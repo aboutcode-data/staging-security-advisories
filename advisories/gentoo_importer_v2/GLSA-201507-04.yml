@@ -1,0 +1,32 @@
+advisory_id: GLSA-201507-04
+datasource_id: gentoo_importer_v2/GLSA-201507-04
+datasource_url: https://security.gentoo.org/glsa/201507-04
+aliases:
+  - CVE-2014-8146
+  - CVE-2014-8147
+summary: |
+  Multiple vulnerabilities have been found in International
+      Components for Unicode, allowing attackers to execute arbitrary code or
+      cause a Denial of Service condition.
+impacted_packages:
+  - purl: pkg:ebuild/dev-libs/icu
+    affected_versions:
+    fixed_versions: vers:ebuild/>=55.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-libs/icu
+    affected_versions: vers:ebuild/<55.1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: normal
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/201507-04
+    reference_type:
+    reference_id:

@@ -1,0 +1,38 @@
+advisory_id: GLSA-200610-11
+datasource_id: gentoo_importer_v2/GLSA-200610-11
+datasource_url: https://security.gentoo.org/glsa/200610-11
+aliases:
+  - CVE-2006-2937
+  - CVE-2006-2940
+  - CVE-2006-3738
+  - CVE-2006-4343
+summary: |
+  OpenSSL contains multiple vulnerabilities including the possible remote
+      execution of arbitrary code.
+impacted_packages:
+  - purl: pkg:ebuild/dev-libs/openssl
+    affected_versions:
+    fixed_versions: vers:ebuild/>=0.9.8d
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-libs/openssl
+    affected_versions:
+    fixed_versions: vers:ebuild/>=0.9.7l
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-libs/openssl
+    affected_versions: vers:ebuild/<0.9.8d
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: high
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/200610-11
+    reference_type:
+    reference_id: GLSA-200610-11

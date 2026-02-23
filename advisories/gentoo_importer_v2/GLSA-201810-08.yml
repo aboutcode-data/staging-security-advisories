@@ -1,0 +1,52 @@
+advisory_id: GLSA-201810-08
+datasource_id: gentoo_importer_v2/GLSA-201810-08
+datasource_url: https://security.gentoo.org/glsa/201810-08
+aliases:
+  - CVE-2018-10915
+  - CVE-2018-10925
+  - CVE-2018-1115
+summary: |
+  Multiple vulnerabilities have been found in PostgreSQL, the worst
+      which could lead to privilege escalation.
+impacted_packages:
+  - purl: pkg:ebuild/dev-db/postgresql?slot=9.3
+    affected_versions:
+    fixed_versions: vers:ebuild/>=9.3.24
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-db/postgresql?slot=9.4
+    affected_versions:
+    fixed_versions: vers:ebuild/>=9.4.19
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-db/postgresql?slot=9.5
+    affected_versions:
+    fixed_versions: vers:ebuild/>=9.5.14
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-db/postgresql?slot=9.6
+    affected_versions:
+    fixed_versions: vers:ebuild/>=9.6.10
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-db/postgresql?slot=10
+    affected_versions:
+    fixed_versions: vers:ebuild/>=10.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-db/postgresql
+    affected_versions: vers:ebuild/<10.5
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: high
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/201810-08
+    reference_type:
+    reference_id:

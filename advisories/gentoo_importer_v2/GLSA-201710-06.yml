@@ -1,0 +1,55 @@
+advisory_id: GLSA-201710-06
+datasource_id: gentoo_importer_v2/GLSA-201710-06
+datasource_url: https://security.gentoo.org/glsa/201710-06
+aliases:
+  - CVE-2017-7484
+  - CVE-2017-7485
+  - CVE-2017-7486
+  - CVE-2017-7546
+  - CVE-2017-7547
+  - CVE-2017-7548
+summary: |
+  Multiple vulnerabilities have been found in PostgreSQL, the worst
+      of which could result in privilege escalation.
+impacted_packages:
+  - purl: pkg:ebuild/dev-db/postgresql?slot=9.6
+    affected_versions:
+    fixed_versions: vers:ebuild/>=9.6.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-db/postgresql?slot=9.5
+    affected_versions:
+    fixed_versions: vers:ebuild/>=9.5.8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-db/postgresql?slot=9.4
+    affected_versions:
+    fixed_versions: vers:ebuild/>=9.4.13
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-db/postgresql?slot=9.3
+    affected_versions:
+    fixed_versions: vers:ebuild/>=9.3.18
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-db/postgresql?slot=9.2
+    affected_versions:
+    fixed_versions: vers:ebuild/>=9.2.22
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-db/postgresql
+    affected_versions: vers:ebuild/<9.6.4
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: normal
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/201710-06
+    reference_type:
+    reference_id:

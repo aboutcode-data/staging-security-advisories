@@ -1,0 +1,55 @@
+advisory_id: GLSA-200909-14
+datasource_id: gentoo_importer_v2/GLSA-200909-14
+datasource_url: https://security.gentoo.org/glsa/200909-14
+aliases:
+  - CVE-2008-5917
+  - CVE-2009-0930
+  - CVE-2009-0931
+  - CVE-2009-0932
+  - CVE-2009-2360
+summary: |
+  Multiple vulnerabilities have been discovered in Horde and two modules,
+      allowing for the execution of arbitrary code, information disclosure, or
+      Cross-Site Scripting.
+impacted_packages:
+  - purl: pkg:ebuild/www-apps/horde
+    affected_versions:
+    fixed_versions: vers:ebuild/>=3.3.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/www-apps/horde
+    affected_versions: vers:ebuild/<3.3.4
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/www-apps/horde-imp
+    affected_versions:
+    fixed_versions: vers:ebuild/>=4.3.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/www-apps/horde-imp
+    affected_versions: vers:ebuild/<4.3.4
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/www-apps/horde-passwd
+    affected_versions:
+    fixed_versions: vers:ebuild/>=3.1.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/www-apps/horde-passwd
+    affected_versions: vers:ebuild/<3.1.1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: normal
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/200909-14
+    reference_type:
+    reference_id: GLSA-200909-14

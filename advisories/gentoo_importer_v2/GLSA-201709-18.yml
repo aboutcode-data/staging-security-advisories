@@ -1,0 +1,32 @@
+advisory_id: GLSA-201709-18
+datasource_id: gentoo_importer_v2/GLSA-201709-18
+datasource_url: https://security.gentoo.org/glsa/201709-18
+aliases:
+  - CVE-2017-1000115
+  - CVE-2017-1000116
+  - CVE-2017-9462
+summary: |
+  Multiple vulnerabilities have been found in Mercurial, the worst of
+      which could lead to the remote execution of arbitrary code.
+impacted_packages:
+  - purl: pkg:ebuild/dev-vcs/mercurial
+    affected_versions:
+    fixed_versions: vers:ebuild/>=4.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-vcs/mercurial
+    affected_versions: vers:ebuild/<4.3
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: normal
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/201709-18
+    reference_type:
+    reference_id:

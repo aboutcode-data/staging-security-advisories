@@ -1,0 +1,31 @@
+advisory_id: GLSA-200410-03
+datasource_id: gentoo_importer_v2/GLSA-200410-03
+datasource_url: https://security.gentoo.org/glsa/200410-03
+aliases:
+  - CVE-2001-0554
+summary: |
+  Buffer overflows exist in the telnet client and daemon provided by
+      netkit-telnetd, which could possibly allow a remote attacker to gain root
+      privileges and compromise the system.
+impacted_packages:
+  - purl: pkg:ebuild/net-misc/netkit-telnetd
+    affected_versions:
+    fixed_versions: vers:ebuild/>=0.17-r4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/net-misc/netkit-telnetd
+    affected_versions: vers:ebuild/<=0.17-r3
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: high
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/200410-03
+    reference_type:
+    reference_id: GLSA-200410-03

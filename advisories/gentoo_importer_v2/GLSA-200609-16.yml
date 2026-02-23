@@ -1,0 +1,31 @@
+advisory_id: GLSA-200609-16
+datasource_id: gentoo_importer_v2/GLSA-200609-16
+datasource_url: https://security.gentoo.org/glsa/200609-16
+aliases:
+  - CVE-2006-4299
+  - CVE-2006-4602
+summary: |
+  Tikiwiki contains a cross-site scripting (XSS) vulnerability as well as a
+      second vulnerability which may allow remote execution of arbitrary code.
+impacted_packages:
+  - purl: pkg:ebuild/www-apps/tikiwiki
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.9.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/www-apps/tikiwiki
+    affected_versions: vers:ebuild/<1.9.5
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: high
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/200609-16
+    reference_type:
+    reference_id: GLSA-200609-16

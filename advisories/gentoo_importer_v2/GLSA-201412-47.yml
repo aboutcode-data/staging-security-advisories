@@ -1,0 +1,41 @@
+advisory_id: GLSA-201412-47
+datasource_id: gentoo_importer_v2/GLSA-201412-47
+datasource_url: https://security.gentoo.org/glsa/201412-47
+aliases:
+  - CVE-2011-2193
+  - CVE-2011-2907
+  - CVE-2011-4925
+  - CVE-2013-4319
+  - CVE-2013-4495
+  - CVE-2014-0749
+summary: |
+  Multiple vulnerabilities have been found in TORQUE Resource
+      Manager, possibly resulting in escalation of privileges or remote code
+      execution.
+impacted_packages:
+  - purl: pkg:ebuild/sys-cluster/torque
+    affected_versions:
+    fixed_versions: vers:ebuild/>=4.1.7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/sys-cluster/torque
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.5.13
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/sys-cluster/torque
+    affected_versions: vers:ebuild/<4.1.7
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: high
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/201412-47
+    reference_type:
+    reference_id: GLSA-201412-47

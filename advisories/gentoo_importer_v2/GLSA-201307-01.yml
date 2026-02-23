@@ -1,0 +1,31 @@
+advisory_id: GLSA-201307-01
+datasource_id: gentoo_importer_v2/GLSA-201307-01
+datasource_url: https://security.gentoo.org/glsa/201307-01
+aliases:
+  - CVE-2013-1912
+  - CVE-2013-2175
+summary: |
+  Multiple vulnerabilities have been found in HAProxy, allowing
+      attackers to execute arbitrary code or cause Denial of Service.
+impacted_packages:
+  - purl: pkg:ebuild/net-proxy/haproxy
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.4.24
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/net-proxy/haproxy
+    affected_versions: vers:ebuild/<1.4.24
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: high
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/201307-01
+    reference_type:
+    reference_id: GLSA-201307-01

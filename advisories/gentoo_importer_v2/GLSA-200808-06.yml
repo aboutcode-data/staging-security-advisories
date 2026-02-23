@@ -1,0 +1,35 @@
+advisory_id: GLSA-200808-06
+datasource_id: gentoo_importer_v2/GLSA-200808-06
+datasource_url: https://security.gentoo.org/glsa/200808-06
+aliases:
+  - CVE-2008-2935
+summary: |
+  libxslt is affected by a heap-based buffer overflow, possibly leading to
+      the execution of arbitrary code.
+impacted_packages:
+  - purl: pkg:ebuild/dev-libs/libxslt
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.1.24-r1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-libs/libxslt
+    affected_versions:
+    fixed_versions: vers:ebuild/<1.1.8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-libs/libxslt
+    affected_versions: vers:ebuild/<1.1.24-r1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: normal
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/200808-06
+    reference_type:
+    reference_id: GLSA-200808-06

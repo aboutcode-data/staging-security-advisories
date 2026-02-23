@@ -1,0 +1,32 @@
+advisory_id: GLSA-200802-12
+datasource_id: gentoo_importer_v2/GLSA-200802-12
+datasource_url: https://security.gentoo.org/glsa/200802-12
+aliases:
+  - CVE-2006-1664
+  - CVE-2008-0486
+  - CVE-2008-1110
+summary: |
+  xine-lib is vulnerable to multiple buffer overflows when processing FLAC
+      and ASF streams.
+impacted_packages:
+  - purl: pkg:ebuild/media-libs/xine-lib
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.1.10.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/media-libs/xine-lib
+    affected_versions: vers:ebuild/<1.1.10.1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: normal
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/200802-12
+    reference_type:
+    reference_id: GLSA-200802-12

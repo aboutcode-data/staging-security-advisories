@@ -1,0 +1,33 @@
+advisory_id: GLSA-202105-38
+datasource_id: gentoo_importer_v2/GLSA-202105-38
+datasource_url: https://security.gentoo.org/glsa/202105-38
+aliases:
+  - CVE-2021-23017
+summary: A vulnerability in nginx could lead to remote code execution.
+impacted_packages:
+  - purl: pkg:ebuild/www-servers/nginx?slot=0
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.20.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/www-servers/nginx?slot=mainline
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.21.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/www-servers/nginx
+    affected_versions: vers:ebuild/<1.21.0
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: high
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/202105-38
+    reference_type:
+    reference_id: GLSA-202105-38

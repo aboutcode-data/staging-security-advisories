@@ -1,0 +1,32 @@
+advisory_id: GLSA-200611-26
+datasource_id: gentoo_importer_v2/GLSA-200611-26
+datasource_url: https://security.gentoo.org/glsa/200611-26
+aliases:
+  - CVE-2006-5815
+  - CVE-2006-6170
+  - CVE-2006-6171
+summary: |
+  ProFTPD is affected by mutiple vulnerabilities allowing for the remote
+      execution of arbitrary code.
+impacted_packages:
+  - purl: pkg:ebuild/net-ftp/proftpd
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.3.0a
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/net-ftp/proftpd
+    affected_versions: vers:ebuild/<1.3.0a
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: high
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/200611-26
+    reference_type:
+    reference_id: GLSA-200611-26

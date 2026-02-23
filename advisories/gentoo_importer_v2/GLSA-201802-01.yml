@@ -1,0 +1,59 @@
+advisory_id: GLSA-201802-01
+datasource_id: gentoo_importer_v2/GLSA-201802-01
+datasource_url: https://security.gentoo.org/glsa/201802-01
+aliases:
+  - CVE-2018-2676
+  - CVE-2018-2685
+  - CVE-2018-2686
+  - CVE-2018-2687
+  - CVE-2018-2688
+  - CVE-2018-2689
+  - CVE-2018-2690
+  - CVE-2018-2693
+  - CVE-2018-2694
+  - CVE-2018-2698
+summary: |
+  Multiple vulnerabilities have been found in VirtualBox, the worst
+      of which could allow an attacker to take control of VirtualBox.
+impacted_packages:
+  - purl: pkg:ebuild/app-emulation/virtualbox
+    affected_versions:
+    fixed_versions: vers:ebuild/>=5.1.32
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/app-emulation/virtualbox
+    affected_versions: vers:ebuild/<5.1.32
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/app-emulation/virtualbox-bin
+    affected_versions:
+    fixed_versions: vers:ebuild/>=5.1.32.120294
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/app-emulation/virtualbox-bin
+    affected_versions: vers:ebuild/<5.1.32.120294
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/app-emulation/virtualbox-guest-additions
+    affected_versions:
+    fixed_versions: vers:ebuild/>=5.1.32
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/app-emulation/virtualbox-guest-additions
+    affected_versions: vers:ebuild/<5.1.32
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: high
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/201802-01
+    reference_type:
+    reference_id: GLSA-201802-01

@@ -1,0 +1,32 @@
+advisory_id: GLSA-200808-01
+datasource_id: gentoo_importer_v2/GLSA-200808-01
+datasource_url: https://security.gentoo.org/glsa/200808-01
+aliases:
+  - CVE-2008-0073
+  - CVE-2008-1482
+  - CVE-2008-1878
+summary: |
+  xine-lib is vulnerable to multiple buffer overflows when processing media
+      streams.
+impacted_packages:
+  - purl: pkg:ebuild/media-libs/xine-lib
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.1.13
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/media-libs/xine-lib
+    affected_versions: vers:ebuild/<1.1.13
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: normal
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/200808-01
+    reference_type:
+    reference_id: GLSA-200808-01

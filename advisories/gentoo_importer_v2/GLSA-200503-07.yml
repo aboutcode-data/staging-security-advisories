@@ -1,0 +1,32 @@
+advisory_id: GLSA-200503-07
+datasource_id: gentoo_importer_v2/GLSA-200503-07
+datasource_url: https://security.gentoo.org/glsa/200503-07
+aliases:
+  - CVE-2005-0543
+  - CVE-2005-0544
+  - CVE-2005-0653
+summary: |
+  phpMyAdmin contains multiple vulnerabilities that could lead to command
+      execution, XSS issues and bypass of security restrictions.
+impacted_packages:
+  - purl: pkg:ebuild/dev-db/phpmyadmin
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.6.1_p2-r1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-db/phpmyadmin
+    affected_versions: vers:ebuild/<2.6.1_p2-r1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: normal
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/200503-07
+    reference_type:
+    reference_id: GLSA-200503-07

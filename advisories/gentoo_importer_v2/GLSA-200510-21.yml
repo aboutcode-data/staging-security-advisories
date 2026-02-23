@@ -1,0 +1,32 @@
+advisory_id: GLSA-200510-21
+datasource_id: gentoo_importer_v2/GLSA-200510-21
+datasource_url: https://security.gentoo.org/glsa/200510-21
+aliases:
+  - CVE-2005-3300
+  - CVE-2005-3301
+summary: |
+  phpMyAdmin contains a local file inclusion vulnerability that may lead to
+      the execution of arbitrary code, along with several cross-site scripting
+      issues.
+impacted_packages:
+  - purl: pkg:ebuild/dev-db/phpmyadmin
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.6.4_p3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-db/phpmyadmin
+    affected_versions: vers:ebuild/<2.6.4_p3
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: normal
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/200510-21
+    reference_type:
+    reference_id: GLSA-200510-21

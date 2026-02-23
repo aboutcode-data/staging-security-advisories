@@ -1,0 +1,34 @@
+advisory_id: GLSA-202101-11
+datasource_id: gentoo_importer_v2/GLSA-202101-11
+datasource_url: https://security.gentoo.org/glsa/202101-11
+aliases: []
+summary: |
+  Multiple vulnerabilities were discovered in Gentoo's ebuild for
+      Zabbix which could lead to root privilege escalation.
+impacted_packages:
+  - purl: pkg:ebuild/net-analyzer/zabbix?slot=0/3.0
+    affected_versions:
+    fixed_versions: vers:ebuild/>=3.0.30
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/net-analyzer/zabbix?slot=0/4.0
+    affected_versions:
+    fixed_versions: vers:ebuild/>=4.0.18
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/net-analyzer/zabbix
+    affected_versions: vers:ebuild/<4.4.6
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: normal
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/202101-11
+    reference_type:
+    reference_id: GLSA-202101-11

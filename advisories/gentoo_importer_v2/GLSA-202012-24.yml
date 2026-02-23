@@ -1,0 +1,33 @@
+advisory_id: GLSA-202012-24
+datasource_id: gentoo_importer_v2/GLSA-202012-24
+datasource_url: https://security.gentoo.org/glsa/202012-24
+aliases:
+  - CVE-2020-14318
+  - CVE-2020-14323
+  - CVE-2020-14383
+  - CVE-2020-1472
+summary: |
+  Multiple vulnerabilities have been found in Samba, the worst of
+      which could result in a Denial of Service condition.
+impacted_packages:
+  - purl: pkg:ebuild/net-fs/samba
+    affected_versions:
+    fixed_versions: vers:ebuild/>=4.12.9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/net-fs/samba
+    affected_versions: vers:ebuild/<4.12.9
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: normal
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/202012-24
+    reference_type:
+    reference_id:

@@ -1,0 +1,36 @@
+advisory_id: GLSA-201110-19
+datasource_id: gentoo_importer_v2/GLSA-201110-19
+datasource_url: https://security.gentoo.org/glsa/201110-19
+aliases:
+  - CVE-2011-4028
+  - CVE-2011-4029
+summary: |
+  Multiple vulnerabilities in the X.Org X server might allow local
+      attackers to disclose information.
+impacted_packages:
+  - purl: pkg:ebuild/x11-base/xorg-server
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.9.5-r1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/x11-base/xorg-server
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.10.4-r1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/x11-base/xorg-server
+    affected_versions: vers:ebuild/<1.10.4-r1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: normal
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/201110-19
+    reference_type:
+    reference_id: GLSA-201110-19

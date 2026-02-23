@@ -1,0 +1,33 @@
+advisory_id: GLSA-201710-01
+datasource_id: gentoo_importer_v2/GLSA-201710-01
+datasource_url: https://security.gentoo.org/glsa/201710-01
+aliases:
+  - CVE-2017-0899
+  - CVE-2017-0900
+  - CVE-2017-0901
+  - CVE-2017-0902
+summary: |
+  Multiple vulnerabilities were found in RubyGems, the worst of which
+      allows execution of arbitrary code.
+impacted_packages:
+  - purl: pkg:ebuild/dev-ruby/rubygems
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.6.13
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-ruby/rubygems
+    affected_versions: vers:ebuild/<2.6.13
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: normal
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/201710-01
+    reference_type:
+    reference_id:

@@ -1,0 +1,40 @@
+advisory_id: GLSA-201509-06
+datasource_id: gentoo_importer_v2/GLSA-201509-06
+datasource_url: https://security.gentoo.org/glsa/201509-06
+aliases:
+  - CVE-2014-9390
+summary: |
+  An attacker could execute arbitrary commands via Git repositories
+      in a case-insensitive or case-normalizing filesystem.
+impacted_packages:
+  - purl: pkg:ebuild/dev-vcs/git
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.8.5.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-vcs/git
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.9.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-vcs/git
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.0.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-vcs/git
+    affected_versions: vers:ebuild/<2.0.5
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: normal
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/201509-06
+    reference_type:
+    reference_id: GLSA-201509-06

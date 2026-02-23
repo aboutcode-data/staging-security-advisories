@@ -1,0 +1,30 @@
+advisory_id: GLSA-202004-04
+datasource_id: gentoo_importer_v2/GLSA-202004-04
+datasource_url: https://security.gentoo.org/glsa/202004-04
+aliases:
+  - CVE-2019-13720
+summary: |
+  A heap use-after-free flaw in Qt WebEngine at worst might allow an
+      attacker to execute arbitrary code.
+impacted_packages:
+  - purl: pkg:ebuild/dev-qt/qtwebengine
+    affected_versions:
+    fixed_versions: vers:ebuild/>=5.14.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-qt/qtwebengine
+    affected_versions: vers:ebuild/<5.14.1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: normal
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/202004-04
+    reference_type:
+    reference_id:

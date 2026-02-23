@@ -1,0 +1,30 @@
+advisory_id: GLSA-202006-14
+datasource_id: gentoo_importer_v2/GLSA-202006-14
+datasource_url: https://security.gentoo.org/glsa/202006-14
+aliases:
+  - CVE-2018-1000888
+summary: |
+  A buffer overflow in the PEAR module Archive_Tar might allow local
+      or remote attacker(s) to execute arbitrary code.
+impacted_packages:
+  - purl: pkg:ebuild/dev-php/PEAR-Archive_Tar
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.4.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-php/PEAR-Archive_Tar
+    affected_versions: vers:ebuild/<1.4.5
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: normal
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/202006-14
+    reference_type:
+    reference_id:

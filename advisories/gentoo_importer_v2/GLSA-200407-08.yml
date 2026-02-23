@@ -1,0 +1,32 @@
+advisory_id: GLSA-200407-08
+datasource_id: gentoo_importer_v2/GLSA-200407-08
+datasource_url: https://security.gentoo.org/glsa/200407-08
+aliases:
+  - CVE-2004-0633
+  - CVE-2004-0634
+  - CVE-2004-0635
+summary: |
+  Multiple vulnerabilities including one buffer overflow exist in Ethereal,
+      which may allow an attacker to run arbitrary code or crash the program.
+impacted_packages:
+  - purl: pkg:ebuild/net-analyzer/ethereal
+    affected_versions:
+    fixed_versions: vers:ebuild/>=0.10.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/net-analyzer/ethereal
+    affected_versions: vers:ebuild/<=0.10.4
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: high
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/200407-08
+    reference_type:
+    reference_id: GLSA-200407-08

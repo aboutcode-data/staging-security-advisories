@@ -1,0 +1,48 @@
+advisory_id: GLSA-201705-09
+datasource_id: gentoo_importer_v2/GLSA-201705-09
+datasource_url: https://security.gentoo.org/glsa/201705-09
+aliases:
+  - CVE-2015-5174
+  - CVE-2015-5345
+  - CVE-2015-5346
+  - CVE-2015-5351
+  - CVE-2016-0706
+  - CVE-2016-0714
+  - CVE-2016-0763
+  - CVE-2016-1240
+  - CVE-2016-3092
+  - CVE-2016-8745
+  - CVE-2017-5647
+  - CVE-2017-5648
+  - CVE-2017-5650
+  - CVE-2017-5651
+summary: |
+  Multiple vulnerabilities have been found in Apache Tomcat, the
+      worst of which could lead to privilege escalation.
+impacted_packages:
+  - purl: pkg:ebuild/www-servers/tomcat
+    affected_versions:
+    fixed_versions: vers:ebuild/>=8.0.36
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/www-servers/tomcat
+    affected_versions:
+    fixed_versions: vers:ebuild/>=7.0.70
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/www-servers/tomcat
+    affected_versions: vers:ebuild/<8.0.36
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: high
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/201705-09
+    reference_type:
+    reference_id:

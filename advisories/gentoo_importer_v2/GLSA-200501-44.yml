@@ -1,0 +1,30 @@
+advisory_id: GLSA-200501-44
+datasource_id: gentoo_importer_v2/GLSA-200501-44
+datasource_url: https://security.gentoo.org/glsa/200501-44
+aliases: []
+summary: |
+  The ncpfs utilities contain multiple flaws, potentially resulting in the
+      remote execution of arbitrary code or local file access with elevated
+      privileges.
+impacted_packages:
+  - purl: pkg:ebuild/net-fs/ncpfs
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.2.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/net-fs/ncpfs
+    affected_versions: vers:ebuild/<2.2.6
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: normal
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/200501-44
+    reference_type:
+    reference_id: GLSA-200501-44
