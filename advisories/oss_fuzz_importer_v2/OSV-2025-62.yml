@@ -1,0 +1,31 @@
+advisory_id: OSV-2025-62
+datasource_id: oss_fuzz_importer_v2/OSV-2025-62
+datasource_url: https://github.com/google/oss-fuzz-vulns/blob/main/vulns/rdkit/OSV-2025-62.yaml
+aliases: []
+summary: |
+  UNKNOWN READ in RDKit::Dict::reset
+  OSS-Fuzz report: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=391962480
+
+  ```
+  Crash type: UNKNOWN READ
+  Crash state:
+  RDKit::Dict::reset
+  RDKit::Atom::~Atom
+  RDKit::QueryAtom::~QueryAtom
+  ```
+impacted_packages:
+  - purl: pkg:generic/rdkit
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits:
+      - vcs_url: https://github.com/rdkit/rdkit
+        commit: 82926b048a2706b0c7c7d9e5a2d16a7187561434
+      - vcs_url: https://github.com/rdkit/rdkit
+        commit: caffd6c0fb5b5f220aea7782fed43181ca78596f
+severities: []
+weaknesses: []
+references:
+  - url: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=391962480
+    reference_type:
+    reference_id:

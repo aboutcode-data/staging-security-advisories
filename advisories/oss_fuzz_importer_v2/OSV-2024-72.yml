@@ -1,0 +1,29 @@
+advisory_id: OSV-2024-72
+datasource_id: oss_fuzz_importer_v2/OSV-2024-72
+datasource_url: https://github.com/google/oss-fuzz-vulns/blob/main/vulns/libavif/OSV-2024-72.yaml
+aliases: []
+summary: |
+  UNKNOWN READ in LLVMFuzzerRunDriver
+  OSS-Fuzz report: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=66204
+
+  ```
+  Crash type: UNKNOWN READ
+  Crash state:
+  LLVMFuzzerRunDriver
+  ```
+impacted_packages:
+  - purl: pkg:generic/libavif
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/aomediacodec/libavif
+        commit: 6cc154be9d0d0b50b12cfab0d65049de1ef8407e
+    introduced_in_commits:
+      - vcs_url: https://github.com/aomediacodec/libavif
+        commit: ac3db6001523e179f9e63f974887b19cb29df855
+severities: []
+weaknesses: []
+references:
+  - url: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=66204
+    reference_type:
+    reference_id:
