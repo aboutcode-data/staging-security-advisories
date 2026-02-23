@@ -1,0 +1,32 @@
+advisory_id: OSV-2026-205
+datasource_id: oss_fuzz_importer_v2/OSV-2026-205
+datasource_url: https://github.com/google/oss-fuzz-vulns/blob/main/vulns/gpsd/OSV-2026-205.yaml
+aliases: []
+summary: |
+  UNKNOWN READ in gpsd_poll
+  OSS-Fuzz report: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=481932457
+
+  ```
+  Crash type: UNKNOWN READ
+  Crash state:
+  gpsd_poll
+  FuzzDrivers.c
+  ```
+impacted_packages:
+  - purl: pkg:generic/gpsd
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://gitlab.com/gpsd/gpsd
+        commit: 454e3a856bdc4c0004fab000f23aec75af41c325
+      - vcs_url: https://gitlab.com/gpsd/gpsd
+        commit: 7164bc6fa2f0d085ac95f1881334790f32db853c
+    introduced_in_commits:
+      - vcs_url: https://gitlab.com/gpsd/gpsd
+        commit: 4d719d0f956444fa8cc00d988fbb9dda878614f4
+severities: []
+weaknesses: []
+references:
+  - url: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=481932457
+    reference_type:
+    reference_id:

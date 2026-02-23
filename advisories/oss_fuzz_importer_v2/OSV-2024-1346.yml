@@ -1,0 +1,31 @@
+advisory_id: OSV-2024-1346
+datasource_id: oss_fuzz_importer_v2/OSV-2024-1346
+datasource_url: https://github.com/google/oss-fuzz-vulns/blob/main/vulns/shaderc/OSV-2024-1346.yaml
+aliases: []
+summary: |
+  UNKNOWN READ in glslang::HlslTokenStream::advanceToken
+  OSS-Fuzz report: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=382547706
+
+  ```
+  Crash type: UNKNOWN READ
+  Crash state:
+  glslang::HlslTokenStream::advanceToken
+  glslang::HlslGrammar::acceptLiteral
+  glslang::HlslGrammar::acceptPostfixExpression
+  ```
+impacted_packages:
+  - purl: pkg:generic/shaderc
+    affected_versions: vers:generic/2024.4.0|2025.1.0|2025.2.0|2025.3.0|2025.4.0|2025.5.0
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/google/shaderc
+        commit: e0a5092b4b05dbcc448b0883f3575163634f8e86
+    introduced_in_commits:
+      - vcs_url: https://github.com/google/shaderc
+        commit: ffd3be52bbcbd428e9de40da996ad09645fc0dc8
+severities: []
+weaknesses: []
+references:
+  - url: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=382547706
+    reference_type:
+    reference_id:

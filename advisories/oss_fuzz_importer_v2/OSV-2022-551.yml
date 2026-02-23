@@ -1,0 +1,35 @@
+advisory_id: OSV-2022-551
+datasource_id: oss_fuzz_importer_v2/OSV-2022-551
+datasource_url: https://github.com/google/oss-fuzz-vulns/blob/main/vulns/libpcap/OSV-2022-551.yaml
+aliases: []
+summary: |
+  Heap-buffer-overflow in fixup_pcap_pkthdr
+  OSS-Fuzz report: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=48863
+
+  ```
+  Crash type: Heap-buffer-overflow READ 1
+  Crash state:
+  fixup_pcap_pkthdr
+  pcap_next_packet
+  pcap_offline_read
+  ```
+impacted_packages:
+  - purl: pkg:generic/libpcap
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/the-tcpdump-group/libpcap
+        commit: e2c0fd75e48a3cbf1bf48b8afe28fff50d8e0877
+      - vcs_url: https://github.com/the-tcpdump-group/libpcap
+        commit: a774407d41419bc8f3069b70e9d9be26c82f0f70
+    introduced_in_commits:
+      - vcs_url: https://github.com/the-tcpdump-group/libpcap
+        commit: b4eeafb93955807464d8bb9327772fb217fcdd9a
+      - vcs_url: https://github.com/the-tcpdump-group/libpcap
+        commit: 854614423a5b790aaac73131591cb7c716157241
+severities: []
+weaknesses: []
+references:
+  - url: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=48863
+    reference_type:
+    reference_id:

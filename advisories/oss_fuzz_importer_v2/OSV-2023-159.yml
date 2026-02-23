@@ -1,0 +1,31 @@
+advisory_id: OSV-2023-159
+datasource_id: oss_fuzz_importer_v2/OSV-2023-159
+datasource_url: https://github.com/google/oss-fuzz-vulns/blob/main/vulns/libavc/OSV-2023-159.yaml
+aliases: []
+summary: |
+  UNKNOWN READ in isvce_cabac_flush
+  OSS-Fuzz report: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=56816
+
+  ```
+  Crash type: UNKNOWN READ
+  Crash state:
+  isvce_cabac_flush
+  isvce_cabac_encode_terminate
+  isvce_entropy
+  ```
+impacted_packages:
+  - purl: pkg:generic/libavc
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/ittiam-systems/libavc
+        commit: ab835f3240d52843b4480fa77352b15c3668ed5a
+    introduced_in_commits:
+      - vcs_url: https://github.com/ittiam-systems/libavc
+        commit: e14ee149ef87f1e90b10cbda4b9d120432c8a410
+severities: []
+weaknesses: []
+references:
+  - url: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=56816
+    reference_type:
+    reference_id:

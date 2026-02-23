@@ -1,0 +1,31 @@
+advisory_id: OSV-2022-386
+datasource_id: oss_fuzz_importer_v2/OSV-2022-386
+datasource_url: https://github.com/google/oss-fuzz-vulns/blob/main/vulns/opensc/OSV-2022-386.yaml
+aliases: []
+summary: |
+  Invalid-free in change_pin
+  OSS-Fuzz report: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=47143
+
+  ```
+  Crash type: Invalid-free
+  Crash state:
+  change_pin
+  _main
+  fuzz_pkcs15_tool.c
+  ```
+impacted_packages:
+  - purl: pkg:generic/opensc
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/opensc/opensc
+        commit: 3d261b9a7f4b056b5b342c8b6ca1a5b1d91ee01e
+    introduced_in_commits:
+      - vcs_url: https://github.com/opensc/opensc
+        commit: 217590ce6d0d02bb9abe20ac26bde8774cf8c8a4
+severities: []
+weaknesses: []
+references:
+  - url: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=47143
+    reference_type:
+    reference_id:

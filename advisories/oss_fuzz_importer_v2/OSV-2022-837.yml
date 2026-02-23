@@ -1,0 +1,31 @@
+advisory_id: OSV-2022-837
+datasource_id: oss_fuzz_importer_v2/OSV-2022-837
+datasource_url: https://github.com/google/oss-fuzz-vulns/blob/main/vulns/suricata/OSV-2022-837.yaml
+aliases: []
+summary: |
+  Heap-buffer-overflow in DetectGetLastSMFromMpmLists
+  OSS-Fuzz report: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=50929
+
+  ```
+  Crash type: Heap-buffer-overflow READ 8
+  Crash state:
+  DetectGetLastSMFromMpmLists
+  DetectFastPatternSetup
+  SigParse
+  ```
+impacted_packages:
+  - purl: pkg:generic/suricata
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/oisf/suricata
+        commit: 55c4834e4e9b14a441b735f84d8d35b4eb151702
+    introduced_in_commits:
+      - vcs_url: https://github.com/oisf/suricata
+        commit: 474e0e364471fed2b6765b2c105f143e8b1864ea
+severities: []
+weaknesses: []
+references:
+  - url: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=50929
+    reference_type:
+    reference_id:

@@ -1,0 +1,31 @@
+advisory_id: OSV-2023-978
+datasource_id: oss_fuzz_importer_v2/OSV-2023-978
+datasource_url: https://github.com/google/oss-fuzz-vulns/blob/main/vulns/glog/OSV-2023-978.yaml
+aliases: []
+summary: |
+  UNKNOWN READ in google::ParseTemplateArg
+  OSS-Fuzz report: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=63034
+
+  ```
+  Crash type: UNKNOWN READ
+  Crash state:
+  google::ParseTemplateArg
+  google::ParseTemplateArg
+  google::ParseEncoding
+  ```
+impacted_packages:
+  - purl: pkg:generic/glog
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/google/glog
+        commit: 7ba2f7bc02cdbab9314f3804c698ec78e20c441e
+    introduced_in_commits:
+      - vcs_url: https://github.com/google/glog
+        commit: a13d03babc574015e417a920968ec966a8fb68f5
+severities: []
+weaknesses: []
+references:
+  - url: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=63034
+    reference_type:
+    reference_id:
