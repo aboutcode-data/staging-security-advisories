@@ -1,0 +1,30 @@
+advisory_id: GLSA-200409-23
+datasource_id: gentoo_importer_v2/GLSA-200409-23
+datasource_url: https://security.gentoo.org/glsa/200409-23
+aliases:
+  - CVE-2004-1470
+summary: |
+  SnipSnap is vulnerable to HTTP response splitting attacks such as web cache
+      poisoning, cross-user defacement, and cross-site scripting.
+impacted_packages:
+  - purl: pkg:ebuild/dev-java/snipsnap-bin
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.0_beta1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-java/snipsnap-bin
+    affected_versions: vers:ebuild/<1.0_beta1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: low
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/200409-23
+    reference_type:
+    reference_id: GLSA-200409-23

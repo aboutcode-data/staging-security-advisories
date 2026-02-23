@@ -1,0 +1,33 @@
+advisory_id: GLSA-201904-16
+datasource_id: gentoo_importer_v2/GLSA-201904-16
+datasource_url: https://security.gentoo.org/glsa/201904-16
+aliases:
+  - CVE-2018-12613
+  - CVE-2018-19968
+  - CVE-2018-19969
+  - CVE-2018-19970
+summary: |
+  Multiple vulnerabilities have been found in phpMyAdmin, the worst
+      of which could result in the arbitrary execution of code.
+impacted_packages:
+  - purl: pkg:ebuild/dev-db/phpmyadmin
+    affected_versions:
+    fixed_versions: vers:ebuild/>=4.8.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-db/phpmyadmin
+    affected_versions: vers:ebuild/<4.8.4
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: normal
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/201904-16
+    reference_type:
+    reference_id:

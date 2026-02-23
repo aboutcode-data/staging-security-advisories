@@ -1,0 +1,32 @@
+advisory_id: GLSA-201403-06
+datasource_id: gentoo_importer_v2/GLSA-201403-06
+datasource_url: https://security.gentoo.org/glsa/201403-06
+aliases:
+  - CVE-2012-5958
+  - CVE-2012-5959
+  - CVE-2012-5960
+summary: |
+  Multiple buffer overflow flaws in libupnp may allow execution of
+      arbitrary code.
+impacted_packages:
+  - purl: pkg:ebuild/net-libs/libupnp
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.6.18
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/net-libs/libupnp
+    affected_versions: vers:ebuild/<1.6.18
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: high
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/201403-06
+    reference_type:
+    reference_id: GLSA-201403-06

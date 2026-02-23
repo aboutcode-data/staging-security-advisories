@@ -1,0 +1,36 @@
+advisory_id: GLSA-201701-18
+datasource_id: gentoo_importer_v2/GLSA-201701-18
+datasource_url: https://security.gentoo.org/glsa/201701-18
+aliases:
+  - CVE-2016-0772
+  - CVE-2016-5636
+summary: |
+  Multiple vulnerabilities have been found in Python, the worst of
+      which could lead to arbitrary code execution.
+impacted_packages:
+  - purl: pkg:ebuild/dev-lang/python?slot=2.7
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.7.12
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-lang/python?slot=3.4
+    affected_versions:
+    fixed_versions: vers:ebuild/>=3.4.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-lang/python
+    affected_versions: vers:ebuild/<3.4.5
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: normal
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/201701-18
+    reference_type:
+    reference_id:

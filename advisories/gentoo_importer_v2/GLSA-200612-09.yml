@@ -1,0 +1,30 @@
+advisory_id: GLSA-200612-09
+datasource_id: gentoo_importer_v2/GLSA-200612-09
+datasource_url: https://security.gentoo.org/glsa/200612-09
+aliases:
+  - CVE-2006-6332
+summary: |
+  MadWifi is vulnerable to a buffer overflow that could potentially lead to
+      the remote execution of arbitrary code with root privileges.
+impacted_packages:
+  - purl: pkg:ebuild/net-wireless/madwifi-ng
+    affected_versions:
+    fixed_versions: vers:ebuild/>=0.9.2.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/net-wireless/madwifi-ng
+    affected_versions: vers:ebuild/<0.9.2.1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: high
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/200612-09
+    reference_type:
+    reference_id: GLSA-200612-09

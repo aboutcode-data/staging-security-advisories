@@ -1,0 +1,33 @@
+advisory_id: GLSA-201903-16
+datasource_id: gentoo_importer_v2/GLSA-201903-16
+datasource_url: https://security.gentoo.org/glsa/201903-16
+aliases:
+  - CVE-2018-20685
+  - CVE-2019-6109
+  - CVE-2019-6110
+  - CVE-2019-6111
+summary: |
+  Multiple vulnerabilities have been found in OpenSSH, the worst of
+      which could allow a remote attacker to gain unauthorized access.
+impacted_packages:
+  - purl: pkg:ebuild/net-misc/openssh
+    affected_versions:
+    fixed_versions: vers:ebuild/>=7.9_p1-r4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/net-misc/openssh
+    affected_versions: vers:ebuild/<7.9_p1-r4
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: normal
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/201903-16
+    reference_type:
+    reference_id: GLSA-201903-16

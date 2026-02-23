@@ -1,0 +1,42 @@
+advisory_id: GLSA-200412-01
+datasource_id: gentoo_importer_v2/GLSA-200412-01
+datasource_url: https://security.gentoo.org/glsa/200412-01
+aliases:
+  - CVE-2004-1161
+  - CVE-2004-1162
+summary: |
+  rssh and scponly do not filter command-line options that can be exploited
+      to execute any command, thereby allowing a remote user to completely bypass
+      the restricted shell.
+impacted_packages:
+  - purl: pkg:ebuild/net-misc/scponly
+    affected_versions:
+    fixed_versions: vers:ebuild/>=4.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/net-misc/scponly
+    affected_versions: vers:ebuild/<4.0
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/app-shells/rssh
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.2.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/app-shells/rssh
+    affected_versions: vers:ebuild/<=2.2.2
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: normal
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/200412-01
+    reference_type:
+    reference_id: GLSA-200412-01

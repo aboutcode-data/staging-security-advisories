@@ -1,0 +1,37 @@
+advisory_id: GLSA-202004-03
+datasource_id: gentoo_importer_v2/GLSA-202004-03
+datasource_url: https://security.gentoo.org/glsa/202004-03
+aliases:
+  - CVE-2019-10216
+  - CVE-2019-14811
+  - CVE-2019-14812
+  - CVE-2019-14813
+  - CVE-2019-14817
+  - CVE-2019-3835
+  - CVE-2019-3838
+  - CVE-2019-6116
+summary: |
+  Multiple vulnerabilities have been found in GPL Ghostscript, the
+      worst of which could result in the execution of arbitrary code.
+impacted_packages:
+  - purl: pkg:ebuild/app-text/ghostscript-gpl
+    affected_versions:
+    fixed_versions: vers:ebuild/>=9.28_rc4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/app-text/ghostscript-gpl
+    affected_versions: vers:ebuild/<9.28_rc4
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: normal
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/202004-03
+    reference_type:
+    reference_id:

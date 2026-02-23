@@ -1,0 +1,56 @@
+advisory_id: GLSA-200705-19
+datasource_id: gentoo_importer_v2/GLSA-200705-19
+datasource_url: https://security.gentoo.org/glsa/200705-19
+aliases:
+  - CVE-2007-1001
+  - CVE-2007-1285
+  - CVE-2007-1286
+  - CVE-2007-1484
+  - CVE-2007-1521
+  - CVE-2007-1583
+  - CVE-2007-1700
+  - CVE-2007-1701
+  - CVE-2007-1711
+  - CVE-2007-1717
+  - CVE-2007-1718
+  - CVE-2007-1864
+  - CVE-2007-1900
+  - CVE-2007-2509
+  - CVE-2007-2510
+  - CVE-2007-2511
+summary: |
+  PHP contains several vulnerabilities including buffer and integer overflows
+      which could under certain conditions lead to the remote execution of
+      arbitrary code.
+impacted_packages:
+  - purl: pkg:ebuild/dev-lang/php
+    affected_versions:
+    fixed_versions: vers:ebuild/>=4.4.7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-lang/php
+    affected_versions:
+    fixed_versions: vers:ebuild/>=4.4.8_pre20070816
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-lang/php
+    affected_versions:
+    fixed_versions: vers:ebuild/>=5.2.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-lang/php
+    affected_versions: vers:ebuild/<5.2.2
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: high
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/200705-19
+    reference_type:
+    reference_id: GLSA-200705-19

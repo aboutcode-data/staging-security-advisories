@@ -1,0 +1,33 @@
+advisory_id: GLSA-201408-12
+datasource_id: gentoo_importer_v2/GLSA-201408-12
+datasource_url: https://security.gentoo.org/glsa/201408-12
+aliases:
+  - CVE-2013-6438
+  - CVE-2014-0098
+  - CVE-2014-0226
+summary: |
+  Multiple vulnerabilities have been discovered in Apache HTTP
+      Server, the worse of which could lead to execution of arbitrary code or a
+      Denial of Service condition
+impacted_packages:
+  - purl: pkg:ebuild/www-servers/apache
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.2.27-r4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/www-servers/apache
+    affected_versions: vers:ebuild/<2.2.27-r4
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: high
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/201408-12
+    reference_type:
+    reference_id: GLSA-201408-12

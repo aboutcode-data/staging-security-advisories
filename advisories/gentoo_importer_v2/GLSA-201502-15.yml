@@ -1,0 +1,41 @@
+advisory_id: GLSA-201502-15
+datasource_id: gentoo_importer_v2/GLSA-201502-15
+datasource_url: https://security.gentoo.org/glsa/201502-15
+aliases:
+  - CVE-2012-6150
+  - CVE-2013-4124
+  - CVE-2013-4408
+  - CVE-2013-4475
+  - CVE-2013-4476
+  - CVE-2013-4496
+  - CVE-2014-0178
+  - CVE-2014-0239
+  - CVE-2014-0244
+  - CVE-2014-3493
+  - CVE-2015-0240
+summary: |
+  Multiple vulnerabilities have been found in Samba, the worst of
+      which allowing a context-dependent attacker to bypass intended file
+      restrictions, cause a Denial of Service or execute arbitrary code.
+impacted_packages:
+  - purl: pkg:ebuild/net-fs/samba
+    affected_versions:
+    fixed_versions: vers:ebuild/>=3.6.25
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/net-fs/samba
+    affected_versions: vers:ebuild/<3.6.25
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: high
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/201502-15
+    reference_type:
+    reference_id: GLSA-201502-15

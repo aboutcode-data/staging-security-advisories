@@ -1,0 +1,31 @@
+advisory_id: GLSA-201805-13
+datasource_id: gentoo_importer_v2/GLSA-201805-13
+datasource_url: https://security.gentoo.org/glsa/201805-13
+aliases:
+  - CVE-2018-11233
+  - CVE-2018-11235
+summary: |
+  Git contains multiple vulnerabilities that allow for the remote
+      execution of arbitrary code.
+impacted_packages:
+  - purl: pkg:ebuild/dev-vcs/git
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.16.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-vcs/git
+    affected_versions: vers:ebuild/<2.16.4
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: high
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/201805-13
+    reference_type:
+    reference_id:

@@ -1,0 +1,31 @@
+advisory_id: GLSA-200606-06
+datasource_id: gentoo_importer_v2/GLSA-200606-06
+datasource_url: https://security.gentoo.org/glsa/200606-06
+aliases:
+  - CVE-2006-1945
+  - CVE-2006-2237
+summary: |
+  AWStats contains a bug in the sanitization of the input parameters which
+      can lead to the remote execution of arbitrary code.
+impacted_packages:
+  - purl: pkg:ebuild/www-misc/awstats
+    affected_versions:
+    fixed_versions: vers:ebuild/>=6.5-r1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/www-misc/awstats
+    affected_versions: vers:ebuild/<6.5-r1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: high
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/200606-06
+    reference_type:
+    reference_id: GLSA-200606-06

@@ -1,0 +1,30 @@
+advisory_id: GLSA-201607-09
+datasource_id: gentoo_importer_v2/GLSA-201607-09
+datasource_url: https://security.gentoo.org/glsa/201607-09
+aliases:
+  - CVE-2014-0114
+summary: |
+  Apache Commons BeanUtils does not properly suppress the class
+      property, which could lead to the remote execution of arbitrary code.
+impacted_packages:
+  - purl: pkg:ebuild/dev-java/commons-beanutils
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.9.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-java/commons-beanutils
+    affected_versions: vers:ebuild/<1.9.2
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: normal
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/201607-09
+    reference_type:
+    reference_id:

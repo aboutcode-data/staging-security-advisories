@@ -1,0 +1,30 @@
+advisory_id: GLSA-200908-09
+datasource_id: gentoo_importer_v2/GLSA-200908-09
+datasource_url: https://security.gentoo.org/glsa/200908-09
+aliases:
+  - CVE-2009-1960
+summary: |
+  An input sanitation error in DokuWiki might lead to the dislosure of local
+      files or even the remote execution of arbitrary code.
+impacted_packages:
+  - purl: pkg:ebuild/www-apps/dokuwiki
+    affected_versions:
+    fixed_versions: vers:ebuild/>=20090214b
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/www-apps/dokuwiki
+    affected_versions: vers:ebuild/<20090214b
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: high
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/200908-09
+    reference_type:
+    reference_id: GLSA-200908-09

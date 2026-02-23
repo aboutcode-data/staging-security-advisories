@@ -1,0 +1,43 @@
+advisory_id: GLSA-201408-17
+datasource_id: gentoo_importer_v2/GLSA-201408-17
+datasource_url: https://security.gentoo.org/glsa/201408-17
+aliases:
+  - CVE-2007-6227
+  - CVE-2013-4377
+  - CVE-2013-4544
+  - CVE-2014-0142
+  - CVE-2014-0143
+  - CVE-2014-0144
+  - CVE-2014-0145
+  - CVE-2014-0146
+  - CVE-2014-0147
+  - CVE-2014-0150
+  - CVE-2014-0222
+  - CVE-2014-0223
+  - CVE-2014-2894
+  - CVE-2014-3461
+summary: |
+  Multiple vulnerabilities have been found in QEMU, worst of which
+      allows local attackers to execute arbitrary code.
+impacted_packages:
+  - purl: pkg:ebuild/app-emulation/qemu
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.0.0-r1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/app-emulation/qemu
+    affected_versions: vers:ebuild/<2.0.0-r1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: high
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/201408-17
+    reference_type:
+    reference_id: GLSA-201408-17

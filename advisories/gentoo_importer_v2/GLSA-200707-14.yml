@@ -1,0 +1,30 @@
+advisory_id: GLSA-200707-14
+datasource_id: gentoo_importer_v2/GLSA-200707-14
+datasource_url: https://security.gentoo.org/glsa/200707-14
+aliases:
+  - CVE-2007-3798
+summary: |
+  A vulnerability has been discovered in tcpdump, allowing for the execution
+      of arbitrary code, possibly with root privileges.
+impacted_packages:
+  - purl: pkg:ebuild/net-analyzer/tcpdump
+    affected_versions:
+    fixed_versions: vers:ebuild/>=3.9.5-r3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/net-analyzer/tcpdump
+    affected_versions: vers:ebuild/<3.9.5-r3
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: high
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/200707-14
+    reference_type:
+    reference_id: GLSA-200707-14

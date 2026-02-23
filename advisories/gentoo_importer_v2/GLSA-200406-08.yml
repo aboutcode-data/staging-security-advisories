@@ -1,0 +1,30 @@
+advisory_id: GLSA-200406-08
+datasource_id: gentoo_importer_v2/GLSA-200406-08
+datasource_url: https://security.gentoo.org/glsa/200406-08
+aliases:
+  - CVE-2004-0520
+summary: |
+  Squirrelmail fails to properly sanitize user input, which could lead to a
+      compromise of webmail accounts.
+impacted_packages:
+  - purl: pkg:ebuild/mail-client/squirrelmail
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.4.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/mail-client/squirrelmail
+    affected_versions: vers:ebuild/<=1.4.3_rc1-r1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: normal
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/200406-08
+    reference_type:
+    reference_id: GLSA-200406-08

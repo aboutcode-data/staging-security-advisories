@@ -1,0 +1,44 @@
+advisory_id: GLSA-200509-12
+datasource_id: gentoo_importer_v2/GLSA-200509-12
+datasource_url: https://security.gentoo.org/glsa/200509-12
+aliases: []
+summary: |
+  mod_ssl and Apache are vulnerable to a restriction bypass and a potential
+      local privilege escalation.
+impacted_packages:
+  - purl: pkg:ebuild/net-www/mod_ssl
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.8.24
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/net-www/mod_ssl
+    affected_versions: vers:ebuild/<2.8.24
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/www-servers/apache
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.0.54-r15
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/www-servers/apache
+    affected_versions:
+    fixed_versions: vers:ebuild/<2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/www-servers/apache
+    affected_versions: vers:ebuild/<2.0.54-r15
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: normal
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/200509-12
+    reference_type:
+    reference_id: GLSA-200509-12

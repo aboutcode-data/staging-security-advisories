@@ -1,0 +1,39 @@
+advisory_id: GLSA-200508-14
+datasource_id: gentoo_importer_v2/GLSA-200508-14
+datasource_url: https://security.gentoo.org/glsa/200508-14
+aliases: []
+summary: |
+  TikiWiki and eGroupWare both include PHP XML-RPC code vulnerable to
+      arbitrary command execution.
+impacted_packages:
+  - purl: pkg:ebuild/www-apps/tikiwiki
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.8.5-r2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/www-apps/tikiwiki
+    affected_versions: vers:ebuild/<1.8.5-r2
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/www-apps/egroupware
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.0.0.009
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/www-apps/egroupware
+    affected_versions: vers:ebuild/<1.0.0.009
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: high
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/200508-14
+    reference_type:
+    reference_id: GLSA-200508-14

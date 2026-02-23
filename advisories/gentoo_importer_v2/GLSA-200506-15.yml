@@ -1,0 +1,30 @@
+advisory_id: GLSA-200506-15
+datasource_id: gentoo_importer_v2/GLSA-200506-15
+datasource_url: https://security.gentoo.org/glsa/200506-15
+aliases:
+  - CVE-2005-1806
+summary: |
+  PeerCast suffers from a format string vulnerability that could allow
+      arbitrary code execution.
+impacted_packages:
+  - purl: pkg:ebuild/media-sound/peercast
+    affected_versions:
+    fixed_versions: vers:ebuild/>=0.1212
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/media-sound/peercast
+    affected_versions: vers:ebuild/<0.1212
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: high
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/200506-15
+    reference_type:
+    reference_id: GLSA-200506-15

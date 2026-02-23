@@ -1,0 +1,30 @@
+advisory_id: GLSA-200910-01
+datasource_id: gentoo_importer_v2/GLSA-200910-01
+datasource_url: https://security.gentoo.org/glsa/200910-01
+aliases:
+  - CVE-2009-3490
+summary: |
+  An error in the X.509 certificate handling of Wget might enable remote
+      attackers to conduct man-in-the-middle attacks.
+impacted_packages:
+  - purl: pkg:ebuild/net-misc/wget
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.12
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/net-misc/wget
+    affected_versions: vers:ebuild/<1.12
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: normal
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/200910-01
+    reference_type:
+    reference_id: GLSA-200910-01

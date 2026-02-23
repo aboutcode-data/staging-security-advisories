@@ -1,0 +1,125 @@
+advisory_id: GLSA-200803-30
+datasource_id: gentoo_importer_v2/GLSA-200803-30
+datasource_url: https://security.gentoo.org/glsa/200803-30
+aliases:
+  - CVE-2008-1383
+summary: |
+  An error in the usage of the ssl-cert eclass within multiple ebuilds might
+      allow for disclosure of generated SSL private keys.
+impacted_packages:
+  - purl: pkg:ebuild/app-admin/conserver
+    affected_versions:
+    fixed_versions: vers:ebuild/>=8.1.16
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/app-admin/conserver
+    affected_versions: vers:ebuild/<8.1.16
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/mail-mta/postfix
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.4.6-r2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/mail-mta/postfix
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.3.8-r1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/mail-mta/postfix
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.2.11-r1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/mail-mta/postfix
+    affected_versions: vers:ebuild/<2.4.6-r2
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/net-ftp/netkit-ftpd
+    affected_versions:
+    fixed_versions: vers:ebuild/>=0.17-r7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/net-ftp/netkit-ftpd
+    affected_versions: vers:ebuild/<0.17-r7
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/net-im/ejabberd
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.1.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/net-im/ejabberd
+    affected_versions: vers:ebuild/<1.1.3
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/net-irc/unrealircd
+    affected_versions:
+    fixed_versions: vers:ebuild/>=3.2.7-r2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/net-irc/unrealircd
+    affected_versions: vers:ebuild/<3.2.7-r2
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/net-mail/cyrus-imapd
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.3.9-r1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/net-mail/cyrus-imapd
+    affected_versions: vers:ebuild/<2.3.9-r1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/net-mail/dovecot
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.0.10
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/net-mail/dovecot
+    affected_versions: vers:ebuild/<1.0.10
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/net-misc/stunnel
+    affected_versions:
+    fixed_versions: vers:ebuild/>=4.21-r1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/net-misc/stunnel
+    affected_versions:
+    fixed_versions: vers:ebuild/<4.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/net-misc/stunnel
+    affected_versions: vers:ebuild/<4.21-r1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/net-nntp/inn
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.4.3-r1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/net-nntp/inn
+    affected_versions: vers:ebuild/<2.4.3-r1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: normal
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/200803-30
+    reference_type:
+    reference_id: GLSA-200803-30

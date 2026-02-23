@@ -1,0 +1,31 @@
+advisory_id: GLSA-200408-19
+datasource_id: gentoo_importer_v2/GLSA-200408-19
+datasource_url: https://security.gentoo.org/glsa/200408-19
+aliases:
+  - CVE-2004-0777
+summary: |
+  There is a format string vulnerability in non-standard configurations of
+      courier-imapd which may be exploited remotely. An attacker may be able to
+      execute arbitrary code as the user running courier-imapd (oftentimes root).
+impacted_packages:
+  - purl: pkg:ebuild/net-mail/courier-imap
+    affected_versions:
+    fixed_versions: vers:ebuild/>=3.0.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/net-mail/courier-imap
+    affected_versions: vers:ebuild/<=3.0.2-r1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: high
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/200408-19
+    reference_type:
+    reference_id: GLSA-200408-19

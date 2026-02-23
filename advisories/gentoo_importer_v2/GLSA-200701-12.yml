@@ -1,0 +1,30 @@
+advisory_id: GLSA-200701-12
+datasource_id: gentoo_importer_v2/GLSA-200701-12
+datasource_url: https://security.gentoo.org/glsa/200701-12
+aliases:
+  - CVE-2006-6104
+summary: |
+  Mono does not properly sanitize pathnames allowing unauthorized information
+      disclosure.
+impacted_packages:
+  - purl: pkg:ebuild/dev-lang/mono
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.2.2.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-lang/mono
+    affected_versions: vers:ebuild/<1.2.2.1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: low
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/200701-12
+    reference_type:
+    reference_id: GLSA-200701-12

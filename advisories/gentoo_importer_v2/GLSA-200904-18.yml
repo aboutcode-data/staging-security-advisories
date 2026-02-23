@@ -1,0 +1,31 @@
+advisory_id: GLSA-200904-18
+datasource_id: gentoo_importer_v2/GLSA-200904-18
+datasource_url: https://security.gentoo.org/glsa/200904-18
+aliases:
+  - CVE-2009-1185
+  - CVE-2009-1186
+summary: |
+  Two errors in udev allow for a local root compromise and a Denial of
+      Service.
+impacted_packages:
+  - purl: pkg:ebuild/sys-fs/udev
+    affected_versions:
+    fixed_versions: vers:ebuild/>=124-r2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/sys-fs/udev
+    affected_versions: vers:ebuild/<124-r2
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: high
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/200904-18
+    reference_type:
+    reference_id: GLSA-200904-18

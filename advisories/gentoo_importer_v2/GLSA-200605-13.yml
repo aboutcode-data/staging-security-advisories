@@ -1,0 +1,34 @@
+advisory_id: GLSA-200605-13
+datasource_id: gentoo_importer_v2/GLSA-200605-13
+datasource_url: https://security.gentoo.org/glsa/200605-13
+aliases:
+  - CVE-2006-1516
+  - CVE-2006-1517
+summary: A MySQL server may leak information to unauthorized users.
+impacted_packages:
+  - purl: pkg:ebuild/dev-db/mysql
+    affected_versions:
+    fixed_versions: vers:ebuild/>=4.1.19
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-db/mysql
+    affected_versions:
+    fixed_versions: vers:ebuild/>=4.0.27
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-db/mysql
+    affected_versions: vers:ebuild/<4.1.19
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: low
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/200605-13
+    reference_type:
+    reference_id: GLSA-200605-13

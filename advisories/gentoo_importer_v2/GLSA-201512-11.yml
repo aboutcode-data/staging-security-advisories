@@ -1,0 +1,30 @@
+advisory_id: GLSA-201512-11
+datasource_id: gentoo_importer_v2/GLSA-201512-11
+datasource_url: https://security.gentoo.org/glsa/201512-11
+aliases:
+  - CVE-2013-2492
+summary: |
+  A buffer overflow in Firebird might allow remote attackers to
+      execute arbitrary code.
+impacted_packages:
+  - purl: pkg:ebuild/dev-db/firebird
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.5.3.26780.0-r3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-db/firebird
+    affected_versions: vers:ebuild/<2.5.3.26780.0-r3
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: high
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/201512-11
+    reference_type:
+    reference_id:

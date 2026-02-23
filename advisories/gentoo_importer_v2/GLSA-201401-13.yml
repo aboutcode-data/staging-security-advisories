@@ -1,0 +1,46 @@
+advisory_id: GLSA-201401-13
+datasource_id: gentoo_importer_v2/GLSA-201401-13
+datasource_url: https://security.gentoo.org/glsa/201401-13
+aliases:
+  - CVE-2012-3221
+  - CVE-2013-5892
+  - CVE-2014-0404
+  - CVE-2014-0405
+  - CVE-2014-0406
+  - CVE-2014-0407
+summary: |
+  Multiple vulnerabilities have been found in VirtualBox, allowing
+      local attackers to escalate their privileges or cause a Denial of Service
+      condition.
+impacted_packages:
+  - purl: pkg:ebuild/app-emulation/virtualbox
+    affected_versions:
+    fixed_versions: vers:ebuild/>=4.2.22
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/app-emulation/virtualbox
+    affected_versions: vers:ebuild/<4.2.22
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/app-emulation/virtualbox-bin
+    affected_versions:
+    fixed_versions: vers:ebuild/>=4.2.22
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/app-emulation/virtualbox-bin
+    affected_versions: vers:ebuild/<4.2.22
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: high
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://security.gentoo.org/glsa/201401-13
+    reference_type:
+    reference_id: GLSA-201401-13
