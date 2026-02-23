@@ -1,0 +1,80 @@
+advisory_id: GHSA-x764-ff8r-9hpx
+datasource_id: github_osv_importer_v2/GHSA-x764-ff8r-9hpx
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/04/GHSA-x764-ff8r-9hpx/GHSA-x764-ff8r-9hpx.json
+aliases:
+  - CVE-2023-29523
+summary: |
+  XWiki Platform vulnerable to code injection in display method used in user profiles
+  ### Impact
+
+  Any user who can edit their own user profile can execute arbitrary script macros including Groovy and Python macros that allow remote code execution including unrestricted read and write access to all wiki contents. The following syntax, to be put, e.g., in the about section of the user profile, demonstrates a proof of concept:
+
+  ```
+  {{html wiki="true"}}~{~{~/~h~t~m~l~}~}~ ~{~{~c~a~c~h~e~}~}~{~{~g~r~o~o~v~y~}~}~p~r~i~n~t~l~n~(~1~)~{~{~/~g~r~o~o~v~y~}~}~{~{~/~c~a~c~h~e~}~}~{{/html}}
+  ```
+
+  While it would be expected that the above code is displayed just without the `~`, in fact just "1" is displayed, followed by a lot of raw HTML code. The same vulnerability can also be exploited in other contexts where the `display` method on a document is used to display a field with wiki syntax, for example in applications created using [App Within Minutes](https://extensions.xwiki.org/xwiki/bin/view/Extension/App%20Within%20Minutes%20Application).
+
+  ### Patches
+  This has been patched in XWiki 13.10.11, 14.4.8, 14.10.2 and 15.0RC1.
+
+  ### Workarounds
+  There is no workaround apart from upgrading.
+
+  ### References
+  * https://jira.xwiki.org/browse/XWIKI-20327
+  * https://github.com/xwiki/xwiki-platform/commit/0d547181389f7941e53291af940966413823f61c
+
+  ### For more information
+
+  If you have any questions or comments about this advisory:
+  * Open an issue in [Jira XWiki.org](https://jira.xwiki.org/)
+  * Email us at [Security Mailing List](mailto:security@xwiki.org)
+impacted_packages:
+  - purl: pkg:maven/org.xwiki.platform/xwiki-platform-oldcore
+    affected_versions: vers:maven/>=3.3-milestone-1|<13.10.11
+    fixed_versions: vers:maven/13.10.11
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.xwiki.platform/xwiki-platform-oldcore
+    affected_versions: vers:maven/>=14.0-rc-1|<14.4.8
+    fixed_versions: vers:maven/14.4.8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.xwiki.platform/xwiki-platform-oldcore
+    affected_versions: vers:maven/>=14.5|<14.10.2
+    fixed_versions: vers:maven/14.10.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '9.9'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/04/GHSA-x764-ff8r-9hpx/GHSA-x764-ff8r-9hpx.json
+  - score: CRITICAL
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-74
+references:
+  - url: https://extensions.xwiki.org/xwiki/bin/view/Extension/App%20Within%20Minutes%20Application
+    reference_type:
+    reference_id:
+  - url: https://github.com/xwiki/xwiki-platform
+    reference_type:
+    reference_id:
+  - url: https://github.com/xwiki/xwiki-platform/commit/0d547181389f7941e53291af940966413823f61c
+    reference_type:
+    reference_id:
+  - url: https://github.com/xwiki/xwiki-platform/security/advisories/GHSA-x764-ff8r-9hpx
+    reference_type:
+    reference_id:
+  - url: https://jira.xwiki.org/browse/XWIKI-20327
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2023-29523
+    reference_type:
+    reference_id: CVE-2023-29523
