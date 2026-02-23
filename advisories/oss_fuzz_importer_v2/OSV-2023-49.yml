@@ -1,0 +1,31 @@
+advisory_id: OSV-2023-49
+datasource_id: oss_fuzz_importer_v2/OSV-2023-49
+datasource_url: https://github.com/google/oss-fuzz-vulns/blob/main/vulns/https:/github.com/php/php-src.git/OSV-2023-49.yaml
+aliases: []
+summary: |
+  Heap-buffer-overflow in lex_scan
+  OSS-Fuzz report: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=55654
+
+  ```
+  Crash type: Heap-buffer-overflow READ 1
+  Crash state:
+  lex_scan
+  zendlex
+  zendparse
+  ```
+impacted_packages:
+  - purl: pkg:generic/php
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/php/php-src
+        commit: 8ad81c0e8c21d904f4d45c165d83925f907489f3
+    introduced_in_commits:
+      - vcs_url: https://github.com/php/php-src
+        commit: f291d37a1a7d78e841f40a4410359548bc73de1b
+severities: []
+weaknesses: []
+references:
+  - url: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=55654
+    reference_type:
+    reference_id:

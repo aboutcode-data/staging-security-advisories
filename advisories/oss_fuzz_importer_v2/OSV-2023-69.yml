@@ -1,6 +1,6 @@
 advisory_id: OSV-2023-69
 datasource_id: oss_fuzz_importer_v2/OSV-2023-69
-datasource_url: https://github.com/google/oss-fuzz-vulns/blob/main/vulns/php/OSV-2023-69.yaml
+datasource_url: https://github.com/google/oss-fuzz-vulns/blob/main/vulns/https:/github.com/php/php-src.git/OSV-2023-69.yaml
 aliases: []
 summary: |
   Heap-use-after-free in zend_ast_evaluate_inner
@@ -13,7 +13,16 @@ summary: |
   zend_ast_evaluate_ex
   zval_update_constant_with_ctx
   ```
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:generic/php
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/php/php-src
+        commit: '1978a7b393ebbf5018e07b42ba65325282eee336'
+    introduced_in_commits:
+      - vcs_url: https://github.com/php/php-src
+        commit: 35a36b13e539c252d309f1799b5f653cf76921bd
 severities: []
 weaknesses: []
 references:

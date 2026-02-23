@@ -1,6 +1,6 @@
 advisory_id: OSV-2023-152
 datasource_id: oss_fuzz_importer_v2/OSV-2023-152
-datasource_url: https://github.com/google/oss-fuzz-vulns/blob/main/vulns/wireshark/OSV-2023-152.yaml
+datasource_url: https://github.com/google/oss-fuzz-vulns/blob/main/vulns/https:/gitlab.com/wireshark/wireshark.git/OSV-2023-152.yaml
 aliases: []
 summary: |
   UNKNOWN READ in dissect_oran_c_section
@@ -13,7 +13,16 @@ summary: |
   dissect_oran
   call_dissector_work
   ```
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:generic/wireshark
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://gitlab.com/wireshark/wireshark.git
+        commit: 53914b044780c3ebac42f465d7f54df27933d22e
+    introduced_in_commits:
+      - vcs_url: https://gitlab.com/wireshark/wireshark.git
+        commit: 13774219250f5e19def001f296dc27a2ec2b37c9
 severities: []
 weaknesses: []
 references:
