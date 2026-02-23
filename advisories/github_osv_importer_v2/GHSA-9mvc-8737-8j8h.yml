@@ -1,0 +1,53 @@
+advisory_id: GHSA-9mvc-8737-8j8h
+datasource_id: github_osv_importer_v2/GHSA-9mvc-8737-8j8h
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-9mvc-8737-8j8h/GHSA-9mvc-8737-8j8h.json
+aliases:
+  - CVE-2026-27026
+summary: |
+  pypdf possibly has long runtimes for malformed FlateDecode streams
+  ### Impact
+
+  An attacker who uses this vulnerability can craft a PDF which leads to long runtimes. This requires a malformed `/FlateDecode` stream, where the byte-by-byte decompression is used.
+
+  ### Patches
+
+  This has been fixed in [pypdf==6.7.1](https://github.com/py-pdf/pypdf/releases/tag/6.7.1).
+
+  ### Workarounds
+
+  If you cannot upgrade yet, consider applying the changes from PR [#3644](https://github.com/py-pdf/pypdf/pull/3644).
+impacted_packages:
+  - purl: pkg:pypi/pypdf
+    affected_versions: vers:pypi/<6.7.1
+    fixed_versions: vers:pypi/6.7.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-9mvc-8737-8j8h/GHSA-9mvc-8737-8j8h.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-770
+references:
+  - url: https://github.com/py-pdf/pypdf
+    reference_type:
+    reference_id:
+  - url: https://github.com/py-pdf/pypdf/commit/7905842d833f899f1d3228af7e7467ad80277016
+    reference_type:
+    reference_id:
+  - url: https://github.com/py-pdf/pypdf/pull/3644
+    reference_type:
+    reference_id:
+  - url: https://github.com/py-pdf/pypdf/releases/tag/6.7.1
+    reference_type:
+    reference_id:
+  - url: https://github.com/py-pdf/pypdf/security/advisories/GHSA-9mvc-8737-8j8h
+    reference_type:
+    reference_id:

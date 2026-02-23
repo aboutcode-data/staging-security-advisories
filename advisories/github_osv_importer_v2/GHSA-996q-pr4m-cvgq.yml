@@ -1,0 +1,53 @@
+advisory_id: GHSA-996q-pr4m-cvgq
+datasource_id: github_osv_importer_v2/GHSA-996q-pr4m-cvgq
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-996q-pr4m-cvgq/GHSA-996q-pr4m-cvgq.json
+aliases:
+  - CVE-2026-27024
+summary: |
+  pypdf has a possible infinite loop when processing TreeObject
+  ### Impact
+
+  An attacker who uses this vulnerability can craft a PDF which leads to an infinite loop. This requires accessing the children of a `TreeObject`, for example as part of outlines.
+
+  ### Patches
+
+  This has been fixed in [pypdf==6.7.1](https://github.com/py-pdf/pypdf/releases/tag/6.7.1).
+
+  ### Workarounds
+
+  If you cannot upgrade yet, consider applying the changes from PR [#3645](https://github.com/py-pdf/pypdf/pull/3645).
+impacted_packages:
+  - purl: pkg:pypi/pypdf
+    affected_versions: vers:pypi/<6.7.1
+    fixed_versions: vers:pypi/6.7.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-996q-pr4m-cvgq/GHSA-996q-pr4m-cvgq.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-835
+references:
+  - url: https://github.com/py-pdf/pypdf
+    reference_type:
+    reference_id:
+  - url: https://github.com/py-pdf/pypdf/commit/bd2f6d052fe5941e85e37082c2a43453d48d1295
+    reference_type:
+    reference_id:
+  - url: https://github.com/py-pdf/pypdf/pull/3645
+    reference_type:
+    reference_id:
+  - url: https://github.com/py-pdf/pypdf/releases/tag/6.7.1
+    reference_type:
+    reference_id:
+  - url: https://github.com/py-pdf/pypdf/security/advisories/GHSA-996q-pr4m-cvgq
+    reference_type:
+    reference_id:

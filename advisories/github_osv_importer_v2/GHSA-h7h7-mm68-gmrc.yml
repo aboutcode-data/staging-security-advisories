@@ -1,0 +1,34 @@
+advisory_id: GHSA-h7h7-mm68-gmrc
+datasource_id: github_osv_importer_v2/GHSA-h7h7-mm68-gmrc
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-h7h7-mm68-gmrc/GHSA-h7h7-mm68-gmrc.json
+aliases:
+  - CVE-2026-27119
+summary: |
+  Svelte affected by XSS in SSR `<option>` element
+  In certain circumstances, the server-side rendering output of an `<option>` element does not properly escape its content, potentially allowing HTML injection in the SSR output. Client-side rendering is not affected.
+impacted_packages:
+  - purl: pkg:npm/svelte
+    affected_versions: vers:npm/>=5.39.3|<5.51.5
+    fixed_versions: vers:npm/5.51.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.1'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:H/AT:P/PR:H/UI:N/VC:L/VI:N/VA:N/SC:H/SI:H/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-h7h7-mm68-gmrc/GHSA-h7h7-mm68-gmrc.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-79
+references:
+  - url: https://github.com/sveltejs/svelte
+    reference_type:
+    reference_id:
+  - url: https://github.com/sveltejs/svelte/security/advisories/GHSA-h7h7-mm68-gmrc
+    reference_type:
+    reference_id:

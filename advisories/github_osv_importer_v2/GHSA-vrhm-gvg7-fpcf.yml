@@ -1,0 +1,41 @@
+advisory_id: GHSA-vrhm-gvg7-fpcf
+datasource_id: github_osv_importer_v2/GHSA-vrhm-gvg7-fpcf
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-vrhm-gvg7-fpcf/GHSA-vrhm-gvg7-fpcf.json
+aliases: []
+summary: |
+  Memory exhaustion in SvelteKit remote form deserialization (experimental only)
+  Versions of `@sveltejs/kit` prior to 2.52.2 with remote functions enabled can be vulnerable to memory exhaustion. Malformed form data can cause the server process to crash due to excessive memory allocation, resulting in denial of service.
+
+  Only applications using both `experimental.remoteFunctions` and `form` are vulnerable.
+impacted_packages:
+  - purl: pkg:npm/%40sveltejs/kit
+    affected_versions: vers:npm/<=2.52.1
+    fixed_versions: vers:npm/2.52.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '4.6'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-vrhm-gvg7-fpcf/GHSA-vrhm-gvg7-fpcf.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-770
+references:
+  - url: https://github.com/sveltejs/kit
+    reference_type:
+    reference_id:
+  - url: https://github.com/sveltejs/kit/commit/f47c01bd8100328c24fdb8522fe35913b0735f35
+    reference_type:
+    reference_id:
+  - url: https://github.com/sveltejs/kit/releases/tag/@sveltejs/kit@2.52.2
+    reference_type:
+    reference_id:
+  - url: https://github.com/sveltejs/kit/security/advisories/GHSA-vrhm-gvg7-fpcf
+    reference_type:
+    reference_id:

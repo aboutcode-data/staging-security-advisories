@@ -1,0 +1,52 @@
+advisory_id: GHSA-4685-c5cp-vp95
+datasource_id: github_osv_importer_v2/GHSA-4685-c5cp-vp95
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-4685-c5cp-vp95/GHSA-4685-c5cp-vp95.json
+aliases: []
+summary: |
+  OpenClaw safeBins stdin-only bypass via sort output and recursive grep flags
+  ## Summary
+  `tools.exec.safeBins` could be bypassed for filesystem access when `sort` output flags (`-o` / `--output`) or recursive `grep` flags were allowed through safe-bin execution paths.
+
+  ## Affected Packages / Versions
+  - Package: `openclaw` (npm)
+  - Affected versions: `<= 2026.2.17`
+  - Patched versions: `>= 2026.2.19`
+  - Latest published version at triage time: `2026.2.17`
+
+  ## Impact
+  In deployments that enabled `tools.exec.safeBins`, an attacker with access to command execution flows could turn intended stdin-only safe-bin usage into file writes (`sort -o`) or recursive file reads (`grep -R`).
+
+  ## Fix Commit(s)
+  - `cfe8457a0f4aae5324daec261d3b0aad1461a4bc`
+
+  Thanks @nedlir for reporting.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<=2026.2.17
+    fixed_versions: vers:npm/2026.2.19
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '3.6'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-4685-c5cp-vp95/GHSA-4685-c5cp-vp95.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-184
+  - CWE-78
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/cfe8457a0f4aae5324daec261d3b0aad1461a4bc
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-4685-c5cp-vp95
+    reference_type:
+    reference_id:

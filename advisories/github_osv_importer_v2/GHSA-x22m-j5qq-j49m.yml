@@ -1,0 +1,61 @@
+advisory_id: GHSA-x22m-j5qq-j49m
+datasource_id: github_osv_importer_v2/GHSA-x22m-j5qq-j49m
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-x22m-j5qq-j49m/GHSA-x22m-j5qq-j49m.json
+aliases: []
+summary: |
+  OpenClaw has two SSRF via sendMediaFeishu and markdown image fetching in Feishu extension
+  ### Summary
+  The Feishu extension could fetch attacker-controlled remote URLs in two paths without SSRF protections:
+
+  - `sendMediaFeishu(mediaUrl)`
+  - Feishu DocX markdown image URLs (write/append -> image processing)
+
+  ### Affected versions
+  - `< 2026.2.14`
+
+  ### Patched versions
+  - `>= 2026.2.14`
+
+  ### Impact
+  If an attacker can influence tool calls (directly or via prompt injection), they may be able to trigger requests to internal services and re-upload the response as Feishu media.
+
+  ### Remediation
+  Upgrade to OpenClaw `2026.2.14` or newer.
+
+  ### Notes
+  The fix routes Feishu remote media fetching through hardened runtime helpers that enforce SSRF policies and size limits.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.2.14
+    fixed_versions: vers:npm/2026.2.14
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.6'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-x22m-j5qq-j49m/GHSA-x22m-j5qq-j49m.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-918
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/5b4121d6011a48c71e747e3c18197f180b872c5d
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/pull/16285
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/releases/tag/v2026.2.14
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-x22m-j5qq-j49m
+    reference_type:
+    reference_id:
