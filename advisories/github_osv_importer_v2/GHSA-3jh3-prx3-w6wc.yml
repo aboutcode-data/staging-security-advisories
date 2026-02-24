@@ -1,0 +1,66 @@
+advisory_id: GHSA-3jh3-prx3-w6wc
+datasource_id: github_osv_importer_v2/GHSA-3jh3-prx3-w6wc
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-3jh3-prx3-w6wc/GHSA-3jh3-prx3-w6wc.json
+aliases:
+  - CVE-2026-27126
+summary: |
+  Craft CMS has Stored XSS in Table Field via "HTML" Column Type
+  A stored Cross-site Scripting (XSS) vulnerability exists in the `editableTable.twig` component when using the `html` column type. The application fails to sanitize the input, allowing an attacker to execute arbitrary JavaScript when another user views a page with the malicious table field.
+
+  ## Prerequisites
+  * An administrator account
+  * `allowAdminChanges` must be enabled in production, which is [against our security recommendations](https://craftcms.com/knowledge-base/securing-craft#set-allowAdminChanges-to-false-in-production).
+
+  ## Steps to Reproduce
+  1. Navigate to **Settings** → **Fields** and create a new field with Type: **Table**
+  1. Add a **Column Heading** and set **Column Type** to `Single-line text`
+      - **Note:** The vulnerable **Column Type** is `html`, but it's not available in the UI dropdown.
+  1. In **Default Values** section, add a row with the following payload:
+      ```html
+      <img src=x onerror="alert('XSS')">
+      ```
+  1. Enable `Static Rows`
+  1. Intercept the **Save Field** request using a proxy tool (e.g., Burp Suite) or use `cURL` directly
+  1. Modify the request body and change the `types[craft-fields-Table][columns][col3][type]` parameter from `singleline` to `html`
+  1. Forward the request to save the field
+  1. Use the field in any object (e.g. user profile fields) → then visit the any user's profile
+  1. Notice the XSS execution
+  1. The XSS will also trigger when an administrator attempts to edit this field, as the malicious payload is executed within the field configuration page, too.
+
+  ## Resources
+
+  https://github.com/craftcms/cms/commit/f5d488d9bb6eff7670ed2c2fe30e15692e92c52b
+impacted_packages:
+  - purl: pkg:composer/craftcms/cms
+    affected_versions: vers:composer/<=4.16.18
+    fixed_versions: vers:composer/4.16.19
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/craftcms/cms
+    affected_versions: vers:composer/<=5.8.22
+    fixed_versions: vers:composer/5.8.23
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:P/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-3jh3-prx3-w6wc/GHSA-3jh3-prx3-w6wc.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-79
+references:
+  - url: https://github.com/craftcms/cms
+    reference_type:
+    reference_id:
+  - url: https://github.com/craftcms/cms/commit/f5d488d9bb6eff7670ed2c2fe30e15692e92c52b
+    reference_type:
+    reference_id:
+  - url: https://github.com/craftcms/cms/security/advisories/GHSA-3jh3-prx3-w6wc
+    reference_type:
+    reference_id:

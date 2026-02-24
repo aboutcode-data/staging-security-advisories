@@ -3,7 +3,7 @@ datasource_id: github_osv_importer_v2/GHSA-83pf-v6qq-pwmr
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-83pf-v6qq-pwmr/GHSA-83pf-v6qq-pwmr.json
 aliases: []
 summary: "Fickling has a detection bypass via stdlib network-protocol constructors\n# Our assessment\n\
-  \n`imtplib`, `imaplib`, `ftplib`, `poplib`, `telnetlib`, and `nntplib` are added to the list\
+  \n`imtplib`, `imaplib`, `ftplib`, `poplib`, `telnetlib`, and `nntplib` were added to the list\
   \ of unsafe imports (https://github.com/trailofbits/fickling/commit/6d20564d23acf14b42ec883908aed159be7b9ade).\
   \ The `UnusedVariables` heuristic works as expected.\n\n# Original report \n\n## Summary\n\
   \nFickling's `check_safety()` API and `--check-safety` CLI flag incorrectly rate as\n`LIKELY_SAFE`\
@@ -114,7 +114,7 @@ summary: "Fickling has a detection bypass via stdlib network-protocol constructo
 impacted_packages:
   - purl: pkg:pypi/fickling
     affected_versions: vers:pypi/<=0.1.7
-    fixed_versions:
+    fixed_versions: vers:pypi/0.1.8
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
