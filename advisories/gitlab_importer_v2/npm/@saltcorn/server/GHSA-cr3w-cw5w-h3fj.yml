@@ -1,0 +1,48 @@
+advisory_id: npm/@saltcorn/server/GHSA-cr3w-cw5w-h3fj
+datasource_id: gitlab_importer_v2/npm/@saltcorn/server/GHSA-cr3w-cw5w-h3fj
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/@saltcorn/server/GHSA-cr3w-cw5w-h3fj.yml
+aliases:
+  - GHSA-cr3w-cw5w-h3fj
+summary: |
+  Saltcorn's Reflected XSS and Command Injection vulnerabilities can be chained for 1-click-RCE
+  1. There is a reflected XSS vulnerability in the GET /admin/edit-codepage/:name route through the name parameter. This can be used to hijack the session of an admin if they click a specially crafted link.
+  2. Additionally, there is a Command Injection vulnerability in GET /admin/backup. The admin can inject a shell command in the backup password which is inserted in the command used to create the backup zip.
+
+
+  Both vulnerabilities can be chained to craft a malicious link which will execute an arbitrary shell command on the server if it is clicked by a saltcorn admin with an active session. I believe iframes could also be used to exploit this silently when the admin visits an attacker-controlled web page (though I have not tested that).
+impacted_packages:
+  - purl: pkg:npm/%40saltcorn/server
+    affected_versions: vers:npm/>=1.1.1|<1.5.0-beta.19
+    fixed_versions: vers:npm/1.5.0-beta.19
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/@saltcorn/server/GHSA-cr3w-cw5w-h3fj.yml
+weaknesses:
+  - CWE-77
+  - CWE-1035
+  - CWE-937
+  - CWE-79
+references:
+  - url: https://github.com/saltcorn/saltcorn
+    reference_type:
+    reference_id:
+  - url: https://github.com/saltcorn/saltcorn/blob/020893c0001678fd5ebd2c088ba68b395de1aabc/packages/saltcorn-admin-models/models/backup.ts#L381-L382
+    reference_type:
+    reference_id:
+  - url: https://github.com/saltcorn/saltcorn/blob/020893c0001678fd5ebd2c088ba68b395de1aabc/packages/server/routes/admin.js#L4886-L4887
+    reference_type:
+    reference_id:
+  - url: https://github.com/saltcorn/saltcorn/commit/1bf681e08c45719a52afcf3506fb5ec59f4974d5
+    reference_type:
+    reference_id:
+  - url: https://github.com/saltcorn/saltcorn/security/advisories/GHSA-cr3w-cw5w-h3fj
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-cr3w-cw5w-h3fj
+    reference_type:
+    reference_id: GHSA-cr3w-cw5w-h3fj
