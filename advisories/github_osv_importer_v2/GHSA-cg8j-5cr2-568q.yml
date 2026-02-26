@@ -1,0 +1,56 @@
+advisory_id: GHSA-cg8j-5cr2-568q
+datasource_id: github_osv_importer_v2/GHSA-cg8j-5cr2-568q
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-cg8j-5cr2-568q/GHSA-cg8j-5cr2-568q.json
+aliases:
+  - CVE-2026-26047
+summary: |
+  Moodle TeX formula editor is vulnerable to DoS through lack of execution time limits
+  A Denial of Service vulnerability was identified in Moodle’s TeX formula editor. When rendering TeX content using mimetex, insufficient execution time limits could allow specially crafted formulas to consume excessive server resources. An authenticated user could abuse this behavior to degrade performance or cause service interruption.
+impacted_packages:
+  - purl: pkg:composer/moodle/moodle
+    affected_versions: vers:composer/>=5.1.0-beta|<5.1.2
+    fixed_versions: vers:composer/5.1.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/moodle/moodle
+    affected_versions: vers:composer/>=5.0.0-beta|<5.0.5
+    fixed_versions: vers:composer/5.0.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/moodle/moodle
+    affected_versions: vers:composer/<4.5.9
+    fixed_versions: vers:composer/4.5.9
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-cg8j-5cr2-568q/GHSA-cg8j-5cr2-568q.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-400
+references:
+  - url: https://access.redhat.com/security/cve/CVE-2026-26047
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2440905
+    reference_type:
+    reference_id:
+  - url: https://github.com/moodle/moodle
+    reference_type:
+    reference_id:
+  - url: https://github.com/moodle/moodle/commit/8683b4a04939332e353cad1be51222930dc40b2c
+    reference_type:
+    reference_id:
+  - url: https://moodle.org/mod/forum/discuss.php?d=473316
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-26047
+    reference_type:
+    reference_id: CVE-2026-26047

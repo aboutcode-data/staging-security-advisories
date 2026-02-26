@@ -1,0 +1,24 @@
+advisory_id: MNDT-2026-0006
+datasource_id: fireeye_importer_v2/MNDT-2026-0006
+datasource_url: https://github.com/mandiant/Vulnerability-Disclosures/blob/master/2026/MNDT-2026-0006.md
+aliases:
+  - CVE-2026-22769
+summary: The vulnerability consists of a publicly exposed Tomcat Manager on the Dell RecoveryPoint
+  for Virtual Machines, versions prior to 6.0.3.1 HF1, that is protected by non-unique hardcoded
+  admin credentials. Using these hardcoded credentials enables the upload of a malicious WAR
+  file containing a webshell to Tomcat. Commands executed via the webshell are executed on the
+  system as `root`.
+impacted_packages: []
+severities: []
+weaknesses:
+  - CWE-798
+references:
+  - url: https://cloud.google.com/blog/topics/threat-intelligence/unc6201-exploiting-dell-recoverpoint-zero-day
+    reference_type:
+    reference_id:
+  - url: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-22769
+    reference_type:
+    reference_id:
+  - url: https://www.dell.com/support/kbdoc/en-us/000426773
+    reference_type:
+    reference_id:

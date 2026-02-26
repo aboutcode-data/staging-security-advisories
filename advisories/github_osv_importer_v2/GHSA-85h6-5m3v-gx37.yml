@@ -8,8 +8,13 @@ summary: |
   Jenkins 2.483 through 2.550 (both inclusive), LTS 2.492.1 through 2.541.1 (both inclusive) does not escape the user-provided description of the "Mark temporarily offline" offline cause, resulting in a stored cross-site scripting (XSS) vulnerability exploitable by attackers with Agent/Configure or Agent/Disconnect permission.
 impacted_packages:
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
-    affected_versions: vers:maven/>=2.483|<2.551
+    affected_versions: vers:maven/>=2.542|<2.551
     fixed_versions: vers:maven/2.551
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
+    affected_versions: vers:maven/>=2.483|<2.541.2
+    fixed_versions: vers:maven/2.541.2
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -30,6 +35,9 @@ references:
     reference_type:
     reference_id:
   - url: https://github.com/jenkinsci/jenkins/commit/578c028e2cdfdc9e124d0ca389a80bb2bd231ab2
+    reference_type:
+    reference_id:
+  - url: https://github.com/jenkinsci/jenkins/releases/tag/jenkins-2.541.2
     reference_type:
     reference_id:
   - url: https://github.com/jenkinsci/jenkins/releases/tag/jenkins-2.551

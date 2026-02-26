@@ -8,7 +8,17 @@ summary: |
   A flaw was found in Undertow. Servlets using a method that calls HttpServletRequestImpl.getParameterNames() can cause an OutOfMemoryError when the client sends a request with large parameter names. This issue can be exploited by an unauthorized user to cause a remote denial-of-service (DoS) attack.
 impacted_packages:
   - purl: pkg:maven/io.undertow/undertow-core
-    affected_versions: vers:maven/<2.3.21.Final
+    affected_versions: vers:maven/<2.2.39.Final
+    fixed_versions: vers:maven/2.2.39.Final
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/io.undertow/undertow-core
+    affected_versions: vers:maven/2.4.0.Alpha1
+    fixed_versions: vers:maven/2.4.0.Beta1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/io.undertow/undertow-core
+    affected_versions: vers:maven/>=2.3.0.Alpha1|<2.3.21.Final
     fixed_versions: vers:maven/2.3.21.Final
     fixed_in_commits: []
     introduced_in_commits: []
@@ -38,7 +48,31 @@ references:
   - url: https://github.com/undertow-io/undertow/commit/6b7c18481ce65ae4012d92fe2b7f17a21ef4d70b
     reference_type:
     reference_id:
+  - url: https://github.com/undertow-io/undertow/commit/8318dd36fdc2c9842baf10c5f1bfbb3bc23f75e7
+    reference_type:
+    reference_id:
+  - url: https://github.com/undertow-io/undertow/commit/cb854c779b9e2368c3c274ebd7217c8e75d505be
+    reference_type:
+    reference_id:
+  - url: https://github.com/undertow-io/undertow/commit/fb14baa51b611a4a9f755f1d8b07d6e12eac68e3
+    reference_type:
+    reference_id:
+  - url: https://github.com/undertow-io/undertow/pull/1860
+    reference_type:
+    reference_id:
+  - url: https://github.com/undertow-io/undertow/pull/1882
+    reference_type:
+    reference_id:
+  - url: https://github.com/undertow-io/undertow/pull/1894
+    reference_type:
+    reference_id:
+  - url: https://github.com/undertow-io/undertow/releases/tag/2.2.39.Final
+    reference_type:
+    reference_id:
   - url: https://github.com/undertow-io/undertow/releases/tag/2.3.21.Final
+    reference_type:
+    reference_id:
+  - url: https://github.com/undertow-io/undertow/releases/tag/2.4.0.Beta1
     reference_type:
     reference_id:
   - url: https://issues.redhat.com/browse/UNDERTOW-2377

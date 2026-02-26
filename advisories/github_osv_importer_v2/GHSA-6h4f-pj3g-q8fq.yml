@@ -8,13 +8,18 @@ summary: |
   A flaw was found in Undertow that can cause remote denial of service attacks. When the server uses the FormEncodedDataDefinition.doParse(StreamSourceChannel) method to parse large form data encoding with application/x-www-form-urlencoded, the method will cause an OutOfMemory issue. This flaw allows unauthorized users to cause a remote denial of service (DoS) attack.
 impacted_packages:
   - purl: pkg:maven/io.undertow/undertow-core
-    affected_versions: vers:maven/<2.3.21.Final
-    fixed_versions: vers:maven/2.3.21.Final
+    affected_versions: vers:maven/<2.2.39.Final
+    fixed_versions: vers:maven/2.2.39.Final
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/io.undertow/undertow-core
     affected_versions: vers:maven/2.4.0.Alpha1
-    fixed_versions:
+    fixed_versions: vers:maven/2.4.0.Beta1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/io.undertow/undertow-core
+    affected_versions: vers:maven/>=2.3.0.Alpha1|<2.3.21.Final
+    fixed_versions: vers:maven/2.3.21.Final
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -37,13 +42,28 @@ references:
   - url: https://github.com/undertow-io/undertow
     reference_type:
     reference_id:
+  - url: https://github.com/undertow-io/undertow/commit/cb854c779b9e2368c3c274ebd7217c8e75d505be
+    reference_type:
+    reference_id:
   - url: https://github.com/undertow-io/undertow/pull/1856
     reference_type:
     reference_id:
   - url: https://github.com/undertow-io/undertow/pull/1860
     reference_type:
     reference_id:
+  - url: https://github.com/undertow-io/undertow/pull/1882
+    reference_type:
+    reference_id:
+  - url: https://github.com/undertow-io/undertow/pull/1894
+    reference_type:
+    reference_id:
+  - url: https://github.com/undertow-io/undertow/releases/tag/2.2.39.Final
+    reference_type:
+    reference_id:
   - url: https://github.com/undertow-io/undertow/releases/tag/2.3.21.Final
+    reference_type:
+    reference_id:
+  - url: https://github.com/undertow-io/undertow/releases/tag/2.4.0.Beta1
     reference_type:
     reference_id:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2275287

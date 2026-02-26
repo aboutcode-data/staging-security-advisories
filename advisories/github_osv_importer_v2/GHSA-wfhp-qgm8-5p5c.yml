@@ -8,8 +8,13 @@ summary: |
   Jenkins 2.550 and earlier, LTS 2.541.1 and earlier accepts Run Parameter values that refer to builds the user submitting the build does not have access to, allowing attackers with Item/Build and Item/Configure permission to obtain information about the existence of jobs, the existence of builds, and if a specified build exists, its display name.
 impacted_packages:
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
-    affected_versions: vers:maven/<2.551
+    affected_versions: vers:maven/>=2.542|<2.551
     fixed_versions: vers:maven/2.551
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
+    affected_versions: vers:maven/<2.541.2
+    fixed_versions: vers:maven/2.541.2
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -30,6 +35,9 @@ references:
     reference_type:
     reference_id:
   - url: https://github.com/jenkinsci/jenkins/commit/f92eadb5813f04ca27439455e2573c3171e93a45
+    reference_type:
+    reference_id:
+  - url: https://github.com/jenkinsci/jenkins/releases/tag/jenkins-2.541.2
     reference_type:
     reference_id:
   - url: https://github.com/jenkinsci/jenkins/releases/tag/jenkins-2.551

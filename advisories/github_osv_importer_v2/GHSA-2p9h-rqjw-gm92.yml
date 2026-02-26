@@ -1,0 +1,76 @@
+advisory_id: GHSA-2p9h-rqjw-gm92
+datasource_id: github_osv_importer_v2/GHSA-2p9h-rqjw-gm92
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-2p9h-rqjw-gm92/GHSA-2p9h-rqjw-gm92.json
+aliases:
+  - CVE-2026-27578
+summary: |
+  n8n Vulnerable to Stored XSS via Various Nodes
+  ## Impact
+  An authenticated user with permission to create or modify workflows could inject arbitrary scripts into pages rendered by the n8n application using different techniques on various nodes (Form Trigger node, Chat Trigger node, Send & Wait node, Webhook Node, and Chat Node). Scripts injected by a malicious workflow execute in the browser of any user who visits the affected page, enabling session hijacking and account takeover.
+
+  ## Patches
+  The issues have been fixed in n8n versions 2.10.1, 2.9.3, and 1.123.22. Users should upgrade to one of these versions or later to remediate the vulnerability.
+
+  ## Workarounds
+  If upgrading is not immediately possible, administrators should consider the following temporary mitigations:
+  - Limit workflow creation and editing permissions to fully trusted users only.
+  - Disable the Webhook node by adding `n8n-nodes-base.webhook` to the `NODES_EXCLUDE` environment variable.
+
+  These workarounds do not fully remediate the risk and should only be used as short-term mitigation measures.
+
+  ## Credit
+  Reporters:
+  - @ori-ron
+  - @Aikido-Security
+  - @nil340
+  - Pawel Bednarz from the NATO Cyber Security Centre (NCSC)
+impacted_packages:
+  - purl: pkg:npm/n8n
+    affected_versions: vers:npm/<1.123.22
+    fixed_versions: vers:npm/1.123.22
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/n8n
+    affected_versions: vers:npm/>=2.0.0|<2.9.3
+    fixed_versions: vers:npm/2.9.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/n8n
+    affected_versions: vers:npm/>=2.10.0|<2.10.1
+    fixed_versions: vers:npm/2.10.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.4'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-2p9h-rqjw-gm92/GHSA-2p9h-rqjw-gm92.json
+  - score: '8.5'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:H/VI:H/VA:N/SC:L/SI:L/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-2p9h-rqjw-gm92/GHSA-2p9h-rqjw-gm92.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-80
+references:
+  - url: https://github.com/n8n-io/n8n
+    reference_type:
+    reference_id:
+  - url: https://github.com/n8n-io/n8n/commit/062644ef786b6af480afe4a0f12bc6d70040534a
+    reference_type:
+    reference_id:
+  - url: https://github.com/n8n-io/n8n/commit/1479aab2d32fe0ee087f82b9038b1035c98be2f6
+    reference_type:
+    reference_id:
+  - url: https://github.com/n8n-io/n8n/commit/9e5212ecbc5d2d4e6f340b636a5e84be6369882e
+    reference_type:
+    reference_id:
+  - url: https://github.com/n8n-io/n8n/security/advisories/GHSA-2p9h-rqjw-gm92
+    reference_type:
+    reference_id:

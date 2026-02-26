@@ -16,7 +16,7 @@ summary: |
 
   ### Mitigation
 
-  The vulnerability is fixed in release 3.4. However, it can be mitigated by either:
+  The vulnerability is fixed in release 3.4 and 2.0.3. However, it can be mitigated by either:
   * Avoiding reuse of the decompression buffer across calls
   * Clearing the decompression buffer before a call to decompress data
 impacted_packages:
@@ -26,8 +26,8 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/io.airlift/aircompressor
-    affected_versions: vers:maven/<=2.0.2
-    fixed_versions:
+    affected_versions: vers:maven/<2.0.3
+    fixed_versions: vers:maven/2.0.3
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -55,6 +55,9 @@ references:
     reference_type:
     reference_id:
   - url: https://github.com/airlift/aircompressor/pull/309
+    reference_type:
+    reference_id:
+  - url: https://github.com/airlift/aircompressor/releases/tag/2.0.3
     reference_type:
     reference_id:
   - url: https://github.com/airlift/aircompressor/security/advisories/GHSA-vx9q-rhv9-3jvg
