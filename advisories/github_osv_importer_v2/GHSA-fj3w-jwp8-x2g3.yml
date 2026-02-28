@@ -1,0 +1,64 @@
+advisory_id: GHSA-fj3w-jwp8-x2g3
+datasource_id: github_osv_importer_v2/GHSA-fj3w-jwp8-x2g3
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-fj3w-jwp8-x2g3/GHSA-fj3w-jwp8-x2g3.json
+aliases:
+  - CVE-2026-27942
+summary: |
+  fast-xml-parser has stack overflow in XMLBuilder with preserveOrder
+  ### Impact
+  Application crashes with stack overflow when user use XML builder with `prserveOrder:true` for following or similar input:
+
+  ```
+  [{
+      'foo': [
+          { 'bar': [{ '@_V': 'baz' }] }
+      ]
+  }]
+  ```
+
+  Cause: `arrToStr` was not validating if the input is an array or a string and treating all non-array values as text content.
+  _What kind of vulnerability is it? Who is impacted?_
+
+  ### Patches
+  Yes, in 5.3.8.
+
+  ### Workarounds
+  Use XML builder with `preserveOrder:false` or check the input data before passing to builder.
+
+  ### References
+  [_Are there any links users can visit to find out more?_](https://github.com/NaturalIntelligence/fast-xml-parser/pull/791)
+impacted_packages:
+  - purl: pkg:npm/fast-xml-parser
+    affected_versions: vers:npm/<5.3.8
+    fixed_versions: vers:npm/5.3.8
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '2.7'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:U
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-fj3w-jwp8-x2g3/GHSA-fj3w-jwp8-x2g3.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-120
+references:
+  - url: https://github.com/NaturalIntelligence/fast-xml-parser
+    reference_type:
+    reference_id:
+  - url: https://github.com/NaturalIntelligence/fast-xml-parser/commit/c13a961910f14986295dd28484eee830fa1a0e8a
+    reference_type:
+    reference_id:
+  - url: https://github.com/NaturalIntelligence/fast-xml-parser/pull/791
+    reference_type:
+    reference_id:
+  - url: https://github.com/NaturalIntelligence/fast-xml-parser/security/advisories/GHSA-fj3w-jwp8-x2g3
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-27942
+    reference_type:
+    reference_id: CVE-2026-27942

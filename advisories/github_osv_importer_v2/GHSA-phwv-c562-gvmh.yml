@@ -1,0 +1,43 @@
+advisory_id: GHSA-phwv-c562-gvmh
+datasource_id: github_osv_importer_v2/GHSA-phwv-c562-gvmh
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-phwv-c562-gvmh/GHSA-phwv-c562-gvmh.json
+aliases:
+  - CVE-2026-27901
+summary: |
+  Svelte vulnerable to XSS during SSR with contenteditable `bind:innerText` and `bind:textContent`
+  The contents of `bind:innerText` and `bind:textContent` on `contenteditable` elements were not properly escaped. This could enable HTML injection and Cross-site Scripting (XSS) if rendering untrusted data as the binding's initial value on the server.
+impacted_packages:
+  - purl: pkg:npm/svelte
+    affected_versions: vers:npm/<=5.53.4
+    fixed_versions: vers:npm/5.53.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:P/VC:L/VI:N/VA:N/SC:H/SI:H/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-phwv-c562-gvmh/GHSA-phwv-c562-gvmh.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-79
+references:
+  - url: https://github.com/sveltejs/svelte
+    reference_type:
+    reference_id:
+  - url: https://github.com/sveltejs/svelte/commit/0df5abcae223058ceb95491470372065fb87951d
+    reference_type:
+    reference_id:
+  - url: https://github.com/sveltejs/svelte/releases/tag/svelte@5.53.5
+    reference_type:
+    reference_id:
+  - url: https://github.com/sveltejs/svelte/security/advisories/GHSA-phwv-c562-gvmh
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-27901
+    reference_type:
+    reference_id: CVE-2026-27901

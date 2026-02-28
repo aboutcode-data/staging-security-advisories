@@ -1,0 +1,60 @@
+advisory_id: GHSA-mqpr-49jj-32rc
+datasource_id: github_osv_importer_v2/GHSA-mqpr-49jj-32rc
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-mqpr-49jj-32rc/GHSA-mqpr-49jj-32rc.json
+aliases: []
+summary: |
+  n8n: Webhook Forgery on Github Webhook Trigger
+  ## Impact
+  An attacker who knows the webhook URL of a workflow using the GitHub Webhook Trigger node could send unsigned POST requests and trigger the workflow with arbitrary data. The node did not implement the HMAC-SHA256 signature verification that GitHub provides to authenticate webhook deliveries, allowing any party to spoof GitHub webhook events.
+
+  ## Patches
+  The issue has been fixed in n8n versions 2.5.0 and 1.123.15. Users should upgrade to one of these versions or later to remediate the vulnerability.
+
+  ## Workarounds
+  If upgrading is not immediately possible, administrators should consider the following temporary mitigations:
+  - Limit workflow creation and editing permissions to fully trusted users only.
+  - Restrict network access to the n8n webhook endpoint to known GitHub webhook IP ranges.
+
+  These workarounds do not fully remediate the risk and should only be used as short-term mitigation measures.
+impacted_packages:
+  - purl: pkg:npm/n8n
+    affected_versions: vers:npm/<1.123.15
+    fixed_versions: vers:npm/1.123.15
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/n8n
+    affected_versions: vers:npm/>=2.0.0|<2.5.0
+    fixed_versions: vers:npm/2.5.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '4.0'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:N/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-mqpr-49jj-32rc/GHSA-mqpr-49jj-32rc.json
+  - score: '6.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:L/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-mqpr-49jj-32rc/GHSA-mqpr-49jj-32rc.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-290
+references:
+  - url: https://github.com/n8n-io/n8n
+    reference_type:
+    reference_id:
+  - url: https://github.com/n8n-io/n8n/commit/a19347a6bc9a96d5065ac77d25a811e46178c578
+    reference_type:
+    reference_id:
+  - url: https://github.com/n8n-io/n8n/commit/afe322325502f448b33bff1db1575e4447c28a36
+    reference_type:
+    reference_id:
+  - url: https://github.com/n8n-io/n8n/security/advisories/GHSA-mqpr-49jj-32rc
+    reference_type:
+    reference_id:

@@ -1,0 +1,47 @@
+advisory_id: GHSA-h294-8fxm-m2pj
+datasource_id: github_osv_importer_v2/GHSA-h294-8fxm-m2pj
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-h294-8fxm-m2pj/GHSA-h294-8fxm-m2pj.json
+aliases:
+  - CVE-2026-23983
+summary: "Apache Superset allows authenticated users to view sensitive data without explicit\
+  \ permissions\nA Sensitive Data Exposure vulnerability exists in Apache Superset allowing\
+  \ authenticated users to retrieve sensitive user information. The Tag endpoint (disabled by\
+  \ default) allows users to retrieve a list of objects associated with a specific tag.\nWhen\
+  \ these associated objects include Users, the API response improperly serializes and returns\
+  \ sensitive fields, including password hashes (pbkdf2), email addresses, and login statistics.\
+  \ This vulnerability allows authenticated users with low privileges (e.g., Gamma role) to\
+  \ view sensitive authentication data \n\nThis issue affects Apache Superset: before 6.0.0.\n\
+  \nUsers are recommended to upgrade to version 6.0.0, which fixes the issue or make sure TAGGING_SYSTEM\
+  \ is False (Apache Superset current default)"
+impacted_packages:
+  - purl: pkg:pypi/apache-superset
+    affected_versions: vers:pypi/<6.0.0
+    fixed_versions: vers:pypi/6.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '2.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-h294-8fxm-m2pj/GHSA-h294-8fxm-m2pj.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-200
+references:
+  - url: https://github.com/apache/superset
+    reference_type:
+    reference_id:
+  - url: http://www.openwall.com/lists/oss-security/2026/02/24/7
+    reference_type:
+    reference_id:
+  - url: https://lists.apache.org/thread/62mgbc5hc8026skp69kb6vqozj3pr5ww
+    reference_type: advisory
+    reference_id: 62mgbc5hc8026skp69kb6vqozj3pr5ww
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-23983
+    reference_type:
+    reference_id: CVE-2026-23983

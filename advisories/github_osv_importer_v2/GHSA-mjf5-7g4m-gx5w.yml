@@ -1,0 +1,99 @@
+advisory_id: GHSA-mjf5-7g4m-gx5w
+datasource_id: github_osv_importer_v2/GHSA-mjf5-7g4m-gx5w
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-mjf5-7g4m-gx5w/GHSA-mjf5-7g4m-gx5w.json
+aliases:
+  - CVE-2026-27148
+summary: |
+  Storybook Dev Server is Vulnerable to WebSocket Hijacking
+  ### Summary
+
+  The WebSocket functionality in Storybook's dev server, used to create and update stories, is vulnerable to WebSocket hijacking. This vulnerability **only affects the Storybook dev server; production builds are not impacted**.
+
+  ### Details
+
+  Exploitation requires a developer to visit a malicious website while their local Storybook dev server is running. Because the WebSocket connection does not validate the origin of incoming connections, a malicious site can silently send WebSocket messages to the local instance without any further user interaction.
+
+  If a Storybook dev server is intentionally exposed publicly (e.g. for design reviews or stakeholder demos) the risk is higher, as no malicious site visit is required. Any unauthenticated attacker can send WebSocket messages to it directly.
+
+  The vulnerability affects the WebSocket message handlers for creating and saving stories, which can be exploited via unauthorized WebSocket connections to achieve persistent XSS or Remote Code Execution (RCE).
+
+  _Note: recent versions of Chrome have some protections against this, but Firefox does not._
+
+  ### Impact
+  This vulnerability can lead to supply chain compromise. Key risks include:
+
+  - **Remote Code Execution**: The vulnerability can allow attackers to execute malicious code, with the extent of impact depending on the configuration. Server-side RCE is possible in non-default configurations, such as when stories are executed via portable stories in JSDOM, potentially allowing attackers to exfiltrate credentials and environment variables, access source code and the filesystem, establish backdoors, or pivot to internal network resources.
+  - **Persistent XSS**: Malicious payloads are written directly into story source files. If the malicious payload is committed to version control, it becomes part of the codebase and can propagate to deployed Storybook documentation sites, affecting developers and stakeholders who view them.
+  - **Supply Chain Propagation**: If the modified source files are committed, injected code can spread to other team members via git, execute in CI/CD pipelines, and affect shared component libraries used across multiple projects.
+
+  ### Affected versions
+
+  8.1 and above. While the exploitable functionality was introduced in 8.1, the patch has been applied to 7.x as a precautionary measure given the underlying WebSocket behaviour.
+
+  ### Recommended actions
+  Update to one of the patched versions: `7.6.23`, `8.6.17`, `9.1.19`, `10.2.10`.
+impacted_packages:
+  - purl: pkg:npm/storybook
+    affected_versions: vers:npm/>=8.1.0|<8.6.17
+    fixed_versions: vers:npm/8.6.17
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/storybook
+    affected_versions: vers:npm/>=8.7.0-alpha.0|<9.1.19
+    fixed_versions: vers:npm/9.1.19
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/storybook
+    affected_versions: vers:npm/>=10.0.0-beta.0|<10.2.10
+    fixed_versions: vers:npm/10.2.10
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-mjf5-7g4m-gx5w/GHSA-mjf5-7g4m-gx5w.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-1385
+  - CWE-79
+  - CWE-74
+references:
+  - url: https://github.com/storybookjs/storybook
+    reference_type:
+    reference_id:
+  - url: https://github.com/storybookjs/storybook/commit/0affdf928bd6fafbadfb1dfe22ce6104805e10e8
+    reference_type:
+    reference_id:
+  - url: https://github.com/storybookjs/storybook/commit/54689a8add18ea75d628c540f4bc677592a1e685
+    reference_type:
+    reference_id:
+  - url: https://github.com/storybookjs/storybook/commit/b8cfa77c73940c140acdcd8a06ab1ea913c44761
+    reference_type:
+    reference_id:
+  - url: https://github.com/storybookjs/storybook/commit/d34085f39c647f5c23c3a3b2d197c18602fcf876
+    reference_type:
+    reference_id:
+  - url: https://github.com/storybookjs/storybook/releases/tag/v10.2.10
+    reference_type:
+    reference_id:
+  - url: https://github.com/storybookjs/storybook/releases/tag/v7.6.23
+    reference_type:
+    reference_id:
+  - url: https://github.com/storybookjs/storybook/releases/tag/v8.6.17
+    reference_type:
+    reference_id:
+  - url: https://github.com/storybookjs/storybook/releases/tag/v9.1.19
+    reference_type:
+    reference_id:
+  - url: https://github.com/storybookjs/storybook/security/advisories/GHSA-mjf5-7g4m-gx5w
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-27148
+    reference_type:
+    reference_id: CVE-2026-27148

@@ -1,0 +1,43 @@
+advisory_id: GHSA-xjhr-fm27-4hmx
+datasource_id: github_osv_importer_v2/GHSA-xjhr-fm27-4hmx
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-xjhr-fm27-4hmx/GHSA-xjhr-fm27-4hmx.json
+aliases:
+  - CVE-2026-26717
+summary: |
+  OpenFUN Richie Observable Timing Discrepancy in its sync_course_run_from_request function
+  An issue in OpenFUN Richie (LMS) in src/richie/apps/courses/api.py. The application used the non-constant time == operator for HMAC signature verification in the sync_course_run_from_request function. This allows remote attackers to forge valid signatures and bypass authentication by measuring response time discrepancies.
+impacted_packages:
+  - purl: pkg:pypi/richie
+    affected_versions: vers:pypi/<3.3.0
+    fixed_versions: vers:pypi/3.3.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '4.8'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-xjhr-fm27-4hmx/GHSA-xjhr-fm27-4hmx.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-208
+references:
+  - url: https://github.com/openfun/richie
+    reference_type:
+    reference_id:
+  - url: https://github.com/openfun/richie/commit/a1b5bbda3403d7debb466c303a32852925fcba5f
+    reference_type:
+    reference_id:
+  - url: https://github.com/Rickidevs/CVE-2026-26717
+    reference_type:
+    reference_id:
+  - url: https://medium.com/@ordogh/cve-2026-26717-hmac-timing-attack-in-openfun-richie-lms-f04377efe83d?postPublishedType=repub
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-26717
+    reference_type:
+    reference_id: CVE-2026-26717

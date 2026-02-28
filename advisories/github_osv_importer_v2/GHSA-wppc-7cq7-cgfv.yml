@@ -1,0 +1,62 @@
+advisory_id: GHSA-wppc-7cq7-cgfv
+datasource_id: github_osv_importer_v2/GHSA-wppc-7cq7-cgfv
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-wppc-7cq7-cgfv/GHSA-wppc-7cq7-cgfv.json
+aliases:
+  - CVE-2026-27457
+summary: |
+  Weblate: Missing access control for the AddonViewSet API exposes all addon configurations
+  ### Impact
+
+  Users were able to obtain add-on configuration via API.
+
+  ### Patches
+
+  * https://github.com/WeblateOrg/weblate/pull/18107
+  * https://github.com/WeblateOrg/weblate/pull/18164
+
+
+  ### References
+
+  Weblate thanks @lighthousekeeper1212 for responsible disclosure.
+impacted_packages:
+  - purl: pkg:pypi/weblate
+    affected_versions: vers:pypi/<5.16.1
+    fixed_versions: vers:pypi/5.16.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '4.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-wppc-7cq7-cgfv/GHSA-wppc-7cq7-cgfv.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-200
+  - CWE-862
+references:
+  - url: https://github.com/WeblateOrg/weblate
+    reference_type:
+    reference_id:
+  - url: https://github.com/WeblateOrg/weblate/commit/3f58f9a4152bc0cbdd6eff5954f9c7bc4d9f0af9
+    reference_type:
+    reference_id:
+  - url: https://github.com/WeblateOrg/weblate/commit/7802c9b121eb407c48d4adddd4f2458fb3efef0f
+    reference_type:
+    reference_id:
+  - url: https://github.com/WeblateOrg/weblate/pull/18107
+    reference_type:
+    reference_id:
+  - url: https://github.com/WeblateOrg/weblate/pull/18164
+    reference_type:
+    reference_id:
+  - url: https://github.com/WeblateOrg/weblate/releases/tag/weblate-5.16.1
+    reference_type:
+    reference_id:
+  - url: https://github.com/WeblateOrg/weblate/security/advisories/GHSA-wppc-7cq7-cgfv
+    reference_type:
+    reference_id:

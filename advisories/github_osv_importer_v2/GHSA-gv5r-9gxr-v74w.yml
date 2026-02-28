@@ -8,8 +8,8 @@ summary: |
   An issue was discovered in post.php in bootstrap-multiselect (aka Bootstrap Multiselect) 1.1.2. A PHP script in the source code echoes arbitrary POST data. If a developer adopts this structure wholesale in a live application, it could create a Reflective Cross-Site Scripting (XSS) vulnerability exploitable through Cross-Site Request Forgery (CSRF).
 impacted_packages:
   - purl: pkg:npm/bootstrap-multiselect
-    affected_versions: vers:npm/<=1.1.2
-    fixed_versions:
+    affected_versions: vers:npm/<2.0.0
+    fixed_versions: vers:npm/2.0.0
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -28,6 +28,15 @@ weaknesses:
   - CWE-79
 references:
   - url: https://github.com/davidstutz/bootstrap-multiselect
+    reference_type:
+    reference_id:
+  - url: https://github.com/davidstutz/bootstrap-multiselect/commit/7da45ded9c82837a8eae9cb9dd3bd32a3dd1dc45
+    reference_type:
+    reference_id:
+  - url: https://github.com/davidstutz/bootstrap-multiselect/issues/1286
+    reference_type:
+    reference_id:
+  - url: https://github.com/davidstutz/bootstrap-multiselect/pull/1287
     reference_type:
     reference_id:
   - url: https://github.com/davidstutz/bootstrap-multiselect/releases

@@ -1,0 +1,44 @@
+advisory_id: GHSA-48m2-v2r8-h23m
+datasource_id: github_osv_importer_v2/GHSA-48m2-v2r8-h23m
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-48m2-v2r8-h23m/GHSA-48m2-v2r8-h23m.json
+aliases:
+  - CVE-2026-23969
+summary: |
+  Apache Superset: Incomplete DISALLOWED_SQL_FUNCTIONS default list for ClickHouse engine
+  Apache Superset utilizes a configurable dictionary, DISALLOWED_SQL_FUNCTIONS, to restrict the execution of potentially sensitive SQL functions within SQL Lab and charts. While this feature included restrictions for engines like PostgreSQL, a vulnerability was reported where the default list for the ClickHouse engine was incomplete.
+
+  This issue affects Apache Superset: before 4.1.2.
+
+  Users are recommended to upgrade to version 4.1.2, which fixes the issue.
+impacted_packages:
+  - purl: pkg:pypi/apache-superset
+    affected_versions: vers:pypi/<4.1.2
+    fixed_versions: vers:pypi/4.1.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-48m2-v2r8-h23m/GHSA-48m2-v2r8-h23m.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-89
+references:
+  - url: https://github.com/apache/superset
+    reference_type:
+    reference_id:
+  - url: http://www.openwall.com/lists/oss-security/2026/02/24/4
+    reference_type:
+    reference_id:
+  - url: https://lists.apache.org/thread/2q22sp4oj3krcgdkxchhtht0vgwp2wnd
+    reference_type: advisory
+    reference_id: 2q22sp4oj3krcgdkxchhtht0vgwp2wnd
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-23969
+    reference_type:
+    reference_id: CVE-2026-23969
