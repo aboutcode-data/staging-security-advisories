@@ -1,0 +1,53 @@
+advisory_id: GHSA-v4jw-m6rm-399h
+datasource_id: github_osv_importer_v2/GHSA-v4jw-m6rm-399h
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-v4jw-m6rm-399h/GHSA-v4jw-m6rm-399h.json
+aliases:
+  - CVE-2026-0871
+summary: |
+  Keycloak Server Private SPI: Improper Access Control Allows Administrators to Bypass Attribute Visibility Restrictions and Modify Unmanaged User Profile Attributes
+  A flaw was found in Keycloak. An administrator with `manage-users` permission can bypass the "Only administrators can view" setting for unmanaged attributes, allowing them to modify these attributes. This improper access control can lead to unauthorized changes to user profiles, even when the system is configured to restrict such modifications.
+impacted_packages:
+  - purl: pkg:maven/org.keycloak/keycloak-server-spi-private
+    affected_versions: vers:maven/<26.5.2
+    fixed_versions: vers:maven/26.5.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '4.9'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-v4jw-m6rm-399h/GHSA-v4jw-m6rm-399h.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-266
+  - CWE-284
+references:
+  - url: https://access.redhat.com/security/cve/CVE-2026-0871
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2428881
+    reference_type:
+    reference_id:
+  - url: https://github.com/keycloak/keycloak
+    reference_type:
+    reference_id:
+  - url: https://github.com/keycloak/keycloak/commit/9d0f679ecea405958f167fcd0f4a6db6ae32c3fa
+    reference_type:
+    reference_id:
+  - url: https://github.com/keycloak/keycloak/issues/45873
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-0871
+    reference_type:
+    reference_id:
+  - url: https://access.redhat.com/errata/RHSA-2026:2365
+    reference_type:
+    reference_id: RHSA-2026:2365
+  - url: https://access.redhat.com/errata/RHSA-2026:2366
+    reference_type:
+    reference_id: RHSA-2026:2366

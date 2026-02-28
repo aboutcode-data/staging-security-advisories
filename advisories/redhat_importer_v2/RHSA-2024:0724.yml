@@ -50,6 +50,7 @@ aliases:
   - CVE-2023-45862
   - CVE-2023-46813
   - CVE-2023-4921
+  - CVE-2023-54270
   - CVE-2023-5717
   - CVE-2023-6356
   - CVE-2023-6535
@@ -119,6 +120,11 @@ summary: |
 
   * kernel: double free in ems_usb_start_xmit in drivers/net/can/usb/ems_usb.c (CVE-2022-28390)
 impacted_packages:
+  - purl: pkg:rpm/redhat/kernel?arch=ppc64le
+    affected_versions: vers:rpm/<4.18.0-372.91.1.el8_6
+    fixed_versions: vers:rpm/4.18.0-372.91.1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/bpftool?arch=aarch64
     affected_versions: vers:rpm/<4.18.0-372.91.1.el8_6
     fixed_versions: vers:rpm/4.18.0-372.91.1.el8_6
@@ -235,11 +241,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/bpftool?arch=ppc64le
-    affected_versions: vers:rpm/<4.18.0-372.91.1.el8_6
-    fixed_versions: vers:rpm/4.18.0-372.91.1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel?arch=ppc64le
     affected_versions: vers:rpm/<4.18.0-372.91.1.el8_6
     fixed_versions: vers:rpm/4.18.0-372.91.1.el8_6
     fixed_in_commits: []

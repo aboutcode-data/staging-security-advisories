@@ -28,6 +28,26 @@ summary: |
 
   All OpenShift Container Platform 4.15 users are advised to upgrade to these updated packages and images when they are available in the appropriate release channel. To check for available updates, use the OpenShift CLI (oc) or web console. Instructions for upgrading a cluster are available at https://docs.openshift.com/container-platform/4.15/updating/updating_a_cluster/updating-cluster-cli.html
 impacted_packages:
+  - purl: pkg:rpm/redhat/kernel-ipaclones-internal?arch=x86_64
+    affected_versions: vers:rpm/<5.14.0-284.86.1.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.86.1.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-modules?arch=x86_64
+    affected_versions: vers:rpm/<5.14.0-284.86.1.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.86.1.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-modules-core?arch=x86_64
+    affected_versions: vers:rpm/<5.14.0-284.86.1.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.86.1.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-modules-extra?arch=x86_64
+    affected_versions: vers:rpm/<5.14.0-284.86.1.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.86.1.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/cri-o?arch=src
     affected_versions: vers:rpm/<1.28.10-5.rhaos4.15.git7a788e6.el9
     fixed_versions: vers:rpm/1.28.10-5.rhaos4.15.git7a788e6.el9
@@ -103,11 +123,6 @@ impacted_packages:
     fixed_versions: vers:rpm/5.14.0-284.86.1.el9_2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-cross-headers?arch=x86_64
-    affected_versions: vers:rpm/<5.14.0-284.86.1.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.86.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debug?arch=x86_64
     affected_versions: vers:rpm/<5.14.0-284.86.1.el9_2
     fixed_versions: vers:rpm/5.14.0-284.86.1.el9_2
@@ -164,31 +179,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-devel-matched?arch=x86_64
-    affected_versions: vers:rpm/<5.14.0-284.86.1.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.86.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-headers?arch=x86_64
-    affected_versions: vers:rpm/<5.14.0-284.86.1.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.86.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-ipaclones-internal?arch=x86_64
-    affected_versions: vers:rpm/<5.14.0-284.86.1.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.86.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-modules?arch=x86_64
-    affected_versions: vers:rpm/<5.14.0-284.86.1.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.86.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-modules-core?arch=x86_64
-    affected_versions: vers:rpm/<5.14.0-284.86.1.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.86.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-modules-extra?arch=x86_64
     affected_versions: vers:rpm/<5.14.0-284.86.1.el9_2
     fixed_versions: vers:rpm/5.14.0-284.86.1.el9_2
     fixed_in_commits: []
@@ -276,6 +266,11 @@ impacted_packages:
   - purl: pkg:rpm/redhat/python3-perf-debuginfo?arch=x86_64
     affected_versions: vers:rpm/<5.14.0-284.86.1.el9_2
     fixed_versions: vers:rpm/5.14.0-284.86.1.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-rt-debuginfo-common-x86_64?arch=x86_64
+    affected_versions: vers:rpm/<5.14.0-284.86.1.rt14.371.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.86.1.rt14.371.el9_2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-rt?arch=x86_64
@@ -389,11 +384,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-rt-debuginfo?arch=x86_64
-    affected_versions: vers:rpm/<5.14.0-284.86.1.rt14.371.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.86.1.rt14.371.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-rt-debuginfo-common-x86_64?arch=x86_64
     affected_versions: vers:rpm/<5.14.0-284.86.1.rt14.371.el9_2
     fixed_versions: vers:rpm/5.14.0-284.86.1.rt14.371.el9_2
     fixed_in_commits: []
@@ -683,11 +673,6 @@ impacted_packages:
     fixed_versions: vers:rpm/5.14.0-284.86.1.el9_2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-cross-headers?arch=aarch64
-    affected_versions: vers:rpm/<5.14.0-284.86.1.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.86.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debug?arch=aarch64
     affected_versions: vers:rpm/<5.14.0-284.86.1.el9_2
     fixed_versions: vers:rpm/5.14.0-284.86.1.el9_2
@@ -739,11 +724,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-devel-matched?arch=aarch64
-    affected_versions: vers:rpm/<5.14.0-284.86.1.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.86.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-headers?arch=aarch64
     affected_versions: vers:rpm/<5.14.0-284.86.1.el9_2
     fixed_versions: vers:rpm/5.14.0-284.86.1.el9_2
     fixed_in_commits: []
@@ -1048,11 +1028,6 @@ impacted_packages:
     fixed_versions: vers:rpm/5.14.0-284.86.1.el9_2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-cross-headers?arch=ppc64le
-    affected_versions: vers:rpm/<5.14.0-284.86.1.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.86.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debug?arch=ppc64le
     affected_versions: vers:rpm/<5.14.0-284.86.1.el9_2
     fixed_versions: vers:rpm/5.14.0-284.86.1.el9_2
@@ -1104,11 +1079,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-devel-matched?arch=ppc64le
-    affected_versions: vers:rpm/<5.14.0-284.86.1.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.86.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-headers?arch=ppc64le
     affected_versions: vers:rpm/<5.14.0-284.86.1.el9_2
     fixed_versions: vers:rpm/5.14.0-284.86.1.el9_2
     fixed_in_commits: []
@@ -1408,11 +1378,6 @@ impacted_packages:
     fixed_versions: vers:rpm/5.14.0-284.86.1.el9_2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-cross-headers?arch=s390x
-    affected_versions: vers:rpm/<5.14.0-284.86.1.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.86.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debug?arch=s390x
     affected_versions: vers:rpm/<5.14.0-284.86.1.el9_2
     fixed_versions: vers:rpm/5.14.0-284.86.1.el9_2
@@ -1464,11 +1429,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-devel-matched?arch=s390x
-    affected_versions: vers:rpm/<5.14.0-284.86.1.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.86.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-headers?arch=s390x
     affected_versions: vers:rpm/<5.14.0-284.86.1.el9_2
     fixed_versions: vers:rpm/5.14.0-284.86.1.el9_2
     fixed_in_commits: []

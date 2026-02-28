@@ -53,6 +53,7 @@ aliases:
   - CVE-2022-50663
   - CVE-2022-50670
   - CVE-2022-50846
+  - CVE-2022-50858
   - CVE-2023-52445
   - CVE-2023-52451
   - CVE-2023-52455
@@ -179,13 +180,17 @@ aliases:
   - CVE-2023-54066
   - CVE-2023-54093
   - CVE-2023-54113
+  - CVE-2023-54114
   - CVE-2023-54136
   - CVE-2023-54165
   - CVE-2023-54172
   - CVE-2023-54194
   - CVE-2023-54198
+  - CVE-2023-54227
+  - CVE-2023-54244
   - CVE-2023-54246
   - CVE-2023-54267
+  - CVE-2023-54268
   - CVE-2023-54271
   - CVE-2023-54298
   - CVE-2023-54299
@@ -1542,6 +1547,61 @@ summary: |
 
   For detailed information on changes in this release, see the Red Hat Enterprise Linux 9.5 Release Notes linked from the References section.
 impacted_packages:
+  - purl: pkg:rpm/redhat/kernel-modules-core?arch=aarch64
+    affected_versions: vers:rpm/<5.14.0-503.11.1.el9_5
+    fixed_versions: vers:rpm/5.14.0-503.11.1.el9_5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-modules-extra?arch=aarch64
+    affected_versions: vers:rpm/<5.14.0-503.11.1.el9_5
+    fixed_versions: vers:rpm/5.14.0-503.11.1.el9_5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-tools?arch=aarch64
+    affected_versions: vers:rpm/<5.14.0-503.11.1.el9_5
+    fixed_versions: vers:rpm/5.14.0-503.11.1.el9_5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-tools-libs?arch=aarch64
+    affected_versions: vers:rpm/<5.14.0-503.11.1.el9_5
+    fixed_versions: vers:rpm/5.14.0-503.11.1.el9_5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python3-perf?arch=aarch64
+    affected_versions: vers:rpm/<5.14.0-503.11.1.el9_5
+    fixed_versions: vers:rpm/5.14.0-503.11.1.el9_5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bpftool-debuginfo?arch=aarch64
+    affected_versions: vers:rpm/<7.4.0-503.11.1.el9_5
+    fixed_versions: vers:rpm/7.4.0-503.11.1.el9_5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libperf?arch=ppc64le
+    affected_versions: vers:rpm/<5.14.0-503.11.1.el9_5
+    fixed_versions: vers:rpm/5.14.0-503.11.1.el9_5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-debug-devel?arch=ppc64le
+    affected_versions: vers:rpm/<5.14.0-503.11.1.el9_5
+    fixed_versions: vers:rpm/5.14.0-503.11.1.el9_5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-debug-devel?arch=x86_64
+    affected_versions: vers:rpm/<5.14.0-503.11.1.el9_5
+    fixed_versions: vers:rpm/5.14.0-503.11.1.el9_5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bpftool?arch=aarch64
+    affected_versions: vers:rpm/<7.4.0-503.11.1.el9_5
+    fixed_versions: vers:rpm/7.4.0-503.11.1.el9_5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel?arch=aarch64
+    affected_versions: vers:rpm/<5.14.0-503.11.1.el9_5
+    fixed_versions: vers:rpm/5.14.0-503.11.1.el9_5
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-64k?arch=aarch64
     affected_versions: vers:rpm/<5.14.0-503.11.1.el9_5
     fixed_versions: vers:rpm/5.14.0-503.11.1.el9_5
@@ -1592,16 +1652,6 @@ impacted_packages:
     fixed_versions: vers:rpm/5.14.0-503.11.1.el9_5
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bpftool?arch=aarch64
-    affected_versions: vers:rpm/<7.4.0-503.11.1.el9_5
-    fixed_versions: vers:rpm/7.4.0-503.11.1.el9_5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel?arch=aarch64
-    affected_versions: vers:rpm/<5.14.0-503.11.1.el9_5
-    fixed_versions: vers:rpm/5.14.0-503.11.1.el9_5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-core?arch=aarch64
     affected_versions: vers:rpm/<5.14.0-503.11.1.el9_5
     fixed_versions: vers:rpm/5.14.0-503.11.1.el9_5
@@ -1635,36 +1685,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/kernel-modules?arch=aarch64
     affected_versions: vers:rpm/<5.14.0-503.11.1.el9_5
     fixed_versions: vers:rpm/5.14.0-503.11.1.el9_5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-modules-core?arch=aarch64
-    affected_versions: vers:rpm/<5.14.0-503.11.1.el9_5
-    fixed_versions: vers:rpm/5.14.0-503.11.1.el9_5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-modules-extra?arch=aarch64
-    affected_versions: vers:rpm/<5.14.0-503.11.1.el9_5
-    fixed_versions: vers:rpm/5.14.0-503.11.1.el9_5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-tools?arch=aarch64
-    affected_versions: vers:rpm/<5.14.0-503.11.1.el9_5
-    fixed_versions: vers:rpm/5.14.0-503.11.1.el9_5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-tools-libs?arch=aarch64
-    affected_versions: vers:rpm/<5.14.0-503.11.1.el9_5
-    fixed_versions: vers:rpm/5.14.0-503.11.1.el9_5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python3-perf?arch=aarch64
-    affected_versions: vers:rpm/<5.14.0-503.11.1.el9_5
-    fixed_versions: vers:rpm/5.14.0-503.11.1.el9_5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bpftool-debuginfo?arch=aarch64
-    affected_versions: vers:rpm/<7.4.0-503.11.1.el9_5
-    fixed_versions: vers:rpm/7.4.0-503.11.1.el9_5
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-64k-debug-debuginfo?arch=aarch64
@@ -1913,16 +1933,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-tools-libs-devel?arch=ppc64le
-    affected_versions: vers:rpm/<5.14.0-503.11.1.el9_5
-    fixed_versions: vers:rpm/5.14.0-503.11.1.el9_5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libperf?arch=ppc64le
-    affected_versions: vers:rpm/<5.14.0-503.11.1.el9_5
-    fixed_versions: vers:rpm/5.14.0-503.11.1.el9_5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debug-devel?arch=ppc64le
     affected_versions: vers:rpm/<5.14.0-503.11.1.el9_5
     fixed_versions: vers:rpm/5.14.0-503.11.1.el9_5
     fixed_in_commits: []
@@ -2178,11 +2188,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-rt-modules-extra?arch=x86_64
-    affected_versions: vers:rpm/<5.14.0-503.11.1.el9_5
-    fixed_versions: vers:rpm/5.14.0-503.11.1.el9_5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debug-devel?arch=x86_64
     affected_versions: vers:rpm/<5.14.0-503.11.1.el9_5
     fixed_versions: vers:rpm/5.14.0-503.11.1.el9_5
     fixed_in_commits: []
