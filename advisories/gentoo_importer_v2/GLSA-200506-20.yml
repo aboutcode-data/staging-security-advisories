@@ -10,13 +10,13 @@ summary: |
       file inclusion vulnerabilities.
 impacted_packages:
   - purl: pkg:ebuild/net-analyzer/cacti
-    affected_versions:
-    fixed_versions: vers:ebuild/>=0.8.6f
+    affected_versions: vers:ebuild/<0.8.6f
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/net-analyzer/cacti
-    affected_versions: vers:ebuild/<0.8.6f
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=0.8.6f
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -27,6 +27,24 @@ severities:
     url:
 weaknesses: []
 references:
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/php/webapps/25859.txt
+    reference_type: exploit
+    reference_id: CVE-2005-1524;OSVDB-17426
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/php/webapps/25927.pl
+    reference_type: exploit
+    reference_id: CVE-2005-1524;OSVDB-17426
+  - url: https://www.securityfocus.com/bid/14030/info
+    reference_type: exploit
+    reference_id: CVE-2005-1524;OSVDB-17426
+  - url: https://www.securityfocus.com/bid/14129/info
+    reference_type: exploit
+    reference_id: CVE-2005-1524;OSVDB-17426
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/php/webapps/25857.txt
+    reference_type: exploit
+    reference_id: CVE-2005-1526;OSVDB-17425
+  - url: https://www.securityfocus.com/bid/14028/info
+    reference_type: exploit
+    reference_id: CVE-2005-1526;OSVDB-17425
   - url: https://security.gentoo.org/glsa/200506-20
     reference_type:
     reference_id: GLSA-200506-20
