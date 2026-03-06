@@ -56,9 +56,29 @@ summary: |
 
   All OpenShift Container Platform 4.12 users are advised to upgrade to these updated packages and images when they are available in the appropriate release channel. To check for available updates, use the OpenShift Console or the CLI oc command. Instructions for upgrading a cluster are available at https://docs.openshift.com/container-platform/4.12/updating/updating-cluster-cli.html
 impacted_packages:
-  - purl: pkg:rpm/redhat/haproxy22?arch=ppc64le
-    affected_versions: vers:rpm/<2.2.24-1.el8
-    fixed_versions: vers:rpm/2.2.24-1.el8
+  - purl: pkg:rpm/redhat/python-wrapt?arch=src
+    affected_versions: vers:rpm/<1.11.2-4.el9
+    fixed_versions: vers:rpm/1.11.2-4.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python3-amqp?arch=noarch
+    affected_versions: vers:rpm/<5.0.6-1.el9
+    fixed_versions: vers:rpm/5.0.6-1.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python-case?arch=src
+    affected_versions: vers:rpm/<1.5.3-5.el9
+    fixed_versions: vers:rpm/1.5.3-5.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python-webob?arch=src
+    affected_versions: vers:rpm/<1.8.5-5.el9
+    fixed_versions: vers:rpm/1.8.5-5.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python-webtest?arch=src
+    affected_versions: vers:rpm/<2.0.33-5.el9
+    fixed_versions: vers:rpm/2.0.33-5.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/atomic-openshift-service-idler?arch=src
@@ -576,11 +596,6 @@ impacted_packages:
     fixed_versions: vers:rpm/3.1.0-4.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python-case?arch=src
-    affected_versions: vers:rpm/<1.5.3-5.el9
-    fixed_versions: vers:rpm/1.5.3-5.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/python-cinderclient?arch=src
     affected_versions: vers:rpm/<9.0.0-0.20220811172734.2c7d463.el9
     fixed_versions: vers:rpm/9.0.0-0.20220811172734.2c7d463.el9
@@ -1096,6 +1111,11 @@ impacted_packages:
     fixed_versions: vers:rpm/1.0.8-19.el9
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python-werkzeug?arch=src
+    affected_versions: vers:rpm/<2.0.3-3.el9
+    fixed_versions: vers:rpm/2.0.3-3.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/python-proliantutils?arch=src
     affected_versions: vers:rpm/<2.13.2-0.20220802173426.8c7b6b1.el9
     fixed_versions: vers:rpm/2.13.2-0.20220802173426.8c7b6b1.el9
@@ -1374,26 +1394,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/python-webencodings?arch=src
     affected_versions: vers:rpm/<0.5.1-15.el9.1
     fixed_versions: vers:rpm/0.5.1-15.el9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python-webob?arch=src
-    affected_versions: vers:rpm/<1.8.5-5.el9
-    fixed_versions: vers:rpm/1.8.5-5.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python-webtest?arch=src
-    affected_versions: vers:rpm/<2.0.33-5.el9
-    fixed_versions: vers:rpm/2.0.33-5.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python-werkzeug?arch=src
-    affected_versions: vers:rpm/<2.0.3-3.el9
-    fixed_versions: vers:rpm/2.0.3-3.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python-wrapt?arch=src
-    affected_versions: vers:rpm/<1.11.2-4.el9
-    fixed_versions: vers:rpm/1.11.2-4.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/python-wsme?arch=src
@@ -5001,6 +5001,11 @@ impacted_packages:
     fixed_versions: vers:rpm/4.4.0-2.rhaos4.11.el8
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/haproxy22?arch=ppc64le
+    affected_versions: vers:rpm/<2.2.24-1.el8
+    fixed_versions: vers:rpm/2.2.24-1.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/haproxy-debugsource?arch=ppc64le
     affected_versions: vers:rpm/<2.2.24-1.el8
     fixed_versions: vers:rpm/2.2.24-1.el8
@@ -7766,11 +7771,6 @@ impacted_packages:
     fixed_versions: vers:rpm/5.0.6-1.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python3-amqp?arch=noarch
-    affected_versions: vers:rpm/<5.0.6-1.el9
-    fixed_versions: vers:rpm/5.0.6-1.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/python3-apipkg?arch=noarch
     affected_versions: vers:rpm/<1.5-12.el9.1
     fixed_versions: vers:rpm/1.5-12.el9.1
@@ -8989,15 +8989,21 @@ severities:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2023/rhsa-2022_7398.json
 weaknesses: []
 references:
+  - url: https://access.redhat.com/errata/RHSA-2022:7398
+    reference_type:
+    reference_id:
   - url: https://access.redhat.com/security/updates/classification/#moderate
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2103220
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2134063
     reference_type:
     reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2023/rhsa-2022_7398.json
     reference_type:
     reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2103220
-    reference_type: bug
-    reference_id: 2103220
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2107342
     reference_type: bug
     reference_id: 2107342
@@ -9022,15 +9028,9 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2132872
     reference_type: bug
     reference_id: 2132872
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2134063
-    reference_type: bug
-    reference_id: 2134063
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2136673
     reference_type: bug
     reference_id: 2136673
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2156727
     reference_type: bug
     reference_id: 2156727
-  - url: https://access.redhat.com/errata/RHSA-2022:7398
-    reference_type:
-    reference_id: RHSA-2022:7398
