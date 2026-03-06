@@ -21,6 +21,41 @@ summary: "An update is now available for Red Hat JBoss Enterprise Application\nP
   * It was discovered that a malicious web application could bypass a\nconfigured SecurityManager\
   \ via manipulation of the configuration parameters\nfor the JSP Servlet. (CVE-2016-6796)"
 impacted_packages:
+  - purl: pkg:rpm/redhat/picketbox?arch=src
+    affected_versions: vers:rpm/<4.1.6-1.Final_redhat_1.1.ep6.el6
+    fixed_versions: vers:rpm/4.1.6-1.Final_redhat_1.1.ep6.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/hornetq?arch=src
+    affected_versions: vers:rpm/<2.3.25-21.SP19_redhat_1.1.ep6.el6
+    fixed_versions: vers:rpm/2.3.25-21.SP19_redhat_1.1.ep6.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/jbossweb?arch=src
+    affected_versions: vers:rpm/<7.5.23-1.Final_redhat_1.1.ep6.el6
+    fixed_versions: vers:rpm/7.5.23-1.Final_redhat_1.1.ep6.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/jboss-as-console?arch=src
+    affected_versions: vers:rpm/<2.5.17-1.Final_redhat_1.1.ep6.el6
+    fixed_versions: vers:rpm/2.5.17-1.Final_redhat_1.1.ep6.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/jboss-hal?arch=src
+    affected_versions: vers:rpm/<2.5.17-1.Final_redhat_1.1.ep6.el6
+    fixed_versions: vers:rpm/2.5.17-1.Final_redhat_1.1.ep6.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/resteasy?arch=src
+    affected_versions: vers:rpm/<2.3.20-1.Final_redhat_1.1.ep6.el6
+    fixed_versions: vers:rpm/2.3.20-1.Final_redhat_1.1.ep6.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/jboss-logmanager?arch=src
+    affected_versions: vers:rpm/<1.5.7-1.Final_redhat_1.1.ep6.el6
+    fixed_versions: vers:rpm/1.5.7-1.Final_redhat_1.1.ep6.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/jbossts?arch=src&epoch=1
     affected_versions: vers:rpm/<4.17.42-1.Final_redhat_1.1.ep6.el6
     fixed_versions: vers:rpm/4.17.42-1.Final_redhat_1.1.ep6.el6
@@ -219,41 +254,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/jboss-as-jsf?arch=src
     affected_versions: vers:rpm/<7.5.16-1.Final_redhat_1.1.ep6.el6
     fixed_versions: vers:rpm/7.5.16-1.Final_redhat_1.1.ep6.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/picketbox?arch=src
-    affected_versions: vers:rpm/<4.1.6-1.Final_redhat_1.1.ep6.el6
-    fixed_versions: vers:rpm/4.1.6-1.Final_redhat_1.1.ep6.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/hornetq?arch=src
-    affected_versions: vers:rpm/<2.3.25-21.SP19_redhat_1.1.ep6.el6
-    fixed_versions: vers:rpm/2.3.25-21.SP19_redhat_1.1.ep6.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/jbossweb?arch=src
-    affected_versions: vers:rpm/<7.5.23-1.Final_redhat_1.1.ep6.el6
-    fixed_versions: vers:rpm/7.5.23-1.Final_redhat_1.1.ep6.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/jboss-as-console?arch=src
-    affected_versions: vers:rpm/<2.5.17-1.Final_redhat_1.1.ep6.el6
-    fixed_versions: vers:rpm/2.5.17-1.Final_redhat_1.1.ep6.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/jboss-hal?arch=src
-    affected_versions: vers:rpm/<2.5.17-1.Final_redhat_1.1.ep6.el6
-    fixed_versions: vers:rpm/2.5.17-1.Final_redhat_1.1.ep6.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/resteasy?arch=src
-    affected_versions: vers:rpm/<2.3.20-1.Final_redhat_1.1.ep6.el6
-    fixed_versions: vers:rpm/2.3.20-1.Final_redhat_1.1.ep6.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/jboss-logmanager?arch=src
-    affected_versions: vers:rpm/<1.5.7-1.Final_redhat_1.1.ep6.el6
-    fixed_versions: vers:rpm/1.5.7-1.Final_redhat_1.1.ep6.el6
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/jboss-as-jsr77?arch=src
@@ -827,6 +827,9 @@ references:
   - url: https://access.redhat.com/documentation/en/red-hat-jboss-enterprise-application-platform/?version=6.4
     reference_type:
     reference_id:
+  - url: https://access.redhat.com/errata/RHSA-2017:1549
+    reference_type:
+    reference_id:
   - url: https://access.redhat.com/security/updates/classification/#moderate
     reference_type:
     reference_id:
@@ -845,6 +848,3 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1456746
     reference_type: bug
     reference_id: 1456746
-  - url: https://access.redhat.com/errata/RHSA-2017:1549
-    reference_type:
-    reference_id: RHSA-2017:1549
