@@ -28,26 +28,6 @@ summary: |
 
   All OpenShift Container Platform 4.15 users are advised to upgrade to these updated packages and images when they are available in the appropriate release channel. To check for available updates, use the OpenShift CLI (oc) or web console. Instructions for upgrading a cluster are available at https://docs.openshift.com/container-platform/4.15/updating/updating_a_cluster/updating-cluster-cli.html
 impacted_packages:
-  - purl: pkg:rpm/redhat/kernel-ipaclones-internal?arch=x86_64
-    affected_versions: vers:rpm/<5.14.0-284.86.1.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.86.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-modules?arch=x86_64
-    affected_versions: vers:rpm/<5.14.0-284.86.1.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.86.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-modules-core?arch=x86_64
-    affected_versions: vers:rpm/<5.14.0-284.86.1.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.86.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-modules-extra?arch=x86_64
-    affected_versions: vers:rpm/<5.14.0-284.86.1.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.86.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/cri-o?arch=src
     affected_versions: vers:rpm/<1.28.10-5.rhaos4.15.git7a788e6.el9
     fixed_versions: vers:rpm/1.28.10-5.rhaos4.15.git7a788e6.el9
@@ -179,6 +159,26 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-devel-matched?arch=x86_64
+    affected_versions: vers:rpm/<5.14.0-284.86.1.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.86.1.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-ipaclones-internal?arch=x86_64
+    affected_versions: vers:rpm/<5.14.0-284.86.1.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.86.1.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-modules?arch=x86_64
+    affected_versions: vers:rpm/<5.14.0-284.86.1.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.86.1.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-modules-core?arch=x86_64
+    affected_versions: vers:rpm/<5.14.0-284.86.1.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.86.1.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-modules-extra?arch=x86_64
     affected_versions: vers:rpm/<5.14.0-284.86.1.el9_2
     fixed_versions: vers:rpm/5.14.0-284.86.1.el9_2
     fixed_in_commits: []
@@ -1766,15 +1766,15 @@ severities:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2024_7182.json
 weaknesses: []
 references:
+  - url: https://access.redhat.com/errata/RHSA-2024:7182
+    reference_type:
+    reference_id:
   - url: https://access.redhat.com/security/updates/classification/#moderate
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2274767
     reference_type:
     reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2024_7182.json
     reference_type:
     reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2274767
-    reference_type: bug
-    reference_id: 2274767
-  - url: https://access.redhat.com/errata/RHSA-2024:7182
-    reference_type:
-    reference_id: RHSA-2024:7182
