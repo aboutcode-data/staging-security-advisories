@@ -32,9 +32,9 @@ summary: |
 
   All OpenShift Container Platform 4.15 users are advised to upgrade to these updated packages and images when they are available in the appropriate release channel. To check for available updates, use the OpenShift CLI (oc) or web console. Instructions for upgrading a cluster are available at https://docs.openshift.com/container-platform/4.15/updating/updating_a_cluster/updating-cluster-cli.html
 impacted_packages:
-  - purl: pkg:rpm/redhat/coreos-installer-dracut?arch=x86_64
-    affected_versions: vers:rpm/<0.17.0-3.rhaos4.15.el9
-    fixed_versions: vers:rpm/0.17.0-3.rhaos4.15.el9
+  - purl: pkg:rpm/redhat/rtla?arch=x86_64
+    affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/afterburn?arch=x86_64
@@ -63,6 +63,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/coreos-installer-bootinfra?arch=x86_64
+    affected_versions: vers:rpm/<0.17.0-3.rhaos4.15.el9
+    fixed_versions: vers:rpm/0.17.0-3.rhaos4.15.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/coreos-installer-dracut?arch=x86_64
     affected_versions: vers:rpm/<0.17.0-3.rhaos4.15.el9
     fixed_versions: vers:rpm/0.17.0-3.rhaos4.15.el9
     fixed_in_commits: []
@@ -462,9 +467,9 @@ impacted_packages:
     fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/rtla?arch=x86_64
-    affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
+  - purl: pkg:rpm/redhat/python3-ddt?arch=noarch
+    affected_versions: vers:rpm/<1.6.0-1.el9
+    fixed_versions: vers:rpm/1.6.0-1.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/bpftool-debuginfo?arch=x86_64
@@ -1032,11 +1037,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.11.2-21.1.rhaos4.15.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-64k-modules?arch=aarch64
-    affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/skopeo-debuginfo?arch=aarch64&epoch=2
     affected_versions: vers:rpm/<1.11.2-21.1.rhaos4.15.el9
     fixed_versions: vers:rpm/1.11.2-21.1.rhaos4.15.el9
@@ -1278,6 +1278,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-64k-devel-matched?arch=aarch64
+    affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-64k-modules?arch=aarch64
     affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
     fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
     fixed_in_commits: []
@@ -3812,11 +3817,6 @@ impacted_packages:
     fixed_versions: vers:rpm/4.3.0-0.20230720153123.72e81d7.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python3-ddt?arch=noarch
-    affected_versions: vers:rpm/<1.6.0-1.el9
-    fixed_versions: vers:rpm/1.6.0-1.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/python3-debtcollector?arch=noarch
     affected_versions: vers:rpm/<2.5.0-0.20230720140419.a6b46c5.el9
     fixed_versions: vers:rpm/2.5.0-0.20230720140419.a6b46c5.el9
@@ -4246,15 +4246,18 @@ references:
   - url: https://access.redhat.com/security/vulnerabilities/RHSB-2023-003
     reference_type:
     reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2253994
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2254210
+    reference_type:
+    reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2023_7201.json
     reference_type:
     reference_id:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2231370
     reference_type: bug
     reference_id: 2231370
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2242803
-    reference_type: bug
-    reference_id: 2242803
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2243296
     reference_type: bug
     reference_id: 2243296
@@ -4267,15 +4270,12 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2253330
     reference_type: bug
     reference_id: 2253330
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2253994
-    reference_type: bug
-    reference_id: 2253994
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2254210
-    reference_type: bug
-    reference_id: 2254210
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2258725
     reference_type: bug
     reference_id: 2258725
   - url: https://access.redhat.com/errata/RHSA-2023:7201
     reference_type:
     reference_id: RHSA-2023:7201
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2242803
+    reference_type: other
+    reference_id: show_bug.cgi?id=2242803
