@@ -28,24 +28,29 @@ summary: |
 
   All OpenShift Container Platform 4.17 users are advised to upgrade to these updated packages and images when they are available in the appropriate release channel. To check for available updates, use the OpenShift CLI (oc) or web console. Instructions for upgrading a cluster are available at https://docs.openshift.com/container-platform/4.17/updating/updating_a_cluster/updating-cluster-cli.html
 impacted_packages:
-  - purl: pkg:rpm/redhat/crun?arch=src
-    affected_versions: vers:rpm/<1.14.3-2.rhaos4.17.el9
-    fixed_versions: vers:rpm/1.14.3-2.rhaos4.17.el9
+  - purl: pkg:rpm/redhat/openshift-clients?arch=src
+    affected_versions: vers:rpm/<4.17.0-202409111134.p0.gbc58b3a.assembly.stream.el9
+    fixed_versions: vers:rpm/4.17.0-202409111134.p0.gbc58b3a.assembly.stream.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ovn24.03?arch=src
-    affected_versions: vers:rpm/<24.03.1-36.el9fdp
-    fixed_versions: vers:rpm/24.03.1-36.el9fdp
+  - purl: pkg:rpm/redhat/containers-common?arch=src&epoch=3
+    affected_versions: vers:rpm/<1-86.rhaos4.17.el8
+    fixed_versions: vers:rpm/1-86.rhaos4.17.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/golang-github-prometheus-promu?arch=src
-    affected_versions: vers:rpm/<0.16.0-17.gitf6c51c9.el9
-    fixed_versions: vers:rpm/0.16.0-17.gitf6c51c9.el9
+  - purl: pkg:rpm/redhat/cri-tools?arch=src
+    affected_versions: vers:rpm/<1.30.0-4.el8
+    fixed_versions: vers:rpm/1.30.0-4.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/openshift-ansible?arch=src
-    affected_versions: vers:rpm/<4.17.0-202409041737.p0.g7fe7411.assembly.stream.el9
-    fixed_versions: vers:rpm/4.17.0-202409041737.p0.g7fe7411.assembly.stream.el9
+  - purl: pkg:rpm/redhat/openshift?arch=src
+    affected_versions: vers:rpm/<4.17.0-202409121706.p0.gd3adea4.assembly.stream.el9
+    fixed_versions: vers:rpm/4.17.0-202409121706.p0.gd3adea4.assembly.stream.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/conmon?arch=src&epoch=3
+    affected_versions: vers:rpm/<2.1.12-4.rhaos4.17.el8
+    fixed_versions: vers:rpm/2.1.12-4.rhaos4.17.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/conmon?arch=src&epoch=3
@@ -113,6 +118,26 @@ impacted_packages:
     fixed_versions: vers:rpm/1.33.7-2.rhaos4.17.el9
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/crun?arch=src
+    affected_versions: vers:rpm/<1.14.3-2.rhaos4.17.el9
+    fixed_versions: vers:rpm/1.14.3-2.rhaos4.17.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/golang-github-prometheus-promu?arch=src
+    affected_versions: vers:rpm/<0.16.0-17.gitf6c51c9.el9
+    fixed_versions: vers:rpm/0.16.0-17.gitf6c51c9.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/openshift-ansible?arch=src
+    affected_versions: vers:rpm/<4.17.0-202409041737.p0.g7fe7411.assembly.stream.el9
+    fixed_versions: vers:rpm/4.17.0-202409041737.p0.g7fe7411.assembly.stream.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ovn24.03?arch=src
+    affected_versions: vers:rpm/<24.03.1-36.el9fdp
+    fixed_versions: vers:rpm/24.03.1-36.el9fdp
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/ovn24.09?arch=src
     affected_versions: vers:rpm/<24.09.0-beta.26.el9fdp
     fixed_versions: vers:rpm/24.09.0-beta.26.el9fdp
@@ -128,34 +153,9 @@ impacted_packages:
     fixed_versions: vers:rpm/1.30.5-7.rhaos4.17.git2e89940.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/openshift-clients?arch=src
-    affected_versions: vers:rpm/<4.17.0-202409111134.p0.gbc58b3a.assembly.stream.el9
-    fixed_versions: vers:rpm/4.17.0-202409111134.p0.gbc58b3a.assembly.stream.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/openshift?arch=src
-    affected_versions: vers:rpm/<4.17.0-202409121706.p0.gd3adea4.assembly.stream.el9
-    fixed_versions: vers:rpm/4.17.0-202409121706.p0.gd3adea4.assembly.stream.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/conmon?arch=src&epoch=3
-    affected_versions: vers:rpm/<2.1.12-4.rhaos4.17.el8
-    fixed_versions: vers:rpm/2.1.12-4.rhaos4.17.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/conmon-rs?arch=src
     affected_versions: vers:rpm/<0.6.3-1.rhaos4.17.el8
     fixed_versions: vers:rpm/0.6.3-1.rhaos4.17.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/containers-common?arch=src&epoch=3
-    affected_versions: vers:rpm/<1-86.rhaos4.17.el8
-    fixed_versions: vers:rpm/1-86.rhaos4.17.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-tools?arch=src
-    affected_versions: vers:rpm/<1.30.0-4.el8
-    fixed_versions: vers:rpm/1.30.0-4.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/libslirp?arch=src
@@ -4083,11 +4083,6 @@ impacted_packages:
     fixed_versions: vers:rpm/2.231.0-3.rhaos4.17.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python3-oslo-middleware-tests?arch=noarch
-    affected_versions: vers:rpm/<6.1.0-0.20240522163319.531f39e.el9
-    fixed_versions: vers:rpm/6.1.0-0.20240522163319.531f39e.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/openshift4-aws-iso?arch=noarch
     affected_versions: vers:rpm/<4.17.0-202404161335.p0.gd2acdd5.assembly.stream.el8
     fixed_versions: vers:rpm/4.17.0-202404161335.p0.gd2acdd5.assembly.stream.el8
@@ -4303,6 +4298,11 @@ impacted_packages:
     fixed_versions: vers:rpm/6.1.0-0.20240522163319.531f39e.el9
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python3-oslo-middleware-tests?arch=noarch
+    affected_versions: vers:rpm/<6.1.0-0.20240522163319.531f39e.el9
+    fixed_versions: vers:rpm/6.1.0-0.20240522163319.531f39e.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/python-oslo-policy-lang?arch=noarch
     affected_versions: vers:rpm/<4.3.0-0.20240522161210.4b7a6f7.el9
     fixed_versions: vers:rpm/4.3.0-0.20240522161210.4b7a6f7.el9
@@ -4336,6 +4336,11 @@ impacted_packages:
   - purl: pkg:rpm/redhat/python3-oslo-serialization-tests?arch=noarch
     affected_versions: vers:rpm/<5.4.0-0.20240522161219.548c7a3.el9
     fixed_versions: vers:rpm/5.4.0-0.20240522161219.548c7a3.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python3-routes?arch=noarch
+    affected_versions: vers:rpm/<2.4.1-12.el9
+    fixed_versions: vers:rpm/2.4.1-12.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/python3-oslo-service?arch=noarch
@@ -4841,11 +4846,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/python3-rfc3986?arch=noarch
     affected_versions: vers:rpm/<1.2.0-6.el9
     fixed_versions: vers:rpm/1.2.0-6.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python3-routes?arch=noarch
-    affected_versions: vers:rpm/<2.4.1-12.el9
-    fixed_versions: vers:rpm/2.4.1-12.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/python3-simplegeneric?arch=noarch
