@@ -1,0 +1,43 @@
+advisory_id: pypi/picklescan/GHSA-m7j5-r2p5-c39r
+datasource_id: gitlab_importer_v2/pypi/picklescan/GHSA-m7j5-r2p5-c39r
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/pypi/picklescan/GHSA-m7j5-r2p5-c39r.yml
+aliases:
+  - GHSA-m7j5-r2p5-c39r
+summary: |
+  picklescan vulnerable to arbitrary file create using logging.FileHandler
+  Unsafe pickle deserialization allows unauthenticated attackers to perform Arbitrary File Creation. By chaining the logging.FileHandler class, an attacker can bypass RCE-focused blocklists to create empty files on the server. The vulnerability allows creating zero-byte files in arbitrary locations but does not permit overwriting or modifying existing files.
+impacted_packages:
+  - purl: pkg:pypi/picklescan
+    affected_versions: vers:pypi/<1.0.1
+    fixed_versions: vers:pypi/1.0.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/pypi/picklescan/GHSA-m7j5-r2p5-c39r.yml
+weaknesses:
+  - CWE-502
+  - CWE-937
+  - CWE-1035
+references:
+  - url: https://github.com/mmaitre314/picklescan
+    reference_type:
+    reference_id:
+  - url: https://github.com/mmaitre314/picklescan/commit/4d9bc9cd34bca8672dad3481cd4556d5ba747156
+    reference_type:
+    reference_id:
+  - url: https://github.com/mmaitre314/picklescan/pull/60
+    reference_type:
+    reference_id:
+  - url: https://github.com/mmaitre314/picklescan/releases/tag/v1.0.1
+    reference_type:
+    reference_id:
+  - url: https://github.com/mmaitre314/picklescan/security/advisories/GHSA-m7j5-r2p5-c39r
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-m7j5-r2p5-c39r
+    reference_type:
+    reference_id: GHSA-m7j5-r2p5-c39r
