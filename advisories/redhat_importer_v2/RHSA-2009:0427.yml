@@ -29,6 +29,11 @@ summary: |
   contain a backported patch to correct this issue. After installing the
   update, the udevd daemon will be restarted automatically.
 impacted_packages:
+  - purl: pkg:rpm/redhat/udev?arch=ia64
+    affected_versions: vers:rpm/<095-14.20.el5_3
+    fixed_versions: vers:rpm/095-14.20.el5_3
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/udev-debuginfo?arch=x86_64
     affected_versions: vers:rpm/<095-14.20.el5_3
     fixed_versions: vers:rpm/095-14.20.el5_3
@@ -80,11 +85,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/libvolume_id-devel?arch=ia64
-    affected_versions: vers:rpm/<095-14.20.el5_3
-    fixed_versions: vers:rpm/095-14.20.el5_3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/udev?arch=ia64
     affected_versions: vers:rpm/<095-14.20.el5_3
     fixed_versions: vers:rpm/095-14.20.el5_3
     fixed_in_commits: []
@@ -181,15 +181,6 @@ references:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2009/rhsa-2009_0427.json
     reference_type:
     reference_id:
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/local/8478.sh
-    reference_type: exploit
-    reference_id: CVE-2009-1185;DSA-1772
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/local/21848.rb
-    reference_type: exploit
-    reference_id: CVE-2009-1185;OSVDB-53810
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/local/8572.c
-    reference_type: exploit
-    reference_id: OSVDB-53810;CVE-2009-1185
   - url: https://access.redhat.com/errata/RHSA-2009:0427
     reference_type:
     reference_id: RHSA-2009:0427

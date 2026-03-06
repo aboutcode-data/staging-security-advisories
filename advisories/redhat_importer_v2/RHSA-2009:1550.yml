@@ -95,6 +95,11 @@ summary: |
   patches to correct these issues. The system must be rebooted for this
   update to take effect.
 impacted_packages:
+  - purl: pkg:rpm/redhat/kernel-smp?arch=i686
+    affected_versions: vers:rpm/<2.4.21-63.EL
+    fixed_versions: vers:rpm/2.4.21-63.EL
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-BOOT?arch=i386
     affected_versions: vers:rpm/<2.4.21-63.EL
     fixed_versions: vers:rpm/2.4.21-63.EL
@@ -141,11 +146,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debuginfo?arch=i686
-    affected_versions: vers:rpm/<2.4.21-63.EL
-    fixed_versions: vers:rpm/2.4.21-63.EL
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-smp?arch=i686
     affected_versions: vers:rpm/<2.4.21-63.EL
     fixed_versions: vers:rpm/2.4.21-63.EL
     fixed_in_commits: []
@@ -406,12 +406,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=520300
     reference_type: bug
     reference_id: 520300
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/local/9543.c
-    reference_type: exploit
-    reference_id: CVE-2009-3002
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/local/9521.c
-    reference_type: exploit
-    reference_id: OSVDB-57428;CVE-2009-3002
   - url: https://access.redhat.com/errata/RHSA-2009:1550
     reference_type:
     reference_id: RHSA-2009:1550

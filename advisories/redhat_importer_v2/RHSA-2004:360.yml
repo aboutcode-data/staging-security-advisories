@@ -25,6 +25,11 @@ summary: |
   kernels to the packages associated with their machine architectures
   and configurations as listed in this erratum.
 impacted_packages:
+  - purl: pkg:rpm/redhat/kernel?arch=src
+    affected_versions: vers:rpm/<2.4.21-15.0.3.EL
+    fixed_versions: vers:rpm/2.4.21-15.0.3.EL
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-BOOT?arch=i386
     affected_versions: vers:rpm/<2.4.21-15.0.3.EL
     fixed_versions: vers:rpm/2.4.21-15.0.3.EL
@@ -180,11 +185,6 @@ impacted_packages:
     fixed_versions: vers:rpm/2.4.21-15.0.3.EL
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel?arch=src
-    affected_versions: vers:rpm/<2.4.21-15.0.3.EL
-    fixed_versions: vers:rpm/2.4.21-15.0.3.EL
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-doc?arch=ppc64
     affected_versions: vers:rpm/<2.4.21-15.0.3.EL
     fixed_versions: vers:rpm/2.4.21-15.0.3.EL
@@ -300,9 +300,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=126716
     reference_type: bug
     reference_id: 126716
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/local/718.c
-    reference_type: exploit
-    reference_id: CVE-2004-0497
   - url: https://access.redhat.com/errata/RHSA-2004:360
     reference_type:
     reference_id: RHSA-2004:360
