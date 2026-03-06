@@ -35,17 +35,17 @@ summary: |
 
   * In the previous release in October 2023 (8u392), the RPMs were changed to use Provides for java, jre, java-headless, jre-headless, java-devel and java-sdk which included the full RPM version. This prevented the Provides being used to resolve a dependency on Java 1.8.0 (for example, "Requires: java-headless 1:1.8.0"). This change has now been reverted to the old "1:1.8.0" value. (RHEL-19634)
 impacted_packages:
+  - purl: pkg:rpm/redhat/java-1.8.0-openjdk-accessibility?arch=x86_64&epoch=1
+    affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_4
+    fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_4
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/java-1.8.0-openjdk?arch=src&epoch=1
     affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_4
     fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_4
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/java-1.8.0-openjdk?arch=x86_64&epoch=1
-    affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_4
-    fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-1.8.0-openjdk-accessibility?arch=x86_64&epoch=1
     affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_4
     fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_4
     fixed_in_commits: []
