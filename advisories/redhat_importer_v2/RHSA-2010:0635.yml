@@ -54,6 +54,11 @@ summary: |
   Users wanting to run the Red Hat HPC Solution on Red Hat Enterprise Linux
   5.5 should install these packages.
 impacted_packages:
+  - purl: pkg:rpm/redhat/component-mvapich1-libraries?arch=src
+    affected_versions: vers:rpm/<0.1-4
+    fixed_versions: vers:rpm/0.1-4
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/component-base-node?arch=src
     affected_versions: vers:rpm/<5.5-1
     fixed_versions: vers:rpm/5.5-1
@@ -92,11 +97,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/component-lava-compute-v1_0?arch=src
     affected_versions: vers:rpm/<1.0-6
     fixed_versions: vers:rpm/1.0-6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/component-mvapich1-libraries?arch=src
-    affected_versions: vers:rpm/<0.1-4
-    fixed_versions: vers:rpm/0.1-4
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/component-nagios-installer-v2_12?arch=src
@@ -1146,15 +1146,6 @@ references:
   - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/php/webapps/12338.txt
     reference_type: exploit
     reference_id: CVE-2010-1431;OSVDB-63967
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/php/webapps/10234.txt
-    reference_type: exploit
-    reference_id: CVE-2010-2543;OSVDB-60566;CVE-2009-4032
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/php/webapps/34504.txt
-    reference_type: exploit
-    reference_id: CVE-2010-2544;OSVDB-67412
-  - url: https://www.securityfocus.com/bid/42575/info
-    reference_type: exploit
-    reference_id: CVE-2010-2544;OSVDB-67412
   - url: https://access.redhat.com/errata/RHSA-2010:0635
     reference_type:
     reference_id: RHSA-2010:0635

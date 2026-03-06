@@ -28,6 +28,11 @@ summary: |
   contain a backported patch to resolve this issue. After installing this
   update, the smb service will be restarted automatically.
 impacted_packages:
+  - purl: pkg:rpm/redhat/libtalloc?arch=ia64
+    affected_versions: vers:rpm/<1.2.0-52.el5_5
+    fixed_versions: vers:rpm/1.2.0-52.el5_5
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/samba-debuginfo?arch=ia64
     affected_versions: vers:rpm/<3.0.9-1.3E.17
     fixed_versions: vers:rpm/3.0.9-1.3E.17
@@ -166,11 +171,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/samba3x-client?arch=ia64
     affected_versions: vers:rpm/<3.3.8-0.52.el5_5
     fixed_versions: vers:rpm/3.3.8-0.52.el5_5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libtalloc?arch=ia64
-    affected_versions: vers:rpm/<1.2.0-52.el5_5
-    fixed_versions: vers:rpm/1.2.0-52.el5_5
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/samba3x-common?arch=ia64
@@ -1490,9 +1490,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=601419
     reference_type: bug
     reference_id: 601419
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux_x86/remote/16860.rb
-    reference_type: exploit
-    reference_id: CVE-2010-2063;OSVDB-65518
   - url: https://access.redhat.com/errata/RHSA-2010:0488
     reference_type:
     reference_id: RHSA-2010:0488
