@@ -8,11 +8,6 @@ summary: |
   An issue was discovered in Django v5.1.1, v5.0.9, and v4.2.16. The django.contrib.auth.forms.PasswordResetForm class, when used in a view implementing password reset flows, allows remote attackers to enumerate user e-mail addresses by sending password reset requests and observing the outcome (only when e-mail sending is consistently failing).
 impacted_packages:
   - purl: pkg:pypi/django
-    affected_versions: vers:pypi/<4.2.16
-    fixed_versions: vers:pypi/4.2.16
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/django
     affected_versions: vers:pypi/>=5.1|<5.1.1
     fixed_versions: vers:pypi/5.1.1
     fixed_in_commits: []
@@ -20,6 +15,11 @@ impacted_packages:
   - purl: pkg:pypi/django
     affected_versions: vers:pypi/>=5.0|<5.0.9
     fixed_versions: vers:pypi/5.0.9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/django
+    affected_versions: vers:pypi/<4.2.16
+    fixed_versions: vers:pypi/4.2.16
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -39,8 +39,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-204
   - CWE-203
+  - CWE-204
 references:
   - url: https://docs.djangoproject.com/en/dev/releases/security
     reference_type:
