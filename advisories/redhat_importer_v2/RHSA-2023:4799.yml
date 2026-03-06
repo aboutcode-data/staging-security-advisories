@@ -20,6 +20,11 @@ summary: |
 
   * "No bootable device" with OS boot disk interface VirtIO-SCSI and with more than 9 VirtIO disks. (BZ#2228486)
 impacted_packages:
+  - purl: pkg:rpm/redhat/nbdkit?arch=ppc64le&rpmmod=virt:rhel:8060020230804183137:ad008a3a
+    affected_versions: vers:rpm/<1.24.0-4.module+el8.6.0+14480+c0a3aa0f
+    fixed_versions: vers:rpm/1.24.0-4.module+el8.6.0+14480+c0a3aa0f
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/hivex?arch=src&rpmmod=virt:rhel:8060020230804183137:ad008a3a
     affected_versions: vers:rpm/<1.3.18-23.module+el8.6.0+14480+c0a3aa0f
     fixed_versions: vers:rpm/1.3.18-23.module+el8.6.0+14480+c0a3aa0f
@@ -955,11 +960,6 @@ impacted_packages:
     fixed_versions: vers:rpm/6.2.0-11.module+el8.6.0+18167+43cf40f3.8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/SLOF?arch=noarch&rpmmod=virt:rhel:8060020230804183137:ad008a3a
-    affected_versions: vers:rpm/<20210217-1.module+el8.6.0+14480+c0a3aa0f
-    fixed_versions: vers:rpm/20210217-1.module+el8.6.0+14480+c0a3aa0f
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/qemu-kvm-block-rbd-debuginfo?arch=x86_64&epoch=15&rpmmod=virt:rhel:8060020230804183137:ad008a3a
     affected_versions: vers:rpm/<6.2.0-11.module+el8.6.0+18167+43cf40f3.8
     fixed_versions: vers:rpm/6.2.0-11.module+el8.6.0+18167+43cf40f3.8
@@ -1278,6 +1278,11 @@ impacted_packages:
   - purl: pkg:rpm/redhat/virt-v2v-man-pages-uk?arch=noarch&epoch=1&rpmmod=virt:rhel:8060020230804183137:ad008a3a
     affected_versions: vers:rpm/<1.42.0-19.module+el8.6.0+15577+2ffd6ffa
     fixed_versions: vers:rpm/1.42.0-19.module+el8.6.0+15577+2ffd6ffa
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/SLOF?arch=noarch&rpmmod=virt:rhel:8060020230804183137:ad008a3a
+    affected_versions: vers:rpm/<20210217-1.module+el8.6.0+14480+c0a3aa0f
+    fixed_versions: vers:rpm/20210217-1.module+el8.6.0+14480+c0a3aa0f
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/hivex?arch=s390x&rpmmod=virt:rhel:8060020230804183137:ad008a3a
@@ -2748,11 +2753,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/nbdfuse-debuginfo?arch=ppc64le&rpmmod=virt:rhel:8060020230804183137:ad008a3a
     affected_versions: vers:rpm/<1.6.0-5.module+el8.6.0+14480+c0a3aa0f
     fixed_versions: vers:rpm/1.6.0-5.module+el8.6.0+14480+c0a3aa0f
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/nbdkit?arch=ppc64le&rpmmod=virt:rhel:8060020230804183137:ad008a3a
-    affected_versions: vers:rpm/<1.24.0-4.module+el8.6.0+14480+c0a3aa0f
-    fixed_versions: vers:rpm/1.24.0-4.module+el8.6.0+14480+c0a3aa0f
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/nbdkit-basic-filters?arch=ppc64le&rpmmod=virt:rhel:8060020230804183137:ad008a3a
@@ -4721,12 +4721,12 @@ references:
   - url: https://access.redhat.com/security/updates/classification/#moderate
     reference_type:
     reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2203653
+    reference_type:
+    reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2023/rhsa-2023_4799.json
     reference_type:
     reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2203653
-    reference_type: bug
-    reference_id: 2203653
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2228486
     reference_type: bug
     reference_id: 2228486
