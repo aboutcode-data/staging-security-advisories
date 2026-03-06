@@ -20,6 +20,11 @@ summary: |
   All dnsmasq users are advised to upgrade to this updated package, that
   upgrades dnsmasq to version 2.45, which resolves this issue.
 impacted_packages:
+  - purl: pkg:rpm/redhat/dnsmasq?arch=ppc
+    affected_versions: vers:rpm/<2.45-1.el5_2.1
+    fixed_versions: vers:rpm/2.45-1.el5_2.1
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/dnsmasq?arch=src
     affected_versions: vers:rpm/<2.45-1.el5_2.1
     fixed_versions: vers:rpm/2.45-1.el5_2.1
@@ -51,11 +56,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/dnsmasq-debuginfo?arch=ia64
-    affected_versions: vers:rpm/<2.45-1.el5_2.1
-    fixed_versions: vers:rpm/2.45-1.el5_2.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/dnsmasq?arch=ppc
     affected_versions: vers:rpm/<2.45-1.el5_2.1
     fixed_versions: vers:rpm/2.45-1.el5_2.1
     fixed_in_commits: []
@@ -95,15 +95,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=449345
     reference_type: bug
     reference_id: 449345
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/remote/6122.rb
-    reference_type: exploit
-    reference_id: OSVDB-48245;CVE-2008-4194;OSVDB-47927;CVE-2008-1447;OSVDB-47926;OSVDB-47916;OSVDB-47232
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/remote/6123.py
-    reference_type: exploit
-    reference_id: OSVDB-48245;CVE-2008-4194;OSVDB-47927;CVE-2008-1447;OSVDB-47926;OSVDB-47916;OSVDB-47232
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/remote/6130.c
-    reference_type: exploit
-    reference_id: OSVDB-48245;CVE-2008-4194;OSVDB-47927;CVE-2008-1447;OSVDB-47926;OSVDB-47916;OSVDB-47232;OSVDB-46776
   - url: https://access.redhat.com/errata/RHSA-2008:0789
     reference_type:
     reference_id: RHSA-2008:0789
