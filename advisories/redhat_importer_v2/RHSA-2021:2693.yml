@@ -21,6 +21,11 @@ summary: |
 
   For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.
 impacted_packages:
+  - purl: pkg:rpm/redhat/eap7-elytron-web?arch=src
+    affected_versions: vers:rpm/<1.6.3-1.Final_redhat_00001.1.el7eap
+    fixed_versions: vers:rpm/1.6.3-1.Final_redhat_00001.1.el7eap
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/eap7-wildfly-elytron?arch=src
     affected_versions: vers:rpm/<1.10.13-1.Final_redhat_00001.1.el7eap
     fixed_versions: vers:rpm/1.10.13-1.Final_redhat_00001.1.el7eap
@@ -64,11 +69,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/eap7-jboss-remoting?arch=src
     affected_versions: vers:rpm/<5.0.23-1.Final_redhat_00001.1.el7eap
     fixed_versions: vers:rpm/5.0.23-1.Final_redhat_00001.1.el7eap
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/eap7-elytron-web?arch=src
-    affected_versions: vers:rpm/<1.6.3-1.Final_redhat_00001.1.el7eap
-    fixed_versions: vers:rpm/1.6.3-1.Final_redhat_00001.1.el7eap
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/eap7-jberet?arch=src
@@ -423,6 +423,9 @@ references:
   - url: https://access.redhat.com/security/updates/classification/#moderate
     reference_type:
     reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1948001
+    reference_type:
+    reference_id:
   - url: https://issues.redhat.com/browse/JBEAP-20264
     reference_type:
     reference_id:
@@ -477,9 +480,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1944888
     reference_type: bug
     reference_id: '1944888'
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1948001
-    reference_type: bug
-    reference_id: '1948001'
   - url: https://access.redhat.com/errata/RHSA-2021:2693
     reference_type:
     reference_id: RHSA-2021:2693

@@ -10,6 +10,11 @@ summary: "Updated unzip packages that address various bugs are now available.\n\
   \n* a long filename buffer overflow vulnerability (CVE-2005-4667)\n\nAll users of unzip should\
   \ upgrade to these updated packages, which\nresolve these issues."
 impacted_packages:
+  - purl: pkg:rpm/redhat/unzip?arch=i386
+    affected_versions: vers:rpm/<5.50-35.EL3
+    fixed_versions: vers:rpm/5.50-35.EL3
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/unzip-debuginfo?arch=ia64
     affected_versions: vers:rpm/<5.50-35.EL3
     fixed_versions: vers:rpm/5.50-35.EL3
@@ -31,11 +36,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/unzip-debuginfo?arch=i386
-    affected_versions: vers:rpm/<5.50-35.EL3
-    fixed_versions: vers:rpm/5.50-35.EL3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/unzip?arch=i386
     affected_versions: vers:rpm/<5.50-35.EL3
     fixed_versions: vers:rpm/5.50-35.EL3
     fixed_in_commits: []
@@ -95,12 +95,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=226749
     reference_type: bug
     reference_id: 226749
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/remote/26913.c
-    reference_type: exploit
-    reference_id: CVE-2005-4667;OSVDB-22400
-  - url: https://www.securityfocus.com/bid/15968/info
-    reference_type: exploit
-    reference_id: CVE-2005-4667;OSVDB-22400
   - url: https://access.redhat.com/errata/RHBA-2007:0418
     reference_type:
     reference_id: RHBA-2007:0418

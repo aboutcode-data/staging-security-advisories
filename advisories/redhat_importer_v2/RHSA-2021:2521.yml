@@ -19,6 +19,11 @@ summary: |
 
   For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.
 impacted_packages:
+  - purl: pkg:rpm/redhat/libguestfs-winsupport?arch=src&rpmmod=virt:8.2:8020120210603194525:863bb0db
+    affected_versions: vers:rpm/<8.2-1.module+el8.2.0+5590+82cd80df
+    fixed_versions: vers:rpm/8.2-1.module+el8.2.0+5590+82cd80df
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/hivex?arch=aarch64&rpmmod=virt:8.2:8020120210603194525:863bb0db
     affected_versions: vers:rpm/<1.3.18-20.module+el8.2.0+5588+63a201c3
     fixed_versions: vers:rpm/1.3.18-20.module+el8.2.0+5588+63a201c3
@@ -347,6 +352,11 @@ impacted_packages:
   - purl: pkg:rpm/redhat/libvirt-daemon-driver-storage-gluster-debuginfo?arch=aarch64&rpmmod=virt:8.2:8020120210603194525:863bb0db
     affected_versions: vers:rpm/<6.0.0-25.5.module+el8.2.1+8680+ea98947b
     fixed_versions: vers:rpm/6.0.0-25.5.module+el8.2.1+8680+ea98947b
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libiscsi?arch=src&rpmmod=virt:8.2:8020120210603194525:863bb0db
+    affected_versions: vers:rpm/<1.18.0-8.module+el8.2.0+4793+b09dd2fb
+    fixed_versions: vers:rpm/1.18.0-8.module+el8.2.0+4793+b09dd2fb
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/libvirt-daemon-driver-storage-iscsi?arch=aarch64&rpmmod=virt:8.2:8020120210603194525:863bb0db
@@ -994,16 +1004,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.40.2-24.module+el8.2.1+7154+47ffd890
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libguestfs-winsupport?arch=src&rpmmod=virt:8.2:8020120210603194525:863bb0db
-    affected_versions: vers:rpm/<8.2-1.module+el8.2.0+5590+82cd80df
-    fixed_versions: vers:rpm/8.2-1.module+el8.2.0+5590+82cd80df
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libiscsi?arch=src&rpmmod=virt:8.2:8020120210603194525:863bb0db
-    affected_versions: vers:rpm/<1.18.0-8.module+el8.2.0+4793+b09dd2fb
-    fixed_versions: vers:rpm/1.18.0-8.module+el8.2.0+4793+b09dd2fb
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/libnbd?arch=src&rpmmod=virt:8.2:8020120210603194525:863bb0db
     affected_versions: vers:rpm/<1.2.2-1.module+el8.2.0+5644+32ac38d4
     fixed_versions: vers:rpm/1.2.2-1.module+el8.2.0+5644+32ac38d4
@@ -1492,6 +1492,11 @@ impacted_packages:
   - purl: pkg:rpm/redhat/libvirt-daemon-driver-storage-iscsi-direct?arch=ppc64le&rpmmod=virt:8.2:8020120210603194525:863bb0db
     affected_versions: vers:rpm/<6.0.0-25.5.module+el8.2.1+8680+ea98947b
     fixed_versions: vers:rpm/6.0.0-25.5.module+el8.2.1+8680+ea98947b
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python3-libnbd?arch=s390x&rpmmod=virt:8.2:8020120210603194525:863bb0db
+    affected_versions: vers:rpm/<1.2.2-1.module+el8.2.0+5644+32ac38d4
+    fixed_versions: vers:rpm/1.2.2-1.module+el8.2.0+5644+32ac38d4
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/libvirt-daemon-driver-storage-iscsi-direct-debuginfo?arch=ppc64le&rpmmod=virt:8.2:8020120210603194525:863bb0db
@@ -2792,11 +2797,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/python3-libguestfs-debuginfo?arch=s390x&epoch=1&rpmmod=virt:8.2:8020120210603194525:863bb0db
     affected_versions: vers:rpm/<1.40.2-24.module+el8.2.1+7154+47ffd890
     fixed_versions: vers:rpm/1.40.2-24.module+el8.2.1+7154+47ffd890
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python3-libnbd?arch=s390x&rpmmod=virt:8.2:8020120210603194525:863bb0db
-    affected_versions: vers:rpm/<1.2.2-1.module+el8.2.0+5644+32ac38d4
-    fixed_versions: vers:rpm/1.2.2-1.module+el8.2.0+5644+32ac38d4
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/python3-libnbd-debuginfo?arch=s390x&rpmmod=virt:8.2:8020120210603194525:863bb0db
@@ -4620,15 +4620,15 @@ references:
   - url: https://access.redhat.com/security/updates/classification/#moderate
     reference_type:
     reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1924601
+    reference_type:
+    reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2021/rhsa-2021_2521.json
     reference_type:
     reference_id:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1842363
     reference_type: bug
     reference_id: 1842363
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1924601
-    reference_type: bug
-    reference_id: '1924601'
   - url: https://access.redhat.com/errata/RHSA-2021:2521
     reference_type:
     reference_id: RHSA-2021:2521

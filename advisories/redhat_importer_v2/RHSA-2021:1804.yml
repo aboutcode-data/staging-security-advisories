@@ -48,19 +48,9 @@ summary: |
 
   For detailed information on changes in this release, see the Red Hat Enterprise Linux 8.4 Release Notes linked from the References section.
 impacted_packages:
-  - purl: pkg:rpm/redhat/egl-wayland?arch=src
-    affected_versions: vers:rpm/<1.1.5-3.el8
-    fixed_versions: vers:rpm/1.1.5-3.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libglvnd?arch=src&epoch=1
-    affected_versions: vers:rpm/<1.3.2-1.el8
-    fixed_versions: vers:rpm/1.3.2-1.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libdrm?arch=src
-    affected_versions: vers:rpm/<2.4.103-1.el8
-    fixed_versions: vers:rpm/2.4.103-1.el8
+  - purl: pkg:rpm/redhat/libwacom-devel?arch=ppc64le
+    affected_versions: vers:rpm/<1.6-2.el8
+    fixed_versions: vers:rpm/1.6-2.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/xorg-x11-drivers?arch=s390x
@@ -1113,11 +1103,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.6-2.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libwacom-devel?arch=ppc64le
-    affected_versions: vers:rpm/<1.6-2.el8
-    fixed_versions: vers:rpm/1.6-2.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/mesa-dri-drivers?arch=ppc64le
     affected_versions: vers:rpm/<20.3.3-2.el8
     fixed_versions: vers:rpm/20.3.3-2.el8
@@ -1638,6 +1623,21 @@ impacted_packages:
     fixed_versions: vers:rpm/1.16.3-1.el8
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/egl-wayland?arch=src
+    affected_versions: vers:rpm/<1.1.5-3.el8
+    fixed_versions: vers:rpm/1.1.5-3.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libglvnd?arch=src&epoch=1
+    affected_versions: vers:rpm/<1.3.2-1.el8
+    fixed_versions: vers:rpm/1.3.2-1.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libdrm?arch=src
+    affected_versions: vers:rpm/<2.4.103-1.el8
+    fixed_versions: vers:rpm/2.4.103-1.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/xorg-x11-server?arch=src
     affected_versions: vers:rpm/<1.20.10-1.el8
     fixed_versions: vers:rpm/1.20.10-1.el8
@@ -2042,6 +2042,24 @@ references:
   - url: https://access.redhat.com/security/updates/classification/#moderate
     reference_type:
     reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1862241
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1862246
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1869139
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1869142
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1869144
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1887276
+    reference_type:
+    reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2021/rhsa-2021_1804.json
     reference_type:
     reference_id:
@@ -2054,12 +2072,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1856738
     reference_type: bug
     reference_id: 1856738
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1862241
-    reference_type: bug
-    reference_id: 1862241
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1862246
-    reference_type: bug
-    reference_id: 1862246
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1862255
     reference_type: bug
     reference_id: 1862255
@@ -2069,15 +2081,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1863142
     reference_type: bug
     reference_id: 1863142
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1869139
-    reference_type: bug
-    reference_id: 1869139
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1869142
-    reference_type: bug
-    reference_id: 1869142
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1869144
-    reference_type: bug
-    reference_id: 1869144
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1872473
     reference_type: bug
     reference_id: 1872473
@@ -2090,9 +2093,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1886648
     reference_type: bug
     reference_id: 1886648
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1887276
-    reference_type: bug
-    reference_id: 1887276
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1887654
     reference_type: bug
     reference_id: 1887654

@@ -20,6 +20,11 @@ summary: |
 
   * Previously, the *Pass-through* plug-in in Directory Server did not support encrypted connections if the encryption was started using the *STARTTLS* command. The problem has been fixed, and the *Pass-through* plug-in now supports connections that use the *STARTTLS* command. (BZ#1635138)
 impacted_packages:
+  - purl: pkg:rpm/redhat/389-ds-base-devel?arch=ppc64le
+    affected_versions: vers:rpm/<1.3.7.5-29.el7_5
+    fixed_versions: vers:rpm/1.3.7.5-29.el7_5
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/389-ds-base-libs?arch=s390x
     affected_versions: vers:rpm/<1.3.7.5-29.el7_5
     fixed_versions: vers:rpm/1.3.7.5-29.el7_5
@@ -95,11 +100,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.3.7.5-29.el7_5
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/389-ds-base-devel?arch=ppc64le
-    affected_versions: vers:rpm/<1.3.7.5-29.el7_5
-    fixed_versions: vers:rpm/1.3.7.5-29.el7_5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/389-ds-base-debuginfo?arch=ppc64le
     affected_versions: vers:rpm/<1.3.7.5-29.el7_5
     fixed_versions: vers:rpm/1.3.7.5-29.el7_5
@@ -139,12 +139,12 @@ references:
   - url: https://access.redhat.com/security/updates/classification/#moderate
     reference_type:
     reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1630668
+    reference_type:
+    reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2018/rhsa-2018_3507.json
     reference_type:
     reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1630668
-    reference_type: bug
-    reference_id: 1630668
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1635138
     reference_type: bug
     reference_id: 1635138

@@ -47,7 +47,17 @@ summary: |
 
   * [kernel] Indefinite waiting for RCU callback while removing cgroup (BZ#2000973)
 impacted_packages:
-  - purl: pkg:rpm/redhat/python-perf?arch=x86_64
+  - purl: pkg:rpm/redhat/kernel-tools?arch=ppc64
+    affected_versions: vers:rpm/<3.10.0-1160.45.1.el7
+    fixed_versions: vers:rpm/3.10.0-1160.45.1.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-tools-libs?arch=ppc64
+    affected_versions: vers:rpm/<3.10.0-1160.45.1.el7
+    fixed_versions: vers:rpm/3.10.0-1160.45.1.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/perf?arch=ppc64
     affected_versions: vers:rpm/<3.10.0-1160.45.1.el7
     fixed_versions: vers:rpm/3.10.0-1160.45.1.el7
     fixed_in_commits: []
@@ -88,6 +98,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/perf?arch=x86_64
+    affected_versions: vers:rpm/<3.10.0-1160.45.1.el7
+    fixed_versions: vers:rpm/3.10.0-1160.45.1.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python-perf?arch=x86_64
     affected_versions: vers:rpm/<3.10.0-1160.45.1.el7
     fixed_versions: vers:rpm/3.10.0-1160.45.1.el7
     fixed_in_commits: []
@@ -267,21 +282,6 @@ impacted_packages:
     fixed_versions: vers:rpm/3.10.0-1160.45.1.el7
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-tools?arch=ppc64
-    affected_versions: vers:rpm/<3.10.0-1160.45.1.el7
-    fixed_versions: vers:rpm/3.10.0-1160.45.1.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-tools-libs?arch=ppc64
-    affected_versions: vers:rpm/<3.10.0-1160.45.1.el7
-    fixed_versions: vers:rpm/3.10.0-1160.45.1.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/perf?arch=ppc64
-    affected_versions: vers:rpm/<3.10.0-1160.45.1.el7
-    fixed_versions: vers:rpm/3.10.0-1160.45.1.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/python-perf?arch=ppc64
     affected_versions: vers:rpm/<3.10.0-1160.45.1.el7
     fixed_versions: vers:rpm/3.10.0-1160.45.1.el7
@@ -418,18 +418,18 @@ references:
   - url: https://access.redhat.com/security/updates/classification/#important
     reference_type:
     reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1983686
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1983988
+    reference_type:
+    reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2021/rhsa-2021_3801.json
     reference_type:
     reference_id:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1965461
     reference_type: bug
     reference_id: '1965461'
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1983686
-    reference_type: bug
-    reference_id: '1983686'
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1983988
-    reference_type: bug
-    reference_id: '1983988'
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1986506
     reference_type: bug
     reference_id: '1986506'

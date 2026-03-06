@@ -35,11 +35,6 @@ summary: |
   Users of Python are advised to upgrade to these updated packages, which
   contain backported patches to resolve these issues.
 impacted_packages:
-  - purl: pkg:rpm/redhat/python-debuginfo?arch=ia64
-    affected_versions: vers:rpm/<2.2.3-6.8
-    fixed_versions: vers:rpm/2.2.3-6.8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/python-devel?arch=ia64
     affected_versions: vers:rpm/<2.2.3-6.8
     fixed_versions: vers:rpm/2.2.3-6.8
@@ -56,6 +51,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/python?arch=ia64
+    affected_versions: vers:rpm/<2.2.3-6.8
+    fixed_versions: vers:rpm/2.2.3-6.8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python-debuginfo?arch=ia64
     affected_versions: vers:rpm/<2.2.3-6.8
     fixed_versions: vers:rpm/2.2.3-6.8
     fixed_in_commits: []
@@ -398,6 +398,12 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=295971
     reference_type: bug
     reference_id: 295971
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/remote/30018.py
+    reference_type: exploit
+    reference_id: CVE-2007-2052;OSVDB-35247
+  - url: https://www.securityfocus.com/bid/23887/info
+    reference_type: exploit
+    reference_id: CVE-2007-2052;OSVDB-35247
   - url: https://access.redhat.com/errata/RHSA-2007:1076
     reference_type:
     reference_id: RHSA-2007:1076

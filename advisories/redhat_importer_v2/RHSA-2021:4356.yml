@@ -113,12 +113,7 @@ summary: |
   * kernel: setsockopt System Call Untrusted Pointer Dereference Information Disclosure (CVE-2021-20239)
   * kernel: out of bounds array access in drivers/md/dm-ioctl.c (CVE-2021-31916)
 impacted_packages:
-  - purl: pkg:rpm/redhat/kernel?arch=s390x
-    affected_versions: vers:rpm/<4.18.0-348.el8
-    fixed_versions: vers:rpm/4.18.0-348.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/perf?arch=aarch64
+  - purl: pkg:rpm/redhat/kernel?arch=ppc64le
     affected_versions: vers:rpm/<4.18.0-348.el8
     fixed_versions: vers:rpm/4.18.0-348.el8
     fixed_in_commits: []
@@ -188,6 +183,11 @@ impacted_packages:
     fixed_versions: vers:rpm/4.18.0-348.el8
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/perf?arch=aarch64
+    affected_versions: vers:rpm/<4.18.0-348.el8
+    fixed_versions: vers:rpm/4.18.0-348.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/python3-perf?arch=aarch64
     affected_versions: vers:rpm/<4.18.0-348.el8
     fixed_versions: vers:rpm/4.18.0-348.el8
@@ -234,11 +234,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/bpftool?arch=ppc64le
-    affected_versions: vers:rpm/<4.18.0-348.el8
-    fixed_versions: vers:rpm/4.18.0-348.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel?arch=ppc64le
     affected_versions: vers:rpm/<4.18.0-348.el8
     fixed_versions: vers:rpm/4.18.0-348.el8
     fixed_in_commits: []
@@ -468,6 +463,11 @@ impacted_packages:
     fixed_versions: vers:rpm/4.18.0-348.el8
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel?arch=s390x
+    affected_versions: vers:rpm/<4.18.0-348.el8
+    fixed_versions: vers:rpm/4.18.0-348.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-core?arch=s390x
     affected_versions: vers:rpm/<4.18.0-348.el8
     fixed_versions: vers:rpm/4.18.0-348.el8
@@ -622,6 +622,36 @@ references:
   - url: https://access.redhat.com/security/updates/classification/#moderate
     reference_type:
     reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1900844
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1912683
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1923636
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1946965
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1964139
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1966578
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1975949
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1976946
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1989165
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1995249
+    reference_type:
+    reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2021/rhsa-2021_4356.json
     reference_type:
     reference_id:
@@ -637,18 +667,12 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1894101
     reference_type: bug
     reference_id: 1894101
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1900844
-    reference_type: bug
-    reference_id: '1900844'
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1903244
     reference_type: bug
     reference_id: '1903244'
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1906522
     reference_type: bug
     reference_id: '1906522'
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1912683
-    reference_type: bug
-    reference_id: '1912683'
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1913348
     reference_type: bug
     reference_id: '1913348'
@@ -661,9 +685,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1921958
     reference_type: bug
     reference_id: '1921958'
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1923636
-    reference_type: bug
-    reference_id: '1923636'
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1930376
     reference_type: bug
     reference_id: '1930376'
@@ -691,9 +712,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1945388
     reference_type: bug
     reference_id: '1945388'
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1946965
-    reference_type: bug
-    reference_id: '1946965'
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1948772
     reference_type: bug
     reference_id: '1948772'
@@ -751,9 +769,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1964028
     reference_type: bug
     reference_id: '1964028'
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1964139
-    reference_type: bug
-    reference_id: '1964139'
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1965038
     reference_type: bug
     reference_id: '1965038'
@@ -763,9 +778,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1965458
     reference_type: bug
     reference_id: '1965458'
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1966578
-    reference_type: bug
-    reference_id: '1966578'
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1969489
     reference_type: bug
     reference_id: '1969489'
@@ -781,18 +793,12 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1975182
     reference_type: bug
     reference_id: '1975182'
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1975949
-    reference_type: bug
-    reference_id: '1975949'
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1976679
     reference_type: bug
     reference_id: '1976679'
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1976699
     reference_type: bug
     reference_id: '1976699'
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1976946
-    reference_type: bug
-    reference_id: '1976946'
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1976969
     reference_type: bug
     reference_id: '1976969'
@@ -823,9 +829,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1986138
     reference_type: bug
     reference_id: '1986138'
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1989165
-    reference_type: bug
-    reference_id: '1989165'
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1989999
     reference_type: bug
     reference_id: '1989999'
@@ -835,18 +838,9 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1992700
     reference_type: bug
     reference_id: '1992700'
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1995249
-    reference_type: bug
-    reference_id: '1995249'
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1996854
     reference_type: bug
     reference_id: '1996854'
-  - url: https://bugs.chromium.org/p/project-zero/issues/detail?id=1958
-    reference_type: exploit
-    reference_id: CVE-2019-15794
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/dos/47692.txt
-    reference_type: exploit
-    reference_id: CVE-2019-15794
   - url: https://access.redhat.com/errata/RHSA-2021:4356
     reference_type:
     reference_id: RHSA-2021:4356

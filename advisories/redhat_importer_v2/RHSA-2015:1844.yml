@@ -41,6 +41,11 @@ summary: "Red Hat OpenShift Enterprise release 2.2.7 is now available with \nupd
   \ \nCVE-2015-1813)\n\nhttps://access.redhat.com/documentation/en-US/OpenShift_Enterprise/2/html-single/Technical_Notes/index.html\n\
   All OpenShift Enterprise 2 users are advised to upgrade to these \nupdated packages."
 impacted_packages:
+  - purl: pkg:rpm/redhat/jenkins?arch=src
+    affected_versions: vers:rpm/<1.609.1-1.el6op
+    fixed_versions: vers:rpm/1.609.1-1.el6op
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/jenkins?arch=noarch
     affected_versions: vers:rpm/<1.609.1-1.el6op
     fixed_versions: vers:rpm/1.609.1-1.el6op
@@ -154,11 +159,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/rubygem-openshift-origin-routing-daemon?arch=noarch
     affected_versions: vers:rpm/<0.25.1.2-1.el6op
     fixed_versions: vers:rpm/0.25.1.2-1.el6op
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/jenkins?arch=src
-    affected_versions: vers:rpm/<1.609.1-1.el6op
-    fixed_versions: vers:rpm/1.609.1-1.el6op
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/openshift-origin-cartridge-jenkins?arch=src
@@ -292,7 +292,25 @@ references:
   - url: https://access.redhat.com/security/updates/classification/#important
     reference_type:
     reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1205615
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1205616
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1205620
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1205622
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1205623
+    reference_type:
+    reference_id:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1205625
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1205627
     reference_type:
     reference_id:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1205632
@@ -331,24 +349,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1197576
     reference_type: bug
     reference_id: 1197576
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1205615
-    reference_type: bug
-    reference_id: 1205615
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1205616
-    reference_type: bug
-    reference_id: 1205616
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1205620
-    reference_type: bug
-    reference_id: 1205620
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1205622
-    reference_type: bug
-    reference_id: 1205622
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1205623
-    reference_type: bug
-    reference_id: 1205623
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1205627
-    reference_type: bug
-    reference_id: 1205627
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1216206
     reference_type: bug
     reference_id: 1216206

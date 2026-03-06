@@ -89,6 +89,11 @@ summary: |
   Release Notes and Technical Notes. The system must be rebooted for this
   update to take effect.
 impacted_packages:
+  - purl: pkg:rpm/redhat/kernel?arch=x86_64
+    affected_versions: vers:rpm/<2.6.18-238.el5
+    fixed_versions: vers:rpm/2.6.18-238.el5
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-xen-devel?arch=i686
     affected_versions: vers:rpm/<2.6.18-238.el5
     fixed_versions: vers:rpm/2.6.18-238.el5
@@ -195,11 +200,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debug-debuginfo?arch=x86_64
-    affected_versions: vers:rpm/<2.6.18-238.el5
-    fixed_versions: vers:rpm/2.6.18-238.el5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel?arch=x86_64
     affected_versions: vers:rpm/<2.6.18-238.el5
     fixed_versions: vers:rpm/2.6.18-238.el5
     fixed_in_commits: []
@@ -1326,6 +1326,15 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=663853
     reference_type: bug
     reference_id: 663853
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/local/17787.c
+    reference_type: exploit
+    reference_id: CVE-2010-4073;CVE-2010-3850;CVE-2010-3848
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/local/34987.c
+    reference_type: exploit
+    reference_id: CVE-2010-4158;OSVDB-69190
+  - url: https://www.securityfocus.com/bid/44758/info
+    reference_type: exploit
+    reference_id: CVE-2010-4158;OSVDB-69190
   - url: https://access.redhat.com/errata/RHSA-2011:0017
     reference_type:
     reference_id: RHSA-2011:0017

@@ -29,6 +29,11 @@ summary: |
   Firefox version 38.1.1 ESR, which corrects this issue. After installing the
   update, Firefox must be restarted for the changes to take effect.
 impacted_packages:
+  - purl: pkg:rpm/redhat/firefox?arch=i386
+    affected_versions: vers:rpm/<38.1.1-1.el5_11
+    fixed_versions: vers:rpm/38.1.1-1.el5_11
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/firefox?arch=x86_64
     affected_versions: vers:rpm/<38.1.1-1.el7_1
     fixed_versions: vers:rpm/38.1.1-1.el7_1
@@ -214,11 +219,6 @@ impacted_packages:
     fixed_versions: vers:rpm/38.1.1-1.el5_11
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/firefox?arch=i386
-    affected_versions: vers:rpm/<38.1.1-1.el5_11
-    fixed_versions: vers:rpm/38.1.1-1.el5_11
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/firefox-debuginfo?arch=ppc64le
     affected_versions: vers:rpm/<38.1.1-1.ael7b_1
     fixed_versions: vers:rpm/38.1.1-1.ael7b_1
@@ -252,9 +252,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1251318
     reference_type: bug
     reference_id: 1251318
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/local/37772.js
-    reference_type: exploit
-    reference_id: CVE-2015-4495;OSVDB-125839
   - url: https://access.redhat.com/errata/RHSA-2015:1581
     reference_type:
     reference_id: RHSA-2015:1581

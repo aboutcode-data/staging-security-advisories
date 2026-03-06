@@ -34,7 +34,27 @@ summary: |
   all running applications that use the xmlsec1 library must be restarted for
   the update to take effect.
 impacted_packages:
-  - purl: pkg:rpm/redhat/xmlsec1-devel?arch=ppc64
+  - purl: pkg:rpm/redhat/xmlsec1-openssl?arch=i386
+    affected_versions: vers:rpm/<1.2.9-8.1.2
+    fixed_versions: vers:rpm/1.2.9-8.1.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/xmlsec1-nss?arch=i386
+    affected_versions: vers:rpm/<1.2.9-8.1.2
+    fixed_versions: vers:rpm/1.2.9-8.1.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/xmlsec1?arch=i386
+    affected_versions: vers:rpm/<1.2.9-8.1.2
+    fixed_versions: vers:rpm/1.2.9-8.1.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/xmlsec1-devel?arch=s390
+    affected_versions: vers:rpm/<1.2.6-3.2
+    fixed_versions: vers:rpm/1.2.6-3.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/xmlsec1-devel?arch=s390
     affected_versions: vers:rpm/<1.2.9-8.1.2
     fixed_versions: vers:rpm/1.2.9-8.1.2
     fixed_in_commits: []
@@ -160,21 +180,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/xmlsec1-debuginfo?arch=i386
-    affected_versions: vers:rpm/<1.2.9-8.1.2
-    fixed_versions: vers:rpm/1.2.9-8.1.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/xmlsec1-openssl?arch=i386
-    affected_versions: vers:rpm/<1.2.9-8.1.2
-    fixed_versions: vers:rpm/1.2.9-8.1.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/xmlsec1-nss?arch=i386
-    affected_versions: vers:rpm/<1.2.9-8.1.2
-    fixed_versions: vers:rpm/1.2.9-8.1.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/xmlsec1?arch=i386
     affected_versions: vers:rpm/<1.2.9-8.1.2
     fixed_versions: vers:rpm/1.2.9-8.1.2
     fixed_in_commits: []
@@ -344,6 +349,11 @@ impacted_packages:
     fixed_versions: vers:rpm/1.2.6-3.2
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/xmlsec1-devel?arch=ppc64
+    affected_versions: vers:rpm/<1.2.9-8.1.2
+    fixed_versions: vers:rpm/1.2.9-8.1.2
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/xmlsec1-gnutls-devel?arch=ppc64
     affected_versions: vers:rpm/<1.2.9-8.1.2
     fixed_versions: vers:rpm/1.2.9-8.1.2
@@ -474,16 +484,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.2.6-3.2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/xmlsec1-devel?arch=s390
-    affected_versions: vers:rpm/<1.2.6-3.2
-    fixed_versions: vers:rpm/1.2.6-3.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/xmlsec1-devel?arch=s390
-    affected_versions: vers:rpm/<1.2.9-8.1.2
-    fixed_versions: vers:rpm/1.2.9-8.1.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/xmlsec1-gnutls-devel?arch=s390
     affected_versions: vers:rpm/<1.2.9-8.1.2
     fixed_versions: vers:rpm/1.2.9-8.1.2
@@ -547,9 +547,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=700467
     reference_type: bug
     reference_id: 700467
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/windows/remote/17993.rb
-    reference_type: exploit
-    reference_id: CVE-2011-1774;OSVDB-74017;CVE-2011-1425;OSVDB-72303
   - url: https://access.redhat.com/errata/RHSA-2011:0486
     reference_type:
     reference_id: RHSA-2011:0486
