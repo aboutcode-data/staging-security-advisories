@@ -11,6 +11,11 @@ summary: "Possible request smuggling in HTTP/2 due missing validation of content
   \ to fix this one case. \n\n### Patches\nThis was fixed as part of 4.1.61.Final\n\n### Workarounds\n\
   Validation can be done by the user before proxy the request by validating the header."
 impacted_packages:
+  - purl: pkg:maven/io.netty/netty-codec-http2
+    affected_versions: vers:maven/>=4.0.0|<4.1.61.Final
+    fixed_versions: vers:maven/4.1.61.Final
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:maven/org.jboss.netty/netty
     affected_versions: vers:maven/<4.0.0
     fixed_versions:
@@ -19,11 +24,6 @@ impacted_packages:
   - purl: pkg:maven/io.netty/netty
     affected_versions: vers:maven/<4.0.0
     fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/io.netty/netty-codec-http2
-    affected_versions: vers:maven/>=4.0.0|<4.1.61.Final
-    fixed_versions: vers:maven/4.1.61.Final
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
