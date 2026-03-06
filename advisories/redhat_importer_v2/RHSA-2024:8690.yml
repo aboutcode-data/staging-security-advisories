@@ -130,11 +130,6 @@ impacted_packages:
     fixed_versions: vers:rpm/4.13.0-202410181847.p0.g53fd427.assembly.stream.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/conmon-debuginfo?arch=x86_64&epoch=3
-    affected_versions: vers:rpm/<2.1.7-5.rhaos4.13.el9
-    fixed_versions: vers:rpm/2.1.7-5.rhaos4.13.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/openshift-ansible?arch=src
     affected_versions: vers:rpm/<4.13.0-202410181847.p0.g1397e80.assembly.stream.el9
     fixed_versions: vers:rpm/4.13.0-202410181847.p0.g1397e80.assembly.stream.el9
@@ -366,6 +361,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/conmon-debugsource?arch=x86_64&epoch=3
+    affected_versions: vers:rpm/<2.1.7-5.rhaos4.13.el9
+    fixed_versions: vers:rpm/2.1.7-5.rhaos4.13.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/conmon-debuginfo?arch=x86_64&epoch=3
     affected_versions: vers:rpm/<2.1.7-5.rhaos4.13.el9
     fixed_versions: vers:rpm/2.1.7-5.rhaos4.13.el9
     fixed_in_commits: []
@@ -838,11 +838,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/podman-gvproxy-debuginfo?arch=aarch64&epoch=3
     affected_versions: vers:rpm/<4.4.1-16.rhaos4.13.el9
     fixed_versions: vers:rpm/4.4.1-16.rhaos4.13.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/haproxy22-debuginfo?arch=s390x
-    affected_versions: vers:rpm/<2.2.24-5.rhaos4.13.el8
-    fixed_versions: vers:rpm/2.2.24-5.rhaos4.13.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-plugins-debuginfo?arch=aarch64&epoch=3
@@ -1320,6 +1315,11 @@ impacted_packages:
     fixed_versions: vers:rpm/2.2.24-5.rhaos4.13.el8
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/haproxy22-debuginfo?arch=s390x
+    affected_versions: vers:rpm/<2.2.24-5.rhaos4.13.el8
+    fixed_versions: vers:rpm/2.2.24-5.rhaos4.13.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/openshift-hyperkube?arch=s390x
     affected_versions: vers:rpm/<4.13.0-202410181847.p0.g53fd427.assembly.stream.el8
     fixed_versions: vers:rpm/4.13.0-202410181847.p0.g53fd427.assembly.stream.el8
@@ -1668,7 +1668,19 @@ severities:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2024_8690.json
 weaknesses: []
 references:
+  - url: https://access.redhat.com/errata/RHSA-2024:8690
+    reference_type:
+    reference_id:
   - url: https://access.redhat.com/security/updates/classification/#important
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2315691
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2317458
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2317467
     reference_type:
     reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2024_8690.json
@@ -1683,15 +1695,3 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2310529
     reference_type: bug
     reference_id: 2310529
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2315691
-    reference_type: bug
-    reference_id: 2315691
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2317458
-    reference_type: bug
-    reference_id: 2317458
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2317467
-    reference_type: bug
-    reference_id: 2317467
-  - url: https://access.redhat.com/errata/RHSA-2024:8690
-    reference_type:
-    reference_id: RHSA-2024:8690
