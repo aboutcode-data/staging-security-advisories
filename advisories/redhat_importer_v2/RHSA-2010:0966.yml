@@ -70,6 +70,11 @@ summary: |
   Firefox version 3.6.13, which corrects these issues. After installing the
   update, Firefox must be restarted for the changes to take effect.
 impacted_packages:
+  - purl: pkg:rpm/redhat/firefox?arch=i386
+    affected_versions: vers:rpm/<3.6.13-2.el5
+    fixed_versions: vers:rpm/3.6.13-2.el5
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/firefox?arch=ia64
     affected_versions: vers:rpm/<3.6.13-3.el4
     fixed_versions: vers:rpm/3.6.13-3.el4
@@ -213,11 +218,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/xulrunner?arch=i386
     affected_versions: vers:rpm/<1.9.2.13-3.el5
     fixed_versions: vers:rpm/1.9.2.13-3.el5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/firefox?arch=i386
-    affected_versions: vers:rpm/<3.6.13-2.el5
-    fixed_versions: vers:rpm/3.6.13-2.el5
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/firefox-debuginfo?arch=i386
@@ -503,12 +503,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=660439
     reference_type: bug
     reference_id: 660439
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/remote/35095.txt
-    reference_type: exploit
-    reference_id: CVE-2010-3770;OSVDB-69772
-  - url: https://www.securityfocus.com/bid/45353/info
-    reference_type: exploit
-    reference_id: CVE-2010-3770;OSVDB-69772
   - url: https://access.redhat.com/errata/RHSA-2010:0966
     reference_type:
     reference_id: RHSA-2010:0966
