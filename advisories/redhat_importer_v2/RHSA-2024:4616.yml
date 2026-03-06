@@ -27,9 +27,19 @@ summary: |
 
   All OpenShift Container Platform 4.16 users are advised to upgrade to these updated packages and images when they are available in the appropriate release channel. To check for available updates, use the OpenShift CLI (oc) or web console. Instructions for upgrading a cluster are available at https://docs.openshift.com/container-platform/4.16/updating/updating_a_cluster/updating-cluster-cli.html
 impacted_packages:
-  - purl: pkg:rpm/redhat/containers-common?arch=ppc64le&epoch=3
-    affected_versions: vers:rpm/<1-78.rhaos4.16.el8
-    fixed_versions: vers:rpm/1-78.rhaos4.16.el8
+  - purl: pkg:rpm/redhat/podman-remote?arch=x86_64&epoch=4
+    affected_versions: vers:rpm/<4.9.4-7.rhaos4.16.el9
+    fixed_versions: vers:rpm/4.9.4-7.rhaos4.16.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-tests?arch=x86_64&epoch=4
+    affected_versions: vers:rpm/<4.9.4-7.rhaos4.16.el9
+    fixed_versions: vers:rpm/4.9.4-7.rhaos4.16.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-gvproxy?arch=ppc64le&epoch=4
+    affected_versions: vers:rpm/<4.9.4-7.rhaos4.16.el8
+    fixed_versions: vers:rpm/4.9.4-7.rhaos4.16.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/python-jinja2?arch=src
@@ -193,16 +203,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-plugins?arch=x86_64&epoch=4
-    affected_versions: vers:rpm/<4.9.4-7.rhaos4.16.el9
-    fixed_versions: vers:rpm/4.9.4-7.rhaos4.16.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-remote?arch=x86_64&epoch=4
-    affected_versions: vers:rpm/<4.9.4-7.rhaos4.16.el9
-    fixed_versions: vers:rpm/4.9.4-7.rhaos4.16.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-tests?arch=x86_64&epoch=4
     affected_versions: vers:rpm/<4.9.4-7.rhaos4.16.el9
     fixed_versions: vers:rpm/4.9.4-7.rhaos4.16.el9
     fixed_in_commits: []
@@ -427,6 +427,11 @@ impacted_packages:
     fixed_versions: vers:rpm/4.16.0-202407111006.p0.gfa84651.assembly.stream.el8
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-plugins?arch=ppc64le&epoch=4
+    affected_versions: vers:rpm/<4.9.4-7.rhaos4.16.el8
+    fixed_versions: vers:rpm/4.9.4-7.rhaos4.16.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/ose-aws-ecr-image-credential-provider?arch=aarch64
     affected_versions: vers:rpm/<4.16.0-202407120242.p0.ga53e9de.assembly.stream.el8
     fixed_versions: vers:rpm/4.16.0-202407120242.p0.ga53e9de.assembly.stream.el8
@@ -602,6 +607,11 @@ impacted_packages:
     fixed_versions: vers:rpm/4.9.4-7.rhaos4.16.el9
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/containers-common?arch=ppc64le&epoch=3
+    affected_versions: vers:rpm/<1-78.rhaos4.16.el8
+    fixed_versions: vers:rpm/1-78.rhaos4.16.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/openshift-clients?arch=ppc64le
     affected_versions: vers:rpm/<4.16.0-202407111006.p0.gfa84651.assembly.stream.el8
     fixed_versions: vers:rpm/4.16.0-202407111006.p0.gfa84651.assembly.stream.el8
@@ -638,16 +648,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-catatonit?arch=ppc64le&epoch=4
-    affected_versions: vers:rpm/<4.9.4-7.rhaos4.16.el8
-    fixed_versions: vers:rpm/4.9.4-7.rhaos4.16.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-gvproxy?arch=ppc64le&epoch=4
-    affected_versions: vers:rpm/<4.9.4-7.rhaos4.16.el8
-    fixed_versions: vers:rpm/4.9.4-7.rhaos4.16.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-plugins?arch=ppc64le&epoch=4
     affected_versions: vers:rpm/<4.9.4-7.rhaos4.16.el8
     fixed_versions: vers:rpm/4.9.4-7.rhaos4.16.el8
     fixed_in_commits: []

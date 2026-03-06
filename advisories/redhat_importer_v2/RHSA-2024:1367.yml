@@ -78,16 +78,6 @@ summary: |
 
   * rbd: don't move requests to the running list on errors [8.x] (JIRA:RHEL-24201)
 impacted_packages:
-  - purl: pkg:rpm/redhat/python3-perf-debuginfo?arch=x86_64
-    affected_versions: vers:rpm/<4.18.0-305.125.1.el8_4
-    fixed_versions: vers:rpm/4.18.0-305.125.1.el8_4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel?arch=src
-    affected_versions: vers:rpm/<4.18.0-305.125.1.el8_4
-    fixed_versions: vers:rpm/4.18.0-305.125.1.el8_4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/bpftool?arch=x86_64
     affected_versions: vers:rpm/<4.18.0-305.125.1.el8_4
     fixed_versions: vers:rpm/4.18.0-305.125.1.el8_4
@@ -189,6 +179,16 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/perf-debuginfo?arch=x86_64
+    affected_versions: vers:rpm/<4.18.0-305.125.1.el8_4
+    fixed_versions: vers:rpm/4.18.0-305.125.1.el8_4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python3-perf-debuginfo?arch=x86_64
+    affected_versions: vers:rpm/<4.18.0-305.125.1.el8_4
+    fixed_versions: vers:rpm/4.18.0-305.125.1.el8_4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel?arch=src
     affected_versions: vers:rpm/<4.18.0-305.125.1.el8_4
     fixed_versions: vers:rpm/4.18.0-305.125.1.el8_4
     fixed_in_commits: []
@@ -321,7 +321,19 @@ severities:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2024_1367.json
 weaknesses: []
 references:
+  - url: https://access.redhat.com/errata/RHSA-2024:1367
+    reference_type:
+    reference_id:
   - url: https://access.redhat.com/security/updates/classification/#important
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2219268
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2253908
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2256279
     reference_type:
     reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2024_1367.json
@@ -345,21 +357,9 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2192671
     reference_type: bug
     reference_id: 2192671
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2219268
-    reference_type: bug
-    reference_id: 2219268
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2225191
     reference_type: bug
     reference_id: 2225191
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2253908
-    reference_type: bug
-    reference_id: 2253908
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2255139
     reference_type: bug
     reference_id: 2255139
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2256279
-    reference_type: bug
-    reference_id: 2256279
-  - url: https://access.redhat.com/errata/RHSA-2024:1367
-    reference_type:
-    reference_id: RHSA-2024:1367
