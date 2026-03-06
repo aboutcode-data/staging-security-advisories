@@ -43,11 +43,6 @@ summary: |
   Technical Notes. The system must be rebooted for this update to take
   effect.
 impacted_packages:
-  - purl: pkg:rpm/redhat/kernel?arch=src
-    affected_versions: vers:rpm/<2.6.32-279.el6
-    fixed_versions: vers:rpm/2.6.32-279.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debuginfo?arch=x86_64
     affected_versions: vers:rpm/<2.6.32-279.el6
     fixed_versions: vers:rpm/2.6.32-279.el6
@@ -99,6 +94,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel?arch=x86_64
+    affected_versions: vers:rpm/<2.6.32-279.el6
+    fixed_versions: vers:rpm/2.6.32-279.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel?arch=src
     affected_versions: vers:rpm/<2.6.32-279.el6
     fixed_versions: vers:rpm/2.6.32-279.el6
     fixed_in_commits: []
@@ -525,6 +525,12 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=824287
     reference_type: bug
     reference_id: 824287
+  - url: https://www.securityfocus.com/bid/46630/info
+    reference_type: exploit
+    reference_id: CVE-2011-1082;OSVDB-73053
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/dos/35403.c
+    reference_type: exploit
+    reference_id: CVE-2011-1083;OSVDB-71265
   - url: https://access.redhat.com/errata/RHSA-2012:0862
     reference_type:
     reference_id: RHSA-2012:0862
