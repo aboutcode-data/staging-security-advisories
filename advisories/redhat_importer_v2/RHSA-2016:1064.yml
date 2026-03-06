@@ -60,14 +60,9 @@ summary: |
   openshift3/python-33-rhel7:3.3-34
   openshift3/ruby-20-rhel7:2.0-34
 impacted_packages:
-  - purl: pkg:rpm/redhat/python-extras?arch=noarch
-    affected_versions: vers:rpm/<0.0.3-2.el7
-    fixed_versions: vers:rpm/0.0.3-2.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ansible?arch=src
-    affected_versions: vers:rpm/<1.9.4-1.el7aos
-    fixed_versions: vers:rpm/1.9.4-1.el7aos
+  - purl: pkg:rpm/redhat/fb303-devel?arch=x86_64
+    affected_versions: vers:rpm/<0.9.1-12.el7
+    fixed_versions: vers:rpm/0.9.1-12.el7
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/rubygem-metaclass-doc?arch=noarch
@@ -2070,6 +2065,11 @@ impacted_packages:
     fixed_versions: vers:rpm/0.5.1-2.el7
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python-extras?arch=noarch
+    affected_versions: vers:rpm/<0.0.3-2.el7
+    fixed_versions: vers:rpm/0.0.3-2.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/python-linecache2?arch=noarch
     affected_versions: vers:rpm/<1.0.0-3.el7
     fixed_versions: vers:rpm/1.0.0-3.el7
@@ -2918,6 +2918,11 @@ impacted_packages:
   - purl: pkg:rpm/redhat/nodejs-boom?arch=src
     affected_versions: vers:rpm/<2.8.0-1.el7aos
     fixed_versions: vers:rpm/2.8.0-1.el7aos
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ansible?arch=src
+    affected_versions: vers:rpm/<1.9.4-1.el7aos
+    fixed_versions: vers:rpm/1.9.4-1.el7aos
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/rubygem-builder?arch=src
@@ -4225,11 +4230,6 @@ impacted_packages:
     fixed_versions: vers:rpm/2.4.0-2.el7_2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/fb303-devel?arch=x86_64
-    affected_versions: vers:rpm/<0.9.1-12.el7
-    fixed_versions: vers:rpm/0.9.1-12.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/python-thrift?arch=x86_64
     affected_versions: vers:rpm/<0.9.1-12.el7
     fixed_versions: vers:rpm/0.9.1-12.el7
@@ -4323,7 +4323,13 @@ severities:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2016/rhsa-2016_1064.json
 weaknesses: []
 references:
+  - url: https://access.redhat.com/errata/RHSA-2016:1064
+    reference_type:
+    reference_id:
   - url: https://access.redhat.com/security/updates/classification/#important
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1316127
     reference_type:
     reference_id:
   - url: https://docs.openshift.com/enterprise/3.2/release_notes/ose_3_2_release_notes.html
@@ -4554,9 +4560,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1316050
     reference_type: bug
     reference_id: 1316050
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1316127
-    reference_type: bug
-    reference_id: 1316127
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1316216
     reference_type: bug
     reference_id: 1316216
@@ -4701,6 +4704,3 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1331038
     reference_type: bug
     reference_id: 1331038
-  - url: https://access.redhat.com/errata/RHSA-2016:1064
-    reference_type:
-    reference_id: RHSA-2016:1064
