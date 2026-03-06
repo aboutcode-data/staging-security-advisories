@@ -63,6 +63,11 @@ summary: |
   All OpenShift Container Platform 4.10 users are advised to upgrade to these updated packages and images when they are available in the appropriate release channel. To check for available updates, use the OpenShift Console or the CLI oc command. Instructions for upgrading a cluster are available
   at https://docs.openshift.com/container-platform/4.10/updating/updating-cluster-cli.html
 impacted_packages:
+  - purl: pkg:rpm/redhat/cri-tools?arch=aarch64
+    affected_versions: vers:rpm/<1.23.0-1.el8
+    fixed_versions: vers:rpm/1.23.0-1.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/cri-o?arch=src
     affected_versions: vers:rpm/<1.23.0-92.rhaos4.10.gitdaab4d1.el7
     fixed_versions: vers:rpm/1.23.0-92.rhaos4.10.gitdaab4d1.el7
@@ -1396,11 +1401,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/coreos-installer-debuginfo?arch=aarch64
     affected_versions: vers:rpm/<0.12.0-1.rhaos4.10.el8
     fixed_versions: vers:rpm/0.12.0-1.rhaos4.10.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-tools?arch=aarch64
-    affected_versions: vers:rpm/<1.23.0-1.el8
-    fixed_versions: vers:rpm/1.23.0-1.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/cri-tools-debugsource?arch=aarch64

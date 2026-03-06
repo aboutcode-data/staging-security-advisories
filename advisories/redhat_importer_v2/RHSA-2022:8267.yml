@@ -263,6 +263,16 @@ summary: |
 
   For detailed information on changes in this release, see the Red Hat Enterprise Linux 9.1 Release Notes linked from the References section.
 impacted_packages:
+  - purl: pkg:rpm/redhat/kernel-debug?arch=aarch64
+    affected_versions: vers:rpm/<5.14.0-162.6.1.el9_1
+    fixed_versions: vers:rpm/5.14.0-162.6.1.el9_1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-debug-core?arch=aarch64
+    affected_versions: vers:rpm/<5.14.0-162.6.1.el9_1
+    fixed_versions: vers:rpm/5.14.0-162.6.1.el9_1
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debug-devel?arch=aarch64
     affected_versions: vers:rpm/<5.14.0-162.6.1.el9_1
     fixed_versions: vers:rpm/5.14.0-162.6.1.el9_1
@@ -334,16 +344,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-core?arch=aarch64
-    affected_versions: vers:rpm/<5.14.0-162.6.1.el9_1
-    fixed_versions: vers:rpm/5.14.0-162.6.1.el9_1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debug?arch=aarch64
-    affected_versions: vers:rpm/<5.14.0-162.6.1.el9_1
-    fixed_versions: vers:rpm/5.14.0-162.6.1.el9_1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debug-core?arch=aarch64
     affected_versions: vers:rpm/<5.14.0-162.6.1.el9_1
     fixed_versions: vers:rpm/5.14.0-162.6.1.el9_1
     fixed_in_commits: []
@@ -814,13 +814,31 @@ references:
   - url: https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/9.1_release_notes/index
     reference_type:
     reference_id:
+  - url: https://access.redhat.com/errata/RHSA-2022:8267
+    reference_type:
+    reference_id:
   - url: https://access.redhat.com/security/updates/classification/#moderate
     reference_type:
     reference_id:
   - url: https://access.redhat.com/solutions/6971358
     reference_type:
     reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2037386
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2066614
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2070205
+    reference_type:
+    reference_id:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2071022
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2084479
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2089815
     reference_type:
     reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2022/rhsa-2022_8267.json
@@ -850,9 +868,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2028370
     reference_type: bug
     reference_id: 2028370
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2037386
-    reference_type: bug
-    reference_id: 2037386
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2038794
     reference_type: bug
     reference_id: 2038794
@@ -883,18 +898,12 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2066297
     reference_type: bug
     reference_id: 2066297
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2066614
-    reference_type: bug
-    reference_id: 2066614
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2066706
     reference_type: bug
     reference_id: 2066706
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2066819
     reference_type: bug
     reference_id: 2066819
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2070205
-    reference_type: bug
-    reference_id: 2070205
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2073064
     reference_type: bug
     reference_id: 2073064
@@ -916,15 +925,9 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2084183
     reference_type: bug
     reference_id: 2084183
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2084479
-    reference_type: bug
-    reference_id: 2084479
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2088021
     reference_type: bug
     reference_id: 2088021
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2089815
-    reference_type: bug
-    reference_id: 2089815
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2090226
     reference_type: bug
     reference_id: 2090226
@@ -985,6 +988,3 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2129152
     reference_type: bug
     reference_id: 2129152
-  - url: https://access.redhat.com/errata/RHSA-2022:8267
-    reference_type:
-    reference_id: RHSA-2022:8267

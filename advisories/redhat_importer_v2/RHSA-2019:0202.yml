@@ -24,6 +24,11 @@ summary: |
 
   * Previously, a file-system shutdown process caused by an I/O error could race against a running fstrim process to acquire a xfs buffer lock. Consequently, the file-system shutdown process never completed due to a deadlock and the file-system became unresponsive, unable to be unmounted. This update fixes the lock ordering so that the deadlock no longer occurs and the file-system shutdown process now completes in the described scenario. (BZ#1657142)
 impacted_packages:
+  - purl: pkg:rpm/redhat/python-perf?arch=ppc64
+    affected_versions: vers:rpm/<3.10.0-862.27.1.el7
+    fixed_versions: vers:rpm/3.10.0-862.27.1.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-doc?arch=noarch
     affected_versions: vers:rpm/<3.10.0-862.27.1.el7
     fixed_versions: vers:rpm/3.10.0-862.27.1.el7
@@ -150,11 +155,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debug-debuginfo?arch=ppc64
-    affected_versions: vers:rpm/<3.10.0-862.27.1.el7
-    fixed_versions: vers:rpm/3.10.0-862.27.1.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python-perf?arch=ppc64
     affected_versions: vers:rpm/<3.10.0-862.27.1.el7
     fixed_versions: vers:rpm/3.10.0-862.27.1.el7
     fixed_in_commits: []

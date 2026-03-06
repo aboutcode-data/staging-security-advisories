@@ -87,6 +87,11 @@ summary: |
 
   * dnf fails with fsync() over local repository present on CIFS mount point (BZ#2055824)
 impacted_packages:
+  - purl: pkg:rpm/redhat/kernel-tools-libs?arch=aarch64
+    affected_versions: vers:rpm/<4.18.0-348.20.1.el8_5
+    fixed_versions: vers:rpm/4.18.0-348.20.1.el8_5
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/bpftool?arch=aarch64
     affected_versions: vers:rpm/<4.18.0-348.20.1.el8_5
     fixed_versions: vers:rpm/4.18.0-348.20.1.el8_5
@@ -143,11 +148,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-tools?arch=aarch64
-    affected_versions: vers:rpm/<4.18.0-348.20.1.el8_5
-    fixed_versions: vers:rpm/4.18.0-348.20.1.el8_5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-tools-libs?arch=aarch64
     affected_versions: vers:rpm/<4.18.0-348.20.1.el8_5
     fixed_versions: vers:rpm/4.18.0-348.20.1.el8_5
     fixed_in_commits: []
@@ -620,9 +620,9 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2051505
     reference_type: bug
     reference_id: 2051505
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2060795
-    reference_type: bug
-    reference_id: 2060795
   - url: https://access.redhat.com/errata/RHSA-2022:0825
     reference_type:
     reference_id: RHSA-2022:0825
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2060795
+    reference_type: other
+    reference_id: show_bug.cgi?id=2060795
