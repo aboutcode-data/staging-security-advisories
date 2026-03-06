@@ -96,6 +96,11 @@ summary: |
   * python3.11-tox-ansible has been updated to 25.12.0
   * python3.11-typing-extensions has been updated to 4.15.0
 impacted_packages:
+  - purl: pkg:rpm/redhat/ansible-sign?arch=src
+    affected_versions: vers:rpm/<0.1.4-1.el8ap
+    fixed_versions: vers:rpm/0.1.4-1.el8ap
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/automation-controller-fapolicyd?arch=src
     affected_versions: vers:rpm/<1.0-5.el9ap
     fixed_versions: vers:rpm/1.0-5.el9ap
@@ -299,11 +304,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/molecule?arch=src
     affected_versions: vers:rpm/<25.12.0-1.el8ap
     fixed_versions: vers:rpm/25.12.0-1.el8ap
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ansible-sign?arch=src
-    affected_versions: vers:rpm/<0.1.4-1.el8ap
-    fixed_versions: vers:rpm/0.1.4-1.el8ap
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/ansible-lint?arch=src
@@ -1274,21 +1274,24 @@ severities:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2025/rhsa-2025_23069.json
 weaknesses: []
 references:
+  - url: https://access.redhat.com/errata/RHSA-2025:23069
+    reference_type:
+    reference_id:
   - url: https://access.redhat.com/security/updates/classification/#important
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2392834
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2392835
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2392836
     reference_type:
     reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2025/rhsa-2025_23069.json
     reference_type:
     reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2392834
-    reference_type: bug
-    reference_id: 2392834
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2392835
-    reference_type: bug
-    reference_id: 2392835
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2392836
-    reference_type: bug
-    reference_id: 2392836
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2394735
     reference_type: bug
     reference_id: 2394735
@@ -1298,6 +1301,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2412651
     reference_type: bug
     reference_id: 2412651
-  - url: https://access.redhat.com/errata/RHSA-2025:23069
-    reference_type:
-    reference_id: RHSA-2025:23069
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/webapps/52456.py
+    reference_type: exploit
+    reference_id: CVE-2025-64459
