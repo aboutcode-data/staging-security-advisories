@@ -543,21 +543,6 @@ summary: |
 
   For detailed information on changes in this release, see the Red Hat Enterprise Linux 9.3 Release Notes linked from the References section.
 impacted_packages:
-  - purl: pkg:rpm/redhat/kernel-64k-debug-devel?arch=aarch64
-    affected_versions: vers:rpm/<5.14.0-362.8.1.el9_3
-    fixed_versions: vers:rpm/5.14.0-362.8.1.el9_3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-64k-debug-devel-matched?arch=aarch64
-    affected_versions: vers:rpm/<5.14.0-362.8.1.el9_3
-    fixed_versions: vers:rpm/5.14.0-362.8.1.el9_3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-64k-devel?arch=aarch64
-    affected_versions: vers:rpm/<5.14.0-362.8.1.el9_3
-    fixed_versions: vers:rpm/5.14.0-362.8.1.el9_3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-64k-devel-matched?arch=aarch64
     affected_versions: vers:rpm/<5.14.0-362.8.1.el9_3
     fixed_versions: vers:rpm/5.14.0-362.8.1.el9_3
@@ -569,6 +554,21 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debug-devel-matched?arch=aarch64
+    affected_versions: vers:rpm/<5.14.0-362.8.1.el9_3
+    fixed_versions: vers:rpm/5.14.0-362.8.1.el9_3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-64k-debug-devel?arch=aarch64
+    affected_versions: vers:rpm/<5.14.0-362.8.1.el9_3
+    fixed_versions: vers:rpm/5.14.0-362.8.1.el9_3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-64k-debug-devel-matched?arch=aarch64
+    affected_versions: vers:rpm/<5.14.0-362.8.1.el9_3
+    fixed_versions: vers:rpm/5.14.0-362.8.1.el9_3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-64k-devel?arch=aarch64
     affected_versions: vers:rpm/<5.14.0-362.8.1.el9_3
     fixed_versions: vers:rpm/5.14.0-362.8.1.el9_3
     fixed_in_commits: []
@@ -1389,10 +1389,46 @@ references:
   - url: https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/9.3_release_notes/index
     reference_type:
     reference_id:
+  - url: https://access.redhat.com/errata/RHSA-2023:6583
+    reference_type:
+    reference_id:
   - url: https://access.redhat.com/security/updates/classification/#important
     reference_type:
     reference_id:
-  - url: https://access.redhat.com/solutions/7027704
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2173403
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2173430
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2175903
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2192667
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2213485
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2213802
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2218195
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2218212
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2218943
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2218944
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2226783
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2229498
     reference_type:
     reference_id:
   - url: https://issues.redhat.com/browse/RHEL-406
@@ -1446,12 +1482,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2172087
     reference_type: bug
     reference_id: 2172087
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2173403
-    reference_type: bug
-    reference_id: 2173403
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2173430
-    reference_type: bug
-    reference_id: 2173430
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2173434
     reference_type: bug
     reference_id: 2173434
@@ -1467,9 +1497,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2175323
     reference_type: bug
     reference_id: 2175323
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2175903
-    reference_type: bug
-    reference_id: 2175903
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2176140
     reference_type: bug
     reference_id: 2176140
@@ -1521,9 +1548,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2189292
     reference_type: bug
     reference_id: 2189292
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2192667
-    reference_type: bug
-    reference_id: 2192667
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2203922
     reference_type: bug
     reference_id: 2203922
@@ -1536,12 +1560,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2213199
     reference_type: bug
     reference_id: 2213199
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2213485
-    reference_type: bug
-    reference_id: 2213485
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2213802
-    reference_type: bug
-    reference_id: 2213802
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2214348
     reference_type: bug
     reference_id: 2214348
@@ -1566,27 +1584,12 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2217964
     reference_type: bug
     reference_id: 2217964
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2218195
-    reference_type: bug
-    reference_id: 2218195
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2218212
-    reference_type: bug
-    reference_id: 2218212
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2218682
     reference_type: bug
     reference_id: 2218682
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2218844
     reference_type: bug
     reference_id: 2218844
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2218943
-    reference_type: bug
-    reference_id: 2218943
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2218944
-    reference_type: bug
-    reference_id: 2218944
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2221609
-    reference_type: bug
-    reference_id: 2221609
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2223719
     reference_type: bug
     reference_id: 2223719
@@ -1599,12 +1602,9 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2225511
     reference_type: bug
     reference_id: 2225511
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2226783
+  - url: https://access.redhat.com/solutions/7027704
+    reference_type: other
+    reference_id: 7027704
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2221609
     reference_type: bug
-    reference_id: 2226783
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2229498
-    reference_type: bug
-    reference_id: 2229498
-  - url: https://access.redhat.com/errata/RHSA-2023:6583
-    reference_type:
-    reference_id: RHSA-2023:6583
+    reference_id: show_bug.cgi?id=2221609
