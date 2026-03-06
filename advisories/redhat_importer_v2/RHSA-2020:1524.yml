@@ -19,7 +19,42 @@ summary: |
 
   For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.
 impacted_packages:
-  - purl: pkg:rpm/redhat/perf?arch=i686
+  - purl: pkg:rpm/redhat/kernel-debuginfo?arch=s390x
+    affected_versions: vers:rpm/<2.6.32-754.29.1.el6
+    fixed_versions: vers:rpm/2.6.32-754.29.1.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-debuginfo-common-s390x?arch=s390x
+    affected_versions: vers:rpm/<2.6.32-754.29.1.el6
+    fixed_versions: vers:rpm/2.6.32-754.29.1.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-kdump-debuginfo?arch=s390x
+    affected_versions: vers:rpm/<2.6.32-754.29.1.el6
+    fixed_versions: vers:rpm/2.6.32-754.29.1.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/perf-debuginfo?arch=s390x
+    affected_versions: vers:rpm/<2.6.32-754.29.1.el6
+    fixed_versions: vers:rpm/2.6.32-754.29.1.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python-perf-debuginfo?arch=s390x
+    affected_versions: vers:rpm/<2.6.32-754.29.1.el6
+    fixed_versions: vers:rpm/2.6.32-754.29.1.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python-perf?arch=s390x
+    affected_versions: vers:rpm/<2.6.32-754.29.1.el6
+    fixed_versions: vers:rpm/2.6.32-754.29.1.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel?arch=ppc64
+    affected_versions: vers:rpm/<2.6.32-754.29.1.el6
+    fixed_versions: vers:rpm/2.6.32-754.29.1.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-bootwrapper?arch=ppc64
     affected_versions: vers:rpm/<2.6.32-754.29.1.el6
     fixed_versions: vers:rpm/2.6.32-754.29.1.el6
     fixed_in_commits: []
@@ -40,6 +75,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-devel?arch=i686
+    affected_versions: vers:rpm/<2.6.32-754.29.1.el6
+    fixed_versions: vers:rpm/2.6.32-754.29.1.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/perf?arch=i686
     affected_versions: vers:rpm/<2.6.32-754.29.1.el6
     fixed_versions: vers:rpm/2.6.32-754.29.1.el6
     fixed_in_commits: []
@@ -189,46 +229,6 @@ impacted_packages:
     fixed_versions: vers:rpm/2.6.32-754.29.1.el6
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debuginfo?arch=s390x
-    affected_versions: vers:rpm/<2.6.32-754.29.1.el6
-    fixed_versions: vers:rpm/2.6.32-754.29.1.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debuginfo-common-s390x?arch=s390x
-    affected_versions: vers:rpm/<2.6.32-754.29.1.el6
-    fixed_versions: vers:rpm/2.6.32-754.29.1.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-kdump-debuginfo?arch=s390x
-    affected_versions: vers:rpm/<2.6.32-754.29.1.el6
-    fixed_versions: vers:rpm/2.6.32-754.29.1.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/perf-debuginfo?arch=s390x
-    affected_versions: vers:rpm/<2.6.32-754.29.1.el6
-    fixed_versions: vers:rpm/2.6.32-754.29.1.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python-perf-debuginfo?arch=s390x
-    affected_versions: vers:rpm/<2.6.32-754.29.1.el6
-    fixed_versions: vers:rpm/2.6.32-754.29.1.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python-perf?arch=s390x
-    affected_versions: vers:rpm/<2.6.32-754.29.1.el6
-    fixed_versions: vers:rpm/2.6.32-754.29.1.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel?arch=ppc64
-    affected_versions: vers:rpm/<2.6.32-754.29.1.el6
-    fixed_versions: vers:rpm/2.6.32-754.29.1.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-bootwrapper?arch=ppc64
-    affected_versions: vers:rpm/<2.6.32-754.29.1.el6
-    fixed_versions: vers:rpm/2.6.32-754.29.1.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debug?arch=ppc64
     affected_versions: vers:rpm/<2.6.32-754.29.1.el6
     fixed_versions: vers:rpm/2.6.32-754.29.1.el6
@@ -299,12 +299,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1763690
     reference_type: bug
     reference_id: 1763690
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux_x86/local/42273.c
-    reference_type: exploit
-    reference_id: CVE-2017-1000371;CVE-2017-1000370
-  - url: https://www.qualys.com/2017/06/19/stack-clash/linux_offset2lib.c
-    reference_type: exploit
-    reference_id: CVE-2017-1000371;CVE-2017-1000370
   - url: https://access.redhat.com/errata/RHSA-2020:1524
     reference_type:
     reference_id: RHSA-2020:1524
