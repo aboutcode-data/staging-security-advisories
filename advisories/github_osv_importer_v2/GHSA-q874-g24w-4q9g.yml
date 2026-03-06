@@ -9,13 +9,13 @@ summary: |
   Description: If notebook server is started with a value of `root_dir` that contains the starting user's home directory, then the underlying REST API can be used to leak the access token assigned at start time by guessing/brute forcing the PID of the jupyter server. While this requires an authenticated user session, this url can be used from an xss payload (as in CVE-2021-32798) or from a hooked or otherwise compromised browser to leak this access token to a malicious third party. This token can be used along with the REST API to interact with Jupyter services/notebooks such as modifying or overwriting critical files, such as .bashrc or .ssh/authorized_keys, allowing a malicious user to read potentially sensitive data and possibly gain control of the impacted system.
 impacted_packages:
   - purl: pkg:pypi/jupyter-server
-    affected_versions: vers:pypi/2.0.0a0
-    fixed_versions: vers:pypi/2.0.0a1
+    affected_versions: vers:pypi/<1.17.1
+    fixed_versions: vers:pypi/1.17.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/jupyter-server
-    affected_versions: vers:pypi/<1.17.1
-    fixed_versions: vers:pypi/1.17.1
+    affected_versions: vers:pypi/2.0.0a0
+    fixed_versions: vers:pypi/2.0.0a1
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
