@@ -1,7 +1,8 @@
 advisory_id: GHSA-xc7w-v5x6-cc87
 datasource_id: github_osv_importer_v2/GHSA-xc7w-v5x6-cc87
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-xc7w-v5x6-cc87/GHSA-xc7w-v5x6-cc87.json
-aliases: []
+aliases:
+  - CVE-2026-29613
 summary: |
   OpenClaw has a webhook auth bypass when gateway is behind a reverse proxy (loopback remoteAddress trust)
   ## Summary
@@ -55,7 +56,12 @@ severities:
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N
     published_at: None
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-xc7w-v5x6-cc87/GHSA-xc7w-v5x6-cc87.json
-  - score: MODERATE
+  - score: '8.2'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-xc7w-v5x6-cc87/GHSA-xc7w-v5x6-cc87.json
+  - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
     published_at: None
@@ -76,5 +82,11 @@ references:
     reference_type:
     reference_id:
   - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-xc7w-v5x6-cc87
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-29613
+    reference_type:
+    reference_id:
+  - url: https://www.vulncheck.com/advisories/openclaw-webhook-authentication-bypass-via-loopback-remoteaddress-trust
     reference_type:
     reference_id:

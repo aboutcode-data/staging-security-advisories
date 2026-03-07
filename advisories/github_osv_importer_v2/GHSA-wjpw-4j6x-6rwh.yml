@@ -1,0 +1,94 @@
+advisory_id: GHSA-wjpw-4j6x-6rwh
+datasource_id: github_osv_importer_v2/GHSA-wjpw-4j6x-6rwh
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-wjpw-4j6x-6rwh/GHSA-wjpw-4j6x-6rwh.json
+aliases:
+  - CVE-2025-11143
+summary: "org.eclipse.jetty:jetty-http has different parsing of invalid URIs\nThe Jetty URI\
+  \ parser has some key differences compared to other common parsers when evaluating invalid\
+  \ or unusual URIs. Specifically:\n\n#### Invalid Scheme\n| URI | Jetty | uri-js (nodejs) |\
+  \ node-url(nodejs) |\n|---|---|---| --- |\n| `https>://vulndetector.com/path` | scheme=`http>`|\
+  \ scheme=`https` | invalid URI |\n\n#### Improper IPv4 mapped IPv6\n\n| URI | Jetty | System.Uri(CSharp)\
+  \ | curl(C) |\n|---|---|---| --- |\n| `http://[0:0:0:0:0:ffff:127.0.0.1]` | invalid | host=`[::ffff:127.0.0.1]`\
+  \ | host=`[::ffff:127.0.0.1]` | \n| `http://[::ffff:255.255.0.0]` | invalid | host=`[::ffff:255.255.0.0]`\
+  \ | host=`[::ffff:255.255.0.0]` | \n\n#### Incorrect IPv6 delimeter priority\n\n| URI | Jetty\
+  \ | urllib3(python) | furl(python) | Spring | chromium |\n|---|---|---| --- |---|---|\n| `http://[normal.com@]vulndetector.com/`\
+  \ | host=`[normal.com@]` | invalid | invalid | | |\n| `http://normal.com[user@vulndetector].com/`\
+  \  | host=`[noirmal.com@vulndetector | | | host=`normal.com` | invalid |\n| `http://normal.com[@]vulndetector.com/`\
+  \  | host=`normal.com[@] | | | host=`normal.com` | invalid |\n\n#### Incorrect delimeter priority\n\
+  \n| URI | Jetty | urllib3(python) | jersey |\n|---|---|---| --- |\n| `http://normal.com/#@vulndetector.com`\
+  \ | host=`vulndetector.com` | host=`normal.com` | host=`normal.com` |\n| `http://normal.com/?@vulndetector.com`\
+  \ | host=`vulndetector.com` | host=`normal.com` | host=`normal.com` |\n\n\n### Impact\nDifferential\
+  \ parsing of URIs in systems using multiple components may result in security by-pass. For\
+  \ example a component that enforces a black list may interpret the URIs differently from one\
+  \ that generates a response.\nAt the very least, differential parsing may divulge implementation\
+  \ details. \n\n### Patches\nPatched in Supported Open Source versions.\n* 12.1.5 - Supported\
+  \ and available on Maven Central\n* 12.0.31 - Supported and available on Maven Central\n*\
+  \ 11.0.x  - EOL Release, patches available on [tuxcare](https://tuxcare.com/) and [herodevs](https://www.herodevs.com/)\n\
+  * 10.0.x  - EOL Release, patches available on [tuxcare](https://tuxcare.com/) and [herodevs](https://www.herodevs.com/)\n\
+  * 9.4.x - EOL Release, patches available on [tuxcare](https://tuxcare.com/) and [herodevs](https://www.herodevs.com/)\n\
+  \n### Workarounds\nNone\n\n### Resources\n\n + [Java Eclipse Jetty Report_ Incorrect Parsing\
+  \ Priority of the IPv6 Hostname Delimeter.pdf](https://github.com/user-attachments/files/22222625/Java.Eclipse.Jetty.Report_.Incorrect.Parsing.Priority.of.the.IPv6.Hostname.Delimeter.pdf)\n\
+  \ + [Java Eclipse Jetty Report_ The Parsing Priority of the Delimiter.pdf](https://github.com/user-attachments/files/22222626/Java.Eclipse.Jetty.Report_.The.Parsing.Priority.of.the.Delimiter.pdf)\n\
+  \ + [Java Eclipse Jetty Report_ Parsing Difference Due to Deformed Scheme.pdf](https://github.com/user-attachments/files/22222627/Java.Eclipse.Jetty.Report_.Parsing.Difference.Due.to.Deformed.Scheme.pdf)\n\
+  \ + [Java Eclipse Jetty Report_ Improper IPv4-mapped IPv6 Parsing.pdf](https://github.com/user-attachments/files/22222630/Java.Eclipse.Jetty.Report_.Improper.IPv4-mapped.IPv6.Parsing.pdf)"
+impacted_packages:
+  - purl: pkg:maven/org.eclipse.jetty/jetty-http
+    affected_versions: vers:maven/>=9.4.0|<=9.4.58
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.eclipse.jetty/jetty-http
+    affected_versions: vers:maven/>=10.0.0|<=10.0.26
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.eclipse.jetty/jetty-http
+    affected_versions: vers:maven/>=11.0.0|<=11.0.26
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.eclipse.jetty/jetty-http
+    affected_versions: vers:maven/<=12.0.30
+    fixed_versions: vers:maven/12.0.31
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.eclipse.jetty/jetty-http
+    affected_versions: vers:maven/<=12.1.4
+    fixed_versions: vers:maven/12.1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '3.7'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-wjpw-4j6x-6rwh/GHSA-wjpw-4j6x-6rwh.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-20
+references:
+  - url: https://github.com/jetty/jetty.project
+    reference_type:
+    reference_id:
+  - url: https://github.com/user-attachments/files/22222625/Java.Eclipse.Jetty.Report_.Incorrect.Parsing.Priority.of.the.IPv6.Hostname.Delimeter.pdf
+    reference_type:
+    reference_id:
+  - url: https://github.com/user-attachments/files/22222626/Java.Eclipse.Jetty.Report_.The.Parsing.Priority.of.the.Delimiter.pdf
+    reference_type:
+    reference_id:
+  - url: https://github.com/user-attachments/files/22222627/Java.Eclipse.Jetty.Report_.Parsing.Difference.Due.to.Deformed.Scheme.pdf
+    reference_type:
+    reference_id:
+  - url: https://github.com/user-attachments/files/22222630/Java.Eclipse.Jetty.Report_.Improper.IPv4-mapped.IPv6.Parsing.pdf
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2025-11143
+    reference_type:
+    reference_id:
+  - url: https://github.com/jetty/jetty.project/security/advisories/GHSA-wjpw-4j6x-6rwh
+    reference_type: other
+    reference_id: GHSA-wjpw-4j6x-6rwh

@@ -1,7 +1,8 @@
 advisory_id: GHSA-qw99-grcx-4pvm
 datasource_id: github_osv_importer_v2/GHSA-qw99-grcx-4pvm
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-qw99-grcx-4pvm/GHSA-qw99-grcx-4pvm.json
-aliases: []
+aliases:
+  - CVE-2026-28395
 summary: |
   OpenClaw's Chrome extension relay binds publicly due to wildcard treated as loopback
   ## Summary
@@ -37,6 +38,11 @@ severities:
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L
     published_at: None
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-qw99-grcx-4pvm/GHSA-qw99-grcx-4pvm.json
+  - score: '6.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:L/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-qw99-grcx-4pvm/GHSA-qw99-grcx-4pvm.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
@@ -44,6 +50,7 @@ severities:
     url:
 weaknesses:
   - CWE-284
+  - CWE-1327
 references:
   - url: https://github.com/openclaw/openclaw
     reference_type:
@@ -51,9 +58,18 @@ references:
   - url: https://github.com/openclaw/openclaw/commit/8d75a496bf5aaab1755c56cf48502d967c75a1d0
     reference_type:
     reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/a1e89afcc19efd641c02b24d66d689f181ae2b5c
+    reference_type:
+    reference_id:
   - url: https://github.com/openclaw/openclaw/releases/tag/v2026.2.12
     reference_type:
     reference_id:
   - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-qw99-grcx-4pvm
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-28395
+    reference_type:
+    reference_id:
+  - url: https://www.vulncheck.com/advisories/openclaw-unintended-public-binding-of-chrome-extension-relay-via-wildcard-cdpurl
     reference_type:
     reference_id:

@@ -1,0 +1,43 @@
+advisory_id: GHSA-5wmx-573v-2qwq
+datasource_id: github_osv_importer_v2/GHSA-5wmx-573v-2qwq
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-5wmx-573v-2qwq/GHSA-5wmx-573v-2qwq.json
+aliases:
+  - CVE-2025-69534
+summary: |
+  Python-Markdown has an Uncaught Exception
+  Python-Markdown version 3.8 contain a vulnerability where malformed HTML-like sequences can cause html.parser.HTMLParser to raise an unhandled AssertionError during Markdown parsing. Because Python-Markdown does not catch this exception, any application that processes attacker-controlled Markdown may crash. This enables remote, unauthenticated Denial of Service in web applications, documentation systems, CI/CD pipelines, and any service that renders untrusted Markdown. The issue was acknowledged by the vendor and fixed in version 3.8.1. This issue causes a remote Denial of Service in any application parsing untrusted Markdown, and can lead to Information Disclosure through uncaught exceptions.
+impacted_packages:
+  - purl: pkg:pypi/markdown
+    affected_versions: vers:pypi/<3.8.1
+    fixed_versions: vers:pypi/3.8.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.5'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-5wmx-573v-2qwq/GHSA-5wmx-573v-2qwq.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-248
+references:
+  - url: https://github.com/Python-Markdown/markdown
+    reference_type:
+    reference_id:
+  - url: https://github.com/Python-Markdown/markdown/actions/runs/15736122892
+    reference_type:
+    reference_id:
+  - url: https://github.com/Python-Markdown/markdown/issues/1534
+    reference_type:
+    reference_id:
+  - url: https://github.com/Python-Markdown/markdown/pull/1535
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2025-69534
+    reference_type:
+    reference_id:

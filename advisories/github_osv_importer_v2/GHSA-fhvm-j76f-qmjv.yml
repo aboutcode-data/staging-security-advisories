@@ -1,7 +1,8 @@
 advisory_id: GHSA-fhvm-j76f-qmjv
 datasource_id: github_osv_importer_v2/GHSA-fhvm-j76f-qmjv
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-fhvm-j76f-qmjv/GHSA-fhvm-j76f-qmjv.json
-aliases: []
+aliases:
+  - CVE-2026-28454
 summary: |
   OpenClaw has a potential access-group authorization bypass if channel type lookup fails
   ## Summary
@@ -44,6 +45,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
+  - score: '9.8'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-fhvm-j76f-qmjv/GHSA-fhvm-j76f-qmjv.json
   - score: '9.1'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N
@@ -55,6 +61,7 @@ severities:
     published_at: None
     url:
 weaknesses:
+  - CWE-345
   - CWE-285
 references:
   - url: https://github.com/openclaw/openclaw
@@ -76,5 +83,11 @@ references:
     reference_type:
     reference_id:
   - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-fhvm-j76f-qmjv
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-28454
+    reference_type:
+    reference_id:
+  - url: https://www.vulncheck.com/advisories/openclaw-authorization-bypass-via-unauthenticated-telegram-webhook
     reference_type:
     reference_id:

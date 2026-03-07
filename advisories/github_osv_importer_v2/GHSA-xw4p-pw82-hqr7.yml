@@ -1,7 +1,8 @@
 advisory_id: GHSA-xw4p-pw82-hqr7
 datasource_id: github_osv_importer_v2/GHSA-xw4p-pw82-hqr7
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-xw4p-pw82-hqr7/GHSA-xw4p-pw82-hqr7.json
-aliases: []
+aliases:
+  - CVE-2026-28457
 summary: |
   OpenClaw's sandbox skill mirroring path traversal vulnerability could write outside the sandbox workspace
   ## Overview
@@ -42,7 +43,12 @@ severities:
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:N/I:H/A:L
     published_at: None
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-xw4p-pw82-hqr7/GHSA-xw4p-pw82-hqr7.json
-  - score: HIGH
+  - score: '5.7'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:A/VC:N/VI:H/VA:L/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-xw4p-pw82-hqr7/GHSA-xw4p-pw82-hqr7.json
+  - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
     published_at: None
@@ -57,5 +63,11 @@ references:
     reference_type:
     reference_id:
   - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-xw4p-pw82-hqr7
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-28457
+    reference_type:
+    reference_id:
+  - url: https://www.vulncheck.com/advisories/openclaw-path-traversal-in-sandbox-skill-mirroring-via-name-parameter
     reference_type:
     reference_id:

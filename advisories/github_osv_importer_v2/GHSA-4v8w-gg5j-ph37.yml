@@ -13,10 +13,11 @@ summary: "MantisBT vulnerable to authentication bypass for some passwords due to
   \ password, using any other password having a  hash evaluating to zero, for example `comito5`\
   \ (0e579603064547166083907005281618). \n\nNo password bruteforcing for individual users is\
   \ needed, thus $g_max_failed_login_count does not protect against the attack.\n\n### Patches\n\
-  Fixed in 2.27.2.\n\n### Workarounds\nCheck the database for vulnerable accounts, and change\
-  \ those users' passwords, e.g. for MySQL:\n```sql\nSELECT username, email FROM mantis_user_table\
-  \ WHERE password REGEXP '^0+[Ee][0-9]+$'\n```\n\n### Credits\nThanks to Harry Sintonen / Reversec\
-  \ for discovering and reporting the issue."
+  * https://github.com/mantisbt/mantisbt/commit/966554a19cf1bdbcfbfb3004766979faa748f9a2\n\n\
+  ### Workarounds\nCheck the database for vulnerable accounts, and change those users' passwords,\
+  \ e.g. for MySQL:\n```sql\nSELECT username, email FROM mantis_user_table WHERE password REGEXP\
+  \ '^0+[Ee][0-9]+$'\n```\n\n### References\n- https://mantisbt.org/bugs/view.php?id=35967\n\
+  \n### Credits\nThanks to Harry Sintonen / Reversec for discovering and reporting the issue."
 impacted_packages:
   - purl: pkg:composer/mantisbt/mantisbt
     affected_versions: vers:composer/<2.27.2

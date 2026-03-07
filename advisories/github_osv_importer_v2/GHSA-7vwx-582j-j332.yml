@@ -1,7 +1,8 @@
 advisory_id: GHSA-7vwx-582j-j332
 datasource_id: github_osv_importer_v2/GHSA-7vwx-582j-j332
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-7vwx-582j-j332/GHSA-7vwx-582j-j332.json
-aliases: []
+aliases:
+  - CVE-2026-28481
 summary: |
   OpenClaw MS Teams inbound attachment downloader leaks bearer tokens to allowlisted suffix domains
   ## Summary
@@ -43,7 +44,12 @@ severities:
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N
     published_at: None
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-7vwx-582j-j332/GHSA-7vwx-582j-j332.json
-  - score: HIGH
+  - score: '5.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-7vwx-582j-j332/GHSA-7vwx-582j-j332.json
+  - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
     published_at: None
@@ -61,5 +67,11 @@ references:
     reference_type:
     reference_id:
   - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-7vwx-582j-j332
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-28481
+    reference_type:
+    reference_id:
+  - url: https://www.vulncheck.com/advisories/openclaw-bearer-token-leakage-via-ms-teams-attachment-downloader-suffix-matching
     reference_type:
     reference_id:
