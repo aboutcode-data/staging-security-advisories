@@ -1,0 +1,55 @@
+advisory_id: GHSA-m297-3jv9-m927
+datasource_id: github_osv_importer_v2/GHSA-m297-3jv9-m927
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-m297-3jv9-m927/GHSA-m297-3jv9-m927.json
+aliases:
+  - CVE-2026-3009
+summary: |
+  Keycloak allows authentication using an Identity Provider (IdP) even after it has been disabled by an administrator
+  A security flaw in the IdentityBrokerService.performLogin endpoint of Keycloak allows authentication to proceed using an Identity Provider (IdP) even after it has been disabled by an administrator. An attacker who knows the IdP alias can reuse a previously generated login request to bypass the administrative restriction. This undermines access control enforcement and may allow unauthorized authentication through a disabled external provider.
+impacted_packages:
+  - purl: pkg:maven/org.keycloak/keycloak-services
+    affected_versions: vers:maven/<26.5.5
+    fixed_versions: vers:maven/26.5.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.1'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-m297-3jv9-m927/GHSA-m297-3jv9-m927.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-285
+references:
+  - url: https://access.redhat.com/security/cve/CVE-2026-3009
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2441867
+    reference_type:
+    reference_id:
+  - url: https://github.com/keycloak/keycloak
+    reference_type:
+    reference_id:
+  - url: https://github.com/keycloak/keycloak/commit/4fd5367e6cc28cfa68fb2240fc459c12b1fdbf2a
+    reference_type:
+    reference_id:
+  - url: https://github.com/keycloak/keycloak/issues/46911
+    reference_type:
+    reference_id:
+  - url: https://github.com/keycloak/keycloak/releases/tag/26.5.5
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-3009
+    reference_type:
+    reference_id: CVE-2026-3009
+  - url: https://access.redhat.com/errata/RHSA-2026:3947
+    reference_type: advisory
+    reference_id: RHSA-2026:3947
+  - url: https://access.redhat.com/errata/RHSA-2026:3948
+    reference_type: advisory
+    reference_id: RHSA-2026:3948

@@ -5,7 +5,7 @@ aliases:
   - CVE-2019-10665
 summary: |
   LibreNMS Information Disclosure
-  An issue was discovered in LibreNMS through 1.47. The scripts that handle the graphing options (`html/includes/graphs/common.inc.php` and `html/includes/graphs/graphs.inc.php`) do not sufficiently validate or encode several fields of user supplied input. Some parameters are filtered with `mysqli_real_escape_string`, which is only useful for preventing SQL injection attacks; other parameters are unfiltered. This allows an attacker to inject RRDtool syntax with newline characters via the `html/graph.php` script. RRDtool syntax is quite versatile and an attacker could leverage this to perform a number of attacks, including disclosing directory structure and filenames, file content, denial of service, or writing arbitrary files.
+  An issue was discovered in LibreNMS through 1.47. The scripts that handle graphing options (`html/includes/graphs/common.inc.php` and `html/includes/graphs/graphs.inc.php`) do not sufficiently validate or encode several fields of user supplied input. Some parameters are filtered with `mysqli_real_escape_string`, which is only useful for preventing SQL injection attacks; other parameters are unfiltered. This allows an attacker to inject RRDtool syntax with newline characters via the `html/graph.php` script. RRDtool syntax is quite versatile and an attacker could leverage this to perform a number of attacks, including disclosing directory structure and filenames, file content, denial of service, or writing arbitrary files.
 impacted_packages:
   - purl: pkg:composer/librenms/librenms
     affected_versions: vers:composer/<=1.47.0
@@ -26,10 +26,7 @@ severities:
 weaknesses:
   - CWE-74
 references:
-  - url: https://github.com/spaceraccoon/CVE-2020-10665
-    reference_type:
-    reference_id:
-  - url: https://www.activecyber.us/activelabs/docker-desktop-local-privilege-escalation-cve-2020-10665
+  - url: https://github.com/librenms/librenms
     reference_type:
     reference_id:
   - url: https://www.darkmatter.ae/xen1thlabs/librenms-rrdtool-injection-vulnerability-xl-19-023

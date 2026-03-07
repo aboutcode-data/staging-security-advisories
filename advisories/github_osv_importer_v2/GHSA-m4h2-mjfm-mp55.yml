@@ -1,0 +1,43 @@
+advisory_id: GHSA-m4h2-mjfm-mp55
+datasource_id: github_osv_importer_v2/GHSA-m4h2-mjfm-mp55
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-m4h2-mjfm-mp55/GHSA-m4h2-mjfm-mp55.json
+aliases:
+  - CVE-2026-30241
+summary: |
+  Mercurius's queryDepth limit bypassed for WebSocket subscriptions
+  ## Description
+
+  Mercurius fails to enforce the configured queryDepth limit on GraphQL subscription queries received over WebSocket connections. The depth check is correctly applied to HTTP queries and mutations, but subscription queries are parsed and executed without invoking the depth validation. This allows a remote client to submit arbitrarily deeply nested subscription queries over WebSocket, bypassing the intended depth restriction. On schemas with recursive types, this can lead to denial of service through exponential data resolution on each subscription event.
+
+  ## Workarounds
+
+  Disable subscriptions and, in general, queries over the WebSocket.
+impacted_packages:
+  - purl: pkg:npm/mercurius
+    affected_versions: vers:npm/<16.8.0
+    fixed_versions: vers:npm/16.8.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '2.7'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N/E:U
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-m4h2-mjfm-mp55/GHSA-m4h2-mjfm-mp55.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-863
+references:
+  - url: https://github.com/mercurius-js/mercurius
+    reference_type:
+    reference_id:
+  - url: https://github.com/mercurius-js/mercurius/commit/5b56f60f4b0d60780b0ff499a479bd830bdd6986
+    reference_type:
+    reference_id:
+  - url: https://github.com/mercurius-js/mercurius/security/advisories/GHSA-m4h2-mjfm-mp55
+    reference_type:
+    reference_id:
