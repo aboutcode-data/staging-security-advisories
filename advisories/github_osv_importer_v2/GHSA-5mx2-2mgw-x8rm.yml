@@ -1,0 +1,74 @@
+advisory_id: GHSA-5mx2-2mgw-x8rm
+datasource_id: github_osv_importer_v2/GHSA-5mx2-2mgw-x8rm
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-5mx2-2mgw-x8rm/GHSA-5mx2-2mgw-x8rm.json
+aliases: []
+summary: |
+  OpenClaw: BlueBubbles beta plugin webhook auth hardening (remove passwordless fallback)
+  ### Summary
+  BlueBubbles webhook auth in the optional beta iMessage plugin allowed a passwordless fallback path. In some reverse-proxy/local routing setups, this could allow unauthenticated webhook events.
+
+  ### Affected Component and Scope
+  - Component: `extensions/bluebubbles` webhook handler
+  - Scope: only deployments using the optional BlueBubbles plugin where webhook password auth was not configured for incoming webhook events
+
+  ### Affected Packages / Versions
+  - Package: `openclaw/openclaw` (npm)
+  - Latest published npm version at triage time (2026-02-21): `2026.2.19-2`
+  - Affected structured range: `<=2026.2.19-2`
+  - Fixed on `main`; planned patched release: `2026.2.21` (`>=2026.2.21`)
+
+  ### Details
+  The vulnerable implementation had multiple auth branches, including a passwordless fallback with loopback/proxy heuristics.
+
+  The fix now uses one authentication codepath:
+  - inbound webhook token/guid must match `channels.bluebubbles.password`
+  - webhook target matching is consolidated to shared plugin-sdk logic
+  - BlueBubbles config validation now requires `password` when `serverUrl` is set
+
+  ### Impact
+  BlueBubbles is an optional beta iMessage plugin, and onboarding/channel-add flows already require a password. Practical exposure is mainly custom/manual configurations that omitted webhook password authentication.
+
+  ### Remediation
+  - Upgrade to a release that includes this patch (`>=2026.2.21`, planned).
+  - Ensure BlueBubbles webhook delivery includes a matching password (`?password=<password>` or `x-password`).
+
+  ### Fix Commit(s)
+  - `6b2f2811dc623e5faaf2f76afaa9279637174590`
+  - `283029bdea23164ab7482b320cb420d1b90df806`
+
+  ### Release Process Note
+  `patched_versions` is pre-set to the planned next release (`2026.2.21`) so once npm release is out, advisory publish can proceed without additional ticket edits.
+
+  OpenClaw thanks @zpbrent for reporting.
+impacted_packages:
+  - purl: pkg:npm/openclaw/openclaw
+    affected_versions: vers:npm/<2026.2.21
+    fixed_versions: vers:npm/2026.2.21
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-5mx2-2mgw-x8rm/GHSA-5mx2-2mgw-x8rm.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-306
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/283029bdea23164ab7482b320cb420d1b90df806
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/6b2f2811dc623e5faaf2f76afaa9279637174590
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-5mx2-2mgw-x8rm
+    reference_type:
+    reference_id:

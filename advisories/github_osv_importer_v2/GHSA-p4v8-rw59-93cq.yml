@@ -1,0 +1,91 @@
+advisory_id: GHSA-p4v8-rw59-93cq
+datasource_id: github_osv_importer_v2/GHSA-p4v8-rw59-93cq
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-p4v8-rw59-93cq/GHSA-p4v8-rw59-93cq.json
+aliases:
+  - CVE-2026-28223
+summary: |
+  Wagtail Vulnerable to Cross-site Scripting in simple_translation admin interface
+  ### Impact
+  A stored Cross-site Scripting (XSS) vulnerability exists on confirmation messages within the `wagtail.contrib.simple_translation` module. A user with access to the Wagtail admin area may create a page with a specially-crafted title which, when another user performs the "Translate" action, causes arbitrary JavaScript code to run. This could lead to performing actions with that user's credentials. The vulnerability is not exploitable by an ordinary site visitor without access to the Wagtail admin.
+
+  ### Patches
+  Patched versions have been released as Wagtail 6.3.8, 7.0.6, 7.2.3 and 7.3.1.
+
+  ### Workarounds
+  None
+
+  ### Acknowledgements
+
+  Many thanks to Guan Chenxian (@GCXWLP) for reporting this issue.
+
+  ### For more information
+
+  If there are any questions or comments about this advisory:
+
+  - Visit Wagtail's [support channels](https://docs.wagtail.io/en/stable/support.html)
+  - Email Wagtail at [security@wagtail.org](mailto:security@wagtail.org) (view the [security policy](https://github.com/wagtail/wagtail/security/policy) for more information).
+impacted_packages:
+  - purl: pkg:pypi/wagtail
+    affected_versions: vers:pypi/<6.3.8
+    fixed_versions: vers:pypi/6.3.8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/wagtail
+    affected_versions: vers:pypi/>=6.4rc1|<7.0.6
+    fixed_versions: vers:pypi/7.0.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/wagtail
+    affected_versions: vers:pypi/>=7.1rc1|<7.2.3
+    fixed_versions: vers:pypi/7.2.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/wagtail
+    affected_versions: vers:pypi/>=7.3rc1|<7.3.1
+    fixed_versions: vers:pypi/7.3.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.1'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:H/I:H/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-p4v8-rw59-93cq/GHSA-p4v8-rw59-93cq.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-79
+references:
+  - url: https://github.com/wagtail/wagtail
+    reference_type:
+    reference_id:
+  - url: https://github.com/wagtail/wagtail/commit/1c6f2effed68f4ccad6fbd07987e03641505f863
+    reference_type:
+    reference_id:
+  - url: https://github.com/wagtail/wagtail/commit/ba70244d376a7b1bd180ded03e827917ff410c19
+    reference_type:
+    reference_id:
+  - url: https://github.com/wagtail/wagtail/commit/d8c5900982df8ed5938ad993aa9ff69cda50f80c
+    reference_type:
+    reference_id:
+  - url: https://github.com/wagtail/wagtail/commit/ee39d39deeb7f250fe886417b24802d7e05b1143
+    reference_type:
+    reference_id:
+  - url: https://github.com/wagtail/wagtail/releases/tag/v6.3.8
+    reference_type:
+    reference_id:
+  - url: https://github.com/wagtail/wagtail/releases/tag/v7.0.6
+    reference_type:
+    reference_id:
+  - url: https://github.com/wagtail/wagtail/releases/tag/v7.2.3
+    reference_type:
+    reference_id:
+  - url: https://github.com/wagtail/wagtail/releases/tag/v7.3.1
+    reference_type:
+    reference_id:
+  - url: https://github.com/wagtail/wagtail/security/advisories/GHSA-p4v8-rw59-93cq
+    reference_type:
+    reference_id:

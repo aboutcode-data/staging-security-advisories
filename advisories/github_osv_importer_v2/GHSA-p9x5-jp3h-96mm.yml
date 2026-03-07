@@ -1,0 +1,44 @@
+advisory_id: GHSA-p9x5-jp3h-96mm
+datasource_id: github_osv_importer_v2/GHSA-p9x5-jp3h-96mm
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-p9x5-jp3h-96mm/GHSA-p9x5-jp3h-96mm.json
+aliases:
+  - CVE-2026-27971
+summary: |
+  Qwik vulnerable to Unauthenticated RCE via server$ Deserialization
+  ### Summary
+  qwik <=1.19.0 is vulnerable to RCE due to an unsafe deserialization vulnerability in the `server$` RPC mechanism that allows any unauthenticated user to execute arbitrary code on the server with a single HTTP request. Affects any deployment where `require()` is available at runtime.
+
+  ### Impact
+  - Remote Code Execution
+impacted_packages:
+  - purl: pkg:npm/%40builder.io/qwik
+    affected_versions: vers:npm/<=1.19.0
+    fixed_versions: vers:npm/1.19.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '9.2'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-p9x5-jp3h-96mm/GHSA-p9x5-jp3h-96mm.json
+  - score: CRITICAL
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-502
+references:
+  - url: https://github.com/QwikDev/qwik
+    reference_type:
+    reference_id:
+  - url: https://github.com/QwikDev/qwik/releases/tag/%40builder.io%2Fqwik%401.19.1
+    reference_type:
+    reference_id:
+  - url: https://github.com/QwikDev/qwik/security/advisories/GHSA-p9x5-jp3h-96mm
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-27971
+    reference_type:
+    reference_id: CVE-2026-27971

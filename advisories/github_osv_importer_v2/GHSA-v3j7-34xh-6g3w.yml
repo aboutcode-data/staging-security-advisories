@@ -1,0 +1,69 @@
+advisory_id: GHSA-v3j7-34xh-6g3w
+datasource_id: github_osv_importer_v2/GHSA-v3j7-34xh-6g3w
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-v3j7-34xh-6g3w/GHSA-v3j7-34xh-6g3w.json
+aliases: []
+summary: |
+  OpenClaw Loopback CDP probe can leak Gateway token to local listener
+  ### Summary
+  A local process can capture the OpenClaw Gateway auth token from Chrome CDP probe traffic on loopback.
+
+  ### Details
+  Affected versions inject `x-openclaw-relay-token` for loopback CDP URLs, and CDP reachability probes send that header to `/json/version`.
+  If an attacker controls the probed loopback port, they can read that token and reuse it as Gateway bearer auth.
+
+  Relevant code paths (pre-fix):
+  - `src/browser/extension-relay.ts` (`getChromeExtensionRelayAuthHeaders`)
+  - `src/browser/cdp.helpers.ts` (`getHeadersWithAuth`)
+  - `src/browser/chrome.ts` (`fetchChromeVersion`)
+
+  ### Affected Packages / Versions
+  - Package: `openclaw` (npm)
+  - Latest published (at triage): `2026.2.21-2`
+  - Vulnerable: `<= 2026.2.21-2`
+  - Patched: >= 2026.2.22
+
+  ### Deployment Model Applicability
+  This does **not** change OpenClaw’s documented security model for standard single-owner installs (you own the machine/VPS and trust local processes under that OS account boundary).
+  Risk is for **non-standard shared-user/shared-host installs** where an untrusted local user/process can race/bind the loopback relay port.
+
+  ### Impact
+  - Local credential disclosure.
+  - Follow-on impact depends on local deployment and enabled Gateway capabilities.
+
+  ### Fix Commit(s)
+  - `afa22acc4a09fdf32be8a167ae216bee85c30dad`
+
+  ### Release Process Note
+  Patched version is set to >= 2026.2.22 for the published release.
+
+  OpenClaw thanks @tdjackey for reporting.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<=2026.2.21-2
+    fixed_versions: vers:npm/2026.2.22
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.7'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-v3j7-34xh-6g3w/GHSA-v3j7-34xh-6g3w.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-306
+  - CWE-290
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/afa22acc4a09fdf32be8a167ae216bee85c30dad
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-v3j7-34xh-6g3w
+    reference_type:
+    reference_id:

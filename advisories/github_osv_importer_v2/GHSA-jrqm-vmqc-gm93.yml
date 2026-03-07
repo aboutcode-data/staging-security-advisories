@@ -1,0 +1,54 @@
+advisory_id: GHSA-jrqm-vmqc-gm93
+datasource_id: github_osv_importer_v2/GHSA-jrqm-vmqc-gm93
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-jrqm-vmqc-gm93/GHSA-jrqm-vmqc-gm93.json
+aliases:
+  - CVE-2026-28343
+summary: "CKEditor 5 has Cross-site Scripting (XSS) in the HTML Support package\n### Impact\n\
+  A Cross-Site Scripting (XSS) vulnerability has been discovered in the General HTML Support\
+  \ feature. This vulnerability could be triggered by inserting specially crafted markup, leading\
+  \ to unauthorized JavaScript code execution, if the editor instance used an unsafe General\
+  \ HTML Support configuration.\n\nThis vulnerability affects only installations where the editor\
+  \ configuration meets the following criteria:\n\n* [General HTML Support](https://ckeditor.com/docs/ckeditor5/latest/features/html/general-html-support.html)\
+  \ is enabled,\n* General HTML Support configuration allows inserting unsafe markup (see [Security](https://ckeditor.com/docs/ckeditor5/latest/features/html/general-html-support.html#security)\
+  \ section to learn more).\n\n### Patches\nThe problem has been recognized and patched. The\
+  \ fix will be available in version 47.6.0 (and above).\n\n### Workarounds\nCKEditor 5 recommends\
+  \ configuring General HTML Support securely to ensure that unsafe content is not accepted.\
+  \ Please refer to the [Security](https://ckeditor.com/docs/ckeditor5/latest/features/html/general-html-support.html#security)\
+  \ section for detailed guidance.\n\n### Credits\nCKEditor 5 would like to thank: \n- Emilio\
+  \ Kevin\n- Jeongwoo Lee, Younsoung Kim, Minseok Kim and Jinyeong Kim from ENKI Whitehat\n\n\
+  for responsibly reporting this vulnerability.\n\n### For more information\nEmail us at [security@cksource.com](mailto:security@cksource.com)\
+  \ if you have any questions or comments about this advisory."
+impacted_packages:
+  - purl: pkg:npm/%40ckeditor/ckeditor5-html-support
+    affected_versions: vers:npm/<47.6.0
+    fixed_versions: vers:npm/47.6.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/ckeditor5
+    affected_versions: vers:npm/<47.6.0
+    fixed_versions: vers:npm/47.6.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.4'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-jrqm-vmqc-gm93/GHSA-jrqm-vmqc-gm93.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-79
+references:
+  - url: https://github.com/ckeditor/ckeditor5
+    reference_type:
+    reference_id:
+  - url: https://github.com/ckeditor/ckeditor5/releases/tag/v47.6.0
+    reference_type:
+    reference_id:
+  - url: https://github.com/ckeditor/ckeditor5/security/advisories/GHSA-jrqm-vmqc-gm93
+    reference_type:
+    reference_id:

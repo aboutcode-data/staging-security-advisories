@@ -1,0 +1,65 @@
+advisory_id: GHSA-pfjf-5gxr-995x
+datasource_id: github_osv_importer_v2/GHSA-pfjf-5gxr-995x
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-pfjf-5gxr-995x/GHSA-pfjf-5gxr-995x.json
+aliases:
+  - CVE-2026-28415
+summary: |
+  Gradio has an Open Redirect in its OAuth Flow
+  # Summary
+
+  The _redirect_to_target() function in Gradio's OAuth flow accepts an unvalidated _target_url query parameter, allowing redirection to arbitrary external URLs. This affects the /logout and /login/callback endpoints on Gradio apps with OAuth enabled (i.e. apps running on Hugging Face Spaces with gr.LoginButton).
+
+  ## Details
+
+  ```python
+
+    def _redirect_to_target(request, default_target="/"):
+        target = request.query_params.get("_target_url", default_target)
+        return RedirectResponse(target)  # No validation
+  ```
+    An attacker can craft a URL like https://my-space.hf.space/logout?_target_url=https://evil.com/phishing that redirects the user to an external site after logout. Because the URL originates from a trusted hf.space domain, users are more likely to trust the link.
+
+  ## Impact
+
+  Phishing — an attacker can use the trusted domain to redirect users to a malicious site. No direct data exposure or server-side impact.
+
+   ## Fix
+  The _target_url parameter is now sanitized to only use the path, query, and fragment, stripping any scheme or host.
+impacted_packages:
+  - purl: pkg:pypi/gradio
+    affected_versions: vers:pypi/<6.6.0
+    fixed_versions: vers:pypi/6.6.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '4.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-pfjf-5gxr-995x/GHSA-pfjf-5gxr-995x.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-284
+  - CWE-330
+  - CWE-200
+  - CWE-601
+references:
+  - url: https://github.com/gradio-app/gradio
+    reference_type:
+    reference_id:
+  - url: https://github.com/gradio-app/gradio/commit/dfee0da06d0aa94b3c2684131e7898d5d5c1911e
+    reference_type:
+    reference_id:
+  - url: https://github.com/gradio-app/gradio/releases/tag/gradio%406.6.0
+    reference_type:
+    reference_id:
+  - url: https://github.com/gradio-app/gradio/security/advisories/GHSA-pfjf-5gxr-995x
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-28415
+    reference_type:
+    reference_id: CVE-2026-28415

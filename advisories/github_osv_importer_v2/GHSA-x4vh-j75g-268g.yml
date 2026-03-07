@@ -1,0 +1,50 @@
+advisory_id: GHSA-x4vh-j75g-268g
+datasource_id: github_osv_importer_v2/GHSA-x4vh-j75g-268g
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-x4vh-j75g-268g/GHSA-x4vh-j75g-268g.json
+aliases:
+  - CVE-2026-28396
+summary: |
+  NocoDB's Refresh Tokens Not Revoked on Password Reset
+  ### Summary
+  The password reset flow did not revoke existing refresh tokens, allowing an attacker with a previously stolen refresh token to continue minting valid JWTs after the victim resets their password.
+
+  ### Details
+  `passwordReset()` in `users.service.ts` updated `token_version` (invalidating JWTs) but did not call `UserRefreshToken.deleteAllUserToken()`. The `refreshToken()` method only checked token existence, not `token_version`. Both `passwordChange()` and `signOut()` correctly deleted all refresh tokens.
+
+  ### Impact
+  An attacker who previously obtained a refresh token retains access after password reset until the token expires.
+
+  ### Credit
+  This issue was reported by [@bugbunny-research](https://github.com/bugbunny-research) (bugbunny.ai).
+impacted_packages:
+  - purl: pkg:npm/nocodb
+    affected_versions: vers:npm/<=0.301.2
+    fixed_versions: vers:npm/0.301.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '4.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:U
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-x4vh-j75g-268g/GHSA-x4vh-j75g-268g.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-613
+references:
+  - url: https://github.com/nocodb/nocodb
+    reference_type:
+    reference_id:
+  - url: https://github.com/nocodb/nocodb/releases/tag/0.301.3
+    reference_type:
+    reference_id:
+  - url: https://github.com/nocodb/nocodb/security/advisories/GHSA-x4vh-j75g-268g
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-28396
+    reference_type:
+    reference_id: CVE-2026-28396

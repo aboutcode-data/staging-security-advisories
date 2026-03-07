@@ -1,0 +1,44 @@
+advisory_id: GHSA-9m84-wc28-w895
+datasource_id: github_osv_importer_v2/GHSA-9m84-wc28-w895
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-9m84-wc28-w895/GHSA-9m84-wc28-w895.json
+aliases: []
+summary: "Ghost has incomplete CSRF protections around OTC use\n### Impact\n\nIncomplete CSRF\
+  \ protections around `/session/verify` made it possible to use OTCs in login sessions different\
+  \ from the requesting session. In some scenarios this might have made it easier for phishers\
+  \ to take over a Ghost site. \n\n### Vulnerable versions\n\nThis vulnerability is present\
+  \ in Ghost from v5.101.6 up to v6.19.2.\n\n### Patches\n\nv6.19.3 contains a fix for this\
+  \ issue.\n\n### How to update\n\nFor self-hosters using Docker, find [Docker's official Ghost\
+  \ image here](https://hub.docker.com/_/ghost). Updating a Docker-based Ghost instance [is\
+  \ documented here](https://docs.ghost.org/install/docker#updating-ghost). \n\nIf a project's\
+  \ Ghost is a Ghost-CLI install see the documentation on [updating it to the latest version\
+  \ here](https://docs.ghost.org/update). \n\n### For more information\n\nIf there are any questions\
+  \ or comments about this advisory, send an email to [security@ghost.org](mailto:security@ghost.org)."
+impacted_packages:
+  - purl: pkg:npm/ghost
+    affected_versions: vers:npm/<=6.19.2
+    fixed_versions: vers:npm/6.19.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-9m84-wc28-w895/GHSA-9m84-wc28-w895.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-352
+references:
+  - url: https://github.com/TryGhost/Ghost
+    reference_type:
+    reference_id:
+  - url: https://github.com/TryGhost/Ghost/commit/ec065a774fa125953d2aa644a59cd8990329e0a0
+    reference_type:
+    reference_id:
+  - url: https://github.com/TryGhost/Ghost/security/advisories/GHSA-9m84-wc28-w895
+    reference_type:
+    reference_id:

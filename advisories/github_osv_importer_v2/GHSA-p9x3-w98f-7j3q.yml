@@ -1,0 +1,50 @@
+advisory_id: GHSA-p9x3-w98f-7j3q
+datasource_id: github_osv_importer_v2/GHSA-p9x3-w98f-7j3q
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-p9x3-w98f-7j3q/GHSA-p9x3-w98f-7j3q.json
+aliases:
+  - CVE-2026-28361
+summary: |
+  NocoDB Missing Ownership Validation in MCP Token Operations
+  ### Summary
+  The MCP token service did not validate token ownership, allowing a Creator within the same base to read, regenerate, or delete another user's MCP tokens if the token ID was known.
+
+  ### Details
+  `McpTokenService.get()`, `regenerateToken()`, and `delete()` did not filter by `fk_user_id`. The analogous `ApiTokensService` correctly enforced ownership.
+
+  ### Impact
+  Limited — requires Creator role and knowledge of target token ID. Primary risk is denial of service (invalidating tokens) and scoped token disclosure.
+
+  ### Credit
+  This issue was reported by [@bugbunny-research](https://github.com/bugbunny-research) (bugbunny.ai).
+impacted_packages:
+  - purl: pkg:npm/nocodb
+    affected_versions: vers:npm/<=0.301.2
+    fixed_versions: vers:npm/0.301.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '4.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:U
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-p9x3-w98f-7j3q/GHSA-p9x3-w98f-7j3q.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-639
+references:
+  - url: https://github.com/nocodb/nocodb
+    reference_type:
+    reference_id:
+  - url: https://github.com/nocodb/nocodb/releases/tag/0.301.3
+    reference_type:
+    reference_id:
+  - url: https://github.com/nocodb/nocodb/security/advisories/GHSA-p9x3-w98f-7j3q
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-28361
+    reference_type:
+    reference_id: CVE-2026-28361

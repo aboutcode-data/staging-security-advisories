@@ -1,0 +1,64 @@
+advisory_id: GHSA-g75x-8qqm-2vxp
+datasource_id: github_osv_importer_v2/GHSA-g75x-8qqm-2vxp
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-g75x-8qqm-2vxp/GHSA-g75x-8qqm-2vxp.json
+aliases: []
+summary: |
+  OpenClaw's `tools.exec.safeBins` PATH-hijack allowed trojan binaries to bypass allowlist checks
+  ## Summary
+
+  `tools.exec.safeBins` allowlist checks could be bypassed by PATH-hijacked binaries, allowing execution of attacker-controlled trojan binaries under an allowlisted executable name.
+
+  ## Affected Packages / Versions
+
+  - Package: `openclaw` (npm)
+  - Latest published version at triage time: `2026.2.17`
+  - Affected range: `>= 2026.1.21 < 2026.2.18`
+  - Patched version: `2026.2.19`
+
+  ## Impact
+
+  In allowlist mode, `safeBins` validation previously accepted a resolved executable path based on executable name and argument shape, without enforcing trusted executable directories. If an attacker could influence process PATH resolution before gateway startup (or otherwise control the gateway launch environment), a trojan binary with an allowlisted name (for example `jq`) could be executed.
+
+  ## Severity Rationale
+
+  This issue is rated `medium` because exploitation requires an additional precondition: influencing the gateway process PATH / launch environment. Request-scoped PATH injection is blocked for host execution.
+
+  ## Fix
+
+  `safeBins` now requires the resolved executable path to come from trusted bin directories (system defaults plus gateway startup PATH), closing the bypass.
+
+  ## Fix Commit(s)
+
+  - 28bac46c92069dc728524fbf383024c1b64e5c23
+
+  OpenClaw thanks @jackhax for reporting.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/>=2026.1.21|<2026.2.19
+    fixed_versions: vers:npm/2026.2.19
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.7'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:H/AT:P/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-g75x-8qqm-2vxp/GHSA-g75x-8qqm-2vxp.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-863
+  - CWE-426
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/28bac46c92069dc728524fbf383024c1b64e5c23
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-g75x-8qqm-2vxp
+    reference_type:
+    reference_id:

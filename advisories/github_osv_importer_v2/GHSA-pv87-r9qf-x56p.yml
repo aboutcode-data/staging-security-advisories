@@ -1,0 +1,71 @@
+advisory_id: GHSA-pv87-r9qf-x56p
+datasource_id: github_osv_importer_v2/GHSA-pv87-r9qf-x56p
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-pv87-r9qf-x56p/GHSA-pv87-r9qf-x56p.json
+aliases:
+  - CVE-2026-28501
+summary: |
+  AVideo has Unauthenticated SQL Injection via JSON Request Bypass in objects/videos.json.php
+  ## Impact
+
+  An unauthenticated SQL Injection vulnerability exists in AVideo within the objects/videos.json.php and objects/video.php components.
+
+  The application fails to properly sanitize the catName parameter when it is supplied via a JSON-formatted POST request body. Because JSON input is parsed and merged into $_REQUEST after global security checks are executed, the payload bypasses the existing sanitization mechanisms.
+
+  This allows an unauthenticated attacker to:
+
+  - Execute arbitrary SQL queries
+  - Perform full database exfiltration
+  - Extract sensitive data including administrator usernames, password hashes, session identifiers and user records
+  - Potentially escalate privileges by cracking password hashes offline
+  - Chain with authenticated vulnerabilities to achieve full system compromise
+
+  This vulnerability is classified as:
+  - CWE-89: Improper Neutralization of Special Elements used in an SQL Command (SQL Injection)
+
+
+  ## Patches
+
+  This vulnerability has been fixed in version 23.
+
+  Users must upgrade to version 23 or later.
+
+
+  ## Workarounds
+
+  There is no reliable workaround.
+
+  The only recommended mitigation is to upgrade immediately to version 23 upon its release.
+
+
+  ## References
+
+  Internal security report.
+impacted_packages:
+  - purl: pkg:composer/wwbn/avideo
+    affected_versions: vers:composer/<=21.0.0
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '9.8'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-pv87-r9qf-x56p/GHSA-pv87-r9qf-x56p.json
+  - score: CRITICAL
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-89
+references:
+  - url: https://github.com/WWBN/AVideo
+    reference_type:
+    reference_id:
+  - url: https://github.com/WWBN/AVideo/commit/0c10be681c64044618ab94473251bd7c9b114fa1
+    reference_type:
+    reference_id:
+  - url: https://github.com/WWBN/AVideo/security/advisories/GHSA-pv87-r9qf-x56p
+    reference_type:
+    reference_id:

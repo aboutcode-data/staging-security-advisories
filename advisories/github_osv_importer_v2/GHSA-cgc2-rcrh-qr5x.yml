@@ -1,0 +1,40 @@
+advisory_id: GHSA-cgc2-rcrh-qr5x
+datasource_id: github_osv_importer_v2/GHSA-cgc2-rcrh-qr5x
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-cgc2-rcrh-qr5x/GHSA-cgc2-rcrh-qr5x.json
+aliases:
+  - CVE-2026-29053
+summary: "Ghost Vulnerable to Remote Code Execution via Malicious Themes\n### Impact\n\nSpecifically\
+  \ crafted malicious themes can execute arbitrary code on the server running Ghost. \n\n###\
+  \ Vulnerable Versions\n\nThis vulnerability is present in Ghost v0.7.2 to v6.19.0.\n\n###\
+  \ Patches\n\nv6.19.1 contains a fix for this issue.\n\n### Workarounds\n\nGhost generally\
+  \ recommends users refrain from installing untrusted themes. If a malicious theme has already\
+  \ been installed, it is recommended to uninstall the theme and then inspect it to understand\
+  \ its impact, which will be attack-specific. \n\n### References\nGhost thanks Cristian-Alexandru\
+  \ Staicu at Endor Labs for disclosing this vulnerability responsibly. \n\n### For more information\n\
+  \nIf there are any questions or comments about this advisory, email Ghost at [security@ghost.org](mailto:security@ghost.org)."
+impacted_packages:
+  - purl: pkg:npm/ghost
+    affected_versions: vers:npm/<=6.19.0
+    fixed_versions: vers:npm/6.19.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.6'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:C/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-cgc2-rcrh-qr5x/GHSA-cgc2-rcrh-qr5x.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-74
+references:
+  - url: https://github.com/TryGhost/Ghost
+    reference_type:
+    reference_id:
+  - url: https://github.com/TryGhost/Ghost/security/advisories/GHSA-cgc2-rcrh-qr5x
+    reference_type:
+    reference_id:

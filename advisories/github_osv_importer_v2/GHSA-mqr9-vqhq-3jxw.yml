@@ -1,0 +1,65 @@
+advisory_id: GHSA-mqr9-vqhq-3jxw
+datasource_id: github_osv_importer_v2/GHSA-mqr9-vqhq-3jxw
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-mqr9-vqhq-3jxw/GHSA-mqr9-vqhq-3jxw.json
+aliases: []
+summary: |
+  OpenClaw Windows Scheduled Task script generation allowed local command injection via unsafe cmd argument handling
+  ### Summary
+  OpenClaw Windows Scheduled Task script generation allowed unsafe argument handling in generated `gateway.cmd` files. In vulnerable versions, cmd metacharacter-only values could be emitted without safe quoting/escaping, which could lead to unintended command execution when the scheduled task runs.
+
+  ### Details
+  The issue affected Windows daemon startup script generation in `src/daemon/schtasks.ts`.
+
+  Vulnerable behavior included:
+  - Incomplete cmd argument quoting for metacharacter-only values.
+  - Incomplete handling of cmd expansion-sensitive characters in script arguments.
+  - Missing CR/LF guards for script-rendered fields.
+
+  The fix hardens Windows script generation by:
+  - Separating schtasks argument quoting from batch script argument quoting.
+  - Quoting cmd metacharacter arguments and escaping `%` / `!` expansion cases.
+  - Rejecting CR/LF in command arguments, task descriptions, and rendered environment assignments.
+  - Adding regression tests for metacharacter and line-break injection paths.
+
+  ### Impact
+  This issue is local to Windows deployments and requires control over values that feed service script generation (for example install-time/runtime arguments or environment-derived values). It can result in unintended command execution in the scheduled task context.
+
+  ### Affected Packages / Versions
+  - Package: `openclaw` (npm)
+  - Vulnerable versions: `<= 2026.2.17`
+  - Patched version: `>= 2026.2.19` (planned next npm release)
+  - Latest published npm version at update time (2026-02-19): `2026.2.17`
+
+  ### Fix Commit(s)
+  - `280c6b117b2f0e24f398e5219048cd4cc3b82396`
+
+  OpenClaw thanks @tdjackey for reporting.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.2.19
+    fixed_versions: vers:npm/2026.2.19
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.5'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-mqr9-vqhq-3jxw/GHSA-mqr9-vqhq-3jxw.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-116
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/280c6b117b2f0e24f398e5219048cd4cc3b82396
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-mqr9-vqhq-3jxw
+    reference_type:
+    reference_id:

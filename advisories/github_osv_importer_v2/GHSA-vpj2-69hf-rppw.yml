@@ -1,0 +1,44 @@
+advisory_id: GHSA-vpj2-69hf-rppw
+datasource_id: github_osv_importer_v2/GHSA-vpj2-69hf-rppw
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-vpj2-69hf-rppw/GHSA-vpj2-69hf-rppw.json
+aliases: []
+summary: |
+  OpenClaw: Browser control startup could continue unauthenticated after auth bootstrap failure
+  ### Summary
+  When browser control started without explicit auth credentials, OpenClaw attempted to bootstrap auth automatically. In affected versions, if that bootstrap step threw an error, startup could continue and expose browser-control routes without authentication.
+
+  ### Impact
+  On affected deployments, a local process (or a loopback-reachable SSRF path) could access browser-control routes, including evaluate-capable actions, without auth.
+
+  ### Fix
+  Startup now fails closed: if bootstrap auth fails and no explicit token/password is configured, browser-control startup aborts.
+
+  ### Affected and Patched Versions
+  - Affected: `<= 2026.2.26`
+  - Patched: `2026.3.1`
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.3.1
+    fixed_versions: vers:npm/2026.3.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-vpj2-69hf-rppw/GHSA-vpj2-69hf-rppw.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-306
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-vpj2-69hf-rppw
+    reference_type:
+    reference_id:

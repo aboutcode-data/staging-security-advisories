@@ -1,0 +1,60 @@
+advisory_id: GHSA-qc86-q28f-ggww
+datasource_id: github_osv_importer_v2/GHSA-qc86-q28f-ggww
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-qc86-q28f-ggww/GHSA-qc86-q28f-ggww.json
+aliases:
+  - CVE-2026-28784
+summary: |
+  Craft CMS has potential authenticated Remote Code Execution via Twig SSTI
+  For this to work, the attacker must have administrator access to the Craft Control Panel, and [allowAdminChanges](https://craftcms.com/docs/5.x/reference/config/general.html#allowadminchanges) must be enabled, which is against Craft CMS' recommendations for any non-dev environment.
+
+  https://craftcms.com/knowledge-base/securing-craft#set-allowAdminChanges-to-false-in-production
+
+  Alternatively, they can have a non-administrator account with `allowAdminChanges` disabled, but they must have access to the System Messages utility.
+
+  It is possible to craft a malicious payload using the Twig `map` filter in text fields that accept Twig input under Settings in the Craft control panel or using the System Messages utility, which could lead to a RCE.
+
+  Users should update to the patched versions (5.8.22 and 4.16.18) to mitigate the issue.
+
+  References:
+
+  https://github.com/craftcms/cms/pull/18208
+impacted_packages:
+  - purl: pkg:composer/craftcms/cms
+    affected_versions: vers:composer/>=5.0.0-RC1|<5.9.0-beta.1
+    fixed_versions: vers:composer/5.9.0-beta.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/craftcms/cms
+    affected_versions: vers:composer/>=4.0.0-RC1|<4.17.0-beta.1
+    fixed_versions: vers:composer/4.17.0-beta.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.1'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:U
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-qc86-q28f-ggww/GHSA-qc86-q28f-ggww.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-1336
+references:
+  - url: https://craftcms.com/knowledge-base/securing-craft#set-allowAdminChanges-to-false-in-production
+    reference_type:
+    reference_id:
+  - url: https://github.com/craftcms/cms
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-28784
+    reference_type:
+    reference_id:
+  - url: https://github.com/craftcms/cms/pull/18208
+    reference_type: other
+    reference_id: 18208
+  - url: https://github.com/craftcms/cms/security/advisories/GHSA-qc86-q28f-ggww
+    reference_type: other
+    reference_id: GHSA-qc86-q28f-ggww

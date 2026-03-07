@@ -1,0 +1,63 @@
+advisory_id: GHSA-5528-5vmv-3xc2
+datasource_id: github_osv_importer_v2/GHSA-5528-5vmv-3xc2
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-5528-5vmv-3xc2/GHSA-5528-5vmv-3xc2.json
+aliases:
+  - CVE-2026-3520
+summary: |
+  Multer Vulnerable to Denial of Service via Uncontrolled Recursion
+  ### Impact
+
+  A vulnerability in Multer versions < 2.1.1 allows an attacker to trigger a Denial of Service (DoS) by sending malformed requests, potentially causing stack overflow.
+
+  ### Patches
+
+  Users should upgrade to `2.1.1`
+
+  ### Workarounds
+
+  None
+
+  ### Resources
+
+  - https://github.com/expressjs/multer/security/advisories/GHSA-5528-5vmv-3xc2
+  - https://www.cve.org/CVERecord?id=CVE-2026-3520
+  - https://github.com/expressjs/multer/commit/7e66481f8b2e6c54b982b34c152479e096ce2752
+  - https://cna.openjsf.org/security-advisories.html
+impacted_packages:
+  - purl: pkg:npm/multer
+    affected_versions: vers:npm/<2.1.1
+    fixed_versions: vers:npm/2.1.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.7'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-5528-5vmv-3xc2/GHSA-5528-5vmv-3xc2.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-674
+references:
+  - url: https://cna.openjsf.org/security-advisories.html
+    reference_type:
+    reference_id:
+  - url: https://github.com/expressjs/multer
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-3520
+    reference_type:
+    reference_id:
+  - url: https://github.com/expressjs/multer/commit/7e66481f8b2e6c54b982b34c152479e096ce2752
+    reference_type: other
+    reference_id: 7e66481f8b2e6c54b982b34c152479e096ce2752
+  - url: https://www.cve.org/CVERecord?id=CVE-2026-3520
+    reference_type: other
+    reference_id: CVERecord?id=CVE-2026-3520
+  - url: https://github.com/expressjs/multer/security/advisories/GHSA-5528-5vmv-3xc2
+    reference_type: other
+    reference_id: GHSA-5528-5vmv-3xc2

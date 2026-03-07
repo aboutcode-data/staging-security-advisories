@@ -1,0 +1,70 @@
+advisory_id: GHSA-7ff8-xjh3-mgh6
+datasource_id: github_osv_importer_v2/GHSA-7ff8-xjh3-mgh6
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-7ff8-xjh3-mgh6/GHSA-7ff8-xjh3-mgh6.json
+aliases: []
+summary: |
+  OpenClaw's non-default autoAllowSkills setting could bypass on-miss exec prompt
+  ### Summary
+  In `openclaw` versions up to and including `2026.2.22-2`, a non-default exec-approval configuration could allow a skill-name collision to bypass an `ask=on-miss` prompt.
+
+  When `autoAllowSkills=true`, a path-scoped executable such as `./skill-bin` could resolve to basename `skill-bin`, satisfy the `skills` allowlist segment, and run without prompting for approval.
+
+  ### Affected Packages / Versions
+  - Package: `npm openclaw`
+  - Affected versions: `<= 2026.2.22-2`
+  - Patched versions: `>= 2026.2.23` (released)
+
+  ### Configuration Scope (Not Default)
+  This behavior requires non-default settings and does not affect default installs.
+
+  Required conditions:
+  - `autoAllowSkills=true` (default is `false`)
+  - `system.run` with `security=allowlist`
+  - `ask=on-miss`
+
+  ### Technical Details
+  The allowlist evaluator accepted `skills` satisfaction by bin-name match, so `./skill-bin` could match `skillBins.has("skill-bin")` after resolution.
+
+  The fix hardens skill auto-allow matching by requiring:
+  - a pathless invocation token (no `/` or `\\`), and
+  - a trusted resolved executable path for that skill bin on the machine where skills run.
+
+  This preserves normal `skill-bin ...` behavior while preventing `./<skill-bin>` and absolute-path basename collisions from auto-satisfying `skills`.
+
+  ### Impact
+  In affected non-default configurations, approval prompts could be skipped for commands that should have required operator confirmation.
+
+  ### Fix Commit(s)
+  - `ffd63b7a2c4c6d5aeb4710ef951d5794ad7ad77b` (`fix(security): trust resolved skill-bin paths in allowlist auto-allow`)
+
+  OpenClaw thanks @tdjackey for reporting.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<=2026.2.22-2
+    fixed_versions: vers:npm/2026.2.23
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:L/AC:H/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-7ff8-xjh3-mgh6/GHSA-7ff8-xjh3-mgh6.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-863
+  - CWE-266
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/ffd63b7a2c4c6d5aeb4710ef951d5794ad7ad77b
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-7ff8-xjh3-mgh6
+    reference_type:
+    reference_id:

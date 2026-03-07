@@ -1,0 +1,59 @@
+advisory_id: GHSA-3x3x-h76w-hp98
+datasource_id: github_osv_importer_v2/GHSA-3x3x-h76w-hp98
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-3x3x-h76w-hp98/GHSA-3x3x-h76w-hp98.json
+aliases: []
+summary: |
+  OpenClaw exec allowlist safeBins short-option bypass could permit arbitrary file write
+  ### Summary
+  OpenClaw `exec` allowlist/safeBins policy could be bypassed with attached short-option payloads (for example `sort -o/tmp/poc`), enabling file-write operations while still satisfying safeBins checks.
+
+  ### Affected Packages / Versions
+  - Package: `openclaw` (npm)
+  - Affected versions: `<= 2026.2.17`
+  - Latest published vulnerable version: `2026.2.17`
+  - Patched in: `2026.2.19`
+
+  ### Impact
+  When `tools.exec.security=allowlist` and `tools.exec.safeBins` included affected binaries, attached short-option payloads could bypass safeBins argument validation and permit file-write behavior that should have been denied.
+
+  ### Fix Commit(s)
+  - cfe8457a0f4aae5324daec261d3b0aad1461a4bc
+  - bafdbb6f112409a65decd3d4e7350fbd637c7754
+  - fec48a5006eab37c6a5821726ccaeec886486b13
+
+  OpenClaw thanks @FailButWin and @Redgrave961 for reporting.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.2.19
+    fixed_versions: vers:npm/2026.2.19
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-3x3x-h76w-hp98/GHSA-3x3x-h76w-hp98.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-184
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/bafdbb6f112409a65decd3d4e7350fbd637c7754
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/cfe8457a0f4aae5324daec261d3b0aad1461a4bc
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/fec48a5006eab37c6a5821726ccaeec886486b13
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-3x3x-h76w-hp98
+    reference_type:
+    reference_id:

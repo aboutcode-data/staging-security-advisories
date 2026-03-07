@@ -1,0 +1,62 @@
+advisory_id: GHSA-rfpp-2hgm-gp5v
+datasource_id: github_osv_importer_v2/GHSA-rfpp-2hgm-gp5v
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-rfpp-2hgm-gp5v/GHSA-rfpp-2hgm-gp5v.json
+aliases:
+  - CVE-2026-28352
+summary: |
+  Indico has a missing access check in the event series management API
+  ### Impact
+  The API endpoint used to manage event series is missing an access check, allowing unauthenticated/unauthorized access to this endpoint.
+
+  The impact of this is limited to:
+
+  - Getting the metadata (title, category chain, start/end date) for events in an existing series
+  - Deleting an existing event series: This just removes the series metadata, ie (if enabled) the links between events in the same series and the lecture series number in the event title
+  - Modifying an existing event series: Just like for deleting, it would only allow to toggle the metadata display. It could also be used to set an event title pattern for the series, but this is only used when cloning an event from that series.
+
+  That this vulnerability does NOT allow unauthorized access to events (beyond the basic metadata mentioned above), nor any kind of tampering with user-visible data in events.
+
+  ### Patches
+  Developers should to update to [Indico 3.3.11](https://github.com/indico/indico/releases/tag/v3.3.11) as soon as possible.
+  See [the docs](https://docs.getindico.io/en/stable/installation/upgrade/) for instructions on how to update.
+
+  ### Workarounds
+  - Developers can configure their webserver to restrict access to the series management API endpoint
+
+  ### For more information
+  If there are any questions or comments about this advisory:
+
+  - Open a thread in [our forum](https://talk.getindico.io/)
+  - Email Indico privately at [indico-team@cern.ch](mailto:indico-team@cern.ch)
+impacted_packages:
+  - purl: pkg:pypi/indico
+    affected_versions: vers:pypi/<3.3.11
+    fixed_versions: vers:pypi/3.3.11
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-rfpp-2hgm-gp5v/GHSA-rfpp-2hgm-gp5v.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-306
+references:
+  - url: https://github.com/indico/indico
+    reference_type:
+    reference_id:
+  - url: https://github.com/indico/indico/releases/tag/v3.3.11
+    reference_type:
+    reference_id:
+  - url: https://github.com/indico/indico/security/advisories/GHSA-rfpp-2hgm-gp5v
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-28352
+    reference_type:
+    reference_id: CVE-2026-28352
