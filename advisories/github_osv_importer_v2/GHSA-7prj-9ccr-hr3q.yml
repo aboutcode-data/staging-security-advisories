@@ -8,8 +8,8 @@ summary: "Sylius has potential Cross Site Scripting vulnerability via the \"Prov
   \ in province field in the Checkout and Address Book and then execute it on these pages. The\
   \ problem occurs when you open the address step page in the checkout or edit the address in\
   \ the address book. This only affects the base UI Shop provided by Sylius.\n\n### Patches\n\
-  The issue is fixed in versions: 1.12.16, 1.13.1 and above.\n\n### Workarounds\n\n1. Create\
-  \ new file `assets/shop/sylius-province-field.js`:\n\n```js\n// assets/shop/sylius-province-field.js\n\
+  The issue is fixed in versions: 1.9.12, 1.10.16, 1.11.17, 1.12.16, 1.13.1 and above.\n\n###\
+  \ Workarounds\n\n1. Create new file `assets/shop/sylius-province-field.js`:\n\n```js\n// assets/shop/sylius-province-field.js\n\
   \nfunction sanitizeInput(input) {\n  const div = document.createElement('div');\n  div.textContent\
   \ = input;\n  return div.innerHTML; // Converts text content to plain HTML, stripping any\
   \ scripts\n}\n\nconst getProvinceInputValue = function getProvinceInputValue(valueSelector)\
@@ -52,13 +52,40 @@ summary: "Sylius has potential Cross Site Scripting vulnerability via the \"Prov
   \ toggleShippingAddress = function toggleShippingAddress() {\n      shippingAddressContainer.toggle(shippingAddressCheckbox.prop('checked'));\n\
   \    };\n    toggleShippingAddress();\n    shippingAddressCheckbox.on('change', toggleShippingAddress);\n\
   \  },\n});\n```\n\n2. Add new import in `assets/shop/entry.js`:\n\n```js\n// assets/shop/entry.js\n\
-  // ...\nimport './sylius-province-field';\n```\n\n3. Rebuild your assets:\n\n```bash\nyarn\
-  \ build\n``` \n\n### Acknowledgements\n\nThis security issue has been reported by @r2tunes,\
-  \ thank you!\n\n### References\n\n- The original advisory: https://github.com/advisories/GHSA-mw82-6m2g-qh6c\n\
+  // ...\nimport './sylius-province-field';\n```\n\n3. If you're using Gulp, update your `gulpfile.babel.js`:\n\
+  \n```diff\n  import chug from 'gulp-chug';\n+ import concat from 'gulp-concat';\n  import\
+  \ gulp from 'gulp';\n  import yargs from 'yargs';\n\n  const { argv } = ...\n\n+ const rootPath\
+  \ = argv.rootPath || 'public/assets';\n+ \n  const config = [...];\n    '--rootPath',\n  \
+  \  argv.rootPath || '../../../../../../../public/assets',\n    '--nodeModulesPath',\n    argv.nodeModulesPath\
+  \ || '../../../../../../../node_modules',\n  ];\n\n  ...\n\n  export const buildShop = ...\n\
+  \n+ export const patchShopJs = function patchShopJs() {\n+   return gulp.src([\n+     `${rootPath}/shop/js/app.js`,\n\
+  +     'assets/shop/sylius-province-field.js',\n+   ])\n+     .pipe(concat('app.js'))\n+  \
+  \   .pipe(gulp.dest(`${rootPath}/shop/js`));\n+ };\n+ patchShopJs.description = 'Append shop\
+  \ security patches to built app.js.';\n\n ...\n\n- export const build = gulp.parallel(buildAdmin,\
+  \ buildShop);\n+ export const build = gulp.series(\n+   gulp.parallel(buildAdmin, buildShop),\n\
+  +   patchShopJs,\n+ );\n\n ...\n\n- gulp.task('shop', buildShop);\n+ gulp.task('shop', gulp.series(buildShop,\
+  \ patchShopJs));\n\n  ...\n```\n\n4. Rebuild your assets:\n\n```bash\nyarn build\n``` \n\n\
+  ### Acknowledgements\n\nThis security issue has been reported by @r2tunes, thank you!\n\n\
+  ### References\n\n- The original advisory: https://github.com/advisories/GHSA-mw82-6m2g-qh6c\n\
   \n### For more information\nIf you have any questions or comments about this advisory:\n*\
   \ Open an issue in [Sylius issues](https://github.com/Sylius/Sylius/issues)\n* Email us at\
   \ security@sylius.com"
 impacted_packages:
+  - purl: pkg:composer/sylius/sylius
+    affected_versions: vers:composer/<1.9.12
+    fixed_versions: vers:composer/1.9.12
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/sylius/sylius
+    affected_versions: vers:composer/>=1.10.0-alpha.1|<1.10.16
+    fixed_versions: vers:composer/1.10.16
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/sylius/sylius
+    affected_versions: vers:composer/>=1.11.0-alpha.1|<1.11.17
+    fixed_versions: vers:composer/1.11.17
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:composer/sylius/sylius
     affected_versions: vers:composer/>=1.12.0-alpha.1|<1.12.16
     fixed_versions: vers:composer/1.12.16

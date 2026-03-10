@@ -1,0 +1,51 @@
+advisory_id: GHSA-m6hv-x64c-27mm
+datasource_id: github_osv_importer_v2/GHSA-m6hv-x64c-27mm
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-m6hv-x64c-27mm/GHSA-m6hv-x64c-27mm.json
+aliases:
+  - CVE-2026-30974
+summary: |
+  copyparty: volflag `nohtml` did not block javascript in svg files
+  ### Summary
+  The `nohtml` config option, intended to prevent execution of JavaScript in user-uploaded HTML files, did not apply to SVG images.
+
+  ### Details
+  A user with write-permission could upload an SVG containing embedded JavaScript, which would execute in the context of whichever user opens it.
+
+  This in itself is not a vulnerability; it is intended behavior according to [the SVG spec](https://www.w3.org/TR/SVG11/script.html). The vulnerability is that the `nohtml` volflag, when enabled, did not prevent this.
+
+  `nohtml`, intended for use on volumes which contains untrusted files, would correctly prevent execution of javascript in HTML files, but did not consider SVG images. This has been fixed in v1.20.11.
+
+  ### Impact
+  The malicious JavaScript could move or delete existing files on the server, or upload new files, using the account of the person who opens the SVG.
+impacted_packages:
+  - purl: pkg:pypi/copyparty
+    affected_versions: vers:pypi/<=1.20.10
+    fixed_versions: vers:pypi/1.20.11
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '4.6'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-m6hv-x64c-27mm/GHSA-m6hv-x64c-27mm.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-79
+references:
+  - url: https://github.com/9001/copyparty
+    reference_type:
+    reference_id:
+  - url: https://github.com/9001/copyparty/commit/1c9f894e149b6be3cc7de81efc93a4ce4766e0e5
+    reference_type:
+    reference_id:
+  - url: https://github.com/9001/copyparty/releases/tag/v1.20.11
+    reference_type:
+    reference_id:
+  - url: https://github.com/9001/copyparty/security/advisories/GHSA-m6hv-x64c-27mm
+    reference_type:
+    reference_id:

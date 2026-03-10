@@ -15,9 +15,9 @@ summary: |
 
   Users may be affected if they:
 
-  - Use a persistent checkpointer (database, remote store, shared filesystem, etc.),
-  - Load/resume from checkpoints, and
-  - Operate in an environment where an attacker could gain privileged write access to checkpoint data in the backing store.
+  - use a persistent checkpointer (database, remote store, shared filesystem, etc.),
+  - load/resume from checkpoints, and
+  - operate in an environment where an attacker could gain privileged write access to checkpoint data in the backing store.
 
   This issue requires the attacker to be able to modify persisted checkpoint bytes (or to compromise a trusted component that writes them). It is generally not reachable by an unauthenticated remote attacker in a correctly configured deployment.
 
@@ -49,12 +49,12 @@ summary: |
   A small set of types is always treated as safe to reconstruct (for example `datetime` types, `uuid.UUID`, `decimal.Decimal`, `set`/`frozenset`/`deque`, `ipaddress` types, `pathlib` paths, `zoneinfo.ZoneInfo`, compiled regex patterns, and selected LangGraph internal types).
 
   ### Automatically derived allowlist (only when compiling graphs)
-  When `LANGGRAPH_STRICT_MSGPACK` is enabled and you compile a `StateGraph`, LangGraph derives an allowlist from the graph’s schemas and channels and applies it to the checkpointer.
+  When `LANGGRAPH_STRICT_MSGPACK` is enabled and `StateGraph` is compiled, LangGraph derives an allowlist from the graph’s schemas and channels and applies it to the checkpointer.
 
   - The allowlist is built by walking the state/input/output/context schemas (plus node/branch input schemas) and channel value/update types. It includes Pydantic v1/v2 models, dataclasses, enums, TypedDict field types, and common typing constructs (containers, unions, `Annotated`).
   - LangGraph also includes a curated set of common LangChain message classes.
 
-  This derived allowlist is only applied if the selected checkpointer supports `with_allowlist(...)`. If users are constructing serializers/checkpointers manually (or using a checkpointer that does not support allowlist propagation), they will need to configure `allowed_msgpack_modules` themselves.
+  This derived allowlist is only applied if the selected checkpointer supports `with_allowlist(...)`. If a user is constructing serializers/checkpointers manually (or using a checkpointer that does not support allowlist propagation), they will need to configure `allowed_msgpack_modules` themselves.
 
   ### Operational guidance
   - Treat checkpoint stores as integrity-sensitive. Restrict write access and rotate credentials if compromise is suspected.
@@ -72,7 +72,7 @@ summary: |
 impacted_packages:
   - purl: pkg:pypi/langgraph
     affected_versions: vers:pypi/<=1.0.9
-    fixed_versions:
+    fixed_versions: vers:pypi/1.0.10
     fixed_in_commits: []
     introduced_in_commits: []
 severities:

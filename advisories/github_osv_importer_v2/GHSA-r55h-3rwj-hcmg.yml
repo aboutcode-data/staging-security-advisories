@@ -55,14 +55,7 @@ summary: "WeKnora has Remote Code Execution (RCE) via Command Injection in MCP S
   \ malware, backdoors, ransomware\n- Lateral movement to internal systems\n- Versions 2.0.5-2.0.9\
   \ vulnerable without notification\n\n**Immediate Actions**:\n1. Upgrade to 2.0.10+ immediately\n\
   2. Review logs for exploitation since 2.0.5\n3. Check for suspicious MCP configurations\n\
-  4. Monitor for unauthorized file creation\n5. Assume breach if compromise suspected\n---\n\
-  \n## CVSS 3.1 Score\n\n**CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H** → **Score: 10.0 (Critical)**\n\
-  - **Attack Vector (AV)**: Network - exploitable remotely via API\n- **Attack Complexity (AC)**:\
-  \ Low - straightforward bypass, no race conditions\n- **Privileges Required (PR)**: None -\
-  \ unauthenticated attack via open registration\n- **User Interaction (UI)**: None - no user\
-  \ interaction needed\n- **Scope (S)**: Changed - impacts resources beyond the vulnerable component\n\
-  - **Confidentiality (C)**: High - full server access\n- **Integrity (I)**: High - can modify/create\
-  \ files\n- **Availability (A)**: High - can delete files or crash service"
+  4. Monitor for unauthorized file creation\n5. Assume breach if compromise suspected\n---"
 impacted_packages: []
 severities:
   - score: '10.0'
@@ -87,3 +80,6 @@ references:
   - url: https://github.com/Tencent/WeKnora/security/advisories/GHSA-r55h-3rwj-hcmg
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-30861
+    reference_type:
+    reference_id: CVE-2026-30861

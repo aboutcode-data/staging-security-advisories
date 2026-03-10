@@ -1,0 +1,65 @@
+advisory_id: GHSA-5j86-7r7m-p8h6
+datasource_id: github_osv_importer_v2/GHSA-5j86-7r7m-p8h6
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-5j86-7r7m-p8h6/GHSA-5j86-7r7m-p8h6.json
+aliases:
+  - CVE-2026-30939
+summary: |
+  Parse Server has Denial of Service (DoS) and Cloud Function Dispatch Bypass via Prototype Chain Resolution
+  ### Impact
+
+  An unauthenticated attacker can crash the Parse Server process by calling a Cloud Function endpoint with a prototype property name as the function name. The server recurses infinitely, causing a call stack size error that terminates the process.
+
+  Other prototype property names bypass Cloud Function dispatch validation and return HTTP 200 responses, even though no such Cloud Functions are defined. The same applies to dot-notation traversal.
+
+  All Parse Server deployments that expose the Cloud Function endpoint are affected.
+
+  ### Patches
+
+  The internal handler registries for Cloud Functions, Jobs, Triggers, and Validators have been changed to prevent prototype chain properties from being resolved.
+
+  ### Workarounds
+
+  Place a reverse proxy or WAF in front of Parse Server and block requests to `Object.prototype` property names.
+
+  ### References
+
+  - GitHub security advisory: https://github.com/parse-community/parse-server/security/advisories/GHSA-5j86-7r7m-p8h6
+  - Fix Parse Server 9: https://github.com/parse-community/parse-server/releases/tag/9.5.1-alpha.2
+  - Fix Parse Server 8: https://github.com/parse-community/parse-server/releases/tag/8.6.13
+impacted_packages:
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/<8.6.13
+    fixed_versions: vers:npm/8.6.13
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/>=9.0.0-alpha.1|<9.5.1-alpha.2
+    fixed_versions: vers:npm/9.5.1-alpha.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.8'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:H/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-5j86-7r7m-p8h6/GHSA-5j86-7r7m-p8h6.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-1321
+references:
+  - url: https://github.com/parse-community/parse-server
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/releases/tag/8.6.13
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/releases/tag/9.5.1-alpha.2
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/security/advisories/GHSA-5j86-7r7m-p8h6
+    reference_type:
+    reference_id:

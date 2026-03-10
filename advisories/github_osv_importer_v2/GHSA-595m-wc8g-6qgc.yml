@@ -75,11 +75,6 @@ summary: |
   - Lateral movement to other containers in the same Docker network
   - Exfiltration of sensitive configuration, API keys, or database credentials
   - Potential RCE if internal services have exploitable vulnerabilities
-
-  **CVSS Score**: 7.5 (High) - Could be higher depending on what's exposed
-
-  - Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-  - Reasoning: Network-accessible via public redirect, no privileges needed, high confidentiality impact
 impacted_packages: []
 severities:
   - score: '5.9'
@@ -101,3 +96,6 @@ references:
   - url: https://github.com/Tencent/WeKnora/security/advisories/GHSA-595m-wc8g-6qgc
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-30247
+    reference_type:
+    reference_id: CVE-2026-30247

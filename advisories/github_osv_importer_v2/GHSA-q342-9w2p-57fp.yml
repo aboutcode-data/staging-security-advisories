@@ -1,0 +1,63 @@
+advisory_id: GHSA-q342-9w2p-57fp
+datasource_id: github_osv_importer_v2/GHSA-q342-9w2p-57fp
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-q342-9w2p-57fp/GHSA-q342-9w2p-57fp.json
+aliases:
+  - CVE-2026-30938
+summary: |
+  Parse Server has denylist `requestKeywordDenylist` keyword scan bypass through nested object placement
+  ### Impact
+
+  The `requestKeywordDenylist` security control can be bypassed by placing any nested object or array before a prohibited keyword in the request payload. This is caused by a logic bug that stops scanning sibling keys after encountering the first nested value. Any custom `requestKeywordDenylist` entries configured by the developer are equally by-passable using the same technique.
+
+  All Parse Server deployments are affected. The `requestKeywordDenylist` is enabled by default.
+
+  ### Patches
+
+  The fix replaces the recursive object scanner with an iterative stack-based traversal that processes all nested values without prematurely exiting the scan loop. This also eliminates a potential stack overflow on deeply nested payloads.
+
+  ### Workarounds
+
+  Use a Cloud Code `beforeSave` trigger to validate incoming data for prohibited keywords across all classes.
+
+  ### References
+
+  - GitHub security advisory: https://github.com/parse-community/parse-server/security/advisories/GHSA-q342-9w2p-57fp
+  - Fix Parse Server 9: https://github.com/parse-community/parse-server/releases/tag/9.5.1-alpha.1
+  - Fix Parse Server 8: https://github.com/parse-community/parse-server/releases/tag/8.6.12
+impacted_packages:
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/<8.6.12
+    fixed_versions: vers:npm/8.6.12
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/>=9.0.0-alpha.1|<9.5.1-alpha.1
+    fixed_versions: vers:npm/9.5.1-alpha.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-q342-9w2p-57fp/GHSA-q342-9w2p-57fp.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-693
+references:
+  - url: https://github.com/parse-community/parse-server
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/releases/tag/8.6.12
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/releases/tag/9.5.1-alpha.1
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/security/advisories/GHSA-q342-9w2p-57fp
+    reference_type:
+    reference_id:

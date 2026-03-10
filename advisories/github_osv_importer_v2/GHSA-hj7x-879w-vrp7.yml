@@ -18,8 +18,8 @@ summary: |
   ### Workarounds
   As a workaround, users can reject certain requests with an error in the request filter logic in order to stop processing bytes on the connection and disable downstream connection reuse. The user should reject any non-HTTP/1.1 request, or a request that has invalid Content-Length, multiple Transfer-Encoding headers, or Transfer-Encoding header that is not an exact “chunked” string match.
 
-  ### Resources
-  See https://www.cve.org/CVERecord?id=CVE-2026-2835. An upcoming Cloudflare blog will also contain more details.
+  ### References
+  See [CVE-2026-2835](https://www.cve.org/CVERecord?id=CVE-2026-2835) and the [Cloudflare blog post](https://blog.cloudflare.com/pingora-oss-smuggling-vulnerabilities/) for more details.
 
   ### Credits
   Disclosed responsibly by Rajat Raghav (@xclow3n) through the Cloudflare [Bug Bounty Program](https://www.cloudflare.com/disclosure/).
