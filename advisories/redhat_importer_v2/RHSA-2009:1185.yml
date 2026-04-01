@@ -30,6 +30,11 @@ summary: |
   a backported patch to correct this issue. After installing the updated
   packages, SeaMonkey must be restarted for the update to take effect.
 impacted_packages:
+  - purl: pkg:rpm/redhat/seamonkey?arch=i386
+    affected_versions: vers:rpm/<1.0.9-0.41.el3
+    fixed_versions: vers:rpm/1.0.9-0.41.el3
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/seamonkey-chat?arch=ia64
     affected_versions: vers:rpm/<1.0.9-0.41.el3
     fixed_versions: vers:rpm/1.0.9-0.41.el3
@@ -96,11 +101,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/seamonkey-nss?arch=i386
-    affected_versions: vers:rpm/<1.0.9-0.41.el3
-    fixed_versions: vers:rpm/1.0.9-0.41.el3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/seamonkey?arch=i386
     affected_versions: vers:rpm/<1.0.9-0.41.el3
     fixed_versions: vers:rpm/1.0.9-0.41.el3
     fixed_in_commits: []
@@ -376,12 +376,12 @@ references:
   - url: https://access.redhat.com/security/updates/classification/#critical
     reference_type:
     reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=512912
-    reference_type:
-    reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2009/rhsa-2009_1185.json
     reference_type:
     reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=512912
+    reference_type: bug
+    reference_id: 512912
   - url: https://access.redhat.com/errata/RHSA-2009:1185
     reference_type:
     reference_id: RHSA-2009:1185

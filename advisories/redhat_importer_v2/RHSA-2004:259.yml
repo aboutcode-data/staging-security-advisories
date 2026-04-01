@@ -22,6 +22,41 @@ summary: "Updated samba packages that fix buffer overflows, as well as other var
   \ update) had been applied. \n \nAll users of Samba should upgrade to these updated packages,\
   \ which\nresolve these issues."
 impacted_packages:
+  - purl: pkg:rpm/redhat/samba?arch=ia64
+    affected_versions: vers:rpm/<3.0.4-6.3E
+    fixed_versions: vers:rpm/3.0.4-6.3E
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-swat?arch=ia64
+    affected_versions: vers:rpm/<3.0.4-6.3E
+    fixed_versions: vers:rpm/3.0.4-6.3E
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-common?arch=ia64
+    affected_versions: vers:rpm/<3.0.4-6.3E
+    fixed_versions: vers:rpm/3.0.4-6.3E
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-client?arch=ia64
+    affected_versions: vers:rpm/<3.0.4-6.3E
+    fixed_versions: vers:rpm/3.0.4-6.3E
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba?arch=i386
+    affected_versions: vers:rpm/<3.0.4-6.3E
+    fixed_versions: vers:rpm/3.0.4-6.3E
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-common?arch=i386
+    affected_versions: vers:rpm/<3.0.4-6.3E
+    fixed_versions: vers:rpm/3.0.4-6.3E
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-swat?arch=i386
+    affected_versions: vers:rpm/<3.0.4-6.3E
+    fixed_versions: vers:rpm/3.0.4-6.3E
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/samba-client?arch=i386
     affected_versions: vers:rpm/<3.0.4-6.3E
     fixed_versions: vers:rpm/3.0.4-6.3E
@@ -117,41 +152,6 @@ impacted_packages:
     fixed_versions: vers:rpm/3.0.4-6.3E
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba?arch=ia64
-    affected_versions: vers:rpm/<3.0.4-6.3E
-    fixed_versions: vers:rpm/3.0.4-6.3E
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-swat?arch=ia64
-    affected_versions: vers:rpm/<3.0.4-6.3E
-    fixed_versions: vers:rpm/3.0.4-6.3E
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-common?arch=ia64
-    affected_versions: vers:rpm/<3.0.4-6.3E
-    fixed_versions: vers:rpm/3.0.4-6.3E
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-client?arch=ia64
-    affected_versions: vers:rpm/<3.0.4-6.3E
-    fixed_versions: vers:rpm/3.0.4-6.3E
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba?arch=i386
-    affected_versions: vers:rpm/<3.0.4-6.3E
-    fixed_versions: vers:rpm/3.0.4-6.3E
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-common?arch=i386
-    affected_versions: vers:rpm/<3.0.4-6.3E
-    fixed_versions: vers:rpm/3.0.4-6.3E
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-swat?arch=i386
-    affected_versions: vers:rpm/<3.0.4-6.3E
-    fixed_versions: vers:rpm/3.0.4-6.3E
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: Important
     scoring_system: rhas
@@ -205,9 +205,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=128227
     reference_type: bug
     reference_id: 128227
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/remote/364.pl
-    reference_type: exploit
-    reference_id: OSVDB-8190;CVE-2004-0600
   - url: https://access.redhat.com/errata/RHSA-2004:259
     reference_type:
     reference_id: RHSA-2004:259

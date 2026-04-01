@@ -22,21 +22,6 @@ summary: "Updated libpng packages that fix several issues are now available.\n\n
   \ to the updated libpng packages which\ncontain backported security patches and are not vulnerable\
   \ to these issues."
 impacted_packages:
-  - purl: pkg:rpm/redhat/libpng10-debuginfo?arch=ppc64
-    affected_versions: vers:rpm/<1.0.13-15
-    fixed_versions: vers:rpm/1.0.13-15
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libpng10?arch=ppc64
-    affected_versions: vers:rpm/<1.0.13-15
-    fixed_versions: vers:rpm/1.0.13-15
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libpng?arch=ppc64&epoch=2
-    affected_versions: vers:rpm/<1.2.2-25
-    fixed_versions: vers:rpm/1.2.2-25
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/libpng10-devel?arch=ia64
     affected_versions: vers:rpm/<1.0.13-15
     fixed_versions: vers:rpm/1.0.13-15
@@ -167,6 +152,21 @@ impacted_packages:
     fixed_versions: vers:rpm/1.2.2-25
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libpng10-debuginfo?arch=ppc64
+    affected_versions: vers:rpm/<1.0.13-15
+    fixed_versions: vers:rpm/1.0.13-15
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libpng10?arch=ppc64
+    affected_versions: vers:rpm/<1.0.13-15
+    fixed_versions: vers:rpm/1.0.13-15
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libpng?arch=ppc64&epoch=2
+    affected_versions: vers:rpm/<1.2.2-25
+    fixed_versions: vers:rpm/1.2.2-25
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/libpng-debuginfo?arch=ppc64&epoch=2
     affected_versions: vers:rpm/<1.2.2-25
     fixed_versions: vers:rpm/1.2.2-25
@@ -249,6 +249,18 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=127869
     reference_type: bug
     reference_id: 127869
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/windows/remote/25094.c
+    reference_type: exploit
+    reference_id: CVE-2004-0597;OSVDB-8326
+  - url: https://www.securityfocus.com/bid/12506/info
+    reference_type: exploit
+    reference_id: CVE-2004-0597;OSVDB-8326
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/local/393.c
+    reference_type: exploit
+    reference_id: OSVDB-8326;CVE-2004-0597
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/remote/389.c
+    reference_type: exploit
+    reference_id: OSVDB-8326;CVE-2004-0597
   - url: https://access.redhat.com/errata/RHSA-2004:402
     reference_type:
     reference_id: RHSA-2004:402

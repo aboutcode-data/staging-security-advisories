@@ -95,11 +95,6 @@ summary: |
   patches to correct these issues. The system must be rebooted for this
   update to take effect.
 impacted_packages:
-  - purl: pkg:rpm/redhat/kernel-smp?arch=i686
-    affected_versions: vers:rpm/<2.4.21-63.EL
-    fixed_versions: vers:rpm/2.4.21-63.EL
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-BOOT?arch=i386
     affected_versions: vers:rpm/<2.4.21-63.EL
     fixed_versions: vers:rpm/2.4.21-63.EL
@@ -146,6 +141,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debuginfo?arch=i686
+    affected_versions: vers:rpm/<2.4.21-63.EL
+    fixed_versions: vers:rpm/2.4.21-63.EL
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-smp?arch=i686
     affected_versions: vers:rpm/<2.4.21-63.EL
     fixed_versions: vers:rpm/2.4.21-63.EL
     fixed_in_commits: []
@@ -364,30 +364,24 @@ references:
   - url: https://access.redhat.com/security/updates/classification/#important
     reference_type:
     reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=470201
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=493771
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=502981
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=519305
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=530490
-    reference_type:
-    reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2009/rhsa-2009_1550.json
     reference_type:
     reference_id:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=457010
     reference_type: bug
     reference_id: 457010
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=470201
+    reference_type: bug
+    reference_id: 470201
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=473259
     reference_type: bug
     reference_id: 473259
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=493771
+    reference_type: bug
+    reference_id: 493771
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=502981
+    reference_type: bug
+    reference_id: 502981
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=505514
     reference_type: bug
     reference_id: 505514
@@ -403,9 +397,18 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=515423
     reference_type: bug
     reference_id: 515423
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=519305
+    reference_type: bug
+    reference_id: 519305
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=520300
     reference_type: bug
     reference_id: 520300
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=530490
+    reference_type: bug
+    reference_id: 530490
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/local/8369.sh
+    reference_type: exploit
+    reference_id: OSVDB-53629;CVE-2009-1337
   - url: https://access.redhat.com/errata/RHSA-2009:1550
     reference_type:
     reference_id: RHSA-2009:1550
