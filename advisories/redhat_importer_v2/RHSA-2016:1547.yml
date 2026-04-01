@@ -34,6 +34,11 @@ summary: |
 
   * Multiple flaws have been discovered in various libtiff tools (bmp2tiff, pal2rgb, thumbnail, tiff2bw, tiff2pdf, tiffcrop, tiffdither, tiffsplit, tiff2rgba). By tricking a user into processing a specially crafted file, a remote attacker could exploit these flaws to cause a crash or memory corruption and, possibly, execute arbitrary code with the privileges of the user running the libtiff tool. (CVE-2014-8127, CVE-2014-8129, CVE-2014-8130, CVE-2014-9330, CVE-2015-7554, CVE-2015-8668, CVE-2016-3632, CVE-2016-3945, CVE-2016-3991)
 impacted_packages:
+  - purl: pkg:rpm/redhat/libtiff?arch=s390
+    affected_versions: vers:rpm/<3.9.4-18.el6_8
+    fixed_versions: vers:rpm/3.9.4-18.el6_8
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/libtiff-debuginfo?arch=x86_64
     affected_versions: vers:rpm/<3.9.4-18.el6_8
     fixed_versions: vers:rpm/3.9.4-18.el6_8
@@ -134,11 +139,6 @@ impacted_packages:
     fixed_versions: vers:rpm/3.9.4-18.el6_8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libtiff?arch=s390
-    affected_versions: vers:rpm/<3.9.4-18.el6_8
-    fixed_versions: vers:rpm/3.9.4-18.el6_8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/libtiff-debuginfo?arch=s390
     affected_versions: vers:rpm/<3.9.4-18.el6_8
     fixed_versions: vers:rpm/3.9.4-18.el6_8
@@ -160,27 +160,6 @@ references:
   - url: https://access.redhat.com/security/updates/classification/#important
     reference_type:
     reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1185815
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1185817
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1325093
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1325095
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1326246
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1326249
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1346687
-    reference_type:
-    reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2016/rhsa-2016_1547.json
     reference_type:
     reference_id:
@@ -190,6 +169,12 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1185805
     reference_type: bug
     reference_id: 1185805
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1185815
+    reference_type: bug
+    reference_id: 1185815
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1185817
+    reference_type: bug
+    reference_id: 1185817
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1190703
     reference_type: bug
     reference_id: 1190703
@@ -214,6 +199,21 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1301652
     reference_type: bug
     reference_id: 1301652
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1325093
+    reference_type: bug
+    reference_id: 1325093
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1325095
+    reference_type: bug
+    reference_id: 1325095
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1326246
+    reference_type: bug
+    reference_id: 1326246
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1326249
+    reference_type: bug
+    reference_id: 1326249
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1346687
+    reference_type: bug
+    reference_id: 1346687
   - url: https://access.redhat.com/errata/RHSA-2016:1547
     reference_type:
     reference_id: RHSA-2016:1547
