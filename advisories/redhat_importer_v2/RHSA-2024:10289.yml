@@ -157,11 +157,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.33.11-1.module+el8.10.0+22417+2fb00970
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/conmon-debugsource?arch=s390x&epoch=3&rpmmod=container-tools:rhel8:8100020241101101019:afee755d
-    affected_versions: vers:rpm/<2.1.10-1.module+el8.10.0+22417+2fb00970
-    fixed_versions: vers:rpm/2.1.10-1.module+el8.10.0+22417+2fb00970
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/buildah-debuginfo?arch=aarch64&epoch=2&rpmmod=container-tools:rhel8:8100020241101101019:afee755d
     affected_versions: vers:rpm/<1.33.11-1.module+el8.10.0+22417+2fb00970
     fixed_versions: vers:rpm/1.33.11-1.module+el8.10.0+22417+2fb00970
@@ -627,11 +622,6 @@ impacted_packages:
     fixed_versions: vers:rpm/4.9.4-18.module+el8.10.0+22417+2fb00970
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-plugins?arch=s390x&epoch=4&rpmmod=container-tools:rhel8:8100020241101101019:afee755d
-    affected_versions: vers:rpm/<4.9.4-18.module+el8.10.0+22417+2fb00970
-    fixed_versions: vers:rpm/4.9.4-18.module+el8.10.0+22417+2fb00970
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-catatonit-debuginfo?arch=ppc64le&epoch=4&rpmmod=container-tools:rhel8:8100020241101101019:afee755d
     affected_versions: vers:rpm/<4.9.4-18.module+el8.10.0+22417+2fb00970
     fixed_versions: vers:rpm/4.9.4-18.module+el8.10.0+22417+2fb00970
@@ -783,6 +773,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/conmon-debuginfo?arch=s390x&epoch=3&rpmmod=container-tools:rhel8:8100020241101101019:afee755d
+    affected_versions: vers:rpm/<2.1.10-1.module+el8.10.0+22417+2fb00970
+    fixed_versions: vers:rpm/2.1.10-1.module+el8.10.0+22417+2fb00970
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/conmon-debugsource?arch=s390x&epoch=3&rpmmod=container-tools:rhel8:8100020241101101019:afee755d
     affected_versions: vers:rpm/<2.1.10-1.module+el8.10.0+22417+2fb00970
     fixed_versions: vers:rpm/2.1.10-1.module+el8.10.0+22417+2fb00970
     fixed_in_commits: []
@@ -943,6 +938,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-gvproxy-debuginfo?arch=s390x&epoch=4&rpmmod=container-tools:rhel8:8100020241101101019:afee755d
+    affected_versions: vers:rpm/<4.9.4-18.module+el8.10.0+22417+2fb00970
+    fixed_versions: vers:rpm/4.9.4-18.module+el8.10.0+22417+2fb00970
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-plugins?arch=s390x&epoch=4&rpmmod=container-tools:rhel8:8100020241101101019:afee755d
     affected_versions: vers:rpm/<4.9.4-18.module+el8.10.0+22417+2fb00970
     fixed_versions: vers:rpm/4.9.4-18.module+el8.10.0+22417+2fb00970
     fixed_in_commits: []
@@ -1335,16 +1335,7 @@ severities:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2024_10289.json
 weaknesses: []
 references:
-  - url: https://access.redhat.com/errata/RHSA-2024:10289
-    reference_type:
-    reference_id:
   - url: https://access.redhat.com/security/updates/classification/#moderate
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2026675
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2317467
     reference_type:
     reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2024_10289.json
@@ -1353,3 +1344,12 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1989575
     reference_type: bug
     reference_id: '1989575'
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2026675
+    reference_type: bug
+    reference_id: 2026675
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2317467
+    reference_type: bug
+    reference_id: 2317467
+  - url: https://access.redhat.com/errata/RHSA-2024:10289
+    reference_type:
+    reference_id: RHSA-2024:10289
