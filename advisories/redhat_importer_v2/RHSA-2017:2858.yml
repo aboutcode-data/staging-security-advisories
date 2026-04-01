@@ -22,6 +22,11 @@ summary: |
 
   Red Hat would like to thank the Samba project for reporting CVE-2017-12150 and CVE-2017-12151 and Yihan Lian and Zhibin Hu (Qihoo 360 GearTeam), Stefan Metzmacher (SerNet), and Jeremy Allison (Google) for reporting CVE-2017-12163. Upstream acknowledges Stefan Metzmacher (SerNet) as the original reporter of CVE-2017-12150 and CVE-2017-12151.
 impacted_packages:
+  - purl: pkg:rpm/redhat/samba?arch=x86_64
+    affected_versions: vers:rpm/<4.6.3-6.el7rhgs
+    fixed_versions: vers:rpm/4.6.3-6.el7rhgs
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/samba-winbind?arch=x86_64
     affected_versions: vers:rpm/<4.6.3-6.el6rhs
     fixed_versions: vers:rpm/4.6.3-6.el6rhs
@@ -223,11 +228,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/samba-test-libs?arch=x86_64
-    affected_versions: vers:rpm/<4.6.3-6.el7rhgs
-    fixed_versions: vers:rpm/4.6.3-6.el7rhgs
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba?arch=x86_64
     affected_versions: vers:rpm/<4.6.3-6.el7rhgs
     fixed_versions: vers:rpm/4.6.3-6.el7rhgs
     fixed_in_commits: []
@@ -310,9 +310,6 @@ severities:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2017/rhsa-2017_2858.json
 weaknesses: []
 references:
-  - url: https://access.redhat.com/errata/RHSA-2017:2858
-    reference_type:
-    reference_id:
   - url: https://access.redhat.com/security/updates/classification/#moderate
     reference_type:
     reference_id:
@@ -328,3 +325,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1491206
     reference_type: bug
     reference_id: 1491206
+  - url: https://access.redhat.com/errata/RHSA-2017:2858
+    reference_type:
+    reference_id: RHSA-2017:2858

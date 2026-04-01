@@ -25,11 +25,6 @@ summary: "An update for samba is now available for Red Hat Gluster Storage 3.3 f
   \ are included in the samba configuration file:\nposix locking = No\nstat cache = Yes\n\n\
   Due to this, a slight improvement in the performance is observed. (BZ#1436265)"
 impacted_packages:
-  - purl: pkg:rpm/redhat/libldb-debuginfo?arch=x86_64
-    affected_versions: vers:rpm/<1.1.29-1.el6rhs
-    fixed_versions: vers:rpm/1.1.29-1.el6rhs
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/libtalloc-debuginfo?arch=x86_64
     affected_versions: vers:rpm/<2.1.9-1.el6rhs
     fixed_versions: vers:rpm/2.1.9-1.el6rhs
@@ -101,6 +96,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/libldb-devel?arch=x86_64
+    affected_versions: vers:rpm/<1.1.29-1.el6rhs
+    fixed_versions: vers:rpm/1.1.29-1.el6rhs
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libldb-debuginfo?arch=x86_64
     affected_versions: vers:rpm/<1.1.29-1.el6rhs
     fixed_versions: vers:rpm/1.1.29-1.el6rhs
     fixed_in_commits: []
@@ -293,13 +293,7 @@ severities:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2017/rhsa-2017_2778.json
 weaknesses: []
 references:
-  - url: https://access.redhat.com/errata/RHSA-2017:2778
-    reference_type:
-    reference_id:
   - url: https://access.redhat.com/security/updates/classification/#moderate
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1429472
     reference_type:
     reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2017/rhsa-2017_2778.json
@@ -311,6 +305,9 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1426663
     reference_type: bug
     reference_id: 1426663
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1429472
+    reference_type: bug
+    reference_id: 1429472
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1436265
     reference_type: bug
     reference_id: 1436265
@@ -320,3 +317,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1459464
     reference_type: bug
     reference_id: 1459464
+  - url: https://access.redhat.com/errata/RHSA-2017:2778
+    reference_type:
+    reference_id: RHSA-2017:2778

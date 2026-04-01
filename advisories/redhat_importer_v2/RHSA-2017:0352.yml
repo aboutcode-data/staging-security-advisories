@@ -14,11 +14,6 @@ summary: |
 
   * Quick emulator (QEMU) built with the Cirrus CLGD 54xx VGA Emulator support is vulnerable to an out-of-bounds access issue. The issue could occur while copying VGA data in cirrus_bitblt_cputovideo. A privileged user inside guest could use this flaw to crash the QEMU process OR potentially execute arbitrary code on host with privileges of the QEMU process. (CVE-2017-2620)
 impacted_packages:
-  - purl: pkg:rpm/redhat/qemu-kvm?arch=x86_64&epoch=2
-    affected_versions: vers:rpm/<0.12.1.2-2.491.el6_8.7
-    fixed_versions: vers:rpm/0.12.1.2-2.491.el6_8.7
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/qemu-img?arch=x86_64&epoch=2
     affected_versions: vers:rpm/<0.12.1.2-2.491.el6_8.7
     fixed_versions: vers:rpm/0.12.1.2-2.491.el6_8.7
@@ -35,6 +30,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/qemu-kvm-tools?arch=x86_64&epoch=2
+    affected_versions: vers:rpm/<0.12.1.2-2.491.el6_8.7
+    fixed_versions: vers:rpm/0.12.1.2-2.491.el6_8.7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/qemu-kvm?arch=x86_64&epoch=2
     affected_versions: vers:rpm/<0.12.1.2-2.491.el6_8.7
     fixed_versions: vers:rpm/0.12.1.2-2.491.el6_8.7
     fixed_in_commits: []
