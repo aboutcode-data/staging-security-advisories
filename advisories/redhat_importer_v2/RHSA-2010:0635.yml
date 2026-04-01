@@ -54,9 +54,24 @@ summary: |
   Users wanting to run the Red Hat HPC Solution on Red Hat Enterprise Linux
   5.5 should install these packages.
 impacted_packages:
-  - purl: pkg:rpm/redhat/component-mvapich1-libraries?arch=src
-    affected_versions: vers:rpm/<0.1-4
-    fixed_versions: vers:rpm/0.1-4
+  - purl: pkg:rpm/redhat/ntop?arch=src
+    affected_versions: vers:rpm/<3.3.9-7.1.el5
+    fixed_versions: vers:rpm/3.3.9-7.1.el5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kit-hpc?arch=x86_64
+    affected_versions: vers:rpm/<0.1-5
+    fixed_versions: vers:rpm/0.1-5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kusu-base-node?arch=x86_64
+    affected_versions: vers:rpm/<5.5-1
+    fixed_versions: vers:rpm/5.5-1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kusu-base-node-debuginfo?arch=x86_64
+    affected_versions: vers:rpm/<5.5-1
+    fixed_versions: vers:rpm/5.5-1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/component-base-node?arch=src
@@ -97,6 +112,11 @@ impacted_packages:
   - purl: pkg:rpm/redhat/component-lava-compute-v1_0?arch=src
     affected_versions: vers:rpm/<1.0-6
     fixed_versions: vers:rpm/1.0-6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/component-mvapich1-libraries?arch=src
+    affected_versions: vers:rpm/<0.1-4
+    fixed_versions: vers:rpm/0.1-4
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/component-nagios-installer-v2_12?arch=src
@@ -332,11 +352,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/netcdf?arch=src
     affected_versions: vers:rpm/<3.6.2-7.el5
     fixed_versions: vers:rpm/3.6.2-7.el5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ntop?arch=src
-    affected_versions: vers:rpm/<3.3.9-7.1.el5
-    fixed_versions: vers:rpm/3.3.9-7.1.el5
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/platform_mvapich?arch=src
@@ -652,21 +667,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/blacs-openmpi-gnu-debuginfo?arch=x86_64
     affected_versions: vers:rpm/<20000224-9
     fixed_versions: vers:rpm/20000224-9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kit-hpc?arch=x86_64
-    affected_versions: vers:rpm/<0.1-5
-    fixed_versions: vers:rpm/0.1-5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kusu-base-node?arch=x86_64
-    affected_versions: vers:rpm/<5.5-1
-    fixed_versions: vers:rpm/5.5-1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kusu-base-node-debuginfo?arch=x86_64
-    affected_versions: vers:rpm/<5.5-1
-    fixed_versions: vers:rpm/5.5-1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/environment-modules-debuginfo?arch=x86_64
@@ -1110,24 +1110,18 @@ references:
   - url: https://access.redhat.com/security/updates/classification/#important
     reference_type:
     reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=459105
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=459229
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=541279
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=609093
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=609115
-    reference_type:
-    reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2010/rhsa-2010_0635.json
     reference_type:
     reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=459105
+    reference_type: bug
+    reference_id: 459105
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=459229
+    reference_type: bug
+    reference_id: 459229
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=541279
+    reference_type: bug
+    reference_id: 541279
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=585401
     reference_type: bug
     reference_id: 585401
@@ -1137,15 +1131,24 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=609076
     reference_type: bug
     reference_id: 609076
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/php/webapps/33374.txt
-    reference_type: exploit
-    reference_id: CVE-2009-4032;OSVDB-60566
-  - url: https://www.securityfocus.com/bid/37109/info
-    reference_type: exploit
-    reference_id: CVE-2009-4032;OSVDB-60566
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=609093
+    reference_type: bug
+    reference_id: 609093
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=609115
+    reference_type: bug
+    reference_id: 609115
   - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/php/webapps/12338.txt
     reference_type: exploit
     reference_id: CVE-2010-1431;OSVDB-63967
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/php/webapps/10234.txt
+    reference_type: exploit
+    reference_id: CVE-2010-2543;OSVDB-60566;CVE-2009-4032
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/php/webapps/34504.txt
+    reference_type: exploit
+    reference_id: CVE-2010-2544;OSVDB-67412
+  - url: https://www.securityfocus.com/bid/42575/info
+    reference_type: exploit
+    reference_id: CVE-2010-2544;OSVDB-67412
   - url: https://access.redhat.com/errata/RHSA-2010:0635
     reference_type:
     reference_id: RHSA-2010:0635

@@ -56,6 +56,26 @@ summary: |
   of the cluster nodes. Once stopped, restart the cluster with
   "service qpidd start" on all nodes for the update to take effect.
 impacted_packages:
+  - purl: pkg:rpm/redhat/qpid-tests?arch=src
+    affected_versions: vers:rpm/<0.14-1.el5
+    fixed_versions: vers:rpm/0.14-1.el5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/qpid-java?arch=src
+    affected_versions: vers:rpm/<0.14-3.el5
+    fixed_versions: vers:rpm/0.14-3.el5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/qpid-jca?arch=src
+    affected_versions: vers:rpm/<0.14-9.el5
+    fixed_versions: vers:rpm/0.14-9.el5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/qpid-cpp-mrg?arch=src
+    affected_versions: vers:rpm/<0.14-14.el5
+    fixed_versions: vers:rpm/0.14-14.el5
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/sesame?arch=src
     affected_versions: vers:rpm/<1.0-3.el5
     fixed_versions: vers:rpm/1.0-3.el5
@@ -84,26 +104,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/qpid-tests?arch=noarch
     affected_versions: vers:rpm/<0.14-1.el5
     fixed_versions: vers:rpm/0.14-1.el5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/qpid-tests?arch=src
-    affected_versions: vers:rpm/<0.14-1.el5
-    fixed_versions: vers:rpm/0.14-1.el5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/qpid-java?arch=src
-    affected_versions: vers:rpm/<0.14-3.el5
-    fixed_versions: vers:rpm/0.14-3.el5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/qpid-jca?arch=src
-    affected_versions: vers:rpm/<0.14-9.el5
-    fixed_versions: vers:rpm/0.14-9.el5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/qpid-cpp-mrg?arch=src
-    affected_versions: vers:rpm/<0.14-14.el5
-    fixed_versions: vers:rpm/0.14-14.el5
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/qpid-java-example?arch=noarch
@@ -425,9 +425,6 @@ references:
   - url: https://access.redhat.com/security/updates/classification/#moderate
     reference_type:
     reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=747078
-    reference_type:
-    reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2012/rhsa-2012_0529.json
     reference_type:
     reference_id:
@@ -473,6 +470,9 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=735208
     reference_type: bug
     reference_id: 735208
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=747078
+    reference_type: bug
+    reference_id: 747078
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=751845
     reference_type: bug
     reference_id: 751845

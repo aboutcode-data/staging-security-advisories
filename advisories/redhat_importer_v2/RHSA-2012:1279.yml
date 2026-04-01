@@ -44,6 +44,16 @@ summary: |
   of the cluster nodes. Once stopped, restart the cluster with "service qpidd
   start" on all nodes for the update to take effect.
 impacted_packages:
+  - purl: pkg:rpm/redhat/xerces-c?arch=src
+    affected_versions: vers:rpm/<3.0.1-20.el6
+    fixed_versions: vers:rpm/3.0.1-20.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/mrg-release?arch=noarch
+    affected_versions: vers:rpm/<2.2.0-1.el6
+    fixed_versions: vers:rpm/2.2.0-1.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/mrg-release?arch=src
     affected_versions: vers:rpm/<2.2.0-1.el6
     fixed_versions: vers:rpm/2.2.0-1.el6
@@ -72,16 +82,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/xqilla?arch=src
     affected_versions: vers:rpm/<2.2.3-8.el6
     fixed_versions: vers:rpm/2.2.3-8.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/xerces-c?arch=src
-    affected_versions: vers:rpm/<3.0.1-20.el6
-    fixed_versions: vers:rpm/3.0.1-20.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/mrg-release?arch=noarch
-    affected_versions: vers:rpm/<2.2.0-1.el6
-    fixed_versions: vers:rpm/2.2.0-1.el6
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/qpid-jca-xarecovery?arch=noarch
@@ -368,12 +368,12 @@ references:
   - url: https://access.redhat.com/security/updates/classification/#moderate
     reference_type:
     reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=836276
-    reference_type:
-    reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2012/rhsa-2012_1279.json
     reference_type:
     reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=836276
+    reference_type: bug
+    reference_id: 836276
   - url: https://access.redhat.com/errata/RHSA-2012:1279
     reference_type:
     reference_id: RHSA-2012:1279
