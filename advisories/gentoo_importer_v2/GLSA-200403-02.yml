@@ -8,6 +8,16 @@ summary: |
       Paul Starzetz of iSEC Security Research which allows for local privilege
       escalations.
 impacted_packages:
+  - purl: pkg:ebuild/sys-kernel/mm-sources
+    affected_versions: vers:ebuild/<2.6.3_rc1-r1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/sys-kernel/openmosix-sources
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.4.22-r4
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:ebuild/sys-kernel/aa-sources
     affected_versions:
     fixed_versions: vers:ebuild/>=2.4.23-r1
@@ -186,16 +196,6 @@ impacted_packages:
   - purl: pkg:ebuild/sys-kernel/mm-sources
     affected_versions:
     fixed_versions: vers:ebuild/>=2.6.3_rc1-r1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/sys-kernel/mm-sources
-    affected_versions: vers:ebuild/<2.6.3_rc1-r1
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/sys-kernel/openmosix-sources
-    affected_versions:
-    fixed_versions: vers:ebuild/>=2.4.22-r4
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/sys-kernel/openmosix-sources
@@ -394,9 +394,3 @@ references:
   - url: https://security.gentoo.org/glsa/200403-02
     reference_type:
     reference_id: GLSA-200403-02
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/local/154.c
-    reference_type: exploit
-    reference_id: OSVDB-3986;CVE-2004-0077
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/local/160.c
-    reference_type: exploit
-    reference_id: OSVDB-3986;CVE-2004-0077

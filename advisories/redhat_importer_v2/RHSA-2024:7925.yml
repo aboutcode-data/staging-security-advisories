@@ -25,6 +25,11 @@ summary: |
 
   All OpenShift Container Platform 4.17 users are advised to upgrade to these updated packages and images when they are available in the appropriate release channel. To check for available updates, use the OpenShift CLI (oc) or web console. Instructions for upgrading a cluster are available at https://docs.openshift.com/container-platform/4.17/updating/updating_a_cluster/updating-cluster-cli.html
 impacted_packages:
+  - purl: pkg:rpm/redhat/container-selinux?arch=src&epoch=3
+    affected_versions: vers:rpm/<2.231.0-4.rhaos4.17.el9
+    fixed_versions: vers:rpm/2.231.0-4.rhaos4.17.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/butane?arch=src
     affected_versions: vers:rpm/<0.22.0-1.rhaos4.17.el8
     fixed_versions: vers:rpm/0.22.0-1.rhaos4.17.el8
@@ -63,11 +68,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/runc?arch=src&epoch=4
     affected_versions: vers:rpm/<1.1.14-1.rhaos4.17.el8
     fixed_versions: vers:rpm/1.1.14-1.rhaos4.17.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/container-selinux?arch=src&epoch=3
-    affected_versions: vers:rpm/<2.231.0-4.rhaos4.17.el9
-    fixed_versions: vers:rpm/2.231.0-4.rhaos4.17.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/cri-o?arch=src
@@ -315,11 +315,6 @@ impacted_packages:
     fixed_versions: vers:rpm/5.14.0-427.40.1.el9_4
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-cross-headers?arch=x86_64
-    affected_versions: vers:rpm/<5.14.0-427.40.1.el9_4
-    fixed_versions: vers:rpm/5.14.0-427.40.1.el9_4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debug?arch=x86_64
     affected_versions: vers:rpm/<5.14.0-427.40.1.el9_4
     fixed_versions: vers:rpm/5.14.0-427.40.1.el9_4
@@ -376,11 +371,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-devel-matched?arch=x86_64
-    affected_versions: vers:rpm/<5.14.0-427.40.1.el9_4
-    fixed_versions: vers:rpm/5.14.0-427.40.1.el9_4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-headers?arch=x86_64
     affected_versions: vers:rpm/<5.14.0-427.40.1.el9_4
     fixed_versions: vers:rpm/5.14.0-427.40.1.el9_4
     fixed_in_commits: []
@@ -985,11 +975,6 @@ impacted_packages:
     fixed_versions: vers:rpm/5.14.0-427.40.1.el9_4
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-cross-headers?arch=aarch64
-    affected_versions: vers:rpm/<5.14.0-427.40.1.el9_4
-    fixed_versions: vers:rpm/5.14.0-427.40.1.el9_4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debug?arch=aarch64
     affected_versions: vers:rpm/<5.14.0-427.40.1.el9_4
     fixed_versions: vers:rpm/5.14.0-427.40.1.el9_4
@@ -1041,11 +1026,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-devel-matched?arch=aarch64
-    affected_versions: vers:rpm/<5.14.0-427.40.1.el9_4
-    fixed_versions: vers:rpm/5.14.0-427.40.1.el9_4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-headers?arch=aarch64
     affected_versions: vers:rpm/<5.14.0-427.40.1.el9_4
     fixed_versions: vers:rpm/5.14.0-427.40.1.el9_4
     fixed_in_commits: []
@@ -1455,11 +1435,6 @@ impacted_packages:
     fixed_versions: vers:rpm/5.14.0-427.40.1.el9_4
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-cross-headers?arch=ppc64le
-    affected_versions: vers:rpm/<5.14.0-427.40.1.el9_4
-    fixed_versions: vers:rpm/5.14.0-427.40.1.el9_4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debug?arch=ppc64le
     affected_versions: vers:rpm/<5.14.0-427.40.1.el9_4
     fixed_versions: vers:rpm/5.14.0-427.40.1.el9_4
@@ -1511,11 +1486,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-devel-matched?arch=ppc64le
-    affected_versions: vers:rpm/<5.14.0-427.40.1.el9_4
-    fixed_versions: vers:rpm/5.14.0-427.40.1.el9_4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-headers?arch=ppc64le
     affected_versions: vers:rpm/<5.14.0-427.40.1.el9_4
     fixed_versions: vers:rpm/5.14.0-427.40.1.el9_4
     fixed_in_commits: []
@@ -1765,11 +1735,6 @@ impacted_packages:
     fixed_versions: vers:rpm/4.17.0-202410020505.p0.g9f67343.assembly.stream.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-tools?arch=s390x
-    affected_versions: vers:rpm/<5.14.0-427.40.1.el9_4
-    fixed_versions: vers:rpm/5.14.0-427.40.1.el9_4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/openshift-kube-controller-manager?arch=s390x
     affected_versions: vers:rpm/<4.17.0-202410020505.p0.g9f67343.assembly.stream.el8
     fixed_versions: vers:rpm/4.17.0-202410020505.p0.g9f67343.assembly.stream.el8
@@ -1915,11 +1880,6 @@ impacted_packages:
     fixed_versions: vers:rpm/5.14.0-427.40.1.el9_4
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-cross-headers?arch=s390x
-    affected_versions: vers:rpm/<5.14.0-427.40.1.el9_4
-    fixed_versions: vers:rpm/5.14.0-427.40.1.el9_4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debug?arch=s390x
     affected_versions: vers:rpm/<5.14.0-427.40.1.el9_4
     fixed_versions: vers:rpm/5.14.0-427.40.1.el9_4
@@ -1975,11 +1935,6 @@ impacted_packages:
     fixed_versions: vers:rpm/5.14.0-427.40.1.el9_4
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-headers?arch=s390x
-    affected_versions: vers:rpm/<5.14.0-427.40.1.el9_4
-    fixed_versions: vers:rpm/5.14.0-427.40.1.el9_4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-modules?arch=s390x
     affected_versions: vers:rpm/<5.14.0-427.40.1.el9_4
     fixed_versions: vers:rpm/5.14.0-427.40.1.el9_4
@@ -2006,6 +1961,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-selftests-internal?arch=s390x
+    affected_versions: vers:rpm/<5.14.0-427.40.1.el9_4
+    fixed_versions: vers:rpm/5.14.0-427.40.1.el9_4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-tools?arch=s390x
     affected_versions: vers:rpm/<5.14.0-427.40.1.el9_4
     fixed_versions: vers:rpm/5.14.0-427.40.1.el9_4
     fixed_in_commits: []
@@ -2243,15 +2203,15 @@ severities:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2024_7925.json
 weaknesses: []
 references:
-  - url: https://access.redhat.com/errata/RHSA-2024:7925
-    reference_type:
-    reference_id:
   - url: https://access.redhat.com/security/updates/classification/#moderate
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2315691
     reference_type:
     reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2024_7925.json
     reference_type:
     reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2315691
+    reference_type: bug
+    reference_id: 2315691
+  - url: https://access.redhat.com/errata/RHSA-2024:7925
+    reference_type:
+    reference_id: RHSA-2024:7925

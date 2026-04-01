@@ -35,6 +35,11 @@ summary: |
 
   * When Transparent Huge Pages (THP) are unconditionally enabled on a system, Java applications using many threads were found to have a large Resident Set Size (RSS). This was due to a race between the kernel transforming thread stack memory into huge pages and the Java Virtual Machine (JVM) shattering these pages into smaller ones when adding a guard page. This release resolves this issue by getting glibc to insert a guard page and prevent the creation of huge pages. (RHEL-13930, RHEL-13931, RHEL-13934, RHEL-13935)
 impacted_packages:
+  - purl: pkg:rpm/redhat/java-17-openjdk-javadoc?arch=aarch64&epoch=1
+    affected_versions: vers:rpm/<17.0.10.0.7-2.el8
+    fixed_versions: vers:rpm/17.0.10.0.7-2.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/java-17-openjdk?arch=src&epoch=1
     affected_versions: vers:rpm/<17.0.10.0.7-2.el8
     fixed_versions: vers:rpm/17.0.10.0.7-2.el8
@@ -61,11 +66,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/java-17-openjdk-headless?arch=aarch64&epoch=1
-    affected_versions: vers:rpm/<17.0.10.0.7-2.el8
-    fixed_versions: vers:rpm/17.0.10.0.7-2.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-17-openjdk-javadoc?arch=aarch64&epoch=1
     affected_versions: vers:rpm/<17.0.10.0.7-2.el8
     fixed_versions: vers:rpm/17.0.10.0.7-2.el8
     fixed_in_commits: []

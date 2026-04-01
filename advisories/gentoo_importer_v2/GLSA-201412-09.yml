@@ -70,6 +70,26 @@ summary: |
       remote code execution. Please see the package list and CVE identifiers
       below for more information.
 impacted_packages:
+  - purl: pkg:ebuild/dev-php/PEAR-PEAR
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.9.2-r1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-php/PEAR-PEAR
+    affected_versions: vers:ebuild/<1.9.2-r1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-db/unixODBC
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.3.0-r1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-db/unixODBC
+    affected_versions: vers:ebuild/<2.3.0-r1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:ebuild/games-sports/racer-bin
     affected_versions: vers:ebuild/>=0.5.0-r1
     fixed_versions:
@@ -152,26 +172,6 @@ impacted_packages:
     introduced_in_commits: []
   - purl: pkg:ebuild/sys-apps/shadow
     affected_versions: vers:ebuild/<4.1.4.3
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/dev-php/PEAR-PEAR
-    affected_versions:
-    fixed_versions: vers:ebuild/>=1.9.2-r1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/dev-php/PEAR-PEAR
-    affected_versions: vers:ebuild/<1.9.2-r1
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/dev-db/unixODBC
-    affected_versions:
-    fixed_versions: vers:ebuild/>=2.3.0-r1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/dev-db/unixODBC
-    affected_versions: vers:ebuild/<2.3.0-r1
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
@@ -326,21 +326,12 @@ references:
   - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/windows/remote/16694.rb
     reference_type: exploit
     reference_id: CVE-2007-4370;OSVDB-39601
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/android/remote/15548.html
-    reference_type: exploit
-    reference_id: CVE-2010-1807
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/android/remote/15423.html
-    reference_type: exploit
-    reference_id: CVE-2010-1807;OSVDB-67962
   - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/local/35681.txt
     reference_type: exploit
     reference_id: CVE-2011-1760;OSVDB-72792
   - url: https://www.securityfocus.com/bid/47652/info
     reference_type: exploit
     reference_id: CVE-2011-1760;OSVDB-72792
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/windows/remote/17993.rb
-    reference_type: exploit
-    reference_id: CVE-2011-1774;OSVDB-74017;CVE-2011-1425;OSVDB-72303
   - url: https://security.gentoo.org/glsa/201412-09
     reference_type:
     reference_id: GLSA-201412-09

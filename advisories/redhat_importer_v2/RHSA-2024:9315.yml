@@ -44,18 +44,23 @@ aliases:
   - CVE-2022-50268
   - CVE-2022-50284
   - CVE-2022-50312
+  - CVE-2022-50347
   - CVE-2022-50468
   - CVE-2022-50486
   - CVE-2022-50495
   - CVE-2022-50541
   - CVE-2022-50625
   - CVE-2022-50640
+  - CVE-2022-50653
   - CVE-2022-50663
   - CVE-2022-50670
+  - CVE-2022-50720
   - CVE-2022-50748
   - CVE-2022-50761
+  - CVE-2022-50769
   - CVE-2022-50846
   - CVE-2022-50858
+  - CVE-2022-50886
   - CVE-2023-52445
   - CVE-2023-52451
   - CVE-2023-52455
@@ -171,6 +176,8 @@ aliases:
   - CVE-2023-53674
   - CVE-2023-53687
   - CVE-2023-53697
+  - CVE-2023-53702
+  - CVE-2023-53704
   - CVE-2023-53708
   - CVE-2023-53719
   - CVE-2023-53731
@@ -180,11 +187,17 @@ aliases:
   - CVE-2023-53858
   - CVE-2023-53861
   - CVE-2023-54010
+  - CVE-2023-54019
   - CVE-2023-54066
+  - CVE-2023-54083
   - CVE-2023-54093
+  - CVE-2023-54095
   - CVE-2023-54113
   - CVE-2023-54114
+  - CVE-2023-54118
   - CVE-2023-54136
+  - CVE-2023-54146
+  - CVE-2023-54153
   - CVE-2023-54165
   - CVE-2023-54172
   - CVE-2023-54194
@@ -1551,31 +1564,6 @@ summary: |
 
   For detailed information on changes in this release, see the Red Hat Enterprise Linux 9.5 Release Notes linked from the References section.
 impacted_packages:
-  - purl: pkg:rpm/redhat/bpftool?arch=aarch64
-    affected_versions: vers:rpm/<7.4.0-503.11.1.el9_5
-    fixed_versions: vers:rpm/7.4.0-503.11.1.el9_5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel?arch=aarch64
-    affected_versions: vers:rpm/<5.14.0-503.11.1.el9_5
-    fixed_versions: vers:rpm/5.14.0-503.11.1.el9_5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-64k?arch=aarch64
-    affected_versions: vers:rpm/<5.14.0-503.11.1.el9_5
-    fixed_versions: vers:rpm/5.14.0-503.11.1.el9_5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-64k-core?arch=aarch64
-    affected_versions: vers:rpm/<5.14.0-503.11.1.el9_5
-    fixed_versions: vers:rpm/5.14.0-503.11.1.el9_5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-64k-debug?arch=aarch64
-    affected_versions: vers:rpm/<5.14.0-503.11.1.el9_5
-    fixed_versions: vers:rpm/5.14.0-503.11.1.el9_5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-64k-debug-core?arch=aarch64
     affected_versions: vers:rpm/<5.14.0-503.11.1.el9_5
     fixed_versions: vers:rpm/5.14.0-503.11.1.el9_5
@@ -1617,6 +1605,31 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debug?arch=aarch64
+    affected_versions: vers:rpm/<5.14.0-503.11.1.el9_5
+    fixed_versions: vers:rpm/5.14.0-503.11.1.el9_5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bpftool?arch=aarch64
+    affected_versions: vers:rpm/<7.4.0-503.11.1.el9_5
+    fixed_versions: vers:rpm/7.4.0-503.11.1.el9_5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel?arch=aarch64
+    affected_versions: vers:rpm/<5.14.0-503.11.1.el9_5
+    fixed_versions: vers:rpm/5.14.0-503.11.1.el9_5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-64k?arch=aarch64
+    affected_versions: vers:rpm/<5.14.0-503.11.1.el9_5
+    fixed_versions: vers:rpm/5.14.0-503.11.1.el9_5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-64k-core?arch=aarch64
+    affected_versions: vers:rpm/<5.14.0-503.11.1.el9_5
+    fixed_versions: vers:rpm/5.14.0-503.11.1.el9_5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-64k-debug?arch=aarch64
     affected_versions: vers:rpm/<5.14.0-503.11.1.el9_5
     fixed_versions: vers:rpm/5.14.0-503.11.1.el9_5
     fixed_in_commits: []
@@ -2449,19 +2462,7 @@ severities:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2024_9315.json
 weaknesses: []
 references:
-  - url: https://access.redhat.com/errata/RHSA-2024:9315
-    reference_type:
-    reference_id:
   - url: https://access.redhat.com/security/updates/classification/#moderate
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1832397
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2257406
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2262241
     reference_type:
     reference_id:
   - url: https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/9.5_release_notes/index
@@ -2512,9 +2513,18 @@ references:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2024_9315.json
     reference_type:
     reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1832397
+    reference_type: bug
+    reference_id: 1832397
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2257406
+    reference_type: bug
+    reference_id: 2257406
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2260038
     reference_type: bug
     reference_id: 2260038
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2262241
+    reference_type: bug
+    reference_id: 2262241
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2263879
     reference_type: bug
     reference_id: 2263879
@@ -3880,3 +3890,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2309868
     reference_type: bug
     reference_id: 2309868
+  - url: https://access.redhat.com/errata/RHSA-2024:9315
+    reference_type:
+    reference_id: RHSA-2024:9315

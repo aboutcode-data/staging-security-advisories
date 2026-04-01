@@ -8,13 +8,13 @@ summary: |
       arbitrary commands with the rights of the web server user.
 impacted_packages:
   - purl: pkg:ebuild/www-apps/phpbb
-    affected_versions:
-    fixed_versions: vers:ebuild/>=2.0.11
+    affected_versions: vers:ebuild/<2.0.10
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/www-apps/phpbb
-    affected_versions: vers:ebuild/<2.0.10
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.0.11
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -25,9 +25,6 @@ severities:
     url:
 weaknesses: []
 references:
-  - url: https://security.gentoo.org/glsa/200411-32
-    reference_type:
-    reference_id:
   - url: http://blog.sitewat.ch/2010/05/vulnerabilities-in-php-nuke.html
     reference_type: exploit
     reference_id: CVE-2004-1315
@@ -43,6 +40,9 @@ references:
   - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/php/webapps/16890.rb
     reference_type: exploit
     reference_id: CVE-2005-2086;CVE-2004-1315;OSVDB-17613;OSVDB-11719
+  - url: https://security.gentoo.org/glsa/200411-32
+    reference_type:
+    reference_id: GLSA-200411-32
   - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/php/webapps/647.pl
     reference_type: exploit
     reference_id: OSVDB-11719;CVE-2004-1315

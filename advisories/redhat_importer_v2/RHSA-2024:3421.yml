@@ -10,6 +10,7 @@ aliases:
   - CVE-2023-52993
   - CVE-2023-53304
   - CVE-2023-53566
+  - CVE-2023-54035
   - CVE-2023-6240
   - CVE-2023-6817
   - CVE-2024-1086
@@ -43,7 +44,7 @@ summary: |
 
   * kdump 2nd kernel panic in call trace tick_handle_periodic (JIRA:RHEL-32889)
 impacted_packages:
-  - purl: pkg:rpm/redhat/kernel-debug-core?arch=ppc64le
+  - purl: pkg:rpm/redhat/kernel-modules?arch=aarch64
     affected_versions: vers:rpm/<5.14.0-70.101.1.el9_0
     fixed_versions: vers:rpm/5.14.0-70.101.1.el9_0
     fixed_in_commits: []
@@ -139,11 +140,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debug-modules-extra?arch=aarch64
-    affected_versions: vers:rpm/<5.14.0-70.101.1.el9_0
-    fixed_versions: vers:rpm/5.14.0-70.101.1.el9_0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-modules?arch=aarch64
     affected_versions: vers:rpm/<5.14.0-70.101.1.el9_0
     fixed_versions: vers:rpm/5.14.0-70.101.1.el9_0
     fixed_in_commits: []
@@ -249,6 +245,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debug?arch=ppc64le
+    affected_versions: vers:rpm/<5.14.0-70.101.1.el9_0
+    fixed_versions: vers:rpm/5.14.0-70.101.1.el9_0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-debug-core?arch=ppc64le
     affected_versions: vers:rpm/<5.14.0-70.101.1.el9_0
     fixed_versions: vers:rpm/5.14.0-70.101.1.el9_0
     fixed_in_commits: []
@@ -591,16 +592,7 @@ severities:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2024_3421.json
 weaknesses: []
 references:
-  - url: https://access.redhat.com/errata/RHSA-2024:3421
-    reference_type:
-    reference_id:
   - url: https://access.redhat.com/security/updates/classification/#important
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2250843
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2270836
     reference_type:
     reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2024_3421.json
@@ -609,6 +601,9 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2235306
     reference_type: bug
     reference_id: 2235306
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2250843
+    reference_type: bug
+    reference_id: 2250843
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2255139
     reference_type: bug
     reference_id: 2255139
@@ -618,6 +613,12 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2265645
     reference_type: bug
     reference_id: 2265645
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2270836
+    reference_type: bug
+    reference_id: 2270836
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2272041
     reference_type: bug
     reference_id: 2272041
+  - url: https://access.redhat.com/errata/RHSA-2024:3421
+    reference_type:
+    reference_id: RHSA-2024:3421

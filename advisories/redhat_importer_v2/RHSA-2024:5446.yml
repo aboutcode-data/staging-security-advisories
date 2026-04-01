@@ -31,14 +31,14 @@ summary: |
 
   All OpenShift Container Platform 4.13 users are advised to upgrade to these updated packages and images when they are available in the appropriate release channel. To check for available updates, use the OpenShift CLI (oc) or web console. Instructions for upgrading a cluster are available at https://docs.openshift.com/container-platform/4.13/updating/updating-cluster-cli.html
 impacted_packages:
-  - purl: pkg:rpm/redhat/buildah?arch=src&epoch=1
-    affected_versions: vers:rpm/<1.29.1-4.rhaos4.13.el8
-    fixed_versions: vers:rpm/1.29.1-4.rhaos4.13.el8
+  - purl: pkg:rpm/redhat/ignition?arch=src
+    affected_versions: vers:rpm/<2.15.0-9.rhaos4.13.el9
+    fixed_versions: vers:rpm/2.15.0-9.rhaos4.13.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/conmon?arch=src&epoch=3
-    affected_versions: vers:rpm/<2.1.7-4.rhaos4.13.el8
-    fixed_versions: vers:rpm/2.1.7-4.rhaos4.13.el8
+  - purl: pkg:rpm/redhat/kernel-debug?arch=aarch64
+    affected_versions: vers:rpm/<5.14.0-284.80.1.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.80.1.el9_2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/NetworkManager?arch=src&epoch=1
@@ -64,11 +64,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/cri-tools?arch=src
     affected_versions: vers:rpm/<1.26.0-6.el9
     fixed_versions: vers:rpm/1.26.0-6.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ignition?arch=src
-    affected_versions: vers:rpm/<2.15.0-9.rhaos4.13.el9
-    fixed_versions: vers:rpm/2.15.0-9.rhaos4.13.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/openshift?arch=src
@@ -99,6 +94,16 @@ impacted_packages:
   - purl: pkg:rpm/redhat/kernel-rt?arch=src
     affected_versions: vers:rpm/<5.14.0-284.80.1.rt14.365.el9_2
     fixed_versions: vers:rpm/5.14.0-284.80.1.rt14.365.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/buildah?arch=src&epoch=1
+    affected_versions: vers:rpm/<1.29.1-4.rhaos4.13.el8
+    fixed_versions: vers:rpm/1.29.1-4.rhaos4.13.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/conmon?arch=src&epoch=3
+    affected_versions: vers:rpm/<2.1.7-4.rhaos4.13.el8
+    fixed_versions: vers:rpm/2.1.7-4.rhaos4.13.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/containernetworking-plugins?arch=src&epoch=1
@@ -547,11 +552,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-core?arch=aarch64
-    affected_versions: vers:rpm/<5.14.0-284.80.1.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.80.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debug?arch=aarch64
     affected_versions: vers:rpm/<5.14.0-284.80.1.el9_2
     fixed_versions: vers:rpm/5.14.0-284.80.1.el9_2
     fixed_in_commits: []
@@ -2051,11 +2051,6 @@ impacted_packages:
     fixed_versions: vers:rpm/5.14.0-284.80.1.rt14.365.el9_2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python3-perf?arch=s390x
-    affected_versions: vers:rpm/<5.14.0-284.80.1.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.80.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-rt-debug-kvm?arch=x86_64
     affected_versions: vers:rpm/<5.14.0-284.80.1.rt14.365.el9_2
     fixed_versions: vers:rpm/5.14.0-284.80.1.rt14.365.el9_2
@@ -2777,6 +2772,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/perf?arch=s390x
+    affected_versions: vers:rpm/<5.14.0-284.80.1.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.80.1.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python3-perf?arch=s390x
     affected_versions: vers:rpm/<5.14.0-284.80.1.el9_2
     fixed_versions: vers:rpm/5.14.0-284.80.1.el9_2
     fixed_in_commits: []

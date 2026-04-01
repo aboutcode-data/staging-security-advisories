@@ -132,7 +132,7 @@ summary: |
 
   * backport timerlat user-space support (JIRA:RHEL-20361)
 impacted_packages:
-  - purl: pkg:rpm/redhat/python3-perf-debuginfo?arch=ppc64le
+  - purl: pkg:rpm/redhat/kernel-core?arch=aarch64
     affected_versions: vers:rpm/<4.18.0-477.51.1.el8_8
     fixed_versions: vers:rpm/4.18.0-477.51.1.el8_8
     fixed_in_commits: []
@@ -143,11 +143,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel?arch=aarch64
-    affected_versions: vers:rpm/<4.18.0-477.51.1.el8_8
-    fixed_versions: vers:rpm/4.18.0-477.51.1.el8_8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-core?arch=aarch64
     affected_versions: vers:rpm/<4.18.0-477.51.1.el8_8
     fixed_versions: vers:rpm/4.18.0-477.51.1.el8_8
     fixed_in_commits: []
@@ -353,6 +348,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/perf-debuginfo?arch=ppc64le
+    affected_versions: vers:rpm/<4.18.0-477.51.1.el8_8
+    fixed_versions: vers:rpm/4.18.0-477.51.1.el8_8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python3-perf-debuginfo?arch=ppc64le
     affected_versions: vers:rpm/<4.18.0-477.51.1.el8_8
     fixed_versions: vers:rpm/4.18.0-477.51.1.el8_8
     fixed_in_commits: []
@@ -635,34 +635,7 @@ severities:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2024_1404.json
 weaknesses: []
 references:
-  - url: https://access.redhat.com/errata/RHSA-2024:1404
-    reference_type:
-    reference_id:
   - url: https://access.redhat.com/security/updates/classification/#important
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2218195
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2218212
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2245663
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2253611
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2253614
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2253908
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2256279
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2258518
     reference_type:
     reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2024_1404.json
@@ -722,6 +695,12 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2213139
     reference_type: bug
     reference_id: 2213139
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2218195
+    reference_type: bug
+    reference_id: 2218195
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2218212
+    reference_type: bug
+    reference_id: 2218212
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2231800
     reference_type: bug
     reference_id: 2231800
@@ -731,15 +710,33 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2245514
     reference_type: bug
     reference_id: 2245514
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2245663
+    reference_type: bug
+    reference_id: 2245663
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2252731
     reference_type: bug
     reference_id: 2252731
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2253611
+    reference_type: bug
+    reference_id: 2253611
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2253614
+    reference_type: bug
+    reference_id: 2253614
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2253908
+    reference_type: bug
+    reference_id: 2253908
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2255139
     reference_type: bug
     reference_id: 2255139
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2255283
     reference_type: bug
     reference_id: 2255283
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2256279
+    reference_type: bug
+    reference_id: 2256279
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2258518
+    reference_type: bug
+    reference_id: 2258518
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2259866
     reference_type: bug
     reference_id: 2259866
@@ -749,3 +746,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2262126
     reference_type: bug
     reference_id: 2262126
+  - url: https://access.redhat.com/errata/RHSA-2024:1404
+    reference_type:
+    reference_id: RHSA-2024:1404

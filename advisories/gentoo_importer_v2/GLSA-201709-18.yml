@@ -10,13 +10,13 @@ summary: |
       which could lead to the remote execution of arbitrary code.
 impacted_packages:
   - purl: pkg:ebuild/dev-vcs/mercurial
-    affected_versions:
-    fixed_versions: vers:ebuild/>=4.3
+    affected_versions: vers:ebuild/<4.3
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/dev-vcs/mercurial
-    affected_versions: vers:ebuild/<4.3
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=4.3
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -29,4 +29,4 @@ weaknesses: []
 references:
   - url: https://security.gentoo.org/glsa/201709-18
     reference_type:
-    reference_id:
+    reference_id: GLSA-201709-18

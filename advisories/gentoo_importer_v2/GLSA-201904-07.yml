@@ -26,6 +26,16 @@ summary: |
   Multiple vulnerabilities have been found in Mozilla Thunderbird and
       Firefox, the worst of which could lead to the execution of arbitrary code.
 impacted_packages:
+  - purl: pkg:ebuild/www-client/firefox
+    affected_versions:
+    fixed_versions: vers:ebuild/>=60.6.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/www-client/firefox
+    affected_versions: vers:ebuild/<60.6.1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:ebuild/mail-client/thunderbird
     affected_versions:
     fixed_versions: vers:ebuild/>=60.6.1
@@ -42,16 +52,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/mail-client/thunderbird-bin
-    affected_versions: vers:ebuild/<60.6.1
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/www-client/firefox
-    affected_versions:
-    fixed_versions: vers:ebuild/>=60.6.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/www-client/firefox
     affected_versions: vers:ebuild/<60.6.1
     fixed_versions:
     fixed_in_commits: []
@@ -76,19 +76,4 @@ weaknesses: []
 references:
   - url: https://security.gentoo.org/glsa/201904-07
     reference_type:
-    reference_id:
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/dos/46605.html
-    reference_type: exploit
-    reference_id: CVE-2019-9810
-  - url: https://github.com/0vercl0k/CVE-2019-11708/tree/1cdf26140f17de8a620e90f4f6ea3865e18e49ad
-    reference_type: exploit
-    reference_id: CVE-2019-9810;CVE-2019-11708
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/windows_x86-64/local/47752.js
-    reference_type: exploit
-    reference_id: CVE-2019-9810;CVE-2019-11708
-  - url: https://bugs.chromium.org/p/project-zero/issues/detail?id=1810
-    reference_type: exploit
-    reference_id: CVE-2019-9813
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/dos/46646.txt
-    reference_type: exploit
-    reference_id: CVE-2019-9813
+    reference_id: GLSA-201904-07

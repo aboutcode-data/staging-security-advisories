@@ -31,6 +31,11 @@ summary: |
 
   All OpenShift Container Platform 4.14 users are advised to upgrade to these updated packages and images when they are available in the appropriate release channel. To check for available updates, use the OpenShift CLI (oc) or web console. Instructions for upgrading a cluster are available at https://docs.openshift.com/container-platform/4.14/updating/updating_a_cluster/updating-cluster-cli.html
 impacted_packages:
+  - purl: pkg:rpm/redhat/podman-debuginfo?arch=x86_64&epoch=3
+    affected_versions: vers:rpm/<4.4.1-13.4.rhaos4.14.el8
+    fixed_versions: vers:rpm/4.4.1-13.4.rhaos4.14.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/cri-o?arch=src
     affected_versions: vers:rpm/<1.27.6-2.rhaos4.14.gitb3bd0bf.el8
     fixed_versions: vers:rpm/1.27.6-2.rhaos4.14.gitb3bd0bf.el8
@@ -117,11 +122,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-catatonit-debuginfo?arch=x86_64&epoch=3
-    affected_versions: vers:rpm/<4.4.1-13.4.rhaos4.14.el8
-    fixed_versions: vers:rpm/4.4.1-13.4.rhaos4.14.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-debuginfo?arch=x86_64&epoch=3
     affected_versions: vers:rpm/<4.4.1-13.4.rhaos4.14.el8
     fixed_versions: vers:rpm/4.4.1-13.4.rhaos4.14.el8
     fixed_in_commits: []
@@ -679,24 +679,24 @@ severities:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2024_2672.json
 weaknesses: []
 references:
-  - url: https://access.redhat.com/errata/RHSA-2024:2672
-    reference_type:
-    reference_id:
   - url: https://access.redhat.com/security/updates/classification/#important
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2265513
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2272532
     reference_type:
     reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2024_2672.json
     reference_type:
     reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2265513
+    reference_type: bug
+    reference_id: 2265513
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2268273
     reference_type: bug
     reference_id: 2268273
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2268854
     reference_type: bug
     reference_id: 2268854
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2272532
+    reference_type: bug
+    reference_id: 2272532
+  - url: https://access.redhat.com/errata/RHSA-2024:2672
+    reference_type:
+    reference_id: RHSA-2024:2672
