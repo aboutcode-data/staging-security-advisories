@@ -27,11 +27,6 @@ summary: |
 
   All OpenShift Container Platform 4.14 users are advised to upgrade to these updated packages and images when they are available in the appropriate release channel. To check for available updates, use the OpenShift CLI (oc) or web console. Instructions for upgrading a cluster are available at https://docs.openshift.com/container-platform/4.14/updating/updating_a_cluster/updating-cluster-cli.html
 impacted_packages:
-  - purl: pkg:rpm/redhat/openshift-clients?arch=x86_64
-    affected_versions: vers:rpm/<4.14.0-202401040833.p0.g286cfa5.assembly.stream.el8
-    fixed_versions: vers:rpm/4.14.0-202401040833.p0.g286cfa5.assembly.stream.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/containernetworking-plugins?arch=src&epoch=1
     affected_versions: vers:rpm/<1.4.0-1.rhaos4.14.el8
     fixed_versions: vers:rpm/1.4.0-1.rhaos4.14.el8
@@ -115,6 +110,11 @@ impacted_packages:
   - purl: pkg:rpm/redhat/openshift-hyperkube?arch=x86_64
     affected_versions: vers:rpm/<4.14.0-202401041534.p0.g5c56cc3.assembly.stream.el8
     fixed_versions: vers:rpm/4.14.0-202401041534.p0.g5c56cc3.assembly.stream.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/openshift-clients?arch=x86_64
+    affected_versions: vers:rpm/<4.14.0-202401040833.p0.g286cfa5.assembly.stream.el8
+    fixed_versions: vers:rpm/4.14.0-202401040833.p0.g286cfa5.assembly.stream.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/openshift-clients-redistributable?arch=x86_64
@@ -1072,11 +1072,6 @@ impacted_packages:
     fixed_versions: vers:rpm/4.14.0-202401041534.p0.g5c56cc3.assembly.stream.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bpftool-debuginfo?arch=s390x
-    affected_versions: vers:rpm/<7.0.0-284.48.1.el9_2
-    fixed_versions: vers:rpm/7.0.0-284.48.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/openshift-clients?arch=ppc64le
     affected_versions: vers:rpm/<4.14.0-202401040833.p0.g286cfa5.assembly.stream.el9
     fixed_versions: vers:rpm/4.14.0-202401040833.p0.g286cfa5.assembly.stream.el9
@@ -1322,6 +1317,11 @@ impacted_packages:
     fixed_versions: vers:rpm/5.14.0-284.48.1.el9_2
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bpftool-debuginfo?arch=s390x
+    affected_versions: vers:rpm/<7.0.0-284.48.1.el9_2
+    fixed_versions: vers:rpm/7.0.0-284.48.1.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debug-debuginfo?arch=s390x
     affected_versions: vers:rpm/<5.14.0-284.48.1.el9_2
     fixed_versions: vers:rpm/5.14.0-284.48.1.el9_2
@@ -1385,13 +1385,7 @@ severities:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2024_0207.json
 weaknesses: []
 references:
-  - url: https://access.redhat.com/errata/RHSA-2024:0207
-    reference_type:
-    reference_id:
   - url: https://access.redhat.com/security/updates/classification/#moderate
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2253994
     reference_type:
     reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2024_0207.json
@@ -1400,3 +1394,9 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2251198
     reference_type: bug
     reference_id: 2251198
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2253994
+    reference_type: bug
+    reference_id: 2253994
+  - url: https://access.redhat.com/errata/RHSA-2024:0207
+    reference_type:
+    reference_id: RHSA-2024:0207
