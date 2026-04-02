@@ -1,0 +1,68 @@
+advisory_id: GHSA-2x4x-cc5g-qmmg
+datasource_id: github_osv_importer_v2/GHSA-2x4x-cc5g-qmmg
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-2x4x-cc5g-qmmg/GHSA-2x4x-cc5g-qmmg.json
+aliases:
+  - CVE-2026-33577
+summary: |
+  OpenClaw: node.pair.approve missing callerScopes validation allows low-privilege operator to approve malicious nodes
+  ## Summary
+
+  The node pairing approval path did not consistently enforce that the approving caller already held every scope requested by the node.
+
+  ## Impact
+
+  A lower-privileged operator could approve a pending node request for broader scopes and extend privileges onto the paired node.
+
+  ## Affected Component
+
+  `src/infra/node-pairing.ts, src/gateway/server-methods/nodes.ts`
+
+  ## Fixed Versions
+
+  - Affected: `<= 2026.3.24`
+  - Patched: `>= 2026.3.28`
+  - Latest stable `2026.3.28` contains the fix.
+
+  ## Fix
+
+  Fixed by commit `4d7cc6bb4f` (`gateway: restrict node pairing approvals`).
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<=2026.3.24
+    fixed_versions: vers:npm/2026.3.28
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '9.8'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-2x4x-cc5g-qmmg/GHSA-2x4x-cc5g-qmmg.json
+  - score: '4.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:U
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-2x4x-cc5g-qmmg/GHSA-2x4x-cc5g-qmmg.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-863
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/4d7cc6bb4fac68b5a5fadd1c5a23168281221f34
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-2x4x-cc5g-qmmg
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33577
+    reference_type:
+    reference_id:
+  - url: https://www.vulncheck.com/advisories/openclaw-insufficient-scope-validation-in-node-pair-approve
+    reference_type:
+    reference_id:

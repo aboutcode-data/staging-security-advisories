@@ -1,0 +1,59 @@
+advisory_id: GHSA-qxgf-hmcj-3xw3
+datasource_id: github_osv_importer_v2/GHSA-qxgf-hmcj-3xw3
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-qxgf-hmcj-3xw3/GHSA-qxgf-hmcj-3xw3.json
+aliases: []
+summary: |
+  OpenClaw affected by SSRF via unguarded image download in fal provider
+  ## Summary
+
+  The fal provider used raw fetches for both provider API traffic and returned image download URLs instead of the existing SSRF-guarded fetch path.
+
+  ## Impact
+
+  A malicious or compromised fal relay could make the gateway fetch internal URLs and expose metadata or internal service responses through the image pipeline.
+
+  ## Affected Component
+
+  `extensions/fal/image-generation-provider.ts`
+
+  ## Fixed Versions
+
+  - Affected: `<= 2026.3.24`
+  - Patched: `>= 2026.3.28`
+  - Latest stable `2026.3.28` contains the fix.
+
+  ## Fix
+
+  Fixed by commit `80d1e8a11a` (`fal: guard image fetches`).
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<=2026.3.24
+    fixed_versions: vers:npm/2026.3.28
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '2.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:L/VI:N/VA:N/SC:L/SI:L/SA:L
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-qxgf-hmcj-3xw3/GHSA-qxgf-hmcj-3xw3.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-918
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/80d1e8a11a2ac118c7f7a70bba9c862b6141d928
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/releases/tag/v2026.3.28
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-qxgf-hmcj-3xw3
+    reference_type:
+    reference_id:

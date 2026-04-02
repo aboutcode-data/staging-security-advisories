@@ -7,12 +7,12 @@ summary: |
   Denial of service in langchain-community
   Denial of service in `SitemapLoader` Document Loader in the `langchain-community` package, affecting versions below 0.2.5. The `parse_sitemap` method, responsible for parsing sitemaps and extracting URLs, lacks a mechanism to prevent infinite recursion when a sitemap URL refers to the current sitemap itself. This oversight allows for the possibility of an infinite loop, leading to a crash by exceeding the maximum recursion depth in Python. This vulnerability can be exploited to occupy server socket/port resources and crash the Python process, impacting the availability of services relying on this functionality.
 impacted_packages:
-  - purl: pkg:pypi/langchain-community
+  - purl: pkg:pypi/langchain
     affected_versions: vers:pypi/<0.2.5
     fixed_versions: vers:pypi/0.2.5
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:pypi/langchain
+  - purl: pkg:pypi/langchain-community
     affected_versions: vers:pypi/<0.2.5
     fixed_versions: vers:pypi/0.2.5
     fixed_in_commits: []

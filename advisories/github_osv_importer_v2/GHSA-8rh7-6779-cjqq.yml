@@ -1,0 +1,59 @@
+advisory_id: GHSA-8rh7-6779-cjqq
+datasource_id: github_osv_importer_v2/GHSA-8rh7-6779-cjqq
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-8rh7-6779-cjqq/GHSA-8rh7-6779-cjqq.json
+aliases: []
+summary: |
+  OpenClaw has a CWD `.env` environment variable injection which bypasses host-env policy and allows config takeover
+  ## Summary
+
+  OpenClaw loaded the current working directory `.env` before trusted state-dir configuration, allowing untrusted workspace state to inject host environment values.
+
+  ## Impact
+
+  A repository or workspace containing a malicious `.env` file could override runtime configuration and security-sensitive environment settings when OpenClaw started there.
+
+  ## Affected Component
+
+  `src/infra/dotenv.ts, src/cli/dotenv.ts`
+
+  ## Fixed Versions
+
+  - Affected: `<= 2026.3.24`
+  - Patched: `>= 2026.3.28`
+  - Latest stable `2026.3.28` contains the fix.
+
+  ## Fix
+
+  Fixed by commit `6a79324802` (`Filter untrusted CWD .env entries before OpenClaw startup`).
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<=2026.3.24
+    fixed_versions: vers:npm/2026.3.28
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '9.6'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-8rh7-6779-cjqq/GHSA-8rh7-6779-cjqq.json
+  - score: CRITICAL
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-426
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/6a793248024dca7685f63bcceb64a0096fd1586d
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/releases/tag/v2026.3.28
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-8rh7-6779-cjqq
+    reference_type:
+    reference_id:

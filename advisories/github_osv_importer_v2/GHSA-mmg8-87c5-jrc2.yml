@@ -1,0 +1,64 @@
+advisory_id: GHSA-mmg8-87c5-jrc2
+datasource_id: github_osv_importer_v2/GHSA-mmg8-87c5-jrc2
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-mmg8-87c5-jrc2/GHSA-mmg8-87c5-jrc2.json
+aliases:
+  - CVE-2026-34595
+summary: |
+  Parse Server has a LiveQuery protected-field guard bypass via array-like logical operator value
+  ### Impact
+
+  An authenticated user with `find` class-level permission can bypass the `protectedFields` class-level permission setting on LiveQuery subscriptions. By sending a subscription with a `$or`, `$and`, or `$nor` operator value as a plain object with numeric keys and a `length` property (an "array-like" object) instead of an array, the protected-field guard is bypassed. The subscription event firing acts as a binary oracle, allowing the attacker to infer whether a protected field matches a given test value.
+
+  ### Patches
+
+  The fix validates that `$or`, `$and`, and `$nor` operator values are arrays in the LiveQuery subscription handler, the query depth checker, and the protected-field guard. As defense in depth, the LiveQuery query evaluator also rejects non-array values for these operators.
+
+  ### Workarounds
+
+  There is no known workaround.
+impacted_packages:
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/>=9.0.0|<9.7.0-alpha.16
+    fixed_versions: vers:npm/9.7.0-alpha.16
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/<8.6.70
+    fixed_versions: vers:npm/8.6.70
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-mmg8-87c5-jrc2/GHSA-mmg8-87c5-jrc2.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-843
+references:
+  - url: https://github.com/parse-community/parse-server
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/commit/f63fd1a3fe0a7c1c5fe809f01b0e04759e8c9b98
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/commit/ffad0ec6b971ee0dd9545e1bf1fb34ddebf275c2
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/pull/10350
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/pull/10351
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/security/advisories/GHSA-mmg8-87c5-jrc2
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-34595
+    reference_type:
+    reference_id:

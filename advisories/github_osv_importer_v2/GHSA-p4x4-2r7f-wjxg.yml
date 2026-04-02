@@ -1,0 +1,59 @@
+advisory_id: GHSA-p4x4-2r7f-wjxg
+datasource_id: github_osv_importer_v2/GHSA-p4x4-2r7f-wjxg
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-p4x4-2r7f-wjxg/GHSA-p4x4-2r7f-wjxg.json
+aliases: []
+summary: |
+  OpenClaw gateway exec allow-always over-trusts positional carrier executables
+  ## Summary
+
+  Allow-always persistence could trust wrapper carrier executables instead of the actual invoked target when commands were routed through dispatch wrappers.
+
+  ## Impact
+
+  A one-time approval could persist a broader future allowlist entry than the operator intended, weakening execution approval boundaries.
+
+  ## Affected Component
+
+  `src/infra/exec-approvals-allowlist.ts`
+
+  ## Fixed Versions
+
+  - Affected: `<= 2026.3.24`
+  - Patched: `>= 2026.3.28`
+  - Latest stable `2026.3.28` contains the fix.
+
+  ## Fix
+
+  Fixed by commit `9ec44fad39` (`Exec approvals: reject wrapper carrier allow-always targets`).
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<=2026.3.24
+    fixed_versions: vers:npm/2026.3.28
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-p4x4-2r7f-wjxg/GHSA-p4x4-2r7f-wjxg.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-863
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/9ec44fad390f0bc1c29c3cc418b322560cb0222b
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/releases/tag/v2026.3.28
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-p4x4-2r7f-wjxg
+    reference_type:
+    reference_id:
