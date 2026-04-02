@@ -1,0 +1,52 @@
+advisory_id: GHSA-m4q3-832v-44j6
+datasource_id: github_osv_importer_v2/GHSA-m4q3-832v-44j6
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-m4q3-832v-44j6/GHSA-m4q3-832v-44j6.json
+aliases:
+  - CVE-2025-14675
+summary: |
+  Meta Box Plugin for WordPress: Authenticated (Contributor+) Arbitrary File Deletion via ajax_delete_file
+  The Meta Box plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the 'ajax_delete_file' function in all versions up to, and including, 5.11.1. This makes it possible for authenticated attackers, with Contributor-level access and above, to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php).
+impacted_packages:
+  - purl: pkg:composer/wpmetabox/meta-box
+    affected_versions: vers:composer/<5.11.2
+    fixed_versions: vers:composer/5.11.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.2'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-m4q3-832v-44j6/GHSA-m4q3-832v-44j6.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-22
+references:
+  - url: https://github.com/wpmetabox/meta-box
+    reference_type:
+    reference_id:
+  - url: https://github.com/wpmetabox/meta-box/commit/08c6511607b9cc9fe8d0de7a7e91c9d5d415f831
+    reference_type:
+    reference_id:
+  - url: https://github.com/wpmetabox/meta-box/pull/1654
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2025-14675
+    reference_type:
+    reference_id:
+  - url: https://plugins.trac.wordpress.org/browser/meta-box/tags/5.11.0/inc/fields/file.php#L30
+    reference_type:
+    reference_id:
+  - url: https://plugins.trac.wordpress.org/browser/meta-box/tags/5.11.0/inc/fields/file.php#L54
+    reference_type:
+    reference_id:
+  - url: https://plugins.trac.wordpress.org/changeset/3475210/meta-box#file3
+    reference_type:
+    reference_id:
+  - url: https://www.wordfence.com/threat-intel/vulnerabilities/id/036467de-95bb-4bfd-9522-df8dc17f3102?source=cve
+    reference_type:
+    reference_id:

@@ -1,0 +1,63 @@
+advisory_id: GHSA-mf92-479x-3373
+datasource_id: github_osv_importer_v2/GHSA-mf92-479x-3373
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-mf92-479x-3373/GHSA-mf92-479x-3373.json
+aliases:
+  - CVE-2026-22732
+summary: |
+  Spring Security HTTP Headers Are not Written Under Some Conditions
+  When applications specify HTTP response headers for servlet applications using Spring Security, there is the possibility that the HTTP Headers will not be written. 
+  This issue affects Spring Security: from 5.7.0 through 5.7.21, from 5.8.0 through 5.8.23, from 6.3.0 through 6.3.14, from 6.4.0 through 6.4.14, from 6.5.0 through 6.5.8, from 7.0.0 through 7.0.3.
+impacted_packages:
+  - purl: pkg:maven/org.springframework.security/spring-security-web
+    affected_versions: vers:maven/<=5.7.14
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.springframework.security/spring-security-web
+    affected_versions: vers:maven/>=5.8.0|<=5.8.16
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.springframework.security/spring-security-web
+    affected_versions: vers:maven/>=6.0.0|<=6.3.10
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.springframework.security/spring-security-web
+    affected_versions: vers:maven/>=6.4.0|<=6.4.13
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.springframework.security/spring-security-web
+    affected_versions: vers:maven/>=6.5.0|<6.5.9
+    fixed_versions: vers:maven/6.5.9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.springframework.security/spring-security-web
+    affected_versions: vers:maven/>=7.0.0|<7.0.4
+    fixed_versions: vers:maven/7.0.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '9.1'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-mf92-479x-3373/GHSA-mf92-479x-3373.json
+  - score: CRITICAL
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-425
+references:
+  - url: https://github.com/spring-projects/spring-security
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-22732
+    reference_type:
+    reference_id:
+  - url: https://spring.io/security/cve-2026-22732
+    reference_type:
+    reference_id:

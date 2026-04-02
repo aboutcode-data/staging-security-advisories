@@ -1,0 +1,49 @@
+advisory_id: GHSA-xh32-c9wx-phrp
+datasource_id: github_osv_importer_v2/GHSA-xh32-c9wx-phrp
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-xh32-c9wx-phrp/GHSA-xh32-c9wx-phrp.json
+aliases:
+  - CVE-2026-3911
+summary: |
+  Keycloak: Information disclosure of disabled user attributes via administrative endpoint
+  A flaw was found in Keycloak. An authenticated user with the view-users role could exploit a vulnerability in the UserResource component. By accessing a specific administrative endpoint, this user could improperly retrieve user attributes that were configured to be hidden. This unauthorized information disclosure could expose sensitive user data.
+impacted_packages:
+  - purl: pkg:maven/org.keycloak/keycloak-services
+    affected_versions: vers:maven/<=26.5.5
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '2.7'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-xh32-c9wx-phrp/GHSA-xh32-c9wx-phrp.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-359
+references:
+  - url: https://access.redhat.com/security/cve/CVE-2026-3911
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2446392
+    reference_type:
+    reference_id:
+  - url: https://github.com/keycloak/keycloak
+    reference_type:
+    reference_id:
+  - url: https://github.com/keycloak/keycloak/commit/215bc1e27230f2a66670ed70262248b5f5254eb9
+    reference_type:
+    reference_id:
+  - url: https://github.com/keycloak/keycloak/issues/46922
+    reference_type:
+    reference_id:
+  - url: https://github.com/keycloak/keycloak/pull/46923
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-3911
+    reference_type:
+    reference_id:

@@ -1,0 +1,64 @@
+advisory_id: GHSA-58qr-rcgv-642v
+datasource_id: github_osv_importer_v2/GHSA-58qr-rcgv-642v
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-58qr-rcgv-642v/GHSA-58qr-rcgv-642v.json
+aliases:
+  - CVE-2026-33660
+summary: |
+  n8n has Multiple Remote Code Execution Vulnerabilities in Merge Node AlaSQL SQL Mode
+  ## Impact
+  An authenticated user with permission to create or modify workflows could use the Merge node's "Combine by SQL" mode to read local files on the n8n host and achieve remote code execution. The AlaSQL sandbox did not sufficiently restrict certain SQL statements, allowing an attacker to access sensitive files on the server or even compromise the intance.
+
+  ## Patches
+  The issue has been fixed in n8n versions 2.14.1, 2.13.3, and 1.123.27. Users should upgrade to one of these versions or later to remediate the vulnerability.
+
+  ## Workarounds
+  If upgrading is not immediately possible, administrators should consider the following temporary mitigations:
+  - Limit workflow creation and editing permissions to fully trusted users only.
+  - Disable the Merge node by adding `n8n-nodes-base.merge` to the `NODES_EXCLUDE` environment variable.
+
+  These workarounds do not fully remediate the risk and should only be used as short-term mitigation measures.
+impacted_packages:
+  - purl: pkg:npm/n8n
+    affected_versions: vers:npm/2.14.0
+    fixed_versions: vers:npm/2.14.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/n8n
+    affected_versions: vers:npm/>=2.0.0-rc.0|<2.13.3
+    fixed_versions: vers:npm/2.13.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/n8n
+    affected_versions: vers:npm/<1.123.27
+    fixed_versions: vers:npm/1.123.27
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '9.9'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-58qr-rcgv-642v/GHSA-58qr-rcgv-642v.json
+  - score: '9.4'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-58qr-rcgv-642v/GHSA-58qr-rcgv-642v.json
+  - score: CRITICAL
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-94
+  - CWE-89
+references:
+  - url: https://github.com/n8n-io/n8n
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33660
+    reference_type:
+    reference_id:
+  - url: https://github.com/n8n-io/n8n/security/advisories/GHSA-58qr-rcgv-642v
+    reference_type: other
+    reference_id: GHSA-58qr-rcgv-642v

@@ -1,7 +1,8 @@
 advisory_id: GHSA-5mx2-2mgw-x8rm
 datasource_id: github_osv_importer_v2/GHSA-5mx2-2mgw-x8rm
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-5mx2-2mgw-x8rm/GHSA-5mx2-2mgw-x8rm.json
-aliases: []
+aliases:
+  - CVE-2026-32896
 summary: |
   OpenClaw: BlueBubbles beta plugin webhook auth hardening (remove passwordless fallback)
   ### Summary
@@ -41,15 +42,20 @@ summary: |
 
   OpenClaw thanks @zpbrent for reporting.
 impacted_packages:
-  - purl: pkg:npm/openclaw/openclaw
+  - purl: pkg:npm/openclaw
     affected_versions: vers:npm/<2026.2.21
     fixed_versions: vers:npm/2026.2.21
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
-  - score: '6.9'
+  - score: '4.8'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-5mx2-2mgw-x8rm/GHSA-5mx2-2mgw-x8rm.json
+  - score: '6.3'
     scoring_system: cvssv4
-    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N
+    scoring_elements: CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N
     published_at: None
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-5mx2-2mgw-x8rm/GHSA-5mx2-2mgw-x8rm.json
   - score: MODERATE
@@ -70,5 +76,11 @@ references:
     reference_type:
     reference_id:
   - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-5mx2-2mgw-x8rm
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32896
+    reference_type:
+    reference_id:
+  - url: https://www.vulncheck.com/advisories/openclaw-unauthenticated-webhook-access-via-passwordless-fallback-in-bluebubbles-plugin
     reference_type:
     reference_id:

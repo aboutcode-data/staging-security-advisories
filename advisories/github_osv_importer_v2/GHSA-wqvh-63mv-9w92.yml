@@ -1,0 +1,59 @@
+advisory_id: GHSA-wqvh-63mv-9w92
+datasource_id: github_osv_importer_v2/GHSA-wqvh-63mv-9w92
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-wqvh-63mv-9w92/GHSA-wqvh-63mv-9w92.json
+aliases:
+  - CVE-2026-32235
+summary: |
+  @backstage/plugin-auth-backend: OAuth redirect URI allowlist bypass
+  ### Impact
+
+  The experimental OIDC provider in `@backstage/plugin-auth-backend` is vulnerable to a redirect URI allowlist bypass. Instances that have enabled experimental Dynamic Client Registration or Client ID Metadata Documents and configured `allowedRedirectUriPatterns` are affected.
+
+  A specially crafted redirect URI can pass the allowlist validation while resolving to an attacker-controlled host. If a victim approves the resulting OAuth consent request, their authorization code is sent to the attacker, who can exchange it for a valid access token.
+
+  This requires victim interaction and that one of the experimental features is explicitly enabled, which is not the default.
+
+  ### Patches
+
+  Upgrade to `@backstage/plugin-auth-backend` version 0.27.1 or later.
+
+  ### Workarounds
+
+  Disable experimental Dynamic Client Registration and Client ID Metadata Documents features if they are not required.
+
+  ### References
+
+  - [RFC 6749 Section 3.1.2 - Redirection Endpoint](https://datatracker.ietf.org/doc/html/rfc6749#section-3.1.2)
+impacted_packages:
+  - purl: pkg:npm/%40backstage/plugin-auth-backend
+    affected_versions: vers:npm/<0.27.1
+    fixed_versions: vers:npm/0.27.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.9'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-wqvh-63mv-9w92/GHSA-wqvh-63mv-9w92.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-601
+  - CWE-20
+references:
+  - url: https://github.com/backstage/backstage
+    reference_type:
+    reference_id:
+  - url: https://github.com/backstage/backstage/commit/6042dd0c7f0706e0f473dafa92799ecf19c825ec
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32235
+    reference_type:
+    reference_id:
+  - url: https://github.com/backstage/backstage/security/advisories/GHSA-wqvh-63mv-9w92
+    reference_type: other
+    reference_id: GHSA-wqvh-63mv-9w92

@@ -1,0 +1,40 @@
+advisory_id: GHSA-vqqj-9cmv-hx43
+datasource_id: github_osv_importer_v2/GHSA-vqqj-9cmv-hx43
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-vqqj-9cmv-hx43/GHSA-vqqj-9cmv-hx43.json
+aliases:
+  - CVE-2026-28369
+summary: |
+  Undertow is Vulnerable to HTTP Request/Response Smuggling
+  A flaw was found in Undertow. When Undertow receives an HTTP request where the first header line starts with one or more spaces, it incorrectly processes the request by stripping these leading spaces. This behavior, which violates HTTP standards, can be exploited by a remote attacker to perform request smuggling. Request smuggling allows an attacker to bypass security mechanisms, access restricted information, or manipulate web caches, potentially leading to unauthorized actions or data exposure.
+impacted_packages:
+  - purl: pkg:maven/io.undertow/undertow-parent
+    affected_versions: vers:maven/<=2.3.23.Final
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.7'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-vqqj-9cmv-hx43/GHSA-vqqj-9cmv-hx43.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-444
+references:
+  - url: https://github.com/undertow-io/undertow
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-28369
+    reference_type:
+    reference_id:
+  - url: https://access.redhat.com/security/cve/CVE-2026-28369
+    reference_type: advisory
+    reference_id: CVE-2026-28369
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2443262
+    reference_type: bug
+    reference_id: show_bug.cgi?id=2443262

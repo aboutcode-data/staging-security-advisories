@@ -1,0 +1,136 @@
+advisory_id: GHSA-wrhr-rf8j-r842
+datasource_id: github_osv_importer_v2/GHSA-wrhr-rf8j-r842
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-wrhr-rf8j-r842/GHSA-wrhr-rf8j-r842.json
+aliases:
+  - CVE-2026-26284
+summary: |
+  ImageMagick: Heap overflow in pcd decoder leads to out of bounds read.
+  The pcd coder lacks proper boundary checking when processing Huffman-coded data. The decoder contains an function that has an incorrect initialization that could cause an out of bounds read.
+
+  ```
+  ==3900053==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x502000003c6c at pc 0x55601b9cc552 bp 0x7ffd904b1f70 sp 0x7ffd904b1f60
+  READ of size 1 at 0x502000003c6c thread T0
+  ```
+impacted_packages:
+  - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-AnyCPU
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-OpenMP-arm64
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-arm64
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-x64
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-x86
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-OpenMP-arm64
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-OpenMP-x64
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-OpenMP-x86
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-arm64
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-x64
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-x86
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-OpenMP-x64
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q8-AnyCPU
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q8-OpenMP-arm64
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q8-OpenMP-x64
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q8-arm64
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q8-x64
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q8-x86
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-wrhr-rf8j-r842/GHSA-wrhr-rf8j-r842.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-125
+  - CWE-122
+references:
+  - url: https://github.com/dlemstra/Magick.NET/releases/tag/14.10.3
+    reference_type:
+    reference_id:
+  - url: https://github.com/ImageMagick/ImageMagick
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-26284
+    reference_type:
+    reference_id: CVE-2026-26284
+  - url: https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-wrhr-rf8j-r842
+    reference_type: other
+    reference_id: GHSA-wrhr-rf8j-r842

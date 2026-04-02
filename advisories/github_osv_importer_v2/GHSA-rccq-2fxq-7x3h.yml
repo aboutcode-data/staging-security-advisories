@@ -1,0 +1,46 @@
+advisory_id: GHSA-rccq-2fxq-7x3h
+datasource_id: github_osv_importer_v2/GHSA-rccq-2fxq-7x3h
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-rccq-2fxq-7x3h/GHSA-rccq-2fxq-7x3h.json
+aliases:
+  - CVE-2025-56421
+summary: |
+  LimeSurvey is vulnerable to SQL injection
+  SQL Injection vulnerability in LimeSurvey before v.6.15.4+250710 allows a remote attacker to obtain sensitive information from the database.
+impacted_packages:
+  - purl: pkg:composer/limesurvey/limesurvey
+    affected_versions: vers:composer/<6.15.4
+    fixed_versions: vers:composer/6.15.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-rccq-2fxq-7x3h/GHSA-rccq-2fxq-7x3h.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-89
+references:
+  - url: https://github.com/hongancalif/security-advisories/blob/main/CVE-2025-56421.md
+    reference_type:
+    reference_id:
+  - url: https://github.com/LimeSurvey/LimeSurvey
+    reference_type:
+    reference_id:
+  - url: https://github.com/LimeSurvey/LimeSurvey/commit/d6c3c780cdd17d5eef1c8c69ad0105beffa2374f
+    reference_type:
+    reference_id:
+  - url: https://github.com/LimeSurvey/LimeSurvey/pull/4328
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2025-56421
+    reference_type:
+    reference_id:
+  - url: http://limesurvey.com
+    reference_type: other
+    reference_id: limesurvey.com

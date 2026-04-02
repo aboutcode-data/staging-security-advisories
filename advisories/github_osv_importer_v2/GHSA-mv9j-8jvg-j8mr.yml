@@ -1,0 +1,53 @@
+advisory_id: GHSA-mv9j-8jvg-j8mr
+datasource_id: github_osv_importer_v2/GHSA-mv9j-8jvg-j8mr
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-mv9j-8jvg-j8mr/GHSA-mv9j-8jvg-j8mr.json
+aliases:
+  - CVE-2026-34209
+summary: |
+  mppx: Tempo has a session close voucher bypass vulnerability due to settled amount equality
+  ### Impact
+
+  The `tempo/session` cooperative close handler validated the close voucher amount using `<` instead of `<=` against the on-chain settled amount. An attacker could submit a close voucher exactly equal to the settled amount, which would be accepted without committing any new funds, effectively closing or griefing the channel for free.
+
+  ### Patches
+
+  Fixed in 0.4.11.
+
+  ### Workarounds
+
+  There are no workarounds available for this vulnerability.
+impacted_packages:
+  - purl: pkg:npm/mppx
+    affected_versions: vers:npm/<0.4.11
+    fixed_versions: vers:npm/0.4.11
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-mv9j-8jvg-j8mr/GHSA-mv9j-8jvg-j8mr.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-294
+references:
+  - url: https://github.com/wevm/mppx
+    reference_type:
+    reference_id:
+  - url: https://github.com/wevm/mppx/commit/94088246ee18f21b5d6be40d9e7a464f5a280bfb
+    reference_type:
+    reference_id:
+  - url: https://github.com/wevm/mppx/security/advisories/GHSA-mv9j-8jvg-j8mr
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-34209
+    reference_type:
+    reference_id:
+  - url: https://github.com/wevm/mppx/releases/tag/mppx@0.4.11
+    reference_type: other
+    reference_id: mppx@0.4.11

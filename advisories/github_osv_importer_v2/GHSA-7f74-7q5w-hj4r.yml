@@ -1,0 +1,46 @@
+advisory_id: GHSA-7f74-7q5w-hj4r
+datasource_id: github_osv_importer_v2/GHSA-7f74-7q5w-hj4r
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-7f74-7q5w-hj4r/GHSA-7f74-7q5w-hj4r.json
+aliases:
+  - CVE-2026-33885
+summary: |
+  Statamic has an Open Redirect on unauthenticated endpoints via URL parsing differential
+  ### Impact
+  The external URL detection used for redirect validation on unauthenticated endpoints could be bypassed, allowing users to be redirected to external URLs after actions like form submissions and authentication flows.
+
+  ### Patches
+  This has been fixed in 5.73.16 and 6.7.2.
+impacted_packages:
+  - purl: pkg:composer/statamic/cms
+    affected_versions: vers:composer/<5.73.16
+    fixed_versions: vers:composer/5.73.16
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/statamic/cms
+    affected_versions: vers:composer/>=6.0.0+alpha.1|<6.7.2
+    fixed_versions: vers:composer/6.7.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.1'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-7f74-7q5w-hj4r/GHSA-7f74-7q5w-hj4r.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-601
+references:
+  - url: https://github.com/statamic/cms
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33885
+    reference_type:
+    reference_id:
+  - url: https://github.com/statamic/cms/security/advisories/GHSA-7f74-7q5w-hj4r
+    reference_type: other
+    reference_id: GHSA-7f74-7q5w-hj4r

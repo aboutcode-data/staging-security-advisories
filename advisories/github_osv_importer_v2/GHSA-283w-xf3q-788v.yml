@@ -1,0 +1,58 @@
+advisory_id: GHSA-283w-xf3q-788v
+datasource_id: github_osv_importer_v2/GHSA-283w-xf3q-788v
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-283w-xf3q-788v/GHSA-283w-xf3q-788v.json
+aliases:
+  - CVE-2026-33674
+summary: |
+  PrestaShop: Improper Use of Validation Framework
+  ### Impact
+  Fix improper use of validation framework
+
+  ### Patches
+  Patched in 8.2.5 and 9.1.0
+
+  ### Workarounds
+  None
+
+  ### References
+  none
+impacted_packages:
+  - purl: pkg:composer/prestashop/prestashop
+    affected_versions: vers:composer/<8.2.5
+    fixed_versions: vers:composer/8.2.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/prestashop/prestashop
+    affected_versions: vers:composer/>=9.0.0-alpha.1|<9.1.0
+    fixed_versions: vers:composer/9.1.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '2.0'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:U/C:N/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-283w-xf3q-788v/GHSA-283w-xf3q-788v.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-1173
+references:
+  - url: https://github.com/PrestaShop/PrestaShop
+    reference_type:
+    reference_id:
+  - url: https://github.com/PrestaShop/PrestaShop/releases/tag/8.2.5
+    reference_type:
+    reference_id:
+  - url: https://github.com/PrestaShop/PrestaShop/releases/tag/9.1.0
+    reference_type:
+    reference_id:
+  - url: https://github.com/PrestaShop/PrestaShop/security/advisories/GHSA-283w-xf3q-788v
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33674
+    reference_type:
+    reference_id:

@@ -1,7 +1,8 @@
 advisory_id: GHSA-mwxv-35wr-4vvj
 datasource_id: github_osv_importer_v2/GHSA-mwxv-35wr-4vvj
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-mwxv-35wr-4vvj/GHSA-mwxv-35wr-4vvj.json
-aliases: []
+aliases:
+  - CVE-2026-32036
 summary: |
   OpenClaw has gateway plugin auth bypass via encoded dot-segment traversal in protected /api/channels paths
   ### Summary
@@ -30,17 +31,37 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
+  - score: '6.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:H/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-mwxv-35wr-4vvj/GHSA-mwxv-35wr-4vvj.json
+  - score: '8.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-mwxv-35wr-4vvj/GHSA-mwxv-35wr-4vvj.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
     published_at: None
     url:
 weaknesses:
+  - CWE-22
   - CWE-289
 references:
   - url: https://github.com/openclaw/openclaw
     reference_type:
     reference_id:
-  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-mwxv-35wr-4vvj
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32036
     reference_type:
     reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/258d615c45527ffda37cecd08cd268f97461bde0
+    reference_type: other
+    reference_id: 258d615c45527ffda37cecd08cd268f97461bde0
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-mwxv-35wr-4vvj
+    reference_type: advisory
+    reference_id: GHSA-mwxv-35wr-4vvj
+  - url: https://www.vulncheck.com/advisories/openclaw-authentication-bypass-via-encoded-dot-segment-traversal-in-api-channels
+    reference_type: advisory
+    reference_id: openclaw-authentication-bypass-via-encoded-dot-segment-traversal-in-api-channels

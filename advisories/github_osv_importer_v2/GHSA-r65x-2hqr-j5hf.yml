@@ -1,7 +1,8 @@
 advisory_id: GHSA-r65x-2hqr-j5hf
 datasource_id: github_osv_importer_v2/GHSA-r65x-2hqr-j5hf
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-r65x-2hqr-j5hf/GHSA-r65x-2hqr-j5hf.json
-aliases: []
+aliases:
+  - CVE-2026-32014
 summary: |
   OpenClaw: Node reconnect metadata spoofing could bypass platform-based node command policy
   ## Summary
@@ -47,6 +48,11 @@ severities:
     scoring_elements: CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
     published_at: None
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-r65x-2hqr-j5hf/GHSA-r65x-2hqr-j5hf.json
+  - score: '8.6'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:A/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-r65x-2hqr-j5hf/GHSA-r65x-2hqr-j5hf.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
@@ -59,9 +65,15 @@ references:
   - url: https://github.com/openclaw/openclaw
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32014
+    reference_type:
+    reference_id:
   - url: https://github.com/openclaw/openclaw/commit/7d8aeaaf06e2e616545d2c2cec7fa27f36b59b6a
-    reference_type:
-    reference_id:
+    reference_type: other
+    reference_id: 7d8aeaaf06e2e616545d2c2cec7fa27f36b59b6a
   - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-r65x-2hqr-j5hf
-    reference_type:
-    reference_id:
+    reference_type: advisory
+    reference_id: GHSA-r65x-2hqr-j5hf
+  - url: https://www.vulncheck.com/advisories/openclaw-node-reconnect-metadata-spoofing-via-unsigned-platform-fields
+    reference_type: advisory
+    reference_id: openclaw-node-reconnect-metadata-spoofing-via-unsigned-platform-fields

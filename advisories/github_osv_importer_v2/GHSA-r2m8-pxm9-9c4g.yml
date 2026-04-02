@@ -1,0 +1,66 @@
+advisory_id: GHSA-r2m8-pxm9-9c4g
+datasource_id: github_osv_importer_v2/GHSA-r2m8-pxm9-9c4g
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-r2m8-pxm9-9c4g/GHSA-r2m8-pxm9-9c4g.json
+aliases:
+  - CVE-2026-31872
+summary: |
+  Parse Server has a protected fields bypass via dot-notation in query and sort
+  ### Impact
+
+  The `protectedFields` class-level permission (CLP) can be bypassed using dot-notation in query WHERE clauses and sort parameters. An attacker can use dot-notation to query or sort by sub-fields of a protected field, enabling a binary oracle attack to enumerate protected field values.
+
+  This affects both MongoDB and PostgreSQL deployments.
+
+  ### Patches
+
+  The fix ensures that query WHERE clause keys and sort keys are checked against protected fields by extracting the root field from dot-notation paths. For example, a query on `secretObj.apiKey` is now correctly blocked when `secretObj` is a protected field.
+
+  ### Workarounds
+
+  None.
+
+  ### References
+
+  - GitHub security advisory: https://github.com/parse-community/parse-server/security/advisories/GHSA-r2m8-pxm9-9c4g
+  - Fix Parse Server 9: https://github.com/parse-community/parse-server/releases/tag/9.6.0-alpha.6
+  - Fix Parse Server 8: https://github.com/parse-community/parse-server/releases/tag/8.6.32
+impacted_packages:
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/>=9.0.0-alpha.1|<9.6.0-alpha.6
+    fixed_versions: vers:npm/9.6.0-alpha.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/<8.6.32
+    fixed_versions: vers:npm/8.6.32
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.7'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-r2m8-pxm9-9c4g/GHSA-r2m8-pxm9-9c4g.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-284
+references:
+  - url: https://github.com/parse-community/parse-server
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-31872
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/releases/tag/8.6.32
+    reference_type: other
+    reference_id: 8.6.32
+  - url: https://github.com/parse-community/parse-server/releases/tag/9.6.0-alpha.6
+    reference_type: other
+    reference_id: 9.6.0-alpha.6
+  - url: https://github.com/parse-community/parse-server/security/advisories/GHSA-r2m8-pxm9-9c4g
+    reference_type: other
+    reference_id: GHSA-r2m8-pxm9-9c4g

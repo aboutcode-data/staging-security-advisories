@@ -1,0 +1,54 @@
+advisory_id: GHSA-8prr-286p-4w7j
+datasource_id: github_osv_importer_v2/GHSA-8prr-286p-4w7j
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-8prr-286p-4w7j/GHSA-8prr-286p-4w7j.json
+aliases:
+  - CVE-2026-34400
+summary: |
+  alerta-server has potential SQL Injection vulnerability in Query String Syntax (q=) API
+  ### Impact
+  The Query string search API (q=) was vulnerable to SQL injection via the Postgres query parser, which built WHERE clauses by interpolating user-supplied search terms directly into SQL strings via f-strings.
+
+  ### Patches
+  Fixed in v9.1.0. The Postgres query parser now uses parameterized queries with %(name)s placeholders passed to psycopg2's cursor.execute(), preventing SQL injection through the ?q= parameter. The MongoDB backend was not affected.
+
+  ### Workarounds
+  Upgrade to v9.1.0 or later. If unable to upgrade, deploy a proxy in front of the Alerta API to sanitize the q= parameter.
+
+  ### Resources
+  https://github.com/alerta/alerta/pull/712/files
+  https://owasp.org/www-community/attacks/SQL_Injection
+impacted_packages:
+  - purl: pkg:pypi/alerta-server
+    affected_versions: vers:pypi/<9.1.0
+    fixed_versions: vers:pypi/9.1.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://github.com/alerta/alerta
+    reference_type:
+    reference_id:
+  - url: https://github.com/alerta/alerta/commit/aeba85a37a09e5769a7a2da56481aa979ff99a00
+    reference_type:
+    reference_id:
+  - url: https://github.com/alerta/alerta/commit/fdd52cd1abad8d02d1dfb8ecdcdbb43b6af3b883
+    reference_type:
+    reference_id:
+  - url: https://github.com/alerta/alerta/pull/2040
+    reference_type:
+    reference_id:
+  - url: https://github.com/alerta/alerta/pull/712
+    reference_type:
+    reference_id:
+  - url: https://github.com/alerta/alerta/releases/tag/v9.1.0
+    reference_type:
+    reference_id:
+  - url: https://github.com/alerta/alerta/security/advisories/GHSA-8prr-286p-4w7j
+    reference_type:
+    reference_id:

@@ -1,7 +1,8 @@
 advisory_id: GHSA-fg3m-vhrr-8gj6
 datasource_id: github_osv_importer_v2/GHSA-fg3m-vhrr-8gj6
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-fg3m-vhrr-8gj6/GHSA-fg3m-vhrr-8gj6.json
-aliases: []
+aliases:
+  - CVE-2026-31995
 summary: "OpenClaw has Windows Lobster shell fallback command injection in constrained fallback\
   \ path\n### Summary\nOn Windows, the Lobster extension previously retried certain spawn failures\
   \ (`ENOENT`/`EINVAL`) with `shell: true` for wrapper compatibility. In that fallback path,\
@@ -38,9 +39,15 @@ references:
   - url: https://github.com/openclaw/openclaw
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-31995
+    reference_type:
+    reference_id:
   - url: https://github.com/openclaw/openclaw/commit/ba7be018da354ea9f803ed356d20464df0437916
-    reference_type:
-    reference_id:
+    reference_type: other
+    reference_id: ba7be018da354ea9f803ed356d20464df0437916
   - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-fg3m-vhrr-8gj6
-    reference_type:
-    reference_id:
+    reference_type: advisory
+    reference_id: GHSA-fg3m-vhrr-8gj6
+  - url: https://www.vulncheck.com/advisories/openclaw-command-injection-via-windows-shell-fallback-in-lobster-extension
+    reference_type: advisory
+    reference_id: openclaw-command-injection-via-windows-shell-fallback-in-lobster-extension

@@ -1,0 +1,47 @@
+advisory_id: GHSA-6fmv-xxpf-w3cw
+datasource_id: github_osv_importer_v2/GHSA-6fmv-xxpf-w3cw
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-6fmv-xxpf-w3cw/GHSA-6fmv-xxpf-w3cw.json
+aliases:
+  - CVE-2025-67030
+summary: |
+  Plexus-Utils has a Directory Traversal vulnerability in its extractFile method
+  Directory Traversal vulnerability in the extractFile method of org.codehaus.plexus.util.Expand in plexus-utils before 6d780b3378829318ba5c2d29547e0012d5b29642. This allows an attacker to execute arbitrary code
+impacted_packages:
+  - purl: pkg:maven/org.codehaus.plexus/plexus-utils
+    affected_versions: vers:maven/<=4.0.2
+    fixed_versions: vers:maven/4.0.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-22
+references:
+  - url: https://gist.github.com/weaver4VD/3216dac645220f8c9b488362f61241ec
+    reference_type:
+    reference_id:
+  - url: https://github.com/codehaus-plexus/plexus-utils
+    reference_type:
+    reference_id:
+  - url: https://github.com/codehaus-plexus/plexus-utils/commit/6d780b3378829318ba5c2d29547e0012d5b29642
+    reference_type:
+    reference_id:
+  - url: https://github.com/codehaus-plexus/plexus-utils/issues/294
+    reference_type:
+    reference_id:
+  - url: https://github.com/codehaus-plexus/plexus-utils/pull/295
+    reference_type:
+    reference_id:
+  - url: https://github.com/codehaus-plexus/plexus-utils/pull/296
+    reference_type:
+    reference_id:
+  - url: https://github.com/codehaus-plexus/plexus-utils/releases/tag/plexus-utils-4.0.3
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2025-67030
+    reference_type:
+    reference_id:

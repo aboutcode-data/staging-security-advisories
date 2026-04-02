@@ -1,7 +1,8 @@
 advisory_id: GHSA-4gc7-qcvf-38wg
 datasource_id: github_osv_importer_v2/GHSA-4gc7-qcvf-38wg
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-4gc7-qcvf-38wg/GHSA-4gc7-qcvf-38wg.json
-aliases: []
+aliases:
+  - CVE-2026-32010
 summary: |
   In OpenClaw, manually adding sort to tools.exec.safeBins could bypass allowlist approval via --compress-program
   ### Summary
@@ -43,26 +44,37 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
-  - score: '7.3'
-    scoring_system: cvssv4
-    scoring_elements: CVSS:4.0/AV:L/AC:H/AT:P/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
+  - score: '8.8'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
     published_at: None
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-4gc7-qcvf-38wg/GHSA-4gc7-qcvf-38wg.json
-  - score: HIGH
+  - score: '5.8'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:L/AC:H/AT:P/PR:L/UI:N/VC:N/VI:H/VA:H/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-4gc7-qcvf-38wg/GHSA-4gc7-qcvf-38wg.json
+  - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
     published_at: None
     url:
 weaknesses:
-  - CWE-78
   - CWE-184
+  - CWE-78
 references:
   - url: https://github.com/openclaw/openclaw
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32010
+    reference_type:
+    reference_id:
   - url: https://github.com/openclaw/openclaw/commit/57fbbaebca4d34d17549accf6092ae26eb7b605c
-    reference_type:
-    reference_id:
+    reference_type: other
+    reference_id: 57fbbaebca4d34d17549accf6092ae26eb7b605c
   - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-4gc7-qcvf-38wg
-    reference_type:
-    reference_id:
+    reference_type: advisory
+    reference_id: GHSA-4gc7-qcvf-38wg
+  - url: https://www.vulncheck.com/advisories/openclaw-allowlist-bypass-via-sort-compress-program-parameter
+    reference_type: advisory
+    reference_id: openclaw-allowlist-bypass-via-sort-compress-program-parameter

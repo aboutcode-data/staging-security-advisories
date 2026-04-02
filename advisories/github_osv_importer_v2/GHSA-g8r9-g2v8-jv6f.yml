@@ -57,7 +57,7 @@ summary: |
 
   ### Fix
 
-  The fix adds two layers of defense:
+  The fix adds three layers of defense:
 
   1. **Parse-time detection:** The shell safety assessment analyzes `${...}` expansion nodes within bash commands, detecting dangerous operators (`@P`, `=`, `:=`, `!`) and nested command/process substitutions. Commands containing these patterns are downgraded from read-only to write-capable, ensuring they require user approval.
 

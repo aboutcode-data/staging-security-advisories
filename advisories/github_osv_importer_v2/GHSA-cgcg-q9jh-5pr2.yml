@@ -1,0 +1,52 @@
+advisory_id: GHSA-cgcg-q9jh-5pr2
+datasource_id: github_osv_importer_v2/GHSA-cgcg-q9jh-5pr2
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-cgcg-q9jh-5pr2/GHSA-cgcg-q9jh-5pr2.json
+aliases:
+  - CVE-2026-33326
+summary: "@keystone-6/core: `isFilterable` bypass via `cursor` parameter in findMany (CVE-2025-46720\
+  \ incomplete fix)\n# Summary  \n`{field}.isFilterable` access control can be bypassed in `findMany`\
+  \ queries by passing a `cursor`.  This can be used to confirm the existence of records by\
+  \ protected field values.\n\nThe fix for [CVE-2025-46720](https://github.com/keystonejs/keystone/security/advisories/GHSA-hg9m-67mm-7pg3)\
+  \ (field-level `isFilterable` bypass for update and delete mutations) added checks to the\
+  \ `where` parameter in `update` and `delete` mutations however the `cursor` parameter in `findMany`\
+  \ was not patched and accepts the same `UniqueWhere` input type.\n\n# Impact  \nThis affects\
+  \ any project relying on `isFilterable` behaviour (at the list or field level) to prevent\
+  \ external users from using the filtering of fields as a discovery mechanism. `isFilterable`\
+  \ access control using a function can be bypassed by using the `cursor` input.\n\nThis has\
+  \ no impact on projects using `isFilterable: false` or `defaultIsFilterable: false` for sensitive\
+  \ fields, or if you have otherwise omitted filtering by these fields from your GraphQL schema.\
+  \ (See workarounds)\n\n# Patches  \nThis issue has been patched in `@keystone-6/core` version\
+  \ 6.5.2.\n\n# Workarounds  \nTo mitigate this issue in older versions where patching is not\
+  \ a viable pathway.\n\n- Set `{field}.isFilterable: false` statically for relevant fields\
+  \ to prevent filtering by them earlier in the access control pipeline (that is, don't use\
+  \ functions)\n- Set `{field}.graphql.omit.read: true` for relevant fields, which implicitly\
+  \ removes filtering by these fields your GraphQL schema"
+impacted_packages:
+  - purl: pkg:npm/%40keystone-6/core
+    affected_versions: vers:npm/<=6.5.1
+    fixed_versions: vers:npm/6.5.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '4.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-cgcg-q9jh-5pr2/GHSA-cgcg-q9jh-5pr2.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-863
+references:
+  - url: https://github.com/keystonejs/keystone
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33326
+    reference_type:
+    reference_id:
+  - url: https://github.com/keystonejs/keystone/security/advisories/GHSA-cgcg-q9jh-5pr2
+    reference_type: other
+    reference_id: GHSA-cgcg-q9jh-5pr2

@@ -1,0 +1,66 @@
+advisory_id: GHSA-gqpp-xgvh-9h7h
+datasource_id: github_osv_importer_v2/GHSA-gqpp-xgvh-9h7h
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-gqpp-xgvh-9h7h/GHSA-gqpp-xgvh-9h7h.json
+aliases:
+  - CVE-2026-31871
+summary: |
+  Parse Server vulnerable to SQL Injection via dot-notation sub-key name in `Increment` operation on PostgreSQL
+  ### Impact
+
+  A SQL injection vulnerability exists in the PostgreSQL storage adapter when processing `Increment` operations on nested object fields using dot notation (e.g., `stats.counter`). The sub-key name is interpolated directly into SQL string literals without escaping. An attacker who can send write requests to the Parse Server REST API can inject arbitrary SQL via a crafted sub-key name containing single quotes, potentially executing commands or reading data from the database, bypassing CLPs and ACLs.
+
+  Only Postgres deployments are affected.
+
+  ### Patches
+
+  The fix escapes single quotes in the sub-key name before interpolating it into the SQL query, preventing breakout from SQL string literals.
+
+  ### Workarounds
+
+  There is no known workaround.
+
+  ### References
+
+  - GitHub security advisory: https://github.com/parse-community/parse-server/security/advisories/GHSA-gqpp-xgvh-9h7h
+  - Fix Parse Server 9: https://github.com/parse-community/parse-server/releases/tag/9.6.0-alpha.5
+  - Fix Parse Server 8: https://github.com/parse-community/parse-server/releases/tag/8.6.31
+impacted_packages:
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/>=9.0.0-alpha.1|<9.6.0-alpha.5
+    fixed_versions: vers:npm/9.6.0-alpha.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/<8.6.31
+    fixed_versions: vers:npm/8.6.31
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '9.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-gqpp-xgvh-9h7h/GHSA-gqpp-xgvh-9h7h.json
+  - score: CRITICAL
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-89
+references:
+  - url: https://github.com/parse-community/parse-server
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-31871
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/releases/tag/8.6.31
+    reference_type: other
+    reference_id: 8.6.31
+  - url: https://github.com/parse-community/parse-server/releases/tag/9.6.0-alpha.5
+    reference_type: other
+    reference_id: 9.6.0-alpha.5
+  - url: https://github.com/parse-community/parse-server/security/advisories/GHSA-gqpp-xgvh-9h7h
+    reference_type: other
+    reference_id: GHSA-gqpp-xgvh-9h7h

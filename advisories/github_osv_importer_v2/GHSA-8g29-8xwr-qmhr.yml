@@ -1,0 +1,63 @@
+advisory_id: GHSA-8g29-8xwr-qmhr
+datasource_id: github_osv_importer_v2/GHSA-8g29-8xwr-qmhr
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-8g29-8xwr-qmhr/GHSA-8g29-8xwr-qmhr.json
+aliases: []
+summary: |
+  @grackle-ai/server JSON.parse lacks try-catch logic in its gRPC Service AdapterConfig Handling
+  ### Impact
+
+  `JSON.parse(env.adapterConfig)` is called without error handling in three locations within the gRPC service. While the data originates from the server's own SQLite database and should always be valid JSON, database corruption, migration errors, or unexpected state could cause an unhandled exception that crashes the gRPC handler.
+
+  Additionally, the parsed result is cast as `Record<string, unknown>` and passed to adapter methods without property validation, creating a theoretical prototype pollution surface if the database is compromised.
+
+  **Affected code:**
+  - `packages/server/src/grpc-service.ts:415` — `reconnectOrProvision` handler
+  - `packages/server/src/grpc-service.ts:482` — `stopEnvironment` handler
+  - `packages/server/src/grpc-service.ts:498` — `destroyEnvironment` handler
+
+  ### Patches
+
+  **Fix:** Wrap in try-catch and return a meaningful gRPC error:
+  ```typescript
+  let config: Record<string, unknown>;
+  try {
+    config = JSON.parse(env.adapterConfig) as Record<string, unknown>;
+  } catch {
+    throw new ConnectError("Invalid adapter configuration", Code.Internal);
+  }
+  ```
+
+  ### Workarounds
+
+  Ensure database integrity. Back up the SQLite database regularly.
+
+  ### Resources
+
+  - CWE-754: Improper Check for Unusual or Exceptional Conditions
+  - File: `packages/server/src/grpc-service.ts`
+impacted_packages:
+  - purl: pkg:npm/%40grackle-ai/server
+    affected_versions: vers:npm/<=0.70.5
+    fixed_versions: vers:npm/0.70.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '2.1'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:H/AT:P/PR:H/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-8g29-8xwr-qmhr/GHSA-8g29-8xwr-qmhr.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-754
+references:
+  - url: https://github.com/nick-pape/grackle
+    reference_type:
+    reference_id:
+  - url: https://github.com/nick-pape/grackle/security/advisories/GHSA-8g29-8xwr-qmhr
+    reference_type:
+    reference_id:

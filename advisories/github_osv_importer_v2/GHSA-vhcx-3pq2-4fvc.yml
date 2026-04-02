@@ -1,0 +1,40 @@
+advisory_id: GHSA-vhcx-3pq2-4fvc
+datasource_id: github_osv_importer_v2/GHSA-vhcx-3pq2-4fvc
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-vhcx-3pq2-4fvc/GHSA-vhcx-3pq2-4fvc.json
+aliases:
+  - CVE-2025-15036
+summary: |
+  MLFlow path traversal vulnerability
+  A path traversal vulnerability exists in the `extract_archive_to_dir` function within the `mlflow/pyfunc/dbconnect_artifact_cache.py` file of the mlflow/mlflow repository. This vulnerability, present in versions before v3.7.0, arises due to the lack of validation of tar member paths during extraction. An attacker with control over the tar.gz file can exploit this issue to overwrite arbitrary files or gain elevated privileges, potentially escaping the sandbox directory in multi-tenant or shared cluster environments.
+impacted_packages:
+  - purl: pkg:pypi/mlflow
+    affected_versions: vers:pypi/<3.9.0rc0
+    fixed_versions: vers:pypi/3.9.0rc0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '9.6'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-vhcx-3pq2-4fvc/GHSA-vhcx-3pq2-4fvc.json
+  - score: CRITICAL
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-29
+references:
+  - url: https://github.com/mlflow/mlflow
+    reference_type:
+    reference_id:
+  - url: https://github.com/mlflow/mlflow/commit/3bf6d81ac4d38654c8ff012dbd0c3e9f17e7e346
+    reference_type:
+    reference_id:
+  - url: https://huntr.com/bounties/36c314cf-fd6e-4fb0-b9b0-1b47bcdf0eb0
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2025-15036
+    reference_type:
+    reference_id:

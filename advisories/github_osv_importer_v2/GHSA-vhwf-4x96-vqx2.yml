@@ -1,0 +1,57 @@
+advisory_id: GHSA-vhwf-4x96-vqx2
+datasource_id: github_osv_importer_v2/GHSA-vhwf-4x96-vqx2
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-vhwf-4x96-vqx2/GHSA-vhwf-4x96-vqx2.json
+aliases: []
+summary: |
+  OpenClaw's skills-install-download can be redirected outside the tools root by rebinding the validated base path
+  OpenClaw's skills download installer validated the intended per-skill tools root lexically, but later reused that mutable path while downloading and copying the archive into place. If a local attacker could rebind that tools-root path between validation and the final write, the installer could be redirected to write outside the intended tools directory.
+
+  The fix pins the canonical per-skill tools root immediately after validation and derives later download/copy paths from that canonical root, so rebinding the lexical path fails closed instead of redirecting the write.
+
+  ## Affected Packages / Versions
+
+  - Package: `openclaw` (npm)
+  - Latest published vulnerable version: `2026.3.7`
+  - Affected range: `<= 2026.3.7`
+  - Fixed in released version: `2026.3.8`
+
+  ## Fix Commit(s)
+
+  - `9abf014f3502009faf9c73df5ca2cff719e54639`
+
+  ## Release Verification
+
+  - Verified fixed in GitHub release `v2026.3.8` published on March 9, 2026.
+  - Verified `npm view openclaw version` resolves to `2026.3.8`.
+  - Verified the release contains the regression test covering tools-root rebinding and that the test passes against the `v2026.3.8` tree.
+
+  Thanks @tdjackey for reporting.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<=2026.3.7
+    fixed_versions: vers:npm/2026.3.8
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-vhwf-4x96-vqx2/GHSA-vhwf-4x96-vqx2.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-367
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/9abf014f3502009faf9c73df5ca2cff719e54639
+    reference_type: other
+    reference_id: 9abf014f3502009faf9c73df5ca2cff719e54639
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-vhwf-4x96-vqx2
+    reference_type: advisory
+    reference_id: GHSA-vhwf-4x96-vqx2

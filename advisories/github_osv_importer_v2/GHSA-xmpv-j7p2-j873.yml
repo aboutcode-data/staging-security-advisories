@@ -1,0 +1,76 @@
+advisory_id: GHSA-xmpv-j7p2-j873
+datasource_id: github_osv_importer_v2/GHSA-xmpv-j7p2-j873
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-xmpv-j7p2-j873/GHSA-xmpv-j7p2-j873.json
+aliases:
+  - CVE-2026-34203
+summary: |
+  Nautobot: Management of users via REST API does not apply configured password validators
+  ### Impact
+
+  In Nautobot versions prior to 2.4.30 or prior to 3.0.10, user creation and editing via the REST API fails to apply the password validation rules defined by Django's `AUTH_PASSWORD_VALIDATORS` setting (which defaults to an empty list, i.e., no specific rules, but can be configured in Nautobot's `nautobot_config.py` to apply various rules if desired). This can potentially allow for the creation or modification of users to have passwords that are weak or otherwise do not comply with configured standards.
+
+  Management of users via the Nautobot admin UI does correctly enforce configured password validation at this time.
+
+  ### Patches
+
+  The issue is resolved in Nautobot versions 2.4.30 and 3.0.10 and later.
+
+  - https://github.com/nautobot/nautobot/pull/8778
+  - https://github.com/nautobot/nautobot/pull/8779
+
+  ### Workarounds
+
+  Review which users have been granted object permissions to create and modify user accounts as well as having access tokens for the REST API, and restrict access as appropriate.
+
+  It may be appropriate furthermore to rotate passwords for any user accounts suspected to have been given weak passwords.
+
+  ### References
+
+  - https://docs.djangoproject.com/en/4.2/ref/settings/#std-setting-AUTH_PASSWORD_VALIDATORS
+  - http://docs.djangoproject.com/en/4.2/topics/auth/passwords/#password-validation
+impacted_packages:
+  - purl: pkg:pypi/nautobot
+    affected_versions: vers:pypi/<2.4.30
+    fixed_versions: vers:pypi/2.4.30
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/nautobot
+    affected_versions: vers:pypi/>=3.0.0|<3.0.10
+    fixed_versions: vers:pypi/3.0.10
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '2.7'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-xmpv-j7p2-j873/GHSA-xmpv-j7p2-j873.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-521
+references:
+  - url: https://github.com/nautobot/nautobot
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-34203
+    reference_type:
+    reference_id:
+  - url: https://github.com/nautobot/nautobot/commit/589f7caf54124ad76bc9fcbb7bdcaa25627cd598
+    reference_type: other
+    reference_id: 589f7caf54124ad76bc9fcbb7bdcaa25627cd598
+  - url: https://github.com/nautobot/nautobot/pull/8778
+    reference_type: other
+    reference_id: 8778
+  - url: https://github.com/nautobot/nautobot/pull/8779
+    reference_type: other
+    reference_id: 8779
+  - url: https://github.com/nautobot/nautobot/commit/d1ef3135aa02fa07de061e8c085f8cce425fe8c9
+    reference_type: other
+    reference_id: d1ef3135aa02fa07de061e8c085f8cce425fe8c9
+  - url: https://github.com/nautobot/nautobot/security/advisories/GHSA-xmpv-j7p2-j873
+    reference_type: other
+    reference_id: GHSA-xmpv-j7p2-j873

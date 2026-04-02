@@ -1,0 +1,61 @@
+advisory_id: GHSA-762r-27w2-q22j
+datasource_id: github_osv_importer_v2/GHSA-762r-27w2-q22j
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-762r-27w2-q22j/GHSA-762r-27w2-q22j.json
+aliases:
+  - CVE-2026-33209
+summary: |
+  Avo has a XSS vulnerability on `return_to` param
+  ## Description
+
+  A reflected cross-site scripting (XSS) vulnerability exists in the `return_to` query parameter used in the avo interface.
+
+  An attacker can craft a malicious URL that injects arbitrary JavaScript, which is executed when he clicks a dynamically generated navigation button.
+
+  ## Impact
+
+  This vulnerability may allow execution of arbitrary JavaScript in the context of the application.
+
+  Impact varies depending on deployment:
+  - In unauthenticated setups: exploitable via crafted links sent to users
+  - In authenticated setups: limited to authenticated users and requires interaction
+impacted_packages:
+  - purl: pkg:gem/avo
+    affected_versions: vers:gem/<=3.30.2
+    fixed_versions: vers:gem/3.30.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-762r-27w2-q22j/GHSA-762r-27w2-q22j.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-79
+references:
+  - url: https://github.com/avo-hq/avo
+    reference_type:
+    reference_id:
+  - url: https://github.com/avo-hq/avo/security/advisories/GHSA-762r-27w2-q22j
+    reference_type:
+    reference_id:
+  - url: https://github.com/rubysec/ruby-advisory-db/blob/master/gems/avo/CVE-2026-33209.yml
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33209
+    reference_type:
+    reference_id:
+  - url: https://github.com/avo-hq/avo/pull/4330
+    reference_type: other
+    reference_id: 4330
+  - url: https://github.com/avo-hq/avo/commit/4453d39ddc6309f3bc8ada73ef21e1971112de7d
+    reference_type: other
+    reference_id: 4453d39ddc6309f3bc8ada73ef21e1971112de7d
+  - url: https://github.com/avo-hq/avo/releases/tag/v3.30.3
+    reference_type: other
+    reference_id: v3.30.3

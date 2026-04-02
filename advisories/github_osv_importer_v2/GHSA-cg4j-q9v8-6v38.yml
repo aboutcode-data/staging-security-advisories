@@ -1,0 +1,70 @@
+advisory_id: GHSA-cg4j-q9v8-6v38
+datasource_id: github_osv_importer_v2/GHSA-cg4j-q9v8-6v38
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-cg4j-q9v8-6v38/GHSA-cg4j-q9v8-6v38.json
+aliases:
+  - CVE-2026-33169
+summary: |
+  Rails Active Support has a possible ReDoS vulnerability in number_to_delimited
+  ### Impact
+  `NumberToDelimitedConverter` used a regular expression with `gsub!` to insert thousands delimiters. This could produce quadratic time complexity on long digit strings.
+
+  ### Releases
+  The fixed releases are available at the normal locations.
+impacted_packages:
+  - purl: pkg:gem/activesupport
+    affected_versions: vers:gem/>=8.1.0.beta1|<8.1.2.1
+    fixed_versions: vers:gem/8.1.2.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:gem/activesupport
+    affected_versions: vers:gem/>=8.0.0.beta1|<8.0.4.1
+    fixed_versions: vers:gem/8.0.4.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:gem/activesupport
+    affected_versions: vers:gem/<7.2.3.1
+    fixed_versions: vers:gem/7.2.3.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-cg4j-q9v8-6v38/GHSA-cg4j-q9v8-6v38.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-1333
+  - CWE-400
+references:
+  - url: https://github.com/rails/rails
+    reference_type:
+    reference_id:
+  - url: https://github.com/rails/rails/releases/tag/v7.2.3.1
+    reference_type:
+    reference_id:
+  - url: https://github.com/rails/rails/releases/tag/v8.0.4.1
+    reference_type:
+    reference_id:
+  - url: https://github.com/rails/rails/releases/tag/v8.1.2.1
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33169
+    reference_type:
+    reference_id:
+  - url: https://github.com/rails/rails/commit/29154f1097da13d48fdb3200760b3e3da66dcb11
+    reference_type: other
+    reference_id: 29154f1097da13d48fdb3200760b3e3da66dcb11
+  - url: https://github.com/rails/rails/commit/b54a4b373c6f042cab6ee2033246b1c9ecc38974
+    reference_type: other
+    reference_id: b54a4b373c6f042cab6ee2033246b1c9ecc38974
+  - url: https://github.com/rails/rails/commit/ec1a0e215efd27a3b3911aae6df978a80f456a49
+    reference_type: other
+    reference_id: ec1a0e215efd27a3b3911aae6df978a80f456a49
+  - url: https://github.com/rails/rails/security/advisories/GHSA-cg4j-q9v8-6v38
+    reference_type: other
+    reference_id: GHSA-cg4j-q9v8-6v38

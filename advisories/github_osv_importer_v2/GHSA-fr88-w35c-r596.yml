@@ -1,0 +1,66 @@
+advisory_id: GHSA-fr88-w35c-r596
+datasource_id: github_osv_importer_v2/GHSA-fr88-w35c-r596
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-fr88-w35c-r596/GHSA-fr88-w35c-r596.json
+aliases:
+  - CVE-2026-30967
+summary: |
+  Parse Server OAuth2 authentication adapter account takeover via identity spoofing
+  ### Impact
+
+  The OAuth2 authentication adapter, when configured without the `useridField` option, only verifies that a token is active via the provider's token introspection endpoint, but does not verify that the token belongs to the user identified by `authData.id`. An attacker with any valid OAuth2 token from the same provider can authenticate as any other user.
+
+  This affects any Parse Server deployment that uses the generic OAuth2 authentication adapter (configured with `oauth2: true`) without setting the `useridField` option.
+
+  ### Patches
+
+  The vulnerability is fixed by defaulting `useridField` to `sub`, which is the standard subject identifier field defined by [RFC 7662](https://datatracker.ietf.org/doc/html/rfc7662). The adapter now always validates the token's identity against the claimed user ID, even when `useridField` is not explicitly configured.
+
+  ### Workarounds
+
+  Set the `useridField` option to the appropriate field name for your OAuth2 provider (e.g. `sub`) in the Parse Server authentication configuration.
+
+  ### References
+
+  - GitHub security advisory: https://github.com/parse-community/parse-server/security/advisories/GHSA-fr88-w35c-r596
+  - Fix Parse Server 9: https://github.com/parse-community/parse-server/releases/tag/9.5.2-alpha.9
+  - Fix Parse Server 8: https://github.com/parse-community/parse-server/releases/tag/8.6.22
+impacted_packages:
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/>=9.0.0-alpha.1|<9.5.2-alpha.9
+    fixed_versions: vers:npm/9.5.2-alpha.9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/<8.6.22
+    fixed_versions: vers:npm/8.6.22
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.6'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-fr88-w35c-r596/GHSA-fr88-w35c-r596.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-287
+references:
+  - url: https://github.com/parse-community/parse-server
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-30967
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/releases/tag/8.6.22
+    reference_type: other
+    reference_id: 8.6.22
+  - url: https://github.com/parse-community/parse-server/releases/tag/9.5.2-alpha.9
+    reference_type: other
+    reference_id: 9.5.2-alpha.9
+  - url: https://github.com/parse-community/parse-server/security/advisories/GHSA-fr88-w35c-r596
+    reference_type: other
+    reference_id: GHSA-fr88-w35c-r596

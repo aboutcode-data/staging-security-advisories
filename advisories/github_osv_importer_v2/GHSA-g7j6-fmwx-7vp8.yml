@@ -1,0 +1,51 @@
+advisory_id: GHSA-g7j6-fmwx-7vp8
+datasource_id: github_osv_importer_v2/GHSA-g7j6-fmwx-7vp8
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-g7j6-fmwx-7vp8/GHSA-g7j6-fmwx-7vp8.json
+aliases:
+  - CVE-2026-31858
+summary: |
+  CraftCMS's `ElementSearchController` Affected by Blind SQL Injection
+  The `ElementSearchController::actionSearch()` endpoint is missing the `unset()` protection that
+  was added to ElementIndexesController in [GHSA-2453-mppf-46cj](https://github.com/craftcms/cms/security/advisories/GHSA-2453-mppf-46cj).
+
+  The exact same SQL injection vulnerability (including `criteria[orderBy]`, the original advisory vector) works on this controller because the fix was never applied to it.
+
+  Any authenticated control panel user (no admin required) can inject arbitrary SQL via `criteria[where]`,
+  `criteria[orderBy]`, or other query properties, and extract the full database contents via boolean-based blind injection.
+
+  Users should update to the patched 5.9.9 release to mitigate the issue.
+impacted_packages:
+  - purl: pkg:composer/craftcms/cms
+    affected_versions: vers:composer/<=5.9.8
+    fixed_versions: vers:composer/5.9.9
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.7'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-g7j6-fmwx-7vp8/GHSA-g7j6-fmwx-7vp8.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-89
+references:
+  - url: https://github.com/craftcms/cms
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-31858
+    reference_type:
+    reference_id:
+  - url: https://github.com/craftcms/cms/commit/e1a3dd669ae31491b86ad996e88a1d30d33d9a42
+    reference_type: other
+    reference_id: e1a3dd669ae31491b86ad996e88a1d30d33d9a42
+  - url: https://github.com/craftcms/cms/security/advisories/GHSA-2453-mppf-46cj
+    reference_type:
+    reference_id: GHSA-2453-mppf-46cj
+  - url: https://github.com/craftcms/cms/security/advisories/GHSA-g7j6-fmwx-7vp8
+    reference_type: other
+    reference_id: GHSA-g7j6-fmwx-7vp8

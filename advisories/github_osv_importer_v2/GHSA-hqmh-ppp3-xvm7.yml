@@ -1,0 +1,56 @@
+advisory_id: GHSA-hqmh-ppp3-xvm7
+datasource_id: github_osv_importer_v2/GHSA-hqmh-ppp3-xvm7
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-hqmh-ppp3-xvm7/GHSA-hqmh-ppp3-xvm7.json
+aliases:
+  - CVE-2026-31826
+summary: |
+  pypdf: manipulated stream length values can exhaust RAM
+  ### Impact
+
+  An attacker who uses this vulnerability can craft a PDF which leads to large memory usage. This requires parsing a content stream with a rather large `/Length` value, regardless of the actual data length inside the stream.
+
+  ### Patches
+  This has been fixed in [pypdf==6.8.0](https://github.com/py-pdf/pypdf/releases/tag/6.8.0).
+
+  ### Workarounds
+  If you cannot upgrade yet, consider applying the changes from PR [#3675](https://github.com/py-pdf/pypdf/pull/3675).
+
+  As far as we are aware, this mostly affects reading from buffers of unknown size, as returned by `open("file.pdf", mode="rb")` for example. Passing a file path or a `BytesIO` buffer to *pypdf* instead does not seem to trigger the vulnerability.
+impacted_packages:
+  - purl: pkg:pypi/pypdf
+    affected_versions: vers:pypi/<6.8.0
+    fixed_versions: vers:pypi/6.8.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.8'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-hqmh-ppp3-xvm7/GHSA-hqmh-ppp3-xvm7.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-770
+references:
+  - url: https://github.com/py-pdf/pypdf
+    reference_type:
+    reference_id:
+  - url: https://github.com/py-pdf/pypdf/commit/3c550b3196adeba1506a26e57c09c09fac75e9aa
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-31826
+    reference_type:
+    reference_id:
+  - url: https://github.com/py-pdf/pypdf/pull/3675
+    reference_type: other
+    reference_id: 3675
+  - url: https://github.com/py-pdf/pypdf/releases/tag/6.8.0
+    reference_type: other
+    reference_id: 6.8.0
+  - url: https://github.com/py-pdf/pypdf/security/advisories/GHSA-hqmh-ppp3-xvm7
+    reference_type: other
+    reference_id: GHSA-hqmh-ppp3-xvm7

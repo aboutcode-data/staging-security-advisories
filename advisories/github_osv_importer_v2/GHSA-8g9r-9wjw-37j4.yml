@@ -1,0 +1,46 @@
+advisory_id: GHSA-8g9r-9wjw-37j4
+datasource_id: github_osv_importer_v2/GHSA-8g9r-9wjw-37j4
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-8g9r-9wjw-37j4/GHSA-8g9r-9wjw-37j4.json
+aliases:
+  - CVE-2026-3429
+summary: |
+  Keycloak: Improper Access Control Leading to MFA Deletion and Account Takeover in Keycloak Account REST API
+  A flaw was identified in the Account REST API of Keycloak that allows a user authenticated at a lower security level to perform sensitive actions intended only for higher-assurance sessions. Specifically, an attacker who has already obtained a victim’s password can delete the victim’s registered MFA/OTP credential without first proving possession of that factor. The attacker can then register their own MFA device, effectively taking full control of the account. This weakness undermines the intended protection provided by multi-factor authentication.
+impacted_packages:
+  - purl: pkg:maven/org.keycloak/keycloak-services
+    affected_versions: vers:maven/<=26.5.6
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '4.2'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-8g9r-9wjw-37j4/GHSA-8g9r-9wjw-37j4.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-284
+references:
+  - url: https://access.redhat.com/security/cve/CVE-2026-3429
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2443771
+    reference_type:
+    reference_id:
+  - url: https://github.com/keycloak/keycloak
+    reference_type:
+    reference_id:
+  - url: https://github.com/keycloak/keycloak/commit/68f5779230d08825e6a4b4e23471fade16434178
+    reference_type:
+    reference_id:
+  - url: https://github.com/keycloak/keycloak/issues/47069
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-3429
+    reference_type:
+    reference_id:

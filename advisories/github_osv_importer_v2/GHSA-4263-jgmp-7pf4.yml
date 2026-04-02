@@ -1,0 +1,58 @@
+advisory_id: GHSA-4263-jgmp-7pf4
+datasource_id: github_osv_importer_v2/GHSA-4263-jgmp-7pf4
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-4263-jgmp-7pf4/GHSA-4263-jgmp-7pf4.json
+aliases:
+  - CVE-2026-32886
+summary: |
+  Parse Server's Cloud function dispatch crashes server via prototype chain traversal
+  ### Impact
+
+  Remote clients can crash the Parse Server process by calling a cloud function endpoint with a crafted function name that traverses the JavaScript prototype chain of a registered cloud function handler, causing a stack overflow.
+
+  ### Patches
+
+  The fix restricts property lookups during cloud function name resolution to own properties only, preventing prototype chain traversal from stored function handlers.
+
+  ### Workarounds
+
+  There is no known workaround.
+impacted_packages:
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/>=9.0.0|<9.6.0-alpha.24
+    fixed_versions: vers:npm/9.6.0-alpha.24
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/<8.6.47
+    fixed_versions: vers:npm/8.6.47
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.2'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-4263-jgmp-7pf4/GHSA-4263-jgmp-7pf4.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-1321
+references:
+  - url: https://github.com/parse-community/parse-server
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32886
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/pull/10210
+    reference_type: other
+    reference_id: 10210
+  - url: https://github.com/parse-community/parse-server/pull/10211
+    reference_type: other
+    reference_id: 10211
+  - url: https://github.com/parse-community/parse-server/security/advisories/GHSA-4263-jgmp-7pf4
+    reference_type: other
+    reference_id: GHSA-4263-jgmp-7pf4

@@ -1,0 +1,40 @@
+advisory_id: GHSA-hvwj-8w5g-28rg
+datasource_id: github_osv_importer_v2/GHSA-hvwj-8w5g-28rg
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-hvwj-8w5g-28rg/GHSA-hvwj-8w5g-28rg.json
+aliases:
+  - CVE-2026-3989
+summary: SGLangs `replay_request_dump.py` contains an insecure pickle.load() without validation
+  and proper deserialization. An attacker can take advantage of this by providing a malicious
+  .pkl file, which will execute the attackers code on the device running the script.
+impacted_packages:
+  - purl: pkg:pypi/sglang
+    affected_versions: vers:pypi/<=0.5.9
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.8'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-hvwj-8w5g-28rg/GHSA-hvwj-8w5g-28rg.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-502
+references:
+  - url: https://github.com/sgl-project/sglang
+    reference_type:
+    reference_id:
+  - url: https://github.com/sgl-project/sglang/blob/main/scripts/playground/replay_request_dump.py
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-3989
+    reference_type:
+    reference_id:
+  - url: https://orca.security/resources/blog/sglang-llm-framework-rce-vulnerabilities
+    reference_type:
+    reference_id:

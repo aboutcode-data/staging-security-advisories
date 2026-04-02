@@ -1,0 +1,40 @@
+advisory_id: GHSA-g6pg-52vf-843h
+datasource_id: github_osv_importer_v2/GHSA-g6pg-52vf-843h
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-g6pg-52vf-843h/GHSA-g6pg-52vf-843h.json
+aliases:
+  - CVE-2025-15381
+summary: |
+  MLFlow allows Tracing + Assessments Access
+  In the latest version of mlflow/mlflow, when the `basic-auth` app is enabled, tracing and assessment endpoints are not protected by permission validators. This allows any authenticated user, including those with `NO_PERMISSIONS` on the experiment, to read trace information and create assessments for traces they should not have access to. This vulnerability impacts confidentiality by exposing trace metadata and integrity by allowing unauthorized creation of assessments. Deployments using `mlflow server --app-name=basic-auth` are affected.
+impacted_packages:
+  - purl: pkg:pypi/mlflow
+    affected_versions: vers:pypi/<=3.8.1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.1'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-g6pg-52vf-843h/GHSA-g6pg-52vf-843h.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-200
+references:
+  - url: https://github.com/mlflow/mlflow
+    reference_type:
+    reference_id:
+  - url: https://github.com/mlflow/mlflow/blob/b569ebc74c14af593c326143bee2df44a5d59edf/mlflow/server/auth/__init__.py#L752
+    reference_type:
+    reference_id:
+  - url: https://huntr.com/bounties/149fb2f9-ef4b-4136-a25c-20563451904c
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2025-15381
+    reference_type:
+    reference_id:

@@ -1,7 +1,8 @@
 advisory_id: GHSA-9q36-67vc-rrwg
 datasource_id: github_osv_importer_v2/GHSA-9q36-67vc-rrwg
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-9q36-67vc-rrwg/GHSA-9q36-67vc-rrwg.json
-aliases: []
+aliases:
+  - CVE-2026-27646
 summary: |
   OpenClaw: Sandboxed /acp spawn requests could initialize host ACP sessions
   ### Summary
@@ -36,9 +37,14 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
-  - score: '5.9'
+  - score: '6.1'
     scoring_system: cvssv3.1
-    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:H/A:N
+    scoring_elements: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-9q36-67vc-rrwg/GHSA-9q36-67vc-rrwg.json
+  - score: '5.8'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:N/VC:L/VI:H/VA:N/SC:N/SI:N/SA:N
     published_at: None
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-9q36-67vc-rrwg/GHSA-9q36-67vc-rrwg.json
   - score: MODERATE
@@ -47,6 +53,7 @@ severities:
     published_at: None
     url:
 weaknesses:
+  - CWE-863
   - CWE-284
   - CWE-693
 references:
@@ -60,5 +67,11 @@ references:
     reference_type:
     reference_id:
   - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-9q36-67vc-rrwg
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-27646
+    reference_type:
+    reference_id:
+  - url: https://vulncheck.com/advisories/openclaw-mar-sandbox-escape-via-acp-spawn-command
     reference_type:
     reference_id:

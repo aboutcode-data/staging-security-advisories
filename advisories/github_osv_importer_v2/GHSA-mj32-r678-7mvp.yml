@@ -1,0 +1,60 @@
+advisory_id: GHSA-mj32-r678-7mvp
+datasource_id: github_osv_importer_v2/GHSA-mj32-r678-7mvp
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-mj32-r678-7mvp/GHSA-mj32-r678-7mvp.json
+aliases:
+  - CVE-2026-29177
+summary: |
+  Craft Commerce has stored XSS in Craft Commerce Order Details Slideout
+  ## Summary
+  A Stored Cross-Site Scripting (XSS) vulnerability exists in the Craft Commerce Order details. Malicious JavaScript can be injected via the **Shipping Method Name**, **Order Reference**, or **Site Name**. When a user opens the order details slideout via a double-click on the order index page, the injected payload executes.
+
+  ## Reproduction Steps
+  1. Navigate to **Commerce** -> **Store Management** -> **Shipping Methods**.
+  1. Click "New Shipping Method".
+  1. In the **Name** field, enter the following XSS payload:
+      ```html
+      <img src=x onerror=alert('XSS_Shipping')>
+      ```
+  1. Save the Shipping Method.
+  1. Place a new order or edit an existing order.
+  1. Set the order's **Shipping Method** to the one created in the previous steps.
+  1. Navigate to the **Orders** index page (`/admin/commerce/orders`).
+  1. Double-click the target order to open the details slideout.
+  1. **Result**: The XSS payload executes.
+impacted_packages:
+  - purl: pkg:composer/craftcms/commerce
+    affected_versions: vers:composer/<=4.10.1
+    fixed_versions: vers:composer/4.10.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/craftcms/commerce
+    affected_versions: vers:composer/<=5.5.2
+    fixed_versions: vers:composer/5.5.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '1.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-mj32-r678-7mvp/GHSA-mj32-r678-7mvp.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-79
+references:
+  - url: https://github.com/craftcms/commerce
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-29177
+    reference_type:
+    reference_id:
+  - url: https://github.com/craftcms/commerce/commit/b0683e04773f16bba6af9df18aab495fc5dde68a
+    reference_type: other
+    reference_id: b0683e04773f16bba6af9df18aab495fc5dde68a
+  - url: https://github.com/craftcms/commerce/security/advisories/GHSA-mj32-r678-7mvp
+    reference_type: other
+    reference_id: GHSA-mj32-r678-7mvp

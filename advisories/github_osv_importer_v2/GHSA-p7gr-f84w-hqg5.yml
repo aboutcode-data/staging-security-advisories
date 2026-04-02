@@ -1,7 +1,8 @@
 advisory_id: GHSA-p7gr-f84w-hqg5
 datasource_id: github_osv_importer_v2/GHSA-p7gr-f84w-hqg5
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-p7gr-f84w-hqg5/GHSA-p7gr-f84w-hqg5.json
-aliases: []
+aliases:
+  - CVE-2026-32048
 summary: |
   OpenClaw's sandboxed sessions_spawn now enforces sandbox inheritance for cross-agent spawns
   ### Summary
@@ -34,12 +35,19 @@ severities:
     published_at: None
     url:
 weaknesses:
+  - CWE-732
   - CWE-284
   - CWE-269
 references:
   - url: https://github.com/openclaw/openclaw
     reference_type:
     reference_id:
-  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-p7gr-f84w-hqg5
+  - url: https://www.vulncheck.com/advisories/openclaw-sandbox-escape-via-cross-agent-sessions-spawn
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32048
+    reference_type:
+    reference_id: CVE-2026-32048
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-p7gr-f84w-hqg5
+    reference_type:
+    reference_id: GHSA-p7gr-f84w-hqg5

@@ -1,0 +1,45 @@
+advisory_id: GHSA-6ggm-pwr9-r5h2
+datasource_id: github_osv_importer_v2/GHSA-6ggm-pwr9-r5h2
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-6ggm-pwr9-r5h2/GHSA-6ggm-pwr9-r5h2.json
+aliases:
+  - CVE-2026-32732
+summary: "XSS in @leanprover/unicode-input-component\n### Impact\nProjects that use [@leanprover/unicode-input-component](https://www.npmjs.com/package/@leanprover/unicode-input-component)\
+  \ are vulnerable to an XSS exploit in 0.1.9 of the package and lower. \nThe component re-inserted\
+  \ text in the input element back into the input element as unescaped HTML.\n\n### Patches\n\
+  The issue has been resolved in 0.2.0.\n\n### Workarounds\nReplace the unicode input component\
+  \ with a basic HTML text field."
+impacted_packages:
+  - purl: pkg:npm/%40leanprover/unicode-input-component
+    affected_versions: vers:npm/<0.2.0
+    fixed_versions: vers:npm/0.2.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '0.0'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-6ggm-pwr9-r5h2/GHSA-6ggm-pwr9-r5h2.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-80
+references:
+  - url: https://github.com/leanprover/vscode-lean4
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32732
+    reference_type:
+    reference_id:
+  - url: https://leanprover.zulipchat.com/#narrow/channel/113488-general/topic/weird.20behavior.20in.20loogle.20searchbar/near/578502003
+    reference_type: other
+    reference_id: 578502003
+  - url: https://github.com/leanprover/vscode-lean4/pull/735
+    reference_type: other
+    reference_id: 735
+  - url: https://github.com/leanprover/vscode-lean4/security/advisories/GHSA-6ggm-pwr9-r5h2
+    reference_type: other
+    reference_id: GHSA-6ggm-pwr9-r5h2

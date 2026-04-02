@@ -1,0 +1,58 @@
+advisory_id: GHSA-827p-g5x5-h86c
+datasource_id: github_osv_importer_v2/GHSA-827p-g5x5-h86c
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-827p-g5x5-h86c/GHSA-827p-g5x5-h86c.json
+aliases:
+  - CVE-2026-32770
+summary: |
+  Parse Server LiveQuery subscription with invalid regular expression crashes server
+  ### Impact
+
+  A remote attacker can crash the Parse Server by subscribing to a LiveQuery with an invalid regular expression pattern. The server process terminates when the invalid pattern reaches the regex engine during subscription matching, causing denial of service for all connected clients.
+
+  ### Patches
+
+  The fix validates regular expression patterns at subscription time, rejecting invalid patterns before they are stored. Additionally, a defense-in-depth try-catch prevents any subscription matching error from crashing the server process.
+
+  ### Workarounds
+
+  Disable LiveQuery if it is not needed.
+impacted_packages:
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/>=9.0.0|<9.6.0-alpha.19
+    fixed_versions: vers:npm/9.6.0-alpha.19
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/<8.6.43
+    fixed_versions: vers:npm/8.6.43
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.9'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-827p-g5x5-h86c/GHSA-827p-g5x5-h86c.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-248
+references:
+  - url: https://github.com/parse-community/parse-server
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32770
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/pull/10197
+    reference_type: other
+    reference_id: 10197
+  - url: https://github.com/parse-community/parse-server/pull/10199
+    reference_type: other
+    reference_id: 10199
+  - url: https://github.com/parse-community/parse-server/security/advisories/GHSA-827p-g5x5-h86c
+    reference_type: other
+    reference_id: GHSA-827p-g5x5-h86c

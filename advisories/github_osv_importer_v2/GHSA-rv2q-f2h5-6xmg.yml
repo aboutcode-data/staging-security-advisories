@@ -1,7 +1,8 @@
 advisory_id: GHSA-rv2q-f2h5-6xmg
 datasource_id: github_osv_importer_v2/GHSA-rv2q-f2h5-6xmg
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-rv2q-f2h5-6xmg/GHSA-rv2q-f2h5-6xmg.json
-aliases: []
+aliases:
+  - CVE-2026-32001
 summary: |
   OpenClaw's Node role device-identity bypass allows unauthorized node.event injection
   ### Summary
@@ -40,6 +41,11 @@ severities:
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N
     published_at: None
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-rv2q-f2h5-6xmg/GHSA-rv2q-f2h5-6xmg.json
+  - score: '5.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-rv2q-f2h5-6xmg/GHSA-rv2q-f2h5-6xmg.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
@@ -51,9 +57,15 @@ references:
   - url: https://github.com/openclaw/openclaw
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32001
+    reference_type:
+    reference_id:
   - url: https://github.com/openclaw/openclaw/commit/ddcb2d79b17bf2a42c5037d8aeff1537a12b931e
-    reference_type:
-    reference_id:
+    reference_type: other
+    reference_id: ddcb2d79b17bf2a42c5037d8aeff1537a12b931e
   - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-rv2q-f2h5-6xmg
-    reference_type:
-    reference_id:
+    reference_type: advisory
+    reference_id: GHSA-rv2q-f2h5-6xmg
+  - url: https://www.vulncheck.com/advisories/openclaw-node-role-device-identity-bypass-via-websocket-authentication
+    reference_type: advisory
+    reference_id: openclaw-node-role-device-identity-bypass-via-websocket-authentication

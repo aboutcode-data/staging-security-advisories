@@ -1,0 +1,37 @@
+advisory_id: GHSA-wcjx-v2wj-xg87
+datasource_id: github_osv_importer_v2/GHSA-wcjx-v2wj-xg87
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-wcjx-v2wj-xg87/GHSA-wcjx-v2wj-xg87.json
+aliases: []
+summary: |
+  C2C CI utils is vulnerable to DoS via pyasn dependency (CVE-2026-30922)
+  Pin vulnerable version of pyasn, see: See: https://github.com/advisories/GHSA-jr27-m4p2-rc6r
+impacted_packages:
+  - purl: pkg:pypi/c2cciutils
+    affected_versions: vers:pypi/<1.1.65
+    fixed_versions: vers:pypi/1.1.66
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-wcjx-v2wj-xg87/GHSA-wcjx-v2wj-xg87.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-1395
+  - CWE-674
+references:
+  - url: https://github.com/camptocamp/c2cciutils
+    reference_type:
+    reference_id:
+  - url: https://github.com/camptocamp/c2cciutils/commit/1ab415014817d7d1cf09ad56cc8a7dec2a1108d8
+    reference_type:
+    reference_id:
+  - url: https://github.com/camptocamp/c2cciutils/security/advisories/GHSA-wcjx-v2wj-xg87
+    reference_type:
+    reference_id:

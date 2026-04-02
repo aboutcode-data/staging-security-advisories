@@ -1,0 +1,55 @@
+advisory_id: GHSA-43v7-fp2v-68f6
+datasource_id: github_osv_importer_v2/GHSA-43v7-fp2v-68f6
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-43v7-fp2v-68f6/GHSA-43v7-fp2v-68f6.json
+aliases:
+  - CVE-2026-33724
+summary: |
+  n8n's Source Control SSH Configuration Uses StrictHostKeyChecking=no
+  ## Impact
+  When the Source Control feature is configured to use SSH, the SSH command used for git operations explicitly disabled host key verification. A network attacker positioned between the n8n instance and the remote Git server could intercept the connection and present a fraudulent host key, potentially injecting malicious content into workflows or intercepting repository data.
+
+  - This issue only affects instances where the Source Control feature has been explicitly enabled and configured to use SSH (non-default).
+
+  ## Patches
+  The issue has been fixed in n8n version 2.5.0. Users should upgrade to this version or later to remediate the vulnerability.
+
+  ## Workarounds
+  If upgrading is not immediately possible, administrators should consider the following temporary mitigations:
+  - Disable the Source Control feature if it is not actively required.
+  - Restrict network access to ensure the n8n instance communicates with the Git server only over trusted, controlled network paths.
+
+  These workarounds do not fully remediate the risk and should only be used as short-term mitigation measures.
+impacted_packages:
+  - purl: pkg:npm/n8n
+    affected_versions: vers:npm/<2.5.0
+    fixed_versions: vers:npm/2.5.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.4'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-43v7-fp2v-68f6/GHSA-43v7-fp2v-68f6.json
+  - score: '6.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:L/VI:L/VA:N/SC:L/SI:L/SA:L
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-43v7-fp2v-68f6/GHSA-43v7-fp2v-68f6.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-639
+references:
+  - url: https://github.com/n8n-io/n8n
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33724
+    reference_type:
+    reference_id:
+  - url: https://github.com/n8n-io/n8n/security/advisories/GHSA-43v7-fp2v-68f6
+    reference_type: other
+    reference_id: GHSA-43v7-fp2v-68f6

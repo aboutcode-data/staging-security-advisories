@@ -1,0 +1,70 @@
+advisory_id: GHSA-w5g8-5849-vj76
+datasource_id: github_osv_importer_v2/GHSA-w5g8-5849-vj76
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-w5g8-5849-vj76/GHSA-w5g8-5849-vj76.json
+aliases:
+  - CVE-2026-33332
+summary: |
+  NiceGUI's unvalidated chunk size parameter in media routes can cause memory exhaustion
+  ## Summary
+
+  NiceGUI's `app.add_media_file()` and `app.add_media_files()` media routes accept a user-controlled query parameter that influences how files are read during streaming. The parameter is passed to the range-response implementation without validation, allowing an attacker to bypass chunked streaming and force the server to load entire files into memory at once.
+
+  With large media files and concurrent requests, this can lead to excessive memory consumption, degraded performance, or denial of service.
+
+  ## Impact
+
+  **Affected applications:** NiceGUI applications that serve media content via `app.add_media_file()` or `app.add_media_files()`, particularly those serving large files (video, audio).
+
+  **What an attacker can do:**
+  - Force the server to load entire files into memory instead of streaming them in chunks
+  - Amplify memory usage with concurrent requests to large media files
+  - Cause performance degradation, memory pressure, and potential OOM conditions
+
+  **Attack difficulty:** Low - requires only a crafted query parameter.
+
+  ## Remediation
+
+  Upgrade to a patched version of NiceGUI.
+
+  As a workaround, restrict access to media endpoints or strip unexpected query parameters at a reverse proxy layer.
+impacted_packages:
+  - purl: pkg:pypi/nicegui
+    affected_versions: vers:pypi/<=3.8.0
+    fixed_versions: vers:pypi/3.9.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-w5g8-5849-vj76/GHSA-w5g8-5849-vj76.json
+  - score: '6.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-w5g8-5849-vj76/GHSA-w5g8-5849-vj76.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-20
+  - CWE-770
+references:
+  - url: https://github.com/zauberzeug/nicegui
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33332
+    reference_type:
+    reference_id:
+  - url: https://github.com/zauberzeug/nicegui/commit/9026962b8c4f3f225c98b2fbc35aa6b60cb3495b
+    reference_type: other
+    reference_id: 9026962b8c4f3f225c98b2fbc35aa6b60cb3495b
+  - url: https://github.com/zauberzeug/nicegui/security/advisories/GHSA-w5g8-5849-vj76
+    reference_type: other
+    reference_id: GHSA-w5g8-5849-vj76
+  - url: https://github.com/zauberzeug/nicegui/releases/tag/v3.9.0
+    reference_type: other
+    reference_id: v3.9.0

@@ -1,0 +1,51 @@
+advisory_id: GHSA-xq8g-hgh6-87hv
+datasource_id: github_osv_importer_v2/GHSA-xq8g-hgh6-87hv
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-xq8g-hgh6-87hv/GHSA-xq8g-hgh6-87hv.json
+aliases: []
+summary: |
+  OpenClaw: BlueBubbles Webhook Missing Rate Limiting Enables Brute-Force Password Guessing
+  ## Summary
+
+  BlueBubbles Webhook Missing Guess Rate Limiting Enables Brute-Force Guessing of Weak Webhook Password
+
+  ## Affected Packages / Versions
+
+  - Package: `openclaw`
+  - Affected versions: `<= 2026.3.24`
+  - First patched version: `2026.3.25`
+  - Latest published npm version at verification time: `2026.3.24`
+
+  ## Details
+
+  BlueBubbles webhook auth previously rejected wrong passwords without throttling repeated guesses, allowing brute-force attempts against weak webhook passwords. Commit `5e08ce36d522a1c96df2bfe88e39303ae2643d92` adds repeated-guess throttling before auth failure responses.
+
+  Verified vulnerable on tag `v2026.3.24` and fixed on `main` by commit `5e08ce36d522a1c96df2bfe88e39303ae2643d92`.
+
+  ## Fix Commit(s)
+
+  - `5e08ce36d522a1c96df2bfe88e39303ae2643d92`
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<=2026.3.24
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-521
+  - CWE-307
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/5e08ce36d522a1c96df2bfe88e39303ae2643d92
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-xq8g-hgh6-87hv
+    reference_type:
+    reference_id:

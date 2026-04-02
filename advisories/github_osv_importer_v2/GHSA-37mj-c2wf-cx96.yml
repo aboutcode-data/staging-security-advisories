@@ -1,0 +1,64 @@
+advisory_id: GHSA-37mj-c2wf-cx96
+datasource_id: github_osv_importer_v2/GHSA-37mj-c2wf-cx96
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-37mj-c2wf-cx96/GHSA-37mj-c2wf-cx96.json
+aliases:
+  - CVE-2026-33627
+summary: |
+  Parse Server exposes auth data via /users/me endpoint
+  ### Impact
+
+  An authenticated user calling `GET /users/me` receives unsanitized auth data, including sensitive credentials such as MFA TOTP secrets and recovery codes. The endpoint internally uses master-level authentication for the session query, and the master context leaks through to the user data, bypassing auth adapter sanitization. An attacker who obtains a user's session token can extract MFA secrets to generate valid TOTP codes indefinitely.
+
+  ### Patches
+
+  The `/users/me` endpoint now queries the session and user data separately, using the caller's authentication context for the user query so that all security layers apply correctly.
+
+  ### Workarounds
+
+  There is no known workaround.
+impacted_packages:
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/>=9.0.0|<9.6.0-alpha.55
+    fixed_versions: vers:npm/9.6.0-alpha.55
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/<8.6.61
+    fixed_versions: vers:npm/8.6.61
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.1'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-37mj-c2wf-cx96/GHSA-37mj-c2wf-cx96.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-200
+references:
+  - url: https://github.com/parse-community/parse-server
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/commit/5b8998e6866bcf75be7b5bb625e27d23bfaf912c
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/commit/875cf10ac979bd60f70e7a0c534e2bc194d6982f
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/pull/10278
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/pull/10279
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/security/advisories/GHSA-37mj-c2wf-cx96
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33627
+    reference_type:
+    reference_id:

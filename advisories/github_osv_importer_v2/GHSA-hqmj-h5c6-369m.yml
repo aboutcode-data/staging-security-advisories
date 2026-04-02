@@ -1,0 +1,50 @@
+advisory_id: GHSA-hqmj-h5c6-369m
+datasource_id: github_osv_importer_v2/GHSA-hqmj-h5c6-369m
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-hqmj-h5c6-369m/GHSA-hqmj-h5c6-369m.json
+aliases:
+  - CVE-2026-28500
+summary: "ONNX Untrusted Model Repository Warnings Suppressed by silent=True in onnx.hub.load()\
+  \ — Silent Supply-Chain Attack\n## What's the issue\nPassing `silent=True` to `onnx.hub.load()`\
+  \ kills all trust warnings and user prompts. This means a model can be downloaded from any\
+  \ unverified GitHub repo with zero user awareness.\n \n```python\nif not _verify_repo_ref(repo)\
+  \ and not silent:\n    # completely skipped when silent=True\n    print(\"The model repo...\
+  \ is not trusted\")\n    if input().lower() != \"y\":\n        return None\n```\n \nOn top\
+  \ of that, the SHA256 integrity check is useless here — it validates against a manifest that\
+  \ lives in the same repo the attacker controls, so the hash will always match.\n\n \n## Impact\n\
+  Any pipeline using `hub.load()` with `silent=True` and an external repo string is silently\
+  \ loading whatever the repo owner ships. If that model executes arbitrary code on load, the\
+  \ attacker has access to the machine.\n \n## Resolved by removing the feature"
+impacted_packages:
+  - purl: pkg:pypi/onnx
+    affected_versions: vers:pypi/<=1.20.1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.6'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-hqmj-h5c6-369m/GHSA-hqmj-h5c6-369m.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-693
+  - CWE-494
+  - CWE-345
+references:
+  - url: https://github.com/onnx/onnx
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-28500
+    reference_type:
+    reference_id:
+  - url: https://github.com/ZeroXJacks/CVEs/blob/main/2026/CVE-2026-28500.md
+    reference_type: other
+    reference_id: CVE-2026-28500.md
+  - url: https://github.com/onnx/onnx/security/advisories/GHSA-hqmj-h5c6-369m
+    reference_type: other
+    reference_id: GHSA-hqmj-h5c6-369m

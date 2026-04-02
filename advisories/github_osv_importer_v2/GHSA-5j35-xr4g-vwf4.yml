@@ -1,0 +1,59 @@
+advisory_id: GHSA-5j35-xr4g-vwf4
+datasource_id: github_osv_importer_v2/GHSA-5j35-xr4g-vwf4
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-5j35-xr4g-vwf4/GHSA-5j35-xr4g-vwf4.json
+aliases: []
+summary: |
+  @grackle-ai/server has a Missing Secure Flag on Session Cookie
+  ### Impact
+
+  The session cookie is set with `HttpOnly; SameSite=Lax; Path=/` but does not include the `Secure` flag. This means the cookie will be sent over plain HTTP connections.
+
+  Since the server binds to `127.0.0.1` by default and uses HTTP (not HTTPS), this is acceptable for localhost use. However, when `--allow-network` is used to bind to `0.0.0.0`, cookies could be transmitted over insecure network connections and intercepted by an attacker.
+
+  **Affected code:**
+  - `packages/server/src/session.ts:76` — cookie string lacks `; Secure` attribute
+
+  ### Patches
+
+  0.70.5
+
+  **Fix:** Conditionally add `; Secure` when served over HTTPS or when `--allow-network` is enabled:
+  ```typescript
+  const securePart = isHttps ? "; Secure" : "";
+  return `${SESSION_COOKIE_NAME}=${cookieValue}; HttpOnly; SameSite=Lax; Path=/${securePart}; Max-Age=${maxAge}`;
+  ```
+
+  ### Workarounds
+
+  Do not use `--allow-network` over untrusted networks without a TLS-terminating reverse proxy.
+
+  ### Resources
+
+  - OWASP: Secure Cookie Attribute
+  - File: `packages/server/src/session.ts`
+impacted_packages:
+  - purl: pkg:npm/%40grackle-ai/server
+    affected_versions: vers:npm/<=0.70.4
+    fixed_versions: vers:npm/0.70.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '2.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:A/AC:H/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-5j35-xr4g-vwf4/GHSA-5j35-xr4g-vwf4.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-614
+references:
+  - url: https://github.com/nick-pape/grackle
+    reference_type:
+    reference_id:
+  - url: https://github.com/nick-pape/grackle/security/advisories/GHSA-5j35-xr4g-vwf4
+    reference_type:
+    reference_id:

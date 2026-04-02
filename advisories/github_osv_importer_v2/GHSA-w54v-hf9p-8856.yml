@@ -1,0 +1,68 @@
+advisory_id: GHSA-w54v-hf9p-8856
+datasource_id: github_osv_importer_v2/GHSA-w54v-hf9p-8856
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-w54v-hf9p-8856/GHSA-w54v-hf9p-8856.json
+aliases:
+  - CVE-2026-31901
+summary: |
+  Parse Server vulnerable to user enumeration via email verification endpoint
+  ### Impact
+
+  The email verification endpoint (`/verificationEmailRequest`) returns distinct error responses depending on whether an email address belongs to an existing user, is already verified, or does not exist. An attacker can send requests with different email addresses and observe the error codes to determine which email addresses are registered in the application.
+
+  This is a user enumeration vulnerability that affects any Parse Server deployment with email verification enabled (`verifyUserEmails: true`).
+
+  ### Patches
+
+  The fix introduces a new Parse Server option `emailVerifySuccessOnInvalidEmail` (default: `true`) that returns a generic success response for all verification email requests, regardless of whether the email address is valid, already verified, or non-existent. This prevents an attacker from distinguishing between these cases.
+
+  The fix also strengthens the input validation for the related `resetPasswordSuccessOnInvalidEmail` option, and adds security checks that warn when either enumeration mitigation is disabled.
+
+  ### Workarounds
+
+  There is no known workaround.
+
+  ### References
+
+  - GitHub security advisory: https://github.com/parse-community/parse-server/security/advisories/GHSA-w54v-hf9p-8856
+  - Fix Parse Server 9: https://github.com/parse-community/parse-server/releases/tag/9.6.0-alpha.8
+  - Fix Parse Server 8: https://github.com/parse-community/parse-server/releases/tag/8.6.34
+impacted_packages:
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/>=9.0.0-alpha.1|<9.6.0-alpha.8
+    fixed_versions: vers:npm/9.6.0-alpha.8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/<8.6.34
+    fixed_versions: vers:npm/8.6.34
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-w54v-hf9p-8856/GHSA-w54v-hf9p-8856.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-204
+references:
+  - url: https://github.com/parse-community/parse-server
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-31901
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/releases/tag/8.6.34
+    reference_type: other
+    reference_id: 8.6.34
+  - url: https://github.com/parse-community/parse-server/releases/tag/9.6.0-alpha.8
+    reference_type: other
+    reference_id: 9.6.0-alpha.8
+  - url: https://github.com/parse-community/parse-server/security/advisories/GHSA-w54v-hf9p-8856
+    reference_type: other
+    reference_id: GHSA-w54v-hf9p-8856

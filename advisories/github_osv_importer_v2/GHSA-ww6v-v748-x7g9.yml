@@ -1,7 +1,8 @@
 advisory_id: GHSA-ww6v-v748-x7g9
 datasource_id: github_osv_importer_v2/GHSA-ww6v-v748-x7g9
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-ww6v-v748-x7g9/GHSA-ww6v-v748-x7g9.json
-aliases: []
+aliases:
+  - CVE-2026-32038
 summary: |
   OpenClaw has a sandbox network isolation bypass via docker.network=container:<id>
   ### Summary
@@ -53,6 +54,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
+  - score: '9.0'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-ww6v-v748-x7g9/GHSA-ww6v-v748-x7g9.json
   - score: '6.9'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:N/SI:L/SA:N
@@ -64,8 +70,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-284
   - CWE-693
+  - CWE-284
 references:
   - url: https://github.com/openclaw/openclaw
     reference_type:
@@ -76,6 +82,12 @@ references:
   - url: https://github.com/openclaw/openclaw/commit/5552f9073
     reference_type:
     reference_id:
-  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-ww6v-v748-x7g9
+  - url: https://www.vulncheck.com/advisories/openclaw-sandbox-network-isolation-bypass-via-docker-network-container-parameter
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32038
+    reference_type:
+    reference_id: CVE-2026-32038
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-ww6v-v748-x7g9
+    reference_type:
+    reference_id: GHSA-ww6v-v748-x7g9

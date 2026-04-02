@@ -1,0 +1,55 @@
+advisory_id: GHSA-3x4c-7xq6-9pq8
+datasource_id: github_osv_importer_v2/GHSA-3x4c-7xq6-9pq8
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-3x4c-7xq6-9pq8/GHSA-3x4c-7xq6-9pq8.json
+aliases:
+  - CVE-2026-27980
+summary: "Next.js: Unbounded next/image disk cache growth can exhaust storage\n## Summary\n\
+  The default Next.js image optimization disk cache (`/_next/image`) did not have a configurable\
+  \ upper bound, allowing unbounded cache growth.\n\n## Impact\nAn attacker could generate many\
+  \ unique image-optimization variants and exhaust disk space, causing denial of service. Note\
+  \ that this does not impact platforms that have their own image optimization capabilities,\
+  \ such as Vercel.\n\n## Patches\nFixed by adding an LRU-backed disk cache with `images.maximumDiskCacheSize`,\
+  \ including eviction of least-recently-used entries when the limit is exceeded. Setting `maximumDiskCacheSize:\
+  \ 0` disables disk caching. \n\n## Workarounds\nIf upgrade is not immediately possible:\n\
+  - Periodically clean `.next/cache/images`.\n- Reduce variant cardinality (e.g., tighten values\
+  \ for `images.localPatterns`, `images.remotePatterns`, and `images.qualities`)"
+impacted_packages:
+  - purl: pkg:npm/next
+    affected_versions: vers:npm/>=16.0.0-beta.0|<16.1.7
+    fixed_versions: vers:npm/16.1.7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/next
+    affected_versions: vers:npm/>=10.0.0|<15.5.14
+    fixed_versions: vers:npm/15.5.14
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-3x4c-7xq6-9pq8/GHSA-3x4c-7xq6-9pq8.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-400
+references:
+  - url: https://github.com/vercel/next.js
+    reference_type:
+    reference_id:
+  - url: https://github.com/vercel/next.js/commit/39eb8e0ac498b48855a0430fbf4c22276a73b4bd
+    reference_type:
+    reference_id:
+  - url: https://github.com/vercel/next.js/security/advisories/GHSA-3x4c-7xq6-9pq8
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-27980
+    reference_type:
+    reference_id:
+  - url: https://github.com/vercel/next.js/releases/tag/v16.1.7
+    reference_type: other
+    reference_id: v16.1.7

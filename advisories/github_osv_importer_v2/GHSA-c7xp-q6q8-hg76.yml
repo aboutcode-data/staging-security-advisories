@@ -1,0 +1,55 @@
+advisory_id: GHSA-c7xp-q6q8-hg76
+datasource_id: github_osv_importer_v2/GHSA-c7xp-q6q8-hg76
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-c7xp-q6q8-hg76/GHSA-c7xp-q6q8-hg76.json
+aliases:
+  - CVE-2026-34404
+summary: "Nuxt OG Image is vulnerable to Denial of Service via unbounded image dimensions\n\
+  **Product:** Nuxt OG Image \n**Version:** 6.1.2\n**CWE-ID:** [CWE-404](https://cwe.mitre.org/data/definitions/404.html):\
+  \ Improper Resource Shutdown or Release\n**Description:** Failure to limit the length and\
+  \ width of the generated image results in a denial of service.\n**Impact:** Denial of service\n\
+  **Exploitation condition:** An external user\n**Mitigation:** Implement a limitation on the\
+  \ width and length of the generated image.\n**Researcher:** Dmitry Prokhorov (Positive Technologies)\n\
+  \n## Research \nDuring the analysis of the nuxt-og-image package, which is shipped with the\
+  \ nuxt-seo package, a zero‑day vulnerability was discovered.\nThis research revealed that\
+  \ the image‑generation component by the URI: `/_og/d/` (and, in older versions, `/og-image/`)\
+  \ contains a Denial of Service (DoS) vulnerability. The issue arises because there is no restriction\
+  \ on the width and height parameters of the generated image. The vulnerability was reproduced\
+  \ using the standard configuration and the default templates.\n\n_Listing 1. The content of\
+  \ the configuration file `nuxt.config.ts`_ \n```\nexport default defineNuxtConfig({\n  modules:\
+  \ ['nuxt-og-image'],\n  devServer: {\n    host: 'web-test.local',\n    port: 3000\n  },\n\
+  \  site: {\n    url: 'http://web-test.local:3000',\n  },\n  ogImage: {\n    fonts: [\n   \
+  \   'Inter:400', \n      'Inter:700'\n    ],\n  }\n})\n```\n\n## Vulnerability reproduction\n\
+  To demonstrate the proof‑of‑concept, a request should be sent with the increased `width` and `height` parameters.\
+  \ This will cause a delay and exhaust the server’s resources during image generation.\n\n\
+  _Listing 2. HTTP-request example_\n```\nGET /_og/d/og.png?width=20000&height=20000 HTTP/1.1\n\
+  Host: web-test.local:3000\n```\n\n_Figure 1. HTTP-response: denial-of-service error_\n<img\
+  \ width=\"974\" height=\"663\" alt=\"image\" src=\"https://github.com/user-attachments/assets/ff625249-2e0d-4a03-a734-3a77fd0cbb81\"\
+  \ />\n\nAfter sending a HTTP-request, the test server's memory was exhausted.\n\n_Figure 2.\
+  \ Video memory exhausted error_\n<img width=\"863\" height=\"1033\" alt=\"image\" src=\"https://github.com/user-attachments/assets/66b5919a-f039-468e-812e-1f709c468287\"\
+  \ />\n\n\n## Credits\nResearcher: Dmitry Prokhorov (Positive Technologies)"
+impacted_packages:
+  - purl: pkg:npm/nuxt-og-image
+    affected_versions: vers:npm/<6.2.5
+    fixed_versions: vers:npm/6.2.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-c7xp-q6q8-hg76/GHSA-c7xp-q6q8-hg76.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-404
+references:
+  - url: https://github.com/nuxt-modules/og-image
+    reference_type:
+    reference_id:
+  - url: https://github.com/nuxt-modules/og-image/security/advisories/GHSA-c7xp-q6q8-hg76
+    reference_type: other
+    reference_id: GHSA-c7xp-q6q8-hg76

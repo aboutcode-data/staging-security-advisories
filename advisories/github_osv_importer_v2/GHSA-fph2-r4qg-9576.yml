@@ -1,0 +1,69 @@
+advisory_id: GHSA-fph2-r4qg-9576
+datasource_id: github_osv_importer_v2/GHSA-fph2-r4qg-9576
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-fph2-r4qg-9576/GHSA-fph2-r4qg-9576.json
+aliases:
+  - CVE-2026-33421
+summary: |
+  Parse Server's LiveQuery bypasses CLP pointer permission enforcement
+  ### Impact
+
+  Parse Server's LiveQuery WebSocket interface does not enforce Class-Level Permission (CLP) pointer permissions (`readUserFields` and `pointerFields`). Any authenticated user can subscribe to LiveQuery events and receive real-time updates for all objects in classes protected by pointer permissions, regardless of whether the pointer fields on those objects point to the subscribing user. This bypasses the intended read access control, allowing unauthorized access to potentially sensitive data that is correctly restricted via the REST API.
+
+  ### Patches
+
+  The LiveQuery server now enforces pointer permissions on each event. After the existing check passes (which defers pointer permissions by design), the fix checks whether any configured pointer field on the object points to the subscribing user. Events for objects that don't match are silently skipped, consistent with how ACL mismatches are handled.
+
+  ### Workarounds
+
+  Use ACLs on individual objects to restrict read access instead of relying solely on CLP pointer permissions. ACLs are enforced by LiveQuery.
+impacted_packages:
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/>=9.0.0|<9.6.0-alpha.42
+    fixed_versions: vers:npm/9.6.0-alpha.42
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/<8.6.53
+    fixed_versions: vers:npm/8.6.53
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-fph2-r4qg-9576/GHSA-fph2-r4qg-9576.json
+  - score: '7.1'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-fph2-r4qg-9576/GHSA-fph2-r4qg-9576.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-863
+references:
+  - url: https://github.com/parse-community/parse-server
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33421
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/pull/10250
+    reference_type: other
+    reference_id: 10250
+  - url: https://github.com/parse-community/parse-server/pull/10252
+    reference_type: other
+    reference_id: 10252
+  - url: https://github.com/parse-community/parse-server/commit/6c3317aca6eb618ac48f999021ae3ef7766ad1ea
+    reference_type: other
+    reference_id: 6c3317aca6eb618ac48f999021ae3ef7766ad1ea
+  - url: https://github.com/parse-community/parse-server/commit/976dad109f3fe3fbd0a3a35ef62e7a5d35eb0bee
+    reference_type: other
+    reference_id: 976dad109f3fe3fbd0a3a35ef62e7a5d35eb0bee
+  - url: https://github.com/parse-community/parse-server/security/advisories/GHSA-fph2-r4qg-9576
+    reference_type: other
+    reference_id: GHSA-fph2-r4qg-9576

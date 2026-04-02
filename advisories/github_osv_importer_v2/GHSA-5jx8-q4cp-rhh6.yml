@@ -1,0 +1,51 @@
+advisory_id: GHSA-5jx8-q4cp-rhh6
+datasource_id: github_osv_importer_v2/GHSA-5jx8-q4cp-rhh6
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-5jx8-q4cp-rhh6/GHSA-5jx8-q4cp-rhh6.json
+aliases:
+  - CVE-2026-4599
+summary: |
+  jsrsasign: Incomplete Comparison Allows DSA Private Key Recovery via Biased Nonce Generation
+  Versions of the package jsrsasign from 7.0.0 and before 11.1.1 are vulnerable to Incomplete Comparison with Missing Factors via the getRandomBigIntegerZeroToMax and getRandomBigIntegerMinToMax functions in src/crypto-1.1.js; an attacker can recover the private key by exploiting the incorrect compareTo checks that accept out-of-range candidates and thus bias DSA nonces during signature generation.
+impacted_packages:
+  - purl: pkg:npm/jsrsasign
+    affected_versions: vers:npm/>=7.0.0|<11.1.1
+    fixed_versions: vers:npm/11.1.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '9.1'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-5jx8-q4cp-rhh6/GHSA-5jx8-q4cp-rhh6.json
+  - score: '9.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-5jx8-q4cp-rhh6/GHSA-5jx8-q4cp-rhh6.json
+  - score: CRITICAL
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-1023
+references:
+  - url: https://github.com/kjur/jsrsasign
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-4599
+    reference_type:
+    reference_id:
+  - url: https://gist.github.com/Kr0emer/081681818b51605c91945126d74b4f20
+    reference_type: other
+    reference_id: 081681818b51605c91945126d74b4f20
+  - url: https://github.com/kjur/jsrsasign/pull/647
+    reference_type: other
+    reference_id: 647
+  - url: https://github.com/kjur/jsrsasign/commit/ee4b013478366cb16cea9a4bdfb218b6077f83b1
+    reference_type: other
+    reference_id: ee4b013478366cb16cea9a4bdfb218b6077f83b1
+  - url: https://security.snyk.io/vuln/SNYK-JS-JSRSASIGN-15370939
+    reference_type: other
+    reference_id: SNYK-JS-JSRSASIGN-15370939

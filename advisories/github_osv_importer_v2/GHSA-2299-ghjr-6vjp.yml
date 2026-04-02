@@ -1,0 +1,64 @@
+advisory_id: GHSA-2299-ghjr-6vjp
+datasource_id: github_osv_importer_v2/GHSA-2299-ghjr-6vjp
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-2299-ghjr-6vjp/GHSA-2299-ghjr-6vjp.json
+aliases:
+  - CVE-2026-33624
+summary: |
+  Parse Server: MFA recovery code single-use bypass via concurrent requests
+  ### Impact
+
+  An attacker who obtains a user's password and a single MFA recovery code can reuse that recovery code an unlimited number of times by sending concurrent login requests. This defeats the single-use design of recovery codes. The attack requires the user's password, a valid recovery code, and the ability to send concurrent requests within milliseconds.
+
+  ### Patches
+
+  The login handler now uses optimistic locking when updating auth data that contains consumed single-use tokens. If a concurrent request has already modified the recovery array, the update fails and the login is rejected.
+
+  ### Workarounds
+
+  There are no known workarounds.
+impacted_packages:
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/>=9.0.0|<9.6.0-alpha.54
+    fixed_versions: vers:npm/9.6.0-alpha.54
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/<8.6.60
+    fixed_versions: vers:npm/8.6.60
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '2.1'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:H/AT:P/PR:H/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-2299-ghjr-6vjp/GHSA-2299-ghjr-6vjp.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-367
+references:
+  - url: https://github.com/parse-community/parse-server
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33624
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/pull/10275
+    reference_type: other
+    reference_id: 10275
+  - url: https://github.com/parse-community/parse-server/pull/10276
+    reference_type: other
+    reference_id: 10276
+  - url: https://github.com/parse-community/parse-server/commit/5e70094250a36bfcc14ecd49592be2b94fba66ff
+    reference_type: other
+    reference_id: 5e70094250a36bfcc14ecd49592be2b94fba66ff
+  - url: https://github.com/parse-community/parse-server/commit/fc3da35a81d5083b453e8967cabcc880f1a3bd0c
+    reference_type: other
+    reference_id: fc3da35a81d5083b453e8967cabcc880f1a3bd0c
+  - url: https://github.com/parse-community/parse-server/security/advisories/GHSA-2299-ghjr-6vjp
+    reference_type: other
+    reference_id: GHSA-2299-ghjr-6vjp

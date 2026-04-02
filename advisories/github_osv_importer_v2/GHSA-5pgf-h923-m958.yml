@@ -1,0 +1,75 @@
+advisory_id: GHSA-5pgf-h923-m958
+datasource_id: github_osv_importer_v2/GHSA-5pgf-h923-m958
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-5pgf-h923-m958/GHSA-5pgf-h923-m958.json
+aliases:
+  - CVE-2026-33160
+summary: |
+  Craft CMS may expose private assets through anonymous "generate transform" calls via transform URL
+  ### Summary
+
+  An unauthenticated user can call `assets/generate-transform` with a private `assetId`, receive a valid transform URL, and fetch transformed image bytes.
+
+  The endpoint is anonymous and does not enforce per-asset authorization before returning the transform URL.
+
+  ### Details
+
+  Root cause:
+  - Anonymous endpoint accepts user-controlled asset reference.
+  - It creates and returns a transform URL for that asset without checking access rights.
+  - If the transform output is reachable, guest users can read content derived from private assets.
+
+  Who is impacted:
+
+  - Installations where private source assets can be transformed and transform URLs are reachable.
+
+  Security consequence:
+
+    - Anonymous users can obtain content derived from private assets without authentication.
+
+  ### Resources
+
+  https://github.com/craftcms/cms/commit/7290d91639e
+impacted_packages:
+  - purl: pkg:composer/craftcms/cms
+    affected_versions: vers:composer/<=5.9.13
+    fixed_versions: vers:composer/5.9.14
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/craftcms/cms
+    affected_versions: vers:composer/<=4.17.7
+    fixed_versions: vers:composer/4.17.8
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '2.7'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:U
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-5pgf-h923-m958/GHSA-5pgf-h923-m958.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-639
+  - CWE-862
+references:
+  - url: https://github.com/craftcms/cms
+    reference_type:
+    reference_id:
+  - url: https://github.com/craftcms/cms/releases/tag/4.17.8
+    reference_type:
+    reference_id:
+  - url: https://github.com/craftcms/cms/releases/tag/5.9.14
+    reference_type:
+    reference_id:
+  - url: https://github.com/craftcms/cms/security/advisories/GHSA-5pgf-h923-m958
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33160
+    reference_type:
+    reference_id:
+  - url: https://github.com/craftcms/cms/commit/7290d91639e5e3a4f7e221dfbef95c9b77331860
+    reference_type: other
+    reference_id: 7290d91639e5e3a4f7e221dfbef95c9b77331860
