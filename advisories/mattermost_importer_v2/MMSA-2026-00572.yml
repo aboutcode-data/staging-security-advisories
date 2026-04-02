@@ -2,9 +2,11 @@ advisory_id: MMSA-2026-00572
 datasource_id: mattermost_importer_v2/MMSA-2026-00572
 datasource_url: https://securityupdates.mattermost.com/security_updates.json
 aliases:
-  -
-summary: Details on the security update will be posted here on March 15 as per our Responsible
-  Disclosure Policy.
+  - CVE-2026-26246
+summary: (CWE-400) Fixed an issue where mattermost didn't bound memory allocation when processing
+  PSD image files allowing an authenticated attacker to cause server memory exhaustion and denial
+  of service via uploading a specially crafted PSD file. Thanks to Juho Forsén for contributing
+  to this improvement under the Mattermost responsible disclosure policy.
 impacted_packages:
   - purl: pkg:github/mattermost/mattermost-server
     affected_versions:
@@ -20,5 +22,5 @@ severities:
 weaknesses: []
 references:
   - url: https://mattermost.com/security-updates/
-    reference_type:
-    reference_id:
+    reference_type: other
+    reference_id: security-updates

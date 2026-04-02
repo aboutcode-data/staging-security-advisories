@@ -2,9 +2,11 @@ advisory_id: MMSA-2025-00562
 datasource_id: mattermost_importer_v2/MMSA-2025-00562
 datasource_url: https://securityupdates.mattermost.com/security_updates.json
 aliases:
-  -
-summary: Details on the security update will be posted here on March 26 as per our Responsible
-  Disclosure Policy.
+  - CVE-2026-3112
+summary: (CWE-1287) Fixed an issue where the Advanced Logging feature did not validate file
+  target paths, allowing system administrators to read arbitrary files from the host filesystem
+  through support packet generation. Thanks to mufeedvh for contributing to this improvement
+  under the Mattermost responsible disclosure policy.
 impacted_packages:
   - purl: pkg:github/mattermost/mattermost-server
     affected_versions:
@@ -20,5 +22,5 @@ severities:
 weaknesses: []
 references:
   - url: https://mattermost.com/security-updates/
-    reference_type:
-    reference_id:
+    reference_type: other
+    reference_id: security-updates

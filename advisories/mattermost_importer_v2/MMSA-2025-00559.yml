@@ -2,9 +2,10 @@ advisory_id: MMSA-2025-00559
 datasource_id: mattermost_importer_v2/MMSA-2025-00559
 datasource_url: https://securityupdates.mattermost.com/security_updates.json
 aliases:
-  -
-summary: Details on the security update will be posted here on March 15  as per our Responsible
-  Disclosure Policy.
+  - CVE-2026-2461
+summary: (CWE-284) Fixed an issue where users with editor permissions could modify any comment
+  on a board, regardless of who created it. Thanks to daynight for contributing to this improvement
+  under the Mattermost responsible disclosure policy.
 impacted_packages:
   - purl: pkg:github/mattermost/mattermost-plugin-github
     affected_versions:
@@ -20,5 +21,5 @@ severities:
 weaknesses: []
 references:
   - url: https://mattermost.com/security-updates/
-    reference_type:
-    reference_id:
+    reference_type: other
+    reference_id: security-updates

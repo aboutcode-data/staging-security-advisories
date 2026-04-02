@@ -2,9 +2,11 @@ advisory_id: MMSA-2026-00590
 datasource_id: mattermost_importer_v2/MMSA-2026-00590
 datasource_url: https://securityupdates.mattermost.com/security_updates.json
 aliases:
-  -
-summary: Details on the security update will be posted here on March 25 as per our Responsible
-  Disclosure Policy.
+  - CVE-2026-27656
+summary: (CWE-287) Fixed an issue where the OpenID Connect generic provider used permissive
+  substring matching to compare user identifiers, allowing an attacker to craft a sub claim
+  that would incorrectly match an existing user's account. Thanks to Christopher Poile for contributing
+  to this improvement under the Mattermost responsible disclosure policy.
 impacted_packages:
   - purl: pkg:github/mattermost/mattermost-server
     affected_versions:
@@ -20,5 +22,5 @@ severities:
 weaknesses: []
 references:
   - url: https://mattermost.com/security-updates/
-    reference_type:
-    reference_id:
+    reference_type: other
+    reference_id: security-updates

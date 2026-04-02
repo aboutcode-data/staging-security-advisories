@@ -2,9 +2,10 @@ advisory_id: MMSA-2025-00537
 datasource_id: mattermost_importer_v2/MMSA-2025-00537
 datasource_url: https://securityupdates.mattermost.com/security_updates.json
 aliases:
-  -
-summary: Details on the security update will be posted here on March 15 as per our Responsible
-  Disclosure Policy.
+  - CVE-2026-2454
+summary: (CWE-754) Fixed an issue where decoding an array with an incorrectly reported length
+  could cause an OOM error and crash the server via sending corrupted msgpack frames within
+  websocket messages to calls plugin.
 impacted_packages:
   - purl: pkg:github/mattermost/mattermost-server
     affected_versions:
@@ -20,5 +21,5 @@ severities:
 weaknesses: []
 references:
   - url: https://mattermost.com/security-updates/
-    reference_type:
-    reference_id:
+    reference_type: other
+    reference_id: security-updates
