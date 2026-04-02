@@ -1,0 +1,42 @@
+advisory_id: packagist/pterodactyl/panel/GHSA-hr7j-63v7-vj7g
+datasource_id: gitlab_importer_v2/packagist/pterodactyl/panel/GHSA-hr7j-63v7-vj7g
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/packagist/pterodactyl/panel/GHSA-hr7j-63v7-vj7g.yml
+aliases:
+  - GHSA-hr7j-63v7-vj7g
+summary: |
+  Pterodactyl Panel's SFTP sessions remain active after user account deletion or password change
+  Deleting a user account with SFTP access or changing the user's password does not immediately terminate existing SFTP sessions, allowing continued filesystem access after credentials are revoked.
+  This can result in unintended and unauthorized access to server files even after administrators believe access has been fully invalidated.
+impacted_packages:
+  - purl: pkg:composer/pterodactyl/panel
+    affected_versions: vers:composer/<1.12.1
+    fixed_versions: vers:composer/1.12.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/packagist/pterodactyl/panel/GHSA-hr7j-63v7-vj7g.yml
+weaknesses:
+  - CWE-613
+  - CWE-284
+  - CWE-937
+  - CWE-1035
+references:
+  - url: https://github.com/pterodactyl/panel
+    reference_type:
+    reference_id:
+  - url: https://github.com/pterodactyl/panel/commit/0e74f3aadec89405751ec602c77fc1d030a417c0
+    reference_type:
+    reference_id:
+  - url: https://github.com/pterodactyl/panel/releases/tag/v1.12.1
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-hr7j-63v7-vj7g
+    reference_type:
+    reference_id: GHSA-hr7j-63v7-vj7g
+  - url: https://github.com/pterodactyl/panel/security/advisories/GHSA-hr7j-63v7-vj7g
+    reference_type:
+    reference_id: GHSA-hr7j-63v7-vj7g

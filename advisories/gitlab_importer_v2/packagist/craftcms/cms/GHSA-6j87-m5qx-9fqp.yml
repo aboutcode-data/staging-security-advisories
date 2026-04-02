@@ -1,0 +1,46 @@
+advisory_id: packagist/craftcms/cms/GHSA-6j87-m5qx-9fqp
+datasource_id: gitlab_importer_v2/packagist/craftcms/cms/GHSA-6j87-m5qx-9fqp
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/packagist/craftcms/cms/GHSA-6j87-m5qx-9fqp.yml
+aliases:
+  - GHSA-6j87-m5qx-9fqp
+summary: |
+  Craft CMS has Stored XSS in Table Field in its "Row Heading" Column Type
+  A stored Cross-site Scripting (XSS) vulnerability exists in the `editableTable.twig` component when using the `Row Heading` column type. The application fails to sanitize input within row headings, allowing an attacker to execute arbitrary JavaScript when another user views a page with the malicious table field.
+impacted_packages:
+  - purl: pkg:composer/craftcms/cms
+    affected_versions: vers:composer/>=4.5.0-beta.1|<4.16.19|>=5.0.0-RC1|<5.8.23
+    fixed_versions: vers:composer/4.16.19|5.8.23
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/packagist/craftcms/cms/GHSA-6j87-m5qx-9fqp.yml
+weaknesses:
+  - CWE-79
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://craftcms.com/knowledge-base/securing-craft#set-allowAdminChanges-to-false-in-production
+    reference_type:
+    reference_id:
+  - url: https://github.com/craftcms/cms
+    reference_type:
+    reference_id:
+  - url: https://github.com/craftcms/cms/commit/7b372de262b8d9d2ce859f32780c3715719b6f5a
+    reference_type:
+    reference_id:
+  - url: https://github.com/craftcms/cms/releases/tag/4.16.19
+    reference_type:
+    reference_id:
+  - url: https://github.com/craftcms/cms/releases/tag/5.8.23
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-6j87-m5qx-9fqp
+    reference_type:
+    reference_id: GHSA-6j87-m5qx-9fqp
+  - url: https://github.com/craftcms/cms/security/advisories/GHSA-6j87-m5qx-9fqp
+    reference_type:
+    reference_id: GHSA-6j87-m5qx-9fqp
