@@ -55,6 +55,11 @@ summary: |
   Enterprise Linux 4 are advised to upgrade to these updated packages. The
   JBoss server process must be restarted for the update to take effect.
 impacted_packages:
+  - purl: pkg:rpm/redhat/cglib?arch=noarch
+    affected_versions: vers:rpm/<2.2-5.3.ep5.el4
+    fixed_versions: vers:rpm/2.2-5.3.ep5.el4
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/mod_cluster-native?arch=src
     affected_versions: vers:rpm/<1.0.10-3.GA_CP02.ep5.el4
     fixed_versions: vers:rpm/1.0.10-3.GA_CP02.ep5.el4
@@ -430,11 +435,6 @@ impacted_packages:
     fixed_versions: vers:rpm/2.2.18-1.1.ep5.el4
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cglib?arch=noarch
-    affected_versions: vers:rpm/<2.2-5.3.ep5.el4
-    fixed_versions: vers:rpm/2.2-5.3.ep5.el4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/jboss-cluster-ha-client?arch=noarch
     affected_versions: vers:rpm/<1.1.4-1.1.ep5.el4
     fixed_versions: vers:rpm/1.1.4-1.1.ep5.el4
@@ -744,9 +744,6 @@ references:
   - url: https://access.redhat.com/support/offerings/techpreview/
     reference_type:
     reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=750422
-    reference_type:
-    reference_id:
   - url: https://docs.redhat.com/docs/en-US/index.html
     reference_type:
     reference_id:
@@ -756,6 +753,9 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=733737
     reference_type: bug
     reference_id: 733737
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=750422
+    reference_type: bug
+    reference_id: 750422
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=754386
     reference_type: bug
     reference_id: 754386
