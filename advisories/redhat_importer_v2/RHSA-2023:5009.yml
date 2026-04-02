@@ -60,6 +60,11 @@ summary: |
 
   All OpenShift Container Platform 4.14 users are advised to upgrade to these updated packages and images when they are available in the appropriate release channel. To check for available updates, use the OpenShift CLI (oc) or web console. Instructions for upgrading a cluster are available at  https://docs.openshift.com/container-platform/4.14/updating/updating_a_cluster/updating-cluster-cli.html
 impacted_packages:
+  - purl: pkg:rpm/redhat/fmt-devel?arch=x86_64
+    affected_versions: vers:rpm/<9.1.0-1.el9
+    fixed_versions: vers:rpm/9.1.0-1.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/catch?arch=src
     affected_versions: vers:rpm/<3.3.2-1.el9
     fixed_versions: vers:rpm/3.3.2-1.el9
@@ -158,6 +163,11 @@ impacted_packages:
   - purl: pkg:rpm/redhat/cri-tools?arch=src
     affected_versions: vers:rpm/<1.27.0-2.1.el9
     fixed_versions: vers:rpm/1.27.0-2.1.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/fmt?arch=x86_64
+    affected_versions: vers:rpm/<9.1.0-1.el9
+    fixed_versions: vers:rpm/9.1.0-1.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/ignition?arch=src
@@ -623,16 +633,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/crun-wasm-debuginfo?arch=x86_64
     affected_versions: vers:rpm/<1.8.5-3.rhaos4.14.el9
     fixed_versions: vers:rpm/1.8.5-3.rhaos4.14.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/fmt?arch=x86_64
-    affected_versions: vers:rpm/<9.1.0-1.el9
-    fixed_versions: vers:rpm/9.1.0-1.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/fmt-devel?arch=x86_64
-    affected_versions: vers:rpm/<9.1.0-1.el9
-    fixed_versions: vers:rpm/9.1.0-1.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/fmt-debugsource?arch=x86_64
@@ -5217,18 +5217,18 @@ references:
   - url: https://access.redhat.com/security/vulnerabilities/RHSB-2023-003
     reference_type:
     reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2212085
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2213279
-    reference_type:
-    reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2023/rhsa-2023_5009.json
     reference_type:
     reference_id:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2124669
     reference_type: bug
     reference_id: 2124669
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2212085
+    reference_type: bug
+    reference_id: 2212085
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2213279
+    reference_type: bug
+    reference_id: 2213279
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2221034
     reference_type: bug
     reference_id: 2221034
@@ -5250,12 +5250,12 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2237778
     reference_type: bug
     reference_id: 2237778
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2242803
+    reference_type: bug
+    reference_id: 2242803
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2243296
     reference_type: bug
     reference_id: 2243296
   - url: https://access.redhat.com/errata/RHSA-2023:5009
     reference_type:
     reference_id: RHSA-2023:5009
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2242803
-    reference_type: other
-    reference_id: show_bug.cgi?id=2242803
