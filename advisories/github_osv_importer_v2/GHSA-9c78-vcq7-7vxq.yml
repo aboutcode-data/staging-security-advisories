@@ -16,6 +16,11 @@ summary: "Out of bounds write in TFLite\n### Impact \nAn attacker can craft a TF
   This vulnerability has been reported by Wang Xuan of Qihoo 360 AIVul Team."
 impacted_packages:
   - purl: pkg:pypi/tensorflow
+    affected_versions: vers:pypi/2.7.0
+    fixed_versions: vers:pypi/2.7.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow
     affected_versions: vers:pypi/<2.5.3
     fixed_versions: vers:pypi/2.5.3
     fixed_in_commits: []
@@ -23,11 +28,6 @@ impacted_packages:
   - purl: pkg:pypi/tensorflow
     affected_versions: vers:pypi/>=2.6.0|<2.6.3
     fixed_versions: vers:pypi/2.6.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow
-    affected_versions: vers:pypi/2.7.0
-    fixed_versions: vers:pypi/2.7.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/tensorflow-cpu
@@ -91,9 +91,9 @@ references:
   - url: https://github.com/tensorflow/tensorflow/commit/6c0b2b70eeee588591680f5b7d5d38175fd7cdf6
     reference_type:
     reference_id:
-  - url: https://github.com/tensorflow/tensorflow/security/advisories/GHSA-9c78-vcq7-7vxq
-    reference_type:
-    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2022-23561
     reference_type:
     reference_id: CVE-2022-23561
+  - url: https://github.com/tensorflow/tensorflow/security/advisories/GHSA-9c78-vcq7-7vxq
+    reference_type:
+    reference_id: GHSA-9c78-vcq7-7vxq
