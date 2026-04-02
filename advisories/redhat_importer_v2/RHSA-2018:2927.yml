@@ -102,9 +102,14 @@ summary: |
 
   This update also fixes several bugs and adds various enhancements. Documentation for these changes is available from the Release Notes document linked to in the References section.
 impacted_packages:
-  - purl: pkg:rpm/redhat/python-semantic_version?arch=src
-    affected_versions: vers:rpm/<2.2.0-6.el7sat
-    fixed_versions: vers:rpm/2.2.0-6.el7sat
+  - purl: pkg:rpm/redhat/python-blinker?arch=src
+    affected_versions: vers:rpm/<1.3-2.el7sat
+    fixed_versions: vers:rpm/1.3-2.el7sat
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python-pymongo?arch=src
+    affected_versions: vers:rpm/<3.2-1.el7sat
+    fixed_versions: vers:rpm/3.2-1.el7sat
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/createrepo_c?arch=src
@@ -150,16 +155,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/python-anyjson?arch=src
     affected_versions: vers:rpm/<0.3.3-5.el7sat
     fixed_versions: vers:rpm/0.3.3-5.el7sat
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python-blinker?arch=src
-    affected_versions: vers:rpm/<1.3-2.el7sat
-    fixed_versions: vers:rpm/1.3-2.el7sat
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python-pymongo?arch=src
-    affected_versions: vers:rpm/<3.2-1.el7sat
-    fixed_versions: vers:rpm/3.2-1.el7sat
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/python-flask?arch=src&epoch=1
@@ -230,6 +225,11 @@ impacted_packages:
   - purl: pkg:rpm/redhat/saslwrapper?arch=src
     affected_versions: vers:rpm/<0.22-5.el7sat
     fixed_versions: vers:rpm/0.22-5.el7sat
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python-semantic_version?arch=src
+    affected_versions: vers:rpm/<2.2.0-6.el7sat
+    fixed_versions: vers:rpm/2.2.0-6.el7sat
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/python-simplejson?arch=src
@@ -3793,22 +3793,7 @@ references:
   - url: https://access.redhat.com/documentation/en-us/red_hat_satellite/6.4/html/release_notes/
     reference_type:
     reference_id:
-  - url: https://access.redhat.com/errata/RHSA-2018:2927
-    reference_type:
-    reference_id:
   - url: https://access.redhat.com/security/updates/classification/#important
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1225252
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1465573
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1561061
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1561723
     reference_type:
     reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2018/rhsa-2018_2927.json
@@ -3829,6 +3814,9 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1197650
     reference_type: bug
     reference_id: 1197650
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1225252
+    reference_type: bug
+    reference_id: 1225252
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1260733
     reference_type: bug
     reference_id: 1260733
@@ -3967,6 +3955,9 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1464512
     reference_type: bug
     reference_id: 1464512
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1465573
+    reference_type: bug
+    reference_id: 1465573
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1468354
     reference_type: bug
     reference_id: 1468354
@@ -4078,6 +4069,12 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1560035
     reference_type: bug
     reference_id: 1560035
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1561061
+    reference_type: bug
+    reference_id: 1561061
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1561723
+    reference_type: bug
+    reference_id: 1561723
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1563749
     reference_type: bug
     reference_id: 1563749
@@ -4141,3 +4138,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1608447
     reference_type: bug
     reference_id: 1608447
+  - url: https://access.redhat.com/errata/RHSA-2018:2927
+    reference_type:
+    reference_id: RHSA-2018:2927

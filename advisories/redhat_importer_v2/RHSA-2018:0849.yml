@@ -20,7 +20,17 @@ summary: |
 
   For detailed information on changes in this release, see the Red Hat Enterprise Linux 7.5 Release Notes linked from the References section.
 impacted_packages:
-  - purl: pkg:rpm/redhat/gcc-go?arch=ppc64le
+  - purl: pkg:rpm/redhat/libgcc?arch=s390x
+    affected_versions: vers:rpm/<4.8.5-28.el7
+    fixed_versions: vers:rpm/4.8.5-28.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/gcc-c%2B%2B?arch=s390x
+    affected_versions: vers:rpm/<4.8.5-28.el7
+    fixed_versions: vers:rpm/4.8.5-28.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libgfortran?arch=s390x
     affected_versions: vers:rpm/<4.8.5-28.el7
     fixed_versions: vers:rpm/4.8.5-28.el7
     fixed_in_commits: []
@@ -825,6 +835,11 @@ impacted_packages:
     fixed_versions: vers:rpm/4.8.5-28.el7
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/gcc-go?arch=ppc64le
+    affected_versions: vers:rpm/<4.8.5-28.el7
+    fixed_versions: vers:rpm/4.8.5-28.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/libgfortran-static?arch=ppc64le
     affected_versions: vers:rpm/<4.8.5-28.el7
     fixed_versions: vers:rpm/4.8.5-28.el7
@@ -926,21 +941,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/libatomic?arch=s390x
-    affected_versions: vers:rpm/<4.8.5-28.el7
-    fixed_versions: vers:rpm/4.8.5-28.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libgcc?arch=s390x
-    affected_versions: vers:rpm/<4.8.5-28.el7
-    fixed_versions: vers:rpm/4.8.5-28.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/gcc-c%2B%2B?arch=s390x
-    affected_versions: vers:rpm/<4.8.5-28.el7
-    fixed_versions: vers:rpm/4.8.5-28.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libgfortran?arch=s390x
     affected_versions: vers:rpm/<4.8.5-28.el7
     fixed_versions: vers:rpm/4.8.5-28.el7
     fixed_in_commits: []
@@ -1261,9 +1261,6 @@ references:
   - url: https://access.redhat.com/documentation/en-US/red_hat_enterprise_linux/7/html/7.5_release_notes/index.html
     reference_type:
     reference_id:
-  - url: https://access.redhat.com/errata/RHSA-2018:0849
-    reference_type:
-    reference_id:
   - url: https://access.redhat.com/security/updates/classification/#low
     reference_type:
     reference_id:
@@ -1285,3 +1282,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1529981
     reference_type: bug
     reference_id: 1529981
+  - url: https://access.redhat.com/errata/RHSA-2018:0849
+    reference_type:
+    reference_id: RHSA-2018:0849
