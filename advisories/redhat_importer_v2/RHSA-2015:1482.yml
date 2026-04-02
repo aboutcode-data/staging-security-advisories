@@ -29,11 +29,6 @@ summary: |
   All libuser users are advised to upgrade to these updated packages, which
   contain a backported patch to correct this issue.
 impacted_packages:
-  - purl: pkg:rpm/redhat/libuser?arch=i686
-    affected_versions: vers:rpm/<0.56.13-8.el6_7
-    fixed_versions: vers:rpm/0.56.13-8.el6_7
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/libuser-debuginfo?arch=s390x
     affected_versions: vers:rpm/<0.56.13-8.el6_7
     fixed_versions: vers:rpm/0.56.13-8.el6_7
@@ -95,6 +90,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/libuser-debuginfo?arch=i686
+    affected_versions: vers:rpm/<0.56.13-8.el6_7
+    fixed_versions: vers:rpm/0.56.13-8.el6_7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libuser?arch=i686
     affected_versions: vers:rpm/<0.56.13-8.el6_7
     fixed_versions: vers:rpm/0.56.13-8.el6_7
     fixed_in_commits: []
@@ -164,6 +164,15 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1233052
     reference_type: bug
     reference_id: 1233052
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/local/44633.rb
+    reference_type: exploit
+    reference_id: CVE-2015-3246;CVE-2015-3245
+  - url: https://raw.githubusercontent.com/rapid7/metasploit-framework/ed5f2bffa9223ea6005cc9f0bc336c796819ecc3/modules/exploits/linux/local/libuser_roothelper_priv_esc.rb
+    reference_type: exploit
+    reference_id: CVE-2015-3246;CVE-2015-3245
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/dos/37706.txt
+    reference_type: exploit
+    reference_id: CVE-2015-3246;CVE-2015-3245;OSVDB-125264;OSVDB-125263
   - url: https://access.redhat.com/errata/RHSA-2015:1482
     reference_type:
     reference_id: RHSA-2015:1482

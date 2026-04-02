@@ -108,11 +108,6 @@ summary: |
   use this flaw to bypass the security mechanism of the
   securelevel/secureboot combination. (CVE-2015-7837, Low)
 impacted_packages:
-  - purl: pkg:rpm/redhat/perf?arch=s390x
-    affected_versions: vers:rpm/<3.10.0-327.el7
-    fixed_versions: vers:rpm/3.10.0-327.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debuginfo?arch=x86_64
     affected_versions: vers:rpm/<3.10.0-327.el7
     fixed_versions: vers:rpm/3.10.0-327.el7
@@ -219,6 +214,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debug?arch=s390x
+    affected_versions: vers:rpm/<3.10.0-327.el7
+    fixed_versions: vers:rpm/3.10.0-327.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/perf?arch=s390x
     affected_versions: vers:rpm/<3.10.0-327.el7
     fixed_versions: vers:rpm/3.10.0-327.el7
     fixed_in_commits: []
@@ -465,48 +465,6 @@ references:
   - url: https://access.redhat.com/security/updates/classification/#important
     reference_type:
     reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1144897
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1163762
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1177260
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1185469
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1186448
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1190546
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1198109
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1209367
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1214030
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1218454
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1218879
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1257528
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1268270
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1272472
-    reference_type:
-    reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2015/rhsa-2015_2152.json
     reference_type:
     reference_id:
@@ -537,24 +495,57 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1076769
     reference_type: bug
     reference_id: 1076769
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1144897
+    reference_type: bug
+    reference_id: 1144897
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1163762
+    reference_type: bug
+    reference_id: 1163762
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1177260
+    reference_type: bug
+    reference_id: 1177260
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1182243
     reference_type: bug
     reference_id: 1182243
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1184155
     reference_type: bug
     reference_id: 1184155
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1185469
+    reference_type: bug
+    reference_id: 1185469
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1186112
     reference_type: bug
     reference_id: 1186112
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1186448
+    reference_type: bug
+    reference_id: 1186448
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1190546
+    reference_type: bug
+    reference_id: 1190546
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1191604
     reference_type: bug
     reference_id: 1191604
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1198109
+    reference_type: bug
+    reference_id: 1198109
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1205258
     reference_type: bug
     reference_id: 1205258
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1206198
     reference_type: bug
     reference_id: 1206198
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1209367
+    reference_type: bug
+    reference_id: 1209367
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1214030
+    reference_type: bug
+    reference_id: 1214030
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1218454
+    reference_type: bug
+    reference_id: 1218454
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1218879
+    reference_type: bug
+    reference_id: 1218879
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1233284
     reference_type: bug
     reference_id: 1233284
@@ -567,9 +558,18 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1251331
     reference_type: bug
     reference_id: 1251331
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1257528
+    reference_type: bug
+    reference_id: 1257528
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1268270
+    reference_type: bug
+    reference_id: 1268270
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1271759
     reference_type: bug
     reference_id: 1271759
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1272472
+    reference_type: bug
+    reference_id: 1272472
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=839466
     reference_type: bug
     reference_id: 839466

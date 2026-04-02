@@ -53,6 +53,26 @@ summary: |
   contain backported patches to correct these issues and add this
   enhancement.
 impacted_packages:
+  - purl: pkg:rpm/redhat/python-tools?arch=s390x
+    affected_versions: vers:rpm/<2.6.6-64.el6
+    fixed_versions: vers:rpm/2.6.6-64.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python-test?arch=x86_64
+    affected_versions: vers:rpm/<2.6.6-64.el6
+    fixed_versions: vers:rpm/2.6.6-64.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python?arch=src
+    affected_versions: vers:rpm/<2.6.6-64.el6
+    fixed_versions: vers:rpm/2.6.6-64.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python-test?arch=s390x
+    affected_versions: vers:rpm/<2.6.6-64.el6
+    fixed_versions: vers:rpm/2.6.6-64.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/python?arch=i686
     affected_versions: vers:rpm/<2.6.6-64.el6
     fixed_versions: vers:rpm/2.6.6-64.el6
@@ -114,26 +134,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/python-tools?arch=x86_64
-    affected_versions: vers:rpm/<2.6.6-64.el6
-    fixed_versions: vers:rpm/2.6.6-64.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python-test?arch=x86_64
-    affected_versions: vers:rpm/<2.6.6-64.el6
-    fixed_versions: vers:rpm/2.6.6-64.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python?arch=src
-    affected_versions: vers:rpm/<2.6.6-64.el6
-    fixed_versions: vers:rpm/2.6.6-64.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python-test?arch=s390x
-    affected_versions: vers:rpm/<2.6.6-64.el6
-    fixed_versions: vers:rpm/2.6.6-64.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python-tools?arch=s390x
     affected_versions: vers:rpm/<2.6.6-64.el6
     fixed_versions: vers:rpm/2.6.6-64.el6
     fixed_in_commits: []
@@ -242,9 +242,6 @@ references:
   - url: https://access.redhat.com/security/updates/classification/#moderate
     reference_type:
     reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1146026
-    reference_type:
-    reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2015/rhsa-2015_1330.json
     reference_type:
     reference_id:
@@ -260,6 +257,9 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1113527
     reference_type: bug
     reference_id: 1113527
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1146026
+    reference_type: bug
+    reference_id: 1146026
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1160640
     reference_type: bug
     reference_id: 1160640
@@ -275,6 +275,9 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=794632
     reference_type: bug
     reference_id: 794632
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/remote/31875.py
+    reference_type: exploit
+    reference_id: CVE-2014-1912;OSVDB-102929
   - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/webapps/33894.txt
     reference_type: exploit
     reference_id: CVE-2014-4650;OSVDB-108369

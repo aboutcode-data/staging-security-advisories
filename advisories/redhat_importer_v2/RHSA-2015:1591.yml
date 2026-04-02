@@ -40,6 +40,11 @@ summary: "Red Hat Satellite 6.1 now available for Red Hat Enterprise Linux 7.\n\
   \ would like to thank Rufus Järnefelt of Coresec for reporting the \nforeman HttpOnly issue.\n\
   \nAll users who require Satellite 6.1 are advised to install these new packages."
 impacted_packages:
+  - purl: pkg:rpm/redhat/nekohtml?arch=src
+    affected_versions: vers:rpm/<1.9.14-13.el7
+    fixed_versions: vers:rpm/1.9.14-13.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/jsoup?arch=src
     affected_versions: vers:rpm/<1.6.1-10.el7
     fixed_versions: vers:rpm/1.6.1-10.el7
@@ -48,11 +53,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/xstream?arch=src
     affected_versions: vers:rpm/<1.3.1-10.el7
     fixed_versions: vers:rpm/1.3.1-10.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/nekohtml?arch=src
-    affected_versions: vers:rpm/<1.9.14-13.el7
-    fixed_versions: vers:rpm/1.9.14-13.el7
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/python-semantic-version?arch=src
@@ -3856,30 +3856,21 @@ references:
   - url: https://access.redhat.com/documentation/en-US/Red_Hat_Satellite/6.1/html/Release_Notes/index.html
     reference_type:
     reference_id:
-  - url: https://access.redhat.com/errata/RHSA-2015:1591
-    reference_type:
-    reference_id:
   - url: https://access.redhat.com/security/updates/classification/#important
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1007746
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1007758
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1145398
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1216035
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1232366
     reference_type:
     reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2015/rhsa-2015_1591.json
     reference_type:
     reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1007746
+    reference_type: bug
+    reference_id: 1007746
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1007758
+    reference_type: bug
+    reference_id: 1007758
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1145398
+    reference_type: bug
+    reference_id: 1145398
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1201357
     reference_type: bug
     reference_id: 1201357
@@ -3889,3 +3880,12 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1208602
     reference_type: bug
     reference_id: 1208602
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1216035
+    reference_type: bug
+    reference_id: 1216035
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1232366
+    reference_type: bug
+    reference_id: 1232366
+  - url: https://access.redhat.com/errata/RHSA-2015:1591
+    reference_type:
+    reference_id: RHSA-2015:1591

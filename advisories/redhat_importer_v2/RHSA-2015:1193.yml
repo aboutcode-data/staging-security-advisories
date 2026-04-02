@@ -22,6 +22,11 @@ summary: |
   All xerces-c users are advised to upgrade to this updated package, which
   contains a backported patch to correct this issue.
 impacted_packages:
+  - purl: pkg:rpm/redhat/xerces-c?arch=s390
+    affected_versions: vers:rpm/<3.1.1-7.el7_1
+    fixed_versions: vers:rpm/3.1.1-7.el7_1
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/xerces-c?arch=i686
     affected_versions: vers:rpm/<3.1.1-7.el7_1
     fixed_versions: vers:rpm/3.1.1-7.el7_1
@@ -102,11 +107,6 @@ impacted_packages:
     fixed_versions: vers:rpm/3.1.1-7.el7_1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/xerces-c?arch=s390
-    affected_versions: vers:rpm/<3.1.1-7.el7_1
-    fixed_versions: vers:rpm/3.1.1-7.el7_1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/xerces-c-devel?arch=s390
     affected_versions: vers:rpm/<3.1.1-7.el7_1
     fixed_versions: vers:rpm/3.1.1-7.el7_1
@@ -164,9 +164,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1199103
     reference_type: bug
     reference_id: 1199103
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/dos/36906.txt
-    reference_type: exploit
-    reference_id: CVE-2015-0252;OSVDB-119811
   - url: https://access.redhat.com/errata/RHSA-2015:1193
     reference_type:
     reference_id: RHSA-2015:1193
