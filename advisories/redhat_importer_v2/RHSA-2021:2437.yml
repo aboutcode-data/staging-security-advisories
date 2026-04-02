@@ -51,16 +51,6 @@ summary: |
 
   All OpenShift Container Platform 4.8 users are advised to upgrade to these updated packages and images when they are available in the appropriate release channel. To check for available updates, use the OpenShift Console or the CLI oc command. Instructions for upgrading a cluster are available at https://docs.openshift.com/container-platform/4.8/updating/updating-cluster-between-minor.html#understanding-upgrade-channels_updating-cluster-between-minor
 impacted_packages:
-  - purl: pkg:rpm/redhat/podman-tests?arch=x86_64
-    affected_versions: vers:rpm/<3.0.1-6.el8
-    fixed_versions: vers:rpm/3.0.1-6.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-tools?arch=ppc64le
-    affected_versions: vers:rpm/<1.21.0-2.el8
-    fixed_versions: vers:rpm/1.21.0-2.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/python-ironic-lib?arch=src
     affected_versions: vers:rpm/<4.6.2-0.20210608101214.ca2e4ba.el8
     fixed_versions: vers:rpm/4.6.2-0.20210608101214.ca2e4ba.el8
@@ -154,11 +144,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/python-oslo-concurrency?arch=src
     affected_versions: vers:rpm/<4.4.0-0.20210325004915.7dcf9e9.el8
     fixed_versions: vers:rpm/4.4.0-0.20210325004915.7dcf9e9.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-remote?arch=x86_64
-    affected_versions: vers:rpm/<3.0.1-6.el8
-    fixed_versions: vers:rpm/3.0.1-6.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/python-debtcollector?arch=src
@@ -866,6 +851,16 @@ impacted_packages:
     fixed_versions: vers:rpm/3.0.1-6.el8
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-remote?arch=x86_64
+    affected_versions: vers:rpm/<3.0.1-6.el8
+    fixed_versions: vers:rpm/3.0.1-6.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-tests?arch=x86_64
+    affected_versions: vers:rpm/<3.0.1-6.el8
+    fixed_versions: vers:rpm/3.0.1-6.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-debugsource?arch=x86_64
     affected_versions: vers:rpm/<3.0.1-6.el8
     fixed_versions: vers:rpm/3.0.1-6.el8
@@ -1109,6 +1104,11 @@ impacted_packages:
   - purl: pkg:rpm/redhat/stress-ng-debuginfo?arch=ppc64le
     affected_versions: vers:rpm/<0.12.06-1.el8
     fixed_versions: vers:rpm/0.12.06-1.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/cri-tools?arch=ppc64le
+    affected_versions: vers:rpm/<1.21.0-2.el8
+    fixed_versions: vers:rpm/1.21.0-2.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/cri-tools-debugsource?arch=ppc64le
@@ -1369,11 +1369,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/atomic-openshift-service-idler?arch=ppc64le
     affected_versions: vers:rpm/<4.8.0-202106281541.p0.git.39cfc66.assembly.stream.el8
     fixed_versions: vers:rpm/4.8.0-202106281541.p0.git.39cfc66.assembly.stream.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ignition-debuginfo?arch=s390x
-    affected_versions: vers:rpm/<2.9.0-6.rhaos4.8.el8
-    fixed_versions: vers:rpm/2.9.0-6.rhaos4.8.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/openshift-clients?arch=ppc64le
@@ -1641,6 +1636,11 @@ impacted_packages:
     fixed_versions: vers:rpm/2.9.0-6.rhaos4.8.el8
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ignition-debuginfo?arch=s390x
+    affected_versions: vers:rpm/<2.9.0-6.rhaos4.8.el8
+    fixed_versions: vers:rpm/2.9.0-6.rhaos4.8.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/ignition-validate-debuginfo?arch=s390x
     affected_versions: vers:rpm/<2.9.0-6.rhaos4.8.el8
     fixed_versions: vers:rpm/2.9.0-6.rhaos4.8.el8
@@ -1742,12 +1742,6 @@ references:
   - url: https://access.redhat.com/security/updates/classification/#moderate
     reference_type:
     reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1937562
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1978621
-    reference_type:
-    reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2021/rhsa-2021_2437.json
     reference_type:
     reference_id:
@@ -1757,6 +1751,9 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1921650
     reference_type: bug
     reference_id: '1921650'
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1937562
+    reference_type: bug
+    reference_id: '1937562'
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1940489
     reference_type: bug
     reference_id: '1940489'
@@ -1775,6 +1772,9 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1959545
     reference_type: bug
     reference_id: '1959545'
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1978621
+    reference_type: bug
+    reference_id: '1978621'
   - url: https://access.redhat.com/errata/RHSA-2021:2437
     reference_type:
     reference_id: RHSA-2021:2437

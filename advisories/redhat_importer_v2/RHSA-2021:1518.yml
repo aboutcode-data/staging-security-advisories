@@ -33,6 +33,11 @@ summary: "An update is now available for Red Hat Ceph Storage 3.3 - Extended Lif
   \ operation and working as expected. (BZ#1652233)\n\nAll users of Red Hat Ceph Storage are\
   \ advised to upgrade to these updated packages."
 impacted_packages:
+  - purl: pkg:rpm/redhat/ceph-mon?arch=x86_64&epoch=2
+    affected_versions: vers:rpm/<12.2.12-139.el7cp
+    fixed_versions: vers:rpm/12.2.12-139.el7cp
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/grafana?arch=src
     affected_versions: vers:rpm/<5.2.4-3.el7cp
     fixed_versions: vers:rpm/5.2.4-3.el7cp
@@ -89,11 +94,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/ceph-mgr?arch=x86_64&epoch=2
-    affected_versions: vers:rpm/<12.2.12-139.el7cp
-    fixed_versions: vers:rpm/12.2.12-139.el7cp
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ceph-mon?arch=x86_64&epoch=2
     affected_versions: vers:rpm/<12.2.12-139.el7cp
     fixed_versions: vers:rpm/12.2.12-139.el7cp
     fixed_in_commits: []
@@ -349,9 +349,6 @@ references:
   - url: https://access.redhat.com/security/updates/classification/#important
     reference_type:
     reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1900109
-    reference_type:
-    reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2021/rhsa-2021_1518.json
     reference_type:
     reference_id:
@@ -400,6 +397,9 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1896448
     reference_type: bug
     reference_id: 1896448
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1900109
+    reference_type: bug
+    reference_id: '1900109'
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1901897
     reference_type: bug
     reference_id: '1901897'

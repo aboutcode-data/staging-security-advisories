@@ -35,6 +35,11 @@ summary: |
 
   All OpenShift Container Platform 4.5 users are advised to upgrade to these updated packages and images when they are available in the appropriate release channel. To check for available updates, use the OpenShift Console or the CLI oc command. Instructions for upgrading a cluster are available at https://docs.openshift.com/container-platform/4.5/updating/updating-cluster-between-minor.html#understanding-upgrade-channels_updating-cluster-between-minor.
 impacted_packages:
+  - purl: pkg:rpm/redhat/cri-tools?arch=ppc64le
+    affected_versions: vers:rpm/<1.18.0-4.el7
+    fixed_versions: vers:rpm/1.18.0-4.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/openshift?arch=src
     affected_versions: vers:rpm/<4.5.0-202102261511.p0.git.0.f0229b9.el8
     fixed_versions: vers:rpm/4.5.0-202102261511.p0.git.0.f0229b9.el8
@@ -303,11 +308,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/cri-o-debuginfo?arch=ppc64le
     affected_versions: vers:rpm/<1.18.4-7.rhaos4.5.git572d9f7.el7
     fixed_versions: vers:rpm/1.18.4-7.rhaos4.5.git572d9f7.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-tools?arch=ppc64le
-    affected_versions: vers:rpm/<1.18.0-4.el7
-    fixed_versions: vers:rpm/1.18.0-4.el7
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/cri-tools-debuginfo?arch=ppc64le
