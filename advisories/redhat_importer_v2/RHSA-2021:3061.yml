@@ -34,14 +34,44 @@ summary: |
 
   * RHEL8.4 Nightly[0322] - KVM guest fails to find zipl boot menu index (qemu-kvm) (BZ#1975679)
 impacted_packages:
-  - purl: pkg:rpm/redhat/libvirt-daemon-driver-storage-logical?arch=s390x&rpmmod=virt:rhel:8040020210721215855:522a0ee4
-    affected_versions: vers:rpm/<6.0.0-35.1.module+el8.4.0+11273+64eb94ef
-    fixed_versions: vers:rpm/6.0.0-35.1.module+el8.4.0+11273+64eb94ef
+  - purl: pkg:rpm/redhat/nbdkit-basic-filters-debuginfo?arch=s390x&rpmmod=virt:rhel:8040020210721215855:522a0ee4
+    affected_versions: vers:rpm/<1.16.2-4.module+el8.3.0+6922+fd575af8
+    fixed_versions: vers:rpm/1.16.2-4.module+el8.3.0+6922+fd575af8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/nbdkit-basic-plugins?arch=s390x&rpmmod=virt:rhel:8040020210721215855:522a0ee4
+    affected_versions: vers:rpm/<1.16.2-4.module+el8.3.0+6922+fd575af8
+    fixed_versions: vers:rpm/1.16.2-4.module+el8.3.0+6922+fd575af8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/nbdkit-basic-plugins-debuginfo?arch=s390x&rpmmod=virt:rhel:8040020210721215855:522a0ee4
+    affected_versions: vers:rpm/<1.16.2-4.module+el8.3.0+6922+fd575af8
+    fixed_versions: vers:rpm/1.16.2-4.module+el8.3.0+6922+fd575af8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/nbdkit-curl-plugin?arch=s390x&rpmmod=virt:rhel:8040020210721215855:522a0ee4
+    affected_versions: vers:rpm/<1.16.2-4.module+el8.3.0+6922+fd575af8
+    fixed_versions: vers:rpm/1.16.2-4.module+el8.3.0+6922+fd575af8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/nbdkit-curl-plugin-debuginfo?arch=s390x&rpmmod=virt:rhel:8040020210721215855:522a0ee4
+    affected_versions: vers:rpm/<1.16.2-4.module+el8.3.0+6922+fd575af8
+    fixed_versions: vers:rpm/1.16.2-4.module+el8.3.0+6922+fd575af8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/nbdkit-debuginfo?arch=s390x&rpmmod=virt:rhel:8040020210721215855:522a0ee4
     affected_versions: vers:rpm/<1.16.2-4.module+el8.3.0+6922+fd575af8
     fixed_versions: vers:rpm/1.16.2-4.module+el8.3.0+6922+fd575af8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/nbdkit-debugsource?arch=s390x&rpmmod=virt:rhel:8040020210721215855:522a0ee4
+    affected_versions: vers:rpm/<1.16.2-4.module+el8.3.0+6922+fd575af8
+    fixed_versions: vers:rpm/1.16.2-4.module+el8.3.0+6922+fd575af8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libvirt-daemon-driver-storage-logical?arch=s390x&rpmmod=virt:rhel:8040020210721215855:522a0ee4
+    affected_versions: vers:rpm/<6.0.0-35.1.module+el8.4.0+11273+64eb94ef
+    fixed_versions: vers:rpm/6.0.0-35.1.module+el8.4.0+11273+64eb94ef
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/libvirt-daemon-driver-storage-logical-debuginfo?arch=s390x&rpmmod=virt:rhel:8040020210721215855:522a0ee4
@@ -184,86 +214,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.16.2-4.module+el8.3.0+6922+fd575af8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/nbdkit-basic-filters-debuginfo?arch=s390x&rpmmod=virt:rhel:8040020210721215855:522a0ee4
-    affected_versions: vers:rpm/<1.16.2-4.module+el8.3.0+6922+fd575af8
-    fixed_versions: vers:rpm/1.16.2-4.module+el8.3.0+6922+fd575af8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/nbdkit-basic-plugins?arch=s390x&rpmmod=virt:rhel:8040020210721215855:522a0ee4
-    affected_versions: vers:rpm/<1.16.2-4.module+el8.3.0+6922+fd575af8
-    fixed_versions: vers:rpm/1.16.2-4.module+el8.3.0+6922+fd575af8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/nbdkit-basic-plugins-debuginfo?arch=s390x&rpmmod=virt:rhel:8040020210721215855:522a0ee4
-    affected_versions: vers:rpm/<1.16.2-4.module+el8.3.0+6922+fd575af8
-    fixed_versions: vers:rpm/1.16.2-4.module+el8.3.0+6922+fd575af8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/nbdkit-curl-plugin?arch=s390x&rpmmod=virt:rhel:8040020210721215855:522a0ee4
-    affected_versions: vers:rpm/<1.16.2-4.module+el8.3.0+6922+fd575af8
-    fixed_versions: vers:rpm/1.16.2-4.module+el8.3.0+6922+fd575af8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/nbdkit-curl-plugin-debuginfo?arch=s390x&rpmmod=virt:rhel:8040020210721215855:522a0ee4
-    affected_versions: vers:rpm/<1.16.2-4.module+el8.3.0+6922+fd575af8
-    fixed_versions: vers:rpm/1.16.2-4.module+el8.3.0+6922+fd575af8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/nbdkit-debugsource?arch=s390x&rpmmod=virt:rhel:8040020210721215855:522a0ee4
-    affected_versions: vers:rpm/<1.16.2-4.module+el8.3.0+6922+fd575af8
-    fixed_versions: vers:rpm/1.16.2-4.module+el8.3.0+6922+fd575af8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/nbdkit-devel?arch=s390x&rpmmod=virt:rhel:8040020210721215855:522a0ee4
-    affected_versions: vers:rpm/<1.16.2-4.module+el8.3.0+6922+fd575af8
-    fixed_versions: vers:rpm/1.16.2-4.module+el8.3.0+6922+fd575af8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/nbdkit-example-plugins?arch=s390x&rpmmod=virt:rhel:8040020210721215855:522a0ee4
-    affected_versions: vers:rpm/<1.16.2-4.module+el8.3.0+6922+fd575af8
-    fixed_versions: vers:rpm/1.16.2-4.module+el8.3.0+6922+fd575af8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/nbdkit-example-plugins-debuginfo?arch=s390x&rpmmod=virt:rhel:8040020210721215855:522a0ee4
-    affected_versions: vers:rpm/<1.16.2-4.module+el8.3.0+6922+fd575af8
-    fixed_versions: vers:rpm/1.16.2-4.module+el8.3.0+6922+fd575af8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/nbdkit-gzip-plugin?arch=s390x&rpmmod=virt:rhel:8040020210721215855:522a0ee4
-    affected_versions: vers:rpm/<1.16.2-4.module+el8.3.0+6922+fd575af8
-    fixed_versions: vers:rpm/1.16.2-4.module+el8.3.0+6922+fd575af8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/nbdkit-gzip-plugin-debuginfo?arch=s390x&rpmmod=virt:rhel:8040020210721215855:522a0ee4
-    affected_versions: vers:rpm/<1.16.2-4.module+el8.3.0+6922+fd575af8
-    fixed_versions: vers:rpm/1.16.2-4.module+el8.3.0+6922+fd575af8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/nbdkit-linuxdisk-plugin?arch=s390x&rpmmod=virt:rhel:8040020210721215855:522a0ee4
-    affected_versions: vers:rpm/<1.16.2-4.module+el8.3.0+6922+fd575af8
-    fixed_versions: vers:rpm/1.16.2-4.module+el8.3.0+6922+fd575af8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/nbdkit-linuxdisk-plugin-debuginfo?arch=s390x&rpmmod=virt:rhel:8040020210721215855:522a0ee4
-    affected_versions: vers:rpm/<1.16.2-4.module+el8.3.0+6922+fd575af8
-    fixed_versions: vers:rpm/1.16.2-4.module+el8.3.0+6922+fd575af8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/nbdkit-python-plugin?arch=s390x&rpmmod=virt:rhel:8040020210721215855:522a0ee4
-    affected_versions: vers:rpm/<1.16.2-4.module+el8.3.0+6922+fd575af8
-    fixed_versions: vers:rpm/1.16.2-4.module+el8.3.0+6922+fd575af8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/nbdkit-python-plugin-debuginfo?arch=s390x&rpmmod=virt:rhel:8040020210721215855:522a0ee4
-    affected_versions: vers:rpm/<1.16.2-4.module+el8.3.0+6922+fd575af8
-    fixed_versions: vers:rpm/1.16.2-4.module+el8.3.0+6922+fd575af8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/nbdkit-server?arch=s390x&rpmmod=virt:rhel:8040020210721215855:522a0ee4
-    affected_versions: vers:rpm/<1.16.2-4.module+el8.3.0+6922+fd575af8
-    fixed_versions: vers:rpm/1.16.2-4.module+el8.3.0+6922+fd575af8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/nbdkit-server-debuginfo?arch=s390x&rpmmod=virt:rhel:8040020210721215855:522a0ee4
     affected_versions: vers:rpm/<1.16.2-4.module+el8.3.0+6922+fd575af8
     fixed_versions: vers:rpm/1.16.2-4.module+el8.3.0+6922+fd575af8
@@ -322,6 +272,56 @@ impacted_packages:
   - purl: pkg:rpm/redhat/perl-Sys-Guestfs?arch=s390x&epoch=1&rpmmod=virt:rhel:8040020210721215855:522a0ee4
     affected_versions: vers:rpm/<1.40.2-27.module+el8.4.0+9282+0bdec052
     fixed_versions: vers:rpm/1.40.2-27.module+el8.4.0+9282+0bdec052
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/nbdkit-devel?arch=s390x&rpmmod=virt:rhel:8040020210721215855:522a0ee4
+    affected_versions: vers:rpm/<1.16.2-4.module+el8.3.0+6922+fd575af8
+    fixed_versions: vers:rpm/1.16.2-4.module+el8.3.0+6922+fd575af8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/nbdkit-example-plugins?arch=s390x&rpmmod=virt:rhel:8040020210721215855:522a0ee4
+    affected_versions: vers:rpm/<1.16.2-4.module+el8.3.0+6922+fd575af8
+    fixed_versions: vers:rpm/1.16.2-4.module+el8.3.0+6922+fd575af8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/nbdkit-example-plugins-debuginfo?arch=s390x&rpmmod=virt:rhel:8040020210721215855:522a0ee4
+    affected_versions: vers:rpm/<1.16.2-4.module+el8.3.0+6922+fd575af8
+    fixed_versions: vers:rpm/1.16.2-4.module+el8.3.0+6922+fd575af8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/nbdkit-gzip-plugin?arch=s390x&rpmmod=virt:rhel:8040020210721215855:522a0ee4
+    affected_versions: vers:rpm/<1.16.2-4.module+el8.3.0+6922+fd575af8
+    fixed_versions: vers:rpm/1.16.2-4.module+el8.3.0+6922+fd575af8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/nbdkit-gzip-plugin-debuginfo?arch=s390x&rpmmod=virt:rhel:8040020210721215855:522a0ee4
+    affected_versions: vers:rpm/<1.16.2-4.module+el8.3.0+6922+fd575af8
+    fixed_versions: vers:rpm/1.16.2-4.module+el8.3.0+6922+fd575af8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/nbdkit-linuxdisk-plugin?arch=s390x&rpmmod=virt:rhel:8040020210721215855:522a0ee4
+    affected_versions: vers:rpm/<1.16.2-4.module+el8.3.0+6922+fd575af8
+    fixed_versions: vers:rpm/1.16.2-4.module+el8.3.0+6922+fd575af8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/nbdkit-linuxdisk-plugin-debuginfo?arch=s390x&rpmmod=virt:rhel:8040020210721215855:522a0ee4
+    affected_versions: vers:rpm/<1.16.2-4.module+el8.3.0+6922+fd575af8
+    fixed_versions: vers:rpm/1.16.2-4.module+el8.3.0+6922+fd575af8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/nbdkit-python-plugin?arch=s390x&rpmmod=virt:rhel:8040020210721215855:522a0ee4
+    affected_versions: vers:rpm/<1.16.2-4.module+el8.3.0+6922+fd575af8
+    fixed_versions: vers:rpm/1.16.2-4.module+el8.3.0+6922+fd575af8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/nbdkit-python-plugin-debuginfo?arch=s390x&rpmmod=virt:rhel:8040020210721215855:522a0ee4
+    affected_versions: vers:rpm/<1.16.2-4.module+el8.3.0+6922+fd575af8
+    fixed_versions: vers:rpm/1.16.2-4.module+el8.3.0+6922+fd575af8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/nbdkit-server?arch=s390x&rpmmod=virt:rhel:8040020210721215855:522a0ee4
+    affected_versions: vers:rpm/<1.16.2-4.module+el8.3.0+6922+fd575af8
+    fixed_versions: vers:rpm/1.16.2-4.module+el8.3.0+6922+fd575af8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/perl-Sys-Guestfs-debuginfo?arch=s390x&epoch=1&rpmmod=virt:rhel:8040020210721215855:522a0ee4
@@ -1179,11 +1179,6 @@ impacted_packages:
     fixed_versions: vers:rpm/6.0.0-35.1.module+el8.4.0+11273+64eb94ef
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libnbd?arch=aarch64&rpmmod=virt:rhel:8040020210721215855:522a0ee4
-    affected_versions: vers:rpm/<1.2.2-1.module+el8.3.0+7353+9de0a3cc
-    fixed_versions: vers:rpm/1.2.2-1.module+el8.3.0+7353+9de0a3cc
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/libvirt-daemon-driver-secret?arch=x86_64&rpmmod=virt:rhel:8040020210721215855:522a0ee4
     affected_versions: vers:rpm/<6.0.0-35.1.module+el8.4.0+11273+64eb94ef
     fixed_versions: vers:rpm/6.0.0-35.1.module+el8.4.0+11273+64eb94ef
@@ -1994,6 +1989,11 @@ impacted_packages:
     fixed_versions: vers:rpm/1.18.0-8.module+el8.1.0+4066+0f1aadab
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libnbd?arch=aarch64&rpmmod=virt:rhel:8040020210721215855:522a0ee4
+    affected_versions: vers:rpm/<1.2.2-1.module+el8.3.0+7353+9de0a3cc
+    fixed_versions: vers:rpm/1.2.2-1.module+el8.3.0+7353+9de0a3cc
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/libnbd-debuginfo?arch=aarch64&rpmmod=virt:rhel:8040020210721215855:522a0ee4
     affected_versions: vers:rpm/<1.2.2-1.module+el8.3.0+7353+9de0a3cc
     fixed_versions: vers:rpm/1.2.2-1.module+el8.3.0+7353+9de0a3cc
@@ -2147,11 +2147,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/libvirt-daemon-driver-storage-gluster?arch=aarch64&rpmmod=virt:rhel:8040020210721215855:522a0ee4
     affected_versions: vers:rpm/<6.0.0-35.1.module+el8.4.0+11273+64eb94ef
     fixed_versions: vers:rpm/6.0.0-35.1.module+el8.4.0+11273+64eb94ef
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/nbdkit?arch=aarch64&rpmmod=virt:rhel:8040020210721215855:522a0ee4
-    affected_versions: vers:rpm/<1.16.2-4.module+el8.3.0+6922+fd575af8
-    fixed_versions: vers:rpm/1.16.2-4.module+el8.3.0+6922+fd575af8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/libvirt-daemon-driver-storage-gluster-debuginfo?arch=aarch64&rpmmod=virt:rhel:8040020210721215855:522a0ee4
@@ -2312,6 +2307,11 @@ impacted_packages:
   - purl: pkg:rpm/redhat/nbdfuse-debuginfo?arch=aarch64&rpmmod=virt:rhel:8040020210721215855:522a0ee4
     affected_versions: vers:rpm/<1.2.2-1.module+el8.3.0+7353+9de0a3cc
     fixed_versions: vers:rpm/1.2.2-1.module+el8.3.0+7353+9de0a3cc
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/nbdkit?arch=aarch64&rpmmod=virt:rhel:8040020210721215855:522a0ee4
+    affected_versions: vers:rpm/<1.16.2-4.module+el8.3.0+6922+fd575af8
+    fixed_versions: vers:rpm/1.16.2-4.module+el8.3.0+6922+fd575af8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/nbdkit-basic-filters?arch=aarch64&rpmmod=virt:rhel:8040020210721215855:522a0ee4
@@ -4235,15 +4235,6 @@ references:
   - url: https://access.redhat.com/security/updates/classification/#moderate
     reference_type:
     reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1924601
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1932827
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1949687
-    reference_type:
-    reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2021/rhsa-2021_3061.json
     reference_type:
     reference_id:
@@ -4253,6 +4244,15 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1891668
     reference_type: bug
     reference_id: 1891668
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1924601
+    reference_type: bug
+    reference_id: '1924601'
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1932827
+    reference_type: bug
+    reference_id: '1932827'
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1949687
+    reference_type: bug
+    reference_id: '1949687'
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1958301
     reference_type: bug
     reference_id: '1958301'
