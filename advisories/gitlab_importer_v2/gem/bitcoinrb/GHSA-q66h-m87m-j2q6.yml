@@ -1,0 +1,40 @@
+advisory_id: gem/bitcoinrb/GHSA-q66h-m87m-j2q6
+datasource_id: gitlab_importer_v2/gem/bitcoinrb/GHSA-q66h-m87m-j2q6
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/gem/bitcoinrb/GHSA-q66h-m87m-j2q6.yml
+aliases:
+  - GHSA-q66h-m87m-j2q6
+summary: |
+  Bitcoinrb Vulnerable to Command injection via RPC
+  Unsafe handling of request parameters in the RPC HTTP server results in command injection
+impacted_packages:
+  - purl: pkg:gem/bitcoinrb
+    affected_versions: vers:gem/<1.12.0
+    fixed_versions: vers:gem/1.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/gem/bitcoinrb/GHSA-q66h-m87m-j2q6.yml
+weaknesses:
+  - CWE-77
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/chaintope/bitcoinrb
+    reference_type:
+    reference_id:
+  - url: https://github.com/chaintope/bitcoinrb/commit/070327133a2a3e5a6d265b2d82f06f9414c01e74
+    reference_type:
+    reference_id:
+  - url: https://github.com/chaintope/bitcoinrb/releases/tag/v1.12.0
+    reference_type:
+    reference_id:
+  - url: https://github.com/chaintope/bitcoinrb/security/advisories/GHSA-q66h-m87m-j2q6
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-q66h-m87m-j2q6
+    reference_type:
+    reference_id: GHSA-q66h-m87m-j2q6
