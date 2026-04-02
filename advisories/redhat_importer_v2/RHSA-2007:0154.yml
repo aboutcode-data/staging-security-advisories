@@ -19,6 +19,11 @@ summary: "Updated PHP packages that fix several security issues are now availabl
   \ code as the\napache user. (CVE-2007-1711)\n\nUsers of PHP should upgrade to these updated\
   \ packages which contain\nbackported patches to correct these issues."
 impacted_packages:
+  - purl: pkg:rpm/redhat/php-mysql?arch=i386
+    affected_versions: vers:rpm/<4.1.2-2.17
+    fixed_versions: vers:rpm/4.1.2-2.17
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/php-odbc?arch=ia64
     affected_versions: vers:rpm/<4.1.2-2.17
     fixed_versions: vers:rpm/4.1.2-2.17
@@ -65,11 +70,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/php-odbc?arch=i386
-    affected_versions: vers:rpm/<4.1.2-2.17
-    fixed_versions: vers:rpm/4.1.2-2.17
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/php-mysql?arch=i386
     affected_versions: vers:rpm/<4.1.2-2.17
     fixed_versions: vers:rpm/4.1.2-2.17
     fixed_in_commits: []
@@ -121,6 +121,24 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=235225
     reference_type: bug
     reference_id: 235225
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/php/dos/29692.txt
+    reference_type: exploit
+    reference_id: CVE-2007-1285;OSVDB-32769
+  - url: https://www.securityfocus.com/bid/22764/info
+    reference_type: exploit
+    reference_id: CVE-2007-1285;OSVDB-32769
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/remote/16310.rb
+    reference_type: exploit
+    reference_id: CVE-2007-1286;OSVDB-32771
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/php/remote/9939.rb
+    reference_type: exploit
+    reference_id: CVE-2007-1286;OSVDB-32771
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/dos/3396.php
+    reference_type: exploit
+    reference_id: OSVDB-32771;CVE-2007-1286
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/dos/3586.php
+    reference_type: exploit
+    reference_id: OSVDB-33946;CVE-2007-1711
   - url: https://access.redhat.com/errata/RHSA-2007:0154
     reference_type:
     reference_id: RHSA-2007:0154

@@ -95,6 +95,11 @@ summary: |
   contain backported patches to correct these issues and add these
   enhancements.
 impacted_packages:
+  - purl: pkg:rpm/redhat/python-debug?arch=s390x
+    affected_versions: vers:rpm/<2.7.5-34.el7
+    fixed_versions: vers:rpm/2.7.5-34.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/python-devel?arch=s390x
     affected_versions: vers:rpm/<2.7.5-34.el7
     fixed_versions: vers:rpm/2.7.5-34.el7
@@ -110,7 +115,12 @@ impacted_packages:
     fixed_versions: vers:rpm/2.7.5-34.el7
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python-debug?arch=s390x
+  - purl: pkg:rpm/redhat/python-tools?arch=s390x
+    affected_versions: vers:rpm/<2.7.5-34.el7
+    fixed_versions: vers:rpm/2.7.5-34.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python-test?arch=s390x
     affected_versions: vers:rpm/<2.7.5-34.el7
     fixed_versions: vers:rpm/2.7.5-34.el7
     fixed_in_commits: []
@@ -176,16 +186,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/python-debuginfo?arch=s390x
-    affected_versions: vers:rpm/<2.7.5-34.el7
-    fixed_versions: vers:rpm/2.7.5-34.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python-tools?arch=s390x
-    affected_versions: vers:rpm/<2.7.5-34.el7
-    fixed_versions: vers:rpm/2.7.5-34.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python-test?arch=s390x
     affected_versions: vers:rpm/<2.7.5-34.el7
     fixed_versions: vers:rpm/2.7.5-34.el7
     fixed_in_commits: []
@@ -344,12 +344,6 @@ references:
   - url: https://access.redhat.com/security/updates/classification/#moderate
     reference_type:
     reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1112285
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1146026
-    reference_type:
-    reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2015/rhsa-2015_2101.json
     reference_type:
     reference_id:
@@ -365,9 +359,15 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1058482
     reference_type: bug
     reference_id: 1058482
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1112285
+    reference_type: bug
+    reference_id: 1112285
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1113527
     reference_type: bug
     reference_id: 1113527
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1146026
+    reference_type: bug
+    reference_id: 1146026
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1173041
     reference_type: bug
     reference_id: 1173041

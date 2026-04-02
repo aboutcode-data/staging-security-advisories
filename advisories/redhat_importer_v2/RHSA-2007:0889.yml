@@ -66,6 +66,26 @@ summary: |
   Users of PHP should upgrade to these updated packages, which contain
   backported patches to correct these issues.
 impacted_packages:
+  - purl: pkg:rpm/redhat/php-pgsql?arch=s390x
+    affected_versions: vers:rpm/<4.3.2-43.ent
+    fixed_versions: vers:rpm/4.3.2-43.ent
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/php?arch=s390x
+    affected_versions: vers:rpm/<4.3.2-43.ent
+    fixed_versions: vers:rpm/4.3.2-43.ent
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/php-mysql?arch=s390x
+    affected_versions: vers:rpm/<4.3.2-43.ent
+    fixed_versions: vers:rpm/4.3.2-43.ent
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/php-imap?arch=s390x
+    affected_versions: vers:rpm/<4.3.2-43.ent
+    fixed_versions: vers:rpm/4.3.2-43.ent
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/php-devel?arch=ia64
     affected_versions: vers:rpm/<4.3.2-43.ent
     fixed_versions: vers:rpm/4.3.2-43.ent
@@ -236,26 +256,6 @@ impacted_packages:
     fixed_versions: vers:rpm/4.3.2-43.ent
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/php-pgsql?arch=s390x
-    affected_versions: vers:rpm/<4.3.2-43.ent
-    fixed_versions: vers:rpm/4.3.2-43.ent
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/php?arch=s390x
-    affected_versions: vers:rpm/<4.3.2-43.ent
-    fixed_versions: vers:rpm/4.3.2-43.ent
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/php-mysql?arch=s390x
-    affected_versions: vers:rpm/<4.3.2-43.ent
-    fixed_versions: vers:rpm/4.3.2-43.ent
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/php-imap?arch=s390x
-    affected_versions: vers:rpm/<4.3.2-43.ent
-    fixed_versions: vers:rpm/4.3.2-43.ent
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/php-debuginfo?arch=s390x
     affected_versions: vers:rpm/<4.3.2-43.ent
     fixed_versions: vers:rpm/4.3.2-43.ent
@@ -349,6 +349,12 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=278041
     reference_type: bug
     reference_id: 278041
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/php/remote/30130.txt
+    reference_type: exploit
+    reference_id: CVE-2007-3799;OSVDB-36855
+  - url: https://www.securityfocus.com/bid/24268/info
+    reference_type: exploit
+    reference_id: CVE-2007-3799;OSVDB-36855
   - url: https://access.redhat.com/errata/RHSA-2007:0889
     reference_type:
     reference_id: RHSA-2007:0889

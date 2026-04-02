@@ -22,14 +22,39 @@ summary: "Red Hat Mobile Application Platform 4.6.0 release - RPMs\n\nRed Hat Mo
   \ security issue(s), including the impact, a CVSS\nscore, acknowledgments, and other related\
   \ information, refer to the CVE page(s) listed in the References section."
 impacted_packages:
-  - purl: pkg:rpm/redhat/supervisor?arch=src
+  - purl: pkg:rpm/redhat/nagios?arch=src
+    affected_versions: vers:rpm/<4.0.8-8.el7map
+    fixed_versions: vers:rpm/4.0.8-8.el7map
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/rhmap-fh-openshift-templates?arch=src
+    affected_versions: vers:rpm/<4.6.0-5.el7
+    fixed_versions: vers:rpm/4.6.0-5.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/supervisor?arch=noarch
     affected_versions: vers:rpm/<3.1.3-3.el7map
     fixed_versions: vers:rpm/3.1.3-3.el7map
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/sendEmail?arch=src
+  - purl: pkg:rpm/redhat/sendEmail?arch=noarch
     affected_versions: vers:rpm/<1.56-2.el7
     fixed_versions: vers:rpm/1.56-2.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/perl-Net-SNMP?arch=noarch
+    affected_versions: vers:rpm/<6.0.1-7.el7map
+    fixed_versions: vers:rpm/6.0.1-7.el7map
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/perl-Crypt-CBC?arch=noarch
+    affected_versions: vers:rpm/<2.33-2.el7map
+    fixed_versions: vers:rpm/2.33-2.el7map
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/rhmap-fh-openshift-templates?arch=noarch
+    affected_versions: vers:rpm/<4.6.0-5.el7
+    fixed_versions: vers:rpm/4.6.0-5.el7
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/fh-system-dump-tool?arch=x86_64
@@ -190,11 +215,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/nagios-plugins-all?arch=x86_64
     affected_versions: vers:rpm/<2.0.3-3.el7map
     fixed_versions: vers:rpm/2.0.3-3.el7map
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ssmtp?arch=src
-    affected_versions: vers:rpm/<2.64-14.el7map
-    fixed_versions: vers:rpm/2.64-14.el7map
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/nagios-plugins-wave?arch=x86_64
@@ -472,6 +492,21 @@ impacted_packages:
     fixed_versions: vers:rpm/3.3.1-7.el7map
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/supervisor?arch=src
+    affected_versions: vers:rpm/<3.1.3-3.el7map
+    fixed_versions: vers:rpm/3.1.3-3.el7map
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/sendEmail?arch=src
+    affected_versions: vers:rpm/<1.56-2.el7
+    fixed_versions: vers:rpm/1.56-2.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ssmtp?arch=src
+    affected_versions: vers:rpm/<2.64-14.el7map
+    fixed_versions: vers:rpm/2.64-14.el7map
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/qstat?arch=src
     affected_versions: vers:rpm/<2.11-13.20080912svn311.el7map
     fixed_versions: vers:rpm/2.11-13.20080912svn311.el7map
@@ -507,41 +542,6 @@ impacted_packages:
     fixed_versions: vers:rpm/2.05-20.el7map
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/nagios?arch=src
-    affected_versions: vers:rpm/<4.0.8-8.el7map
-    fixed_versions: vers:rpm/4.0.8-8.el7map
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/rhmap-fh-openshift-templates?arch=src
-    affected_versions: vers:rpm/<4.6.0-5.el7
-    fixed_versions: vers:rpm/4.6.0-5.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/supervisor?arch=noarch
-    affected_versions: vers:rpm/<3.1.3-3.el7map
-    fixed_versions: vers:rpm/3.1.3-3.el7map
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/sendEmail?arch=noarch
-    affected_versions: vers:rpm/<1.56-2.el7
-    fixed_versions: vers:rpm/1.56-2.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/perl-Net-SNMP?arch=noarch
-    affected_versions: vers:rpm/<6.0.1-7.el7map
-    fixed_versions: vers:rpm/6.0.1-7.el7map
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/perl-Crypt-CBC?arch=noarch
-    affected_versions: vers:rpm/<2.33-2.el7map
-    fixed_versions: vers:rpm/2.33-2.el7map
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/rhmap-fh-openshift-templates?arch=noarch
-    affected_versions: vers:rpm/<4.6.0-5.el7
-    fixed_versions: vers:rpm/4.6.0-5.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: Moderate
     scoring_system: rhas
@@ -550,9 +550,6 @@ severities:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2018/rhsa-2018_1263.json
 weaknesses: []
 references:
-  - url: https://access.redhat.com/errata/RHSA-2018:1263
-    reference_type:
-    reference_id:
   - url: https://access.redhat.com/security/updates/classification/#moderate
     reference_type:
     reference_id:
@@ -568,3 +565,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1545893
     reference_type: bug
     reference_id: 1545893
+  - url: https://access.redhat.com/errata/RHSA-2018:1263
+    reference_type:
+    reference_id: RHSA-2018:1263
