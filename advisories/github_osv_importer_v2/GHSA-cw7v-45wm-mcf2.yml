@@ -1,0 +1,58 @@
+advisory_id: GHSA-cw7v-45wm-mcf2
+datasource_id: github_osv_importer_v2/GHSA-cw7v-45wm-mcf2
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-cw7v-45wm-mcf2/GHSA-cw7v-45wm-mcf2.json
+aliases:
+  - CVE-2026-29905
+summary: |
+  Kirby CMS has Persistent DoS via Malformed Image Upload
+  ## Summary
+
+  Kirby CMS through version 5.1.4 allows an authenticated user with Editor permissions to cause a persistent Denial of Service (DoS) via a malformed image upload.
+
+  ## Details
+
+  The vulnerability is caused by improper validation of the return value of PHP's `getimagesize()` function. When a malformed file is uploaded with a valid image extension (e.g., `.jpg`), the function returns `false` instead of an expected array.
+
+  The application fails to handle this condition properly and proceeds with image processing, resulting in a fatal `TypeError`. This leads to persistent application crashes when the affected file is accessed.
+
+  ## Impact
+
+  - Persistent Denial of Service (DoS)
+  - Affected pages return HTTP 500 errors
+  - Requires manual removal of the malformed file to restore functionality
+  - Exploitable by authenticated users with Editor permissions
+impacted_packages:
+  - purl: pkg:composer/getkirby/cms
+    affected_versions: vers:composer/<5.2.0-rc.1
+    fixed_versions: vers:composer/5.2.0-rc.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-cw7v-45wm-mcf2/GHSA-cw7v-45wm-mcf2.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-20
+references:
+  - url: https://github.com/Stalin-143/CVE-2026-29905/security/advisories/GHSA-cw7v-45wm-mcf2
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-29905
+    reference_type:
+    reference_id:
+  - url: https://github.com/getkirby/kirby/releases/tag/5.2.0-rc.1
+    reference_type: other
+    reference_id: 5.2.0-rc.1
+  - url: https://github.com/Stalin-143/CVE-2026-29905
+    reference_type: other
+    reference_id: CVE-2026-29905
+  - url: https://drive.google.com/file/d/1MwvvSYIwnC8kOIzjycGMQZw4d2K2ef8h/view?usp=sharing
+    reference_type: other
+    reference_id: view?usp=sharing

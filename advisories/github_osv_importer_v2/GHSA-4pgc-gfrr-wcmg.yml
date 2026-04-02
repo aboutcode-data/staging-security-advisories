@@ -1,0 +1,40 @@
+advisory_id: GHSA-4pgc-gfrr-wcmg
+datasource_id: github_osv_importer_v2/GHSA-4pgc-gfrr-wcmg
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-4pgc-gfrr-wcmg/GHSA-4pgc-gfrr-wcmg.json
+aliases:
+  - CVE-2026-4628
+summary: |
+  Keycloak has Improper Access Control allows attackers with valid credentials to bypass the allowRemoteResourceManagement=false
+  A flaw was found in Keycloak. An improper Access Control vulnerability in Keycloak’s User-Managed Access (UMA) resource_set endpoint allows attackers with valid credentials to bypass the allowRemoteResourceManagement=false restriction. This occurs due to incomplete enforcement of access control checks on PUT operations to the resource_set endpoint. This issue enables unauthorized modification of protected resources, impacting data integrity.
+impacted_packages:
+  - purl: pkg:maven/org.keycloak/keycloak-services
+    affected_versions: vers:maven/<=26.5.6
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '4.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-4pgc-gfrr-wcmg/GHSA-4pgc-gfrr-wcmg.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-284
+references:
+  - url: https://github.com/keycloak/keycloak
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-4628
+    reference_type:
+    reference_id:
+  - url: https://access.redhat.com/security/cve/CVE-2026-4628
+    reference_type: advisory
+    reference_id: CVE-2026-4628
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2450240
+    reference_type: bug
+    reference_id: show_bug.cgi?id=2450240

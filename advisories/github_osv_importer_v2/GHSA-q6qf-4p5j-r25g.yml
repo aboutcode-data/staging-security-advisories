@@ -1,7 +1,8 @@
 advisory_id: GHSA-q6qf-4p5j-r25g
 datasource_id: github_osv_importer_v2/GHSA-q6qf-4p5j-r25g
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-q6qf-4p5j-r25g/GHSA-q6qf-4p5j-r25g.json
-aliases: []
+aliases:
+  - CVE-2026-32002
 summary: |
   OpenClaw's image tool bypasses tools.fs.workspaceOnly on sandbox mount paths and exfiltrates out-of-workspace images
   ### Summary
@@ -35,6 +36,11 @@ severities:
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N
     published_at: None
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-q6qf-4p5j-r25g/GHSA-q6qf-4p5j-r25g.json
+  - score: '6.0'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-q6qf-4p5j-r25g/GHSA-q6qf-4p5j-r25g.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
@@ -47,9 +53,15 @@ references:
   - url: https://github.com/openclaw/openclaw
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32002
+    reference_type:
+    reference_id:
   - url: https://github.com/openclaw/openclaw/commit/dd9d9c1c609dcb4579f9e57bd7b5c879d0146b53
-    reference_type:
-    reference_id:
+    reference_type: other
+    reference_id: dd9d9c1c609dcb4579f9e57bd7b5c879d0146b53
   - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-q6qf-4p5j-r25g
-    reference_type:
-    reference_id:
+    reference_type: advisory
+    reference_id: GHSA-q6qf-4p5j-r25g
+  - url: https://www.vulncheck.com/advisories/openclaw-sandbox-boundary-bypass-via-image-tool-workspaceonly-bypass
+    reference_type: advisory
+    reference_id: openclaw-sandbox-boundary-bypass-via-image-tool-workspaceonly-bypass

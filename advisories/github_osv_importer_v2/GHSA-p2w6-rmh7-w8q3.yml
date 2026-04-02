@@ -1,0 +1,66 @@
+advisory_id: GHSA-p2w6-rmh7-w8q3
+datasource_id: github_osv_importer_v2/GHSA-p2w6-rmh7-w8q3
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-p2w6-rmh7-w8q3/GHSA-p2w6-rmh7-w8q3.json
+aliases:
+  - CVE-2026-33539
+summary: |
+  Parse Server has SQL Injection through aggregate and distinct field names in PostgreSQL adapter
+  ### Impact
+
+  An attacker with master key access can execute arbitrary SQL statements on the PostgreSQL database by injecting SQL metacharacters into field name parameters of the aggregate `$group` pipeline stage or the `distinct` operation. This allows privilege escalation from Parse Server application-level administrator to PostgreSQL database-level access.
+
+  Only Parse Server deployments using PostgreSQL are affected. MongoDB deployments are not affected.
+
+  ### Patches
+
+  Field names in the aggregate `$group._id` object values and `distinct` dot-notation parameters are now validated to only contain alphanumeric characters and underscores, preventing SQL injection via the `:raw` interpolation used in the PostgreSQL storage adapter.
+
+  ### Workarounds
+
+  No workaround. Upgrade to a patched version.
+impacted_packages:
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/>=9.0.0|<9.6.0-alpha.53
+    fixed_versions: vers:npm/9.6.0-alpha.53
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/<8.6.59
+    fixed_versions: vers:npm/8.6.59
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.6'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-p2w6-rmh7-w8q3/GHSA-p2w6-rmh7-w8q3.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-89
+references:
+  - url: https://github.com/parse-community/parse-server
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/commit/03249f9bf5b8783c8b848f84dab791ff0b761b8c
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/commit/bdddab5f8b61a40cb8fc62dd895887bdd2f3838e
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/pull/10272
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/pull/10273
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/security/advisories/GHSA-p2w6-rmh7-w8q3
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33539
+    reference_type:
+    reference_id:

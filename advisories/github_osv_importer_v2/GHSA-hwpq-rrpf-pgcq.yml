@@ -1,7 +1,8 @@
 advisory_id: GHSA-hwpq-rrpf-pgcq
 datasource_id: github_osv_importer_v2/GHSA-hwpq-rrpf-pgcq
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-hwpq-rrpf-pgcq/GHSA-hwpq-rrpf-pgcq.json
-aliases: []
+aliases:
+  - CVE-2026-32065
 summary: |
   OpenClaw: system.run approval identity mismatch could execute a different binary than displayed
   ### Summary
@@ -32,19 +33,24 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
-  - score: '8.7'
-    scoring_system: cvssv4
-    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
+  - score: '4.8'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:N/I:H/A:N
     published_at: None
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-hwpq-rrpf-pgcq/GHSA-hwpq-rrpf-pgcq.json
-  - score: HIGH
+  - score: '5.7'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:H/AT:P/PR:L/UI:A/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-hwpq-rrpf-pgcq/GHSA-hwpq-rrpf-pgcq.json
+  - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
     published_at: None
     url:
 weaknesses:
-  - CWE-863
   - CWE-436
+  - CWE-863
 references:
   - url: https://github.com/openclaw/openclaw
     reference_type:
@@ -52,6 +58,12 @@ references:
   - url: https://github.com/openclaw/openclaw/commit/03e689fc89bbecbcd02876a95957ef1ad9caa176
     reference_type:
     reference_id:
-  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-hwpq-rrpf-pgcq
+  - url: https://www.vulncheck.com/advisories/openclaw-approval-identity-mismatch-in-system-run-command-execution
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32065
+    reference_type:
+    reference_id: CVE-2026-32065
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-hwpq-rrpf-pgcq
+    reference_type:
+    reference_id: GHSA-hwpq-rrpf-pgcq

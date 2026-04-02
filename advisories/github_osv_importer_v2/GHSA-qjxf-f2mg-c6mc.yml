@@ -1,0 +1,48 @@
+advisory_id: GHSA-qjxf-f2mg-c6mc
+datasource_id: github_osv_importer_v2/GHSA-qjxf-f2mg-c6mc
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-qjxf-f2mg-c6mc/GHSA-qjxf-f2mg-c6mc.json
+aliases:
+  - CVE-2026-31958
+summary: "Tornado is vulnerable to DoS due to too many multipart parts\nIn versions of Tornado\
+  \ prior to 6.5.5, the only limit on the number of parts in `multipart/form-data` is the `max_body_size`\
+  \ setting (default 100MB). Since parsing occurs synchronously on the main thread, this creates\
+  \ the possibility of denial-of-service due to the cost of parsing very large multipart bodies\
+  \ with many parts. \n\nTornado 6.5.5 introduces new limits on the size and complexity of multipart\
+  \ bodies, including a default limit of 100 parts per request. These limits are configurable\
+  \ if needed; see `tornado.httputil.ParseMultipartConfig`. It is also now possible to disable\
+  \ `multipart/form-data` parsing entirely if it is not required for the application."
+impacted_packages:
+  - purl: pkg:pypi/tornado
+    affected_versions: vers:pypi/<=6.5.4
+    fixed_versions: vers:pypi/6.5.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.7'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-qjxf-f2mg-c6mc/GHSA-qjxf-f2mg-c6mc.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-400
+references:
+  - url: https://github.com/tornadoweb/tornado
+    reference_type:
+    reference_id:
+  - url: https://github.com/tornadoweb/tornado/commit/119a195e290c43ad2d63a2cf012c29d43d6ed839
+    reference_type:
+    reference_id:
+  - url: https://github.com/tornadoweb/tornado/releases/tag/v6.5.5
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-31958
+    reference_type:
+    reference_id:
+  - url: https://github.com/tornadoweb/tornado/security/advisories/GHSA-qjxf-f2mg-c6mc
+    reference_type: other
+    reference_id: GHSA-qjxf-f2mg-c6mc

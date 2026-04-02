@@ -1,0 +1,60 @@
+advisory_id: GHSA-6hpg-8rx3-cwgv
+datasource_id: github_osv_importer_v2/GHSA-6hpg-8rx3-cwgv
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-6hpg-8rx3-cwgv/GHSA-6hpg-8rx3-cwgv.json
+aliases:
+  - CVE-2026-30880
+summary: |
+  baserCMS has OS command injection vulnerability in installer
+  baserCMS has an OS command injection vulnerability in the installer.
+
+  ### Target
+  baserCMS 5.2.2 and earlier versions
+
+  ### Vulnerability
+
+  If baserCMS is placed on a server but not installed, malicious commands may be executed.
+
+  ### Countermeasures
+  Update to the latest version of baserCMS
+
+  Please refer to the following page to reference for more information.
+  https://basercms.net/security/JVN_54513170
+
+  ### Credits
+
+  REN XINGDIAN
+impacted_packages:
+  - purl: pkg:composer/baserproject/basercms
+    affected_versions: vers:composer/<=5.2.2
+    fixed_versions: vers:composer/5.2.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '9.2'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-6hpg-8rx3-cwgv/GHSA-6hpg-8rx3-cwgv.json
+  - score: CRITICAL
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-78
+references:
+  - url: https://github.com/baserproject/basercms
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-30880
+    reference_type:
+    reference_id:
+  - url: https://github.com/baserproject/basercms/releases/tag/5.2.3
+    reference_type: other
+    reference_id: 5.2.3
+  - url: https://github.com/baserproject/basercms/security/advisories/GHSA-6hpg-8rx3-cwgv
+    reference_type: other
+    reference_id: GHSA-6hpg-8rx3-cwgv
+  - url: https://basercms.net/security/JVN_20837860
+    reference_type: other
+    reference_id: JVN_20837860

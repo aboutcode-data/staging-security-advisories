@@ -1,0 +1,52 @@
+advisory_id: GHSA-7grx-3xcx-2xv5
+datasource_id: github_osv_importer_v2/GHSA-7grx-3xcx-2xv5
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-7grx-3xcx-2xv5/GHSA-7grx-3xcx-2xv5.json
+aliases:
+  - CVE-2026-33484
+summary: |
+  langflow has Unauthenticated IDOR on Image Downloads
+  ### Summary
+  The `/api/v1/files/images/{flow_id}/{file_name}` endpoint serves image files without any authentication or ownership check. Any unauthenticated request with a known flow_id and file_name returns the image with HTTP 200.
+
+  ### Details
+  `src/backend/base/langflow/api/v1/files.py:138-164` — `download_image` takes `flow_id`: UUID as a bare path parameter with no Depends(get_flow) or `CurrentActiveUser`. All other file routes (`download_file`, `upload_file`, `list_files`, `delete_file`) use `Depends(get_flow)` which enforces both authentication and ownership. There is no global auth middleware on /api/v1; protection is per-endpoint only.
+
+  ### PoC
+  ```
+  curl -v "http://localhost:7860/api/v1/files/images/<flow_uuid>/<filename.png>"
+  # Returns HTTP 200 with image bytes, no auth header required
+  ```
+
+  ### Impact
+  Unauthenticated cross-tenant data leak. In a multi-tenant deployment, any attacker who can discover or guess a `flow_id` (UUIDs can be leaked through other API responses) can download any user's uploaded images without credentials.
+impacted_packages:
+  - purl: pkg:pypi/langflow
+    affected_versions: vers:pypi/>=1.0.0|<=1.8.1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-7grx-3xcx-2xv5/GHSA-7grx-3xcx-2xv5.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-639
+  - CWE-284
+  - CWE-862
+references:
+  - url: https://github.com/langflow-ai/langflow
+    reference_type:
+    reference_id:
+  - url: https://github.com/langflow-ai/langflow/security/advisories/GHSA-7grx-3xcx-2xv5
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33484
+    reference_type:
+    reference_id:

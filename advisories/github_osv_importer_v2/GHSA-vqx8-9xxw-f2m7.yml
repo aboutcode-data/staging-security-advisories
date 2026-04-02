@@ -1,7 +1,8 @@
 advisory_id: GHSA-vqx8-9xxw-f2m7
 datasource_id: github_osv_importer_v2/GHSA-vqx8-9xxw-f2m7
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-vqx8-9xxw-f2m7/GHSA-vqx8-9xxw-f2m7.json
-aliases: []
+aliases:
+  - CVE-2026-32053
 summary: |
   OpenClaw's voice-call Twilio webhook replay could bypass manager dedupe because normalized event IDs were randomized per parse
   ## Impact
@@ -31,7 +32,7 @@ impacted_packages:
 severities:
   - score: '6.9'
     scoring_system: cvssv4
-    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N
     published_at: None
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-vqx8-9xxw-f2m7/GHSA-vqx8-9xxw-f2m7.json
   - score: MODERATE
@@ -46,9 +47,15 @@ references:
   - url: https://github.com/openclaw/openclaw
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32053
+    reference_type:
+    reference_id:
   - url: https://github.com/openclaw/openclaw/commit/1d28da55a5d0ff409e34999e0961157e9db0a2ab
-    reference_type:
-    reference_id:
+    reference_type: other
+    reference_id: 1d28da55a5d0ff409e34999e0961157e9db0a2ab
   - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-vqx8-9xxw-f2m7
-    reference_type:
-    reference_id:
+    reference_type: advisory
+    reference_id: GHSA-vqx8-9xxw-f2m7
+  - url: https://www.vulncheck.com/advisories/openclaw-twilio-webhook-replay-bypass-via-randomized-event-id-normalization
+    reference_type: advisory
+    reference_id: openclaw-twilio-webhook-replay-bypass-via-randomized-event-id-normalization

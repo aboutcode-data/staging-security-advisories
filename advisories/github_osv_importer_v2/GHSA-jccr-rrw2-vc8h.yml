@@ -1,0 +1,58 @@
+advisory_id: GHSA-jccr-rrw2-vc8h
+datasource_id: github_osv_importer_v2/GHSA-jccr-rrw2-vc8h
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-jccr-rrw2-vc8h/GHSA-jccr-rrw2-vc8h.json
+aliases: []
+summary: |
+  OpenClaw safeBins jq `$ENV` filter bypass allows environment variable disclosure
+  ## Summary
+
+  The jq safe-bin policy blocked explicit `env` usage but still allowed jq programs that accessed environment data through `$ENV`.
+
+  ## Impact
+
+  An operator-approved safe-bin jq command could disclose environment variables that the safe-bin policy was supposed to keep out of scope.
+
+  ## Affected Component
+
+  `src/infra/exec-safe-bin-semantics.ts`
+
+  ## Fixed Versions
+
+  - Affected: `<= 2026.3.24`
+  - Patched: `>= 2026.3.28`
+  - Latest stable `2026.3.28` contains the fix.
+
+  ## Fix
+
+  Fixed by commit `78e2f3d66d` (`Exec: tighten jq safe-bin env checks`).
+
+  OpenClaw thanks @nicky-cc  of Tencent zhuque Lab [https://github.com/Tencent/AI-Infra-Guard](https://github.com/Tencent/AI-Infra-Guard) for reporting.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<=2026.3.24
+    fixed_versions: vers:npm/2026.3.28
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.7'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-jccr-rrw2-vc8h/GHSA-jccr-rrw2-vc8h.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-200
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/78e2f3d66d74e5c7e6f45c54162e63986e39771b
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-jccr-rrw2-vc8h
+    reference_type:
+    reference_id:

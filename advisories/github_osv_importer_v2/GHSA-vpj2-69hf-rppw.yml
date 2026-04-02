@@ -1,7 +1,8 @@
 advisory_id: GHSA-vpj2-69hf-rppw
 datasource_id: github_osv_importer_v2/GHSA-vpj2-69hf-rppw
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-vpj2-69hf-rppw/GHSA-vpj2-69hf-rppw.json
-aliases: []
+aliases:
+  - CVE-2026-32041
 summary: |
   OpenClaw: Browser control startup could continue unauthenticated after auth bootstrap failure
   ### Summary
@@ -24,11 +25,16 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '6.9'
-    scoring_system: cvssv4
-    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:L
     published_at: None
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-vpj2-69hf-rppw/GHSA-vpj2-69hf-rppw.json
-  - score: MODERATE
+  - score: '7.5'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:L/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-vpj2-69hf-rppw/GHSA-vpj2-69hf-rppw.json
+  - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
     published_at: None
@@ -39,6 +45,12 @@ references:
   - url: https://github.com/openclaw/openclaw
     reference_type:
     reference_id:
-  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-vpj2-69hf-rppw
+  - url: https://www.vulncheck.com/advisories/openclaw-unauthenticated-browser-control-access-via-failed-auth-bootstrap
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32041
+    reference_type:
+    reference_id: CVE-2026-32041
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-vpj2-69hf-rppw
+    reference_type:
+    reference_id: GHSA-vpj2-69hf-rppw

@@ -1,0 +1,71 @@
+advisory_id: GHSA-6qh5-m6g3-xhq6
+datasource_id: github_osv_importer_v2/GHSA-6qh5-m6g3-xhq6
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-6qh5-m6g3-xhq6/GHSA-6qh5-m6g3-xhq6.json
+aliases:
+  - CVE-2026-33508
+summary: |
+  Parse Server LiveQuery subscription query depth bypass
+  ### Impact
+
+  Parse Server's LiveQuery component does not enforce the `requestComplexity.queryDepth` configuration setting when processing WebSocket subscription requests. An attacker can send a subscription with deeply nested logical operators, causing excessive recursion and CPU consumption that degrades or disrupts service availability.
+
+  Deployments are affected when the LiveQuery WebSocket endpoint is reachable by untrusted clients.
+
+  ### Patches
+
+  The fix adds query condition depth validation to the LiveQuery subscription handler, enforcing the same `requestComplexity.queryDepth` limit that already protects REST API queries.
+
+  ### Workarounds
+
+  There is no known workaround other than upgrading.
+impacted_packages:
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/>=9.0.0|<9.6.0-alpha.45
+    fixed_versions: vers:npm/9.6.0-alpha.45
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/<8.6.56
+    fixed_versions: vers:npm/8.6.56
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-6qh5-m6g3-xhq6/GHSA-6qh5-m6g3-xhq6.json
+  - score: '8.2'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-6qh5-m6g3-xhq6/GHSA-6qh5-m6g3-xhq6.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-674
+references:
+  - url: https://github.com/parse-community/parse-server
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/commit/060d27053fb0fadf613c25aabab7fe0c82b7a899
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/commit/2126fe4e12f9b399dc6b4b6a3fa70cb1825f159b
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/pull/10259
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/pull/10260
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/security/advisories/GHSA-6qh5-m6g3-xhq6
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33508
+    reference_type:
+    reference_id:

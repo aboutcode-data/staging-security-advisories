@@ -1,7 +1,8 @@
 advisory_id: GHSA-q399-23r3-hfx4
 datasource_id: github_osv_importer_v2/GHSA-q399-23r3-hfx4
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-q399-23r3-hfx4/GHSA-q399-23r3-hfx4.json
-aliases: []
+aliases:
+  - CVE-2026-31997
 summary: |
   OpenClaw: system.run approvals did not bind PATH-token executable identity, enabling post-approval executable rebind
   ### Summary
@@ -34,12 +35,18 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-367
   - CWE-426
+  - CWE-367
 references:
   - url: https://github.com/openclaw/openclaw
     reference_type:
     reference_id:
-  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-q399-23r3-hfx4
+  - url: https://www.vulncheck.com/advisories/openclaw-executable-rebind-via-unbound-path-token-in-system-run-approvals
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-31997
+    reference_type:
+    reference_id: CVE-2026-31997
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-q399-23r3-hfx4
+    reference_type:
+    reference_id: GHSA-q399-23r3-hfx4

@@ -1,0 +1,66 @@
+advisory_id: GHSA-v5hf-f4c3-m5rv
+datasource_id: github_osv_importer_v2/GHSA-v5hf-f4c3-m5rv
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-v5hf-f4c3-m5rv/GHSA-v5hf-f4c3-m5rv.json
+aliases:
+  - CVE-2026-31868
+summary: |
+  Parse Server vulnerable to stored XSS via file upload of HTML-renderable file types
+  ### Impact
+
+  An attacker can upload a file with a file extension or content type that is not blocked by the default configuration of the Parse Server `fileUpload.fileExtensions` option. The file can contain malicious code, for example JavaScript in an SVG or XHTML file. When the file is accessed via its URL, the browser renders the file and executes the malicious code in the context of the Parse Server domain. This is a stored Cross-Site Scripting (XSS) vulnerability that can be exploited to steal session tokens, redirect users, or perform actions on behalf of other users.
+
+  Affected file extensions and content types include `.svgz`, `.xht`, `.xml`, `.xsl`, `.xslt`, and content types `application/xhtml+xml` and `application/xslt+xml` for extensionless uploads. Uploading of `.html`, `.htm`, `.shtml`, `.xhtml`, and `.svg` files was already blocked.
+
+  ### Patches
+
+  The fix adds the missing file extensions and content types to the default value of the `fileUpload.fileExtensions` server option.
+
+  ### Workarounds
+
+  Configure the `fileUpload.fileExtensions` server option to block the affected file extensions and content types.
+
+  ### References
+
+  - GitHub security advisory: https://github.com/parse-community/parse-server/security/advisories/GHSA-v5hf-f4c3-m5rv
+  - Fix Parse Server 9: https://github.com/parse-community/parse-server/releases/tag/9.6.0-alpha.4
+  - Fix Parse Server 8: https://github.com/parse-community/parse-server/releases/tag/8.6.30
+impacted_packages:
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/>=9.0.0-alpha.1|<9.6.0-alpha.4
+    fixed_versions: vers:npm/9.6.0-alpha.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/<8.6.30
+    fixed_versions: vers:npm/8.6.30
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:H/SI:H/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-v5hf-f4c3-m5rv/GHSA-v5hf-f4c3-m5rv.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-79
+references:
+  - url: https://github.com/parse-community/parse-server
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-31868
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/releases/tag/8.6.30
+    reference_type: other
+    reference_id: 8.6.30
+  - url: https://github.com/parse-community/parse-server/releases/tag/9.6.0-alpha.4
+    reference_type: other
+    reference_id: 9.6.0-alpha.4
+  - url: https://github.com/parse-community/parse-server/security/advisories/GHSA-v5hf-f4c3-m5rv
+    reference_type: other
+    reference_id: GHSA-v5hf-f4c3-m5rv

@@ -1,0 +1,65 @@
+advisory_id: GHSA-3mjm-x6gw-2x42
+datasource_id: github_osv_importer_v2/GHSA-3mjm-x6gw-2x42
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-3mjm-x6gw-2x42/GHSA-3mjm-x6gw-2x42.json
+aliases: []
+summary: |
+  @grackle-ai/server has Missing Content-Security-Policy and X-Frame-Options Headers
+  ### Impact
+
+  The HTTP server does not set `Content-Security-Policy`, `X-Frame-Options`, or `X-Content-Type-Options` headers on any response. This reduces defense-in-depth against XSS, clickjacking, and MIME-sniffing attacks.
+
+  While the current XSS attack surface is small (React-markdown is configured safely, no `dangerouslySetInnerHTML`, Vite does not generate source maps), the absence of these headers means any future XSS vulnerability would have no secondary defense layer.
+
+  **Affected code:**
+  - `packages/server/src/index.ts` — all `res.writeHead()` calls only set `Content-Type`, with no security headers
+
+  ### Patches
+
+  0.70.4
+
+  **Fix:** Add security headers to all HTML/API responses:
+  ```typescript
+  res.writeHead(200, {
+    "Content-Type": contentType,
+    "Content-Security-Policy": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:",
+    "X-Frame-Options": "DENY",
+    "X-Content-Type-Options": "nosniff"
+  });
+  ```
+
+  ### Workarounds
+
+  Use a reverse proxy (nginx, Caddy) in front of the Grackle server to inject security headers.
+
+  ### References
+
+  - CWE-693: Protection Mechanism Failure
+  - OWASP: HTTP Security Response Headers
+  - File: `packages/server/src/index.ts`
+impacted_packages:
+  - purl: pkg:npm/%40grackle-ai/server
+    affected_versions: vers:npm/<=0.70.3
+    fixed_versions: vers:npm/0.70.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-3mjm-x6gw-2x42/GHSA-3mjm-x6gw-2x42.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-79
+  - CWE-693
+references:
+  - url: https://github.com/nick-pape/grackle
+    reference_type:
+    reference_id:
+  - url: https://github.com/nick-pape/grackle/security/advisories/GHSA-3mjm-x6gw-2x42
+    reference_type:
+    reference_id:

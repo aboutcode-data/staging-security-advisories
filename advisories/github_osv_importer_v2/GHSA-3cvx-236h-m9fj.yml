@@ -1,7 +1,8 @@
 advisory_id: GHSA-3cvx-236h-m9fj
 datasource_id: github_osv_importer_v2/GHSA-3cvx-236h-m9fj
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-3cvx-236h-m9fj/GHSA-3cvx-236h-m9fj.json
-aliases: []
+aliases:
+  - CVE-2026-32034
 summary: |
   OpenClaw has an opt-in insecure Control UI auth over plaintext HTTP could allow privileged access
   ## Description
@@ -32,6 +33,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
+  - score: '7.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-3cvx-236h-m9fj/GHSA-3cvx-236h-m9fj.json
   - score: '5.9'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N
@@ -43,8 +49,9 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-319
   - CWE-285
+  - CWE-319
+  - CWE-78
 references:
   - url: https://github.com/openclaw/openclaw
     reference_type:
@@ -56,5 +63,11 @@ references:
     reference_type:
     reference_id:
   - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-3cvx-236h-m9fj
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32034
+    reference_type:
+    reference_id:
+  - url: https://www.vulncheck.com/advisories/openclaw-insecure-control-ui-authentication-over-plaintext-http
     reference_type:
     reference_id:

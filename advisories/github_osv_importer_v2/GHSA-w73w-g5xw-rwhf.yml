@@ -1,0 +1,64 @@
+advisory_id: GHSA-w73w-g5xw-rwhf
+datasource_id: github_osv_importer_v2/GHSA-w73w-g5xw-rwhf
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-w73w-g5xw-rwhf/GHSA-w73w-g5xw-rwhf.json
+aliases:
+  - CVE-2026-34224
+summary: |
+  Parse Server has an MFA single-use token bypass via concurrent authData login requests
+  ### Impact
+
+  An attacker who possesses a valid authentication provider token and a single MFA recovery code or SMS one-time password can create multiple authenticated sessions by sending concurrent login requests via the authData login endpoint. This defeats the single-use guarantee of MFA recovery codes and SMS one-time passwords, allowing session persistence even after the legitimate user revokes detected sessions.
+
+  ### Patches
+
+  The fix adds optimistic locking to the authData login path, ensuring that concurrent database updates for the same user fail when the original MFA token array has already been modified by another request.
+
+  ### Workarounds
+
+  There is no known workaround.
+impacted_packages:
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/>=9.0.0|<9.7.0-alpha.8
+    fixed_versions: vers:npm/9.7.0-alpha.8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/<8.6.64
+    fixed_versions: vers:npm/8.6.64
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '2.1'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:H/AT:N/PR:H/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-w73w-g5xw-rwhf/GHSA-w73w-g5xw-rwhf.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-367
+references:
+  - url: https://github.com/parse-community/parse-server
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/commit/661f160edac8daac0486bc94413cf9652876ab92
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/commit/e7efbebba398ce6abe5b6b6fb9829c6ebe310fbf
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/pull/10326
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/pull/10327
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/security/advisories/GHSA-w73w-g5xw-rwhf
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-34224
+    reference_type:
+    reference_id:

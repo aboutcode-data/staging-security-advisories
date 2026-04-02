@@ -1,0 +1,66 @@
+advisory_id: GHSA-7ch5-98q2-7289
+datasource_id: github_osv_importer_v2/GHSA-7ch5-98q2-7289
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-7ch5-98q2-7289/GHSA-7ch5-98q2-7289.json
+aliases:
+  - CVE-2026-30947
+summary: |
+  Parse Server has a bypass of class-level permissions in LiveQuery
+  ### Impact
+
+  Class-level permissions (CLP) are not enforced for LiveQuery subscriptions. An unauthenticated or unauthorized client can subscribe to any LiveQuery-enabled class and receive real-time events for all objects, regardless of CLP restrictions.
+
+  All Parse Server deployments that use LiveQuery with class-level permissions are affected. Data intended to be restricted by CLP is leaked to unauthorized subscribers in real time.
+
+  ### Patches
+
+  The fix enforces CLP before creating the subscription and during event delivery.
+
+  ### Workarounds
+
+  Disable LiveQuery for classes that use CLP restrictions by removing them from the `liveQuery.classNames` server configuration.
+
+  ### References
+
+  - GitHub security advisory: https://github.com/parse-community/parse-server/security/advisories/GHSA-7ch5-98q2-7289
+  - Fix Parse Server 9: https://github.com/parse-community/parse-server/releases/tag/9.5.2-alpha.3
+  - Fix Parse Server 8: https://github.com/parse-community/parse-server/releases/tag/8.6.16
+impacted_packages:
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/>=9.0.0|<9.5.2-alpha.3
+    fixed_versions: vers:npm/9.5.2-alpha.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/<8.6.16
+    fixed_versions: vers:npm/8.6.16
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.7'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-7ch5-98q2-7289/GHSA-7ch5-98q2-7289.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-863
+references:
+  - url: https://github.com/parse-community/parse-server
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-30947
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/releases/tag/8.6.16
+    reference_type: other
+    reference_id: 8.6.16
+  - url: https://github.com/parse-community/parse-server/releases/tag/9.5.2-alpha.3
+    reference_type: other
+    reference_id: 9.5.2-alpha.3
+  - url: https://github.com/parse-community/parse-server/security/advisories/GHSA-7ch5-98q2-7289
+    reference_type: other
+    reference_id: GHSA-7ch5-98q2-7289

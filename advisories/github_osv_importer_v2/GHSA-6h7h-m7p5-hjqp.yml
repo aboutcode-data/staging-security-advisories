@@ -1,0 +1,62 @@
+advisory_id: GHSA-6h7h-m7p5-hjqp
+datasource_id: github_osv_importer_v2/GHSA-6h7h-m7p5-hjqp
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-6h7h-m7p5-hjqp/GHSA-6h7h-m7p5-hjqp.json
+aliases:
+  - CVE-2026-34372
+summary: |
+  Sulu checks fix permissions for subentities endpoints
+  ### Impact
+
+  A user which has permission for the Sulu Admin via atleast one role could have access to the subentities of contacts via the admin API without even have permission for contacts.
+
+  ### Patches
+
+  The issue was patched in release 2.6.22 and 3.0.5.
+
+  ### Workarounds
+
+  Create a Symfony Request Listener checking the permissions for the specific roles.
+
+  ### Resources
+
+  Github Advisory: https://github.com/sulu/sulu/security/advisories/GHSA-6h7h-m7p5-hjqp
+impacted_packages:
+  - purl: pkg:composer/sulu/sulu
+    affected_versions: vers:composer/>=1.0.0|<2.6.22
+    fixed_versions: vers:composer/2.6.22
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/sulu/sulu
+    affected_versions: vers:composer/>=3.0.0|<3.0.5
+    fixed_versions: vers:composer/3.0.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-6h7h-m7p5-hjqp/GHSA-6h7h-m7p5-hjqp.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-288
+references:
+  - url: https://github.com/sulu/sulu
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-34372
+    reference_type:
+    reference_id:
+  - url: https://github.com/sulu/sulu/releases/tag/2.6.22
+    reference_type: other
+    reference_id: 2.6.22
+  - url: https://github.com/sulu/sulu/releases/tag/3.0.5
+    reference_type: other
+    reference_id: 3.0.5
+  - url: https://github.com/sulu/sulu/security/advisories/GHSA-6h7h-m7p5-hjqp
+    reference_type: other
+    reference_id: GHSA-6h7h-m7p5-hjqp

@@ -1,0 +1,68 @@
+advisory_id: GHSA-775h-3xrc-c228
+datasource_id: github_osv_importer_v2/GHSA-775h-3xrc-c228
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-775h-3xrc-c228/GHSA-775h-3xrc-c228.json
+aliases:
+  - CVE-2026-30972
+summary: |
+  Parse Server has a rate limit bypass via batch request endpoint
+  ### Impact
+
+  Parse Server's rate limiting middleware is applied at the Express middleware layer, but the batch request endpoint (`/batch`) processes sub-requests internally by routing them directly through the Promise router, bypassing Express middleware including rate limiting. An attacker can bundle multiple requests targeting a rate-limited endpoint into a single batch request to circumvent the configured rate limit.
+
+  Any Parse Server deployment that relies on the built-in rate limiting feature is affected.
+
+  ### Patches
+
+  The fix adds a pre-flight check in the batch request handler that counts the number of sub-requests targeting each rate-limited path and rejects the entire batch request if any path's count exceeds its configured `requestCount`.
+
+  Note that this is a server-level rate limit that counts sub-requests within a single batch request. Requests already consumed in the current time window by previous individual or batch requests are not counted against the batch, so the effective limit may be higher when combining individual and batch requests. For comprehensive rate limiting protection, use a reverse proxy or WAF.
+
+  ### Workarounds
+
+  Use a reverse proxy or web application firewall (WAF) to enforce rate limiting before requests reach Parse Server.
+
+  ### References
+
+  - GitHub security advisory: https://github.com/parse-community/parse-server/security/advisories/GHSA-775h-3xrc-c228
+  - Fix Parse Server 9: https://github.com/parse-community/parse-server/releases/tag/9.5.2-alpha.10
+  - Fix Parse Server 8: https://github.com/parse-community/parse-server/releases/tag/8.6.23
+impacted_packages:
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/>=9.0.0-alpha.1|<9.5.2-alpha.10
+    fixed_versions: vers:npm/9.5.2-alpha.10
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/<8.6.23
+    fixed_versions: vers:npm/8.6.23
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:N/SI:N/SA:L
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-775h-3xrc-c228/GHSA-775h-3xrc-c228.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-799
+references:
+  - url: https://github.com/parse-community/parse-server
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-30972
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/releases/tag/8.6.23
+    reference_type: other
+    reference_id: 8.6.23
+  - url: https://github.com/parse-community/parse-server/releases/tag/9.5.2-alpha.10
+    reference_type: other
+    reference_id: 9.5.2-alpha.10
+  - url: https://github.com/parse-community/parse-server/security/advisories/GHSA-775h-3xrc-c228
+    reference_type: other
+    reference_id: GHSA-775h-3xrc-c228

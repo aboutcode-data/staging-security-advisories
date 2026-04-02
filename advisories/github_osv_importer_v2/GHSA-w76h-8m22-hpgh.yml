@@ -1,7 +1,8 @@
 advisory_id: GHSA-w76h-8m22-hpgh
 datasource_id: github_osv_importer_v2/GHSA-w76h-8m22-hpgh
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-w76h-8m22-hpgh/GHSA-w76h-8m22-hpgh.json
-aliases: []
+aliases:
+  - CVE-2026-32037
 summary: |
   OpenClaw's MSTeams attachment redirect handling could bypass configured media host allowlists
   ## Summary
@@ -30,6 +31,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
+  - score: '6.0'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:L/I:L/A:L
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-w76h-8m22-hpgh/GHSA-w76h-8m22-hpgh.json
   - score: '8.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N
@@ -53,5 +59,11 @@ references:
     reference_type:
     reference_id:
   - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-w76h-8m22-hpgh
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32037
+    reference_type:
+    reference_id:
+  - url: https://www.vulncheck.com/advisories/openclaw-redirect-chain-bypass-of-media-host-allowlist-in-msteams-attachment-handling
     reference_type:
     reference_id:

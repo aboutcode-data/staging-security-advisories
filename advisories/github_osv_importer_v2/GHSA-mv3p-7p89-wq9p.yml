@@ -1,0 +1,80 @@
+advisory_id: GHSA-mv3p-7p89-wq9p
+datasource_id: github_osv_importer_v2/GHSA-mv3p-7p89-wq9p
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-mv3p-7p89-wq9p/GHSA-mv3p-7p89-wq9p.json
+aliases:
+  - CVE-2026-32278
+summary: |
+  Connect CMS has Stored Cross-site Scripting (XSS) in the File Field of its Form Plugin
+  # Security Advisory — Form Plugin (Stored XSS)
+
+  ## Summary
+
+  A Stored Cross-site Scripting (XSS) issue exists in the file field of the Form Plugin.
+
+  ## Affected Versions
+
+  - 1.x series: <= 1.41.0
+  - 2.x series: <= 2.41.0
+
+  ## Patched Versions
+
+  - 1.41.1
+  - 2.41.1
+
+  ## Description
+
+  In the file field of the Form Plugin, Stored Cross-site Scripting (XSS) could occur. If exploited, arbitrary script could run in an administrator's browser, which may lead to unauthorized actions or information theft. Users affected by this vulnerability should update to a fixed version.
+
+  ## Solution
+
+  Update to the fixed version.
+  For the 1.x series, update to 1.41.1 or later.
+  For the 2.x series, update to 2.41.1 or later.
+
+  ## Credits
+
+  OpenSource WorkShop thanks **Sho Odagiri** (小田切 祥) of **GMO Cybersecurity by Ierae, Inc.** for reporting this vulnerability.
+impacted_packages:
+  - purl: pkg:composer/opensource-workshop/connect-cms
+    affected_versions: vers:composer/<=1.41.0
+    fixed_versions: vers:composer/1.41.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/opensource-workshop/connect-cms
+    affected_versions: vers:composer/<=2.41.0
+    fixed_versions: vers:composer/2.41.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.2'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:L
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-mv3p-7p89-wq9p/GHSA-mv3p-7p89-wq9p.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-434
+  - CWE-79
+references:
+  - url: https://github.com/opensource-workshop/connect-cms
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32278
+    reference_type:
+    reference_id:
+  - url: https://github.com/opensource-workshop/connect-cms/commit/9d87fe8ecf7f57efbb0e5231be058807734c96b3
+    reference_type: other
+    reference_id: 9d87fe8ecf7f57efbb0e5231be058807734c96b3
+  - url: https://github.com/opensource-workshop/connect-cms/security/advisories/GHSA-mv3p-7p89-wq9p
+    reference_type: other
+    reference_id: GHSA-mv3p-7p89-wq9p
+  - url: https://github.com/opensource-workshop/connect-cms/releases/tag/v1.41.1
+    reference_type: other
+    reference_id: v1.41.1
+  - url: https://github.com/opensource-workshop/connect-cms/releases/tag/v2.41.1
+    reference_type: other
+    reference_id: v2.41.1

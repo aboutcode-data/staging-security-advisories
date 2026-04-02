@@ -1,0 +1,64 @@
+advisory_id: GHSA-5fw2-8jcv-xh87
+datasource_id: github_osv_importer_v2/GHSA-5fw2-8jcv-xh87
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-5fw2-8jcv-xh87/GHSA-5fw2-8jcv-xh87.json
+aliases:
+  - CVE-2026-32248
+summary: |
+  Parse Server: Account takeover via operator injection in authentication data identifier
+  ### Impact
+
+  An unauthenticated attacker can take over any user account that was created with an authentication provider that does not validate the format of the user identifier (e.g. anonymous authentication). By sending a crafted login request, the attacker can cause the server to perform a pattern-matching query instead of an exact-match lookup, allowing the attacker to match an existing user and obtain a valid session token for that user's account. Both MongoDB and PostgreSQL database backends are affected. Any Parse Server deployment that allows anonymous authentication (enabled by default) is vulnerable.
+
+  ### Patches
+
+  The fix enforces that the user identifier in authentication data is a string before using it in a database query. Non-string values are rejected with a validation error.
+
+  ### Workarounds
+
+  There is no known workaround.
+
+  ### References
+
+  - GitHub security advisory: https://github.com/parse-community/parse-server/security/advisories/GHSA-5fw2-8jcv-xh87
+  - Fix Parse Server 9: https://github.com/parse-community/parse-server/releases/tag/9.6.0-alpha.12
+  - Fix Parse Server 8: https://github.com/parse-community/parse-server/releases/tag/8.6.38
+impacted_packages:
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/>=9.0.0|<9.6.0-alpha.12
+    fixed_versions: vers:npm/9.6.0-alpha.12
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/<8.6.38
+    fixed_versions: vers:npm/8.6.38
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '9.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-5fw2-8jcv-xh87/GHSA-5fw2-8jcv-xh87.json
+  - score: CRITICAL
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-943
+references:
+  - url: https://github.com/parse-community/parse-server
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/releases/tag/8.6.38
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/releases/tag/9.6.0-alpha.12
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/security/advisories/GHSA-5fw2-8jcv-xh87
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32248
+    reference_type:
+    reference_id:

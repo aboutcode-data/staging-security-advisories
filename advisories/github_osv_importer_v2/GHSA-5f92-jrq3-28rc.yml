@@ -1,0 +1,66 @@
+advisory_id: GHSA-5f92-jrq3-28rc
+datasource_id: github_osv_importer_v2/GHSA-5f92-jrq3-28rc
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-5f92-jrq3-28rc/GHSA-5f92-jrq3-28rc.json
+aliases:
+  - CVE-2026-30966
+summary: |
+  Parse Server has role escalation and CLP bypass via direct `_Join` table write
+  ### Impact
+
+  Parse Server's internal tables, which store Relation field mappings such as role memberships, can be directly accessed via the REST API or GraphQL API by any client using only the application key. No master key is required.
+
+  An attacker can create, read, update, or delete records in any internal relationship table. Exploiting this allows the attacker to inject themselves into any Parse Role, gaining all permissions associated with that role, including full read, write, and delete access to classes protected by role-based Class-Level Permissions (CLP). Similarly, writing to any such table that backs a Relation field used in a `pointerFields` CLP bypasses that access control.
+
+  ### Patches
+
+  The fix blocks direct client access to internal relationship tables in Parse Server's role security enforcement. All create, find, get, update, and delete operations on these tables now require the master key or maintenance key.
+
+  ### Workarounds
+
+  There is no known workaround.
+
+  ### References
+
+  - GitHub security advisory: https://github.com/parse-community/parse-server/security/advisories/GHSA-5f92-jrq3-28rc
+  - Fix Parse Server 9: https://github.com/parse-community/parse-server/releases/tag/9.5.2-alpha.7
+  - Fix Parse Server 8: https://github.com/parse-community/parse-server/releases/tag/8.6.20
+impacted_packages:
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/>=9.0.0-alpha.1|<9.5.2-alpha.7
+    fixed_versions: vers:npm/9.5.2-alpha.7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/<8.6.20
+    fixed_versions: vers:npm/8.6.20
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '10.0'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:L
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-5f92-jrq3-28rc/GHSA-5f92-jrq3-28rc.json
+  - score: CRITICAL
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-284
+references:
+  - url: https://github.com/parse-community/parse-server
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-30966
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/releases/tag/8.6.20
+    reference_type: other
+    reference_id: 8.6.20
+  - url: https://github.com/parse-community/parse-server/releases/tag/9.5.2-alpha.7
+    reference_type: other
+    reference_id: 9.5.2-alpha.7
+  - url: https://github.com/parse-community/parse-server/security/advisories/GHSA-5f92-jrq3-28rc
+    reference_type: other
+    reference_id: GHSA-5f92-jrq3-28rc

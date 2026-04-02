@@ -1,0 +1,62 @@
+advisory_id: GHSA-677c-xv24-crgx
+datasource_id: github_osv_importer_v2/GHSA-677c-xv24-crgx
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-677c-xv24-crgx/GHSA-677c-xv24-crgx.json
+aliases:
+  - CVE-2026-32734
+summary: |
+  baserCMS is Vulnerable to Cross-site Scripting
+  baserCMS has DOM-based cross-site scripting in tag creation.
+
+  ### Target
+  baserCMS 5.2.2 and earlier versions
+
+  ### Vulnerability
+   Malicious JavaScript may be executed when creating a tag.
+
+  ### Countermeasures
+  Update to the latest version of baserCMS
+
+  Please refer to the following page to reference for more information.
+  https://basercms.net/security/JVN_94952030
+
+  ### Credits
+
+  - quanlna2 (Le Nguyen Anh Quan)
+  - namdi (Do Ich Nam)
+  - minhnn42 (Nguyen Ngoc Minh)
+  - VCSLab - Viettel Cyber Security
+impacted_packages:
+  - purl: pkg:composer/baserproject/basercms
+    affected_versions: vers:composer/<=5.2.2
+    fixed_versions: vers:composer/5.2.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.1'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-677c-xv24-crgx/GHSA-677c-xv24-crgx.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-79
+references:
+  - url: https://github.com/baserproject/basercms
+    reference_type:
+    reference_id:
+  - url: https://github.com/baserproject/basercms/security/advisories/GHSA-677c-xv24-crgx
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32734
+    reference_type:
+    reference_id:
+  - url: https://github.com/baserproject/basercms/releases/tag/5.2.3
+    reference_type: other
+    reference_id: 5.2.3
+  - url: https://basercms.net/security/JVN_20837860
+    reference_type: other
+    reference_id: JVN_20837860

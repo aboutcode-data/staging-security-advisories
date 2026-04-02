@@ -12,8 +12,7 @@ summary: |
 
   If an attacker can control the input object passed to `serialize()`, they can inject malicious JavaScript via the flags property of a RegExp object. When the serialized string is later evaluated (via `eval`, `new Function`, or `<script>` tags), the injected code executes.
 
-  ```
-  javascript
+  ```javascript
   const serialize = require('serialize-javascript');
   // Create an object that passes instanceof RegExp with a spoofed .flags
   const fakeRegex = Object.create(RegExp.prototype);
@@ -30,8 +29,7 @@ summary: |
   #h2. PoC 2: Code Injection via Date.toISOString()
   ```
 
-  ```
-  javascript
+  ```javascript
   const serialize = require('serialize-javascript');
   const fakeDate = Object.create(Date.prototype);
   fakeDate.toISOString = function() { return '"+(global.DATE_PWNED="DATE_INJECTION")+"'; };
@@ -43,8 +41,7 @@ summary: |
   #h2. PoC 3: Remote Code Execution
   ```
 
-  ```
-  javascript
+  ```javascript
   const serialize = require('serialize-javascript');
   const rceRegex = Object.create(RegExp.prototype);
   Object.defineProperty(rceRegex, 'source', { get: () => 'x' });
@@ -80,9 +77,6 @@ severities:
 weaknesses:
   - CWE-96
 references:
-  - url: https://github.com/advisories/GHSA-hxcc-f52p-wc94
-    reference_type:
-    reference_id:
   - url: https://github.com/yahoo/serialize-javascript
     reference_type:
     reference_id:
@@ -92,9 +86,12 @@ references:
   - url: https://github.com/yahoo/serialize-javascript/releases/tag/v7.0.3
     reference_type:
     reference_id:
-  - url: https://github.com/yahoo/serialize-javascript/security/advisories/GHSA-5c6j-r48x-rmvq
-    reference_type:
-    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2020-7660
     reference_type:
     reference_id: CVE-2020-7660
+  - url: https://github.com/yahoo/serialize-javascript/security/advisories/GHSA-5c6j-r48x-rmvq
+    reference_type:
+    reference_id: GHSA-5c6j-r48x-rmvq
+  - url: https://github.com/advisories/GHSA-hxcc-f52p-wc94
+    reference_type:
+    reference_id: GHSA-hxcc-f52p-wc94

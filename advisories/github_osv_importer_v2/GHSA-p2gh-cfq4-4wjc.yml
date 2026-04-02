@@ -1,0 +1,49 @@
+advisory_id: GHSA-p2gh-cfq4-4wjc
+datasource_id: github_osv_importer_v2/GHSA-p2gh-cfq4-4wjc
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-p2gh-cfq4-4wjc/GHSA-p2gh-cfq4-4wjc.json
+aliases: []
+summary: |
+  Protobuf: Denial of Service issue through malicious messages containing negative varints or deep recursion
+  ### Impact
+  A Denial of Service (DoS) vulnerability exists in the Protobuf PHP library during the parsing of untrusted input. Maliciously structured messages—specifically those containing negative `varint`s or deep recursion—can be used to crash the application, impacting service availability.
+
+  ### Patches
+  Patches have been released to 5.34.0-RC1 and 4.33.6.
+impacted_packages:
+  - purl: pkg:composer/google/protobuf
+    affected_versions: vers:composer/<4.33.6
+    fixed_versions: vers:composer/4.33.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.1'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-p2gh-cfq4-4wjc/GHSA-p2gh-cfq4-4wjc.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-400
+references:
+  - url: https://github.com/protocolbuffers/protobuf
+    reference_type:
+    reference_id:
+  - url: https://github.com/protocolbuffers/protobuf/commit/60e93d2d104f2af9cd345b1c6f3891d91430244a
+    reference_type:
+    reference_id:
+  - url: https://github.com/protocolbuffers/protobuf/commit/c8e9b27d95c6ab2d0668b5889e7dac2c477b7038
+    reference_type:
+    reference_id:
+  - url: https://github.com/protocolbuffers/protobuf/issues/24159
+    reference_type:
+    reference_id:
+  - url: https://github.com/protocolbuffers/protobuf/issues/25067
+    reference_type:
+    reference_id:
+  - url: https://github.com/protocolbuffers/protobuf/security/advisories/GHSA-p2gh-cfq4-4wjc
+    reference_type:
+    reference_id:

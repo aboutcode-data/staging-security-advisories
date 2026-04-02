@@ -1,0 +1,61 @@
+advisory_id: GHSA-5239-wwwm-4pmq
+datasource_id: github_osv_importer_v2/GHSA-5239-wwwm-4pmq
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-5239-wwwm-4pmq/GHSA-5239-wwwm-4pmq.json
+aliases:
+  - CVE-2026-4539
+summary: |
+  Pygments has Regular Expression Denial of Service (ReDoS) due to Inefficient Regex for GUID Matching
+  A security flaw has been discovered in pygments before 2.20.0. The impacted element is the function AdlLexer of the file pygments/lexers/archetype.py. The manipulation results in inefficient regular expression complexity. The attack is only possible with local access. The exploit has been released to the public and may be used for attacks. The project was informed of the problem early through an issue report but has not responded yet.
+impacted_packages:
+  - purl: pkg:pypi/pygments
+    affected_versions: vers:pypi/<2.20.0
+    fixed_versions: vers:pypi/2.20.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '3.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-5239-wwwm-4pmq/GHSA-5239-wwwm-4pmq.json
+  - score: '1.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-5239-wwwm-4pmq/GHSA-5239-wwwm-4pmq.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-1333
+  - CWE-400
+references:
+  - url: https://github.com/pygments/pygments
+    reference_type:
+    reference_id:
+  - url: https://github.com/pygments/pygments/commit/24b8aa76c6cd6d70f39c6dd605cce319c98e2ccc
+    reference_type:
+    reference_id:
+  - url: https://github.com/pygments/pygments/pull/3064
+    reference_type:
+    reference_id:
+  - url: https://github.com/pygments/pygments/releases/tag/2.20.0
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-4539
+    reference_type:
+    reference_id:
+  - url: https://github.com/pygments/pygments/issues/3058
+    reference_type: bug
+    reference_id: 3058
+  - url: https://vuldb.com/?ctiid.352327
+    reference_type: other
+    reference_id: ?ctiid.352327
+  - url: https://vuldb.com/?id.352327
+    reference_type: advisory
+    reference_id: ?id.352327
+  - url: https://vuldb.com/?submit.774685
+    reference_type: advisory
+    reference_id: ?submit.774685

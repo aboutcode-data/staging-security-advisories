@@ -1,0 +1,68 @@
+advisory_id: GHSA-9ccr-fpp6-78qf
+datasource_id: github_osv_importer_v2/GHSA-9ccr-fpp6-78qf
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-9ccr-fpp6-78qf/GHSA-9ccr-fpp6-78qf.json
+aliases:
+  - CVE-2026-32878
+summary: |
+  Parse Server vulnerable to schema poisoning via prototype pollution in deep copy
+  ### Impact
+
+  An attacker can bypass the default request keyword denylist protection and the class-level permission for adding fields by sending a crafted request that exploits prototype pollution in the deep copy mechanism. This allows injecting fields into class schemas that have field addition locked down, and can cause permanent schema type conflicts that cannot be resolved even with the master key.
+
+  ### Patches
+
+  The vulnerable third-party deep copy library has been replaced with a built-in deep clone mechanism that handles prototype properties safely, allowing the existing denylist check to correctly detect and reject the prohibited keyword.
+
+  ### Workarounds
+
+  None.
+
+  ### Vulnerability Independence
+
+  This vulnerability is not caused by or dependent on a vulnerability in a third-party dependency.
+
+  The third-party `deepcopy` library that was replaced in the fix has no known CVE or security advisory regarding this. The library functions as designed. It is not vulnerable.
+
+  The vulnerability is in parse-server's own request processing logic. Parse-server's security-critical keyword denylist check runs after the deep copy step in the request pipeline. The deep copy step strips `__proto__` properties as a normal part of its cloning behavior, which means the denylist check never sees the prohibited key. This allows an attacker to bypass both the denylist protection and class-level permissions for adding fields, resulting in schema poisoning.
+
+  The root cause is parse-server's reliance on a cloning mechanism that alters the shape of the data before the security check can inspect it. This is a logic flaw in parse-server's security pipeline, not a vulnerability in a dependency. Replacing the cloning mechanism was the fix for parse-server's own bug.
+impacted_packages:
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/>=9.0.0|<9.6.0-alpha.20
+    fixed_versions: vers:npm/9.6.0-alpha.20
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/<8.6.44
+    fixed_versions: vers:npm/8.6.44
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-9ccr-fpp6-78qf/GHSA-9ccr-fpp6-78qf.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-1321
+references:
+  - url: https://github.com/parse-community/parse-server
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32878
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/pull/10200
+    reference_type: other
+    reference_id: 10200
+  - url: https://github.com/parse-community/parse-server/pull/10201
+    reference_type: other
+    reference_id: 10201
+  - url: https://github.com/parse-community/parse-server/security/advisories/GHSA-9ccr-fpp6-78qf
+    reference_type: other
+    reference_id: GHSA-9ccr-fpp6-78qf

@@ -1,0 +1,60 @@
+advisory_id: GHSA-w3hv-x4fp-6h6j
+datasource_id: github_osv_importer_v2/GHSA-w3hv-x4fp-6h6j
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-w3hv-x4fp-6h6j/GHSA-w3hv-x4fp-6h6j.json
+aliases: []
+summary: |
+  @grackle-ai/server has Missing WebSocket Origin Header Validation
+  ### Impact
+
+  The WebSocket upgrade handler in the server validates authentication (API key token or session cookie) but does not check the `Origin` header. A malicious webpage on a different origin could initiate a WebSocket connection to `ws://localhost:3000/ws` if it can leverage the user's session cookie (which is `SameSite=Lax`, allowing top-level navigations).
+
+  This enables **cross-origin WebSocket hijacking** — if a user visits a malicious site while a Grackle session is active, the attacker's page could open a WebSocket and subscribe to real-time events (session output, task updates, environment state).
+
+  **Affected code:**
+  - `packages/server/src/ws-bridge.ts:80-91` — connection handler accepts WebSocket upgrades without checking `req.headers.origin`
+
+  ### Patches
+
+  **Fix:** Validate `req.headers.origin` against an allowlist before accepting connections:
+  ```typescript
+  const origin = req.headers.origin || "";
+  if (origin && !origin.includes("localhost") && !origin.includes("127.0.0.1")) {
+    ws.close(4003, "Invalid origin");
+    return;
+  }
+  ```
+
+  ### Workarounds
+
+  Ensure the Grackle server is only accessible on `127.0.0.1` (the default). Do not use `--allow-network` in untrusted network environments.
+
+  ### Resources
+
+  - CWE-346: Origin Validation Error
+  - File: `packages/server/src/ws-bridge.ts`
+impacted_packages:
+  - purl: pkg:npm/%40grackle-ai/server
+    affected_versions: vers:npm/<=0.70.2
+    fixed_versions: vers:npm/0.70.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.1'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-w3hv-x4fp-6h6j/GHSA-w3hv-x4fp-6h6j.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-346
+references:
+  - url: https://github.com/nick-pape/grackle
+    reference_type:
+    reference_id:
+  - url: https://github.com/nick-pape/grackle/security/advisories/GHSA-w3hv-x4fp-6h6j
+    reference_type:
+    reference_id:

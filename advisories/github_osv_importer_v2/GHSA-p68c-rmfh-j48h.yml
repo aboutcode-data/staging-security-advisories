@@ -1,0 +1,37 @@
+advisory_id: GHSA-p68c-rmfh-j48h
+datasource_id: github_osv_importer_v2/GHSA-p68c-rmfh-j48h
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-p68c-rmfh-j48h/GHSA-p68c-rmfh-j48h.json
+aliases:
+  - CVE-2026-30662
+summary: |
+  ConcreteCMS is vulnerable to Denial of Service During Bulk Downloads
+  ConcreteCMS v9.4.7 contains a Denial of Service (DoS) vulnerability in the File Manager component. The 'download' method in 'concrete/controllers/backend/file.php' improperly manages memory when creating zip archives. It uses 'ZipArchive::addFromString' combined with 'file_get_contents', which loads the entire content of every selected file into PHP memory. An authenticated attacker can exploit this by requesting a bulk download of large files, triggering an Out-Of-Memory (OOM) condition that causes the PHP-FPM process to terminate (SIGSEGV) and the web server to return a 500 error.
+impacted_packages:
+  - purl: pkg:composer/concrete5/concrete5
+    affected_versions: vers:composer/<=9.4.7
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-p68c-rmfh-j48h/GHSA-p68c-rmfh-j48h.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-770
+references:
+  - url: https://github.com/concretecms/concretecms
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-30662
+    reference_type:
+    reference_id:
+  - url: https://wang1rrr.github.io/2026/02/11/CVE-Report-ConcreteCMS-DoS
+    reference_type:
+    reference_id:

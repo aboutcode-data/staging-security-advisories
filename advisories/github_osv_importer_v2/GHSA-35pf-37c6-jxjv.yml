@@ -1,0 +1,58 @@
+advisory_id: GHSA-35pf-37c6-jxjv
+datasource_id: github_osv_importer_v2/GHSA-35pf-37c6-jxjv
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-35pf-37c6-jxjv/GHSA-35pf-37c6-jxjv.json
+aliases:
+  - CVE-2026-33673
+summary: |
+  PrestaShop has multiple stored XSS vulnerabilities via unprotected Template variables
+  ### Impact
+  Multiple stored Cross-Site Scripting (stored XSS) vulnerabilities in the BO: an attacker who can inject data into the database, via limited back-office access or a previously existing vulnerability, can exploit unprotected variables in back-office templates.
+
+  ### Patches
+  Patched on 8.2.5 and 9.1.0
+
+  ### Workarounds
+  None
+
+  ### References
+  None
+impacted_packages:
+  - purl: pkg:composer/prestashop/prestashop
+    affected_versions: vers:composer/>=9.0.0-alpha.1|<9.1.0
+    fixed_versions: vers:composer/9.1.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/prestashop/prestashop
+    affected_versions: vers:composer/<8.2.5
+    fixed_versions: vers:composer/8.2.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.6'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:C/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-35pf-37c6-jxjv/GHSA-35pf-37c6-jxjv.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-79
+references:
+  - url: https://github.com/PrestaShop/PrestaShop
+    reference_type:
+    reference_id:
+  - url: https://github.com/PrestaShop/PrestaShop/releases/tag/8.2.5
+    reference_type:
+    reference_id:
+  - url: https://github.com/PrestaShop/PrestaShop/releases/tag/9.1.0
+    reference_type:
+    reference_id:
+  - url: https://github.com/PrestaShop/PrestaShop/security/advisories/GHSA-35pf-37c6-jxjv
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33673
+    reference_type:
+    reference_id:

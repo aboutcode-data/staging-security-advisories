@@ -1,0 +1,208 @@
+advisory_id: GHSA-xcwx-r2gw-w93m
+datasource_id: github_osv_importer_v2/GHSA-xcwx-r2gw-w93m
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-xcwx-r2gw-w93m/GHSA-xcwx-r2gw-w93m.json
+aliases:
+  - CVE-2026-31825
+summary: |
+  Sylius has a DQL Injection via API Order Filters
+  ### Impact
+  Sylius API filters `ProductPriceOrderFilter` and `TranslationOrderNameAndLocaleFilter` pass user-supplied order direction values directly to Doctrine's `orderBy()` without validation. An attacker can inject arbitrary DQL:
+
+  ```
+  GET /api/v2/shop/products?order[price]=ASC,%20variant.code%20DESC
+  ```
+
+  ### Patches
+  The issue is fixed in versions: 1.9.12, 1.10.16, 1.11.17, 1.12.23, 1.13.15, 1.14.18, 2.0.16, 2.1.12, 2.2.3 and above.
+
+  ### Workarounds
+
+  An `EventSubscriber` that sanitizes `order` query parameters **only on API routes** before they reach the vulnerable filters.
+
+  The subscriber accepts an `$apiRoute` constructor parameter (default `/api/v2`) and skips non-API requests entirely — so there is zero overhead on shop/admin page requests.
+
+  This follows the same pattern used by Sylius's own `KernelRequestEventSubscriber` (`src/Sylius/Bundle/ApiBundle/EventSubscriber/KernelRequestEventSubscriber.php`), which also uses `str_contains($pathInfo, $this->apiRoute)` to scope logic to API routes.
+
+  ---
+
+  #### Step 1 — Create the EventSubscriber
+
+  `src/EventSubscriber/SanitizeOrderDirectionSubscriber.php`:
+
+  ```php
+  <?php
+
+  declare(strict_types=1);
+
+  namespace App\EventSubscriber;
+
+  use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+  use Symfony\Component\HttpKernel\Event\RequestEvent;
+  use Symfony\Component\HttpKernel\KernelEvents;
+
+  final class SanitizeOrderDirectionSubscriber implements EventSubscriberInterface
+  {
+      private const ALLOWED_DIRECTIONS = ['asc', 'desc'];
+
+      public function __construct(
+          private string $apiRoute,
+      ) {
+      }
+
+      public static function getSubscribedEvents(): array
+      {
+          return [
+              KernelEvents::REQUEST => ['sanitizeOrderParameters', 64],
+          ];
+      }
+
+      public function sanitizeOrderParameters(RequestEvent $event): void
+      {
+          if (!str_contains($event->getRequest()->getPathInfo(), $this->apiRoute)) {
+              return;
+          }
+
+          $request = $event->getRequest();
+
+          /** @var mixed $order */
+          $order = $request->query->all()['order'] ?? null;
+          if (!is_array($order)) {
+              return;
+          }
+
+          $needsSanitization = false;
+          $sanitized = [];
+          foreach ($order as $field => $direction) {
+              if (is_string($direction) && in_array(strtolower($direction), self::ALLOWED_DIRECTIONS, true)) {
+                  $sanitized[$field] = $direction;
+              } else {
+                  $needsSanitization = true;
+              }
+          }
+
+          if (!$needsSanitization) {
+              return;
+          }
+
+          $all = $request->query->all();
+          $all['order'] = $sanitized;
+          $request->query->replace($all);
+
+          $request->server->set('QUERY_STRING', http_build_query($all));
+          $request->attributes->set('_api_filters', $all);
+      }
+  }
+  ```
+
+  #### Step 2 — Register the service
+
+  **Option A** — If your `config/services.yaml` already has `App\` autowiring (Symfony default):
+
+  ```yaml
+  # Nothing to do — autoconfigure picks up EventSubscriberInterface automatically.
+  # Optionally bind the API route prefix:
+  services:
+      App\EventSubscriber\SanitizeOrderDirectionSubscriber:
+          arguments:
+              $apiRoute: '%sylius.security.new_api_route%'
+  ```
+
+  **Option B** — If there is no `App\` autowiring:
+
+  ```yaml
+  services:
+      App\EventSubscriber\SanitizeOrderDirectionSubscriber:
+          arguments:
+              $apiRoute: '%sylius.security.new_api_route%'
+          tags: ['kernel.event_subscriber']
+  ```
+
+  Using `%sylius.security.new_api_route%` ties the subscriber to the same prefix Sylius uses (`/api/v2` by default). If the parameter is not available, hardcode `'/api/v2'` instead.
+
+  #### Step 3 — Clear cache
+
+  ```bash
+  bin/console cache:clear
+  ```
+
+  ### Reporters
+
+  We would like to extend our gratitude to the following individuals for their detailed reporting and responsible disclosure of this vulnerability:
+  - Chris Alupului (@Neosprings)
+  - Bartłomiej Nowiński (@bnBart)
+
+  ### For more information
+  If you have any questions or comments about this advisory:
+
+  - Open an issue in [Sylius issues](https://github.com/Sylius/Sylius/issues?q=sort%3Aupdated-desc+is%3Aissue+is%3Aopen)
+  - Email us at [security@sylius.com](mailto:security@sylius.com)
+impacted_packages:
+  - purl: pkg:composer/sylius/sylius
+    affected_versions: vers:composer/<=1.9.11
+    fixed_versions: vers:composer/1.9.12
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/sylius/sylius
+    affected_versions: vers:composer/<=1.10.15
+    fixed_versions: vers:composer/1.10.16
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/sylius/sylius
+    affected_versions: vers:composer/<=1.11.16
+    fixed_versions: vers:composer/1.11.17
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/sylius/sylius
+    affected_versions: vers:composer/<=1.12.22
+    fixed_versions: vers:composer/1.12.23
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/sylius/sylius
+    affected_versions: vers:composer/<=1.13.14
+    fixed_versions: vers:composer/1.13.15
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/sylius/sylius
+    affected_versions: vers:composer/<=1.14.17
+    fixed_versions: vers:composer/1.14.18
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/sylius/sylius
+    affected_versions: vers:composer/<=2.0.15
+    fixed_versions: vers:composer/2.0.16
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/sylius/sylius
+    affected_versions: vers:composer/<=2.1.11
+    fixed_versions: vers:composer/2.1.12
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/sylius/sylius
+    affected_versions: vers:composer/<=2.2.2
+    fixed_versions: vers:composer/2.2.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-xcwx-r2gw-w93m/GHSA-xcwx-r2gw-w93m.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-943
+  - CWE-89
+references:
+  - url: https://github.com/Sylius/Sylius
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-31825
+    reference_type:
+    reference_id:
+  - url: https://github.com/Sylius/Sylius/security/advisories/GHSA-xcwx-r2gw-w93m
+    reference_type: other
+    reference_id: GHSA-xcwx-r2gw-w93m

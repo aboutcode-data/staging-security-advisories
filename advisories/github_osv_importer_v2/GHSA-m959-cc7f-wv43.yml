@@ -1,0 +1,49 @@
+advisory_id: GHSA-m959-cc7f-wv43
+datasource_id: github_osv_importer_v2/GHSA-m959-cc7f-wv43
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-m959-cc7f-wv43/GHSA-m959-cc7f-wv43.json
+aliases:
+  - CVE-2026-34073
+summary: "cryptography has incomplete DNS name constraint enforcement on peer names\n## Summary\n\
+  \nIn versions of cryptography prior to 46.0.5, DNS name constraints were only validated against\
+  \ SANs within child certificates, and not the \"peer name\" presented during each validation.\
+  \ Consequently, cryptography would allow a peer named `bar.example.com` to validate against\
+  \ a wildcard leaf certificate for `*.example.com`, even if the leaf's parent certificate (or\
+  \ upwards) contained an excluded subtree constraint for `bar.example.com`.\n\nThis behavior\
+  \ resulted from a gap between RFC 5280 (which defines Name Constraint semantics) and RFC 9525\
+  \ (which defines service identity semantics): put together, neither states definitively whether\
+  \ Name Constraints should be applied to peer names. To close this gap, cryptography now conservatively\
+  \ rejects any validation where the peer name would be rejected by a name constraint if it\
+  \ were a SAN instead.\n\nIn practice, exploitation of this bypass requires an uncommon X.509\
+  \ topology, one that the Web PKI avoids because it exhibits these kinds of problems. Consequently,\
+  \ we consider this a medium-to-low impact severity.\n\nSee CVE-2025-61727 for a similar bypass\
+  \ in Go's `crypto/x509`.\n\n## Remediation\n\nUsers should upgrade to 46.0.6 or newer. \n\n\
+  ## Attribution\n\nReporter: @1seal"
+impacted_packages:
+  - purl: pkg:pypi/cryptography
+    affected_versions: vers:pypi/<46.0.6
+    fixed_versions: vers:pypi/46.0.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '1.7'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-m959-cc7f-wv43/GHSA-m959-cc7f-wv43.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-295
+references:
+  - url: https://github.com/pyca/cryptography
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-34073
+    reference_type:
+    reference_id:
+  - url: https://github.com/pyca/cryptography/security/advisories/GHSA-m959-cc7f-wv43
+    reference_type: other
+    reference_id: GHSA-m959-cc7f-wv43

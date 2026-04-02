@@ -1,0 +1,46 @@
+advisory_id: GHSA-xch3-2f9x-wh9f
+datasource_id: github_osv_importer_v2/GHSA-xch3-2f9x-wh9f
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-xch3-2f9x-wh9f/GHSA-xch3-2f9x-wh9f.json
+aliases:
+  - CVE-2025-14287
+summary: |
+  MLflow has a command injection in mlflow/sagemaker/__init__.py
+  A command injection vulnerability exists in mlflow/mlflow versions before v3.7.0, specifically in the `mlflow/sagemaker/__init__.py` file at lines 161-167. The vulnerability arises from the direct interpolation of user-supplied container image names into shell commands without proper sanitization, which are then executed using `os.system()`. This allows attackers to execute arbitrary commands by supplying malicious input through the `--container` parameter of the CLI. The issue affects environments where MLflow is used, including development setups, CI/CD pipelines, and cloud deployments.
+impacted_packages:
+  - purl: pkg:pypi/mlflow
+    affected_versions: vers:pypi/<3.8.0rc0
+    fixed_versions: vers:pypi/3.8.0rc0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-xch3-2f9x-wh9f/GHSA-xch3-2f9x-wh9f.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-94
+references:
+  - url: https://github.com/mlflow/mlflow
+    reference_type:
+    reference_id:
+  - url: https://github.com/mlflow/mlflow/commit/8b8792a7034fb33a14b0b31cabcaa9b912d3485f
+    reference_type:
+    reference_id:
+  - url: https://github.com/mlflow/mlflow/pull/19277
+    reference_type:
+    reference_id:
+  - url: https://github.com/mlflow/mlflow/releases/tag/v3.8.0rc0
+    reference_type:
+    reference_id:
+  - url: https://huntr.com/bounties/229cd526-41aa-4819-b6f0-e2d0371c89e3
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2025-14287
+    reference_type:
+    reference_id:

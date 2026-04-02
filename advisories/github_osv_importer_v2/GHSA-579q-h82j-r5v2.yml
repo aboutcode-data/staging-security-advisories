@@ -1,0 +1,57 @@
+advisory_id: GHSA-579q-h82j-r5v2
+datasource_id: github_osv_importer_v2/GHSA-579q-h82j-r5v2
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-579q-h82j-r5v2/GHSA-579q-h82j-r5v2.json
+aliases:
+  - CVE-2026-33728
+summary: |
+  dd-trace-java: Unsafe deserialization in RMI instrumentation may lead to remote code execution
+  In versions of dd-trace-java prior to 1.60.3, the RMI instrumentation registered a custom endpoint that deserialized incoming data without applying serialization filters. On JDK version 16 and earlier, an attacker with network access to a JMX or RMI port on an instrumented JVM could exploit this to potentially achieve remote code execution. All three of the following conditions must be true to exploit this vulnerability:
+  1. dd-trace-java is attached as a Java agent (`-javaagent`) on Java 16 or earlier
+  2. A JMX/RMI port has been explicitly configured via `-Dcom.sun.management.jmxremote.port` and is network-reachable
+  3. A gadget-chain-compatible library is present on the classpath
+
+  ### Impact
+  Arbitrary remote code execution with the privileges of the user running the instrumented JVM.
+
+  ### Recommendation
+  - For JDK >= 17: No action is required, but upgrading is strongly encouraged.
+  - For JDK >= 8u121 < JDK 17: Upgrade to dd-trace-java version 1.60.3 or later.
+  - For JDK < 8u121 and earlier where serialization filters are not available, apply the workaround described below.
+
+  ### Workarounds
+  Set the following environment variable to disable the RMI integration: `DD_INTEGRATION_RMI_ENABLED=false`
+
+  ### Credits
+  This vulnerability was responsibly disclosed by Mohamed Amine ait Ouchebou (mrecho) (Indiesecurity) via the Datadog bug bounty program.
+impacted_packages:
+  - purl: pkg:maven/com.datadoghq/dd-java-agent
+    affected_versions: vers:maven/>=0.40.0|<1.60.3
+    fixed_versions: vers:maven/1.60.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '9.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-579q-h82j-r5v2/GHSA-579q-h82j-r5v2.json
+  - score: CRITICAL
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-502
+references:
+  - url: https://github.com/DataDog/dd-trace-java
+    reference_type:
+    reference_id:
+  - url: https://github.com/DataDog/dd-trace-java/releases/tag/v1.60.3
+    reference_type:
+    reference_id:
+  - url: https://github.com/DataDog/dd-trace-java/security/advisories/GHSA-579q-h82j-r5v2
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33728
+    reference_type:
+    reference_id:

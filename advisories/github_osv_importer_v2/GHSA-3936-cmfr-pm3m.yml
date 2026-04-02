@@ -1,0 +1,49 @@
+advisory_id: GHSA-3936-cmfr-pm3m
+datasource_id: github_osv_importer_v2/GHSA-3936-cmfr-pm3m
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-3936-cmfr-pm3m/GHSA-3936-cmfr-pm3m.json
+aliases:
+  - CVE-2026-32274
+summary: "Black: Arbitrary file writes from unsanitized user input in cache file name\n### Impact\n\
+  \nBlack writes a cache file, the name of which is computed from various formatting options.\
+  \ The value of the `--python-cell-magics` option was placed in the filename without sanitization,\
+  \ which allowed an attacker who controls the value of this argument to write cache files to\
+  \ arbitrary file system locations. \n\n### Patches\n\nFixed in Black 26.3.1.\n\n### Workarounds\n\
+  \nDo not allow untrusted user input into the value of the `--python-cell-magics` option."
+impacted_packages:
+  - purl: pkg:pypi/black
+    affected_versions: vers:pypi/<26.3.1
+    fixed_versions: vers:pypi/26.3.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.7'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-3936-cmfr-pm3m/GHSA-3936-cmfr-pm3m.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-22
+references:
+  - url: https://github.com/psf/black
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32274
+    reference_type:
+    reference_id:
+  - url: https://github.com/psf/black/releases/tag/26.3.1
+    reference_type: other
+    reference_id: 26.3.1
+  - url: https://github.com/psf/black/commit/4937fe6cf241139ddbfc16b0bdbb5b422798909d
+    reference_type: other
+    reference_id: 4937fe6cf241139ddbfc16b0bdbb5b422798909d
+  - url: https://github.com/psf/black/pull/5038
+    reference_type: other
+    reference_id: 5038
+  - url: https://github.com/psf/black/security/advisories/GHSA-3936-cmfr-pm3m
+    reference_type: other
+    reference_id: GHSA-3936-cmfr-pm3m

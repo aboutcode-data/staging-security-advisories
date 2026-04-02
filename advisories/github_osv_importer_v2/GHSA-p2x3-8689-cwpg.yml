@@ -1,0 +1,64 @@
+advisory_id: GHSA-p2x3-8689-cwpg
+datasource_id: github_osv_importer_v2/GHSA-p2x3-8689-cwpg
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-p2x3-8689-cwpg/GHSA-p2x3-8689-cwpg.json
+aliases:
+  - CVE-2026-32594
+summary: |
+  Parse Server's GraphQL WebSocket endpoint bypasses security middleware
+  ### Impact
+
+  Any Parse Server deployment that uses the GraphQL API is affected. The GraphQL WebSocket endpoint for subscriptions does not pass requests through the Express middleware chain that enforces authentication, introspection control, and query complexity limits. An attacker can connect to the WebSocket endpoint and execute GraphQL operations without providing a valid application or API key, access the GraphQL schema via introspection even when public introspection is disabled, and send arbitrarily complex queries that bypass configured complexity limits.
+
+  ### Patches
+
+  The unfinished GraphQL WebSocket subscription feature has been removed, including the `createSubscriptions` method and the `subscriptions-transport-ws` dependency. GraphQL subscriptions were never functional in Parse Server as the schema did not define any subscription types.
+
+  ### Workarounds
+
+  Block WebSocket upgrade requests to the GraphQL subscriptions path (by default `/subscriptions`) at the network level, for example using a reverse proxy or load balancer rule.
+impacted_packages:
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/>=9.0.0|<9.6.0-alpha.14
+    fixed_versions: vers:npm/9.6.0-alpha.14
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/<8.0.0
+    fixed_versions: vers:npm/8.6.40
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:L/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-p2x3-8689-cwpg/GHSA-p2x3-8689-cwpg.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-306
+references:
+  - url: https://github.com/parse-community/parse-server
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/commit/21330d146c68b57a930a58b8a8cd9fbf09436cf3
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/commit/3ffba757bfc836bd034e1369f4f64304e110e375
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32594
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/pull/10189
+    reference_type: other
+    reference_id: 10189
+  - url: https://github.com/parse-community/parse-server/pull/10190
+    reference_type: other
+    reference_id: 10190
+  - url: https://github.com/parse-community/parse-server/security/advisories/GHSA-p2x3-8689-cwpg
+    reference_type: other
+    reference_id: GHSA-p2x3-8689-cwpg

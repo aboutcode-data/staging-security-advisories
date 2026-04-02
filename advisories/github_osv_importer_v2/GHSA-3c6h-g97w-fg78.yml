@@ -1,7 +1,8 @@
 advisory_id: GHSA-3c6h-g97w-fg78
 datasource_id: github_osv_importer_v2/GHSA-3c6h-g97w-fg78
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-3c6h-g97w-fg78/GHSA-3c6h-g97w-fg78.json
-aliases: []
+aliases:
+  - CVE-2026-32059
 summary: |
   OpenClaw's tools.exec.safeBins sort long-option abbreviation bypass can skip exec approval in allowlist mode
   ### Summary
@@ -44,14 +45,19 @@ severities:
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
     published_at: None
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-3c6h-g97w-fg78/GHSA-3c6h-g97w-fg78.json
+  - score: '8.7'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-3c6h-g97w-fg78/GHSA-3c6h-g97w-fg78.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
     published_at: None
     url:
 weaknesses:
-  - CWE-863
   - CWE-184
+  - CWE-863
 references:
   - url: https://github.com/openclaw/openclaw
     reference_type:
@@ -59,6 +65,12 @@ references:
   - url: https://github.com/openclaw/openclaw/commit/3b8e33037ae2e12af7beb56fcf0346f1f8cbde6f
     reference_type:
     reference_id:
-  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-3c6h-g97w-fg78
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32059
     reference_type:
     reference_id:
+  - url: https://www.vulncheck.com/advisories/openclaw-allowlist-bypass-via-sort-long-option-abbreviation-in-toolsexecsafebins
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-3c6h-g97w-fg78
+    reference_type:
+    reference_id: GHSA-3c6h-g97w-fg78

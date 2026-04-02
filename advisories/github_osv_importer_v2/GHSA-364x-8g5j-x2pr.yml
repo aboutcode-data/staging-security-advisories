@@ -1,0 +1,54 @@
+advisory_id: GHSA-364x-8g5j-x2pr
+datasource_id: github_osv_importer_v2/GHSA-364x-8g5j-x2pr
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-364x-8g5j-x2pr/GHSA-364x-8g5j-x2pr.json
+aliases: []
+summary: |
+  n8n has XSS in its Credential Management Flow
+  ## Impact
+  An authenticated user with permission to create and share credentials could craft a malicious OAuth2 credential containing a JavaScript URL in the Authorization URL field. If a victim opened the credential and interacted with the OAuth authorization button, the injected script would execute in their browser session.
+
+  ## Patches
+  The issue has been fixed in n8n versions 2.8.0 and 2.6.4. Users should upgrade to one of these versions or later to remediate the vulnerability.
+
+  ## Workarounds
+  If upgrading is not immediately possible, administrators should consider the following temporary mitigations:
+  - Limit credential creation and sharing permissions to fully trusted users only.
+  - Restrict access to the n8n instance to trusted users only.
+
+  These workarounds do not fully remediate the risk and should only be used as short-term mitigation measures.
+impacted_packages:
+  - purl: pkg:npm/n8n
+    affected_versions: vers:npm/>=2.7.0|<2.8.0
+    fixed_versions: vers:npm/2.8.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/n8n
+    affected_versions: vers:npm/<2.6.4
+    fixed_versions: vers:npm/2.6.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.4'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-364x-8g5j-x2pr/GHSA-364x-8g5j-x2pr.json
+  - score: '4.8'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-364x-8g5j-x2pr/GHSA-364x-8g5j-x2pr.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-79
+references:
+  - url: https://github.com/n8n-io/n8n
+    reference_type:
+    reference_id:
+  - url: https://github.com/n8n-io/n8n/security/advisories/GHSA-364x-8g5j-x2pr
+    reference_type:
+    reference_id:

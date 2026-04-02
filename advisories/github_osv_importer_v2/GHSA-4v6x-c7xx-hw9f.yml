@@ -19,12 +19,6 @@ summary: |
 
   - Set the `html_input` configuration option to `'escape'` or `'strip'` to disable all raw HTML, though this is a broader restriction than the `DisallowedRawHtml` extension provides.
   - Pass the rendered HTML through a dedicated HTML sanitizer before serving it to users ([always recommended](https://commonmark.thephpleague.com/2.x/security/#additional-filtering))
-
-  ### Resources
-
-  - [CommonMark DisallowedRawHtml documentation](https://commonmark.thephpleague.com/extensions/disallowed-raw-html/)
-  - [CWE-79: Improper Neutralization of Input During Web Page Generation](https://cwe.mitre.org/data/definitions/79.html)
-  - [CWE-80: Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS)](https://cwe.mitre.org/data/definitions/80.html)
 impacted_packages:
   - purl: pkg:composer/league/commonmark
     affected_versions: vers:composer/<=2.8.0
@@ -51,9 +45,9 @@ references:
   - url: https://github.com/thephpleague/commonmark
     reference_type:
     reference_id:
-  - url: https://github.com/thephpleague/commonmark/security/advisories/GHSA-4v6x-c7xx-hw9f
-    reference_type:
-    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-30838
     reference_type:
-    reference_id: CVE-2026-30838
+    reference_id:
+  - url: https://github.com/thephpleague/commonmark/security/advisories/GHSA-4v6x-c7xx-hw9f
+    reference_type: other
+    reference_id: GHSA-4v6x-c7xx-hw9f

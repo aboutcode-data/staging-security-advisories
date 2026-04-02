@@ -1,7 +1,8 @@
 advisory_id: GHSA-vmqr-rc7x-3446
 datasource_id: github_osv_importer_v2/GHSA-vmqr-rc7x-3446
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-vmqr-rc7x-3446/GHSA-vmqr-rc7x-3446.json
-aliases: []
+aliases:
+  - CVE-2026-22169
 summary: |
   OpenClaw's non-default safeBins sort configuration can bypass intended allowlist approval constraints
   When `sort` is explicitly added to `tools.exec.safeBins` (non-default), the `--compress-program` option can invoke an external helper and bypass the intended safe-bin approval constraints in allowlist mode.
@@ -46,9 +47,9 @@ references:
   - url: https://github.com/openclaw/openclaw
     reference_type:
     reference_id:
-  - url: https://github.com/openclaw/openclaw/commit/57fbbaebca4d34d17549accf6092ae26eb7b605c
-    reference_type:
-    reference_id:
   - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-vmqr-rc7x-3446
     reference_type:
     reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/57fbbaebca4d34d17549accf6092ae26eb7b605c
+    reference_type: other
+    reference_id: 57fbbaebca4d34d17549accf6092ae26eb7b605c

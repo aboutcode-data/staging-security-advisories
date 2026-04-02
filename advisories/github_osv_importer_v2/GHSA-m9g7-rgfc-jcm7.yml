@@ -1,0 +1,54 @@
+advisory_id: GHSA-m9g7-rgfc-jcm7
+datasource_id: github_osv_importer_v2/GHSA-m9g7-rgfc-jcm7
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-m9g7-rgfc-jcm7/GHSA-m9g7-rgfc-jcm7.json
+aliases:
+  - CVE-2026-30877
+summary: |
+  baserCMS Update Functionality Vulnerable to OS Command Injection
+  ### Summary
+  The latest version of baserCMS (basercms-5.2.2) contains an OS command injection vulnerability (CWE-78) in its update functionality.
+  Due to this issue, an authenticated user with administrator privileges in baserCMS can execute arbitrary OS commands on the server with the privileges of the user account running baserCMS.
+
+  ### Details
+  Please refer to the attached materials.
+  [OSコマンドインジェクション（baserCMSのアップデート機能）.pdf](https://github.com/user-attachments/files/25468689/OS.baserCMS.pdf)
+
+
+
+  ### Impact
+  An authenticated user with administrator privileges in baserCMS can execute OS commands on the server with the privileges of the user account running baserCMS.
+impacted_packages:
+  - purl: pkg:composer/baserproject/basercms
+    affected_versions: vers:composer/<=5.2.2
+    fixed_versions: vers:composer/5.2.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '9.1'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-m9g7-rgfc-jcm7/GHSA-m9g7-rgfc-jcm7.json
+  - score: CRITICAL
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-78
+references:
+  - url: https://github.com/baserproject/basercms
+    reference_type:
+    reference_id:
+  - url: https://github.com/baserproject/basercms/security/advisories/GHSA-m9g7-rgfc-jcm7
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-30877
+    reference_type:
+    reference_id:
+  - url: https://github.com/baserproject/basercms/releases/tag/5.2.3
+    reference_type: other
+    reference_id: 5.2.3
+  - url: https://basercms.net/security/JVN_20837860
+    reference_type: other
+    reference_id: JVN_20837860

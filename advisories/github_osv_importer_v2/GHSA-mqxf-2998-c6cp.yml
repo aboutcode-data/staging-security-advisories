@@ -1,0 +1,68 @@
+advisory_id: GHSA-mqxf-2998-c6cp
+datasource_id: github_osv_importer_v2/GHSA-mqxf-2998-c6cp
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-mqxf-2998-c6cp/GHSA-mqxf-2998-c6cp.json
+aliases:
+  - CVE-2026-29173
+summary: |
+  Craft Commerce is Vulnerable to Stored XSS while updating Order Status from Orders Table
+  ## Summary
+  A stored XSS vulnerability exists when a user tries to update the Order Status from the Commerce Orders Table. The Order Status Name is rendered without proper escaping, allowing script execution to occur.
+
+  ---
+  ## Proof of Concept
+  ### Required Permissions
+  - Admin access (to edit/create Order Statuses)
+
+  ### Steps to Reproduce
+  1. Log in with an admin account
+  2. Navigate to **Commerce** → **Settings** → **Order Statuses**
+  3. Create a new order status
+  4. Set the **Name** field to:
+  ```html
+  <img src=x onerror="alert('Order Statuses XSS')">
+  ```
+  5. Save the order status
+  6. Go to Commerce → Orders (make sure you placed any orders)
+  7. From the left panel, select any Order Status (e.g., New)
+  8. Select any order from the orders table → Click on the Gear Icon → then click "Update Order Status..."
+  9. Notice the XSS execution
+impacted_packages:
+  - purl: pkg:composer/craftcms/commerce
+    affected_versions: vers:composer/<=4.10.1
+    fixed_versions: vers:composer/4.10.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/craftcms/commerce
+    affected_versions: vers:composer/<=5.5.2
+    fixed_versions: vers:composer/5.5.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '1.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-mqxf-2998-c6cp/GHSA-mqxf-2998-c6cp.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-79
+references:
+  - url: https://github.com/craftcms/commerce
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-29173
+    reference_type:
+    reference_id:
+  - url: https://github.com/craftcms/commerce/commit/60cdc505c03b6fa2f59715e8c060114b66334afa
+    reference_type: other
+    reference_id: 60cdc505c03b6fa2f59715e8c060114b66334afa
+  - url: https://github.com/craftcms/commerce/commit/a2ea853935ef03297ea1298bdb0d8c55ec5daf7b
+    reference_type: other
+    reference_id: a2ea853935ef03297ea1298bdb0d8c55ec5daf7b
+  - url: https://github.com/craftcms/commerce/security/advisories/GHSA-mqxf-2998-c6cp
+    reference_type: other
+    reference_id: GHSA-mqxf-2998-c6cp

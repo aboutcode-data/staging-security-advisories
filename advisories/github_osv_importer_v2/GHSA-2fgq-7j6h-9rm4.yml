@@ -1,7 +1,8 @@
 advisory_id: GHSA-2fgq-7j6h-9rm4
 datasource_id: github_osv_importer_v2/GHSA-2fgq-7j6h-9rm4
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-2fgq-7j6h-9rm4/GHSA-2fgq-7j6h-9rm4.json
-aliases: []
+aliases:
+  - CVE-2026-32003
 summary: |
   OpenClaw has system.run shell-wrapper env injection via SHELLOPTS/PS4 can bypass allowlist intent (RCE)
   ### Summary
@@ -49,7 +50,12 @@ severities:
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H
     published_at: None
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-2fgq-7j6h-9rm4/GHSA-2fgq-7j6h-9rm4.json
-  - score: MODERATE
+  - score: '7.5'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:H/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-2fgq-7j6h-9rm4/GHSA-2fgq-7j6h-9rm4.json
+  - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
     published_at: None
@@ -61,9 +67,15 @@ references:
   - url: https://github.com/openclaw/openclaw
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32003
+    reference_type:
+    reference_id:
   - url: https://github.com/openclaw/openclaw/commit/e80c803fa887f9699ad87a9e906ab5c1ff85bd9a
-    reference_type:
-    reference_id:
+    reference_type: other
+    reference_id: e80c803fa887f9699ad87a9e906ab5c1ff85bd9a
   - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-2fgq-7j6h-9rm4
-    reference_type:
-    reference_id:
+    reference_type: advisory
+    reference_id: GHSA-2fgq-7j6h-9rm4
+  - url: https://www.vulncheck.com/advisories/openclaw-remote-code-execution-via-shellopts-ps4-environment-injection-in-system-run
+    reference_type: advisory
+    reference_id: openclaw-remote-code-execution-via-shellopts-ps4-environment-injection-in-system-run

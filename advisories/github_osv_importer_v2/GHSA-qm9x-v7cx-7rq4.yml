@@ -1,0 +1,56 @@
+advisory_id: GHSA-qm9x-v7cx-7rq4
+datasource_id: github_osv_importer_v2/GHSA-qm9x-v7cx-7rq4
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-qm9x-v7cx-7rq4/GHSA-qm9x-v7cx-7rq4.json
+aliases: []
+summary: |
+  OpenClaw's system.run allowlist can be bypassed through an unregistered time dispatch wrapper
+  ## Summary
+  Allow-always exec approvals did not unwrap /usr/bin/time, so an unregistered time wrapper could bypass executable binding and reuse approval state for the inner command.
+
+  ## Affected Packages / Versions
+  - Package: `openclaw` (npm)
+  - Affected: < 2026.3.22
+  - Fixed: >= 2026.3.22
+  - Latest released tag checked: `v2026.3.23-2` (`630f1479c44f78484dfa21bb407cbe6f171dac87`)
+  - Latest published npm version checked: `2026.3.23-2`
+
+  ## Fix Commit(s)
+  - `39409b6a6dd4239deea682e626bac9ba547bfb14`
+
+  ## Release Status
+  The fix shipped in `v2026.3.22` and remains present in `v2026.3.23` and `v2026.3.23-2`.
+
+  ## Code-Level Confirmation
+  - src/infra/dispatch-wrapper-resolution.ts now unwraps /usr/bin/time and binds approvals to the real inner executable.
+  - src/infra/exec-approvals-allow-always.test.ts ships regression coverage for time-wrapper allow-always approval bypasses.
+
+  OpenClaw thanks @YLChen-007 for reporting.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.3.22
+    fixed_versions: vers:npm/2026.3.22
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.4'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-qm9x-v7cx-7rq4/GHSA-qm9x-v7cx-7rq4.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-863
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/39409b6a6dd4239deea682e626bac9ba547bfb14
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-qm9x-v7cx-7rq4
+    reference_type:
+    reference_id:
