@@ -17,7 +17,7 @@ summary: "Home Assistant has Stored XSS vulnerability in Energy dashboard from E
   \ can name the entity themselves and as such pick a malicious name. The default name given\
   \ by the Energy integration can also be taken directly from their system, and be vulnerable\
   \ that way. The execution happens within the energy dashboard, when hovering over a data point:\n\
-  \n<img width=\"1547\" height=\"575\" alt=\"image\" src=\"https://github.com/user-attachments/assets/6e5880c2-cde4-4a96-b573-73756c69d0d8\"\
+  \n<img width=\"1545\" height=\"571\" alt=\"image\" src=\"https://github.com/user-attachments/assets/46dc7f00-4593-4271-8c3f-4c02b021ff2b\"\
   \ />\n\n\n**Update found after issue was reported:**\nI found that the issue presents itself\
   \ for any entity with a html-entity in the name, which is included and rendered in the graph\
   \ view. Following is an example for a speaker:\n<img width=\"423\" height=\"96\" alt=\"11_cens\"\
@@ -81,9 +81,6 @@ references:
   - url: https://github.com/home-assistant/core
     reference_type:
     reference_id:
-  - url: https://github.com/home-assistant/core/security/advisories/GHSA-mq77-rv97-285m
-    reference_type:
-    reference_id:
   - url: https://github.com/home-assistant/frontend/blob/c13a80ce5e7ae39f0262444e2b6295a074a96732/src/common/entity/compute_state_name.ts
     reference_type:
     reference_id:
@@ -99,3 +96,6 @@ references:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2025-62172
     reference_type:
     reference_id: CVE-2025-62172
+  - url: https://github.com/home-assistant/core/security/advisories/GHSA-mq77-rv97-285m
+    reference_type:
+    reference_id: GHSA-mq77-rv97-285m

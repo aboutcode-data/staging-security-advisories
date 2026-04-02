@@ -1,0 +1,66 @@
+advisory_id: GHSA-qpr4-jrj4-6f27
+datasource_id: github_osv_importer_v2/GHSA-qpr4-jrj4-6f27
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-qpr4-jrj4-6f27/GHSA-qpr4-jrj4-6f27.json
+aliases:
+  - CVE-2026-31840
+summary: |
+  Parse Server: SQL injection via dot-notation field name in PostgreSQL
+  ### Impact
+
+  An attacker can use a dot-notation field name in combination with the `sort` query parameter to inject SQL into the PostgreSQL database through an improper escaping of sub-field values in dot-notation queries. The vulnerability may also affect queries that use dot-notation field names with the `distinct` and `where` query parameters.
+
+  This vulnerability only affects deployments using a PostgreSQL database.
+
+  ### Patches
+
+  The fix escapes characters in dot-notation sub-field values that could allow a SQL breakout.
+
+  ### Workarounds
+
+  There is no known workaround.
+
+  ### References
+
+  - GitHub security advisory: https://github.com/parse-community/parse-server/security/advisories/GHSA-qpr4-jrj4-6f27
+  - Fix Parse Server 9: https://github.com/parse-community/parse-server/releases/tag/9.6.0-alpha.2
+  - Fix Parse Server 8: https://github.com/parse-community/parse-server/releases/tag/8.6.28
+impacted_packages:
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/>=9.0.0|<9.6.0-alpha.2
+    fixed_versions: vers:npm/9.6.0-alpha.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/<8.6.28
+    fixed_versions: vers:npm/8.6.28
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '9.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-qpr4-jrj4-6f27/GHSA-qpr4-jrj4-6f27.json
+  - score: CRITICAL
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-89
+references:
+  - url: https://github.com/parse-community/parse-server
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-31840
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/releases/tag/8.6.28
+    reference_type: other
+    reference_id: 8.6.28
+  - url: https://github.com/parse-community/parse-server/releases/tag/9.6.0-alpha.2
+    reference_type: other
+    reference_id: 9.6.0-alpha.2
+  - url: https://github.com/parse-community/parse-server/security/advisories/GHSA-qpr4-jrj4-6f27
+    reference_type: other
+    reference_id: GHSA-qpr4-jrj4-6f27
