@@ -8,11 +8,6 @@ summary: |
   qs before 6.10.3 allows attackers to cause a Node process hang because an `__ proto__` key can be used. In many typical web framework use cases, an unauthenticated remote attacker can place the attack payload in the query string of the URL that is used to visit the application, such as `a[__proto__]=b&a[__proto__]&a[length]=100000000`. The fix was backported to qs 6.9.7, 6.8.3, 6.7.3, 6.6.1, 6.5.3, 6.4.1, 6.3.3, and 6.2.4.
 impacted_packages:
   - purl: pkg:npm/qs
-    affected_versions: vers:npm/>=6.10.0|<6.10.3
-    fixed_versions: vers:npm/6.10.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:npm/qs
     affected_versions: vers:npm/>=6.9.0|<6.9.7
     fixed_versions: vers:npm/6.9.7
     fixed_in_commits: []
@@ -50,6 +45,11 @@ impacted_packages:
   - purl: pkg:npm/qs
     affected_versions: vers:npm/<6.2.4
     fixed_versions: vers:npm/6.2.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/qs
+    affected_versions: vers:npm/>=6.10.0|<6.10.3
+    fixed_versions: vers:npm/6.10.3
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -102,15 +102,15 @@ references:
   - url: https://github.com/ljharb/qs/pull/428
     reference_type:
     reference_id:
-  - url: https://github.com/n8tz/CVE-2022-24999
-    reference_type:
-    reference_id:
   - url: https://lists.debian.org/debian-lts-announce/2023/01/msg00039.html
     reference_type:
     reference_id:
   - url: https://security.netapp.com/advisory/ntap-20230908-0005
     reference_type:
     reference_id:
+  - url: https://github.com/n8tz/CVE-2022-24999
+    reference_type:
+    reference_id: CVE-2022-24999
   - url: https://nvd.nist.gov/vuln/detail/CVE-2022-24999
     reference_type:
     reference_id: CVE-2022-24999
