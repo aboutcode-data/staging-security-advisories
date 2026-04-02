@@ -1,0 +1,42 @@
+advisory_id: npm/@sveltejs/kit/GHSA-fpg4-jhqr-589c
+datasource_id: gitlab_importer_v2/npm/@sveltejs/kit/GHSA-fpg4-jhqr-589c
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/@sveltejs/kit/GHSA-fpg4-jhqr-589c.yml
+aliases:
+  - GHSA-fpg4-jhqr-589c
+summary: |
+  SvelteKit  has deserialization expansion in unvalidated `form` remote function leading to Denial of Service (experimental only)
+  Some relatively small inputs can cause very large files arrays in `form` handlers. If the SvelteKit application code doesn't check `files.length` or individual files' sizes and performs expensive processing with them, it can result in Denial of Service.
+
+  Only users with `experimental.remoteFunctions: true` who are using the `form` function and are processing the `files` array without validation are vulnerable.
+impacted_packages:
+  - purl: pkg:npm/%40sveltejs/kit
+    affected_versions: vers:npm/>=2.49.0|<2.53.3
+    fixed_versions: vers:npm/2.53.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/@sveltejs/kit/GHSA-fpg4-jhqr-589c.yml
+weaknesses:
+  - CWE-770
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/sveltejs/kit
+    reference_type:
+    reference_id:
+  - url: https://github.com/sveltejs/kit/commit/faba869db3644077169bf5d7c6e41fd5f3d6c65e
+    reference_type:
+    reference_id:
+  - url: https://github.com/sveltejs/kit/releases/tag/@sveltejs/kit@2.53.3
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-fpg4-jhqr-589c
+    reference_type:
+    reference_id: GHSA-fpg4-jhqr-589c
+  - url: https://github.com/sveltejs/kit/security/advisories/GHSA-fpg4-jhqr-589c
+    reference_type:
+    reference_id: GHSA-fpg4-jhqr-589c
