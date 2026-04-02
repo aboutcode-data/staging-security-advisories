@@ -21,9 +21,9 @@ summary: "An update for yum is now available for Red Hat Enterprise Linux 8.\n\n
   \ in this release, see the Red Hat Enterprise Linux 8.1 Release Notes linked from the References\
   \ section."
 impacted_packages:
-  - purl: pkg:rpm/redhat/librhsm?arch=s390x
-    affected_versions: vers:rpm/<0.0.3-3.el8
-    fixed_versions: vers:rpm/0.0.3-3.el8
+  - purl: pkg:rpm/redhat/libdnf?arch=ppc64le
+    affected_versions: vers:rpm/<0.35.1-8.el8
+    fixed_versions: vers:rpm/0.35.1-8.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/libsolv-demo-debuginfo?arch=aarch64
@@ -626,6 +626,11 @@ impacted_packages:
     fixed_versions: vers:rpm/0.0.3-3.el8
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/librhsm?arch=s390x
+    affected_versions: vers:rpm/<0.0.3-3.el8
+    fixed_versions: vers:rpm/0.0.3-3.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/librhsm-debuginfo?arch=s390x
     affected_versions: vers:rpm/<0.0.3-3.el8
     fixed_versions: vers:rpm/0.0.3-3.el8
@@ -941,11 +946,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.10.3-3.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libdnf?arch=ppc64le
-    affected_versions: vers:rpm/<0.35.1-8.el8
-    fixed_versions: vers:rpm/0.35.1-8.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/python3-hawkey?arch=ppc64le
     affected_versions: vers:rpm/<0.35.1-8.el8
     fixed_versions: vers:rpm/0.35.1-8.el8
@@ -1075,9 +1075,6 @@ severities:
 weaknesses: []
 references:
   - url: https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/8.1_release_notes/
-    reference_type:
-    reference_id:
-  - url: https://access.redhat.com/errata/RHSA-2019:3583
     reference_type:
     reference_id:
   - url: https://access.redhat.com/security/updates/classification/#moderate
@@ -1314,3 +1311,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1746349
     reference_type: bug
     reference_id: 1746349
+  - url: https://access.redhat.com/errata/RHSA-2019:3583
+    reference_type:
+    reference_id: RHSA-2019:3583

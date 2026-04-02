@@ -38,6 +38,11 @@ summary: "Red Hat OpenShift Container Platform release 3.11.146 is now available
   \ been set or changes since the last upgrade. (BZ#1749341)\n\nAll OpenShift Container Platform\
   \ 3.11 users are advised to upgrade to these\nupdated packages and images."
 impacted_packages:
+  - purl: pkg:rpm/redhat/kibana?arch=src
+    affected_versions: vers:rpm/<5.6.16-2.el7
+    fixed_versions: vers:rpm/5.6.16-2.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/atomic-enterprise-service-catalog?arch=ppc64le&epoch=1
     affected_versions: vers:rpm/<3.11.146-1.git.1.3f0869b.el7
     fixed_versions: vers:rpm/3.11.146-1.git.1.3f0869b.el7
@@ -418,11 +423,6 @@ impacted_packages:
     fixed_versions: vers:rpm/5.4.0-2.el7
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kibana?arch=src
-    affected_versions: vers:rpm/<5.6.16-2.el7
-    fixed_versions: vers:rpm/5.6.16-2.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/atomic-openshift-docker-excluder?arch=noarch
     affected_versions: vers:rpm/<3.11.146-1.git.0.4aab273.el7
     fixed_versions: vers:rpm/3.11.146-1.git.0.4aab273.el7
@@ -471,9 +471,6 @@ severities:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2019/rhba-2019_2816.json
 weaknesses: []
 references:
-  - url: https://access.redhat.com/errata/RHBA-2019:2816
-    reference_type:
-    reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2019/rhba-2019_2816.json
     reference_type:
     reference_id:
@@ -525,3 +522,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1752853
     reference_type: bug
     reference_id: 1752853
+  - url: https://access.redhat.com/errata/RHBA-2019:2816
+    reference_type:
+    reference_id: RHBA-2019:2816
