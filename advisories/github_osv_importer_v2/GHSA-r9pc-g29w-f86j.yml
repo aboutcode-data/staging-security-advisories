@@ -8,6 +8,11 @@ summary: |
   Moodle through 2.6.11, 2.7.x before 2.7.13, 2.8.x before 2.8.11, 2.9.x before 2.9.5, and 3.0.x before 3.0.3 does not properly restrict links, which allows remote attackers to obtain sensitive URL information by reading a Referer log.
 impacted_packages:
   - purl: pkg:composer/moodle/moodle
+    affected_versions: vers:composer/>=3.0.0|<3.0.3
+    fixed_versions: vers:composer/3.0.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/moodle/moodle
     affected_versions: vers:composer/<=2.6.11
     fixed_versions:
     fixed_in_commits: []
@@ -25,11 +30,6 @@ impacted_packages:
   - purl: pkg:composer/moodle/moodle
     affected_versions: vers:composer/>=2.9.0|<2.9.5
     fixed_versions: vers:composer/2.9.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/>=3.0.0|<3.0.3
-    fixed_versions: vers:composer/3.0.3
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
