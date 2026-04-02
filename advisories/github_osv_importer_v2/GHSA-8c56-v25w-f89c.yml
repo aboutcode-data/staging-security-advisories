@@ -8,13 +8,13 @@ summary: |
   Puppet 2.7.x before 2.7.5, 2.6.x before 2.6.11, and 0.25.x allows local users to overwrite arbitrary files via a symlink attack on the .k5login file.
 impacted_packages:
   - purl: pkg:gem/puppet
-    affected_versions: vers:gem/>=2.7.0|<2.7.5
-    fixed_versions: vers:gem/2.7.5
+    affected_versions: vers:gem/<2.6.11
+    fixed_versions: vers:gem/2.6.11
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:gem/puppet
-    affected_versions: vers:gem/<2.6.11
-    fixed_versions: vers:gem/2.6.11
+    affected_versions: vers:gem/>=2.7.0|<2.7.5
+    fixed_versions: vers:gem/2.7.5
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
