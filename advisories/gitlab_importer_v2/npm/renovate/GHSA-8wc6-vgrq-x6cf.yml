@@ -1,0 +1,46 @@
+advisory_id: npm/renovate/GHSA-8wc6-vgrq-x6cf
+datasource_id: gitlab_importer_v2/npm/renovate/GHSA-8wc6-vgrq-x6cf
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/renovate/GHSA-8wc6-vgrq-x6cf.yml
+aliases:
+  - GHSA-8wc6-vgrq-x6cf
+summary: |
+  Child processes spawned by Renovate incorrectly have full access to environment variables
+  When Renovate spawns child processes, their access to environment variables is filtered to an allowlist, to prevent unauthorized access to privileged credentials that the Renovate process has access to.
+
+  Since [42.68.1](https://github.com/renovatebot/renovate/releases/tag/42.68.1) (2025-12-30), this filtering had been **inadvertently removed**, and so any child processes spawned from these versions will have had access to any environment variables that Renovate has access to.
+
+  This could lead to [insider attackers](https://docs.renovatebot.com/security-and-permissions/#execution-of-code-insider-attack) and [outside attackers](https://docs.renovatebot.com/security-and-permissions/#execution-of-code-outsider-attack) being able to exflitrate secrets from the Renovate deployment.
+
+  It is recommended to rotate (+ revoke) any credentials that Renovate has access to, in case any spawned child processes have attempted to exfiltrate any secrets.
+impacted_packages:
+  - purl: pkg:npm/renovate
+    affected_versions: vers:npm/>=42.68.1|<42.96.3|>=43.0.0|<43.4.4
+    fixed_versions: vers:npm/42.96.3|43.4.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/renovate/GHSA-8wc6-vgrq-x6cf.yml
+weaknesses:
+  - CWE-1035
+  - CWE-937
+  - CWE-269
+references:
+  - url: https://github.com/renovatebot/renovate
+    reference_type:
+    reference_id:
+  - url: https://github.com/renovatebot/renovate/releases/tag/42.96.3
+    reference_type:
+    reference_id:
+  - url: https://github.com/renovatebot/renovate/releases/tag/43.4.4
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-8wc6-vgrq-x6cf
+    reference_type:
+    reference_id: GHSA-8wc6-vgrq-x6cf
+  - url: https://github.com/renovatebot/renovate/security/advisories/GHSA-8wc6-vgrq-x6cf
+    reference_type:
+    reference_id: GHSA-8wc6-vgrq-x6cf
