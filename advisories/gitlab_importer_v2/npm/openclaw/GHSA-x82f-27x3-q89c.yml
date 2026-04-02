@@ -1,0 +1,35 @@
+advisory_id: npm/openclaw/GHSA-x82f-27x3-q89c
+datasource_id: gitlab_importer_v2/npm/openclaw/GHSA-x82f-27x3-q89c
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-x82f-27x3-q89c.yml
+aliases:
+  - GHSA-x82f-27x3-q89c
+summary: |
+  OpenClaw's TOCTOU symlink race in writeFileWithinRoot could create or truncate files outside root boundaries
+  A symlink-retarget TOCTOU race in `writeFileWithinRoot` could point an attacker-controlled path alias outside the configured root between resolution and write operations.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.3.1
+    fixed_versions: vers:npm/2026.3.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-x82f-27x3-q89c.yml
+weaknesses:
+  - CWE-59
+  - CWE-1035
+  - CWE-937
+  - CWE-367
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-x82f-27x3-q89c
+    reference_type:
+    reference_id: GHSA-x82f-27x3-q89c
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-x82f-27x3-q89c
+    reference_type:
+    reference_id: GHSA-x82f-27x3-q89c

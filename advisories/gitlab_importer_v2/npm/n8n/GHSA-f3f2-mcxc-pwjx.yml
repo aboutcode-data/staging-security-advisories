@@ -1,0 +1,40 @@
+advisory_id: npm/n8n/GHSA-f3f2-mcxc-pwjx
+datasource_id: gitlab_importer_v2/npm/n8n/GHSA-f3f2-mcxc-pwjx
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/n8n/GHSA-f3f2-mcxc-pwjx.yml
+aliases:
+  - GHSA-f3f2-mcxc-pwjx
+summary: |
+  n8n: SQL Injection in MySQL, PostgreSQL, and Microsoft SQL nodes
+  An authenticated user with permission to create or modify workflows and access to a database credential could unknowingly create a workflow that was vulnerable to SQL injection, even while expecting inputs to be handled safely through escaped parameters. By supplying specially crafted table or column names, an attacker could inject arbitrary SQL because the MySQL, PostgreSQL, and Microsoft SQL nodes did not escape identifier values when constructing queries, enabling injection through node configuration parameters.
+impacted_packages:
+  - purl: pkg:npm/n8n
+    affected_versions: vers:npm/<2.4.0
+    fixed_versions: vers:npm/2.4.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/n8n/GHSA-f3f2-mcxc-pwjx.yml
+weaknesses:
+  - CWE-1035
+  - CWE-937
+  - CWE-89
+references:
+  - url: https://github.com/n8n-io/n8n
+    reference_type:
+    reference_id:
+  - url: https://github.com/n8n-io/n8n/commit/f73fae6fe7fc34907bba102648a9997186aa4385
+    reference_type:
+    reference_id:
+  - url: https://github.com/n8n-io/n8n/releases/tag/n8n%402.4.0
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-f3f2-mcxc-pwjx
+    reference_type:
+    reference_id: GHSA-f3f2-mcxc-pwjx
+  - url: https://github.com/n8n-io/n8n/security/advisories/GHSA-f3f2-mcxc-pwjx
+    reference_type:
+    reference_id: GHSA-f3f2-mcxc-pwjx

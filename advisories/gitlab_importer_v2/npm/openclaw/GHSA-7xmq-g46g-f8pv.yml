@@ -1,0 +1,35 @@
+advisory_id: npm/openclaw/GHSA-7xmq-g46g-f8pv
+datasource_id: gitlab_importer_v2/npm/openclaw/GHSA-7xmq-g46g-f8pv
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-7xmq-g46g-f8pv.yml
+aliases:
+  - GHSA-7xmq-g46g-f8pv
+summary: |
+  OpenClaw: Sandbox media TOCTOU could read files outside sandbox root
+  Sandbox media handling had a time-of-check/time-of-use gap: media paths could be validated first and read later through a separate path. A symlink retarget between those steps could cause reads outside `sandboxRoot`.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.3.1
+    fixed_versions: vers:npm/2026.3.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-7xmq-g46g-f8pv.yml
+weaknesses:
+  - CWE-59
+  - CWE-1035
+  - CWE-937
+  - CWE-367
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-7xmq-g46g-f8pv
+    reference_type:
+    reference_id: GHSA-7xmq-g46g-f8pv
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-7xmq-g46g-f8pv
+    reference_type:
+    reference_id: GHSA-7xmq-g46g-f8pv

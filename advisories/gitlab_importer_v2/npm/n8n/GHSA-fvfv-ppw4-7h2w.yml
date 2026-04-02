@@ -1,0 +1,41 @@
+advisory_id: npm/n8n/GHSA-fvfv-ppw4-7h2w
+datasource_id: gitlab_importer_v2/npm/n8n/GHSA-fvfv-ppw4-7h2w
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/n8n/GHSA-fvfv-ppw4-7h2w.yml
+aliases:
+  - GHSA-fvfv-ppw4-7h2w
+summary: |
+  n8n has a Guardrail Node Bypass
+  An end user interacting with a workflow that uses the Guardrail node could craft an input that bypasses the default guardrail instructions.
+impacted_packages:
+  - purl: pkg:npm/n8n
+    affected_versions: vers:npm/<2.10.0
+    fixed_versions: vers:npm/2.10.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/n8n/GHSA-fvfv-ppw4-7h2w.yml
+weaknesses:
+  - CWE-20
+  - CWE-693
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/n8n-io/n8n
+    reference_type:
+    reference_id:
+  - url: https://github.com/n8n-io/n8n/commit/8d0251d1deef256fd3d9176f05dedab62afde918
+    reference_type:
+    reference_id:
+  - url: https://github.com/n8n-io/n8n/releases/tag/n8n@2.10.0
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-fvfv-ppw4-7h2w
+    reference_type:
+    reference_id: GHSA-fvfv-ppw4-7h2w
+  - url: https://github.com/n8n-io/n8n/security/advisories/GHSA-fvfv-ppw4-7h2w
+    reference_type:
+    reference_id: GHSA-fvfv-ppw4-7h2w

@@ -1,0 +1,40 @@
+advisory_id: npm/n8n/GHSA-mqpr-49jj-32rc
+datasource_id: gitlab_importer_v2/npm/n8n/GHSA-mqpr-49jj-32rc
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/n8n/GHSA-mqpr-49jj-32rc.yml
+aliases:
+  - GHSA-mqpr-49jj-32rc
+summary: |
+  n8n: Webhook Forgery on Github Webhook Trigger
+  An attacker who knows the webhook URL of a workflow using the GitHub Webhook Trigger node could send unsigned POST requests and trigger the workflow with arbitrary data. The node did not implement the HMAC-SHA256 signature verification that GitHub provides to authenticate webhook deliveries, allowing any party to spoof GitHub webhook events.
+impacted_packages:
+  - purl: pkg:npm/n8n
+    affected_versions: vers:npm/<1.123.15|>=2.0.0|<2.5.0
+    fixed_versions: vers:npm/1.123.15|2.5.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:N/I:L/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/n8n/GHSA-mqpr-49jj-32rc.yml
+weaknesses:
+  - CWE-290
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/n8n-io/n8n
+    reference_type:
+    reference_id:
+  - url: https://github.com/n8n-io/n8n/commit/a19347a6bc9a96d5065ac77d25a811e46178c578
+    reference_type:
+    reference_id:
+  - url: https://github.com/n8n-io/n8n/commit/afe322325502f448b33bff1db1575e4447c28a36
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-mqpr-49jj-32rc
+    reference_type:
+    reference_id: GHSA-mqpr-49jj-32rc
+  - url: https://github.com/n8n-io/n8n/security/advisories/GHSA-mqpr-49jj-32rc
+    reference_type:
+    reference_id: GHSA-mqpr-49jj-32rc
