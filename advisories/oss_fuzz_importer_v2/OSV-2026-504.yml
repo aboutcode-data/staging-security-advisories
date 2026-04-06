@@ -1,0 +1,25 @@
+advisory_id: OSV-2026-504
+datasource_id: oss_fuzz_importer_v2/OSV-2026-504
+datasource_url: https://github.com/google/oss-fuzz-vulns/blob/main/vulns/poppler/OSV-2026-504.yaml
+aliases: []
+summary: |
+  Heap-use-after-free in ObjectStream::getObject
+  OSS-Fuzz report: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=498251261
+
+  ```
+  Crash type: Heap-use-after-free READ 4
+  Crash state:
+  ObjectStream::getObject
+  XRef::fetch
+  XRef::fetch
+  ```
+impacted_packages: []
+severities: []
+weaknesses: []
+references:
+  - url: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=498251261
+    reference_type:
+    reference_id:
+  - url: https://gitlab.freedesktop.org/poppler/poppler.git
+    reference_type: commit
+    reference_id: fceaba5461e276121e50d858169a53f7434b1e05
