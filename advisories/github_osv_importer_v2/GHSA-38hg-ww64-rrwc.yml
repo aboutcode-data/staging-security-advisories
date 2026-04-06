@@ -1,0 +1,47 @@
+advisory_id: GHSA-38hg-ww64-rrwc
+datasource_id: github_osv_importer_v2/GHSA-38hg-ww64-rrwc
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-38hg-ww64-rrwc/GHSA-38hg-ww64-rrwc.json
+aliases:
+  - CVE-2026-35442
+summary: |
+  Directus: Authenticated Users Can Extract Concealed Fields via Aggregate Queries
+  ### Summary
+
+  Aggregate functions (`min`, `max`) applied to fields with the `conceal` special type incorrectly return raw database values instead of the masked placeholder. When combined with `groupBy`, any authenticated user with read access to the affected collection can extract concealed field values, including static API tokens and two-factor authentication secrets from `directus_users`.
+
+  ### Details
+
+  Fields marked with `conceal` are protected by payload processing logic that replaces real values with a masked placeholder on read. This protection works correctly for standard item queries, but aggregate query results are structured differently, operations are nested under their function name rather than appearing as flat field keys. The masking logic does not account for this nested structure, causing it to silently skip concealed fields in aggregate responses and return their raw values to the client.
+
+  ### Impact
+
+  - **Account Takeover** An authenticated attacker can harvest static API tokens for all users, including administrators, enabling immediate authentication as any account without credentials.
+
+  - **2FA Bypass** TOTP seeds stored in directus_users can similarly be extracted, allowing an attacker to bypass two-factor authentication for any account.
+impacted_packages:
+  - purl: pkg:npm/directus
+    affected_versions: vers:npm/<11.17.0
+    fixed_versions: vers:npm/11.17.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.1'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-38hg-ww64-rrwc/GHSA-38hg-ww64-rrwc.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-863
+  - CWE-200
+references:
+  - url: https://github.com/directus/directus
+    reference_type:
+    reference_id:
+  - url: https://github.com/directus/directus/security/advisories/GHSA-38hg-ww64-rrwc
+    reference_type:
+    reference_id:

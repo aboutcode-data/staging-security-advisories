@@ -1,0 +1,64 @@
+advisory_id: GHSA-8337-3p73-46f4
+datasource_id: github_osv_importer_v2/GHSA-8337-3p73-46f4
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-8337-3p73-46f4/GHSA-8337-3p73-46f4.json
+aliases:
+  - CVE-2026-34771
+summary: |
+  Electron: Use-after-free in WebContents fullscreen, pointer-lock, and keyboard-lock permission callbacks
+  ### Impact
+  Apps that register an asynchronous `session.setPermissionRequestHandler()` may be vulnerable to a use-after-free when handling fullscreen, pointer-lock, or keyboard-lock permission requests. If the requesting frame navigates or the window closes while the permission handler is pending, invoking the stored callback dereferences freed memory, which may lead to a crash or memory corruption.
+
+  Apps that do not set a permission request handler, or whose handler responds synchronously, are not affected.
+
+  ### Workarounds
+  Respond to permission requests synchronously, or deny fullscreen, pointer-lock, and keyboard-lock requests if an asynchronous flow is required.
+
+  ### Fixed Versions
+  * `41.0.0-beta.8`
+  * `40.7.0`
+  * `39.8.0`
+  * `38.8.6`
+
+  ### For more information
+  If there are any questions or comments about this advisory, please email [security@electronjs.org](mailto:security@electronjs.org)
+impacted_packages:
+  - purl: pkg:npm/electron
+    affected_versions: vers:npm/<38.8.6
+    fixed_versions: vers:npm/38.8.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/electron
+    affected_versions: vers:npm/>=39.0.0-alpha.1|<39.8.0
+    fixed_versions: vers:npm/39.8.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/electron
+    affected_versions: vers:npm/>=40.0.0-alpha.1|<40.7.0
+    fixed_versions: vers:npm/40.7.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/electron
+    affected_versions: vers:npm/>=41.0.0-alpha.1|<41.0.0-beta.8
+    fixed_versions: vers:npm/41.0.0-beta.8
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-8337-3p73-46f4/GHSA-8337-3p73-46f4.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-416
+references:
+  - url: https://github.com/electron/electron
+    reference_type:
+    reference_id:
+  - url: https://github.com/electron/electron/security/advisories/GHSA-8337-3p73-46f4
+    reference_type:
+    reference_id:

@@ -1,0 +1,58 @@
+advisory_id: GHSA-532v-xpq5-8h95
+datasource_id: github_osv_importer_v2/GHSA-532v-xpq5-8h95
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-532v-xpq5-8h95/GHSA-532v-xpq5-8h95.json
+aliases:
+  - CVE-2026-34774
+summary: |
+  Electron: Use-after-free in offscreen child window paint callback
+  ### Impact
+  Apps that use offscreen rendering and allow child windows via `window.open()` may be vulnerable to a use-after-free. If the parent offscreen `WebContents` is destroyed while a child window remains open, subsequent paint frames on the child dereference freed memory, which may lead to a crash or memory corruption.
+
+  Apps are only affected if they use offscreen rendering (`webPreferences.offscreen: true`) and their `setWindowOpenHandler` permits child windows. Apps that do not use offscreen rendering, or that deny child windows, are not affected.
+
+  ### Workarounds
+  Deny child window creation from offscreen renderers in your `setWindowOpenHandler`, or ensure child windows are closed before the parent is destroyed.
+
+  ### Fixed Versions
+  * `41.0.0`
+  * `40.7.0`
+  * `39.8.1`
+
+  ### For more information
+  If there are any questions or comments about this advisory, please email [security@electronjs.org](mailto:security@electronjs.org)
+impacted_packages:
+  - purl: pkg:npm/electron
+    affected_versions: vers:npm/<39.8.1
+    fixed_versions: vers:npm/39.8.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/electron
+    affected_versions: vers:npm/>=40.0.0-alpha.1|<40.7.0
+    fixed_versions: vers:npm/40.7.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/electron
+    affected_versions: vers:npm/>=41.0.0-alpha.1|<41.0.0
+    fixed_versions: vers:npm/41.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.1'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-532v-xpq5-8h95/GHSA-532v-xpq5-8h95.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-416
+references:
+  - url: https://github.com/electron/electron
+    reference_type:
+    reference_id:
+  - url: https://github.com/electron/electron/security/advisories/GHSA-532v-xpq5-8h95
+    reference_type:
+    reference_id:

@@ -1,0 +1,55 @@
+advisory_id: GHSA-3xv9-89fm-7h4r
+datasource_id: github_osv_importer_v2/GHSA-3xv9-89fm-7h4r
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-3xv9-89fm-7h4r/GHSA-3xv9-89fm-7h4r.json
+aliases: []
+summary: |
+  OpenClaw: diffs viewer misclassifies proxied remote requests as loopback when `allowRemoteViewer` is disabled
+  ## Summary
+  diffs viewer misclassifies proxied remote requests as loopback when `allowRemoteViewer` is disabled
+
+  ## Current Maintainer Triage
+  - Assessment: Shipped v2026.3.28 misclassified proxied diff-viewer requests as local loopback in some cases, a real but low-severity access-control flaw.
+
+  ## Affected Packages / Versions
+  - Package: `openclaw` (npm)
+  - Latest published npm version: `2026.3.31`
+  - Vulnerable version range: `<=2026.3.28`
+  - Patched versions: `>= 2026.3.31`
+  - First stable tag containing the fix: `v2026.3.31`
+
+  ## Fix Commit(s)
+  - `30a1690323088fd291abd11643a264a6828a002c` — 2026-03-30T14:17:27-06:00
+
+  OpenClaw thanks @smaeljaish771 for reporting.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<=2026.3.28
+    fixed_versions: vers:npm/2026.3.31
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-3xv9-89fm-7h4r/GHSA-3xv9-89fm-7h4r.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-348
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/30a1690323088fd291abd11643a264a6828a002c
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/releases/tag/v2026.3.31
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-3xv9-89fm-7h4r
+    reference_type:
+    reference_id:

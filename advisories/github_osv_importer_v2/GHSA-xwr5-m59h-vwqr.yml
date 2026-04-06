@@ -1,0 +1,64 @@
+advisory_id: GHSA-xwr5-m59h-vwqr
+datasource_id: github_osv_importer_v2/GHSA-xwr5-m59h-vwqr
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-xwr5-m59h-vwqr/GHSA-xwr5-m59h-vwqr.json
+aliases:
+  - CVE-2026-34775
+summary: |
+  Electron: nodeIntegrationInWorker not correctly scoped in shared renderer processes
+  ### Impact
+  The `nodeIntegrationInWorker` webPreference was not correctly scoped in all configurations. In certain process-sharing scenarios, workers spawned in frames configured with `nodeIntegrationInWorker: false` could still receive Node.js integration.
+
+  Apps are only affected if they enable `nodeIntegrationInWorker`. Apps that do not use `nodeIntegrationInWorker` are not affected.
+
+  ### Workarounds
+  Avoid enabling `nodeIntegrationInWorker` in apps that also open child windows or embed content with differing webPreferences.
+
+  ### Fixed Versions
+  * `41.0.0`
+  * `40.8.4`
+  * `39.8.4`
+  * `38.8.6`
+
+  ### For more information
+  If there are any questions or comments about this advisory, please email [security@electronjs.org](mailto:security@electronjs.org)
+impacted_packages:
+  - purl: pkg:npm/electron
+    affected_versions: vers:npm/<38.8.6
+    fixed_versions: vers:npm/38.8.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/electron
+    affected_versions: vers:npm/>=39.0.0-alpha.1|<39.8.4
+    fixed_versions: vers:npm/39.8.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/electron
+    affected_versions: vers:npm/>=40.0.0-alpha.1|<40.8.4
+    fixed_versions: vers:npm/40.8.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/electron
+    affected_versions: vers:npm/>=41.0.0-alpha.1|<41.0.0
+    fixed_versions: vers:npm/41.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.8'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-xwr5-m59h-vwqr/GHSA-xwr5-m59h-vwqr.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-653
+references:
+  - url: https://github.com/electron/electron
+    reference_type:
+    reference_id:
+  - url: https://github.com/electron/electron/security/advisories/GHSA-xwr5-m59h-vwqr
+    reference_type:
+    reference_id:

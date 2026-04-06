@@ -1,0 +1,37 @@
+advisory_id: npm/openclaw/GHSA-f6h3-846h-2r8w
+datasource_id: gitlab_importer_v2/npm/openclaw/GHSA-f6h3-846h-2r8w
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-f6h3-846h-2r8w.yml
+aliases:
+  - GHSA-f6h3-846h-2r8w
+summary: |
+  OpenClaw's elevated allowFrom accepted broader identity signals than specified within sender-scoped authorization
+  In certain elevated-mode configurations, `tools.elevated.allowFrom` accepted broader identity signals than intended. The fix tightens matching to sender-scoped identity by default and makes mutable metadata matching explicit.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.2.22
+    fixed_versions: vers:npm/2026.2.22
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-f6h3-846h-2r8w.yml
+weaknesses:
+  - CWE-639
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/6817c0ec7b4fa830123d4f5c340f075a4bd04ee2
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-f6h3-846h-2r8w
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-f6h3-846h-2r8w
+    reference_type:
+    reference_id: GHSA-f6h3-846h-2r8w

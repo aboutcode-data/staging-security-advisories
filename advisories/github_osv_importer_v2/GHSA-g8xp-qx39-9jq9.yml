@@ -1,0 +1,57 @@
+advisory_id: GHSA-g8xp-qx39-9jq9
+datasource_id: github_osv_importer_v2/GHSA-g8xp-qx39-9jq9
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-g8xp-qx39-9jq9/GHSA-g8xp-qx39-9jq9.json
+aliases: []
+summary: |
+  OpenClaw: Incomplete host-env-security-policy allows untrusted model to substitute compiler binaries via env overrides
+  ## Summary
+  Incomplete `host-env-security-policy.json` allows untrusted model to substitute compiler binaries (`CC`, `CXX`, `CARGO_BUILD_RUSTC`, `CMAKE_C_COMPILER`) via env overrides on approved host exec requests
+
+  ## Current Maintainer Triage
+  - Status: narrow
+  - Normalized severity: medium
+  - Assessment: Shipped v2026.3.28 host-env policy missed compiler override vars, but exploitation still requires an approved host-exec request inside the existing exec trust domain, so medium not high.
+
+  ## Affected Packages / Versions
+  - Package: `openclaw` (npm)
+  - Latest published npm version: `2026.3.31`
+  - Vulnerable version range: `<=2026.3.28`
+  - Patched versions: `>= 2026.3.31`
+  - First stable tag containing the fix: `v2026.3.31`
+
+  ## Fix Commit(s)
+  - `e277a37f896b5011a1df06e6490c6630074d0afa` — 2026-03-30T20:06:32+01:00
+
+  OpenClaw thanks @tdjackey for reporting.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<=2026.3.28
+    fixed_versions: vers:npm/2026.3.31
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:L/AC:H/AT:P/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-g8xp-qx39-9jq9/GHSA-g8xp-qx39-9jq9.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-427
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/e277a37f896b5011a1df06e6490c6630074d0afa
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/releases/tag/v2026.3.31
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-g8xp-qx39-9jq9
+    reference_type:
+    reference_id:

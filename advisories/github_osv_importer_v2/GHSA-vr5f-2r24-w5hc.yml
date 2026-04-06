@@ -1,0 +1,55 @@
+advisory_id: GHSA-vr5f-2r24-w5hc
+datasource_id: github_osv_importer_v2/GHSA-vr5f-2r24-w5hc
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-vr5f-2r24-w5hc/GHSA-vr5f-2r24-w5hc.json
+aliases:
+  - CVE-2026-35200
+summary: |
+  Parse Server: File upload Content-Type override via extension mismatch
+  ### Impact
+
+  A file can be uploaded with a filename extension that passes the file extension allowlist (e.g., `.txt`) but with a `Content-Type` header that differs from the extension (e.g., `text/html`). The `Content-Type` is passed to the storage adapter without consistency validation. Storage adapters that store and serve the provided Content-Type (such as S3 or GCS) serve the file with the mismatched Content-Type. The default GridFS adapter is not affected because it derives Content-Type from the filename at serving time.
+
+  ### Patches
+
+  The file upload now derives the Content-Type from the filename extension, overriding any user-provided Content-Type when the file has an extension.
+
+  ### Workarounds
+
+  Configure the storage adapter or CDN to derive Content-Type from the filename extension instead of using the stored Content-Type.
+impacted_packages:
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/>=9.0.0|<9.7.1-alpha.4
+    fixed_versions: vers:npm/9.7.1-alpha.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/<=8.6.72
+    fixed_versions: vers:npm/8.6.73
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '2.1'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-vr5f-2r24-w5hc/GHSA-vr5f-2r24-w5hc.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-436
+references:
+  - url: https://github.com/parse-community/parse-server
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/pull/10383
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/pull/10384
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/security/advisories/GHSA-vr5f-2r24-w5hc
+    reference_type:
+    reference_id:

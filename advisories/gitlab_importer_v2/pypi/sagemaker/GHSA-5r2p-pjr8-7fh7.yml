@@ -1,0 +1,42 @@
+advisory_id: pypi/sagemaker/GHSA-5r2p-pjr8-7fh7
+datasource_id: gitlab_importer_v2/pypi/sagemaker/GHSA-5r2p-pjr8-7fh7
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/pypi/sagemaker/GHSA-5r2p-pjr8-7fh7.yml
+aliases:
+  - GHSA-5r2p-pjr8-7fh7
+summary: |
+  SageMaker Python SDK replaced eval() with safe parser in JumpStart search functionality
+  This advisory addresses the use of the search_hub() function within the SageMaker Python SDK's JumpStart search functionality. An actor with the ability to control query parameters passed to the search_hub() function could potentially provide malformed input that causes the eval() function to execute arbitrary commands, access sensitive data, or compromise the execution environment.
+
+  A defense-in-depth enhancement has been implemented to replace code evaluation with safe string operations when processing search query parameters. This enhancement removes the use of eval() from the execution path, replacing it with a safe recursive descent parser. The change was released in SageMaker Python SDK version 3.4.0 on January 23, 2026. This advisory is informational to help customers understand their responsibilities regarding input validation and configuration security under the [AWS Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/).
+impacted_packages:
+  - purl: pkg:pypi/sagemaker
+    affected_versions: vers:pypi/<3.4.0
+    fixed_versions: vers:pypi/3.4.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/pypi/sagemaker/GHSA-5r2p-pjr8-7fh7.yml
+weaknesses:
+  - CWE-184
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/aws/sagemaker-python-sdk
+    reference_type:
+    reference_id:
+  - url: https://github.com/aws/sagemaker-python-sdk/commit/e706e578519bd9b92ea44b9b15f872eca5e77ea4
+    reference_type:
+    reference_id:
+  - url: https://github.com/aws/sagemaker-python-sdk/pull/5497
+    reference_type:
+    reference_id:
+  - url: https://github.com/aws/sagemaker-python-sdk/security/advisories/GHSA-5r2p-pjr8-7fh7
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-5r2p-pjr8-7fh7
+    reference_type:
+    reference_id: GHSA-5r2p-pjr8-7fh7

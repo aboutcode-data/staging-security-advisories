@@ -1,0 +1,65 @@
+advisory_id: GHSA-9wfr-w7mm-pc7f
+datasource_id: github_osv_importer_v2/GHSA-9wfr-w7mm-pc7f
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-9wfr-w7mm-pc7f/GHSA-9wfr-w7mm-pc7f.json
+aliases:
+  - CVE-2026-34769
+summary: |
+  Electron: Renderer command-line switch injection via undocumented commandLineSwitches webPreference
+  ### Impact
+  An undocumented `commandLineSwitches` webPreference allowed arbitrary switches to be appended to the renderer process command line. Apps that construct `webPreferences` by spreading untrusted configuration objects may inadvertently allow an attacker to inject switches that disable renderer sandboxing or web security controls.
+
+  Apps are only affected if they construct `webPreferences` from external or untrusted input without an allowlist. Apps that use a fixed, hardcoded `webPreferences` object are not affected.
+
+  ### Workarounds
+  Do not spread untrusted input into `webPreferences`. Use an explicit allowlist of permitted preference keys when constructing `BrowserWindow` or `webContents` options from external configuration.
+
+  ### Fixed Versions
+  * `41.0.0-beta.8`
+  * `40.7.0`
+  * `39.8.0`
+  * `38.8.6`
+
+  ### For more information
+  If there are any questions or comments about this advisory, send an email to [security@electronjs.org](mailto:security@electronjs.org)
+impacted_packages:
+  - purl: pkg:npm/electron
+    affected_versions: vers:npm/<38.8.6
+    fixed_versions: vers:npm/38.8.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/electron
+    affected_versions: vers:npm/>=39.0.0-alpha.1|<39.8.0
+    fixed_versions: vers:npm/39.8.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/electron
+    affected_versions: vers:npm/>=40.0.0-alpha.1|<40.7.0
+    fixed_versions: vers:npm/40.7.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/electron
+    affected_versions: vers:npm/>=41.0.0-alpha.1|<41.0.0-beta.8
+    fixed_versions: vers:npm/41.0.0-beta.8
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.7'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-9wfr-w7mm-pc7f/GHSA-9wfr-w7mm-pc7f.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-912
+  - CWE-88
+references:
+  - url: https://github.com/electron/electron
+    reference_type:
+    reference_id:
+  - url: https://github.com/electron/electron/security/advisories/GHSA-9wfr-w7mm-pc7f
+    reference_type:
+    reference_id:

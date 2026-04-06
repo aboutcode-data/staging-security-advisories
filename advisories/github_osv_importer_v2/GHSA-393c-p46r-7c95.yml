@@ -1,0 +1,58 @@
+advisory_id: GHSA-393c-p46r-7c95
+datasource_id: github_osv_importer_v2/GHSA-393c-p46r-7c95
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-393c-p46r-7c95/GHSA-393c-p46r-7c95.json
+aliases: []
+summary: |
+  Directus: Path Traversal and Broken Access Control in File Management API
+  ## Summary
+
+  Critical vulnerabilities were identified in the Directus file management API that allow unauthorized manipulation of file storage paths and metadata. These issues enable attackers to overwrite files belonging to other users, write files outside intended storage boundaries via path traversal, and potentially achieve remote code execution under certain conditions.
+
+  ## Details
+
+  The file management API accepts user-controlled parameters that should be restricted to server-side logic only. Specifically, the `filename_disk` parameter can be manipulated in both `POST /files` and `PATCH /files/{id}` requests, enabling two attack vectors:
+
+  1. **Path Traversal**: By specifying paths containing `../` sequences in the `filename_disk` parameter during file upload, attackers can write files outside the intended storage prefix.
+
+  2. **Broken Access Control**: By modifying the `filename_disk` parameter to reference another user's file, attackers can overwrite legitimate files with malicious content while manipulating metadata fields (such as `uploaded_by`) to obscure the tampering.
+
+  ## Impact
+
+  - **Unauthorized File Overwrite**: Attackers can replace legitimate files with malicious content, creating significant risk of malware propagation and data corruption.
+
+  - **Storage Boundary Bypass**: Files can be written to arbitrary locations outside the designated storage area, potentially affecting system configurations or application components.
+
+  - **Remote Code Execution**: If the storage backend is shared with the extensions location, attackers can deploy malicious extensions that execute arbitrary code when loaded (either via service restart or administrator-triggered extension reload).
+
+  - **Data Integrity Compromise**: Sensitive files can be tampered with or replaced without visible indication in the application interface, undermining trust in stored data.
+
+  ## Mitigation
+
+  The `filename_disk` parameter should not be accepted from client input. File paths must be generated exclusively using server-side logic. If client input must be accepted for any path-like parameters, implementations should normalize paths and strictly verify containment within allowed directories, rejecting path traversal sequences, absolute paths, and path separator variants.
+impacted_packages:
+  - purl: pkg:npm/directus
+    affected_versions: vers:npm/<11.17.0
+    fixed_versions: vers:npm/11.17.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:H/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-393c-p46r-7c95/GHSA-393c-p46r-7c95.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-915
+  - CWE-284
+references:
+  - url: https://github.com/directus/directus
+    reference_type:
+    reference_id:
+  - url: https://github.com/directus/directus/security/advisories/GHSA-393c-p46r-7c95
+    reference_type:
+    reference_id:

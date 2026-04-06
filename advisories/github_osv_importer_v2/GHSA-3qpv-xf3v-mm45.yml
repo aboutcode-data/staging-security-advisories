@@ -1,0 +1,57 @@
+advisory_id: GHSA-3qpv-xf3v-mm45
+datasource_id: github_osv_importer_v2/GHSA-3qpv-xf3v-mm45
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-3qpv-xf3v-mm45/GHSA-3qpv-xf3v-mm45.json
+aliases: []
+summary: |
+  OpenClaw: Workspace `.env` can override the bundled hooks root and load attacker hook code
+  ## Summary
+  Workspace `.env` can override the bundled hooks root and load attacker hook code
+
+  ## Current Maintainer Triage
+  - Status: open
+  - Normalized severity: high
+  - Assessment: v2026.3.28 still lets workspace .env override OPENCLAW_BUNDLED_HOOKS_DIR, which can replace trusted default-on bundled hooks from an untrusted workspace.
+
+  ## Affected Packages / Versions
+  - Package: `openclaw` (npm)
+  - Latest published npm version: `2026.3.31`
+  - Vulnerable version range: `<=2026.3.28`
+  - Patched versions: `>= 2026.3.31`
+  - First stable tag containing the fix: `v2026.3.31`
+
+  ## Fix Commit(s)
+  - `330a9f98cb29c79b1c16a2117e03d6276a0d6289` — 2026-03-31T19:25:12+09:00
+
+  OpenClaw thanks @nexrin for reporting.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<=2026.3.28
+    fixed_versions: vers:npm/2026.3.31
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-3qpv-xf3v-mm45/GHSA-3qpv-xf3v-mm45.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-15
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/330a9f98cb29c79b1c16a2117e03d6276a0d6289
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/releases/tag/v2026.3.31
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-3qpv-xf3v-mm45
+    reference_type:
+    reference_id:

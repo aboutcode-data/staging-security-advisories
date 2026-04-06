@@ -1,0 +1,44 @@
+advisory_id: GHSA-wxwm-3fxv-mrvx
+datasource_id: github_osv_importer_v2/GHSA-wxwm-3fxv-mrvx
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-wxwm-3fxv-mrvx/GHSA-wxwm-3fxv-mrvx.json
+aliases:
+  - CVE-2026-35413
+summary: |
+  Directus: GraphQL Schema SDL Disclosure Setting
+  ## Summary
+
+  When `GRAPHQL_INTROSPECTION=false` is configured, Directus correctly blocks standard GraphQL introspection queries (`__schema`, `__type`). However, the `server_specs_graphql` resolver on the `/graphql/system` endpoint returns an equivalent SDL representation of the schema and was not subject to the same restriction. This allowed the introspection control to be bypassed, exposing schema structure (collection names, field names, types, and relationships) to unauthenticated users at the public permission level, and to authenticated users at their permitted permission level.
+
+  ## Impact
+
+  Administrators who set `GRAPHQL_INTROSPECTION=false` to hide schema structure from clients would have had a false sense of security, as equivalent schema information remained accessible via the SDL endpoint without authentication.
+
+  ## Credit
+
+  This vulnerability was discovered and reported by [bugbunny.ai](https://bugbunny.ai).
+impacted_packages:
+  - purl: pkg:npm/directus
+    affected_versions: vers:npm/<11.16.1
+    fixed_versions: vers:npm/11.16.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-wxwm-3fxv-mrvx/GHSA-wxwm-3fxv-mrvx.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-200
+references:
+  - url: https://github.com/directus/directus
+    reference_type:
+    reference_id:
+  - url: https://github.com/directus/directus/security/advisories/GHSA-wxwm-3fxv-mrvx
+    reference_type:
+    reference_id:

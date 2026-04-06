@@ -1,0 +1,55 @@
+advisory_id: GHSA-9jpj-g8vv-j5mf
+datasource_id: github_osv_importer_v2/GHSA-9jpj-g8vv-j5mf
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-9jpj-g8vv-j5mf/GHSA-9jpj-g8vv-j5mf.json
+aliases: []
+summary: |
+  OpenClaw: Gemini OAuth exposed the PKCE verifier through the OAuth state parameter
+  ## Summary
+
+  Before OpenClaw 2026.4.2, the Gemini OAuth flow reused the PKCE verifier as the OAuth `state` value. Because the provider reflected `state` back in the redirect URL, the verifier could be exposed alongside the authorization code.
+
+  ## Impact
+
+  Anyone who could capture the redirect URL could learn both the authorization code and the PKCE verifier, defeating PKCE's interception protection for that flow and enabling token redemption.
+
+  ## Affected Packages / Versions
+
+  - Package: `openclaw` (npm)
+  - Affected versions: `<= 2026.4.1`
+  - Patched versions: `>= 2026.4.2`
+  - Latest published npm version: `2026.4.1`
+
+  ## Fix Commit(s)
+
+  - `a26f4d0f3ef0757db6c6c40277cc06a5de76c52f` — separate OAuth state from the PKCE verifier
+
+  OpenClaw thanks @BG0ECV for reporting.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<=2026.4.1
+    fixed_versions: vers:npm/2026.4.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.0'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:A/VC:H/VI:N/VA:N/SC:H/SI:H/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-9jpj-g8vv-j5mf/GHSA-9jpj-g8vv-j5mf.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-345
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/a26f4d0f3ef0757db6c6c40277cc06a5de76c52f
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-9jpj-g8vv-j5mf
+    reference_type:
+    reference_id:

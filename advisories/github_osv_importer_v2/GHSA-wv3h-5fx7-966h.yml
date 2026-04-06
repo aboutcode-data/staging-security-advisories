@@ -1,0 +1,44 @@
+advisory_id: GHSA-wv3h-5fx7-966h
+datasource_id: github_osv_importer_v2/GHSA-wv3h-5fx7-966h
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-wv3h-5fx7-966h/GHSA-wv3h-5fx7-966h.json
+aliases:
+  - CVE-2026-35409
+summary: |
+  Directus: SSRF Protection Bypass via IPv4-Mapped IPv6 Addresses in File Import
+  ### Summary
+  A Server-Side Request Forgery (SSRF) protection bypass has been identified and fixed in Directus. The IP address validation mechanism used to block requests to local and private networks could be circumvented using IPv4-Mapped IPv6 address notation.
+
+  ### Details
+  Directus implements an IP deny-list to prevent server-side requests to internal/private network ranges. The validation logic failed to normalize IPv4-Mapped IPv6 addresses (e.g., the IPv6 representation of `127.0.0.1`) before checking them against the deny-list. Because the deny-list check did not recognize these mapped addresses as equivalent to their IPv4 counterparts, an attacker could bypass the restriction while the underlying HTTP client and operating system still resolved and connected to the intended private target.
+
+  This has been fixed by adding a normalization step that converts IPv4-Mapped IPv6 addresses to their canonical IPv4 form prior to validation.
+
+  ### Impact
+  An authenticated user (or an unauthenticated user if public file-import permissions are enabled) could exploit this bypass to perform SSRF attacks against internal services on the same host (databases, caches, internal APIs) or cloud instance metadata endpoints (e.g., AWS/GCP/Azure IMDS).
+impacted_packages:
+  - purl: pkg:npm/directus
+    affected_versions: vers:npm/<11.16.0
+    fixed_versions: vers:npm/11.16.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.7'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-wv3h-5fx7-966h/GHSA-wv3h-5fx7-966h.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-20
+  - CWE-918
+references:
+  - url: https://github.com/directus/directus
+    reference_type:
+    reference_id:
+  - url: https://github.com/directus/directus/security/advisories/GHSA-wv3h-5fx7-966h
+    reference_type:
+    reference_id:

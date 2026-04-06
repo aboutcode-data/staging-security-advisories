@@ -1,0 +1,54 @@
+advisory_id: GHSA-v3qc-wrwx-j3pw
+datasource_id: github_osv_importer_v2/GHSA-v3qc-wrwx-j3pw
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-v3qc-wrwx-j3pw/GHSA-v3qc-wrwx-j3pw.json
+aliases: []
+summary: |
+  OpenClaw: Agentic Consent Bypass — LLM Agent Can Silently Disable Exec Approval via `config.patch`
+  ## Summary
+  Agentic Consent Bypass: LLM Agent Can Silently Disable Exec Approval via `config.patch`
+
+  ## Current Maintainer Triage
+  - Status: open
+  - Normalized severity: high
+  - Assessment: Maintainers accepted this issue, fixed it in 76411b2afc4ae721e36c12e0ea24fd23e2fed61e on 2026-03-27, and that fix shipped in v2026.3.28, so normalize it as a fixed released draft rather than a close-by-trust-model call.
+
+  ## Affected Packages / Versions
+  - Package: `openclaw` (npm)
+  - Latest published npm version: `2026.3.31`
+  - Vulnerable version range: `<=2026.3.24`
+  - Patched versions: `>= 2026.3.28`
+  - First stable tag containing the fix: `v2026.3.28`
+
+  ## Fix Commit(s)
+  - `76411b2afc4ae721e36c12e0ea24fd23e2fed61e` — 2026-03-27T09:42:15Z
+
+  OpenClaw thanks @YLChen-007 for reporting.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<=2026.3.24
+    fixed_versions: vers:npm/2026.3.28
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.2'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:H/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-v3qc-wrwx-j3pw/GHSA-v3qc-wrwx-j3pw.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-285
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/76411b2afc4ae721e36c12e0ea24fd23e2fed61e
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-v3qc-wrwx-j3pw
+    reference_type:
+    reference_id:

@@ -1,0 +1,57 @@
+advisory_id: GHSA-rm5c-4rmf-vvhw
+datasource_id: github_osv_importer_v2/GHSA-rm5c-4rmf-vvhw
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-rm5c-4rmf-vvhw/GHSA-rm5c-4rmf-vvhw.json
+aliases: []
+summary: |
+  OpenClaw: Sandbox file operations use check-then-act, bypassing fd-based TOCTOU defenses
+  ## Summary
+  Sandbox file operations use check-then-act, bypassing fd-based TOCTOU defenses
+
+  ## Current Maintainer Triage
+  - Status: narrow
+  - Normalized severity: medium
+  - Assessment: Released workspace-only apply_patch remove and mkdir operations were still check-then-act, but the draft overstates scope by bundling broader edit paths; keep it open but narrow it to the actual sandbox-workspace mutation boundary.
+
+  ## Affected Packages / Versions
+  - Package: `openclaw` (npm)
+  - Latest published npm version: `2026.3.31`
+  - Vulnerable version range: `<=2026.3.28`
+  - Patched versions: `>= 2026.3.31`
+  - First stable tag containing the fix: `v2026.3.31`
+
+  ## Fix Commit(s)
+  - `32a4a47d602e0618f87b3e59f94d8c142767f860` — 2026-03-30T16:49:49+01:00
+
+  OpenClaw thanks @AntAISecurityLab for reporting.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<=2026.3.28
+    fixed_versions: vers:npm/2026.3.31
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.8'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:L/AC:H/AT:P/PR:L/UI:N/VC:N/VI:H/VA:H/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-rm5c-4rmf-vvhw/GHSA-rm5c-4rmf-vvhw.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-367
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/32a4a47d602e0618f87b3e59f94d8c142767f860
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/releases/tag/v2026.3.31
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-rm5c-4rmf-vvhw
+    reference_type:
+    reference_id:

@@ -1,0 +1,50 @@
+advisory_id: GHSA-cf45-hxwj-4cfj
+datasource_id: github_osv_importer_v2/GHSA-cf45-hxwj-4cfj
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-cf45-hxwj-4cfj/GHSA-cf45-hxwj-4cfj.json
+aliases:
+  - CVE-2026-35410
+summary: |
+  Directus: Open Redirect via Parser Bypass in OAuth2/SAML Authentication Flow
+  ### Summary
+
+  An open redirect vulnerability exists in the login redirection logic. The `isLoginRedirectAllowed` function fails to correctly identify certain malformed URLs as external, allowing attackers to bypass redirect allow-list validation and redirect users to arbitrary external domains upon successful authentication.
+
+  ### Details
+
+  A parser differential exists between the server-side URL validation logic and how modern browsers interpret URL path segments containing backslashes. Specifically, certain URL patterns are incorrectly classified as safe relative paths by the server, but are normalized by browsers into external domain references.
+
+  This is particularly impactful in SSO authentication flows (e.g., OAuth2 providers), where an attacker can craft a login URL that redirects the victim to an attacker-controlled site immediately after successful authentication, without any visible indication during the login process.
+
+  ### Impact
+
+  - **Phishing:** Users may be silently redirected to attacker-controlled sites impersonating legitimate services after authenticating.
+  - **Credential/token theft:** The redirect can be chained to capture OAuth tokens or authorization codes.
+  - **Trust erosion:** Users lose confidence in the application after being redirected to unexpected domains post-login.
+impacted_packages:
+  - purl: pkg:npm/directus
+    affected_versions: vers:npm/<11.16.1
+    fixed_versions: vers:npm/11.16.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.1'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-cf45-hxwj-4cfj/GHSA-cf45-hxwj-4cfj.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-601
+  - CWE-20
+  - CWE-184
+references:
+  - url: https://github.com/directus/directus
+    reference_type:
+    reference_id:
+  - url: https://github.com/directus/directus/security/advisories/GHSA-cf45-hxwj-4cfj
+    reference_type:
+    reference_id:

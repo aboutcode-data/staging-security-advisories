@@ -1,0 +1,66 @@
+advisory_id: GHSA-5jg4-p4qw-cgfr
+datasource_id: github_osv_importer_v2/GHSA-5jg4-p4qw-cgfr
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-5jg4-p4qw-cgfr/GHSA-5jg4-p4qw-cgfr.json
+aliases: []
+summary: |
+  @stablelib/cbor: Stack exhaustion Denial of Service via deeply nested CBOR arrays, maps, or tags
+  ### Summary
+
+  `@stablelib/cbor` decodes nested CBOR structures recursively and does not enforce a maximum nesting depth. A sufficiently deep attacker-controlled CBOR payload can therefore crash decoding with `RangeError: Maximum call stack size exceeded`.
+
+  ### Details
+
+  The decoder processes arrays, maps, and tagged values through recursive calls. Each nested container causes another descent into `_decodeValue()` until a leaf value is reached.
+
+  There is no depth limit, no iterative fallback, and no protection against pathological nesting. An attacker can therefore supply a payload made of thousands of nested arrays, maps, or tags and force the decoder to recurse until the JavaScript call stack is exhausted.
+
+  ### PoC
+
+  ```js
+  import { decode } from "@stablelib/cbor";
+
+  const depth = 12000;
+  const payload = new Uint8Array(depth + 1);
+
+  // Build [[[...[null]...]]]
+  payload.fill(0x81, 0, depth); // array(1)
+  payload[depth] = 0xf6;        // null
+
+  decode(payload);
+  // RangeError: Maximum call stack size exceeded
+  ```
+
+  ### Impact
+
+  Any application that decodes attacker-controlled CBOR can be forced into a reliable denial of service with a single crafted payload.
+
+  The immediate result is an exception during decoding. In services that do not catch that exception safely, the request fails and the worker or process handling the decode may terminate.
+impacted_packages:
+  - purl: pkg:npm/%40stablelib/cbor
+    affected_versions: vers:npm/<2.0.3
+    fixed_versions: vers:npm/2.0.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.7'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-5jg4-p4qw-cgfr/GHSA-5jg4-p4qw-cgfr.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-674
+references:
+  - url: https://github.com/StableLib/stablelib
+    reference_type:
+    reference_id:
+  - url: https://github.com/StableLib/stablelib/commit/0149e18d9d4736e22c257744ca945ebce7899a01
+    reference_type:
+    reference_id:
+  - url: https://github.com/StableLib/stablelib/security/advisories/GHSA-5jg4-p4qw-cgfr
+    reference_type:
+    reference_id:

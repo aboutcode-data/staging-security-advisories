@@ -1,0 +1,54 @@
+advisory_id: GHSA-6q22-g298-grjh
+datasource_id: github_osv_importer_v2/GHSA-6q22-g298-grjh
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-6q22-g298-grjh/GHSA-6q22-g298-grjh.json
+aliases: []
+summary: |
+  Directus: Unauthenticated Denial of Service via GraphQL Alias Amplification of Expensive Health Check Resolver
+  ## Summary
+
+  The GraphQL specification permits a single query to repeat the same field multiple times using aliases, with each alias resolved independently by default. Directus did not deduplicate resolver invocations within a single request, meaning each alias triggered a full, independent execution of the underlying resolver.
+
+  The health check resolver ran all backend checks (database connectivity, cache, storage writes, and SMTP verification) on every invocation. Combined with unauthenticated access to the system GraphQL endpoint, this allowed an attacker to amplify resource consumption significantly from a single HTTP request, exhausting the database connection pool, storage I/O, and SMTP connections.
+
+  ## Fix
+
+  A request-scoped resolver deduplication mechanism was introduced and applied broadly across all GraphQL read resolvers, both system and items endpoints. When multiple aliases in a single request invoke the same resolver with identical arguments, only the first call executes; all subsequent aliases share its result. This eliminates the amplification factor regardless of how many aliases an attacker includes in a query.
+
+  ## Impact
+
+  - **Service degradation or outage:** Database connection pool exhaustion prevents all Directus operations for all users
+  - **Storage I/O saturation:** Concurrent file writes can overwhelm disk I/O
+  - **SMTP resource exhaustion:** Concurrent SMTP verification calls may overwhelm the mail server
+  - **No authentication required:** Any network-accessible attacker can trigger this condition
+  - **Single-request impact:** A single request is sufficient to cause significant resource consumption
+
+  ## Credit
+
+  This vulnerability was discovered and reported by [bugbunny.ai](https://bugbunny.ai).
+impacted_packages:
+  - purl: pkg:npm/directus
+    affected_versions: vers:npm/<11.17.0
+    fixed_versions: vers:npm/11.17.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-6q22-g298-grjh/GHSA-6q22-g298-grjh.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-770
+  - CWE-400
+references:
+  - url: https://github.com/directus/directus
+    reference_type:
+    reference_id:
+  - url: https://github.com/directus/directus/security/advisories/GHSA-6q22-g298-grjh
+    reference_type:
+    reference_id:

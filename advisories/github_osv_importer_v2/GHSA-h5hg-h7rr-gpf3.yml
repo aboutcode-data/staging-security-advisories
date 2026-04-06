@@ -1,0 +1,53 @@
+advisory_id: GHSA-h5hg-h7rr-gpf3
+datasource_id: github_osv_importer_v2/GHSA-h5hg-h7rr-gpf3
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-h5hg-h7rr-gpf3/GHSA-h5hg-h7rr-gpf3.json
+aliases: []
+summary: |
+  OpenClaw: Node browser proxy `allowProfiles` bypass through persistent profile mutation and runtime profile selection
+  ## Summary
+  Node browser proxy `allowProfiles` bypass through persistent profile mutation and runtime profile selection
+
+  ## Current Maintainer Triage
+  - Normalized severity: high
+  - Assessment: Real released allowProfiles bypass through profile mutation and runtime profile selection, fixed and shipped in v2026.3.22+, so keep open for publish rather than close.
+
+  ## Affected Packages / Versions
+  - Package: `openclaw` (npm)
+  - Latest published npm version: `2026.3.31`
+  - Vulnerable version range: `<=2026.3.13-1`
+  - Patched versions: `>= 2026.3.22`
+  - First stable tag containing the fix: `v2026.3.22`
+
+  ## Fix Commit(s)
+  - `eac93507c36ccd0c359fba18fa466ef6448be8a5` — 2026-03-23T00:56:44-07:00
+
+  OpenClaw thanks @smaeljaish771 for reporting.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<=2026.3.13-1
+    fixed_versions: vers:npm/2026.3.22
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.6'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-h5hg-h7rr-gpf3/GHSA-h5hg-h7rr-gpf3.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-863
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/eac93507c36ccd0c359fba18fa466ef6448be8a5
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-h5hg-h7rr-gpf3
+    reference_type:
+    reference_id:

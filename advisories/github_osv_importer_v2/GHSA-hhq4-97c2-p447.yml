@@ -1,0 +1,57 @@
+advisory_id: GHSA-hhq4-97c2-p447
+datasource_id: github_osv_importer_v2/GHSA-hhq4-97c2-p447
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-hhq4-97c2-p447/GHSA-hhq4-97c2-p447.json
+aliases: []
+summary: |
+  OpenClaw: Zalo webhook replay cache cross-target messageId scope bypass
+  ## Summary
+  Zalo webhook replay cache cross-target messageId scope bypass
+
+  ## Current Maintainer Triage
+  - Status: narrow
+  - Normalized severity: low
+  - Assessment: v2026.3.28 replay dedupe is still keyed too broadly, but the issue should stay scoped to authenticated sibling-target delivery paths rather than arbitrary unauthenticated attackers.
+
+  ## Affected Packages / Versions
+  - Package: `openclaw` (npm)
+  - Latest published npm version: `2026.3.31`
+  - Vulnerable version range: `<=2026.3.28`
+  - Patched versions: `>= 2026.3.31`
+  - First stable tag containing the fix: `v2026.3.31`
+
+  ## Fix Commit(s)
+  - `4d038bb242c11f39e45f6a4bde400e5fd42e4ebf` — 2026-03-31T19:33:57+09:00
+
+  OpenClaw thanks @smaeljaish771 for reporting.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<=2026.3.28
+    fixed_versions: vers:npm/2026.3.31
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '2.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-hhq4-97c2-p447/GHSA-hhq4-97c2-p447.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-294
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/4d038bb242c11f39e45f6a4bde400e5fd42e4ebf
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/releases/tag/v2026.3.31
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-hhq4-97c2-p447
+    reference_type:
+    reference_id:

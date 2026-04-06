@@ -1,0 +1,56 @@
+advisory_id: GHSA-3pm9-5j7m-59vc
+datasource_id: github_osv_importer_v2/GHSA-3pm9-5j7m-59vc
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-3pm9-5j7m-59vc/GHSA-3pm9-5j7m-59vc.json
+aliases: []
+summary: |
+  OpenClaw: Tlon Startup Migration Rehydrates Empty-Array Revocations From File Config
+  ## Summary
+  Tlon Startup Migration Rehydrates Empty-Array Revocations From File Config
+
+  ## Current Maintainer Triage
+  - Normalized severity: low
+  - Assessment: v2026.3.28 startup migration still treats empty-array settings as missing and can rehydrate revoked Tlon config from file state after restart.
+
+  ## Affected Packages / Versions
+  - Package: `openclaw` (npm)
+  - Latest published npm version: `2026.3.31`
+  - Vulnerable version range: `<=2026.3.28`
+  - Patched versions: `>= 2026.3.31`
+  - First stable tag containing the fix: `v2026.3.31`
+
+  ## Fix Commit(s)
+  - `a4d72a83f01fedd35964c352e3473c7712a3511b` — 2026-03-31T14:57:03+01:00
+
+  OpenClaw thanks @smaeljaish771 for reporting.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<=2026.3.28
+    fixed_versions: vers:npm/2026.3.31
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '2.1'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-3pm9-5j7m-59vc/GHSA-3pm9-5j7m-59vc.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-436
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/a4d72a83f01fedd35964c352e3473c7712a3511b
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/releases/tag/v2026.3.31
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-3pm9-5j7m-59vc
+    reference_type:
+    reference_id:

@@ -1,0 +1,56 @@
+advisory_id: GHSA-x2m8-53h4-6hch
+datasource_id: github_osv_importer_v2/GHSA-x2m8-53h4-6hch
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-x2m8-53h4-6hch/GHSA-x2m8-53h4-6hch.json
+aliases: []
+summary: |
+  OpenClaw: Discord voice ingress authorization can be bypassed via channel, name, and stale-role validation gaps
+  ## Summary
+  Discord voice ingress authorization can be bypassed via channel, name, and stale-role validation gaps
+
+  ## Current Maintainer Triage
+  - Status: narrow
+  - Assessment: Real in shipped v2026.3.28 Discord voice ingress, but impact is channel/member allowlist bypass rather than a broader critical auth break and mainline fix is unreleased.
+
+  ## Affected Packages / Versions
+  - Package: `openclaw` (npm)
+  - Latest published npm version: `2026.3.31`
+  - Vulnerable version range: `<=2026.3.28`
+  - Patched versions: `>= 2026.3.31`
+  - First stable tag containing the fix: `v2026.3.31`
+
+  ## Fix Commit(s)
+  - `dba96e7507e0900f120e5e28e57755d69bf78759` — 2026-03-31T21:29:13+09:00
+
+  OpenClaw thanks @cyjhhh for reporting.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<=2026.3.28
+    fixed_versions: vers:npm/2026.3.31
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '2.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:L/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-x2m8-53h4-6hch/GHSA-x2m8-53h4-6hch.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-862
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/dba96e7507e0900f120e5e28e57755d69bf78759
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/releases/tag/v2026.3.31
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-x2m8-53h4-6hch
+    reference_type:
+    reference_id:

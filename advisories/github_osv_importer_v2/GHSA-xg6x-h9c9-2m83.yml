@@ -1,0 +1,61 @@
+advisory_id: GHSA-xg6x-h9c9-2m83
+datasource_id: github_osv_importer_v2/GHSA-xg6x-h9c9-2m83
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-xg6x-h9c9-2m83/GHSA-xg6x-h9c9-2m83.json
+aliases: []
+summary: |
+  Better Auth Has Two-Factor Authentication Bypass via Premature Session Caching (session.cookieCache)
+  ### Summary
+
+  Under certain configurations, sessions may be considered valid before two-factor authentication (2FA) is fully completed. This can allow access to authenticated routes without verifying the second factor.
+
+  ---
+
+  ### Description
+
+  When two-factor authentication is enabled, the authentication flow correctly identifies users who require additional verification and defers full authentication until the second factor is completed.
+
+  However, when `session.cookieCache` is enabled, the session generated during the initial sign-in step may be cached as valid **prior to 2FA verification**. Subsequent session lookups may then return this cached session without re-evaluating the 2FA requirement.
+
+  This results in a situation where session validity can be established before all authentication constraints are satisfied.
+
+  ---
+
+  ### Impact
+
+  An attacker (or user) with valid primary credentials may gain access to protected application routes without completing the required second authentication factor.
+
+  Any application using `better-auth` with both two-factor authentication and session cookie caching enabled may be affected.
+
+  ---
+
+  ### Mitigation
+
+  * Upgrade to a version of `better-auth` that includes the fix for this issue.
+  * Ensure that session caching does not treat sessions as fully authenticated until all required authentication steps, including 2FA, are completed.
+  * As a temporary workaround, disable `session.cookieCache` when using two-factor authentication.
+impacted_packages:
+  - purl: pkg:npm/better-auth
+    affected_versions: vers:npm/<1.4.9
+    fixed_versions: vers:npm/1.4.9
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '9.1'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-xg6x-h9c9-2m83/GHSA-xg6x-h9c9-2m83.json
+  - score: CRITICAL
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-288
+references:
+  - url: https://github.com/better-auth/better-auth
+    reference_type:
+    reference_id:
+  - url: https://github.com/better-auth/better-auth/security/advisories/GHSA-xg6x-h9c9-2m83
+    reference_type:
+    reference_id:

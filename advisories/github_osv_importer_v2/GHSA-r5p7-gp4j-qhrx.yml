@@ -1,0 +1,64 @@
+advisory_id: GHSA-r5p7-gp4j-qhrx
+datasource_id: github_osv_importer_v2/GHSA-r5p7-gp4j-qhrx
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-r5p7-gp4j-qhrx/GHSA-r5p7-gp4j-qhrx.json
+aliases:
+  - CVE-2026-34777
+summary: |
+  Electron: Incorrect origin passed to permission request handler for iframe requests
+  ### Impact
+  When an iframe requests `fullscreen`, `pointerLock`, `keyboardLock`, `openExternal`, or `media` permissions, the origin passed to `session.setPermissionRequestHandler()` was the top-level page's origin rather than the requesting iframe's origin. Apps that grant permissions based on the origin parameter or `webContents.getURL()` may inadvertently grant permissions to embedded third-party content.
+
+  The correct requesting URL remains available via `details.requestingUrl`. Apps that already check `details.requestingUrl` are not affected.
+
+  ### Workarounds
+  In your `setPermissionRequestHandler`, inspect `details.requestingUrl` rather than the origin parameter or `webContents.getURL()` when deciding whether to grant `fullscreen`, `pointerLock`, `keyboardLock`, `openExternal`, or `media` permissions.
+
+  ### Fixed Versions
+  * `41.0.0`
+  * `40.8.1`
+  * `39.8.1`
+  * `38.8.6`
+
+  ### For more information
+  If there are any questions or comments about this advisory, please email [security@electronjs.org](mailto:security@electronjs.org)
+impacted_packages:
+  - purl: pkg:npm/electron
+    affected_versions: vers:npm/<38.8.6
+    fixed_versions: vers:npm/38.8.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/electron
+    affected_versions: vers:npm/>=39.0.0-alpha.1|<39.8.1
+    fixed_versions: vers:npm/39.8.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/electron
+    affected_versions: vers:npm/>=40.0.0-alpha.1|<40.8.1
+    fixed_versions: vers:npm/40.8.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/electron
+    affected_versions: vers:npm/>=41.0.0-alpha.1|<41.0.0
+    fixed_versions: vers:npm/41.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.4'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-r5p7-gp4j-qhrx/GHSA-r5p7-gp4j-qhrx.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-346
+references:
+  - url: https://github.com/electron/electron
+    reference_type:
+    reference_id:
+  - url: https://github.com/electron/electron/security/advisories/GHSA-r5p7-gp4j-qhrx
+    reference_type:
+    reference_id:

@@ -1,0 +1,56 @@
+advisory_id: GHSA-cg7q-fg22-4g98
+datasource_id: github_osv_importer_v2/GHSA-cg7q-fg22-4g98
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-cg7q-fg22-4g98/GHSA-cg7q-fg22-4g98.json
+aliases: []
+summary: |
+  OpenClaw: Host exec environment sanitization misses package, registry, Docker, compiler, and TLS override variables
+  ## Summary
+  Host exec environment sanitization misses package, registry, Docker, compiler, and TLS override variables
+
+  ## Current Maintainer Triage
+  - Normalized severity: medium
+  - Assessment: v2026.3.28 also misses the broader package, registry, compiler, Docker, and TLS env family in the shipped host-env policy, and the unreleased main fix means this is a real medium-severity open issue.
+
+  ## Affected Packages / Versions
+  - Package: `openclaw` (npm)
+  - Latest published npm version: `2026.3.31`
+  - Vulnerable version range: `<=2026.3.28`
+  - Patched versions: `>= 2026.3.31`
+  - First stable tag containing the fix: `v2026.3.31`
+
+  ## Fix Commit(s)
+  - `eb8de6715f02949c21c4e895fffc8a6dcb00975c` — 2026-03-31T19:37:43+09:00
+
+  OpenClaw thanks @tdjackey for reporting.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<=2026.3.28
+    fixed_versions: vers:npm/2026.3.31
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.0'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-cg7q-fg22-4g98/GHSA-cg7q-fg22-4g98.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-184
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/eb8de6715f02949c21c4e895fffc8a6dcb00975c
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/releases/tag/v2026.3.31
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-cg7q-fg22-4g98
+    reference_type:
+    reference_id:

@@ -1,0 +1,66 @@
+advisory_id: GHSA-3c8v-cfp5-9885
+datasource_id: github_osv_importer_v2/GHSA-3c8v-cfp5-9885
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-3c8v-cfp5-9885/GHSA-3c8v-cfp5-9885.json
+aliases:
+  - CVE-2026-34776
+summary: |
+  Electron: Out-of-bounds read in second-instance IPC on macOS and Linux
+  ### Impact
+  On macOS and Linux, apps that call `app.requestSingleInstanceLock()` were vulnerable to an out-of-bounds heap read when parsing a crafted second-instance message. Leaked memory could be delivered to the app's `second-instance` event handler.
+
+  This issue is limited to processes running as the same user as the Electron app.
+
+  Apps that do not call `app.requestSingleInstanceLock()` are not affected. Windows is not affected by this issue.
+
+  ### Workarounds
+  There are no app side workarounds, developers must update to a patched version of Electron.
+
+  ### Fixed Versions
+  * `41.0.0`
+  * `40.8.1`
+  * `39.8.1`
+  * `38.8.6`
+
+  ### For more information
+  If there are any questions or comments about this advisory, please email [security@electronjs.org](mailto:security@electronjs.org)
+impacted_packages:
+  - purl: pkg:npm/electron
+    affected_versions: vers:npm/<38.8.6
+    fixed_versions: vers:npm/38.8.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/electron
+    affected_versions: vers:npm/>=39.0.0-alpha.1|<39.8.1
+    fixed_versions: vers:npm/39.8.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/electron
+    affected_versions: vers:npm/>=40.0.0-alpha.1|<40.8.1
+    fixed_versions: vers:npm/40.8.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/electron
+    affected_versions: vers:npm/>=41.0.0-alpha.1|<41.0.0
+    fixed_versions: vers:npm/41.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:L
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-3c8v-cfp5-9885/GHSA-3c8v-cfp5-9885.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-125
+references:
+  - url: https://github.com/electron/electron
+    reference_type:
+    reference_id:
+  - url: https://github.com/electron/electron/security/advisories/GHSA-3c8v-cfp5-9885
+    reference_type:
+    reference_id:

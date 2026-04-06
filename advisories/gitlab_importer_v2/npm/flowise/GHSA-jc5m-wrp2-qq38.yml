@@ -1,0 +1,34 @@
+advisory_id: npm/flowise/GHSA-jc5m-wrp2-qq38
+datasource_id: gitlab_importer_v2/npm/flowise/GHSA-jc5m-wrp2-qq38
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/flowise/GHSA-jc5m-wrp2-qq38.yml
+aliases:
+  - GHSA-jc5m-wrp2-qq38
+summary: |
+  Flowise Vulnerable to PII Disclosure on Unauthenticated Forgot Password Endpoint
+  The `/api/v1/account/forgot-password` endpoint returns the full user object including PII (id, name, email, status, timestamps) in the response body instead of a generic success message. This exposes sensitive user information to unauthenticated attackers who only need to know a valid email address.
+impacted_packages:
+  - purl: pkg:npm/flowise
+    affected_versions: vers:npm/<3.0.13
+    fixed_versions: vers:npm/3.0.13
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/flowise/GHSA-jc5m-wrp2-qq38.yml
+weaknesses:
+  - CWE-937
+  - CWE-1035
+  - CWE-200
+references:
+  - url: https://github.com/FlowiseAI/Flowise
+    reference_type:
+    reference_id:
+  - url: https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-jc5m-wrp2-qq38
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-jc5m-wrp2-qq38
+    reference_type:
+    reference_id: GHSA-jc5m-wrp2-qq38

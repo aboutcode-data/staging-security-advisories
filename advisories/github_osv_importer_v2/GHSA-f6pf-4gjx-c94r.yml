@@ -1,0 +1,50 @@
+advisory_id: GHSA-f6pf-4gjx-c94r
+datasource_id: github_osv_importer_v2/GHSA-f6pf-4gjx-c94r
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-f6pf-4gjx-c94r/GHSA-f6pf-4gjx-c94r.json
+aliases: []
+summary: |
+  OpenClaw: Media Parsing Path Traversal Leads to Arbitrary File Read
+  ## Summary
+  OpenClaw <= 2026.3.24 Media Parsing Path Traversal to Arbitrary File Read
+
+  ## Affected Packages / Versions
+  - Package: `openclaw` (npm)
+  - Latest published npm version: `2026.3.31`
+  - Vulnerable version range: `<=2026.3.24`
+  - Patched versions: `>= 2026.3.28`
+  - First stable tag containing the fix: `v2026.3.28`
+
+  ## Fix Commit(s)
+  - `4797bbc5b96e2cca5532e43b58915c051746fe37` — 2026-03-25T13:35:16-06:00
+
+  ## Release Process Note
+  - The fix is already present in released version `2026.3.28`.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<=2026.3.24
+    fixed_versions: vers:npm/2026.3.28
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.1'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-f6pf-4gjx-c94r/GHSA-f6pf-4gjx-c94r.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-22
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/4797bbc5b96e2cca5532e43b58915c051746fe37
+    reference_type: other
+    reference_id: 4797bbc5b96e2cca5532e43b58915c051746fe37
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-f6pf-4gjx-c94r
+    reference_type: advisory
+    reference_id: GHSA-f6pf-4gjx-c94r

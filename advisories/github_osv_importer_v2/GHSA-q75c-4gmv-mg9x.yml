@@ -1,0 +1,41 @@
+advisory_id: GHSA-q75c-4gmv-mg9x
+datasource_id: github_osv_importer_v2/GHSA-q75c-4gmv-mg9x
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-q75c-4gmv-mg9x/GHSA-q75c-4gmv-mg9x.json
+aliases:
+  - CVE-2026-35411
+summary: |
+  Directus: Open Redirect in Admin 2FA Setup Page
+  ### Summary
+
+  Directus is vulnerable to an Open Redirect via the redirect query parameter on the `/admin/tfa-setup` page. When an administrator who has not yet configured Two-Factor Authentication (2FA) visits a crafted URL, they are presented with the legitimate Directus 2FA setup page. After completing the setup process, the application redirects the user to the attacker-controlled URL specified in the `redirect` parameter without any validation.
+
+  This vulnerability could be used in phishing attacks targeting Directus administrators, as the initial interaction occurs on a trusted domain.
+
+  ### Credits
+  Discovered by Neo by ProjectDiscovery (https://neo.projectdiscovery.io/)
+impacted_packages:
+  - purl: pkg:npm/directus
+    affected_versions: vers:npm/<11.16.1
+    fixed_versions: vers:npm/11.16.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '4.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-q75c-4gmv-mg9x/GHSA-q75c-4gmv-mg9x.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-601
+references:
+  - url: https://github.com/directus/directus
+    reference_type:
+    reference_id:
+  - url: https://github.com/directus/directus/security/advisories/GHSA-q75c-4gmv-mg9x
+    reference_type:
+    reference_id:

@@ -1,0 +1,56 @@
+advisory_id: GHSA-58q2-7r52-jq62
+datasource_id: github_osv_importer_v2/GHSA-58q2-7r52-jq62
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-58q2-7r52-jq62/GHSA-58q2-7r52-jq62.json
+aliases: []
+summary: |
+  OpenClaw: Path traversal via inbound channel attachment path in ACP dispatch allows arbitrary file read
+  ## Summary
+  Path traversal via inbound channel attachment path in ACP dispatch allows arbitrary file read
+
+  ## Current Maintainer Triage
+  - Normalized severity: medium
+  - Assessment: v2026.3.28 ACP dispatch still reads attachment paths outside the guarded attachment-cache or root checks, and the root-enforcement fix is not yet shipped.
+
+  ## Affected Packages / Versions
+  - Package: `openclaw` (npm)
+  - Latest published npm version: `2026.3.31`
+  - Vulnerable version range: `<=2026.3.28`
+  - Patched versions: `>= 2026.3.31`
+  - First stable tag containing the fix: `v2026.3.31`
+
+  ## Fix Commit(s)
+  - `566fb73d9da2d73c0be0d9b8e5b762e4dcd8e81d` — 2026-03-30T14:04:02+01:00
+
+  OpenClaw thanks @north-echo for reporting.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<=2026.3.28
+    fixed_versions: vers:npm/2026.3.31
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-58q2-7r52-jq62/GHSA-58q2-7r52-jq62.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-22
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/566fb73d9da2d73c0be0d9b8e5b762e4dcd8e81d
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/releases/tag/v2026.3.31
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-58q2-7r52-jq62
+    reference_type:
+    reference_id:

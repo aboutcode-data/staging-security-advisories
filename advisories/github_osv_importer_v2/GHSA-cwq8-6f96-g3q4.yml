@@ -1,0 +1,67 @@
+advisory_id: GHSA-cwq8-6f96-g3q4
+datasource_id: github_osv_importer_v2/GHSA-cwq8-6f96-g3q4
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-cwq8-6f96-g3q4/GHSA-cwq8-6f96-g3q4.json
+aliases: []
+summary: |
+  OpenClaw: Security Scan Failure Does Not Block Plugin Installation (Fail-Open)
+  ## Summary
+  Security Scan Failure Does Not Block Plugin Installation (Fail-Open)
+
+  ## Current Maintainer Triage
+  - Status: open
+  - Normalized severity: low
+  - Assessment: Real in shipped v2026.3.28 plugin install flow, but low severity fits because it still requires an operator to choose installation of an untrusted package and the scan failure was visible rather than silent.
+
+  ## Affected Packages / Versions
+  - Package: `openclaw` (npm)
+  - Latest published npm version: `2026.3.31`
+  - Vulnerable version range: `<=2026.3.28`
+  - Patched versions: `>= 2026.3.31`
+  - First stable tag containing the fix: `v2026.3.31`
+
+  ## Fix Commit(s)
+  - `7a953a52271b9188a5fa830739a4366614ff9916` — 2026-03-30T15:36:08+01:00
+  - `44b993613601280d46a5b88190e46669fc13d669` — 2026-03-31T23:16:11+09:00
+  - `0d7f1e2c84eca65df7dee890d9c30e2a841c030a` — 2026-03-31T23:27:20+09:00
+  - `bf96c67fd1954740aeabfadc7cfe3098bcfc6b68` — 2026-03-31T15:53:29+01:00
+
+  OpenClaw thanks @davidluzsilva for reporting.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<=2026.3.28
+    fixed_versions: vers:npm/2026.3.31
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '2.0'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:A/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-cwq8-6f96-g3q4/GHSA-cwq8-6f96-g3q4.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-754
+  - CWE-636
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/0d7f1e2c84eca65df7dee890d9c30e2a841c030a
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/44b993613601280d46a5b88190e46669fc13d669
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/bf96c67fd1954740aeabfadc7cfe3098bcfc6b68
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/7a953a52271b9188a5fa830739a4366614ff9916
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-cwq8-6f96-g3q4
+    reference_type:
+    reference_id:
