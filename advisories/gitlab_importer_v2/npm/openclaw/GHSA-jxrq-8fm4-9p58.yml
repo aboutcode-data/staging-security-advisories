@@ -1,0 +1,37 @@
+advisory_id: npm/openclaw/GHSA-jxrq-8fm4-9p58
+datasource_id: gitlab_importer_v2/npm/openclaw/GHSA-jxrq-8fm4-9p58
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-jxrq-8fm4-9p58.yml
+aliases:
+  - GHSA-jxrq-8fm4-9p58
+summary: |
+  OpenClaw: Zip extraction symlink traversal could write outside destination
+  A path confinement bypass in OpenClaw ZIP extraction allowed writes outside the intended destination when a pre-existing symlink was present under the extraction root.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.2.22
+    fixed_versions: vers:npm/2026.2.22
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-jxrq-8fm4-9p58.yml
+weaknesses:
+  - CWE-1035
+  - CWE-937
+  - CWE-59
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/4b226b74f5fd3b106a83a6347fd404172e2fd246
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-jxrq-8fm4-9p58
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-jxrq-8fm4-9p58
+    reference_type:
+    reference_id: GHSA-jxrq-8fm4-9p58

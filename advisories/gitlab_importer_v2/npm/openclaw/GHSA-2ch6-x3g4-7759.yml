@@ -1,0 +1,39 @@
+advisory_id: npm/openclaw/GHSA-2ch6-x3g4-7759
+datasource_id: gitlab_importer_v2/npm/openclaw/GHSA-2ch6-x3g4-7759
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-2ch6-x3g4-7759.yml
+aliases:
+  - GHSA-2ch6-x3g4-7759
+summary: |
+  OpenClaw's commands.allowFrom sender authorization accepted conversation identifiers via ctx.From
+  `commands.allowFrom` is documented as a sender authorization allowlist for commands/directives, but command authorization could include `ctx.From` (conversation identity) as a sender candidate.
+
+  When `commands.allowFrom` contained conversation-like identifiers (for example Discord `channel:<id>` or WhatsApp group JIDs), command/directive authorization could be granted to participants in that conversation instead of only the intended sender identity.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.2.23
+    fixed_versions: vers:npm/2026.2.23
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-2ch6-x3g4-7759.yml
+weaknesses:
+  - CWE-639
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/08e2aa44e78a9c946d97bea62304e6f533b8fa8e
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-2ch6-x3g4-7759
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-2ch6-x3g4-7759
+    reference_type:
+    reference_id: GHSA-2ch6-x3g4-7759

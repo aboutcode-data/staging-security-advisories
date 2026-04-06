@@ -1,0 +1,37 @@
+advisory_id: pypi/picklescan/GHSA-vvpj-8cmc-gx39
+datasource_id: gitlab_importer_v2/pypi/picklescan/GHSA-vvpj-8cmc-gx39
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/pypi/picklescan/GHSA-vvpj-8cmc-gx39.yml
+aliases:
+  - GHSA-vvpj-8cmc-gx39
+summary: |
+  PickleScan's pkgutil.resolve_name has a universal blocklist bypass
+  `pkgutil.resolve_name()` is a Python stdlib function that resolves any `"module:attribute"` string to the corresponding Python object at runtime. By using `pkgutil.resolve_name` as the first REDUCE call in a pickle, an attacker can obtain a reference to ANY blocked function (e.g., `os.system`, `builtins.exec`, `subprocess.call`) without that function appearing in the pickle's opcodes. picklescan only sees `pkgutil.resolve_name` (which is not blocked) and misses the actual dangerous function entirely.
+
+  This defeats picklescan's **entire blocklist concept** — every single entry in `_unsafe_globals` can be bypassed.
+impacted_packages:
+  - purl: pkg:pypi/picklescan
+    affected_versions: vers:pypi/<1.0.4
+    fixed_versions: vers:pypi/1.0.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/pypi/picklescan/GHSA-vvpj-8cmc-gx39.yml
+weaknesses:
+  - CWE-183
+  - CWE-693
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/mmaitre314/picklescan
+    reference_type:
+    reference_id:
+  - url: https://github.com/mmaitre314/picklescan/security/advisories/GHSA-vvpj-8cmc-gx39
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-vvpj-8cmc-gx39
+    reference_type:
+    reference_id: GHSA-vvpj-8cmc-gx39

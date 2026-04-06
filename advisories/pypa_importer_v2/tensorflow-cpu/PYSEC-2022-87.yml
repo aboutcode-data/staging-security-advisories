@@ -4,6 +4,7 @@ datasource_url: https://github.com/pypa/advisory-database/blob/main/vulns/tensor
 aliases:
   - CVE-2022-23578
   - GHSA-8r7c-3cm2-3h8f
+  - PYSEC-2022-87
 summary: Tensorflow is an Open Source Machine Learning Framework. If a graph node is invalid,
   TensorFlow can leak memory in the implementation of `ImmutableExecutorState::Initialize`.
   Here, we set `item->kernel` to `nullptr` but it is a simple `OpKernel*` pointer so the memory

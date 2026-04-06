@@ -4,6 +4,7 @@ datasource_url: https://github.com/pypa/advisory-database/blob/main/vulns/vtk/PY
 aliases:
   - CVE-2021-42521
   - GHSA-xfhg-9pjg-xg7g
+  - PYSEC-2022-255
 summary: There is a NULL pointer dereference vulnerability in VTK, and it lies in IO/Infovis/vtkXMLTreeReader.cxx.
   The vendor didn't check the return value of libxml2 API 'xmlDocGetRootElement', and try to
   dereference it. It is unsafe as the return value can be NULL and that NULL pointer dereference

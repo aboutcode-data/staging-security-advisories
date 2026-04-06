@@ -1,0 +1,51 @@
+advisory_id: GHSA-hvc7-763r-4f3h
+datasource_id: github_osv_importer_v2/GHSA-hvc7-763r-4f3h
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-hvc7-763r-4f3h/GHSA-hvc7-763r-4f3h.json
+aliases: []
+summary: |
+  openssl-encrypt has no owner verification on key revocation — any client can revoke any key
+  ### Summary
+
+  The `revoke_key` method in `openssl_encrypt_server/modules/keyserver/service.py` at **lines 195-270** accepts a `client_id` parameter but never verifies that the requesting client is the same as `key.owner_client_id`.
+
+  ### Impact
+
+  Any authenticated client can revoke any other client's key, as long as they provide a valid revocation signature. While the signature requirement mitigates this somewhat (you need the private key to sign), the lack of ownership check is a defense-in-depth gap.
+
+  ### Recommended Fix
+
+  - Add an ownership check: verify `client_id == key.owner_client_id` before allowing revocation
+  - Return 403 Forbidden if the requesting client does not own the key
+
+  ### Fix
+
+  Fixed in commit `05e45f3` on branch `releases/1.4.x` — added documentation that ML-DSA signature verification IS the cryptographic ownership check; added info-level logging on successful verification.
+impacted_packages:
+  - purl: pkg:pypi/openssl-encrypt
+    affected_versions: vers:pypi/<1.4.0
+    fixed_versions: vers:pypi/1.4.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.6'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:U
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-hvc7-763r-4f3h/GHSA-hvc7-763r-4f3h.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-862
+references:
+  - url: https://github.com/jahlives/openssl_encrypt
+    reference_type:
+    reference_id:
+  - url: https://github.com/jahlives/openssl_encrypt/commit/05e45f393886b5bf7e924d2dd42099a9dd37f91d
+    reference_type:
+    reference_id:
+  - url: https://github.com/jahlives/openssl_encrypt/security/advisories/GHSA-hvc7-763r-4f3h
+    reference_type:
+    reference_id:

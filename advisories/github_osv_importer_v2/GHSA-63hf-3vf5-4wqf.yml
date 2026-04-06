@@ -1,0 +1,53 @@
+advisory_id: GHSA-63hf-3vf5-4wqf
+datasource_id: github_osv_importer_v2/GHSA-63hf-3vf5-4wqf
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-63hf-3vf5-4wqf/GHSA-63hf-3vf5-4wqf.json
+aliases:
+  - CVE-2026-34520
+summary: |
+  AIOHTTP's C parser (llhttp) accepts null bytes and control characters in response header values - header injection/security bypass
+  ### Summary
+
+  The C parser (the default for most installs) accepted null bytes and control characters is response headers.
+
+  ### Impact
+
+  An attacker could send header values that are interpreted differently than expected due to the presence of control characters. For example, `request.url.origin()` may return a different value than the raw Host header, or what a reverse proxy interpreted it as., potentially resulting in some kind of security bypass.
+
+  -----
+
+  Patch: https://github.com/aio-libs/aiohttp/commit/9370b9714a7a56003cacd31a9b4ae16eab109ba4
+impacted_packages:
+  - purl: pkg:pypi/aiohttp
+    affected_versions: vers:pypi/<=3.13.3
+    fixed_versions: vers:pypi/3.13.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '2.7'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-63hf-3vf5-4wqf/GHSA-63hf-3vf5-4wqf.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-113
+references:
+  - url: https://github.com/aio-libs/aiohttp
+    reference_type:
+    reference_id:
+  - url: https://github.com/aio-libs/aiohttp/commit/9370b9714a7a56003cacd31a9b4ae16eab109ba4
+    reference_type:
+    reference_id:
+  - url: https://github.com/aio-libs/aiohttp/releases/tag/v3.13.4
+    reference_type:
+    reference_id:
+  - url: https://github.com/aio-libs/aiohttp/security/advisories/GHSA-63hf-3vf5-4wqf
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-34520
+    reference_type:
+    reference_id:

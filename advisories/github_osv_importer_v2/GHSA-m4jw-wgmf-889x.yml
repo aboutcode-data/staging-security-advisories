@@ -1,0 +1,40 @@
+advisory_id: GHSA-m4jw-wgmf-889x
+datasource_id: github_osv_importer_v2/GHSA-m4jw-wgmf-889x
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-m4jw-wgmf-889x/GHSA-m4jw-wgmf-889x.json
+aliases:
+  - CVE-2026-24157
+summary: |
+  NVIDIA NeMo Framework contains an RCE vulnerability in checkpoint loading
+  NVIDIA NeMo Framework contains a vulnerability in checkpoint loading where an attacker could cause remote code execution. A successful exploit of this vulnerability might lead to code execution, escalation of privileges, information disclosure and data tampering.
+impacted_packages:
+  - purl: pkg:pypi/nemo-toolkit
+    affected_versions: vers:pypi/<2.6.2
+    fixed_versions: vers:pypi/2.6.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.8'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-m4jw-wgmf-889x/GHSA-m4jw-wgmf-889x.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-502
+references:
+  - url: https://github.com/NVIDIA-NeMo/NeMo
+    reference_type:
+    reference_id:
+  - url: https://nvidia.custhelp.com/app/answers/detail/a_id/5800
+    reference_type: other
+    reference_id: 5800
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-24157
+    reference_type: other
+    reference_id: CVE-2026-24157
+  - url: https://www.cve.org/CVERecord?id=CVE-2026-24157
+    reference_type: other
+    reference_id: CVERecord?id=CVE-2026-24157

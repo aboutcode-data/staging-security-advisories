@@ -1,0 +1,35 @@
+advisory_id: npm/openclaw/GHSA-h656-5vcf-cm23
+datasource_id: gitlab_importer_v2/npm/openclaw/GHSA-h656-5vcf-cm23
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-h656-5vcf-cm23.yml
+aliases:
+  - GHSA-h656-5vcf-cm23
+summary: |
+  OpenClaw: Unauthorized Telegram Senders Trigger Media Download and Disk Write Before Access Check
+  In Telegram DM mode, inbound media was downloaded and written to disk before sender authorization checks completed. An unauthorized sender could trigger inbound media download/write activity (including media groups) even when DM access should be denied.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.2.24
+    fixed_versions: vers:npm/2026.2.24
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities: []
+weaknesses:
+  - CWE-404
+  - CWE-770
+  - CWE-1035
+  - CWE-937
+  - CWE-208
+  - CWE-406
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/9514201fb9b51de5d0b23151110d0ff5d9c8bd67
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-h656-5vcf-cm23
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-h656-5vcf-cm23
+    reference_type:
+    reference_id: GHSA-h656-5vcf-cm23

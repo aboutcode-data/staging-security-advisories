@@ -1,0 +1,41 @@
+advisory_id: npm/openclaw/GHSA-cjv3-m589-v3rx
+datasource_id: gitlab_importer_v2/npm/openclaw/GHSA-cjv3-m589-v3rx
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-cjv3-m589-v3rx.yml
+aliases:
+  - GHSA-cjv3-m589-v3rx
+summary: |
+  OpenClaw has Canvas route hardening for mixed-trust deployments
+  This advisory tracks a defense-in-depth hardening for canvas routes. In mixed-trust or network-visible deployments, prior canvas auth/fallback behavior could broaden access beyond intended boundaries.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.2.21
+    fixed_versions: vers:npm/2026.2.21
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-cjv3-m589-v3rx.yml
+weaknesses:
+  - CWE-79
+  - CWE-1035
+  - CWE-937
+  - CWE-1021
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/08a7967936cfc0b2af6b27ec1f9272542648ad6c
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/c45f3c5b004c8d63dc0e282e2176f8c9355d24f1
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-cjv3-m589-v3rx
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-cjv3-m589-v3rx
+    reference_type:
+    reference_id: GHSA-cjv3-m589-v3rx

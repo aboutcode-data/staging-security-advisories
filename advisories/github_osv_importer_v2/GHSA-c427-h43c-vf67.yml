@@ -1,0 +1,58 @@
+advisory_id: GHSA-c427-h43c-vf67
+datasource_id: github_osv_importer_v2/GHSA-c427-h43c-vf67
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-c427-h43c-vf67/GHSA-c427-h43c-vf67.json
+aliases:
+  - CVE-2026-34525
+summary: |
+  AIOHTTP accepts duplicate Host headers
+  ### Summary
+
+  Multiple Host headers were allowed in aiohttp.
+
+  ### Impact
+
+  Mostly this doesn't affect aiohttp security itself, but if a reverse proxy is applying security rules depending on the target Host, it is theoretically possible that the proxy and aiohttp could process different host names, possibly resulting in bypassing a security check on the proxy and getting a request processed by aiohttp in a privileged sub app when using `Application.add_domain()`.
+
+  -----
+
+  Patch: https://github.com/aio-libs/aiohttp/commit/e00ca3cca92c465c7913c4beb763a72da9ed8349
+  Patch: https://github.com/aio-libs/aiohttp/commit/53e2e6fc58b89c6185be7820bd2c9f40216b3000
+impacted_packages:
+  - purl: pkg:pypi/aiohttp
+    affected_versions: vers:pypi/<=3.13.3
+    fixed_versions: vers:pypi/3.13.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:L/SI:L/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-c427-h43c-vf67/GHSA-c427-h43c-vf67.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-20
+  - CWE-444
+references:
+  - url: https://github.com/aio-libs/aiohttp
+    reference_type:
+    reference_id:
+  - url: https://github.com/aio-libs/aiohttp/commit/53e2e6fc58b89c6185be7820bd2c9f40216b3000
+    reference_type:
+    reference_id:
+  - url: https://github.com/aio-libs/aiohttp/commit/e00ca3cca92c465c7913c4beb763a72da9ed8349
+    reference_type:
+    reference_id:
+  - url: https://github.com/aio-libs/aiohttp/releases/tag/v3.13.4
+    reference_type:
+    reference_id:
+  - url: https://github.com/aio-libs/aiohttp/security/advisories/GHSA-c427-h43c-vf67
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-34525
+    reference_type:
+    reference_id:

@@ -4,6 +4,7 @@ datasource_url: https://github.com/pypa/advisory-database/blob/main/vulns/tensor
 aliases:
   - CVE-2019-16778
   - GHSA-844w-j86r-4x2j
+  - PYSEC-2019-227
 summary: In TensorFlow before 1.15, a heap buffer overflow in UnsortedSegmentSum can be produced
   when the Index template argument is int32. In this case data_size and num_segments fields
   are truncated from int64 to int32 and can produce negative numbers, resulting in accessing

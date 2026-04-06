@@ -1,0 +1,38 @@
+advisory_id: npm/openclaw/GHSA-534w-2vm4-89xr
+datasource_id: gitlab_importer_v2/npm/openclaw/GHSA-534w-2vm4-89xr
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-534w-2vm4-89xr.yml
+aliases:
+  - GHSA-534w-2vm4-89xr
+summary: |
+  OpenClaw's Zalo group sender allowlist bypass permits unauthorized GROUP dispatch
+  A missing group-sender authorization check in the Zalo plugin allowed unauthorized `GROUP` messages to enter agent dispatch paths in configurations intended to restrict group traffic.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.2.24
+    fixed_versions: vers:npm/2026.2.24
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-534w-2vm4-89xr.yml
+weaknesses:
+  - CWE-863
+  - CWE-284
+  - CWE-937
+  - CWE-1035
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/b4010a0b627025c809c0e5dbdbd4770f3bc59ef8
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-534w-2vm4-89xr
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-534w-2vm4-89xr
+    reference_type:
+    reference_id: GHSA-534w-2vm4-89xr

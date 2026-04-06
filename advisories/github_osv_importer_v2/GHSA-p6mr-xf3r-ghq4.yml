@@ -1,0 +1,48 @@
+advisory_id: GHSA-p6mr-xf3r-ghq4
+datasource_id: github_osv_importer_v2/GHSA-p6mr-xf3r-ghq4
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-p6mr-xf3r-ghq4/GHSA-p6mr-xf3r-ghq4.json
+aliases:
+  - CVE-2026-34749
+summary: "Payload has a CSRF Protection Bypass in Authentication Flow\n### Impact\n\nA Cross-Site\
+  \ Request Forgery (CSRF) vulnerability existed in the authentication flow. Under certain conditions,\
+  \ the configured CSRF protection could be bypassed, allowing cross-site requests to be made.\n\
+  \nConsumers are affected if ALL of these are true:\n\n- Payload version **< v3.79.1**\n- `serverURL`\
+  \ is configured\n\n### Patches\n\nThis vulnerability has been patched in **v3.79.1**. Additional\
+  \ validation has been added to the authentication flow.\n\nConsumers should upgrade to **v3.79.1**\
+  \ or later.\n\n### Workarounds\n\nThere is no complete workaround without upgrading. \n\n\
+  If consumers cannot upgrade immediately, setting `cookies.sameSite` to `'Strict'` will prevent\
+  \ the session cookie from being sent cross-site. However, this will also require users to\
+  \ re-authenticate when navigating to the application from external links (e.g. email, other\
+  \ sites)."
+impacted_packages:
+  - purl: pkg:npm/payload
+    affected_versions: vers:npm/<3.79.1
+    fixed_versions: vers:npm/3.79.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.4'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:L
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-p6mr-xf3r-ghq4/GHSA-p6mr-xf3r-ghq4.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-352
+references:
+  - url: https://github.com/payloadcms/payload
+    reference_type:
+    reference_id:
+  - url: https://github.com/payloadcms/payload/releases/tag/v3.79.1
+    reference_type:
+    reference_id:
+  - url: https://github.com/payloadcms/payload/security/advisories/GHSA-p6mr-xf3r-ghq4
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-34749
+    reference_type:
+    reference_id:

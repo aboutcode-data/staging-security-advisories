@@ -1,0 +1,40 @@
+advisory_id: npm/openclaw/GHSA-474h-prjg-mmw3
+datasource_id: gitlab_importer_v2/npm/openclaw/GHSA-474h-prjg-mmw3
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-474h-prjg-mmw3.yml
+aliases:
+  - GHSA-474h-prjg-mmw3
+summary: |
+  OpenClaw: Sandboxed sessions_spawn(runtime="acp") bypassed sandbox inheritance and allowed host ACP initialization
+  Sandboxed `sessions_spawn(runtime="acp")` could bypass sandbox inheritance and initialize host-side ACP runtime. The fix now fail-closes ACP spawn from sandboxed requester sessions and rejects `sandbox="require"` for `runtime="acp"`.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.3.2
+    fixed_versions: vers:npm/2026.3.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-474h-prjg-mmw3.yml
+weaknesses:
+  - CWE-1035
+  - CWE-937
+  - CWE-269
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/ac11f0af731d41743ba02d8595f4d0fe747336e3
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/c703aa0fe92df9fb71cf254fc46991e05fba2114
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-474h-prjg-mmw3
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-474h-prjg-mmw3
+    reference_type:
+    reference_id: GHSA-474h-prjg-mmw3

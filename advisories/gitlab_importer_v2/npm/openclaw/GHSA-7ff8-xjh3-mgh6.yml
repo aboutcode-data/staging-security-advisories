@@ -1,0 +1,40 @@
+advisory_id: npm/openclaw/GHSA-7ff8-xjh3-mgh6
+datasource_id: gitlab_importer_v2/npm/openclaw/GHSA-7ff8-xjh3-mgh6
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-7ff8-xjh3-mgh6.yml
+aliases:
+  - GHSA-7ff8-xjh3-mgh6
+summary: |
+  OpenClaw's non-default autoAllowSkills setting could bypass on-miss exec prompt
+  In `openclaw` versions up to and including `2026.2.22-2`, a non-default exec-approval configuration could allow a skill-name collision to bypass an `ask=on-miss` prompt.
+
+  When `autoAllowSkills=true`, a path-scoped executable such as `./skill-bin` could resolve to basename `skill-bin`, satisfy the `skills` allowlist segment, and run without prompting for approval.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.2.23
+    fixed_versions: vers:npm/2026.2.23
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-7ff8-xjh3-mgh6.yml
+weaknesses:
+  - CWE-266
+  - CWE-863
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/ffd63b7a2c4c6d5aeb4710ef951d5794ad7ad77b
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-7ff8-xjh3-mgh6
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-7ff8-xjh3-mgh6
+    reference_type:
+    reference_id: GHSA-7ff8-xjh3-mgh6

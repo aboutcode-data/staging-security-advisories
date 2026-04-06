@@ -1,0 +1,83 @@
+advisory_id: GHSA-658g-p7jg-wx5g
+datasource_id: github_osv_importer_v2/GHSA-658g-p7jg-wx5g
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-658g-p7jg-wx5g/GHSA-658g-p7jg-wx5g.json
+aliases:
+  - CVE-2026-34841
+summary: |
+  Axios npm Supply Chain Incident Impacting @usebruno/cli
+  ### **Impact**
+
+  This is a **supply chain attack** involving compromised versions of the `axios` npm package, which introduced a hidden dependency deploying a cross-platform Remote Access Trojan (RAT).
+
+  Users of **@usebruno/cli** who ran `npm install` between **00:21 UTC and ~03:30 UTC on March 31, 2026** may have been impacted.
+
+  Potential impact includes:
+
+  * Execution of a malicious `postinstall` script
+  * Remote Access Trojan (RAT) installation
+  * Exfiltration of credentials and sensitive data
+
+  **Not impacted:**
+
+  * Bruno desktop app users
+  * Users who installed outside the attack window
+
+
+  ### **Patches**
+
+  The compromised `axios` versions (`1.14.1`, `0.30.4`) have been **removed from npm**, and new installations will now resolve to safe versions.
+
+  Additionally, Bruno has taken further hardening steps:
+
+  * Pinned `axios` to a known safe version to prevent accidental resolution to malicious releases
+  * Fix implemented in: [https://github.com/usebruno/bruno/pull/7632](https://github.com/usebruno/bruno/pull/7632)
+
+
+  ### **Recommendation**
+
+  If users installed **@usebruno/cli** during the affected window:
+  1. Reinstall dependencies
+  2. Rotate all credentials and secrets:
+
+  For additional guidance on securing your system, refer to this article:
+  https://www.aikido.dev/blog/axios-npm-compromised-maintainer-hijacked-rat
+impacted_packages:
+  - purl: pkg:npm/%40usebruno/cli
+    affected_versions: vers:npm/<3.2.0
+    fixed_versions: vers:npm/3.2.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '9.8'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-658g-p7jg-wx5g/GHSA-658g-p7jg-wx5g.json
+  - score: CRITICAL
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-1395
+  - CWE-506
+  - CWE-494
+references:
+  - url: https://github.com/advisories/GHSA-fw8c-xr5c-95f9
+    reference_type:
+    reference_id:
+  - url: https://github.com/axios/axios/issues/10604
+    reference_type:
+    reference_id:
+  - url: https://github.com/usebruno/bruno
+    reference_type:
+    reference_id:
+  - url: https://github.com/usebruno/bruno/pull/7632
+    reference_type:
+    reference_id:
+  - url: https://github.com/usebruno/bruno/security/advisories/GHSA-658g-p7jg-wx5g
+    reference_type:
+    reference_id:
+  - url: https://www.aikido.dev/blog/axios-npm-compromised-maintainer-hijacked-rat
+    reference_type:
+    reference_id:

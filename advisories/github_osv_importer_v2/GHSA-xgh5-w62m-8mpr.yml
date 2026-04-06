@@ -1,0 +1,90 @@
+advisory_id: GHSA-xgh5-w62m-8mpr
+datasource_id: github_osv_importer_v2/GHSA-xgh5-w62m-8mpr
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-xgh5-w62m-8mpr/GHSA-xgh5-w62m-8mpr.json
+aliases:
+  - CVE-2026-34565
+summary: |
+  CI4MS: Menu Management (Posts) Full Account Takeover for All-Roles & Privilege-Escalation via Stored DOM XSS
+  ## Summary
+  ### **Vulnerability: Stored DOM XSS via Posts Added to Menu (Persistent Payload Injection)**
+  - Stored Cross-Site Scripting via Unsafe Rendering of Post Entries in Menu Management
+
+  ### Description
+  The application fails to properly sanitize user-controlled input when **adding Posts to navigation menus** through the Menu Management functionality. Post-related data selected via the Posts section is stored server-side and rendered without proper output encoding.
+
+  These stored values are later rendered unsafely within administrative dashboards and public-facing navigation menus, resulting in stored DOM-based cross-site scripting (XSS).
+
+  ### Affected Functionality
+  - Menu Management – Posts section
+  - Adding posts to navigation menus
+  - Menu storage and rendering logic
+
+  ### Attack Scenario
+  - An attacker creates or controls a post containing a malicious JavaScript payload.
+  - The attacker adds the post to the menu using the **Posts** functionality in Menu Manager.
+  - The application stores the menu entry without sanitization or encoding.
+  - The payload persists and executes whenever the menu is rendered.
+
+  ### Impact
+  - Persistent Stored DOM XSS
+  - Execution of arbitrary JavaScript in victims’ browsers
+  - Privilege escalation in administrative contexts
+  - Full administrator account takeover
+  - Full account takeover across all roles
+  - Full compromise of the entire application via global navigation execution
+
+  Endpoint:
+  - `/backend/menu/`
+
+  ## Steps To Reproduce (POC)
+  1. Navigate to Menu Management
+  2. Use the **Posts** section to add a post containing an XSS payload such as:
+  `<img src=x onerror=alert(document.domain)>`
+  3. Save the menu
+  4. View the menu in the administrative panel or any public-facing page
+  5. Observe the JavaScript payload executing automatically
+
+  ## Remediation
+
+  - **Avoid unsafe DOM manipulation methods:** Do not use `.html()`, `innerHTML`, or similar sink functions in client-side JavaScript or server-side templating (e.g., PHP). Even when user input flowing into these sinks is not immediately apparent, they can introduce Cross-Site Scripting (XSS) vulnerabilities that an attacker may exploit.
+
+  - **Apply output encoding:** Implement HTML entity encoding on all user-controlled data before rendering it in the browser. This helps neutralize potentially malicious input.
+
+  - **Implement input sanitization:** Ensure that all user-supplied input is properly sanitized before processing or output. Currently, no sanitization mechanisms are in place, which should be addressed as a priority.
+
+  - **Enforce security headers and cookie attributes:**
+    - **Content Security Policy (CSP):** Define and enforce a strict CSP to limit the execution of unauthorized scripts.
+    - **HttpOnly flag:** Set the `HttpOnly` attribute on session cookies to prevent client-side script access.
+    - **SameSite attribute:** Configure the `SameSite` cookie attribute to mitigate Cross-Site Request Forgery (CSRF) risks.
+    - **Secure flag:** Ensure all cookies are transmitted only over HTTPS by enabling the `Secure` attribute.
+
+    These measures collectively reduce the impact of XSS and help prevent escalation paths such as CSRF via XSS.
+
+  # Ready Video POC:
+  https://mega.nz/file/PcMiUA5K#L2RlZJa340Q8K42TksxiXMuo_9XsRYPi14-WvBnak2A
+impacted_packages:
+  - purl: pkg:composer/ci4-cms-erp/ci4ms
+    affected_versions: vers:composer/<=0.28.6+0
+    fixed_versions: vers:composer/0.31.0+0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '9.1'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:L
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-xgh5-w62m-8mpr/GHSA-xgh5-w62m-8mpr.json
+  - score: CRITICAL
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-79
+references:
+  - url: https://github.com/ci4-cms-erp/ci4ms
+    reference_type:
+    reference_id:
+  - url: https://github.com/ci4-cms-erp/ci4ms/security/advisories/GHSA-xgh5-w62m-8mpr
+    reference_type:
+    reference_id:

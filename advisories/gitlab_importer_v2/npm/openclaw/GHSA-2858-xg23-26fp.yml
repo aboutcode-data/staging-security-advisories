@@ -1,0 +1,39 @@
+advisory_id: npm/openclaw/GHSA-2858-xg23-26fp
+datasource_id: gitlab_importer_v2/npm/openclaw/GHSA-2858-xg23-26fp
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-2858-xg23-26fp.yml
+aliases:
+  - GHSA-2858-xg23-26fp
+summary: |
+  OpenClaw: Node camera URL payload host-binding bypass allowed gateway fetch pivots
+  OpenClaw accepted `camera.snap` / `camera.clip` node payload `url` fields and downloaded them on the gateway/agent host without binding downloads to the resolved node host.
+
+  In OpenClaw's documented trust model, paired nodes are in the same operator trust boundary, so this is scoped as medium-severity hardening. A malicious or compromised paired node could still steer gateway-host fetches during camera URL retrieval.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/>=2026.2.13|<2026.3.2
+    fixed_versions: vers:npm/2026.3.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:L
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-2858-xg23-26fp.yml
+weaknesses:
+  - CWE-918
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/3bf19d6f40a0aaa55818b96eede3d05130c02533
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-2858-xg23-26fp
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-2858-xg23-26fp
+    reference_type:
+    reference_id: GHSA-2858-xg23-26fp

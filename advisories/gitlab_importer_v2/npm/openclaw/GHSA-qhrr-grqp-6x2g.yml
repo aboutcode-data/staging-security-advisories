@@ -1,0 +1,37 @@
+advisory_id: npm/openclaw/GHSA-qhrr-grqp-6x2g
+datasource_id: gitlab_importer_v2/npm/openclaw/GHSA-qhrr-grqp-6x2g
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-qhrr-grqp-6x2g.yml
+aliases:
+  - GHSA-qhrr-grqp-6x2g
+summary: |
+  OpenClaw's tools.exec.safeBins trusted PATH directories allowed binary shadowing in allowlist mode
+  In `openclaw` allowlist mode, `tools.exec.safeBins` trusted PATH-derived directories for safe-bin resolution. A same-name binary placed in a trusted PATH directory could satisfy safe-bin checks and execute.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.2.22
+    fixed_versions: vers:npm/2026.2.22
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-qhrr-grqp-6x2g.yml
+weaknesses:
+  - CWE-426
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/64b273a71cf0b2f2419c974832cede1fc2158729
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-qhrr-grqp-6x2g
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-qhrr-grqp-6x2g
+    reference_type:
+    reference_id: GHSA-qhrr-grqp-6x2g
