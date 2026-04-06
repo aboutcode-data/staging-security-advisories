@@ -4,6 +4,7 @@ datasource_url: https://github.com/pypa/advisory-database/blob/main/vulns/flask/
 aliases:
   - CVE-2023-30861
   - GHSA-m2qf-hxjv-5gpq
+  - PYSEC-2023-62
 summary: |
   Flask is a lightweight WSGI web application framework. When all of the following conditions are met, a response containing data intended for one client may be cached and subsequently sent by the proxy to other clients. If the proxy also caches `Set-Cookie` headers, it may send one client's `session` cookie to other clients. The severity depends on the application's use of the session and the proxy's behavior regarding cookies. The risk depends on all these conditions being met.
 
