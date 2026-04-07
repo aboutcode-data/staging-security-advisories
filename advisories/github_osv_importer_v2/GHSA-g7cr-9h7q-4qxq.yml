@@ -1,7 +1,8 @@
 advisory_id: GHSA-g7cr-9h7q-4qxq
 datasource_id: github_osv_importer_v2/GHSA-g7cr-9h7q-4qxq
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-g7cr-9h7q-4qxq/GHSA-g7cr-9h7q-4qxq.json
-aliases: []
+aliases:
+  - CVE-2026-34506
 summary: |
   OpenClaw's MS Teams sender allowlist bypass when route allowlist is configured and sender allowlist is empty
   OpenClaw's Microsoft Teams plugin widened group sender authorization when a team/channel route allowlist was configured but `groupAllowFrom` was empty. Before the fix, a matching route allowlist entry could cause the message handler to synthesize wildcard sender authorization for that route, allowing any sender in the matched team/channel to bypass the intended `groupPolicy: "allowlist"` sender check.
@@ -52,6 +53,12 @@ references:
   - url: https://github.com/openclaw/openclaw/commit/88aee9161e0e6d32e810a25711e32a808a1777b2
     reference_type: other
     reference_id: 88aee9161e0e6d32e810a25711e32a808a1777b2
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-34506
+    reference_type:
+    reference_id: CVE-2026-34506
   - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-g7cr-9h7q-4qxq
     reference_type: advisory
     reference_id: GHSA-g7cr-9h7q-4qxq
+  - url: https://www.vulncheck.com/advisories/openclaw-sender-allowlist-bypass-in-microsoft-teams-plugin-via-route-allowlist-configuration
+    reference_type: advisory
+    reference_id: openclaw-sender-allowlist-bypass-in-microsoft-teams-plugin-via-route-allowlist-configuration

@@ -5,6 +5,17 @@ aliases:
   - CVE-2026-30762
 summary: |
   LightRAG: Hardcoded JWT Signing Secret Allows Authentication Bypass
+  Subject: Security Vulnerability Report Hardcoded JWT Secret (CVE-2026-30762)
+
+  Hi HKUDS team,
+
+  I'm writing to report a security vulnerability I discovered in LightRAG v1.4.10. This has been assigned CVE-2026-30762 by MITRE.
+
+  Vulnerability: Hardcoded JWT signing secret
+  Type: Improper Authentication (CWE-287)
+  Severity: High
+  Attack Vector: Remote / Unauthenticated
+
   Summary:
   The file lightrag/api/config.py (line 397) uses a default JWT secret "lightrag-jwt-default-secret" when the TOKEN_SECRET environment variable is not set. The AuthHandler in lightrag/api/auth.py (lines 24-25) uses this secret to sign and verify tokens. An unauthenticated attacker can forge valid JWT tokens using the publicly known default secret and gain access to any protected endpoint.
 
@@ -17,9 +28,10 @@ summary: |
   Suggested Fix:
   Require TOKEN_SECRET to be explicitly set when AUTH_ACCOUNTS is configured. Refuse to start the API server if authentication is enabled but no custom secret is provided.
 
-  ---
+  I'm following a 90-day responsible disclosure timeline from today's date. Please let me know if you have any questions or need additional information.
+
+  Best regards,
   Venkata Avinash Taduturi
-  taduturivenkata@gmail.com
 impacted_packages:
   - purl: pkg:pypi/lightrag-hku
     affected_versions: vers:pypi/<=1.4.12

@@ -1,7 +1,8 @@
 advisory_id: GHSA-8g75-q649-6pv6
 datasource_id: github_osv_importer_v2/GHSA-8g75-q649-6pv6
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-8g75-q649-6pv6/GHSA-8g75-q649-6pv6.json
-aliases: []
+aliases:
+  - CVE-2026-32921
 summary: |
   OpenClaw's system.run approvals did not bind mutable script operands across approval and execution
   OpenClaw's `system.run` approval flow did not bind mutable interpreter-style script operands across approval and execution.
@@ -61,6 +62,12 @@ references:
   - url: https://github.com/openclaw/openclaw/commit/cf3a479bd1204f62eef7dd82b4aa328749ae6c91
     reference_type: other
     reference_id: cf3a479bd1204f62eef7dd82b4aa328749ae6c91
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32921
+    reference_type:
+    reference_id: CVE-2026-32921
   - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-8g75-q649-6pv6
     reference_type: advisory
     reference_id: GHSA-8g75-q649-6pv6
+  - url: https://www.vulncheck.com/advisories/openclaw-script-content-modification-via-mutable-operand-binding-in-system-run
+    reference_type: advisory
+    reference_id: openclaw-script-content-modification-via-mutable-operand-binding-in-system-run

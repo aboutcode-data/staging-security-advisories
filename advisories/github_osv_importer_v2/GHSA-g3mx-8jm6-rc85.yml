@@ -4,7 +4,8 @@ datasource_url: https://github.com/github/advisory-database/blob/main/advisories
 aliases:
   - CVE-2026-34382
 summary: "Admidio has Missing CSRF Protections on Custom List Deletion in mylist_function.php\n\
-  ### Summary\n\nThe `delete` mode handler in `mylist_function.php` permanently deletes list\
+  **Reported by:** Juan Felipe Oz [@JF0x0r](https://x.com/PwnedRar_)\n> [LinkedIn](https://www.linkedin.com/in/juanfelipeoz/)\n\
+  \n### Summary\n\nThe `delete` mode handler in `mylist_function.php` permanently deletes list\
   \ configurations without validating a CSRF token. An attacker who can lure an authenticated\
   \ user to a malicious page can silently destroy that user's list configurations — including\
   \ organization-wide shared lists when the victim holds administrator rights.\n\n### Vulnerable\
@@ -27,7 +28,7 @@ summary: "Admidio has Missing CSRF Protections on Custom List Deletion in mylist
   \ When an administrator is the CSRF victim, these global lists are permanently deleted affecting\
   \ all members of the organization. There is no soft-delete or recovery mechanism.\n\n---\n\
   \n### Proof of Concept\n\n> First my video PoC, after that, the proof of concept with detail.\
-  \ \n\n[Watch Video](https://drive.google.com/file/d/1STAIDs32dTKCrQ4E-4BNMOO75ssSk48q/view?usp=sharing)\n\
+  \ \n\n[Watch Video](https://drive.google.com/file/d/1wEdTIH7O0PvlnyjR2I_VpcAl3tvr6saA/view?usp=sharing)\n\
   \n* Prerequisites: Victim is authenticated in Admidio. Attacker knows the target list UUID\
   \ (visible in the page URL at modules/groups-roles/mylist.php?list_uuid=...)\n\n1. Step 1:\
   \ Attacker serves this page from any HTTP origin:\n\n```html\n<!DOCTYPE html>\n<html>\n<body>\n\
@@ -47,7 +48,7 @@ summary: "Admidio has Missing CSRF Protections on Custom List Deletion in mylist
   \ the `in_array($getMode, ['save', 'save_as', 'save_temporary'])` block, since delete requires\
   \ no column data and the guard currently forces attackers to include a trivially satisfiable\
   \ dummy value.\n\n<img width=\"751\" height=\"240\" alt=\"imagen\" src=\"https://github.com/user-attachments/assets/607510b9-64a9-49fb-8806-604b651d31a8\"\
-  \ />\n\n**Reported by:** Juan Felipe Oz [@JF0x0r](https://x.com/PwnedRar_)\n> [LinkedIn](https://www.linkedin.com/in/juanfelipeoz/)"
+  \ />"
 impacted_packages:
   - purl: pkg:composer/admidio/admidio
     affected_versions: vers:composer/<=5.0.7

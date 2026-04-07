@@ -1,7 +1,8 @@
 advisory_id: GHSA-vr7j-g7jv-h5mp
 datasource_id: github_osv_importer_v2/GHSA-vr7j-g7jv-h5mp
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-vr7j-g7jv-h5mp/GHSA-vr7j-g7jv-h5mp.json
-aliases: []
+aliases:
+  - CVE-2026-33572
 summary: |
   OpenClaw session transcript files were created without forced user-only permissions
   `openclaw` created new session transcript JSONL files with overly broad default permissions in affected releases. On multi-user hosts, other local users or processes could read transcript contents, including secrets that might appear in tool output.
@@ -63,3 +64,9 @@ references:
   - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-vr7j-g7jv-h5mp
     reference_type:
     reference_id:
+  - url: https://www.vulncheck.com/advisories/openclaw-insufficient-file-permissions-in-session-transcript-files
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33572
+    reference_type:
+    reference_id: CVE-2026-33572

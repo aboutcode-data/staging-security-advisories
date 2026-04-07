@@ -13,11 +13,12 @@ summary: "ONNX Untrusted Model Repository Warnings Suppressed by silent=True in 
   \ lives in the same repo the attacker controls, so the hash will always match.\n\n \n## Impact\n\
   Any pipeline using `hub.load()` with `silent=True` and an external repo string is silently\
   \ loading whatever the repo owner ships. If that model executes arbitrary code on load, the\
-  \ attacker has access to the machine.\n \n## Resolved by removing the feature"
+  \ attacker has access to the machine.\n \n## Resolved by removing the feature \n## References\n\
+  \ \n- [Write-up](https://github.com/ZeroXJacks/CVEs/blob/main/2026/CVE-2026-28500.md)"
 impacted_packages:
   - purl: pkg:pypi/onnx
     affected_versions: vers:pypi/<=1.20.1
-    fixed_versions:
+    fixed_versions: vers:pypi/1.21.0
     fixed_in_commits: []
     introduced_in_commits: []
 severities:

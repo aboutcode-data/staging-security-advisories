@@ -1,7 +1,8 @@
 advisory_id: GHSA-qxgf-hmcj-3xw3
 datasource_id: github_osv_importer_v2/GHSA-qxgf-hmcj-3xw3
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-qxgf-hmcj-3xw3/GHSA-qxgf-hmcj-3xw3.json
-aliases: []
+aliases:
+  - CVE-2026-34504
 summary: |
   OpenClaw affected by SSRF via unguarded image download in fal provider
   ## Summary
@@ -25,6 +26,8 @@ summary: |
   ## Fix
 
   Fixed by commit `80d1e8a11a` (`fal: guard image fetches`).
+
+  OpenClaw thanks @AntAISecurityLab for reporting.
 impacted_packages:
   - purl: pkg:npm/openclaw
     affected_versions: vers:npm/<=2026.3.24
@@ -57,3 +60,9 @@ references:
   - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-qxgf-hmcj-3xw3
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-34504
+    reference_type:
+    reference_id: CVE-2026-34504
+  - url: https://www.vulncheck.com/advisories/openclaw-server-side-request-forgery-via-unguarded-image-download-in-fal-provider
+    reference_type: advisory
+    reference_id: openclaw-server-side-request-forgery-via-unguarded-image-download-in-fal-provider

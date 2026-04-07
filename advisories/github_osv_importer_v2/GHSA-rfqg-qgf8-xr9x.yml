@@ -8,6 +8,7 @@ summary: |
   Gateway `device.token.rotate` does not terminate active WebSocket sessions after credential rotation
 
   ## Current Maintainer Triage
+  - Status: open
   - Normalized severity: low
   - Assessment: v2026.3.28 rotates device tokens without disconnecting already-authenticated WebSocket sessions, which is a real but post-compromise revocation gap.
 
@@ -21,7 +22,11 @@ summary: |
   ## Fix Commit(s)
   - `91f7a6b0fd67b703897e6e307762d471ca09333d` — 2026-03-31T09:05:34+09:00
 
-  OpenClaw thanks @zsxsoft for reporting.
+  ## Release Process Note
+  - The fix is already present in released version `2026.3.31`.
+  - This draft looks ready for final maintainer disposition or publication, not additional code-fix work.
+
+  Thanks @zsxsoft for reporting.
 impacted_packages:
   - purl: pkg:npm/openclaw
     affected_versions: vers:npm/<=2026.3.28

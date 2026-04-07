@@ -1,0 +1,37 @@
+advisory_id: GHSA-7qhf-v65m-g5f3
+datasource_id: github_osv_importer_v2/GHSA-7qhf-v65m-g5f3
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-7qhf-v65m-g5f3/GHSA-7qhf-v65m-g5f3.json
+aliases:
+  - CVE-2026-0545
+summary: |
+  mlflow: FastAPI job endpoints under `/ajax-api/3.0/jobs/*` are not protected by authentication or authorization
+  In mlflow/mlflow, the FastAPI job endpoints under `/ajax-api/3.0/jobs/*` are not protected by authentication or authorization when the `basic-auth` app is enabled. This vulnerability affects the latest version of the repository. If job execution is enabled (`MLFLOW_SERVER_ENABLE_JOB_EXECUTION=true`) and any job function is allowlisted, any network client can submit, read, search, and cancel jobs without credentials, bypassing basic-auth entirely. This can lead to unauthenticated remote code execution if allowed jobs perform privileged actions such as shell execution or filesystem changes. Even if jobs are deemed safe, this still constitutes an authentication bypass, potentially resulting in job spam, denial of service (DoS), or data exposure in job results.
+impacted_packages:
+  - purl: pkg:pypi/mlflow
+    affected_versions: vers:pypi/<=3.10.1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '9.1'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-7qhf-v65m-g5f3/GHSA-7qhf-v65m-g5f3.json
+  - score: CRITICAL
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-306
+references:
+  - url: https://github.com/mlflow/mlflow
+    reference_type:
+    reference_id:
+  - url: https://huntr.com/bounties/b2e5b028-9541-4d29-8703-a76f1a3734d8
+    reference_type: other
+    reference_id: b2e5b028-9541-4d29-8703-a76f1a3734d8
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-0545
+    reference_type:
+    reference_id: CVE-2026-0545

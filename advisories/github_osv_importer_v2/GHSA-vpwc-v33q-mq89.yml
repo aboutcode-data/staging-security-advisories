@@ -1,0 +1,46 @@
+advisory_id: GHSA-vpwc-v33q-mq89
+datasource_id: github_osv_importer_v2/GHSA-vpwc-v33q-mq89
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-vpwc-v33q-mq89/GHSA-vpwc-v33q-mq89.json
+aliases:
+  - CVE-2026-35523
+summary: |
+  strawberry-graphql: Authentication bypass via legacy graphql-ws WebSocket subprotocol
+  Strawberry up until version `0.312.3` is vulnerable to an authentication bypass on WebSocket subscription endpoints. The legacy graphql-ws subprotocol handler does not verify that a `connection_init` handshake has been completed before processing start (subscription) messages. This allows a remote attacker to skip the `on_ws_connect` authentication hook entirely by connecting with the graphql-ws subprotocol and sending a start message directly, without ever sending `connection_init`.
+
+  The graphql-transport-ws subprotocol handler is not affected, as it correctly gates subscription operations on a connection_acknowledged flag. However, both subprotocols are enabled by default in all framework integrations that support websockets, and the subprotocol is selected by the client via the Sec-WebSocket-Protocol header.
+
+  Any application relying on `on_ws_connect` for authentication or authorization is affected.
+
+  Mitigation: Upgrade to the patched version, or explicitly disable the legacy graphql-ws subprotocol by setting `subscription_protocols=[GRAPHQL_TRANSPORT_WS_PROTOCOL]` on your GraphQL view/router.
+impacted_packages:
+  - purl: pkg:pypi/strawberry-graphql
+    affected_versions: vers:pypi/<=0.312.2
+    fixed_versions: vers:pypi/0.312.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-vpwc-v33q-mq89/GHSA-vpwc-v33q-mq89.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-306
+references:
+  - url: https://github.com/strawberry-graphql/strawberry
+    reference_type:
+    reference_id:
+  - url: https://github.com/strawberry-graphql/strawberry/commit/0977a4e6b41b7cfe3e9d8ba84a43458a2b0c54c2
+    reference_type:
+    reference_id:
+  - url: https://github.com/strawberry-graphql/strawberry/releases/tag/0.312.3
+    reference_type:
+    reference_id:
+  - url: https://github.com/strawberry-graphql/strawberry/security/advisories/GHSA-vpwc-v33q-mq89
+    reference_type:
+    reference_id:

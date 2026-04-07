@@ -5,12 +5,37 @@ aliases:
   - CVE-2026-30836
 summary: |
   step-ca has Unauthenticated Certificate Issuance via SCEP UpdateReq (MessageType=18)
-  ⚠️ **Limited Disclosure — Full Details Pending**
+  ## Summary
 
-  A critical security vulnerability has been identified in Step CA. An updated version, v0.30.0, is available and all operators are strongly encouraged to upgrade immediately.
+  An attacker can force a Step CA SCEP provisioner to create certificates without completing certain protocol authorization checks.
 
-  Full details of this vulnerability will be published in this security advisory on March 30, 2026.
-  If you have urgent questions in the meantime, please contact [security@smallstep.com](mailto:security@smallstep.com).
+  ## Details
+
+  SCEP requests carry a message type. On receipt of a SCEP request, Step CA starts processing it by parsing its contents. Message types that were considered valid, but not explicitly supported in Step CA, would result in getting parsed successfully. While processing the parsed SCEP message, authorization logic would be skipped for the non-supported message types.
+
+  As a result, the request would be treated as authorized, bypassing the authorization checks normally enforced as part of the SCEP protocol and its implementation in Step CA.
+
+  Authorization webhooks and regular CA policies, such as allowed names and restrictions on certificate validity periods, remain in place.
+
+  ## Mitigations
+
+  If you are unable to upgrade to v0.30.0 or newer, the attack can be mitigated by (temporarily) disabling or removing SCEP provisioners, or restricting access to SCEP provisioners to trusted clients only.
+
+  ## Fix
+
+  In v0.30.0, additional validation was added to SCEP provisioners, so that they reject unsupported message types.
+
+  ## Acknowledgements
+
+  This issue was identified and reported by Prasanth Sundararajan.
+
+  ## Embargo List
+
+  If your organization runs Step CA in production and would like advance, embargoed notification of future security updates, visit https://u.step.sm/disclosure to request inclusion on our embargo list.
+
+  Stay safe, and thank you for helping us keep the ecosystem secure.
+
+  If you have urgent questions, please contact [security@smallstep.com](mailto:security@smallstep.com).
 impacted_packages: []
 severities:
   - score: '10.0'
