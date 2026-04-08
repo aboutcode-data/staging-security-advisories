@@ -1,0 +1,59 @@
+advisory_id: GHSA-2f7j-rp58-mr42
+datasource_id: github_osv_importer_v2/GHSA-2f7j-rp58-mr42
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-2f7j-rp58-mr42/GHSA-2f7j-rp58-mr42.json
+aliases: []
+summary: |
+  OpenClaw: Gateway hello snapshots exposed host config and state paths to non-admin clients
+  ## Summary
+
+  Before OpenClaw 2026.4.2, the Gateway `connect` success snapshot exposed local `configPath` and `stateDir` metadata to non-admin clients. Low-privilege authenticated clients could learn host filesystem layout and deployment details that were not needed for their role.
+
+  ## Impact
+
+  A non-admin client could recover host-specific filesystem paths and related deployment metadata, aiding host fingerprinting and chained attacks. This was an information-disclosure issue, not a direct authorization bypass.
+
+  ## Affected Packages / Versions
+
+  - Package: `openclaw` (npm)
+  - Affected versions: `<= 2026.4.1`
+  - Patched versions: `>= 2026.4.2`
+  - Latest published npm version: `2026.4.1`
+
+  ## Fix Commit(s)
+
+  - `676b748056b5efca6f1255708e9dd9469edf5e2e` — limit connect snapshot metadata to admin-scoped clients
+
+  ## Release Process Note
+
+  The fix is present on `main` and is staged for OpenClaw `2026.4.2`. Publish this advisory after the `2026.4.2` npm release is live.
+
+  Thanks @topsec-bunney for reporting.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<=2026.4.1
+    fixed_versions: vers:npm/2026.4.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-2f7j-rp58-mr42/GHSA-2f7j-rp58-mr42.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-200
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/676b748056b5efca6f1255708e9dd9469edf5e2e
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-2f7j-rp58-mr42
+    reference_type:
+    reference_id:

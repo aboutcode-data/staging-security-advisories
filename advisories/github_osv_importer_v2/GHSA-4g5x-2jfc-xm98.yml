@@ -1,0 +1,58 @@
+advisory_id: GHSA-4g5x-2jfc-xm98
+datasource_id: github_osv_importer_v2/GHSA-4g5x-2jfc-xm98
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-4g5x-2jfc-xm98/GHSA-4g5x-2jfc-xm98.json
+aliases: []
+summary: |
+  OpenClaw: Tlon media downloads can bypass core safety limits and exhaust disk
+  ## Summary
+  Tlon media downloads can bypass core safety limits and exhaust disk
+
+  ## Current Maintainer Triage
+  - Status: narrow
+  - Normalized severity: low
+  - Assessment: Shipped v2026.3.28 Tlon media downloads bypassed core size/count/cleanup limits, but this is availability-only resource exhaustion in a bundled plugin path, so low.
+
+  ## Affected Packages / Versions
+  - Package: `openclaw` (npm)
+  - Latest published npm version: `2026.3.31`
+  - Vulnerable version range: `<=2026.3.28`
+  - Patched versions: `>= 2026.3.31`
+  - First stable tag containing the fix: `v2026.3.31`
+
+  ## Fix Commit(s)
+  - `2194587d70d2aef863508b945319c5a7c88b12ce` — 2026-03-31T19:40:15+09:00
+
+  ## Release Process Note
+  - The fix is already present in released version `2026.3.31`.
+  - This draft looks ready for final maintainer disposition or publication, not additional code-fix work.
+
+  Thanks @AntAISecurityLab for reporting.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<=2026.3.28
+    fixed_versions: vers:npm/2026.3.31
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-4g5x-2jfc-xm98/GHSA-4g5x-2jfc-xm98.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-434
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/2194587d70d2aef863508b945319c5a7c88b12ce
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-4g5x-2jfc-xm98
+    reference_type:
+    reference_id:

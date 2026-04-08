@@ -35,6 +35,11 @@ summary: |
   Any application that decodes attacker-controlled CBOR can be forced into a reliable denial of service with a single crafted payload.
 
   The immediate result is an exception during decoding. In services that do not catch that exception safely, the request fails and the worker or process handling the decode may terminate.
+
+
+  ### Solution
+
+  Upgrade to version 2.0.4. The stack is limited to 128 by default, but can be configured using the `maxDepth` option. Catch the `CBORMaxDepthExceededError` exception.
 impacted_packages:
   - purl: pkg:npm/%40stablelib/cbor
     affected_versions: vers:npm/<2.0.3

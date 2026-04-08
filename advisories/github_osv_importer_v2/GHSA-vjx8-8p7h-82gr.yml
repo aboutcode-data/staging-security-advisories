@@ -1,0 +1,58 @@
+advisory_id: GHSA-vjx8-8p7h-82gr
+datasource_id: github_osv_importer_v2/GHSA-vjx8-8p7h-82gr
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-vjx8-8p7h-82gr/GHSA-vjx8-8p7h-82gr.json
+aliases: []
+summary: |
+  OpenClaw: Marketplace Plugin Download Follows Redirects Without SSRF Protection
+  ## Summary
+  Marketplace Plugin Download Follows Redirects Without SSRF Protection
+
+  ## Current Maintainer Triage
+  - Status: open
+  - Normalized severity: medium
+  - Assessment: v2026.3.28 still uses bare redirect-following fetch in src/plugins/marketplace.ts for marketplace archives, and fixed-on-main only does not change that shipped SSRF exposure.
+
+  ## Affected Packages / Versions
+  - Package: `openclaw` (npm)
+  - Latest published npm version: `2026.3.31`
+  - Vulnerable version range: `<=2026.3.28`
+  - Patched versions: `>= 2026.3.31`
+  - First stable tag containing the fix: `v2026.3.31`
+
+  ## Fix Commit(s)
+  - `2ce44ca6a1302b166a128abbd78f72114f2f4f52` — 2026-03-31T12:59:42+01:00
+
+  ## Release Process Note
+  - The fix is already present in released version `2026.3.31`.
+  - This draft looks ready for final maintainer disposition or publication, not additional code-fix work.
+
+  Thanks @AntAISecurityLab for reporting.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<=2026.3.28
+    fixed_versions: vers:npm/2026.3.31
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-vjx8-8p7h-82gr/GHSA-vjx8-8p7h-82gr.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-918
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/2ce44ca6a1302b166a128abbd78f72114f2f4f52
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-vjx8-8p7h-82gr
+    reference_type:
+    reference_id:

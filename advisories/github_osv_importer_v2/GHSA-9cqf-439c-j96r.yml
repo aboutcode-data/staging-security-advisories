@@ -4,7 +4,7 @@ datasource_url: https://github.com/github/advisory-database/blob/main/advisories
 aliases:
   - CVE-2026-35171
 summary: "Kedro has Arbitrary Code Execution via Malicious Logging Configuration\n### Impact\n\
-  \nThis is a **critical Remote Code Execution (RCE)** vulnerability caused by unsafe use of\
+  \nThis is a **critical remote code execution (RCE)** vulnerability caused by unsafe use of\
   \ `logging.config.dictConfig()` with user-controlled input.\n\nKedro allows the logging configuration\
   \ file path to be set via the `KEDRO_LOGGING_CONFIG` environment variable and loads it without\
   \ validation. The logging configuration schema supports the special `()` key, which enables\
@@ -17,7 +17,9 @@ summary: "Kedro has Arbitrary Code Execution via Malicious Logging Configuration
   \ variable  \n- Restrict write access to logging configuration files  \n- Avoid using externally\
   \ supplied or dynamically generated logging configs  \n- Manually validate logging YAML to\
   \ ensure it does not contain the `()` key  \n\nThese mitigations reduce risk but do not fully\
-  \ eliminate it."
+  \ eliminate it.\n\n---\n\n### References\n\n- Python logging configuration documentation:\
+  \ https://docs.python.org/3/library/logging.config.html#logging-config-dictschema  \n- CWE-94:\
+  \ Code Injection — https://cwe.mitre.org/data/definitions/94.html"
 impacted_packages:
   - purl: pkg:pypi/kedro
     affected_versions: vers:pypi/<1.3.0

@@ -1,0 +1,82 @@
+advisory_id: GHSA-f37v-82c4-4x64
+datasource_id: github_osv_importer_v2/GHSA-f37v-82c4-4x64
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-f37v-82c4-4x64/GHSA-f37v-82c4-4x64.json
+aliases:
+  - CVE-2026-34781
+summary: |
+  Electron: Crash in clipboard.readImage() on malformed clipboard image data
+  ### Impact
+  Apps that call `clipboard.readImage()` may be vulnerable to a denial of service. If the system clipboard contains image data that fails to decode, the resulting null bitmap is passed unchecked to image construction, triggering a controlled abort and crashing the process.
+
+  Apps are only affected if they call `clipboard.readImage()`. Apps that do not read images from the clipboard are not affected. This issue does not allow memory corruption or code execution.
+
+  ### Workarounds
+  Validate that the clipboard contains image data via `clipboard.availableFormats()` before calling `clipboard.readImage()`. Note this only narrows the window — upgrading to a fixed version is recommended.
+
+  ### Fixed Versions
+  * `42.0.0-alpha.5`
+  * `41.1.0`
+  * `40.8.5`
+  * `39.8.5`
+
+  ### For more information
+  If you have any questions or comments about this advisory, email us at [security@electronjs.org](mailto:security@electronjs.org)
+impacted_packages:
+  - purl: pkg:npm/electron
+    affected_versions: vers:npm/<39.8.5
+    fixed_versions: vers:npm/39.8.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/electron
+    affected_versions: vers:npm/>=40.0.0-alpha.1|<40.8.5
+    fixed_versions: vers:npm/40.8.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/electron
+    affected_versions: vers:npm/>=41.0.0-alpha.1|<41.1.0
+    fixed_versions: vers:npm/41.1.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/electron
+    affected_versions: vers:npm/>=42.0.0-alpha.1|<42.0.0-alpha.5
+    fixed_versions: vers:npm/42.0.0-alpha.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '2.8'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:N/I:N/A:L
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-f37v-82c4-4x64/GHSA-f37v-82c4-4x64.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-476
+references:
+  - url: https://github.com/electron/electron
+    reference_type:
+    reference_id:
+  - url: https://github.com/electron/electron/commit/a48f03fb8d03933547281ddb2dbb6c6b9e705287
+    reference_type:
+    reference_id:
+  - url: https://github.com/electron/electron/pull/50475
+    reference_type:
+    reference_id:
+  - url: https://github.com/electron/electron/releases/tag/v39.8.5
+    reference_type:
+    reference_id:
+  - url: https://github.com/electron/electron/releases/tag/v40.8.5
+    reference_type:
+    reference_id:
+  - url: https://github.com/electron/electron/releases/tag/v41.1.0
+    reference_type:
+    reference_id:
+  - url: https://github.com/electron/electron/releases/tag/v42.0.0-alpha.5
+    reference_type:
+    reference_id:
+  - url: https://github.com/electron/electron/security/advisories/GHSA-f37v-82c4-4x64
+    reference_type:
+    reference_id:

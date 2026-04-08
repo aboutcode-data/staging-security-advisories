@@ -59,6 +59,10 @@ summary: |
   Any application that decodes untrusted CBOR into JavaScript objects can receive objects with attacker-controlled prototypes.
 
   In practice, that can corrupt configuration objects, influence authorization checks, alter feature flags, and break application logic that relies on normal property lookup instead of strict own-property checks. If the decoded object is later merged into other objects, the impact can spread further.
+
+  ### Solution
+
+  Upgrade to version 2.0.4.
 impacted_packages:
   - purl: pkg:npm/%40stablelib/cbor
     affected_versions: vers:npm/<2.0.3

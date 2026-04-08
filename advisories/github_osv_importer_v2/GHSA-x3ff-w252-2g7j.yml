@@ -8,6 +8,9 @@ summary: |
 
   ## Target
   - Repository: StableLib/stablelib (package: @stablelib/ed25519)
+  - Platform: GitHub PVR
+  - Bounty: CVE credit
+  - CWE: CWE-347 (Improper Verification of Cryptographic Signature)
   - Version: 2.0.2 (latest, 2026-03-28)
 
   ## Root Cause
@@ -125,6 +128,11 @@ summary: |
   - **Is RFC 8032 strict about this?** No. RFC 8032 does not require S < L. However, the CFRG recommends it, ZIP-215 requires it, and the node-forge advisory (CVE-2026-33895) treats the identical issue as HIGH severity.
   - **Is this already reported?** No. No existing issues or CVEs for @stablelib/ed25519 regarding malleability or S < L.
   - **Honest weaknesses:** (1) RFC 8032 does not strictly require S < L. (2) Not all applications are affected -- only those depending on signature uniqueness. (3) This is malleability, not forgery -- the attacker cannot sign new messages. (4) tweetnacl has the same issue and considers it a known limitation.
+  - **CVSS:** Medium (5.3). AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N -- can produce alternate valid signatures, limited integrity impact.
+
+  ## Solution
+
+  Upgrade to version 2.1.0.
 impacted_packages:
   - purl: pkg:npm/%40stablelib/ed25519
     affected_versions: vers:npm/<=2.0.2
