@@ -1,0 +1,41 @@
+advisory_id: npm/openclaw/GHSA-j425-whc4-4jgc
+datasource_id: gitlab_importer_v2/npm/openclaw/GHSA-j425-whc4-4jgc
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-j425-whc4-4jgc.yml
+aliases:
+  - GHSA-j425-whc4-4jgc
+summary: |
+  OpenClaw's `system.run` env override filtering allowed dangerous helper-command pivots
+  `system.run` env override sanitization allowed dangerous override-only helper-command pivots to reach subprocesses. A caller who could invoke `system.run` with `env` overrides could bypass allowlist/approval intent by steering an allowlisted tool through helper-command or config-loading environment variables such as `GIT_SSH_COMMAND`, editor/pager hooks, and `GIT_CONFIG_*` / `NPM_CONFIG_*`.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.3.7
+    fixed_versions: vers:npm/2026.3.7
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-j425-whc4-4jgc.yml
+weaknesses:
+  - CWE-639
+  - CWE-1035
+  - CWE-937
+  - CWE-15
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/e27bbe4982439da6864160fd1b66445058f74801
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/releases/tag/v2026.3.7
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-j425-whc4-4jgc
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-j425-whc4-4jgc
+    reference_type:
+    reference_id: GHSA-j425-whc4-4jgc

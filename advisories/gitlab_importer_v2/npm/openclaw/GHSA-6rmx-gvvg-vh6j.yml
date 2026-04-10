@@ -1,0 +1,43 @@
+advisory_id: npm/openclaw/GHSA-6rmx-gvvg-vh6j
+datasource_id: gitlab_importer_v2/npm/openclaw/GHSA-6rmx-gvvg-vh6j
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-6rmx-gvvg-vh6j.yml
+aliases:
+  - GHSA-6rmx-gvvg-vh6j
+summary: |
+  OpenClaw's hooks count non-POST requests toward auth lockout
+  OpenClaw's hooks HTTP handler counted hook authentication failures before rejecting unsupported HTTP methods. An unauthenticated client could send repeated non-`POST` requests (for example `GET`) with an invalid token to consume the hook auth failure budget and trigger the temporary lockout window for that client key.
+
+  The fix moves the hook method gate ahead of auth-failure accounting so unsupported methods return `405 Method Not Allowed` without incrementing the hook auth limiter.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.3.7
+    fixed_versions: vers:npm/2026.3.7
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-6rmx-gvvg-vh6j.yml
+weaknesses:
+  - CWE-799
+  - CWE-1035
+  - CWE-937
+  - CWE-307
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/44820dceadac65ac7c0ce8fc0ffba8c2bd9fae89
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/releases/tag/v2026.3.7
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-6rmx-gvvg-vh6j
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-6rmx-gvvg-vh6j
+    reference_type:
+    reference_id: GHSA-6rmx-gvvg-vh6j
