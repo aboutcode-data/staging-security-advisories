@@ -1,0 +1,51 @@
+advisory_id: GHSA-h336-2wxm-pr6q
+datasource_id: github_osv_importer_v2/GHSA-h336-2wxm-pr6q
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-h336-2wxm-pr6q/GHSA-h336-2wxm-pr6q.json
+aliases:
+  - CVE-2026-22680
+summary: |
+  OpenViking contains a missing authorization vulnerability in the task polling endpoints
+  OpenViking versions prior to 0.3.3 contain a missing authorization vulnerability in the task polling endpoints that allows unauthorized attackers to enumerate or retrieve background task metadata created by other users. Attackers can access the /api/v1/tasks and /api/v1/tasks/{task_id} routes without authentication to expose task type, task status, resource identifiers, archive URIs, result payloads, and error information, potentially causing cross-tenant interference in multi-tenant deployments.
+impacted_packages:
+  - purl: pkg:pypi/openviking
+    affected_versions: vers:pypi/<0.3.3
+    fixed_versions: vers:pypi/0.3.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-h336-2wxm-pr6q/GHSA-h336-2wxm-pr6q.json
+  - score: '6.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-h336-2wxm-pr6q/GHSA-h336-2wxm-pr6q.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-862
+references:
+  - url: https://github.com/volcengine/OpenViking
+    reference_type:
+    reference_id:
+  - url: https://github.com/volcengine/OpenViking/commit/8c1c3f3608364ee0bb0e45f73478771a68aebdf5
+    reference_type:
+    reference_id:
+  - url: https://github.com/volcengine/OpenViking/pull/1182
+    reference_type:
+    reference_id:
+  - url: https://github.com/volcengine/OpenViking/releases/tag/v0.3.3
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-22680
+    reference_type:
+    reference_id:
+  - url: https://www.vulncheck.com/advisories/openviking-missing-authorization-via-task-polling
+    reference_type:
+    reference_id:

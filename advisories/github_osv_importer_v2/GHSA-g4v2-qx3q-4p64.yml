@@ -1,0 +1,64 @@
+advisory_id: GHSA-g4v2-qx3q-4p64
+datasource_id: github_osv_importer_v2/GHSA-g4v2-qx3q-4p64
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-g4v2-qx3q-4p64/GHSA-g4v2-qx3q-4p64.json
+aliases:
+  - CVE-2026-39381
+summary: |
+  Parse Server's Endpoint `/sessions/me` bypasses `_Session` `protectedFields`
+  ### Impact
+
+  The `GET /sessions/me` endpoint returns `_Session` fields that the server operator explicitly configured as protected via the `protectedFields` server option. Any authenticated user can retrieve their own session's protected fields with a single request. The equivalent `GET /sessions` and `GET /sessions/:objectId` endpoints correctly strip protected fields.
+
+  ### Patches
+
+  The `GET /sessions/me` handler now re-fetches the session with the caller's auth context after validating the session token, ensuring `protectedFields` and CLP apply consistently with other session endpoints.
+
+  ### Workarounds
+
+  None.
+
+  ### References
+
+  - GitHub security advisory: https://github.com/parse-community/parse-server/security/advisories/GHSA-g4v2-qx3q-4p64
+  - Fix Parse Server 9: https://github.com/parse-community/parse-server/pull/10406
+  - Fix Parse Server 8: https://github.com/parse-community/parse-server/pull/10407
+impacted_packages:
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/>=9.0.0|<9.8.0-alpha.7
+    fixed_versions: vers:npm/9.8.0-alpha.7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/>=7.0.0|<8.6.75
+    fixed_versions: vers:npm/8.6.75
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-g4v2-qx3q-4p64/GHSA-g4v2-qx3q-4p64.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-863
+references:
+  - url: https://github.com/parse-community/parse-server
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-39381
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/pull/10406
+    reference_type: other
+    reference_id: 10406
+  - url: https://github.com/parse-community/parse-server/pull/10407
+    reference_type: other
+    reference_id: 10407
+  - url: https://github.com/parse-community/parse-server/security/advisories/GHSA-g4v2-qx3q-4p64
+    reference_type: other
+    reference_id: GHSA-g4v2-qx3q-4p64

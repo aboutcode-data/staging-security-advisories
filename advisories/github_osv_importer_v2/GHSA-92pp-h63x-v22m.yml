@@ -1,0 +1,72 @@
+advisory_id: GHSA-92pp-h63x-v22m
+datasource_id: github_osv_importer_v2/GHSA-92pp-h63x-v22m
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-92pp-h63x-v22m/GHSA-92pp-h63x-v22m.json
+aliases:
+  - CVE-2026-39406
+summary: |
+  @hono/node-server: Middleware bypass via repeated slashes in serveStatic
+  ## Summary
+
+  A path handling inconsistency in `serveStatic` allows protected static files to be accessed by using repeated slashes (`//`) in the request path.
+
+  When route-based middleware (e.g., `/admin/*`) is used for authorization, the router may not match paths containing repeated slashes, while `serveStatic` resolves them as normalized paths. This can lead to a middleware bypass.
+
+  ## Details
+
+  The routing layer and `serveStatic` handle repeated slashes differently.
+
+  For example:
+
+  - `/admin/secret.txt` => matches `/admin/*`
+  - `//admin/secret.txt` => may not match `/admin/*`
+
+  This inconsistency allows a request such as:
+
+  ```
+  GET //admin/secret.txt
+  ```
+
+  to bypass middleware registered on `/admin/*` and access protected files.
+
+  ## Impact
+
+  An attacker can access static files that are intended to be protected by route-based middleware by using repeated slashes in the request path.
+
+  This can lead to unauthorized access to sensitive files under the static root.
+
+  This issue affects applications that rely on `serveStatic` together with route-based middleware for access control.
+impacted_packages:
+  - purl: pkg:npm/%40hono/node-server
+    affected_versions: vers:npm/<1.19.13
+    fixed_versions: vers:npm/1.19.13
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-92pp-h63x-v22m/GHSA-92pp-h63x-v22m.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-22
+references:
+  - url: https://github.com/honojs/node-server
+    reference_type:
+    reference_id:
+  - url: https://github.com/honojs/node-server/commit/025c30f55d589ddbe6048b151d77e904f67a8cc2
+    reference_type:
+    reference_id:
+  - url: https://github.com/honojs/node-server/releases/tag/v1.19.13
+    reference_type:
+    reference_id:
+  - url: https://github.com/honojs/node-server/security/advisories/GHSA-92pp-h63x-v22m
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-39406
+    reference_type:
+    reference_id:

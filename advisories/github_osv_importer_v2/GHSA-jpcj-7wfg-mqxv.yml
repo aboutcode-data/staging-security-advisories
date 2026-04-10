@@ -1,0 +1,46 @@
+advisory_id: GHSA-jpcj-7wfg-mqxv
+datasource_id: github_osv_importer_v2/GHSA-jpcj-7wfg-mqxv
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-jpcj-7wfg-mqxv/GHSA-jpcj-7wfg-mqxv.json
+aliases:
+  - CVE-2026-31040
+summary: |
+  stata-mcp has insufficient validation of user-supplied Stata do-file content that can lead to command execution
+  A vulnerability was identified in stata-mcp prior to v1.13.0 where insufficient validation of user-supplied Stata do-file content can lead to command execution.
+impacted_packages:
+  - purl: pkg:pypi/stata-mcp
+    affected_versions: vers:pypi/<1.13.0
+    fixed_versions: vers:pypi/1.13.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.7'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-jpcj-7wfg-mqxv/GHSA-jpcj-7wfg-mqxv.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-20
+references:
+  - url: https://github.com/sepinetam/stata-mcp
+    reference_type:
+    reference_id:
+  - url: https://github.com/SepineTam/stata-mcp/commit/52413ce
+    reference_type:
+    reference_id:
+  - url: https://github.com/SepineTam/stata-mcp/issues/20
+    reference_type:
+    reference_id:
+  - url: https://github.com/SepineTam/stata-mcp/pull/21
+    reference_type:
+    reference_id:
+  - url: https://github.com/SepineTam/stata-mcp/releases/tag/v1.13.0
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-31040
+    reference_type:
+    reference_id:

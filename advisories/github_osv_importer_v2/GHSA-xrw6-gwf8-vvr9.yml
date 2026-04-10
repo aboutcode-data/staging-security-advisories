@@ -1,0 +1,58 @@
+advisory_id: GHSA-xrw6-gwf8-vvr9
+datasource_id: github_osv_importer_v2/GHSA-xrw6-gwf8-vvr9
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-xrw6-gwf8-vvr9/GHSA-xrw6-gwf8-vvr9.json
+aliases: []
+summary: |
+  Tmds.DBus: malicious D-Bus peers can spoof signals, exhaust file descriptor resources, and cause denial of service
+  Tmds.DBus and Tmds.DBus.Protocol are vulnerable to malicious D-Bus peers. A peer on the same bus can spoof signals by impersonating the owner of a well-known name, exhaust system resources or cause file descriptor spillover by sending messages with an excessive number of Unix file descriptors, and crash the application by sending malformed message bodies that cause unhandled exceptions on the SynchronizationContext.
+
+  ### Patches
+
+  The vulnerabilities are fixed in version 0.92.0.
+  For Tmds.DBus.Protocol, the fixes are also backported to 0.21.3.
+
+  ### Workarounds
+
+  There are no known workarounds. Users should upgrade to a patched version.
+impacted_packages:
+  - purl: pkg:nuget/Tmds.DBus
+    affected_versions: vers:nuget/<0.92.0
+    fixed_versions: vers:nuget/0.92.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Tmds.DBus.Protocol
+    affected_versions: vers:nuget/<0.21.3
+    fixed_versions: vers:nuget/0.21.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Tmds.DBus.Protocol
+    affected_versions: vers:nuget/>=0.22.0|<0.92.0
+    fixed_versions: vers:nuget/0.92.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.1'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-xrw6-gwf8-vvr9/GHSA-xrw6-gwf8-vvr9.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-400
+references:
+  - url: https://github.com/tmds/Tmds.DBus
+    reference_type:
+    reference_id:
+  - url: https://github.com/tmds/Tmds.DBus/releases/tag/rel%2F0.21.3
+    reference_type:
+    reference_id:
+  - url: https://github.com/tmds/Tmds.DBus/releases/tag/rel%2F0.92.0
+    reference_type:
+    reference_id:
+  - url: https://github.com/tmds/Tmds.DBus/security/advisories/GHSA-xrw6-gwf8-vvr9
+    reference_type:
+    reference_id:

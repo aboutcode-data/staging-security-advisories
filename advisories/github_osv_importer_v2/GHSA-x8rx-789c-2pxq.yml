@@ -1,0 +1,51 @@
+advisory_id: GHSA-x8rx-789c-2pxq
+datasource_id: github_osv_importer_v2/GHSA-x8rx-789c-2pxq
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-x8rx-789c-2pxq/GHSA-x8rx-789c-2pxq.json
+aliases:
+  - CVE-2026-39371
+summary: |
+  RedwoodSDK has a CSRF vulnerability in server function dispatch via GET requests
+  **Summary**
+
+  Server functions exported from `"use server"` files could be invoked via GET requests, bypassing their intended HTTP method. In cookie-authenticated applications, this allowed cross-site GET navigations to trigger state-changing functions, because browsers send `SameSite=Lax` cookies on top-level GET requests.
+
+  This affected all server functions -- both `serverAction()` handlers and bare exported functions in `"use server"` files.
+
+  **Impact**
+
+  An attacker could construct a URL containing a known action ID and JSON-encoded arguments. When a victim with an active session visited or was redirected to this URL, the function executed with the victim's credentials. This affected any server function that performs state-changing operations (writes, deletes, mutations) in applications using cookie-based authentication.
+
+  **Remediation**
+
+  Update to rwsdk `1.0.6`. No application code changes are required.
+
+  The fix enforces the declared HTTP method at dispatch time. GET requests to server functions that require POST now return `405 Method Not Allowed`.
+impacted_packages:
+  - purl: pkg:npm/rwsdk
+    affected_versions: vers:npm/<=1.0.5
+    fixed_versions: vers:npm/1.0.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.1'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-x8rx-789c-2pxq/GHSA-x8rx-789c-2pxq.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-352
+references:
+  - url: https://github.com/redwoodjs/sdk
+    reference_type:
+    reference_id:
+  - url: https://github.com/redwoodjs/sdk/security/advisories/GHSA-x8rx-789c-2pxq
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-39371
+    reference_type:
+    reference_id:
