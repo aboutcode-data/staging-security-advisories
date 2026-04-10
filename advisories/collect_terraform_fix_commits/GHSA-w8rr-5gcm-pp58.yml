@@ -1,0 +1,35 @@
+advisory_id: GHSA-w8rr-5gcm-pp58
+datasource_id: collect_terraform_fix_commits/GHSA-w8rr-5gcm-pp58
+datasource_url: https://github.com/hashicorp/terraform
+aliases: []
+summary: |
+  e9b22412f28e10be5a036c1adb11421baa55bede:chore: go get go.opentelemetry.io/contrib/exporters/autoexport@v0.68.0 & make syncdeps
+
+  This causes go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracehttp indirect dependency to reach v1.43.0, fixing https://github.com/open-telemetry/opentelemetry-go/security/advisories/GHSA-w8rr-5gcm-pp58
+  171d553979bbf5ef055b9a0db0e52b3a407397e8:chore: go get go.opentelemetry.io/contrib/exporters/autoexport@v0.68.0 & make syncdeps
+
+  This causes go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracehttp indirect dependency to reach v1.43.0, fixing https://github.com/open-telemetry/opentelemetry-go/security/advisories/GHSA-w8rr-5gcm-pp58
+impacted_packages:
+  - purl: pkg:github/hashicorp/terraform
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/hashicorp/terraform
+        commit: 171d553979bbf5ef055b9a0db0e52b3a407397e8
+    introduced_in_commits: []
+  - purl: pkg:github/hashicorp/terraform
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/hashicorp/terraform
+        commit: e9b22412f28e10be5a036c1adb11421baa55bede
+    introduced_in_commits: []
+severities: []
+weaknesses: []
+references:
+  - url: https://github.com/hashicorp/terraform/tree/171d553979bbf5ef055b9a0db0e52b3a407397e8
+    reference_type: commit
+    reference_id: 171d553979bbf5ef055b9a0db0e52b3a407397e8
+  - url: https://github.com/hashicorp/terraform/tree/e9b22412f28e10be5a036c1adb11421baa55bede
+    reference_type: commit
+    reference_id: e9b22412f28e10be5a036c1adb11421baa55bede
