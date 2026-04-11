@@ -1,7 +1,8 @@
 advisory_id: GHSA-xrw6-gwf8-vvr9
 datasource_id: github_osv_importer_v2/GHSA-xrw6-gwf8-vvr9
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-xrw6-gwf8-vvr9/GHSA-xrw6-gwf8-vvr9.json
-aliases: []
+aliases:
+  - CVE-2026-39959
 summary: |
   Tmds.DBus: malicious D-Bus peers can spoof signals, exhaust file descriptor resources, and cause denial of service
   Tmds.DBus and Tmds.DBus.Protocol are vulnerable to malicious D-Bus peers. A peer on the same bus can spoof signals by impersonating the owner of a well-known name, exhaust system resources or cause file descriptor spillover by sending messages with an excessive number of Unix file descriptors, and crash the application by sending malformed message bodies that cause unhandled exceptions on the SynchronizationContext.
@@ -42,6 +43,7 @@ severities:
     published_at: None
     url:
 weaknesses:
+  - CWE-290
   - CWE-400
 references:
   - url: https://github.com/tmds/Tmds.DBus
@@ -54,5 +56,8 @@ references:
     reference_type:
     reference_id:
   - url: https://github.com/tmds/Tmds.DBus/security/advisories/GHSA-xrw6-gwf8-vvr9
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-39959
     reference_type:
     reference_id:

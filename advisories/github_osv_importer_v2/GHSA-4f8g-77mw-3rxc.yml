@@ -1,0 +1,57 @@
+advisory_id: GHSA-4f8g-77mw-3rxc
+datasource_id: github_osv_importer_v2/GHSA-4f8g-77mw-3rxc
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-4f8g-77mw-3rxc/GHSA-4f8g-77mw-3rxc.json
+aliases: []
+summary: |
+  OpenClaw: Gateway plugin HTTP `auth: gateway` widens identity-bearing `operator.read` requests into runtime `operator.write`
+  ## Impact
+
+  Gateway plugin HTTP `auth: gateway` widens identity-bearing `operator.read` requests into runtime `operator.write`.
+
+  Plugin HTTP routes using gateway auth could receive runtime write scopes even when the upstream trusted-proxy request only declared read.
+
+  OpenClaw is a user-controlled local assistant. This advisory is scoped to the OpenClaw trust model and does not assume a multi-tenant service boundary.
+
+  ## Affected Packages / Versions
+
+  - Package: `openclaw` (npm)
+  - Affected versions: `2026.1.29`
+  - Patched versions: `2026.4.8`
+
+  ## Fix
+
+  The issue was fixed on `main` and is available in the patched npm version listed above. The verified fixed tree is commit `d7c3210cd6f5fdfdc1beff4c9541673e814354d5`.
+
+  ## Verification
+
+  The fix was re-checked against `main` before publication, including targeted regression tests for the affected security boundary.
+
+  ## Credits
+
+  Thanks @smaeljaish771 for reporting.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.4.8
+    fixed_versions: vers:npm/2026.4.8
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '2.0'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-4f8g-77mw-3rxc/GHSA-4f8g-77mw-3rxc.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-269
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-4f8g-77mw-3rxc
+    reference_type:
+    reference_id:

@@ -1,0 +1,56 @@
+advisory_id: GHSA-whf9-3hcx-gq54
+datasource_id: github_osv_importer_v2/GHSA-whf9-3hcx-gq54
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-whf9-3hcx-gq54/GHSA-whf9-3hcx-gq54.json
+aliases: []
+summary: |
+  ## Impact
+
+  OpenClaw `device.token.rotate` mints tokens for unapproved roles, bypassing device role-upgrade pairing.
+
+  Device token rotation could mint or preserve roles/scopes that had not gone through the intended pairing approval.
+
+  OpenClaw is a user-controlled local assistant. This advisory is scoped to the OpenClaw trust model and does not assume a multi-tenant service boundary.
+
+  ## Affected Packages / Versions
+
+  - Package: `openclaw` (npm)
+  - Affected versions: `<= v2026.04.01`
+  - Patched versions: `2026.4.8`
+
+  ## Fix
+
+  The issue was fixed on `main` and is available in the patched npm version listed above. The verified fixed tree is commit `d7c3210cd6f5fdfdc1beff4c9541673e814354d5`.
+
+  ## Verification
+
+  The fix was re-checked against `main` before publication, including targeted regression tests for the affected security boundary.
+
+  ## Credits
+
+  Thanks @nicky-cc  of Tencent zhuque Lab ([https://github.com/Tencent/AI-Infra-Guard](https://github.com/Tencent/AI-Infra-Guard)) for reporting.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.4.8
+    fixed_versions: vers:npm/2026.4.8
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-whf9-3hcx-gq54/GHSA-whf9-3hcx-gq54.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-863
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-whf9-3hcx-gq54
+    reference_type:
+    reference_id:

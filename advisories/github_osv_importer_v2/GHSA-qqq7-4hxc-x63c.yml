@@ -1,0 +1,57 @@
+advisory_id: GHSA-qqq7-4hxc-x63c
+datasource_id: github_osv_importer_v2/GHSA-qqq7-4hxc-x63c
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-qqq7-4hxc-x63c/GHSA-qqq7-4hxc-x63c.json
+aliases: []
+summary: |
+  OpenClaw: Shared reply MEDIA - paths are treated as trusted and can trigger cross-channel local file exfiltration
+  ## Impact
+
+  Shared reply MEDIA: paths are treated as trusted and can trigger cross-channel local file exfiltration.
+
+  A crafted shared reply MEDIA reference could cause another channel to read a local file path as trusted generated media.
+
+  OpenClaw is a user-controlled local assistant. This advisory is scoped to the OpenClaw trust model and does not assume a multi-tenant service boundary.
+
+  ## Affected Packages / Versions
+
+  - Package: `openclaw` (npm)
+  - Affected versions: `<=2026.4.4`
+  - Patched versions: `2026.4.8`
+
+  ## Fix
+
+  The issue was fixed on `main` and is available in the patched npm version listed above. The verified fixed tree is commit `d7c3210cd6f5fdfdc1beff4c9541673e814354d5`.
+
+  ## Verification
+
+  The fix was re-checked against `main` before publication, including targeted regression tests for the affected security boundary.
+
+  ## Credits
+
+  Thanks @threalwinky for reporting.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.4.8
+    fixed_versions: vers:npm/2026.4.8
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.1'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-qqq7-4hxc-x63c/GHSA-qqq7-4hxc-x63c.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-668
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-qqq7-4hxc-x63c
+    reference_type:
+    reference_id:

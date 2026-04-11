@@ -2,9 +2,12 @@ advisory_id: MMSA-2026-00611
 datasource_id: mattermost_importer_v2/MMSA-2026-00611
 datasource_url: https://securityupdates.mattermost.com/security_updates.json
 aliases:
-  -
-summary: Details on the security update will be posted here on April 09  as per our Responsible
-  Disclosure Policy.
+  - CVE-2026-24661
+summary: (CWE-400) Fixed an issue where Mattermost MS Teams plugin fails to limit the request
+  body size on the /changes webhook endpoint which allows an authenticated attacker to cause
+  memory exhaustion and denial of service via sending an oversized JSON payload. Thanks to Lorenzo
+  Gallegos for contributing to this improvement under the Mattermost responsible disclosure
+  policy.
 impacted_packages:
   - purl: pkg:github/mattermost/mattermost-plugin-github
     affected_versions:
