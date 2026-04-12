@@ -1,7 +1,8 @@
 advisory_id: GHSA-m3mh-3mpg-37hw
 datasource_id: github_osv_importer_v2/GHSA-m3mh-3mpg-37hw
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-m3mh-3mpg-37hw/GHSA-m3mh-3mpg-37hw.json
-aliases: []
+aliases:
+  - CVE-2026-35641
 summary: |
   OpenClaw has an Arbitrary Malicious Code Execution Vulnerability
   > Fixed in OpenClaw 2026.3.24, the current shipping release.
@@ -236,6 +237,11 @@ severities:
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H
     published_at: None
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-m3mh-3mpg-37hw/GHSA-m3mh-3mpg-37hw.json
+  - score: '8.4'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-m3mh-3mpg-37hw/GHSA-m3mh-3mpg-37hw.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
@@ -243,10 +249,17 @@ severities:
     url:
 weaknesses:
   - CWE-426
+  - CWE-349
 references:
   - url: https://github.com/openclaw/openclaw
     reference_type:
     reference_id:
   - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-m3mh-3mpg-37hw
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-35641
+    reference_type:
+    reference_id:
+  - url: https://www.vulncheck.com/advisories/openclaw-arbitrary-code-execution-via-npmrc-in-local-plugin-hook-installation
     reference_type:
     reference_id:

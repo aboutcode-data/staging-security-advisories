@@ -1,0 +1,84 @@
+advisory_id: GHSA-69cc-cv78-qc8g
+datasource_id: github_osv_importer_v2/GHSA-69cc-cv78-qc8g
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-69cc-cv78-qc8g/GHSA-69cc-cv78-qc8g.json
+aliases:
+  - CVE-2026-29129
+summary: |
+  Apache Tomcat: Configured cipher preference order not preserved
+  Configured cipher preference order not preserved vulnerability in Apache Tomcat.
+
+  This issue affects Apache Tomcat: from 11.0.16 through 11.0.18, from 10.1.51 through 10.1.52, from 9.0.114 through 9.0.115.
+
+  Users are recommended to upgrade to version 11.0.20, 10.1.53 or 9.0.116, which fix the issue.
+impacted_packages:
+  - purl: pkg:maven/org.apache.tomcat/tomcat-catalina
+    affected_versions: vers:maven/>=9.0.114|<9.0.116
+    fixed_versions: vers:maven/9.0.116
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat/tomcat-catalina
+    affected_versions: vers:maven/>=10.1.51|<10.1.53
+    fixed_versions: vers:maven/10.1.53
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat/tomcat-catalina
+    affected_versions: vers:maven/>=11.0.16|<11.0.20
+    fixed_versions: vers:maven/11.0.20
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat/tomcat
+    affected_versions: vers:maven/>=9.0.114|<9.0.116
+    fixed_versions: vers:maven/9.0.116
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat/tomcat
+    affected_versions: vers:maven/>=10.1.51|<10.1.53
+    fixed_versions: vers:maven/10.1.53
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat/tomcat
+    affected_versions: vers:maven/>=11.0.16|<11.0.20
+    fixed_versions: vers:maven/11.0.20
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
+    affected_versions: vers:maven/>=9.0.114|<9.0.116
+    fixed_versions: vers:maven/9.0.116
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
+    affected_versions: vers:maven/>=10.1.51|<10.1.53
+    fixed_versions: vers:maven/10.1.53
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
+    affected_versions: vers:maven/>=11.0.16|<11.0.20
+    fixed_versions: vers:maven/11.0.20
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-69cc-cv78-qc8g/GHSA-69cc-cv78-qc8g.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-327
+references:
+  - url: https://github.com/apache/tomcat
+    reference_type:
+    reference_id:
+  - url: https://lists.apache.org/thread/r4h1t6f8xhxsxfm6c2z5cprolsosho3f
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-29129
+    reference_type:
+    reference_id:
+  - url: http://www.openwall.com/lists/oss-security/2026/04/09/22
+    reference_type:
+    reference_id:

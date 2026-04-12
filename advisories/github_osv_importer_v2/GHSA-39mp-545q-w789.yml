@@ -1,7 +1,8 @@
 advisory_id: GHSA-39mp-545q-w789
 datasource_id: github_osv_importer_v2/GHSA-39mp-545q-w789
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-39mp-545q-w789/GHSA-39mp-545q-w789.json
-aliases: []
+aliases:
+  - CVE-2026-35620
 summary: "OpenClaw: Non-owner command-authorized sender can change the owner-only `/send` session\
   \ delivery policy\n> Fixed in OpenClaw 2026.3.24, the current shipping release.\n\n**Title**\
   \  \nNon-owner command-authorized sender can change the owner-only `/send` session delivery\
@@ -75,17 +76,41 @@ severities:
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L
     published_at: None
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-39mp-545q-w789/GHSA-39mp-545q-w789.json
+  - score: '5.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-39mp-545q-w789/GHSA-39mp-545q-w789.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
     published_at: None
     url:
 weaknesses:
+  - CWE-862
   - CWE-285
 references:
   - url: https://github.com/openclaw/openclaw
     reference_type:
     reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/555b2578a8cc6e1b93f717496935ead97bfbed8b
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/ccfeecb6887cd97937e33a71877ad512741e82b2
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/ea018a68ccb92dbc735bc1df9880d5c95c63ca35
+    reference_type:
+    reference_id:
   - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-39mp-545q-w789
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-vqvg-86cc-cg83
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-35620
+    reference_type:
+    reference_id:
+  - url: https://www.vulncheck.com/advisories/openclaw-missing-authorization-in-send-and-allowlist-chat-commands
     reference_type:
     reference_id:

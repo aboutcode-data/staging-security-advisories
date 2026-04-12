@@ -1,0 +1,46 @@
+advisory_id: GHSA-3f6h-2hrp-w5wx
+datasource_id: github_osv_importer_v2/GHSA-3f6h-2hrp-w5wx
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-3f6h-2hrp-w5wx/GHSA-3f6h-2hrp-w5wx.json
+aliases:
+  - CVE-2026-40074
+summary: |
+  @sveltejs/kit: Unvalidated redirect in handle hook causes Denial-of-Service
+  `redirect`, when called from inside the `handle` server hook with a location parameter containing characters that are invalid in a HTTP header, will cause an unhandled `TypeError`. This could result in DoS on some platforms, especially if the location passed to `redirect` contains unsanitized user input.
+impacted_packages:
+  - purl: pkg:npm/%40sveltejs/kit
+    affected_versions: vers:npm/<=2.57.0
+    fixed_versions: vers:npm/2.57.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:L
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-3f6h-2hrp-w5wx/GHSA-3f6h-2hrp-w5wx.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-755
+references:
+  - url: https://github.com/sveltejs/kit
+    reference_type:
+    reference_id:
+  - url: https://github.com/sveltejs/kit/commit/10d7b44425c3d9da642eecce373d0c6ef83b4fcd
+    reference_type:
+    reference_id:
+  - url: https://github.com/sveltejs/kit/releases/tag/%40sveltejs%2Fkit%402.57.1
+    reference_type:
+    reference_id:
+  - url: https://github.com/sveltejs/kit/releases/tag/@sveltejs/kit@2.57.1
+    reference_type:
+    reference_id:
+  - url: https://github.com/sveltejs/kit/security/advisories/GHSA-3f6h-2hrp-w5wx
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-40074
+    reference_type:
+    reference_id:

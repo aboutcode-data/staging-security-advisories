@@ -1,7 +1,8 @@
 advisory_id: GHSA-mf5g-6r6f-ghhm
 datasource_id: github_osv_importer_v2/GHSA-mf5g-6r6f-ghhm
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-mf5g-6r6f-ghhm/GHSA-mf5g-6r6f-ghhm.json
-aliases: []
+aliases:
+  - CVE-2026-35646
 summary: |
   OpenClaw: Synology Chat Webhook Pre-Auth Rate-Limit Bypass Enables Brute-Force Guessing of Webhook Token
   ## Summary
@@ -26,11 +27,16 @@ summary: |
   - `0b4d07337467f4d40a0cc1ced83d45ceaec0863c`
 impacted_packages:
   - purl: pkg:npm/openclaw
-    affected_versions: vers:npm/<=2026.3.24
+    affected_versions: vers:npm/<2026.3.28
     fixed_versions: vers:npm/2026.3.28
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
+  - score: '6.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-mf5g-6r6f-ghhm/GHSA-mf5g-6r6f-ghhm.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
@@ -47,5 +53,11 @@ references:
     reference_type:
     reference_id:
   - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-mf5g-6r6f-ghhm
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-35646
+    reference_type:
+    reference_id:
+  - url: https://www.vulncheck.com/advisories/openclaw-pre-authentication-rate-limit-bypass-in-webhook-token-validation
     reference_type:
     reference_id:

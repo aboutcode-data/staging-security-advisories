@@ -1,0 +1,81 @@
+advisory_id: GHSA-69r9-qgr7-g2wj
+datasource_id: github_osv_importer_v2/GHSA-69r9-qgr7-g2wj
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-69r9-qgr7-g2wj/GHSA-69r9-qgr7-g2wj.json
+aliases:
+  - CVE-2026-34486
+summary: |
+  Apache Tomcat Missing Encryption of Sensitive Data vulnerability
+  Missing Encryption of Sensitive Data vulnerability in Apache Tomcat due to the fix for CVE-2026-29146 allowing the bypass of the EncryptInterceptor.
+
+  This issue affects Apache Tomcat: 11.0.20, 10.1.53, 9.0.116.
+
+  Users are recommended to upgrade to version 11.0.21, 10.1.54 or 9.0.117, which fix the issue.
+impacted_packages:
+  - purl: pkg:maven/org.apache.tomcat/tomcat-catalina
+    affected_versions: vers:maven/11.0.20
+    fixed_versions: vers:maven/11.0.21
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat/tomcat-catalina
+    affected_versions: vers:maven/10.1.53
+    fixed_versions: vers:maven/10.1.54
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat/tomcat-catalina
+    affected_versions: vers:maven/9.0.116
+    fixed_versions: vers:maven/9.0.117
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat/tomcat
+    affected_versions: vers:maven/11.0.20
+    fixed_versions: vers:maven/11.0.21
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat/tomcat
+    affected_versions: vers:maven/10.1.53
+    fixed_versions: vers:maven/10.1.54
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat/tomcat
+    affected_versions: vers:maven/9.0.116
+    fixed_versions: vers:maven/9.0.117
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
+    affected_versions: vers:maven/11.0.20
+    fixed_versions: vers:maven/11.0.21
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
+    affected_versions: vers:maven/10.1.53
+    fixed_versions: vers:maven/10.1.54
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
+    affected_versions: vers:maven/9.0.116
+    fixed_versions: vers:maven/9.0.117
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-69r9-qgr7-g2wj/GHSA-69r9-qgr7-g2wj.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-311
+references:
+  - url: https://github.com/apache/tomcat
+    reference_type:
+    reference_id:
+  - url: https://lists.apache.org/thread/9510k5p5zdvt9pkkgtyp85mvwxo2qrly
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-34486
+    reference_type:
+    reference_id:

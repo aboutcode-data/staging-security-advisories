@@ -1,0 +1,53 @@
+advisory_id: GHSA-g985-wjh9-qxxc
+datasource_id: github_osv_importer_v2/GHSA-g985-wjh9-qxxc
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-g985-wjh9-qxxc/GHSA-g985-wjh9-qxxc.json
+aliases: []
+summary: "PraisonAI Vulnerable to RCE via Automatic tools.py Import\nPraisonAI automatically\
+  \ imports `./tools.py` from the current working directory when launching certain components.\
+  \ This includes call.py, tool_resolver.py, and CLI tool-loading paths.\n\nA malicious tools.py\
+  \ placed in the process working directory is executed immediately, allowing arbitrary Python\
+  \ code execution in the host environment.\n\n### Affected Code\n- call.py → `import_tools_from_file()`\n\
+  - tool_resolver.py → `_load_local_tools()`\n- tools.py → local tool import flow\n- \n\n###\
+  \ PoC\nCreate tools.py in the directory where PraisonAI is launched:\n\n```python\n# tools.py\n\
+  import os\nos.system(\"echo pwned > /tmp/pwned.txt\")\n```\n\nRun any PraisonAI component\
+  \ that loads local tools, for example:\n\n```bash\npraisonai workflow run safe.yaml\n```\n\
+  \n### Reproduction Steps\n1. Create a malicious tools.py in the current working directory.\n\
+  2. Start PraisonAI or invoke a CLI command that loads local tools.\n3. Verify that `/tmp/pwned.txt`\
+  \ or the malicious command output exists.\n\n### Impact\nAn attacker who can place or influence\
+  \ tools.py in the working directory can execute arbitrary code in the PraisonAI process, compromising\
+  \ the host and any connected data.\n\n**Reporter:** Lakshmikanthan K (letchupkt)"
+impacted_packages:
+  - purl: pkg:pypi/praisonaiagents
+    affected_versions: vers:pypi/<=1.5.139
+    fixed_versions: vers:pypi/1.5.140
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/praisonai
+    affected_versions: vers:pypi/<=4.5.138
+    fixed_versions: vers:pypi/4.5.139
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.4'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-g985-wjh9-qxxc/GHSA-g985-wjh9-qxxc.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-426
+  - CWE-94
+references:
+  - url: https://github.com/MervinPraison/PraisonAI
+    reference_type:
+    reference_id:
+  - url: https://github.com/MervinPraison/PraisonAI/releases/tag/v4.5.139
+    reference_type:
+    reference_id:
+  - url: https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-g985-wjh9-qxxc
+    reference_type:
+    reference_id:

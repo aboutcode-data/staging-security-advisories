@@ -1,0 +1,43 @@
+advisory_id: GHSA-q4gf-8mx6-v5v3
+datasource_id: github_osv_importer_v2/GHSA-q4gf-8mx6-v5v3
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-q4gf-8mx6-v5v3/GHSA-q4gf-8mx6-v5v3.json
+aliases: []
+summary: |
+  Next.js has a Denial of Service with Server Components
+  A vulnerability affects certain React Server Components packages for versions 19.x and frameworks that use the affected packages, including Next.js 13.x, 14.x, 15.x, and 16.x using the App Router. The issue is tracked upstream as [CVE-2026-23869](https://github.com/facebook/react/security/advisories/GHSA-479c-33wc-g2pg). You can read more about this advisory our [this changelog](https://vercel.com/changelog/summary-of-cve-2026-23869).
+
+  A specially crafted HTTP request can be sent to any App Router Server Function endpoint that, when deserialized, may trigger excessive CPU usage. This can result in denial of service in unpatched environments.
+impacted_packages:
+  - purl: pkg:npm/next
+    affected_versions: vers:npm/>=13.0.0|<15.5.15
+    fixed_versions: vers:npm/15.5.15
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/next
+    affected_versions: vers:npm/>=16.0.0-beta.0|<16.2.3
+    fixed_versions: vers:npm/16.2.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-q4gf-8mx6-v5v3/GHSA-q4gf-8mx6-v5v3.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-770
+references:
+  - url: https://github.com/vercel/next.js
+    reference_type:
+    reference_id:
+  - url: https://github.com/vercel/next.js/security/advisories/GHSA-q4gf-8mx6-v5v3
+    reference_type:
+    reference_id:
+  - url: https://vercel.com/changelog/summary-of-cve-2026-23869
+    reference_type:
+    reference_id:

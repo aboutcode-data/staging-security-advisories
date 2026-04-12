@@ -1,0 +1,46 @@
+advisory_id: GHSA-2crg-3p73-43xp
+datasource_id: github_osv_importer_v2/GHSA-2crg-3p73-43xp
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-2crg-3p73-43xp/GHSA-2crg-3p73-43xp.json
+aliases:
+  - CVE-2026-40073
+summary: |
+  @sveltejs/adapter-node has a BODY_SIZE_LIMIT bypass
+  Under certain circumstances, requests could bypass the `BODY_SIZE_LIMIT` on SvelteKit applications running with `adapter-node`. This bypass does not affect body size limits at other layers of the application stack, so limits enforced in the WAF, gateway, or at the platform level are unaffected.
+impacted_packages:
+  - purl: pkg:npm/%40sveltejs/kit
+    affected_versions: vers:npm/<=2.57.0
+    fixed_versions: vers:npm/2.57.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.2'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-2crg-3p73-43xp/GHSA-2crg-3p73-43xp.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-770
+references:
+  - url: https://github.com/sveltejs/kit
+    reference_type:
+    reference_id:
+  - url: https://github.com/sveltejs/kit/commit/3202ed6c98f9e8d86bf0c4c7ad0f2e273e5e3b95
+    reference_type:
+    reference_id:
+  - url: https://github.com/sveltejs/kit/releases/tag/%40sveltejs%2Fkit%402.57.1
+    reference_type:
+    reference_id:
+  - url: https://github.com/sveltejs/kit/releases/tag/@sveltejs/kit@2.57.1
+    reference_type:
+    reference_id:
+  - url: https://github.com/sveltejs/kit/security/advisories/GHSA-2crg-3p73-43xp
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-40073
+    reference_type:
+    reference_id:

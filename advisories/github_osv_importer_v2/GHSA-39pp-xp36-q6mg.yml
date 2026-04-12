@@ -1,7 +1,8 @@
 advisory_id: GHSA-39pp-xp36-q6mg
 datasource_id: github_osv_importer_v2/GHSA-39pp-xp36-q6mg
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-39pp-xp36-q6mg/GHSA-39pp-xp36-q6mg.json
-aliases: []
+aliases:
+  - CVE-2026-35650
 summary: |
   OpenClaw has Inconsistent Host Exec Environment Override Sanitization
   ## Summary
@@ -32,9 +33,14 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
-  - score: '8.4'
+  - score: '7.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-39pp-xp36-q6mg/GHSA-39pp-xp36-q6mg.json
+  - score: '7.7'
     scoring_system: cvssv4
-    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:H/VA:N/SC:L/SI:H/SA:N
+    scoring_elements: CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
     published_at: None
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-39pp-xp36-q6mg/GHSA-39pp-xp36-q6mg.json
   - score: HIGH
@@ -49,6 +55,18 @@ references:
   - url: https://github.com/openclaw/openclaw
     reference_type:
     reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/630f1479c44f78484dfa21bb407cbe6f171dac87
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/7abfff756d6c68d17e21d1657bbacbaec86de232
+    reference_type:
+    reference_id:
   - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-39pp-xp36-q6mg
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-35650
+    reference_type:
+    reference_id:
+  - url: https://www.vulncheck.com/advisories/openclaw-environment-variable-override-bypass-via-inconsistent-sanitization
     reference_type:
     reference_id:

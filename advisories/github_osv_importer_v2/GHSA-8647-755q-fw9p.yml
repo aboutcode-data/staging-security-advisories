@@ -1,0 +1,44 @@
+advisory_id: GHSA-8647-755q-fw9p
+datasource_id: github_osv_importer_v2/GHSA-8647-755q-fw9p
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-8647-755q-fw9p/GHSA-8647-755q-fw9p.json
+aliases:
+  - CVE-2026-40178
+summary: |
+  ajenti.plugin.core has race conditions in 2FA
+  ### Impact
+
+  If the 2FA was activated, it was possible during a short moment after the authentication of an user to bypass its authentication.
+
+  ### Patches
+
+  This is fixed in the version 0.112. Users should upgrade to this version as soon as possible.
+impacted_packages:
+  - purl: pkg:pypi/ajenti.plugin.core
+    affected_versions: vers:pypi/<=0.111
+    fixed_versions: vers:pypi/0.112
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:U
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-8647-755q-fw9p/GHSA-8647-755q-fw9p.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-362
+  - CWE-287
+references:
+  - url: https://github.com/ajenti/ajenti
+    reference_type:
+    reference_id:
+  - url: https://github.com/ajenti/ajenti/security/advisories/GHSA-8647-755q-fw9p
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-40178
+    reference_type:
+    reference_id:

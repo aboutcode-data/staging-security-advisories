@@ -1,7 +1,8 @@
 advisory_id: GHSA-844j-xrrq-wgh4
 datasource_id: github_osv_importer_v2/GHSA-844j-xrrq-wgh4
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-844j-xrrq-wgh4/GHSA-844j-xrrq-wgh4.json
-aliases: []
+aliases:
+  - CVE-2026-35656
 summary: |
   OpenClaw: Forwarding header spoofing bypasses gateway.trustedProxies origin detection
   ## Summary
@@ -32,9 +33,14 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
+  - score: '6.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-844j-xrrq-wgh4/GHSA-844j-xrrq-wgh4.json
   - score: '6.3'
     scoring_system: cvssv4
-    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:L/SA:L
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N
     published_at: None
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-844j-xrrq-wgh4/GHSA-844j-xrrq-wgh4.json
   - score: MODERATE
@@ -48,9 +54,18 @@ references:
   - url: https://github.com/openclaw/openclaw
     reference_type:
     reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/630f1479c44f78484dfa21bb407cbe6f171dac87
+    reference_type:
+    reference_id:
   - url: https://github.com/openclaw/openclaw/commit/fc2d29ea926f47c428c556e92ec981441228d2a4
     reference_type:
     reference_id:
   - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-844j-xrrq-wgh4
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-35656
+    reference_type:
+    reference_id:
+  - url: https://www.vulncheck.com/advisories/openclaw-xff-loopback-spoofing-bypass-in-canvas-authentication-and-rate-limiter
     reference_type:
     reference_id:

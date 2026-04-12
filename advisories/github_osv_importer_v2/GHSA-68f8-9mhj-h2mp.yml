@@ -1,7 +1,8 @@
 advisory_id: GHSA-68f8-9mhj-h2mp
 datasource_id: github_osv_importer_v2/GHSA-68f8-9mhj-h2mp
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-68f8-9mhj-h2mp/GHSA-68f8-9mhj-h2mp.json
-aliases: []
+aliases:
+  - CVE-2026-35619
 summary: |
   OpenClaw has a Gateway HTTP /v1/models Route Bypasses Operator Read Scope
   > Fixed in OpenClaw 2026.3.24, the current shipping release.
@@ -63,6 +64,16 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
+  - score: '4.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-68f8-9mhj-h2mp/GHSA-68f8-9mhj-h2mp.json
+  - score: '5.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-68f8-9mhj-h2mp/GHSA-68f8-9mhj-h2mp.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
@@ -75,6 +86,15 @@ references:
   - url: https://github.com/openclaw/openclaw
     reference_type:
     reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/06de515b6c42816b62ec752e1c221cab67b38501
+    reference_type:
+    reference_id:
   - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-68f8-9mhj-h2mp
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-35619
+    reference_type:
+    reference_id:
+  - url: https://www.vulncheck.com/advisories/openclaw-authorization-bypass-via-http-v1-models-endpoint
     reference_type:
     reference_id:
