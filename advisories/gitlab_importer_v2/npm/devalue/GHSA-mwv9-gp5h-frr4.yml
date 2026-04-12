@@ -1,0 +1,43 @@
+advisory_id: npm/devalue/GHSA-mwv9-gp5h-frr4
+datasource_id: gitlab_importer_v2/npm/devalue/GHSA-mwv9-gp5h-frr4
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/devalue/GHSA-mwv9-gp5h-frr4.yml
+aliases:
+  - GHSA-mwv9-gp5h-frr4
+summary: |
+  Sveltejs devalue's `devalue.parse` and `devalue.unflatten` emit objects with `__proto__` own properties
+  In some circumstances, `devalue.parse` and `devalue.unflatten` could emit objects with `__proto__` own properties. This in and of itself is not a security vulnerability (and is possible with, for example, `JSON.parse` as well), but it can result in prototype injection if _downstream_ code handles it incorrectly:
+
+  ```ts
+  const result = devalue.parse(/* input creating an object with a __proto__ property */);
+  const target = {};
+  Object.assign(target, result); // target's prototype is now polluted
+  ```
+impacted_packages:
+  - purl: pkg:npm/devalue
+    affected_versions: vers:npm/<5.6.4
+    fixed_versions: vers:npm/5.6.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/devalue/GHSA-mwv9-gp5h-frr4.yml
+weaknesses:
+  - CWE-1035
+  - CWE-937
+  - CWE-1321
+references:
+  - url: https://github.com/sveltejs/devalue
+    reference_type:
+    reference_id:
+  - url: https://github.com/sveltejs/devalue/releases/tag/v5.6.4
+    reference_type:
+    reference_id:
+  - url: https://github.com/sveltejs/devalue/security/advisories/GHSA-mwv9-gp5h-frr4
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-mwv9-gp5h-frr4
+    reference_type:
+    reference_id: GHSA-mwv9-gp5h-frr4

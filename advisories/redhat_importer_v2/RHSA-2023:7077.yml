@@ -52,7 +52,9 @@ aliases:
   - CVE-2022-50317
   - CVE-2022-50318
   - CVE-2022-50348
+  - CVE-2022-50354
   - CVE-2022-50356
+  - CVE-2022-50365
   - CVE-2022-50369
   - CVE-2022-50385
   - CVE-2022-50388
@@ -229,11 +231,13 @@ aliases:
   - CVE-2023-53376
   - CVE-2023-53390
   - CVE-2023-53398
+  - CVE-2023-53400
   - CVE-2023-53409
   - CVE-2023-53410
   - CVE-2023-53421
   - CVE-2023-53422
   - CVE-2023-53430
+  - CVE-2023-53431
   - CVE-2023-53437
   - CVE-2023-53443
   - CVE-2023-53453
@@ -420,6 +424,61 @@ summary: |
 
   For detailed information on changes in this release, see the Red Hat Enterprise Linux 8.9 Release Notes linked from the References section.
 impacted_packages:
+  - purl: pkg:rpm/redhat/kernel-zfcpdump-core?arch=s390x
+    affected_versions: vers:rpm/<4.18.0-513.5.1.el8_9
+    fixed_versions: vers:rpm/4.18.0-513.5.1.el8_9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-zfcpdump-devel?arch=s390x
+    affected_versions: vers:rpm/<4.18.0-513.5.1.el8_9
+    fixed_versions: vers:rpm/4.18.0-513.5.1.el8_9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-zfcpdump-modules?arch=s390x
+    affected_versions: vers:rpm/<4.18.0-513.5.1.el8_9
+    fixed_versions: vers:rpm/4.18.0-513.5.1.el8_9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-zfcpdump-modules-extra?arch=s390x
+    affected_versions: vers:rpm/<4.18.0-513.5.1.el8_9
+    fixed_versions: vers:rpm/4.18.0-513.5.1.el8_9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/perf?arch=s390x
+    affected_versions: vers:rpm/<4.18.0-513.5.1.el8_9
+    fixed_versions: vers:rpm/4.18.0-513.5.1.el8_9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python3-perf?arch=s390x
+    affected_versions: vers:rpm/<4.18.0-513.5.1.el8_9
+    fixed_versions: vers:rpm/4.18.0-513.5.1.el8_9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bpftool-debuginfo?arch=s390x
+    affected_versions: vers:rpm/<4.18.0-513.5.1.el8_9
+    fixed_versions: vers:rpm/4.18.0-513.5.1.el8_9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-debug-debuginfo?arch=s390x
+    affected_versions: vers:rpm/<4.18.0-513.5.1.el8_9
+    fixed_versions: vers:rpm/4.18.0-513.5.1.el8_9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-debuginfo?arch=s390x
+    affected_versions: vers:rpm/<4.18.0-513.5.1.el8_9
+    fixed_versions: vers:rpm/4.18.0-513.5.1.el8_9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-debuginfo-common-s390x?arch=s390x
+    affected_versions: vers:rpm/<4.18.0-513.5.1.el8_9
+    fixed_versions: vers:rpm/4.18.0-513.5.1.el8_9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-tools-debuginfo?arch=s390x
+    affected_versions: vers:rpm/<4.18.0-513.5.1.el8_9
+    fixed_versions: vers:rpm/4.18.0-513.5.1.el8_9
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/bpftool?arch=aarch64
     affected_versions: vers:rpm/<4.18.0-513.5.1.el8_9
     fixed_versions: vers:rpm/4.18.0-513.5.1.el8_9
@@ -826,61 +885,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-zfcpdump?arch=s390x
-    affected_versions: vers:rpm/<4.18.0-513.5.1.el8_9
-    fixed_versions: vers:rpm/4.18.0-513.5.1.el8_9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-zfcpdump-core?arch=s390x
-    affected_versions: vers:rpm/<4.18.0-513.5.1.el8_9
-    fixed_versions: vers:rpm/4.18.0-513.5.1.el8_9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-zfcpdump-devel?arch=s390x
-    affected_versions: vers:rpm/<4.18.0-513.5.1.el8_9
-    fixed_versions: vers:rpm/4.18.0-513.5.1.el8_9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-zfcpdump-modules?arch=s390x
-    affected_versions: vers:rpm/<4.18.0-513.5.1.el8_9
-    fixed_versions: vers:rpm/4.18.0-513.5.1.el8_9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-zfcpdump-modules-extra?arch=s390x
-    affected_versions: vers:rpm/<4.18.0-513.5.1.el8_9
-    fixed_versions: vers:rpm/4.18.0-513.5.1.el8_9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/perf?arch=s390x
-    affected_versions: vers:rpm/<4.18.0-513.5.1.el8_9
-    fixed_versions: vers:rpm/4.18.0-513.5.1.el8_9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python3-perf?arch=s390x
-    affected_versions: vers:rpm/<4.18.0-513.5.1.el8_9
-    fixed_versions: vers:rpm/4.18.0-513.5.1.el8_9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bpftool-debuginfo?arch=s390x
-    affected_versions: vers:rpm/<4.18.0-513.5.1.el8_9
-    fixed_versions: vers:rpm/4.18.0-513.5.1.el8_9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debug-debuginfo?arch=s390x
-    affected_versions: vers:rpm/<4.18.0-513.5.1.el8_9
-    fixed_versions: vers:rpm/4.18.0-513.5.1.el8_9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debuginfo?arch=s390x
-    affected_versions: vers:rpm/<4.18.0-513.5.1.el8_9
-    fixed_versions: vers:rpm/4.18.0-513.5.1.el8_9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debuginfo-common-s390x?arch=s390x
-    affected_versions: vers:rpm/<4.18.0-513.5.1.el8_9
-    fixed_versions: vers:rpm/4.18.0-513.5.1.el8_9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-tools-debuginfo?arch=s390x
     affected_versions: vers:rpm/<4.18.0-513.5.1.el8_9
     fixed_versions: vers:rpm/4.18.0-513.5.1.el8_9
     fixed_in_commits: []

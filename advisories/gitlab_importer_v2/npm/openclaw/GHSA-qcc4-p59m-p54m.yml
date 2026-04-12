@@ -1,0 +1,38 @@
+advisory_id: npm/openclaw/GHSA-qcc4-p59m-p54m
+datasource_id: gitlab_importer_v2/npm/openclaw/GHSA-qcc4-p59m-p54m
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-qcc4-p59m-p54m.yml
+aliases:
+  - GHSA-qcc4-p59m-p54m
+summary: |
+  OpenClaw: Sandbox dangling-symlink alias handling could bypass workspace-only write boundary
+  A sandbox boundary-validation gap in symlink alias handling allowed certain workspace-only write paths to be treated as in-boundary even when they could resolve outside the workspace/sandbox root.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.2.26
+    fixed_versions: vers:npm/2026.2.26
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-qcc4-p59m-p54m.yml
+weaknesses:
+  - CWE-59
+  - CWE-1035
+  - CWE-937
+  - CWE-367
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/4fd29a35bb85a1898ebff518364c467058b50e14
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-qcc4-p59m-p54m
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-qcc4-p59m-p54m
+    reference_type:
+    reference_id: GHSA-qcc4-p59m-p54m

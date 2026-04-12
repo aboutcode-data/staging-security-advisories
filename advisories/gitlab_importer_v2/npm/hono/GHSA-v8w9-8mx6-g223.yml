@@ -1,0 +1,39 @@
+advisory_id: npm/hono/GHSA-v8w9-8mx6-g223
+datasource_id: gitlab_importer_v2/npm/hono/GHSA-v8w9-8mx6-g223
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/hono/GHSA-v8w9-8mx6-g223.yml
+aliases:
+  - GHSA-v8w9-8mx6-g223
+summary: |
+  Hono vulnerable to Prototype Pollution possible through __proto__ key allowed in parseBody({ dot: true })
+  When using `parseBody({ dot: true })` in HonoRequest, specially crafted form field names such as `__proto__.x` could create objects containing a `__proto__` property.
+
+  If the parsed result is later merged into regular JavaScript objects using unsafe merge patterns, this may lead to prototype pollution in the target object.
+impacted_packages:
+  - purl: pkg:npm/hono
+    affected_versions: vers:npm/<4.12.7
+    fixed_versions: vers:npm/4.12.7
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/hono/GHSA-v8w9-8mx6-g223.yml
+weaknesses:
+  - CWE-1035
+  - CWE-937
+  - CWE-1321
+references:
+  - url: https://github.com/honojs/hono
+    reference_type:
+    reference_id:
+  - url: https://github.com/honojs/hono/commit/ef902257e0beacbb83d2a9549b3b83e03514a6fe
+    reference_type:
+    reference_id:
+  - url: https://github.com/honojs/hono/security/advisories/GHSA-v8w9-8mx6-g223
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-v8w9-8mx6-g223
+    reference_type:
+    reference_id: GHSA-v8w9-8mx6-g223
