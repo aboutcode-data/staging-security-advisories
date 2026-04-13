@@ -1,0 +1,33 @@
+advisory_id: npm/openclaw/GHSA-f5mf-3r52-r83w
+datasource_id: gitlab_importer_v2/npm/openclaw/GHSA-f5mf-3r52-r83w
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-f5mf-3r52-r83w.yml
+aliases:
+  - GHSA-f5mf-3r52-r83w
+summary: |
+  OpenClaw's Zalouser allowlist authorization matched mutable group names by default
+  OpenClaw's Zalouser allowlist mode accepted mutable group names and normalized slugs as authorization matches instead of requiring stable group IDs. In deployments that used name-based `channels.zalouser.groups` entries together with permissive sender allowlists, a different group could be accepted by reusing the same display name as an allowlisted group.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.3.12
+    fixed_versions: vers:npm/2026.3.12
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities: []
+weaknesses:
+  - CWE-863
+  - CWE-1035
+  - CWE-937
+  - CWE-807
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/releases/tag/v2026.3.12
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-f5mf-3r52-r83w
+    reference_type:
+    reference_id: GHSA-f5mf-3r52-r83w
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-f5mf-3r52-r83w
+    reference_type: advisory
+    reference_id: GHSA-f5mf-3r52-r83w
