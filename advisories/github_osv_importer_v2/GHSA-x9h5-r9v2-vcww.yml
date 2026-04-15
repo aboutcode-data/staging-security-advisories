@@ -1,0 +1,126 @@
+advisory_id: GHSA-x9h5-r9v2-vcww
+datasource_id: github_osv_importer_v2/GHSA-x9h5-r9v2-vcww
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-x9h5-r9v2-vcww/GHSA-x9h5-r9v2-vcww.json
+aliases:
+  - CVE-2026-33901
+summary: |
+  ImageMagick has a heap Buffer Overflow in ImageMagick MVG decoder
+  A heap buffer overflow occurs in the MVG decoder that could result in an out of bounds write when processing a crafted image.
+impacted_packages:
+  - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-AnyCPU
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-x64
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-x86
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-x64
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-x86
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q8-AnyCPU
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q8-x64
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q8-x86
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-OpenMP-arm64
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-arm64
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-OpenMP-arm64
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-OpenMP-x64
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-arm64
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q8-OpenMP-arm64
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q8-OpenMP-x64
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q8-arm64
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-x9h5-r9v2-vcww/GHSA-x9h5-r9v2-vcww.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-122
+references:
+  - url: https://github.com/dlemstra/Magick.NET/releases/tag/14.12.0
+    reference_type:
+    reference_id:
+  - url: https://github.com/ImageMagick/ImageMagick
+    reference_type:
+    reference_id:
+  - url: https://github.com/ImageMagick/ImageMagick/commit/4c72003e9e54a4ebaa938d239e75f5d285527ebe
+    reference_type:
+    reference_id:
+  - url: https://github.com/ImageMagick/ImageMagick/releases/tag/7.1.2-19
+    reference_type:
+    reference_id:
+  - url: https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-x9h5-r9v2-vcww
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33901
+    reference_type:
+    reference_id:

@@ -1,0 +1,40 @@
+advisory_id: GHSA-527g-3w9m-29hv
+datasource_id: github_osv_importer_v2/GHSA-527g-3w9m-29hv
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-527g-3w9m-29hv/GHSA-527g-3w9m-29hv.json
+aliases: []
+summary: "LDAP Injection in mitmproxy\n### Impact\nIn mitmproxy 12.2.1 and below, the builtin\
+  \ LDAP proxy authentication does not correctly sanitize the username when querying the LDAP\
+  \ server. This allows a malicious client to bypass authentication.\n\nOnly mitmproxy instances\
+  \ using the `proxyauth` option with LDAP are affected. This option is not enabled by default.\n\
+  \n### Patches\n\nThe vulnerability has been fixed in mitmproxy 12.2.2 and above.\n\n### Acknowledgements\n\
+  \nWe thank Yue (Knox) Liu (@yueyueL) for responsibly disclosing this vulnerability to the\
+  \ mitmproxy team.\n\n### Timeline\n\n- **2025-12-08**: Received initial report. \n- **2025-12-09**:\
+  \ Verified report and confirmed receipt.\n- **2026-01-02**: Informed researcher that patch\
+  \ will be part of the next regular patch release.\n- **2026-04-12**: Published patch release\
+  \ and advisory."
+impacted_packages:
+  - purl: pkg:pypi/mitmproxy
+    affected_versions: vers:pypi/<=12.2.1
+    fixed_versions: vers:pypi/12.2.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '4.8'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-527g-3w9m-29hv/GHSA-527g-3w9m-29hv.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-90
+references:
+  - url: https://github.com/mitmproxy/mitmproxy
+    reference_type:
+    reference_id:
+  - url: https://github.com/mitmproxy/mitmproxy/security/advisories/GHSA-527g-3w9m-29hv
+    reference_type:
+    reference_id:

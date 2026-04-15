@@ -15,12 +15,12 @@ summary: "Potential XSS vulnerability in jQuery\n### Impact\nPassing HTML from u
   \ don't find an answer, open a new issue."
 impacted_packages:
   - purl: pkg:npm/jquery
-    affected_versions: vers:npm/>=1.2.0|<3.5.0
+    affected_versions: vers:npm/>=1.12.0|<3.5.0
     fixed_versions: vers:npm/3.5.0
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:nuget/jquery
-    affected_versions: vers:nuget/>=1.2.0|<3.5.0
+    affected_versions: vers:nuget/>=1.12.0|<3.5.0
     fixed_versions: vers:nuget/3.5.0
     fixed_in_commits: []
     introduced_in_commits: []
@@ -30,7 +30,7 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.webjars.npm/jquery
-    affected_versions: vers:maven/>=1.2.0|<3.5.0
+    affected_versions: vers:maven/>=1.12.0|<3.5.0
     fixed_versions: vers:maven/3.5.0
     fixed_in_commits: []
     introduced_in_commits: []
@@ -45,7 +45,7 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/components/jquery
-    affected_versions: vers:composer/>=1.2.0|<3.5.0
+    affected_versions: vers:composer/>=1.12.0|<3.5.0
     fixed_versions: vers:composer/3.5.0
     fixed_in_commits: []
     introduced_in_commits: []
@@ -63,19 +63,10 @@ severities:
 weaknesses:
   - CWE-79
 references:
-  - url: http://lists.opensuse.org/opensuse-security-announce/2020-07/msg00067.html
-    reference_type:
-    reference_id:
-  - url: http://lists.opensuse.org/opensuse-security-announce/2020-07/msg00085.html
-    reference_type:
-    reference_id:
-  - url: http://lists.opensuse.org/opensuse-security-announce/2020-11/msg00039.html
-    reference_type:
-    reference_id:
-  - url: http://packetstormsecurity.com/files/162159/jQuery-1.2-Cross-Site-Scripting.html
-    reference_type:
-    reference_id:
   - url: https://blog.jquery.com/2020/04/10/jquery-3-5-0-released
+    reference_type:
+    reference_id:
+  - url: http://security.netapp.com/advisory/ntap-20200511-0006
     reference_type:
     reference_id:
   - url: https://github.com/jquery/jquery
@@ -153,16 +144,22 @@ references:
   - url: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/VOE7P7APPRQKD4FGNHBKJPDY6FFCOH3W
     reference_type:
     reference_id:
-  - url: https://security.netapp.com/advisory/ntap-20200511-0006
+  - url: https://lists.opensuse.org/opensuse-security-announce/2020-07/msg00067.html
+    reference_type:
+    reference_id:
+  - url: https://lists.opensuse.org/opensuse-security-announce/2020-07/msg00085.html
+    reference_type:
+    reference_id:
+  - url: https://lists.opensuse.org/opensuse-security-announce/2020-11/msg00039.html
+    reference_type:
+    reference_id:
+  - url: https://packetstormsecurity.com/files/162159/jQuery-1.2-Cross-Site-Scripting.html
     reference_type:
     reference_id:
   - url: https://www.debian.org/security/2020/dsa-4693
     reference_type:
     reference_id:
   - url: https://www.drupal.org/sa-core-2020-002
-    reference_type:
-    reference_id:
-  - url: https://www.npmjs.com/advisories/1518
     reference_type:
     reference_id:
   - url: https://www.oracle.com/security-alerts/cpuApr2021.html
@@ -204,18 +201,12 @@ references:
   - url: https://www.tenable.com/security/tns-2021-10
     reference_type:
     reference_id:
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/webapps/49766.txt
-    reference_type: exploit
-    reference_id: CVE-2020-11022
   - url: https://nvd.nist.gov/vuln/detail/CVE-2020-11022
     reference_type:
     reference_id: CVE-2020-11022
   - url: https://github.com/rubysec/ruby-advisory-db/blob/master/gems/jquery-rails/CVE-2020-11022.yml
     reference_type:
     reference_id: CVE-2020-11022.YML
-  - url: https://github.com/advisories/GHSA-gxr4-xjj5-5px2
-    reference_type:
-    reference_id: GHSA-gxr4-xjj5-5px2
   - url: https://security.gentoo.org/glsa/202007-03
     reference_type:
     reference_id: GLSA-202007-03

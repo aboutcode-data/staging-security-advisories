@@ -1,0 +1,63 @@
+advisory_id: GHSA-r54v-qq87-px5r
+datasource_id: github_osv_importer_v2/GHSA-r54v-qq87-px5r
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-r54v-qq87-px5r/GHSA-r54v-qq87-px5r.json
+aliases:
+  - CVE-2026-32272
+summary: |
+  Craft Commerce hasVariant/hasProduct Blind SQL Injection
+  ## Overview
+
+  Craft Commerce’s `ProductQuery::hasVariant` and `VariantQuery::hasProduct` properties bypass the `unset()` blocklist added to `ElementIndexesController` in GHSA-2453-mppf-46cj.
+
+  The blocklist only strips top-level Yii2 Query properties (`where`, `orderBy`, etc.), but `hasVariant` and `hasProduct` pass
+  through untouched. Internally, these properties call `Craft::configure()` on a subquery without sanitization, re-introducing SQL injection via `criteria[hasVariant][where]=INJECTED_SQL`.
+
+  An authenticated control panel user can perform boolean-based blind SQL injection through the patched `ElementIndexesController` and extract arbitrary database contents.
+
+  ## Impact
+
+  * Full database read access via blind SQL injection
+  * Privilege escalation via security key extraction → forged admin sessions
+
+  ## Prerequisites
+  * Authenticated control panel user
+  * Commerce plugin installed
+  * Products with variants in the database
+impacted_packages:
+  - purl: pkg:composer/craftcms/commerce
+    affected_versions: vers:composer/>=5.0.0|<5.6.0
+    fixed_versions: vers:composer/5.6.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.7'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-r54v-qq87-px5r/GHSA-r54v-qq87-px5r.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-89
+references:
+  - url: https://github.com/craftcms/commerce
+    reference_type:
+    reference_id:
+  - url: https://github.com/craftcms/commerce/pull/4232
+    reference_type:
+    reference_id:
+  - url: https://github.com/craftcms/commerce/releases/tag/5.6.0
+    reference_type:
+    reference_id:
+  - url: https://github.com/craftcms/commerce/security/advisories/GHSA-r54v-qq87-px5r
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32272
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-2453-mppf-46cj
+    reference_type:
+    reference_id: GHSA-2453-mppf-46cj

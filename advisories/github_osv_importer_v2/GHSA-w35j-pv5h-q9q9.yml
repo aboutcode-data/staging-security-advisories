@@ -4,14 +4,13 @@ datasource_url: https://github.com/github/advisory-database/blob/main/advisories
 aliases:
   - CVE-2026-34481
 summary: |
-  Apache Log4j's JsonTemplateLayout produces invalid JSON output when log events contain non-finite floating-point values
-  Apache Log4j's JsonTemplateLayout https://logging.apache.org/log4j/2.x/manual/json-template-layout.html , in versions up to and including 2.25.3, produces invalid JSON output when log events contain non-finite floating-point values (NaN, Infinity, or -Infinity), which are prohibited by RFC 8259. This may cause downstream log processing systems to reject or fail to index affected records.
+  Apache Log4j JSON Template Layout: Improper serialization of non-finite floating-point values in JsonTemplateLayout
+  Apache Log4j's [`JsonTemplateLayout`](https://logging.apache.org/log4j/2.x/manual/json-template-layout.html), in versions up to and including 2.25.3, produces invalid JSON output when log events contain non-finite floating-point values (`NaN`, `Infinity`, or `-Infinity`), which are prohibited by RFC 8259. This may cause downstream log processing systems to reject or fail to index affected records.
 
   An attacker can exploit this issue only if both of the following conditions are met:
 
-    *  The application uses JsonTemplateLayout.
-    *  The application logs a MapMessage containing an attacker-controlled floating-point value.
-
+    *  The application uses `JsonTemplateLayout`.
+    *  The application logs a `MapMessage` containing an attacker-controlled floating-point value.
 
   Users are advised to upgrade to Apache Log4j JSON Template Layout 2.25.4, which corrects this issue.
 impacted_packages:
@@ -21,8 +20,8 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.logging.log4j/log4j-layout-template-json
-    affected_versions: vers:maven/>=3.0.0-alpha1|<3.0.0-beta3
-    fixed_versions: vers:maven/3.0.0-beta3
+    affected_versions: vers:maven/>=3.0.0-alpha1|<=3.0.0-beta3
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
 severities:

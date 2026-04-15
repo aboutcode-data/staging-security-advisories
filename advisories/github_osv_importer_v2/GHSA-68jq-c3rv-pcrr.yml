@@ -1,0 +1,50 @@
+advisory_id: GHSA-68jq-c3rv-pcrr
+datasource_id: github_osv_importer_v2/GHSA-68jq-c3rv-pcrr
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-68jq-c3rv-pcrr/GHSA-68jq-c3rv-pcrr.json
+aliases: []
+summary: |
+  graphql-php is affected by a Denial of Service via quadratic complexity in OverlappingFieldsCanBeMerged validation
+  The `OverlappingFieldsCanBeMerged` validation rule exhibits quadratic time complexity when processing queries with many repeated fields sharing the same response name. An attacker can send a crafted query like `{ hello hello hello ... }` with thousands of repeated fields, causing excessive CPU usage during validation before execution begins.
+
+  This is not mitigated by existing QueryDepth or QueryComplexity rules.
+
+  **Observed impact (tested on v15.31.4):**
+  - 1000 fields: ~0.6s
+  - 2000 fields: ~2.4s
+  - 3000 fields: ~5.3s
+  - 5000 fields: request timeout (>20s)
+
+  **Root cause:** `collectConflictsWithin()` performs O(n²) pairwise comparisons of all fields with the same response name. For identical repeated fields, every comparison returns "no conflict" but the quadratic iteration count causes resource exhaustion.
+
+  **Fix:** Deduplicate structurally identical fields before pairwise comparison, reducing the complexity from O(n²) to O(u²) where u is the number of unique field signatures (typically 1 for this attack pattern).
+
+  **Credit:** Ashwak N (ashwakn04@gmail.com)
+impacted_packages:
+  - purl: pkg:composer/webonyx/graphql-php
+    affected_versions: vers:composer/<=15.31.4
+    fixed_versions: vers:composer/15.31.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-68jq-c3rv-pcrr/GHSA-68jq-c3rv-pcrr.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-407
+references:
+  - url: https://github.com/webonyx/graphql-php
+    reference_type:
+    reference_id:
+  - url: https://github.com/webonyx/graphql-php/releases/tag/v15.31.5
+    reference_type:
+    reference_id:
+  - url: https://github.com/webonyx/graphql-php/security/advisories/GHSA-68jq-c3rv-pcrr
+    reference_type:
+    reference_id:

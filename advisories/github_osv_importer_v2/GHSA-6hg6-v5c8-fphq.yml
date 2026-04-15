@@ -1,0 +1,66 @@
+advisory_id: GHSA-6hg6-v5c8-fphq
+datasource_id: github_osv_importer_v2/GHSA-6hg6-v5c8-fphq
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-6hg6-v5c8-fphq/GHSA-6hg6-v5c8-fphq.json
+aliases:
+  - CVE-2026-34477
+summary: |
+  Apache Log4j Core: `verifyHostName` attribute silently ignored in TLS configuration
+  The fix for  CVE-2025-68161 was incomplete: it addressed hostname verification only when enabled via the  [`log4j2.sslVerifyHostName`](https://logging.apache.org/log4j/2.x/manual/systemproperties.html#log4j2.sslVerifyHostName) system property, but not when configured through the [`verifyHostName`](https://logging.apache.org/log4j/2.x/manual/appenders/network.html#SslConfiguration-attr-verifyHostName) attribute of the `<Ssl>` element.
+
+  Although the `verifyHostName` configuration attribute was introduced in Log4j Core 2.12.0, it was silently ignored in all versions through 2.25.3, leaving TLS connections vulnerable to interception regardless of the configured value.
+
+  A network-based attacker may be able to perform a man-in-the-middle attack when all of the following conditions are met:
+
+    *  An SMTP, Socket, or Syslog appender is in use.
+    *  TLS is configured via a nested <Ssl> element.
+    *  The attacker can present a certificate issued by a CA trusted by the appender's configured trust store, or by the default Java trust store if none is configured.
+
+  This issue does not affect users of the HTTP appender, which uses a separate [`verifyHostname`](https://logging.apache.org/log4j/2.x/manual/appenders/network.html#HttpAppender-attr-verifyHostName) attribute that was not subject to this bug and verifies host names by default.
+
+  Users are advised to upgrade to Apache Log4j Core 2.25.4, which corrects this issue.
+impacted_packages:
+  - purl: pkg:maven/org.apache.logging.log4j/log4j-core
+    affected_versions: vers:maven/>=2.12.0|<2.25.4
+    fixed_versions: vers:maven/2.25.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.logging.log4j/log4j-core
+    affected_versions: vers:maven/>=3.0.0-alpha1|<=3.0.0-beta3
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:L/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-6hg6-v5c8-fphq/GHSA-6hg6-v5c8-fphq.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-297
+references:
+  - url: https://github.com/apache/logging-log4j2
+    reference_type:
+    reference_id:
+  - url: https://logging.apache.org/cyclonedx/vdr.xml
+    reference_type:
+    reference_id:
+  - url: https://logging.apache.org/log4j/2.x/manual/appenders/network.html#SslConfiguration-attr-verifyHostName
+    reference_type:
+    reference_id:
+  - url: https://github.com/apache/logging-log4j2/pull/4075
+    reference_type: other
+    reference_id: 4075
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-34477
+    reference_type:
+    reference_id: CVE-2026-34477
+  - url: https://lists.apache.org/thread/lkx8cl46t2bvkcwfcb2pd43ygc097lq4
+    reference_type: advisory
+    reference_id: lkx8cl46t2bvkcwfcb2pd43ygc097lq4
+  - url: https://logging.apache.org/security.html#CVE-2026-34477
+    reference_type: advisory
+    reference_id: security.html#CVE-2026-34477

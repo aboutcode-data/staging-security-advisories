@@ -1,10 +1,14 @@
 advisory_id: GHSA-gc59-r5jq-98qw
 datasource_id: github_osv_importer_v2/GHSA-gc59-r5jq-98qw
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-gc59-r5jq-98qw/GHSA-gc59-r5jq-98qw.json
-aliases:
-  - CVE-2026-5795
+aliases: []
 summary: |
-  Eclipse Jetty: Early return from the JASPIAuthenticator code can potentially no clear ThreadLocal variables
+  Duplicate Advisory: Eclipse Jetty: Early return from the JASPIAuthenticator code can potentially no clear ThreadLocal variables
+  ## Duplicate Advisory
+
+  This advisory has been withdrawn because it is a duplicate of GHSA-r7p8-xq5m-436c. This link is maintained to preserve external references.
+
+  ## Original Description
   In Eclipse Jetty, the class JASPIAuthenticator initiates the authentication checks, which set two ThreadLocal variable.
 
 
@@ -13,16 +17,6 @@ summary: |
 
   A subsequent request using the same thread inherits the ThreadLocal values, leading to a broken access control and privilege escalation.
 impacted_packages:
-  - purl: pkg:maven/org.eclipse.jetty.ee10/jetty-ee10
-    affected_versions: vers:maven/>=12.1.0|<12.1.7
-    fixed_versions: vers:maven/12.1.7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.eclipse.jetty.ee10/jetty-ee10
-    affected_versions: vers:maven/>=12.0.0|<12.0.33
-    fixed_versions: vers:maven/12.0.33
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:maven/org.eclipse.jetty.ee10/jetty-ee10
     affected_versions: vers:maven/>=11.0.0|<11.0.28
     fixed_versions: vers:maven/11.0.28
@@ -36,6 +30,16 @@ impacted_packages:
   - purl: pkg:maven/org.eclipse.jetty.ee10/jetty-ee10
     affected_versions: vers:maven/>=9.4.0|<9.4.60
     fixed_versions: vers:maven/9.4.60
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.eclipse.jetty.ee10/jetty-ee10
+    affected_versions: vers:maven/>=12.1.0|<12.1.7
+    fixed_versions: vers:maven/12.1.7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.eclipse.jetty.ee10/jetty-ee10
+    affected_versions: vers:maven/>=12.0.0|<12.0.33
+    fixed_versions: vers:maven/12.0.33
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
