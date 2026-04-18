@@ -1,0 +1,37 @@
+advisory_id: npm/openclaw/GHSA-g2f6-pwvx-r275
+datasource_id: gitlab_importer_v2/npm/openclaw/GHSA-g2f6-pwvx-r275
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-g2f6-pwvx-r275.yml
+aliases:
+  - GHSA-g2f6-pwvx-r275
+summary: |
+  OpneClaw accepts unsanitized iMessage attachment paths which allowed SCP remote-path command injection
+  `openclaw` versions `<= 2026.3.12` accepted unsanitized iMessage remote attachment paths when staging files over SCP, allowing shell metacharacters in the remote path operand.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.3.13
+    fixed_versions: vers:npm/2026.3.13
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-g2f6-pwvx-r275.yml
+weaknesses:
+  - CWE-1035
+  - CWE-937
+  - CWE-78
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/a54bf71b4c0cbe554a84340b773df37ee8e959de
+    reference_type: other
+    reference_id: a54bf71b4c0cbe554a84340b773df37ee8e959de
+  - url: https://github.com/advisories/GHSA-g2f6-pwvx-r275
+    reference_type:
+    reference_id: GHSA-g2f6-pwvx-r275
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-g2f6-pwvx-r275
+    reference_type: advisory
+    reference_id: GHSA-g2f6-pwvx-r275

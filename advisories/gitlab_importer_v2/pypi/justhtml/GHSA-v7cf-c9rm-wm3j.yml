@@ -1,0 +1,37 @@
+advisory_id: pypi/justhtml/GHSA-v7cf-c9rm-wm3j
+datasource_id: gitlab_importer_v2/pypi/justhtml/GHSA-v7cf-c9rm-wm3j
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/pypi/justhtml/GHSA-v7cf-c9rm-wm3j.yml
+aliases:
+  - GHSA-v7cf-c9rm-wm3j
+summary: |
+  Uncontrolled recursion DoS in JustHTML() via deeply nested HTML
+  justhtml through 1.9.1 allows denial of service via deeply nested HTML. During parsing, `JustHTML.__init__()` always reaches `TreeBuilder.finish()`, which unconditionally calls `_populate_selectedcontent()`. That function recursively traverses the DOM via `_find_elements()` / `_find_element()` without a depth bound, allowing attacker-controlled deeply nested input to trigger an unhandled `RecursionError` on CPython. Depending on the host application's exception handling, this can abort parsing, fail requests, or terminate a worker/process.
+impacted_packages:
+  - purl: pkg:pypi/justhtml
+    affected_versions: vers:pypi/<1.10.0
+    fixed_versions: vers:pypi/1.10.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/pypi/justhtml/GHSA-v7cf-c9rm-wm3j.yml
+weaknesses:
+  - CWE-674
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/EmilStenstrom/justhtml
+    reference_type:
+    reference_id:
+  - url: https://github.com/EmilStenstrom/justhtml/releases/tag/v1.10.0
+    reference_type:
+    reference_id:
+  - url: https://github.com/EmilStenstrom/justhtml/security/advisories/GHSA-v7cf-c9rm-wm3j
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-v7cf-c9rm-wm3j
+    reference_type:
+    reference_id: GHSA-v7cf-c9rm-wm3j
