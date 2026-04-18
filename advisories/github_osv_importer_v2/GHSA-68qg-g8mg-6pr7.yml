@@ -8,6 +8,10 @@ summary: |
 
   An unauthenticated attacker can achieve full remote code execution on any network-accessible Paperclip instance running in `authenticated` mode with default configuration. No user interaction, no credentials, just the target's address. The entire chain is six API calls.
 
+  I verified every step against the latest version. I have a fully automated PoC script and a video recording available.
+
+  Discord: sagi03581
+
   ## Steps to Reproduce
 
   The attack chains four independent flaws to escalate from zero access to RCE:
@@ -208,13 +212,6 @@ summary: |
     assertCompanyAccess(req, req.body.target.companyId);
   }
   ```
-
-  ## Contact
-
-  Discord: sagi03581
-
-
-  https://github.com/user-attachments/assets/50c4520a-9ea1-48bd-95b5-8e370d8110c3
 impacted_packages:
   - purl: pkg:npm/paperclipai
     affected_versions: vers:npm/<2026.410.0

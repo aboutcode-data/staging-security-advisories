@@ -27,6 +27,11 @@ summary: |
   This bug only affects users of Cranelift on aarch64. Cranelift on other platforms is not affected. Additionally this only affects 64-bit WebAssembly linear memories, so if `Config::wasm_memory64` is disabled then hosts are not affected. Note that `Config::wasm_memory64` is enabled by default. If spectre mitigations are enabled, which are enabled by default, then hosts are not affected by this issue.
 impacted_packages: []
 severities:
+  - score: '7.8'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-jhxm-h53p-jm7w/GHSA-jhxm-h53p-jm7w.json
   - score: '9.0'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H

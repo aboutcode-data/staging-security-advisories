@@ -8,8 +8,8 @@ summary: |
   Remote unauthenticated attackers can overwrite arbitrary server files with attacker-controllable data. The data that the attacker can control is not entirely arbitrary. h2o writes a CSV/XLS/etc file to disk, so the attacker data is wrapped in quotations and starts with "C1", if they're exporting as CSV.
 impacted_packages:
   - purl: pkg:pypi/h2o
-    affected_versions: vers:pypi/<=3.44.0.2
-    fixed_versions:
+    affected_versions: vers:pypi/<3.46.0.1
+    fixed_versions: vers:pypi/3.46.0.1
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -28,6 +28,9 @@ weaknesses:
   - CWE-73
 references:
   - url: https://github.com/h2oai/h2o-3
+    reference_type:
+    reference_id:
+  - url: https://github.com/h2oai/h2o-3/commit/e8884f5187eb81311877c5f0dd4d6d9c70f33d78
     reference_type:
     reference_id:
   - url: https://huntr.com/bounties/a5d003dc-c23e-4c98-8dcf-35ba9252fa3c

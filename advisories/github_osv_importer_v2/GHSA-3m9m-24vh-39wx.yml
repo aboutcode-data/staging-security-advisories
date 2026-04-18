@@ -1,0 +1,58 @@
+advisory_id: GHSA-3m9m-24vh-39wx
+datasource_id: github_osv_importer_v2/GHSA-3m9m-24vh-39wx
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-3m9m-24vh-39wx/GHSA-3m9m-24vh-39wx.json
+aliases: []
+summary: |
+  Server-Side Request Forgery (SSRF) in Craft CMS with Asset Uploads Mutations
+  ## Required Permissions
+
+  The exploitation requires a few permissions to be enabled in the used GraphQL schema:
+
+  * "Edit assets in the <VolumeName> volume"
+  * "Create assets in the <VolumeName> volume"
+
+  ## Details
+
+  The implementation fails to restrict the URL Scheme. While the application is intended to "upload assets", there is no whitelist forcing `http` or `https`. This allows attackers to use the Gopher protocol to wrap raw TCP commands.
+
+  **Impact:** Combined with the DWORD bypass, an attacker can hit internal services without triggering any "127.0.0.1" string-matching filters.
+
+  **Example Payload:** gopher://2130706433:6379/_FLUSHALL (Targets local Redis via DWORD).
+
+  **Remediation Strategy**
+
+  To prevent mathematical IP obfuscation, the application must normalize the hostname before validation.
+impacted_packages:
+  - purl: pkg:composer/craftcms/cms
+    affected_versions: vers:composer/<=5.9.14
+    fixed_versions: vers:composer/5.9.15
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/craftcms/cms
+    affected_versions: vers:composer/<=4.17.8
+    fixed_versions: vers:composer/4.17.9
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.5'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N/E:P
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-3m9m-24vh-39wx/GHSA-3m9m-24vh-39wx.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-918
+references:
+  - url: https://github.com/craftcms/cms
+    reference_type:
+    reference_id:
+  - url: https://github.com/craftcms/cms/commit/d20aecfaa0eae076c4154be3b17e1f9fa05ce46f
+    reference_type:
+    reference_id:
+  - url: https://github.com/craftcms/cms/security/advisories/GHSA-3m9m-24vh-39wx
+    reference_type:
+    reference_id:

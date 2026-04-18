@@ -1,7 +1,8 @@
 advisory_id: GHSA-pr3g-phhr-h8fh
 datasource_id: github_osv_importer_v2/GHSA-pr3g-phhr-h8fh
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-pr3g-phhr-h8fh/GHSA-pr3g-phhr-h8fh.json
-aliases: []
+aliases:
+  - CVE-2026-6204
 summary: "LibreNMS is Vulnerable to Remote Code Execution by Arbitrary File Write\n### Summary\n\
   A vulnerability has been identified that allows an authenticated administrator to execute\
   \ arbitrary code on the host server. By modifying the binary path settings for built-in network\
@@ -47,9 +48,9 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
-  - score: '7.6'
+  - score: '8.5'
     scoring_system: cvssv4
-    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N
     published_at: None
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-pr3g-phhr-h8fh/GHSA-pr3g-phhr-h8fh.json
   - score: HIGH
@@ -58,7 +59,6 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-79
   - CWE-78
 references:
   - url: https://github.com/librenms/librenms
@@ -70,3 +70,9 @@ references:
   - url: https://github.com/librenms/librenms/security/advisories/GHSA-pr3g-phhr-h8fh
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-6204
+    reference_type:
+    reference_id:
+  - url: https://projectblack.io/blog/librenms-authenticated-rce-and-xss/#binary-path-rce-poc
+    reference_type: exploit
+    reference_id: '#binary-path-rce-poc'

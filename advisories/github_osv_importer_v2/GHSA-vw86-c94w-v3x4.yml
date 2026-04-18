@@ -1,133 +1,28 @@
 advisory_id: GHSA-vw86-c94w-v3x4
 datasource_id: github_osv_importer_v2/GHSA-vw86-c94w-v3x4
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-vw86-c94w-v3x4/GHSA-vw86-c94w-v3x4.json
-aliases: []
+aliases:
+  - CVE-2026-40318
 summary: |
   SiYuan: Publish Reader Path Traversal Delete via `removeUnusedAttributeView`
-  SiYuan's publish/read-only boundary can be broken through `/api/av/removeUnusedAttributeView`.
+  ## Summary
 
-  A publish-service Reader context can call this endpoint because it is protected only by `CheckAuth`, and publish requests are forwarded upstream with a valid `RoleReader` JWT. The handler accepts attacker-controlled `id` input and passes it directly into a filesystem delete sink:
+  The endpoint `/api/av/removeUnusedAttributeView` is vulnerable to a **path traversal (CWE-22)** that allows an attacker to delete arbitrary `.json` files on the server.
 
-  - no admin check
-  - no readonly check
-  - no node-ID validation
-  - no subpath enforcement
-  - no verification that the target AV is actually unused
+  The issue arises because user-controlled input (`id`) is directly used in filesystem path construction without validation or restriction.
 
-  Because the sink builds the file path with:
+  > Access to this endpoint (e.g., via a Reader-role or publish context) is considered a precondition and not part of the vulnerability. The root cause is unsafe path handling.
 
-  ```go
-  filepath.Join(util.DataDir, "storage", "av", id+".json")
-  ```
+  ---
 
-  an attacker can supply `../` path traversal sequences and delete arbitrary `.json` files reachable from the workspace, rather than only `data/storage/av/<id>.json`.
+  ## Steps To Reproduce
 
-  This is a real write/destructive authorization bug, not a `visible=false` listing issue.
-
-  ## Impact
-
-  An attacker with publish-reader access can delete arbitrary `.json` files under the workspace path reachable from `data/storage/av/` using traversal payloads.
-
-  Examples of realistic targets:
-
-  - `../local` -> `data/storage/local.json`
-  - `../../storage/recent-doc` -> `data/storage/recent-doc.json`
-  - `../../storage/outline` -> `data/storage/outline.json`
-  - `../../storage/criteria` -> `data/storage/criteria.json`
-  - `../../../conf/conf` -> `conf/conf.json`
-
-  Practical impact includes:
-
-  - persistent destruction of Attribute View definitions
-  - deletion of global workspace configuration
-  - deletion of local storage and outline state
-  - corruption of user state that survives reload
-  - forced reset/recovery flows or broken UI behavior
-
-  Even if some files can be regenerated, this is still a publish-reader to persistent server-side delete primitive against workspace data.
-
-  ## Source to Sink
-
-  ### Source 1: publish service issues Reader-role JWTs
-
-  `kernel/server/proxy/publish.go`
-
-  The publish reverse proxy forwards requests to the kernel and injects `X-Auth-Token`.
-
-  ### Source 2: publish accounts are Reader-role accounts
-
-  `kernel/model/auth.go`
-
-  Publish accounts are created with `RoleReader`.
-
-  ### Source 3: generic auth accepts Reader role
-
-  `kernel/model/session.go`
-
-  `CheckAuth` allows:
-
-  - `RoleAdministrator`
-  - `RoleEditor`
-  - `RoleReader`
-
-  ### Source 4: dangerous route is only guarded by `CheckAuth`
-
-  [`kernel/api/router.go#L507`](/root/audit/siyuan/kernel/api/router.go#L507)
-
-  ```go
-  ginServer.Handle("POST", "/api/av/removeUnusedAttributeView", model.CheckAuth, removeUnusedAttributeView)
-  ```
-
-  ### Source 5: attacker-controlled `id` is passed straight to model
-
-  [`kernel/api/av.go#L32-L45`](/root/audit/siyuan/kernel/api/av.go#L32)
-
-  ```go
-  avID := arg["id"].(string)
-  model.RemoveUnusedAttributeView(avID)
-  ```
-
-  There is no:
-
-  - `util.InvalidIDPattern(...)`
-  - allowlist
-  - normalization check
-  - verification that the caller should modify this object
-
-  ### Sink: path traversal reaches filesystem delete
-
-  [`kernel/model/attribute_view.go#L49-L76`](/root/audit/siyuan/kernel/model/attribute_view.go#L49)
-
-  ```go
-  absPath := filepath.Join(util.DataDir, "storage", "av", id+".json")
-  ...
-  if err = filelock.RemoveWithoutFatal(absPath); err != nil {
-  ```
-
-  Because `id` is not validated, inputs like `../../../conf/conf` resolve outside `data/storage/av/`.
-
-  Examples:
-
-  ```text
-  ../../../conf/conf              -> <workspace>/conf/conf.json
-  ../local                        -> <workspace>/data/storage/local.json
-  ../../storage/recent-doc        -> <workspace>/data/storage/recent-doc.json
-  ../../storage/outline           -> <workspace>/data/storage/outline.json
-  ../../storage/criteria          -> <workspace>/data/storage/criteria.json
-  ```
-
-  ## Proof of Concept
-
-  Prerequisite:
-
-  - publish service enabled
-  - attacker has publish-reader access, or anonymous publish access if publish auth is disabled
-
-  Request:
+  1. Ensure the target instance has the publish service enabled (or any valid access to the endpoint).
+  2. Send the following request:
 
   ```http
   POST /api/av/removeUnusedAttributeView HTTP/1.1
-  Host: <publish-host>:6808
+  Host: <target>
   Content-Type: application/json
 
   {
@@ -135,78 +30,85 @@ summary: |
   }
   ```
 
-  Expected result:
+  3. Observe that the request is accepted.
+  4. The server resolves the path outside the intended directory and deletes the target file.
 
-  - request is accepted from publish context
-  - backend resolves target to `<workspace>/conf/conf.json`
-  - target file is removed
+  ---
 
-  Safer validation targets for testing:
+  ## Impact
 
-  ```json
-  {"id":"../local"}
-  {"id":"../../storage/recent-doc"}
-  {"id":"../../storage/outline"}
+  An attacker can delete arbitrary `.json` files within the workspace directory.
+
+  This may lead to:
+
+  * Deletion of global configuration files (e.g., `conf/conf.json`)
+  * Loss of user data and application state
+  * Corruption of workspace metadata
+  * Persistent application instability or forced recovery
+
+  This represents a **server-side arbitrary file deletion primitive**, which can have severe impact depending on the targeted files.
+
+  ---
+
+  ## Technical Details
+
+  The vulnerable code constructs file paths as follows:
+
+  ```go
+  filepath.Join(util.DataDir, "storage", "av", id+".json")
   ```
 
-  These demonstrate traversal without immediately targeting the main config file.
+  Because `id` is not validated, attackers can inject path traversal sequences such as `../` to escape the intended directory.
 
+  ### Example payloads
+
+  * `../local` → `data/storage/local.json`
+  * `../../storage/outline` → `data/storage/outline.json`
+  * `../../../conf/conf` → `conf/conf.json`
+
+  No validation or restriction is applied to:
+
+  * input format
+  * path normalization
+  * directory boundaries
+
+  ---
 
   ## Root Cause
 
-  Two separate authorization/design failures combine here:
+  * Untrusted user input (`id`) is directly used in filesystem path construction
+  * No input validation or sanitization
+  * No enforcement that the resolved path stays within the intended directory
 
-  1. publish Reader contexts are treated as fully authenticated for `CheckAuth` routes
-  2. a destructive internal endpoint trusts raw `id` input as a filesystem path component
-
-  Either issue would be dangerous; together they produce a high-impact delete primitive.
+  ---
 
   ## Remediation
 
-  ### 1. Lock the endpoint down properly
+  1. **Validate input strictly**
 
-  `/api/av/removeUnusedAttributeView` should require:
+     * Only allow valid Attribute View IDs
+     * Reject any input containing path traversal sequences
 
-  - `CheckAdminRole`
-  - `CheckReadonly`
-
-  ### 2. Validate the identifier
-
-  Reject anything that is not a valid AV/node ID. For example, enforce `util.InvalidIDPattern(...)` or an equivalent strict allowlist.
-
-  ### 3. Enforce subpath safety
-
-  After path construction, verify the resolved path remains under the intended directory:
+  2. **Enforce directory boundaries**
 
   ```go
   base := filepath.Join(util.DataDir, "storage", "av")
   absPath := filepath.Join(base, id+".json")
+
   if !util.IsSubPath(base, absPath) {
       return error
   }
   ```
 
-  ### 4. Actually verify "unused"
+  3. **Normalize paths before use**
 
-  Before deletion, confirm that the requested AV is in the computed unused set. The current single-delete API does not do that at all.
+     * Ensure canonical paths cannot escape the base directory
 
-  ### 5. Add regression tests
+  4. **Add additional logical checks**
 
-  Add negative tests proving a publish-reader context cannot:
+     * Verify that the target object is valid and allowed to be deleted
 
-  - call this endpoint successfully
-  - delete a valid AV directly
-  - pass traversal strings such as `../local`
-  - escape `data/storage/av/`
-
-  ## Key References
-
-  - Route exposure: [`kernel/api/router.go#L507`](/root/audit/siyuan/kernel/api/router.go#L507)
-  - Handler: [`kernel/api/av.go#L32`](/root/audit/siyuan/kernel/api/av.go#L32)
-  - Delete sink: [`kernel/model/attribute_view.go#L49`](/root/audit/siyuan/kernel/model/attribute_view.go#L49)
-  - Publish proxy token forwarding: [`kernel/server/proxy/publish.go`](/root/audit/siyuan/kernel/server/proxy/publish.go)
-  - Reader JWT issuance: [`kernel/model/auth.go`](/root/audit/siyuan/kernel/model/auth.go)
-  - `CheckAuth` accepting `RoleReader`: [`kernel/model/session.go#L201`](/root/audit/siyuan/kernel/model/session.go#L201)
+  ---
 impacted_packages: []
 severities:
   - score: '8.5'

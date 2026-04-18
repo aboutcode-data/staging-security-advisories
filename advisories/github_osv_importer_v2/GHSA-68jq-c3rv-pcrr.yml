@@ -1,7 +1,8 @@
 advisory_id: GHSA-68jq-c3rv-pcrr
 datasource_id: github_osv_importer_v2/GHSA-68jq-c3rv-pcrr
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-68jq-c3rv-pcrr/GHSA-68jq-c3rv-pcrr.json
-aliases: []
+aliases:
+  - CVE-2026-40476
 summary: |
   graphql-php is affected by a Denial of Service via quadratic complexity in OverlappingFieldsCanBeMerged validation
   The `OverlappingFieldsCanBeMerged` validation rule exhibits quadratic time complexity when processing queries with many repeated fields sharing the same response name. An attacker can send a crafted query like `{ hello hello hello ... }` with thousands of repeated fields, causing excessive CPU usage during validation before execution begins.

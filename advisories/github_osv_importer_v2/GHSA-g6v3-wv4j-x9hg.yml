@@ -1,0 +1,60 @@
+advisory_id: GHSA-g6v3-wv4j-x9hg
+datasource_id: github_osv_importer_v2/GHSA-g6v3-wv4j-x9hg
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-g6v3-wv4j-x9hg/GHSA-g6v3-wv4j-x9hg.json
+aliases:
+  - CVE-2026-25125
+summary: |
+  October Rain has Environment Variable Exfiltration via INI Parser Interpolation
+  A server-side information disclosure vulnerability was identified in the INI settings parser. PHP's `parse_ini_string()` function supports `${}` syntax for environment variable interpolation. Attackers with Editor access could inject `${APP_KEY}`, `${DB_PASSWORD}`, or similar patterns into CMS page settings fields, causing sensitive environment variables to be resolved and stored in the template. These values were then returned to the attacker when the page was reopened.
+
+  ### Impact
+  - Exfiltration of sensitive environment variables (APP_KEY, DB credentials, AWS keys, etc.)
+  - Could enable further attacks: database access, cookie forgery, AWS resource access
+  - Requires authenticated backend access with Editor permissions
+  - Only relevant when `cms.safe_mode` is enabled (otherwise direct PHP injection is already possible)
+
+  ### Patches
+  The vulnerability has been patched in v3.7.14 and v4.1.10. All users are encouraged to upgrade to the latest patched version.
+
+  ### Workarounds
+  If upgrading immediately is not possible:
+  - Restrict Editor tool access to fully trusted administrators only
+  - Ensure database and cloud service credentials are not accessible from the web server's network
+
+  ### References
+  - Reported by Proactive Testing Team (PTT)
+impacted_packages:
+  - purl: pkg:composer/october/rain
+    affected_versions: vers:composer/<=4.1.9
+    fixed_versions: vers:composer/4.1.10
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/october/rain
+    affected_versions: vers:composer/<=3.7.13
+    fixed_versions: vers:composer/3.7.14
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '4.9'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-g6v3-wv4j-x9hg/GHSA-g6v3-wv4j-x9hg.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-94
+  - CWE-200
+references:
+  - url: https://github.com/octobercms/october
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-25125
+    reference_type:
+    reference_id:
+  - url: https://github.com/octobercms/october/security/advisories/GHSA-g6v3-wv4j-x9hg
+    reference_type: other
+    reference_id: GHSA-g6v3-wv4j-x9hg

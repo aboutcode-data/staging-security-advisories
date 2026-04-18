@@ -1,8 +1,9 @@
 advisory_id: GHSA-527g-3w9m-29hv
 datasource_id: github_osv_importer_v2/GHSA-527g-3w9m-29hv
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-527g-3w9m-29hv/GHSA-527g-3w9m-29hv.json
-aliases: []
-summary: "LDAP Injection in mitmproxy\n### Impact\nIn mitmproxy 12.2.1 and below, the builtin\
+aliases:
+  - CVE-2026-40606
+summary: "mitmproxy has an LDAP Injection\n### Impact\nIn mitmproxy 12.2.1 and below, the builtin\
   \ LDAP proxy authentication does not correctly sanitize the username when querying the LDAP\
   \ server. This allows a malicious client to bypass authentication.\n\nOnly mitmproxy instances\
   \ using the `proxyauth` option with LDAP are affected. This option is not enabled by default.\n\

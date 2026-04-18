@@ -1,9 +1,10 @@
 advisory_id: GHSA-j98m-w3xp-9f56
 datasource_id: github_osv_importer_v2/GHSA-j98m-w3xp-9f56
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-j98m-w3xp-9f56/GHSA-j98m-w3xp-9f56.json
-aliases: []
+aliases:
+  - CVE-2026-40576
 summary: |
-  Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') in excel-mcp-server
+  excel-mcp-server has a Path Traversal issue
   ## Summary
 
   A path traversal vulnerability exists in [`excel-mcp-server`](https://github.com/haris-musa/excel-mcp-server) versions up to and including `0.1.7`. When running in SSE or Streamable-HTTP transport mode (the documented way to use this server remotely), an unauthenticated attacker on the network can read, write, and overwrite arbitrary files on the host filesystem by supplying crafted `filepath` arguments to any of the 25 exposed MCP tool handlers.

@@ -1,0 +1,46 @@
+advisory_id: GHSA-pfx2-9x9m-7ghx
+datasource_id: github_osv_importer_v2/GHSA-pfx2-9x9m-7ghx
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-pfx2-9x9m-7ghx/GHSA-pfx2-9x9m-7ghx.json
+aliases:
+  - CVE-2026-40683
+summary: |
+  OpenStack Keystone: LDAP identity backend does not convert enabled attribute to boolean
+  In OpenStack Keystone before 28.0.1, the LDAP identity backend does not convert the user enabled attribute to a boolean when the user_enabled_invert configuration option is False (the default). The _ldap_res_to_model method in the UserApi class only performed string-to-boolean conversion when user_enabled_invert was True. When False, the raw string value from LDAP (e.g., "FALSE") was used directly. Since non-empty strings are truthy in Python, users marked as disabled in LDAP were treated as enabled by Keystone, allowing them to authenticate and perform actions. All deployments using the LDAP identity backend without user_enabled_invert=True or user_enabled_emulation are affected.
+impacted_packages:
+  - purl: pkg:pypi/keystone
+    affected_versions: vers:pypi/<28.0.1
+    fixed_versions: vers:pypi/28.0.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.7'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:L/I:L/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-pfx2-9x9m-7ghx/GHSA-pfx2-9x9m-7ghx.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-843
+references:
+  - url: https://github.com/openstack/keystone
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-40683
+    reference_type:
+    reference_id:
+  - url: https://bugs.launchpad.net/keystone/+bug/2121152
+    reference_type: other
+    reference_id: 2121152
+  - url: https://bugs.launchpad.net/keystone/+bug/2141713
+    reference_type: other
+    reference_id: 2141713
+  - url: https://www.openwall.com/lists/oss-security/2026/04/14/9
+    reference_type: other
+    reference_id: 9
+  - url: https://review.opendev.org/958205
+    reference_type: other
+    reference_id: 958205

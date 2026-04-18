@@ -1,0 +1,63 @@
+advisory_id: GHSA-xp4f-g2cm-rhg7
+datasource_id: github_osv_importer_v2/GHSA-xp4f-g2cm-rhg7
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-xp4f-g2cm-rhg7/GHSA-xp4f-g2cm-rhg7.json
+aliases: []
+summary: |
+  PocketMine-MP has LogDoS by many junk properties in client data JWT in LoginPacket
+  ### Impact
+
+  Attackers can fill the body of the clientData JWT in LoginPacket with lots of junk properties, causing the server to flood warning messages, as well as wasting CPU time.
+
+  This happens because the JsonMapper instance used to process the JWT body is configured to warn on unexpected properties instead of rejecting them outright. While this behaviour increases flexibility for random changes introduced by Microsoft, it also creates vulnerabilities if not handled carefully.
+
+  This vulnerability affects PocketMine-MP servers exposed to a public network where unknown actors may have access.
+
+  ### Patches
+
+  This issue was fixed in c1d4a813fb8c21bfd8b9affd040da864b794df71 by restricting the number of unknown properties to 10, and rejecting the packet if this limit is exceeded. This continues to tolerate random additions to the JWT between versions, while preventing the logger from being abused by clients to slow down the server.
+
+  ### Workarounds
+  Plugins can handle `DataPacketReceiveEvent` to capture `LoginPacket`, and pre-process the clientData JWT to ensure it doesn't have any unusual properties in it. This can be achieved using `JsonMapper` (see the original affected code below) and setting the `bExceptionOnUndefinedProperty` flag to `true`. A `JsonMapper_Exception` will be thrown if the JWT is problematic.
+
+  However, it's important to caveat that this approach may cause login failures if any unexpected properties appear out of the blue in future versions (which has happened in the past).
+
+  ### References
+  Affected code:
+
+  https://github.com/pmmp/PocketMine-MP/blob/5.41.1/src/network/mcpe/handler/LoginPacketHandler.php#L289-L303
+  https://github.com/pmmp/PocketMine-MP/blob/5.41.1/src/network/mcpe/handler/LoginPacketHandler.php#L334-L350
+impacted_packages:
+  - purl: pkg:composer/pocketmine/pocketmine-mp
+    affected_versions: vers:composer/<5.42.1
+    fixed_versions: vers:composer/5.42.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-xp4f-g2cm-rhg7/GHSA-xp4f-g2cm-rhg7.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-779
+references:
+  - url: https://github.com/pmmp/PocketMine-MP
+    reference_type:
+    reference_id:
+  - url: https://github.com/pmmp/PocketMine-MP/blob/5.41.1/src/network/mcpe/handler/LoginPacketHandler.php#L289-L303
+    reference_type:
+    reference_id:
+  - url: https://github.com/pmmp/PocketMine-MP/blob/5.41.1/src/network/mcpe/handler/LoginPacketHandler.php#L334-L350
+    reference_type:
+    reference_id:
+  - url: https://github.com/pmmp/PocketMine-MP/commit/c1d4a813fb8c21bfd8b9affd040da864b794df71
+    reference_type:
+    reference_id:
+  - url: https://github.com/pmmp/PocketMine-MP/security/advisories/GHSA-xp4f-g2cm-rhg7
+    reference_type:
+    reference_id:

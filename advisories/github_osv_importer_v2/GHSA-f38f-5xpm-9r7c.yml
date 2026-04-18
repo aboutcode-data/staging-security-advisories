@@ -7,7 +7,12 @@ summary: |
   CairoSVG vulnerable to Exponential DoS via recursive <use> element amplification
   ## Summary
 
-  Kozea/CairoSVG has exponential denial of service via recursive `<use>` element amplification in `cairosvg/defs.py` (line ~335). This causes CPU exhaustion from a small input.
+  Kozea/CairoSVG (~300K downloads/week) has exponential denial of service via recursive `<use>` element amplification in `cairosvg/defs.py` (line ~335). This causes CPU exhaustion from a small input.
+
+  ## Severity
+
+  High — CVSS 3.1: 7.5
+  Vector: `CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H`
 
   ## Vulnerable Code
 

@@ -1,0 +1,62 @@
+advisory_id: GHSA-458j-xx4x-4375
+datasource_id: github_osv_importer_v2/GHSA-458j-xx4x-4375
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-458j-xx4x-4375/GHSA-458j-xx4x-4375.json
+aliases: []
+summary: |
+  hono Improperly Handles JSX Attribute Names Allows HTML Injection in hono/jsx SSR
+  ## Summary
+
+  Improper handling of JSX attribute names in hono/jsx allows malformed attribute keys to corrupt the generated HTML output.
+
+  When untrusted input is used as attribute keys during server-side rendering, specially crafted keys can break out of attribute or tag boundaries and inject unintended HTML.
+
+  ## Details
+
+  When rendering JSX elements to HTML strings, attribute values are escaped, but attribute names (keys) were previously inserted into the output without validation.
+
+  If an attribute name contains characters such as `"`, `>`, or whitespace, it can alter the structure of the generated HTML.
+
+  For example, malformed attribute names can:
+
+  * Break out of the current attribute and introduce unintended additional attributes
+  * Break out of the current HTML tag and inject new elements into the output
+
+  This issue arises when untrusted input (such as query parameters or form data) is used as JSX attribute keys during server-side rendering.
+
+  ## Impact
+
+  An attacker who can control attribute keys used in JSX rendering may inject unintended attributes or HTML elements into the generated output.
+
+  This may lead to:
+
+  * Injection of unexpected HTML attributes
+  * Corruption of the HTML structure
+  * Potential cross-site scripting (XSS) if combined with unsafe usage patterns
+
+  This issue affects applications that pass untrusted input as JSX attribute keys during server-side rendering.
+impacted_packages:
+  - purl: pkg:npm/hono
+    affected_versions: vers:npm/<4.12.14
+    fixed_versions: vers:npm/4.12.14
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '4.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-458j-xx4x-4375/GHSA-458j-xx4x-4375.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-79
+references:
+  - url: https://github.com/honojs/hono
+    reference_type:
+    reference_id:
+  - url: https://github.com/honojs/hono/security/advisories/GHSA-458j-xx4x-4375
+    reference_type:
+    reference_id:

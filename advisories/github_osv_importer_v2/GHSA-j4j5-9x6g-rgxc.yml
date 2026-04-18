@@ -1,0 +1,59 @@
+advisory_id: GHSA-j4j5-9x6g-rgxc
+datasource_id: github_osv_importer_v2/GHSA-j4j5-9x6g-rgxc
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-j4j5-9x6g-rgxc/GHSA-j4j5-9x6g-rgxc.json
+aliases:
+  - CVE-2026-24907
+summary: |
+  October CMS has Stored XSS in Event Log Mail Preview
+  A stored cross-site scripting (XSS) vulnerability was identified in the Event Log mail preview feature. When viewing logged mail messages, HTML content was rendered in an iframe without proper sandboxing, allowing JavaScript execution in the viewer's browser context.
+
+  ### Impact
+  - Stored XSS via mail template content rendered in Event Log
+  - Could allow privilege escalation if a superuser views a malicious log entry
+  - Requires authenticated backend access with mail template editing permissions
+  - Requires a superuser to view the specific Event Log entry to trigger
+
+  ### Patches
+  The vulnerability has been patched in v3.7.14 and v4.1.10. All users are encouraged to upgrade to the latest patched version.
+
+  ### Workarounds
+  If upgrading immediately is not possible:
+  - Restrict mail template editing permissions to fully trusted administrators only
+  - Restrict Event Log viewing permissions to minimize exposure
+
+  ### References
+  - Reported by [Chris Alupului](https://github.com/neosprings)
+impacted_packages:
+  - purl: pkg:composer/october/system
+    affected_versions: vers:composer/<=4.1.9
+    fixed_versions: vers:composer/4.1.10
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/october/system
+    affected_versions: vers:composer/<=3.7.13
+    fixed_versions: vers:composer/3.7.14
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.1'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-j4j5-9x6g-rgxc/GHSA-j4j5-9x6g-rgxc.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-79
+references:
+  - url: https://github.com/octobercms/october
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-24907
+    reference_type:
+    reference_id:
+  - url: https://github.com/octobercms/october/security/advisories/GHSA-j4j5-9x6g-rgxc
+    reference_type: other
+    reference_id: GHSA-j4j5-9x6g-rgxc

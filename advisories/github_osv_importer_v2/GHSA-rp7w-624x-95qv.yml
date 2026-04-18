@@ -1,0 +1,37 @@
+advisory_id: GHSA-rp7w-624x-95qv
+datasource_id: github_osv_importer_v2/GHSA-rp7w-624x-95qv
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-rp7w-624x-95qv/GHSA-rp7w-624x-95qv.json
+aliases:
+  - CVE-2026-2728
+summary: |
+  LibreNMS affected by an authenticated Cross-site Scripting vulnerability on the showconfig page
+  LibreNMS versions before 26.3.0 are affected by an authenticated Cross-site Scripting vulnerability on the showconfig page. Successful exploitation requires administrative privileges. Exploitation could result in XSS attacks being performed against other users with access to the page.
+impacted_packages:
+  - purl: pkg:composer/librenms/librenms
+    affected_versions: vers:composer/<26.3.0
+    fixed_versions: vers:composer/26.3.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '4.6'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:A/VC:N/VI:L/VA:N/SC:N/SI:L/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-rp7w-624x-95qv/GHSA-rp7w-624x-95qv.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-79
+references:
+  - url: https://github.com/librenms/librenms
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-2728
+    reference_type:
+    reference_id:
+  - url: https://projectblack.io/blog/librenms-authenticated-rce-and-xss/#xss-on-showconfig-page-2630
+    reference_type: exploit
+    reference_id: '#xss-on-showconfig-page-2630'

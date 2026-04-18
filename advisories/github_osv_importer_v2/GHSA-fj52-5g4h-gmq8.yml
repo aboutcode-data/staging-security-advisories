@@ -1,0 +1,56 @@
+advisory_id: GHSA-fj52-5g4h-gmq8
+datasource_id: github_osv_importer_v2/GHSA-fj52-5g4h-gmq8
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-fj52-5g4h-gmq8/GHSA-fj52-5g4h-gmq8.json
+aliases: []
+summary: |
+  pyLoad's Session Not Invalidated After Permission Changes
+  ### Summary
+  The `pyload` application does not properly invalidate or modify sessions upon changes made to a user's permissions.
+
+  ### Details
+  Whenever an administrator changes the permissions a specific account has, they do not expect that account still being able to access data that their new permissions do not allow. This is not the case for the `pyload` application, as a user with a valid session can still perform the actions.
+
+  ### PoC
+  Take a user with all the permissions, as shown below.
+  ![image](https://user-images.githubusercontent.com/44903767/294956335-0e4da84f-bf9a-42c8-87f1-f5ff35967c63.png)
+
+  We now log in as this user.
+  ![image](https://user-images.githubusercontent.com/44903767/294956539-ac6805fe-957d-4289-8ca9-2f3b6b2878a3.png)
+
+  Let us now take away all the permissions.
+  ![image](https://user-images.githubusercontent.com/44903767/294956689-757e6e08-03fd-42eb-b4a5-1ceefa6c24ed.png)
+
+  The logged in session can still be used to access everything in the application.
+  ![image](https://user-images.githubusercontent.com/44903767/294956943-fa0f23c0-a28c-4eed-89d6-1cc074feda6d.png)
+
+  ### Impact
+  Should permissions be taken away, then the user is expected not to be able to execute the actions belonging to those actions anymore.
+impacted_packages:
+  - purl: pkg:pypi/pyload-ng
+    affected_versions: vers:pypi/<=0.5.0b3.dev97
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '2.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:P
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-fj52-5g4h-gmq8/GHSA-fj52-5g4h-gmq8.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-613
+references:
+  - url: https://github.com/pyload/pyload
+    reference_type:
+    reference_id:
+  - url: https://github.com/pyload/pyload/commit/e95804fb0d06cbb07d2ba380fc494d9ff89b68c1
+    reference_type:
+    reference_id:
+  - url: https://github.com/pyload/pyload/security/advisories/GHSA-fj52-5g4h-gmq8
+    reference_type:
+    reference_id:
