@@ -1,0 +1,34 @@
+advisory_id: npm/@pdfme/schemas/GHSA-qq9g-96v4-m3cj
+datasource_id: gitlab_importer_v2/npm/@pdfme/schemas/GHSA-qq9g-96v4-m3cj
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/@pdfme/schemas/GHSA-qq9g-96v4-m3cj.yml
+aliases:
+  - GHSA-qq9g-96v4-m3cj
+summary: |
+  Cross-Site Scripting (XSS) via Select Schema Option Value Injection in @pdfme/schemas
+  The Select schema plugin in `@pdfme/schemas` constructs HTML from template-defined option values using unsanitized string interpolation and sets it via `innerHTML`, enabling arbitrary JavaScript execution.
+impacted_packages:
+  - purl: pkg:npm/%40pdfme/schemas
+    affected_versions: vers:npm/<5.5.9
+    fixed_versions: vers:npm/5.5.9
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/@pdfme/schemas/GHSA-qq9g-96v4-m3cj.yml
+weaknesses:
+  - CWE-79
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/pdfme/pdfme
+    reference_type:
+    reference_id:
+  - url: https://github.com/pdfme/pdfme/security/advisories/GHSA-qq9g-96v4-m3cj
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-qq9g-96v4-m3cj
+    reference_type:
+    reference_id: GHSA-qq9g-96v4-m3cj
