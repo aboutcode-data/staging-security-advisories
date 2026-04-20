@@ -1,0 +1,53 @@
+advisory_id: GHSA-vj45-x3pj-f4w4
+datasource_id: github_osv_importer_v2/GHSA-vj45-x3pj-f4w4
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-vj45-x3pj-f4w4/GHSA-vj45-x3pj-f4w4.json
+aliases:
+  - CVE-2026-33212
+summary: |
+  Weblate: Improper access control for pending tasks in API
+  ### Impact
+  The API for tasks didn't verify user access for pending tasks. This could expose logs of in-progress operations to users who don't have access to given scope.
+
+  ### Patches
+  * https://github.com/WeblateOrg/weblate/pull/18515
+
+  ### Workarounds
+  The attacker needs to guess the random UUID of the task, so exploiting this is unlikely with the default API rate limits.
+
+  ### References
+  This issue was identified by Michal Čihař.
+impacted_packages:
+  - purl: pkg:pypi/weblate
+    affected_versions: vers:pypi/<5.17
+    fixed_versions: vers:pypi/5.17
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '3.1'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-vj45-x3pj-f4w4/GHSA-vj45-x3pj-f4w4.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-284
+references:
+  - url: https://github.com/WeblateOrg/weblate
+    reference_type:
+    reference_id:
+  - url: https://github.com/WeblateOrg/weblate/pull/18515
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33212
+    reference_type:
+    reference_id:
+  - url: https://github.com/WeblateOrg/weblate/commit/4e06b12cd05d087db68384e09d5f70fe883f2b70
+    reference_type: other
+    reference_id: 4e06b12cd05d087db68384e09d5f70fe883f2b70
+  - url: https://github.com/WeblateOrg/weblate/security/advisories/GHSA-vj45-x3pj-f4w4
+    reference_type: other
+    reference_id: GHSA-vj45-x3pj-f4w4

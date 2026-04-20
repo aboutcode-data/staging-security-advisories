@@ -1,0 +1,50 @@
+advisory_id: GHSA-phv5-vq5p-qhp7
+datasource_id: github_osv_importer_v2/GHSA-phv5-vq5p-qhp7
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-phv5-vq5p-qhp7/GHSA-phv5-vq5p-qhp7.json
+aliases:
+  - CVE-2026-31987
+summary: "Apache Airflow: JWT token appearing in logs\nJWT Tokens used by tasks were exposed\
+  \ in logs. This could allow UI users to act as Dag Authors. \nUsers are advised to upgrade\
+  \ to Airflow version that contains fix.\n\nUsers are recommended to upgrade to version 3.2.0,\
+  \ which fixes this issue."
+impacted_packages:
+  - purl: pkg:pypi/apache-airflow
+    affected_versions: vers:pypi/>=3.0.0|<3.2.0
+    fixed_versions: vers:pypi/3.2.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-phv5-vq5p-qhp7/GHSA-phv5-vq5p-qhp7.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-532
+references:
+  - url: https://github.com/apache/airflow
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-31987
+    reference_type:
+    reference_id:
+  - url: http://www.openwall.com/lists/oss-security/2026/04/16/7
+    reference_type:
+    reference_id:
+  - url: https://github.com/apache/airflow/issues/62428
+    reference_type: bug
+    reference_id: 62428
+  - url: https://github.com/apache/airflow/issues/62773
+    reference_type: bug
+    reference_id: 62773
+  - url: https://github.com/apache/airflow/pull/62964
+    reference_type: other
+    reference_id: 62964
+  - url: https://lists.apache.org/thread/pvsrtxzwo9xy6xgknmwslv4zrw70kt6g
+    reference_type: advisory
+    reference_id: pvsrtxzwo9xy6xgknmwslv4zrw70kt6g

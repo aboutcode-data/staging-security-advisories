@@ -1,0 +1,73 @@
+advisory_id: GHSA-c4qm-58hj-j6pj
+datasource_id: github_osv_importer_v2/GHSA-c4qm-58hj-j6pj
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-c4qm-58hj-j6pj/GHSA-c4qm-58hj-j6pj.json
+aliases: []
+summary: |
+  OpenClaw: Browser snapshot and screenshot routes could expose internal page content after navigation
+  ## Summary
+
+  Browser snapshot and screenshot routes could expose internal page content after navigation.
+
+  ## Affected Packages / Versions
+
+  - Package: `openclaw`
+  - Ecosystem: npm
+  - Affected versions: `< 2026.4.14`
+  - Patched versions: `>= 2026.4.14`
+
+  ## Impact
+
+  Authenticated browser tool callers could use snapshot, screenshot, or tab routes that did not consistently validate the final browser target after route-driven navigation. In restrictive browser SSRF configurations this could expose content from internal or otherwise disallowed pages.
+
+  ## Technical Details
+
+  The fix re-checks browser snapshot, screenshot, and tab route results against the configured browser SSRF policy before returning page content. Regression coverage was added around snapshot/screenshot and tab-route flows.
+
+  ## Fix
+
+  The issue was fixed in #66040. The first stable tag containing the fix is `v2026.4.14`, and `openclaw@2026.4.14` includes the fix.
+
+  ## Fix Commit(s)
+
+  - `b75ad800a59009fc47eaa3471410f69046150e59`
+  - PR: #66040
+
+  ## Release Process Note
+
+  Users should upgrade to `openclaw` 2026.4.14 or newer. The latest npm release, `2026.4.14`, already includes the fix.
+
+  ## Credits
+
+  Thanks to @zsxsoft, with sponsorship from @KeenSecurityLab and @qclawer for reporting this issue.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.4.14
+    fixed_versions: vers:npm/2026.4.14
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.0'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:N/VA:N/SC:L/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-c4qm-58hj-j6pj/GHSA-c4qm-58hj-j6pj.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-918
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/b75ad800a59009fc47eaa3471410f69046150e59
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/pull/66040
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-c4qm-58hj-j6pj
+    reference_type:
+    reference_id:

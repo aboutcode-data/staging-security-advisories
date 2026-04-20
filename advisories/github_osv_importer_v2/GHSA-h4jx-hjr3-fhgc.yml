@@ -1,7 +1,8 @@
 advisory_id: GHSA-h4jx-hjr3-fhgc
 datasource_id: github_osv_importer_v2/GHSA-h4jx-hjr3-fhgc
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-h4jx-hjr3-fhgc/GHSA-h4jx-hjr3-fhgc.json
-aliases: []
+aliases:
+  - CVE-2026-35645
 summary: |
   OpenClaw: Gateway Plugin Subagent Fallback `deleteSession` Uses Synthetic `operator.admin`
   ## Summary
@@ -31,7 +32,17 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
-  - score: HIGH
+  - score: '8.1'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-h4jx-hjr3-fhgc/GHSA-h4jx-hjr3-fhgc.json
+  - score: '6.1'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:H/VA:H/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-h4jx-hjr3-fhgc/GHSA-h4jx-hjr3-fhgc.json
+  - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
     published_at: None
@@ -39,6 +50,7 @@ severities:
 weaknesses:
   - CWE-266
   - CWE-863
+  - CWE-648
 references:
   - url: https://github.com/openclaw/openclaw
     reference_type:
@@ -49,3 +61,9 @@ references:
   - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-h4jx-hjr3-fhgc
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-35645
+    reference_type:
+    reference_id: CVE-2026-35645
+  - url: https://www.vulncheck.com/advisories/openclaw-privilege-escalation-via-synthetic-operator-admin-in-deletesession
+    reference_type: advisory
+    reference_id: openclaw-privilege-escalation-via-synthetic-operator-admin-in-deletesession

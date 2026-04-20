@@ -1,0 +1,45 @@
+advisory_id: GHSA-3jfp-46x4-xgfj
+datasource_id: github_osv_importer_v2/GHSA-3jfp-46x4-xgfj
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-3jfp-46x4-xgfj/GHSA-3jfp-46x4-xgfj.json
+aliases: []
+summary: |
+  yard: Possible arbitrary path traversal and file access via yard server
+  ### Impact
+
+  A path traversal vulnerability was discovered in YARD <= 0.9.41 when using yard server to serve documentation. This bug would allow unsanitized HTTP requests to access arbitrary files on the machine of a yard server host under certain conditions.
+
+  The original patch in [GHSA-xfhh-rx56-rxcr](https://github.com/lsegal/yard/security/advisories/GHSA-xfhh-rx56-rxcr) was incorrectly applied.
+
+  ### Patches
+
+  Please upgrade to YARD v0.9.42 immediately if you are relying on yard server to host documentation in any untrusted environments without WEBrick and rely on `--docroot`.
+
+  ### Workarounds
+
+  For users who cannot upgrade, it is possible to perform path sanitization of HTTP requests at your webserver level. WEBrick, for example, can perform such sanitization by default (which you can use via yard server -s webrick), as can certain rules in your webserver configuration.
+impacted_packages:
+  - purl: pkg:gem/yard
+    affected_versions: vers:gem/<0.9.42
+    fixed_versions: vers:gem/0.9.42
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-3jfp-46x4-xgfj/GHSA-3jfp-46x4-xgfj.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-22
+references:
+  - url: https://github.com/lsegal/yard
+    reference_type:
+    reference_id:
+  - url: https://github.com/lsegal/yard/security/advisories/GHSA-3jfp-46x4-xgfj
+    reference_type:
+    reference_id:

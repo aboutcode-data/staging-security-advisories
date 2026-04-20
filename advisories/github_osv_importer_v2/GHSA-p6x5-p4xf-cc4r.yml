@@ -1,0 +1,45 @@
+advisory_id: GHSA-p6x5-p4xf-cc4r
+datasource_id: github_osv_importer_v2/GHSA-p6x5-p4xf-cc4r
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-p6x5-p4xf-cc4r/GHSA-p6x5-p4xf-cc4r.json
+aliases: []
+summary: "Remote Code Execution (RCE) via String Literal Injection into math-codegen\n### Impact\n\
+  \nString literal content passed to `cg.parse()` is injected verbatim into a `new Function()`\
+  \ body without sanitization. This allows an attacker to execute arbitrary system commands\
+  \ when user-controlled input reaches the parser. Any application exposing a math evaluation\
+  \ endpoint where user input flows into `cg.parse()` is vulnerable to full RCE.\n    \n###\
+  \ Patches\n\nThe vulnerability is addressed by using `JSON.stringify()` on string literal\
+  \ values in `lib/node/ConstantNode.js` to ensure they are treated as data rather than code.\
+  \ Users should upgrade to version 0.4.3 or later.\n    \n### Workarounds\n\nAvoid passing\
+  \ un-sanitized user input to the parser or manually escape string literals in the input."
+impacted_packages:
+  - purl: pkg:npm/math-codegen
+    affected_versions: vers:npm/<0.4.3
+    fixed_versions: vers:npm/0.4.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '9.8'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-p6x5-p4xf-cc4r/GHSA-p6x5-p4xf-cc4r.json
+  - score: CRITICAL
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-94
+references:
+  - url: https://github.com/hits3134
+    reference_type:
+    reference_id:
+  - url: https://github.com/mauriciopoppe/math-codegen
+    reference_type:
+    reference_id:
+  - url: https://github.com/mauriciopoppe/math-codegen/pull/11
+    reference_type:
+    reference_id:
+  - url: https://github.com/mauriciopoppe/math-codegen/security/advisories/GHSA-p6x5-p4xf-cc4r
+    reference_type:
+    reference_id:

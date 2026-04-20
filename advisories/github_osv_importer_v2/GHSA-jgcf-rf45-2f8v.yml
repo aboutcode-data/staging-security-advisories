@@ -1,0 +1,56 @@
+advisory_id: GHSA-jgcf-rf45-2f8v
+datasource_id: github_osv_importer_v2/GHSA-jgcf-rf45-2f8v
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-jgcf-rf45-2f8v/GHSA-jgcf-rf45-2f8v.json
+aliases:
+  - CVE-2026-24749
+summary: |
+  Silverstripe Assets Module has a DBFile::getURL() permission bypass
+  ### Impact
+
+  Images rendered in templates or otherwise accessed via `DBFile::getURL()` or `DBFile::getSourceURL()` incorrectly add an access grant to the current session, which bypasses file permissions.
+
+  This usually happens when creating an image variant, for example using a manipulation method like `ScaleWidth()` or `Convert()`.
+
+  Note that if you use `DBFile` directly in the `$db` configuration for a `DataObject` class that doesn't subclass `File`, and if you were setting the visibility of those files to "protected", those files will now need an explicit access grant to be accessed. If you do not want to explicitly provide access grants for these files (i.e. you want these files to be accessible by default), you should use the "public" visibility.
+
+  ### Reported by
+
+  Restruct web & apps
+impacted_packages:
+  - purl: pkg:composer/silverstripe/assets
+    affected_versions: vers:composer/<2.4.5
+    fixed_versions: vers:composer/2.4.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/silverstripe/assets
+    affected_versions: vers:composer/>=3.0.0|<3.1.3
+    fixed_versions: vers:composer/3.1.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-jgcf-rf45-2f8v/GHSA-jgcf-rf45-2f8v.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-266
+  - CWE-863
+references:
+  - url: https://github.com/silverstripe/silverstripe-assets
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-24749
+    reference_type:
+    reference_id:
+  - url: https://www.silverstripe.org/download/security-releases/cve-2026-24749
+    reference_type: other
+    reference_id: cve-2026-24749
+  - url: https://github.com/silverstripe/silverstripe-assets/security/advisories/GHSA-jgcf-rf45-2f8v
+    reference_type: other
+    reference_id: GHSA-jgcf-rf45-2f8v

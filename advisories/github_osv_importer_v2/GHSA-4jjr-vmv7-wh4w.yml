@@ -1,0 +1,50 @@
+advisory_id: GHSA-4jjr-vmv7-wh4w
+datasource_id: github_osv_importer_v2/GHSA-4jjr-vmv7-wh4w
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-4jjr-vmv7-wh4w/GHSA-4jjr-vmv7-wh4w.json
+aliases: []
+summary: |
+  Statamic: Unsafe method invocation via query value resolution allows data destruction
+  ### Impact
+
+  Manipulating query parameters on Control Panel and REST API endpoints, or arguments in GraphQL queries, could result in the loss of content, assets, and user accounts.
+
+  The Control Panel requires authentication with minimal permissions in order to exploit. e.g. "view entries" permission to delete entries, or "view users" permission to delete users, etc.
+
+  The REST and GraphQL API exploits do not require any permissions, however neither are enabled by default. In order to be exploited, they would need to be explicitly enabled with no authentication configured, and the specific resources enabled too.
+
+  Sites that enable the REST or GraphQL API without authentication should treat patching as critical priority.
+
+  ### Patches
+
+  This has been fixed in 5.73.20 and 6.13.0.
+impacted_packages:
+  - purl: pkg:composer/statamic/cms
+    affected_versions: vers:composer/<5.73.20
+    fixed_versions: vers:composer/5.73.20
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/statamic/cms
+    affected_versions: vers:composer/>=6.0.0-alpha.1|<6.13.0
+    fixed_versions: vers:composer/6.13.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.1'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-4jjr-vmv7-wh4w/GHSA-4jjr-vmv7-wh4w.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-470
+references:
+  - url: https://github.com/statamic/cms
+    reference_type:
+    reference_id:
+  - url: https://github.com/statamic/cms/security/advisories/GHSA-4jjr-vmv7-wh4w
+    reference_type:
+    reference_id:

@@ -1,0 +1,194 @@
+advisory_id: GHSA-mj7r-x3h3-7rmr
+datasource_id: github_osv_importer_v2/GHSA-mj7r-x3h3-7rmr
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-mj7r-x3h3-7rmr/GHSA-mj7r-x3h3-7rmr.json
+aliases:
+  - CVE-2026-33877
+summary: |
+  ApostropheCMS: User Enumeration via Timing Side Channel in Password Reset Endpoint
+  ## Summary
+
+  The password reset endpoint (`/api/v1/@apostrophecms/login/reset-request`) exhibits a measurable timing side channel that allows unauthenticated attackers to enumerate valid usernames and email addresses. When a user is not found, the handler returns after a fixed 2-second artificial delay, but when a valid user is found, it performs database writes and SMTP operations with no equivalent delay normalization, producing a distinguishable timing profile.
+
+  ## Details
+
+  The `resetRequest` handler in `modules/@apostrophecms/login/index.js` attempts to obscure the user-not-found path with an artificial delay, but fails to normalize the timing of the user-found path:
+
+  **User not found — fixed 2000ms delay** (`index.js:309-314`):
+  ```javascript
+  if (!user) {
+    await wait();  // wait = (t = 2000) => Promise.delay(t)
+    self.apos.util.error(
+      `Reset password request error - the user ${email} doesn\`t exist.`
+    );
+    return;
+  }
+  ```
+
+  **User found — variable-duration DB + SMTP operations, no artificial delay** (`index.js:323-355`):
+  ```javascript
+  const reset = self.apos.util.generateId();
+  user.passwordReset = reset;
+  user.passwordResetAt = new Date();
+  await self.apos.user.update(req, user, { permissions: false });
+  // ... URL construction ...
+  await self.email(req, 'passwordResetEmail', {
+    user,
+    url: parsed.toString(),
+    site
+  }, {
+    to: user.email,
+    subject: req.t('apostrophe:passwordResetRequest', { site })
+  });
+  ```
+
+  The user-found path includes a MongoDB `update()` call and an SMTP `email()` send, which together produce response times that differ measurably from the fixed 2000ms delay. Depending on SMTP server latency, responses for valid users will either be noticeably faster (local/fast SMTP) or slower (remote SMTP) than the constant 2-second delay for invalid users.
+
+  Additionally, the `getPasswordResetUser` method (`index.js:664-666`) accepts both username and email via an `$or` query, enabling enumeration of both identifiers:
+  ```javascript
+  const criteriaOr = [
+    { username: email },
+    { email }
+  ];
+  ```
+
+  There is no rate limiting on the reset endpoint. The `checkLoginAttempts` throttle (`index.js:978`) is only applied to the login flow, allowing unlimited rapid probing of the reset endpoint.
+
+  ## PoC
+
+  **Prerequisites:** An Apostrophe instance with `passwordReset: true` enabled in `@apostrophecms/login` configuration.
+
+  **Step 1 — Baseline invalid user timing:**
+  ```bash
+  for i in $(seq 1 10); do
+    curl -s -o /dev/null -w "%{time_total}\n" \
+      -X POST http://localhost:3000/api/v1/@apostrophecms/login/reset-request \
+      -H "Content-Type: application/json" \
+      -d '{"email": "nonexistent-user-'$i'@example.com"}'
+  done
+  # Expected: all responses cluster tightly around 2.0xx seconds
+  ```
+
+  **Step 2 — Test known valid user:**
+  ```bash
+  for i in $(seq 1 10); do
+    curl -s -o /dev/null -w "%{time_total}\n" \
+      -X POST http://localhost:3000/api/v1/@apostrophecms/login/reset-request \
+      -H "Content-Type: application/json" \
+      -d '{"email": "admin"}'
+  done
+  # Expected: response times differ from 2.0s baseline (faster with local SMTP, slower with remote SMTP)
+  ```
+
+  **Step 3 — Statistical comparison:**
+  The two distributions will show a measurable divergence. With a local mail server, valid-user responses typically complete in <500ms. With a remote SMTP server, valid-user responses may take 3-5+ seconds. Either way, the timing is distinguishable from the fixed 2000ms invalid-user delay.
+
+  ## Impact
+
+  - **Account enumeration:** An unauthenticated attacker can determine whether a given username or email address has an account in the Apostrophe instance.
+  - **Credential stuffing preparation:** Confirmed valid accounts can be targeted with credential stuffing attacks using breached password databases.
+  - **Phishing targeting:** Knowledge of valid accounts enables targeted phishing campaigns against confirmed users.
+  - **No rate limiting:** The absence of throttling on the reset endpoint allows high-speed automated enumeration.
+  - **Mitigating factor:** The `passwordReset` option defaults to `false` (`index.js:62`), so only instances that explicitly enable password reset are affected.
+
+  ## Recommended Fix
+
+  Normalize all code paths to a constant minimum duration, ensuring the response time does not leak whether a user was found:
+
+  ```javascript
+  async resetRequest(req) {
+    const MIN_RESPONSE_TIME = 2000;
+    const startTime = Date.now();
+    const site = (req.headers.host || '').replace(/:\d+$/, '');
+    const email = self.apos.launder.string(req.body.email);
+    if (!email.length) {
+      throw self.apos.error('invalid', req.t('apostrophe:loginResetEmailRequired'));
+    }
+    let user;
+    try {
+      user = await self.getPasswordResetUser(req.body.email);
+    } catch (e) {
+      self.apos.util.error(e);
+    }
+    if (!user) {
+      self.apos.util.error(
+        `Reset password request error - the user ${email} doesn\`t exist.`
+      );
+    } else if (!user.email) {
+      self.apos.util.error(
+        `Reset password request error - the user ${user.username} doesn\`t have an email.`
+      );
+    } else {
+      const reset = self.apos.util.generateId();
+      user.passwordReset = reset;
+      user.passwordResetAt = new Date();
+      await self.apos.user.update(req, user, { permissions: false });
+      let port = (req.headers.host || '').split(':')[1];
+      if (!port || [ '80', '443' ].includes(port)) {
+        port = '';
+      } else {
+        port = `:${port}`;
+      }
+      const parsed = new URL(
+        req.absoluteUrl,
+        self.apos.baseUrl
+          ? undefined
+          : `${req.protocol}://${req.hostname}${port}`
+      );
+      parsed.pathname = self.login();
+      parsed.search = '?';
+      parsed.searchParams.append('reset', reset);
+      parsed.searchParams.append('email', user.email);
+      try {
+        await self.email(req, 'passwordResetEmail', {
+          user,
+          url: parsed.toString(),
+          site
+        }, {
+          to: user.email,
+          subject: req.t('apostrophe:passwordResetRequest', { site })
+        });
+      } catch (err) {
+        self.apos.util.error(`Error while sending email to ${user.email}`, err);
+      }
+    }
+    // Pad all paths to a constant minimum duration
+    const elapsed = Date.now() - startTime;
+    if (elapsed < MIN_RESPONSE_TIME) {
+      await Promise.delay(MIN_RESPONSE_TIME - elapsed);
+    }
+  },
+  ```
+
+  Additionally, consider applying rate limiting to the `reset-request` endpoint to prevent high-speed enumeration attempts.
+impacted_packages:
+  - purl: pkg:npm/apostrophe
+    affected_versions: vers:npm/<4.29.0
+    fixed_versions: vers:npm/4.29.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '3.7'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-mj7r-x3h3-7rmr/GHSA-mj7r-x3h3-7rmr.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-208
+references:
+  - url: https://github.com/apostrophecms/apostrophe
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33877
+    reference_type:
+    reference_id:
+  - url: https://github.com/apostrophecms/apostrophe/commit/e266cffd8c0d331a9b05c92bf11616556efcdc77
+    reference_type: other
+    reference_id: e266cffd8c0d331a9b05c92bf11616556efcdc77
+  - url: https://github.com/apostrophecms/apostrophe/security/advisories/GHSA-mj7r-x3h3-7rmr
+    reference_type: other
+    reference_id: GHSA-mj7r-x3h3-7rmr

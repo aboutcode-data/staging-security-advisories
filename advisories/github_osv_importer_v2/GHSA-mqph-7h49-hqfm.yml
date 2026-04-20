@@ -1,0 +1,51 @@
+advisory_id: GHSA-mqph-7h49-hqfm
+datasource_id: github_osv_importer_v2/GHSA-mqph-7h49-hqfm
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-mqph-7h49-hqfm/GHSA-mqph-7h49-hqfm.json
+aliases:
+  - CVE-2026-33220
+summary: |
+  Weblate: JavaScript localization CDN add-on allows arbitrary local file read outside the repository
+  ### Impact
+  The translation memory API exposed unintended endpoints, which in turn didn't do proper access control.
+
+  ### Patches
+  * https://github.com/WeblateOrg/weblate/pull/18516
+
+  ### Workarounds
+  The CDN add-on is not enabled by default.
+
+  ### References
+  Thanks to @spbavarva for reporting this responsibly via GitHub.
+impacted_packages:
+  - purl: pkg:pypi/weblate
+    affected_versions: vers:pypi/<5.17
+    fixed_versions: vers:pypi/5.17
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.8'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-mqph-7h49-hqfm/GHSA-mqph-7h49-hqfm.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-22
+  - CWE-200
+references:
+  - url: https://github.com/WeblateOrg/weblate
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33220
+    reference_type:
+    reference_id:
+  - url: https://github.com/WeblateOrg/weblate/pull/18516
+    reference_type: other
+    reference_id: 18516
+  - url: https://github.com/WeblateOrg/weblate/security/advisories/GHSA-mqph-7h49-hqfm
+    reference_type: other
+    reference_id: GHSA-mqph-7h49-hqfm

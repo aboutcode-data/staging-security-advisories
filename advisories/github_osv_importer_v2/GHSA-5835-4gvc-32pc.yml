@@ -178,6 +178,10 @@ summary: |
   3. **Attribute value extraction via boolean-based blind injection:** An attacker who holds valid credentials for any one LDAP account can inject additional filter conditions (e.g., `bob)(description=X*`) that turn the authentication response into a boolean oracle, and the same technique works via a timing side-channel.
 
   4. **DN template path traversal:** When `dn_template` is used instead of `filter` (line 255), injected characters can manipulate the DN structure, potentially targeting entries in different organizational units or directory subtrees.
+
+  ### Credit
+
+  [Yuheng Zhang](mailto:zhangyuh25@mails.tsinghua.edu.cn), [Zihan Zhang](mailto:zzh1032@sjtu.edu.cn), [Jianjun Chen](mailto:jianjun@tsinghua.edu.cn) and [Teatime Lab LTD.](mailto:research@teatimelab.com)
 impacted_packages: []
 severities:
   - score: '8.2'
@@ -205,3 +209,6 @@ references:
   - url: https://github.com/foxcpp/maddy/security/advisories/GHSA-5835-4gvc-32pc
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-40193
+    reference_type:
+    reference_id: CVE-2026-40193

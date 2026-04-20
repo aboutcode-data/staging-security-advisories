@@ -1,0 +1,76 @@
+advisory_id: GHSA-45q2-gjvg-7973
+datasource_id: github_osv_importer_v2/GHSA-45q2-gjvg-7973
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-45q2-gjvg-7973/GHSA-45q2-gjvg-7973.json
+aliases: []
+summary: "Angular: SSRF via protocol-relative and backslash URLs in Angular Platform-Server\n\
+  ### Impact\n\nA [Server-Side Request Forgery (SSRF)](https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/SSRF)\
+  \ vulnerability exists in `@angular/platform-server` due to improper handling of URLs during\
+  \ Server-Side Rendering (SSR).\n\nWhen an attacker sends a request such as `GET /\\evil.com/\
+  \ HTTP/1.1` the server engine (Express, etc.) passes the URL string to Angular’s rendering\
+  \ functions.\n\nBecause the URL parser normalizes the backslash to a forward slash for HTTP/HTTPS\
+  \ schemes, the internal state of the application is hijacked to believe the current origin\
+  \ is `evil.com`. This misinterpretation tricks the application into treating the attacker’s\
+  \ domain as the local origin. Consequently, any relative `HttpClient` requests or `PlatformLocation.hostname`\
+  \ references are redirected to the attacker controlled server, potentially exposing internal\
+  \ APIs or metadata services.\n\n**Affected APIs:**\n- `renderModule`\n- `renderApplication`\n\
+  - `CommonEngine` (from `@angular/ssr`)\n\n**Non-Affected APIs:**\n- `AngularAppEngine` (from\
+  \ `@angular/ssr`)\n- `AngularNodeAppEngine` (from `@angular/ssr`)\n\n### Attack Preconditions\n\
+  - The server has outbound network access.\n- The application uses Angular SSR via the affected\
+  \ APIs.\n- A pathname is passed as URL to the rendering method  (e.g. using `req.url`).\n\
+  - The server-side code performs HTTP requests using `HttpClient` with relative URLs or uses\
+  \ `PlatformLocation.hostname` to build URLs. \n\n\n### Patches\n- 22.0.0-next.8\n- 21.2.9\n\
+  - 20.3.19\n- 19.2.21\n\n### Workarounds\nDevelopers should implement a middleware to sanitize\
+  \ the request URL before it reaches Angular. This involves stripping or normalizing leading\
+  \ slashes:\n\n```js\napp.use((req, res, next) => {\n  // Sanitize the URL to ensure it starts\
+  \ with a single forward slash\n  if (req.url.startsWith('//') || req.url.startsWith('/\\\\\
+  ') || req.url.startsWith('\\\\')) {\n     req.url = '/' + req.url.replace(/^[/\\\\]+/, '');\n\
+  \  }\n  next();\n});\n\n```\n### References\n- [Fix](https://github.com/angular/angular/pull/68194)"
+impacted_packages:
+  - purl: pkg:npm/%40angular/platform-server
+    affected_versions: vers:npm/>=22.0.0-next.0|<22.0.0-next.8
+    fixed_versions: vers:npm/22.0.0-next.8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/%40angular/platform-server
+    affected_versions: vers:npm/>=21.0.0-next.0|<21.2.9
+    fixed_versions: vers:npm/21.2.9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/%40angular/platform-server
+    affected_versions: vers:npm/>=20.0.0-next.0|<20.3.19
+    fixed_versions: vers:npm/20.3.19
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/%40angular/platform-server
+    affected_versions: vers:npm/>=19.0.0-next.0|<19.2.21
+    fixed_versions: vers:npm/19.2.21
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/%40angular/platform-server
+    affected_versions: vers:npm/<=18.2.14
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.7'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:L/SI:L/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-45q2-gjvg-7973/GHSA-45q2-gjvg-7973.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-918
+references:
+  - url: https://github.com/angular/angular
+    reference_type:
+    reference_id:
+  - url: https://github.com/angular/angular/pull/68194
+    reference_type:
+    reference_id:
+  - url: https://github.com/angular/angular/security/advisories/GHSA-45q2-gjvg-7973
+    reference_type:
+    reference_id:

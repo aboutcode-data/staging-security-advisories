@@ -1,0 +1,73 @@
+advisory_id: GHSA-2cq5-mf3v-mx44
+datasource_id: github_osv_importer_v2/GHSA-2cq5-mf3v-mx44
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-2cq5-mf3v-mx44/GHSA-2cq5-mf3v-mx44.json
+aliases: []
+summary: |
+  OpenClaw: busybox and toybox applet execution weakened exec approval binding
+  ## Summary
+
+  busybox and toybox applet execution weakened exec approval binding.
+
+  ## Affected Packages / Versions
+
+  - Package: `openclaw`
+  - Ecosystem: npm
+  - Affected versions: `>= 2026.2.23 < 2026.4.12`
+  - Patched versions: `>= 2026.4.12`
+
+  ## Impact
+
+  Opaque multi-call binaries such as `busybox` and `toybox` could obscure which applet or script-like behavior would actually run, weakening exec approval binding and risk classification.
+
+  ## Technical Details
+
+  The fix treats `busybox` and `toybox` as opaque mutable script runners and fails closed rather than binding unsafe applet invocations.
+
+  ## Fix
+
+  The issue was fixed in #65713. The first stable tag containing the fix is `v2026.4.12`, and `openclaw@2026.4.14` includes the fix.
+
+  ## Fix Commit(s)
+
+  - `666f48d9b882a8a1415ca53f9567c72499d850c9`
+  - PR: #65713
+
+  ## Release Process Note
+
+  Users should upgrade to `openclaw` 2026.4.12 or newer. The latest npm release, `2026.4.14`, already includes the fix.
+
+  ## Credits
+
+  Thanks to @decsecre583 for reporting this issue.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/>=2026.2.23|<2026.4.12
+    fixed_versions: vers:npm/2026.4.12
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.6'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-2cq5-mf3v-mx44/GHSA-2cq5-mf3v-mx44.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-863
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/666f48d9b882a8a1415ca53f9567c72499d850c9
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/pull/65713
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-2cq5-mf3v-mx44
+    reference_type:
+    reference_id:

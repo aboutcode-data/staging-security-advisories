@@ -1,0 +1,41 @@
+advisory_id: GHSA-5cwg-9f6j-9jvx
+datasource_id: github_osv_importer_v2/GHSA-5cwg-9f6j-9jvx
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-5cwg-9f6j-9jvx/GHSA-5cwg-9f6j-9jvx.json
+aliases:
+  - CVE-2026-35603
+summary: |
+  Claude Code: Insecure System-Wide Configuration Loading Enables Local Privilege Escalation on Windows
+  On Windows, Claude Code loaded system-wide default configuration from `C:\ProgramData\ClaudeCode\managed-settings.json` without validating directory ownership or access permissions. Because the `ProgramData` directory is writable by non-administrative users by default and the `ClaudeCode` subdirectory was not pre-created or access-restricted, a low-privileged local user could create this directory and place a malicious configuration file that would be automatically loaded for any user launching Claude Code on the same machine. Exploiting this would have required a shared multi-user Windows system and a victim user to launch Claude Code after the malicious configuration was placed.
+
+  Users on standard Claude Code auto-update have received this fix already. Users performing manual updates are advised to update to the latest version.
+
+  Thank you to hackerone.com/edbr for reporting this issue.
+impacted_packages:
+  - purl: pkg:npm/%40anthropic-ai/claude-code
+    affected_versions: vers:npm/<2.1.75
+    fixed_versions: vers:npm/2.1.75
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.4'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-5cwg-9f6j-9jvx/GHSA-5cwg-9f6j-9jvx.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-426
+references:
+  - url: https://github.com/anthropics/claude-code
+    reference_type:
+    reference_id:
+  - url: https://github.com/anthropics/claude-code/security/advisories/GHSA-5cwg-9f6j-9jvx
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-35603
+    reference_type:
+    reference_id:

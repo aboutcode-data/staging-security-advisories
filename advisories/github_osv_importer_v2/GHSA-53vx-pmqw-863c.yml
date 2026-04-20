@@ -1,0 +1,89 @@
+advisory_id: GHSA-53vx-pmqw-863c
+datasource_id: github_osv_importer_v2/GHSA-53vx-pmqw-863c
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-53vx-pmqw-863c/GHSA-53vx-pmqw-863c.json
+aliases: []
+summary: |
+  OpenClaw: Browser SSRF policy default allowed private-network navigation
+  ## Summary
+
+  Browser SSRF policy default allowed private-network navigation.
+
+  ## Affected Packages / Versions
+
+  - Package: `openclaw`
+  - Ecosystem: npm
+  - Affected versions: `< 2026.4.14`
+  - Patched versions: `>= 2026.4.14`
+
+  ## Impact
+
+  Browser SSRF protection could allow private-network navigation by default in paths where restrictive behavior was expected, exposing internal services or metadata endpoints through browser-driven requests.
+
+  ## Technical Details
+
+  The fix preserves strict SSRF configuration semantics, keeps private-network access disabled unless explicitly opted in, and updates loopback CDP readiness handling for the stricter default.
+
+  ## Fix
+
+  The issue was fixed in #66354 and #66386. The first stable tag containing the fix is `v2026.4.14`, and `openclaw@2026.4.14` includes the fix.
+
+  ## Fix Commit(s)
+
+  - `024f4614a1a1831406e763adc40ef226e3d5e9ed`
+  - `1dabfef28db523e7de81edeb3dd689e9171236a2`
+  - `213c36cf51121ef6c05cfccd78037371f968f31a`
+  - `7eecfa411df3d12e6b810e6ca5df47254fc3db3f`
+  - PR: #66354, #66386
+
+  ## Release Process Note
+
+  Users should upgrade to `openclaw` 2026.4.14 or newer. The latest npm release, `2026.4.14`, already includes the fix.
+
+  ## Credits
+
+  Thanks to @zsxsoft, with sponsorship from @KeenSecurityLab and @qclawer for reporting this issue.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.4.14
+    fixed_versions: vers:npm/2026.4.14
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-53vx-pmqw-863c/GHSA-53vx-pmqw-863c.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-1188
+  - CWE-918
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/024f4614a1a1831406e763adc40ef226e3d5e9ed
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/1dabfef28db523e7de81edeb3dd689e9171236a2
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/213c36cf51121ef6c05cfccd78037371f968f31a
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/7eecfa411df3d12e6b810e6ca5df47254fc3db3f
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/pull/66354
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/pull/66386
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-53vx-pmqw-863c
+    reference_type:
+    reference_id:

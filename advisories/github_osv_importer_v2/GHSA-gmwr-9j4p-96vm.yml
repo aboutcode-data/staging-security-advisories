@@ -1,0 +1,48 @@
+advisory_id: GHSA-gmwr-9j4p-96vm
+datasource_id: github_osv_importer_v2/GHSA-gmwr-9j4p-96vm
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-gmwr-9j4p-96vm/GHSA-gmwr-9j4p-96vm.json
+aliases:
+  - CVE-2026-40500
+summary: |
+  ProcessWire: server-side request forgery vulnerability in the admin panel's 'Add Module From URL' feature
+  ProcessWire CMS version 3.0.255 and prior contain a server-side request forgery vulnerability in the admin panel's 'Add Module From URL' feature that allows authenticated administrators to supply arbitrary URLs to the module download parameter, causing the server to issue outbound HTTP requests to attacker-controlled internal or external hosts. Attackers can exploit differentiable error messages returned by the server to perform reliable internal network port scanning, host enumeration across RFC-1918 ranges, and potential access to cloud instance metadata endpoints.
+impacted_packages:
+  - purl: pkg:composer/processwire/processwire
+    affected_versions: vers:composer/<=3.0.255
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.8'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-gmwr-9j4p-96vm/GHSA-gmwr-9j4p-96vm.json
+  - score: '6.1'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:L/VI:N/VA:N/SC:H/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-gmwr-9j4p-96vm/GHSA-gmwr-9j4p-96vm.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-918
+references:
+  - url: https://github.com/processwire/processwire
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-40500
+    reference_type:
+    reference_id:
+  - url: https://processwire.com
+    reference_type:
+    reference_id:
+  - url: https://gist.github.com/thepiyushkumarshukla/7514e5eed526fd9d20fcfc42ce8d0a82
+    reference_type: exploit
+    reference_id: 7514e5eed526fd9d20fcfc42ce8d0a82
+  - url: https://www.vulncheck.com/advisories/processwire-cms-ssrf-via-add-module-from-url
+    reference_type: advisory
+    reference_id: processwire-cms-ssrf-via-add-module-from-url

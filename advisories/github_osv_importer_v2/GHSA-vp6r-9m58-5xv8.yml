@@ -1,0 +1,76 @@
+advisory_id: GHSA-vp6r-9m58-5xv8
+datasource_id: github_osv_importer_v2/GHSA-vp6r-9m58-5xv8
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-vp6r-9m58-5xv8/GHSA-vp6r-9m58-5xv8.json
+aliases: []
+summary: |
+  OmniFaces: EL injection via crafted resource name in wildcard CDN mapping
+  ### Impact
+
+  Server-side EL injection leading to Remote Code Execution (RCE). Affects applications that use `CDNResourceHandler` with a wildcard CDN mapping (e.g. `libraryName:*=https://cdn.example.com/*`). An attacker can craft a resource request
+  URL containing an EL expression in the resource name, which is evaluated server-side.
+
+  The severity depends on the EL implementation and the objects available in the EL context. In the worst case this leads to Remote Code Execution (RCE). At minimum it allows information disclosure and denial of service.
+
+  Applications using `CDNResourceHandler` without wildcard mappings (i.e. only explicit resource-to-URL mappings) are **not** affected.
+
+  ### Patches
+
+  Fixed in versions 5.2.3, 4.7.5, 3.14.16, 2.7.32, and 1.14.2. Users should upgrade to the appropriate version for their branch.
+
+  ### Workarounds
+
+  Replace wildcard CDN mappings with explicit resource-to-URL mappings. For example, replace:
+  ```
+  libraryName:*=https://cdn.example.com/*
+  ```
+  with individual entries:
+  ```
+  libraryName:resource1.js=https://cdn.example.com/resource1.js,
+  libraryName:resource2.js=https://cdn.example.com/resource2.js
+  ```
+impacted_packages:
+  - purl: pkg:maven/org.omnifaces/omnifaces
+    affected_versions: vers:maven/<1.14.2
+    fixed_versions: vers:maven/1.14.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.omnifaces/omnifaces
+    affected_versions: vers:maven/>=2.0-RC1|<2.7.32
+    fixed_versions: vers:maven/2.7.32
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.omnifaces/omnifaces
+    affected_versions: vers:maven/>=3.0-RC1|<3.14.16
+    fixed_versions: vers:maven/3.14.16
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.omnifaces/omnifaces
+    affected_versions: vers:maven/>=4.0-M1|<4.7.5
+    fixed_versions: vers:maven/4.7.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.omnifaces/omnifaces
+    affected_versions: vers:maven/<5.2.2
+    fixed_versions: vers:maven/5.2.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.1'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-vp6r-9m58-5xv8/GHSA-vp6r-9m58-5xv8.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-917
+references:
+  - url: https://github.com/omnifaces/omnifaces
+    reference_type:
+    reference_id:
+  - url: https://github.com/omnifaces/omnifaces/security/advisories/GHSA-vp6r-9m58-5xv8
+    reference_type:
+    reference_id:

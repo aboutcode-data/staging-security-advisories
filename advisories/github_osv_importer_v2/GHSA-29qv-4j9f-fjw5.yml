@@ -1,0 +1,50 @@
+advisory_id: GHSA-29qv-4j9f-fjw5
+datasource_id: github_osv_importer_v2/GHSA-29qv-4j9f-fjw5
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-29qv-4j9f-fjw5/GHSA-29qv-4j9f-fjw5.json
+aliases:
+  - CVE-2026-40897
+summary: |
+  Unsafe object property setter in mathjs
+  ### Impact
+  This security vulnerability allowed executing arbitrary JavaScript via the expression parser of mathjs. You can be affected when you have an application where users can evaluate arbitrary expressions using the mathjs expression parser.
+
+  ### Patches
+  The issue was introduced in mathjs `v13.1.1`, and patched in mathjs `v15.2.0`.
+
+  ### Workarounds
+  There is no workaround without upgrading to `v15.2.0`.
+
+  ### References
+  You can find out more via the commit fixing this issue: https://github.com/josdejong/mathjs/commit/513ab2a0e01004af91b31aada68fae8a821326ad (part of PR https://github.com/josdejong/mathjs/pull/3656).
+impacted_packages:
+  - purl: pkg:npm/mathjs
+    affected_versions: vers:npm/>=13.1.1|<15.2.0
+    fixed_versions: vers:npm/15.2.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.8'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-29qv-4j9f-fjw5/GHSA-29qv-4j9f-fjw5.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-915
+references:
+  - url: https://github.com/josdejong/mathjs
+    reference_type:
+    reference_id:
+  - url: https://github.com/josdejong/mathjs/commit/513ab2a0e01004af91b31aada68fae8a821326ad
+    reference_type:
+    reference_id:
+  - url: https://github.com/josdejong/mathjs/pull/3656
+    reference_type:
+    reference_id:
+  - url: https://github.com/josdejong/mathjs/security/advisories/GHSA-29qv-4j9f-fjw5
+    reference_type:
+    reference_id:

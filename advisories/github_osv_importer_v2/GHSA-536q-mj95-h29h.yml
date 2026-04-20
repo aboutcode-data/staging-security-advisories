@@ -1,0 +1,87 @@
+advisory_id: GHSA-536q-mj95-h29h
+datasource_id: github_osv_importer_v2/GHSA-536q-mj95-h29h
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-536q-mj95-h29h/GHSA-536q-mj95-h29h.json
+aliases: []
+summary: |
+  OpenClaw: Browser press/type interaction routes missed complete navigation guard coverage
+  ## Summary
+
+  Browser press/type interaction routes missed complete navigation guard coverage.
+
+  ## Affected Packages / Versions
+
+  - Package: `openclaw`
+  - Ecosystem: npm
+  - Affected versions: `< 2026.4.10`
+  - Patched versions: `>= 2026.4.10`
+
+  ## Impact
+
+  Some browser press/type style interactions could trigger navigation without complete post-action SSRF policy enforcement.
+
+  ## Technical Details
+
+  The fix applies a three-phase interaction navigation guard to navigation-capable interactions, including pressKey and type submit flows.
+
+  ## Fix
+
+  The issue was fixed in #62023 and #63226 and #63889. The first stable tag containing the fix is `v2026.4.10`, and `openclaw@2026.4.14` includes the fix.
+
+  ## Fix Commit(s)
+
+  - `049acf23cb03e1b92f5c71cd99c6ec5f35cc56fe`
+  - `5f5b3d733bdd791cb457f838514179e1288b10b3`
+  - `e0b8ddc1a55185aff1cf9e0e095014d2e4f1d894`
+  - PR: #62023, #63226, #63889
+
+  ## Release Process Note
+
+  Users should upgrade to `openclaw` 2026.4.10 or newer. The latest npm release, `2026.4.14`, already includes the fix.
+
+  ## Credits
+
+  Thanks to @zsxsoft, with sponsorship from @KeenSecurityLab and @qclawer for reporting this issue.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.4.10
+    fixed_versions: vers:npm/2026.4.10
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-536q-mj95-h29h/GHSA-536q-mj95-h29h.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-918
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/049acf23cb03e1b92f5c71cd99c6ec5f35cc56fe
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/5f5b3d733bdd791cb457f838514179e1288b10b3
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/e0b8ddc1a55185aff1cf9e0e095014d2e4f1d894
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/pull/62023
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/pull/63226
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/pull/63889
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-536q-mj95-h29h
+    reference_type:
+    reference_id:

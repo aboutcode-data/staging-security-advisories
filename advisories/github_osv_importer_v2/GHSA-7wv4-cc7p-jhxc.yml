@@ -1,0 +1,73 @@
+advisory_id: GHSA-7wv4-cc7p-jhxc
+datasource_id: github_osv_importer_v2/GHSA-7wv4-cc7p-jhxc
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-7wv4-cc7p-jhxc/GHSA-7wv4-cc7p-jhxc.json
+aliases: []
+summary: |
+  OpenClaw: Workspace .env could inject OpenClaw runtime-control variables
+  ## Summary
+
+  Workspace .env could inject OpenClaw runtime-control variables.
+
+  ## Affected Packages / Versions
+
+  - Package: `openclaw`
+  - Ecosystem: npm
+  - Affected versions: `< 2026.4.9`
+  - Patched versions: `>= 2026.4.9`
+
+  ## Impact
+
+  A malicious workspace `.env` file could set OpenClaw runtime-control variables affecting update sources, gateway URLs, ClawHub resolution, browser executable paths, and related behavior.
+
+  ## Technical Details
+
+  The fix blocks OpenClaw runtime-control keys and key families from workspace `.env` loading.
+
+  ## Fix
+
+  The issue was fixed in #62660. The first stable tag containing the fix is `v2026.4.9`, and `openclaw@2026.4.14` includes the fix.
+
+  ## Fix Commit(s)
+
+  - `dbfcef319618158fa40b31cdac386ea34c392c0c`
+  - PR: #62660
+
+  ## Release Process Note
+
+  Users should upgrade to `openclaw` 2026.4.9 or newer. The latest npm release, `2026.4.14`, already includes the fix.
+
+  ## Credits
+
+  Thanks to @zsxsoft, with sponsorship from @KeenSecurityLab for reporting this issue.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.4.9
+    fixed_versions: vers:npm/2026.4.9
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.8'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-7wv4-cc7p-jhxc/GHSA-7wv4-cc7p-jhxc.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-15
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/dbfcef319618158fa40b31cdac386ea34c392c0c
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/pull/62660
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-7wv4-cc7p-jhxc
+    reference_type:
+    reference_id:

@@ -1,0 +1,74 @@
+advisory_id: GHSA-vw3h-q6xq-jjm5
+datasource_id: github_osv_importer_v2/GHSA-vw3h-q6xq-jjm5
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-vw3h-q6xq-jjm5/GHSA-vw3h-q6xq-jjm5.json
+aliases: []
+summary: |
+  OpenClaw: Voice-call realtime WebSocket accepted oversized frames
+  ## Summary
+
+  Voice-call realtime WebSocket accepted oversized frames.
+
+  ## Affected Packages / Versions
+
+  - Package: `openclaw`
+  - Ecosystem: npm
+  - Affected versions: `>= 2026.4.9 < 2026.4.10`
+  - Patched versions: `>= 2026.4.10`
+
+  ## Impact
+
+  The voice-call realtime WebSocket path could accept oversized frames, creating a remote availability risk for deployments exposing that webhook path.
+
+  ## Technical Details
+
+  The fix rejects oversized realtime WebSocket frames before processing them.
+
+  ## Fix
+
+  The issue was fixed in #63890. The first stable tag containing the fix is `v2026.4.10`, and `openclaw@2026.4.14` includes the fix.
+
+  ## Fix Commit(s)
+
+  - `afadb7dae6738819ad9c7d2597ace0516957d20e`
+  - PR: #63890
+
+  ## Release Process Note
+
+  Users should upgrade to `openclaw` 2026.4.10 or newer. The latest npm release, `2026.4.14`, already includes the fix.
+
+  ## Credits
+
+  Thanks to @zsxsoft, with sponsorship from @KeenSecurityLab and @qclawer for reporting this issue.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/>=2026.4.9|<2026.4.10
+    fixed_versions: vers:npm/2026.4.10
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.7'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-vw3h-q6xq-jjm5/GHSA-vw3h-q6xq-jjm5.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-770
+  - CWE-400
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/afadb7dae6738819ad9c7d2597ace0516957d20e
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/pull/63890
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-vw3h-q6xq-jjm5
+    reference_type:
+    reference_id:
