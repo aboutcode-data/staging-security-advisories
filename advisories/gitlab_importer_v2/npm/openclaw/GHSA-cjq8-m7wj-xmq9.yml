@@ -1,0 +1,45 @@
+advisory_id: npm/openclaw/GHSA-cjq8-m7wj-xmq9
+datasource_id: gitlab_importer_v2/npm/openclaw/GHSA-cjq8-m7wj-xmq9
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-cjq8-m7wj-xmq9.yml
+aliases:
+  - GHSA-cjq8-m7wj-xmq9
+summary: |
+  Duplicate Advisory: OpenClaw Node system.run approval context-binding weakness in approval-enabled host=node flows
+  ## Duplicate Advisory
+
+  This advisory has been withdrawn because it is a duplicate of GHSA-hjvp-qhm6-wrh2. This link is maintained to preserve external references.
+
+  ## Original Description
+  OpenClaw versions prior to 2026.2.26 contain an approval context-binding weakness in system.run execution flows with host=node that allows reuse of previously approved requests with modified environment variables. Attackers with access to an approval id can exploit this by reusing an approval with changed env input, bypassing execution-integrity controls in approval-enabled workflows.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/>=0.0.0
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:N/I:L/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-cjq8-m7wj-xmq9.yml
+weaknesses:
+  - CWE-863
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/openclaw/openclaw/commit/10481097f8e6dd0346db9be0b5f27570e1bdfcfa
+    reference_type:
+    reference_id:
+  - url: https://www.vulncheck.com/advisories/openclaw-approval-context-binding-weakness-in-system-run-via-host-node
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32058
+    reference_type:
+    reference_id: CVE-2026-32058
+  - url: https://github.com/advisories/GHSA-cjq8-m7wj-xmq9
+    reference_type:
+    reference_id: GHSA-cjq8-m7wj-xmq9
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-hjvp-qhm6-wrh2
+    reference_type:
+    reference_id: GHSA-hjvp-qhm6-wrh2

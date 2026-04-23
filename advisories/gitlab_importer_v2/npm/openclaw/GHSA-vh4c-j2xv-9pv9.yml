@@ -1,0 +1,48 @@
+advisory_id: npm/openclaw/GHSA-vh4c-j2xv-9pv9
+datasource_id: gitlab_importer_v2/npm/openclaw/GHSA-vh4c-j2xv-9pv9
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-vh4c-j2xv-9pv9.yml
+aliases:
+  - GHSA-vh4c-j2xv-9pv9
+summary: |
+  Duplicate Advisory: OpenClaw: BlueBubbles beta plugin webhook auth hardening (remove passwordless fallback)
+  ## Duplicate Advisory
+
+  This advisory has been withdrawn because it is a duplicate of GHSA-5mx2-2mgw-x8rm. This link is maintained to preserve external references.
+
+  ## Original Description
+  OpenClaw versions prior to 2026.2.21 BlueBubbles webhook handler contains a passwordless fallback authentication path that allows unauthenticated webhook events in certain reverse-proxy or local routing configurations. Attackers can bypass webhook authentication by exploiting the loopback/proxy heuristics to send unauthenticated webhook events to the BlueBubbles plugin.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/>=0.0.0
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-vh4c-j2xv-9pv9.yml
+weaknesses:
+  - CWE-306
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/openclaw/openclaw/commit/283029bdea23164ab7482b320cb420d1b90df806
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/6b2f2811dc623e5faaf2f76afaa9279637174590
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-5mx2-2mgw-x8rm
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32896
+    reference_type:
+    reference_id:
+  - url: https://www.vulncheck.com/advisories/openclaw-unauthenticated-webhook-access-via-passwordless-fallback-in-bluebubbles-plugin
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-vh4c-j2xv-9pv9
+    reference_type:
+    reference_id: GHSA-vh4c-j2xv-9pv9
