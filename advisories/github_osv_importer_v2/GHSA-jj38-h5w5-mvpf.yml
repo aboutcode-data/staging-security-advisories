@@ -1,0 +1,52 @@
+advisory_id: GHSA-jj38-h5w5-mvpf
+datasource_id: github_osv_importer_v2/GHSA-jj38-h5w5-mvpf
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-jj38-h5w5-mvpf/GHSA-jj38-h5w5-mvpf.json
+aliases:
+  - CVE-2026-27937
+summary: |
+  October CMS: Reflected XSS via DataTable Form Widget
+  A reflected Cross-Site Scripting (XSS) vulnerability was identified in the backend DataTable widget where a query parameter was rendered without proper output escaping.
+
+  ### Impact
+  - Reflected XSS only, no stored/persistent component
+  - The backend URL prefix is customizable and must be known or guessed by the attacker
+  - Requires an authenticated backend user to visit a crafted URL
+  - No direct access is gained without social engineering
+
+  ### Patches
+  The vulnerability has been patched in v3.7.16 and v4.1.16. The affected parameter is now properly escaped. All users are encouraged to upgrade to the latest patched version.
+
+  ### Workarounds
+  - Use a non-default backend URL prefix (recommended as standard practice)
+  - Implement a Content Security Policy (CSP) for backend pages
+impacted_packages:
+  - purl: pkg:composer/october/system
+    affected_versions: vers:composer/<3.7.16
+    fixed_versions: vers:composer/3.7.16
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/october/system
+    affected_versions: vers:composer/<4.1.16
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '3.1'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-jj38-h5w5-mvpf/GHSA-jj38-h5w5-mvpf.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-79
+references:
+  - url: https://github.com/octobercms/october
+    reference_type:
+    reference_id:
+  - url: https://github.com/octobercms/october/security/advisories/GHSA-jj38-h5w5-mvpf
+    reference_type: other
+    reference_id: GHSA-jj38-h5w5-mvpf

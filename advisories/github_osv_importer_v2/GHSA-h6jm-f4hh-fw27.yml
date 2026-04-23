@@ -1,0 +1,55 @@
+advisory_id: GHSA-h6jm-f4hh-fw27
+datasource_id: github_osv_importer_v2/GHSA-h6jm-f4hh-fw27
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-h6jm-f4hh-fw27/GHSA-h6jm-f4hh-fw27.json
+aliases:
+  - CVE-2026-26274
+summary: |
+  October CMS has Safe Mode Bypass via Twig Database Write Operations
+  A vulnerability was identified in the Twig sandbox security policy that allowed database write operations when `cms.safe_mode` is enabled. Backend users with Developer permissions could use Twig template markup to execute insert, update, and delete operations on any database table through the query builder, which is included in the sandbox allow-list.
+
+  ### Impact
+  - Arbitrary database writes including modification or deletion of any table
+  - Requires authenticated backend access with Developer permissions
+  - Only relevant when `cms.safe_mode` is enabled (otherwise direct PHP injection is already possible)
+
+  ### Patches
+  The vulnerability has been patched in v3.7.14 and v4.1.10. Write operations such as `insert`, `update`, `delete`, and `truncate` are now blocked on query builder and model objects within the Twig sandbox. All users are encouraged to upgrade to the latest patched version.
+
+  ### Workarounds
+  If upgrading immediately is not possible:
+  - Restrict Developer tool access to fully trusted administrators only
+
+  ### Reporter
+  - Reported by [Chris Alupului](https://github.com/neosprings)
+impacted_packages:
+  - purl: pkg:composer/october/october
+    affected_versions: vers:composer/<3.7.14
+    fixed_versions: vers:composer/3.7.14
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/october/october
+    affected_versions: vers:composer/>=4.0.0|<4.1.10
+    fixed_versions: vers:composer/4.1.10
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.6'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-h6jm-f4hh-fw27/GHSA-h6jm-f4hh-fw27.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-184
+  - CWE-863
+references:
+  - url: https://github.com/octobercms/october
+    reference_type:
+    reference_id:
+  - url: https://github.com/octobercms/october/security/advisories/GHSA-h6jm-f4hh-fw27
+    reference_type: other
+    reference_id: GHSA-h6jm-f4hh-fw27

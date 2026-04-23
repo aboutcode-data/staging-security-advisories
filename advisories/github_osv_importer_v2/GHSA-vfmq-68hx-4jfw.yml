@@ -1,0 +1,52 @@
+advisory_id: GHSA-vfmq-68hx-4jfw
+datasource_id: github_osv_importer_v2/GHSA-vfmq-68hx-4jfw
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-vfmq-68hx-4jfw/GHSA-vfmq-68hx-4jfw.json
+aliases:
+  - CVE-2026-41066
+summary: |
+  lxml: Default configuration of iterparse() and ETCompatXMLParser() allows XXE to local files
+  ### Impact
+  Using either of the two parsers in the default configuration (with `resolve_entities=True`) allows untrusted XML input to read local files.
+
+  ### Patches
+  lxml 6.1.0 changes the default to `resolve_entities='internal'`, thus disallowing local file access by default.
+
+  ### Workarounds
+  Setting the `resolve_entities` option explicitly to `resolve_entities='internal'` or `resolve_entities=False` disables the local file access.
+
+  ### Resources
+  Original report: https://bugs.launchpad.net/lxml/+bug/2146291
+
+  The default option was changed to `resolve_entities='internal'` for the normal XML and HTML parsers in lxml 5.0. The default was not changed for `iterparse()` and `ETCompatXMLParser()` at the time. lxml 6.1 makes the safe option the default for all parsers.
+impacted_packages:
+  - purl: pkg:pypi/lxml
+    affected_versions: vers:pypi/<6.1.0
+    fixed_versions: vers:pypi/6.1.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-vfmq-68hx-4jfw/GHSA-vfmq-68hx-4jfw.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-611
+references:
+  - url: https://bugs.launchpad.net/lxml/+bug/2146291
+    reference_type:
+    reference_id:
+  - url: https://github.com/lxml/lxml
+    reference_type:
+    reference_id:
+  - url: https://github.com/lxml/lxml/releases/tag/lxml-6.1.0
+    reference_type:
+    reference_id:
+  - url: https://github.com/lxml/lxml/security/advisories/GHSA-vfmq-68hx-4jfw
+    reference_type:
+    reference_id:

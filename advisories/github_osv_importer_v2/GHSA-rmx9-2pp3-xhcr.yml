@@ -1,0 +1,110 @@
+advisory_id: GHSA-rmx9-2pp3-xhcr
+datasource_id: github_osv_importer_v2/GHSA-rmx9-2pp3-xhcr
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-rmx9-2pp3-xhcr/GHSA-rmx9-2pp3-xhcr.json
+aliases:
+  - CVE-2026-25542
+summary: |
+  Tekton Pipelines has VerificationPolicy regex pattern bypass via substring matching
+  ## Summary
+
+  The Trusted Resources verification system matches a resource source string (`refSource.URI`) against `spec.resources[].pattern` using Go's `regexp.MatchString`. In Go, `regexp.MatchString` reports a match if the pattern matches **anywhere** in the input string. As a result, common unanchored patterns—including examples found in Tekton documentation—can be bypassed by attacker-controlled source strings that contain the trusted pattern as a substring. This may cause an unintended policy match and alter which verification mode or keys are applied.
+
+  ## Affected Component
+
+  - **Repository:** <https://github.com/tektoncd/pipeline>
+  - **Commit:** `0133513db03dadb3cb08301d6b0330badcb63830`
+  - **Call site:** `pkg/trustedresources/verify.go:118–137` (`getMatchedPolicies`)
+
+  ## Impact
+
+  An attacker can craft a Trusted Resources source string that embeds a trusted substring and still matches an unanchored `VerificationPolicy` `spec.resources[].pattern`, even if the policy is intended to constrain matches to a specific trusted source. This occurs because `regexp.MatchString` succeeds on substring matches. For example, a pattern such as `https://github.com/tektoncd/catalog.git` would match an attacker-controlled source like `https://evil.com/?x=https://github.com/tektoncd/catalog.git`.
+
+  **Affected:** Deployments using Trusted Resources verification with unanchored `VerificationPolicy` patterns, where an attacker can influence the `refSource.URI` value used for policy matching.
+
+  **Not affected:** Deployments that anchor all patterns (`^...$`) or otherwise enforce full-string matching; deployments where attackers cannot influence `refSource.URI`.
+
+  ## Reproduction
+
+  ### Canonical (Demonstrates Vulnerability)
+
+  ```bash
+  unzip -q -o poc.zip -d /tmp/poc-tekton-regex-001
+  cd /tmp/poc-tekton-regex-001/poc-F-TEKTON-REGEX-001
+  bash ./run.sh canonical | tee /tmp/tekton-regex-001-canonical.log
+  ```
+
+  - **Expected (secure):** Capability not reached; canonical does not emit vulnerability markers.
+  - **Actual (vulnerable):** Capability reached; canonical emits vulnerability markers.
+  - **Canonical markers (mandatory):** `[CALLSITE_HIT]` + `[PROOF_MARKER]`
+
+  ### Negative Control
+
+  ```bash
+  bash ./run.sh control | tee /tmp/tekton-regex-001-control.log
+  ```
+
+  - **Expected:** Capability not reached under the same harness; control emits the control marker and does not emit vulnerability markers.
+  - **Control markers (mandatory):** `[CALLSITE_HIT]` + `[NC_MARKER]`
+
+  ### Verification
+
+  ```bash
+  grep -n '\[PROOF_MARKER\]' /tmp/tekton-regex-001-canonical.log \
+    && grep -n '\[NC_MARKER\]' /tmp/tekton-regex-001-control.log \
+    && ! grep -n '\[PROOF_MARKER\]' /tmp/tekton-regex-001-control.log
+  ```
+
+  ## Suggested Fix
+
+  It is recommended to make matching safe-by-default by requiring full-string matches, or by validating patterns and clearly documenting substring semantics. Possible approaches include:
+
+  1. **Anchor patterns before matching** — e.g., wrap `pattern` as `^(?:pattern)$` when not already anchored.
+  2. **Introduce a separate field** for exact match vs. regex match semantics.
+  3. **Document substring semantics explicitly** and update all documentation examples to include anchors.
+
+  A fix is considered accepted when, under the same harness, the canonical test still hits `[CALLSITE_HIT]` but **does not** emit `[PROOF_MARKER]`.
+
+  ## Workarounds
+
+  Anchor all `VerificationPolicy` resource patterns so they must match the full source string. For example:
+
+  ```yaml
+  pattern: "^https://github\\.com/tektoncd/catalog\\.git$"
+  ```
+
+  ## Proof Bundle
+
+  - **Bundle:** [poc.zip](https://github.com/user-attachments/files/24833926/poc.zip)
+  - **Convention:** The zip extracts under a single top-level folder (`poc-F-TEKTON-REGEX-001/`) to avoid collisions.
+  - **Contains:** `canonical.log`, `control.log`, `witness.txt`
+  - **Extracted paths:** `./poc/poc-F-TEKTON-REGEX-001/canonical.log`, `./poc/poc-F-TEKTON-REGEX-001/control.log`, `./poc/poc-F-TEKTON-REGEX-001/witness.txt`
+  - **Integrity verification:** Compare `shasum -a 256` for `canonical.log`, `control.log`, `fix.patch`, and test source against `witness.txt`.
+
+  > **Note:** If a supported integration uses verified HTTPS app-links or universal links only, provide the supported tag or branch and retesting on that pin can be arranged.
+impacted_packages: []
+severities:
+  - score: '6.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-rmx9-2pp3-xhcr/GHSA-rmx9-2pp3-xhcr.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-185
+references:
+  - url: https://github.com/tektoncd/pipeline
+    reference_type:
+    reference_id:
+  - url: https://github.com/tektoncd/pipeline/commit/2c398711e6e9e232180508f0648425a8ea34dc9e
+    reference_type:
+    reference_id:
+  - url: https://github.com/tektoncd/pipeline/releases/tag/v1.11.0
+    reference_type:
+    reference_id:
+  - url: https://github.com/tektoncd/pipeline/security/advisories/GHSA-rmx9-2pp3-xhcr
+    reference_type: other
+    reference_id: GHSA-rmx9-2pp3-xhcr

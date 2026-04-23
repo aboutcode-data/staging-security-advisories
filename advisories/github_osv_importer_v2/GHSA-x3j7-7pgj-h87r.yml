@@ -1,0 +1,50 @@
+advisory_id: GHSA-x3j7-7pgj-h87r
+datasource_id: github_osv_importer_v2/GHSA-x3j7-7pgj-h87r
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-x3j7-7pgj-h87r/GHSA-x3j7-7pgj-h87r.json
+aliases:
+  - CVE-2026-32604
+summary: "Spinnaker: RCE when using gitrepo artifact types due to improper sanitization of user\
+  \ input on branch and paths\n### Impact\nA bad actor can execute arbitrary commands very simply\
+  \ on the clouddriver pods.  This can expose credentials, remove files, or inject resources\
+  \ easily. \n\n### Workarounds\nDisable the gitrepo artifact types."
+impacted_packages:
+  - purl: pkg:maven/io.spinnaker.clouddriver/clouddriver-artifacts-gitrepo
+    affected_versions: vers:maven/<2026.0.1
+    fixed_versions: vers:maven/2026.0.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '9.9'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-x3j7-7pgj-h87r/GHSA-x3j7-7pgj-h87r.json
+  - score: CRITICAL
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-20
+references:
+  - url: https://github.com/spinnaker/spinnaker
+    reference_type:
+    reference_id:
+  - url: https://github.com/spinnaker/spinnaker/releases/tag/spinnaker-release-2026.0.2
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32604
+    reference_type:
+    reference_id:
+  - url: https://github.com/spinnaker/spinnaker/security/advisories/GHSA-x3j7-7pgj-h87r
+    reference_type: other
+    reference_id: GHSA-x3j7-7pgj-h87r
+  - url: https://github.com/spinnaker/spinnaker/releases/tag/spinnaker-release-2025.3.2
+    reference_type: other
+    reference_id: spinnaker-release-2025.3.2
+  - url: https://github.com/spinnaker/spinnaker/releases/tag/spinnaker-release-2025.4.2
+    reference_type: other
+    reference_id: spinnaker-release-2025.4.2
+  - url: https://github.com/spinnaker/spinnaker/releases/tag/spinnaker-release-2026.0.1
+    reference_type: other
+    reference_id: spinnaker-release-2026.0.1
