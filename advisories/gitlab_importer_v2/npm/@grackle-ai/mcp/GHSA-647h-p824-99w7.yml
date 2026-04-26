@@ -1,0 +1,43 @@
+advisory_id: npm/@grackle-ai/mcp/GHSA-647h-p824-99w7
+datasource_id: gitlab_importer_v2/npm/@grackle-ai/mcp/GHSA-647h-p824-99w7
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/@grackle-ai/mcp/GHSA-647h-p824-99w7.yml
+aliases:
+  - GHSA-647h-p824-99w7
+summary: |
+  @grackle-ai/mcp has a workspace authorization bypass in its knowledge_search MCP tool
+  The `knowledge_search` and `knowledge_get_node` MCP tools are included in `SCOPED_TOOLS` (visible to scoped agents) but their handlers do not receive `authContext` and do not enforce workspace scoping. A scoped agent in Workspace A can supply an arbitrary `workspaceId` parameter to search or retrieve knowledge graph nodes from Workspace B, bypassing workspace isolation boundaries.
+
+  This is a **cross-workspace data leakage** vulnerability affecting any deployment where multiple workspaces contain sensitive knowledge graph data and scoped agents are used.
+
+  **Affected code:**
+  - `packages/mcp/src/tools/knowledge.ts:146-169` (knowledge_search handler)
+  - `packages/mcp/src/tools/knowledge.ts:244-283` (knowledge_get_node handler)
+  - `packages/mcp/src/tool-scoping.ts:11` (both tools listed in SCOPED_TOOLS)
+
+  **Contrast with correct implementation:** `knowledge_create_node` (same file, lines 334-357) properly receives `authContext` and overrides the user-supplied `workspaceId` for scoped callers.
+impacted_packages:
+  - purl: pkg:npm/%40grackle-ai/mcp
+    affected_versions: vers:npm/<0.70.2
+    fixed_versions: vers:npm/0.70.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/@grackle-ai/mcp/GHSA-647h-p824-99w7.yml
+weaknesses:
+  - CWE-284
+  - CWE-937
+  - CWE-1035
+references:
+  - url: https://github.com/nick-pape/grackle
+    reference_type:
+    reference_id:
+  - url: https://github.com/nick-pape/grackle/security/advisories/GHSA-647h-p824-99w7
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-647h-p824-99w7
+    reference_type:
+    reference_id: GHSA-647h-p824-99w7

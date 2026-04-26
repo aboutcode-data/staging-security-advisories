@@ -1,0 +1,38 @@
+advisory_id: GHSA-qxpq-82f3-xj47
+datasource_id: github_osv_importer_v2/GHSA-qxpq-82f3-xj47
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-qxpq-82f3-xj47/GHSA-qxpq-82f3-xj47.json
+aliases:
+  - CVE-2026-41201
+summary: |
+  CI4MS: Backup Management Full Account Takeover for All Roles & Privilege Escalation via Stored DOM Blind XSS
+  ## Summary:
+  An attacker can acheive Full Account Takeover & Privilege Escalation via Stored DOM XSS in backup module filename field manipulated via an SQLl file that tampers with the file name field to contain hidden XSS payload.
+impacted_packages:
+  - purl: pkg:composer/ci4-cms-erp/ci4ms
+    affected_versions: vers:composer/<0.31.5+0
+    fixed_versions: vers:composer/0.31.5+0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.8'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-qxpq-82f3-xj47/GHSA-qxpq-82f3-xj47.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-79
+references:
+  - url: https://github.com/ci4-cms-erp/ci4ms
+    reference_type:
+    reference_id:
+  - url: https://github.com/ci4-cms-erp/ci4ms/releases/tag/0.31.5.0
+    reference_type:
+    reference_id:
+  - url: https://github.com/ci4-cms-erp/ci4ms/security/advisories/GHSA-qxpq-82f3-xj47
+    reference_type:
+    reference_id:

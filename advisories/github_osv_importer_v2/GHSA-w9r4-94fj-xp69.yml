@@ -1,0 +1,45 @@
+advisory_id: GHSA-w9r4-94fj-xp69
+datasource_id: github_osv_importer_v2/GHSA-w9r4-94fj-xp69
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-w9r4-94fj-xp69/GHSA-w9r4-94fj-xp69.json
+aliases:
+  - CVE-2026-32690
+summary: |
+  Apache Airflow Exposes Secrets in Variables Saved as JSON Dictionaries
+  Secrets in Variables saved as JSON dictionaries were not properly redacted - in case the variables were retrieved by the user the secrets stored as nested fields were not masked.
+
+  If developers do not store variables with sensitive values in JSON form, their projects are not affected. Otherwise upgrade to the fixed version, Apache Airflow 3.2.0.
+impacted_packages:
+  - purl: pkg:pypi/apache-airflow-core
+    affected_versions: vers:pypi/>=3.0.0|<3.2.0
+    fixed_versions: vers:pypi/3.2.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '3.7'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-w9r4-94fj-xp69/GHSA-w9r4-94fj-xp69.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-668
+references:
+  - url: https://github.com/apache/airflow
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32690
+    reference_type:
+    reference_id:
+  - url: http://www.openwall.com/lists/oss-security/2026/04/17/6
+    reference_type:
+    reference_id:
+  - url: https://github.com/apache/airflow/pull/63480
+    reference_type: other
+    reference_id: 63480
+  - url: https://lists.apache.org/thread/7rnzxofntcznqxnhsmjvvlvygwph7rn5
+    reference_type: advisory
+    reference_id: 7rnzxofntcznqxnhsmjvvlvygwph7rn5

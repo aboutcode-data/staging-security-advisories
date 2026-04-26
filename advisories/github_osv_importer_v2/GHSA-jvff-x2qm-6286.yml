@@ -1,17 +1,21 @@
 advisory_id: GHSA-jvff-x2qm-6286
 datasource_id: github_osv_importer_v2/GHSA-jvff-x2qm-6286
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-jvff-x2qm-6286/GHSA-jvff-x2qm-6286.json
-aliases: []
+aliases:
+  - CVE-2026-41139
 summary: |
   mathjs Allows Improperly Controlled Modification of Dynamically-Determined Object Attributes
   ### Impact
-  Two security vulnerabilities, the first of which was introduced in version 13.1.0, were detected that allowed executing arbitrary JavaScript via the expression parser of mathjs. You can be affected when you have an application where users can evaluate arbitrary expressions using the mathjs expression parser.
+  This security vulnerability allowed executing arbitrary JavaScript via the expression parser of mathjs. You can be affected when you have an application where users can evaluate arbitrary expressions using the mathjs expression parser.
 
   ### Patches
-  The problem is patched in mathjs v15.2.0.
+  The issue was introduced in mathjs `v13.1.0`, and patched in mathjs `v15.2.0`.
 
   ### Workarounds
-  There is no workaround without upgrading.
+  There is no workaround without upgrading to `v15.2.0`.
+
+  ### References
+  You can find out more via the commit fixing this issue: https://github.com/josdejong/mathjs/commit/24d5ee7e25e85d49619b09122f055db4139bc057 (part of PR https://github.com/josdejong/mathjs/pull/3656).
 impacted_packages:
   - purl: pkg:npm/mathjs
     affected_versions: vers:npm/>=13.1.0|<15.2.0

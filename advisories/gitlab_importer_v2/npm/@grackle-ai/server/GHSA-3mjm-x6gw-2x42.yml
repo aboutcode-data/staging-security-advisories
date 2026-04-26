@@ -1,0 +1,40 @@
+advisory_id: npm/@grackle-ai/server/GHSA-3mjm-x6gw-2x42
+datasource_id: gitlab_importer_v2/npm/@grackle-ai/server/GHSA-3mjm-x6gw-2x42
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/@grackle-ai/server/GHSA-3mjm-x6gw-2x42.yml
+aliases:
+  - GHSA-3mjm-x6gw-2x42
+summary: |
+  @grackle-ai/server has Missing Content-Security-Policy and X-Frame-Options Headers
+  The HTTP server does not set `Content-Security-Policy`, `X-Frame-Options`, or `X-Content-Type-Options` headers on any response. This reduces defense-in-depth against XSS, clickjacking, and MIME-sniffing attacks.
+
+  While the current XSS attack surface is small (React-markdown is configured safely, no `dangerouslySetInnerHTML`, Vite does not generate source maps), the absence of these headers means any future XSS vulnerability would have no secondary defense layer.
+
+  **Affected code:**
+  - `packages/server/src/index.ts` — all `res.writeHead()` calls only set `Content-Type`, with no security headers
+impacted_packages:
+  - purl: pkg:npm/%40grackle-ai/server
+    affected_versions: vers:npm/<0.70.4
+    fixed_versions: vers:npm/0.70.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/@grackle-ai/server/GHSA-3mjm-x6gw-2x42.yml
+weaknesses:
+  - CWE-79
+  - CWE-693
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/nick-pape/grackle
+    reference_type:
+    reference_id:
+  - url: https://github.com/nick-pape/grackle/security/advisories/GHSA-3mjm-x6gw-2x42
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-3mjm-x6gw-2x42
+    reference_type:
+    reference_id: GHSA-3mjm-x6gw-2x42

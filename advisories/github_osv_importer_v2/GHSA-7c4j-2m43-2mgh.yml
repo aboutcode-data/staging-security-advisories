@@ -1,0 +1,45 @@
+advisory_id: GHSA-7c4j-2m43-2mgh
+datasource_id: github_osv_importer_v2/GHSA-7c4j-2m43-2mgh
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-7c4j-2m43-2mgh/GHSA-7c4j-2m43-2mgh.json
+aliases:
+  - CVE-2026-34065
+summary: |
+  nimiq-primitives: Node crash due to missing interlink validation in election macro block proposals
+  ### Impact
+  An untrusted p2p peer can cause a node to panic by announcing an election macro block whose `validators` set contains an invalid compressed BLS voting key.
+
+  Hashing an election macro header hashes `validators` and reaches `Validators::voting_keys()`, which calls `validator.voting_key.uncompress().unwrap()` and panics on invalid bytes.
+
+  ### Patches
+  [The patch for this vulnerability](https://github.com/nimiq/core-rs-albatross/commit/e10eaebcd7774e5da6d0ff5e88ed13503474f0ff) is included as part of [v1.3.0](https://github.com/nimiq/core-rs-albatross/releases/tag/v1.3.0).
+
+  ### Workarounds
+  No known workarounds.
+impacted_packages: []
+severities:
+  - score: '7.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-7c4j-2m43-2mgh/GHSA-7c4j-2m43-2mgh.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-755
+  - CWE-252
+references:
+  - url: https://github.com/nimiq/core-rs-albatross
+    reference_type:
+    reference_id:
+  - url: https://github.com/nimiq/core-rs-albatross/pull/3662
+    reference_type: other
+    reference_id: 3662
+  - url: https://github.com/nimiq/core-rs-albatross/commit/e10eaebcd7774e5da6d0ff5e88ed13503474f0ff
+    reference_type: other
+    reference_id: e10eaebcd7774e5da6d0ff5e88ed13503474f0ff
+  - url: https://github.com/nimiq/core-rs-albatross/security/advisories/GHSA-7c4j-2m43-2mgh
+    reference_type: other
+    reference_id: GHSA-7c4j-2m43-2mgh
