@@ -1,0 +1,42 @@
+advisory_id: packagist/aws/aws-sdk-php/GHSA-27qh-8cxx-2cr5
+datasource_id: gitlab_importer_v2/packagist/aws/aws-sdk-php/GHSA-27qh-8cxx-2cr5
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/packagist/aws/aws-sdk-php/GHSA-27qh-8cxx-2cr5.yml
+aliases:
+  - GHSA-27qh-8cxx-2cr5
+summary: |
+  AWS SDK for PHP has CloudFront Policy Document Injection via Special Characters
+  This notification is related to the [CloudFront signing utilities](https://github.com/aws/aws-sdk-php/blob/master/src/CloudFront/Signer.php) in the AWS SDK for PHP, which are used to generate Amazon CloudFront signed URLs and signed cookies. A defense-in-depth enhancement has been implemented to improve handling of special characters, such as double quotes and backslashes, in input values.
+impacted_packages:
+  - purl: pkg:composer/aws/aws-sdk-php
+    affected_versions: vers:composer/>=3.11.7|<3.371.4
+    fixed_versions: vers:composer/3.371.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/packagist/aws/aws-sdk-php/GHSA-27qh-8cxx-2cr5.yml
+weaknesses:
+  - CWE-20
+  - CWE-150
+  - CWE-1035
+  - CWE-937
+  - CWE-74
+references:
+  - url: https://github.com/aws/aws-sdk-php
+    reference_type:
+    reference_id:
+  - url: https://github.com/aws/aws-sdk-php/blob/master/src/CloudFront/Signer.php
+    reference_type:
+    reference_id:
+  - url: https://github.com/aws/aws-sdk-php/releases/tag/3.371.4
+    reference_type:
+    reference_id:
+  - url: https://github.com/aws/aws-sdk-php/security/advisories/GHSA-27qh-8cxx-2cr5
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-27qh-8cxx-2cr5
+    reference_type:
+    reference_id: GHSA-27qh-8cxx-2cr5

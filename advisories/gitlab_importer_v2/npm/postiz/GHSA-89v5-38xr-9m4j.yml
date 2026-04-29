@@ -1,0 +1,43 @@
+advisory_id: npm/postiz/GHSA-89v5-38xr-9m4j
+datasource_id: gitlab_importer_v2/npm/postiz/GHSA-89v5-38xr-9m4j
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/postiz/GHSA-89v5-38xr-9m4j.yml
+aliases:
+  - GHSA-89v5-38xr-9m4j
+summary: |
+  Postiz has Multiple SSRF Vectors - Webhooks, RSS Feed, URL Loader
+  Postiz has multiple SSRF vulnerabilities where user-provided URLs are fetched server-side without any IP validation or SSRF protection.
+impacted_packages:
+  - purl: pkg:npm/postiz
+    affected_versions: vers:npm/<=2.0.12
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/postiz/GHSA-89v5-38xr-9m4j.yml
+weaknesses:
+  - CWE-918
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/gitroomhq/postiz-app
+    reference_type:
+    reference_id:
+  - url: https://github.com/gitroomhq/postiz-app/commit/0ad89ccd26b1c387c4f3f3544b18c20d33586466
+    reference_type:
+    reference_id:
+  - url: https://github.com/gitroomhq/postiz-app/commit/be5d871896e97cb1f5a2c9241f156b6a1e1debe8
+    reference_type:
+    reference_id:
+  - url: https://github.com/gitroomhq/postiz-app/releases/tag/v2.21.2
+    reference_type:
+    reference_id:
+  - url: https://github.com/gitroomhq/postiz-app/security/advisories/GHSA-89v5-38xr-9m4j
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-89v5-38xr-9m4j
+    reference_type:
+    reference_id: GHSA-89v5-38xr-9m4j

@@ -1,0 +1,35 @@
+advisory_id: npm/n8n/GHSA-w673-8fjw-457c
+datasource_id: gitlab_importer_v2/npm/n8n/GHSA-w673-8fjw-457c
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/n8n/GHSA-w673-8fjw-457c.yml
+aliases:
+  - GHSA-w673-8fjw-457c
+summary: |
+  n8n: Authenticated XSS and Open Redirect via Form Node
+  An authenticated user with permission to create or modify workflows could configure a Form Node with an unsanitized HTML description field or exploit an overly permissive iframe sandbox policy to perform stored cross-site scripting or redirect end users visiting the form to an arbitrary external URL. The vulnerability could be used to facilitate phishing attacks.
+impacted_packages:
+  - purl: pkg:npm/n8n
+    affected_versions: vers:npm/<1.123.24|>=2.0.0-rc.0|<2.10.4|>=2.11.0|<2.12.0
+    fixed_versions: vers:npm/1.123.24|2.10.4|2.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:N/I:L/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/n8n/GHSA-w673-8fjw-457c.yml
+weaknesses:
+  - CWE-601
+  - CWE-79
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/n8n-io/n8n
+    reference_type:
+    reference_id:
+  - url: https://github.com/n8n-io/n8n/security/advisories/GHSA-w673-8fjw-457c
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-w673-8fjw-457c
+    reference_type:
+    reference_id: GHSA-w673-8fjw-457c

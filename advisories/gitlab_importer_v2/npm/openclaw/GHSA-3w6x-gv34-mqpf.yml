@@ -1,0 +1,37 @@
+advisory_id: npm/openclaw/GHSA-3w6x-gv34-mqpf
+datasource_id: gitlab_importer_v2/npm/openclaw/GHSA-3w6x-gv34-mqpf
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-3w6x-gv34-mqpf.yml
+aliases:
+  - GHSA-3w6x-gv34-mqpf
+summary: |
+  OpenClaw's mutating internal ACP chat commands missed operator.admin scope enforcement
+  Mutating internal ACP chat commands missed the operator.admin gate that should separate read-only and mutating control-plane actions.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.3.22
+    fixed_versions: vers:npm/2026.3.22
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-3w6x-gv34-mqpf.yml
+weaknesses:
+  - CWE-1035
+  - CWE-937
+  - CWE-862
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/229426a257e49694a59fa4e3895861d02a4d767f
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-3w6x-gv34-mqpf
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-3w6x-gv34-mqpf
+    reference_type:
+    reference_id: GHSA-3w6x-gv34-mqpf

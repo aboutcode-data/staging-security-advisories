@@ -1,0 +1,44 @@
+advisory_id: packagist/craftcms/cms/GHSA-44px-qjjc-xrhq
+datasource_id: gitlab_importer_v2/packagist/craftcms/cms/GHSA-44px-qjjc-xrhq
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/packagist/craftcms/cms/GHSA-44px-qjjc-xrhq.yml
+aliases:
+  - GHSA-44px-qjjc-xrhq
+summary: |
+  Craft CMS: Authorized asset "preview file" requests bypass allows users without asset access to retrieve private preview metadata
+  An authenticated low-privileged user can call `assets/preview-file` for an asset they are not authorized to view and still receive preview response data (`previewHtml`) for that private asset.
+
+  The returned preview HTML included a private preview image route containing the target private `assetId`, even though `canView` was `false` for the attacker account.
+impacted_packages:
+  - purl: pkg:composer/craftcms/cms
+    affected_versions: vers:composer/>=4.0.0-RC1|<4.17.8|>=5.0.0-RC1|<5.9.14
+    fixed_versions: vers:composer/4.17.8|5.9.14
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score:
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/packagist/craftcms/cms/GHSA-44px-qjjc-xrhq.yml
+weaknesses:
+  - CWE-1035
+  - CWE-937
+  - CWE-639
+  - CWE-200
+  - CWE-862
+references:
+  - url: https://github.com/craftcms/cms
+    reference_type:
+    reference_id:
+  - url: https://github.com/craftcms/cms/commit/b1cddf72c98a66801beb04ea4b07e72182b7b7db
+    reference_type:
+    reference_id:
+  - url: https://github.com/craftcms/cms/security/advisories/GHSA-44px-qjjc-xrhq
+    reference_type:
+    reference_id:
+  - url: https://github.com/craftcms/cms/commit/d30df3112220db1ffd6726a3ed11857014c7fb27
+    reference_type: other
+    reference_id: d30df3112220db1ffd6726a3ed11857014c7fb27
+  - url: https://github.com/advisories/GHSA-44px-qjjc-xrhq
+    reference_type:
+    reference_id: GHSA-44px-qjjc-xrhq
