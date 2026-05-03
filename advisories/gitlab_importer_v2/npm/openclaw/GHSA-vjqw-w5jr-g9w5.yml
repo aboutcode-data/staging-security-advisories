@@ -1,0 +1,41 @@
+advisory_id: npm/openclaw/GHSA-vjqw-w5jr-g9w5
+datasource_id: gitlab_importer_v2/npm/openclaw/GHSA-vjqw-w5jr-g9w5
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-vjqw-w5jr-g9w5.yml
+aliases:
+  - GHSA-vjqw-w5jr-g9w5
+summary: |
+  Duplicate Advisory: OpenClaw: Feishu webhook mode accepted forged events when only `verificationToken` was configured
+  ### Duplicate Advisory
+  This advisory has been withdrawn because it is a duplicate of GHSA-g353-mgv3-8pcj. This link is maintained to preserve external references.
+
+  ### Original Description
+  OpenClaw before 2026.3.12 contains an authentication bypass vulnerability in Feishu webhook mode when only verificationToken is configured without encryptKey, allowing acceptance of forged events. Unauthenticated network attackers can inject forged Feishu events and trigger downstream tool execution by reaching the webhook endpoint.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.3.12
+    fixed_versions: vers:npm/2026.3.12
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:L
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-vjqw-w5jr-g9w5.yml
+weaknesses:
+  - CWE-347
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-g353-mgv3-8pcj
+    reference_type:
+    reference_id:
+  - url: https://www.vulncheck.com/advisories/openclaw-forged-event-injection-via-feishu-webhook-verification-token
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32974
+    reference_type:
+    reference_id: CVE-2026-32974
+  - url: https://github.com/advisories/GHSA-vjqw-w5jr-g9w5
+    reference_type:
+    reference_id: GHSA-vjqw-w5jr-g9w5

@@ -1,0 +1,41 @@
+advisory_id: npm/openclaw/GHSA-rwwx-25m7-ww73
+datasource_id: gitlab_importer_v2/npm/openclaw/GHSA-rwwx-25m7-ww73
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-rwwx-25m7-ww73.yml
+aliases:
+  - GHSA-rwwx-25m7-ww73
+summary: |
+  Duplicate Advisory: OpenClaw: Unrecognized script runners could bypass `system.run` approval integrity
+  ### Duplicate Advisory
+  This advisory has been withdrawn because it is a duplicate of GHSA-qc36-x95h-7j53. This link is maintained to preserve external references.
+
+  ### Original Description
+  OpenClaw before 2026.3.11 contains an approval integrity vulnerability where system.run approvals fail to bind mutable file operands for certain script runners like tsx and jiti. Attackers can obtain approval for benign script commands, rewrite referenced scripts on disk, and execute modified code under the approved run context.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.3.12
+    fixed_versions: vers:npm/2026.3.12
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:H
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-rwwx-25m7-ww73.yml
+weaknesses:
+  - CWE-863
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32978
+    reference_type:
+    reference_id: CVE-2026-32978
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-qc36-x95h-7j53
+    reference_type: advisory
+    reference_id: GHSA-qc36-x95h-7j53
+  - url: https://github.com/advisories/GHSA-rwwx-25m7-ww73
+    reference_type:
+    reference_id: GHSA-rwwx-25m7-ww73
+  - url: https://www.vulncheck.com/advisories/openclaw-approval-bypass-via-unrecognized-script-runners
+    reference_type: advisory
+    reference_id: openclaw-approval-bypass-via-unrecognized-script-runners

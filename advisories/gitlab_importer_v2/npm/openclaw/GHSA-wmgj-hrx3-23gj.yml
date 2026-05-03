@@ -1,0 +1,41 @@
+advisory_id: npm/openclaw/GHSA-wmgj-hrx3-23gj
+datasource_id: gitlab_importer_v2/npm/openclaw/GHSA-wmgj-hrx3-23gj
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-wmgj-hrx3-23gj.yml
+aliases:
+  - GHSA-wmgj-hrx3-23gj
+summary: |
+  Duplicate Advisory: OpenClaw: Unbound interpreter and runtime commands could bypass node-host approval integrity
+  ### Duplicate Advisory
+  This advisory has been withdrawn because it is a duplicate of GHSA-xf99-j42q-5w5p. This link is maintained to preserve external references.
+
+  ### Original Description
+  OpenClaw before 2026.3.11 contains an approval integrity vulnerability allowing attackers to execute rewritten local code by modifying scripts between approval and execution when exact file binding cannot occur. Remote attackers can change approved local scripts before execution to achieve unintended code execution as the OpenClaw runtime user.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.3.11
+    fixed_versions: vers:npm/2026.3.11
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-wmgj-hrx3-23gj.yml
+weaknesses:
+  - CWE-1035
+  - CWE-937
+  - CWE-367
+references:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32979
+    reference_type:
+    reference_id: CVE-2026-32979
+  - url: https://github.com/advisories/GHSA-wmgj-hrx3-23gj
+    reference_type:
+    reference_id: GHSA-wmgj-hrx3-23gj
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-xf99-j42q-5w5p
+    reference_type: advisory
+    reference_id: GHSA-xf99-j42q-5w5p
+  - url: https://www.vulncheck.com/advisories/openclaw-unbound-interpreter-and-runtime-commands-bypass-in-node-host-approval
+    reference_type: advisory
+    reference_id: openclaw-unbound-interpreter-and-runtime-commands-bypass-in-node-host-approval
