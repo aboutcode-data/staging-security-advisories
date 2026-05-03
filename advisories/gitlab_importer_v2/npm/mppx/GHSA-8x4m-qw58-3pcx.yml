@@ -1,0 +1,46 @@
+advisory_id: npm/mppx/GHSA-8x4m-qw58-3pcx
+datasource_id: gitlab_importer_v2/npm/mppx/GHSA-8x4m-qw58-3pcx
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/mppx/GHSA-8x4m-qw58-3pcx.yml
+aliases:
+  - GHSA-8x4m-qw58-3pcx
+summary: |
+  mppx has multiple payment bypass and griefing vulnerabilities
+  Multiple vulnerabilities were discovered in `tempo/charge` and `tempo/session` which allowed for undesirable behaviors, including:
+  - Replaying `tempo/charge` transaction hashes across push/pull modes, across charge/session endpoints, and via concurrent requests
+  - Performing free `tempo/charge` requests due to missing transfer log verification in pull-mode
+  - Replaying `tempo/charge` credentials across routes via cross-route scope confusion (`memo`/`splits` not included in scope binding)
+  - Manipulating the fee payer of a `tempo/charge` handler into paying for requests (missing sender signature before co-signing)
+  - Bypassing `tempo/session` voucher signature verification
+  - Piggybacking off existing `tempo/session` channels via settle voucher reuse and weak channel ID binding
+  - Performing free `tempo/session` requests by exploiting channel reopen without on-chain settled state
+  - Accepting deductions on finalized `tempo/session` channels
+  - Bypassing payment on free routes via method-mismatch fallback
+  - Griefing `tempo/session` channels via force-close detection bypass (`closeRequestedAt` not persisted)
+impacted_packages:
+  - purl: pkg:npm/mppx
+    affected_versions: vers:npm/<0.4.8
+    fixed_versions: vers:npm/0.4.8
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/mppx/GHSA-8x4m-qw58-3pcx.yml
+weaknesses:
+  - CWE-1035
+  - CWE-937
+  - CWE-345
+  - CWE-288
+  - CWE-294
+references:
+  - url: https://github.com/wevm/mppx
+    reference_type:
+    reference_id:
+  - url: https://github.com/wevm/mppx/security/advisories/GHSA-8x4m-qw58-3pcx
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-8x4m-qw58-3pcx
+    reference_type:
+    reference_id: GHSA-8x4m-qw58-3pcx
