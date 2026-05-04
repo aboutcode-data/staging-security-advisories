@@ -1,0 +1,37 @@
+advisory_id: pypi/openssl-encrypt/GHSA-h45m-mgcp-q388
+datasource_id: gitlab_importer_v2/pypi/openssl-encrypt/GHSA-h45m-mgcp-q388
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/pypi/openssl-encrypt/GHSA-h45m-mgcp-q388.yml
+aliases:
+  - GHSA-h45m-mgcp-q388
+summary: |
+  openssl-encrypt: TOTP rate limiter is in-memory only — not shared across workers, lost on restart
+  The TOTP brute-force rate limiter in `openssl_encrypt_server/modules/pepper/totp.py` at **lines 47-98** uses an in-memory `defaultdict(list)` as a class variable.
+impacted_packages:
+  - purl: pkg:pypi/openssl-encrypt
+    affected_versions: vers:pypi/<1.4.0
+    fixed_versions: vers:pypi/1.4.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/pypi/openssl-encrypt/GHSA-h45m-mgcp-q388.yml
+weaknesses:
+  - CWE-770
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/jahlives/openssl_encrypt
+    reference_type:
+    reference_id:
+  - url: https://github.com/jahlives/openssl_encrypt/commit/2749bc0949b34a5921a35fb4a3f1856fc51916de
+    reference_type:
+    reference_id:
+  - url: https://github.com/jahlives/openssl_encrypt/security/advisories/GHSA-h45m-mgcp-q388
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-h45m-mgcp-q388
+    reference_type:
+    reference_id: GHSA-h45m-mgcp-q388

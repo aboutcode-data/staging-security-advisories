@@ -1,0 +1,37 @@
+advisory_id: pypi/openssl-encrypt/GHSA-425g-fjhq-5h92
+datasource_id: gitlab_importer_v2/pypi/openssl-encrypt/GHSA-425g-fjhq-5h92
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/pypi/openssl-encrypt/GHSA-425g-fjhq-5h92.yml
+aliases:
+  - GHSA-425g-fjhq-5h92
+summary: |
+  openssl-encrypt silently skips schema validation when jsonschema library is not installed
+  In `openssl_encrypt/modules/json_validator.py` at **lines 234-238**, when the `jsonschema` library is not installed, all schema validation is silently skipped with only a print warning.
+impacted_packages:
+  - purl: pkg:pypi/openssl-encrypt
+    affected_versions: vers:pypi/<1.4.0
+    fixed_versions: vers:pypi/1.4.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/pypi/openssl-encrypt/GHSA-425g-fjhq-5h92.yml
+weaknesses:
+  - CWE-20
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/jahlives/openssl_encrypt
+    reference_type:
+    reference_id:
+  - url: https://github.com/jahlives/openssl_encrypt/commit/6e7f938dcb7928faf5fd12bb5559f6dae2944124
+    reference_type:
+    reference_id:
+  - url: https://github.com/jahlives/openssl_encrypt/security/advisories/GHSA-425g-fjhq-5h92
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-425g-fjhq-5h92
+    reference_type:
+    reference_id: GHSA-425g-fjhq-5h92
