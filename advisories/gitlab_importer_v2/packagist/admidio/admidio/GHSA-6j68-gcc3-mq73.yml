@@ -8,7 +8,7 @@ summary: |
   The SSO metadata fetch endpoint at `modules/sso/fetch_metadata.php` accepts an arbitrary URL via `$_GET['url']`, validates it only with PHP's `FILTER_VALIDATE_URL`, and passes it directly to `file_get_contents()`. `FILTER_VALIDATE_URL` accepts `file://`, `http://`, `ftp://`, `data://`, and `php://` scheme URIs. An authenticated administrator can use this endpoint to read arbitrary local files via the `file://` wrapper (Local File Read), reach internal services via `http://` (SSRF), or fetch cloud instance metadata. The full response body is returned verbatim to the caller.
 impacted_packages:
   - purl: pkg:composer/admidio/admidio
-    affected_versions: vers:composer/>=5.0.0|<5.0.7
+    affected_versions: vers:composer/<0.0.0
     fixed_versions: vers:composer/5.0.7
     fixed_in_commits: []
     introduced_in_commits: []

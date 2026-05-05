@@ -8,7 +8,7 @@ summary: |
   In `JsonBeanPropertyBinder::expandArrayToThreshold` in `io.micronaut:micronaut-json-core` before Micronaut 4 4.10.16 and in Micronaut 3 before 3.10.5 does not correctly handle descending array index order during form-urlencoded body binding, which allows remote attackers to cause a denial of service (non-terminating loop, CPU exhaustion, and OutOfMemoryError) via crafted indexed form parameters (e.g., `authors[1].name` followed by `authors[0].name`).
 impacted_packages:
   - purl: pkg:maven/io.micronaut/micronaut-json-core
-    affected_versions:
+    affected_versions: vers:maven/<0
     fixed_versions: vers:maven/3.10.5|4.10.16
     fixed_in_commits: []
     introduced_in_commits: []

@@ -8,7 +8,7 @@ summary: |
   Before `v2026.3.23`, the Plivo V2 verification path treated query-only variants of the same signed request as fresh verified work. Plivo V2 signatures authenticate `baseUrl + nonce`, but the replay key was derived from the full verification URL including the query string, so unsigned query-only changes minted a new `verifiedRequestKey`.
 impacted_packages:
   - purl: pkg:npm/openclaw
-    affected_versions: vers:npm/<2026.3.23
+    affected_versions: vers:npm/<0.0.0
     fixed_versions: vers:npm/2026.3.23
     fixed_in_commits: []
     introduced_in_commits: []

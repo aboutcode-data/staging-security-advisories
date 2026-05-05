@@ -10,7 +10,7 @@ summary: |
   Clusters started with `dask.distributed.LocalCluster` or `dask.distributed.Client()` (which defaults to using `LocalCluster`) would mistakenly configure their respective Dask workers to listen on external interfaces (typically with a randomly selected high port) rather than only on `localhost`. A Dask cluster created using this method AND running on a machine that has these ports exposed could be used by a sophisticated attacker to enable remote code execution. Users running on machines with standard firewalls in place, or using clusters created via cluster objects other than `LocalCluster` (e.g. `dask_kubernetes.KubeCluster`) should not be affected. This vulnerability is documented in CVE-2021-42343, and was fixed in version `2021.10.0` (PR #5427).
 impacted_packages:
   - purl: pkg:pypi/distributed
-    affected_versions: vers:pypi/<2021.10.0
+    affected_versions: vers:pypi/<0
     fixed_versions: vers:pypi/2021.10.0
     fixed_in_commits: []
     introduced_in_commits: []

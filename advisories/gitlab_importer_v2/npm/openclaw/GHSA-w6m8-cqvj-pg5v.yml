@@ -8,7 +8,7 @@ summary: |
   The patch for CVE-2026-32011 tightened pre-auth body parsing limits (from 1MB/30s to 64KB/5s) across several webhook handlers. However, the **Feishu extension's webhook handler** was not included in the patch and still accepts request bodies with the old permissive limits (1MB body, 30-second timeout) **before** verifying the webhook signature. An unauthenticated attacker can exhaust server connection resources by sending concurrent slow HTTP POST requests to the Feishu webhook endpoint.
 impacted_packages:
   - purl: pkg:npm/openclaw
-    affected_versions: vers:npm/<2026.3.24
+    affected_versions: vers:npm/<0.0.0
     fixed_versions: vers:npm/2026.3.24
     fixed_in_commits: []
     introduced_in_commits: []

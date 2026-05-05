@@ -8,7 +8,7 @@ summary: |
   AutoMapper is vulnerable to a Denial of Service (DoS) attack. When mapping deeply nested object graphs, the library uses recursive method calls without enforcing a default maximum depth limit. This allows an attacker to provide a specially crafted object graph that exhausts the thread's stack memory, triggering a `StackOverflowException` and causing the entire application process to terminate.
 impacted_packages:
   - purl: pkg:nuget/AutoMapper
-    affected_versions:
+    affected_versions: vers:nuget/<0.0.0
     fixed_versions: vers:nuget/15.1.1|16.1.1
     fixed_in_commits: []
     introduced_in_commits: []

@@ -8,7 +8,7 @@ summary: |
   In OpenClaw `system.run` allowlist mode, shell-wrapper analysis could be bypassed by splitting command substitution as `$\\` + newline + `(` inside double quotes. Analysis treated the payload as allowlisted (for example `/bin/echo`), while shell runtime folded the line continuation into `$(...)` and executed non-allowlisted subcommands.
 impacted_packages:
   - purl: pkg:npm/openclaw
-    affected_versions: vers:npm/<2026.2.22
+    affected_versions: vers:npm/<0.0.0
     fixed_versions: vers:npm/2026.2.22
     fixed_in_commits: []
     introduced_in_commits: []

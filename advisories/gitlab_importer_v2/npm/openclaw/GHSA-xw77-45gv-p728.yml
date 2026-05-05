@@ -8,7 +8,7 @@ summary: |
   In affected versions of `openclaw`, the plugin subagent runtime dispatched gateway methods through a synthetic operator client that always carried broad administrative scopes. Plugin-owned HTTP routes using `auth: "plugin"` could therefore trigger admin-only gateway actions without normal gateway authorization.
 impacted_packages:
   - purl: pkg:npm/openclaw
-    affected_versions: vers:npm/>=2026.3.7|<2026.3.11
+    affected_versions: vers:npm/<0.0.0
     fixed_versions: vers:npm/2026.3.11
     fixed_in_commits: []
     introduced_in_commits: []

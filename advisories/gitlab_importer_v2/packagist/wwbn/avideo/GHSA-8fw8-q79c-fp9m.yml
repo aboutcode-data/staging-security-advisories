@@ -8,7 +8,7 @@ summary: |
   An unauthenticated API endpoint (`APIName=locale`) concatenates user input into an `include` path with no canonicalization or `whitelist`. Path traversal is accepted, so arbitrary PHP files under the web root can be included. In our test this yielded confirmed file disclosure and code execution of existing PHP content (e.g., `view/about.php`), and it *can* escalate to RCE if an attacker can place or control a PHP file elsewhere in the tree.
 impacted_packages:
   - purl: pkg:composer/wwbn/avideo
-    affected_versions: vers:composer/<=26.0.0
+    affected_versions: vers:composer/<0.0.0
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []

@@ -8,7 +8,7 @@ summary: |
   The `uploadVideoToLinkedIn()` method in the SocialMediaPublisher plugin constructs a shell command by directly interpolating an upload URL received from LinkedIn's API response, without sanitization via `escapeshellarg()`. If an attacker can influence the LinkedIn API response (via MITM, compromised OAuth token, or API compromise), they can inject arbitrary OS commands that execute as the web server user.
 impacted_packages:
   - purl: pkg:composer/wwbn/avideo
-    affected_versions: vers:composer/<=25.0.0
+    affected_versions: vers:composer/<0.0.0
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
