@@ -40,6 +40,11 @@ summary: |
   Any charm deployment where a resource could be modified to inject security vulnerabilities into another workload. The most obvious is OCI containers as one gets execution escalation, but if a file resource had security controls in it, this could also be leveraged. For the file case, this would need to be examined on a case-by-case basis.
 impacted_packages: []
 severities:
+  - score: '6.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-245v-p8fj-vwm2/GHSA-245v-p8fj-vwm2.json
   - score: '7.1'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N

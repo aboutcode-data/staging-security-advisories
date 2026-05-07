@@ -1,7 +1,8 @@
 advisory_id: GHSA-rg3h-x3jw-7jm5
 datasource_id: github_osv_importer_v2/GHSA-rg3h-x3jw-7jm5
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-rg3h-x3jw-7jm5/GHSA-rg3h-x3jw-7jm5.json
-aliases: []
+aliases:
+  - CVE-2026-41496
 summary: |
   PraisonAI: SQL Injection via unvalidated `table_prefix` in 9 conversation store backends (incomplete fix for CVE-2026-40315)
   The fix for [CVE-2026-40315](https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-x783-xp3g-mqhp) added input validation to `SQLiteConversationStore` only. Nine sibling backends — MySQL, PostgreSQL, async SQLite/MySQL/PostgreSQL, Turso, SingleStore, Supabase, SurrealDB — pass `table_prefix` straight into f-string SQL. Same root cause, same code pattern, same exploitation. 52 unvalidated injection points across the codebase.

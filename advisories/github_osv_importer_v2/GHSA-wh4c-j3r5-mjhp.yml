@@ -140,6 +140,29 @@ summary: |
   ### Option B — Defensive serialization: split the terminator during serialization
 
   `XMLSerializer` now replaces every occurrence of `]]>` in CDATA section data with the split sequence `]]]]><![CDATA[>` before emitting. This closes all mutation-vector paths that Option A alone cannot guard, and means the serialized output is always well-formed XML regardless of how `]]>` entered the node.
+
+  ## Update — 2026-04-xx (0.9.10 / 0.8.13)
+
+  ### `splitCDATASections` is deprecated
+
+  The CDATA split behavior introduced as Option B of this fix (replacing `]]>` with`]]]]><![CDATA[>` during serialization) is **deprecated** as of 0.9.10 / 0.8.13.
+
+  This release introduces a `requireWellFormed` option on `XMLSerializer.serializeToString()`. When `{ requireWellFormed: true }` is passed as the second argument, the serializer throws `InvalidStateError` if CDATA section data contains `]]>` — this is the spec-aligned behavior (W3C DOM Parsing and Serialization, `require well-formed` flag) and the recommended migration path going forward.
+  The split behavior is now controlled by an explicit `splitCDATASections` option (default `true`, preserving the current behavior). The three serialization behaviors are:
+  | `requireWellFormed` | `splitCDATASections` | Behavior ||---|---|---|| `false` (default) | `true` (default) | Split `]]>` → `]]]]><![CDATA[>` (current behavior, deprecated) || `true` | — (ignored) | Throw `InvalidStateError` — spec-aligned, recommended |\ `false` | `false` | Emit verbatim — same as pre-0.9.9 behavior |
+
+  `requireWellFormed: true` takes precedence: the split path is unreachable when it is set.
+
+  ### Migration
+  Replace any reliance on the default split behavior with an explicit opt-in:
+  ```js// Before (implicit split, deprecated): const xml = new XMLSerializer().serializeToString(doc);
+
+  // After (explicit guard, spec-aligned): const xml = new XMLSerializer().serializeToString(doc, { requireWellFormed: true }); // Throws InvalidStateError if any CDATASection contains ']]>' ```
+
+  ### Removal timeline
+  Both the `splitCDATASections` option and the underlying `]]>` → `]]]]><![CDATA[>` split mechanics will be removed in the next breaking (`0.10.0`) release. After removal, the only behaviors will be verbatim (default) and `requireWellFormed: true` (throws).
+
+  Removal is tracked in [xmldom/xmldom#999](https://github.com/xmldom/xmldom/issues/999).
 impacted_packages:
   - purl: pkg:npm/xmldom
     affected_versions: vers:npm/<=0.6.0

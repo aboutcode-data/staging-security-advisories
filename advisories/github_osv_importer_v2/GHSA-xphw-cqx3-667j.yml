@@ -1,7 +1,8 @@
 advisory_id: GHSA-xphw-cqx3-667j
 datasource_id: github_osv_importer_v2/GHSA-xphw-cqx3-667j
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-xphw-cqx3-667j/GHSA-xphw-cqx3-667j.json
-aliases: []
+aliases:
+  - CVE-2026-6654
 summary: |
   thin-vec: Use-After-Free and Double Free in IntoIter::drop When Element Drop Panics
   ### Summary
@@ -161,6 +162,10 @@ summary: |
 
   ### Impact
 
+  **Vulnerability classification:**
+  - CWE-415: Double Free
+  - CWE-416: Use-After-Free
+
   **Affected code:** All code satisfying the following conditions simultaneously:
 
   1. `ThinVec` stores heap-owning types (`String`, `Vec`, `Box`, etc.)
@@ -191,3 +196,9 @@ references:
   - url: https://github.com/mozilla/thin-vec/security/advisories/GHSA-xphw-cqx3-667j
     reference_type:
     reference_id:
+  - url: https://rustsec.org/advisories/RUSTSEC-2026-0103.html
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-6654
+    reference_type:
+    reference_id: CVE-2026-6654

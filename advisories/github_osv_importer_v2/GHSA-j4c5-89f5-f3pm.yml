@@ -1,0 +1,62 @@
+advisory_id: GHSA-j4c5-89f5-f3pm
+datasource_id: github_osv_importer_v2/GHSA-j4c5-89f5-f3pm
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-j4c5-89f5-f3pm/GHSA-j4c5-89f5-f3pm.json
+aliases: []
+summary: |
+  OpenClaw: Browser CDP profile creation skipped strict-mode SSRF checks
+  ## Affected Packages / Versions
+
+  - Package: `openclaw` (npm)
+  - Affected versions: `< 2026.4.20`
+  - Patched version: `2026.4.20`
+
+  ## Impact
+
+  Browser profile creation normalized `cdpUrl` values before persisting them, but did not apply the configured browser SSRF policy at creation time. In deployments that explicitly disabled private-network CDP targets, a stored profile could still point at a private-network or metadata endpoint and later be probed by normal profile status flows.
+
+  Default trusted-operator browser behavior allows private-network CDP endpoints, so this only affected strict-mode deployments. Severity is low.
+
+  ## Fix
+
+  OpenClaw now checks CDP endpoints against the browser SSRF policy during profile creation and reachability operations.
+
+  Fix commits:
+
+  - `1fd049e3074cac72f6734a7fe88468c84f5f8bd7`
+  - `e90c89cf8b1459f2aa1f3a665be67392b6c03fdf`
+
+  ## Release
+
+  Fixed in OpenClaw `2026.4.20`.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.4.20
+    fixed_versions: vers:npm/2026.4.20
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '2.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-j4c5-89f5-f3pm/GHSA-j4c5-89f5-f3pm.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-918
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/1fd049e3074cac72f6734a7fe88468c84f5f8bd7
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/e90c89cf8b1459f2aa1f3a665be67392b6c03fdf
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-j4c5-89f5-f3pm
+    reference_type:
+    reference_id:

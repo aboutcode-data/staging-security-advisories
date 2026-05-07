@@ -1,0 +1,38 @@
+advisory_id: GHSA-66fx-fqv6-5wwx
+datasource_id: github_osv_importer_v2/GHSA-66fx-fqv6-5wwx
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-66fx-fqv6-5wwx/GHSA-66fx-fqv6-5wwx.json
+aliases:
+  - CVE-2026-35365
+summary: |
+  uutils coreutils has a Link Following issue
+  The mv utility in uutils coreutils improperly handles directory trees containing symbolic links during moves across filesystem boundaries. Instead of preserving symlinks, the implementation expands them, copying the linked targets as real files or directories at the destination. This can lead to resource exhaustion (disk space or time) if symlinks point to large external directories, unexpected duplication of sensitive data into unintended locations, or infinite recursion and repeated copying in the presence of symlink loops.
+impacted_packages: []
+severities:
+  - score: '6.6'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:L
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-66fx-fqv6-5wwx/GHSA-66fx-fqv6-5wwx.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-59
+references:
+  - url: https://github.com/uutils/coreutils
+    reference_type:
+    reference_id:
+  - url: https://github.com/uutils/coreutils/commit/9654e4abaf24449ef2279e9a16963edb5c8b8fef
+    reference_type:
+    reference_id:
+  - url: https://github.com/uutils/coreutils/releases/tag/0.7.0
+    reference_type: advisory
+    reference_id: 0.7.0
+  - url: https://github.com/uutils/coreutils/pull/10546
+    reference_type: bug
+    reference_id: 10546
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-35365
+    reference_type:
+    reference_id: CVE-2026-35365

@@ -67,6 +67,11 @@ summary: |
   The endpoint is an inter-NF SBI API used during AMF-to-AMF UE context handover. It is not directly reachable from external UEs and requires access to the internal 5GC SBI network. The processor's secondary mandatory field validation prevents any unintended state modification, so there is no direct exploitability. However, the SBI handler layer is the intended first line of defense — relying on the processor to compensate for a missing input check increases fragility and violates defense in depth. Any future change to the processor's validation logic could inadvertently expose the system to processing completely empty request objects.
 impacted_packages: []
 severities:
+  - score: '5.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-r99v-75p9-xqm5/GHSA-r99v-75p9-xqm5.json
   - score: '5.5'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P
@@ -80,6 +85,9 @@ severities:
 weaknesses:
   - CWE-440
 references:
+  - url: https://github.com/free5gc/amf/releases/tag/v1.4.3
+    reference_type:
+    reference_id:
   - url: https://github.com/free5gc/free5gc
     reference_type:
     reference_id:

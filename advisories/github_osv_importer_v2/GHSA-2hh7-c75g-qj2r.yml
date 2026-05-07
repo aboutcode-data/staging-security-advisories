@@ -1,0 +1,58 @@
+advisory_id: GHSA-2hh7-c75g-qj2r
+datasource_id: github_osv_importer_v2/GHSA-2hh7-c75g-qj2r
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-2hh7-c75g-qj2r/GHSA-2hh7-c75g-qj2r.json
+aliases: []
+summary: |
+  OpenClaw validates Zalo outbound photo URLs through the SSRF guard
+  ## Summary
+  Zalo outbound photo URLs are validated through the SSRF guard.
+
+  ## Affected Packages / Versions
+  - Package: openclaw (npm)
+  - Affected versions: <= 2026.4.21
+  - Fixed version: 2026.4.22
+
+  ## Impact
+  The Zalo plugin could forward an attacker-controlled outbound photo URL to the Zalo Bot API without first applying OpenClaw's SSRF validation policy.
+
+  ## Fix
+  Zalo sendPhoto now parses and validates outbound photo URLs with the shared SSRF hostname policy before posting to Zalo, and media-reply paths route through the guarded outbound media helpers.
+
+  ## Fix Commit(s)
+  - a65eb1b864b7630c1242a82de9e5799b80583c3f
+
+  ## Verification
+  - The fix commit is contained in the public v2026.4.22 tag.
+  - openclaw@2026.4.22 is published on npm and the compiled package contains the fix.
+  - Focused regression coverage for this path passed before publication.
+
+  OpenClaw thanks @foodlook for reporting.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<=2026.4.21
+    fixed_versions: vers:npm/2026.4.22
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-2hh7-c75g-qj2r/GHSA-2hh7-c75g-qj2r.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-918
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/a65eb1b864b7630c1242a82de9e5799b80583c3f
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-2hh7-c75g-qj2r
+    reference_type:
+    reference_id:

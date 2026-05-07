@@ -1,19 +1,18 @@
 advisory_id: GHSA-wxw2-rwmh-vr8f
 datasource_id: github_osv_importer_v2/GHSA-wxw2-rwmh-vr8f
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-wxw2-rwmh-vr8f/GHSA-wxw2-rwmh-vr8f.json
-aliases: []
+aliases:
+  - CVE-2026-41500
 summary: |
   electerm: electerm_install_script_CommandInjection Vulnerability Report
   ### Impact
   _What kind of vulnerability is it? Who is impacted?_
 
-  **Two Command Injection vulnerabilities in electerm:**
+  **Command Injection vulnerabilities in electerm:**
 
-  1. **macOS Installer** (`electerm_CommandInjection_02`): A command injection vulnerability exists in `github.com/elcterm/electerm/npm/install.js:150`. The `runMac()` function appends attacker-controlled remote `releaseInfo.name` directly into an `exec("open ...")` command without validation.
+  A command injection vulnerability exists in `github.com/elcterm/electerm/npm/install.js:150`. The `runMac()` function appends attacker-controlled remote `releaseInfo.name` directly into an `exec("open ...")` command without validation.
 
-  2. **Linux Installer** (`electerm_CommandInjection_01`): A command injection vulnerability exists in `github.com/elcterm/electerm/npm/install.js:130`. The `runLinux()` function appends attacker-controlled remote version strings directly into an `exec("rm -rf ...")` command without validation.
-
-  **Who is impacted:** Users who run `npm install -g electerm`. An attacker who can control the remote release metadata (version string or release name) served by the project's update server could execute arbitrary system commands, tamper local files, and escalate compromise of development/runtime assets.
+  **Who is impacted:** Users who run `npm install -g electerm` in Mac OS. An attacker who can control the remote release metadata (version string or release name) served by the project's update server could execute arbitrary system commands, tamper local files, and escalate compromise of development/runtime assets.
 
   ---
 
@@ -28,6 +27,13 @@ summary: |
   _Is there a way for users to fix or remediate the vulnerability without upgrading?_
 
   no
+
+  ---
+
+  ### References
+  _Are there any links users can visit to find out more?_
+
+  [59708b38c8a52f5db59d7d4eff98e31d573128ee](https://github.com/electerm/electerm/commit/59708b38c8a52f5db59d7d4eff98e31d573128ee)
 impacted_packages:
   - purl: pkg:npm/electerm
     affected_versions: vers:npm/<3.3.8

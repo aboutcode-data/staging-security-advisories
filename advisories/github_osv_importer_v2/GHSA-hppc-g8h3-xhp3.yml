@@ -1,7 +1,8 @@
 advisory_id: GHSA-hppc-g8h3-xhp3
 datasource_id: github_osv_importer_v2/GHSA-hppc-g8h3-xhp3
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-hppc-g8h3-xhp3/GHSA-hppc-g8h3-xhp3.json
-aliases: []
+aliases:
+  - CVE-2026-41898
 summary: |
   rust-openssl: Unchecked callback length in PSK/cookie trampolines leaks adjacent memory to peer
   The FFI trampolines behind `SslContextBuilder::set_psk_client_callback`, `set_psk_server_callback`, `set_cookie_generate_cb`,  and `set_stateless_cookie_generate_cb` forwarded the user closure's returned usize directly to OpenSSL without checking it against the `&mut [u8]` that was handed to the closure. This can lead to buffer overflows and other unintended consequences.
@@ -36,3 +37,6 @@ references:
   - url: https://github.com/rust-openssl/rust-openssl/security/advisories/GHSA-hppc-g8h3-xhp3
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-41898
+    reference_type:
+    reference_id: CVE-2026-41898

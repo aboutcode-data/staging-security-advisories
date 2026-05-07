@@ -4,7 +4,7 @@ datasource_url: https://github.com/github/advisory-database/blob/main/advisories
 aliases:
   - CVE-2026-32285
 summary: |
-  Denial of service in github.com/buger/jsonparser
+  github.com/buger/jsonparser has a denial of service vulnerability
   The Delete function fails to properly validate offsets when processing malformed JSON input. This can lead to a negative slice index and a runtime panic, allowing a denial of service attack.
 impacted_packages: []
 severities:
@@ -19,6 +19,7 @@ severities:
     published_at: None
     url:
 weaknesses:
+  - CWE-129
   - CWE-125
 references:
   - url: https://github.com/buger/jsonparser

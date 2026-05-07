@@ -27,6 +27,10 @@ summary: |
   Content-Length: 107
   ```
 
+  ### Refferences
+  - https://github.com/pyload/pyload/commit/5823327d0b797161c7195a1f660266d30a69f0ca
+  - [`@4624`](https://github.com/pyload/pyload/pull/4624)
+
   ### Impact
 
   Exploiting this vulnerability allows an attacker to inject and execute arbitrary JavaScript within the browser session of a user accessing the pyLoad Web UI. In practice, this means an attacker could impersonate an administrator, steal authentication cookies or tokens, and perform unauthorized actions on behalf of the victim. Because the affected endpoints are part of the core interface, a successful attack undermines the trust and security of the entire application, potentially leading to a full compromise of the management interface and the data it controls. The impact is particularly severe in cases where the Web UI is exposed over a network without additional access restrictions, as it enables remote attackers to directly target users with crafted links or requests that trigger the vulnerability.

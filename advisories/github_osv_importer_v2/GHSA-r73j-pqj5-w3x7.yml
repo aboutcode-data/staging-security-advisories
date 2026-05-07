@@ -1,0 +1,52 @@
+advisory_id: GHSA-r73j-pqj5-w3x7
+datasource_id: github_osv_importer_v2/GHSA-r73j-pqj5-w3x7
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-r73j-pqj5-w3x7/GHSA-r73j-pqj5-w3x7.json
+aliases:
+  - CVE-2026-42310
+summary: |
+  Pillow has a PDF Parsing Trailer Infinite Loop (DoS)
+  ### Impact
+  An attacker can supply a malicious PDF that causes the process to hang indefinitely, consuming 100% CPU and making the application unresponsive.
+
+  ### Patches
+  Patched version: 12.2.0.
+
+  PdfParser (introduced in Pillow 4.2.0) follows Prev pointers in PDF trailers to read cross-reference sections. If a
+  trailer's Prev pointer references an offset that has already been processed — either pointing to itself or forming a
+  longer cycle — the parser enters an infinite loop. Pillow now tracks previously processed trailer offsets and raises an
+  error if a cycle is detected.
+
+  ### Workarounds
+  Use any version but the affected versions: >= 4.2.0, < 12.2.0
+
+  ### Resources
+   - Fix: https://github.com/python-pillow/Pillow/pull/9519
+impacted_packages:
+  - purl: pkg:pypi/pillow
+    affected_versions: vers:pypi/>=4.2.0|<12.2.0
+    fixed_versions: vers:pypi/12.2.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.1'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-r73j-pqj5-w3x7/GHSA-r73j-pqj5-w3x7.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-835
+references:
+  - url: https://github.com/python-pillow/Pillow
+    reference_type:
+    reference_id:
+  - url: https://github.com/python-pillow/Pillow/pull/9519
+    reference_type:
+    reference_id:
+  - url: https://github.com/python-pillow/Pillow/security/advisories/GHSA-r73j-pqj5-w3x7
+    reference_type:
+    reference_id:

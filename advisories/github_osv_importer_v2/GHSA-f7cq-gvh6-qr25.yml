@@ -68,6 +68,11 @@ summary: |
   The attack surface is widened by the default `ReadWriteMany` PVC access mode, which means any pod in the cluster with the PVC mounted can inject the payload — not just the OTEL Collector itself.
 impacted_packages: []
 severities:
+  - score: '9.8'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-f7cq-gvh6-qr25/GHSA-f7cq-gvh6-qr25.json
   - score: '8.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:H/VA:H/SC:N/SI:L/SA:L

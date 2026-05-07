@@ -1,7 +1,8 @@
 advisory_id: GHSA-qcj9-wwgw-6gm8
 datasource_id: github_osv_importer_v2/GHSA-qcj9-wwgw-6gm8
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-qcj9-wwgw-6gm8/GHSA-qcj9-wwgw-6gm8.json
-aliases: []
+aliases:
+  - CVE-2026-41396
 summary: |
   OpenClaw: Workspace `.env` can override the bundled plugin trust root
   ## Summary
@@ -30,6 +31,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
+  - score: '7.8'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-qcj9-wwgw-6gm8/GHSA-qcj9-wwgw-6gm8.json
   - score: '7.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
@@ -42,6 +48,7 @@ severities:
     url:
 weaknesses:
   - CWE-15
+  - CWE-829
 references:
   - url: https://github.com/openclaw/openclaw
     reference_type:
@@ -55,3 +62,9 @@ references:
   - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-qcj9-wwgw-6gm8
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-41396
+    reference_type:
+    reference_id:
+  - url: https://www.vulncheck.com/advisories/openclaw-environment-variable-override-of-plugin-trust-root
+    reference_type: advisory
+    reference_id: openclaw-environment-variable-override-of-plugin-trust-root

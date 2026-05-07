@@ -1,0 +1,34 @@
+advisory_id: GHSA-wjx4-4jcj-g98j
+datasource_id: github_osv_importer_v2/GHSA-wjx4-4jcj-g98j
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-wjx4-4jcj-g98j/GHSA-wjx4-4jcj-g98j.json
+aliases:
+  - CVE-2026-42308
+summary: |
+  Pillow has an integer overflow when processing fonts
+  If a font advances for each glyph by an exceeding large amount, when Pillow keeps track of the current position, it may lead to an integer overflow. This has been fixed.
+impacted_packages:
+  - purl: pkg:pypi/pillow
+    affected_versions: vers:pypi/<12.2.0
+    fixed_versions: vers:pypi/12.2.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.1'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-wjx4-4jcj-g98j/GHSA-wjx4-4jcj-g98j.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-190
+references:
+  - url: https://github.com/python-pillow/Pillow
+    reference_type:
+    reference_id:
+  - url: https://github.com/python-pillow/Pillow/security/advisories/GHSA-wjx4-4jcj-g98j
+    reference_type:
+    reference_id:

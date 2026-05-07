@@ -1,0 +1,46 @@
+advisory_id: GHSA-qh7q-6qm3-653w
+datasource_id: github_osv_importer_v2/GHSA-qh7q-6qm3-653w
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-qh7q-6qm3-653w/GHSA-qh7q-6qm3-653w.json
+aliases:
+  - CVE-2025-61669
+summary: "Jupyter Server has an open redirection vulnerability in `next` query parameter\n###\
+  \ Summary\n\nThe `?next=...` URL query parameter has an open redirection vulnerability. In\
+  \ `jupyter_server<=2.17.0`, this URL query parameter allows redirection to arbitrary external\
+  \ domains, which can be exploited to facilitate phishing attacks on server users.\n\n### Details\n\
+  \nThe vulnerability is caused by insufficient validation in the `LoginFormHandler._redirect_safe()`\
+  \ method.\n\n- Source code reference: https://github.com/jupyter-server/jupyter_server/blob/987ebdd5e188cdc49751b01a0d6782d686492a53/jupyter_server/auth/login.py#L33-L76\n\
+  \nThis vulnerability was originally reported by Noriaki Iwasaki. All discovery credit goes\
+  \ to them.\n\n### PoC\n\n1. Navigate to `http://localhost:8888/login?next=///google.com`\n\
+  2. Observe that the user is redirected to `google.com` despite it being an external domain.\n\
+  \nThe external domain passed in the `?next` parameter may be replaced with a malicious lookalike\
+  \ to facilitate phishing attacks. Jupyter Server deployments served on a public domain are\
+  \ especially vulnerable, as `prod.company.com` may be redirected to a look-alike URL such\
+  \ as `prod.company.dev`. \n\n### Impact\n\nThis vulnerability affects all users, especially\
+  \ enterprise users who work with sensitive/confidential data.\n\n### Patches\n\nJupyter Server\
+  \ 2.18+\n\n### Workaround\n\nNone."
+impacted_packages:
+  - purl: pkg:pypi/jupyter-server
+    affected_versions: vers:pypi/<=2.17.0
+    fixed_versions: vers:pypi/2.18.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.0'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:H/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-qh7q-6qm3-653w/GHSA-qh7q-6qm3-653w.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-601
+references:
+  - url: https://github.com/jupyter-server/jupyter_server
+    reference_type:
+    reference_id:
+  - url: https://github.com/jupyter-server/jupyter_server/security/advisories/GHSA-qh7q-6qm3-653w
+    reference_type: other
+    reference_id: GHSA-qh7q-6qm3-653w

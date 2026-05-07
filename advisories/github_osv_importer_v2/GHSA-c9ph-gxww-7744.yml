@@ -1,0 +1,55 @@
+advisory_id: GHSA-c9ph-gxww-7744
+datasource_id: github_osv_importer_v2/GHSA-c9ph-gxww-7744
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-c9ph-gxww-7744/GHSA-c9ph-gxww-7744.json
+aliases:
+  - CVE-2026-41901
+summary: |
+  Sandboxed Thymeleaf expressions vulnerable to improper recognition of unauthorized syntax patterns
+  ### Impact
+
+  A security bypass vulnerability exists in the expression execution mechanisms of Thymeleaf up to and including 3.1.4.RELEASE. Although the library provides mechanisms to avoid the execution of potentially dangerous expressions in some specific sandboxed (restricted) contexts, it fails to properly neutralize specific constructs that allow this kind of expressions to be executed. If an application developer passes to the template engine unsanitized variables that contain such expressions, and these values are used in sandboxed contexts inside the templates, these expressions can be executed achieving Server-Side Template Injection (SSTI).
+
+  ### Patches
+
+  This has been fixed in Thymeleaf 3.1.5.RELEASE. All users are advised to upgrade immediately.
+
+  ### Workarounds
+
+  No workaround is available beyond ensuring applications do not pass unvalidated/unsanitized data directly to the template engine. Upgrading to 3.1.5.RELEASE is strongly recommended in any case.
+impacted_packages:
+  - purl: pkg:maven/org.thymeleaf/thymeleaf
+    affected_versions: vers:maven/<=3.1.4.RELEASE
+    fixed_versions: vers:maven/3.1.5.RELEASE
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.thymeleaf/thymeleaf-spring5
+    affected_versions: vers:maven/<=3.1.4.RELEASE
+    fixed_versions: vers:maven/3.1.5.RELEASE
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.thymeleaf/thymeleaf-spring6
+    affected_versions: vers:maven/<=3.1.4.RELEASE
+    fixed_versions: vers:maven/3.1.5.RELEASE
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '9.0'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-c9ph-gxww-7744/GHSA-c9ph-gxww-7744.json
+  - score: CRITICAL
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-1336
+  - CWE-917
+references:
+  - url: https://github.com/thymeleaf/thymeleaf
+    reference_type:
+    reference_id:
+  - url: https://github.com/thymeleaf/thymeleaf/security/advisories/GHSA-c9ph-gxww-7744
+    reference_type:
+    reference_id:

@@ -4,7 +4,7 @@ datasource_url: https://github.com/github/advisory-database/blob/main/advisories
 aliases:
   - CVE-2025-41118
 summary: |
-  Exposure of Storage Secret in Pyroscope
+  Pyroscope Exposes Storage Secret
   Pyroscope is an open-source continuous profiling database. The database supports various storage backends, including Tencent Cloud Object Storage (COS).
 
   If the database is configured to use Tencent COS as the storage backend, an attacker could extract the secret_key configuration value from the Pyroscope API.
@@ -31,6 +31,7 @@ severities:
     published_at: None
     url:
 weaknesses:
+  - CWE-732
   - CWE-200
 references:
   - url: https://github.com/grafana/pyroscope

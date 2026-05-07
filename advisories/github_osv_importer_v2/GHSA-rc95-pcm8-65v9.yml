@@ -1,0 +1,61 @@
+advisory_id: GHSA-rc95-pcm8-65v9
+datasource_id: github_osv_importer_v2/GHSA-rc95-pcm8-65v9
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-rc95-pcm8-65v9/GHSA-rc95-pcm8-65v9.json
+aliases:
+  - CVE-2026-39852
+summary: |
+  Quarkus has Authentication/Authorization bypasses
+  Quarkus version 3.32.4 is vulnerable to an authorization bypass issue (GHSL-2026-099), in which semicolons (matrix parameters) in HTTP requests can be used to bypass security constraints, potentially allowing unauthorized access to protected resources.
+
+  Unauthenticated or lower-privileged users can bypass HTTP path-based authorization policies by appending a semicolon (`;`) and arbitrary text to the request URL. The vulnerability arises from a path-normalization inconsistency: Quarkus's [security layer](https://quarkus.io/guides/security-authorize-web-endpoints-reference) performs authorization checks on the raw URL path (which preserves matrix parameters), whereas RESTEasy Reactive's routing layer strips matrix parameters before matching endpoints. This allows requests like `/api/admin;anything` to bypass policies protecting `/api/admin` while still routing to the protected endpoint.
+
+
+  ### Impact
+
+  This issue may lead to Authentication/Authorization bypasses.
+
+  ### Credits
+
+  This issue was discovered with the [GitHub Security Lab Taskflow Agent](https://github.com/GitHubSecurityLab/seclab-taskflow-agent) and manually verified by GHSL team members [@p- (Peter Stöckli)](https://github.com/p-) and [@m-y-mo (Man Yue Mo)](https://github.com/m-y-mo).
+impacted_packages:
+  - purl: pkg:maven/io.quarkus/quarkus-vertx-http
+    affected_versions: vers:maven/<3.20.6.1
+    fixed_versions: vers:maven/3.20.6.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/io.quarkus/quarkus-vertx-http
+    affected_versions: vers:maven/>=3.21.0|<3.27.3.1
+    fixed_versions: vers:maven/3.27.3.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/io.quarkus/quarkus-vertx-http
+    affected_versions: vers:maven/>=3.30.0|<3.33.1.1
+    fixed_versions: vers:maven/3.33.1.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/io.quarkus/quarkus-vertx-http
+    affected_versions: vers:maven/>=3.34.0|<3.35.1.1
+    fixed_versions: vers:maven/3.35.1.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.2'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-rc95-pcm8-65v9/GHSA-rc95-pcm8-65v9.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-863
+  - CWE-287
+references:
+  - url: https://github.com/quarkusio/quarkus
+    reference_type:
+    reference_id:
+  - url: https://github.com/quarkusio/quarkus/security/advisories/GHSA-rc95-pcm8-65v9
+    reference_type:
+    reference_id:

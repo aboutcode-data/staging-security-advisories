@@ -1,0 +1,83 @@
+advisory_id: GHSA-2h7v-4372-f6x2
+datasource_id: github_osv_importer_v2/GHSA-2h7v-4372-f6x2
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-2h7v-4372-f6x2/GHSA-2h7v-4372-f6x2.json
+aliases:
+  - CVE-2026-42069
+summary: |
+  Kirby CMS's read access to site, user and role information is not gated by permissions
+  ### TL;DR
+
+  This vulnerability affects all Kirby sites that might have potential attackers in the group of authenticated Panel users.
+
+  **This vulnerability is of high severity for affected sites.**
+
+  Sites using Kirby are *not* affected if they intend all users of the site to be able to list and access the site model and all users and roles, including the content stored within these models. Write actions are *not* affected by this vulnerability as they were gated by permissions before.
+
+  ----
+
+  ### Introduction
+
+  Missing authorization allows authenticated users to perform actions they are not intended to have access to.
+
+  The effects of missing authorization can include unauthorized access to sensitive information as well as unauthorized changes to content or system information.
+
+  ### Impact
+
+  Kirby's user permissions control which user role is allowed to perform specific actions to content models in the CMS. These permissions are defined for each role in the user blueprint (`site/blueprints/users/...`). It is also possible to customize the permissions for each target model in the model blueprints (such as in `site/blueprints/pages/...`) using the `options` feature. The permissions and options together control the authorization of user actions.
+
+  In affected releases, Kirby did not provide permission settings that control the access to the site model as well as to users and user roles. If the site developer disabled all permissions via the wildcard `"*": false` setting, this only disabled the actions that were explicitly gated by existing permissions.
+
+  To be specific, the following permissions were missing in affected releases and have been added in the patches:
+
+  - `site.access`
+  - `user.access` and `users.access` (for the own user and other users respectively)
+  - `user.list` and `users.list` (for the own user and other users respectively)
+
+  Access to role information such as the list of existing roles, their names and descriptions as well as their configured permissions were also not gated by user-based permissions.
+
+  ### Patches
+
+  The problem has been patched in [Kirby 4.9.0](https://github.com/getkirby/kirby/releases/tag/4.9.0) and [Kirby 5.4.0](https://github.com/getkirby/kirby/releases/tag/5.4.0). Please update to one of these or a [later version](https://github.com/getkirby/kirby/releases) to fix the vulnerability.
+
+  In all of the mentioned releases, Kirby has added the missing permissions that are listed in the "Impact" section. The `user.access` and `users.access` permissions also take effect on the access to the user's own role and to other roles respectively.
+
+  ### Credits
+
+  Kirby thanks @HuajiHD for responsibly reporting the identified issue.
+impacted_packages:
+  - purl: pkg:composer/getkirby/cms
+    affected_versions: vers:composer/<=4.8.0
+    fixed_versions: vers:composer/4.9.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/getkirby/cms
+    affected_versions: vers:composer/<=5.3.3
+    fixed_versions: vers:composer/5.4.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.1'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-2h7v-4372-f6x2/GHSA-2h7v-4372-f6x2.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-862
+references:
+  - url: https://github.com/getkirby/kirby
+    reference_type:
+    reference_id:
+  - url: https://github.com/getkirby/kirby/security/advisories/GHSA-2h7v-4372-f6x2
+    reference_type:
+    reference_id:
+  - url: https://github.com/getkirby/kirby/releases/tag/4.9.0
+    reference_type: other
+    reference_id: 4.9.0
+  - url: https://github.com/getkirby/kirby/releases/tag/5.4.0
+    reference_type: other
+    reference_id: 5.4.0

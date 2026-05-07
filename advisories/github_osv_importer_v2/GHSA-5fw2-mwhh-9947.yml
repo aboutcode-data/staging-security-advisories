@@ -1,7 +1,8 @@
 advisory_id: GHSA-5fw2-mwhh-9947
 datasource_id: github_osv_importer_v2/GHSA-5fw2-mwhh-9947
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-5fw2-mwhh-9947/GHSA-5fw2-mwhh-9947.json
-aliases: []
+aliases:
+  - CVE-2026-41279
 summary: |
   Flowise: Unauthenticated TTS endpoint accepts arbitrary credential IDs — enables API credit abuse via stored credentials
   ### Summary
@@ -59,6 +60,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
+  - score: '7.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-5fw2-mwhh-9947/GHSA-5fw2-mwhh-9947.json
   - score: '8.2'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N
@@ -78,3 +84,6 @@ references:
   - url: https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-5fw2-mwhh-9947
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-41279
+    reference_type:
+    reference_id: CVE-2026-41279

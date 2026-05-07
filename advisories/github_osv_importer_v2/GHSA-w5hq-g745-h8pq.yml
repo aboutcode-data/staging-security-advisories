@@ -1,7 +1,8 @@
 advisory_id: GHSA-w5hq-g745-h8pq
 datasource_id: github_osv_importer_v2/GHSA-w5hq-g745-h8pq
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-w5hq-g745-h8pq/GHSA-w5hq-g745-h8pq.json
-aliases: []
+aliases:
+  - CVE-2026-41907
 summary: "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided\n### Summary\n\n\
   `v3`, `v5`, and `v6` accept external output buffers but do not reject out-of-range writes\
   \ (small `buf` or large `offset`).  \nBy contrast, `v4`, `v1`, and `v7` explicitly throw `RangeError`\
@@ -25,8 +26,18 @@ summary: "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided\n##
   ```\n\nApply to:\n\n- `src/v35.ts` (covers `v3` and `v5`)\n- `src/v6.ts`"
 impacted_packages:
   - purl: pkg:npm/uuid
-    affected_versions: vers:npm/<14.0.0
-    fixed_versions: vers:npm/14.0.0
+    affected_versions: vers:npm/>=11.0.0|<11.1.1
+    fixed_versions: vers:npm/11.1.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/uuid
+    affected_versions: vers:npm/>=12.0.0|<12.0.1
+    fixed_versions: vers:npm/12.0.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/uuid
+    affected_versions: vers:npm/>=13.0.0|<13.0.1
+    fixed_versions: vers:npm/13.0.1
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -53,6 +64,9 @@ references:
   - url: https://github.com/uuidjs/uuid/commit/3d2c5b0342f0fcb52a5ac681c3d47c13e7444b34
     reference_type: other
     reference_id: 3d2c5b0342f0fcb52a5ac681c3d47c13e7444b34
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-41907
+    reference_type:
+    reference_id: CVE-2026-41907
   - url: https://github.com/uuidjs/uuid/security/advisories/GHSA-w5hq-g745-h8pq
     reference_type: other
     reference_id: GHSA-w5hq-g745-h8pq
