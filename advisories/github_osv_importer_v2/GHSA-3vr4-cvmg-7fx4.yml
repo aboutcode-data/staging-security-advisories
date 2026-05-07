@@ -1,0 +1,51 @@
+advisory_id: GHSA-3vr4-cvmg-7fx4
+datasource_id: github_osv_importer_v2/GHSA-3vr4-cvmg-7fx4
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-3vr4-cvmg-7fx4/GHSA-3vr4-cvmg-7fx4.json
+aliases:
+  - CVE-2026-6874
+summary: |
+  copilot-api has Reliance on Reverse DNS Resolution for a Security-Critical Action
+  A vulnerability was determined in ericc-ch copilot-api up to 0.7.0. This impacts an unknown function of the file /token of the component Header Handler. Executing a manipulation of the argument Host can lead to reliance on reverse dns resolution. The attack may be performed from remote. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.
+impacted_packages:
+  - purl: pkg:npm/copilot-api
+    affected_versions: vers:npm/<=0.7.0
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '4.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-3vr4-cvmg-7fx4/GHSA-3vr4-cvmg-7fx4.json
+  - score: '2.1'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-3vr4-cvmg-7fx4/GHSA-3vr4-cvmg-7fx4.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-350
+references:
+  - url: https://github.com/ericc-ch/copilot-api
+    reference_type:
+    reference_id:
+  - url: https://github.com/August829/CVEP/issues/32
+    reference_type: bug
+    reference_id: 32
+  - url: https://vuldb.com/vuln/359039
+    reference_type: advisory
+    reference_id: 359039
+  - url: https://vuldb.com/submit/795212
+    reference_type: advisory
+    reference_id: 795212
+  - url: https://vuldb.com/vuln/359039/cti
+    reference_type: other
+    reference_id: cti
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-6874
+    reference_type:
+    reference_id: CVE-2026-6874

@@ -1,0 +1,58 @@
+advisory_id: GHSA-c4qg-j8jg-42q5
+datasource_id: github_osv_importer_v2/GHSA-c4qg-j8jg-42q5
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-c4qg-j8jg-42q5/GHSA-c4qg-j8jg-42q5.json
+aliases: []
+summary: |
+  OpenClaw: QQBot direct media upload skipped URL SSRF validation
+  ## Affected Packages / Versions
+
+  - Package: `openclaw` (npm)
+  - Affected versions: `< 2026.4.20`
+  - Patched version: `2026.4.20`
+
+  ## Impact
+
+  The QQBot direct-upload media path could forward attacker-controlled image URLs without applying the SSRF validation used by the local download path. This could make configured QQBot media delivery request or relay URLs the operator did not intend to allow.
+
+  The affected path is limited to QQBot outbound media handling and does not expose arbitrary local files. Severity is low.
+
+  ## Fix
+
+  OpenClaw now validates QQBot direct-upload media URLs before `uploadC2CMedia` and `uploadGroupMedia` direct-upload calls.
+
+  Fix commit:
+
+  - `49db424c8001f2f419aad85f434894d8d85c1a09`
+
+  ## Release
+
+  Fixed in OpenClaw `2026.4.20`.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.4.20
+    fixed_versions: vers:npm/2026.4.20
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '1.7'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:N/SC:L/SI:N/SA:N/E:U
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-c4qg-j8jg-42q5/GHSA-c4qg-j8jg-42q5.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-918
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/49db424c8001f2f419aad85f434894d8d85c1a09
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-c4qg-j8jg-42q5
+    reference_type:
+    reference_id:

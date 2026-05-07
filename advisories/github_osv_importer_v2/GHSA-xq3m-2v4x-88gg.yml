@@ -5,26 +5,25 @@ aliases:
   - CVE-2026-41242
 summary: |
   Arbitrary code execution in protobufjs
-  ### Summary
-  protobufjs compiles protobuf definitions into JS functions. Attackers can manipulate these definitions to execute arbitrary JS code.
+  ## Summary
 
-  ### Details
-  Attackers can inject arbitrary code in the "type" fields of protobuf definitions, which will then execute during object decoding using that definition.
+  protobufjs could execute generated JavaScript code derived from protobuf schema metadata. When loading a crafted JSON descriptor, schema-controlled type names and type references could reach runtime code generation without sufficient validation.
 
-  ### PoC
-  ```js
-  const protobuf = require('protobufjs');
-  maliciousDescriptor = JSON.parse(`{"nested":{"User":{"fields":{"id":{"type":"int32","id":1},"data":{"type":"Data(){console.log(process.mainModule.require('child_process').execSync('id').toString())};\\nfunction X","id":2}}},"Data(){console.log(process.mainModule.require('child_process').execSync('id').toString())};\\nfunction X":{"fields":{"content":{"type":"string","id":1}}}}}`)
-  const root = protobuf.Root.fromJSON(maliciousDescriptor);
-  const UserType = root.lookupType("User");
-  const userBytes = Buffer.from([0x08, 0x01, 0x12, 0x07, 0x0a, 0x05, 0x68, 0x65, 0x6c, 0x6c, 0x6f]);
-  try {
-      const user = UserType.decode(userBytes);
-  } catch (e) {}
-  ```
+  ## Impact
 
-  ### Impact
-  Remote code execution when attackers can control the protobuf definition files.
+  An attacker who can provide a malicious protobuf definition or JSON descriptor to an application may be able to execute arbitrary JavaScript in the context of the process using protobufjs.
+
+  This requires control over the protobuf schema or descriptor being loaded. Applications that only decode messages using trusted, application-defined schemas are not directly affected by this issue.
+
+  ## Preconditions
+
+  - The application must allow an attacker to control or influence a protobuf definition or JSON descriptor.
+  - The application must load that definition through protobufjs reflection APIs such as descriptor loading.
+  - The affected generated-code path must be reached, for example by performing an operation on the loaded type.
+
+  ## Workarounds
+
+  Do not load protobuf definitions or JSON descriptors from untrusted sources with affected versions. If untrusted schemas must be accepted, validate or restrict them before loading and run schema processing in an isolated environment.
 impacted_packages:
   - purl: pkg:npm/protobufjs
     affected_versions: vers:npm/>=8.0.0|<8.0.1
@@ -37,6 +36,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
+  - score: '9.8'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-xq3m-2v4x-88gg/GHSA-xq3m-2v4x-88gg.json
   - score: '9.4'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H
@@ -56,3 +60,18 @@ references:
   - url: https://github.com/protobufjs/protobuf.js/security/advisories/GHSA-xq3m-2v4x-88gg
     reference_type:
     reference_id:
+  - url: https://github.com/protobufjs/protobuf.js/commit/535df444ac060243722ac5d672db205e5c531d75
+    reference_type: other
+    reference_id: 535df444ac060243722ac5d672db205e5c531d75
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-41242
+    reference_type:
+    reference_id: CVE-2026-41242
+  - url: https://github.com/protobufjs/protobuf.js/commit/ff7b2afef8754837cc6dc64c864cd111ab477956
+    reference_type: other
+    reference_id: ff7b2afef8754837cc6dc64c864cd111ab477956
+  - url: https://github.com/protobufjs/protobuf.js/releases/tag/protobufjs-v7.5.5
+    reference_type: other
+    reference_id: protobufjs-v7.5.5
+  - url: https://github.com/protobufjs/protobuf.js/releases/tag/protobufjs-v8.0.1
+    reference_type: other
+    reference_id: protobufjs-v8.0.1
