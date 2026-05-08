@@ -1,0 +1,37 @@
+advisory_id: npm/openclaw/GHSA-846p-hgpv-vphc
+datasource_id: gitlab_importer_v2/npm/openclaw/GHSA-846p-hgpv-vphc
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-846p-hgpv-vphc.yml
+aliases:
+  - GHSA-846p-hgpv-vphc
+summary: |
+  OpenClaw: QQ Bot structured payloads could read arbitrary local files
+  Before OpenClaw 2026.4.2, QQ Bot structured media payloads could read local files from attacker-chosen paths. A crafted structured payload could escape QQ Bot-owned media roots and cause arbitrary file reads on the host.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.4.2
+    fixed_versions: vers:npm/2026.4.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-846p-hgpv-vphc.yml
+weaknesses:
+  - CWE-22
+  - CWE-937
+  - CWE-1035
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/2c45b06afdd6f7c621038b5419d8e661cff34a7f
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-846p-hgpv-vphc
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-846p-hgpv-vphc
+    reference_type:
+    reference_id: GHSA-846p-hgpv-vphc

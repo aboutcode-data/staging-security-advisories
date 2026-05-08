@@ -1,0 +1,37 @@
+advisory_id: npm/openclaw/GHSA-w6wx-jq6j-6mcj
+datasource_id: gitlab_importer_v2/npm/openclaw/GHSA-w6wx-jq6j-6mcj
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-w6wx-jq6j-6mcj.yml
+aliases:
+  - GHSA-w6wx-jq6j-6mcj
+summary: |
+  OpenClaw: pnpm dlx approvals did not bind local script operands
+  Before OpenClaw 2026.4.2, `pnpm dlx` approval planning did not bind local script operands the same way as related `pnpm exec` flows. A local script approved through a `pnpm dlx` path could be replaced before execution without invalidating the approval.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.4.2
+    fixed_versions: vers:npm/2026.4.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-w6wx-jq6j-6mcj.yml
+weaknesses:
+  - CWE-863
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/176c059b05357df1bc09d4328a2380670859eeff
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-w6wx-jq6j-6mcj
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-w6wx-jq6j-6mcj
+    reference_type:
+    reference_id: GHSA-w6wx-jq6j-6mcj
