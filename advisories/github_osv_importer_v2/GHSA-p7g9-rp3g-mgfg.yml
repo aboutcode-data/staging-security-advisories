@@ -1,0 +1,58 @@
+advisory_id: GHSA-p7g9-rp3g-mgfg
+datasource_id: github_osv_importer_v2/GHSA-p7g9-rp3g-mgfg
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-p7g9-rp3g-mgfg/GHSA-p7g9-rp3g-mgfg.json
+aliases:
+  - CVE-2026-44374
+summary: "Backstage: Catalog unprocessed read endpoints allow authenticated cross-owner data\
+  \ access without permission checks\n### Impact   \n\n  The unprocessed entities read endpoints\
+  \ in `@backstage/plugin-catalog-backend-module-unprocessed` do not enforce permission authorization\
+  \ checks. Any authenticated user can access unprocessed entity records regardless of ownership.\
+  \ This is \n  an information disclosure vulnerability affecting Backstage installations using\
+  \ this module.                                                                     \n    \
+  \                                                                    \n  ### Patches     \
+  \        \n                                         \n  This is patched in `@backstage/plugin-catalog-backend-module-unprocessed`\
+  \ version 0.6.11, `@backstage/plugin-catalog-unprocessed-entities-common` version 0.0.15 and\
+  \ `@backstage/plugin-catalog-unprocessed-entities` version 0.2.30. Users should upgrade all\
+  \ packages.                                    \n   \n  ### Workarounds                  \
+  \                                                                                        \
+  \                                                                                        \
+  \                                \n                                                      \
+  \                  \n  If users cannot upgrade, they can remove the `@backstage/plugin-catalog-backend-module-unprocessed`\
+  \ module from their backend until the patch is applied. There is no configuration-based workaround\
+  \ to add permission checks to these endpoints    \n  without upgrading."
+impacted_packages:
+  - purl: pkg:npm/%40backstage/plugin-catalog-unprocessed-entities-common
+    affected_versions: vers:npm/<0.0.15
+    fixed_versions: vers:npm/0.0.15
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/%40backstage/plugin-catalog-unprocessed-entities
+    affected_versions: vers:npm/<0.2.30
+    fixed_versions: vers:npm/0.2.30
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/%40backstage/plugin-catalog-backend-module-unprocessed
+    affected_versions: vers:npm/<0.6.11
+    fixed_versions: vers:npm/0.6.11
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '4.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-p7g9-rp3g-mgfg/GHSA-p7g9-rp3g-mgfg.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-863
+references:
+  - url: https://github.com/backstage/backstage
+    reference_type:
+    reference_id:
+  - url: https://github.com/backstage/backstage/security/advisories/GHSA-p7g9-rp3g-mgfg
+    reference_type:
+    reference_id:

@@ -1,0 +1,40 @@
+advisory_id: GHSA-q57j-rwwx-7rwp
+datasource_id: github_osv_importer_v2/GHSA-q57j-rwwx-7rwp
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-q57j-rwwx-7rwp/GHSA-q57j-rwwx-7rwp.json
+aliases:
+  - CVE-2026-42474
+summary: |
+  MixPHP Framework has an SQL injection vulnerability via crafted `data` array
+  SQL injection vulnerability in MixPHP Framework 2.x thru 2.2.17 via crafted `data` array to the data function in BuildHelper.php.
+impacted_packages:
+  - purl: pkg:composer/mix/mix
+    affected_versions: vers:composer/>=2.0.0|<=2.2.17
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-q57j-rwwx-7rwp/GHSA-q57j-rwwx-7rwp.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-89
+references:
+  - url: https://github.com/mix-php/mix/blob/v2.2.17/src/database/src/Helper/BuildHelper.php
+    reference_type: other
+    reference_id: BuildHelper.php
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-42474
+    reference_type:
+    reference_id: CVE-2026-42474
+  - url: https://gist.github.com/sgInnora/fa46386840fe978a30d7e53c458f2975
+    reference_type: other
+    reference_id: fa46386840fe978a30d7e53c458f2975
+  - url: https://github.com/mix-php/mix
+    reference_type: other
+    reference_id: mix

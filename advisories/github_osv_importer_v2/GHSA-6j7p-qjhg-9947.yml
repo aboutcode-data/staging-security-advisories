@@ -1,0 +1,77 @@
+advisory_id: GHSA-6j7p-qjhg-9947
+datasource_id: github_osv_importer_v2/GHSA-6j7p-qjhg-9947
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-6j7p-qjhg-9947/GHSA-6j7p-qjhg-9947.json
+aliases:
+  - CVE-2026-29090
+summary: |
+  Rucio has SQL Injection in FilterEngine PostgreSQL Query Builder via DID Search API
+  ### Summary
+
+  A SQL injection vulnerability in `FilterEngine.create_postgres_query` allows any authenticated Rucio user to execute arbitrary SQL against the configured PostgreSQL metadata database through the DID search endpoint (`GET /dids/<scope>/dids/search`). When the external metadata plugin `postgres_meta` is configured, attacker-controlled filter keys and values are interpolated directly into raw SQL statements via Python `str.format`. This enables full database compromise including data exfiltration, data modification, and potential remote code execution via `COPY ... FROM PROGRAM`.
+
+  ### Details
+
+  *Will follow in two weeks (2025-05-19).*
+
+  ### Impact
+
+  **Vulnerability type:** SQL Injection (CWE-89)
+
+  **Who is impacted:**
+
+  - Rucio deployments that have explicitly configured the `postgres_meta` metadata plugin.
+
+  **What an attacker can do:**
+
+  - **Data modification:** PostgreSQL stacked queries enable arbitrary `INSERT`/`UPDATE`/`DELETE` operations.
+  - **Remote code execution:** Via PostgreSQL's `COPY ... FROM PROGRAM` if the database user has superuser or `pg_execute_server_program` privileges.
+  - **File system access:** Via `COPY ... TO/FROM '/path'` if filesystem permissions allow.
+
+  **Further elevation when the same postgres database and access is used for metadata and for Rucio itself**
+
+  - **Full database read access:** Extract any table including `identities` (password hashes and salts), `tokens` (active authentication sessions), `accounts` (user enumeration), `rse_settings` (storage endpoint credentials), and `rules` (data management policies) could be extracted.
+  - **Password hash extraction:** Combined with Rucio's use of single-iteration SHA-256 for password hashing (no KDF), extracted hashes can be cracked at GPU speed.
+  - **Authentication token theft:** Active bearer tokens can be extracted and used for immediate session hijacking.
+
+  **Required attacker privileges:** Any authenticated Rucio user. Authentication tokens can be obtained via any supported method (userpass, x509, OIDC, SAML, SSH, GSS). No special roles or administrative permissions are required. The `GET /dids/<scope>/dids/search` endpoint is available to all authenticated users.
+impacted_packages:
+  - purl: pkg:pypi/rucio
+    affected_versions: vers:pypi/>=1.30.0|<35.8.5
+    fixed_versions: vers:pypi/35.8.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/rucio
+    affected_versions: vers:pypi/>=36.0.0|<38.5.5
+    fixed_versions: vers:pypi/38.5.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/rucio
+    affected_versions: vers:pypi/>=39.0.0|<39.4.2
+    fixed_versions: vers:pypi/39.4.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/rucio
+    affected_versions: vers:pypi/>=40.0.0|<40.1.1
+    fixed_versions: vers:pypi/40.1.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '9.9'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-6j7p-qjhg-9947/GHSA-6j7p-qjhg-9947.json
+  - score: CRITICAL
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-89
+references:
+  - url: https://github.com/rucio/rucio
+    reference_type:
+    reference_id:
+  - url: https://github.com/rucio/rucio/security/advisories/GHSA-6j7p-qjhg-9947
+    reference_type: other
+    reference_id: GHSA-6j7p-qjhg-9947

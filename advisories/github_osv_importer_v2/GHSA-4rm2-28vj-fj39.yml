@@ -1,0 +1,53 @@
+advisory_id: GHSA-4rm2-28vj-fj39
+datasource_id: github_osv_importer_v2/GHSA-4rm2-28vj-fj39
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-4rm2-28vj-fj39/GHSA-4rm2-28vj-fj39.json
+aliases:
+  - CVE-2026-44262
+summary: |
+  Scramble vulnerable to remote code execution via evaluation of user-controlled input in validation rules
+  ### Impact
+
+  A remote code execution (RCE) vulnerability affects versions `0.13.2` through `0.13.21`. When documentation endpoints are publicly accessible and validation rules reference user-controlled input, request supplied data may be evaluated during documentation generation, leading to execution of arbitrary PHP code in the application context.
+
+  ### Patches
+
+  Fixed in version `0.13.22`.
+
+  ### Workarounds
+
+  If upgrading is not immediately possible:
+
+  * Restrict access to documentation endpoints (`/docs/api`, `/docs/api.json`)
+  * Avoid using user-controlled variables inside validation rule expressions (e.g., values derived from request input)
+  * Disable documentation endpoints in production environments if not required
+
+  These measures significantly reduce or prevent exploitability.
+impacted_packages:
+  - purl: pkg:composer/dedoc/scramble
+    affected_versions: vers:composer/<=0.13.21
+    fixed_versions: vers:composer/0.13.22
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '9.4'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-4rm2-28vj-fj39/GHSA-4rm2-28vj-fj39.json
+  - score: CRITICAL
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-94
+references:
+  - url: https://github.com/dedoc/scramble
+    reference_type:
+    reference_id:
+  - url: https://github.com/dedoc/scramble/releases/tag/v0.13.22
+    reference_type:
+    reference_id:
+  - url: https://github.com/dedoc/scramble/security/advisories/GHSA-4rm2-28vj-fj39
+    reference_type:
+    reference_id:

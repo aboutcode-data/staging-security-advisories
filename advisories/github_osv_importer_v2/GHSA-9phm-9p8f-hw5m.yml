@@ -1,0 +1,76 @@
+advisory_id: GHSA-9phm-9p8f-hw5m
+datasource_id: github_osv_importer_v2/GHSA-9phm-9p8f-hw5m
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-9phm-9p8f-hw5m/GHSA-9phm-9p8f-hw5m.json
+aliases:
+  - CVE-2026-44372
+summary: "Nitro has an Open Redirect via Protocol-Relative URL Bypass in Wildcard Route Rules\n\
+  A redirect route rule like:\n\n```ts\nrouteRules: {\n  \"/legacy/**\": { redirect: \"/**\"\
+  \ }\n}\n```\n\nis intended to rewrite paths within the same host. Before the patch, an attacker\
+  \ could turn the rewrite into a cross-host redirect by sliding an extra slash in after the\
+  \ rule prefix. Example exploit:\n\n```\nGET /legacy//evil.com\n```\n\nNitro stripped `/legacy`\
+  \ from the matched pathname and joined the remainder against the rule's target. The remainder\
+  \ was `//evil.com`, which the join preserved verbatim, so Nitro responded with `Location:\
+  \ //evil.com`. Browsers resolve `//evil.com` as a protocol-relative URL against the current\
+  \ scheme, sending the user to `https://evil.com`. \n\n### Are you affected?\n\nUsers may be\
+  \ affected if **all** of the following are true:\n\n1. Their project uses Nitro's `routeRules`\
+  \ with a `redirect` entry.\n2. The target uses a `/**` wildcard suffix to forward sub-paths\
+  \ (e.g. `redirect: \"/**\"`, `redirect: \"/new/**\"`, `proxy: { to: \"http://upstream/**\"\
+  \ }`).\n3. The `redirect` rule is _not_ handled natively at the CDN layer. The `vercel`, `netlify`,\
+  \ `cloudflare-pages`, and `edgeone` presets translate `routeRules.redirect` into platform\
+  \ config (`vercel.json`, `_redirects`, EdgeOne v3 config) and serve the redirect at the edge\
+  \ — those deployments bypass the Nitro runtime entirely and are not affected. Every other\
+  \ preset executes the redirect through the Nitro runtime and can be vulnerable.\n\n## Impact\n\
+  \nOpen redirect from any host serving Nitro with a wildcard `redirect` rule. The redirect\
+  \ target is fully attacker-controlled, the URL looks legitimate (it starts with the victim's\
+  \ domain), and the browser silently follows it.\n\n## Patched versions\n\nUpgrade to one of:\n\
+  \n- [2.13.4](https://github.com/nitrojs/nitro/releases/tag/v2.13.4) or later (or upgrade lockfile\
+  \ with latest ufo 1.6.4+)\n- [3.0.260429-beta](https://github.com/nitrojs/nitro/releases/tag/v3.0.260429-beta)\
+  \ or later (https://github.com/nitrojs/nitro/pull/4236)\n\nThe fix has two parts:\n\n1. `ufo`\
+  \ is bumped to `^1.6.4` ([unjs/ufo@5cd9e67](https://github.com/unjs/ufo/commit/5cd9e676711af3f4e4b5398ddf6ca8d52c1c7e1f)),\
+  \ which collapses any run of leading slashes to a single `/` inside `withoutBase`. This covers\
+  \ the typical `\"/scope/**\"` rule.\n2. The Nitro runtime additionally collapses leading `//`\
+  \ before joining when the rule path itself is `/**` (in rare case which case `withoutBase`\
+  \ is never called and the raw pathname flows straight into `joinURL(\"\", …)`)."
+impacted_packages:
+  - purl: pkg:npm/nitro
+    affected_versions: vers:npm/<3.0.260429-beta
+    fixed_versions: vers:npm/3.0.260429-beta
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/nitropack
+    affected_versions: vers:npm/<2.13.4
+    fixed_versions: vers:npm/2.13.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-9phm-9p8f-hw5m/GHSA-9phm-9p8f-hw5m.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-601
+references:
+  - url: https://github.com/nitrojs/nitro
+    reference_type:
+    reference_id:
+  - url: https://github.com/nitrojs/nitro/pull/4236
+    reference_type:
+    reference_id:
+  - url: https://github.com/nitrojs/nitro/releases/tag/v2.13.4
+    reference_type:
+    reference_id:
+  - url: https://github.com/nitrojs/nitro/releases/tag/v3.0.260429-beta
+    reference_type:
+    reference_id:
+  - url: https://github.com/nitrojs/nitro/security/advisories/GHSA-9phm-9p8f-hw5m
+    reference_type:
+    reference_id:
+  - url: https://github.com/unjs/ufo/commit/5cd9e676711af3f4e4b5398ddf6ca8d52c1c7e1f
+    reference_type:
+    reference_id:

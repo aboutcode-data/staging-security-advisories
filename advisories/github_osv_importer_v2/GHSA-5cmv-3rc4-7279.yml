@@ -1,0 +1,51 @@
+advisory_id: GHSA-5cmv-3rc4-7279
+datasource_id: github_osv_importer_v2/GHSA-5cmv-3rc4-7279
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-5cmv-3rc4-7279/GHSA-5cmv-3rc4-7279.json
+aliases:
+  - CVE-2026-44264
+summary: |
+  Weblate vulnerable to XSS via crafted Markdown
+  ### Impact
+  The Markdown renderer used in user comments and other user-provided content didn't properly sanitize some attributes.
+
+  ### Patches
+  * https://github.com/WeblateOrg/weblate/pull/19259
+
+  ### Workarounds
+  Even though the attacker might be able to inject code into the HTML, the Weblate's strict CSP should mitigate the risks.
+
+  ### Acknowlegement
+  Michal Čihař has identified and fixed this vulnerability.
+impacted_packages:
+  - purl: pkg:pypi/weblate
+    affected_versions: vers:pypi/<5.17.1
+    fixed_versions: vers:pypi/5.17.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '4.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-5cmv-3rc4-7279/GHSA-5cmv-3rc4-7279.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-80
+  - CWE-79
+references:
+  - url: https://github.com/WeblateOrg/weblate
+    reference_type:
+    reference_id:
+  - url: https://github.com/WeblateOrg/weblate/pull/19259
+    reference_type: other
+    reference_id: '19259'
+  - url: https://github.com/WeblateOrg/weblate/commit/85abc9df88b7464f4c0e794aef752e45f4230f75
+    reference_type: other
+    reference_id: 85abc9df88b7464f4c0e794aef752e45f4230f75
+  - url: https://github.com/WeblateOrg/weblate/security/advisories/GHSA-5cmv-3rc4-7279
+    reference_type: other
+    reference_id: GHSA-5cmv-3rc4-7279

