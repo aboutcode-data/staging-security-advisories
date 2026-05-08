@@ -1,7 +1,8 @@
 advisory_id: GHSA-fv94-qvg8-xqpw
 datasource_id: github_osv_importer_v2/GHSA-fv94-qvg8-xqpw
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-fv94-qvg8-xqpw/GHSA-fv94-qvg8-xqpw.json
-aliases: []
+aliases:
+  - CVE-2026-41364
 summary: |
   OpenClaw: SSH sandbox tar upload follows symlinks, enabling arbitrary file write on remote host
   ## Summary
@@ -30,12 +31,17 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
-  - score: '6.1'
-    scoring_system: cvssv4
-    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:H/VA:H/SC:N/SI:N/SA:N
+  - score: '8.1'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H
     published_at: None
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-fv94-qvg8-xqpw/GHSA-fv94-qvg8-xqpw.json
-  - score: MODERATE
+  - score: '7.2'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:H/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-fv94-qvg8-xqpw/GHSA-fv94-qvg8-xqpw.json
+  - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
     published_at: None
@@ -56,3 +62,9 @@ references:
   - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-fv94-qvg8-xqpw
     reference_type:
     reference_id:
+  - url: https://www.vulncheck.com/advisories/openclaw-arbitrary-file-write-via-symlink-following-in-ssh-sandbox-tar-upload
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-41364
+    reference_type:
+    reference_id: CVE-2026-41364

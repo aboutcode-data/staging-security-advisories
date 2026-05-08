@@ -1,10 +1,13 @@
 advisory_id: GHSA-xfhx-r7ww-5995
 datasource_id: github_osv_importer_v2/GHSA-xfhx-r7ww-5995
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-xfhx-r7ww-5995/GHSA-xfhx-r7ww-5995.json
-aliases:
-  - CVE-2026-0897
+aliases: []
 summary: |
-  Google Keras Allocates Resources Without Limits or Throttling in the HDF5 weight loading component
+  Duplicate Advisory: Google Keras Allocates Resources Without Limits or Throttling in the HDF5 weight loading component
+  ### Duplicate Advisory
+  This advisory has been withdrawn because it is a duplicate of GHSA-mgx6-5cf9-rr43. This link is maintained to preserve external references.
+
+  ### Original Description
   Allocation of Resources Without Limits or Throttling in the HDF5 weight loading component in Google Keras 3.0.0 through 3.12.0 and 3.13.0 on all platforms allows a remote attacker to cause a Denial of Service (DoS) through memory exhaustion and a crash of the Python interpreter via a crafted .keras archive containing a valid model.weights.h5 file whose dataset declares an extremely large shape.
 impacted_packages:
   - purl: pkg:pypi/keras
