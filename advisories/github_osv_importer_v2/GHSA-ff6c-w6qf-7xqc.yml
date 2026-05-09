@@ -17,7 +17,7 @@ summary: "CSS Parser: Improper Certificate Validation allows MITM injection of r
   \ a local proxy (such as mitmproxy or Burp Suite) to intercept outgoing HTTPS requests.\n\
   3. Present a fake self-signed certificate to the client.\n4. Inject custom CSS into the intercepted\
   \ HTTPS response.\n   \nThe request will succeed and the injected CSS will be delivered to\
-  \ the application, as the connection is not validated.\n\n### Resources\n \nhttps://github.com/premailer/css_parser/issues/185\n\
+  \ the application, as the connection is not validated.\n\n### References\n \nhttps://github.com/premailer/css_parser/issues/185\n\
   \n### Impact\n\nApplications using CSS Parser to load remote stylesheets over HTTPS are vulnerable\
   \ to CSS injection and content manipulation, regardless of the trust status of the remote\
   \ server. All users who use CSS Parser to fetch external CSS over HTTPS may be impacted.\n\
@@ -25,8 +25,13 @@ summary: "CSS Parser: Improper Certificate Validation allows MITM injection of r
   \ team."
 impacted_packages:
   - purl: pkg:gem/css_parser
-    affected_versions: vers:gem/<2.1.0
+    affected_versions: vers:gem/>=2.0.0|<2.1.0
     fixed_versions: vers:gem/2.1.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:gem/css_parser
+    affected_versions: vers:gem/<1.22.0
+    fixed_versions: vers:gem/1.22.0
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -45,6 +50,12 @@ weaknesses:
   - CWE-829
 references:
   - url: https://github.com/premailer/css_parser
+    reference_type:
+    reference_id:
+  - url: https://github.com/premailer/css_parser/commit/35e689c904225add78e0c488cf04bad052666449
+    reference_type:
+    reference_id:
+  - url: https://github.com/premailer/css_parser/commit/e0c95d5abe91b237becb90ff316531a6547ada18
     reference_type:
     reference_id:
   - url: https://github.com/premailer/css_parser/issues/185

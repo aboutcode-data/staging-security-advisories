@@ -11,7 +11,8 @@ summary: "CKAN has CSRF exemption primed by anonymous requests\nViews can be mar
   \ for static configuration. \n\nAn unauthenticated request could hit a protected endpoint,\
   \ exempting it from CSRF protection for the life of the particular server process. (e.g. one\
   \ worker of uwsgi).\n\nThis could be leveraged with XSS to perform actions using other user's\
-  \ credentials."
+  \ credentials.\n\n### References\n\n* [Vulnerability report](https://github.com/Shirshaw64p/security-advisories/tree/main/CVE-2026-41255)\
+  \ by @Shirshaw64p (original reporter)"
 impacted_packages:
   - purl: pkg:pypi/ckan
     affected_versions: vers:pypi/>=2.10.0|<2.10.10
