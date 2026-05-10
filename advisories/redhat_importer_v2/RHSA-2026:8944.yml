@@ -5,7 +5,9 @@ aliases:
   - CVE-2025-60753
   - CVE-2026-4111
   - CVE-2026-4424
+  - CVE-2026-4426
   - CVE-2026-5121
+  - CVE-2026-5745
 summary: |
   An update for Red Hat Hardened Images RPMs is now available.
 
@@ -20,17 +22,17 @@ summary: |
     * libarchive-devel-3.8.7-1.hum1 (aarch64, x86_64)
     * libarchive-3.8.7-1.hum1.src (src)
 impacted_packages:
+  - purl: pkg:rpm/redhat/libarchive?arch=src&distro=hummingbird-20251124&repository_id=public-hummingbird-source-rpms
+    affected_versions: vers:rpm/<3.8.7-1.hum1
+    fixed_versions: vers:rpm/3.8.7-1.hum1
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/bsdcat?arch=aarch64&distro=hummingbird-20251124&repository_id=public-hummingbird-aarch64-rpms
     affected_versions: vers:rpm/<3.8.7-1.hum1
     fixed_versions: vers:rpm/3.8.7-1.hum1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/bsdcat?arch=x86_64&distro=hummingbird-20251124&repository_id=public-hummingbird-x86_64-rpms
-    affected_versions: vers:rpm/<3.8.7-1.hum1
-    fixed_versions: vers:rpm/3.8.7-1.hum1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libarchive?arch=src&distro=hummingbird-20251124&repository_id=public-hummingbird-source-rpms
     affected_versions: vers:rpm/<3.8.7-1.hum1
     fixed_versions: vers:rpm/3.8.7-1.hum1
     fixed_in_commits: []
@@ -61,9 +63,15 @@ references:
   - url: https://access.redhat.com/security/cve/CVE-2026-4424
     reference_type: advisory
     reference_id: CVE-2026-4424
+  - url: https://access.redhat.com/security/cve/CVE-2026-4426
+    reference_type: advisory
+    reference_id: CVE-2026-4426
   - url: https://access.redhat.com/security/cve/CVE-2026-5121
     reference_type: advisory
     reference_id: CVE-2026-5121
+  - url: https://access.redhat.com/security/cve/CVE-2026-5745
+    reference_type: advisory
+    reference_id: CVE-2026-5745
   - url: https://access.redhat.com/errata/RHSA-2026:8944
     reference_type: advisory
     reference_id: RHSA-2026:8944
