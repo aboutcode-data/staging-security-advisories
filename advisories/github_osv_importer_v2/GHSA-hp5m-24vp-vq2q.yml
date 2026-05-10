@@ -1,0 +1,56 @@
+advisory_id: GHSA-hp5m-24vp-vq2q
+datasource_id: github_osv_importer_v2/GHSA-hp5m-24vp-vq2q
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-hp5m-24vp-vq2q/GHSA-hp5m-24vp-vq2q.json
+aliases:
+  - CVE-2026-44556
+summary: |
+  Open WebUI's responses passthrough endpoint lacks access control authorization
+  ## Summary
+
+  The /responses endpoint in the OpenAI router accepts any authenticated user and forwards requests directly to upstream LLM providers without enforcing per-model access control. While the primary chat completion endpoint (generate_chat_completion) checks model ownership, group membership, and AccessGrants before allowing a request, the /responses proxy only validates that the user has a valid session via get_verified_user.
+
+  This allows any authenticated user — regardless of role or group assignment — to interact with any model configured on the instance by sending a POST request to /api/openai/responses with an arbitrary model ID.
+
+  ## Impact
+
+  As per OWASP TOP 10 LLM:
+
+  - **Model Denial of Service (OWASP LLM04):** An unauthorized user can submit resource-intensive requests to expensive models (e.g., o1-pro, GPT-4o) that were explicitly restricted by the administrator. In shared deployments, this can exhaust API budgets or rate limits, causing total service disruption for all legitimate users.
+
+  - **Model Theft (OWASP LLM10):** If the instance proxies access to fine-tuned or self-hosted models, unauthorized users can freely interact with them, enabling capability extraction or model distillation without authorization.
+
+  - **Access Policy Bypass:** Administrators lose the ability to enforce cost-tier restrictions, team-based model assignments, or compliance boundaries through the existing access control system.
+
+  The endpoint is a raw passthrough proxy and does not resolve workspace model configurations (system prompts, knowledge bases, RAG pipelines). Therefore, workspace-specific confidential data is not directly exposed through this vector.
+
+  PR: https://github.com/open-webui/open-webui/pull/23481
+impacted_packages:
+  - purl: pkg:pypi/open-webui
+    affected_versions: vers:pypi/<=0.8.12
+    fixed_versions: vers:pypi/0.9.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.1'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-hp5m-24vp-vq2q/GHSA-hp5m-24vp-vq2q.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-284
+  - CWE-862
+references:
+  - url: https://github.com/open-webui/open-webui
+    reference_type:
+    reference_id:
+  - url: https://github.com/open-webui/open-webui/pull/23481
+    reference_type:
+    reference_id:
+  - url: https://github.com/open-webui/open-webui/security/advisories/GHSA-hp5m-24vp-vq2q
+    reference_type:
+    reference_id:

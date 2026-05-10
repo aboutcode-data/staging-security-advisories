@@ -1,11 +1,10 @@
 advisory_id: GHSA-j7w6-vpvq-j3gm
 datasource_id: github_osv_importer_v2/GHSA-j7w6-vpvq-j3gm
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-j7w6-vpvq-j3gm/GHSA-j7w6-vpvq-j3gm.json
-aliases: []
-summary: "Duplicate Advisory: Diffusers has a `trust_remote_code` bypass via `custom_pipeline`\
-  \ and local custom components\n### Duplicate Advisory\nThis advisory has been withdrawn because\
-  \ it is a duplicate of GHSA-98h9-4798-4q5v. This link is maintained to preserve external references.\n\
-  \n### Original Description\n\n## Background\n\nThis vulnerability is found in the `DiffusionPipeline.from_pretrained`\
+aliases:
+  - CVE-2026-44827
+summary: "Diffusers has a `trust_remote_code` bypass via `custom_pipeline` and local custom\
+  \ components\n## Background\n\nThis vulnerability is found in the `DiffusionPipeline.from_pretrained`\
   \ flow, which is used to load a pipeline from the HuggingFace Hub.\n\nThis function accepts\
   \ an optional `custom_pipeline` keyword argument: the name of a Python file in the repo that\
   \ contains a custom class inheriting from `DiffusionPipeline`. An equivalent flow is triggered\
@@ -74,12 +73,12 @@ summary: "Duplicate Advisory: Diffusers has a `trust_remote_code` bypass via `cu
   \npipeline = DiffusionPipeline.from_pretrained('ido-shani/none-py-trust-remote-code-bypass')\n\
   ```\n\n## PoC\n\n-   Upload this zip as a model to the hub. https://drive.google.com/file/d/1mULARMLJJUTCi57xIv0wtDauko-JW0h7/view?usp=sharing\n\
   -   Run `DiffusionPipeline.from_pretrained` on the uploaded model hub identifier.\n-   RCE\
-  \ occured; `/tmp/pwned` was created. If users are running the exploit on windows, they should\
-  \ change the path touched in `None.py`.\n\n# Impact\n\nThe vulnerability is a silent RCE -\
-  \ it allows arbitrary code to be loaded through the custom\\_pipeline flow from a Hub repo,\
-  \ with no `custom_pipeline` or `trust_remote_code` kwargs and nothing suspicious in the config.\
-  \ The `from_pretrained` call succeeds and returns a functional pipeline.\n\n# Occurrences\n\
-  \nhttps://github.com/huggingface/diffusers/blob/e1b5db52bda85d47a4f8f75954f77e672a8f7f1c/src/diffusers/pipelines/pipeline_loading_utils.py#L976\n\
+  \ occured; `/tmp/pwned` was created. If you are running the exploit on windows, change the\
+  \ path touched in `None.py`.\n\n# Impact\n\nThe vulnerability is a silent RCE - it allows\
+  \ arbitrary code to be loaded through the custom\\_pipeline flow from a Hub repo, with no\
+  \ `custom_pipeline` or `trust_remote_code` kwargs and nothing suspicious in the config. The\
+  \ `from_pretrained` call succeeds and returns a functional pipeline.\n\n# Occurrences\n\n\
+  https://github.com/huggingface/diffusers/blob/e1b5db52bda85d47a4f8f75954f77e672a8f7f1c/src/diffusers/pipelines/pipeline_loading_utils.py#L976\n\
   \n# Patches\n\nYes. Fixed in **diffusers 0.38.0** via [PR #13448](https://github.com/huggingface/diffusers/pull/13448).\
   \ All users on versions `< 0.38.0` should upgrade:\n\n```bash\npip install --upgrade \"diffusers>=0.38.0\"\
   \n```\n\nThe fix moves the `trust_remote_code` gate out of `DiffusionPipeline.download()`\
@@ -92,7 +91,14 @@ summary: "Duplicate Advisory: Diffusers has a `trust_remote_code` bypass via `cu
   \ pointing at a Hub repository different from the primary `pretrained_model_name_or_path`\
   \ unless you have read its `pipeline.py`.\n- Before calling `from_pretrained` on a local snapshot,\
   \ inspect the snapshot for unexpected `*.py` files, especially under component subdirectories\
-  \ (`unet/`, `scheduler/`, etc.) and at the snapshot root."
+  \ (`unet/`, `scheduler/`, etc.) and at the snapshot root.\n\n# Why this should have a dedicated\
+  \ CVE\n\nGHSA-j7w6-vpvq-j3gm is a distinct defect from CVE-2026-44513. CVE-2026-44513 is a\
+  \ misplaced-security-gate bug requiring a user-supplied `custom_pipeline` argument or a config\
+  \ entry declaring custom code. GHSA-j7w6 is a string-formatting bug where the default custom_pipeline=None\
+  \ is interpolated into the filename `None.py`, allowing silent RCE on a fully default `from_pretrained('repo')`\
+  \ call with no kwargs and a `model_index.json` that shadows a legitimate class. The root cause\
+  \ root cause and trigger are different, although the fix applied to address CVE-2026-44513\
+  \ also addresses this vulnerability."
 impacted_packages:
   - purl: pkg:pypi/diffusers
     affected_versions: vers:pypi/<0.38.0

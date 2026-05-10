@@ -1,0 +1,105 @@
+advisory_id: GHSA-3g76-f9xq-8vp6
+datasource_id: github_osv_importer_v2/GHSA-3g76-f9xq-8vp6
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-3g76-f9xq-8vp6/GHSA-3g76-f9xq-8vp6.json
+aliases:
+  - CVE-2026-6860
+summary: |
+  Vert.x has a DoS via unbounded server-side SNI SslContext cache growth
+  Potential unbounded server-side SNI `SslContext` cache growth in Vert.x TLS handling, with possible resource-exhaustion / DoS impact.
+
+  On affected versions, matching server-side SNI names are cached via `computeIfAbsent(serverName, ...)` in a serverName-keyed `SslContext` cache, and I could not find any bound, TTL, or eviction for that cache.
+
+  The implementation differs slightly by branch, but the same sink appears to be present in released versions `4.3.4` through `5.0.8`:
+  - `4.3.x`: `SSLHelper`
+  - `4.4.x` / `4.5.x`: `SslChannelProvider`
+  - `5.0.x` and current `master`: `SslContextProvider`
+
+  It appears that when server-side SNI is enabled, and wildcard or otherwise broad hostname mappings are used, an unauthenticated client can send many distinct matching SNI names and cause the server to retain increasing numbers of `SslContext` entries over time, leading to increasing memory consumption and possible DoS conditions.
+
+  A check was performed on the related TCP SNI path across affected versions, the QUIC SNI path on `5.x`, and the wildcard hostname resolution helpers used during certificate selection.
+
+  ## Steps to reproduce
+
+  1. Configure a Vert.x server with `setSsl(true)` and `setSni(true)`.
+  2. Use a keystore or mapping where many distinct SNI names match a wildcard or similarly broad rule.
+  3. Send repeated connections with distinct matching SNI values.
+  4. Observe that the SNI cache size grows with the number of unique matching names.
+
+  Local observations:
+  - initial `sniEntrySize()` = `0`
+  - after 20 unique matching names: `20`
+  - after 40 unique matching names: `40`
+  - repeating previously seen matching names did not grow the cache further
+  - non-matching SNI names did not create new cache entries
+
+  ## What are the affected versions?
+
+  Affected released versions confirmed on `origin`:
+  - `4.3.4` through `4.3.8`
+  - `4.4.0` through `4.4.9`
+  - `4.5.0` through `4.5.25`
+  - `5.0.0` through `5.0.8`
+
+  Not affected by the same sink:
+  - `4.0.x` through `4.2.x`
+  - `4.3.0` through `4.3.3`
+
+  ## Are there any ways to mitigate this issue?
+
+  - Disable server-side SNI if it is not needed.
+  - Avoid wildcard or otherwise high-cardinality hostname mappings where feasible.
+  - Apply connection or rate limiting in front of the service.
+impacted_packages:
+  - purl: pkg:maven/io.vertx/vertx-core
+    affected_versions: vers:maven/>=4.3.4|<=4.3.8
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/io.vertx/vertx-core
+    affected_versions: vers:maven/>=4.4.0|<=4.4.9
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/io.vertx/vertx-core
+    affected_versions: vers:maven/>=4.5.0|<=4.5.25
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/io.vertx/vertx-core
+    affected_versions: vers:maven/>=5.0.0|<=5.0.8
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-3g76-f9xq-8vp6/GHSA-3g76-f9xq-8vp6.json
+  - score: '6.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:L
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-3g76-f9xq-8vp6/GHSA-3g76-f9xq-8vp6.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses: []
+references:
+  - url: https://github.com/eclipse-vertx/vert.x
+    reference_type:
+    reference_id:
+  - url: https://gitlab.eclipse.org/security/vulnerability-reports/-/issues/381
+    reference_type: other
+    reference_id: 381
+  - url: https://github.com/eclipse-vertx/vert.x/pull/6102
+    reference_type: other
+    reference_id: 6102
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-6860
+    reference_type:
+    reference_id: CVE-2026-6860
+  - url: https://github.com/eclipse-vertx/vert.x/security/advisories/GHSA-3g76-f9xq-8vp6
+    reference_type: other
+    reference_id: GHSA-3g76-f9xq-8vp6

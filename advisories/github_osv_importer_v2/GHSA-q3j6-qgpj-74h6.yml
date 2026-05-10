@@ -1,0 +1,54 @@
+advisory_id: GHSA-q3j6-qgpj-74h6
+datasource_id: github_osv_importer_v2/GHSA-q3j6-qgpj-74h6
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-q3j6-qgpj-74h6/GHSA-q3j6-qgpj-74h6.json
+aliases:
+  - CVE-2026-6321
+summary: |
+  fast-uri vulnerable to path traversal via percent-encoded dot segments
+  ### Impact
+
+  `fast-uri` v3.1.0 and earlier decodes percent-encoded path separators (`%2F`) and dot segments (`%2E`) before applying dot-segment removal in `normalize()` and `equal()`. This makes encoded path data behave like real `/` and `..`, so distinct URIs collapse onto the same normalized path.
+
+  For example, `http://example.com/public/%2e%2e/admin` normalizes to `http://example.com/admin`, and `equal()` considers them the same URI.
+
+  Applications that normalize or compare attacker-controlled URLs to enforce path-based policy can be bypassed. A path that looks confined under an allowed prefix can normalize to a different location.
+
+  ### Patches
+
+  Upgrade to `fast-uri` >= 3.1.1.
+
+  ### Workarounds
+
+  None. Upgrade to the patched version.
+impacted_packages:
+  - purl: pkg:npm/fast-uri
+    affected_versions: vers:npm/<=3.1.0
+    fixed_versions: vers:npm/3.1.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-q3j6-qgpj-74h6/GHSA-q3j6-qgpj-74h6.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-22
+references:
+  - url: https://cna.openjsf.org/security-advisories.html
+    reference_type:
+    reference_id:
+  - url: https://github.com/fastify/fast-uri
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-6321
+    reference_type:
+    reference_id: CVE-2026-6321
+  - url: https://github.com/fastify/fast-uri/security/advisories/GHSA-q3j6-qgpj-74h6
+    reference_type: other
+    reference_id: GHSA-q3j6-qgpj-74h6

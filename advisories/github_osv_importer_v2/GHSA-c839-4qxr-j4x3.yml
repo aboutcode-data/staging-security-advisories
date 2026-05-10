@@ -106,12 +106,18 @@ severities:
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:L/I:N/A:N
     published_at: None
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-c839-4qxr-j4x3/GHSA-c839-4qxr-j4x3.json
+  - score: '2.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:A/AC:H/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-c839-4qxr-j4x3/GHSA-c839-4qxr-j4x3.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
     published_at: None
     url:
 weaknesses:
+  - CWE-295
   - CWE-287
 references:
   - url: https://github.com/lxc/incus
@@ -120,3 +126,18 @@ references:
   - url: https://github.com/lxc/incus/security/advisories/GHSA-c839-4qxr-j4x3
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-40243
+    reference_type:
+    reference_id: CVE-2026-40243
+  - url: https://github.com/lxc/incus/blob/v6.22.0/internal/server/network/ovn/ovn_icnb.go
+    reference_type: other
+    reference_id: ovn_icnb.go
+  - url: https://github.com/lxc/incus/blob/v6.22.0/internal/server/network/ovn/ovn_icsb.go
+    reference_type: other
+    reference_id: ovn_icsb.go
+  - url: https://github.com/lxc/incus/blob/v6.22.0/internal/server/network/ovn/ovn_nb.go
+    reference_type: other
+    reference_id: ovn_nb.go
+  - url: https://github.com/lxc/incus/blob/v6.22.0/internal/server/network/ovn/ovn_sb.go
+    reference_type: other
+    reference_id: ovn_sb.go

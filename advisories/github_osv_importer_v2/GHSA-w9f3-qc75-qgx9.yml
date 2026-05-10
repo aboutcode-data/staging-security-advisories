@@ -1,0 +1,55 @@
+advisory_id: GHSA-w9f3-qc75-qgx9
+datasource_id: github_osv_importer_v2/GHSA-w9f3-qc75-qgx9
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-w9f3-qc75-qgx9/GHSA-w9f3-qc75-qgx9.json
+aliases:
+  - CVE-2026-44212
+summary: |
+  PrestaShop has a stored XSS executable in customer service view
+  ### Impact
+
+  This is a **stored Cross-site Scripting (XSS)** vulnerability in the PrestaShop back-office Customer Service view.
+
+  An unauthenticated attacker can submit the public Contact Us form with a malicious email address. The payload is stored in the database and executed when a back-office employee opens the affected customer thread, enabling session hijacking and full back-office takeover.
+
+  ### Patches
+
+  Patched in PrestaShop 8.2.6 and 9.1.1.
+
+  ### Workarounds
+
+  None.
+
+  ### Resources
+
+  - Reported by Savio at Doyensec (`anthropic@doyensec.com`) in collaboration with Anthropic Research.
+impacted_packages:
+  - purl: pkg:composer/prestashop/prestashop
+    affected_versions: vers:composer/<8.2.6
+    fixed_versions: vers:composer/8.2.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/prestashop/prestashop
+    affected_versions: vers:composer/>=9.0.0|<9.1.1
+    fixed_versions: vers:composer/9.1.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '9.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-w9f3-qc75-qgx9/GHSA-w9f3-qc75-qgx9.json
+  - score: CRITICAL
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-79
+references:
+  - url: https://github.com/PrestaShop/PrestaShop
+    reference_type:
+    reference_id:
+  - url: https://github.com/PrestaShop/PrestaShop/security/advisories/GHSA-w9f3-qc75-qgx9
+    reference_type:
+    reference_id:

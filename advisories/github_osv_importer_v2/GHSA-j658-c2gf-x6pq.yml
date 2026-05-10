@@ -1,0 +1,49 @@
+advisory_id: GHSA-j658-c2gf-x6pq
+datasource_id: github_osv_importer_v2/GHSA-j658-c2gf-x6pq
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-j658-c2gf-x6pq/GHSA-j658-c2gf-x6pq.json
+aliases:
+  - CVE-2026-44966
+summary: "Velocity.js has a Prototype Pollution vulnerability through #set path assignment\n\
+  ### Summary\nA prototype pollution vulnerability was discovered in Velocity.js <= 2.1.5. This\
+  \ issue occurs during the processing of #set directives in Velocity templates. If an application\
+  \ renders a template controlled by an attacker, it is possible to modify Object.prototype,\
+  \ potentially leading to Denial of Service (DoS) or Remote Code Execution (RCE) depending\
+  \ on the server environment.\n\n### Details\nThe root cause is located in the #set path assignment\
+  \ logic within the source code:\n- File: /src/compile/set.ts \n- Issue: The engine accepts\
+  \ arbitrary path keys and performs assignments using the logic `(baseRef as Record<string,\
+  \ unknown>)[key] = val`.\n\n\nBecause there is no validation or filtering to block sensitive\
+  \ keys such as \\_\\_proto\\_\\_, constructor, or prototype, an attacker can traverse the\
+  \ prototype chain and pollute the global Object.prototype.\n\n### PoC\n```javascript\nconst\
+  \ {render} = require('velocityjs');\ndelete Object.prototype.polluted;\nconsole.log({}.polluted);\
+  \ // \"\"\nrender('#set($__proto__.polluted = \"hacked\")', {});\nconsole.log({}.polluted);\
+  \ // \"hacked\"\ndelete Object.prototype.polluted;\n```\n\n### Impact\n- Vulnerability Type:\
+  \ Prototype Pollution\n- Who is impacted: Any application that renders Velocity templates\
+  \ where the template content can be influenced or controlled by untrusted users.\n- Severity:\
+  \ High. Prototype pollution can often be used to bypass security controls, cause application\
+  \ crashes (DoS), or be chained with other vulnerabilities to achieve code execution."
+impacted_packages:
+  - purl: pkg:npm/velocityjs
+    affected_versions: vers:npm/<=2.1.5
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-j658-c2gf-x6pq/GHSA-j658-c2gf-x6pq.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-1321
+references:
+  - url: https://github.com/shepherdwind/velocity.js
+    reference_type:
+    reference_id:
+  - url: https://github.com/shepherdwind/velocity.js/security/advisories/GHSA-j658-c2gf-x6pq
+    reference_type:
+    reference_id:
