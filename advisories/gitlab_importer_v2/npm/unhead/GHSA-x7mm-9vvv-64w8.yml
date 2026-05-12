@@ -1,0 +1,37 @@
+advisory_id: npm/unhead/GHSA-x7mm-9vvv-64w8
+datasource_id: gitlab_importer_v2/npm/unhead/GHSA-x7mm-9vvv-64w8
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/unhead/GHSA-x7mm-9vvv-64w8.yml
+aliases:
+  - GHSA-x7mm-9vvv-64w8
+summary: |
+  unhead: Streaming SSR `streamKey` injected into inline script without identifier validation
+  `createStreamableHead({ streamKey })` interpolated its `streamKey` argument directly into the streaming SSR bootstrap and suspense-chunk inline scripts without identifier validation or escaping. If an application forwards untrusted data into that configuration value, the rendered scripts become a script-injection sink.
+impacted_packages:
+  - purl: pkg:npm/unhead
+    affected_versions: vers:npm/>=3.0.0-beta.5|<3.0.1
+    fixed_versions: vers:npm/3.0.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/unhead/GHSA-x7mm-9vvv-64w8.yml
+weaknesses:
+  - CWE-79
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/unjs/unhead
+    reference_type:
+    reference_id:
+  - url: https://github.com/unjs/unhead/commit/64b5ac0aa30cc256ea6677ce3dc4f132f81b2ff6
+    reference_type:
+    reference_id:
+  - url: https://github.com/unjs/unhead/security/advisories/GHSA-x7mm-9vvv-64w8
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-x7mm-9vvv-64w8
+    reference_type:
+    reference_id: GHSA-x7mm-9vvv-64w8

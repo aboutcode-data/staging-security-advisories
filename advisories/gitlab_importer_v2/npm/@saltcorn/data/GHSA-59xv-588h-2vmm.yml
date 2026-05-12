@@ -1,0 +1,34 @@
+advisory_id: npm/@saltcorn/data/GHSA-59xv-588h-2vmm
+datasource_id: gitlab_importer_v2/npm/@saltcorn/data/GHSA-59xv-588h-2vmm
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/@saltcorn/data/GHSA-59xv-588h-2vmm.yml
+aliases:
+  - GHSA-59xv-588h-2vmm
+summary: |
+  @saltcorn/data vulnerable to SQL Injection via jsexprToSQL Literal Handler
+  The `jsexprToSQL()` function in Saltcorn converts JavaScript expressions to SQL for use in database constraints. The `Literal` handler wraps string values in single quotes without escaping embedded single quotes, allowing SQL injection when creating Formula-type table constraints.
+impacted_packages:
+  - purl: pkg:npm/%40saltcorn/data
+    affected_versions: vers:npm/<1.4.5|>=1.5.0|<1.5.5|>=1.6.0-alpha.0|<1.6.0-beta.4
+    fixed_versions: vers:npm/1.4.5|1.5.5|1.6.0-beta.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/@saltcorn/data/GHSA-59xv-588h-2vmm.yml
+weaknesses:
+  - CWE-1035
+  - CWE-937
+  - CWE-89
+references:
+  - url: https://github.com/saltcorn/saltcorn
+    reference_type:
+    reference_id:
+  - url: https://github.com/saltcorn/saltcorn/security/advisories/GHSA-59xv-588h-2vmm
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-59xv-588h-2vmm
+    reference_type:
+    reference_id: GHSA-59xv-588h-2vmm

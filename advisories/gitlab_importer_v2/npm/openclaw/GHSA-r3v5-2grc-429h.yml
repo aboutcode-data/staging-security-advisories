@@ -1,0 +1,47 @@
+advisory_id: npm/openclaw/GHSA-r3v5-2grc-429h
+datasource_id: gitlab_importer_v2/npm/openclaw/GHSA-r3v5-2grc-429h
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-r3v5-2grc-429h.yml
+aliases:
+  - GHSA-r3v5-2grc-429h
+summary: |
+  Duplicate Advisory: OpenClaw Gateway: RCE and Privilege Escalation from operator.pairing to operator.admin via device.pair.approve
+  ### Duplicate Advisory
+  This advisory has been withdrawn because it is a duplicate of GHSA-hf68-49fm-59cq. This link is maintained to preserve external references.
+
+  ### Original Description
+  OpenClaw before 2026.3.22 contains a privilege escalation vulnerability in the device.pair.approve method that allows an operator.pairing approver to approve pending device requests with broader operator scopes than the approver actually holds. Attackers can exploit insufficient scope validation to escalate privileges to operator.admin and achieve remote code execution on the Node infrastructure.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.3.22
+    fixed_versions: vers:npm/2026.3.22
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-r3v5-2grc-429h.yml
+weaknesses:
+  - CWE-648
+  - CWE-937
+  - CWE-1035
+references:
+  - url: https://github.com/openclaw/openclaw/commit/630f1479c44f78484dfa21bb407cbe6f171dac87
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/fc2d29ea926f47c428c556e92ec981441228d2a4
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-hf68-49fm-59cq
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-35639
+    reference_type:
+    reference_id:
+  - url: https://www.vulncheck.com/advisories/openclaw-privilege-escalation-via-device-pair-approve-scope-validation
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-r3v5-2grc-429h
+    reference_type:
+    reference_id: GHSA-r3v5-2grc-429h
