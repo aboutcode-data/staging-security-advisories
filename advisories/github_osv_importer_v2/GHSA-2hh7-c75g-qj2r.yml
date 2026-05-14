@@ -1,7 +1,8 @@
 advisory_id: GHSA-2hh7-c75g-qj2r
 datasource_id: github_osv_importer_v2/GHSA-2hh7-c75g-qj2r
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-2hh7-c75g-qj2r/GHSA-2hh7-c75g-qj2r.json
-aliases: []
+aliases:
+  - CVE-2026-44116
 summary: |
   OpenClaw validates Zalo outbound photo URLs through the SSRF guard
   ## Summary
@@ -34,9 +35,14 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
-  - score: '5.3'
+  - score: '8.6'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-2hh7-c75g-qj2r/GHSA-2hh7-c75g-qj2r.json
+  - score: '6.9'
     scoring_system: cvssv4
-    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:H/SI:N/SA:N
     published_at: None
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-2hh7-c75g-qj2r/GHSA-2hh7-c75g-qj2r.json
   - score: MODERATE
@@ -56,3 +62,9 @@ references:
   - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-2hh7-c75g-qj2r
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-44116
+    reference_type:
+    reference_id: CVE-2026-44116
+  - url: https://www.vulncheck.com/advisories/openclaw-server-side-request-forgery-in-zalo-photo-url-validation
+    reference_type: advisory
+    reference_id: openclaw-server-side-request-forgery-in-zalo-photo-url-validation

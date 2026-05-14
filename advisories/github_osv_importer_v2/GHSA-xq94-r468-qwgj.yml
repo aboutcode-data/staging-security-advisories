@@ -1,7 +1,8 @@
 advisory_id: GHSA-xq94-r468-qwgj
 datasource_id: github_osv_importer_v2/GHSA-xq94-r468-qwgj
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-xq94-r468-qwgj/GHSA-xq94-r468-qwgj.json
-aliases: []
+aliases:
+  - CVE-2026-43582
 summary: |
   OpenClaw: Browser SSRF hostname validation could be bypassed by DNS rebinding
   ## Summary
@@ -47,8 +48,13 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '6.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-xq94-r468-qwgj/GHSA-xq94-r468-qwgj.json
+  - score: '4.9'
     scoring_system: cvssv4
-    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N
+    scoring_elements: CVSS:4.0/AV:N/AC:H/AT:P/PR:L/UI:N/VC:N/VI:N/VA:N/SC:H/SI:N/SA:N
     published_at: None
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-xq94-r468-qwgj/GHSA-xq94-r468-qwgj.json
   - score: MODERATE
@@ -72,3 +78,9 @@ references:
   - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-xq94-r468-qwgj
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-43582
+    reference_type:
+    reference_id: CVE-2026-43582
+  - url: https://www.vulncheck.com/advisories/openclaw-dns-rebinding-ssrf-via-hostname-validation-bypass
+    reference_type: advisory
+    reference_id: openclaw-dns-rebinding-ssrf-via-hostname-validation-bypass

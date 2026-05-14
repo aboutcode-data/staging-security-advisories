@@ -1,32 +1,20 @@
 advisory_id: GHSA-5h3g-6xhh-rg6p
 datasource_id: github_osv_importer_v2/GHSA-5h3g-6xhh-rg6p
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-5h3g-6xhh-rg6p/GHSA-5h3g-6xhh-rg6p.json
-aliases: []
-summary: |
-  OpenClaw: OpenShell FS bridge reads pin and verify the opened file before returning bytes
-  ## Summary
-  OpenShell FS bridge reads pin and verify the opened file before returning bytes
-
-  ## Affected Packages / Versions
-  - Package: openclaw (npm)
-  - Affected versions: <= 2026.4.21
-  - Fixed version: 2026.4.22
-
-  ## Impact
-  A time-of-check/time-of-use race around OpenShell sandbox filesystem reads could let a symlink swap cause bytes outside the intended mount root to be read.
-
-  ## Fix
-  OpenShell reads now open the file with no-follow semantics where available, validate the pinned file descriptor against the canonical mount root, reject unsafe hardlink/symlink cases, and use a strict fallback ancestor walk on platforms without fd-path readback.
-
-  ## Fix Commit(s)
-  - 95119017c847c737bd113f0bff728c4666d79c45
-
-  ## Verification
-  - The fix commit is contained in the public v2026.4.22 tag.
-  - openclaw@2026.4.22 is published on npm and the compiled package contains the fix.
-  - Focused regression coverage for this path passed before publication.
-
-  OpenClaw thanks @VladimirEliTokarev for reporting.
+aliases:
+  - CVE-2026-44113
+summary: "OpenClaw: OpenShell FS bridge reads pin and verify the opened file before returning\
+  \ bytes\n## Summary\nOpenShell FS bridge reads pin and verify the opened file before returning\
+  \ bytes \n\n## Affected Packages / Versions\n- Package: openclaw (npm)\n- Affected versions:\
+  \ <= 2026.4.21\n- Fixed version: 2026.4.22\n\n## Impact\nA time-of-check/time-of-use race\
+  \ around OpenShell sandbox filesystem reads could let a symlink swap cause bytes outside the\
+  \ intended mount root to be read.\n\n## Fix\nOpenShell reads now open the file with no-follow\
+  \ semantics where available, validate the pinned file descriptor against the canonical mount\
+  \ root, reject unsafe hardlink/symlink cases, and use a strict fallback ancestor walk on platforms\
+  \ without fd-path readback.\n\n## Fix Commit(s)\n- 95119017c847c737bd113f0bff728c4666d79c45\n\
+  \n## Verification\n- The fix commit is contained in the public v2026.4.22 tag.\n- openclaw@2026.4.22\
+  \ is published on npm and the compiled package contains the fix.\n- Focused regression coverage\
+  \ for this path passed before publication.\n\nThanks @VladimirEliTokarev for reporting."
 impacted_packages:
   - purl: pkg:npm/openclaw
     affected_versions: vers:npm/<=2026.4.21
@@ -34,9 +22,14 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
-  - score: '6.8'
+  - score: '5.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-5h3g-6xhh-rg6p/GHSA-5h3g-6xhh-rg6p.json
+  - score: '6.0'
     scoring_system: cvssv4
-    scoring_elements: CVSS:4.0/AV:L/AC:H/AT:P/PR:L/UI:N/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N
+    scoring_elements: CVSS:4.0/AV:N/AC:H/AT:P/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N
     published_at: None
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-5h3g-6xhh-rg6p/GHSA-5h3g-6xhh-rg6p.json
   - score: MODERATE
@@ -56,3 +49,9 @@ references:
   - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-5h3g-6xhh-rg6p
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-44113
+    reference_type:
+    reference_id: CVE-2026-44113
+  - url: https://www.vulncheck.com/advisories/openclaw-time-of-check-time-of-use-race-condition-in-openshell-fs-bridge
+    reference_type: advisory
+    reference_id: openclaw-time-of-check-time-of-use-race-condition-in-openshell-fs-bridge

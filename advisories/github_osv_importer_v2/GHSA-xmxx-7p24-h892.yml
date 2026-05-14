@@ -1,7 +1,8 @@
 advisory_id: GHSA-xmxx-7p24-h892
 datasource_id: github_osv_importer_v2/GHSA-xmxx-7p24-h892
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-xmxx-7p24-h892/GHSA-xmxx-7p24-h892.json
-aliases: []
+aliases:
+  - CVE-2026-43585
 summary: |
   OpenClaw: Gateway HTTP endpoints re-resolve bearer auth after SecretRef rotation
   ## Summary
@@ -39,17 +40,23 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
-  - score: '7.6'
-    scoring_system: cvssv4
-    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N
+  - score: '8.1'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H
     published_at: None
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-xmxx-7p24-h892/GHSA-xmxx-7p24-h892.json
-  - score: HIGH
+  - score: '9.2'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-xmxx-7p24-h892/GHSA-xmxx-7p24-h892.json
+  - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
     published_at: None
     url:
 weaknesses:
+  - CWE-672
   - CWE-324
 references:
   - url: https://github.com/openclaw/openclaw
@@ -64,3 +71,9 @@ references:
   - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-xmxx-7p24-h892
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-43585
+    reference_type:
+    reference_id: CVE-2026-43585
+  - url: https://www.vulncheck.com/advisories/openclaw-bearer-token-validation-bypass-via-stale-secretref-resolution
+    reference_type: advisory
+    reference_id: openclaw-bearer-token-validation-bypass-via-stale-secretref-resolution

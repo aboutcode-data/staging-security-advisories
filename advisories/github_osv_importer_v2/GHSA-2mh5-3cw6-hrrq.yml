@@ -1,0 +1,58 @@
+advisory_id: GHSA-2mh5-3cw6-hrrq
+datasource_id: github_osv_importer_v2/GHSA-2mh5-3cw6-hrrq
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-2mh5-3cw6-hrrq/GHSA-2mh5-3cw6-hrrq.json
+aliases:
+  - CVE-2026-40981
+summary: |
+  Spring Cloud Config has an Authorization Bypass Through User-Controlled Key
+  When using Google Secrets Manager as a backend for the Spring Cloud Config server a client can craft a request to the config server potentially exposing secrets from unintended GCP projects.
+  Spring Cloud Config 3.1.x: affected from 3.1.0 through 3.1.13 (inclusive); upgrade to 3.1.14 or greater (Enterprise Support Only). Spring Cloud Config 4.1.x: affected from 4.1.0 through 4.1.9 (inclusive); upgrade to 4.1.10 or greater (Enterprise Support Only). Spring Cloud Config 4.2.x: affected from 4.2.0 through 4.2.6 (inclusive); upgrade to 4.2.7 or greater (Enterprise Support Only). Spring Cloud Config 4.3.x: affected from 4.3.0 through 4.3.2 (inclusive); upgrade to 4.3.3 or greater. Spring Cloud Config 5.0.x: affected from 5.0.0 through 5.0.2 (inclusive); upgrade to 5.0.3 or greater.
+impacted_packages:
+  - purl: pkg:maven/org.springframework.cloud/spring-cloud-config
+    affected_versions: vers:maven/>=3.1.0|<=3.1.13
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.springframework.cloud/spring-cloud-config
+    affected_versions: vers:maven/>=4.1.0|<=4.1.9
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.springframework.cloud/spring-cloud-config
+    affected_versions: vers:maven/>=4.2.0|<=4.2.6
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.springframework.cloud/spring-cloud-config
+    affected_versions: vers:maven/<=4.3.2
+    fixed_versions: vers:maven/4.3.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.springframework.cloud/spring-cloud-config
+    affected_versions: vers:maven/<=5.0.2
+    fixed_versions: vers:maven/5.0.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-2mh5-3cw6-hrrq/GHSA-2mh5-3cw6-hrrq.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-639
+references:
+  - url: https://github.com/spring-cloud/spring-cloud-config
+    reference_type:
+    reference_id:
+  - url: https://spring.io/security/cve-2026-40981
+    reference_type: other
+    reference_id: cve-2026-40981
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-40981
+    reference_type:
+    reference_id: CVE-2026-40981

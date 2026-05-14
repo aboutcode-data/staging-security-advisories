@@ -1,0 +1,53 @@
+advisory_id: GHSA-rmp5-5jj7-gmvf
+datasource_id: github_osv_importer_v2/GHSA-rmp5-5jj7-gmvf
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-rmp5-5jj7-gmvf/GHSA-rmp5-5jj7-gmvf.json
+aliases:
+  - CVE-2026-34744
+summary: |
+  MantisBT has an authorization bypass that allows reading attachments after losing access to a private issue
+  MantisBT permits a user to list and download their own attachments from an Issue created by another user, even after that Issue becomes private and direct access to it is denied.
+
+  ### Impact
+  The loss of confidentiality caused by this vulnerability is minimal, considering that only the attachments that were previously uploaded by the user themselves remains accessible.
+
+  ### Patches
+  - de7bdeec36de066235e38a77bf056917d951c84d
+
+  ### Workarounds
+  None.
+
+  ### Credits
+
+  Thanks to Vishal Shukla for discovering and responsibly reporting the issue.
+impacted_packages:
+  - purl: pkg:composer/mantisbt/mantisbt
+    affected_versions: vers:composer/<=2.28.1
+    fixed_versions: vers:composer/2.28.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-rmp5-5jj7-gmvf/GHSA-rmp5-5jj7-gmvf.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-200
+references:
+  - url: https://github.com/mantisbt/mantisbt
+    reference_type:
+    reference_id:
+  - url: https://github.com/mantisbt/mantisbt/commit/de7bdeec36de066235e38a77bf056917d951c84d
+    reference_type:
+    reference_id:
+  - url: https://github.com/mantisbt/mantisbt/security/advisories/GHSA-rmp5-5jj7-gmvf
+    reference_type:
+    reference_id:
+  - url: https://mantisbt.org/bugs/view.php?id=36977
+    reference_type:
+    reference_id:

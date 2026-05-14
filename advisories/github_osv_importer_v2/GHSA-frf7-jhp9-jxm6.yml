@@ -1,0 +1,56 @@
+advisory_id: GHSA-frf7-jhp9-jxm6
+datasource_id: github_osv_importer_v2/GHSA-frf7-jhp9-jxm6
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-frf7-jhp9-jxm6/GHSA-frf7-jhp9-jxm6.json
+aliases:
+  - CVE-2026-34390
+summary: "MantisBT Vulnerable to Privilege Escalation from Manager to Administrator\nInsufficient\
+  \ access control checks in _ProjectUsersAddCommand_ (used in *manage_proj_user_add.php* and\
+  \ REST API endpoint `PUT /project/{id}/users`) allows users having *manage_project_threshold*\
+  \ access level (*manager* by default) to grant project-level *administrator* access to any\
+  \ user (including themselves) in any Project they have *manager* rights in.\n\nThe normal\
+  \ project-user add form does restrict the selectable access levels to the actor's own project\
+  \ role or below. However, the backend handler still accepts a forged higher access_level value\
+  \ and writes it.\n\n### Impact\nPrivilege escalation.\n\nThe consequences of the privilege\
+  \ escalation are not as bad as it may sound, because having *administrator* access at Project\
+  \ level is effectively not very different from being *manager*, it does not actually give\
+  \ administrator privileges on the whole MantisBT instance. In particular, it does not let\
+  \ the upgraded user delete the Project or grant them any access to global administrative functions\
+  \ such as managing Users, Projects, Plugins, Custom Fields, etc. \n\n### Patches\n- 69e0180f180ed5acf48a8d281a73683a7bf32461\n\
+  \n### Workarounds\nNone\n\n### Credits\nThanks to the following security researchers for independently\
+  \ discovering and responsibly reporting the issue:\n- [Dracosec Research Limited](https://dracosec.tech/)\
+  \ (Siu Nam Tang, Chris Chan, Krecendo Hui, William Lam)\n- Vishal Shukla"
+impacted_packages:
+  - purl: pkg:composer/mantisbt/mantisbt
+    affected_versions: vers:composer/<=2.28.1
+    fixed_versions: vers:composer/2.28.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.1'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-frf7-jhp9-jxm6/GHSA-frf7-jhp9-jxm6.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-284
+references:
+  - url: https://github.com/mantisbt/mantisbt
+    reference_type:
+    reference_id:
+  - url: https://github.com/mantisbt/mantisbt/commit/69e0180f180ed5acf48a8d281a73683a7bf32461
+    reference_type:
+    reference_id:
+  - url: https://github.com/mantisbt/mantisbt/security/advisories/GHSA-frf7-jhp9-jxm6
+    reference_type:
+    reference_id:
+  - url: https://mantisbt.org/bugs/view.php?id=36995
+    reference_type:
+    reference_id:
+  - url: https://mantisbt.org/bugs/view.php?id=37002
+    reference_type:
+    reference_id:

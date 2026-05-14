@@ -1,0 +1,55 @@
+advisory_id: GHSA-c4j6-fc7j-m34r
+datasource_id: github_osv_importer_v2/GHSA-c4j6-fc7j-m34r
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-c4j6-fc7j-m34r/GHSA-c4j6-fc7j-m34r.json
+aliases:
+  - CVE-2026-44578
+summary: |
+  Next.js vulnerable to server-side request forgery in applications using WebSocket upgrades
+  ### Impact
+
+  Self-hosted applications using the built-in Node.js server can be vulnerable to server-side request forgery through crafted WebSocket upgrade requests. An attacker can cause the server to proxy requests to arbitrary internal or external destinations, which may expose internal services or cloud metadata endpoints. Vercel-hosted deployments are not affected.
+
+  ### Fix
+
+  We now apply the same safety checks to WebSocket upgrade handling that already existed for normal HTTP requests, so upgrade requests are only proxied when routing has explicitly marked them as safe external rewrites.
+
+  ### Workarounds
+
+  If you cannot upgrade immediately, do not expose the origin server directly to untrusted networks. If WebSocket upgrades are not required, block them at your reverse proxy or load balancer, and restrict origin egress to internal networks and metadata services where possible.
+impacted_packages:
+  - purl: pkg:npm/next
+    affected_versions: vers:npm/>=13.4.13|<15.5.16
+    fixed_versions: vers:npm/15.5.16
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/next
+    affected_versions: vers:npm/>=16.0.0|<16.2.5
+    fixed_versions: vers:npm/16.2.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.6'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-c4j6-fc7j-m34r/GHSA-c4j6-fc7j-m34r.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-918
+references:
+  - url: https://github.com/vercel/next.js
+    reference_type:
+    reference_id:
+  - url: https://github.com/vercel/next.js/releases/tag/v15.5.16
+    reference_type:
+    reference_id:
+  - url: https://github.com/vercel/next.js/releases/tag/v16.2.5
+    reference_type:
+    reference_id:
+  - url: https://github.com/vercel/next.js/security/advisories/GHSA-c4j6-fc7j-m34r
+    reference_type:
+    reference_id:

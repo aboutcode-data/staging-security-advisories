@@ -1,0 +1,55 @@
+advisory_id: GHSA-267c-6grr-h53f
+datasource_id: github_osv_importer_v2/GHSA-267c-6grr-h53f
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-267c-6grr-h53f/GHSA-267c-6grr-h53f.json
+aliases:
+  - CVE-2026-44575
+summary: |
+  Next.js has a Middleware / Proxy bypass in App Router applications via segment-prefetch routes
+  ### Impact
+
+  App Router applications that rely on middleware or proxy-based checks for authorization can allow unauthorized access through transport-specific route variants used for segment prefetching. In affected configurations, specially crafted `.rsc` and segment-prefetch URLs can resolve to the same page without being matched by the intended middleware rule, which can allow protected content to be reached without the expected authorization check.
+
+  ### Fix
+
+  We now include App Router transport variants when generating middleware matchers, so middleware protections are applied consistently to those requests as well as to the normal page URL.
+
+  ### Workarounds
+
+  If you cannot upgrade immediately, enforce authorization in the underlying route or page logic instead of relying solely on middleware.
+impacted_packages:
+  - purl: pkg:npm/next
+    affected_versions: vers:npm/>=15.2.0|<15.5.16
+    fixed_versions: vers:npm/15.5.16
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/next
+    affected_versions: vers:npm/>=16.0.0|<16.2.5
+    fixed_versions: vers:npm/16.2.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-267c-6grr-h53f/GHSA-267c-6grr-h53f.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-288
+references:
+  - url: https://github.com/vercel/next.js
+    reference_type:
+    reference_id:
+  - url: https://github.com/vercel/next.js/releases/tag/v15.5.16
+    reference_type:
+    reference_id:
+  - url: https://github.com/vercel/next.js/releases/tag/v16.2.5
+    reference_type:
+    reference_id:
+  - url: https://github.com/vercel/next.js/security/advisories/GHSA-267c-6grr-h53f
+    reference_type:
+    reference_id:

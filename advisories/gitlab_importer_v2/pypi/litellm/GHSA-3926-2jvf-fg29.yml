@@ -1,0 +1,38 @@
+advisory_id: pypi/litellm/GHSA-3926-2jvf-fg29
+datasource_id: gitlab_importer_v2/pypi/litellm/GHSA-3926-2jvf-fg29
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/pypi/litellm/GHSA-3926-2jvf-fg29.yml
+aliases:
+  - GHSA-3926-2jvf-fg29
+summary: |
+  Duplicate Advisory: LiteLLM has a sandbox escape in custom-code guardrail
+  ### Duplicate Advisory
+  This advisory has been withdrawn because it is a duplicate of GHSA-wxxx-gvqv-xp7p. This link is maintained to preserve external references.
+
+  ### Original Description
+  LiteLLM through 2026-04-08 allows remote attackers to execute arbitrary code via bytecode rewriting at the /guardrails/test_custom_code URI.
+impacted_packages:
+  - purl: pkg:pypi/litellm
+    affected_versions: vers:pypi/>=1.81.8|<1.83.10
+    fixed_versions: vers:pypi/1.83.10
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/pypi/litellm/GHSA-3926-2jvf-fg29.yml
+weaknesses:
+  - CWE-1035
+  - CWE-937
+  - CWE-420
+references:
+  - url: https://www.x41-dsec.de/lab/advisories/x41-2026-001-litellm
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-40217
+    reference_type:
+    reference_id: CVE-2026-40217
+  - url: https://github.com/advisories/GHSA-3926-2jvf-fg29
+    reference_type:
+    reference_id: GHSA-3926-2jvf-fg29
