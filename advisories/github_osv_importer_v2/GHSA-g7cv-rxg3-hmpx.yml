@@ -104,6 +104,36 @@ summary: |
     - GitHub Security Lab, "Keeping your GitHub Actions and workflows secure: Preventing Pwn Requests"
     - StepSecurity, "tj-actions/changed-files action is compromised" (March 2025) — the malicious payload reuses this incident's runner-memory extraction technique verbatim
 impacted_packages:
+  - purl: pkg:npm/%40tanstack/start-storage-context
+    affected_versions: vers:npm/1.166.38
+    fixed_versions: vers:npm/1.166.42
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/%40tanstack/valibot-adapter
+    affected_versions: vers:npm/1.166.12
+    fixed_versions: vers:npm/1.166.16
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/%40tanstack/virtual-file-routes
+    affected_versions: vers:npm/1.161.10
+    fixed_versions: vers:npm/1.161.14
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/%40tanstack/vue-router
+    affected_versions: vers:npm/1.169.5
+    fixed_versions: vers:npm/1.169.9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/%40tanstack/vue-router-devtools
+    affected_versions: vers:npm/1.166.16
+    fixed_versions: vers:npm/1.166.20
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/%40tanstack/vue-router-ssr-query
+    affected_versions: vers:npm/1.166.15
+    fixed_versions: vers:npm/1.166.19
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:npm/%40tanstack/arktype-adapter
     affected_versions: vers:npm/1.166.12
     fixed_versions: vers:npm/1.166.16
@@ -262,36 +292,6 @@ impacted_packages:
   - purl: pkg:npm/%40tanstack/start-static-server-functions
     affected_versions: vers:npm/1.166.44
     fixed_versions: vers:npm/1.166.48
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:npm/%40tanstack/start-storage-context
-    affected_versions: vers:npm/1.166.38
-    fixed_versions: vers:npm/1.166.42
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:npm/%40tanstack/valibot-adapter
-    affected_versions: vers:npm/1.166.12
-    fixed_versions: vers:npm/1.166.16
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:npm/%40tanstack/virtual-file-routes
-    affected_versions: vers:npm/1.161.10
-    fixed_versions: vers:npm/1.161.14
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:npm/%40tanstack/vue-router
-    affected_versions: vers:npm/1.169.5
-    fixed_versions: vers:npm/1.169.9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:npm/%40tanstack/vue-router-devtools
-    affected_versions: vers:npm/1.166.16
-    fixed_versions: vers:npm/1.166.20
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:npm/%40tanstack/vue-router-ssr-query
-    affected_versions: vers:npm/1.166.15
-    fixed_versions: vers:npm/1.166.19
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:npm/%40tanstack/vue-start
@@ -553,3 +553,9 @@ references:
   - url: https://github.com/TanStack/router/security/advisories/GHSA-g7cv-rxg3-hmpx
     reference_type: other
     reference_id: GHSA-g7cv-rxg3-hmpx
+  - url: https://www.stepsecurity.io/blog/mini-shai-hulud-is-back-a-self-spreading-supply-chain-attack-hits-the-npm-ecosystem
+    reference_type: other
+    reference_id: mini-shai-hulud-is-back-a-self-spreading-supply-chain-attack-hits-the-npm-ecosystem
+  - url: https://tanstack.com/blog/npm-supply-chain-compromise-postmortem
+    reference_type: other
+    reference_id: npm-supply-chain-compromise-postmortem

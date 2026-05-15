@@ -8,13 +8,17 @@ summary: "SandboxJS has a sandbox escape via Function.caller leakage of internal
   \ recover the internal `LispType.Call` runtime callback. That callback can then be invoked\
   \ with attacker-controlled fake context and obj values to extract blocked host statics, recover\
   \ the real host Function constructor, and execute arbitrary host JavaScript.\n### Details\n\
-  In [executorUtils.ts](https://github.com/nyariv/SandboxJS/blob/1e6785658c94f5f2fb8e4a02cfcf1e7821b8be7f/src/executor/executorUtils.ts#L239-L282)\
+  \nThe vulnerability is in the property access logic registered via `addOps` in [prop.ts](https://github.com/nyariv/SandboxJS/blob/1e6785658c94f5f2fb8e4a02cfcf1e7821b8be7f/src/executor/ops/prop.ts#L10).\
+  \ Sandboxed code could access the `caller`, `callee`, and `arguments` properties on functions.\
+  \ In the CommonJS build, this allowed sandboxed code to read `Function.caller` and leak a\
+  \ privileged internal `LispType.Call` callback.\n\nIn [executorUtils.ts](https://github.com/nyariv/SandboxJS/blob/1e6785658c94f5f2fb8e4a02cfcf1e7821b8be7f/src/executor/executorUtils.ts#L239-L282)\
   \ `createFunction()` constructs normal host JS functions, and because these are ordinary host\
   \ functions, sandbox code can observe:\n```js\nfunction f(){ return f.caller }\n```\nThat\
   \ leaks the host-side callback that invoked the sandbox function. This leaked callback is\
   \ the internal `LispType.Call` op, which is registered in [call.ts](https://github.com/nyariv/SandboxJS/blob/1e6785658c94f5f2fb8e4a02cfcf1e7821b8be7f/src/executor/ops/call.ts#L16-L17).\
-  \ The leaked callback accepts a **params** object from the attacker and uses its fields without\
-  \ any authentication checks. if you looked at those branches [call.ts:47](https://github.com/nyariv/SandboxJS/blob/1e6785658c94f5f2fb8e4a02cfcf1e7821b8be7f/src/executor/ops/call.ts#L47-L55),\
+  \ The escape was possible because the `LispType.Call` handler accepts a **params** object\
+  \ from the attacker and uses its fields without authenticating that they came from the executor.\
+  \ if you looked at those branches [call.ts:47](https://github.com/nyariv/SandboxJS/blob/1e6785658c94f5f2fb8e4a02cfcf1e7821b8be7f/src/executor/ops/call.ts#L47-L55),\
   \ [call.ts:70](https://github.com/nyariv/SandboxJS/blob/1e6785658c94f5f2fb8e4a02cfcf1e7821b8be7f/src/executor/ops/call.ts#L70),\
   \ [call.ts:149](https://github.com/nyariv/SandboxJS/blob/1e6785658c94f5f2fb8e4a02cfcf1e7821b8be7f/src/executor/ops/call.ts#L149-L153).\
   \ This means the attacker controls `obj.context`, `obj.prop`, `obj.get`, `context.evals.get`\

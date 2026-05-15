@@ -134,9 +134,9 @@ summary: |
   Bob   -> patreon_da39a3ee5e6b4b0d3255bfef95601890afd80709
   ```
 
-  This was confirmed locally with three distinct Patreon `data.id` values; all of them produced the same `patreon_da39...` identity.
+  I also confirmed this locally with three distinct Patreon `data.id` values; all of them produced the same `patreon_da39...` identity.
 
-  The same issue is reflected in the existing built-in tests, which already assert this constant Patreon ID.
+  You can also see the same issue reflected in the existing built-in tests, which already assert this constant Patreon ID.
 
   ### Impact
   This is an authentication/identity-collision vulnerability in the Patreon provider.
@@ -175,7 +175,7 @@ summary: |
   userInfo.ID = "patreon_" + token.HashID(sha1.New(), uinfoJSON.Data.ID)
   ```
 
-  The addition of regression testing with at least two different Patreon `data.id` values and asserting that they produce different local IDs is recommended.
+  I would also recommend adding a regression test with at least two different Patreon `data.id` values and asserting that they produce different local IDs.
 
   Because the current bug causes all Patreon users to share a single local ID, maintainers may also want to consider migration guidance for consumers who already have Patreon-linked local accounts created under the broken identifier.
 impacted_packages: []
@@ -208,3 +208,6 @@ references:
   - url: https://github.com/go-pkgz/auth/security/advisories/GHSA-f6qq-3m3h-4g42
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-42560
+    reference_type:
+    reference_id: CVE-2026-42560

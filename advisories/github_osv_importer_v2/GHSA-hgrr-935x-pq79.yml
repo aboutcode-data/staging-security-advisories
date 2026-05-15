@@ -16,6 +16,11 @@ summary: "Apache Tomcat Vulnerable to Improper Resource Shutdown or Release\nIf 
   \ the issue."
 impacted_packages:
   - purl: pkg:maven/org.apache.tomcat/tomcat
+    affected_versions: vers:maven/>=8.5.0|<=8.5.100
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat/tomcat
     affected_versions: vers:maven/>=11.0.0-M1|<11.0.12
     fixed_versions: vers:maven/11.0.12
     fixed_in_commits: []
@@ -28,11 +33,6 @@ impacted_packages:
   - purl: pkg:maven/org.apache.tomcat/tomcat
     affected_versions: vers:maven/>=9.0.0.M1|<9.0.110
     fixed_versions: vers:maven/9.0.110
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.tomcat/tomcat
-    affected_versions: vers:maven/>=8.5.0|<=8.5.100
-    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat/tomcat-catalina
@@ -76,6 +76,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
+  - score: '5.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/10/GHSA-hgrr-935x-pq79/GHSA-hgrr-935x-pq79.json
   - score: '2.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U
@@ -119,3 +124,6 @@ references:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2025-61795
     reference_type:
     reference_id: CVE-2025-61795
+  - url: https://cert-portal.siemens.com/productcert/html/ssa-032379.html
+    reference_type: other
+    reference_id: ssa-032379.html

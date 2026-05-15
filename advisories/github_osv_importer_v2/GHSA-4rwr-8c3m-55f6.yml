@@ -23,11 +23,11 @@ summary: "TorrentPier is Vulnerable to Authenticated SQL Injection through Moder
   \ parameter to manipulate the query's execution.\n\n### PoC\nThis is a time-based blind SQL\
   \ injection vulnerability that requires moderator privileges.\n\n**Prerequisites:**\n1.  A\
   \ running instance of TorrentPier.\n2.  An account with moderator permissions.\n\n**Steps\
-  \ to Reproduce:**\n\n1.  Log in as a moderator.\n2.  Obtain the full session cookie string\
-  \ from the browser's developer tools.\n3.  Use `sqlmap` to automate the exploitation. The\
+  \ to Reproduce:**\n\n1.  Log in as a moderator.\n2.  Obtain your full session cookie string\
+  \ from your browser's developer tools.\n3.  Use `sqlmap` to automate the exploitation. The\
   \ tool will test the `t` parameter for vulnerabilities.\n\n**`sqlmap` Command:**\n*(Note:\
   \ Replace `https://localhost` with the target URL and `\"your_full_cookie_string\"` with the\
-  \ actual cookie data from the browser session, e.g., `\"key1=value1; key2=value2\"`)*.\n\n\
+  \ actual cookie data from your browser session, e.g., `\"key1=value1; key2=value2\"`)*.\n\n\
   ```bash\nsqlmap -u \"https://localhost/modcp.php?mode=lock&t=1\" -p t --cookie \"your_full_cookie_string\"\
   \ --dbms mysql --technique T --current-db\n```\n\n**`sqlmap` Output Confirmation:**\nThe following\
   \ output from `sqlmap` confirms successful exploitation:\n```\n---\nParameter: t (GET)\n \
@@ -45,7 +45,7 @@ summary: "TorrentPier is Vulnerable to Authenticated SQL Injection through Moder
 impacted_packages:
   - purl: pkg:composer/torrentpier/torrentpier
     affected_versions: vers:composer/<=2.8.8
-    fixed_versions:
+    fixed_versions: vers:composer/2.8.9
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -66,6 +66,9 @@ references:
     reference_type:
     reference_id:
   - url: https://github.com/torrentpier/torrentpier/commit/6a0f6499d89fa5d6e2afa8ee53802a1ad11ece80
+    reference_type:
+    reference_id:
+  - url: https://github.com/torrentpier/torrentpier/releases/tag/v2.8.9
     reference_type:
     reference_id:
   - url: https://github.com/torrentpier/torrentpier/security/advisories/GHSA-4rwr-8c3m-55f6

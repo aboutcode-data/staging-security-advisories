@@ -7,7 +7,7 @@ summary: |
   ws affected by a DoS when handling a request with many HTTP headers
   ### Impact
 
-  A request with a number of headers exceeding the[`server.maxHeadersCount`][] threshold could be used to crash a ws server.
+  A request with a number of headers exceeding the [`server.maxHeadersCount`][] threshold could be used to crash a ws server.
 
   ### Proof of concept
 
@@ -48,7 +48,7 @@ summary: |
 
   ### Patches
 
-  The vulnerability was fixed in ws@8.17.1 (https://github.com/websockets/ws/commit/e55e5106f10fcbaac37cfa89759e4cc0d073a52c) and backported to ws@7.5.10 (https://github.com/websockets/ws/commit/22c28763234aa75a7e1b76f5c01c181260d7917f), ws@6.2.3 (https://github.com/websockets/ws/commit/eeb76d313e2a00dd5247ca3597bba7877d064a63), and ws@5.2.4 (https://github.com/websockets/ws/commit/4abd8f6de4b0b65ef80b3ff081989479ed93377e)
+  The vulnerability was fixed in ws@8.17.1 (https://github.com/websockets/ws/commit/e55e5106f10fcbaac37cfa89759e4cc0d073a52c) and backported to ws@7.5.10 (https://github.com/websockets/ws/commit/22c28763234aa75a7e1b76f5c01c181260d7917f), ws@6.2.3 (https://github.com/websockets/ws/commit/eeb76d313e2a00dd5247ca3597bba7877d064a63), and ws@5.2.4 (https://github.com/websockets/ws/commit/4abd8f6de4b0b65ef80b3ff081989479ed93377e).
 
   ### Workarounds
 
@@ -63,6 +63,8 @@ summary: |
 
   ### References
 
+  - https://github.com/advisories/GHSA-3h5v-q93c-6h6q
+  - https://www.cve.org/CVERecord?id=CVE-2024-37890
   - https://github.com/websockets/ws/issues/2230
   - https://github.com/websockets/ws/pull/2231
 
