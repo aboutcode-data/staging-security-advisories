@@ -21,6 +21,8 @@ summary: |
 
   **Medium** — Denial of Service (resource exhaustion / CPU spin)
 
+  **CVSS:** 3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H - **7.5**
+
   **CWE:** CWE-772: Missing Release of Resource after Effective Lifetime
 
   ## Description
@@ -46,13 +48,13 @@ summary: |
   - Upgrade to 4.2.13.Final when released (or build from the `4.2` branch at commit [`0ec3d97`](https://github.com/netty/netty/commit/0ec3d97fab376e243d328ac95fbd288ba0f6e22d)).
   - If upgrading is not immediately possible, configure idle timeouts on connections to limit the lifetime of stale channels.
 
-  ## Resources
+  ## References
 
   - Issue: https://github.com/netty/netty/issues/16683
   - Fix: https://github.com/netty/netty/pull/16689
 impacted_packages:
   - purl: pkg:maven/io.netty/netty-transport-native-epoll
-    affected_versions: vers:maven/<4.2.13.Final
+    affected_versions: vers:maven/>=4.2.0.Final|<4.2.13.Final
     fixed_versions: vers:maven/4.2.13.Final
     fixed_in_commits: []
     introduced_in_commits: []
@@ -82,3 +84,6 @@ references:
   - url: https://github.com/netty/netty/security/advisories/GHSA-rwm7-x88c-3g2p
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-42577
+    reference_type:
+    reference_id: CVE-2026-42577

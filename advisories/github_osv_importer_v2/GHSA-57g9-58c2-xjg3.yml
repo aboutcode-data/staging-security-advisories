@@ -1,0 +1,60 @@
+advisory_id: GHSA-57g9-58c2-xjg3
+datasource_id: github_osv_importer_v2/GHSA-57g9-58c2-xjg3
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-57g9-58c2-xjg3/GHSA-57g9-58c2-xjg3.json
+aliases:
+  - CVE-2026-44790
+summary: |
+  n8n Has an Arbitrary File Read via Git Node
+  ## Impact
+  An authenticated user with permission to create or modify workflows could inject CLI flags on the Git node's Push operation allowing an attacker to read arbitrary files from the n8n server potentially leading to full compromise.
+
+  ## Patches
+  The issue has been fixed in n8n versions 1.123.43, 2.20.7, and 2.22.1. Users should upgrade to one of these versions or later to remediate the vulnerability.
+
+  ## Workarounds
+  If upgrading is not immediately possible, administrators should consider the following temporary mitigations:
+  - Limit workflow creation and editing permissions to fully trusted users only.
+  - Disable the Git node by adding `n8n-nodes-base.git` to the `NODES_EXCLUDE` environment variable.
+
+  These workarounds do not fully remediate the risk and should only be used as short-term mitigation measures.
+
+  ---
+  n8n has adopted CVSS 4.0 as primary score for all security advisories. CVSS 3.1 vector strings are provided for backwards compatibility.
+
+  CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H
+impacted_packages:
+  - purl: pkg:npm/n8n
+    affected_versions: vers:npm/<1.123.43
+    fixed_versions: vers:npm/1.123.43
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/n8n
+    affected_versions: vers:npm/>=2.21.0|<2.22.1
+    fixed_versions: vers:npm/2.22.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/n8n
+    affected_versions: vers:npm/>=2.0.0-rc.0|<2.20.7
+    fixed_versions: vers:npm/2.20.7
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '9.4'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-57g9-58c2-xjg3/GHSA-57g9-58c2-xjg3.json
+  - score: CRITICAL
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-88
+references:
+  - url: https://github.com/n8n-io/n8n
+    reference_type:
+    reference_id:
+  - url: https://github.com/n8n-io/n8n/security/advisories/GHSA-57g9-58c2-xjg3
+    reference_type:
+    reference_id:

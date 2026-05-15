@@ -4,7 +4,7 @@ datasource_url: https://github.com/github/advisory-database/blob/main/advisories
 aliases:
   - CVE-2026-42593
 summary: |
-  Goteberg has arbitrary PDF read via stampExpression and watermarkExpression in merge, split, and convert routes
+  Gotenberg has arbitrary PDF read via stampExpression and watermarkExpression in merge, split, and convert routes
   ## Summary
 
   Six conversion routes (`pdfengines/merge`, `pdfengines/split`, `libreoffice/convert`, `chromium/convert/url`, `chromium/convert/html`, `chromium/convert/markdown`) accept `stampSource=pdf` + `stampExpression=/path` and `watermarkSource=pdf` + `watermarkExpression=/path` from anonymous callers. The dedicated stamp/watermark routes require an uploaded file when the source type is image or pdf; these six routes only overwrite the expression when a file is uploaded, leaving the user-controlled path intact when no file is attached. pdfcpu opens the path and composites its pages onto the output PDF, which returns to the caller. An attacker reads any PDF the Gotenberg process can access on the container filesystem.
@@ -149,5 +149,8 @@ references:
     reference_type:
     reference_id:
   - url: https://github.com/gotenberg/gotenberg/security/advisories/GHSA-3cv5-q585-h563
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-42593
     reference_type:
     reference_id:

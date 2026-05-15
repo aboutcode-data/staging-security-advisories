@@ -1,0 +1,48 @@
+advisory_id: GHSA-rcqx-6q8c-2c42
+datasource_id: github_osv_importer_v2/GHSA-rcqx-6q8c-2c42
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-rcqx-6q8c-2c42/GHSA-rcqx-6q8c-2c42.json
+aliases:
+  - CVE-2026-42573
+summary: |
+  Svelte Vulnerable to XSS via DOM Clobbering of Internal Framework State
+  Svelte was vulnerable to DOM clobbering of its internal framework state on elements, potentially leading to XSS attacks.
+
+  You are vulnerable if all of the following is true:
+  - you are using attribute spreading on a form element
+  - you are using attribute spreading or allow a dynamic value for the `name` attribute on an input or button element within that form
+  - both of these are simultaneously user-controllable
+
+  ```svelte
+  <form {...spread1}>
+    <input {...spread2}>
+  </form>
+  ```
+impacted_packages:
+  - purl: pkg:npm/svelte
+    affected_versions: vers:npm/<=5.55.6
+    fixed_versions: vers:npm/5.55.7
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:H/AT:P/PR:L/UI:N/VC:L/VI:N/VA:N/SC:H/SI:H/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-rcqx-6q8c-2c42/GHSA-rcqx-6q8c-2c42.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-79
+references:
+  - url: https://github.com/sveltejs/svelte
+    reference_type:
+    reference_id:
+  - url: https://github.com/sveltejs/svelte/releases/tag/svelte%405.55.7
+    reference_type:
+    reference_id:
+  - url: https://github.com/sveltejs/svelte/security/advisories/GHSA-rcqx-6q8c-2c42
+    reference_type:
+    reference_id:
