@@ -5,11 +5,11 @@ aliases:
   - CVE-2014-9706
 summary: |
   Dulwich Arbitrary code execution via commit with directory path starting with .git
-  The `build_index_from_tree` function in index.py in Dulwich before 0.9.9 allows remote attackers to execute arbitrary code via a commit with a directory path starting with `.git/`, which is not properly handled when checking out a working tree.
+  The `build_index_from_tree` function in index.py in Dulwich versions 0.9.9 and below allows remote attackers to execute arbitrary code via a commit with a directory path starting with `.git/`, which is not properly handled when checking out a working tree.
 impacted_packages:
   - purl: pkg:pypi/dulwich
-    affected_versions: vers:pypi/<0.9.9
-    fixed_versions: vers:pypi/0.9.9
+    affected_versions: vers:pypi/<0.9.10
+    fixed_versions: vers:pypi/0.9.10
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
