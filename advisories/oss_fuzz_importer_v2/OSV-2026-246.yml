@@ -1,0 +1,29 @@
+advisory_id: OSV-2026-246
+datasource_id: oss_fuzz_importer_v2/OSV-2026-246
+datasource_url: https://github.com/google/oss-fuzz-vulns/blob/main/vulns/capstone/OSV-2026-246.yaml
+aliases: []
+summary: |
+  Use-of-uninitialized-value in printAddressingMode
+  OSS-Fuzz report: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=484248078
+
+  ```
+  Crash type: Use-of-uninitialized-value
+  Crash state:
+  printAddressingMode
+  M68K_printInst
+  cs_disasm
+  ```
+impacted_packages:
+  - purl: pkg:generic/capstone
+    affected_versions: vers:generic/6.0.0-Alpha6|6.0.0-Alpha7
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits:
+      - vcs_url: https://github.com/capstone-engine/capstone
+        commit: 1bc76ead22ca927a04000a5c8e89c608f00bab46
+severities: []
+weaknesses: []
+references:
+  - url: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=484248078
+    reference_type:
+    reference_id:
