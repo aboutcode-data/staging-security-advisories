@@ -7,9 +7,9 @@ summary: |
   SpiceDB: LookupResources with Multiple Entrypoints across Different Definitions Can Return Incomplete Results
   ### Impact
 
-  If a schema includes the following characteristics:
+  If your schema includes the following characteristics:
 
-  1. Permission defined in terms of a union (`+`)
+  1. You have a permission defined in terms of a union (`+`)
   1. That union references the same relation on both sides, but one side arrows to a different permission
 
   Then you might have missing `LookupResources` results when checking the permission. This only affects `LookupResources`; other APIs calculate permissionship correctly.
@@ -68,6 +68,12 @@ summary: |
   ### Patches
 
   The issue is fixed in v1.47.1. Upgrading to this version will remediate this issue.
+
+  ### Workarounds
+  N/A
+
+  ### References
+  N/A
 impacted_packages: []
 severities:
   - score: '2.9'
