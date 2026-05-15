@@ -1,0 +1,34 @@
+advisory_id: gem/fat_free_crm/GHSA-9pm8-vwc5-w2hm
+datasource_id: gitlab_importer_v2/gem/fat_free_crm/GHSA-9pm8-vwc5-w2hm
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/gem/fat_free_crm/GHSA-9pm8-vwc5-w2hm.yml
+aliases:
+  - GHSA-9pm8-vwc5-w2hm
+summary: |
+  Fat Free CRM has BOLA in DELETE /emails/:id - Any authenticated user can hit this endpoint and delete emails by ID
+  Authenticated users can delete emails imported into the system assigned to another user; where the [Email Dropbox](https://github.com/fatfreecrm/fat_free_crm/wiki/Email-Dropbox) is in use.
+impacted_packages:
+  - purl: pkg:gem/fat_free_crm
+    affected_versions: vers:gem/<0.26.0
+    fixed_versions: vers:gem/0.26.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/gem/fat_free_crm/GHSA-9pm8-vwc5-w2hm.yml
+weaknesses:
+  - CWE-639
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/fatfreecrm/fat_free_crm
+    reference_type:
+    reference_id:
+  - url: https://github.com/fatfreecrm/fat_free_crm/security/advisories/GHSA-9pm8-vwc5-w2hm
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-9pm8-vwc5-w2hm
+    reference_type:
+    reference_id: GHSA-9pm8-vwc5-w2hm
