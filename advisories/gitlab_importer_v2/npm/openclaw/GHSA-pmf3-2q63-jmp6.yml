@@ -5,15 +5,10 @@ aliases:
   - GHSA-pmf3-2q63-jmp6
 summary: |
   Duplicate Advisory: OpenClaw: Symlink Traversal via IDENTITY.md appendFile in agents.create/update (Incomplete Fix for CVE-2026-32013)
-  ## Duplicate Advisory
-
-  This advisory has been withdrawn because it is a duplicate of GHSA-7xr2-q9vf-x4r5. This link is maintained to preserve external references.
-
-  ## Original Description
-  OpenClaw through 2026.2.22 contains a symlink traversal vulnerability in agents.create and agents.update handlers that use fs.appendFile on IDENTITY.md without symlink containment checks. Attackers with workspace access can plant symlinks to append attacker-controlled content to arbitrary files, enabling remote code execution via crontab injection or unauthorized access via SSH key manipulation.
+  This advisory has been withdrawn.
 impacted_packages:
   - purl: pkg:npm/openclaw
-    affected_versions: vers:npm/<=2026.2.22
+    affected_versions: vers:npm/<0.0.0
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
