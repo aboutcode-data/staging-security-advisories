@@ -1,0 +1,43 @@
+advisory_id: packagist/wwbn/avideo/GHSA-x2pw-9c38-cp2j
+datasource_id: gitlab_importer_v2/packagist/wwbn/avideo/GHSA-x2pw-9c38-cp2j
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/packagist/wwbn/avideo/GHSA-x2pw-9c38-cp2j.yml
+aliases:
+  - GHSA-x2pw-9c38-cp2j
+summary: |
+  WWBN AVideo: Missing CSRF Protection on State-Changing JSON Endpoints Enables Forced Comment Creation, Vote Manipulation, and Category Asset Deletion
+  Multiple AVideo JSON endpoints under `objects/` accept state-changing requests via `$_REQUEST`/`$_GET` and persist changes tied to the caller's session user, without any anti-CSRF token, origin check, or referer check. A malicious page visited by a logged-in victim can silently:
+
+  1. Cast/flip the victim's like/dislike on any comment (`objects/comments_like.json.php`).
+  2. Post a comment authored by the victim on any video, with attacker-chosen text (`objects/commentAddNew.json.php`).
+  3. Delete assets from any category (`objects/categoryDeleteAssets.json.php`) when the victim has category management rights.
+
+  Each endpoint is reachable from a browser via a simple `<img src="…">` tag or form submission, so exploitation only requires the victim to load an attacker-controlled HTML resource.
+impacted_packages:
+  - purl: pkg:composer/wwbn/avideo
+    affected_versions: vers:composer/<=29.0.0
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:L
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/packagist/wwbn/avideo/GHSA-x2pw-9c38-cp2j.yml
+weaknesses:
+  - CWE-352
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/WWBN/AVideo
+    reference_type:
+    reference_id:
+  - url: https://github.com/WWBN/AVideo/commit/7aaad601bd9cd7b993ba0ee1b1bea6c32ee7b77c
+    reference_type:
+    reference_id:
+  - url: https://github.com/WWBN/AVideo/security/advisories/GHSA-x2pw-9c38-cp2j
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-x2pw-9c38-cp2j
+    reference_type:
+    reference_id: GHSA-x2pw-9c38-cp2j
