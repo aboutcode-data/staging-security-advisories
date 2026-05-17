@@ -34,10 +34,11 @@ summary: |
 
   Monkey-patch `urllib.request.urlopen` to return a fake 50 MB response; observe memory growth before/after the call. Pre-fix: process memory grows by ~50 MB. Post-fix: `_fetch` returns `None`, memory growth bounded to MAX_RESPONSE_BYTES.
 
-  ## Resources
+  ## References
 
   - Fix released in [v0.8.2](https://github.com/Jo-Jo98/ciguard/releases/tag/v0.8.2)
   - CI regression gate added in [v0.8.3](https://github.com/Jo-Jo98/ciguard/releases/tag/v0.8.3)
+  - https://www.cve.org/CVERecord?id=CVE-2026-44219
 impacted_packages:
   - purl: pkg:pypi/ciguard
     affected_versions: vers:pypi/<=0.8.1

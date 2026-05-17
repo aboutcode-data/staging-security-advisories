@@ -1,9 +1,11 @@
 advisory_id: MMSA-2026-00631
 datasource_id: mattermost_importer_v2/MMSA-2026-00631
 datasource_url: https://securityupdates.mattermost.com/security_updates.json
-aliases: []
-summary: Details on the security update will be posted here on May 15 as per our Responsible
-  Disclosure Policy.
+aliases:
+  - CVE-2026-4053
+summary: (CWE-672) Fixed an issue where some operations updating a post are allowed even if
+  post edit time is set and expired. Thanks to se1en for contributing to this improvement under
+  the Mattermost responsible disclosure policy.
 impacted_packages:
   - purl: pkg:github/mattermost/mattermost-server
     affected_versions:

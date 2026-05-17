@@ -1,9 +1,12 @@
 advisory_id: MMSA-2026-00630
 datasource_id: mattermost_importer_v2/MMSA-2026-00630
 datasource_url: https://securityupdates.mattermost.com/security_updates.json
-aliases: []
-summary: Details on the security update will be posted here on May 15 as per our Responsible
-  Disclosure Policy.
+aliases:
+  - CVE-2026-4054
+summary: (CWE-754) Fixed an issue where the local image proxy allowed SVG content to be served
+  through by only validating the Content-Type header declared by the upstream server, without
+  inspecting the actual response body. Thanks to mk7120 for contributing to this improvement
+  under the Mattermost responsible disclosure policy.
 impacted_packages:
   - purl: pkg:github/mattermost/mattermost-server
     affected_versions:

