@@ -1,0 +1,34 @@
+advisory_id: npm/vite-plus/GHSA-33r3-4whc-44c2
+datasource_id: gitlab_importer_v2/npm/vite-plus/GHSA-33r3-4whc-44c2
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/vite-plus/GHSA-33r3-4whc-44c2.yml
+aliases:
+  - GHSA-33r3-4whc-44c2
+summary: |
+  Path traversal in vite-plus/binding downloadPackageManager() writes outside VP_HOME
+  `downloadPackageManager()` in `vite-plus/binding` accepts an untrusted `version` string and uses it directly in filesystem paths. A caller can supply `../` segments to escape the `VP_HOME/package_manager/<pm>/` cache root and cause Vite+ to delete, replace, and populate directories outside the intended cache location.
+impacted_packages:
+  - purl: pkg:npm/vite-plus
+    affected_versions: vers:npm/<0.1.17
+    fixed_versions: vers:npm/0.1.17
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:H
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/vite-plus/GHSA-33r3-4whc-44c2.yml
+weaknesses:
+  - CWE-22
+  - CWE-937
+  - CWE-1035
+references:
+  - url: https://github.com/voidzero-dev/vite-plus
+    reference_type:
+    reference_id:
+  - url: https://github.com/voidzero-dev/vite-plus/security/advisories/GHSA-33r3-4whc-44c2
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-33r3-4whc-44c2
+    reference_type:
+    reference_id: GHSA-33r3-4whc-44c2
