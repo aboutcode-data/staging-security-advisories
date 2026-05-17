@@ -1,0 +1,51 @@
+advisory_id: npm/@paperclipai/server/GHSA-47wq-cj9q-wpmp
+datasource_id: gitlab_importer_v2/npm/@paperclipai/server/GHSA-47wq-cj9q-wpmp
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/@paperclipai/server/GHSA-47wq-cj9q-wpmp.yml
+aliases:
+  - GHSA-47wq-cj9q-wpmp
+summary: |
+  Paperclip: Cross-tenant agent API token minting via missing assertCompanyAccess on /api/agents/:id/keys
+  `POST /api/agents/:id/keys`, `GET /api/agents/:id/keys`, and
+  `DELETE /api/agents/:id/keys/:keyId` (`server/src/routes/agents.ts`
+  lines 2050-2087) only call `assertBoard` to authorize the caller. They never
+  call `assertCompanyAccess` and never verify that the caller is a member of the
+  company that owns the target agent.
+
+  Any authenticated board user (including a freshly signed-up account with zero
+  company memberships and no `instance_admin` role) can mint a plaintext
+  `pcp_*` agent API token for any agent in any company on the instance. The
+  minted token is bound to the **victim** agent's `companyId` server-side, so
+  every downstream `assertCompanyAccess` check on that token authorizes
+  operations inside the victim tenant.
+
+  This is a pure authorization bypass on the core tenancy boundary. It is
+  distinct from GHSA-68qg-g8mg-6pr7 (the unauth import → RCE chain disclosed in
+  2026.410.0): that advisory fixed one handler, this report is a different
+  handler with the same class of mistake that the 2026.410.0 patch did not
+  cover.
+impacted_packages:
+  - purl: pkg:npm/%40paperclipai/server
+    affected_versions: vers:npm/<2026.416.0
+    fixed_versions: vers:npm/2026.416.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/@paperclipai/server/GHSA-47wq-cj9q-wpmp.yml
+weaknesses:
+  - CWE-1035
+  - CWE-937
+  - CWE-639
+  - CWE-1220
+  - CWE-285
+  - CWE-862
+references:
+  - url: https://github.com/paperclipai/paperclip/security/advisories/GHSA-47wq-cj9q-wpmp
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-47wq-cj9q-wpmp
+    reference_type:
+    reference_id: GHSA-47wq-cj9q-wpmp
