@@ -1,0 +1,37 @@
+advisory_id: npm/openclaw/GHSA-f934-5rqf-xx47
+datasource_id: gitlab_importer_v2/npm/openclaw/GHSA-f934-5rqf-xx47
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-f934-5rqf-xx47.yml
+aliases:
+  - GHSA-f934-5rqf-xx47
+summary: |
+  OpenClaw: QMD memory_get restricts reads to canonical or indexed memory paths
+  The QMD backend `memory_get` read path accepted arbitrary workspace Markdown paths that were inside the workspace but outside the canonical memory locations or indexed QMD result set.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.4.15
+    fixed_versions: vers:npm/2026.4.15
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-f934-5rqf-xx47.yml
+weaknesses:
+  - CWE-22
+  - CWE-937
+  - CWE-1035
+references:
+  - url: https://github.com/openclaw/openclaw/commit/37d5971db36491d5050efd42c333cbe0b98ed292
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/pull/66026
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-f934-5rqf-xx47
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-f934-5rqf-xx47
+    reference_type:
+    reference_id: GHSA-f934-5rqf-xx47
