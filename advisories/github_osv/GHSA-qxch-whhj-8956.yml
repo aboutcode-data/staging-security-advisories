@@ -1,0 +1,54 @@
+advisory_id: GHSA-qxch-whhj-8956
+datasource_id: github_osv/GHSA-qxch-whhj-8956
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-qxch-whhj-8956/GHSA-qxch-whhj-8956.json
+aliases:
+  - CVE-2026-8161
+summary: |
+  multiparty: Denial of Service via Prototype Pollution leads to Uncaught Exception
+  ### Impact
+
+  multiparty@4.2.3 and lower versions are vulnerable to denial of service via uncaught exception. By sending a `multipart/form-data` request with a field name that collides with an inherited `Object.prototype` property (e.g., `__proto__`, `constructor`, `toString`), the parser invokes `.push()` on the inherited prototype value rather than an array, throwing a `TypeError` that propagates as an uncaught exception and crashes the process. Any service accepting multipart uploads via multiparty is affected.
+
+  ### Patches
+
+  Users should upgrade to multiparty@4.3.0 or higher.
+
+  ### Workarounds
+
+  None.
+impacted_packages:
+  - purl: pkg:npm/multiparty
+    affected_versions: vers:npm/<=4.2.3
+    fixed_versions: vers:npm/4.3.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-qxch-whhj-8956/GHSA-qxch-whhj-8956.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-1321
+  - CWE-248
+references:
+  - url: https://cna.openjsf.org/security-advisories.html
+    reference_type:
+    reference_id:
+  - url: https://github.com/pillarjs/multiparty
+    reference_type:
+    reference_id:
+  - url: https://github.com/pillarjs/multiparty/releases/tag/v4.3.0
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-8161
+    reference_type:
+    reference_id: CVE-2026-8161
+  - url: https://github.com/pillarjs/multiparty/security/advisories/GHSA-qxch-whhj-8956
+    reference_type: other
+    reference_id: GHSA-qxch-whhj-8956

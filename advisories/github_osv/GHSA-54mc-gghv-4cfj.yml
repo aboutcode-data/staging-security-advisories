@@ -1,0 +1,71 @@
+advisory_id: GHSA-54mc-gghv-4cfj
+datasource_id: github_osv/GHSA-54mc-gghv-4cfj
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-54mc-gghv-4cfj/GHSA-54mc-gghv-4cfj.json
+aliases:
+  - CVE-2026-46645
+summary: |
+  SQLAdmin: Authorization Bypass on `ajax_lookup`
+  ### Impact
+
+  The `ajax_lookup` endpoint in `application.py` bypasses the `is_accessible()` access control check that all other endpoints enforce.
+
+  If a developer restricts model access by overriding `is_accessible()`, an authenticated user can still query that model's data through the `ajax_lookup` endpoint — silently bypassing the restriction.
+
+  **Affected endpoint:**
+
+  `GET /{identity}/ajax/lookup?name=<field>&term=<query>`
+
+  **All other endpoints enforce both checks:**
+
+  | Endpoint | `@login_required` | `is_accessible()` |
+  |---|---|---|
+  | `list` | ✓ | ✓ |
+  | `create` | ✓ | ✓ |
+  | `edit` | ✓ | ✓ |
+  | `delete` | ✓ | ✓ |
+  | `details` | ✓ | ✓ |
+  | `export` | ✓ | ✓ |
+  | `ajax_lookup` (before fix) | ✗ | ✗ |
+  | `ajax_lookup` (after fix) | ✓ | ✓ |
+
+  Note: before this fix, `ajax_lookup` also lacked the `@login_required` decorator — unauthenticated users could query it directly. That was addressed in #1035. This report covers the remaining gap: authenticated but unauthorized users.
+
+  ### Patches
+
+  Two changes were made to `ajax_lookup`:
+
+  1. Replaced the hand-rolled authentication check added in #1035 with the standard `@login_required` decorator used by all other endpoints.
+  2. Added the missing `is_accessible(request)` check, raising `HTTP 403` when it returns `False`.
+
+  ### Workarounds
+
+  None. Developers relying on `is_accessible()` to restrict model visibility are exposed regardless of what other access controls are in place.
+impacted_packages:
+  - purl: pkg:pypi/sqladmin
+    affected_versions: vers:pypi/<=0.25.0
+    fixed_versions: vers:pypi/0.25.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '4.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-54mc-gghv-4cfj/GHSA-54mc-gghv-4cfj.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-862
+references:
+  - url: https://github.com/smithyhq/sqladmin
+    reference_type:
+    reference_id:
+  - url: https://github.com/smithyhq/sqladmin/pull/1035
+    reference_type:
+    reference_id:
+  - url: https://github.com/smithyhq/sqladmin/security/advisories/GHSA-54mc-gghv-4cfj
+    reference_type:
+    reference_id:

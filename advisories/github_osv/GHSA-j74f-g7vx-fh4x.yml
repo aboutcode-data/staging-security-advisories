@@ -1,0 +1,58 @@
+advisory_id: GHSA-j74f-g7vx-fh4x
+datasource_id: github_osv/GHSA-j74f-g7vx-fh4x
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-j74f-g7vx-fh4x/GHSA-j74f-g7vx-fh4x.json
+aliases:
+  - CVE-2026-7816
+summary: |
+  pgAdmin 4: OS command injection vulnerability in Import/Export query export
+  OS command injection (CWE-78) vulnerability in pgAdmin 4 Import/Export query export.
+
+  User-supplied input was interpolated directly into a psql \copy metacommand template without sanitization. An authenticated user could inject ") TO PROGRAM 'cmd'" to break out of the \copy (...) context and achieve arbitrary command execution on the pgAdmin server, or ") TO '/path'" for arbitrary file write. Additional fields (format, on_error, log_verbosity) were also raw-interpolated and exploitable.
+
+  Fix adds a parens-balance parser modeled on psql's strtokx tokenizer, allow-lists format/on_error/log_verbosity, rejects null bytes in the query, and tightens type and gating checks.
+
+  This issue affects pgAdmin 4: before 9.15.
+impacted_packages:
+  - purl: pkg:pypi/pgadmin4
+    affected_versions: vers:pypi/<9.15
+    fixed_versions: vers:pypi/9.15
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/pgadmin-org/pgadmin4
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/pgadmin-org/pgadmin4
+        commit: 13badc62c
+    introduced_in_commits: []
+severities:
+  - score: '8.8'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-j74f-g7vx-fh4x/GHSA-j74f-g7vx-fh4x.json
+  - score: '8.7'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-j74f-g7vx-fh4x/GHSA-j74f-g7vx-fh4x.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-89
+references:
+  - url: https://github.com/pgadmin-org/pgadmin4
+    reference_type:
+    reference_id:
+  - url: https://github.com/pgadmin-org/pgadmin4/commit/13badc62c
+    reference_type:
+    reference_id:
+  - url: https://github.com/pgadmin-org/pgadmin4/issues/9899
+    reference_type: bug
+    reference_id: 9899
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-7816
+    reference_type:
+    reference_id: CVE-2026-7816

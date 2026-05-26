@@ -1,0 +1,47 @@
+advisory_id: GHSA-pf9c-ch8r-2958
+datasource_id: github_osv/GHSA-pf9c-ch8r-2958
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-pf9c-ch8r-2958/GHSA-pf9c-ch8r-2958.json
+aliases:
+  - CVE-2026-45660
+summary: |
+  Statamic CMS: Server-Side Request Forgery via Glide
+  ### Impact
+
+  The Glide image proxy's URL validation could be bypassed using an IP representation that wasn't normalized before the public-IP check. An unauthenticated user could cause the server to make HTTP requests to internal addresses — including loopback, private network, and cloud metadata endpoints.
+
+  This affects sites that pass user-supplied URLs to Glide. Sites running PHP 8.3 or newer are not affected.
+
+  ### Patches
+
+  This has been fixed in 5.73.22 and 6.18.1
+impacted_packages:
+  - purl: pkg:composer/statamic/cms
+    affected_versions: vers:composer/<5.73.22
+    fixed_versions: vers:composer/5.73.22
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/statamic/cms
+    affected_versions: vers:composer/>=6.0.0-alpha.1|<6.18.1
+    fixed_versions: vers:composer/6.18.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.4'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-pf9c-ch8r-2958/GHSA-pf9c-ch8r-2958.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-918
+references:
+  - url: https://github.com/statamic/cms
+    reference_type:
+    reference_id:
+  - url: https://github.com/statamic/cms/security/advisories/GHSA-pf9c-ch8r-2958
+    reference_type:
+    reference_id:

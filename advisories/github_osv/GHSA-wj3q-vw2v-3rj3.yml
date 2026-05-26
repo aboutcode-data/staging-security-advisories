@@ -1,0 +1,45 @@
+advisory_id: GHSA-wj3q-vw2v-3rj3
+datasource_id: github_osv/GHSA-wj3q-vw2v-3rj3
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-wj3q-vw2v-3rj3/GHSA-wj3q-vw2v-3rj3.json
+aliases:
+  - CVE-2026-46360
+summary: |
+  phpMyFAQ: SVG Sanitizer Entity Decoding Depth Limit Bypass Leading to Stored XSS
+  phpMyFAQ before 4.1.2 contains a stored cross-site scripting vulnerability in SvgSanitizer::decodeAllEntities() that limits recursive entity decoding to 5 iterations, allowing attackers to bypass sanitization. Authenticated users with FAQ_EDIT permission can upload malicious SVG files with deeply nested ampersand encoding around numeric HTML entities to reconstruct javascript: URLs, which execute arbitrary JavaScript when clicked by other users viewing the uploaded SVG.
+impacted_packages:
+  - purl: pkg:composer/phpmyfaq/phpmyfaq
+    affected_versions: vers:composer/<4.1.2
+    fixed_versions: vers:composer/4.1.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/thorsten/phpmyfaq
+    affected_versions: vers:composer/<4.1.2
+    fixed_versions: vers:composer/4.1.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.4'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-wj3q-vw2v-3rj3/GHSA-wj3q-vw2v-3rj3.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-79
+references:
+  - url: https://github.com/thorsten/phpMyFAQ
+    reference_type:
+    reference_id:
+  - url: https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-whqh-9pq5-c7r3
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-46360
+    reference_type:
+    reference_id: CVE-2026-46360
+  - url: https://www.vulncheck.com/advisories/phpmyfaq-stored-xss-via-entity-decoding-depth-limit-bypass-in-svg-sanitizer
+    reference_type: advisory
+    reference_id: phpmyfaq-stored-xss-via-entity-decoding-depth-limit-bypass-in-svg-sanitizer

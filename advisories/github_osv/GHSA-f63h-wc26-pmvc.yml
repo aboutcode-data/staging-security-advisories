@@ -1,0 +1,64 @@
+advisory_id: GHSA-f63h-wc26-pmvc
+datasource_id: github_osv/GHSA-f63h-wc26-pmvc
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-f63h-wc26-pmvc/GHSA-f63h-wc26-pmvc.json
+aliases:
+  - CVE-2026-8754
+summary: |
+  AstrBot: File upload vulnerability in the function post_file of the file astrbot/dashboard/routes/chat.py
+  A vulnerability was detected in AstrBotDevs AstrBot up to 4.23.5. Impacted is the function post_file of the file astrbot/dashboard/routes/chat.py of the component File Upload Handler. The manipulation of the argument filename results in path traversal. It is possible to launch the attack remotely. The exploit is now public and may be used. Upgrading to version 4.23.6 is recommended to address this issue. The patch is identified as aaec41e5054569ceaa1113593a34da7568e2d211. You should upgrade the affected component.
+impacted_packages:
+  - purl: pkg:pypi/astrbot
+    affected_versions: vers:pypi/<4.23.6
+    fixed_versions: vers:pypi/4.23.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/astrbotdevs/astrbot
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/astrbotdevs/astrbot
+        commit: aaec41e5054569ceaa1113593a34da7568e2d211
+    introduced_in_commits: []
+severities:
+  - score: '6.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-f63h-wc26-pmvc/GHSA-f63h-wc26-pmvc.json
+  - score: '2.1'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-f63h-wc26-pmvc/GHSA-f63h-wc26-pmvc.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-22
+references:
+  - url: https://gist.github.com/YLChen-007/054415c2b63e58813328bc879a90c504
+    reference_type:
+    reference_id:
+  - url: https://github.com/AstrBotDevs/AstrBot
+    reference_type:
+    reference_id:
+  - url: https://github.com/AstrBotDevs/AstrBot/commit/aaec41e5054569ceaa1113593a34da7568e2d211
+    reference_type:
+    reference_id:
+  - url: https://github.com/AstrBotDevs/AstrBot/releases/tag/v4.23.6
+    reference_type:
+    reference_id:
+  - url: https://vuldb.com/submit/811172
+    reference_type:
+    reference_id:
+  - url: https://vuldb.com/vuln/364381
+    reference_type:
+    reference_id:
+  - url: https://vuldb.com/vuln/364381/cti
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-8754
+    reference_type:
+    reference_id: CVE-2026-8754

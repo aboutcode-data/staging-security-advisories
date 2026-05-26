@@ -1,0 +1,75 @@
+advisory_id: GHSA-q8ff-7ffm-m3r9
+datasource_id: github_osv/GHSA-q8ff-7ffm-m3r9
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-q8ff-7ffm-m3r9/GHSA-q8ff-7ffm-m3r9.json
+aliases:
+  - CVE-2026-45005
+summary: |
+  OpenClaw's Webhooks SecretRef route secret remains valid after rotation/reload
+  ## Summary
+
+  OpenClaw webhooks allowed route secrets to be backed by `SecretRef` values, but cached the resolved secret for a route. After an operator rotated the underlying secret and ran `openclaw secrets reload`, the previous resolved webhook secret could remain valid until the plugin or gateway restarted.
+
+  ## Impact
+
+  An attacker who already had a previously valid webhook route secret could continue authenticating webhook requests after the operator rotated the secret and reloaded secrets. This weakened credential rotation for webhook routes and could allow continued invocation of the configured webhook task flow until restart.
+
+  ## Affected Packages / Versions
+
+  - Package: `openclaw` on npm
+  - Affected: versions before `2026.4.23`
+  - Fixed: `2026.4.23`
+  - Latest stable verified fixed: `openclaw@2026.4.23`, tag `v2026.4.23`
+
+  ## Fix
+
+  Webhook route authentication now resolves `SecretRef`-backed route secrets on each request. A rotated secret becomes effective after `openclaw secrets reload` without requiring a gateway or plugin restart, and the old secret is rejected.
+
+  ## Fix Commit(s)
+
+  - `36c4a372a0ad5dca8bfc0d93f7aab9c2f2de66fa` (`fix(webhooks): reload route secrets per request`)
+
+  ## Severity
+
+  Severity remains `medium`. The attack requires possession of a previously valid route secret, but the stale credential can continue to authorize webhook actions after rotation.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.4.23
+    fixed_versions: vers:npm/2026.4.23
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/openclaw/openclaw
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openclaw/openclaw
+        commit: 36c4a372a0ad5dca8bfc0d93f7aab9c2f2de66fa
+    introduced_in_commits: []
+severities:
+  - score: '6.0'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:H/A:L
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-q8ff-7ffm-m3r9/GHSA-q8ff-7ffm-m3r9.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-613
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/36c4a372a0ad5dca8bfc0d93f7aab9c2f2de66fa
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-q8ff-7ffm-m3r9
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-45005
+    reference_type:
+    reference_id: CVE-2026-45005
+  - url: https://www.vulncheck.com/advisories/openclaw-webhook-route-secret-cache-not-invalidated-after-rotation
+    reference_type: advisory
+    reference_id: openclaw-webhook-route-secret-cache-not-invalidated-after-rotation

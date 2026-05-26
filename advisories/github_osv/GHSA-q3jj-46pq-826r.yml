@@ -1,0 +1,72 @@
+advisory_id: GHSA-q3jj-46pq-826r
+datasource_id: github_osv/GHSA-q3jj-46pq-826r
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-q3jj-46pq-826r/GHSA-q3jj-46pq-826r.json
+aliases:
+  - CVE-2026-44997
+summary: |
+  OpenClaw's ACP child sessions inherit subagent security envelope constraints
+  ## Summary
+  ACP child sessions inherit subagent security envelope constraints.
+
+  ## Affected Packages / Versions
+  - Package: openclaw (npm)
+  - Affected versions: <= 2026.4.21
+  - Fixed version: 2026.4.22
+
+  ## Impact
+  A restricted subagent spawning an ACP child session could fail to carry forward subagent-only constraints such as depth, child-count limits, control scope, or target-agent restrictions.
+
+  ## Fix
+  ACP spawn now resolves and persists child subagent envelope fields, enforces maximum depth and active-child caps, and applies the inherited control scope to child ACP sessions.
+
+  ## Fix Commit(s)
+  - 31160dc069b7cc5d833b39c53736a41ad3befda2
+
+  ## Verification
+  - The fix commit is contained in the public v2026.4.22 tag.
+  - openclaw@2026.4.22 is published on npm and the compiled package contains the fix.
+  - Focused regression coverage for this path passed before publication.
+
+  OpenClaw thanks @zsxsoft, @qclawer, and @KeenSecurityLab for reporting.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<=2026.4.21
+    fixed_versions: vers:npm/2026.4.22
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/openclaw/openclaw
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openclaw/openclaw
+        commit: 31160dc069b7cc5d833b39c53736a41ad3befda2
+    introduced_in_commits: []
+severities:
+  - score: '5.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-q3jj-46pq-826r/GHSA-q3jj-46pq-826r.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-277
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/31160dc069b7cc5d833b39c53736a41ad3befda2
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-q3jj-46pq-826r
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-44997
+    reference_type:
+    reference_id: CVE-2026-44997
+  - url: https://www.vulncheck.com/advisories/openclaw-security-envelope-constraint-bypass-in-acp-child-sessions
+    reference_type: advisory
+    reference_id: openclaw-security-envelope-constraint-bypass-in-acp-child-sessions

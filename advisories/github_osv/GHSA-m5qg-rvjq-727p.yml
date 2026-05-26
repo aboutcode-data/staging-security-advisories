@@ -1,0 +1,54 @@
+advisory_id: GHSA-m5qg-rvjq-727p
+datasource_id: github_osv/GHSA-m5qg-rvjq-727p
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-m5qg-rvjq-727p/GHSA-m5qg-rvjq-727p.json
+aliases:
+  - CVE-2026-46549
+summary: |
+  NocoDB: OAuth Token Scope Not Enforced at ACL Layer Allows Scope Escalation
+  ### Summary
+
+  The OAuth token strategy attached `oauth_scope` and `oauth_granted_resources` to the request user, but the ACL middleware never consulted either. An OAuth token issued with a restricted scope (e.g. MCP-only) therefore inherited the full permissions of the underlying user across all routes; the `granted_resources.base_id` restriction was bypassed on org-level endpoints that don't populate `req.context.base_id`.
+
+  ### Details
+
+  In `packages/nocodb/src/strategies/oauth-token.strategy.ts`, the strategy set `is_oauth_token`, `oauth_client_id`, `oauth_granted_resources`, and `oauth_scope` on the user object, then mapped through to the user's existing `roles` / `base_roles`. The ACL middleware in `extract-ids.middleware.ts` honoured `is_api_token` via `blockApiTokenAccess` but had no equivalent gate for `is_oauth_token` or scope-string enforcement.
+
+  The base/workspace restriction logic short-circuited when `req.context.base_id` was unset (org-level routes), so an OAuth token scoped to one base could still call org-level endpoints as the underlying user.
+
+  The fix adds a path-prefix allowlist (`['/mcp', '/api/v3/', '/auth/user/me']`) enforced inside the strategy and a `blockOAuthTokenAccess` ACL flag for endpoints that should never accept OAuth tokens.
+
+  ### Impact
+
+  - Scope escalation: tokens issued with a narrow scope received the underlying user's full role.
+  - Resource boundary bypass: per-base restrictions did not apply to org-level routes.
+  - Violates least-privilege expectation for third-party OAuth integrations.
+
+  ### Credit
+
+  This issue was reported by [@ik0z](https://github.com/ik0z).
+impacted_packages:
+  - purl: pkg:npm/nocodb
+    affected_versions: vers:npm/<=0.301.3
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '2.0'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:U/C:L/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-m5qg-rvjq-727p/GHSA-m5qg-rvjq-727p.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-863
+references:
+  - url: https://github.com/nocodb/nocodb
+    reference_type:
+    reference_id:
+  - url: https://github.com/nocodb/nocodb/security/advisories/GHSA-m5qg-rvjq-727p
+    reference_type:
+    reference_id:

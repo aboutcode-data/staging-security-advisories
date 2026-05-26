@@ -1,0 +1,52 @@
+advisory_id: GHSA-vcc8-phrv-43wj
+datasource_id: github_osv/GHSA-vcc8-phrv-43wj
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-vcc8-phrv-43wj/GHSA-vcc8-phrv-43wj.json
+aliases:
+  - CVE-2026-46635
+summary: |
+  Twig: Sandbox property allowlist bypass via the `column` filter (array_column on objects)
+  ### Description
+
+  The `column` filter passes its input straight to PHP's native `array_column()`. When the array elements are objects, `array_column()` reads `$obj->$name` (and `$obj->$index`) directly, including invoking `__get`/`__isset`. Because this property read happens entirely in PHP native code and never reaches `CoreExtension::getAttribute()`, `SandboxExtension::checkPropertyAllowed()` is never consulted.
+
+  An untrusted template author with `column` in their `allowedFilters` list can therefore read any public or magic property of any object reachable in the render context, regardless of the `SecurityPolicy` `allowedProperties` list. This is a variant of CVE-2024-51755 / GHSA-jjxq-ff2g-95vh that the `ArrayAccess`-focused fix did not cover.
+
+  ### Resolution
+
+  The `column` filter now routes object property reads through the sandbox-aware attribute accessor so the property allowlist is enforced.
+
+  ### Credits
+
+  Twig: would like to thank Claude Mythos Preview (via Project Glasswing) for reporting the issue and providing the fix.
+impacted_packages:
+  - purl: pkg:composer/twig/twig
+    affected_versions: vers:composer/<3.26.0
+    fixed_versions: vers:composer/3.26.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '2.1'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-vcc8-phrv-43wj/GHSA-vcc8-phrv-43wj.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-863
+references:
+  - url: https://github.com/FriendsOfPHP/security-advisories/blob/master/twig/twig/CVE-2026-46635.yaml
+    reference_type:
+    reference_id:
+  - url: https://github.com/twigphp/Twig
+    reference_type:
+    reference_id:
+  - url: https://github.com/twigphp/Twig/security/advisories/GHSA-vcc8-phrv-43wj
+    reference_type:
+    reference_id:
+  - url: https://symfony.com/cve-2026-46635
+    reference_type:
+    reference_id:

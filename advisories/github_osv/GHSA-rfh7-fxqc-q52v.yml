@@ -1,0 +1,90 @@
+advisory_id: GHSA-rfh7-fxqc-q52v
+datasource_id: github_osv/GHSA-rfh7-fxqc-q52v
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-rfh7-fxqc-q52v/GHSA-rfh7-fxqc-q52v.json
+aliases:
+  - CVE-2026-46417
+summary: |
+  @angular/platform-server: SSRF via Hostname Hijacking
+  ### Impact
+
+  A Server-Side Request Forgery (SSRF) vulnerability exists in `@angular/platform-server`. The issue stems from how the server-side rendering (SSR) engine processes the request URL provided to the rendering entry points.
+
+  When an absolute-form URL (e.g., `http://evil.com`) is passed to the rendering engine, the internal `ServerPlatformLocation` can be manipulated into adopting the attacker-controlled domain as the "current" hostname.
+
+  Consequently, any relative `HttpClient` requests or `PlatformLocation.hostname` references are redirected to the attacker controlled server, potentially exposing internal APIs or metadata services.
+
+  ### Fix Information
+  The vulnerability is mitigated by introducing an Allowlist Mechanism directly into the core rendering APIs.
+  The renderModule and renderApplication functions now include an allowedHosts configuration option. The rendering engine validates the hostname extracted from the request URL against this list before proceeding. If the hostname does not match an allowed entry, the engine prevents the hostname hijacking, ensuring that HttpClient requests remain restricted to trusted domains.
+
+
+  ### Patches
+  - 22.0.0-next.12
+  - 21.2.13
+  - 20.3.21
+  - 19.2.22
+
+
+  ### Workarounds
+  Developers unable to update immediately should implement strict URL validation in their server entry point (e.g., `server.ts`). Ensure that `req.url` is validated against a known list of trusted hostnames or normalized to a relative path before being passed to`renderApplication` or `renderModule`.
+
+  ```TypeScript
+  // Example manual normalization in Express
+  app.get('*', (req, res, next) => {
+    const trustedHost = 'localhost:4000';
+    // Ensure the request target matches expectations
+    if (req.headers.host !== trustedHost) {
+       return res.status(403).send('Forbidden');
+    }
+    next();
+  });
+  ```
+impacted_packages:
+  - purl: pkg:npm/%40angular/platform-server
+    affected_versions: vers:npm/>=22.0.0-next.0|<22.0.0-next.12
+    fixed_versions: vers:npm/22.0.0-next.12
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/%40angular/platform-server
+    affected_versions: vers:npm/>=21.0.0-next.0|<21.2.13
+    fixed_versions: vers:npm/21.2.13
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/%40angular/platform-server
+    affected_versions: vers:npm/>=20.0.0-next.0|<20.3.21
+    fixed_versions: vers:npm/20.3.21
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/%40angular/platform-server
+    affected_versions: vers:npm/>=19.0.0-next.0|<19.2.22
+    fixed_versions: vers:npm/19.2.22
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/%40angular/platform-server
+    affected_versions: vers:npm/<=18.2.14
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.8'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:L/VA:N/SC:L/SI:L/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-rfh7-fxqc-q52v/GHSA-rfh7-fxqc-q52v.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-918
+references:
+  - url: https://github.com/angular/angular
+    reference_type:
+    reference_id:
+  - url: https://github.com/angular/angular/pull/68570
+    reference_type:
+    reference_id:
+  - url: https://github.com/angular/angular/security/advisories/GHSA-rfh7-fxqc-q52v
+    reference_type:
+    reference_id:

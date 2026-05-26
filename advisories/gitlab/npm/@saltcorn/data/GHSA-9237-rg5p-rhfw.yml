@@ -1,0 +1,33 @@
+advisory_id: npm/@saltcorn/data/GHSA-9237-rg5p-rhfw
+datasource_id: gitlab/npm/@saltcorn/data/GHSA-9237-rg5p-rhfw
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/@saltcorn/data/GHSA-9237-rg5p-rhfw.yml
+aliases:
+  - GHSA-9237-rg5p-rhfw
+summary: |
+  @saltcorn/data: Tenant user role is used for tenant creation role check
+  When a tenant admin is logged out of the root domain (e.g., saltcorn.com) but logged in to their own tenant space as admin, they can simply append `/tenant/create` to their tenant URL. The system reads the role from the tenant context (admin), and a new tenant is created on the **root domain** (in `PUBLIC SCHEMA > _sc_tenants`), rather than in the tenant's own `_sc_tenants` table.
+
+  If the same logic applies to other routes, a tenant admin effectively gains admin rights on the root domain.
+impacted_packages:
+  - purl: pkg:npm/%40saltcorn/data
+    affected_versions: vers:npm/<1.4.4|>=1.5.0-beta.0|<1.5.2|>=1.6.0-alpha.0|<1.6.0-beta.2
+    fixed_versions: vers:npm/1.4.4|1.5.2|1.6.0-beta.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/@saltcorn/data/GHSA-9237-rg5p-rhfw.yml
+weaknesses:
+  - CWE-863
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/saltcorn/saltcorn/security/advisories/GHSA-9237-rg5p-rhfw
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-9237-rg5p-rhfw
+    reference_type:
+    reference_id: GHSA-9237-rg5p-rhfw

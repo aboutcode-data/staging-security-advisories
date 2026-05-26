@@ -1,0 +1,64 @@
+advisory_id: GHSA-3mjv-375j-6h92
+datasource_id: github_osv/GHSA-3mjv-375j-6h92
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-3mjv-375j-6h92/GHSA-3mjv-375j-6h92.json
+aliases:
+  - CVE-2026-45731
+summary: |
+  AVideo: Authenticated Arbitrary File Read in view/update.php
+  ### Summary
+  view/update.php reads $_POST['updateFile'] as a relative path under updatedb/ and passes it to PHP's file() for line-by-line execution as part of a database migration. An authenticated administrator can abuse this to read arbitrary text files reachable from the web-server process — especially valuable on misconfigured deployments where /etc/passwd, .env, or other sibling-app configs are reachable relative to the AVideo directory.
+
+  ### Details
+  view/update.php, lines 134-145 (excerpt):
+
+  if (!empty($_POST['updateFile'])) {
+      $dir = Video::getStoragePath() . "cache";
+      rrmdir($dir);
+      /* …unrelated cache-clear… */
+
+      if (file_exists($logfile . "log")) {
+          unlink($logfile . "log");
+          // ...
+      }
+      $lines = file("{$global['systemRootPath']}updatedb/{$_POST['updateFile']}");
+  The User::isAdmin() and adminSecurityCheck(true) guards at lines 12-15 enforce admin auth, but $_POST['updateFile'] is concatenated into a path without any sanitization. file() returns the file's contents as an array of lines; the script subsequently iterates them and echoes the SQL it would run.
+
+  ### PoC
+  POST /view/update.php
+  Content-Type: application/x-www-form-urlencoded
+
+  updateFile=../../../../etc/passwd
+  Result: the script attempts to load /etc/passwd (relative to {systemRootPath}updatedb/), echoing each line in the migration-runner HTML output. $_POST['updateFile'] traversal accepted, no extension guard, no in-array whitelist.
+
+  Attempting ../../../../proc/self/environ similarly reveals web-server environment variables on Linux.
+
+
+
+  ### Impact
+  Verified on the current master branch of WWBN/AVideo (commit bc0340662…). Likely affected: every release where view/update.php contains the $_POST['updateFile'] consumer — pattern predates 2024.
+impacted_packages:
+  - purl: pkg:composer/wwbn/avideo
+    affected_versions: vers:composer/<=29.0.0
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-3mjv-375j-6h92/GHSA-3mjv-375j-6h92.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-22
+references:
+  - url: https://github.com/WWBN/AVideo
+    reference_type:
+    reference_id:
+  - url: https://github.com/WWBN/AVideo/security/advisories/GHSA-3mjv-375j-6h92
+    reference_type:
+    reference_id:

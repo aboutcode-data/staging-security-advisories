@@ -1,0 +1,128 @@
+advisory_id: GHSA-jg2m-9x48-3gvj
+datasource_id: github_osv/GHSA-jg2m-9x48-3gvj
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-jg2m-9x48-3gvj/GHSA-jg2m-9x48-3gvj.json
+aliases:
+  - CVE-2026-40453
+summary: |
+  Apache Camel has an incomplete fix for CVE-2025-27636
+  The fix for CVE-2025-27636 added setLowerCase(true) to HttpHeaderFilterStrategy so that case-variant header names such as 'CAmelExecCommandExecutable' are filtered out alongside 'CamelExecCommandExecutable'. The same setLowerCase(true) call was not applied to five non-HTTP HeaderFilterStrategy implementations: JmsHeaderFilterStrategy and ClassicJmsHeaderFilterStrategy in camel-jms, SjmsHeaderFilterStrategy in camel-sjms, CoAPHeaderFilterStrategy in camel-coap, and GooglePubsubHeaderFilterStrategy in camel-google-pubsub. Because those strategies use case-sensitive String.startsWith('Camel'/'camel') filtering while the Camel Exchange stores headers in a case-insensitive map, an attacker with JMS (or equivalent) producer access to the broker consumed by a Camel route can inject case-variant Camel internal headers, which are then resolved by downstream components such as camel-exec and camel-file using their canonical casing. This enables remote code execution and arbitrary file write on routes that forward JMS messages to header-driven components.
+
+  This issue affects Apache Camel: from 3.0.0 before 4.14.6, from 4.15.0 before 4.18.2, from 4.19.0 before 4.20.0.
+
+  Users are recommended to upgrade to version 4.20.0, which fixes the issue. If users are on the 4.14.x LTS releases stream, then they are suggested to upgrade to 4.14.6. If users are on the 4.18.x releases stream, then they are suggested to upgrade to 4.18.2.
+impacted_packages:
+  - purl: pkg:maven/org.apache.camel/camel-coap
+    affected_versions: vers:maven/>=3.0.0|<4.14.6
+    fixed_versions: vers:maven/4.14.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.camel/camel-coap
+    affected_versions: vers:maven/>=4.15.0|<4.18.2
+    fixed_versions: vers:maven/4.18.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.camel/camel-coap
+    affected_versions: vers:maven/>=4.19.0|<4.20.0
+    fixed_versions: vers:maven/4.20.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.camel/camel-google-pubsub
+    affected_versions: vers:maven/>=3.0.0|<4.14.6
+    fixed_versions: vers:maven/4.14.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.camel/camel-google-pubsub
+    affected_versions: vers:maven/>=4.15.0|<4.18.2
+    fixed_versions: vers:maven/4.18.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.camel/camel-google-pubsub
+    affected_versions: vers:maven/>=4.19.0|<4.20.0
+    fixed_versions: vers:maven/4.20.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.camel/camel-jms
+    affected_versions: vers:maven/>=3.0.0|<4.14.6
+    fixed_versions: vers:maven/4.14.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.camel/camel-jms
+    affected_versions: vers:maven/>=4.15.0|<4.18.2
+    fixed_versions: vers:maven/4.18.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.camel/camel-jms
+    affected_versions: vers:maven/>=4.19.0|<4.20.0
+    fixed_versions: vers:maven/4.20.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.camel/camel-sjms
+    affected_versions: vers:maven/>=3.0.0|<4.14.6
+    fixed_versions: vers:maven/4.14.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.camel/camel-sjms
+    affected_versions: vers:maven/>=4.15.0|<4.18.2
+    fixed_versions: vers:maven/4.18.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.camel/camel-sjms
+    affected_versions: vers:maven/>=4.19.0|<4.20.0
+    fixed_versions: vers:maven/4.20.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/apache/camel
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/camel
+        commit: 3d2efeed2f6ea757f0254a1d1cdeb9a4f28ca147
+      - vcs_url: https://github.com/apache/camel
+        commit: 301bb7401cd480895b94a28a8ad6cf04952d8125
+      - vcs_url: https://github.com/apache/camel
+        commit: 1e331daa4eea0a3f01d951e74cda8faee79495a2
+    introduced_in_commits: []
+severities:
+  - score: '9.9'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-jg2m-9x48-3gvj/GHSA-jg2m-9x48-3gvj.json
+  - score: CRITICAL
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-178
+references:
+  - url: https://camel.apache.org/security/CVE-2026-40453.html
+    reference_type:
+    reference_id:
+  - url: https://github.com/apache/camel
+    reference_type:
+    reference_id:
+  - url: https://github.com/apache/camel/commit/1e331daa4eea0a3f01d951e74cda8faee79495a2
+    reference_type:
+    reference_id:
+  - url: https://github.com/apache/camel/commit/301bb7401cd480895b94a28a8ad6cf04952d8125
+    reference_type:
+    reference_id:
+  - url: https://github.com/apache/camel/commit/3d2efeed2f6ea757f0254a1d1cdeb9a4f28ca147
+    reference_type:
+    reference_id:
+  - url: https://github.com/apache/camel/pull/22569
+    reference_type:
+    reference_id:
+  - url: https://github.com/apache/camel/pull/22575
+    reference_type:
+    reference_id:
+  - url: https://github.com/apache/camel/pull/22576
+    reference_type:
+    reference_id:
+  - url: https://issues.apache.org/jira/browse/CAMEL-23313
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-40453
+    reference_type:
+    reference_id: CVE-2026-40453

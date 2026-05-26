@@ -1,0 +1,117 @@
+advisory_id: GHSA-qv2q-c278-pch5
+datasource_id: github_osv/GHSA-qv2q-c278-pch5
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-qv2q-c278-pch5/GHSA-qv2q-c278-pch5.json
+aliases: []
+summary: |
+  ImageMagick: Information Disclosure in PasskeyEncipherImage via AES-CTR nonce reuse
+  The PasskeyEncipherImage method is vulnerable to information disclosure via AES-CTR nonce reuse. ImageMagick has update the documentation on its website to make it more clear that this is happening: https://imagemagick.org/cipher/
+impacted_packages:
+  - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-AnyCPU
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q8-AnyCPU
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q8-x64
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q8-x86
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-OpenMP-arm64
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-arm64
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-OpenMP-arm64
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-OpenMP-x64
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-arm64
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q8-OpenMP-arm64
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q8-OpenMP-x64
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q8-arm64
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-x64
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-x86
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-x64
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-x86
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '3.7'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-qv2q-c278-pch5/GHSA-qv2q-c278-pch5.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-323
+  - CWE-330
+references:
+  - url: https://github.com/ImageMagick/ImageMagick
+    reference_type:
+    reference_id:
+  - url: https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-qv2q-c278-pch5
+    reference_type:
+    reference_id:
+  - url: https://imagemagick.org/cipher
+    reference_type:
+    reference_id:
