@@ -1,0 +1,34 @@
+advisory_id: GLIBC-SA-2023-0004
+datasource_id: glibc/GLIBC-SA-2023-0004
+datasource_url: https://sourceware.org/git/glibc.git
+aliases:
+  - CVE-2023-4911
+summary: |
+  tunables: local privilege escalation through buffer overflow
+  If a tunable of the form NAME=NAME=VAL is passed in the environment of a
+  setuid program and NAME is valid, it may result in a buffer overflow,
+  which could be exploited to achieve escalated privileges.  This flaw was
+  introduced in glibc 2.34.
+impacted_packages:
+  - purl: pkg:sid/gnu.org/glibc
+    affected_versions: vers:generic/2.34.0
+    fixed_versions: vers:generic/2.34.0-423|2.35.0-274|2.36.0-118|2.37.0-45|2.38.0-27|2.39.0
+    fixed_in_commits:
+      - vcs_url: https://sourceware.org/git/glibc.git
+        commit: 1056e5b4c3f2d90ed2b4a55f96add28da2f4c8fa
+      - vcs_url: https://sourceware.org/git/glibc.git
+        commit: dcc367f148bc92e7f3778a125f7a416b093964d9
+      - vcs_url: https://sourceware.org/git/glibc.git
+        commit: c84018a05aec80f5ee6f682db0da1130b0196aef
+      - vcs_url: https://sourceware.org/git/glibc.git
+        commit: 22955ad85186ee05834e47e665056148ca07699c
+      - vcs_url: https://sourceware.org/git/glibc.git
+        commit: b4e23c75aea756b4bddc4abcf27a1c6dca8b6bd3
+      - vcs_url: https://sourceware.org/git/glibc.git
+        commit: 750a45a783906a19591fb8ff6b7841470f1f5701
+    introduced_in_commits:
+      - vcs_url: https://sourceware.org/git/glibc.git
+        commit: 2ed18c5b534d9e92fc006202a5af0df6b72e7aca
+severities: []
+weaknesses: []
+references: []

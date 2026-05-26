@@ -1,0 +1,40 @@
+advisory_id: GLIBC-SA-2024-0004
+datasource_id: glibc/GLIBC-SA-2024-0004
+datasource_url: https://sourceware.org/git/glibc.git
+aliases:
+  - CVE-2024-2961
+summary: "ISO-2022-CN-EXT: fix out-of-bound writes when writing escape sequence\nThe iconv()\
+  \ function in the GNU C Library versions 2.39 and older may \noverflow the output buffer passed\
+  \ to it by up to 4 bytes when converting \nstrings to the ISO-2022-CN-EXT character set, which\
+  \ may be used to \ncrash an application or overwrite a neighbouring variable."
+impacted_packages:
+  - purl: pkg:sid/gnu.org/glibc
+    affected_versions: vers:generic/2.1.93-169
+    fixed_versions: vers:generic/2.31.0-154|2.32.0-140|2.33.0-263|2.34.0-459|2.35.0-315|2.36.0-164|2.37.0-89|2.38.0-66|2.39.0-31|2.40.0
+    fixed_in_commits:
+      - vcs_url: https://sourceware.org/git/glibc.git
+        commit: f9dc609e06b1136bb0408be9605ce7973a767ada
+      - vcs_url: https://sourceware.org/git/glibc.git
+        commit: 31da30f23cddd36db29d5b6a1c7619361b271fb4
+      - vcs_url: https://sourceware.org/git/glibc.git
+        commit: e1135387deded5d73924f6ca20c72a35dc8e1bda
+      - vcs_url: https://sourceware.org/git/glibc.git
+        commit: 89ce64b269a897a7780e4c73a7412016381c6ecf
+      - vcs_url: https://sourceware.org/git/glibc.git
+        commit: 4ed98540a7fd19f458287e783ae59c41e64df7b5
+      - vcs_url: https://sourceware.org/git/glibc.git
+        commit: 36280d1ce5e245aabefb877fe4d3c6cff95dabfa
+      - vcs_url: https://sourceware.org/git/glibc.git
+        commit: a8b0561db4b9847ebfbfec20075697d5492a363c
+      - vcs_url: https://sourceware.org/git/glibc.git
+        commit: ed4f16ff6bed3037266f1fa682ebd32a18fce29c
+      - vcs_url: https://sourceware.org/git/glibc.git
+        commit: 682ad4c8623e611a971839990ceef00346289cc9
+      - vcs_url: https://sourceware.org/git/glibc.git
+        commit: 3703c32a8d304c1ee12126134ce69be965f38000
+    introduced_in_commits:
+      - vcs_url: https://sourceware.org/git/glibc.git
+        commit: 755104edc75c53f4a0e7440334e944ad3c6b32fc
+severities: []
+weaknesses: []
+references: []
