@@ -1,0 +1,164 @@
+advisory_id: RHSA-2026:19875
+datasource_id: redhat/RHSA-2026:19875
+datasource_url: https://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_19875.json
+aliases:
+  - CVE-2025-21999
+  - CVE-2025-71238
+  - CVE-2026-23243
+  - CVE-2026-23401
+  - CVE-2026-31532
+  - CVE-2026-46300
+  - CVE-2026-46333
+summary: |
+  An update for kernel-rt is now available for Red Hat Enterprise Linux 9.2 Update Services for SAP Solutions.
+
+  Red Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section.
+
+  The kernel-rt packages provide the Real Time Linux Kernel, which enables fine-tuning for systems with extremely high determinism requirements.
+
+  Security Fix(es):
+
+  * kernel: proc: fix UAF in proc_get_inode() (CVE-2025-21999)
+
+  * kernel: Linux kernel (qla2xxx): Double free vulnerability leads to denial of service and potential privilege escalation. (CVE-2025-71238)
+
+  * kernel: Linux kernel: Denial of service and memory corruption in RDMA umad (CVE-2026-23243)
+
+  * kernel: Linux kernel KVM: Privilege escalation or denial of service due to improper shadow page table entry handling (CVE-2026-23401)
+
+  * kernel: can: raw: fix ro->uniq use-after-free in raw_rcv() (CVE-2026-31532)
+
+  * kernel: "Fragnesia" is a variant of Dirty Frag vulnerability in the ESP/XFRM leading to Local Privilege Escalation (LPE) vulnerability in the Linux kernel (CVE-2026-46300)
+
+  * kernel: Read root-owned files as an unprivileged user (CVE-2026-46333)
+
+  For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.
+impacted_packages:
+  - purl: pkg:rpm/redhat/kernel-rt-debug-modules-extra?arch=x86_64
+    affected_versions: vers:rpm/<5.14.0-284.172.1.rt14.457.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.172.1.rt14.457.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-rt-devel?arch=x86_64
+    affected_versions: vers:rpm/<5.14.0-284.172.1.rt14.457.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.172.1.rt14.457.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-rt-modules?arch=x86_64
+    affected_versions: vers:rpm/<5.14.0-284.172.1.rt14.457.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.172.1.rt14.457.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-rt-modules-core?arch=x86_64
+    affected_versions: vers:rpm/<5.14.0-284.172.1.rt14.457.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.172.1.rt14.457.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-rt-modules-extra?arch=x86_64
+    affected_versions: vers:rpm/<5.14.0-284.172.1.rt14.457.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.172.1.rt14.457.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-rt?arch=src
+    affected_versions: vers:rpm/<5.14.0-284.172.1.rt14.457.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.172.1.rt14.457.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-rt?arch=x86_64
+    affected_versions: vers:rpm/<5.14.0-284.172.1.rt14.457.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.172.1.rt14.457.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-rt-core?arch=x86_64
+    affected_versions: vers:rpm/<5.14.0-284.172.1.rt14.457.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.172.1.rt14.457.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-rt-debug?arch=x86_64
+    affected_versions: vers:rpm/<5.14.0-284.172.1.rt14.457.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.172.1.rt14.457.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-rt-debug-core?arch=x86_64
+    affected_versions: vers:rpm/<5.14.0-284.172.1.rt14.457.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.172.1.rt14.457.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-rt-debug-devel?arch=x86_64
+    affected_versions: vers:rpm/<5.14.0-284.172.1.rt14.457.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.172.1.rt14.457.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-rt-debug-modules?arch=x86_64
+    affected_versions: vers:rpm/<5.14.0-284.172.1.rt14.457.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.172.1.rt14.457.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-rt-debug-modules-core?arch=x86_64
+    affected_versions: vers:rpm/<5.14.0-284.172.1.rt14.457.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.172.1.rt14.457.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-rt-debug-debuginfo?arch=x86_64
+    affected_versions: vers:rpm/<5.14.0-284.172.1.rt14.457.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.172.1.rt14.457.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-rt-debuginfo?arch=x86_64
+    affected_versions: vers:rpm/<5.14.0-284.172.1.rt14.457.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.172.1.rt14.457.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-rt-debuginfo-common-x86_64?arch=x86_64
+    affected_versions: vers:rpm/<5.14.0-284.172.1.rt14.457.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.172.1.rt14.457.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-rt-debug-kvm?arch=x86_64
+    affected_versions: vers:rpm/<5.14.0-284.172.1.rt14.457.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.172.1.rt14.457.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-rt-kvm?arch=x86_64
+    affected_versions: vers:rpm/<5.14.0-284.172.1.rt14.457.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.172.1.rt14.457.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: Important
+    scoring_system: rhas
+    scoring_elements:
+    published_at: None
+    url: https://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_19875.json
+weaknesses: []
+references:
+  - url: https://access.redhat.com/security/updates/classification/#important
+    reference_type:
+    reference_id:
+  - url: https://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_19875.json
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2357134
+    reference_type: bug
+    reference_id: 2357134
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2444398
+    reference_type: bug
+    reference_id: 2444398
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2448594
+    reference_type: bug
+    reference_id: 2448594
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2453803
+    reference_type: bug
+    reference_id: 2453803
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2461107
+    reference_type: bug
+    reference_id: 2461107
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2477015
+    reference_type: bug
+    reference_id: 2477015
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2477802
+    reference_type: bug
+    reference_id: 2477802
+  - url: https://access.redhat.com/errata/RHSA-2026:19875
+    reference_type:
+    reference_id: RHSA-2026:19875
