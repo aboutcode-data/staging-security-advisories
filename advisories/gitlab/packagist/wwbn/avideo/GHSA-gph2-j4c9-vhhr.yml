@@ -1,0 +1,44 @@
+advisory_id: packagist/wwbn/avideo/GHSA-gph2-j4c9-vhhr
+datasource_id: gitlab/packagist/wwbn/avideo/GHSA-gph2-j4c9-vhhr
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/packagist/wwbn/avideo/GHSA-gph2-j4c9-vhhr.yml
+aliases:
+  - GHSA-gph2-j4c9-vhhr
+summary: |
+  WWBN AVideo YPTSocket WebSocket Broadcast Relay Leads to Unauthenticated Cross-User JavaScript Execution via Client-Side eval() Sinks
+  The YPTSocket plugin's WebSocket server relays attacker-supplied JSON message bodies to every connected client without sanitizing the `msg` or `callback` fields. On the client side, `plugin/YPTSocket/script.js` contains two `eval()` sinks fed directly by those relayed fields (`json.msg.autoEvalCodeOnHTML` at line 568 and `json.callback` at line 95). Because tokens are minted for anonymous visitors and never revalidated beyond decryption, an unauthenticated attacker can broadcast arbitrary JavaScript that executes in the origin of every currently-connected user (including administrators), resulting in universal account takeover, session theft, and privileged action execution.
+impacted_packages:
+  - purl: pkg:composer/wwbn/avideo
+    affected_versions: vers:composer/<=29.0.0
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/wwbn/avideo
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/wwbn/avideo
+        commit: c08694bf6264eb4decceb78c711baee2609b4efd
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/packagist/wwbn/avideo/GHSA-gph2-j4c9-vhhr.yml
+weaknesses:
+  - CWE-1035
+  - CWE-94
+  - CWE-937
+references:
+  - url: https://github.com/WWBN/AVideo
+    reference_type:
+    reference_id:
+  - url: https://github.com/WWBN/AVideo/commit/c08694bf6264eb4decceb78c711baee2609b4efd
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-gph2-j4c9-vhhr
+    reference_type:
+    reference_id: GHSA-gph2-j4c9-vhhr
+  - url: https://github.com/WWBN/AVideo/security/advisories/GHSA-gph2-j4c9-vhhr
+    reference_type:
+    reference_id: GHSA-gph2-j4c9-vhhr

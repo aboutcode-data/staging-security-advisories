@@ -1,0 +1,34 @@
+advisory_id: packagist/wwbn/avideo/GHSA-gmpc-fxg2-vcmq
+datasource_id: gitlab/packagist/wwbn/avideo/GHSA-gmpc-fxg2-vcmq
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/packagist/wwbn/avideo/GHSA-gmpc-fxg2-vcmq.yml
+aliases:
+  - GHSA-gmpc-fxg2-vcmq
+summary: |
+  AVideo has Stored XSS via Unescaped Menu Item Fields in TopMenu Plugin
+  The TopMenu plugin renders menu item fields (icon classes, URLs, and text labels) directly into HTML without applying `htmlspecialchars()` or any other output encoding. Since menu items are rendered on every public page through plugin hooks, a single malicious menu entry results in stored cross-site scripting that executes for every visitor to the site. An admin user who is tricked into saving a crafted menu item (or an attacker who gains admin access) can compromise all site visitors.
+impacted_packages:
+  - purl: pkg:composer/wwbn/avideo
+    affected_versions: vers:composer/<=26.0.0
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/packagist/wwbn/avideo/GHSA-gmpc-fxg2-vcmq.yml
+weaknesses:
+  - CWE-79
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/WWBN/AVideo
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-gmpc-fxg2-vcmq
+    reference_type:
+    reference_id: GHSA-gmpc-fxg2-vcmq
+  - url: https://github.com/WWBN/AVideo/security/advisories/GHSA-gmpc-fxg2-vcmq
+    reference_type:
+    reference_id: GHSA-gmpc-fxg2-vcmq
