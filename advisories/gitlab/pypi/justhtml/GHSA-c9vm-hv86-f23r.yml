@@ -1,0 +1,37 @@
+advisory_id: pypi/justhtml/GHSA-c9vm-hv86-f23r
+datasource_id: gitlab/pypi/justhtml/GHSA-c9vm-hv86-f23r
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/pypi/justhtml/GHSA-c9vm-hv86-f23r.yml
+aliases:
+  - GHSA-c9vm-hv86-f23r
+summary: |
+  justhtml includes multiple security fixes
+  `justhtml` `1.15.0` includes multiple security fixes affecting URL sanitization helpers, HTML serialization, Markdown passthrough, and several custom sanitization-policy edge cases.
+
+  These issues have different impact levels and do not all affect the default configuration in the same way.
+impacted_packages:
+  - purl: pkg:pypi/justhtml
+    affected_versions: vers:pypi/<1.15.0
+    fixed_versions: vers:pypi/1.15.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities: []
+weaknesses:
+  - CWE-79
+  - CWE-178
+  - CWE-755
+  - CWE-1035
+  - CWE-937
+  - CWE-20
+references:
+  - url: https://github.com/EmilStenstrom/justhtml/compare/v1.14.0...v1.15.0
+    reference_type:
+    reference_id:
+  - url: https://github.com/EmilStenstrom/justhtml/releases/tag/v1.15.0
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-c9vm-hv86-f23r
+    reference_type:
+    reference_id: GHSA-c9vm-hv86-f23r
+  - url: https://github.com/EmilStenstrom/justhtml/security/advisories/GHSA-c9vm-hv86-f23r
+    reference_type:
+    reference_id: GHSA-c9vm-hv86-f23r

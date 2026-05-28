@@ -1,0 +1,43 @@
+advisory_id: pypi/justhtml/GHSA-4p64-v8f5-r2gx
+datasource_id: gitlab/pypi/justhtml/GHSA-4p64-v8f5-r2gx
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/pypi/justhtml/GHSA-4p64-v8f5-r2gx.yml
+aliases:
+  - GHSA-4p64-v8f5-r2gx
+summary: |
+  Multiple security fixes in justhtml
+  `justhtml` `1.16.0` fixes multiple security issues in sanitization, serialization, and programmatic DOM handling.
+
+  Most of these issues affected one of these advanced paths rather than ordinary parsed HTML with the default safe settings:
+
+  - programmatic DOM input to `sanitize()` or `sanitize_dom()`
+  - reused or mutated sanitization policy objects
+  - custom policies that preserve foreign namespaces such as SVG or MathML
+impacted_packages:
+  - purl: pkg:pypi/justhtml
+    affected_versions: vers:pypi/<1.16.0
+    fixed_versions: vers:pypi/1.16.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/pypi/justhtml/GHSA-4p64-v8f5-r2gx.yml
+weaknesses:
+  - CWE-79
+  - CWE-471
+  - CWE-178
+  - CWE-436
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/EmilStenstrom/justhtml
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-4p64-v8f5-r2gx
+    reference_type:
+    reference_id: GHSA-4p64-v8f5-r2gx
+  - url: https://github.com/EmilStenstrom/justhtml/security/advisories/GHSA-4p64-v8f5-r2gx
+    reference_type:
+    reference_id: GHSA-4p64-v8f5-r2gx
