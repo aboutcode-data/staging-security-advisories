@@ -1,0 +1,51 @@
+advisory_id: packagist/pocketmine/pocketmine-mp/GHSA-xp4f-g2cm-rhg7
+datasource_id: gitlab/packagist/pocketmine/pocketmine-mp/GHSA-xp4f-g2cm-rhg7
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/packagist/pocketmine/pocketmine-mp/GHSA-xp4f-g2cm-rhg7.yml
+aliases:
+  - GHSA-xp4f-g2cm-rhg7
+summary: |
+  PocketMine-MP has LogDoS by many junk properties in client data JWT in LoginPacket
+  Attackers can fill the body of the clientData JWT in LoginPacket with lots of junk properties, causing the server to flood warning messages, as well as wasting CPU time.
+
+  This happens because the JsonMapper instance used to process the JWT body is configured to warn on unexpected properties instead of rejecting them outright. While this behaviour increases flexibility for random changes introduced by Microsoft, it also creates vulnerabilities if not handled carefully.
+
+  This vulnerability affects PocketMine-MP servers exposed to a public network where unknown actors may have access.
+impacted_packages:
+  - purl: pkg:composer/pocketmine/pocketmine-mp
+    affected_versions: vers:composer/<5.42.1
+    fixed_versions: vers:composer/5.42.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/pmmp/pocketmine-mp
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/pmmp/pocketmine-mp
+        commit: c1d4a813fb8c21bfd8b9affd040da864b794df71
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/packagist/pocketmine/pocketmine-mp/GHSA-xp4f-g2cm-rhg7.yml
+weaknesses:
+  - CWE-779
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/pmmp/PocketMine-MP/blob/5.41.1/src/network/mcpe/handler/LoginPacketHandler.php#L289-L303
+    reference_type:
+    reference_id:
+  - url: https://github.com/pmmp/PocketMine-MP/blob/5.41.1/src/network/mcpe/handler/LoginPacketHandler.php#L334-L350
+    reference_type:
+    reference_id:
+  - url: https://github.com/pmmp/PocketMine-MP/commit/c1d4a813fb8c21bfd8b9affd040da864b794df71
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-xp4f-g2cm-rhg7
+    reference_type:
+    reference_id: GHSA-xp4f-g2cm-rhg7
+  - url: https://github.com/pmmp/PocketMine-MP/security/advisories/GHSA-xp4f-g2cm-rhg7
+    reference_type:
+    reference_id: GHSA-xp4f-g2cm-rhg7

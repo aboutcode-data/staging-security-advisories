@@ -1,0 +1,39 @@
+advisory_id: packagist/kimai/kimai/GHSA-3jp4-mhh4-gcgr
+datasource_id: gitlab/packagist/kimai/kimai/GHSA-3jp4-mhh4-gcgr
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/packagist/kimai/kimai/GHSA-3jp4-mhh4-gcgr.yml
+aliases:
+  - GHSA-3jp4-mhh4-gcgr
+summary: |
+  Kimai has an Open Redirect via Unvalidated RelayState in SAML ACS Handler
+  The SAML authentication success handler in Kimai returns the `RelayState` POST parameter as a redirect destination without validating the host or scheme. After a user successfully authenticates via SAML, they are redirected to an attacker-controlled URL if the IdP includes a malicious `RelayState` value. This enables phishing attacks that steal credentials or session tokens post-SSO.
+
+  *Requires SAML to be enabled (non-default configuration).*
+impacted_packages:
+  - purl: pkg:composer/kimai/kimai
+    affected_versions: vers:composer/<2.53.0
+    fixed_versions: vers:composer/2.53.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:N/I:N/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/packagist/kimai/kimai/GHSA-3jp4-mhh4-gcgr.yml
+weaknesses:
+  - CWE-601
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/kimai/kimai
+    reference_type:
+    reference_id:
+  - url: https://github.com/kimai/kimai/pull/5878
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-3jp4-mhh4-gcgr
+    reference_type:
+    reference_id: GHSA-3jp4-mhh4-gcgr
+  - url: https://github.com/kimai/kimai/security/advisories/GHSA-3jp4-mhh4-gcgr
+    reference_type:
+    reference_id: GHSA-3jp4-mhh4-gcgr
