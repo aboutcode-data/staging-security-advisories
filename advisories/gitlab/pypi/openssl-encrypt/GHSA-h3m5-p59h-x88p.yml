@@ -1,0 +1,44 @@
+advisory_id: pypi/openssl-encrypt/GHSA-h3m5-p59h-x88p
+datasource_id: gitlab/pypi/openssl-encrypt/GHSA-h3m5-p59h-x88p
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/pypi/openssl-encrypt/GHSA-h3m5-p59h-x88p.yml
+aliases:
+  - GHSA-h3m5-p59h-x88p
+summary: |
+  openssl-encrypt has visible password in process list via --password CLI argument
+  Passwords passed via the `--password` / `-p` CLI argument in `openssl_encrypt/modules/crypt_cli_subparser.py` at **lines 150-154** are visible to any user on the system via `ps aux` or `/proc/[pid]/cmdline`.
+impacted_packages:
+  - purl: pkg:pypi/openssl-encrypt
+    affected_versions: vers:pypi/<1.4.0
+    fixed_versions: vers:pypi/1.4.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/jahlives/openssl_encrypt
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/jahlives/openssl_encrypt
+        commit: e78a3666e4592f3538adaaa6be8f5f04356174db
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/pypi/openssl-encrypt/GHSA-h3m5-p59h-x88p.yml
+weaknesses:
+  - CWE-1035
+  - CWE-256
+  - CWE-937
+references:
+  - url: https://github.com/jahlives/openssl_encrypt
+    reference_type:
+    reference_id:
+  - url: https://github.com/jahlives/openssl_encrypt/commit/e78a3666e4592f3538adaaa6be8f5f04356174db
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-h3m5-p59h-x88p
+    reference_type:
+    reference_id: GHSA-h3m5-p59h-x88p
+  - url: https://github.com/jahlives/openssl_encrypt/security/advisories/GHSA-h3m5-p59h-x88p
+    reference_type:
+    reference_id: GHSA-h3m5-p59h-x88p

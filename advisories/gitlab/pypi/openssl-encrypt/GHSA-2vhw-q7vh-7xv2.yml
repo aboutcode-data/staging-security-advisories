@@ -1,0 +1,44 @@
+advisory_id: pypi/openssl-encrypt/GHSA-2vhw-q7vh-7xv2
+datasource_id: gitlab/pypi/openssl-encrypt/GHSA-2vhw-q7vh-7xv2
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/pypi/openssl-encrypt/GHSA-2vhw-q7vh-7xv2.yml
+aliases:
+  - GHSA-2vhw-q7vh-7xv2
+summary: |
+  openssl-encrypt's readiness endpoint leaks database error details to unauthenticated callers
+  The `/ready` endpoint in `openssl_encrypt_server/server.py` at **lines 159-175** catches database errors and returns the full exception string in the response.
+impacted_packages:
+  - purl: pkg:pypi/openssl-encrypt
+    affected_versions: vers:pypi/<1.4.0
+    fixed_versions: vers:pypi/1.4.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/jahlives/openssl_encrypt
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/jahlives/openssl_encrypt
+        commit: 7aa8787f4de2e9a23f58fca067bb16c4c69d28bb
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/pypi/openssl-encrypt/GHSA-2vhw-q7vh-7xv2.yml
+weaknesses:
+  - CWE-1035
+  - CWE-201
+  - CWE-937
+references:
+  - url: https://github.com/jahlives/openssl_encrypt
+    reference_type:
+    reference_id:
+  - url: https://github.com/jahlives/openssl_encrypt/commit/7aa8787f4de2e9a23f58fca067bb16c4c69d28bb
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-2vhw-q7vh-7xv2
+    reference_type:
+    reference_id: GHSA-2vhw-q7vh-7xv2
+  - url: https://github.com/jahlives/openssl_encrypt/security/advisories/GHSA-2vhw-q7vh-7xv2
+    reference_type:
+    reference_id: GHSA-2vhw-q7vh-7xv2
