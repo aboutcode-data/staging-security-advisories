@@ -1,0 +1,35 @@
+advisory_id: npm/paperclipai/GHSA-gqqj-85qm-8qhf
+datasource_id: gitlab/npm/paperclipai/GHSA-gqqj-85qm-8qhf
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/paperclipai/GHSA-gqqj-85qm-8qhf.yml
+aliases:
+  - GHSA-gqqj-85qm-8qhf
+summary: |
+  Paperclip: codex_local inherited ChatGPT/OpenAI-connected Gmail and was able to send real email
+  A Paperclip-managed `codex_local` runtime was able to access and use a Gmail connector that I had connected in the ChatGPT/OpenAI apps UI, even though I had not explicitly connected Gmail inside Paperclip or separately inside Codex.
+
+  In my environment this enabled mailbox access and a real outbound email to be sent from my Gmail account. After I manually intervened to stop the workflow, follow-up retraction messages were also sent, confirming repeated outward write/send capability.
+
+  This appears to be a trust-boundary failure between Paperclip-managed Codex execution and inherited OpenAI app connectors, amplified by dangerous-by-default runtime settings.
+impacted_packages:
+  - purl: pkg:npm/paperclipai
+    affected_versions: vers:npm/<=2026.403.0
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/paperclipai/GHSA-gqqj-85qm-8qhf.yml
+weaknesses:
+  - CWE-1035
+  - CWE-284
+  - CWE-937
+references:
+  - url: https://github.com/advisories/GHSA-gqqj-85qm-8qhf
+    reference_type:
+    reference_id: GHSA-gqqj-85qm-8qhf
+  - url: https://github.com/paperclipai/paperclip/security/advisories/GHSA-gqqj-85qm-8qhf
+    reference_type:
+    reference_id: GHSA-gqqj-85qm-8qhf

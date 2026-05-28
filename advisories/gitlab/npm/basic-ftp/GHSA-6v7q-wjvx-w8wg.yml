@@ -1,0 +1,47 @@
+advisory_id: npm/basic-ftp/GHSA-6v7q-wjvx-w8wg
+datasource_id: gitlab/npm/basic-ftp/GHSA-6v7q-wjvx-w8wg
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/basic-ftp/GHSA-6v7q-wjvx-w8wg.yml
+aliases:
+  - GHSA-6v7q-wjvx-w8wg
+summary: |
+  basic-ftp: Incomplete CRLF Injection Protection Allows Arbitrary FTP Command Execution via Credentials and MKD Commands
+  basic-ftp's CRLF injection protection (added in commit 2ecc8e2 for GHSA-chqc-8p9q-pq6q) is incomplete. Two code paths bypass the `protectWhitespace()` control character check: (1) the `login()` method directly concatenates user-supplied credentials into USER/PASS FTP commands without any validation, and (2) the `_openDir()` method sends an MKD command before `cd()` invokes `protectWhitespace()`, creating a TOCTOU bypass. Both vectors allow an attacker who controls input to inject arbitrary FTP commands into the control connection.
+impacted_packages:
+  - purl: pkg:npm/basic-ftp
+    affected_versions: vers:npm/<5.2.2
+    fixed_versions: vers:npm/5.2.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/patrickjuchli/basic-ftp
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/patrickjuchli/basic-ftp
+        commit: 20327d35126e57e5fdbaae79a4b65222fbadc53c
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:L
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/basic-ftp/GHSA-6v7q-wjvx-w8wg.yml
+weaknesses:
+  - CWE-93
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/patrickjuchli/basic-ftp
+    reference_type:
+    reference_id:
+  - url: https://github.com/patrickjuchli/basic-ftp/commit/20327d35126e57e5fdbaae79a4b65222fbadc53c
+    reference_type:
+    reference_id:
+  - url: https://github.com/patrickjuchli/basic-ftp/releases/tag/v5.2.2
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-6v7q-wjvx-w8wg
+    reference_type:
+    reference_id: GHSA-6v7q-wjvx-w8wg
+  - url: https://github.com/patrickjuchli/basic-ftp/security/advisories/GHSA-6v7q-wjvx-w8wg
+    reference_type:
+    reference_id: GHSA-6v7q-wjvx-w8wg

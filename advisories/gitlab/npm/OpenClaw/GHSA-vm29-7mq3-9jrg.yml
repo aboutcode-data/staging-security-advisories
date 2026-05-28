@@ -1,0 +1,41 @@
+advisory_id: npm/OpenClaw/GHSA-vm29-7mq3-9jrg
+datasource_id: gitlab/npm/OpenClaw/GHSA-vm29-7mq3-9jrg
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/OpenClaw/GHSA-vm29-7mq3-9jrg.yml
+aliases:
+  - GHSA-vm29-7mq3-9jrg
+summary: |
+  Duplicate Advisory: OpenClaw: Unavailable local auth SecretRefs could fall through to remote credentials in local mode
+  ### Duplicate Advisory
+  This advisory has been withdrawn because it is a duplicate of GHSA-qvr7-g57c-mrc7. This link is maintained to preserve external references.
+
+  ### Original Description
+  OpenClaw before 2026.3.11 contains a credential fallback vulnerability where unavailable local gateway.auth.token and gateway.auth.password SecretRefs are treated as unset, allowing fallback to remote credentials in local mode. Attackers can exploit misconfigured local auth references to cause CLI and helper paths to select incorrect credential sources, potentially bypassing intended local authentication boundaries.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.3.11
+    fixed_versions: vers:npm/2026.3.11
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/OpenClaw/GHSA-vm29-7mq3-9jrg.yml
+weaknesses:
+  - CWE-636
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://www.vulncheck.com/advisories/openclaw-credential-fallback-logic-bypass-via-unavailable-local-auth-secretrefs
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32970
+    reference_type:
+    reference_id: CVE-2026-32970
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-qvr7-g57c-mrc7
+    reference_type:
+    reference_id: GHSA-qvr7-g57c-mrc7
+  - url: https://github.com/advisories/GHSA-vm29-7mq3-9jrg
+    reference_type:
+    reference_id: GHSA-vm29-7mq3-9jrg
