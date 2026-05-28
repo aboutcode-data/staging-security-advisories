@@ -1,0 +1,31 @@
+advisory_id: npm/@paperclipai/server/GHSA-w8hx-hqjv-vjcq
+datasource_id: gitlab/npm/@paperclipai/server/GHSA-w8hx-hqjv-vjcq
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/@paperclipai/server/GHSA-w8hx-hqjv-vjcq.yml
+aliases:
+  - GHSA-w8hx-hqjv-vjcq
+summary: |
+  Paperclip: Malicious skills able to exfiltrate and destroy all user data
+  An arbitrary code execution vulnerability in the workspace runtime service allows any agent to execute shell commands on the server, exposing all environment variables including API keys, JWT secrets, and database credentials.
+impacted_packages:
+  - purl: pkg:npm/%40paperclipai/server
+    affected_versions: vers:npm/<2026.416.0
+    fixed_versions: vers:npm/2026.416.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/@paperclipai/server/GHSA-w8hx-hqjv-vjcq.yml
+weaknesses:
+  - CWE-77
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/advisories/GHSA-w8hx-hqjv-vjcq
+    reference_type:
+    reference_id: GHSA-w8hx-hqjv-vjcq
+  - url: https://github.com/paperclipai/paperclip/security/advisories/GHSA-w8hx-hqjv-vjcq
+    reference_type:
+    reference_id: GHSA-w8hx-hqjv-vjcq

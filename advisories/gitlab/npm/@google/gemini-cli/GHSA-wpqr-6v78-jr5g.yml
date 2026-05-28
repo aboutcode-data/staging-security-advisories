@@ -1,0 +1,34 @@
+advisory_id: npm/@google/gemini-cli/GHSA-wpqr-6v78-jr5g
+datasource_id: gitlab/npm/@google/gemini-cli/GHSA-wpqr-6v78-jr5g
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/@google/gemini-cli/GHSA-wpqr-6v78-jr5g.yml
+aliases:
+  - GHSA-wpqr-6v78-jr5g
+summary: |
+  Gemini CLI: Remote Code Execution via workspace trust and tool allowlisting bypasses
+  Gemini CLI (`@google/gemini-cli`) and the `run-gemini-cli` GitHub Action are being updated to harden workspace trust and tool allowlisting, in particular when used in untrusted environments like GitHub Actions. This update introduces a breaking change to how non-interactive (headless) environments handle folder trust, which may impact existing CI/CD workflows under specific conditions.
+impacted_packages:
+  - purl: pkg:npm/%40google/gemini-cli
+    affected_versions: vers:npm/<0.39.1|>=0.40.0-preview.2|<0.40.0-preview.3
+    fixed_versions: vers:npm/0.39.1|0.40.0-preview.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/@google/gemini-cli/GHSA-wpqr-6v78-jr5g.yml
+weaknesses:
+  - CWE-77
+  - CWE-78
+  - CWE-1035
+  - CWE-200
+  - CWE-937
+  - CWE-20
+references:
+  - url: https://github.com/advisories/GHSA-wpqr-6v78-jr5g
+    reference_type:
+    reference_id: GHSA-wpqr-6v78-jr5g
+  - url: https://github.com/google-github-actions/run-gemini-cli/security/advisories/GHSA-wpqr-6v78-jr5g
+    reference_type:
+    reference_id: GHSA-wpqr-6v78-jr5g

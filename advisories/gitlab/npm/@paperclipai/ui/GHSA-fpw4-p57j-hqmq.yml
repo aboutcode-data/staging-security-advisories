@@ -1,0 +1,31 @@
+advisory_id: npm/@paperclipai/ui/GHSA-fpw4-p57j-hqmq
+datasource_id: gitlab/npm/@paperclipai/ui/GHSA-fpw4-p57j-hqmq
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/@paperclipai/ui/GHSA-fpw4-p57j-hqmq.yml
+aliases:
+  - GHSA-fpw4-p57j-hqmq
+summary: |
+  Paperclip: Stored XSS via javascript: URLs in MarkdownBody — urlTransform override disables react-markdown sanitization
+  `MarkdownBody`, the shared component used to render every Markdown surface in the Paperclip UI (issue documents, issue comments, chat threads, approvals, agent details, export previews, etc.), passes `urlTransform={(url) => url}` to `react-markdown`. That override replaces `react-markdown`'s built-in `defaultUrlTransform` — the library's only defense against `javascript:`/`vbscript:`/`data:` URL injection — with a no-op, and the custom `a` component then renders the unsanitized href directly. Any authenticated company member can plant `[text](javascript:...)` in an issue document or comment; when another member clicks the link, the script executes in the Paperclip origin with full access to the victim's session, enabling cross-user account takeover inside a tenant.
+impacted_packages:
+  - purl: pkg:npm/%40paperclipai/ui
+    affected_versions: vers:npm/<2026.416.0
+    fixed_versions: vers:npm/2026.416.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/@paperclipai/ui/GHSA-fpw4-p57j-hqmq.yml
+weaknesses:
+  - CWE-79
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/advisories/GHSA-fpw4-p57j-hqmq
+    reference_type:
+    reference_id: GHSA-fpw4-p57j-hqmq
+  - url: https://github.com/paperclipai/paperclip/security/advisories/GHSA-fpw4-p57j-hqmq
+    reference_type:
+    reference_id: GHSA-fpw4-p57j-hqmq
