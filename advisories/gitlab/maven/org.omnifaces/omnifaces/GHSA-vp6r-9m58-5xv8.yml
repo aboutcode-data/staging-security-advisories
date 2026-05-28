@@ -1,0 +1,39 @@
+advisory_id: maven/org.omnifaces/omnifaces/GHSA-vp6r-9m58-5xv8
+datasource_id: gitlab/maven/org.omnifaces/omnifaces/GHSA-vp6r-9m58-5xv8
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/maven/org.omnifaces/omnifaces/GHSA-vp6r-9m58-5xv8.yml
+aliases:
+  - GHSA-vp6r-9m58-5xv8
+summary: |
+  OmniFaces: EL injection via crafted resource name in wildcard CDN mapping
+  Server-side EL injection leading to Remote Code Execution (RCE). Affects applications that use `CDNResourceHandler` with a wildcard CDN mapping (e.g. `libraryName:*=https://cdn.example.com/*`). An attacker can craft a resource request
+  URL containing an EL expression in the resource name, which is evaluated server-side.
+
+  The severity depends on the EL implementation and the objects available in the EL context. In the worst case this leads to Remote Code Execution (RCE). At minimum it allows information disclosure and denial of service.
+
+  Applications using `CDNResourceHandler` without wildcard mappings (i.e. only explicit resource-to-URL mappings) are **not** affected.
+impacted_packages:
+  - purl: pkg:maven/org.omnifaces/omnifaces
+    affected_versions: vers:maven/<1.14.2|>=2.0-RC1|<2.7.32|>=3.0-RC1|<3.14.16|>=4.0-M1|<4.7.5|>=5.0-M1|<5.2.3
+    fixed_versions: vers:maven/1.14.2|2.7.32|3.14.16|4.7.5|5.2.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/maven/org.omnifaces/omnifaces/GHSA-vp6r-9m58-5xv8.yml
+weaknesses:
+  - CWE-917
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/omnifaces/omnifaces
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-vp6r-9m58-5xv8
+    reference_type:
+    reference_id: GHSA-vp6r-9m58-5xv8
+  - url: https://github.com/omnifaces/omnifaces/security/advisories/GHSA-vp6r-9m58-5xv8
+    reference_type:
+    reference_id: GHSA-vp6r-9m58-5xv8
