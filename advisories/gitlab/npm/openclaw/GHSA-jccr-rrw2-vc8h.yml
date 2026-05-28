@@ -1,0 +1,45 @@
+advisory_id: npm/openclaw/GHSA-jccr-rrw2-vc8h
+datasource_id: gitlab/npm/openclaw/GHSA-jccr-rrw2-vc8h
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-jccr-rrw2-vc8h.yml
+aliases:
+  - GHSA-jccr-rrw2-vc8h
+summary: |
+  OpenClaw safeBins jq `$ENV` filter bypass allows environment variable disclosure
+  The jq safe-bin policy blocked explicit `env` usage but still allowed jq programs that accessed environment data through `$ENV`.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.3.28
+    fixed_versions: vers:npm/2026.3.28
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/openclaw/openclaw
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openclaw/openclaw
+        commit: 78e2f3d66d74e5c7e6f45c54162e63986e39771b
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-jccr-rrw2-vc8h.yml
+weaknesses:
+  - CWE-185
+  - CWE-1035
+  - CWE-200
+  - CWE-937
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/78e2f3d66d74e5c7e6f45c54162e63986e39771b
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-jccr-rrw2-vc8h
+    reference_type:
+    reference_id: GHSA-jccr-rrw2-vc8h
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-jccr-rrw2-vc8h
+    reference_type:
+    reference_id: GHSA-jccr-rrw2-vc8h

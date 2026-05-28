@@ -1,0 +1,48 @@
+advisory_id: npm/openclaw/GHSA-j4c5-89f5-f3pm
+datasource_id: gitlab/npm/openclaw/GHSA-j4c5-89f5-f3pm
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-j4c5-89f5-f3pm.yml
+aliases:
+  - GHSA-j4c5-89f5-f3pm
+summary: |
+  OpenClaw: Browser CDP profile creation skipped strict-mode SSRF checks
+  Browser profile creation normalized `cdpUrl` values before persisting them, but did not apply the configured browser SSRF policy at creation time. In deployments that explicitly disabled private-network CDP targets, a stored profile could still point at a private-network or metadata endpoint and later be probed by normal profile status flows.
+
+  Default trusted-operator browser behavior allows private-network CDP endpoints, so this only affected strict-mode deployments. Severity is low.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.4.20
+    fixed_versions: vers:npm/2026.4.20
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/openclaw/openclaw
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openclaw/openclaw
+        commit: e90c89cf8b1459f2aa1f3a665be67392b6c03fdf
+      - vcs_url: https://github.com/openclaw/openclaw
+        commit: 1fd049e3074cac72f6734a7fe88468c84f5f8bd7
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-j4c5-89f5-f3pm.yml
+weaknesses:
+  - CWE-1035
+  - CWE-918
+  - CWE-937
+references:
+  - url: https://github.com/openclaw/openclaw/commit/1fd049e3074cac72f6734a7fe88468c84f5f8bd7
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/e90c89cf8b1459f2aa1f3a665be67392b6c03fdf
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-j4c5-89f5-f3pm
+    reference_type:
+    reference_id: GHSA-j4c5-89f5-f3pm
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-j4c5-89f5-f3pm
+    reference_type:
+    reference_id: GHSA-j4c5-89f5-f3pm

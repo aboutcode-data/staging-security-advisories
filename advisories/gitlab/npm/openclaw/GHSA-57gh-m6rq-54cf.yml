@@ -1,0 +1,44 @@
+advisory_id: npm/openclaw/GHSA-57gh-m6rq-54cf
+datasource_id: gitlab/npm/openclaw/GHSA-57gh-m6rq-54cf
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-57gh-m6rq-54cf.yml
+aliases:
+  - GHSA-57gh-m6rq-54cf
+summary: |
+  OpenClaw: Self-`Whitelist`ing in appendLocalMediaParentRoots Allows Arbitrary File Read & Credential Exfiltration
+  Media Local Roots Self-`Whitelist`ing in `appendLocalMediaParentRoots` Allows Model-Initiated Arbitrary Host File Read and Credential Exfiltration
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.3.31
+    fixed_versions: vers:npm/2026.3.31
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/openclaw/openclaw
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openclaw/openclaw
+        commit: 1ca4261d7e055d0be141ed79ebb1365d0fbc7364
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-57gh-m6rq-54cf.yml
+weaknesses:
+  - CWE-552
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/1ca4261d7e055d0be141ed79ebb1365d0fbc7364
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-57gh-m6rq-54cf
+    reference_type:
+    reference_id: GHSA-57gh-m6rq-54cf
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-57gh-m6rq-54cf
+    reference_type:
+    reference_id: GHSA-57gh-m6rq-54cf

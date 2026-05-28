@@ -1,0 +1,33 @@
+advisory_id: npm/flowise-components/GHSA-9hrv-gvrv-6gf2
+datasource_id: gitlab/npm/flowise-components/GHSA-9hrv-gvrv-6gf2
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/flowise-components/GHSA-9hrv-gvrv-6gf2.yml
+aliases:
+  - GHSA-9hrv-gvrv-6gf2
+summary: |
+  Flowise Execute Flow function has an SSRF vulnerability
+  The attacker provides an intranet address through the base url field configured in the Execute Flow node
+  → Bypass checkDenyList / resolveAndValidate in httpSecurity.ts (not called)
+  → Causes the server to initiate an HTTP request to any internal network address, read cloud metadata, or detect internal network services
+impacted_packages:
+  - purl: pkg:npm/flowise-components
+    affected_versions: vers:npm/<3.1.0
+    fixed_versions: vers:npm/3.1.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:L/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/flowise-components/GHSA-9hrv-gvrv-6gf2.yml
+weaknesses:
+  - CWE-1035
+  - CWE-918
+  - CWE-937
+references:
+  - url: https://github.com/advisories/GHSA-9hrv-gvrv-6gf2
+    reference_type:
+    reference_id: GHSA-9hrv-gvrv-6gf2
+  - url: https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-9hrv-gvrv-6gf2
+    reference_type:
+    reference_id: GHSA-9hrv-gvrv-6gf2

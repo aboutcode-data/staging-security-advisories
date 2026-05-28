@@ -1,0 +1,50 @@
+advisory_id: npm/@angular/platform-server/GHSA-45q2-gjvg-7973
+datasource_id: gitlab/npm/@angular/platform-server/GHSA-45q2-gjvg-7973
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/@angular/platform-server/GHSA-45q2-gjvg-7973.yml
+aliases:
+  - GHSA-45q2-gjvg-7973
+summary: |
+  Angular: SSRF via protocol-relative and backslash URLs in Angular Platform-Server
+  A [Server-Side Request Forgery (SSRF)](https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/SSRF) vulnerability exists in `@angular/platform-server` due to improper handling of URLs during Server-Side Rendering (SSR).
+
+  When an attacker sends a request such as `GET /\evil.com/ HTTP/1.1` the server engine (Express, etc.) passes the URL string to Angular’s rendering functions.
+
+  Because the URL parser normalizes the backslash to a forward slash for HTTP/HTTPS schemes, the internal state of the application is hijacked to believe the current origin is `evil.com`. This misinterpretation tricks the application into treating the attacker’s domain as the local origin. Consequently, any relative `HttpClient` requests or `PlatformLocation.hostname` references are redirected to the attacker controlled server, potentially exposing internal APIs or metadata services.
+
+  **Affected APIs:**
+  - `renderModule`
+  - `renderApplication`
+  - `CommonEngine` (from `@angular/ssr`)
+
+  **Non-Affected APIs:**
+  - `AngularAppEngine` (from `@angular/ssr`)
+  - `AngularNodeAppEngine` (from `@angular/ssr`)
+impacted_packages:
+  - purl: pkg:npm/%40angular/platform-server
+    affected_versions: vers:npm/<=18.2.14|>=19.0.0-next.0|<19.2.21|>=20.0.0-next.0|<20.3.19|>=21.0.0-next.0|<21.2.9|>=22.0.0-next.0|<22.0.0-next.8
+    fixed_versions: vers:npm/19.2.21|20.3.19|21.2.9|22.0.0-next.8
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/@angular/platform-server/GHSA-45q2-gjvg-7973.yml
+weaknesses:
+  - CWE-1035
+  - CWE-918
+  - CWE-937
+references:
+  - url: https://github.com/angular/angular
+    reference_type:
+    reference_id:
+  - url: https://github.com/angular/angular/pull/68194
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-45q2-gjvg-7973
+    reference_type:
+    reference_id: GHSA-45q2-gjvg-7973
+  - url: https://github.com/angular/angular/security/advisories/GHSA-45q2-gjvg-7973
+    reference_type:
+    reference_id: GHSA-45q2-gjvg-7973

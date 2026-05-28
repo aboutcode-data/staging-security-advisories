@@ -1,0 +1,42 @@
+advisory_id: npm/openclaw/GHSA-rm5c-4rmf-vvhw
+datasource_id: gitlab/npm/openclaw/GHSA-rm5c-4rmf-vvhw
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-rm5c-4rmf-vvhw.yml
+aliases:
+  - GHSA-rm5c-4rmf-vvhw
+summary: |
+  OpenClaw: Sandbox file operations use check-then-act, bypassing fd-based TOCTOU defenses
+  Sandbox file operations use check-then-act, bypassing fd-based TOCTOU defenses
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.3.31
+    fixed_versions: vers:npm/2026.3.31
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/openclaw/openclaw
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openclaw/openclaw
+        commit: 32a4a47d602e0618f87b3e59f94d8c142767f860
+    introduced_in_commits: []
+severities: []
+weaknesses:
+  - CWE-367
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/32a4a47d602e0618f87b3e59f94d8c142767f860
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/releases/tag/v2026.3.31
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-rm5c-4rmf-vvhw
+    reference_type:
+    reference_id: GHSA-rm5c-4rmf-vvhw
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-rm5c-4rmf-vvhw
+    reference_type:
+    reference_id: GHSA-rm5c-4rmf-vvhw
