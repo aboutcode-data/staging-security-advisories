@@ -1,0 +1,37 @@
+advisory_id: GHSA-gxhx-2686-5h9g
+datasource_id: github_osv/GHSA-gxhx-2686-5h9g
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-gxhx-2686-5h9g/GHSA-gxhx-2686-5h9g.json
+aliases: []
+summary: |
+  slack-go `SecretsVerifier` accepts empty signing secret without precondition
+  ```go
+  func NewSecretsVerifier(header http.Header, secret string) (SecretsVerifier, error) {
+      hash := hmac.New(sha256.New, []byte(secret))    // raw secret, no precondition
+  }
+  ```
+impacted_packages: []
+severities:
+  - score: '4.8'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:H/VA:N/SC:N/SI:N/SA:N/E:U
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-gxhx-2686-5h9g/GHSA-gxhx-2686-5h9g.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-1391
+  - CWE-287
+  - CWE-326
+references:
+  - url: https://github.com/slack-go/slack
+    reference_type:
+    reference_id:
+  - url: https://github.com/slack-go/slack/releases/tag/v0.23.1
+    reference_type:
+    reference_id:
+  - url: https://github.com/slack-go/slack/security/advisories/GHSA-gxhx-2686-5h9g
+    reference_type:
+    reference_id:

@@ -1,0 +1,53 @@
+advisory_id: GHSA-j7v9-f46r-2rp4
+datasource_id: github_osv/GHSA-j7v9-f46r-2rp4
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-j7v9-f46r-2rp4/GHSA-j7v9-f46r-2rp4.json
+aliases:
+  - CVE-2026-41897
+summary: |
+  MantisBT is Vulnerable to Reflected XSS in Rendering Dynamic Custom Textarea Field
+  Lack of validation of filter_target parameter on return_dynamic_filters.php (normally used as an AJAX in View Issues Page) allows an attacker to inject arbitrary HTML if the target is a TEXTAREA custom field.
+
+  ### Impact
+  Cross-site scripting (XSS)
+
+  ### Patches
+  - c885af13f0b8596714ffe11df757c09f35fbd8f4
+
+  ### Workarounds
+  None
+
+  ### Credits
+
+  Thanks to siunam (Tang Cheuk Hei) for discovering and responsibly reporting the issue.
+impacted_packages:
+  - purl: pkg:composer/mantisbt/mantisbt
+    affected_versions: vers:composer/>=1.0.0|<2.28.2
+    fixed_versions: vers:composer/2.28.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-j7v9-f46r-2rp4/GHSA-j7v9-f46r-2rp4.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-79
+references:
+  - url: https://github.com/mantisbt/mantisbt
+    reference_type:
+    reference_id:
+  - url: https://github.com/mantisbt/mantisbt/commit/c885af13f0b8596714ffe11df757c09f35fbd8f4
+    reference_type:
+    reference_id:
+  - url: https://github.com/mantisbt/mantisbt/security/advisories/GHSA-j7v9-f46r-2rp4
+    reference_type:
+    reference_id:
+  - url: https://mantisbt.org/bugs/view.php?id=37013
+    reference_type:
+    reference_id:

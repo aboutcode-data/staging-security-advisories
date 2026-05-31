@@ -1,0 +1,59 @@
+advisory_id: GHSA-q4p8-8j9m-8hxj
+datasource_id: github_osv/GHSA-q4p8-8j9m-8hxj
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-q4p8-8j9m-8hxj/GHSA-q4p8-8j9m-8hxj.json
+aliases:
+  - CVE-2026-43943
+summary: "Electerm Security Vulnerability: RCE via malicious SSH server filename in openFileWithEditor\n\
+  ### Impact\n\nA code execution (RCE) vulnerability exists in electerm's SFTP open with system\
+  \ editor or \"Edit with custom editor\" feature. When a user opts to edit a file using open\
+  \ with system editor or open with a custom editor, the filename is passed directly into a\
+  \ command line without sanitization.\n\nA malicious actor controlling the SSH server or user\
+  \ OS can exploit this by crafting a filename containing shell metacharacters. If a victim\
+  \ subsequently attempts to edit this file, the injected commands are executed on their machine\
+  \ with the user's privileges. This could allow the attacker to run arbitrary code, install\
+  \ malware, or move laterally within the network.\n\n<img width=\"1792\" height=\"817\" alt=\"\
+  1\" src=\"https://github.com/user-attachments/assets/ddf78890-e95d-4fe7-981e-f86887677e8b\"\
+  \ />\n<img width=\"1648\" height=\"941\" alt=\"2\" src=\"https://github.com/user-attachments/assets/cca2295b-2053-4d99-a464-be51eac2f5be\"\
+  \ />\n\n### Patches\n\nFixed in version >= 3.7.9\n\n- https://github.com/electerm/electerm/commit/24ce7103e264cffe6eb5476c0506a2379e6f8333\n\
+  \n### Workarounds\n\nUntil a patch is available, it is strongly recommended to:  \n- Refrain\
+  \ from using the open with system editor  or \"Edit with custom editor\" feature when connected\
+  \ to untrusted or unfamiliar SSH servers.  \n- Consider using the built-in editor for viewing\
+  \ files, as this path may not be vulnerable to the same injection.  \n- If the feature must\
+  \ be used, ensure connections are exclusively established with trusted servers and perform\
+  \ rigorous filename validation before editing.\n\n### Resources\n\n- [electerm GitHub Repository](https://github.com/electerm/electerm)"
+impacted_packages:
+  - purl: pkg:npm/electerm
+    affected_versions: vers:npm/<=3.7.8
+    fixed_versions: vers:npm/3.7.9
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.8'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-q4p8-8j9m-8hxj/GHSA-q4p8-8j9m-8hxj.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-88
+  - CWE-78
+references:
+  - url: https://github.com/electerm/electerm
+    reference_type:
+    reference_id:
+  - url: https://github.com/electerm/electerm/commit/24ce7103e264cffe6eb5476c0506a2379e6f8333
+    reference_type:
+    reference_id:
+  - url: https://github.com/electerm/electerm/releases/tag/v3.7.9
+    reference_type:
+    reference_id:
+  - url: https://github.com/electerm/electerm/security/advisories/GHSA-q4p8-8j9m-8hxj
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-43943
+    reference_type:
+    reference_id:
