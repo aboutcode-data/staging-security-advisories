@@ -1,0 +1,48 @@
+advisory_id: GHSA-w7rc-q6cm-f5gm
+datasource_id: github_osv/GHSA-w7rc-q6cm-f5gm
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-w7rc-q6cm-f5gm/GHSA-w7rc-q6cm-f5gm.json
+aliases:
+  - CVE-2026-40690
+summary: |
+  Apache Airflow's asset dependency graph did not restrict nodes by the viewer's DAG read permissions
+  The asset dependency graph did not restrict nodes by the viewer's DAG read permissions: a user with read access to at least one DAG could browse the asset graph for any other asset in the deployment and learn the existence and names of DAGs and assets outside their authorized scope.
+
+  Users are recommended to upgrade to version 3.2.1, which fixes this issue.
+impacted_packages:
+  - purl: pkg:pypi/apache-airflow
+    affected_versions: vers:pypi/<3.2.1rc1
+    fixed_versions: vers:pypi/3.2.1rc1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '4.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-w7rc-q6cm-f5gm/GHSA-w7rc-q6cm-f5gm.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-1220
+references:
+  - url: https://github.com/apache/airflow
+    reference_type:
+    reference_id:
+  - url: https://github.com/apache/airflow/commit/cf3452d76e2ef5a8bae247f9fc90c759ff9df02f
+    reference_type:
+    reference_id:
+  - url: https://github.com/apache/airflow/pull/65273
+    reference_type:
+    reference_id:
+  - url: https://lists.apache.org/thread/bqt7y4g2cpj396b0sd20lv510ff19ndl
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-40690
+    reference_type:
+    reference_id:
+  - url: http://www.openwall.com/lists/oss-security/2026/04/24/4
+    reference_type:
+    reference_id:

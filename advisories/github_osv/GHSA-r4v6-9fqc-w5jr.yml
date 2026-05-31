@@ -1,0 +1,60 @@
+advisory_id: GHSA-r4v6-9fqc-w5jr
+datasource_id: github_osv/GHSA-r4v6-9fqc-w5jr
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-r4v6-9fqc-w5jr/GHSA-r4v6-9fqc-w5jr.json
+aliases:
+  - CVE-2026-42226
+summary: |
+  n8n's Credential Authorization Bypass in dynamic-node-parameters Allows Foreign API Key Replay
+  ## Impact
+  The `dynamic-node-parameters` endpoints did not verify whether the authenticated caller was authorized to use a supplied credential reference. An authenticated user with access to a shared workflow could supply a foreign credential ID in the request body, causing the backend to decrypt and use that credential in a helper execution path where the caller also controls the destination URL. This allowed the caller to force the backend to authenticate against attacker-controlled infrastructure using a credential belonging to another user, effectively exfiltrating a reusable API key.
+
+  The issue is not limited to any single node type; any node that resolves credentials dynamically through these endpoints may be affected.
+
+  ## Patches
+  The issue has been fixed in n8n version 2.18.0. Users should upgrade to this version or later to remediate the vulnerability.
+
+  ## Workarounds
+  If upgrading is not immediately possible, administrators should consider the following temporary mitigations:
+  - Restrict n8n access to fully trusted users only.
+  - Avoid sharing workflows with users who should not have access to the credentials those workflows reference.
+
+  These workarounds do not fully remediate the risk and should only be used as short-term mitigation measures.
+impacted_packages:
+  - purl: pkg:npm/n8n
+    affected_versions: vers:npm/>=2.17.0|<2.17.5
+    fixed_versions: vers:npm/2.17.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/n8n
+    affected_versions: vers:npm/<1.123.33
+    fixed_versions: vers:npm/1.123.33
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:L
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-r4v6-9fqc-w5jr/GHSA-r4v6-9fqc-w5jr.json
+  - score: '7.1'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:L/SC:L/SI:L/SA:L
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-r4v6-9fqc-w5jr/GHSA-r4v6-9fqc-w5jr.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-862
+references:
+  - url: https://github.com/n8n-io/n8n
+    reference_type:
+    reference_id:
+  - url: https://github.com/n8n-io/n8n/security/advisories/GHSA-r4v6-9fqc-w5jr
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-42226
+    reference_type:
+    reference_id:

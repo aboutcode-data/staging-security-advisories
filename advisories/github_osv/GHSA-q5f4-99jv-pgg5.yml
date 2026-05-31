@@ -1,0 +1,67 @@
+advisory_id: GHSA-q5f4-99jv-pgg5
+datasource_id: github_osv/GHSA-q5f4-99jv-pgg5
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-q5f4-99jv-pgg5/GHSA-q5f4-99jv-pgg5.json
+aliases:
+  - CVE-2026-42231
+summary: |
+  n8n has Prototype Pollution in XML Webhook Body Parser that Leads to RCE
+  ## Impact
+  A flaw in the `xml2js` library used to parse XML request bodies in n8n's webhook handler allowed prototype pollution via a crafted XML payload. An authenticated user with permission to create or modify workflows could exploit this to pollute the JavaScript object prototype and, by chaining the pollution with the Git node's SSH operations, achieve remote code execution on the n8n host.
+
+  ## Patches
+  The issue has been fixed in n8n versions 1.123.32, 2.17.4, and 2.18.1. Users should upgrade to one of these versions or later to remediate the vulnerability.
+
+  ## Workarounds
+  If upgrading is not immediately possible, administrators should consider the following temporary mitigations:
+  - Limit workflow creation and editing permissions to fully trusted users only.
+
+  These workarounds do not fully remediate the risk and should only be used as short-term mitigation measures.
+
+  ---
+  n8n has adopted CVSS 4.0 as primary score for all security advisories. CVSS 3.1 vector strings are provided for backwards compatibility.
+
+  CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
+impacted_packages:
+  - purl: pkg:npm/n8n
+    affected_versions: vers:npm/<1.123.32
+    fixed_versions: vers:npm/1.123.32
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/n8n
+    affected_versions: vers:npm/>=2.18.0|<2.18.1
+    fixed_versions: vers:npm/2.18.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/n8n
+    affected_versions: vers:npm/>=2.17.0|<2.17.4
+    fixed_versions: vers:npm/2.17.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '10.0'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-q5f4-99jv-pgg5/GHSA-q5f4-99jv-pgg5.json
+  - score: '10.0'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-q5f4-99jv-pgg5/GHSA-q5f4-99jv-pgg5.json
+  - score: CRITICAL
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-1321
+references:
+  - url: https://github.com/n8n-io/n8n
+    reference_type:
+    reference_id:
+  - url: https://github.com/n8n-io/n8n/security/advisories/GHSA-q5f4-99jv-pgg5
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-42231
+    reference_type:
+    reference_id:

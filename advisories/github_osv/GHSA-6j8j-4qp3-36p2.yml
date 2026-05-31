@@ -1,0 +1,53 @@
+advisory_id: GHSA-6j8j-4qp3-36p2
+datasource_id: github_osv/GHSA-6j8j-4qp3-36p2
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-6j8j-4qp3-36p2/GHSA-6j8j-4qp3-36p2.json
+aliases:
+  - CVE-2026-41519
+summary: |
+  Weblate Doesn't Invalidate API Token on Password Change
+  ### Impact
+  When a user changes their password, browser sessions are correctly invalidated via `cycle_session_keys()`, but DRF API tokens (`wlu_*` prefix) stored in `authtoken_token` are not revoked.
+
+  ### Patches
+  * https://github.com/WeblateOrg/weblate/pull/19057
+
+  ### Resources
+  Weblate thanks Sang Yu Jeon for reporting this via GitHub.
+impacted_packages:
+  - purl: pkg:pypi/weblate
+    affected_versions: vers:pypi/<5.17.1
+    fixed_versions: vers:pypi/5.17.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '4.2'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-6j8j-4qp3-36p2/GHSA-6j8j-4qp3-36p2.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-613
+references:
+  - url: https://github.com/WeblateOrg/weblate
+    reference_type:
+    reference_id:
+  - url: https://github.com/WeblateOrg/weblate/commit/649a2da81700542f95c0807b3c625fc3bb0eaf95
+    reference_type:
+    reference_id:
+  - url: https://github.com/WeblateOrg/weblate/pull/19057
+    reference_type:
+    reference_id:
+  - url: https://github.com/WeblateOrg/weblate/releases/tag/weblate-5.17.1
+    reference_type:
+    reference_id:
+  - url: https://github.com/WeblateOrg/weblate/security/advisories/GHSA-6j8j-4qp3-36p2
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-41519
+    reference_type:
+    reference_id:
