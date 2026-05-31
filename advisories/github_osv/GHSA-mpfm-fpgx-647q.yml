@@ -1,0 +1,52 @@
+advisory_id: GHSA-mpfm-fpgx-647q
+datasource_id: github_osv/GHSA-mpfm-fpgx-647q
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-mpfm-fpgx-647q/GHSA-mpfm-fpgx-647q.json
+aliases:
+  - CVE-2026-41132
+summary: |
+  CKAN has no certificate validation on STMP connection
+  ### Impact
+  Configured SMTP server may be spoofed with any certificate (e.g. self-signed), leaving credentials and all emails sent open to MITM attacks.
+
+  ### Patches
+  The vulnerability has been patched in CKAN 2.10.10 and CKAN 2.11.5
+impacted_packages:
+  - purl: pkg:pypi/ckan
+    affected_versions: vers:pypi/<=2.11.4
+    fixed_versions: vers:pypi/2.11.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/ckan
+    affected_versions: vers:pypi/<2.10.10
+    fixed_versions: vers:pypi/2.10.10
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.6'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:U
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-mpfm-fpgx-647q/GHSA-mpfm-fpgx-647q.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-295
+references:
+  - url: https://docs.ckan.org/en/2.10/changelog.html#v-2-10-10-2026-04-29
+    reference_type:
+    reference_id:
+  - url: https://docs.ckan.org/en/2.11/changelog.html#v-2-11-5-2026-04-29
+    reference_type:
+    reference_id:
+  - url: https://github.com/ckan/ckan
+    reference_type:
+    reference_id:
+  - url: https://github.com/ckan/ckan/security/advisories/GHSA-mpfm-fpgx-647q
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-41132
+    reference_type:
+    reference_id:
