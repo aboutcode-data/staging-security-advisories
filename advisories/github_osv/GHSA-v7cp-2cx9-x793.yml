@@ -1,0 +1,76 @@
+advisory_id: GHSA-v7cp-2cx9-x793
+datasource_id: github_osv/GHSA-v7cp-2cx9-x793
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-v7cp-2cx9-x793/GHSA-v7cp-2cx9-x793.json
+aliases:
+  - CVE-2026-41895
+summary: |
+  changedetection.io project has an XXE vulnerability
+  # changedetection.io_XXE_01 Vulnerability Report: We discovered a XXE vulnerability in the changedetection.io project
+
+  While analyzing the code logic, it was determined that an area may lead to unintended behavior under specific conditions. With the project's security in mind, see the analysis results to discern whether this may indicate a potential security risk.
+
+  ## Overview
+  - SOURCE_VERSION: `0.54.9 (9f3a9fdc18bba404244801e5df8109e213ce9ff4)`
+  - Vulnerability type: `XXE`
+  - Finding title: `XML XPath helpers parse untrusted XML with entity resolution left to lxml defaults`
+  - Affected location: `changedetectionio/html_tools.py:287`
+
+  ## Root Cause
+  `xpath_filter()` switches to XML mode for XML/RSS content and creates `etree.XMLParser(strip_cdata=False)` without explicitly disabling external entity resolution, external DTD loading, or network-backed entity lookup. The helper then parses untrusted XML bytes directly with `etree.fromstring(...)`.
+
+  ## Source-to-Sink Chain
+  1. Untrusted XML/RSS response content is fetched from monitored URLs.
+  2. Stream detection marks the content as XML/RSS and the include-filter path invokes `xpath_filter(..., is_xml=True)`.
+  3. `xpath_filter()` builds the default XML parser and calls `etree.fromstring(...)` at `changedetectionio/html_tools.py:287`.
+  4. External entity declarations in attacker XML can be expanded by parser-default behavior in affected runtime combinations.
+
+  ## Exploitation Preconditions
+  1. Attacker controls the watched XML/RSS response body.
+  2. The watch uses an XPath include filter that triggers XML helper parsing.
+  3. Runtime parser behavior allows external entity expansion (for example, vulnerable dependency/default combinations).
+  4. The process can read the referenced local resource.
+
+  ## Risk
+  The XML helper path can turn watch processing into a local file disclosure primitive when entity expansion is enabled by parser defaults.
+
+  ## Impact
+  Sensitive local files can be exposed into extracted watch output, diff history, and downstream notification channels.
+
+  ## Remediation
+  1. Harden XML parser construction with `resolve_entities=False`, `load_dtd=False`, and `no_network=True`.
+  2. Reject `DOCTYPE`/entity declarations for untrusted XML if DTD features are unnecessary.
+  3. Add regression tests that assert external entities are never expanded in XPath XML helper flows.
+impacted_packages:
+  - purl: pkg:pypi/changedetection.io
+    affected_versions: vers:pypi/<=0.54.9
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-v7cp-2cx9-x793/GHSA-v7cp-2cx9-x793.json
+  - score: '8.2'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-v7cp-2cx9-x793/GHSA-v7cp-2cx9-x793.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-611
+references:
+  - url: https://github.com/dgtlmoon/changedetection.io
+    reference_type:
+    reference_id:
+  - url: https://github.com/dgtlmoon/changedetection.io/security/advisories/GHSA-v7cp-2cx9-x793
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-41895
+    reference_type:
+    reference_id:

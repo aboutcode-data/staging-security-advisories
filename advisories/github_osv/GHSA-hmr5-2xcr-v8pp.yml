@@ -1,0 +1,83 @@
+advisory_id: GHSA-hmr5-2xcr-v8pp
+datasource_id: github_osv/GHSA-hmr5-2xcr-v8pp
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-hmr5-2xcr-v8pp/GHSA-hmr5-2xcr-v8pp.json
+aliases:
+  - CVE-2026-45072
+summary: "Symfony Vulnerable to stored XSS in WebProfiler CodeExtension::fileExcerpt() — Unescaped\
+  \ Non-PHP File Rendering\n### Description\n\nSymfony's profiler, a development only debug\
+  \ UI, renders source-code excerpts on several pages using Twig's custom `file_excerpt` filter.\
+  \ This filter renders PHP files via `highlight_string()` (which escapes HTML), but renders\
+  \ **non-PHP files** by splitting on `\\n` and interpolating each line directly into `<code>{$line}</code>`\
+  \ with no escaping. \n\nAn attacker who can write arbitrary bytes into any file under the\
+  \ project root (including e.g. `var/log/dev.log`), achieves **stored XSS** against any developer\
+  \ who later opens that file in the profiler.\n\n### Resolution\n\nThe `file_excerpt` filter\
+  \ now properly escapes each line of non-PHP files using `htmlspecialchars()` before concatenating\
+  \ them.\n\nThe patch for this issue is available [here](https://github.com/symfony/symfony/commit/863aa81c61166f1aa74b7732df316f76113acbdb)\
+  \ for branch 6.4.\n\n### Credits\n\nSymfony would like to thank Claude Mythos Preview (via\
+  \ Project Glasswing) for reporting the issue and providing the fix."
+impacted_packages:
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=6.4.24|<6.4.40
+    fixed_versions: vers:composer/6.4.40
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=7.2.9|<7.4.12
+    fixed_versions: vers:composer/7.4.12
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=8.0.0|<8.0.12
+    fixed_versions: vers:composer/8.0.12
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/twig-bridge
+    affected_versions: vers:composer/>=6.4.24|<6.4.40
+    fixed_versions: vers:composer/6.4.40
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/web-profiler-bundle
+    affected_versions: vers:composer/>=7.2.9|<7.4.12
+    fixed_versions: vers:composer/7.4.12
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/web-profiler-bundle
+    affected_versions: vers:composer/>=8.0.0|<8.0.12
+    fixed_versions: vers:composer/8.0.12
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '1.2'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:U
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-hmr5-2xcr-v8pp/GHSA-hmr5-2xcr-v8pp.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-79
+references:
+  - url: https://github.com/FriendsOfPHP/security-advisories/blob/master/symfony/symfony/CVE-2026-45072.yaml
+    reference_type:
+    reference_id:
+  - url: https://github.com/FriendsOfPHP/security-advisories/blob/master/symfony/twig-bridge/CVE-2026-45072.yaml
+    reference_type:
+    reference_id:
+  - url: https://github.com/FriendsOfPHP/security-advisories/blob/master/symfony/web-profiler-bundle/CVE-2026-45072.yaml
+    reference_type:
+    reference_id:
+  - url: https://github.com/symfony/symfony
+    reference_type:
+    reference_id:
+  - url: https://github.com/symfony/symfony/commit/863aa81c61166f1aa74b7732df316f76113acbdb
+    reference_type:
+    reference_id:
+  - url: https://github.com/symfony/symfony/security/advisories/GHSA-hmr5-2xcr-v8pp
+    reference_type:
+    reference_id:
+  - url: https://symfony.com/cve-2026-45072
+    reference_type:
+    reference_id:

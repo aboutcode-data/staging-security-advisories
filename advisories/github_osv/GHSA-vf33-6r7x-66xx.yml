@@ -6,27 +6,12 @@ summary: |
   ImageMagick: Division by Zero in binomial kernel
   An user supplied large binomial kernel could result in an overflow that would lead to a division by zero.
 impacted_packages:
-  - purl: pkg:nuget/Magick.NET-Q16-x64
+  - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
     affected_versions: vers:nuget/<14.12.0
     fixed_versions: vers:nuget/14.12.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-x86
-    affected_versions: vers:nuget/<14.12.0
-    fixed_versions: vers:nuget/14.12.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q8-AnyCPU
-    affected_versions: vers:nuget/<14.12.0
-    fixed_versions: vers:nuget/14.12.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q8-x64
-    affected_versions: vers:nuget/<14.12.0
-    fixed_versions: vers:nuget/14.12.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q8-x86
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-AnyCPU
     affected_versions: vers:nuget/<14.12.0
     fixed_versions: vers:nuget/14.12.0
     fixed_in_commits: []
@@ -37,6 +22,16 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-HDRI-arm64
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-x64
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-x86
     affected_versions: vers:nuget/<14.12.0
     fixed_versions: vers:nuget/14.12.0
     fixed_in_commits: []
@@ -56,6 +51,21 @@ impacted_packages:
     fixed_versions: vers:nuget/14.12.0
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-x64
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-x86
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q8-AnyCPU
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q8-OpenMP-arm64
     affected_versions: vers:nuget/<14.12.0
     fixed_versions: vers:nuget/14.12.0
@@ -71,22 +81,12 @@ impacted_packages:
     fixed_versions: vers:nuget/14.12.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
+  - purl: pkg:nuget/Magick.NET-Q8-x64
     affected_versions: vers:nuget/<14.12.0
     fixed_versions: vers:nuget/14.12.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-HDRI-AnyCPU
-    affected_versions: vers:nuget/<14.12.0
-    fixed_versions: vers:nuget/14.12.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-HDRI-x64
-    affected_versions: vers:nuget/<14.12.0
-    fixed_versions: vers:nuget/14.12.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-HDRI-x86
+  - purl: pkg:nuget/Magick.NET-Q8-x86
     affected_versions: vers:nuget/<14.12.0
     fixed_versions: vers:nuget/14.12.0
     fixed_in_commits: []
@@ -103,8 +103,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-190
   - CWE-369
+  - CWE-190
 references:
   - url: https://github.com/ImageMagick/ImageMagick
     reference_type:

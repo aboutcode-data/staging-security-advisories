@@ -1,0 +1,54 @@
+advisory_id: GHSA-5x9h-93gp-chpj
+datasource_id: github_osv/GHSA-5x9h-93gp-chpj
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-5x9h-93gp-chpj/GHSA-5x9h-93gp-chpj.json
+aliases:
+  - CVE-2026-42509
+summary: |
+  Apache Wicket has a Cross-site Scripting issue
+  Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Apache Wicket.
+
+  This issue affects Apache Wicket: from 8.0.0 through 8.17.0, 9.0.0, from 10.0.0 through 10.8.0.
+
+  Users are recommended to upgrade to version 10.9.0, which fixes the issue.
+impacted_packages:
+  - purl: pkg:maven/org.apache.wicket/wicket-parent
+    affected_versions: vers:maven/>=8.0.0-M1|<=8.17.0
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.wicket/wicket-parent
+    affected_versions: vers:maven/>=9.0.0-M1|<=9.22.0
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.wicket/wicket-parent
+    affected_versions: vers:maven/<=10.8.0
+    fixed_versions: vers:maven/10.9.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.1'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-5x9h-93gp-chpj/GHSA-5x9h-93gp-chpj.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-79
+references:
+  - url: https://github.com/apache/wicket
+    reference_type:
+    reference_id:
+  - url: https://lists.apache.org/thread/52nrq4tt07gxz4r6sj5gyocz5s6bprjp
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-42509
+    reference_type:
+    reference_id:
+  - url: http://www.openwall.com/lists/oss-security/2026/05/06/2
+    reference_type:
+    reference_id:

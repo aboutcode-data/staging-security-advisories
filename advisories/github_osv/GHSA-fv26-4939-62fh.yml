@@ -1,0 +1,77 @@
+advisory_id: GHSA-fv26-4939-62fh
+datasource_id: github_osv/GHSA-fv26-4939-62fh
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-fv26-4939-62fh/GHSA-fv26-4939-62fh.json
+aliases:
+  - CVE-2026-42569
+summary: |
+  phpVMS has an /importer authorization bypass causing full database wipe
+  # Security Advisory: Unauthenticated Access to Legacy Import Feature
+
+  **Severity:** Critical
+  **Affected versions:** phpVMS 7.x (up to 7.0.5)
+  **Fixed in:** v7.0.6
+  **Component:** Legacy importer
+
+  ## Summary
+
+  A critical vulnerability in phpVMS 7.x allowed unauthenticated access to a legacy import feature. Although this feature is deprecated, parts of it remained accessible and operational.
+
+  ## Impact
+
+  A remote attacker could trigger internal processes that modify or delete application data, potentially resulting in:
+
+  - Data loss
+  - Service disruption
+
+  No authentication was required.
+
+  ## Remediation
+
+  - **Update immediately** to [the latest patched version](https://github.com/phpvms/phpvms/releases/tag/7.0.7)
+  - If unable to update:
+    - The release link has instructions on how to fix it (it's a one-line fix to comment out the routes)
+
+  ## Affected Versions
+
+  * Affected: phpVMS 7.x ≤ 7.0.5
+  * Not affected: phpVMS >= 7.0.6, v8 (feature removed from public access)
+impacted_packages:
+  - purl: pkg:composer/nabeel/phpvms
+    affected_versions: vers:composer/<7.0.6
+    fixed_versions: vers:composer/7.0.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '9.4'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-fv26-4939-62fh/GHSA-fv26-4939-62fh.json
+  - score: CRITICAL
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-306
+  - CWE-284
+  - CWE-862
+references:
+  - url: https://github.com/phpvms/phpvms
+    reference_type:
+    reference_id:
+  - url: https://github.com/phpvms/phpvms/commit/f59ba8e0e8fc25c60c3faf14e526cfd49df3f7dc
+    reference_type:
+    reference_id:
+  - url: https://github.com/phpvms/phpvms/releases/tag/7.0.6
+    reference_type:
+    reference_id:
+  - url: https://github.com/phpvms/phpvms/releases/tag/7.0.7
+    reference_type:
+    reference_id:
+  - url: https://github.com/phpvms/phpvms/security/advisories/GHSA-fv26-4939-62fh
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-42569
+    reference_type:
+    reference_id:

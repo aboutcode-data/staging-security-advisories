@@ -1,0 +1,37 @@
+advisory_id: GHSA-cgx8-qgvr-f7vf
+datasource_id: github_osv/GHSA-cgx8-qgvr-f7vf
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-cgx8-qgvr-f7vf/GHSA-cgx8-qgvr-f7vf.json
+aliases:
+  - CVE-2026-31245
+summary: |
+  mem0 server lacks authentication and authorization controls for its memory creation API endpoint
+  The mem0 1.0.0 server lacks authentication and authorization controls for its memory creation API endpoint (POST /memories). The endpoint allows unauthenticated users to submit arbitrary memory records without verifying their identity or permissions. A remote attacker can exploit this by sending unauthenticated POST requests to create malicious or spoofed memory entries in the database, leading to unauthorized data injection and potential data pollution.
+impacted_packages:
+  - purl: pkg:pypi/mem0ai
+    affected_versions: vers:pypi/<=1.0.0
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-cgx8-qgvr-f7vf/GHSA-cgx8-qgvr-f7vf.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-306
+references:
+  - url: https://github.com/mem0ai/mem0
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-31245
+    reference_type:
+    reference_id:
+  - url: https://www.notion.so/CVE-2026-31245-35d1e1393188810aab57ff9b49146b05
+    reference_type:
+    reference_id:

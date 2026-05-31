@@ -1,0 +1,48 @@
+advisory_id: GHSA-6f72-9gxx-98mj
+datasource_id: github_osv/GHSA-6f72-9gxx-98mj
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-6f72-9gxx-98mj/GHSA-6f72-9gxx-98mj.json
+aliases: []
+summary: |
+  Duplicate Advisory: OpenClaw: OpenShell FS bridge writes stay pinned to the sandbox mount root
+  ### Duplicate Advisory
+  This advisory has been withdrawn because it is a duplicate of GHSA-wppj-c6mr-83jj. This link is maintained to preserve external references.
+
+  ### Original Description
+  OpenClaw before 2026.4.22 contains a time-of-check/time-of-use race condition in OpenShell sandbox filesystem writes that allows attackers to redirect writes outside the intended mount root. Attackers can exploit symlink swaps during filesystem operations to bypass sandbox restrictions and write files outside the local mount root.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.4.22
+    fixed_versions: vers:npm/2026.4.22
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-6f72-9gxx-98mj/GHSA-6f72-9gxx-98mj.json
+  - score: '6.0'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:H/AT:P/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-6f72-9gxx-98mj/GHSA-6f72-9gxx-98mj.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-367
+references:
+  - url: https://github.com/openclaw/openclaw/commit/7be82d4fd1193bcb7e44ee38838f00bf924ffa76
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-wppj-c6mr-83jj
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-44112
+    reference_type:
+    reference_id:
+  - url: https://www.vulncheck.com/advisories/openclaw-symlink-swap-race-condition-in-openshell-fs-bridge-writes
+    reference_type:
+    reference_id:

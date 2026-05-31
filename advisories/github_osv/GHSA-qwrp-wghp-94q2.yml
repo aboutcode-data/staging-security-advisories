@@ -1,0 +1,40 @@
+advisory_id: GHSA-qwrp-wghp-94q2
+datasource_id: github_osv/GHSA-qwrp-wghp-94q2
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-qwrp-wghp-94q2/GHSA-qwrp-wghp-94q2.json
+aliases:
+  - CVE-2026-7302
+summary: |
+  SGLang's multimodal generation runtime has an unauthenticated path traversal vulnerability
+  SGLang's multimodal generation runtime is vulnerable to an unauthenticated path traversal vulnerability, allowing an attacker to write arbitrary files anywhere the server process has write access, by including ../ sequences in the upload filename when sent to specific endpoints.
+impacted_packages:
+  - purl: pkg:pypi/sglang
+    affected_versions: vers:pypi/>=0.5.5|<=0.5.12
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '9.1'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-qwrp-wghp-94q2/GHSA-qwrp-wghp-94q2.json
+  - score: CRITICAL
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-35
+references:
+  - url: https://antiproof.ai/blog/three-rces-in-sglang
+    reference_type:
+    reference_id:
+  - url: https://github.com/sgl-project/sglang
+    reference_type:
+    reference_id:
+  - url: https://github.com/sgl-project/sglang/tree/main/python/sglang
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-7302
+    reference_type:
+    reference_id:

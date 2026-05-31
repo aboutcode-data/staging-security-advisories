@@ -1,0 +1,53 @@
+advisory_id: GHSA-6wxc-8mgq-w26m
+datasource_id: github_osv/GHSA-6wxc-8mgq-w26m
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-6wxc-8mgq-w26m/GHSA-6wxc-8mgq-w26m.json
+aliases:
+  - CVE-2026-45106
+summary: |
+  Weblate: Stored HTML injection in editor search preview
+  ### Impact
+  Weblate's live search preview renders unit `source` and `context` as HTML without escaping. Any contributor whose content reaches those fields stores HTML and CSS that runs inside the authenticated editor of every user who runs a matching search.
+
+  ### Patches
+  * https://github.com/WeblateOrg/weblate/pull/19422
+
+  ### Workarounds
+  Only the search preview on the selected views is affected.
+
+  ### Resources
+  Weblate thanks @adrgs for reporting this issue responsibly via GitHub.
+impacted_packages:
+  - purl: pkg:pypi/weblate
+    affected_versions: vers:pypi/<2026.5
+    fixed_versions: vers:pypi/2026.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '4.6'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-6wxc-8mgq-w26m/GHSA-6wxc-8mgq-w26m.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-79
+references:
+  - url: https://github.com/WeblateOrg/weblate
+    reference_type:
+    reference_id:
+  - url: https://github.com/WeblateOrg/weblate/commit/8b0adf1d0b43dfc0d09da4b878857b2288b84f2d
+    reference_type:
+    reference_id:
+  - url: https://github.com/WeblateOrg/weblate/pull/19422
+    reference_type:
+    reference_id:
+  - url: https://github.com/WeblateOrg/weblate/releases/tag/weblate-2026.5
+    reference_type:
+    reference_id:
+  - url: https://github.com/WeblateOrg/weblate/security/advisories/GHSA-6wxc-8mgq-w26m
+    reference_type:
+    reference_id:

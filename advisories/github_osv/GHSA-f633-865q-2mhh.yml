@@ -1,0 +1,45 @@
+advisory_id: GHSA-f633-865q-2mhh
+datasource_id: github_osv/GHSA-f633-865q-2mhh
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-f633-865q-2mhh/GHSA-f633-865q-2mhh.json
+aliases:
+  - CVE-2026-40607
+summary: "MantisBT is Vulnerable to Stored XSS in Saved-Filter Owner Column\nIncorrect escaping\
+  \ of a saved filter's owner allows an attacker to inject arbitrary HTML on systems where $g_show_user_realname\
+  \ = ON.\n\n### Impact\nCross-site scripting (XSS).\n\nNote that By default, only users with\
+  \ *Manager* access level or above can save their filters publicly\n\n### Patches\n- 44f490bcf20fd491c1b8f3fc9dd041d8c2a30010\n\
+  \n### Workarounds\n- Prevent display of users' real name (set `$g_ show_user_realname = OFF;`\
+  \ in configuration)\n- Restrict ability to store filters (set $`g_stored_query_create_threshold`\
+  \ / $`g_stored_query_create_shared_threshold` to `NOBODY` \n\n### Credits\nThanks to siunam\
+  \ (Tang Cheuk Hei) for discovering and responsibly reporting the issue."
+impacted_packages:
+  - purl: pkg:composer/mantisbt/mantisbt
+    affected_versions: vers:composer/<=2.28.1
+    fixed_versions: vers:composer/2.28.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.5'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-f633-865q-2mhh/GHSA-f633-865q-2mhh.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-79
+references:
+  - url: https://github.com/mantisbt/mantisbt
+    reference_type:
+    reference_id:
+  - url: https://github.com/mantisbt/mantisbt/commit/44f490bcf20fd491c1b8f3fc9dd041d8c2a30010
+    reference_type:
+    reference_id:
+  - url: https://github.com/mantisbt/mantisbt/security/advisories/GHSA-f633-865q-2mhh
+    reference_type:
+    reference_id:
+  - url: https://mantisbt.org/bugs/view.php?id=37015
+    reference_type:
+    reference_id:

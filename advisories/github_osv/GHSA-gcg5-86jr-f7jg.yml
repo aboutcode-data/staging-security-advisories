@@ -1,0 +1,54 @@
+advisory_id: GHSA-gcg5-86jr-f7jg
+datasource_id: github_osv/GHSA-gcg5-86jr-f7jg
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-gcg5-86jr-f7jg/GHSA-gcg5-86jr-f7jg.json
+aliases:
+  - CVE-2026-44263
+summary: |
+  Weblate Vulnerable to Private Translation Enumeration via Screenshot API
+  ### Impact
+
+  The screenshots, tasks, and component link API allowed for the enumeration of translations in a project inaccessible to the user.
+
+  ### Patches
+  * https://github.com/WeblateOrg/weblate/pull/19258
+
+  ### Acknowledgement
+  Weblate thanks Luay for reporting this vulnerability according to the organization's [security issues guideline](https://docs.weblate.org/en/latest/security/issues.html).
+impacted_packages:
+  - purl: pkg:pypi/weblate
+    affected_versions: vers:pypi/<5.17.1
+    fixed_versions: vers:pypi/5.17.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '4.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-gcg5-86jr-f7jg/GHSA-gcg5-86jr-f7jg.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-203
+references:
+  - url: https://github.com/WeblateOrg/weblate
+    reference_type:
+    reference_id:
+  - url: https://github.com/WeblateOrg/weblate/commit/6cf892c7bd50b667a65a99d716a90694f7d9f203
+    reference_type:
+    reference_id:
+  - url: https://github.com/WeblateOrg/weblate/pull/19258
+    reference_type:
+    reference_id:
+  - url: https://github.com/WeblateOrg/weblate/releases/tag/weblate-5.17.1
+    reference_type:
+    reference_id:
+  - url: https://github.com/WeblateOrg/weblate/security/advisories/GHSA-gcg5-86jr-f7jg
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-44263
+    reference_type:
+    reference_id:

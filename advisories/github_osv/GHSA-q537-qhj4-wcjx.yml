@@ -1,0 +1,44 @@
+advisory_id: GHSA-q537-qhj4-wcjx
+datasource_id: github_osv/GHSA-q537-qhj4-wcjx
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-q537-qhj4-wcjx/GHSA-q537-qhj4-wcjx.json
+aliases:
+  - CVE-2026-44730
+summary: |
+  OpenCTI: Privilege escalation via graphQL API is abusable by organization admins, due to incorrect ACL on userEdit relationAdd
+  ### Summary
+  An organization admin can escalate their privileges by adding a user from a different organization with higher privileges, to their own organization.
+
+  ### Impact
+  Full platform access, access to sensitive or proprietary information.
+impacted_packages:
+  - purl: pkg:pypi/pycti
+    affected_versions: vers:pypi/<6.9.7
+    fixed_versions: vers:pypi/6.9.7
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.2'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-q537-qhj4-wcjx/GHSA-q537-qhj4-wcjx.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-284
+references:
+  - url: https://github.com/OpenCTI-Platform/opencti
+    reference_type:
+    reference_id:
+  - url: https://github.com/OpenCTI-Platform/opencti/security/advisories/GHSA-q537-qhj4-wcjx
+    reference_type:
+    reference_id:
+  - url: https://github.com/pypa/advisory-database/tree/main/vulns/pycti/PYSEC-2026-167.yaml
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-44730
+    reference_type:
+    reference_id:

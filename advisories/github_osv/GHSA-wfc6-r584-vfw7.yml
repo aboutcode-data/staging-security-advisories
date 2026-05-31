@@ -1,0 +1,58 @@
+advisory_id: GHSA-wfc6-r584-vfw7
+datasource_id: github_osv/GHSA-wfc6-r584-vfw7
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-wfc6-r584-vfw7/GHSA-wfc6-r584-vfw7.json
+aliases:
+  - CVE-2026-44576
+summary: |
+  Next.js vulnerable to cache poisoning in React Server Component responses
+  ### Impact
+
+  Applications using React Server Components can be vulnerable to cache poisoning when shared caches do not correctly partition response variants. Under affected conditions, an attacker can cause an RSC response to be served from the original URL and poison shared cache entries so later visitors receive component payloads instead of the expected HTML.
+
+  ### Fix
+
+  We now validate and interpret `RSC` request headers consistently across request classification and rendering, and we enforce the intended cache-busting behavior so RSC payloads are not unexpectedly served from the original URL.
+
+  ### Workarounds
+
+  If you cannot upgrade immediately, ensure your CDN or reverse proxy keys on the relevant RSC request headers and honors `Vary`, or disable shared caching for affected App Router and RSC responses.
+impacted_packages:
+  - purl: pkg:npm/next
+    affected_versions: vers:npm/>=14.2.0|<15.5.16
+    fixed_versions: vers:npm/15.5.16
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/next
+    affected_versions: vers:npm/>=16.0.0|<16.2.5
+    fixed_versions: vers:npm/16.2.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.4'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:N/I:L/A:L
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-wfc6-r584-vfw7/GHSA-wfc6-r584-vfw7.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-436
+references:
+  - url: https://github.com/vercel/next.js
+    reference_type:
+    reference_id:
+  - url: https://github.com/vercel/next.js/releases/tag/v15.5.16
+    reference_type:
+    reference_id:
+  - url: https://github.com/vercel/next.js/releases/tag/v16.2.5
+    reference_type:
+    reference_id:
+  - url: https://github.com/vercel/next.js/security/advisories/GHSA-wfc6-r584-vfw7
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-44576
+    reference_type:
+    reference_id:
