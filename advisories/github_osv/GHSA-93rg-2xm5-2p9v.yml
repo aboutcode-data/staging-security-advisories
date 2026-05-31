@@ -1,0 +1,58 @@
+advisory_id: GHSA-93rg-2xm5-2p9v
+datasource_id: github_osv/GHSA-93rg-2xm5-2p9v
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-93rg-2xm5-2p9v/GHSA-93rg-2xm5-2p9v.json
+aliases: []
+summary: |
+  OpenClaw's Gateway Control UI bootstrap config required Gateway auth
+  ## Summary
+  Gateway Control UI bootstrap config required Gateway auth.
+
+  ## Affected Packages / Versions
+  - Package: openclaw (npm)
+  - Affected versions: <= 2026.4.21
+  - Fixed version: 2026.4.22
+
+  ## Impact
+  When Gateway authentication was enabled, the Control UI bootstrap config endpoint could still be read without a valid Gateway token. That response could expose sensitive bootstrap/config fields intended only for authenticated Control UI sessions.
+
+  ## Fix
+  The bootstrap config route now goes through the same Gateway read-auth path as other authenticated Control UI reads. Regression tests cover unauthenticated rejection, valid-token access, and basePath handling.
+
+  ## Fix Commit(s)
+  - 2321d67263bc710e357644d59f746b08d891051b
+
+  ## Verification
+  - The fix commit is contained in the public v2026.4.22 tag.
+  - openclaw@2026.4.22 is published on npm and the compiled package contains the fix.
+  - Focused regression coverage for this path passed before publication.
+
+  OpenClaw thanks @zsxsoft for reporting.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<=2026.4.21
+    fixed_versions: vers:npm/2026.4.22
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-93rg-2xm5-2p9v/GHSA-93rg-2xm5-2p9v.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-287
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/2321d67263bc710e357644d59f746b08d891051b
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-93rg-2xm5-2p9v
+    reference_type:
+    reference_id:

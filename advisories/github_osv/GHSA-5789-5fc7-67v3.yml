@@ -1,0 +1,85 @@
+advisory_id: GHSA-5789-5fc7-67v3
+datasource_id: github_osv/GHSA-5789-5fc7-67v3
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-5789-5fc7-67v3/GHSA-5789-5fc7-67v3.json
+aliases:
+  - CVE-2026-35397
+summary: |
+  Jupyter Server: Path Traversal via incorrect startswith() root directory check allows access to sibling directories
+  ### Summary
+
+  Jupyter Server <=2.17.0 can access directories sibling to the root directory, if it starts with the root dir's name.
+
+  ### PoC
+
+  Minimal:
+
+  ```
+  .
+  ├── test/              <- root directory.
+  │   └── test.txt
+  └── testtest/
+      └── secret.txt     <- file to exfiltrate that we should not be able to access via API
+  ```
+
+  ```bash
+  HOST="http://localhost:8888"
+  TOKEN=""
+  SIBLING="testtest"
+  TARGET="secret.txt"
+
+  curl -s -X POST \
+    "$HOST/api/contents/%2e%2e/$SIBLING/$TARGET/checkpoints" \
+    -H "Authorization: token $TOKEN"
+  ```
+
+  Full PoC by @stef41: https://gist.github.com/Yann-P/66d4982a965dee8fcb8dd89db29e7006
+
+  ### Impact
+
+  It is possible for an authenticated user to access content outside the server's `root_dir` in siblings directories sharing the same prefix as the `root_dir`. The attacker can escalate access, reading, writing, and deleting from sibling directories.
+
+  This can have a tangible impact for deployments using predictable naming scheme with multi-tenant server, for example `user1`, `user2`, `user3`, ..., `user10` etc, as `user1` could access and modify files of all `user10` - `user19` and higher.
+
+  In a hypothetical system where users can choose a name of their folder, an attacker could choose a single-letter username to gain access to a significant number of sibling directories.
+
+  ### Workarounds
+
+  Use folder names that do not overlap.
+
+  ### Acknowledgments
+
+  Thank you to @stef41 for providing a useful PoC.
+impacted_packages:
+  - purl: pkg:pypi/jupyter-server
+    affected_versions: vers:pypi/<=2.17.0
+    fixed_versions: vers:pypi/2.18.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.1'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:L
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-5789-5fc7-67v3/GHSA-5789-5fc7-67v3.json
+  - score: '7.6'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-5789-5fc7-67v3/GHSA-5789-5fc7-67v3.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-22
+references:
+  - url: https://github.com/jupyter-server/jupyter_server
+    reference_type:
+    reference_id:
+  - url: https://github.com/jupyter-server/jupyter_server/security/advisories/GHSA-5789-5fc7-67v3
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-35397
+    reference_type:
+    reference_id:

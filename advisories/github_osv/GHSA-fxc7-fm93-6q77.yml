@@ -1,0 +1,48 @@
+advisory_id: GHSA-fxc7-fm93-6q77
+datasource_id: github_osv/GHSA-fxc7-fm93-6q77
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-fxc7-fm93-6q77/GHSA-fxc7-fm93-6q77.json
+aliases:
+  - CVE-2026-44221
+summary: |
+  ArcadeDB vulnerable to cross-database authorization bypass and unsecured newly-created databases
+  ### Impact
+  Authenticated users and API tokens scoped to a specific database could read, write, and mutate schema on any other database on the same server. Two distinct defects contributed: (1) ServerSecurityUser.getDatabaseUser() returned a DB user with an uninitialized fileAccessMap, which requestAccessOnFile treated as allow-all; (2) ArcadeDBServer.createDatabase() omitted factory.setSecurity(...) so any database created via POST /api/v1/server {"command":"create database X"} had its entire record-level authorization system silently disabled. In combination, record-level and database-level authorization could be bypassed by any authenticated principal.
+
+  ### Patches
+  Upgrade to version 26.4.2
+
+  ### Resources
+
+  https://github.com/ArcadeData/arcadedb/commit/04110c06315da55604ac107f71fe7182f3a3deb8
+impacted_packages:
+  - purl: pkg:maven/com.arcadedb/arcadedb-server
+    affected_versions: vers:maven/<26.4.2
+    fixed_versions: vers:maven/26.4.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '9.0'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-fxc7-fm93-6q77/GHSA-fxc7-fm93-6q77.json
+  - score: CRITICAL
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-863
+references:
+  - url: https://github.com/ArcadeData/arcadedb
+    reference_type:
+    reference_id:
+  - url: https://github.com/ArcadeData/arcadedb/commit/04110c06315da55604ac107f71fe7182f3a3deb8
+    reference_type:
+    reference_id:
+  - url: https://github.com/ArcadeData/arcadedb/security/advisories/GHSA-fxc7-fm93-6q77
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-44221
+    reference_type:
+    reference_id:

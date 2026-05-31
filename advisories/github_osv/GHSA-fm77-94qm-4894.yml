@@ -6,14 +6,7 @@ aliases:
 summary: |
   Crabbox: environment variable exposure vulnerability
   Crabbox prior to v0.12.0 contains an environment variable exposure vulnerability that allows attackers with access to a malicious or compromised repository to forward local secrets such as API tokens, cloud credentials, and broker tokens into the remote command environment. Attackers can exploit overly permissive environment variable allowlisting in repo-local Crabbox configuration to serialize sensitive environment variables into remote command execution, exposing credentials to the remote environment.
-impacted_packages:
-  - purl: pkg:github/openclaw/crabbox
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/openclaw/crabbox
-        commit: eaae40ae4ce009e60633f16f7f19600c74557f6f
-    introduced_in_commits: []
+impacted_packages: []
 severities:
   - score: '9.1'
     scoring_system: cvssv3.1
@@ -36,18 +29,18 @@ references:
   - url: https://github.com/openclaw/crabbox
     reference_type:
     reference_id:
+  - url: https://github.com/openclaw/crabbox/commit/eaae40ae4ce009e60633f16f7f19600c74557f6f
+    reference_type:
+    reference_id:
   - url: https://github.com/openclaw/crabbox/pull/78
-    reference_type: bug
-    reference_id: 78
-  - url: https://www.vulncheck.com/advisories/crabbox-environment-variable-information-disclosure
-    reference_type: advisory
-    reference_id: crabbox-environment-variable-information-disclosure
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/crabbox/releases/tag/v0.12.0
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-8634
     reference_type:
-    reference_id: CVE-2026-8634
-  - url: https://github.com/openclaw/crabbox/commit/eaae40ae4ce009e60633f16f7f19600c74557f6f
-    reference_type: other
-    reference_id: eaae40ae4ce009e60633f16f7f19600c74557f6f
-  - url: https://github.com/openclaw/crabbox/releases/tag/v0.12.0
-    reference_type: other
-    reference_id: v0.12.0
+    reference_id:
+  - url: https://www.vulncheck.com/advisories/crabbox-environment-variable-information-disclosure
+    reference_type:
+    reference_id:

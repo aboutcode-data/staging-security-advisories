@@ -1,0 +1,59 @@
+advisory_id: GHSA-hmg2-jjjx-jcp2
+datasource_id: github_osv/GHSA-hmg2-jjjx-jcp2
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-hmg2-jjjx-jcp2/GHSA-hmg2-jjjx-jcp2.json
+aliases:
+  - CVE-2026-46444
+summary: |
+  FlowiseAI: Vector Store No Permission Checks
+  ### FINDING 4: OpenAI Assistants Vector Store - No Auth on CRUD Operations
+  **Severity**: HIGH (CVSS ~8.1)
+  **Type**: CWE-306 (Missing Authentication for Critical Function)
+  **File**: `packages/server/src/routes/openai-assistants-vector-store/index.ts`
+
+  **Description**: ALL CRUD endpoints for OpenAI Assistants Vector Store have no authentication middleware AND the route path `/api/v1/openai-assistants-vector-store` is NOT in `WHITELIST_URLS`. However, it is also NOT protected by the main auth middleware when accessed via API key — the route requires API key auth (not whitelisted), but NO permission checks exist on any operation.
+
+  The real issue is that the routes have no `checkAnyPermission()` middleware, meaning any authenticated user regardless of role can:
+  - Create vector stores
+  - Upload files to vector stores
+  - Delete vector stores and files
+  - Modify any vector store
+
+  **Evidence**:
+  ```typescript
+  // No permission middleware on any route
+  router.post('/', controller.createAssistantVectorStore)          // No permission check
+  router.put(['/', '/:id'], controller.updateAssistantVectorStore) // No permission check
+  router.delete(['/', '/:id'], controller.deleteAssistantVectorStore) // No permission check
+  router.post('/:id', getMulterStorage().array('files'), controller.uploadFilesToAssistantVectorStore) // No permission check
+  ```
+
+  **Impact**: Any authenticated user can manipulate OpenAI vector stores, upload malicious files, delete data, or exfiltrate stored documents regardless of their assigned permissions.
+impacted_packages:
+  - purl: pkg:npm/flowise
+    affected_versions: vers:npm/<=3.1.1
+    fixed_versions: vers:npm/3.1.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.7'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-hmg2-jjjx-jcp2/GHSA-hmg2-jjjx-jcp2.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-862
+references:
+  - url: https://github.com/FlowiseAI/Flowise
+    reference_type:
+    reference_id:
+  - url: https://github.com/FlowiseAI/Flowise/releases/tag/flowise%403.1.2
+    reference_type:
+    reference_id:
+  - url: https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-hmg2-jjjx-jcp2
+    reference_type:
+    reference_id:

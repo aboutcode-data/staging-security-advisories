@@ -1,0 +1,61 @@
+advisory_id: GHSA-8cph-rgr4-g5vj
+datasource_id: github_osv/GHSA-8cph-rgr4-g5vj
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-8cph-rgr4-g5vj/GHSA-8cph-rgr4-g5vj.json
+aliases:
+  - CVE-2026-47248
+summary: |
+  Parse Server's GraphQL "Did you mean ...?" validation suggestions disclose schema to unauthenticated callers
+  ### Impact
+
+  Parse Server's GraphQL endpoint discloses schema metadata to unauthenticated callers through `Did you mean ...?` suggestions embedded in GraphQL validation-error messages. An unauthenticated caller who knows only the public application id can iteratively send malformed queries to reconstruct class names, field names, argument names, mutation names, and input-object fields. This bypasses the `IntrospectionControlPlugin` enforced when `graphQLPublicIntrospection: false` (the default) and defeats the schema-hiding goal of prior advisories GHSA-48q3-prgv-gm4w and GHSA-q5q9-2rhp-33qw. Schema disclosure aids reconnaissance for downstream authorization probing but does not by itself leak object data or authentication material.
+
+  ### Patches
+
+  A new `SchemaSuggestionsControlPlugin` Apollo plugin strips the `Did you mean ...?` suffix from GraphQL validation-error messages during `validationDidStart`, which runs before any introspection gate. The plugin applies only when `graphQLPublicIntrospection: false` and the caller is not a master-key or maintenance-key holder, matching the trust model of the existing `IntrospectionControlPlugin`.
+
+  ### Workarounds
+
+  No code workaround is available short of disabling the GraphQL API (`mountGraphQL: false`). Operators who require disclosure-resistant validation errors should upgrade to a patched release.
+
+  ### Resources
+
+  - GitHub security advisory: https://github.com/parse-community/parse-server/security/advisories/GHSA-8cph-rgr4-g5vj
+  - Fix Parse Server 9: https://github.com/parse-community/parse-server/pull/10467
+  - Fix Parse Server 8: https://github.com/parse-community/parse-server/pull/10468
+impacted_packages:
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/>=9.0.0|<9.9.1-alpha.2
+    fixed_versions: vers:npm/9.9.1-alpha.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/<8.6.78
+    fixed_versions: vers:npm/8.6.78
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-8cph-rgr4-g5vj/GHSA-8cph-rgr4-g5vj.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-209
+references:
+  - url: https://github.com/parse-community/parse-server
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/pull/10467
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/pull/10468
+    reference_type:
+    reference_id:
+  - url: https://github.com/parse-community/parse-server/security/advisories/GHSA-8cph-rgr4-g5vj
+    reference_type:
+    reference_id:

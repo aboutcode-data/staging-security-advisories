@@ -1,0 +1,48 @@
+advisory_id: GHSA-m24v-f7g5-gq67
+datasource_id: github_osv/GHSA-m24v-f7g5-gq67
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-m24v-f7g5-gq67/GHSA-m24v-f7g5-gq67.json
+aliases:
+  - CVE-2026-44306
+summary: |
+  Statamic CMS vulnerable to email enumeration via forgot password endpoint
+  ### Impact
+
+  Responses from the forgot password forms hinted at whether an account existed for a given email address. An unauthenticated attacker could use this to enumerate valid users, which can aid in follow-up credential-based attacks.
+
+  ### Patches
+
+  This has been fixed in 5.73.21 and 6.15.0. The forgot password forms now return the same generic response regardless of whether the submitted email matches a registered user.
+impacted_packages:
+  - purl: pkg:composer/statamic/cms
+    affected_versions: vers:composer/<5.73.21
+    fixed_versions: vers:composer/5.73.21
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/statamic/cms
+    affected_versions: vers:composer/>=6.0.0|<6.15.0
+    fixed_versions: vers:composer/6.15.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-m24v-f7g5-gq67/GHSA-m24v-f7g5-gq67.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-204
+references:
+  - url: https://github.com/statamic/cms
+    reference_type:
+    reference_id:
+  - url: https://github.com/statamic/cms/security/advisories/GHSA-m24v-f7g5-gq67
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-44306
+    reference_type:
+    reference_id:

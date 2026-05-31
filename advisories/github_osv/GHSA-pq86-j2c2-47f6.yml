@@ -1,0 +1,52 @@
+advisory_id: GHSA-pq86-j2c2-47f6
+datasource_id: github_osv/GHSA-pq86-j2c2-47f6
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-pq86-j2c2-47f6/GHSA-pq86-j2c2-47f6.json
+aliases:
+  - CVE-2026-42070
+summary: "MantisBT: Authorization Bypass in Bugnote Editing via Issue Update API\nThe mc_issue_update()\
+  \ function in MantisBT allows users having *update_bug_threshold* access (UPDATER, with default\
+  \ settings) to edit, change view state, and modify time tracking on bugnotes belonging to\
+  \ other users — bypassing the default DEVELOPER (level 55) threshold required by the dedicated\
+  \ mc_issue_note_update() function.\n\n### Impact\n1. UPDATER can edit notes by DEVELOPER/MANAGER/ADMIN\
+  \ — bypassing the DEVELOPER threshold\n2. UPDATER can change private notes to public — exposing\
+  \ confidential internal discussion\n3. UPDATER can change public notes to private — hiding\
+  \ information from reporters/viewers\n\n### Patches\n- 6e58fae4f22efdc3987f903c8ba2611de17a9435\n\
+  \n### Workarounds\nNone\n\n### Credits\nThanks to the following security researchers for independently\
+  \ discovering and responsibly reporting the issue.\n- Vishal Shukla \n- Tristan Madani (@TristanInSec)\
+  \ from Talence Security \n\nThis advisory's contents was largely copied from Tristan's well-written\
+  \ report."
+impacted_packages:
+  - purl: pkg:composer/mantisbt/mantisbt
+    affected_versions: vers:composer/<=2.28.1
+    fixed_versions: vers:composer/2.28.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-pq86-j2c2-47f6/GHSA-pq86-j2c2-47f6.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-863
+references:
+  - url: https://github.com/mantisbt/mantisbt
+    reference_type:
+    reference_id:
+  - url: https://github.com/mantisbt/mantisbt/commit/6e58fae4f22efdc3987f903c8ba2611de17a9435
+    reference_type:
+    reference_id:
+  - url: https://github.com/mantisbt/mantisbt/security/advisories/GHSA-pq86-j2c2-47f6
+    reference_type:
+    reference_id:
+  - url: https://mantisbt.org/bugs/view.php?id=37089
+    reference_type:
+    reference_id:
+  - url: https://mantisbt.org/bugs/view.php?id=37093
+    reference_type:
+    reference_id:

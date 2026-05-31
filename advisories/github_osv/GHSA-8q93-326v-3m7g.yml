@@ -1,0 +1,61 @@
+advisory_id: GHSA-8q93-326v-3m7g
+datasource_id: github_osv/GHSA-8q93-326v-3m7g
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-8q93-326v-3m7g/GHSA-8q93-326v-3m7g.json
+aliases:
+  - CVE-2026-45078
+summary: |
+  Synapse CPU starvation (Denial of Service)
+  ### Impact
+
+  Local authenticated users can cause Synapse to starve other requests of CPU and lead to other requests failing, causing other users to be denied service.
+
+  Homeservers that trust all their local users are not at risk.
+
+  ### Patches
+
+  Update to Synapse 1.152.1 or later.
+
+  ### Workarounds
+
+  If Synapse is deployed behind a reverse proxy, the reverse proxy could be configured to limit the rate of user requests,
+  preventing or increasing the difficulty of the attack.
+
+  ### Identifiers
+
+  - ELEMENTSEC-2026-1706
+
+  ### For more information
+
+  If you have any questions or comments about this advisory, please email us at [security at element.io](mailto:security@element.io).
+impacted_packages:
+  - purl: pkg:pypi/matrix-synapse
+    affected_versions: vers:pypi/<1.152.1
+    fixed_versions: vers:pypi/1.152.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.1'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-8q93-326v-3m7g/GHSA-8q93-326v-3m7g.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-400
+references:
+  - url: https://github.com/element-hq/synapse
+    reference_type:
+    reference_id:
+  - url: https://github.com/element-hq/synapse/commit/3f58bc50dfba5768ee43ce48c5e74c25ba0b078a
+    reference_type:
+    reference_id:
+  - url: https://github.com/element-hq/synapse/issues/19394
+    reference_type:
+    reference_id:
+  - url: https://github.com/element-hq/synapse/security/advisories/GHSA-8q93-326v-3m7g
+    reference_type:
+    reference_id:

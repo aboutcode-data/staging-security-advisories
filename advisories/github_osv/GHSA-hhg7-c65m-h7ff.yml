@@ -1,0 +1,98 @@
+advisory_id: GHSA-hhg7-c65m-h7ff
+datasource_id: github_osv/GHSA-hhg7-c65m-h7ff
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-hhg7-c65m-h7ff/GHSA-hhg7-c65m-h7ff.json
+aliases:
+  - CVE-2026-45753
+summary: |
+  Symfony's HtmlSanitizer UrlAttributeSanitizer Omits action/formaction/poster/cite — `javascript`: URI Survives Sanitization (XSS)
+  ### Description
+
+  `symfony/html-sanitizer` lets applications sanitise untrusted HTML. `UrlAttributeSanitizer` is the visitor responsible for validating URL-valued attributes and stripping dangerous schemes from them; it runs on every element regardless of configuration. Whether an attribute is *kept* is decided by the element/attribute allow-list; validating the *scheme* of a URL attribute is solely `UrlAttributeSanitizer`'s responsibility.
+
+  `UrlAttributeSanitizer::getSupportedAttributes()` returned only `['src', 'href', 'lowsrc', 'background', 'ping']`. The HTML URL-valued attributes `action` (`<form>`), `formaction` (`<button>`, `<input type=image>`), `poster` (`<video>`) and `cite` (`<blockquote>`, `<q>`, `<del>`, `<ins>`) were missing from that list, so `DomVisitor` never invoked scheme validation for them. As a result, when a configuration admits one of those attributes, a `javascript:` URI in it survived sanitisation.
+
+  ### Conditions for exploitation
+
+  `allowSafeElements()` is **not** affected: `<form>` and the `formaction` attribute are both flagged unsafe in `W3CReference`, and `allowElement('form')` resets the element's attribute list. Reaching the vulnerable attributes requires a deliberately permissive configuration, for example:
+
+  * `<form>` + `action`: `allowElement('form', '*')`, `allowElement('form', ['action', …])`, `allowElement('form')->allowAttribute('action', 'form')`, or the `allowStaticElements()` preset (whose docblock already warns the output "may still contain other dangerous behaviors");
+  * `<button>` / `<input type=image>` + `formaction`: `allowElement(…, '*')`, `allowAttribute('formaction', …)`, or `allowStaticElements()`;
+  * `<blockquote>` / `<q>` / `<del>` / `<ins>` + `cite`, or `<video>` + `poster`: similarly via `'*'`, `allowAttribute()`, or `allowStaticElements()`.
+
+  For the `action` / `formaction` cases the victim must additionally submit the form or click the button.
+
+  ### Resolution
+
+  `UrlAttributeSanitizer` now also handles `action`, `formaction`, `cite` and `poster`. `action` / `formaction` / `cite` are validated against the link schemes (like `<a href>`, so `javascript:` is rejected and `data:` is dropped too); `poster` is validated against the media schemes (so `data:` images keep working). The behaviour of `<a href>` and `<img src>` is unchanged.
+
+  One behaviour change to be aware of: a relative `action="/submit"` on an allowed `<form>` is now dropped by default (the same as `<a href>` / `<img src>` today); `->allowRelativeLinks()` re-enables it.
+
+  The patch for this issue is available [here](https://github.com/symfony/symfony/commit/26a598fcfc4f903cc55ff202f642ee621839825e) for branch 6.4.
+
+  ### Credits
+
+  Symfony would like to thank Himanshu Anand and Rémi Pelloux for reporting the issue and Nicolas Grekas for providing the fix.
+impacted_packages:
+  - purl: pkg:composer/symfony/html-sanitizer
+    affected_versions: vers:composer/>=6.1.0|<6.4.40
+    fixed_versions: vers:composer/6.4.40
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/html-sanitizer
+    affected_versions: vers:composer/>=7.0.0|<7.4.12
+    fixed_versions: vers:composer/7.4.12
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/html-sanitizer
+    affected_versions: vers:composer/>=8.0.0|<8.0.12
+    fixed_versions: vers:composer/8.0.12
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=6.1.0|<6.4.40
+    fixed_versions: vers:composer/6.4.40
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=7.0.0|<7.4.12
+    fixed_versions: vers:composer/7.4.12
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=8.0.0|<8.0.12
+    fixed_versions: vers:composer/8.0.12
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '1.2'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:U
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-hhg7-c65m-h7ff/GHSA-hhg7-c65m-h7ff.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-184
+  - CWE-79
+references:
+  - url: https://github.com/FriendsOfPHP/security-advisories/blob/master/symfony/html-sanitizer/CVE-2026-45753.yaml
+    reference_type:
+    reference_id:
+  - url: https://github.com/FriendsOfPHP/security-advisories/blob/master/symfony/symfony/CVE-2026-45753.yaml
+    reference_type:
+    reference_id:
+  - url: https://github.com/symfony/symfony
+    reference_type:
+    reference_id:
+  - url: https://github.com/symfony/symfony/commit/26a598fcfc4f903cc55ff202f642ee621839825e
+    reference_type:
+    reference_id:
+  - url: https://github.com/symfony/symfony/security/advisories/GHSA-hhg7-c65m-h7ff
+    reference_type:
+    reference_id:
+  - url: https://symfony.com/cve-2026-45753
+    reference_type:
+    reference_id:

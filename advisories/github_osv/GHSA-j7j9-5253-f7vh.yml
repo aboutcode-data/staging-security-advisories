@@ -1,0 +1,88 @@
+advisory_id: GHSA-j7j9-5253-f7vh
+datasource_id: github_osv/GHSA-j7j9-5253-f7vh
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-j7j9-5253-f7vh/GHSA-j7j9-5253-f7vh.json
+aliases:
+  - CVE-2026-42555
+summary: |
+  Valtimo has SpEL injection via StandardEvaluationContext that allows Remote Code Execution by admin users
+  ### Summary
+
+  Multiple classes evaluate Spring Expression Language (SpEL) expressions from user-supplied input using `StandardEvaluationContext`, which provides unrestricted access to Java types and methods. An authenticated user with the ADMIN role can achieve Remote Code Execution and credential exfiltration.
+
+  ### Impact
+
+  An attacker with ADMIN credentials can:
+  - **Execute arbitrary OS commands** via `T(java.lang.Runtime).getRuntime().exec('...')`
+  - **Exfiltrate all environment variables** (database passwords, API keys, Keycloak secrets) via `T(java.lang.System).getenv()`
+  - **Read JVM system properties** via `T(java.lang.System).getProperties()`
+  - **Load arbitrary classes** via `T(java.lang.Class).forName('...')`
+
+  ### Affected Components
+
+  **1. DocumentMigrationService** (since 12.0.0)
+
+  Exploitable through the document migration REST API:
+  - `POST /api/management/v1/document-definition/migrate`
+  - `POST /api/management/v1/document-definition/migration/conflicts`
+
+  The malicious SpEL expression is supplied in the `source` or `target` field of a `DocumentMigrationPatch` object in the request body, using the `${...}` template syntax.
+
+  - In 12.x: `com.ritense.document.service.DocumentMigrationService#handleSpelExpression` (document module)
+  - In 13.x: same class, moved to the case module
+
+  **2. Condition** (since 13.4.0)
+
+  Exploitable through any admin-configured widget, dashboard, or feature that uses the `Condition` framework. The SpEL expression is supplied in the `value` field of a condition's JSON configuration.
+
+  - `com.ritense.valtimo.contract.conditions.Condition#resolveValue` (contract module)
+
+  This component has a significantly wider attack surface than DocumentMigrationService, as conditions are used across many modules.
+
+  ### Remediation
+
+  Replace `StandardEvaluationContext` with `SimpleEvaluationContext` in both affected classes, which disallows Java type references and arbitrary method invocation:
+
+  ```kotlin
+  val evaluationContext = SimpleEvaluationContext
+      .forPropertyAccessors(MapAccessor(), jsonPropertyAccessor)
+      .build()
+  ```
+impacted_packages:
+  - purl: pkg:maven/com.ritense.valtimo/document
+    affected_versions: vers:maven/>=12.0.0|<12.32.0
+    fixed_versions: vers:maven/12.32.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/com.ritense.valtimo/case
+    affected_versions: vers:maven/>=13.0.0|<13.23.0
+    fixed_versions: vers:maven/13.23.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/com.ritense.valtimo/contract
+    affected_versions: vers:maven/>=13.4.0|<13.23.0
+    fixed_versions: vers:maven/13.23.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '9.1'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-j7j9-5253-f7vh/GHSA-j7j9-5253-f7vh.json
+  - score: CRITICAL
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-94
+references:
+  - url: https://github.com/valtimo-platform/valtimo
+    reference_type:
+    reference_id:
+  - url: https://github.com/valtimo-platform/valtimo/security/advisories/GHSA-j7j9-5253-f7vh
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-42555
+    reference_type:
+    reference_id:
