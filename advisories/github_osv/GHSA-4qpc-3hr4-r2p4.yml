@@ -1,0 +1,93 @@
+advisory_id: GHSA-4qpc-3hr4-r2p4
+datasource_id: github_osv/GHSA-4qpc-3hr4-r2p4
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-4qpc-3hr4-r2p4/GHSA-4qpc-3hr4-r2p4.json
+aliases:
+  - CVE-2026-45304
+summary: |
+  Symfony's YAML Parser Vulnerable to Exponential Memory Allocation via Recursive Collection-Alias Expansion ("Billion Laughs")
+  ### Description
+
+  `Symfony\Component\Yaml\Parser` resolves YAML aliases (`*anchor`) during parsing. Aliases that reference *collections* (arrays, `stdClass`, `TaggedValue`-wrapped collections) can themselves point to other collections containing aliases, creating exponential expansion at resolution time. A small input can blow up into a multi-gigabyte structure and exhaust memory: the classic "Billion Laughs" denial-of-service against any parser exposed to untrusted YAML.
+
+  ### Resolution
+
+  The `Parser` now counts collection alias resolutions in a shared `ParserState` object, with a default limit of **128**, following the [SnakeYAML model](https://github.com/snakeyaml/snakeyaml/blob/master/src/main/java/org/yaml/snakeyaml/LoaderOptions.java). Scalar aliases remain unrestricted since they cannot drive exponential growth. The limit is configurable via a new `$maxAliasesForCollections` argument on `Parser::__construct()`, `Yaml::parse()` and `Yaml::parseFile()`. A new `Yaml::PARSE_EXCEPTION_ON_ALIAS` flag also rejects all aliases outright when parsing fully untrusted input.
+
+  The patch for this issue is available [here](https://github.com/symfony/symfony/commit/e77391b2e4f18821198f010d573674c8ed4a970a) for branch 5.4.
+
+  ### Credits
+
+  Symfony would like to thank Pietro Tirenna (Shielder) for reporting the issue and Nicolas Grekas for fixing it.
+impacted_packages:
+  - purl: pkg:composer/symfony/yaml
+    affected_versions: vers:composer/<5.4.52
+    fixed_versions: vers:composer/5.4.52
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/<5.4.52
+    fixed_versions: vers:composer/5.4.52
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=6.0.0|<6.4.40
+    fixed_versions: vers:composer/6.4.40
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=7.0.0|<7.4.12
+    fixed_versions: vers:composer/7.4.12
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=8.0.0|<8.0.12
+    fixed_versions: vers:composer/8.0.12
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/yaml
+    affected_versions: vers:composer/>=6.0.0|<6.4.40
+    fixed_versions: vers:composer/6.4.40
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/yaml
+    affected_versions: vers:composer/>=7.0.0|<7.4.12
+    fixed_versions: vers:composer/7.4.12
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/yaml
+    affected_versions: vers:composer/>=8.0.0|<8.0.12
+    fixed_versions: vers:composer/8.0.12
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '2.7'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:U
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-4qpc-3hr4-r2p4/GHSA-4qpc-3hr4-r2p4.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-776
+references:
+  - url: https://github.com/FriendsOfPHP/security-advisories/blob/master/symfony/symfony/CVE-2026-45304.yaml
+    reference_type:
+    reference_id:
+  - url: https://github.com/FriendsOfPHP/security-advisories/blob/master/symfony/yaml/CVE-2026-45304.yaml
+    reference_type:
+    reference_id:
+  - url: https://github.com/symfony/symfony
+    reference_type:
+    reference_id:
+  - url: https://github.com/symfony/symfony/commit/e77391b2e4f18821198f010d573674c8ed4a970a
+    reference_type:
+    reference_id:
+  - url: https://github.com/symfony/symfony/security/advisories/GHSA-4qpc-3hr4-r2p4
+    reference_type:
+    reference_id:
+  - url: https://symfony.com/cve-2026-45304
+    reference_type:
+    reference_id:
