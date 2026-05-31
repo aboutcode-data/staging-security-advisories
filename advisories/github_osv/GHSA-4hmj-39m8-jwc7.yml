@@ -1,0 +1,68 @@
+advisory_id: GHSA-4hmj-39m8-jwc7
+datasource_id: github_osv/GHSA-4hmj-39m8-jwc7
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-4hmj-39m8-jwc7/GHSA-4hmj-39m8-jwc7.json
+aliases:
+  - CVE-2026-35651
+summary: |
+  OpenClaw has ACP CLI approval prompt ANSI escape sequence injection
+  ## Summary
+
+  ACP CLI approval prompt ANSI escape sequence injection
+
+  ## Affected Packages / Versions
+
+  - Package: `openclaw`
+  - Affected versions: `>= 2026.2.13, <= 2026.3.24`
+  - First patched version: `2026.3.25`
+  - Latest published npm version at verification time: `2026.3.24`
+
+  ## Details
+
+  ACP tool titles could previously carry ANSI control sequences into approval prompts and permission logs, letting untrusted tool metadata spoof terminal output. Commit `464e2c10a5edceb380d815adb6ff56e1a4c50f60` sanitizes tool titles at the source and broadens ANSI stripping to full CSI sequences.
+
+  Verified vulnerable on tag `v2026.3.24` and fixed on `main` by commit `464e2c10a5edceb380d815adb6ff56e1a4c50f60`.
+
+  ## Fix Commit(s)
+
+  - `464e2c10a5edceb380d815adb6ff56e1a4c50f60`
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<=2026.3.24
+    fixed_versions: vers:npm/2026.3.28
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '4.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-4hmj-39m8-jwc7/GHSA-4hmj-39m8-jwc7.json
+  - score: '5.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-4hmj-39m8-jwc7/GHSA-4hmj-39m8-jwc7.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-150
+  - CWE-116
+references:
+  - url: https://github.com/openclaw/openclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/commit/464e2c10a5edceb380d815adb6ff56e1a4c50f60
+    reference_type:
+    reference_id:
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-4hmj-39m8-jwc7
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-35651
+    reference_type:
+    reference_id:
+  - url: https://www.vulncheck.com/advisories/openclaw-ansi-escape-sequence-injection-in-approval-prompt
+    reference_type:
+    reference_id:
