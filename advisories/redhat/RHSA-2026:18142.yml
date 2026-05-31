@@ -20,6 +20,21 @@ summary: |
 
   For detailed information on changes in this release, see the Red Hat Enterprise Linux 10 Release Notes linked from the References section.
 impacted_packages:
+  - purl: pkg:rpm/redhat/NetworkManager-libnm-devel?arch=s390x&epoch=1
+    affected_versions: vers:rpm/<1.56.0-1.el10
+    fixed_versions: vers:rpm/1.56.0-1.el10
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/NetworkManager-cloud-setup?arch=s390x&epoch=1
+    affected_versions: vers:rpm/<1.56.0-1.el10
+    fixed_versions: vers:rpm/1.56.0-1.el10
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/NetworkManager-ovs?arch=s390x&epoch=1
+    affected_versions: vers:rpm/<1.56.0-1.el10
+    fixed_versions: vers:rpm/1.56.0-1.el10
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/NetworkManager-ppp?arch=s390x&epoch=1
     affected_versions: vers:rpm/<1.56.0-1.el10
     fixed_versions: vers:rpm/1.56.0-1.el10
@@ -51,26 +66,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/NetworkManager-libnm-debuginfo?arch=s390x&epoch=1
-    affected_versions: vers:rpm/<1.56.0-1.el10
-    fixed_versions: vers:rpm/1.56.0-1.el10
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/NetworkManager-ppp-debuginfo?arch=ppc64le&epoch=1
-    affected_versions: vers:rpm/<1.56.0-1.el10
-    fixed_versions: vers:rpm/1.56.0-1.el10
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/NetworkManager-tui-debuginfo?arch=ppc64le&epoch=1
-    affected_versions: vers:rpm/<1.56.0-1.el10
-    fixed_versions: vers:rpm/1.56.0-1.el10
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/NetworkManager-cloud-setup?arch=s390x&epoch=1
-    affected_versions: vers:rpm/<1.56.0-1.el10
-    fixed_versions: vers:rpm/1.56.0-1.el10
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/NetworkManager-ovs?arch=s390x&epoch=1
     affected_versions: vers:rpm/<1.56.0-1.el10
     fixed_versions: vers:rpm/1.56.0-1.el10
     fixed_in_commits: []
@@ -131,11 +126,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/NetworkManager-wwan?arch=s390x&epoch=1
-    affected_versions: vers:rpm/<1.56.0-1.el10
-    fixed_versions: vers:rpm/1.56.0-1.el10
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/NetworkManager-libnm-devel?arch=s390x&epoch=1
     affected_versions: vers:rpm/<1.56.0-1.el10
     fixed_versions: vers:rpm/1.56.0-1.el10
     fixed_in_commits: []
@@ -296,6 +286,16 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/NetworkManager-ovs-debuginfo?arch=ppc64le&epoch=1
+    affected_versions: vers:rpm/<1.56.0-1.el10
+    fixed_versions: vers:rpm/1.56.0-1.el10
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/NetworkManager-ppp-debuginfo?arch=ppc64le&epoch=1
+    affected_versions: vers:rpm/<1.56.0-1.el10
+    fixed_versions: vers:rpm/1.56.0-1.el10
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/NetworkManager-tui-debuginfo?arch=ppc64le&epoch=1
     affected_versions: vers:rpm/<1.56.0-1.el10
     fixed_versions: vers:rpm/1.56.0-1.el10
     fixed_in_commits: []
@@ -483,7 +483,13 @@ severities:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_18142.json
 weaknesses: []
 references:
+  - url: https://access.redhat.com/errata/RHSA-2026:18142
+    reference_type:
+    reference_id:
   - url: https://access.redhat.com/security/updates/classification/#low
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2391503
     reference_type:
     reference_id:
   - url: https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10/html/10.2_release_notes/index
@@ -522,9 +528,3 @@ references:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_18142.json
     reference_type:
     reference_id:
-  - url: https://access.redhat.com/errata/RHSA-2026:18142
-    reference_type:
-    reference_id: RHSA-2026:18142
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2391503
-    reference_type: bug
-    reference_id: show_bug.cgi?id=2391503

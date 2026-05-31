@@ -20,27 +20,7 @@ summary: |
 
   For detailed information on changes in this release, see the Red Hat Enterprise Linux 9 Release Notes linked from the References section.
 impacted_packages:
-  - purl: pkg:rpm/redhat/podman-tests?arch=aarch64&epoch=6
-    affected_versions: vers:rpm/<5.8.0-1.el9
-    fixed_versions: vers:rpm/5.8.0-1.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-debugsource?arch=aarch64&epoch=6
-    affected_versions: vers:rpm/<5.8.0-1.el9
-    fixed_versions: vers:rpm/5.8.0-1.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-plugins-debuginfo?arch=aarch64&epoch=6
-    affected_versions: vers:rpm/<5.8.0-1.el9
-    fixed_versions: vers:rpm/5.8.0-1.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman?arch=ppc64le&epoch=6
-    affected_versions: vers:rpm/<5.8.0-1.el9
-    fixed_versions: vers:rpm/5.8.0-1.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-docker?arch=noarch&epoch=6
     affected_versions: vers:rpm/<5.8.0-1.el9
     fixed_versions: vers:rpm/5.8.0-1.el9
     fixed_in_commits: []
@@ -65,7 +45,17 @@ impacted_packages:
     fixed_versions: vers:rpm/5.8.0-1.el9
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-tests?arch=aarch64&epoch=6
+    affected_versions: vers:rpm/<5.8.0-1.el9
+    fixed_versions: vers:rpm/5.8.0-1.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-debuginfo?arch=aarch64&epoch=6
+    affected_versions: vers:rpm/<5.8.0-1.el9
+    fixed_versions: vers:rpm/5.8.0-1.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-plugins-debuginfo?arch=aarch64&epoch=6
     affected_versions: vers:rpm/<5.8.0-1.el9
     fixed_versions: vers:rpm/5.8.0-1.el9
     fixed_in_commits: []
@@ -76,6 +66,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-tests-debuginfo?arch=aarch64&epoch=6
+    affected_versions: vers:rpm/<5.8.0-1.el9
+    fixed_versions: vers:rpm/5.8.0-1.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman?arch=ppc64le&epoch=6
     affected_versions: vers:rpm/<5.8.0-1.el9
     fixed_versions: vers:rpm/5.8.0-1.el9
     fixed_in_commits: []
@@ -210,6 +205,11 @@ impacted_packages:
     fixed_versions: vers:rpm/5.8.0-1.el9
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-docker?arch=noarch&epoch=6
+    affected_versions: vers:rpm/<5.8.0-1.el9
+    fixed_versions: vers:rpm/5.8.0-1.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: Important
     scoring_system: rhas
@@ -218,7 +218,13 @@ severities:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_18722.json
 weaknesses: []
 references:
+  - url: https://access.redhat.com/errata/RHSA-2026:18722
+    reference_type:
+    reference_id:
   - url: https://access.redhat.com/security/updates/classification/#important
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2393152
     reference_type:
     reference_id:
   - url: https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/9.8_release_notes/index
@@ -239,9 +245,3 @@ references:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_18722.json
     reference_type:
     reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2393152
-    reference_type: bug
-    reference_id: 2393152
-  - url: https://access.redhat.com/errata/RHSA-2026:18722
-    reference_type:
-    reference_id: RHSA-2026:18722
