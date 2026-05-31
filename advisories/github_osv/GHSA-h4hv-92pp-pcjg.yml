@@ -1,0 +1,46 @@
+advisory_id: GHSA-h4hv-92pp-pcjg
+datasource_id: github_osv/GHSA-h4hv-92pp-pcjg
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-h4hv-92pp-pcjg/GHSA-h4hv-92pp-pcjg.json
+aliases:
+  - CVE-2026-42615
+summary: |
+  CyberChef has a Cross-site Scripting issue
+  GCHQ CyberChef before 11.0.0 allows XSS via Show Base64 offsets, as demonstrated by the /#recipe=Show_Base64_offsets('%3Cscript substring.
+impacted_packages:
+  - purl: pkg:npm/cyberchef
+    affected_versions: vers:npm/<11.0.0
+    fixed_versions: vers:npm/11.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.2'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-h4hv-92pp-pcjg/GHSA-h4hv-92pp-pcjg.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-79
+references:
+  - url: https://github.com/gchq/CyberChef
+    reference_type:
+    reference_id:
+  - url: https://github.com/gchq/CyberChef/commit/9641ae07f92e9af50f10e978385465b2f4a36c4d
+    reference_type:
+    reference_id:
+  - url: https://github.com/gchq/CyberChef/compare/v10.24.0...v11.0.0
+    reference_type:
+    reference_id:
+  - url: https://github.com/gchq/CyberChef/issues/2344
+    reference_type:
+    reference_id:
+  - url: https://github.com/gchq/CyberChef/pull/2346
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-42615
+    reference_type:
+    reference_id:

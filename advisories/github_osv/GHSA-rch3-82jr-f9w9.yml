@@ -1,0 +1,97 @@
+advisory_id: GHSA-rch3-82jr-f9w9
+datasource_id: github_osv/GHSA-rch3-82jr-f9w9
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-rch3-82jr-f9w9/GHSA-rch3-82jr-f9w9.json
+aliases:
+  - CVE-2026-40171
+summary: |
+  Jupyter Notebook Vulnerable to Authentication Token Theft via CommandLinker XSS
+  ### Impact
+
+  A stored Cross-Site Scripting (XSS) vulnerability in Jupyter Notebook allows attackers to steal authentication tokens from users who open malicious notebook files and interact with elements that the attacker can make look indistinguishable from legitimate controls (single click interaction).
+
+  The vulnerability enables complete account takeover through the Jupyter REST API, allowing the attacker to:
+  1. Read all files
+  2. Modify/create files
+  3. Access running kernels and execute arbitrary code
+  4. Create terminals for shell access
+
+  ### Patches
+
+  Jupyter Notebook 7.5.6 and JupyterLab 4.5.7 include patches for this vulnerability.
+
+  ### Workarounds
+
+  The help extension can be disabled via CLI:
+
+  ```
+  jupyter labextension disable @jupyter-notebook/help-extension
+  jupyter labextension disable @jupyterlab/help-extension
+  ```
+
+  ### Hardening
+
+  The patched versions include a toggle to disable the command linker functionality altogether, for example via `overrides.json`:
+
+  ```json
+  {
+    "@jupyterlab/apputils-extension:sanitizer": {
+      "allowCommandLinker": false
+    }
+  }
+  ```
+
+  ### Resources
+
+  - https://jupyterlab.readthedocs.io/en/latest/user/commands.html#commands-in-markdown-output-and-files
+
+  ### Acknowledgments
+
+  Reported by Daniel Teixeira - NVIDIA AI Red Team
+impacted_packages:
+  - purl: pkg:npm/%40jupyter-notebook/help-extension
+    affected_versions: vers:npm/<=7.5.5
+    fixed_versions: vers:npm/7.5.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/notebook
+    affected_versions: vers:pypi/<=7.5.5
+    fixed_versions: vers:pypi/7.5.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/jupyterlab
+    affected_versions: vers:pypi/<=4.5.6
+    fixed_versions: vers:pypi/4.5.7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/%40jupyterlab/help-extension
+    affected_versions: vers:npm/<=4.5.6
+    fixed_versions: vers:npm/4.5.7
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.4'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-rch3-82jr-f9w9/GHSA-rch3-82jr-f9w9.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-79
+  - CWE-601
+references:
+  - url: https://github.com/jupyter/notebook
+    reference_type:
+    reference_id:
+  - url: https://github.com/jupyter/notebook/security/advisories/GHSA-rch3-82jr-f9w9
+    reference_type:
+    reference_id:
+  - url: https://jupyterlab.readthedocs.io/en/latest/user/commands.html#commands-in-markdown-output-and-files
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-40171
+    reference_type:
+    reference_id:

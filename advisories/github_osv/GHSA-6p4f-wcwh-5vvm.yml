@@ -1,0 +1,81 @@
+advisory_id: GHSA-6p4f-wcwh-5vvm
+datasource_id: github_osv/GHSA-6p4f-wcwh-5vvm
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-6p4f-wcwh-5vvm/GHSA-6p4f-wcwh-5vvm.json
+aliases:
+  - CVE-2026-22745
+summary: |
+  Spring MVC and WebFlux applications are vulnerable to Denial of Service attacks when resolving static resources.
+
+
+  More precisely, an application can be vulnerable when all the following are true:
+
+    *  the application is using Spring MVC or Spring WebFlux
+    *  the application is serving static resources from the file system
+    *  the application is running on a Windows platform
+
+
+  When all the conditions above are met, the attacker can send malicious requests that are slow to resolve and that can keep HTTP connections in use. This can cause a Denial of Service on the application.
+impacted_packages:
+  - purl: pkg:maven/org.springframework/spring-webflux
+    affected_versions: vers:maven/<=7.0.6
+    fixed_versions: vers:maven/7.0.7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.springframework/spring-webflux
+    affected_versions: vers:maven/<=6.2.17
+    fixed_versions: vers:maven/6.2.18
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.springframework/spring-webflux
+    affected_versions: vers:maven/>=6.1.0|<=6.1.26
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.springframework/spring-webflux
+    affected_versions: vers:maven/<=5.3.47
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.springframework/spring-webmvc
+    affected_versions: vers:maven/<=7.0.6
+    fixed_versions: vers:maven/7.0.7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.springframework/spring-webmvc
+    affected_versions: vers:maven/<=6.2.17
+    fixed_versions: vers:maven/6.2.18
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.springframework/spring-webmvc
+    affected_versions: vers:maven/>=6.1.0|<=6.1.26
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.springframework/spring-webmvc
+    affected_versions: vers:maven/<=5.3.47
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-6p4f-wcwh-5vvm/GHSA-6p4f-wcwh-5vvm.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-400
+references:
+  - url: https://github.com/spring-projects/spring-framework
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-22745
+    reference_type:
+    reference_id:
+  - url: https://spring.io/security/cve-2026-22745
+    reference_type:
+    reference_id:
