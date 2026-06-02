@@ -7,6 +7,11 @@ summary: |
   ### Summary
   Pimcore 10.6.x and Enterprise 10.6.x versions currently depend on PHPOffice/PhpSpreadsheet version 1.x, which has recently been identified with a security vulnerability (CVE-2024-45048). To mitigate this issue, it is recommended to update to the latest version 2.2.2. For more details, please refer to the official advisory: [GHSA-ghg6-32f9-2jp7](https://github.com/advisories/GHSA-ghg6-32f9-2jp7).
 impacted_packages:
+  - purl: pkg:composer/pimcore/pimcore
+    affected_versions: vers:composer/>=10.6.9+0|<10.6.9+12
+    fixed_versions: vers:composer/10.6.9+12
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:composer/pimcore/data-importer
     affected_versions: vers:composer/<1.8.9
     fixed_versions: vers:composer/1.8.9
@@ -30,11 +35,6 @@ impacted_packages:
   - purl: pkg:composer/pimcore/admin-ui-classic-bundle
     affected_versions: vers:composer/>=1.5.0|<1.5.4
     fixed_versions: vers:composer/1.5.4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/pimcore/pimcore
-    affected_versions: vers:composer/>=10.6.9+0|<10.6.9+12
-    fixed_versions: vers:composer/10.6.9+12
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/pimcore/pimcore
@@ -63,9 +63,9 @@ references:
   - url: https://github.com/advisories/GHSA-ghg6-32f9-2jp7
     reference_type:
     reference_id:
-  - url: https://github.com/pimcore/pimcore
-    reference_type:
-    reference_id:
   - url: https://github.com/pimcore/pimcore/security/advisories/GHSA-hq76-662x-7mw4
     reference_type:
     reference_id:
+  - url: https://github.com/pimcore/pimcore
+    reference_type: other
+    reference_id: pimcore
