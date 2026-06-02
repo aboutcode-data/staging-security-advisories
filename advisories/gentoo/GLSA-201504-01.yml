@@ -173,34 +173,49 @@ impacted_packages:
     fixed_versions: vers:ebuild/>=31.5.3
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:ebuild/www-client/firefox-bin
+    affected_versions:
+    fixed_versions: vers:ebuild/>=31.5.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/mail-client/thunderbird
+    affected_versions:
+    fixed_versions: vers:ebuild/>=31.5.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/mail-client/thunderbird-bin
+    affected_versions:
+    fixed_versions: vers:ebuild/>=31.5.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/www-client/seamonkey
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.33.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/www-client/seamonkey-bin
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.33.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-libs/nspr
+    affected_versions:
+    fixed_versions: vers:ebuild/>=4.10.6
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:ebuild/www-client/firefox
     affected_versions: vers:ebuild/<31.5.3
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/www-client/firefox-bin
-    affected_versions:
-    fixed_versions: vers:ebuild/>=31.5.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/www-client/firefox-bin
     affected_versions: vers:ebuild/<31.5.3
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/mail-client/thunderbird
-    affected_versions:
-    fixed_versions: vers:ebuild/>=31.5.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/mail-client/thunderbird
     affected_versions: vers:ebuild/<31.5.0
     fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/mail-client/thunderbird-bin
-    affected_versions:
-    fixed_versions: vers:ebuild/>=31.5.0
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/mail-client/thunderbird-bin
@@ -209,28 +224,13 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/www-client/seamonkey
-    affected_versions:
-    fixed_versions: vers:ebuild/>=2.33.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/www-client/seamonkey
     affected_versions: vers:ebuild/<2.33.1
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/www-client/seamonkey-bin
-    affected_versions:
-    fixed_versions: vers:ebuild/>=2.33.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/www-client/seamonkey-bin
     affected_versions: vers:ebuild/<2.33.1
     fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/dev-libs/nspr
-    affected_versions:
-    fixed_versions: vers:ebuild/>=4.10.6
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/dev-libs/nspr
@@ -246,6 +246,18 @@ severities:
     url:
 weaknesses: []
 references:
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/remote/34448.rb
+    reference_type: exploit
+    reference_id: CVE-2014-1511;OSVDB-104594;CVE-2014-1510;OSVDB-104593
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/remote/39295.js
+    reference_type: exploit
+    reference_id: CVE-2014-1564;OSVDB-110716
+  - url: https://www.securityfocus.com/bid/69525/info
+    reference_type: exploit
+    reference_id: CVE-2014-1564;OSVDB-110716
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/remote/36480.rb
+    reference_type: exploit
+    reference_id: CVE-2014-8636;OSVDB-117005
   - url: https://security.gentoo.org/glsa/201504-01
     reference_type:
-    reference_id:
+    reference_id: GLSA-201504-01

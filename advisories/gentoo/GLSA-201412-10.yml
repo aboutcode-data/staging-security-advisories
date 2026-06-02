@@ -25,11 +25,6 @@ impacted_packages:
     fixed_versions: vers:ebuild/>=1.8.004.20120613
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:ebuild/www-apps/egroupware
-    affected_versions: vers:ebuild/<1.8.004.20120613
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:ebuild/x11-libs/vte
     affected_versions:
     fixed_versions: vers:ebuild/>=0.32.2
@@ -45,14 +40,39 @@ impacted_packages:
     fixed_versions: vers:ebuild/>=0.28.2-r206
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:ebuild/x11-libs/vte
-    affected_versions: vers:ebuild/<0.32.2
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:ebuild/net-analyzer/lft
     affected_versions:
     fixed_versions: vers:ebuild/>=3.33
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-php/suhosin
+    affected_versions:
+    fixed_versions: vers:ebuild/>=0.9.33
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/x11-misc/slock
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/sys-cluster/ganglia
+    affected_versions:
+    fixed_versions: vers:ebuild/>=3.3.7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/net-im/gg-transport
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.2.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/www-apps/egroupware
+    affected_versions: vers:ebuild/<1.8.004.20120613
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/x11-libs/vte
+    affected_versions: vers:ebuild/<0.32.2
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/net-analyzer/lft
@@ -61,18 +81,8 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/dev-php/suhosin
-    affected_versions:
-    fixed_versions: vers:ebuild/>=0.9.33
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/dev-php/suhosin
     affected_versions: vers:ebuild/<0.9.33
     fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/x11-misc/slock
-    affected_versions:
-    fixed_versions: vers:ebuild/>=1.0
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/x11-misc/slock
@@ -81,18 +91,8 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/sys-cluster/ganglia
-    affected_versions:
-    fixed_versions: vers:ebuild/>=3.3.7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/sys-cluster/ganglia
     affected_versions: vers:ebuild/<3.3.7
     fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/net-im/gg-transport
-    affected_versions:
-    fixed_versions: vers:ebuild/>=2.2.4
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/net-im/gg-transport
@@ -108,6 +108,18 @@ severities:
     url:
 weaknesses: []
 references:
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/php/webapps/11777.txt
+    reference_type: exploit
+    reference_id: CVE-2010-3314;CVE-2010-3313;OSVDB-62805;OSVDB-62804
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/dos/37477.txt
+    reference_type: exploit
+    reference_id: CVE-2012-2738;OSVDB-84337
+  - url: https://www.securityfocus.com/bid/54281/info
+    reference_type: exploit
+    reference_id: CVE-2012-2738;OSVDB-84337
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/php/webapps/38030.php
+    reference_type: exploit
+    reference_id: CVE-2012-3448;OSVDB-84240
   - url: https://security.gentoo.org/glsa/201412-10
     reference_type:
     reference_id: GLSA-201412-10
