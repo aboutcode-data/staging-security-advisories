@@ -109,14 +109,34 @@ impacted_packages:
     fixed_versions: vers:ebuild/>=4.12
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:ebuild/dev-libs/nspr
-    affected_versions: vers:ebuild/<4.12
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:ebuild/dev-libs/nss
     affected_versions:
     fixed_versions: vers:ebuild/>=3.22.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/mail-client/thunderbird
+    affected_versions:
+    fixed_versions: vers:ebuild/>=38.7.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/mail-client/thunderbird-bin
+    affected_versions:
+    fixed_versions: vers:ebuild/>=38.7.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/www-client/firefox
+    affected_versions:
+    fixed_versions: vers:ebuild/>=38.7.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/www-client/firefox-bin
+    affected_versions:
+    fixed_versions: vers:ebuild/>=38.7.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-libs/nspr
+    affected_versions: vers:ebuild/<4.12
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/dev-libs/nss
@@ -125,18 +145,8 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/mail-client/thunderbird
-    affected_versions:
-    fixed_versions: vers:ebuild/>=38.7.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/mail-client/thunderbird
     affected_versions: vers:ebuild/<38.7.0
     fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/mail-client/thunderbird-bin
-    affected_versions:
-    fixed_versions: vers:ebuild/>=38.7.0
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/mail-client/thunderbird-bin
@@ -145,18 +155,8 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/www-client/firefox
-    affected_versions:
-    fixed_versions: vers:ebuild/>=38.7.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/www-client/firefox
     affected_versions: vers:ebuild/<38.7.0
     fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/www-client/firefox-bin
-    affected_versions:
-    fixed_versions: vers:ebuild/>=38.7.0
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/www-client/firefox-bin
@@ -172,6 +172,15 @@ severities:
     url:
 weaknesses: []
 references:
+  - url: https://code.google.com/p/google-security-research/issues/detail?id=427&can=1
+    reference_type: exploit
+    reference_id: CVE-2015-4481
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/windows/local/37925.txt
+    reference_type: exploit
+    reference_id: CVE-2015-4481
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/windows/remote/42484.html
+    reference_type: exploit
+    reference_id: CVE-2016-1960
   - url: https://security.gentoo.org/glsa/201605-06
     reference_type:
-    reference_id:
+    reference_id: GLSA-201605-06
