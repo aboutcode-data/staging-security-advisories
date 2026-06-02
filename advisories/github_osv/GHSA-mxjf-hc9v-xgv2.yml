@@ -7,11 +7,6 @@ summary: |
   Failing to properly validate the HTTP host-header TYPO3 CMS is susceptible to host spoofing. TYPO3 uses the HTTP host-header to generate absolute URLs in several places like 404 handling, http(s) enforcement, password reset links and many more. Since the host header itself is provided by the client it can be forged to any value, even in a name based virtual hosts environment. A blog post describes this problem in great detail.
 impacted_packages:
   - purl: pkg:composer/typo3/cms
-    affected_versions: vers:composer/>=6.2.0|<6.2.3
-    fixed_versions: vers:composer/6.2.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/typo3/cms
     affected_versions: vers:composer/>=6.1.0|<6.1.9
     fixed_versions: vers:composer/6.1.9
     fixed_in_commits: []
@@ -24,6 +19,11 @@ impacted_packages:
   - purl: pkg:composer/typo3/cms
     affected_versions: vers:composer/>=4.5.0|<4.5.34
     fixed_versions: vers:composer/4.5.34
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/typo3/cms
+    affected_versions: vers:composer/>=6.2.0|<6.2.3
+    fixed_versions: vers:composer/6.2.3
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
