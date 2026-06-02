@@ -12,13 +12,13 @@ summary: |
   Users are recommended to upgrade to version 11.0.0, 10.1.31 or 9.0.96, which fix the issue.
 impacted_packages:
   - purl: pkg:maven/org.apache.tomcat/tomcat-catalina
-    affected_versions: vers:maven/>=10.1.0-M1|<10.1.30
-    fixed_versions: vers:maven/10.1.30
+    affected_versions: vers:maven/<9.0.96
+    fixed_versions: vers:maven/9.0.96
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat/tomcat-catalina
-    affected_versions: vers:maven/<9.0.96
-    fixed_versions: vers:maven/9.0.96
+    affected_versions: vers:maven/>=10.1.0-M1|<10.1.30
+    fixed_versions: vers:maven/10.1.30
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat/tomcat-catalina
@@ -53,9 +53,6 @@ references:
   - url: https://github.com/apache/tomcat/commit/acc2f01395f895980f5d8a64573fcc1bade13369
     reference_type:
     reference_id:
-  - url: https://lists.apache.org/thread/lopzlqh91jj9n334g02om08sbysdb928
-    reference_type:
-    reference_id:
   - url: https://lists.debian.org/debian-lts-announce/2025/01/msg00009.html
     reference_type:
     reference_id:
@@ -68,3 +65,6 @@ references:
   - url: http://www.openwall.com/lists/oss-security/2024/11/18/2
     reference_type:
     reference_id:
+  - url: https://lists.apache.org/thread/lopzlqh91jj9n334g02om08sbysdb928
+    reference_type: advisory
+    reference_id: lopzlqh91jj9n334g02om08sbysdb928

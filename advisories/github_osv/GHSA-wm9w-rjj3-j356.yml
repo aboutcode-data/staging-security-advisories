@@ -23,11 +23,6 @@ impacted_packages:
     fixed_versions: vers:maven/10.1.25
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
-    affected_versions: vers:maven/>=9.0.0-M1|<9.0.90
-    fixed_versions: vers:maven/9.0.90
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat/tomcat-coyote
     affected_versions: vers:maven/>=11.0.0-M1|<11.0.0-M21
     fixed_versions: vers:maven/11.0.0-M21
@@ -53,6 +48,11 @@ impacted_packages:
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
+    affected_versions: vers:maven/>=9.0.0-M1|<9.0.90
+    fixed_versions: vers:maven/9.0.90
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -70,8 +70,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-755
   - CWE-400
+  - CWE-755
 references:
   - url: https://github.com/apache/tomcat
     reference_type:
@@ -83,9 +83,6 @@ references:
     reference_type:
     reference_id:
   - url: https://github.com/apache/tomcat/commit/9fec9a82887853402833a80b584e3762c7423f5f
-    reference_type:
-    reference_id:
-  - url: https://lists.apache.org/thread/4kqf0bc9gxymjc2x7v3p7dvplnl77y8l
     reference_type:
     reference_id:
   - url: https://lists.debian.org/debian-lts-announce/2025/07/msg00009.html
@@ -106,3 +103,6 @@ references:
   - url: https://tomcat.apache.org/security-9.html
     reference_type:
     reference_id:
+  - url: https://lists.apache.org/thread/4kqf0bc9gxymjc2x7v3p7dvplnl77y8l
+    reference_type: advisory
+    reference_id: 4kqf0bc9gxymjc2x7v3p7dvplnl77y8l

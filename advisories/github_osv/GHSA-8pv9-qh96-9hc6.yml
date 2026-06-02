@@ -12,6 +12,11 @@ summary: |
   Jenkins 2.471, LTS 2.452.4, LTS 2.462.1 restricts access to a user’s "My Views" to the owning user and administrators.
 impacted_packages:
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
+    affected_versions: vers:maven/>=2.470|<2.471
+    fixed_versions: vers:maven/2.471
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
     affected_versions: vers:maven/<2.452.4
     fixed_versions: vers:maven/2.452.4
     fixed_in_commits: []
@@ -19,11 +24,6 @@ impacted_packages:
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
     affected_versions: vers:maven/>=2.460|<2.462.1
     fixed_versions: vers:maven/2.462.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
-    affected_versions: vers:maven/>=2.470|<2.471
-    fixed_versions: vers:maven/2.471
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -43,8 +43,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-862
   - CWE-285
+  - CWE-862
 references:
   - url: https://github.com/jenkinsci/jenkins
     reference_type:
@@ -62,5 +62,5 @@ references:
     reference_type:
     reference_id:
   - url: https://www.jenkins.io/security/advisory/2024-08-07/#SECURITY-3349
-    reference_type:
-    reference_id:
+    reference_type: advisory
+    reference_id: '#SECURITY-3349'
