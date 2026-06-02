@@ -29,6 +29,13 @@ summary: 'Django Two-Factor Authentication before 1.12, stores the user''s passw
   using signed cookies rather than a server-side session storage. There is no way to fully mitigate
   the issue without upgrading.'
 impacted_packages:
+  - purl: pkg:github/bouke/django-two-factor-auth
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/bouke/django-two-factor-auth
+        commit: 454fd9842fa6e8bb772dbf0943976bc8e3335359
+    introduced_in_commits: []
   - purl: pkg:pypi/django-two-factor-auth
     affected_versions: vers:pypi/0.1.0|0.1.1|0.1.2|0.2.0|0.2.1|0.2.2|0.2.3|0.3.0|0.3.1|0.4.0|0.5.0|1.0.0b1|1.0.0b2|1.0.0b3|1.0.0|1.1.0|1.1.1|1.2.0|1.2.1|1.2.2|1.3.0|1.3.1|1.4.0|1.5.0|1.6.0|1.6.1|1.6.2|1.7.0|1.8.0|1.9.1|1.10.0|1.11.0
     fixed_versions: vers:pypi/1.12
