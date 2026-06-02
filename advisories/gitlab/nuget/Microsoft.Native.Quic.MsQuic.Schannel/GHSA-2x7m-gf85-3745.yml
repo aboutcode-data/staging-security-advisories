@@ -19,19 +19,19 @@ summary: |
   ### MSRC CVE Info
   https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-26190
 impacted_packages:
-  - purl: pkg:nuget/Microsoft.Native.Quic.MsQuic.Schannel
-    affected_versions:
-    fixed_versions: vers:nuget/2.1.12|2.2.7|2.3.5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/microsoft/msquic
     affected_versions:
     fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/microsoft/msquic
-        commit: 5d070d661c45979946615289e92bb6b822efe9e9
-      - vcs_url: https://github.com/microsoft/msquic
         commit: 933f7b79949bc588945672396d70b661143bb8f0
+      - vcs_url: https://github.com/microsoft/msquic
+        commit: 5d070d661c45979946615289e92bb6b822efe9e9
+    introduced_in_commits: []
+  - purl: pkg:nuget/Microsoft.Native.Quic.MsQuic.Schannel
+    affected_versions:
+    fixed_versions: vers:nuget/2.1.12|2.2.7|2.3.5
+    fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: None
@@ -41,8 +41,8 @@ severities:
     url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/nuget/Microsoft.Native.Quic.MsQuic.Schannel/GHSA-2x7m-gf85-3745.yml
 weaknesses:
   - CWE-1035
-  - CWE-401
   - CWE-937
+  - CWE-401
 references:
   - url: https://github.com/microsoft/msquic
     reference_type:
