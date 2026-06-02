@@ -2,9 +2,11 @@ advisory_id: PYSEC-2026-161
 datasource_id: pysec/PYSEC-2026-161
 datasource_url: https://osv-vulnerabilities.storage.googleapis.com/PyPI/all.zip
 aliases:
+  - CVE-2026-48710
   - GHSA-86qp-5c8j-p5mr
+  - X41-2026-002
 summary: |
-  Missing Host header validation poisons request.url.path, bypassing path-based security checks
+  BadHost: Missing Host header validation poisons request.url.path, bypassing path-based security checks
   Starlette reconstructs the requested URL based on the HTTP Host request header and requested path, but does not perform any validation of the Host header value. This allows attackers to inject paths into the host part, prepending the actual path. However, routing in Starlette is based on the actual request path. This inconsistent interpretation of HTTP requests may lead to issues such as authentication bypass when the authentication depends on the reconstructed URL’s path.
 impacted_packages:
   - purl: pkg:pypi/starlette
@@ -22,10 +24,19 @@ impacted_packages:
 severities: []
 weaknesses: []
 references:
+  - url: https://badhost.org
+    reference_type:
+    reference_id:
   - url: https://github.com/Kludex/starlette/commit/764dab0dcfb9033d75442d7a359645c9f94648c6
     reference_type:
     reference_id:
   - url: https://github.com/Kludex/starlette/security/advisories/GHSA-86qp-5c8j-p5mr
+    reference_type:
+    reference_id:
+  - url: https://ostif.org/disclosing-the-badhost-vulnerability-in-starlette/
+    reference_type:
+    reference_id:
+  - url: https://www.secwest.net/starlette
     reference_type:
     reference_id:
   - url: https://www.x41-dsec.de/lab/advisories/x41-2026-002-starlette/

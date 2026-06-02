@@ -9,17 +9,17 @@ summary: |
 
   A server using fickling.load() as a security gate before deserializing untrusted pickle data (its documented use case) is fully bypassed. The attacker receives the contents of any file readable by the server process as the return value of fickling.load().
 impacted_packages:
-  - purl: pkg:pypi/fickling
-    affected_versions: vers:pypi/<0.1.10
-    fixed_versions: vers:pypi/0.1.10
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/trailofbits/fickling
     affected_versions:
     fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/trailofbits/fickling
         commit: 7f39d97258217ee2c21a1f5031d4a6d7343eb30d
+    introduced_in_commits: []
+  - purl: pkg:pypi/fickling
+    affected_versions: vers:pypi/<0.1.10
+    fixed_versions: vers:pypi/0.1.10
+    fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: None
@@ -28,9 +28,9 @@ severities:
     published_at: None
     url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/pypi/fickling/GHSA-r48f-3986-4f9c.yml
 weaknesses:
-  - CWE-184
   - CWE-1035
   - CWE-937
+  - CWE-184
 references:
   - url: https://github.com/trailofbits/fickling
     reference_type:

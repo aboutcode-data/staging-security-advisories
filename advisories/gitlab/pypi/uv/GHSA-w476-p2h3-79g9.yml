@@ -13,11 +13,6 @@ summary: |
 
   However, this particular source of malleability in source distributions is unintentional and not operating by design, and therefore we consider it a vulnerability despite its overlap in capabilities with intended behavior.
 impacted_packages:
-  - purl: pkg:pypi/uv
-    affected_versions: vers:pypi/<0.9.5
-    fixed_versions: vers:pypi/0.9.5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/astral-sh/uv
     affected_versions:
     fixed_versions:
@@ -25,11 +20,16 @@ impacted_packages:
       - vcs_url: https://github.com/astral-sh/uv
         commit: ae450662d1546e9853f67a8c61a506d3a892d963
     introduced_in_commits: []
+  - purl: pkg:pypi/uv
+    affected_versions: vers:pypi/<0.9.5
+    fixed_versions: vers:pypi/0.9.5
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities: []
 weaknesses:
-  - CWE-843
   - CWE-1035
   - CWE-937
+  - CWE-843
 references:
   - url: https://github.com/astral-sh/uv
     reference_type:

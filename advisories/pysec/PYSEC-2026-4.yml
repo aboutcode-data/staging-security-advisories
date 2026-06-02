@@ -4,6 +4,7 @@ datasource_url: https://osv-vulnerabilities.storage.googleapis.com/PyPI/all.zip
 aliases:
   - BIT-gdal-2026-8212
   - CVE-2026-8212
+  - GHSA-r5m4-5vww-w9f5
 summary: A flaw has been found in OSGeo gdal up to 3.13.0dev-4. Affected by this vulnerability
   is the function SWSDfldsrch of the file frmts/hdf4/hdf-eos/SWapi.c. Executing a manipulation
   can lead to heap-based buffer overflow. The attack requires local access. The exploit has
@@ -29,6 +30,9 @@ references:
   - url: https://github.com/biniamf/pocs/tree/main/gdal-swsdfldsrch_oob-read
     reference_type:
     reference_id:
+  - url: https://github.com/OSGeo/gdal/
+    reference_type:
+    reference_id:
   - url: https://github.com/OSGeo/gdal/commit/3e04c0385630e4d42517046d9a4967dfccfeb7fd
     reference_type:
     reference_id:
@@ -47,6 +51,3 @@ references:
   - url: https://vuldb.com/vuln/362429/cti
     reference_type:
     reference_id:
-  - url: https://github.com/OSGeo/gdal/
-    reference_type: other
-    reference_id: gdal
