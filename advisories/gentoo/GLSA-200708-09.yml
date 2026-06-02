@@ -20,24 +20,44 @@ impacted_packages:
     fixed_versions: vers:ebuild/>=2.0.0.6
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:ebuild/www-client/mozilla-firefox-bin
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.0.0.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/mail-client/mozilla-thunderbird
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.0.0.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/mail-client/mozilla-thunderbird-bin
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.0.0.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/www-client/seamonkey
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.1.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/www-client/seamonkey-bin
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.1.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/net-libs/xulrunner
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.8.1.6
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:ebuild/www-client/mozilla-firefox
     affected_versions: vers:ebuild/<2.0.0.6
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/www-client/mozilla-firefox-bin
-    affected_versions:
-    fixed_versions: vers:ebuild/>=2.0.0.6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/www-client/mozilla-firefox-bin
     affected_versions: vers:ebuild/<2.0.0.6
     fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/mail-client/mozilla-thunderbird
-    affected_versions:
-    fixed_versions: vers:ebuild/>=2.0.0.6
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/mail-client/mozilla-thunderbird
@@ -46,38 +66,18 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/mail-client/mozilla-thunderbird-bin
-    affected_versions:
-    fixed_versions: vers:ebuild/>=2.0.0.6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/mail-client/mozilla-thunderbird-bin
     affected_versions: vers:ebuild/<2.0.0.6
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/www-client/seamonkey
-    affected_versions:
-    fixed_versions: vers:ebuild/>=1.1.4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/www-client/seamonkey
     affected_versions: vers:ebuild/<1.1.4
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/www-client/seamonkey-bin
-    affected_versions:
-    fixed_versions: vers:ebuild/>=1.1.4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/www-client/seamonkey-bin
     affected_versions: vers:ebuild/<1.1.4
     fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/net-libs/xulrunner
-    affected_versions:
-    fixed_versions: vers:ebuild/>=1.8.1.6
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/net-libs/xulrunner
@@ -93,6 +93,12 @@ severities:
     url:
 weaknesses: []
 references:
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/remote/30439.txt
+    reference_type: exploit
+    reference_id: CVE-2007-3844;OSVDB-38026
+  - url: https://www.securityfocus.com/bid/25142/info
+    reference_type: exploit
+    reference_id: CVE-2007-3844;OSVDB-38026
   - url: https://security.gentoo.org/glsa/200708-09
     reference_type:
     reference_id: GLSA-200708-09

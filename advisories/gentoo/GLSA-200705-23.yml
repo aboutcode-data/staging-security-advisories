@@ -29,11 +29,6 @@ impacted_packages:
     fixed_versions: vers:ebuild/>=1.4.2.19
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:ebuild/dev-java/sun-jdk
-    affected_versions: vers:ebuild/<1.5.0.11
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:ebuild/dev-java/sun-jre-bin
     affected_versions:
     fixed_versions: vers:ebuild/>=1.6.0.01
@@ -94,6 +89,11 @@ impacted_packages:
     fixed_versions: vers:ebuild/>=1.5.0.18
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:ebuild/dev-java/sun-jdk
+    affected_versions: vers:ebuild/<1.5.0.11
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:ebuild/dev-java/sun-jre-bin
     affected_versions: vers:ebuild/<1.6.0.01
     fixed_versions:
@@ -107,6 +107,12 @@ severities:
     url:
 weaknesses: []
 references:
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/remote/30043.txt
+    reference_type: exploit
+    reference_id: CVE-2007-2788;OSVDB-36199
+  - url: https://www.securityfocus.com/bid/24004/info
+    reference_type: exploit
+    reference_id: CVE-2007-2788;OSVDB-36199
   - url: https://security.gentoo.org/glsa/200705-23
     reference_type:
     reference_id: GLSA-200705-23
