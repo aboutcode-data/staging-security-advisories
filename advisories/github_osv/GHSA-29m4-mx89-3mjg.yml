@@ -7,6 +7,11 @@ summary: |
   Online Media Asset Handling (*.youtube and *.vimeo files) in the TYPO3 backend is vulnerable to denial of service. Putting large files with according file extensions results in high consumption of system resources. This can lead to exceeding limits of the current PHP process which results in a dysfunctional backend component. A valid backend user account or write access on the server system (e.g. SFTP) is needed in order to exploit this vulnerability.
 impacted_packages:
   - purl: pkg:composer/typo3/cms-core
+    affected_versions: vers:composer/>=7.0.0|<7.6.32
+    fixed_versions: vers:composer/7.6.32
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/typo3/cms-core
     affected_versions: vers:composer/>=8.0.0|<8.7.21
     fixed_versions: vers:composer/8.7.21
     fixed_in_commits: []
@@ -14,11 +19,6 @@ impacted_packages:
   - purl: pkg:composer/typo3/cms-core
     affected_versions: vers:composer/>=9.0.0|<9.5.2
     fixed_versions: vers:composer/9.5.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/typo3/cms-core
-    affected_versions: vers:composer/>=7.0.0|<7.6.32
-    fixed_versions: vers:composer/7.6.32
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
