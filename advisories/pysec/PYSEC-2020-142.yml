@@ -9,6 +9,13 @@ summary: A mis-handling of invalid unicode characters in the Java implementation
   creation of a second ciphertext that can decrypt to the same plaintext. This can be a problem
   with encrypting deterministic AEAD with a single key, and rely on a unique ciphertext-per-plaintext.
 impacted_packages:
+  - purl: pkg:github/google/tink
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/google/tink
+        commit: 93d839a5865b9d950dffdc9d0bc99b71280a8899
+    introduced_in_commits: []
   - purl: pkg:pypi/tink
     affected_versions: vers:pypi/1.4.0
     fixed_versions: vers:pypi/1.5.0

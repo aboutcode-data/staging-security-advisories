@@ -12,6 +12,13 @@ summary: The _encode_invalid_chars function in util/url.py in the urllib3 librar
   O(N^2). If percent_encodings were deduplicated, the time to compute _encode_invalid_chars
   would be O(kN), where k is at most 484 ((10+6*2)^2).
 impacted_packages:
+  - purl: pkg:github/urllib3/urllib3
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/urllib3/urllib3
+        commit: a74c9cfbaed9f811e7563cfc3dce894928e0221a
+    introduced_in_commits: []
   - purl: pkg:pypi/urllib3
     affected_versions: vers:pypi/1.25.2|1.25.3|1.25.4|1.25.5|1.25.6|1.25.7
     fixed_versions: vers:pypi/1.25.8

@@ -8,6 +8,13 @@ summary: An exploitable vulnerability exists in the yaml loading functionality o
   before 1.0.5. A specially crafted vault can execute arbitrary python commands resulting in
   command execution. An attacker can insert python into the vault to trigger this vulnerability.
 impacted_packages:
+  - purl: pkg:github/tomoh1r/ansible-vault
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/tomoh1r/ansible-vault
+        commit: 3f8f659ef443ab870bb19f95d43543470168ae04
+    introduced_in_commits: []
   - purl: pkg:pypi/ansible-vault
     affected_versions: vers:pypi/1.0.0|1.0.1|1.0.2|1.0.3|1.0.4
     fixed_versions: vers:pypi/1.0.5

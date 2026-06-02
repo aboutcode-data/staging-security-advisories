@@ -7,6 +7,13 @@ aliases:
 summary: pyro before 3.15 unsafely handles pid files in temporary directory locations and opening
   the pid file as root. An attacker can use this flaw to overwrite arbitrary files via symlinks.
 impacted_packages:
+  - purl: pkg:github/irmen/pyro3
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/irmen/pyro3
+        commit: 554e095a62c4412c91f981e72fd34a936ac2bf1e
+    introduced_in_commits: []
   - purl: pkg:pypi/pyro
     affected_versions: vers:pypi/3.9.1|3.10|3.11|3.12|3.13|3.14
     fixed_versions: vers:pypi/3.15

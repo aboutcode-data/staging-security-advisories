@@ -12,6 +12,13 @@ summary: In TensorFlow before 1.15, a heap buffer overflow in UnsortedSegmentSum
   out of bounds heap memory. This is unlikely to be exploitable and was detected and fixed internally
   in TensorFlow 1.15 and 2.0.
 impacted_packages:
+  - purl: pkg:github/tensorflow/tensorflow
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/tensorflow/tensorflow
+        commit: db4f9717c41bccc3ce10099ab61996b246099892
+    introduced_in_commits: []
   - purl: pkg:pypi/tensorflow-cpu
     affected_versions: vers:pypi/>=1.0.0|<1.15.0
     fixed_versions: vers:pypi/1.15.0

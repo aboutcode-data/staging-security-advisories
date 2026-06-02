@@ -7,6 +7,13 @@ aliases:
 summary: 'redirect() in bottle.py in bottle 0.12.10 doesn''t filter a "\r\n" sequence, which
   leads to a CRLF attack, as demonstrated by a redirect("233\r\nSet-Cookie: name=salt") call.'
 impacted_packages:
+  - purl: pkg:github/bottlepy/bottle
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/bottlepy/bottle
+        commit: 6d7e13da0f998820800ecb3fe9ccee4189aefb54
+    introduced_in_commits: []
   - purl: pkg:pypi/bottle
     affected_versions: vers:pypi/0.10.1|0.10.2|0.10.3|0.10.4|0.10.5|0.10.6|0.10.7|0.10.8|0.10.9|0.10.10|0.10.11|0.10.12|0.11.1|0.11.2|0.11.3|0.11.4|0.11.5|0.11.6|0.11.7|0.12.1|0.12.2|0.12.3|0.12.4|0.12.5|0.12.6|0.12.7|0.12.8|0.12.9|0.12.10
     fixed_versions: vers:pypi/0.12.11

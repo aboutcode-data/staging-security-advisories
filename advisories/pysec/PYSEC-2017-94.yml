@@ -8,6 +8,13 @@ summary: Heap-based buffer overflow in the ALGnew function in block_templace.c i
   Toolkit (aka pycrypto) allows remote attackers to execute arbitrary code as demonstrated by
   a crafted iv parameter to cryptmsg.py.
 impacted_packages:
+  - purl: pkg:github/dlitz/pycrypto
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/dlitz/pycrypto
+        commit: 8dbe0dc3eea5c689d4f76b37b93fe216cf1f00d4
+    introduced_in_commits: []
   - purl: pkg:pypi/pycrypto
     affected_versions: vers:pypi/1.9a2|1.9a5|1.9a6|2.0|2.0.1|2.1.0|2.2|2.3|2.4|2.4.1|2.5|2.6|2.6.1
     fixed_versions:
@@ -39,12 +46,12 @@ references:
   - url: https://pony7.fr/ctf:public:32c3:cryptmsg
     reference_type:
     reference_id:
-  - url: https://security.gentoo.org/glsa/201702-14
-    reference_type:
-    reference_id:
   - url: http://www.openwall.com/lists/oss-security/2016/12/27/8
     reference_type:
     reference_id:
   - url: http://www.securityfocus.com/bid/95122
     reference_type:
     reference_id:
+  - url: https://security.gentoo.org/glsa/201702-14
+    reference_type:
+    reference_id: GLSA-201702-14
