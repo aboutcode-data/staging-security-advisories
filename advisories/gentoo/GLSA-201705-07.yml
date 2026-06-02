@@ -20,14 +20,14 @@ impacted_packages:
     fixed_versions: vers:ebuild/>=45.8.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:ebuild/mail-client/thunderbird
-    affected_versions: vers:ebuild/<45.8.0
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:ebuild/mail-client/thunderbird-bin
     affected_versions:
     fixed_versions: vers:ebuild/>=45.8.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/mail-client/thunderbird
+    affected_versions: vers:ebuild/<45.8.0
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/mail-client/thunderbird-bin
@@ -43,6 +43,12 @@ severities:
     url:
 weaknesses: []
 references:
+  - url: https://bugs.chromium.org/p/project-zero/issues/detail?id=1130
+    reference_type: exploit
+    reference_id: CVE-2017-5404;MFSA2017-05
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/dos/41660.html
+    reference_type: exploit
+    reference_id: CVE-2017-5404;MFSA2017-05
   - url: https://security.gentoo.org/glsa/201705-07
     reference_type:
-    reference_id:
+    reference_id: GLSA-201705-07
