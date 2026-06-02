@@ -7,11 +7,6 @@ aliases:
 summary: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')
   in moment-timezone.
 impacted_packages:
-  - purl: pkg:npm/moment-timezone
-    affected_versions: vers:npm/>=0.1.0|<0.5.35
-    fixed_versions: vers:npm/0.5.35
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/moment/moment-timezone
     affected_versions:
     fixed_versions:
@@ -19,10 +14,15 @@ impacted_packages:
       - vcs_url: https://github.com/moment/moment-timezone
         commit: ce955a301ff372e8e9fb3a5b516620c60e7a082a
     introduced_in_commits: []
+  - purl: pkg:npm/moment-timezone
+    affected_versions: vers:npm/>=0.1.0|<0.5.35
+    fixed_versions: vers:npm/0.5.35
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities: []
 weaknesses:
-  - CWE-1035
   - CWE-78
+  - CWE-1035
   - CWE-937
 references:
   - url: https://github.com/moment/moment-timezone/commit/ce955a301ff372e8e9fb3a5b516620c60e7a082a
