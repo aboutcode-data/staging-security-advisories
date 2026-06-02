@@ -14,17 +14,17 @@ summary: |
   ### Impact
   Production environments typically disable unused endpoints and secure/restrict access to needed endpoints. A more likely victim is the developer in their local development host, who has enabled endpoints without security for the sake of easing development.
 impacted_packages:
+  - purl: pkg:maven/io.micronaut/micronaut-http-server-tck
+    affected_versions: vers:maven/<3.8.3
+    fixed_versions: vers:maven/3.8.3
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:maven/io.micronaut/micronaut-http-server
     affected_versions: vers:maven/<3.8.3
     fixed_versions: vers:maven/3.8.3
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/io.micronaut/micronaut-http-server-netty
-    affected_versions: vers:maven/<3.8.3
-    fixed_versions: vers:maven/3.8.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/io.micronaut/micronaut-http-server-tck
     affected_versions: vers:maven/<3.8.3
     fixed_versions: vers:maven/3.8.3
     fixed_in_commits: []
@@ -45,9 +45,6 @@ weaknesses:
   - CWE-664
   - CWE-610
 references:
-  - url: https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#simple_requests
-    reference_type:
-    reference_id:
   - url: https://github.com/micronaut-projects/micronaut-core
     reference_type:
     reference_id:
@@ -57,9 +54,12 @@ references:
   - url: https://github.com/micronaut-projects/micronaut-core/pull/8642
     reference_type:
     reference_id:
-  - url: https://github.com/micronaut-projects/micronaut-core/security/advisories/GHSA-583g-g682-crxf
-    reference_type:
-    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-23639
     reference_type:
     reference_id:
+  - url: https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#simple_requests
+    reference_type: other
+    reference_id: CORS#simple_requests
+  - url: https://github.com/micronaut-projects/micronaut-core/security/advisories/GHSA-583g-g682-crxf
+    reference_type: other
+    reference_id: GHSA-583g-g682-crxf

@@ -7,19 +7,9 @@ summary: |
   Signature forgery in Spring Boot's Loader
   Applications that use spring-boot-loader or spring-boot-loader-classic and contain custom code that performs signature verification of nested jar files may be vulnerable to signature forgery where content that appears to have been signed by one signer has, in fact, been signed by another.
 impacted_packages:
-  - purl: pkg:maven/org.springframework.boot/spring-boot-loader
-    affected_versions: vers:maven/<=2.7.21
-    fixed_versions: vers:maven/2.7.22
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:maven/org.springframework.boot/spring-boot-loader-classic
     affected_versions: vers:maven/<=2.7.21
     fixed_versions: vers:maven/2.7.22
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.springframework.boot/spring-boot-loader
-    affected_versions: vers:maven/<=3.0.16
-    fixed_versions: vers:maven/3.0.17
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.springframework.boot/spring-boot-loader-classic
@@ -27,12 +17,22 @@ impacted_packages:
     fixed_versions: vers:maven/3.0.17
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/org.springframework.boot/spring-boot-loader
+  - purl: pkg:maven/org.springframework.boot/spring-boot-loader-classic
     affected_versions: vers:maven/<=3.1.12
     fixed_versions: vers:maven/3.1.13
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/org.springframework.boot/spring-boot-loader-classic
+  - purl: pkg:maven/org.springframework.boot/spring-boot-loader
+    affected_versions: vers:maven/<=2.7.21
+    fixed_versions: vers:maven/2.7.22
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.springframework.boot/spring-boot-loader
+    affected_versions: vers:maven/<=3.0.16
+    fixed_versions: vers:maven/3.0.17
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.springframework.boot/spring-boot-loader
     affected_versions: vers:maven/<=3.1.12
     fixed_versions: vers:maven/3.1.13
     fixed_in_commits: []
@@ -87,5 +87,5 @@ references:
     reference_type:
     reference_id:
   - url: https://spring.io/security/cve-2024-38807
-    reference_type:
-    reference_id:
+    reference_type: other
+    reference_id: cve-2024-38807

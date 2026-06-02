@@ -18,6 +18,11 @@ summary: "Apache Tomcat Time-of-check Time-of-use (TOCTOU) Race Condition vulner
   \ is set appropriately before allowing the default servlet to be write enabled on a case insensitive\
   \ file system. Tomcat will also set sun.io.useCanonCaches to false by default where it can."
 impacted_packages:
+  - purl: pkg:maven/org.apache.tomcat/tomcat-embed-core
+    affected_versions: vers:maven/>=9.0.0.M1|<9.0.98
+    fixed_versions: vers:maven/9.0.98
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat/tomcat-catalina
     affected_versions: vers:maven/>=11.0.0-M1|<11.0.2
     fixed_versions: vers:maven/11.0.2
@@ -26,11 +31,6 @@ impacted_packages:
   - purl: pkg:maven/org.apache.tomcat/tomcat-catalina
     affected_versions: vers:maven/>=10.1.0-M1|<10.1.34
     fixed_versions: vers:maven/10.1.34
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.tomcat/tomcat-embed-core
-    affected_versions: vers:maven/>=9.0.0.M1|<9.0.98
-    fixed_versions: vers:maven/9.0.98
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
@@ -65,9 +65,6 @@ references:
   - url: https://github.com/apache/tomcat
     reference_type:
     reference_id:
-  - url: https://lists.apache.org/thread/b2b9qrgjrz1kvo4ym8y2wkfdvwoq6qbp
-    reference_type:
-    reference_id:
   - url: https://lists.debian.org/debian-lts-announce/2025/01/msg00009.html
     reference_type:
     reference_id:
@@ -86,6 +83,9 @@ references:
   - url: https://tomcat.apache.org/security-9.html#Fixed_in_Apache_Tomcat_9.0.98
     reference_type:
     reference_id:
+  - url: https://lists.apache.org/thread/b2b9qrgjrz1kvo4ym8y2wkfdvwoq6qbp
+    reference_type: advisory
+    reference_id: b2b9qrgjrz1kvo4ym8y2wkfdvwoq6qbp
   - url: https://www.cve.org/CVERecord?id=CVE-2024-50379
-    reference_type:
-    reference_id:
+    reference_type: advisory
+    reference_id: CVERecord?id=CVE-2024-50379
