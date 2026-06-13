@@ -11,17 +11,17 @@ summary: |
   ## Original Description
   Jenkins Folder-based Authorization Strategy Plugin 1.3 and earlier does not escape the names of roles shown on the configuration form, resulting in a stored cross-site scripting (XSS) vulnerability exploitable by attackers with Overall/Administer permission.
 impacted_packages:
-  - purl: pkg:maven/io.jenkins.plugins/folder-auth
-    affected_versions: vers:maven/<1.4
-    fixed_versions: vers:maven/1.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/folder-auth-plugin
     affected_versions:
     fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/jenkinsci/folder-auth-plugin
         commit: 085df580c22902820ebba77b1201fabff098efc4
+    introduced_in_commits: []
+  - purl: pkg:maven/io.jenkins.plugins/folder-auth
+    affected_versions: vers:maven/<1.4
+    fixed_versions: vers:maven/1.4
+    fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: None
@@ -30,9 +30,9 @@ severities:
     published_at: None
     url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/maven/io.jenkins.plugins/folder-auth/GHSA-chr6-386q-4m3v.yml
 weaknesses:
-  - CWE-79
   - CWE-1035
   - CWE-937
+  - CWE-79
 references:
   - url: https://github.com/jenkinsci/folder-auth-plugin
     reference_type:

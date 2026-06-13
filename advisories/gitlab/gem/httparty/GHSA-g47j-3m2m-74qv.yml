@@ -11,19 +11,19 @@ summary: |
   ### Original Description
   httparty before 0.21.0 is vulnerable to an assumed-immutable web parameter vulnerability. A remote and unauthenticated attacker can provide a crafted filename parameter during multipart/form-data uploads which could result in attacker controlled filenames being written.
 impacted_packages:
-  - purl: pkg:gem/httparty
-    affected_versions: vers:gem/<=0.20.0
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jnunemaker/httparty
     affected_versions:
     fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/jnunemaker/httparty
-        commit: 4416141d37fd71bdba4f37589ec265f55aa446ce
-      - vcs_url: https://github.com/jnunemaker/httparty
         commit: cdb45a678c43e44570b4e73f84b1abeb5ec22b8e
+      - vcs_url: https://github.com/jnunemaker/httparty
+        commit: 4416141d37fd71bdba4f37589ec265f55aa446ce
+    introduced_in_commits: []
+  - purl: pkg:gem/httparty
+    affected_versions: vers:gem/<=0.20.0
+    fixed_versions:
+    fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: None
@@ -33,8 +33,8 @@ severities:
     url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/gem/httparty/GHSA-g47j-3m2m-74qv.yml
 weaknesses:
   - CWE-668
-  - CWE-472
   - CWE-1035
+  - CWE-472
   - CWE-937
 references:
   - url: https://github.com/jnunemaker/httparty/blob/4416141d37fd71bdba4f37589ec265f55aa446ce/lib/httparty/request/body.rb#L43
