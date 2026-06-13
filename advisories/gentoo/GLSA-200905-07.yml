@@ -11,13 +11,13 @@ summary: |
       arbitrary code or a Denial of Service.
 impacted_packages:
   - purl: pkg:ebuild/net-im/pidgin
-    affected_versions:
-    fixed_versions: vers:ebuild/>=2.5.6
+    affected_versions: vers:ebuild/<2.5.6
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/net-im/pidgin
-    affected_versions: vers:ebuild/<2.5.6
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.5.6
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -31,3 +31,6 @@ references:
   - url: https://security.gentoo.org/glsa/200905-07
     reference_type:
     reference_id: GLSA-200905-07
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/windows/remote/9615.jar
+    reference_type: exploit
+    reference_id: OSVDB-54647;CVE-2009-2694;CVE-2009-1376

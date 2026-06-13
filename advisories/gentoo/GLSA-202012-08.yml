@@ -10,9 +10,19 @@ summary: |
   Multiple vulnerabilities have been found in MariaDB, the worst of
       which could result in privilege escalation.
 impacted_packages:
+  - purl: pkg:ebuild/dev-db/mariadb
+    affected_versions: vers:ebuild/<10.5.8
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:ebuild/dev-db/mariadb?slot=10.2
     affected_versions:
     fixed_versions: vers:ebuild/>=10.2.36
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-db/mariadb?slot=10.5
+    affected_versions:
+    fixed_versions: vers:ebuild/>=10.5.8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/dev-db/mariadb?slot=10.3
@@ -23,16 +33,6 @@ impacted_packages:
   - purl: pkg:ebuild/dev-db/mariadb?slot=10.4
     affected_versions:
     fixed_versions: vers:ebuild/>=10.4.17
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/dev-db/mariadb?slot=10.5
-    affected_versions:
-    fixed_versions: vers:ebuild/>=10.5.8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/dev-db/mariadb
-    affected_versions: vers:ebuild/<10.5.8
-    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
 severities:

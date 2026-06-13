@@ -32,13 +32,13 @@ summary: |
       elevated privileges from a guest VM.
 impacted_packages:
   - purl: pkg:ebuild/app-emulation/qemu
-    affected_versions:
-    fixed_versions: vers:ebuild/>=2.5.0-r1
+    affected_versions: vers:ebuild/<2.5.0-r1
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/app-emulation/qemu
-    affected_versions: vers:ebuild/<2.5.0-r1
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.5.0-r1
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -49,6 +49,12 @@ severities:
     url:
 weaknesses: []
 references:
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/dos/37053.c
+    reference_type: exploit
+    reference_id: CVE-2015-3456;OSVDB-122072
+  - url: https://marc.info/?l=oss-security&m=143155206320935&w=2
+    reference_type: exploit
+    reference_id: CVE-2015-3456;OSVDB-122072
   - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/local/39010.c
     reference_type: exploit
     reference_id: CVE-2015-8556

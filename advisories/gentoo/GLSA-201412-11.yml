@@ -28,13 +28,13 @@ summary: |
       code.
 impacted_packages:
   - purl: pkg:ebuild/app-emulation/emul-linux-x86-baselibs
-    affected_versions:
-    fixed_versions: vers:ebuild/>=20140406-r1
+    affected_versions: vers:ebuild/<20140406-r1
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/app-emulation/emul-linux-x86-baselibs
-    affected_versions: vers:ebuild/<20140406-r1
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=20140406-r1
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -45,21 +45,18 @@ severities:
     url:
 weaknesses: []
 references:
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/dos/14422.c
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/remote/29753.c
     reference_type: exploit
-    reference_id: CVE-2010-1205
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/remote/32764.py
+    reference_id: CVE-2007-1536;OSVDB-34285
+  - url: https://www.securityfocus.com/bid/23021/info
     reference_type: exploit
-    reference_id: CVE-2014-0346;CVE-2014-0160;OSVDB-105465
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/remote/32791.c
+    reference_id: CVE-2007-1536;OSVDB-34285
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/dos/30898.pl
     reference_type: exploit
-    reference_id: CVE-2014-0346;CVE-2014-0160;OSVDB-105465
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/remote/32998.c
+    reference_id: CVE-2007-5849;OSVDB-40719
+  - url: https://www.securityfocus.com/bid/26917/info
     reference_type: exploit
-    reference_id: CVE-2014-0346;CVE-2014-0160;OSVDB-105465
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/remote/32745.py
-    reference_type: exploit
-    reference_id: CVE-2014-0346;OSVDB-105465;CVE-2014-0160
+    reference_id: CVE-2007-5849;OSVDB-40719
   - url: https://security.gentoo.org/glsa/201412-11
     reference_type:
     reference_id: GLSA-201412-11

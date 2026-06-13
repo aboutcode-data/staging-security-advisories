@@ -7,12 +7,27 @@ summary: |
   KPDF includes code from xpdf that is vulnerable to a stack-based buffer
       overflow.
 impacted_packages:
+  - purl: pkg:ebuild/kde-base/kdegraphics
+    affected_versions: vers:ebuild/<3.5.7-r1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:ebuild/app-office/koffice
-    affected_versions:
-    fixed_versions: vers:ebuild/>=1.6.3-r1
+    affected_versions: vers:ebuild/<1.6.3-r1
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/app-office/kword
+    affected_versions: vers:ebuild/<1.6.3-r1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/kde-base/kpdf
+    affected_versions: vers:ebuild/<3.5.7-r1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/app-office/koffice
     affected_versions:
     fixed_versions: vers:ebuild/>=1.6.3-r1
     fixed_in_commits: []
@@ -27,24 +42,9 @@ impacted_packages:
     fixed_versions: vers:ebuild/>=3.5.7-r1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:ebuild/app-office/koffice
-    affected_versions: vers:ebuild/<1.6.3-r1
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:ebuild/app-office/kword
-    affected_versions: vers:ebuild/<1.6.3-r1
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/kde-base/kdegraphics
-    affected_versions: vers:ebuild/<3.5.7-r1
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/kde-base/kpdf
-    affected_versions: vers:ebuild/<3.5.7-r1
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.6.3-r1
     fixed_in_commits: []
     introduced_in_commits: []
 severities:

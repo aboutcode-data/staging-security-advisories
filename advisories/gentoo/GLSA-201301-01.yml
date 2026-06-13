@@ -508,41 +508,6 @@ summary: |
       allow execution of arbitrary code or local privilege escalation.
 impacted_packages:
   - purl: pkg:ebuild/www-client/firefox
-    affected_versions:
-    fixed_versions: vers:ebuild/>=10.0.11
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/www-client/firefox-bin
-    affected_versions:
-    fixed_versions: vers:ebuild/>=10.0.11
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/mail-client/thunderbird
-    affected_versions:
-    fixed_versions: vers:ebuild/>=10.0.11
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/mail-client/thunderbird-bin
-    affected_versions:
-    fixed_versions: vers:ebuild/>=10.0.11
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/www-client/seamonkey
-    affected_versions:
-    fixed_versions: vers:ebuild/>=2.14-r1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/www-client/seamonkey-bin
-    affected_versions:
-    fixed_versions: vers:ebuild/>=2.14
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/dev-libs/nss
-    affected_versions:
-    fixed_versions: vers:ebuild/>=3.14
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/www-client/firefox
     affected_versions: vers:ebuild/<10.0.11
     fixed_versions:
     fixed_in_commits: []
@@ -610,6 +575,48 @@ impacted_packages:
   - purl: pkg:ebuild/net-libs/xulrunner-bin
     affected_versions: vers:ebuild/<=1.8.1.19
     fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/rapid7/metasploit-framework
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/rapid7/metasploit-framework
+        commit: 72caeaa72f843ec3534e272427c3915ef498b2f9
+    introduced_in_commits: []
+  - purl: pkg:ebuild/www-client/firefox
+    affected_versions:
+    fixed_versions: vers:ebuild/>=10.0.11
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/mail-client/thunderbird
+    affected_versions:
+    fixed_versions: vers:ebuild/>=10.0.11
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/www-client/seamonkey-bin
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.14
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/www-client/firefox-bin
+    affected_versions:
+    fixed_versions: vers:ebuild/>=10.0.11
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-libs/nss
+    affected_versions:
+    fixed_versions: vers:ebuild/>=3.14
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/www-client/seamonkey
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.14-r1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/mail-client/thunderbird-bin
+    affected_versions:
+    fixed_versions: vers:ebuild/>=10.0.11
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -707,6 +714,15 @@ references:
   - url: https://www.securityfocus.com/bid/36866/info
     reference_type: exploit
     reference_id: CVE-2009-3382;OSVDB-59384
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/remote/10579.py
+    reference_type: exploit
+    reference_id: CVE-2009-3555
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/remote/10071.txt
+    reference_type: exploit
+    reference_id: CVE-2009-3555;OSVDB-59970
+  - url: https://www.securityfocus.com/bid/35888/info
+    reference_type: exploit
+    reference_id: CVE-2009-3555;OSVDB-59970
   - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/dos/33800.html
     reference_type: exploit
     reference_id: CVE-2010-0166;OSVDB-63266
@@ -824,6 +840,12 @@ references:
   - url: http://www.zerodayinitiative.com/advisories/upcoming/ZDI-CAN-1413
     reference_type: exploit
     reference_id: CVE-2011-3659;OSVDB-78736
+  - url: https://github.com/rapid7/metasploit-framework/blob/72caeaa72f843ec3534e272427c3915ef498b2f9/modules/exploits/multi/browser/firefox_proto_crmfrequest.rb
+    reference_type: exploit
+    reference_id: CVE-2012-3993;OSVDB-96019;CVE-2013-1710
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/local/30474.rb
+    reference_type: exploit
+    reference_id: CVE-2012-3993;OSVDB-96019;CVE-2013-1710
   - url: https://security.gentoo.org/glsa/201301-01
     reference_type:
     reference_id: GLSA-201301-01

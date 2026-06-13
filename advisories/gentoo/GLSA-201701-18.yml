@@ -8,9 +8,9 @@ summary: |
   Multiple vulnerabilities have been found in Python, the worst of
       which could lead to arbitrary code execution.
 impacted_packages:
-  - purl: pkg:ebuild/dev-lang/python?slot=2.7
-    affected_versions:
-    fixed_versions: vers:ebuild/>=2.7.12
+  - purl: pkg:ebuild/dev-lang/python
+    affected_versions: vers:ebuild/<3.4.5
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/dev-lang/python?slot=3.4
@@ -18,9 +18,9 @@ impacted_packages:
     fixed_versions: vers:ebuild/>=3.4.5
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:ebuild/dev-lang/python
-    affected_versions: vers:ebuild/<3.4.5
-    fixed_versions:
+  - purl: pkg:ebuild/dev-lang/python?slot=2.7
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.7.12
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -31,12 +31,6 @@ severities:
     url:
 weaknesses: []
 references:
-  - url: https://github.com/tintinweb/pub/tree/11f6ebda59ad878377df78351f8ab580660d0024/pocs/cve-2016-0772
-    reference_type: exploit
-    reference_id: CVE-2016-0772
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/local/43500.txt
-    reference_type: exploit
-    reference_id: CVE-2016-0772
   - url: https://security.gentoo.org/glsa/201701-18
     reference_type:
     reference_id: GLSA-201701-18

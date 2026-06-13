@@ -8,13 +8,13 @@ summary: |
       injected.
 impacted_packages:
   - purl: pkg:ebuild/net-misc/wget
-    affected_versions:
-    fixed_versions: vers:ebuild/>=1.19.5
+    affected_versions: vers:ebuild/<1.19.5
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/net-misc/wget
-    affected_versions: vers:ebuild/<1.19.5
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.19.5
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -25,6 +25,12 @@ severities:
     url:
 weaknesses: []
 references:
+  - url: http://seclists.org/fulldisclosure/2018/May/20
+    reference_type: exploit
+    reference_id: CVE-2018-0494
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/local/44601.txt
+    reference_type: exploit
+    reference_id: CVE-2018-0494
   - url: https://security.gentoo.org/glsa/201806-01
     reference_type:
     reference_id: GLSA-201806-01

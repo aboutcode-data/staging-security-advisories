@@ -8,13 +8,13 @@ summary: |
       execution of arbitrary code with root privileges.
 impacted_packages:
   - purl: pkg:ebuild/net-wireless/aircrack-ng
-    affected_versions:
-    fixed_versions: vers:ebuild/>=0.7-r2
+    affected_versions: vers:ebuild/<0.7-r2
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/net-wireless/aircrack-ng
-    affected_versions: vers:ebuild/<0.7-r2
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=0.7-r2
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -28,6 +28,3 @@ references:
   - url: https://security.gentoo.org/glsa/200704-16
     reference_type:
     reference_id: GLSA-200704-16
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/remote/3724.c
-    reference_type: exploit
-    reference_id: OSVDB-34931;CVE-2007-2057

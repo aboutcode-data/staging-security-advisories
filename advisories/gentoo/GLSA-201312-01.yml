@@ -16,13 +16,20 @@ summary: |
       worst of which allowing arbitrary code execution and privilege escalation.
 impacted_packages:
   - purl: pkg:ebuild/sys-libs/glibc
-    affected_versions:
-    fixed_versions: vers:ebuild/>=2.15-r3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/sys-libs/glibc
     affected_versions: vers:ebuild/<2.15-r3
     fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/rapid7/metasploit-framework
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/rapid7/metasploit-framework
+        commit: add7ae8fa18f689ff7e41057bc5bd51fdc8eaa5e
+    introduced_in_commits: []
+  - purl: pkg:ebuild/sys-libs/glibc
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.15-r3
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -33,6 +40,24 @@ severities:
     url:
 weaknesses: []
 references:
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/dos/36404.c
+    reference_type: exploit
+    reference_id: CVE-2009-5029;OSVDB-77508
+  - url: https://www.securityfocus.com/bid/50898/info
+    reference_type: exploit
+    reference_id: CVE-2009-5029;OSVDB-77508
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/local/44024.rb
+    reference_type: exploit
+    reference_id: CVE-2010-3847
+  - url: https://raw.githubusercontent.com/rapid7/metasploit-framework/add7ae8fa18f689ff7e41057bc5bd51fdc8eaa5e/modules/exploits/linux/local/glibc_origin_expansion_priv_esc.rb
+    reference_type: exploit
+    reference_id: CVE-2010-3847
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/dos/17120.c
+    reference_type: exploit
+    reference_id: CVE-2011-1071
+  - url: https://www.securityfocus.com/bid/46563/info
+    reference_type: exploit
+    reference_id: CVE-2011-1071
   - url: https://security.gentoo.org/glsa/201312-01
     reference_type:
     reference_id: GLSA-201312-01

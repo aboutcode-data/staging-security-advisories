@@ -24,13 +24,13 @@ summary: |
       arbitrary code.
 impacted_packages:
   - purl: pkg:ebuild/dev-lang/php
-    affected_versions:
-    fixed_versions: vers:ebuild/>=4.4.7
+    affected_versions: vers:ebuild/<5.2.2
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/dev-lang/php
     affected_versions:
-    fixed_versions: vers:ebuild/>=4.4.8_pre20070816
+    fixed_versions: vers:ebuild/>=4.4.7
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/dev-lang/php
@@ -39,8 +39,8 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/dev-lang/php
-    affected_versions: vers:ebuild/<5.2.2
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=4.4.8_pre20070816
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -51,6 +51,12 @@ severities:
     url:
 weaknesses: []
 references:
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/php/dos/29823.c
+    reference_type: exploit
+    reference_id: CVE-2007-1001;OSVDB-34671
+  - url: https://www.securityfocus.com/bid/23357/info
+    reference_type: exploit
+    reference_id: CVE-2007-1001;OSVDB-34671
   - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/php/dos/29692.txt
     reference_type: exploit
     reference_id: CVE-2007-1285;OSVDB-32769

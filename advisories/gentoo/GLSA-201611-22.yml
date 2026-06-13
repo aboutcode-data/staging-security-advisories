@@ -48,13 +48,13 @@ summary: |
       condition.
 impacted_packages:
   - purl: pkg:ebuild/dev-lang/php
-    affected_versions:
-    fixed_versions: vers:ebuild/>=5.6.28
+    affected_versions: vers:ebuild/<5.6.28
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/dev-lang/php
-    affected_versions: vers:ebuild/<5.6.28
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=5.6.28
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -65,9 +65,6 @@ severities:
     url:
 weaknesses: []
 references:
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/remote/39645.php
-    reference_type: exploit
-    reference_id: CVE-2016-4071
   - url: https://security.gentoo.org/glsa/201611-22
     reference_type:
-    reference_id: GLSA-201611-22
+    reference_id:

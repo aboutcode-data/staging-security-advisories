@@ -91,23 +91,23 @@ summary: |
       worst of which may allow execution of arbitrary code.
 impacted_packages:
   - purl: pkg:ebuild/www-client/firefox
-    affected_versions:
-    fixed_versions: vers:ebuild/>=52.6.0
+    affected_versions: vers:ebuild/<52.6.0
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/www-client/firefox-bin
-    affected_versions:
-    fixed_versions: vers:ebuild/>=52.6.0
+    affected_versions: vers:ebuild/<52.6.0
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/www-client/firefox
-    affected_versions: vers:ebuild/<52.6.0
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=52.6.0
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/www-client/firefox-bin
-    affected_versions: vers:ebuild/<52.6.0
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=52.6.0
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -118,6 +118,18 @@ severities:
     url:
 weaknesses: []
 references:
+  - url: https://bugs.chromium.org/p/project-zero/issues/detail?id=1160
+    reference_type: exploit
+    reference_id: CVE-2017-5447
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/dos/42071.html
+    reference_type: exploit
+    reference_id: CVE-2017-5447
+  - url: https://bugs.chromium.org/p/project-zero/issues/detail?id=1185
+    reference_type: exploit
+    reference_id: CVE-2017-5465
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/dos/42072.html
+    reference_type: exploit
+    reference_id: CVE-2017-5465
   - url: https://security.gentoo.org/glsa/201802-03
     reference_type:
     reference_id: GLSA-201802-03

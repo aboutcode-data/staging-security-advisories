@@ -6,13 +6,13 @@ aliases:
 summary: A vulnerability has been discovered in sudo which could result in root privilege escalation.
 impacted_packages:
   - purl: pkg:ebuild/app-admin/sudo
-    affected_versions:
-    fixed_versions: vers:ebuild/>=1.9.12_p2
+    affected_versions: vers:ebuild/<1.9.12_p2
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/app-admin/sudo
-    affected_versions: vers:ebuild/<1.9.12_p2
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.9.12_p2
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -23,6 +23,9 @@ severities:
     url:
 weaknesses: []
 references:
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/local/51217.sh
+    reference_type: exploit
+    reference_id: CVE-2023-22809
   - url: https://security.gentoo.org/glsa/202305-12
     reference_type:
     reference_id: GLSA-202305-12

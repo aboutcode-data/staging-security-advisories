@@ -27,13 +27,13 @@ summary: |
       which could result in the remote execution of code.
 impacted_packages:
   - purl: pkg:ebuild/www-client/chromium
-    affected_versions:
-    fixed_versions: vers:ebuild/>=73.0.3683.75
+    affected_versions: vers:ebuild/<73.0.3683.75
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/www-client/chromium
-    affected_versions: vers:ebuild/<73.0.3683.75
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=73.0.3683.75
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -44,24 +44,6 @@ severities:
     url:
 weaknesses: []
 references:
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/windows_x86/remote/46812.rb
-    reference_type: exploit
-    reference_id: CVE-2019-5786
-  - url: https://raw.githubusercontent.com/rapid7/metasploit-framework/master/modules/exploits/windows/browser/chrome_filereader_uaf.rb
-    reference_type: exploit
-    reference_id: CVE-2019-5786
-  - url: https://bugs.chromium.org/p/project-zero/issues/detail?id=1767
-    reference_type: exploit
-    reference_id: CVE-2019-5788
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/dos/46571.txt
-    reference_type: exploit
-    reference_id: CVE-2019-5788
-  - url: https://bugs.chromium.org/p/project-zero/issues/detail?id=1744
-    reference_type: exploit
-    reference_id: CVE-2019-5797
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/dos/46565.txt
-    reference_type: exploit
-    reference_id: CVE-2019-5797
   - url: https://security.gentoo.org/glsa/201903-23
     reference_type:
     reference_id: GLSA-201903-23

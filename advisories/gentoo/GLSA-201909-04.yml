@@ -13,13 +13,13 @@ summary: |
       which could result in a Denial of Service condition.
 impacted_packages:
   - purl: pkg:ebuild/www-servers/apache
-    affected_versions:
-    fixed_versions: vers:ebuild/>=2.4.41
+    affected_versions: vers:ebuild/<2.4.41
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/www-servers/apache
-    affected_versions: vers:ebuild/<2.4.41
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.4.41
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -30,12 +30,6 @@ severities:
     url:
 weaknesses: []
 references:
-  - url: https://0day.work/open-redirects-in-improperly-configured-mod_rewrite-rules-poc-for-cve-2019-10098/
-    reference_type: exploit
-    reference_id: CVE-2019-10098
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/webapps/47689.md
-    reference_type: exploit
-    reference_id: CVE-2019-10098
   - url: https://security.gentoo.org/glsa/201909-04
     reference_type:
     reference_id: GLSA-201909-04

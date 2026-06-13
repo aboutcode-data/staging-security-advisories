@@ -9,13 +9,13 @@ aliases:
 summary: Multiple vulnerabilities were found in the Dovecot mailserver.
 impacted_packages:
   - purl: pkg:ebuild/net-mail/dovecot
-    affected_versions:
-    fixed_versions: vers:ebuild/>=1.1.7-r1
+    affected_versions: vers:ebuild/<1.1.7-r1
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/net-mail/dovecot
-    affected_versions: vers:ebuild/<1.1.7-r1
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.1.7-r1
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -26,6 +26,12 @@ severities:
     url:
 weaknesses: []
 references:
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/dos/32551.txt
+    reference_type: exploit
+    reference_id: CVE-2008-4907;OSVDB-49429
+  - url: https://www.securityfocus.com/bid/31997/info
+    reference_type: exploit
+    reference_id: CVE-2008-4907;OSVDB-49429
   - url: https://security.gentoo.org/glsa/200812-16
     reference_type:
     reference_id: GLSA-200812-16

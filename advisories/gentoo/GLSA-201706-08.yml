@@ -11,13 +11,13 @@ summary: |
       have other unspecified impact.
 impacted_packages:
   - purl: pkg:ebuild/app-text/mupdf
-    affected_versions:
-    fixed_versions: vers:ebuild/>=1.11-r1
+    affected_versions: vers:ebuild/<1.11-r1
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/app-text/mupdf
-    affected_versions: vers:ebuild/<1.11-r1
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.11-r1
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -28,6 +28,12 @@ severities:
     url:
 weaknesses: []
 references:
+  - url: https://bugs.ghostscript.com/show_bug.cgi?id=697500
+    reference_type: exploit
+    reference_id: CVE-2017-5991
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/dos/42138.txt
+    reference_type: exploit
+    reference_id: CVE-2017-5991
   - url: https://security.gentoo.org/glsa/201706-08
     reference_type:
     reference_id: GLSA-201706-08
