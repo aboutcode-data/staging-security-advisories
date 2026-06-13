@@ -1,0 +1,31 @@
+advisory_id: packagist/thorsten/phpmyfaq/GHSA-rm98-82fr-mcfx
+datasource_id: gitlab/packagist/thorsten/phpmyfaq/GHSA-rm98-82fr-mcfx
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/packagist/thorsten/phpmyfaq/GHSA-rm98-82fr-mcfx.yml
+aliases:
+  - GHSA-rm98-82fr-mcfx
+summary: |
+  phpMyFAQ's Missing CONFIGURATION_EDIT Permission Check on 12 Admin API Configuration Tab Endpoints Allows Information Disclosure by Any Authenticated User
+  12 endpoints in `ConfigurationTabController.php` use `userIsAuthenticated()` (login-only check) instead of `userHasPermission(PermissionType::CONFIGURATION_EDIT)`. This allows any authenticated user — including ones with zero admin permissions — to enumerate system configuration metadata including the permission model, active template, cache backend, mail provider, and translation provider.
+impacted_packages:
+  - purl: pkg:composer/thorsten/phpmyfaq
+    affected_versions: vers:composer/<4.1.2
+    fixed_versions: vers:composer/4.1.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/packagist/thorsten/phpmyfaq/GHSA-rm98-82fr-mcfx.yml
+weaknesses:
+  - CWE-862
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/advisories/GHSA-rm98-82fr-mcfx
+    reference_type:
+    reference_id: GHSA-rm98-82fr-mcfx
+  - url: https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-rm98-82fr-mcfx
+    reference_type:
+    reference_id: GHSA-rm98-82fr-mcfx

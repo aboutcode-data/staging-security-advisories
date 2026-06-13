@@ -1,0 +1,31 @@
+advisory_id: packagist/thorsten/phpmyfaq/GHSA-99qv-g4x9-mgc3
+datasource_id: gitlab/packagist/thorsten/phpmyfaq/GHSA-99qv-g4x9-mgc3
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/packagist/thorsten/phpmyfaq/GHSA-99qv-g4x9-mgc3.yml
+aliases:
+  - GHSA-99qv-g4x9-mgc3
+summary: |
+  phpMyFAQ has unauthenticated FAQ permission bypass via getFaqBySolutionId fallback query
+  The public `/solution_id_{id}.html` route calls `Faq::getIdFromSolutionId()` in `phpmyfaq/src/phpMyFAQ/Faq.php:1312`. That query joins `faqdata` with `faqcategoryrelations` solely by `solution_id` and returns the matching FAQ's `id`, `lang`, `thema` (title), and `category_id` with no permission filter. An unauthenticated visitor hits the route with a sequential integer and the server 301-redirects to `/content/<category>/<id>/<lang>/<title-slug>.html`, leaking the FAQ's existence, internal id, language, category binding, and title via the redirect's `Location` header and the redirected page's canonical link, share-to-social URLs, and hidden form fields. The related `getFaqBySolutionId()` at line 1221 contains an explicit fallback query (added "for tests") that also bypasses the permission filter, widening the blast radius to any callsite that trusts its result.
+impacted_packages:
+  - purl: pkg:composer/thorsten/phpmyfaq
+    affected_versions: vers:composer/<4.1.2
+    fixed_versions: vers:composer/4.1.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/packagist/thorsten/phpmyfaq/GHSA-99qv-g4x9-mgc3.yml
+weaknesses:
+  - CWE-1035
+  - CWE-863
+  - CWE-937
+references:
+  - url: https://github.com/advisories/GHSA-99qv-g4x9-mgc3
+    reference_type:
+    reference_id: GHSA-99qv-g4x9-mgc3
+  - url: https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-99qv-g4x9-mgc3
+    reference_type:
+    reference_id: GHSA-99qv-g4x9-mgc3
