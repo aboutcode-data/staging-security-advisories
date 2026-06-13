@@ -31,13 +31,13 @@ summary: |
       which may allow remote attackers to cause a Denial of Service condition.
 impacted_packages:
   - purl: pkg:ebuild/sys-devel/binutils
-    affected_versions:
-    fixed_versions: vers:ebuild/>=2.29.1-r1
+    affected_versions: vers:ebuild/<2.29.1-r1
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/sys-devel/binutils
-    affected_versions: vers:ebuild/<2.29.1-r1
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.29.1-r1
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -48,18 +48,12 @@ severities:
     url:
 weaknesses: []
 references:
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/dos/42201.txt
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/dos/42198.txt
     reference_type: exploit
-    reference_id: CVE-2017-9749
-  - url: https://sourceware.org/bugzilla/show_bug.cgi?id=21586
+    reference_id: CVE-2017-9750
+  - url: https://sourceware.org/bugzilla/show_bug.cgi?id=21587
     reference_type: exploit
-    reference_id: CVE-2017-9749
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/dos/42204.txt
-    reference_type: exploit
-    reference_id: CVE-2017-9756
-  - url: https://sourceware.org/bugzilla/show_bug.cgi?id=21595
-    reference_type: exploit
-    reference_id: CVE-2017-9756
+    reference_id: CVE-2017-9750
   - url: https://security.gentoo.org/glsa/201801-01
     reference_type:
     reference_id: GLSA-201801-01

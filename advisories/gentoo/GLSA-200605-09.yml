@@ -27,23 +27,23 @@ summary: |
       script execution with elevated privileges to information leaks.
 impacted_packages:
   - purl: pkg:ebuild/mail-client/mozilla-thunderbird
-    affected_versions:
-    fixed_versions: vers:ebuild/>=1.0.8
+    affected_versions: vers:ebuild/<1.0.8
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/mail-client/mozilla-thunderbird-bin
-    affected_versions:
-    fixed_versions: vers:ebuild/>=1.0.8
+    affected_versions: vers:ebuild/<1.0.8
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/mail-client/mozilla-thunderbird
-    affected_versions: vers:ebuild/<1.0.8
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.0.8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/mail-client/mozilla-thunderbird-bin
-    affected_versions: vers:ebuild/<1.0.8
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.0.8
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -54,12 +54,6 @@ severities:
     url:
 weaknesses: []
 references:
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/dos/27257.html
-    reference_type: exploit
-    reference_id: CVE-2006-0884;OSVDB-23653
-  - url: https://www.securityfocus.com/bid/16770/info
-    reference_type: exploit
-    reference_id: CVE-2006-0884;OSVDB-23653
   - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/php/webapps/27337.txt
     reference_type: exploit
     reference_id: CVE-2006-1045;OSVDB-24681

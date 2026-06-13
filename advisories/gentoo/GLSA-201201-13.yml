@@ -29,13 +29,13 @@ summary: |
       most severe of which may allow remote execution of arbitrary code.
 impacted_packages:
   - purl: pkg:ebuild/app-crypt/mit-krb5
-    affected_versions:
-    fixed_versions: vers:ebuild/>=1.9.2-r1
+    affected_versions: vers:ebuild/<1.9.2-r1
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/app-crypt/mit-krb5
-    affected_versions: vers:ebuild/<1.9.2-r1
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.9.2-r1
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -46,6 +46,18 @@ severities:
     url:
 weaknesses: []
 references:
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/remote/33855.txt
+    reference_type: exploit
+    reference_id: CVE-2010-1320;OSVDB-63975
+  - url: https://www.securityfocus.com/bid/39599/info
+    reference_type: exploit
+    reference_id: CVE-2010-1320;OSVDB-63975
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/remote/35606.txt
+    reference_type: exploit
+    reference_id: CVE-2011-0285;OSVDB-71789
+  - url: https://www.securityfocus.com/bid/47310/info
+    reference_type: exploit
+    reference_id: CVE-2011-0285;OSVDB-71789
   - url: https://security.gentoo.org/glsa/201201-13
     reference_type:
     reference_id: GLSA-201201-13

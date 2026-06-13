@@ -8,13 +8,13 @@ summary: |
       arbitrary code or Denial of Service.
 impacted_packages:
   - purl: pkg:ebuild/dev-python/pypam
-    affected_versions:
-    fixed_versions: vers:ebuild/>=0.5.0-r3
+    affected_versions: vers:ebuild/<0.5.0-r3
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/dev-python/pypam
-    affected_versions: vers:ebuild/<0.5.0-r3
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=0.5.0-r3
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -25,12 +25,9 @@ severities:
     url:
 weaknesses: []
 references:
+  - url: https://security.gentoo.org/glsa/201507-09
+    reference_type:
+    reference_id:
   - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/dos/18579.txt
     reference_type: exploit
     reference_id: CVE-2012-1502;OSVDB-79892
-  - url: http://www.lsexperts.de/advisories/lse-2012-03-01.txt
-    reference_type: exploit
-    reference_id: CVE-2012-1502;OSVDB-79892
-  - url: https://security.gentoo.org/glsa/201507-09
-    reference_type:
-    reference_id: GLSA-201507-09

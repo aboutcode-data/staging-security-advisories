@@ -53,14 +53,21 @@ summary: |
       of which may lead to arbitrary code execution.
 impacted_packages:
   - purl: pkg:ebuild/net-libs/webkit-gtk
+    affected_versions: vers:ebuild/<2.20.4
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/net-libs/webkit-gtk
     affected_versions:
     fixed_versions: vers:ebuild/>=2.20.4
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:ebuild/net-libs/webkit-gtk
-    affected_versions: vers:ebuild/<2.20.4
+  - purl: pkg:github/rapid7/metasploit-framework
+    affected_versions:
     fixed_versions:
-    fixed_in_commits: []
+    fixed_in_commits:
+      - vcs_url: https://github.com/rapid7/metasploit-framework
+        commit: cc7cb7302ef43478292f684f473fadb00f9b4344
     introduced_in_commits: []
 severities:
   - score: normal
