@@ -7,6 +7,13 @@ summary: |
   Wizkunde SAMLBase SAML Bypass
   Wizkunde SAMLBase may incorrectly utilize the results of XML DOM traversal and canonicalization APIs in such a way that an attacker may be able to manipulate the SAML data without invalidating the cryptographic signature, allowing the attack to potentially bypass authentication to SAML service providers.
 impacted_packages:
+  - purl: pkg:github/gogentooss/samlbase
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/gogentooss/samlbase
+        commit: 482cdf8c090e0f1179073034ebcb609ac7c3f5b3
+    introduced_in_commits: []
   - purl: pkg:composer/gogentooss/samlbase
     affected_versions: vers:composer/<1.2.7
     fixed_versions: vers:composer/1.2.7

@@ -6,7 +6,16 @@ aliases:
 summary: |
   Moby Docker cp broken with debian containers
   In Docker 19.03.x before 19.03.1 linked against the GNU C Library (aka glibc), code injection can occur when the nsswitch facility dynamically loads a library inside a chroot that contains the contents of the container.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/moby/moby
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/moby/moby
+        commit: 11e48badcb67554b3d795241855028f28d244545
+      - vcs_url: https://github.com/moby/moby
+        commit: fa8dd90ceb7bcb9d554d27e0b9087ab83e54bd2b
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
@@ -24,8 +33,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-665
   - CWE-94
+  - CWE-665
 references:
   - url: http://lists.opensuse.org/opensuse-security-announce/2019-08/msg00084.html
     reference_type:
@@ -48,6 +57,9 @@ references:
   - url: https://github.com/moby/moby/pull/39612
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2019-14271
+    reference_type:
+    reference_id:
   - url: https://seclists.org/bugtraq/2019/Sep/21
     reference_type:
     reference_id:
@@ -57,6 +69,3 @@ references:
   - url: https://www.debian.org/security/2019/dsa-4521
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2019-14271
-    reference_type:
-    reference_id: CVE-2019-14271

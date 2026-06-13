@@ -15,6 +15,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:gem/activerecord
+    affected_versions: vers:gem/<=5.2.8
+    fixed_versions: vers:gem/5.2.8.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:gem/activerecord
     affected_versions: vers:gem/<=6.1.6
     fixed_versions: vers:gem/6.1.6.1
     fixed_in_commits: []
@@ -24,10 +29,12 @@ impacted_packages:
     fixed_versions: vers:gem/6.0.5.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:gem/activerecord
-    affected_versions: vers:gem/<=5.2.8
-    fixed_versions: vers:gem/5.2.8.1
-    fixed_in_commits: []
+  - purl: pkg:github/rails/rails
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/rails/rails
+        commit: 611990f1a6c137c2d56b1ba06b27e5d2434dcd6a
     introduced_in_commits: []
 severities:
   - score: '9.8'
@@ -46,16 +53,10 @@ references:
   - url: https://discuss.rubyonrails.org/t/cve-2022-32224-possible-rce-escalation-bug-with-serialized-columns-in-active-record/81017
     reference_type:
     reference_id:
-  - url: https://github.com/advisories/GHSA-3hhc-qp5v-9p2j
-    reference_type:
-    reference_id:
   - url: https://github.com/rails/rails/commit/611990f1a6c137c2d56b1ba06b27e5d2434dcd6a
     reference_type:
     reference_id:
   - url: https://github.com/rails/rails/commits/main/activerecord
-    reference_type:
-    reference_id:
-  - url: https://github.com/rubysec/ruby-advisory-db/blob/master/gems/activerecord/CVE-2022-32224.yml
     reference_type:
     reference_id:
   - url: https://groups.google.com/g/rubyonrails-security/c/MmFO3LYQE8U
@@ -67,3 +68,9 @@ references:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2022-32224
     reference_type:
     reference_id: CVE-2022-32224
+  - url: https://github.com/rubysec/ruby-advisory-db/blob/master/gems/activerecord/CVE-2022-32224.yml
+    reference_type:
+    reference_id: CVE-2022-32224.YML
+  - url: https://github.com/advisories/GHSA-3hhc-qp5v-9p2j
+    reference_type:
+    reference_id: GHSA-3hhc-qp5v-9p2j

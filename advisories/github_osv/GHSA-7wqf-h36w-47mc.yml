@@ -7,6 +7,13 @@ summary: |
   OS Command Injection in Apache Airflow
   Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability in Apache Airflow Pinot Provider, Apache Airflow allows an attacker to control commands executed in the task execution context, without write access to DAG files. This issue affects Apache Airflow Pinot Provider versions prior to 4.0.0. It also impacts any Apache Airflow versions prior to 2.3.0 in case Apache Airflow Pinot Provider is installed (Apache Airflow Pinot Provider 4.0.0 can only be installed for Airflow 2.3.0+). Note that you need to manually install the Pinot Provider version 4.0.0 in order to get rid of the vulnerability on top of Airflow 2.3.0+ version.
 impacted_packages:
+  - purl: pkg:github/apache/airflow
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/airflow
+        commit: 1d4fd5c6eacab0b88f8660f9d780174434393f1a
+    introduced_in_commits: []
   - purl: pkg:pypi/apache-airflow
     affected_versions: vers:pypi/<2.3.0
     fixed_versions: vers:pypi/2.3.0

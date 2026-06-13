@@ -25,7 +25,14 @@ summary: |
   ### For more information
   Open an issue in the [Argo Events issue tracker](https://github.com/argoproj/argo-events/issues) or [discussions](https://github.com/argoproj/argo-events/discussions)
   Join us on [Slack](https://argoproj.github.io/community/join-slack) in channel #argo-events
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/argoproj/argo-events
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/argoproj/argo-events
+        commit: d0f66dbce78bc31923ca057b20fc722aa24ca961
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -55,12 +62,12 @@ references:
   - url: https://github.com/argoproj/argo-events/security/advisories/GHSA-qpgx-64h2-gc3c
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2022-25856
+    reference_type:
+    reference_id:
   - url: https://pkg.go.dev/vuln/GO-2022-0492
     reference_type:
     reference_id:
   - url: https://snyk.io/vuln/SNYK-GOLANG-GITHUBCOMARGOPROJARGOEVENTSSENSORSARTIFACTS-2864522
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2022-25856
-    reference_type:
-    reference_id: CVE-2022-25856

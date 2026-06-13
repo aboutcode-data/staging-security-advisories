@@ -6,7 +6,14 @@ aliases:
 summary: |
   Mattermost Server exposes account details to any Team Administrator
   An issue was discovered in Mattermost Server before 3.0.0. It offers superfluous APIs for a Team Administrator to view account details.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 6c75662b824491a20a757a5eec59556a866374b5
+    introduced_in_commits: []
 severities:
   - score: '5.1'
     scoring_system: cvssv4
@@ -32,4 +39,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2016-11080
     reference_type:
-    reference_id: CVE-2016-11080
+    reference_id:

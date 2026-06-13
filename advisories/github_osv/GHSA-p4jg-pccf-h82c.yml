@@ -6,7 +6,14 @@ aliases:
 summary: |
   Insecure Temporary File in SWHKD
   SWHKD is a display protocol-independent hotkey daemon made in Rust. In SWHKD versions 1.1.5 and prior, SWHKD uses the /tmp/swhkd.pid pathname. As /tmp is accessible to all users, there can be an information leak or denial of service. No known workarounds exist. A patch is available on the `1.1.0` branch of the repository.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/waycrate/swhkd
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/waycrate/swhkd
+        commit: e661a4940df78fbb7b52c622ac4ae6a3a7f7d8aa
+    introduced_in_commits: []
 severities:
   - score: '9.1'
     scoring_system: cvssv3.1
@@ -34,9 +41,9 @@ references:
   - url: https://github.com/waycrate/swhkd/releases/tag/1.2.0
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2022-27815
+    reference_type:
+    reference_id:
   - url: http://www.openwall.com/lists/oss-security/2022/04/14/1
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2022-27815
-    reference_type:
-    reference_id: CVE-2022-27815

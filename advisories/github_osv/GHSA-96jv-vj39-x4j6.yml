@@ -56,7 +56,14 @@ summary: |
       - Limit who has delete, get, or action access to Applications.
 
   These mitigations can help limit potential damage, but they are not a substitute for upgrading. It is necessary to upgrade immediately.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/argoproj/argo-cd
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/argoproj/argo-cd
+        commit: af03b291d4b7e9d3ce9a6580ae9c8141af0e05cf
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
@@ -69,8 +76,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-863
   - CWE-284
+  - CWE-863
   - CWE-1220
 references:
   - url: https://access.redhat.com/errata/RHSA-2022:1039
@@ -102,4 +109,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2022-1025
     reference_type:
-    reference_id: CVE-2022-1025
+    reference_id:

@@ -7,6 +7,13 @@ summary: |
   PyTorch vulnerable to arbitrary code execution
   In PyTorch before trunk/89695, torch.jit.annotations.parse_type_line can cause arbitrary code execution because eval is used unsafely. The fix for this issue is available in version 1.13.1. There is a release checker in [issue #89855](https://github.com/pytorch/pytorch/issues/89855).
 impacted_packages:
+  - purl: pkg:github/pytorch/pytorch
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/pytorch/pytorch
+        commit: 767f6aa49fe20a2766b9843d01e3b7f7793df6a3
+    introduced_in_commits: []
   - purl: pkg:pypi/torch
     affected_versions: vers:pypi/<=1.13.0
     fixed_versions: vers:pypi/1.13.1

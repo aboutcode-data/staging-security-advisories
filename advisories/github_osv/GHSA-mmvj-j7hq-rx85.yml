@@ -8,13 +8,13 @@ summary: |
   Moodle through 2.6.11, 2.7.x before 2.7.11, 2.8.x before 2.8.9, and 2.9.x before 2.9.3 does not consider the moodle/badges:viewbadges capability, which allows remote authenticated users to obtain sensitive badge information via a request involving (1) `badges/overview.php` or (2) `badges/view.php`.
 impacted_packages:
   - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/<=2.6.11
-    fixed_versions:
+    affected_versions: vers:composer/>=2.7.0|<2.7.11
+    fixed_versions: vers:composer/2.7.11
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/>=2.7.0|<2.7.11
-    fixed_versions: vers:composer/2.7.11
+    affected_versions: vers:composer/<=2.6.11
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/moodle/moodle
@@ -26,6 +26,21 @@ impacted_packages:
     affected_versions: vers:composer/>=2.9.0|<2.9.3
     fixed_versions: vers:composer/2.9.3
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/moodle/moodle
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/moodle/moodle
+        commit: 47d5c29202e299fdbe54229d3f6b0c381835eae3
+      - vcs_url: https://github.com/moodle/moodle
+        commit: 65734f149f3c7e6cce9402f51f9a97deb31170db
+      - vcs_url: https://github.com/moodle/moodle
+        commit: 7cff64fdbfff749e779cb625fbddcce737355100
+      - vcs_url: https://github.com/moodle/moodle
+        commit: d70f610615242c5c7b3ae0bf7ef6868520dcd850
+      - vcs_url: https://github.com/moodle/moodle
+        commit: d41fa94a69bebeca69a4cd5332bb9569cfd87b99
     introduced_in_commits: []
 severities:
   - score: '4.3'

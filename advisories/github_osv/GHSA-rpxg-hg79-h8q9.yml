@@ -8,13 +8,13 @@ summary: |
   A SQL injection issue was discovered in the lux extension before 17.6.1, and 18.x through 24.x before 24.0.2, for TYPO3.
 impacted_packages:
   - purl: pkg:composer/in2code/lux
-    affected_versions: vers:composer/>=18.0.0|<24.0.2
-    fixed_versions: vers:composer/24.0.2
+    affected_versions: vers:composer/<17.6.1
+    fixed_versions: vers:composer/17.6.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/in2code/lux
-    affected_versions: vers:composer/<17.6.1
-    fixed_versions: vers:composer/17.6.1
+    affected_versions: vers:composer/>=18.0.0|<24.0.2
+    fixed_versions: vers:composer/24.0.2
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -31,12 +31,12 @@ severities:
 weaknesses:
   - CWE-89
 references:
-  - url: https://github.com/FriendsOfPHP/security-advisories/blob/master/in2code/lux/CVE-2022-35628.yaml
-    reference_type:
-    reference_id:
   - url: https://typo3.org/security/advisory/typo3-ext-sa-2022-014
     reference_type:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2022-35628
     reference_type:
     reference_id: CVE-2022-35628
+  - url: https://github.com/FriendsOfPHP/security-advisories/blob/master/in2code/lux/CVE-2022-35628.yaml
+    reference_type:
+    reference_id: CVE-2022-35628.YAML

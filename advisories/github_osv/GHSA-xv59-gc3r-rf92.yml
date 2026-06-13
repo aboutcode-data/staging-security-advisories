@@ -6,7 +6,14 @@ aliases:
 summary: |
   Insufficient Session Expiration in Nakama
   Old session tokens can be used to authenticate to the application and send authenticated requests.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/heroiclabs/nakama
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/heroiclabs/nakama
+        commit: ce8d3921e2acd44ef8b5e6edfe595b6df067b166
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -32,4 +39,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2022-2306
     reference_type:
-    reference_id: CVE-2022-2306
+    reference_id:

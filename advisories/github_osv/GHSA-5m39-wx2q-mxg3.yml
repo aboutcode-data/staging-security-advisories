@@ -9,7 +9,14 @@ summary: |
   The flaw was corrected in commit b633bf265e41c60dfce3be7eac4e4dd5e18d06cf by using a heap-allocated `Vec` and removing out use of `mem::uninitialized`. The fix was released in v0.3.2 and v1.0.0
 
   Subsequently, the crate was deprecated and its use is discouraged.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/badboy/lzf-rs
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/badboy/lzf-rs
+        commit: b633bf265e41c60dfce3be7eac4e4dd5e18d06cf
+    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual

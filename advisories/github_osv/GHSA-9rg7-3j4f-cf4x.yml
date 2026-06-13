@@ -13,7 +13,14 @@ summary: "QueryInterface should call AddRef before returning pointer\nAffected v
   The only way to quick fix this is to use the macro expanded version of the code and modify\
   \ \nthe QueryInterface method to add the AddRef call yourself.\n\nThe issue was corrected\
   \ in commit `9803f31fbd1717d482d848f041044d061fca6da7`."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/connicpu/com-impl
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/connicpu/com-impl
+        commit: 9803f31fbd1717d482d848f041044d061fca6da7
+    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual

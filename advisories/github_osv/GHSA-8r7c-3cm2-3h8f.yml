@@ -16,6 +16,15 @@ summary: "Memory leak in Tensorflow\n### Impact\nIf a graph node is invalid, Ten
   \ for more information regarding the security model and how to contact us with issues and\
   \ questions."
 impacted_packages:
+  - purl: pkg:github/tensorflow/tensorflow
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/tensorflow/tensorflow
+        commit: c79ccba517dbb1a0ccb9b01ee3bd2a63748b60dd
+      - vcs_url: https://github.com/tensorflow/tensorflow
+        commit: a1320ec1eac186da1d03f033109191f715b2b130
+    introduced_in_commits: []
   - purl: pkg:pypi/tensorflow
     affected_versions: vers:pypi/<2.5.3
     fixed_versions: vers:pypi/2.5.3
@@ -95,9 +104,9 @@ references:
   - url: https://github.com/tensorflow/tensorflow/commit/c79ccba517dbb1a0ccb9b01ee3bd2a63748b60dd
     reference_type:
     reference_id:
-  - url: https://github.com/tensorflow/tensorflow/security/advisories/GHSA-8r7c-3cm2-3h8f
-    reference_type:
-    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2022-23578
     reference_type:
     reference_id: CVE-2022-23578
+  - url: https://github.com/tensorflow/tensorflow/security/advisories/GHSA-8r7c-3cm2-3h8f
+    reference_type:
+    reference_id: GHSA-8r7c-3cm2-3h8f

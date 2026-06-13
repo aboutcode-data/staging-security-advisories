@@ -8,6 +8,16 @@ summary: |
   An issue was discovered in SaltStack Salt through 3002. Sending crafted web requests to the Salt API, with the SSH client enabled, can result in shell injection.
 impacted_packages:
   - purl: pkg:pypi/salt
+    affected_versions: vers:pypi/>=3000.0|<3000.4
+    fixed_versions: vers:pypi/3000.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/salt
+    affected_versions: vers:pypi/>=3002|<3002.1
+    fixed_versions: vers:pypi/3002.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/salt
     affected_versions: vers:pypi/<2015.8.13
     fixed_versions: vers:pypi/2015.8.13
     fixed_in_commits: []
@@ -38,19 +48,16 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/salt
-    affected_versions: vers:pypi/>=3000.0|<3000.4
-    fixed_versions: vers:pypi/3000.4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/salt
     affected_versions: vers:pypi/>=3001|<3001.2
     fixed_versions: vers:pypi/3001.2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:pypi/salt
-    affected_versions: vers:pypi/>=3002|<3002.1
-    fixed_versions: vers:pypi/3002.1
-    fixed_in_commits: []
+  - purl: pkg:github/saltstack/salt
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/saltstack/salt
+        commit: 8f9405cf8e6f7d7776d5000841c886dec6d96250
     introduced_in_commits: []
 severities:
   - score: '9.8'

@@ -7,6 +7,11 @@ summary: |
   Authentication Bypass Using an Alternate Path or Channel in Apache Tomcat
   In Apache Tomcat 9.0.0.M1 to 9.0.0.M9, 8.5.0 to 8.5.4, 8.0.0.RC1 to 8.0.36, 7.0.0 to 7.0.70 and 6.0.0 to 6.0.45 a malicious web application was able to bypass a configured SecurityManager via a Tomcat utility method that was accessible to web applications.
 impacted_packages:
+  - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-jasper
+    affected_versions: vers:maven/<=6.0.45
+    fixed_versions: vers:maven/6.0.47
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat/tomcat-jasper
     affected_versions: vers:maven/<=9.0.0.M9
     fixed_versions: vers:maven/9.0.0.M10
@@ -52,10 +57,16 @@ impacted_packages:
     fixed_versions: vers:maven/7.0.72
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-jasper
-    affected_versions: vers:maven/<=6.0.45
-    fixed_versions: vers:maven/6.0.47
-    fixed_in_commits: []
+  - purl: pkg:github/apache/tomcat
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/tomcat
+        commit: a6b1ebc246b91b854237e5aad3dfd2b5460ea282
+      - vcs_url: https://github.com/apache/tomcat
+        commit: 648122fef84d3b43223e0b5ae668f84719dada0a
+      - vcs_url: https://github.com/apache/tomcat
+        commit: 890a2f681ed2f3461b27983d7da9737375ff2ae4
     introduced_in_commits: []
 severities:
   - score: '9.1'
@@ -72,33 +83,6 @@ weaknesses:
   - CWE-288
 references:
   - url: http://packetstormsecurity.com/files/155873/Tomcat-9.0.0.M1-Sandbox-Escape.html
-    reference_type:
-    reference_id:
-  - url: http://rhn.redhat.com/errata/RHSA-2017-0457.html
-    reference_type:
-    reference_id:
-  - url: http://rhn.redhat.com/errata/RHSA-2017-1551.html
-    reference_type:
-    reference_id:
-  - url: https://access.redhat.com/errata/RHSA-2017:0455
-    reference_type:
-    reference_id:
-  - url: https://access.redhat.com/errata/RHSA-2017:0456
-    reference_type:
-    reference_id:
-  - url: https://access.redhat.com/errata/RHSA-2017:1548
-    reference_type:
-    reference_id:
-  - url: https://access.redhat.com/errata/RHSA-2017:1549
-    reference_type:
-    reference_id:
-  - url: https://access.redhat.com/errata/RHSA-2017:1550
-    reference_type:
-    reference_id:
-  - url: https://access.redhat.com/errata/RHSA-2017:1552
-    reference_type:
-    reference_id:
-  - url: https://access.redhat.com/errata/RHSA-2017:2247
     reference_type:
     reference_id:
   - url: https://github.com/apache/tomcat
@@ -218,3 +202,30 @@ references:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2016-5018
     reference_type:
     reference_id: CVE-2016-5018
+  - url: https://access.redhat.com/errata/RHSA-2017:0455
+    reference_type:
+    reference_id: RHSA-2017:0455
+  - url: https://access.redhat.com/errata/RHSA-2017:0456
+    reference_type:
+    reference_id: RHSA-2017:0456
+  - url: http://rhn.redhat.com/errata/RHSA-2017-0457.html
+    reference_type:
+    reference_id: RHSA-2017-0457.html
+  - url: https://access.redhat.com/errata/RHSA-2017:1548
+    reference_type:
+    reference_id: RHSA-2017:1548
+  - url: https://access.redhat.com/errata/RHSA-2017:1549
+    reference_type:
+    reference_id: RHSA-2017:1549
+  - url: https://access.redhat.com/errata/RHSA-2017:1550
+    reference_type:
+    reference_id: RHSA-2017:1550
+  - url: http://rhn.redhat.com/errata/RHSA-2017-1551.html
+    reference_type:
+    reference_id: RHSA-2017-1551.html
+  - url: https://access.redhat.com/errata/RHSA-2017:1552
+    reference_type:
+    reference_id: RHSA-2017:1552
+  - url: https://access.redhat.com/errata/RHSA-2017:2247
+    reference_type:
+    reference_id: RHSA-2017:2247

@@ -7,6 +7,13 @@ summary: |
   SEOmatic for CraftCMS allows Server-Side Template Injection
   In the SEOmatic plugin before 3.2.49 for Craft CMS, helpers/DynamicMeta.php does not properly sanitize the URL. This leads to Server-Side Template Injection and credentials disclosure via a crafted Twig template after a semicolon.
 impacted_packages:
+  - purl: pkg:github/nystudio107/craft-seomatic
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/nystudio107/craft-seomatic
+        commit: 82f4a25b28fd622393da6592dc9e5ccee7fc5be3
+    introduced_in_commits: []
   - purl: pkg:composer/nystudio107/craft-seomatic
     affected_versions: vers:composer/<3.2.49
     fixed_versions: vers:composer/3.2.49

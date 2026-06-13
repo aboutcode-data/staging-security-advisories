@@ -8,6 +8,11 @@ summary: |
   If Apache TomEE is configured to use the embedded ActiveMQ broker, and the broker URI includes the useJMX=true parameter, a JMX port is opened on TCP port 1099, which does not include authentication. This affects Apache TomEE 8.0.0-M1 - 8.0.1, Apache TomEE 7.1.0 - 7.1.2, Apache TomEE 7.0.0-M1 - 7.0.7, Apache TomEE 1.0.0 - 1.7.5.
 impacted_packages:
   - purl: pkg:maven/org.apache.tomee/tomee
+    affected_versions: vers:maven/<=1.7.5
+    fixed_versions: vers:maven/1.7.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomee/tomee
     affected_versions: vers:maven/<=8.0.1
     fixed_versions: vers:maven/8.0.2
     fixed_in_commits: []
@@ -20,11 +25,6 @@ impacted_packages:
   - purl: pkg:maven/org.apache.tomee/tomee
     affected_versions: vers:maven/<=7.0.7
     fixed_versions: vers:maven/7.0.8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.tomee/tomee
-    affected_versions: vers:maven/<=1.7.5
-    fixed_versions: vers:maven/1.7.6
     fixed_in_commits: []
     introduced_in_commits: []
 severities:

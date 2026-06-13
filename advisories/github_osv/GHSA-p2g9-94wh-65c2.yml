@@ -10,7 +10,14 @@ summary: |
       let html = format!("<div title={}>", clean_text(user_supplied_string));
 
   Applications are not affected if they quote their attributes, or if they don't use `clean_text` at all.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/rust-ammonia/ammonia
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/rust-ammonia/ammonia
+        commit: 6c7bf22907a75d1bbaed52e4f7dd9716f5e6f737
+    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual

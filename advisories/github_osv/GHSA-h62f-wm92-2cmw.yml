@@ -9,7 +9,14 @@ summary: |
   ### Specific Go Packages Affected
   github.com/docker/distribution/registry/storage
   github.com/docker/distribution/registry/handlers
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/distribution/distribution
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/distribution/distribution
+        commit: 91c507a39abfce14b5c8541cf284330e22208c0f
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -45,9 +52,9 @@ references:
   - url: https://github.com/docker/distribution/releases/tag/v2.6.2
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2017-11468
+    reference_type:
+    reference_id:
   - url: https://pkg.go.dev/vuln/GO-2021-0072
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2017-11468
-    reference_type:
-    reference_id: CVE-2017-11468

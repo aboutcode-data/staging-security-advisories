@@ -8,19 +8,30 @@ summary: |
   The internationalization (i18n) framework in Django 0.91, 0.95, 0.95.1, and 0.96, and as used in other products such as PyLucid, when the USE_I18N option and the i18n component are enabled, allows remote attackers to cause a denial of service (memory consumption) via many HTTP requests with large Accept-Language headers.
 impacted_packages:
   - purl: pkg:pypi/django
-    affected_versions: vers:pypi/0.96.0
-    fixed_versions: vers:pypi/0.96.1
+    affected_versions: vers:pypi/>=0.95|<0.95.2
+    fixed_versions: vers:pypi/0.95.2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/django
-    affected_versions: vers:pypi/>=0.95|<0.95.2
-    fixed_versions: vers:pypi/0.95.2
+    affected_versions: vers:pypi/0.96.0
+    fixed_versions: vers:pypi/0.96.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/django
     affected_versions: vers:pypi/0.91.0
     fixed_versions: vers:pypi/0.91.1
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/django/django
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/django/django
+        commit: 8bc36e726c9e8c75c681d3ad232df8e882aaac81
+      - vcs_url: https://github.com/django/django
+        commit: 412ed22502e11c50dbfee854627594f0e7e2c234
+      - vcs_url: https://github.com/django/django
+        commit: 7dd2dd08a79e388732ce00e2b5514f15bd6d0f6f
     introduced_in_commits: []
 severities:
   - score: '5.9'

@@ -24,7 +24,14 @@ summary: |
   If you have any questions or comments about this advisory:
   * Join us in the #fleet channel of [osquery Slack](https://join.slack.com/t/osquery/shared_invite/zt-h29zm0gk-s2DBtGUTW4CFel0f0IjTEw).
   * Email us at [security@fleetdm.com](mailto:security@fleetdm.com).
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/fleetdm/fleet
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/fleetdm/fleet
+        commit: 35d5a7b285f15ddd47486fa656e8b1acf3d48374
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
@@ -37,8 +44,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-284
   - CWE-287
+  - CWE-284
 references:
   - url: https://github.com/fleetdm/fleet
     reference_type:
@@ -51,4 +58,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2022-23600
     reference_type:
-    reference_id: CVE-2022-23600
+    reference_id:

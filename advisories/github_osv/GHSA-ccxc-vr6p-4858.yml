@@ -56,7 +56,14 @@ summary: "Improper Certificate Validation in Cosign\n### Impact\n\nCosign can be
   \n### Thank you\nThank you to @mtrmac for finding and reporting this vulnerability.\n\nThank\
   \ you to everyone who worked on fixing this:\n* @nsmith5\n* @znewman01 \n* @dlorenc\n* @mattmoor\
   \ \n* @priyawadhwa"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/sigstore/cosign
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/sigstore/cosign
+        commit: 96d410a6580e4e81d24d112a0855c70ca3fb5b49
+    introduced_in_commits: []
 severities:
   - score: '3.3'
     scoring_system: cvssv3.1
@@ -85,4 +92,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2022-23649
     reference_type:
-    reference_id: CVE-2022-23649
+    reference_id:

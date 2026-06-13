@@ -10,7 +10,14 @@ summary: |
    * There are NO attestations of the type being verified (--type defaults to "custom")
 
   Users should upgrade to cosign version 0.2.1 or greater for a patch. There are no known workarounds at this time.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/sigstore/policy-controller
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/sigstore/policy-controller
+        commit: e852af36fb7d42678b21d7e97503c25bd1fd05c8
+    introduced_in_commits: []
 severities:
   - score: '7.1'
     scoring_system: cvssv3.1
@@ -39,4 +46,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2022-35930
     reference_type:
-    reference_id: CVE-2022-35930
+    reference_id:

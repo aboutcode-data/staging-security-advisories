@@ -17,7 +17,14 @@ summary: |
   ### Backward Compatibility
   This update is not backward compatible.
   Any tuples where the `user` field is set to a `userset`, and the tuple's relation is used on the right-hand side of a `from` statement have to be rewritten.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/openfga/openfga
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openfga/openfga
+        commit: 776e80505e8d184b2286acc8268d8d74f36a9984
+    introduced_in_commits: []
 severities:
   - score: '4.8'
     scoring_system: cvssv3.1
@@ -46,4 +53,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2022-39352
     reference_type:
-    reference_id: CVE-2022-39352
+    reference_id:

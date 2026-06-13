@@ -10,7 +10,14 @@ summary: |
 
   ## Original Description
   An out-of-bounds read in the rewrite function at /modules/caddyhttp/rewrite/rewrite.go in Caddy v2.5.1 allows attackers to cause a Denial of Service (DoS) on the client side via a crafted URI.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/caddyserver/caddy
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/caddyserver/caddy
+        commit: 693e9b5283e675b56084ecc83d73176cab0ee27c
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -39,4 +46,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2022-34037
     reference_type:
-    reference_id: CVE-2022-34037
+    reference_id:

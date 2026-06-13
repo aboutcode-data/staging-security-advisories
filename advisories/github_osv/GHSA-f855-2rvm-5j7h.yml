@@ -7,6 +7,13 @@ summary: |
   Liferay Portal and Liferay DXP has incorrect default permissions for site members
   The Dynamic Data Mapping module before 4.0.39 from Liferay Portal 7.0.0 through 7.3.6, and Liferay DXP 7.0 before fix pack 101, 7.1 before fix pack 21, 7.2 before fix pack 10 and 7.3 before fix pack 2 incorrectly sets default permissions for site members, which allows remote authenticated users with the site member role to add and duplicate forms, via the UI or the API.
 impacted_packages:
+  - purl: pkg:github/liferay/liferay-portal
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/liferay/liferay-portal
+        commit: 16228425d7395b564f3c4cb5fae0c71c7228202b
+    introduced_in_commits: []
   - purl: pkg:maven/com.liferay/com.liferay.dynamic.data.mapping.service
     affected_versions: vers:maven/<6.0.0
     fixed_versions: vers:maven/6.0.0
@@ -60,4 +67,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2021-38268
     reference_type:
-    reference_id: CVE-2021-38268
+    reference_id:

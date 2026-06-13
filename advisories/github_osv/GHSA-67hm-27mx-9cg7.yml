@@ -6,7 +6,14 @@ aliases:
 summary: |
   Link Following in Deno
   Deno <=1.14.0 file sandbox does not handle symbolic links correctly. When running Deno with specific write access, the Deno.symlink method can be used to gain access to any directory.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/denoland/deno
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/denoland/deno
+        commit: d44011a69e0674acfa9c59bd7ad7f0523eb61d42
+    introduced_in_commits: []
 severities:
   - score: '8.4'
     scoring_system: cvssv3.1
@@ -35,4 +42,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2021-41641
     reference_type:
-    reference_id: CVE-2021-41641
+    reference_id:

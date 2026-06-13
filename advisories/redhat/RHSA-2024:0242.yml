@@ -35,6 +35,96 @@ summary: |
 
   * When Transparent Huge Pages (THP) are unconditionally enabled on a system, Java applications using many threads were found to have a large Resident Set Size (RSS). This was due to a race between the kernel transforming thread stack memory into huge pages and the Java Virtual Machine (JVM) shattering these pages into smaller ones when adding a guard page. This release resolves this issue by getting glibc to insert a guard page and prevent the creation of huge pages. (RHEL-13929)
 impacted_packages:
+  - purl: pkg:rpm/redhat/java-17-openjdk-static-libs?arch=aarch64&epoch=1
+    affected_versions: vers:rpm/<17.0.10.0.7-1.el8_6
+    fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-17-openjdk-demo-fastdebug?arch=ppc64le&epoch=1
+    affected_versions: vers:rpm/<17.0.10.0.7-1.el8_6
+    fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-17-openjdk-demo-slowdebug?arch=ppc64le&epoch=1
+    affected_versions: vers:rpm/<17.0.10.0.7-1.el8_6
+    fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-17-openjdk-devel-fastdebug?arch=ppc64le&epoch=1
+    affected_versions: vers:rpm/<17.0.10.0.7-1.el8_6
+    fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-17-openjdk-devel-slowdebug?arch=ppc64le&epoch=1
+    affected_versions: vers:rpm/<17.0.10.0.7-1.el8_6
+    fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-17-openjdk-fastdebug?arch=ppc64le&epoch=1
+    affected_versions: vers:rpm/<17.0.10.0.7-1.el8_6
+    fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-17-openjdk-demo-slowdebug?arch=x86_64&epoch=1
+    affected_versions: vers:rpm/<17.0.10.0.7-1.el8_6
+    fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-17-openjdk-devel-fastdebug?arch=x86_64&epoch=1
+    affected_versions: vers:rpm/<17.0.10.0.7-1.el8_6
+    fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-17-openjdk-devel-slowdebug?arch=x86_64&epoch=1
+    affected_versions: vers:rpm/<17.0.10.0.7-1.el8_6
+    fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-17-openjdk-fastdebug?arch=x86_64&epoch=1
+    affected_versions: vers:rpm/<17.0.10.0.7-1.el8_6
+    fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-17-openjdk-headless-fastdebug?arch=x86_64&epoch=1
+    affected_versions: vers:rpm/<17.0.10.0.7-1.el8_6
+    fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-17-openjdk-headless-slowdebug?arch=x86_64&epoch=1
+    affected_versions: vers:rpm/<17.0.10.0.7-1.el8_6
+    fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-17-openjdk-jmods-fastdebug?arch=x86_64&epoch=1
+    affected_versions: vers:rpm/<17.0.10.0.7-1.el8_6
+    fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-17-openjdk-jmods-slowdebug?arch=x86_64&epoch=1
+    affected_versions: vers:rpm/<17.0.10.0.7-1.el8_6
+    fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-17-openjdk-slowdebug?arch=x86_64&epoch=1
+    affected_versions: vers:rpm/<17.0.10.0.7-1.el8_6
+    fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-17-openjdk-src-fastdebug?arch=x86_64&epoch=1
+    affected_versions: vers:rpm/<17.0.10.0.7-1.el8_6
+    fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-17-openjdk-src-slowdebug?arch=x86_64&epoch=1
+    affected_versions: vers:rpm/<17.0.10.0.7-1.el8_6
+    fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-17-openjdk-static-libs-fastdebug?arch=x86_64&epoch=1
+    affected_versions: vers:rpm/<17.0.10.0.7-1.el8_6
+    fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/java-17-openjdk-demo-fastdebug?arch=aarch64&epoch=1
     affected_versions: vers:rpm/<17.0.10.0.7-1.el8_6
     fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
@@ -195,36 +285,6 @@ impacted_packages:
     fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-17-openjdk-static-libs?arch=aarch64&epoch=1
-    affected_versions: vers:rpm/<17.0.10.0.7-1.el8_6
-    fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-17-openjdk-demo-fastdebug?arch=ppc64le&epoch=1
-    affected_versions: vers:rpm/<17.0.10.0.7-1.el8_6
-    fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-17-openjdk-demo-slowdebug?arch=ppc64le&epoch=1
-    affected_versions: vers:rpm/<17.0.10.0.7-1.el8_6
-    fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-17-openjdk-devel-fastdebug?arch=ppc64le&epoch=1
-    affected_versions: vers:rpm/<17.0.10.0.7-1.el8_6
-    fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-17-openjdk-devel-slowdebug?arch=ppc64le&epoch=1
-    affected_versions: vers:rpm/<17.0.10.0.7-1.el8_6
-    fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-17-openjdk-fastdebug?arch=ppc64le&epoch=1
-    affected_versions: vers:rpm/<17.0.10.0.7-1.el8_6
-    fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/java-17-openjdk-headless-fastdebug?arch=ppc64le&epoch=1
     affected_versions: vers:rpm/<17.0.10.0.7-1.el8_6
     fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
@@ -366,66 +426,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/java-17-openjdk-demo-fastdebug?arch=x86_64&epoch=1
-    affected_versions: vers:rpm/<17.0.10.0.7-1.el8_6
-    fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-17-openjdk-demo-slowdebug?arch=x86_64&epoch=1
-    affected_versions: vers:rpm/<17.0.10.0.7-1.el8_6
-    fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-17-openjdk-devel-fastdebug?arch=x86_64&epoch=1
-    affected_versions: vers:rpm/<17.0.10.0.7-1.el8_6
-    fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-17-openjdk-devel-slowdebug?arch=x86_64&epoch=1
-    affected_versions: vers:rpm/<17.0.10.0.7-1.el8_6
-    fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-17-openjdk-fastdebug?arch=x86_64&epoch=1
-    affected_versions: vers:rpm/<17.0.10.0.7-1.el8_6
-    fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-17-openjdk-headless-fastdebug?arch=x86_64&epoch=1
-    affected_versions: vers:rpm/<17.0.10.0.7-1.el8_6
-    fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-17-openjdk-headless-slowdebug?arch=x86_64&epoch=1
-    affected_versions: vers:rpm/<17.0.10.0.7-1.el8_6
-    fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-17-openjdk-jmods-fastdebug?arch=x86_64&epoch=1
-    affected_versions: vers:rpm/<17.0.10.0.7-1.el8_6
-    fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-17-openjdk-jmods-slowdebug?arch=x86_64&epoch=1
-    affected_versions: vers:rpm/<17.0.10.0.7-1.el8_6
-    fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-17-openjdk-slowdebug?arch=x86_64&epoch=1
-    affected_versions: vers:rpm/<17.0.10.0.7-1.el8_6
-    fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-17-openjdk-src-fastdebug?arch=x86_64&epoch=1
-    affected_versions: vers:rpm/<17.0.10.0.7-1.el8_6
-    fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-17-openjdk-src-slowdebug?arch=x86_64&epoch=1
-    affected_versions: vers:rpm/<17.0.10.0.7-1.el8_6
-    fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-17-openjdk-static-libs-fastdebug?arch=x86_64&epoch=1
     affected_versions: vers:rpm/<17.0.10.0.7-1.el8_6
     fixed_versions: vers:rpm/17.0.10.0.7-1.el8_6
     fixed_in_commits: []

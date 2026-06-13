@@ -25,7 +25,16 @@ summary: "Missing Role Based Access Control for the REST handlers in bleve/http 
   \ use that in production use cases.\n\n### For more information\nIf you have any questions\
   \ or comments about this advisory:\n* Open an issue [here](https://github.com/blevesearch/bleve/issues).\n\
   * Email us at [mailto:security@couchbase.com, fts-team@couchbase.com]."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/blevesearch/bleve
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/blevesearch/bleve
+        commit: 1c7509d6a17d36f265c90b4e8f4e3a3182fe79ff
+      - vcs_url: https://github.com/blevesearch/bleve
+        commit: af9e3111dadfedf9d30f0448506b4a57fecc8550
+    introduced_in_commits: []
 severities:
   - score: '5.5'
     scoring_system: cvssv3.1
@@ -38,8 +47,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-306
   - CWE-288
+  - CWE-306
 references:
   - url: github.com/blevesearch/bleve
     reference_type:
@@ -53,9 +62,9 @@ references:
   - url: https://github.com/blevesearch/bleve/security/advisories/GHSA-9w9f-6mg8-jp7w
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2022-31022
+    reference_type:
+    reference_id:
   - url: https://pkg.go.dev/vuln/GO-2022-0470
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2022-31022
-    reference_type:
-    reference_id: CVE-2022-31022

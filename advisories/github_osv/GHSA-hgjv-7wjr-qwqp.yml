@@ -7,14 +7,14 @@ summary: |
   Liferay Portal and Liferay DXP Cross-site scripting (XSS) vulnerability in the Frontend JS module
   Cross-site scripting (XSS) vulnerability in the Frontend JS module before version 4.0.18, in Liferay Portal 7.3.4 and earlier, and Liferay DXP 7.0 before fix pack 96, 7.1 before fix pack 20 and 7.2 before fix pack 9, allows remote attackers to inject arbitrary web script or HTML via the title of a modal window.
 impacted_packages:
-  - purl: pkg:maven/com.liferay/com.liferay.frontend.js.aui.web
-    affected_versions: vers:maven/<4.0.18
-    fixed_versions: vers:maven/4.0.18
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:maven/com.liferay.portal/release.dxp.bom
     affected_versions: vers:maven/>=7.0.0|<7.0.10.fp96
     fixed_versions: vers:maven/7.0.10.fp96
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/com.liferay/com.liferay.frontend.js.aui.web
+    affected_versions: vers:maven/<4.0.18
+    fixed_versions: vers:maven/4.0.18
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/com.liferay.portal/release.dxp.bom
@@ -26,6 +26,13 @@ impacted_packages:
     affected_versions: vers:maven/>=7.2.0|<7.2.10.fp9
     fixed_versions: vers:maven/7.2.10.fp9
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/liferay/liferay-portal
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/liferay/liferay-portal
+        commit: eb0590cea2d899f9e95bdb2e767466b8444aa573
     introduced_in_commits: []
 severities:
   - score: '6.1'
@@ -55,4 +62,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2021-33326
     reference_type:
-    reference_id: CVE-2021-33326
+    reference_id:

@@ -23,7 +23,16 @@ summary: "Juniper is vulnerable to @DOS GraphQL Nested Fragments overflow\n### G
   \    print('Connection closed, POC worked.')\n```\n\n```\ncargo run\n[in separate shell] python3\
   \ poc.py\n```\n\n### Credits\n\n[@Escape-Technologies](https://escape.tech)\n\n@c3b5aw \n\
   @MdotTIM \n@karimhreda"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/graphql-rust/juniper
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/graphql-rust/juniper
+        commit: 2b609ee057be950e3454b69fadc431d120e407bb
+      - vcs_url: https://github.com/graphql-rust/juniper
+        commit: 8d28cdba6eb10f53490ba41d1b5cb40506c2de22
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -36,8 +45,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-674
   - CWE-400
+  - CWE-674
 references:
   - url: https://github.com/graphql-rust/juniper
     reference_type:
@@ -54,9 +63,9 @@ references:
   - url: https://github.com/graphql-rust/juniper/security/advisories/GHSA-4rx6-g5vg-5f3j
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2022-31173
+    reference_type:
+    reference_id:
   - url: https://rustsec.org/advisories/RUSTSEC-2022-0038.html
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2022-31173
-    reference_type:
-    reference_id: CVE-2022-31173

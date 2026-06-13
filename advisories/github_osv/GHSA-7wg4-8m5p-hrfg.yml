@@ -6,7 +6,14 @@ aliases:
 summary: |
   HashiCorp Nomad vulnerable to non-sensitive metadata exposure
   HashiCorp Nomad and Nomad Enterprise 1.4.0 up to 1.4.1 workload identity token can list non-sensitive metadata for paths under `nomad/` that belong to other jobs in the same namespace. Fixed in 1.4.2.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/hashicorp/nomad
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/hashicorp/nomad
+        commit: 3b24f26603e2b116ba324101afa8a7e3a7a769a5
+    introduced_in_commits: []
 severities:
   - score: '5.0'
     scoring_system: cvssv3.1
@@ -32,4 +39,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2022-3866
     reference_type:
-    reference_id: CVE-2022-3866
+    reference_id:
