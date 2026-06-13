@@ -72,7 +72,14 @@ summary: |
   - RCE via /etc/cron.d/ (root containers), ~/.bashrc, SSH authorized_keys
   - Data destruction by overwriting workspace or application files
   - In Docker containers running as root (common default), this grants full container compromise
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/siyuan-note/siyuan
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/siyuan-note/siyuan
+        commit: 5ee00907f0b0c4aca748ce21ef1977bb98178e14
+    introduced_in_commits: []
 severities:
   - score: '7.6'
     scoring_system: cvssv3.1
@@ -85,21 +92,21 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-73
   - CWE-22
+  - CWE-73
 references:
   - url: https://github.com/siyuan-note/siyuan
+    reference_type:
+    reference_id:
+  - url: https://github.com/siyuan-note/siyuan/commit/5ee00907f0b0c4aca748ce21ef1977bb98178e14
+    reference_type:
+    reference_id:
+  - url: https://github.com/siyuan-note/siyuan/releases/tag/v3.6.1
+    reference_type:
+    reference_id:
+  - url: https://github.com/siyuan-note/siyuan/security/advisories/GHSA-qvvf-q994-x79v
     reference_type:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32749
     reference_type:
     reference_id:
-  - url: https://github.com/siyuan-note/siyuan/commit/5ee00907f0b0c4aca748ce21ef1977bb98178e14
-    reference_type: other
-    reference_id: 5ee00907f0b0c4aca748ce21ef1977bb98178e14
-  - url: https://github.com/siyuan-note/siyuan/security/advisories/GHSA-qvvf-q994-x79v
-    reference_type: other
-    reference_id: GHSA-qvvf-q994-x79v
-  - url: https://github.com/siyuan-note/siyuan/releases/tag/v3.6.1
-    reference_type: other
-    reference_id: v3.6.1

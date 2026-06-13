@@ -154,7 +154,14 @@ summary: |
   ```
 
   This checks project-level read permission once per unique project ID (cached in `allowedProjectIDs`) and skips related tasks from projects the user cannot access.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/go-vikunja/vikunja
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/go-vikunja/vikunja
+        commit: 833f2aec006ac0f6643c41872e45dd79220b9174
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
@@ -172,18 +179,18 @@ references:
   - url: https://github.com/go-vikunja/vikunja
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33676
+  - url: https://github.com/go-vikunja/vikunja/commit/833f2aec006ac0f6643c41872e45dd79220b9174
     reference_type:
     reference_id:
   - url: https://github.com/go-vikunja/vikunja/pull/2449
-    reference_type: other
-    reference_id: 2449
-  - url: https://github.com/go-vikunja/vikunja/commit/833f2aec006ac0f6643c41872e45dd79220b9174
-    reference_type: other
-    reference_id: 833f2aec006ac0f6643c41872e45dd79220b9174
+    reference_type:
+    reference_id:
   - url: https://github.com/go-vikunja/vikunja/security/advisories/GHSA-8cmm-j6c4-rr8v
-    reference_type: other
-    reference_id: GHSA-8cmm-j6c4-rr8v
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33676
+    reference_type:
+    reference_id:
   - url: https://vikunja.io/changelog/vikunja-v2.2.2-was-released
-    reference_type: other
-    reference_id: vikunja-v2.2.2-was-released
+    reference_type:
+    reference_id:

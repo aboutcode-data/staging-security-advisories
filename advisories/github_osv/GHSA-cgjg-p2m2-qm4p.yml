@@ -6,7 +6,14 @@ aliases:
 summary: |
   Mattermost fails to enforce invite permissions when updating team settings
   Mattermost versions 10.11.x <= 10.11.9 fail to enforce invite permissions when updating team settings, which allows team administrators without proper permissions to bypass restrictions and add users to their team via API requests. Mattermost Advisory ID: MMSA-2025-00561
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 6404ab29acc04901c5cb1cf5ad97fc3c0693e2cd
+    introduced_in_commits: []
 severities:
   - score: '3.8'
     scoring_system: cvssv3.1
@@ -27,9 +34,9 @@ references:
   - url: https://github.com/mattermost/mattermost/commit/6404ab29acc04901c5cb1cf5ad97fc3c0693e2cd
     reference_type:
     reference_id:
+  - url: https://mattermost.com/security-updates
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2025-14573
     reference_type:
     reference_id:
-  - url: https://mattermost.com/security-updates
-    reference_type: other
-    reference_id: security-updates

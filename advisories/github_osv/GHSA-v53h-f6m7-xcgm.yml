@@ -16,7 +16,14 @@ summary: |
   ### Workarounds
 
   Do not use the `use_pyproject: true` option in the psf/black GitHub Action.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/psf/black
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/psf/black
+        commit: 0a2560b981364dde4c8cf8ce9d164c40669a8611
+    introduced_in_commits: []
 severities:
   - score: '8.7'
     scoring_system: cvssv4
@@ -34,12 +41,12 @@ references:
   - url: https://github.com/psf/black
     reference_type:
     reference_id:
+  - url: https://github.com/psf/black/commit/0a2560b981364dde4c8cf8ce9d164c40669a8611
+    reference_type:
+    reference_id:
+  - url: https://github.com/psf/black/security/advisories/GHSA-v53h-f6m7-xcgm
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-31900
     reference_type:
     reference_id:
-  - url: https://github.com/psf/black/commit/0a2560b981364dde4c8cf8ce9d164c40669a8611
-    reference_type: other
-    reference_id: 0a2560b981364dde4c8cf8ce9d164c40669a8611
-  - url: https://github.com/psf/black/security/advisories/GHSA-v53h-f6m7-xcgm
-    reference_type: other
-    reference_id: GHSA-v53h-f6m7-xcgm

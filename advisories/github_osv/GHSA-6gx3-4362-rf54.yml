@@ -19,7 +19,14 @@ summary: "astral-tokio-tar insufficiently validates PAX extensions during extrac
   \ a result of the patch above. Some users who attempt to extract poorly constructed tar files\
   \ may experience errors; users should re-construct their tar files with a conforming tar parser.\n\
   \n## Attribution\n\n- Sergei Zimmerman (@xokdvium)"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/astral-sh/tokio-tar
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/astral-sh/tokio-tar
+        commit: e5e0139cae4577eeedf5fc16b65e690bf988ce52
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
@@ -42,15 +49,15 @@ references:
   - url: https://github.com/astral-sh/tokio-tar
     reference_type:
     reference_id:
+  - url: https://github.com/astral-sh/tokio-tar/commit/e5e0139cae4577eeedf5fc16b65e690bf988ce52
+    reference_type:
+    reference_id:
+  - url: https://github.com/astral-sh/tokio-tar/security/advisories/GHSA-6gx3-4362-rf54
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32766
     reference_type:
     reference_id:
   - url: https://rustsec.org/advisories/RUSTSEC-2026-0066.html
     reference_type:
     reference_id:
-  - url: https://github.com/astral-sh/tokio-tar/commit/e5e0139cae4577eeedf5fc16b65e690bf988ce52
-    reference_type: other
-    reference_id: e5e0139cae4577eeedf5fc16b65e690bf988ce52
-  - url: https://github.com/astral-sh/tokio-tar/security/advisories/GHSA-6gx3-4362-rf54
-    reference_type: other
-    reference_id: GHSA-6gx3-4362-rf54

@@ -205,7 +205,14 @@ summary: |
   **Option B — Enforce SELECT-only for non-admin users:**
 
   Validate the parsed SQL to ensure only SELECT statements are executed when the user is not an administrator.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/siyuan-note/siyuan
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/siyuan-note/siyuan
+        commit: d5e2d0bce0dffef5f61bd8066954bc2d41181fc5
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
@@ -224,18 +231,18 @@ references:
   - url: https://github.com/siyuan-note/siyuan
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32767
+  - url: https://github.com/siyuan-note/siyuan/commit/d5e2d0bce0dffef5f61bd8066954bc2d41181fc5
     reference_type:
     reference_id:
   - url: https://github.com/siyuan-note/siyuan/issues/17209
-    reference_type: other
-    reference_id: 17209
-  - url: https://github.com/siyuan-note/siyuan/commit/d5e2d0bce0dffef5f61bd8066954bc2d41181fc5
-    reference_type: other
-    reference_id: d5e2d0bce0dffef5f61bd8066954bc2d41181fc5
-  - url: https://github.com/siyuan-note/siyuan/security/advisories/GHSA-j7wh-x834-p3r7
-    reference_type: other
-    reference_id: GHSA-j7wh-x834-p3r7
+    reference_type:
+    reference_id:
   - url: https://github.com/siyuan-note/siyuan/releases/tag/v3.6.1
-    reference_type: other
-    reference_id: v3.6.1
+    reference_type:
+    reference_id:
+  - url: https://github.com/siyuan-note/siyuan/security/advisories/GHSA-j7wh-x834-p3r7
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32767
+    reference_type:
+    reference_id:

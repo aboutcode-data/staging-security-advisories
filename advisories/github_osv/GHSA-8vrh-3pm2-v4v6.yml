@@ -38,7 +38,16 @@ summary: "FileBrowser Quantum: Password Protection Not Enforced on Shared File L
   \nThen just copy paste the new link (example: https://example.com/public/api/raw?hash=ngCZzArOyFHUQBmfbvP-pA&token=uEr4nCNarX6FqlzwmBo8X1rRRASbOrMY.sWSARcKhrVKrEJlqiF-l6RjXK9fMEPYZsMc9DCJ96BQ%3D)\
   \ into any browser, and the file will download. All without giving a password.\n\n### Impact\n\
   This affects anyone who shares password-protected files."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/gtsteffaniak/filebrowser
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/gtsteffaniak/filebrowser
+        commit: a8c9b9419ec530568991a2f72cec4ed263f99e3c
+      - vcs_url: https://github.com/gtsteffaniak/filebrowser
+        commit: c51b0ee9738fa4599b409f47c5bf820ef31b4fe1
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
@@ -56,8 +65,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-200
   - CWE-602
+  - CWE-200
   - CWE-288
 references:
   - url: https://github.com/gtsteffaniak/filebrowser
@@ -66,15 +75,15 @@ references:
   - url: https://github.com/gtsteffaniak/filebrowser/commit/a8c9b9419ec530568991a2f72cec4ed263f99e3c
     reference_type:
     reference_id:
+  - url: https://github.com/gtsteffaniak/filebrowser/commit/c51b0ee9738fa4599b409f47c5bf820ef31b4fe1
+    reference_type:
+    reference_id:
+  - url: https://github.com/gtsteffaniak/filebrowser/security/advisories/GHSA-8vrh-3pm2-v4v6
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-27611
     reference_type:
     reference_id:
   - url: https://pkg.go.dev/vuln/GO-2026-4546
     reference_type:
     reference_id:
-  - url: https://github.com/gtsteffaniak/filebrowser/commit/c51b0ee9738fa4599b409f47c5bf820ef31b4fe1
-    reference_type: other
-    reference_id: c51b0ee9738fa4599b409f47c5bf820ef31b4fe1
-  - url: https://github.com/gtsteffaniak/filebrowser/security/advisories/GHSA-8vrh-3pm2-v4v6
-    reference_type: other
-    reference_id: GHSA-8vrh-3pm2-v4v6

@@ -124,7 +124,14 @@ summary: |
   The execute endpoints also traverse via `locateDAG`, loading the target YAML as a DAG definition. If the file contains valid DAG syntax with shell commands, those commands execute as the dagu process user. I haven't verified this end-to-end since it requires a target file with DAG-compatible structure, but the code path is the same `locateDAG` call confirmed above.
 
   Auth is enabled by default since PR #1688 (v2.0.0), but exploitable by any authenticated user regardless of role - the DAG read/delete paths don't enforce RBAC granularity. Pre-v2.0.0 deployments or those with `auth.mode=none` are exploitable without credentials.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/dagu-org/dagu
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/dagu-org/dagu
+        commit: 7d07fda8f9de3ae73dfb081ccd0639f8059c56bb
+    introduced_in_commits: []
 severities:
   - score: '8.1'
     scoring_system: cvssv3.1
@@ -142,12 +149,12 @@ references:
   - url: https://github.com/dagu-org/dagu
     reference_type:
     reference_id:
+  - url: https://github.com/dagu-org/dagu/commit/7d07fda8f9de3ae73dfb081ccd0639f8059c56bb
+    reference_type:
+    reference_id:
+  - url: https://github.com/dagu-org/dagu/security/advisories/GHSA-ph8x-4jfv-v9v8
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33344
     reference_type:
     reference_id:
-  - url: https://github.com/dagu-org/dagu/commit/7d07fda8f9de3ae73dfb081ccd0639f8059c56bb
-    reference_type: other
-    reference_id: 7d07fda8f9de3ae73dfb081ccd0639f8059c56bb
-  - url: https://github.com/dagu-org/dagu/security/advisories/GHSA-ph8x-4jfv-v9v8
-    reference_type: other
-    reference_id: GHSA-ph8x-4jfv-v9v8

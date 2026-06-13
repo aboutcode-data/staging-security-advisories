@@ -111,7 +111,14 @@ summary: "SiYuan has Stored XSS to RCE via Unsanitized Bazaar README Rendering\n
   \ = DOMPurify.sanitize(response.data.html);\n});\n```\n\n### 3. Long-term: Harden Electron\
   \ configuration\n\n```javascript\nwebPreferences: {\n    nodeIntegration: false,\n    contextIsolation:\
   \ true,\n    sandbox: true,\n}\n```"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/siyuan-note/siyuan
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/siyuan-note/siyuan
+        commit: b382f50e1880ed996364509de5a10a72d7409428
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv4
@@ -129,12 +136,12 @@ references:
   - url: https://github.com/siyuan-note/siyuan
     reference_type:
     reference_id:
+  - url: https://github.com/siyuan-note/siyuan/commit/b382f50e1880ed996364509de5a10a72d7409428
+    reference_type:
+    reference_id:
+  - url: https://github.com/siyuan-note/siyuan/security/advisories/GHSA-4663-4mpg-879v
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33066
     reference_type:
     reference_id:
-  - url: https://github.com/siyuan-note/siyuan/commit/b382f50e1880ed996364509de5a10a72d7409428
-    reference_type: other
-    reference_id: b382f50e1880ed996364509de5a10a72d7409428
-  - url: https://github.com/siyuan-note/siyuan/security/advisories/GHSA-4663-4mpg-879v
-    reference_type: other
-    reference_id: GHSA-4663-4mpg-879v

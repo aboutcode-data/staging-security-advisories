@@ -39,7 +39,14 @@ summary: |
   https://github.com/mermaid-js/mermaid/releases/tag/v10.9.5
   2. Consider running mermaid using `sandbox` level which would mitigate impact of future potential cross-site scripting issues
   https://mermaid.js.org/config/usage.html#securitylevel
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/gogs/gogs
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/gogs/gogs
+        commit: 71a72a72ad1c8cea7940c9d7e4cbdfbc0fc3d401
+    introduced_in_commits: []
 severities:
   - score: '7.3'
     scoring_system: cvssv3.1
@@ -52,8 +59,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-1395
   - CWE-79
+  - CWE-1395
 references:
   - url: https://github.com/gogs/gogs
     reference_type:
@@ -65,8 +72,8 @@ references:
     reference_type:
     reference_id:
   - url: https://github.com/mermaid-js/mermaid/security/advisories/GHSA-7rqq-prvp-x9jh
-    reference_type: other
+    reference_type:
     reference_id: GHSA-7rqq-prvp-x9jh
   - url: https://github.com/mermaid-js/mermaid/security/advisories/GHSA-8gwm-58g9-j8pw
-    reference_type: other
+    reference_type:
     reference_id: GHSA-8gwm-58g9-j8pw

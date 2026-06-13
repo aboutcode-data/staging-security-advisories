@@ -15,7 +15,14 @@ summary: "apko has a path traversal in apko dirFS which allows filesystem writes
   \                                                                                        \
   \                                                      \napko thanks Oleh Konko from [1seal](https://1seal.org/)\
   \ for discovering and reporting this issue."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/chainguard-dev/apko
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/chainguard-dev/apko
+        commit: d8b7887a968a527791b3c591ae83928cb49a9f14
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -34,12 +41,12 @@ references:
   - url: https://github.com/chainguard-dev/apko
     reference_type:
     reference_id:
+  - url: https://github.com/chainguard-dev/apko/commit/d8b7887a968a527791b3c591ae83928cb49a9f14
+    reference_type:
+    reference_id:
+  - url: https://github.com/chainguard-dev/apko/security/advisories/GHSA-5g94-c2wx-8pxw
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-25121
     reference_type:
     reference_id:
-  - url: https://github.com/chainguard-dev/apko/commit/d8b7887a968a527791b3c591ae83928cb49a9f14
-    reference_type: other
-    reference_id: d8b7887a968a527791b3c591ae83928cb49a9f14
-  - url: https://github.com/chainguard-dev/apko/security/advisories/GHSA-5g94-c2wx-8pxw
-    reference_type: other
-    reference_id: GHSA-5g94-c2wx-8pxw

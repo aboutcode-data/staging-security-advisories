@@ -41,7 +41,14 @@ summary: "rs-soroban-sdk: `Fr` scalar field equality comparison bypasses modular
   \ any deployed contracts that accept `Fr` values as input, and compare those values using\
   \ `==`, `!=`, or `assert_eq!`. These contracts may be vulnerable if an attacker can supply\
   \ unreduced scalar values to bypass equality checks."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/stellar/rs-soroban-sdk
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/stellar/rs-soroban-sdk
+        commit: 082424b30bf22ea7fb8c79f16ccd135e0ae9f3db
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
@@ -74,9 +81,9 @@ references:
   - url: https://github.com/stellar/rs-soroban-sdk/releases/tag/v25.3.0
     reference_type:
     reference_id:
+  - url: https://github.com/stellar/rs-soroban-sdk/security/advisories/GHSA-x2hw-px52-wp4m
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32322
     reference_type:
     reference_id:
-  - url: https://github.com/stellar/rs-soroban-sdk/security/advisories/GHSA-x2hw-px52-wp4m
-    reference_type: other
-    reference_id: GHSA-x2hw-px52-wp4m

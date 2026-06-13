@@ -143,7 +143,14 @@ summary: |
   ### Impact
 
   This can affect anything that uses the `tar` crate to parse archives and expects to have a consistent view with other parsers. In particular it is known to affect crates.io which uses `astral-tokio-tar` to parse, but cargo uses `tar`.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/alexcrichton/tar-rs
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/alexcrichton/tar-rs
+        commit: de1a5870e603758f430073688691165f21a33946
+    introduced_in_commits: []
 severities:
   - score: '8.1'
     scoring_system: cvssv3.1
@@ -166,6 +173,12 @@ references:
   - url: https://github.com/alexcrichton/tar-rs
     reference_type:
     reference_id:
+  - url: https://github.com/alexcrichton/tar-rs/commit/de1a5870e603758f430073688691165f21a33946
+    reference_type:
+    reference_id:
+  - url: https://github.com/alexcrichton/tar-rs/security/advisories/GHSA-gchp-q4r4-x4ff
+    reference_type:
+    reference_id:
   - url: https://github.com/composefs/tar-rs/security/advisories/GHSA-gchp-q4r4-x4ff
     reference_type:
     reference_id:
@@ -176,11 +189,5 @@ references:
     reference_type:
     reference_id:
   - url: https://www.cve.org/CVERecord?id=CVE-2025-62518
-    reference_type: other
-    reference_id: CVERecord?id=CVE-2025-62518
-  - url: https://github.com/alexcrichton/tar-rs/commit/de1a5870e603758f430073688691165f21a33946
-    reference_type: other
-    reference_id: de1a5870e603758f430073688691165f21a33946
-  - url: https://github.com/alexcrichton/tar-rs/security/advisories/GHSA-gchp-q4r4-x4ff
-    reference_type: other
-    reference_id: GHSA-gchp-q4r4-x4ff
+    reference_type:
+    reference_id:

@@ -134,7 +134,14 @@ summary: |
   This vulnerability allows an authenticated attacker to execute arbitrary PowerShell commands on the Windows host running PinchTab. Impact - full host compromise including command execution, persistence, and data access; Root Cause - user-controlled input (profile name) is embedded into a PowerShell command without proper neutralization of special characters; Remediation - avoid constructing shell commands using string interpolation, enforce strict input validation (allowlist), and use structured command execution instead of powershell -Command.
 
   Additionally, because the injection is triggered during the cleanup routine, environments with automatic instance restart behavior may repeatedly execute the injected payload, leading to uncontrolled process creation and resource exhaustion. This enables a reliable denial-of-service condition in addition to remote code execution.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/pinchtab/pinchtab
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/pinchtab/pinchtab
+        commit: 25b3374bdcdf0dad32c44d5d726bf953238cd8bd
+    introduced_in_commits: []
 severities:
   - score: '6.7'
     scoring_system: cvssv3.1
@@ -153,12 +160,12 @@ references:
   - url: https://github.com/pinchtab/pinchtab
     reference_type:
     reference_id:
+  - url: https://github.com/pinchtab/pinchtab/commit/25b3374bdcdf0dad32c44d5d726bf953238cd8bd
+    reference_type:
+    reference_id:
+  - url: https://github.com/pinchtab/pinchtab/security/advisories/GHSA-p8mm-644p-phmh
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33623
     reference_type:
     reference_id:
-  - url: https://github.com/pinchtab/pinchtab/commit/25b3374bdcdf0dad32c44d5d726bf953238cd8bd
-    reference_type: other
-    reference_id: 25b3374bdcdf0dad32c44d5d726bf953238cd8bd
-  - url: https://github.com/pinchtab/pinchtab/security/advisories/GHSA-p8mm-644p-phmh
-    reference_type: other
-    reference_id: GHSA-p8mm-644p-phmh

@@ -18,7 +18,14 @@ summary: "free5GC AUSF UE Authentication Panic on Nil SuciSupiMap Interface Conv
   \ upgrade to the next release of free5GC that includes this commit.\n\n**Workarounds**  \n\
   There is no direct workaround at the application level. The recommendation is to apply the\
   \ provided patch or restrict access to the AUSF API to trusted sources only."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/free5gc/ausf
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/free5gc/ausf
+        commit: 3b9ac4403c2756dc89a5ed3cdcefe688458588aa
+    introduced_in_commits: []
 severities:
   - score: '8.7'
     scoring_system: cvssv4
@@ -33,21 +40,21 @@ severities:
 weaknesses:
   - CWE-476
 references:
+  - url: https://github.com/free5gc/ausf/commit/3b9ac4403c2756dc89a5ed3cdcefe688458588aa
+    reference_type:
+    reference_id:
+  - url: https://github.com/free5gc/ausf/pull/52
+    reference_type:
+    reference_id:
+  - url: https://github.com/free5gc/free5gc
+    reference_type:
+    reference_id:
+  - url: https://github.com/free5gc/free5gc/issues/778
+    reference_type:
+    reference_id:
+  - url: https://github.com/free5gc/free5gc/security/advisories/GHSA-4jrw-92fg-4jwx
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33063
     reference_type:
     reference_id:
-  - url: https://github.com/free5gc/ausf/commit/3b9ac4403c2756dc89a5ed3cdcefe688458588aa
-    reference_type: other
-    reference_id: 3b9ac4403c2756dc89a5ed3cdcefe688458588aa
-  - url: https://github.com/free5gc/ausf/pull/52
-    reference_type: other
-    reference_id: 52
-  - url: https://github.com/free5gc/free5gc/issues/778
-    reference_type: other
-    reference_id: 778
-  - url: https://github.com/free5gc/free5gc
-    reference_type: other
-    reference_id: free5gc
-  - url: https://github.com/free5gc/free5gc/security/advisories/GHSA-4jrw-92fg-4jwx
-    reference_type: other
-    reference_id: GHSA-4jrw-92fg-4jwx

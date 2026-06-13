@@ -80,12 +80,57 @@ summary: "ImageMagick: Specially crafted SVG leads to segmentation fault and gen
   \ \n103M\tdos_k.txt\n```\n\nP. S. If ImageMagick will work in Docker container this attack\
   \ will crash server where docker running. Because the size of the docker container will increase."
 impacted_packages:
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-x64
+    affected_versions: vers:nuget/<=12.3.0
+    fixed_versions: vers:nuget/13.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-x86
+    affected_versions: vers:nuget/<=12.3.0
+    fixed_versions: vers:nuget/13.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-OpenMP-x86
+    affected_versions: vers:nuget/<=12.3.0
+    fixed_versions: vers:nuget/13.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-x86
+    affected_versions: vers:nuget/<=12.3.0
+    fixed_versions: vers:nuget/13.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q8-AnyCPU
+    affected_versions: vers:nuget/<=12.3.0
+    fixed_versions: vers:nuget/13.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-OpenMP-x64
+    affected_versions: vers:nuget/<=12.3.0
+    fixed_versions: vers:nuget/13.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
     affected_versions: vers:nuget/<=12.3.0
     fixed_versions: vers:nuget/13.0.0
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-HDRI-AnyCPU
+    affected_versions: vers:nuget/<=12.3.0
+    fixed_versions: vers:nuget/13.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-x64
+    affected_versions: vers:nuget/<=12.3.0
+    fixed_versions: vers:nuget/13.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q8-x64
+    affected_versions: vers:nuget/<=12.3.0
+    fixed_versions: vers:nuget/13.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q8-x86
     affected_versions: vers:nuget/<=12.3.0
     fixed_versions: vers:nuget/13.0.0
     fixed_in_commits: []
@@ -100,16 +145,6 @@ impacted_packages:
     fixed_versions: vers:nuget/13.0.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-HDRI-x64
-    affected_versions: vers:nuget/<=12.3.0
-    fixed_versions: vers:nuget/13.0.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-HDRI-x86
-    affected_versions: vers:nuget/<=12.3.0
-    fixed_versions: vers:nuget/13.0.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-OpenMP-arm64
     affected_versions: vers:nuget/<=12.3.0
     fixed_versions: vers:nuget/13.0.0
@@ -120,32 +155,7 @@ impacted_packages:
     fixed_versions: vers:nuget/13.0.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-OpenMP-x86
-    affected_versions: vers:nuget/<=12.3.0
-    fixed_versions: vers:nuget/13.0.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-arm64
-    affected_versions: vers:nuget/<=12.3.0
-    fixed_versions: vers:nuget/13.0.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-x64
-    affected_versions: vers:nuget/<=12.3.0
-    fixed_versions: vers:nuget/13.0.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-x86
-    affected_versions: vers:nuget/<=12.3.0
-    fixed_versions: vers:nuget/13.0.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-HDRI-OpenMP-x64
-    affected_versions: vers:nuget/<=12.3.0
-    fixed_versions: vers:nuget/13.0.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q8-AnyCPU
     affected_versions: vers:nuget/<=12.3.0
     fixed_versions: vers:nuget/13.0.0
     fixed_in_commits: []
@@ -165,15 +175,12 @@ impacted_packages:
     fixed_versions: vers:nuget/13.0.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q8-x64
-    affected_versions: vers:nuget/<=12.3.0
-    fixed_versions: vers:nuget/13.0.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q8-x86
-    affected_versions: vers:nuget/<=12.3.0
-    fixed_versions: vers:nuget/13.0.0
-    fixed_in_commits: []
+  - purl: pkg:github/imagemagick/imagemagick
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/imagemagick/imagemagick
+        commit: c5b23cbf2119540725e6dc81f4deb25798ead6a4
     introduced_in_commits: []
 severities:
   - score: '5.5'
@@ -187,8 +194,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-20
   - CWE-400
+  - CWE-20
 references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2176858
     reference_type:

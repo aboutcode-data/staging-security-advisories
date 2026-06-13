@@ -65,7 +65,14 @@ summary: |
     - Bypass of allowlist intent by injecting allowlisted sender IDs in payload.
     - Cross-chat/session contamination or hijacking by choosing arbitrary `chat_id`.
     - Potential unauthorized downstream agent/tool actions triggered by malicious input.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/qhkm/zeptoclaw
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/qhkm/zeptoclaw
+        commit: bf004a20d3687a0c1a9e052ec79536e30d6de134
+    introduced_in_commits: []
 severities:
   - score: '8.2'
     scoring_system: cvssv3.1
@@ -78,24 +85,24 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-306
   - CWE-345
+  - CWE-306
 references:
   - url: https://github.com/qhkm/zeptoclaw
+    reference_type:
+    reference_id:
+  - url: https://github.com/qhkm/zeptoclaw/commit/bf004a20d3687a0c1a9e052ec79536e30d6de134
+    reference_type:
+    reference_id:
+  - url: https://github.com/qhkm/zeptoclaw/pull/324
+    reference_type:
+    reference_id:
+  - url: https://github.com/qhkm/zeptoclaw/releases/tag/v0.7.6
+    reference_type:
+    reference_id:
+  - url: https://github.com/qhkm/zeptoclaw/security/advisories/GHSA-46q5-g3j9-wx5c
     reference_type:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32231
     reference_type:
     reference_id:
-  - url: https://github.com/qhkm/zeptoclaw/pull/324
-    reference_type: other
-    reference_id: 324
-  - url: https://github.com/qhkm/zeptoclaw/commit/bf004a20d3687a0c1a9e052ec79536e30d6de134
-    reference_type: other
-    reference_id: bf004a20d3687a0c1a9e052ec79536e30d6de134
-  - url: https://github.com/qhkm/zeptoclaw/security/advisories/GHSA-46q5-g3j9-wx5c
-    reference_type: other
-    reference_id: GHSA-46q5-g3j9-wx5c
-  - url: https://github.com/qhkm/zeptoclaw/releases/tag/v0.7.6
-    reference_type: other
-    reference_id: v0.7.6

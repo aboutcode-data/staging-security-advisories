@@ -43,7 +43,14 @@ summary: |
   This vulnerability impacts the confidentiality and integrity of data stored in filebrowser.
   - Confidentiality: Users can read files they are explicitly forbidden from accessing.
   - Integrity: If the user has general write permissions but is restricted from specific directories via rules, they can bypass these restrictions to rename, delete, or modify files.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/filebrowser/filebrowser
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/filebrowser/filebrowser
+        commit: 489af403a19057f6b6b4b1dc0e48cbb26a202ef9
+    introduced_in_commits: []
 severities:
   - score: '8.1'
     scoring_system: cvssv3.1
@@ -56,13 +63,16 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-863
   - CWE-706
+  - CWE-863
 references:
   - url: https://github.com/filebrowser/filebrowser
     reference_type:
     reference_id:
   - url: https://github.com/filebrowser/filebrowser/commit/489af403a19057f6b6b4b1dc0e48cbb26a202ef9
+    reference_type:
+    reference_id:
+  - url: https://github.com/filebrowser/filebrowser/releases/tag/v2.57.1
     reference_type:
     reference_id:
   - url: https://github.com/filebrowser/filebrowser/security/advisories/GHSA-4mh3-h929-w968
@@ -71,6 +81,3 @@ references:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-25890
     reference_type:
     reference_id:
-  - url: https://github.com/filebrowser/filebrowser/releases/tag/v2.57.1
-    reference_type: other
-    reference_id: v2.57.1

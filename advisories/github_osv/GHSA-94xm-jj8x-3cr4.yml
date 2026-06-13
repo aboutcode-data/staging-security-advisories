@@ -47,7 +47,20 @@ summary: |
      curl -H "Authorization: Bearer tk_<token>" https://vikunja.example/api/v1/user
      ```
   4. The request succeeds with a 200 response despite the account being disabled.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/go-vikunja/vikunja
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/go-vikunja/vikunja
+        commit: 033922309f492996c928122fb49b691339199c35
+      - vcs_url: https://github.com/go-vikunja/vikunja
+        commit: 04704e0fde4b027039cf583110cee7afe136fc1b
+      - vcs_url: https://github.com/go-vikunja/vikunja
+        commit: 0b04768d830c80e9fde1b0962db1499cc652da0e
+      - vcs_url: https://github.com/go-vikunja/vikunja
+        commit: fd452b9cb6457fd4f9936527a14c359818f1cca7
+    introduced_in_commits: []
 severities:
   - score: '7.1'
     scoring_system: cvssv4
@@ -65,24 +78,24 @@ references:
   - url: https://github.com/go-vikunja/vikunja
     reference_type:
     reference_id:
+  - url: https://github.com/go-vikunja/vikunja/commit/033922309f492996c928122fb49b691339199c35
+    reference_type:
+    reference_id:
+  - url: https://github.com/go-vikunja/vikunja/commit/04704e0fde4b027039cf583110cee7afe136fc1b
+    reference_type:
+    reference_id:
+  - url: https://github.com/go-vikunja/vikunja/commit/0b04768d830c80e9fde1b0962db1499cc652da0e
+    reference_type:
+    reference_id:
+  - url: https://github.com/go-vikunja/vikunja/commit/fd452b9cb6457fd4f9936527a14c359818f1cca7
+    reference_type:
+    reference_id:
+  - url: https://github.com/go-vikunja/vikunja/security/advisories/GHSA-94xm-jj8x-3cr4
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33668
     reference_type:
     reference_id:
-  - url: https://github.com/go-vikunja/vikunja/commit/033922309f492996c928122fb49b691339199c35
-    reference_type: other
-    reference_id: 033922309f492996c928122fb49b691339199c35
-  - url: https://github.com/go-vikunja/vikunja/commit/04704e0fde4b027039cf583110cee7afe136fc1b
-    reference_type: other
-    reference_id: 04704e0fde4b027039cf583110cee7afe136fc1b
-  - url: https://github.com/go-vikunja/vikunja/commit/0b04768d830c80e9fde1b0962db1499cc652da0e
-    reference_type: other
-    reference_id: 0b04768d830c80e9fde1b0962db1499cc652da0e
-  - url: https://github.com/go-vikunja/vikunja/commit/fd452b9cb6457fd4f9936527a14c359818f1cca7
-    reference_type: other
-    reference_id: fd452b9cb6457fd4f9936527a14c359818f1cca7
-  - url: https://github.com/go-vikunja/vikunja/security/advisories/GHSA-94xm-jj8x-3cr4
-    reference_type: other
-    reference_id: GHSA-94xm-jj8x-3cr4
   - url: https://vikunja.io/changelog/vikunja-v2.2.2-was-released
-    reference_type: other
-    reference_id: vikunja-v2.2.2-was-released
+    reference_type:
+    reference_id:

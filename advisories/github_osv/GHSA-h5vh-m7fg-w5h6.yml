@@ -74,7 +74,14 @@ summary: |
 
   ### Impact
   An admin can exfiltrate any file readable by the SiYuan process that falls outside the incomplete blocklist. In containerized deployments this includes all injected secrets and environment variables - a common pattern for passing credentials to containers. The exfiltrated files are then accessible via the standard workspace file API and persist until manually deleted.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/siyuan-note/siyuan
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/siyuan-note/siyuan
+        commit: 9914fd1d39e5f0a8dcc9fb587e1c0b46f31490a1
+    introduced_in_commits: []
 severities:
   - score: '6.8'
     scoring_system: cvssv3.1
@@ -93,15 +100,15 @@ references:
   - url: https://github.com/siyuan-note/siyuan
     reference_type:
     reference_id:
+  - url: https://github.com/siyuan-note/siyuan/commit/9914fd1d39e5f0a8dcc9fb587e1c0b46f31490a1
+    reference_type:
+    reference_id:
+  - url: https://github.com/siyuan-note/siyuan/releases/tag/v3.6.1
+    reference_type:
+    reference_id:
+  - url: https://github.com/siyuan-note/siyuan/security/advisories/GHSA-h5vh-m7fg-w5h6
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32747
     reference_type:
     reference_id:
-  - url: https://github.com/siyuan-note/siyuan/commit/9914fd1d39e5f0a8dcc9fb587e1c0b46f31490a1
-    reference_type: other
-    reference_id: 9914fd1d39e5f0a8dcc9fb587e1c0b46f31490a1
-  - url: https://github.com/siyuan-note/siyuan/security/advisories/GHSA-h5vh-m7fg-w5h6
-    reference_type: other
-    reference_id: GHSA-h5vh-m7fg-w5h6
-  - url: https://github.com/siyuan-note/siyuan/releases/tag/v3.6.1
-    reference_type: other
-    reference_id: v3.6.1

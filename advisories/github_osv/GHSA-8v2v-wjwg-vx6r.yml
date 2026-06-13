@@ -23,7 +23,14 @@ summary: "actix-files has a possible exposure of information vulnerability\n### 
   \    ```\n    \n4. Run the project with `cargo run`.\n5. Access the <http://localhost:8080/images/Cargo.toml>\
   \ URL.\n\n### Impact\n\nThis is an exposure of information vulnerability. It affects anyone\
   \ using the `actix-files::Files` library that mounts a non-existing folder for any reason."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/actix/actix-web
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/actix/actix-web
+        commit: fba766b4beb92278665d58815c94d336015225c5
+    introduced_in_commits: []
 severities:
   - score: '6.3'
     scoring_system: cvssv4

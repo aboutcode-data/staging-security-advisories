@@ -56,7 +56,14 @@ summary: "WeKnora has Remote Code Execution (RCE) via Command Injection in MCP S
   \ vulnerable without notification\n\n**Immediate Actions**:\n1. Upgrade to 2.0.10+ immediately\n\
   2. Review logs for exploitation since 2.0.5\n3. Check for suspicious MCP configurations\n\
   4. Monitor for unauthorized file creation\n5. Assume breach if compromise suspected\n---"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/tencent/weknora
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/tencent/weknora
+        commit: 57d6fea8bc265ad28b385e0158957c870cff4b50
+    introduced_in_commits: []
 severities:
   - score: '10.0'
     scoring_system: cvssv3.1
@@ -77,9 +84,9 @@ references:
   - url: https://github.com/Tencent/WeKnora/commit/57d6fea8bc265ad28b385e0158957c870cff4b50
     reference_type:
     reference_id:
+  - url: https://github.com/Tencent/WeKnora/security/advisories/GHSA-r55h-3rwj-hcmg
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-30861
     reference_type:
     reference_id:
-  - url: https://github.com/Tencent/WeKnora/security/advisories/GHSA-r55h-3rwj-hcmg
-    reference_type: other
-    reference_id: GHSA-r55h-3rwj-hcmg

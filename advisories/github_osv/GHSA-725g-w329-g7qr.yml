@@ -215,7 +215,14 @@ summary: |
   - `crates/lib/src/token/spl_token_2022.rs:165-198` — `calculate_transfer_fee()` (exists but not called in verification)
   - `crates/lib/src/fee/fee.rs:174-204` — `analyze_payment_instructions()` (correctly accounts for transfer fee in estimation)
   - SPL Token-2022 specification: transfer fees are deducted from the transfer amount by the on-chain program
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/solana-foundation/kora
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/solana-foundation/kora
+        commit: 8cbd8217ee505e6b37c63ef835ff095cfa8ab318
+    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual

@@ -19,7 +19,14 @@ summary: |
   ### Mitigation
 
   The operand types were changed from `in` to `inout`, and the impacted versions of the `keccak` crate were yanked.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/rustcrypto/sponges
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/rustcrypto/sponges
+        commit: 7ac1920198ebb7d0192e6d2c3581e15b38a6e0e5
+    introduced_in_commits: []
 severities:
   - score: '0.5'
     scoring_system: cvssv4

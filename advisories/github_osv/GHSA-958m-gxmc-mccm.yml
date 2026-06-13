@@ -20,7 +20,14 @@ summary: "free5GC UDM incorrectly returns 500 for empty supi path parameter in D
   \ direct workaround at the application level. The recommendation is to apply the provided\
   \ patch or implement API gateway-level validation to reject DELETE requests with empty path\
   \ parameters before they reach UDM."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/free5gc/udm
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/free5gc/udm
+        commit: 88de9fa74a1b3f3522e53b4cfa2d184712ffa4ee
+    introduced_in_commits: []
 severities:
   - score: '6.9'
     scoring_system: cvssv4
@@ -35,21 +42,21 @@ severities:
 weaknesses:
   - CWE-209
 references:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33065
+  - url: https://github.com/free5gc/free5gc
     reference_type:
     reference_id:
   - url: https://github.com/free5gc/free5gc/issues/783
-    reference_type: other
-    reference_id: 783
-  - url: https://github.com/free5gc/udm/pull/79
-    reference_type: other
-    reference_id: 79
-  - url: https://github.com/free5gc/udm/commit/88de9fa74a1b3f3522e53b4cfa2d184712ffa4ee
-    reference_type: other
-    reference_id: 88de9fa74a1b3f3522e53b4cfa2d184712ffa4ee
-  - url: https://github.com/free5gc/free5gc
-    reference_type: other
-    reference_id: free5gc
+    reference_type:
+    reference_id:
   - url: https://github.com/free5gc/free5gc/security/advisories/GHSA-958m-gxmc-mccm
-    reference_type: other
-    reference_id: GHSA-958m-gxmc-mccm
+    reference_type:
+    reference_id:
+  - url: https://github.com/free5gc/udm/commit/88de9fa74a1b3f3522e53b4cfa2d184712ffa4ee
+    reference_type:
+    reference_id:
+  - url: https://github.com/free5gc/udm/pull/79
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33065
+    reference_type:
+    reference_id:

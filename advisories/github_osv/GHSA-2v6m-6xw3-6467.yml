@@ -20,7 +20,14 @@ summary: "Fleet: Sensitive Google Calendar credentials disclosed to low-privileg
   \nIf there are any questions or comments about this advisory:\n\nEmail Fleet at [security@fleetdm.com](mailto:security@fleetdm.com)\
   \  \nJoin #fleet in [osquery Slack](https://join.slack.com/t/osquery/shared_invite/zt-h29zm0gk-s2DBtGUTW4CFel0f0IjTEw)\n\
   \n### Credits\n\nFleet thanks @secfox-ai for responsibly reporting this issue."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/fleetdm/fleet
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/fleetdm/fleet
+        commit: 23fc6804efe785f806f769d6be1f5f05b2e13ec2
+    introduced_in_commits: []
 severities:
   - score: '7.1'
     scoring_system: cvssv4
@@ -33,8 +40,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-200
   - CWE-201
+  - CWE-200
 references:
   - url: https://github.com/fleetdm/fleet
     reference_type:
@@ -42,9 +49,9 @@ references:
   - url: https://github.com/fleetdm/fleet/commit/23fc6804efe785f806f769d6be1f5f05b2e13ec2
     reference_type:
     reference_id:
+  - url: https://github.com/fleetdm/fleet/security/advisories/GHSA-2v6m-6xw3-6467
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-27465
     reference_type:
     reference_id:
-  - url: https://github.com/fleetdm/fleet/security/advisories/GHSA-2v6m-6xw3-6467
-    reference_type: other
-    reference_id: GHSA-2v6m-6xw3-6467

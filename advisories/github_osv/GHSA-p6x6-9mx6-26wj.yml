@@ -48,7 +48,16 @@ summary: "Gogs Vulnerable to  2FA Bypass via Recovery Code\nContact OpenAI Secur
   \ or use, misuse, or interpretation of this information. Any references to third-party systems,\
   \ services, or entities are included solely for identification purposes and do not imply endorsement,\
   \ responsibility, or attribution."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/gogs/gogs
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/gogs/gogs
+        commit: a617d52374e937db0edacfba2a26bdd14a05538e
+      - vcs_url: https://github.com/gogs/gogs
+        commit: d568e048315dc9729c8518d8085cab7dbbfac80f
+    introduced_in_commits: []
 severities:
   - score: '7.7'
     scoring_system: cvssv4
@@ -72,9 +81,9 @@ references:
   - url: https://github.com/gogs/gogs/commit/d568e048315dc9729c8518d8085cab7dbbfac80f
     reference_type:
     reference_id:
+  - url: https://github.com/gogs/gogs/security/advisories/GHSA-p6x6-9mx6-26wj
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2025-64175
     reference_type:
     reference_id:
-  - url: https://github.com/gogs/gogs/security/advisories/GHSA-p6x6-9mx6-26wj
-    reference_type: other
-    reference_id: GHSA-p6x6-9mx6-26wj

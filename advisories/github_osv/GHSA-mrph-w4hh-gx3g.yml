@@ -60,7 +60,14 @@ summary: |
   * **Sensitive information disclosure:** `app.ini`, databases, logs, environment variables, etc.
   * **Configuration or data tampering:** Overwriting existing files
   * **Secondary impact:** Extraction of `SECRET_KEY` and database credentials may allow token forging or further compromise
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/gogs/gogs
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/gogs/gogs
+        commit: 4894629903f9508fe85567c44f68804f008f1655
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
@@ -84,9 +91,9 @@ references:
   - url: https://github.com/gogs/gogs/releases/tag/v0.13.4
     reference_type:
     reference_id:
+  - url: https://github.com/gogs/gogs/security/advisories/GHSA-mrph-w4hh-gx3g
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-23633
     reference_type:
     reference_id:
-  - url: https://github.com/gogs/gogs/security/advisories/GHSA-mrph-w4hh-gx3g
-    reference_type: other
-    reference_id: GHSA-mrph-w4hh-gx3g

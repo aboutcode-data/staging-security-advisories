@@ -120,7 +120,14 @@ summary: "Traefik has Knative Ingress Rule Injection that Allows Host Restrictio
   \ admission controls). Standard Kubernetes Ingress host injection is usually blocked by API\
   \ validation.\n- **Security consequences:** Cross-tenant traffic access, internal service\
   \ exposure, policy bypass, and potential chaining with app-level vulnerabilities.\n\n</details>"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/traefik/traefik
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/traefik/traefik
+        commit: 11d251415a6fd935025df5a9dda898e17e3097b2
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv4
@@ -141,15 +148,15 @@ references:
   - url: https://github.com/traefik/traefik/commit/11d251415a6fd935025df5a9dda898e17e3097b2
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32695
+  - url: https://github.com/traefik/traefik/releases/tag/v3.6.11
+    reference_type:
+    reference_id:
+  - url: https://github.com/traefik/traefik/releases/tag/v3.7.0-ea.2
     reference_type:
     reference_id:
   - url: https://github.com/traefik/traefik/security/advisories/GHSA-67jx-r9pv-98rj
-    reference_type: other
-    reference_id: GHSA-67jx-r9pv-98rj
-  - url: https://github.com/traefik/traefik/releases/tag/v3.6.11
-    reference_type: other
-    reference_id: v3.6.11
-  - url: https://github.com/traefik/traefik/releases/tag/v3.7.0-ea.2
-    reference_type: other
-    reference_id: v3.7.0-ea.2
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-32695
+    reference_type:
+    reference_id:

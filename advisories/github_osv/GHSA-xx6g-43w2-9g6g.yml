@@ -77,7 +77,14 @@ summary: "OliveTin's email argument makes compliance harder, enables log injecti
   \   _, err := mail.ParseAddress(value)\n    if err != nil {\n        log.WithField(\"type\"\
   , \"email\").Debugf(\"Email argument type check failed\")\n        return err\n    }\n   \
   \ return nil\n}\n```\n\n`Only log on failure, at DEBUG level, and never log the value itself.`"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/olivetin/olivetin
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/olivetin/olivetin
+        commit: bc5e9fbe1e22ff87a4b277cb56605a46a10e561a
+    introduced_in_commits: []
 severities:
   - score: '6.9'
     scoring_system: cvssv4
@@ -93,6 +100,9 @@ weaknesses:
   - CWE-117
   - CWE-532
 references:
+  - url: https://github.com/OliveTin/OliveTin
+    reference_type:
+    reference_id:
   - url: https://github.com/OliveTin/OliveTin/commit/bc5e9fbe1e22ff87a4b277cb56605a46a10e561a
     reference_type:
     reference_id:
@@ -102,6 +112,3 @@ references:
   - url: https://github.com/OliveTin/OliveTin/security/advisories/GHSA-xx6g-43w2-9g6g
     reference_type:
     reference_id:
-  - url: https://github.com/OliveTin/OliveTin
-    reference_type: other
-    reference_id: OliveTin

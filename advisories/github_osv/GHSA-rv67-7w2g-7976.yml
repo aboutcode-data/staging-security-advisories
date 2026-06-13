@@ -6,7 +6,14 @@ aliases:
 summary: |
   Mattermost fails to validate user's authentication method when processing account auth type switch
   Mattermost versions 10.11.x <= 10.11.10 fail to validate user's authentication method when processing account auth type switch which allows an authenticated attacker to change account password without confirmation via falsely claiming a different auth provider.. Mattermost Advisory ID: MMSA-2026-00583
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: ced9a56e3988fe9fd4559d45f9971dbd562e2218
+    introduced_in_commits: []
 severities:
   - score: '3.1'
     scoring_system: cvssv3.1
@@ -27,9 +34,9 @@ references:
   - url: https://github.com/mattermost/mattermost/commit/ced9a56e3988fe9fd4559d45f9971dbd562e2218
     reference_type:
     reference_id:
+  - url: https://mattermost.com/security-updates
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-22545
     reference_type:
     reference_id:
-  - url: https://mattermost.com/security-updates
-    reference_type: other
-    reference_id: security-updates

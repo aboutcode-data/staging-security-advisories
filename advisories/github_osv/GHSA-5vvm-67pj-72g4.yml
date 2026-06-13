@@ -90,7 +90,14 @@ summary: |
   - Impact is bounded to a single Project. The `promote` bypass does not enable cross-Project access or escalation beyond the namespace in which the attacker already holds the prerequisite permissions.
 
   - There is no evidence of exploitation in the wild.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/akuity/kargo
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/akuity/kargo
+        commit: 833314cad5513d48d89431493325ae44c1324a49
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv4
@@ -108,12 +115,12 @@ references:
   - url: https://github.com/akuity/kargo
     reference_type:
     reference_id:
+  - url: https://github.com/akuity/kargo/commit/833314cad5513d48d89431493325ae44c1324a49
+    reference_type:
+    reference_id:
+  - url: https://github.com/akuity/kargo/security/advisories/GHSA-5vvm-67pj-72g4
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-27111
     reference_type:
     reference_id:
-  - url: https://github.com/akuity/kargo/commit/833314cad5513d48d89431493325ae44c1324a49
-    reference_type: other
-    reference_id: 833314cad5513d48d89431493325ae44c1324a49
-  - url: https://github.com/akuity/kargo/security/advisories/GHSA-5vvm-67pj-72g4
-    reference_type: other
-    reference_id: GHSA-5vvm-67pj-72g4

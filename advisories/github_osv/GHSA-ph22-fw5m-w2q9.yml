@@ -6,7 +6,14 @@ aliases:
 summary: |
   Mattermost allows attackers to spoof permalink embeds
   Mattermost versions 11.3.x <= 11.3.0, 11.2.x <= 11.2.2, 10.11.x <= 10.11.10 fail to sanitize client-supplied post metadata which allows an authenticated attacker to spoof permalink embeds impersonating other users via crafted PUT requests to the post update API endpoint. Mattermost Advisory ID: MMSA-2025-00569
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 9efe617be8b8f1d036e12721e8e73b69a543ed34
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1
@@ -27,9 +34,9 @@ references:
   - url: https://github.com/mattermost/mattermost/commit/9efe617be8b8f1d036e12721e8e73b69a543ed34
     reference_type:
     reference_id:
+  - url: https://mattermost.com/security-updates
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-2457
     reference_type:
     reference_id:
-  - url: https://mattermost.com/security-updates
-    reference_type: other
-    reference_id: security-updates

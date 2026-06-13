@@ -15,7 +15,14 @@ summary: "jose vulnerable to untrusted JWK header key acceptance during signatur
   \ Workarounds\n\nReject tokens where header `jwk` is present unless that `jwk` matches a key\
   \ already present in the application's trusted key store.\n\n### Resources\n\nFix commit:\
   \ [fix: improved key resolution in JsonWebKeyStore](https://github.com/appsup-dart/jose/commit/b07799aac1f56a9a21483feac026272aab30cc5d)"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/appsup-dart/jose
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/appsup-dart/jose
+        commit: b07799aac1f56a9a21483feac026272aab30cc5d
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -33,12 +40,12 @@ references:
   - url: https://github.com/appsup-dart/jose
     reference_type:
     reference_id:
+  - url: https://github.com/appsup-dart/jose/commit/b07799aac1f56a9a21483feac026272aab30cc5d
+    reference_type:
+    reference_id:
+  - url: https://github.com/appsup-dart/jose/security/advisories/GHSA-vm9r-h74p-hg97
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-34240
     reference_type:
     reference_id:
-  - url: https://github.com/appsup-dart/jose/commit/b07799aac1f56a9a21483feac026272aab30cc5d
-    reference_type: other
-    reference_id: b07799aac1f56a9a21483feac026272aab30cc5d
-  - url: https://github.com/appsup-dart/jose/security/advisories/GHSA-vm9r-h74p-hg97
-    reference_type: other
-    reference_id: GHSA-vm9r-h74p-hg97

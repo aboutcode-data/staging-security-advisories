@@ -34,7 +34,14 @@ summary: "Navidrome has XSS via comment from song metadata\n### Summary\n\nAn XS
   \ [[Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP)\
   \ in their reverse-proxy to make exfiltration more difficult\n- Users of Navidrome should\
   \ not index songs from untrusted sources without first vetting their metadata"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/navidrome/navidrome
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/navidrome/navidrome
+        commit: d7ec7355c9036d5be659d6ac555c334bb5848ba6
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
@@ -53,15 +60,15 @@ references:
   - url: https://github.com/navidrome/navidrome
     reference_type:
     reference_id:
+  - url: https://github.com/navidrome/navidrome/commit/d7ec7355c9036d5be659d6ac555c334bb5848ba6
+    reference_type:
+    reference_id:
+  - url: https://github.com/navidrome/navidrome/releases/tag/v0.60.0
+    reference_type:
+    reference_id:
+  - url: https://github.com/navidrome/navidrome/security/advisories/GHSA-rh3r-8pxm-hg4w
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-25578
     reference_type:
     reference_id:
-  - url: https://github.com/navidrome/navidrome/commit/d7ec7355c9036d5be659d6ac555c334bb5848ba6
-    reference_type: other
-    reference_id: d7ec7355c9036d5be659d6ac555c334bb5848ba6
-  - url: https://github.com/navidrome/navidrome/security/advisories/GHSA-rh3r-8pxm-hg4w
-    reference_type: other
-    reference_id: GHSA-rh3r-8pxm-hg4w
-  - url: https://github.com/navidrome/navidrome/releases/tag/v0.60.0
-    reference_type: other
-    reference_id: v0.60.0

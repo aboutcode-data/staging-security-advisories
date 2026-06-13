@@ -78,7 +78,14 @@ summary: "Vikunja has SSRF via Todoist/Trello Migration File Attachment URLs tha
   \ Limit response body to 100MB to prevent memory exhaustion\n    buf = &bytes.Buffer{}\n \
   \   _, err = buf.ReadFrom(io.LimitReader(resp.Body, 100*1024*1024))\n    return\n}\n```\n\n\
   Apply the same pattern to `DoGetWithHeaders` and `DoPostWithHeaders` in the same file."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/go-vikunja/vikunja
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/go-vikunja/vikunja
+        commit: 93297742236e3d33af72c993e5da960db01d259e
+    introduced_in_commits: []
 severities:
   - score: '6.4'
     scoring_system: cvssv3.1
@@ -96,15 +103,15 @@ references:
   - url: https://github.com/go-vikunja/vikunja
     reference_type:
     reference_id:
+  - url: https://github.com/go-vikunja/vikunja/commit/93297742236e3d33af72c993e5da960db01d259e
+    reference_type:
+    reference_id:
+  - url: https://github.com/go-vikunja/vikunja/security/advisories/GHSA-g66v-54v9-52pr
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33675
     reference_type:
     reference_id:
-  - url: https://github.com/go-vikunja/vikunja/commit/93297742236e3d33af72c993e5da960db01d259e
-    reference_type: other
-    reference_id: 93297742236e3d33af72c993e5da960db01d259e
-  - url: https://github.com/go-vikunja/vikunja/security/advisories/GHSA-g66v-54v9-52pr
-    reference_type: other
-    reference_id: GHSA-g66v-54v9-52pr
   - url: https://vikunja.io/changelog/vikunja-v2.2.2-was-released
-    reference_type: other
-    reference_id: vikunja-v2.2.2-was-released
+    reference_type:
+    reference_id:

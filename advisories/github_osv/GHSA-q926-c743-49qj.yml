@@ -38,7 +38,14 @@ summary: "Centrifugo's InsecureSkipTokenSignatureVerify flag silently disables J
   )\n}\n```\n2. Consider requiring an additional explicit `insecure_mode: true` flag to prevent\
   \ accidental single-flag misconfiguration\n3. Log a warning on every accepted token when skip\
   \ is active"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/centrifugal/centrifugo
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/centrifugal/centrifugo
+        commit: dab80fe3adfe0bbeca3bb3ea45e6d95df9f601a8
+    introduced_in_commits: []
 severities:
   - score: '0.0'
     scoring_system: cvssv3.1
