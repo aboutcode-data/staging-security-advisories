@@ -31,14 +31,124 @@ summary: |
 
   All OpenShift Container Platform 4.12 users are advised to upgrade to these updated packages and images when they are available in the appropriate release channel. To check for available updates, use the OpenShift CLI (oc) or web console. Instructions for upgrading a cluster are available at https://docs.openshift.com/container-platform/4.12/updating/updating-cluster-cli.html
 impacted_packages:
-  - purl: pkg:rpm/redhat/butane?arch=x86_64
-    affected_versions: vers:rpm/<0.16.0-4.rhaos4.12.el8
-    fixed_versions: vers:rpm/0.16.0-4.rhaos4.12.el8
+  - purl: pkg:rpm/redhat/kernel-debug-modules-internal?arch=s390x
+    affected_versions: vers:rpm/<4.18.0-372.118.1.el8_6
+    fixed_versions: vers:rpm/4.18.0-372.118.1.el8_6
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/butane-debugsource?arch=x86_64
-    affected_versions: vers:rpm/<0.16.0-4.rhaos4.12.el8
-    fixed_versions: vers:rpm/0.16.0-4.rhaos4.12.el8
+  - purl: pkg:rpm/redhat/kernel-devel?arch=s390x
+    affected_versions: vers:rpm/<4.18.0-372.118.1.el8_6
+    fixed_versions: vers:rpm/4.18.0-372.118.1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-modules?arch=s390x
+    affected_versions: vers:rpm/<4.18.0-372.118.1.el8_6
+    fixed_versions: vers:rpm/4.18.0-372.118.1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-modules-extra?arch=s390x
+    affected_versions: vers:rpm/<4.18.0-372.118.1.el8_6
+    fixed_versions: vers:rpm/4.18.0-372.118.1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-modules-internal?arch=s390x
+    affected_versions: vers:rpm/<4.18.0-372.118.1.el8_6
+    fixed_versions: vers:rpm/4.18.0-372.118.1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-selftests-internal?arch=s390x
+    affected_versions: vers:rpm/<4.18.0-372.118.1.el8_6
+    fixed_versions: vers:rpm/4.18.0-372.118.1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-tools?arch=s390x
+    affected_versions: vers:rpm/<4.18.0-372.118.1.el8_6
+    fixed_versions: vers:rpm/4.18.0-372.118.1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ignition-validate?arch=s390x
+    affected_versions: vers:rpm/<2.14.0-7.rhaos4.12.el9
+    fixed_versions: vers:rpm/2.14.0-7.rhaos4.12.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ignition-debugsource?arch=s390x
+    affected_versions: vers:rpm/<2.14.0-7.rhaos4.12.el9
+    fixed_versions: vers:rpm/2.14.0-7.rhaos4.12.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ignition-debuginfo?arch=s390x
+    affected_versions: vers:rpm/<2.14.0-7.rhaos4.12.el9
+    fixed_versions: vers:rpm/2.14.0-7.rhaos4.12.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ignition-validate-debuginfo?arch=s390x
+    affected_versions: vers:rpm/<2.14.0-7.rhaos4.12.el9
+    fixed_versions: vers:rpm/2.14.0-7.rhaos4.12.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman?arch=s390x&epoch=3
+    affected_versions: vers:rpm/<4.2.0-11.rhaos4.12.el9
+    fixed_versions: vers:rpm/4.2.0-11.rhaos4.12.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-catatonit?arch=s390x&epoch=3
+    affected_versions: vers:rpm/<4.2.0-11.rhaos4.12.el9
+    fixed_versions: vers:rpm/4.2.0-11.rhaos4.12.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-gvproxy?arch=s390x&epoch=3
+    affected_versions: vers:rpm/<4.2.0-11.rhaos4.12.el9
+    fixed_versions: vers:rpm/4.2.0-11.rhaos4.12.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-plugins?arch=s390x&epoch=3
+    affected_versions: vers:rpm/<4.2.0-11.rhaos4.12.el9
+    fixed_versions: vers:rpm/4.2.0-11.rhaos4.12.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/buildah-debuginfo?arch=aarch64&epoch=1
+    affected_versions: vers:rpm/<1.23.4-7.rhaos4.12.el8
+    fixed_versions: vers:rpm/1.23.4-7.rhaos4.12.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/cri-tools?arch=aarch64
+    affected_versions: vers:rpm/<1.25.0-4.el9
+    fixed_versions: vers:rpm/1.25.0-4.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/skopeo?arch=ppc64le&epoch=2
+    affected_versions: vers:rpm/<1.9.4-6.rhaos4.12.el9
+    fixed_versions: vers:rpm/1.9.4-6.rhaos4.12.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/cri-o-debugsource?arch=x86_64
+    affected_versions: vers:rpm/<1.25.3-7.rhaos4.12.git44a2cb2.el9
+    fixed_versions: vers:rpm/1.25.3-7.rhaos4.12.git44a2cb2.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/cri-o-debuginfo?arch=x86_64
+    affected_versions: vers:rpm/<1.25.3-7.rhaos4.12.git44a2cb2.el9
+    fixed_versions: vers:rpm/1.25.3-7.rhaos4.12.git44a2cb2.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/cri-tools?arch=x86_64
+    affected_versions: vers:rpm/<1.25.0-4.el9
+    fixed_versions: vers:rpm/1.25.0-4.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/cri-tools-debugsource?arch=x86_64
+    affected_versions: vers:rpm/<1.25.0-4.el9
+    fixed_versions: vers:rpm/1.25.0-4.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/cri-tools-debuginfo?arch=x86_64
+    affected_versions: vers:rpm/<1.25.0-4.el9
+    fixed_versions: vers:rpm/1.25.0-4.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ignition?arch=x86_64
+    affected_versions: vers:rpm/<2.14.0-7.rhaos4.12.el9
+    fixed_versions: vers:rpm/2.14.0-7.rhaos4.12.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/buildah?arch=src&epoch=1
@@ -161,9 +271,14 @@ impacted_packages:
     fixed_versions: vers:rpm/1.23.4-7.rhaos4.12.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/conmon-debuginfo?arch=ppc64le&epoch=2
-    affected_versions: vers:rpm/<2.1.2-7.rhaos4.12.el8
-    fixed_versions: vers:rpm/2.1.2-7.rhaos4.12.el8
+  - purl: pkg:rpm/redhat/butane?arch=x86_64
+    affected_versions: vers:rpm/<0.16.0-4.rhaos4.12.el8
+    fixed_versions: vers:rpm/0.16.0-4.rhaos4.12.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/butane-debugsource?arch=x86_64
+    affected_versions: vers:rpm/<0.16.0-4.rhaos4.12.el8
+    fixed_versions: vers:rpm/0.16.0-4.rhaos4.12.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/butane-debuginfo?arch=x86_64
@@ -621,36 +736,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.25.3-7.rhaos4.12.git44a2cb2.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-o-debugsource?arch=x86_64
-    affected_versions: vers:rpm/<1.25.3-7.rhaos4.12.git44a2cb2.el9
-    fixed_versions: vers:rpm/1.25.3-7.rhaos4.12.git44a2cb2.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-o-debuginfo?arch=x86_64
-    affected_versions: vers:rpm/<1.25.3-7.rhaos4.12.git44a2cb2.el9
-    fixed_versions: vers:rpm/1.25.3-7.rhaos4.12.git44a2cb2.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-tools?arch=x86_64
-    affected_versions: vers:rpm/<1.25.0-4.el9
-    fixed_versions: vers:rpm/1.25.0-4.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-tools-debugsource?arch=x86_64
-    affected_versions: vers:rpm/<1.25.0-4.el9
-    fixed_versions: vers:rpm/1.25.0-4.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-tools-debuginfo?arch=x86_64
-    affected_versions: vers:rpm/<1.25.0-4.el9
-    fixed_versions: vers:rpm/1.25.0-4.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ignition?arch=x86_64
-    affected_versions: vers:rpm/<2.14.0-7.rhaos4.12.el9
-    fixed_versions: vers:rpm/2.14.0-7.rhaos4.12.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/ignition-validate?arch=x86_64
     affected_versions: vers:rpm/<2.14.0-7.rhaos4.12.el9
     fixed_versions: vers:rpm/2.14.0-7.rhaos4.12.el9
@@ -762,11 +847,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/buildah-debugsource?arch=aarch64&epoch=1
-    affected_versions: vers:rpm/<1.23.4-7.rhaos4.12.el8
-    fixed_versions: vers:rpm/1.23.4-7.rhaos4.12.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/buildah-debuginfo?arch=aarch64&epoch=1
     affected_versions: vers:rpm/<1.23.4-7.rhaos4.12.el8
     fixed_versions: vers:rpm/1.23.4-7.rhaos4.12.el8
     fixed_in_commits: []
@@ -1156,11 +1236,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.25.3-7.rhaos4.12.git44a2cb2.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-tools?arch=aarch64
-    affected_versions: vers:rpm/<1.25.0-4.el9
-    fixed_versions: vers:rpm/1.25.0-4.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/cri-tools-debugsource?arch=aarch64
     affected_versions: vers:rpm/<1.25.0-4.el9
     fixed_versions: vers:rpm/1.25.0-4.el9
@@ -1322,6 +1397,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/conmon-debugsource?arch=ppc64le&epoch=2
+    affected_versions: vers:rpm/<2.1.2-7.rhaos4.12.el8
+    fixed_versions: vers:rpm/2.1.2-7.rhaos4.12.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/conmon-debuginfo?arch=ppc64le&epoch=2
     affected_versions: vers:rpm/<2.1.2-7.rhaos4.12.el8
     fixed_versions: vers:rpm/2.1.2-7.rhaos4.12.el8
     fixed_in_commits: []
@@ -1781,11 +1861,6 @@ impacted_packages:
     fixed_versions: vers:rpm/4.2.0-11.rhaos4.12.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/skopeo?arch=ppc64le&epoch=2
-    affected_versions: vers:rpm/<1.9.4-6.rhaos4.12.el9
-    fixed_versions: vers:rpm/1.9.4-6.rhaos4.12.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/skopeo-tests?arch=ppc64le&epoch=2
     affected_versions: vers:rpm/<1.9.4-6.rhaos4.12.el9
     fixed_versions: vers:rpm/1.9.4-6.rhaos4.12.el9
@@ -1962,41 +2037,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debug-modules-extra?arch=s390x
-    affected_versions: vers:rpm/<4.18.0-372.118.1.el8_6
-    fixed_versions: vers:rpm/4.18.0-372.118.1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debug-modules-internal?arch=s390x
-    affected_versions: vers:rpm/<4.18.0-372.118.1.el8_6
-    fixed_versions: vers:rpm/4.18.0-372.118.1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-devel?arch=s390x
-    affected_versions: vers:rpm/<4.18.0-372.118.1.el8_6
-    fixed_versions: vers:rpm/4.18.0-372.118.1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-modules?arch=s390x
-    affected_versions: vers:rpm/<4.18.0-372.118.1.el8_6
-    fixed_versions: vers:rpm/4.18.0-372.118.1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-modules-extra?arch=s390x
-    affected_versions: vers:rpm/<4.18.0-372.118.1.el8_6
-    fixed_versions: vers:rpm/4.18.0-372.118.1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-modules-internal?arch=s390x
-    affected_versions: vers:rpm/<4.18.0-372.118.1.el8_6
-    fixed_versions: vers:rpm/4.18.0-372.118.1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-selftests-internal?arch=s390x
-    affected_versions: vers:rpm/<4.18.0-372.118.1.el8_6
-    fixed_versions: vers:rpm/4.18.0-372.118.1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-tools?arch=s390x
     affected_versions: vers:rpm/<4.18.0-372.118.1.el8_6
     fixed_versions: vers:rpm/4.18.0-372.118.1.el8_6
     fixed_in_commits: []
@@ -2249,46 +2289,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/ignition?arch=s390x
     affected_versions: vers:rpm/<2.14.0-7.rhaos4.12.el9
     fixed_versions: vers:rpm/2.14.0-7.rhaos4.12.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ignition-validate?arch=s390x
-    affected_versions: vers:rpm/<2.14.0-7.rhaos4.12.el9
-    fixed_versions: vers:rpm/2.14.0-7.rhaos4.12.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ignition-debugsource?arch=s390x
-    affected_versions: vers:rpm/<2.14.0-7.rhaos4.12.el9
-    fixed_versions: vers:rpm/2.14.0-7.rhaos4.12.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ignition-debuginfo?arch=s390x
-    affected_versions: vers:rpm/<2.14.0-7.rhaos4.12.el9
-    fixed_versions: vers:rpm/2.14.0-7.rhaos4.12.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ignition-validate-debuginfo?arch=s390x
-    affected_versions: vers:rpm/<2.14.0-7.rhaos4.12.el9
-    fixed_versions: vers:rpm/2.14.0-7.rhaos4.12.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman?arch=s390x&epoch=3
-    affected_versions: vers:rpm/<4.2.0-11.rhaos4.12.el9
-    fixed_versions: vers:rpm/4.2.0-11.rhaos4.12.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-catatonit?arch=s390x&epoch=3
-    affected_versions: vers:rpm/<4.2.0-11.rhaos4.12.el9
-    fixed_versions: vers:rpm/4.2.0-11.rhaos4.12.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-gvproxy?arch=s390x&epoch=3
-    affected_versions: vers:rpm/<4.2.0-11.rhaos4.12.el9
-    fixed_versions: vers:rpm/4.2.0-11.rhaos4.12.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-plugins?arch=s390x&epoch=3
-    affected_versions: vers:rpm/<4.2.0-11.rhaos4.12.el9
-    fixed_versions: vers:rpm/4.2.0-11.rhaos4.12.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-remote?arch=s390x&epoch=3
