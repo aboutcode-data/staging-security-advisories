@@ -7,9 +7,9 @@ summary: |
   Uncontrolled Recursion in Akka HTTP
   Akka HTTP 10.1.x and 10.2.x before 10.2.7 can encounter stack exhaustion while parsing HTTP headers, which allows a remote attacker to conduct a Denial of Service attack by sending a User-Agent header with deeply nested comments.
 impacted_packages:
-  - purl: pkg:maven/com.typesafe.akka/akka-http-core_2.13
-    affected_versions: vers:maven/>=10.2.0-M1|<10.2.7
-    fixed_versions: vers:maven/10.2.7
+  - purl: pkg:maven/com.typesafe.akka/aakka-http-core_2.13.0-M3
+    affected_versions: vers:maven/<10.1.15
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/com.typesafe.akka/akka-http-core_2.13.0-RC3
@@ -27,14 +27,14 @@ impacted_packages:
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/com.typesafe.akka/aakka-http-core_2.13.0-M3
-    affected_versions: vers:maven/<10.1.15
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:maven/com.typesafe.akka/akka-http-core_2.13
     affected_versions: vers:maven/>=10.1.0|<10.1.15
     fixed_versions: vers:maven/10.1.15
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/com.typesafe.akka/akka-http-core_2.13
+    affected_versions: vers:maven/>=10.2.0-M1|<10.2.7
+    fixed_versions: vers:maven/10.2.7
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/com.typesafe.akka/akka-http-core_2.12

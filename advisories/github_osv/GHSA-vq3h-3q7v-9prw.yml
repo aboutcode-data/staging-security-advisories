@@ -8,6 +8,11 @@ summary: |
   The `django.util.http.is_safe_url` function in Django 1.4 before 1.4.13, 1.5 before 1.5.8, 1.6 before 1.6.5, and 1.7 before 1.7b4 does not properly validate URLs, which allows remote attackers to conduct open redirect attacks via a malformed URL, as demonstrated by "http:\\\djangoproject.com."
 impacted_packages:
   - purl: pkg:pypi/django
+    affected_versions: vers:pypi/>=1.7a1|<1.7b4
+    fixed_versions: vers:pypi/1.7b4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/django
     affected_versions: vers:pypi/>=1.4|<1.4.13
     fixed_versions: vers:pypi/1.4.13
     fixed_in_commits: []
@@ -22,10 +27,16 @@ impacted_packages:
     fixed_versions: vers:pypi/1.6.5
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:pypi/django
-    affected_versions: vers:pypi/>=1.7a1|<1.7b4
-    fixed_versions: vers:pypi/1.7b4
-    fixed_in_commits: []
+  - purl: pkg:github/django/django
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/django/django
+        commit: ad32c218850ad40972dcef57beb460f8c979dd6d
+      - vcs_url: https://github.com/django/django
+        commit: 7feb54bbae3f637ab3c4dd4831d4385964f574df
+      - vcs_url: https://github.com/django/django
+        commit: 601107524523bca02376a0ddc1a06c6fdb8f22f3
     introduced_in_commits: []
 severities:
   - score: '7.5'

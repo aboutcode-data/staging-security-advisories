@@ -8,6 +8,11 @@ summary: |
   An issue was discovered in OpenStack Neutron 11.x before 11.0.7, 12.x before 12.0.6, and 13.x before 13.0.3. By creating two security groups with separate/overlapping port ranges, an authenticated user may prevent Neutron from being able to configure networks on any compute nodes where those security groups are present, because of an Open vSwitch (OVS) firewall KeyError. All Neutron deployments utilizing neutron-openvswitch-agent are affected.
 impacted_packages:
   - purl: pkg:pypi/neutron
+    affected_versions: vers:pypi/>=11.0.0|<11.0.7
+    fixed_versions: vers:pypi/11.0.7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/neutron
     affected_versions: vers:pypi/>=12.0.0|<12.0.6
     fixed_versions: vers:pypi/12.0.6
     fixed_in_commits: []
@@ -15,11 +20,6 @@ impacted_packages:
   - purl: pkg:pypi/neutron
     affected_versions: vers:pypi/>=13.0.0|<13.0.3
     fixed_versions: vers:pypi/13.0.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/neutron
-    affected_versions: vers:pypi/>=11.0.0|<11.0.7
-    fixed_versions: vers:pypi/11.0.7
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -40,12 +40,6 @@ severities:
     url:
 weaknesses: []
 references:
-  - url: https://access.redhat.com/errata/RHSA-2019:0879
-    reference_type:
-    reference_id:
-  - url: https://access.redhat.com/errata/RHSA-2019:0935
-    reference_type:
-    reference_id:
   - url: https://bugs.launchpad.net/ossa/+bug/1813007
     reference_type:
     reference_id:
@@ -67,3 +61,9 @@ references:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2019-10876
     reference_type:
     reference_id: CVE-2019-10876
+  - url: https://access.redhat.com/errata/RHSA-2019:0879
+    reference_type:
+    reference_id: RHSA-2019:0879
+  - url: https://access.redhat.com/errata/RHSA-2019:0935
+    reference_type:
+    reference_id: RHSA-2019:0935

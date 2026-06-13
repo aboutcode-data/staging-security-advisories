@@ -8,11 +8,6 @@ summary: |
   Multiple cross-site scripting (XSS) vulnerabilities in phpMyAdmin 4.0.x before 4.0.10.13, 4.4.x before 4.4.15.3, and 4.5.x before 4.5.4 allow remote authenticated users to inject arbitrary web script or HTML via a (1) table name, (2) SET value, (3) search query, or (4) hostname in a Location header.
 impacted_packages:
   - purl: pkg:composer/phpmyadmin/phpmyadmin
-    affected_versions: vers:composer/>=4.0.0|<4.0.10+13
-    fixed_versions: vers:composer/4.0.10+13
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/phpmyadmin/phpmyadmin
     affected_versions: vers:composer/>=4.4.0|<4.4.15+3
     fixed_versions: vers:composer/4.4.15+3
     fixed_in_commits: []
@@ -21,6 +16,22 @@ impacted_packages:
     affected_versions: vers:composer/>=4.5.0|<4.5.4
     fixed_versions: vers:composer/4.5.4
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/phpmyadmin/phpmyadmin
+    affected_versions: vers:composer/>=4.0.0|<4.0.10+13
+    fixed_versions: vers:composer/4.0.10+13
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/phpmyadmin/phpmyadmin
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/phpmyadmin/phpmyadmin
+        commit: 75a55824012406a08c4debf5ddb7ae41c32a7dbc
+      - vcs_url: https://github.com/phpmyadmin/phpmyadmin
+        commit: edffb52884b09562490081c3b8666ef46c296418
+      - vcs_url: https://github.com/phpmyadmin/phpmyadmin
+        commit: aca42efa01917cc0fe8cfdb2927a6399ca1742f2
     introduced_in_commits: []
 severities:
   - score: '5.4'

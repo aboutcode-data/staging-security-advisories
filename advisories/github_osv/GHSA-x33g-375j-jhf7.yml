@@ -6,7 +6,18 @@ aliases:
 summary: |
   Mattermost Server has Improper Authorization for Integration Requests
   An issue was discovered in Mattermost Server before 3.8.2, 3.7.5, and 3.6.7. API endpoint access control does not honor an integration permission restriction.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 0968e4079e0aa670254f3fe3a7248d126e3cf877
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: fb325cc339eb8d8efb60dbadc48fd38897201c6f
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: b74e85653660525d351d090a1e1874ae933bcbc8
+    introduced_in_commits: []
 severities:
   - score: '6.9'
     scoring_system: cvssv4
@@ -38,4 +49,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2017-18916
     reference_type:
-    reference_id: CVE-2017-18916
+    reference_id:

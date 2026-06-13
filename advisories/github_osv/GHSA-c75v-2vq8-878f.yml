@@ -8,6 +8,11 @@ summary: |
   A vulnerability was found in Angular up to 11.0.4/11.1.0-next.2. It has been classified as problematic. Affected is the handling of comments. The manipulation leads to cross site scripting. It is possible to launch the attack remotely but it might require an authentication first. Upgrading to version 10.2.5, 11.0.5 or 11.1.0-next.3 is advised to to address this issue.
 impacted_packages:
   - purl: pkg:npm/%40angular/core
+    affected_versions: vers:npm/<10.2.5
+    fixed_versions: vers:npm/10.2.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/%40angular/core
     affected_versions: vers:npm/>=11.0.0|<11.0.5
     fixed_versions: vers:npm/11.0.5
     fixed_in_commits: []
@@ -17,10 +22,16 @@ impacted_packages:
     fixed_versions: vers:npm/11.1.0-next.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:npm/%40angular/core
-    affected_versions: vers:npm/<10.2.5
-    fixed_versions: vers:npm/10.2.5
-    fixed_in_commits: []
+  - purl: pkg:github/angular/angular
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/angular/angular
+        commit: 47d9b6d72dab9d60c96bc1c3604219f6385649ea
+      - vcs_url: https://github.com/angular/angular
+        commit: ba8da742e3b243e8f43d4c63aa842b44e14f2b09
+      - vcs_url: https://github.com/angular/angular
+        commit: 0aa220bc0000fc4d1651ec388975bbf5baa1da36
     introduced_in_commits: []
 severities:
   - score: '5.4'

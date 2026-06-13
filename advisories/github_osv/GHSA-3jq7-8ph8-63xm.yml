@@ -6,7 +6,14 @@ aliases:
 summary: |
   Grafana information disclosure
   An information-disclosure flaw was found in Grafana. The database directory `/var/lib/grafana` and database file `/var/lib/grafana/grafana.db` are world readable. This can result in exposure of sensitive information (e.g., cleartext or encrypted datasource passwords).
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/grafana/grafana
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/grafana/grafana
+        commit: 102448040d5132460e3b0013e03ebedec0677e00
+    introduced_in_commits: []
 severities:
   - score: '5.5'
     scoring_system: cvssv3.1
@@ -48,9 +55,9 @@ references:
   - url: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WEBCIEVSYIDDCA7FTRS2IFUOYLIQU34A
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2020-12458
+    reference_type:
+    reference_id:
   - url: https://security.netapp.com/advisory/ntap-20200518-0001
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2020-12458
-    reference_type:
-    reference_id: CVE-2020-12458

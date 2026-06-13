@@ -31,16 +31,6 @@ summary: "Code injection in `saved_model_cli` in TensorFlow\n### Impact\nTensorF
   \ the Cybersecurity Education and Research Lab in the Department of Computer Science at the\
   \ University of Wyoming."
 impacted_packages:
-  - purl: pkg:pypi/tensorflow-cpu
-    affected_versions: vers:pypi/>=2.8.0|<2.8.1
-    fixed_versions: vers:pypi/2.8.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow-gpu
-    affected_versions: vers:pypi/>=2.7.0|<2.7.2
-    fixed_versions: vers:pypi/2.7.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:pypi/tensorflow
     affected_versions: vers:pypi/<2.6.4
     fixed_versions: vers:pypi/2.6.4
@@ -71,10 +61,31 @@ impacted_packages:
     fixed_versions: vers:pypi/2.7.2
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow-cpu
+    affected_versions: vers:pypi/>=2.8.0|<2.8.1
+    fixed_versions: vers:pypi/2.8.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow-gpu
+    affected_versions: vers:pypi/>=2.7.0|<2.7.2
+    fixed_versions: vers:pypi/2.7.2
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:pypi/tensorflow-gpu
     affected_versions: vers:pypi/>=2.8.0|<2.8.1
     fixed_versions: vers:pypi/2.8.1
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/tensorflow/tensorflow
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/tensorflow/tensorflow
+        commit: 8b202f08d52e8206af2bdb2112a62fafbc546ec7
+      - vcs_url: https://github.com/tensorflow/tensorflow
+        commit: f3b9bf4c3c0597563b289c0512e98d4ce81f886e
+      - vcs_url: https://github.com/tensorflow/tensorflow
+        commit: c5da7af048611aa29e9382371f0aed5018516cac
     introduced_in_commits: []
 severities:
   - score: '7.8'
@@ -114,9 +125,9 @@ references:
   - url: https://github.com/tensorflow/tensorflow/releases/tag/v2.9.0
     reference_type:
     reference_id:
-  - url: https://github.com/tensorflow/tensorflow/security/advisories/GHSA-75c9-jrh4-79mc
-    reference_type:
-    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2022-29216
     reference_type:
     reference_id: CVE-2022-29216
+  - url: https://github.com/tensorflow/tensorflow/security/advisories/GHSA-75c9-jrh4-79mc
+    reference_type:
+    reference_id: GHSA-75c9-jrh4-79mc

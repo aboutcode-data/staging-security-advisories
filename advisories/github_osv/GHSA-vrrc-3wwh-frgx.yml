@@ -12,6 +12,11 @@ summary: |
   Mercurial Plugin 2.12, 2.10.1, 2.9.1, and 2.8.1 performs permission checks when listing configured Mercurial installations.
 impacted_packages:
   - purl: pkg:maven/org.jenkins-ci.plugins/mercurial
+    affected_versions: vers:maven/<2.8.1
+    fixed_versions: vers:maven/2.8.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/mercurial
     affected_versions: vers:maven/2.11
     fixed_versions: vers:maven/2.12
     fixed_in_commits: []
@@ -26,10 +31,19 @@ impacted_packages:
     fixed_versions: vers:maven/2.9.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/org.jenkins-ci.plugins/mercurial
-    affected_versions: vers:maven/<2.8.1
-    fixed_versions: vers:maven/2.8.1
-    fixed_in_commits: []
+  - purl: pkg:github/cveproject/cvelist
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/cveproject/cvelist
+        commit: 381fe967666a5ce01625a7a050427aa4757e3ca6
+    introduced_in_commits: []
+  - purl: pkg:github/jenkinsci/mercurial-plugin
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/jenkinsci/mercurial-plugin
+        commit: edd59db1eec7e3c8d467372cd8417ae65eeb29dd
     introduced_in_commits: []
 severities:
   - score: '4.3'

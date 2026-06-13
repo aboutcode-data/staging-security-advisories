@@ -13,6 +13,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.cloudfoundry.identity/cloudfoundry-identity-server
+    affected_versions: vers:maven/>=3.10.0|<3.16.0
+    fixed_versions: vers:maven/3.16.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.cloudfoundry.identity/cloudfoundry-identity-server
     affected_versions: vers:maven/>=3.0.0|<3.6.9
     fixed_versions: vers:maven/3.6.9
     fixed_in_commits: []
@@ -22,10 +27,20 @@ impacted_packages:
     fixed_versions: vers:maven/3.9.11
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/org.cloudfoundry.identity/cloudfoundry-identity-server
-    affected_versions: vers:maven/>=3.10.0|<3.16.0
-    fixed_versions: vers:maven/3.16.0
-    fixed_in_commits: []
+  - purl: pkg:github/cloudfoundry/uaa
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/cloudfoundry/uaa
+        commit: 5dc5ca9176ed5baa870680d99f37e7e559dddc5
+      - vcs_url: https://github.com/cloudfoundry/uaa
+        commit: b6d6526cb89120043d390bf0274cd062e9fc452
+      - vcs_url: https://github.com/cloudfoundry/uaa
+        commit: 01edea6337c8ddb2ab80906aa1254d3c1dc02fb
+      - vcs_url: https://github.com/cloudfoundry/uaa
+        commit: 74b9b270787aa602196d59d58893c3a6e09816f9
+      - vcs_url: https://github.com/cloudfoundry/uaa
+        commit: 2dbeb9e93e076d71d7f0886dea9f77f23e0b8f3c
     introduced_in_commits: []
 severities:
   - score: '6.5'
@@ -59,12 +74,12 @@ references:
   - url: https://github.com/cloudfoundry/uaa/commit/b6d6526cb89120043d390bf0274cd062e9fc452
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2017-4974
+    reference_type:
+    reference_id:
   - url: https://web.archive.org/web/20200227163823/http://www.securityfocus.com/bid/99254
     reference_type:
     reference_id:
   - url: https://www.cloudfoundry.org/cve-2017-4974
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2017-4974
-    reference_type:
-    reference_id: CVE-2017-4974

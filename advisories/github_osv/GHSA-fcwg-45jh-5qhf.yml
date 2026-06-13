@@ -6,7 +6,18 @@ aliases:
 summary: |
   Mattermost Server vulnerable to CSRF if CORS is enabled
   An issue was discovered in Mattermost Server before 4.0.0, 3.10.2, and 3.9.2. CSRF can occur if CORS is enabled.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 4519b03d95e8bfe1b2f74094673ae1a2f39f6b47
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 312269ad0bd166174f07f9df7391fce714601600
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: a18479df0940be8503c9b88993490741793eba9e
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
@@ -38,4 +49,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2017-18903
     reference_type:
-    reference_id: CVE-2017-18903
+    reference_id:

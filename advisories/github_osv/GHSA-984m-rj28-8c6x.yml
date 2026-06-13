@@ -7,6 +7,11 @@ summary: |
   Plone unauthorized member addition vulnerability
   Plone 3.3.0 through 3.3.6, 4.0.0 through 4.0.10, 4.1.0 through 4.1.6, 4.2.0 through 4.2.7, 4.3.0 through 4.3.6, and 5.0rc1 allows remote attackers to add a new member to a Plone site with registration enabled, without acknowledgment of site administrator.
 impacted_packages:
+  - purl: pkg:pypi/plone
+    affected_versions: vers:pypi/>=4.1a1|<=4.1.6
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:pypi/products.cmfplone
     affected_versions: vers:pypi/<4.3.6
     fixed_versions: vers:pypi/4.3.7
@@ -28,11 +33,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/plone
-    affected_versions: vers:pypi/>=4.1a1|<=4.1.6
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/plone
     affected_versions: vers:pypi/>=4.2a1|<=4.2.7
     fixed_versions:
     fixed_in_commits: []
@@ -46,6 +46,22 @@ impacted_packages:
     affected_versions: vers:pypi/5.0rc1
     fixed_versions:
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/zopefoundation/products.cmfcore
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/zopefoundation/products.cmfcore
+        commit: e1d981bfa14b664317285f0f36498f4be4a23406
+    introduced_in_commits: []
+  - purl: pkg:github/plone/products.cmfplone
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/plone/products.cmfplone
+        commit: 9f0111f85cd14f3f067044b59b93e2856c99d542
+      - vcs_url: https://github.com/plone/products.cmfplone
+        commit: 1845b0a92312291811b68907bf2aa0fb448c4016
     introduced_in_commits: []
 severities:
   - score: '5.9'

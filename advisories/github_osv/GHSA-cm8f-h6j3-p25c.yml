@@ -10,7 +10,14 @@ summary: "Pion DTLS Header reconstruction method can be thrown into an infinite 
   \ and the Mattermost team for discovering and reporting this. \n\n### For more information\n\
   If you have any questions or comments about this advisory:\n* Open an issue in [Pion DTLS](http://github.com/pion/dtls)\n\
   * Email us at [team@pion.ly](mailto:team@pion.ly)"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/pion/dtls
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/pion/dtls
+        commit: e0b2ce3592e8e7d73713ac67b363a2e192a4cecf
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -37,9 +44,9 @@ references:
   - url: https://github.com/pion/dtls/security/advisories/GHSA-cm8f-h6j3-p25c
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2022-29190
+    reference_type:
+    reference_id:
   - url: https://pkg.go.dev/vuln/GO-2022-0460
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2022-29190
-    reference_type:
-    reference_id: CVE-2022-29190

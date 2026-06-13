@@ -12,6 +12,15 @@ impacted_packages:
     fixed_versions: vers:maven/5.11.2
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:github/apache/activemq
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/activemq
+        commit: 729c4731574ffffaf58ebefdbaeb3bd19ed1c7b7
+      - vcs_url: https://github.com/apache/activemq
+        commit: 9fd5cb7dfe0fcc431f99d5e14206e0090e72f36b
+    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual
@@ -21,9 +30,6 @@ severities:
 weaknesses:
   - CWE-22
 references:
-  - url: http://activemq.apache.org/security-advisories.data/CVE-2015-1830-announcement.txt
-    reference_type:
-    reference_id:
   - url: http://packetstormsecurity.com/files/156643/Apache-ActiveMQ-5.11.1-Directory-Traversal-Shell-Upload.html
     reference_type:
     reference_id:
@@ -54,6 +60,15 @@ references:
   - url: http://www.zerodayinitiative.com/advisories/ZDI-15-407
     reference_type:
     reference_id:
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/windows/remote/48181.rb
+    reference_type: exploit
+    reference_id: CVE-2015-1830
   - url: https://nvd.nist.gov/vuln/detail/CVE-2015-1830
     reference_type:
     reference_id: CVE-2015-1830
+  - url: https://raw.githubusercontent.com/rapid7/metasploit-framework/master/modules/exploits/windows/http/apache_activemq_traversal_upload.rb
+    reference_type: exploit
+    reference_id: CVE-2015-1830
+  - url: http://activemq.apache.org/security-advisories.data/CVE-2015-1830-announcement.txt
+    reference_type:
+    reference_id: CVE-2015-1830-ANNOUNCEMENT.TXT

@@ -6,7 +6,14 @@ aliases:
 summary: |
   JSON-Patch Out-of-bounds Write vulnerability
   An out of bound write can occur when patching an Openshift object using the `oc patch` functionality in OpenShift Container Platform before 3.7. An attacker can use this flaw to cause a denial of service attack on the Openshift master api service which provides cluster management.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/evanphx/json-patch
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/evanphx/json-patch
+        commit: 4c9aadca8f89e349c999f04e28199e96e81aba03
+    introduced_in_commits: []
 severities:
   - score: '7.7'
     scoring_system: cvssv3.1
@@ -51,9 +58,9 @@ references:
   - url: https://github.com/evanphx/json-patch/pull/57
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2018-14632
+    reference_type:
+    reference_id:
   - url: https://pkg.go.dev/vuln/GO-2021-0076
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2018-14632
-    reference_type:
-    reference_id: CVE-2018-14632

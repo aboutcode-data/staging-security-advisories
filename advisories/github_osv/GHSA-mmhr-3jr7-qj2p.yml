@@ -7,13 +7,13 @@ summary: |
   Auth0-ASPNET and Auth0-ASPNET-Owin vulnerable to Cross-Site Request Forgery
   An issue was discovered in Auth0 auth0-aspnet and auth0-aspnet-owin. Affected packages do not use or validate the state parameter of the OAuth 2.0 and OpenID Connect protocols. This leaves applications vulnerable to CSRF attacks during authentication and authorization operations.
 impacted_packages:
-  - purl: pkg:nuget/Auth0-ASPNET-Owin
-    affected_versions: vers:nuget/<=2.3.2
+  - purl: pkg:nuget/auth0-aspnet
+    affected_versions: vers:nuget/<=2.1.1
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/auth0-aspnet
-    affected_versions: vers:nuget/<=2.1.1
+  - purl: pkg:nuget/Auth0-ASPNET-Owin
+    affected_versions: vers:nuget/<=2.3.2
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
@@ -31,15 +31,15 @@ severities:
 weaknesses:
   - CWE-352
 references:
-  - url: https://auth0.com/docs/security/bulletins/cve-2018-15121
-    reference_type:
-    reference_id:
   - url: https://github.com/auth0/auth0-aspnet-owin
     reference_type:
     reference_id:
   - url: https://www.nuget.org/packages/Auth0-ASPNET-Owin
     reference_type:
     reference_id:
+  - url: https://auth0.com/docs/security/bulletins/cve-2018-15121
+    reference_type:
+    reference_id: CVE-2018-15121
   - url: https://nvd.nist.gov/vuln/detail/CVE-2018-15121
     reference_type:
     reference_id: CVE-2018-15121
