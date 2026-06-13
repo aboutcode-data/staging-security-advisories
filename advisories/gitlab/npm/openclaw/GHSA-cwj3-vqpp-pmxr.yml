@@ -1,0 +1,41 @@
+advisory_id: npm/openclaw/GHSA-cwj3-vqpp-pmxr
+datasource_id: gitlab/npm/openclaw/GHSA-cwj3-vqpp-pmxr
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-cwj3-vqpp-pmxr.yml
+aliases:
+  - GHSA-cwj3-vqpp-pmxr
+summary: |
+  OpenClaw's gateway config mutation guard allowed unsafe model-driven config writes
+  The agent-facing `gateway` tool protects `config.apply` and `config.patch` with a model-to-operator trust boundary. That guard used a hand-maintained denylist of protected config paths. The config schema outgrew that denylist, leaving sensitive subtrees writable through model-driven gateway config mutations.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.4.23
+    fixed_versions: vers:npm/2026.4.23
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/openclaw/openclaw
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openclaw/openclaw
+        commit: bceda6089aa7b3695cc7696b43c61ae3d01bb0ec
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-cwj3-vqpp-pmxr.yml
+weaknesses:
+  - CWE-862
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/openclaw/openclaw/commit/bceda6089aa7b3695cc7696b43c61ae3d01bb0ec
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-cwj3-vqpp-pmxr
+    reference_type:
+    reference_id: GHSA-cwj3-vqpp-pmxr
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-cwj3-vqpp-pmxr
+    reference_type:
+    reference_id: GHSA-cwj3-vqpp-pmxr

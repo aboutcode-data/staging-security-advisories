@@ -1,0 +1,31 @@
+advisory_id: npm/next-intl/GHSA-4c35-wcg5-mm9h
+datasource_id: gitlab/npm/next-intl/GHSA-4c35-wcg5-mm9h
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/next-intl/GHSA-4c35-wcg5-mm9h.yml
+aliases:
+  - GHSA-4c35-wcg5-mm9h
+summary: |
+  next-intl has prototype pollution with `experimental.messages.precompile` via attacker-controlled translation catalog keys
+  `setNestedProperty` in `packages/next-intl/src/extractor/utils.tsx` walks a dotted key path and assigns the final value without blocking the reserved keys `__proto__`, `constructor`, or `prototype`. When the next-intl Next.js plugin is configured with `experimental.messages` and `messages.precompile: true`, a JSON translation catalog containing a top‑level `__proto__` key causes `setNestedProperty(result, '__proto__.isAdmin', compiledMessage)` to assign onto `Object.prototype`, polluting every object in the running build process.
+impacted_packages:
+  - purl: pkg:npm/next-intl
+    affected_versions: vers:npm/<4.9.2
+    fixed_versions: vers:npm/4.9.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:L/I:L/A:L
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/next-intl/GHSA-4c35-wcg5-mm9h.yml
+weaknesses:
+  - CWE-1321
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/advisories/GHSA-4c35-wcg5-mm9h
+    reference_type:
+    reference_id: GHSA-4c35-wcg5-mm9h
+  - url: https://github.com/amannn/next-intl/security/advisories/GHSA-4c35-wcg5-mm9h
+    reference_type:
+    reference_id: GHSA-4c35-wcg5-mm9h

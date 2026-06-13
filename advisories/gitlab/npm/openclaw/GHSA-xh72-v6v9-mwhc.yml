@@ -8,7 +8,7 @@ summary: |
   Feishu webhook mode accepted missing `encryptKey` configuration as valid and blank card-action callback tokens as usable lifecycle tokens. Together, those fail-open paths could allow unauthenticated webhook or card-action traffic to reach command dispatch in affected deployments.
 impacted_packages:
   - purl: pkg:npm/openclaw
-    affected_versions: vers:npm/<2026.4.15
+    affected_versions: vers:npm/<0.0.0
     fixed_versions: vers:npm/2026.4.15
     fixed_in_commits: []
     introduced_in_commits: []
@@ -26,11 +26,11 @@ severities:
     published_at: None
     url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-xh72-v6v9-mwhc.yml
 weaknesses:
-  - CWE-1188
+  - CWE-294
   - CWE-1035
   - CWE-937
-  - CWE-294
   - CWE-287
+  - CWE-1188
 references:
   - url: https://github.com/openclaw/openclaw
     reference_type:
