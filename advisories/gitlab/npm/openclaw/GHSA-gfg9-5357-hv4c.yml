@@ -1,0 +1,46 @@
+advisory_id: npm/openclaw/GHSA-gfg9-5357-hv4c
+datasource_id: gitlab/npm/openclaw/GHSA-gfg9-5357-hv4c
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-gfg9-5357-hv4c.yml
+aliases:
+  - GHSA-gfg9-5357-hv4c
+summary: |
+  OpenClaw: Webchat audio embedding could read local files without local-root containment
+  OpenClaw deployments before `2026.4.15` could embed host-local audio files into webchat responses without applying the local media root containment check used by other media-serving paths.
+
+  If an attacker could influence an agent or tool-produced `ReplyPayload.mediaUrl`, the webchat audio embedding helper could resolve an absolute local path or `file:` URL, read an audio-like file under the size cap, and base64-encode it into the webchat media response. This crossed the model/tool-output boundary into a host file read. Prompt injection or malicious tool output is a delivery mechanism; the security boundary failure is the missing local-root containment check.
+
+  The impact is narrow: the file had to be readable by the gateway process, have an audio-like extension, and fit within the webchat audio size cap. The issue exposed contents into the webchat assistant/media transcript path; it was not a general remote filesystem API.
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.4.15
+    fixed_versions: vers:npm/2026.4.15
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/openclaw/openclaw
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openclaw/openclaw
+        commit: 6e58f1f9f54bca1fea1268ec0ee4c01a2af03dde
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-gfg9-5357-hv4c.yml
+weaknesses:
+  - CWE-22
+  - CWE-200
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/openclaw/openclaw/commit/6e58f1f9f54bca1fea1268ec0ee4c01a2af03dde
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-gfg9-5357-hv4c
+    reference_type:
+    reference_id: GHSA-gfg9-5357-hv4c
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-gfg9-5357-hv4c
+    reference_type:
+    reference_id: GHSA-gfg9-5357-hv4c

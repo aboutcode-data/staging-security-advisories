@@ -1,0 +1,36 @@
+advisory_id: npm/openclaw/GHSA-x3h8-jrgh-p8jx
+datasource_id: gitlab/npm/openclaw/GHSA-x3h8-jrgh-p8jx
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-x3h8-jrgh-p8jx.yml
+aliases:
+  - GHSA-x3h8-jrgh-p8jx
+summary: |
+  OpenClaw's exec allowlist analysis rejects shell expansion in unquoted heredocs
+  Exec allowlist analysis rejects shell expansion in unquoted heredocs
+impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.4.22
+    fixed_versions: vers:npm/2026.4.22
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/openclaw/openclaw
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openclaw/openclaw
+        commit: b2e8b7d4bb2f22eaa16f5c4b07547774e90b65a5
+    introduced_in_commits: []
+severities: []
+weaknesses:
+  - CWE-200
+  - CWE-1035
+  - CWE-937
+references:
+  - url: https://github.com/openclaw/openclaw/commit/b2e8b7d4bb2f22eaa16f5c4b07547774e90b65a5
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-x3h8-jrgh-p8jx
+    reference_type:
+    reference_id: GHSA-x3h8-jrgh-p8jx
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-x3h8-jrgh-p8jx
+    reference_type:
+    reference_id: GHSA-x3h8-jrgh-p8jx
