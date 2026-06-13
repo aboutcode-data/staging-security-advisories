@@ -8,13 +8,13 @@ summary: |
       arbitrary code.
 impacted_packages:
   - purl: pkg:ebuild/media-libs/plib
-    affected_versions:
-    fixed_versions: vers:ebuild/>=1.8.5-r1
+    affected_versions: vers:ebuild/<1.8.5-r1
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/media-libs/plib
-    affected_versions: vers:ebuild/<1.8.5-r1
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.8.5-r1
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -25,9 +25,9 @@ severities:
     url:
 weaknesses: []
 references:
+  - url: https://security.gentoo.org/glsa/201606-16
+    reference_type:
+    reference_id:
   - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/windows/local/18258.c
     reference_type: exploit
     reference_id: CVE-2011-4620;OSVDB-77973
-  - url: https://security.gentoo.org/glsa/201606-16
-    reference_type:
-    reference_id: GLSA-201606-16

@@ -24,23 +24,23 @@ summary: |
       software suites.
 impacted_packages:
   - purl: pkg:ebuild/dev-java/oracle-jdk-bin?slot=1.8
-    affected_versions:
-    fixed_versions: vers:ebuild/>=1.8.0.202
+    affected_versions: vers:ebuild/<1.8.0.202
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/dev-java/oracle-jre-bin?slot=1.8
-    affected_versions:
-    fixed_versions: vers:ebuild/>=1.8.0.202
+    affected_versions: vers:ebuild/<1.8.0.202
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/dev-java/oracle-jdk-bin?slot=1.8
-    affected_versions: vers:ebuild/<1.8.0.202
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.8.0.202
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/dev-java/oracle-jre-bin?slot=1.8
-    affected_versions: vers:ebuild/<1.8.0.202
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.8.0.202
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -57,6 +57,12 @@ references:
   - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/dos/46722.txt
     reference_type: exploit
     reference_id: CVE-2019-2697
+  - url: https://bugs.chromium.org/p/project-zero/issues/detail?id=1778
+    reference_type: exploit
+    reference_id: CVE-2019-2698
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/dos/46723.txt
+    reference_type: exploit
+    reference_id: CVE-2019-2698
   - url: https://security.gentoo.org/glsa/201908-10
     reference_type:
     reference_id: GLSA-201908-10

@@ -27,23 +27,30 @@ summary: |
       Chrome, the worst of which could result in the execution of arbitrary code.
 impacted_packages:
   - purl: pkg:ebuild/www-client/chromium
-    affected_versions:
-    fixed_versions: vers:ebuild/>=62.0.3202.62
+    affected_versions: vers:ebuild/<62.0.3202.62
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/www-client/google-chrome
+    affected_versions: vers:ebuild/<62.0.3202.62
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/www-client/google-chrome
     affected_versions:
     fixed_versions: vers:ebuild/>=62.0.3202.62
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/bo0om/cve-2017-5124
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/bo0om/cve-2017-5124
+        commit: 265c2f139cd404b3ba0e12b498642979ca89036c
     introduced_in_commits: []
   - purl: pkg:ebuild/www-client/chromium
-    affected_versions: vers:ebuild/<62.0.3202.62
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/www-client/google-chrome
-    affected_versions: vers:ebuild/<62.0.3202.62
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=62.0.3202.62
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -54,6 +61,12 @@ severities:
     url:
 weaknesses: []
 references:
+  - url: https://github.com/Bo0oM/CVE-2017-5124/tree/265c2f139cd404b3ba0e12b498642979ca89036c
+    reference_type: exploit
+    reference_id: CVE-2017-5124
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/local/45867.txt
+    reference_type: exploit
+    reference_id: CVE-2017-5124
   - url: https://security.gentoo.org/glsa/201710-24
     reference_type:
     reference_id: GLSA-201710-24

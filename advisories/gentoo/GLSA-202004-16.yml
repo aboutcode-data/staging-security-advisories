@@ -8,13 +8,13 @@ summary: |
       which could result in the arbitrary execution of code.
 impacted_packages:
   - purl: pkg:ebuild/net-analyzer/cacti
-    affected_versions:
-    fixed_versions: vers:ebuild/>=1.2.11
+    affected_versions: vers:ebuild/<1.2.11
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/net-analyzer/cacti
-    affected_versions: vers:ebuild/<1.2.11
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.2.11
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -25,18 +25,6 @@ severities:
     url:
 weaknesses: []
 references:
-  - url: https://github.com/mhaskar/CVE-2020-8813/blob/4877c2b2f378ce5937f56b259b69b02840514d4c/Cacti-postauth-rce.py
-    reference_type: exploit
-    reference_id: CVE-2020-8813
-  - url: https://github.com/mhaskar/CVE-2020-8813/blob/dfb48378f39249ff54ecf24ccd3b89db26971ccf/Cacti-preauth-rce.py
-    reference_type: exploit
-    reference_id: CVE-2020-8813
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/webapps/48144.py
-    reference_type: exploit
-    reference_id: CVE-2020-8813
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/webapps/48145.py
-    reference_type: exploit
-    reference_id: CVE-2020-8813
   - url: https://security.gentoo.org/glsa/202004-16
     reference_type:
     reference_id: GLSA-202004-16

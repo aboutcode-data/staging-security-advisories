@@ -9,19 +9,14 @@ summary: |
   Multiple vulnerabilities have been found in PostgreSQL, the worst
       which could lead to privilege escalation.
 impacted_packages:
+  - purl: pkg:ebuild/dev-db/postgresql
+    affected_versions: vers:ebuild/<10.5
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:ebuild/dev-db/postgresql?slot=9.3
     affected_versions:
     fixed_versions: vers:ebuild/>=9.3.24
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/dev-db/postgresql?slot=9.4
-    affected_versions:
-    fixed_versions: vers:ebuild/>=9.4.19
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/dev-db/postgresql?slot=9.5
-    affected_versions:
-    fixed_versions: vers:ebuild/>=9.5.14
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/dev-db/postgresql?slot=9.6
@@ -34,9 +29,14 @@ impacted_packages:
     fixed_versions: vers:ebuild/>=10.5
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:ebuild/dev-db/postgresql
-    affected_versions: vers:ebuild/<10.5
-    fixed_versions:
+  - purl: pkg:ebuild/dev-db/postgresql?slot=9.4
+    affected_versions:
+    fixed_versions: vers:ebuild/>=9.4.19
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-db/postgresql?slot=9.5
+    affected_versions:
+    fixed_versions: vers:ebuild/>=9.5.14
     fixed_in_commits: []
     introduced_in_commits: []
 severities:

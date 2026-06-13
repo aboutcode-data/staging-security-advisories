@@ -71,13 +71,13 @@ summary: |
       leading to remote execution of arbitrary code.
 impacted_packages:
   - purl: pkg:ebuild/dev-lang/php
-    affected_versions:
-    fixed_versions: vers:ebuild/>=5.3.8
+    affected_versions: vers:ebuild/<5.3.8
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/dev-lang/php
-    affected_versions: vers:ebuild/<5.3.8
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=5.3.8
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -130,9 +130,6 @@ references:
   - url: https://www.securityfocus.com/bid/45668/info
     reference_type: exploit
     reference_id: CVE-2010-4645;OSVDB-70370
-  - url: http://securityreason.com/securityalert/8087
-    reference_type: exploit
-    reference_id: CVE-2011-0420;OSVDB-73275
   - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/dos/16182.txt
     reference_type: exploit
     reference_id: CVE-2011-0420;OSVDB-73275
@@ -142,12 +139,6 @@ references:
   - url: https://www.securityfocus.com/bid/46429/info
     reference_type: exploit
     reference_id: CVE-2011-0420;OSVDB-73275
-  - url: http://securityreason.com/securityalert/8146
-    reference_type: exploit
-    reference_id: CVE-2011-0421
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/dos/17004.txt
-    reference_type: exploit
-    reference_id: CVE-2011-0421
   - url: http://permalink.gmane.org/gmane.comp.security.oss.general/4198
     reference_type: exploit
     reference_id: CVE-2011-0708

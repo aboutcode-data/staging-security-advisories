@@ -8,13 +8,13 @@ summary: |
       condition.
 impacted_packages:
   - purl: pkg:ebuild/www-servers/lighttpd
-    affected_versions:
-    fixed_versions: vers:ebuild/>=1.4.25-r1
+    affected_versions: vers:ebuild/<1.4.25-r1
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/www-servers/lighttpd
-    affected_versions: vers:ebuild/<1.4.25-r1
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.4.25-r1
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -25,12 +25,6 @@ severities:
     url:
 weaknesses: []
 references:
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/dos/33591.sh
-    reference_type: exploit
-    reference_id: CVE-2010-0295;OSVDB-62068
-  - url: https://www.securityfocus.com/bid/38036/info
-    reference_type: exploit
-    reference_id: CVE-2010-0295;OSVDB-62068
   - url: https://security.gentoo.org/glsa/201006-17
     reference_type:
     reference_id: GLSA-201006-17

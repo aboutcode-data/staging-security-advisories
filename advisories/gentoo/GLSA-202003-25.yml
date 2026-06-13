@@ -12,13 +12,13 @@ summary: |
       which could result in a Denial of Service condition.
 impacted_packages:
   - purl: pkg:ebuild/media-libs/tiff
-    affected_versions:
-    fixed_versions: vers:ebuild/>=4.1.0
+    affected_versions: vers:ebuild/<4.1.0
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/media-libs/tiff
-    affected_versions: vers:ebuild/<4.1.0
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=4.1.0
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -29,6 +29,12 @@ severities:
     url:
 weaknesses: []
 references:
+  - url: http://bugzilla.maptools.org/show_bug.cgi?id=2750
+    reference_type: exploit
+    reference_id: CVE-2017-17095
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/dos/43322.txt
+    reference_type: exploit
+    reference_id: CVE-2017-17095
   - url: https://security.gentoo.org/glsa/202003-25
     reference_type:
     reference_id: GLSA-202003-25

@@ -8,13 +8,13 @@ summary: |
       arbitrary command execution.
 impacted_packages:
   - purl: pkg:ebuild/dev-lang/ruby?slot=2.2
-    affected_versions:
-    fixed_versions: vers:ebuild/>=2.2.9
+    affected_versions: vers:ebuild/<2.2.9
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/dev-lang/ruby?slot=2.2
-    affected_versions: vers:ebuild/<2.2.9
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.2.9
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -25,6 +25,12 @@ severities:
     url:
 weaknesses: []
 references:
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/ruby/local/43381.md
+    reference_type: exploit
+    reference_id: CVE-2017-17405
+  - url: https://hackerone.com/reports/294462
+    reference_type: exploit
+    reference_id: CVE-2017-17405
   - url: https://security.gentoo.org/glsa/201802-05
     reference_type:
     reference_id: GLSA-201802-05

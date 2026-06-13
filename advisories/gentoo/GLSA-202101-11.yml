@@ -6,6 +6,11 @@ summary: |
   Multiple vulnerabilities were discovered in Gentoo's ebuild for
       Zabbix which could lead to root privilege escalation.
 impacted_packages:
+  - purl: pkg:ebuild/net-analyzer/zabbix
+    affected_versions: vers:ebuild/<4.4.6
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:ebuild/net-analyzer/zabbix?slot=0/3.0
     affected_versions:
     fixed_versions: vers:ebuild/>=3.0.30
@@ -14,11 +19,6 @@ impacted_packages:
   - purl: pkg:ebuild/net-analyzer/zabbix?slot=0/4.0
     affected_versions:
     fixed_versions: vers:ebuild/>=4.0.18
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/net-analyzer/zabbix
-    affected_versions: vers:ebuild/<4.4.6
-    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
 severities:

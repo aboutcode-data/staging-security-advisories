@@ -8,23 +8,30 @@ summary: |
       certain modeline options are treated.
 impacted_packages:
   - purl: pkg:ebuild/app-editors/vim
-    affected_versions:
-    fixed_versions: vers:ebuild/>=8.1.1486
+    affected_versions: vers:ebuild/<8.1.1486
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/app-editors/gvim
-    affected_versions:
-    fixed_versions: vers:ebuild/>=8.1.1486
+    affected_versions: vers:ebuild/<8.1.1486
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/app-editors/vim
-    affected_versions: vers:ebuild/<8.1.1486
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=8.1.1486
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:ebuild/app-editors/gvim
-    affected_versions: vers:ebuild/<8.1.1486
+  - purl: pkg:github/numirias/security
+    affected_versions:
     fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/numirias/security
+        commit: 6171866eb84b4deed10cd5214130f1070c82db13
+    introduced_in_commits: []
+  - purl: pkg:ebuild/app-editors/gvim
+    affected_versions:
+    fixed_versions: vers:ebuild/>=8.1.1486
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -35,6 +42,12 @@ severities:
     url:
 weaknesses: []
 references:
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/local/46973.md
+    reference_type: exploit
+    reference_id: CVE-2019-12735
+  - url: https://raw.githubusercontent.com/numirias/security/6171866eb84b4deed10cd5214130f1070c82db13/doc/2019-06-04_ace-vim-neovim.md
+    reference_type: exploit
+    reference_id: CVE-2019-12735
   - url: https://security.gentoo.org/glsa/202003-04
     reference_type:
     reference_id: GLSA-202003-04

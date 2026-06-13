@@ -9,13 +9,13 @@ summary: |
       argument injection.
 impacted_packages:
   - purl: pkg:ebuild/net-mail/dovecot
-    affected_versions:
-    fixed_versions: vers:ebuild/>=1.0.13-r1
+    affected_versions: vers:ebuild/<1.0.13-r1
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/net-mail/dovecot
-    affected_versions: vers:ebuild/<1.0.13-r1
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.0.13-r1
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -26,9 +26,6 @@ severities:
     url:
 weaknesses: []
 references:
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/remote/5257.py
-    reference_type: exploit
-    reference_id: CVE-2008-1218
   - url: https://security.gentoo.org/glsa/200803-25
     reference_type:
     reference_id: GLSA-200803-25

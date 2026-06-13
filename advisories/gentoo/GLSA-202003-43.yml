@@ -11,16 +11,6 @@ summary: |
       worst of which could lead to arbitrary code execution.
 impacted_packages:
   - purl: pkg:ebuild/www-servers/tomcat?slot=8.5
-    affected_versions:
-    fixed_versions: vers:ebuild/>=8.5.51
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/www-servers/tomcat?slot=7
-    affected_versions:
-    fixed_versions: vers:ebuild/>=7.0.100
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/www-servers/tomcat?slot=8.5
     affected_versions: vers:ebuild/<8.5.51
     fixed_versions:
     fixed_in_commits: []
@@ -28,6 +18,16 @@ impacted_packages:
   - purl: pkg:ebuild/www-servers/tomcat?slot=7
     affected_versions: vers:ebuild/<7.0.100
     fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/www-servers/tomcat?slot=8.5
+    affected_versions:
+    fixed_versions: vers:ebuild/>=8.5.51
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/www-servers/tomcat?slot=7
+    affected_versions:
+    fixed_versions: vers:ebuild/>=7.0.100
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -38,18 +38,9 @@ severities:
     url:
 weaknesses: []
 references:
+  - url: https://security.gentoo.org/glsa/202003-43
+    reference_type:
+    reference_id:
   - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/webapps/50119.txt
     reference_type: exploit
     reference_id: CVE-2019-0221
-  - url: https://github.com/YDHCUI/CNVD-2020-10487-Tomcat-Ajp-lfi/blob/8bd38f4cf22331ecf4e48096a78c5931509c26be/CNVD-2020-10487-Tomcat-Ajp-lfi.py
-    reference_type: exploit
-    reference_id: CVE-2020-1938
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/webapps/48143.py
-    reference_type: exploit
-    reference_id: CVE-2020-1938
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/webapps/49039.rb
-    reference_type: exploit
-    reference_id: CVE-2020-1938
-  - url: https://security.gentoo.org/glsa/202003-43
-    reference_type:
-    reference_id: GLSA-202003-43

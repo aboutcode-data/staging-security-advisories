@@ -14,6 +14,11 @@ summary: |
       which could lead to arbitrary code execution.
 impacted_packages:
   - purl: pkg:ebuild/dev-lang/python
+    affected_versions: vers:ebuild/<3.3.5-r1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-lang/python
     affected_versions:
     fixed_versions: vers:ebuild/>=3.3.5-r1
     fixed_in_commits: []
@@ -21,11 +26,6 @@ impacted_packages:
   - purl: pkg:ebuild/dev-lang/python
     affected_versions:
     fixed_versions: vers:ebuild/>=2.7.9-r1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/dev-lang/python
-    affected_versions: vers:ebuild/<3.3.5-r1
-    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -36,9 +36,9 @@ severities:
     url:
 weaknesses: []
 references:
+  - url: https://security.gentoo.org/glsa/201503-10
+    reference_type:
+    reference_id:
   - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/remote/31875.py
     reference_type: exploit
     reference_id: CVE-2014-1912;OSVDB-102929
-  - url: https://security.gentoo.org/glsa/201503-10
-    reference_type:
-    reference_id: GLSA-201503-10

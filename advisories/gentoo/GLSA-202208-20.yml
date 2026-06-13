@@ -27,23 +27,23 @@ summary: Multiple vulnerabilities have been discovered in Apache Webserver, the 
   could result in remote code execution.
 impacted_packages:
   - purl: pkg:ebuild/app-admin/apache-tools
-    affected_versions:
-    fixed_versions: vers:ebuild/>=2.4.54
+    affected_versions: vers:ebuild/<2.4.54
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/www-servers/apache
-    affected_versions:
-    fixed_versions: vers:ebuild/>=2.4.54
+    affected_versions: vers:ebuild/<2.4.54
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/app-admin/apache-tools
-    affected_versions: vers:ebuild/<2.4.54
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.4.54
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/www-servers/apache
-    affected_versions: vers:ebuild/<2.4.54
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.4.54
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -60,6 +60,9 @@ references:
   - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/webapps/50446.sh
     reference_type: exploit
     reference_id: CVE-2021-42013
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/webapps/51193.py
+    reference_type: exploit
+    reference_id: CVE-2021-44790
   - url: https://security.gentoo.org/glsa/202208-20
     reference_type:
     reference_id: GLSA-202208-20

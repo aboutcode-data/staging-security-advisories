@@ -8,13 +8,13 @@ summary: |
       arbitrary code.
 impacted_packages:
   - purl: pkg:ebuild/mail-filter/libspf2
-    affected_versions:
-    fixed_versions: vers:ebuild/>=1.2.8
+    affected_versions: vers:ebuild/<1.2.8
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/mail-filter/libspf2
-    affected_versions: vers:ebuild/<1.2.8
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.2.8
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -28,6 +28,3 @@ references:
   - url: https://security.gentoo.org/glsa/200810-03
     reference_type:
     reference_id: GLSA-200810-03
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/dos/6805.txt
-    reference_type: exploit
-    reference_id: OSVDB-49277;CVE-2008-2469

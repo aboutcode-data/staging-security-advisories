@@ -62,13 +62,13 @@ summary: |
       attackers to execute arbitrary code or conduct various other attacks.
 impacted_packages:
   - purl: pkg:ebuild/app-text/acroread
-    affected_versions:
-    fixed_versions: vers:ebuild/>=9.4.7
+    affected_versions: vers:ebuild/<9.4.7
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/app-text/acroread
-    affected_versions: vers:ebuild/<9.4.7
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=9.4.7
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -79,6 +79,18 @@ severities:
     url:
 weaknesses: []
 references:
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/windows/dos/15419.txt
+    reference_type: exploit
+    reference_id: CVE-2010-4091;OSVDB-69005
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/windows/remote/18437.txt
+    reference_type: exploit
+    reference_id: CVE-2011-2140;OSVDB-74439
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/windows/remote/18479.rb
+    reference_type: exploit
+    reference_id: CVE-2011-2140;OSVDB-74439
+  - url: http://www.zerodayinitiative.com/advisories/ZDI-11-276/
+    reference_type: exploit
+    reference_id: CVE-2011-2140;OSVDB-74439
   - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/windows/local/18366.rb
     reference_type: exploit
     reference_id: CVE-2011-2462;OSVDB-77529

@@ -10,13 +10,13 @@ aliases:
 summary: Multiple vulnerabilities have been discovered in Apache.
 impacted_packages:
   - purl: pkg:ebuild/www-servers/apache
-    affected_versions:
-    fixed_versions: vers:ebuild/>=2.2.8
+    affected_versions: vers:ebuild/<2.2.8
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/www-servers/apache
-    affected_versions: vers:ebuild/<2.2.8
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.2.8
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -27,6 +27,12 @@ severities:
     url:
 weaknesses: []
 references:
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/remote/31052.java
+    reference_type: exploit
+    reference_id: CVE-2008-0455;OSVDB-41019
+  - url: https://www.securityfocus.com/bid/27409/info
+    reference_type: exploit
+    reference_id: CVE-2008-0455;OSVDB-41019
   - url: https://security.gentoo.org/glsa/200803-19
     reference_type:
     reference_id: GLSA-200803-19
