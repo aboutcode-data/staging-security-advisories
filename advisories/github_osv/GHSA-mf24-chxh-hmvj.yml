@@ -33,7 +33,18 @@ summary: "Envoy Gateway Log Injection Vulnerability\n### Impact\nIn all Envoy Ga
   \      downstream_remote_address: '%DOWNSTREAM_REMOTE_ADDRESS%'\n      requested_server_name:\
   \ '%REQUESTED_SERVER_NAME%'\n      route_name: '%ROUTE_NAME%'\n```\nsee API definition [here](https://gateway.envoyproxy.io/v1.3/api/extension_types/#proxyaccesslogformat)\n\
   \n### References\n_Are there any links users can visit to find out more?_"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/envoyproxy/gateway
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/envoyproxy/gateway
+        commit: 041d474a70d5921e5d65e6e14ea60e14dac70b01
+      - vcs_url: https://github.com/envoyproxy/gateway
+        commit: 358bed50dcb7b32f39a2edb252fb1399c7fc65dc
+      - vcs_url: https://github.com/envoyproxy/gateway
+        commit: 8f48f5199cf1bbb9a8ac0695c5171bfef6c9198a
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1

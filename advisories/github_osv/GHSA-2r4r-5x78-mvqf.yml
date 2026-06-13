@@ -105,7 +105,18 @@ summary: "KubeVirt Isolation Detection Flaw Allows Arbitrary File Permission Cha
   \ exploited, for example, to change the ownership of arbitrary files on the host node to the\
   \ unprivileged user with UID `107` (the same user used by `virt-launcher`) thus, compromising\
   \ the CIA (Confidentiality, Integrity and Availability) of data on the host."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/kubevirt/kubevirt
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/kubevirt/kubevirt
+        commit: f59ca63133f25de8fceb3e2a0e5cc0b7bdb6a265
+      - vcs_url: https://github.com/kubevirt/kubevirt
+        commit: 8644dbe0d04784b0bfa8395b91ecbd6001f88f6b
+      - vcs_url: https://github.com/kubevirt/kubevirt
+        commit: 3ce9f41c54d04a65f10b23a46771391c00659afb
+    introduced_in_commits: []
 severities:
   - score: '5.0'
     scoring_system: cvssv3.1

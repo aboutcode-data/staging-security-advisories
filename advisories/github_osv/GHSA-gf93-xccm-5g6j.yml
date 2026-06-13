@@ -12,7 +12,16 @@ summary: "MARIN3R: Cross-Namespace Vulnerability in the Operator\n## Summary\nCr
   \ Workarounds\nRestrict DiscoveryServiceCertificate create permissions to cluster administrators\
   \ \nonly until patched version is deployed.\n\n## Credit\nThanks to @debuggerchen for the\
   \ responsible disclosure."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/3scale-sre/marin3r
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/3scale-sre/marin3r
+        commit: c60246a43ae8c0c38dd7267f298d68a121a159fa
+      - vcs_url: https://github.com/3scale-sre/marin3r
+        commit: 859b14115fde1d67620e645cd1b62e90e30d9981
+    introduced_in_commits: []
 severities:
   - score: '8.7'
     scoring_system: cvssv4

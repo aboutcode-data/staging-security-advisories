@@ -6,7 +6,14 @@ aliases:
 summary: |
   Mattermost allows regular users to access archived channel content and files
   Mattermost versions < 11.0 fail to properly enforce the "Allow users to view archived channels" setting which allows regular users to access archived channel content and files via the "Open in Channel" functionality from followed threads
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: c8d66301415d5b447df0e829bdbaa92e8a83ecf8
+    introduced_in_commits: []
 severities:
   - score: '3.1'
     scoring_system: cvssv3.1

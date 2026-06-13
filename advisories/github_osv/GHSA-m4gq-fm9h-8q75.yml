@@ -15,7 +15,14 @@ summary: |
 
   ### Workarounds
   Avoid passing cache backend credentials with CLI arguments. Make sure access to traces and BuildKit history records is kept secure.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/docker/buildx
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/docker/buildx
+        commit: 18ccba072076ddbfb0aeedd6746d7719b0729b58
+    introduced_in_commits: []
 severities:
   - score: '4.1'
     scoring_system: cvssv4

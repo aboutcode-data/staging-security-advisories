@@ -125,7 +125,16 @@ summary: "KubeVirt Vulnerable to Arbitrary Host File Read and Write\n### Summary
   \ error initializing audit plugin sudoers_audit\n```\n\n### Impact\n\nHost files arbitrary\
   \ read and write - this vulnerability it can unintentionally grant access to sensitive host\
   \ files, compromising their integrity and confidentiality."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/kubevirt/kubevirt
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/kubevirt/kubevirt
+        commit: ff3b69b08b6b9c8d08d23735ca8d82455f790a69
+      - vcs_url: https://github.com/kubevirt/kubevirt
+        commit: 00d03e43e3bf03e563136695a4732b65ed42d764
+    introduced_in_commits: []
 severities:
   - score: '7.7'
     scoring_system: cvssv3.1
@@ -143,9 +152,9 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-200
   - CWE-123
   - CWE-732
+  - CWE-200
 references:
   - url: https://github.com/kubevirt/kubevirt
     reference_type:

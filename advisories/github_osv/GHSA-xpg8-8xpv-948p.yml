@@ -6,7 +6,14 @@ aliases:
 summary: |
   Mattermost does not enforce MFA on WebSocket connections
   Mattermost versions < 11 fail to enforce multi-factor authentication on WebSocket connections which allows unauthenticated users to access sensitive information via WebSocket events.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 7d8b7b5e4a6076b2f7c87606883c417f9a610df5
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1

@@ -114,7 +114,18 @@ summary: "KubeVirt's Improper TLS Certificate Management Handling Allows API Ide
   \ who compromises a `virt-handler` instance, could exploit these shared credentials to impersonate\
   \ `virt-api` and execute privileged operations against other `virt-handler` instances potentially\
   \ compromising the integrity and availability of the managed by it VM."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/kubevirt/kubevirt
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/kubevirt/kubevirt
+        commit: b9773bc588e6e18ece896a2dad5336ef7a653074
+      - vcs_url: https://github.com/kubevirt/kubevirt
+        commit: af2f08a9a186eccc650f87c30ab3e07b669e8b5b
+      - vcs_url: https://github.com/kubevirt/kubevirt
+        commit: 231dc69723f331dc02f65a31ab4c3d6869f40d6a
+    introduced_in_commits: []
 severities:
   - score: '4.7'
     scoring_system: cvssv3.1

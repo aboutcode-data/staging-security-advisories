@@ -12,7 +12,14 @@ summary: "SpiceDB WriteRelationships fails silently if payload is too big\n### I
   \ incorrect permission check results, if those relationships had to be read to resolve the\
   \ relation involving the exclusion\n\n### Patches\n\nUpgrade to v.145.2.\n\n### Workarounds\n\
   \nSet `--write-relationships-max-updates-per-call` to `1000`."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/authzed/spicedb
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/authzed/spicedb
+        commit: d0cd103a92cc1915636733fb1d1730c2c7f74851
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1

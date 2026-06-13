@@ -68,7 +68,14 @@ summary: "esm.sh CDN service has JS Template Literal Injection in CSS-to-JavaScr
   https://github.com/user-attachments/assets/b2cd56a9-930e-4e64-a05c-5df02682c897\" />\n\n\n\
   \n### Impact\nCan execute arbitrary JavaScript.\nThis can sometimes lead to remote code execution.\n\
   (Electron App, Deno App, ...)"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/esm-dev/esm.sh
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/esm-dev/esm.sh
+        commit: 87d2f6497574bf4448641a5527a3ac2beba5fd6c
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1

@@ -36,7 +36,14 @@ summary: "Wasmtime provides unsound API access to a WebAssembly shared linear me
   \ unable to upgrade. Note that core dumps are disabled by default but the wasm threads proposal\
   \ (and shared memory) is enabled by default. It's recommended to upgrade to a patched version\
   \ of Wasmtime, however."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/bytecodealliance/wasmtime
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/bytecodealliance/wasmtime
+        commit: 9ebb6934f00d58b92fb68ed0e0b16c0ae828ca10
+    introduced_in_commits: []
 severities:
   - score: '1.8'
     scoring_system: cvssv3.1

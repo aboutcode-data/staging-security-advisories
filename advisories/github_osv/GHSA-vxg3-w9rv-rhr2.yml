@@ -19,7 +19,16 @@ summary: "Contrast leaks workload secrets to logs on INFO level\nThis is the sam
   \ logging needs to be turned off. \n\n### References\n\nFirst occurrence:\n* https://github.com/edgelesssys/contrast/security/advisories/GHSA-h5f8-crrq-4pw8\n\
   \nWe are defining a process for handling GHSAs that should prevent such regressions in the\
   \ future:\n* https://github.com/edgelesssys/contrast/pull/1739"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/edgelesssys/contrast
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/edgelesssys/contrast
+        commit: 5a5512c4af63c17bb66331e7bd2768a863b2f225
+      - vcs_url: https://github.com/edgelesssys/contrast
+        commit: cf58026b30c43fe7df91eac5322da02e1725d554
+    introduced_in_commits: []
 severities:
   - score: '7.3'
     scoring_system: cvssv3.1

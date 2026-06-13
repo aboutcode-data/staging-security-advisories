@@ -14,7 +14,14 @@ summary: "VictoriaMetrics' Snappy Decoder DoS Vulnerability is Causing OOM\n### 
   \ control flags or a firewall); this advisory addresses malicious input that should not be\
   \ possible under a [correctly secured](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#security)\
   \ deployment."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/victoriametrics/victoriametrics
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/victoriametrics/victoriametrics
+        commit: 51b44afd34d2c9a392d4ebedeeb5b4a7f5beca24
+    introduced_in_commits: []
 severities:
   - score: '2.7'
     scoring_system: cvssv3.1

@@ -14,7 +14,16 @@ summary: "Vela Server Has Insufficient Webhook Payload Data Verification\n### Im
   \ to fix or remediate the vulnerability without upgrading?_\n\nThere are no workarounds to\
   \ the issue.\n\n### References\n_Are there any links users can visit to find out more?_\n\n\
   Please see linked CWEs (common weakness enumerators) for more information."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/go-vela/server
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/go-vela/server
+        commit: 67c1892e2464dc54b8d2588815dfb7819222500b
+      - vcs_url: https://github.com/go-vela/server
+        commit: 257886e5a3eea518548387885894e239668584f5
+    introduced_in_commits: []
 severities:
   - score: '8.5'
     scoring_system: cvssv3.1
@@ -27,8 +36,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-290
   - CWE-345
+  - CWE-290
 references:
   - url: https://github.com/go-vela/server
     reference_type:

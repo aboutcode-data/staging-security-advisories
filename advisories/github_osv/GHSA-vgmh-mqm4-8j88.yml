@@ -17,7 +17,14 @@ summary: |
   - `pared::sync::Parc::try_from_arc`
 
   This flaw was fixed in [108f540ea8acb6073751a1aa386085c1cdc4fd1e](https://github.com/radekvit/pared/commit/108f540ea8acb6073751a1aa386085c1cdc4fd1e) by requiring that the type stored in the `Arc`s and `Rc`s passed to these functions contain `T: 'static`.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/radekvit/pared
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/radekvit/pared
+        commit: 108f540ea8acb6073751a1aa386085c1cdc4fd1e
+    introduced_in_commits: []
 severities:
   - score: '6.8'
     scoring_system: cvssv4

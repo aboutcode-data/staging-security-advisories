@@ -41,7 +41,14 @@ summary: "github.com/ulikunitz/xz leaks memory when decoding a corrupted multipl
   \ unpackHash)\n\n\treturn os.Rename(tmpFile.Name(), unpackPath)\n}\n```\n\n\n\n### Impact\n\
   Servers with a small amount of RAM that download and unpack a large number of unverified LZMA\
   \ archives"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/ulikunitz/xz
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/ulikunitz/xz
+        commit: 88ddf1d0d98d688db65de034f48960b2760d2ae2
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1

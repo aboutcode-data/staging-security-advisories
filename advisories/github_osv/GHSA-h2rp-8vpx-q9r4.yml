@@ -14,7 +14,14 @@ summary: "cheqd-node Security patch for upstream vulnerabilities in IBC-Go (ISA-
   \ full nodes, and IBC relayers should upgrade to [cheqd-node v3.1.8](https://github.com/cheqd/cheqd-node/releases/tag/v3.1.8).\
   \ This upgrade does not require a software upgrade proposal on-chain and is meant to be non\
   \ state-breaking."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/cheqd/cheqd-node
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/cheqd/cheqd-node
+        commit: 5a58b08dfb8dfc24631fb85b641cb75e9178d07f
+    introduced_in_commits: []
 severities:
   - score: CRITICAL
     scoring_system: generic_textual

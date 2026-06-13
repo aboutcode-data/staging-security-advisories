@@ -6,7 +6,14 @@ aliases:
 summary: |
   jose2go is vulnerable to a JWT bomb attack through its decode function
   An issue was discovered in dvsekhvalnov jose2go 1.5.0 thru 1.7.0 allowing an attacker to cause a Denial-of-Service (DoS) via crafted JSON Web Encryption (JWE) token with an exceptionally high compression ratio.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/dvsekhvalnov/jose2go
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/dvsekhvalnov/jose2go
+        commit: 0a0673dd7f2820a446de5b04b9094b2291d77d5d
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

@@ -106,7 +106,20 @@ summary: "runc container escape via \"masked path\" abuse due to mount race cond
   \  \n\n### Credits ###  \nThanks to Lei Wang (@ssst0n3 from Huawei) for finding and reporting\
   \ the original vulnerability (Attack 1), and Li Fubang (@lifubang from acmcoder.com, CIIC)\
   \ for discovering another attack vector (Attack 2) based on @ssst0n3's initial findings."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/opencontainers/runc
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/opencontainers/runc
+        commit: db19bbed5348847da433faa9d69e9f90192bfa64
+      - vcs_url: https://github.com/opencontainers/runc
+        commit: 8476df83b534a2522b878c0507b3491def48db9f
+      - vcs_url: https://github.com/opencontainers/runc
+        commit: 5d7b2424072449872d1cd0c937f2ca25f418eb66
+      - vcs_url: https://github.com/opencontainers/runc
+        commit: 1a30a8f3d921acbbb6a4bb7e99da2c05f8d48522
+    introduced_in_commits: []
 severities:
   - score: '7.3'
     scoring_system: cvssv4

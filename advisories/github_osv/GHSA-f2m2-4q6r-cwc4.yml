@@ -6,7 +6,14 @@ aliases:
 summary: |
   simple-admin-core SQL Injection vulnerability
   An issue was discovered in simple-admin-core v1.2.0 thru v1.6.7. The /sys-api/role/update interface in the simple-admin-core system has a limited SQL injection vulnerability, which may lead to partial data leakage or disruption of normal system operations.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/suyuan32/simple-admin-core
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/suyuan32/simple-admin-core
+        commit: f1e2c4f3c55cd5953ad7f7b0706df48adaaeb18a
+    introduced_in_commits: []
 severities:
   - score: '7.0'
     scoring_system: cvssv3.1

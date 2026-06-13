@@ -14,7 +14,14 @@ summary: "OpenBao Root Namespace Operator May Elevate Token Privileges\n### Impa
   \ may be sufficient to prohibit this type of attack. \n\n### References\n\nThis issue was\
   \ disclosed to HashiCorp and is the OpenBao equivalent of the following tickets:\n\n- https://discuss.hashicorp.com/t/hcsec-2025-13-vault-root-namespace-operator-may-elevate-token-privileges/76032\n\
   - https://nvd.nist.gov/vuln/detail/cve-2025-5999"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/openbao/openbao
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openbao/openbao
+        commit: 9b0b5d4f345fdfb1065956f042b12cbd86cd6e0f
+    introduced_in_commits: []
 severities:
   - score: '7.2'
     scoring_system: cvssv3.1
@@ -27,8 +34,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-269
   - CWE-266
+  - CWE-269
 references:
   - url: https://discuss.hashicorp.com/t/hcsec-2025-13-vault-root-namespace-operator-may-elevate-token-privileges/76032
     reference_type:

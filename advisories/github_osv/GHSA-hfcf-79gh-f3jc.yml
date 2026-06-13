@@ -6,7 +6,14 @@ aliases:
 summary: |
   Memos has Cross-Site Scripting (XSS) Vulnerability in Image URLs
   The Memos application, up to version v0.24.3, allows for the embedding of markdown images with arbitrary URLs. When a user views a memo containing such an image, their browser automatically fetches the image URL without explicit user consent or interaction beyond viewing the memo. This can be exploited by an attacker to disclose the viewing user's IP address, browser User-Agent string, and potentially other request-specific information to the attacker-controlled server, leading to information disclosure and user tracking.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/usememos/memos
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/usememos/memos
+        commit: 46d5307d7f210067b46e07400a728fa9095803d9
+    introduced_in_commits: []
 severities:
   - score: '5.2'
     scoring_system: cvssv4

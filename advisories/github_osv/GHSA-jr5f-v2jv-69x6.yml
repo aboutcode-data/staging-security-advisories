@@ -35,14 +35,23 @@ summary: "axios Requests Vulnerable To Possible SSRF and Credential Leakage via 
   \ not validate path parameters is affected by this issue."
 impacted_packages:
   - purl: pkg:npm/axios
+    affected_versions: vers:npm/<0.30.0
+    fixed_versions: vers:npm/0.30.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/axios
     affected_versions: vers:npm/>=1.0.0|<1.8.2
     fixed_versions: vers:npm/1.8.2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:npm/axios
-    affected_versions: vers:npm/<0.30.0
-    fixed_versions: vers:npm/0.30.0
-    fixed_in_commits: []
+  - purl: pkg:github/axios/axios
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/axios/axios
+        commit: 02c3c69ced0f8fd86407c23203835892313d7fde
+      - vcs_url: https://github.com/axios/axios
+        commit: fb8eec214ce7744b5ca787f2c3b8339b2f54b00f
     introduced_in_commits: []
 severities:
   - score: '7.7'
@@ -76,9 +85,9 @@ references:
   - url: https://github.com/axios/axios/releases/tag/v1.8.2
     reference_type:
     reference_id:
-  - url: https://github.com/axios/axios/security/advisories/GHSA-jr5f-v2jv-69x6
-    reference_type:
-    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2025-27152
     reference_type:
-    reference_id:
+    reference_id: CVE-2025-27152
+  - url: https://github.com/axios/axios/security/advisories/GHSA-jr5f-v2jv-69x6
+    reference_type:
+    reference_id: GHSA-jr5f-v2jv-69x6

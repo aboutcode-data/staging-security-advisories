@@ -6,7 +6,14 @@ aliases:
 summary: |
   Kubernetes Nodes can delete themselves by adding an OwnerReference
   A vulnerability exists in the NodeRestriction admission controller in Kubernetes clusters where node users can delete their corresponding node object by patching themselves with an OwnerReference to a cluster-scoped resource. If the OwnerReference resource does not exist or is subsequently deleted, the given node object will be deleted via garbage collection.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/kubernetes/kubernetes
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/kubernetes/kubernetes
+        commit: a2d98cac56a0c5cb2d8abc4d087fc00846b3bc0f
+    introduced_in_commits: []
 severities:
   - score: '6.7'
     scoring_system: cvssv3.1

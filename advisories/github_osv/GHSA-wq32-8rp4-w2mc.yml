@@ -6,7 +6,16 @@ aliases:
 summary: |
   Nethermind Juno Potential Denial of Service (DoS) via Integer Overflow
   An integer overflow in Nethermind Juno before v0.12.5 within the Sierra bytecode decompression logic within the "cairo-lang-starknet-classes" library could allow remote attackers to trigger an infinite loop (and high CPU usage) by submitting a malicious Declare v2/v3 transaction. This results in a denial-of-service condition for affected Starknet full-node implementations.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/nethermindeth/juno
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/nethermindeth/juno
+        commit: 51074875941aa111c5dd2b41f2ec890a4a15b587
+      - vcs_url: https://github.com/nethermindeth/juno
+        commit: b9fe28df6a4339a66f91bff723c61dc063f9ed50
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

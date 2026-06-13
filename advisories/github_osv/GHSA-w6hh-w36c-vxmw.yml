@@ -6,7 +6,14 @@ aliases:
 summary: |
   LocalAI Cross-Site Scripting (XSS) vulnerability in its search functionality
   mudler/localai version v2.21.1 contains a Cross-Site Scripting (XSS) vulnerability in its search functionality. The vulnerability arises due to improper sanitization of user input, allowing the injection and execution of arbitrary JavaScript code. This can lead to the execution of malicious scripts in the context of the victim's browser, potentially compromising user sessions, stealing session cookies, redirecting users to malicious websites, or manipulating the DOM.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mudler/localai
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mudler/localai
+        commit: a1634b219a4e52813e70ff07e6376a01449c4515
+    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1

@@ -9,7 +9,14 @@ summary: |
 
   # Original Description
   Plenti <= 0.7.16 is vulnerable to code execution. Users uploading '.svelte' files with the /postLocal endpoint can define the file name as javascript codes. The server executes the uploaded file name in host, and cause code execution.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/plentico/plenti
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/plentico/plenti
+        commit: c3e72a9ebbc2a03f4b0f3104becbfc25e390cb8e
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1

@@ -6,7 +6,22 @@ aliases:
 summary: |
   Mattermost allows an attacker to edit arbitrary posts via a crafted MSTeams plugin OAuth redirect URL
   Mattermost versions 10.11.x <= 10.11.3, 10.5.x <= 10.5.11, 10.12.x <= 10.12.0 fail to validate the relationship between the post being updated and the MSTeams plugin OAuth flow which allows an attacker to edit arbitrary posts via a crafted MSTeams plugin OAuth redirect URL.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: e47349ea0fc072ee1dfb196d9bb1c8fd1a589224
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 375ce229f4923205394d8f27925372b2cbf28130
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: b822cea06bf5683a176e2c92711241bd29cd9389
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 6c288aa62bb3343183ec1d0a06360d14aa0193e9
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: a41db04d2746ab549d056db4ede4cd803f64989c
+    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1

@@ -17,7 +17,14 @@ summary: |
   Any **ONE** of these is sufficient to block this reporting:
   - Disable usage reporting by setting configuration option `usage_report.enabled` or environment variable `LAKEFS_USAGE_REPORT_ENABLED` to `false`.
   - Using load-balancer or application level firewall - blocking the request route /api/v1/usage-report/summary.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/treeverse/lakefs
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/treeverse/lakefs
+        commit: 1c8adab852dac2387fcb00a256402b308a610c60
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1

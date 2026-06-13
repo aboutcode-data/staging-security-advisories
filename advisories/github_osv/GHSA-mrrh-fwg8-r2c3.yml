@@ -51,7 +51,21 @@ summary: "tj-actions changed-files through 45.0.7 allows remote attackers to dis
   \ keys, cloud credentials, SSH keys).  \n  - Unauthorized access to source code, infrastructure,\
   \ and production environments.  \n  - Credential leaks in public repositories, enabling further\
   \ supply chain attacks."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/github/docs
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/github/docs
+        commit: 962a1c8dccb8c0f66548b324e5b921b5e4fbc3d6
+    introduced_in_commits: []
+  - purl: pkg:github/tj-actions/changed-files
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/tj-actions/changed-files
+        commit: 45fb12d7a8bedb4da42342e52fe054c6c2c3fd73
+    introduced_in_commits: []
 severities:
   - score: '8.6'
     scoring_system: cvssv3.1

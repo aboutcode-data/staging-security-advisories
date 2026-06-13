@@ -12,7 +12,14 @@ summary: |
       .checked_add(crate::nft_nlmsg_maxsize())
       .expect("batch_page_size is too large and would overflow");
   ```
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mullvad/nftnl-rs
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mullvad/nftnl-rs
+        commit: 94a286f87e88f431913d19668246de9006790125
+    introduced_in_commits: []
 severities:
   - score: '9.3'
     scoring_system: cvssv4

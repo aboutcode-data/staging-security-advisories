@@ -69,7 +69,21 @@ summary: "### Summary\nKyverno ignores subjectRegExp and IssuerRegExp while veri
   \ by [Mohcode](https://github.com/Mohdcode). But i think it should be registered as security\
   \ problem such as it allows to bypass part of the verification mechanism and Kyverno users\
   \ should be aware of it."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mohdcode/kyverno
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mohdcode/kyverno
+        commit: 373f942ea9fa8b63140d0eb0e101b9a5f71033f3
+    introduced_in_commits: []
+  - purl: pkg:github/kyverno/kyverno
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/kyverno/kyverno
+        commit: 8777672fb17bdf252bd2e7d8de3441e240404a60
+    introduced_in_commits: []
 severities:
   - score: '5.8'
     scoring_system: cvssv3.1

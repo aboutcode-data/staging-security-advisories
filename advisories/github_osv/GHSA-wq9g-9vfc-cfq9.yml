@@ -48,7 +48,16 @@ summary: "Improper Handling of Highly Compressed Data (Data Amplification) in gi
   \ enforce a maximum size of the decompressed archive and bailout as soon as it's reached (probably\
   \ with a small default value and allow the users to configure it through the input options\
   \ ?)"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/getkin/kin-openapi
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/getkin/kin-openapi
+        commit: 6da871e0e170b7637eb568c265c08bc2b5d6e7a3
+      - vcs_url: https://github.com/getkin/kin-openapi
+        commit: 67f0b233ffc01332f7d993f79490fbea5f4455f1
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

@@ -35,7 +35,14 @@ summary: "OAuth2-Proxy is vulnerable to header smuggling via underscore leading 
   \ values for this header\n\tValues []HeaderValue `json:\"values,omitempty\"`\n}\n```\n\n###\
   \ Workarounds\nEnsure filtering and processing logic in upstream services don't treat underscores\
   \ and hyphens in Headers the same way."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/oauth2-proxy/oauth2-proxy
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/oauth2-proxy/oauth2-proxy
+        commit: f3f30fa976fb4bb97d6345ba4735cb6d86e24f95
+    introduced_in_commits: []
 severities:
   - score: '8.5'
     scoring_system: cvssv3.1

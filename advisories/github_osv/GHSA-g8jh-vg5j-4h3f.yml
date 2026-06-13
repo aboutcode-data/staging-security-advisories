@@ -27,7 +27,14 @@ summary: "Apollo Router Improperly Enforces Renamed Access Control Directives\n#
   \ argument to the `@link` directive.\n- Customers not using Apollo Router with renamed access\
   \ control directives (`@authenticated`, `@requiresScopes`, and `@policy`) are not affected\
   \ and do not need to take action."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/apollographql/router
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apollographql/router
+        commit: 78e4b20a2fc26cc5f141aa47992ed85375266a2b
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

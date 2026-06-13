@@ -6,7 +6,14 @@ aliases:
 summary: |
   NSSF panic due to nil pointer dereference when expiry field is omitted in NSSAIAvailability POST
   An issue was discovered in Free5GC v4.0.0 and v4.0.1 allowing an attacker to cause a denial of service via crafted POST request to the Nnssf_NSSAIAvailability API.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/free5gc/nssf
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/free5gc/nssf
+        commit: 66fc727a894fa821fde14030346b18de69192204
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

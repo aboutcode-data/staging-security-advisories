@@ -6,7 +6,14 @@ aliases:
 summary: |
   Mattermost fails to properly restrict access to archived channel search API
   Mattermost versions < 11 fail to properly restrict access to archived channel search API which allows guest users to discover archived public channels via the `/api/v4/teams/{team_id}/channels/search_archived` endpoint
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: c8d66301415d5b447df0e829bdbaa92e8a83ecf8
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1

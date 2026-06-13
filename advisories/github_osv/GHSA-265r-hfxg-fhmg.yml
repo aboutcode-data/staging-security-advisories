@@ -22,7 +22,18 @@ summary: "containerd has an integer overflow in User ID handling\n### Impact\nA 
   \ Email us at [security@containerd.io](mailto:security@containerd.io)\n\nTo report a security\
   \ issue in containerd:\n* [Report a new vulnerability](https://github.com/containerd/containerd/security/advisories/new)\n\
   * Email us at [security@containerd.io](mailto:security@containerd.io)"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/containerd/containerd
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/containerd/containerd
+        commit: cf158e884cfe4812a6c371b59e4ea9bc4c46e51a
+      - vcs_url: https://github.com/containerd/containerd
+        commit: 1a43cb6a1035441f9aca8f5666a9b3ef9e70ab20
+      - vcs_url: https://github.com/containerd/containerd
+        commit: 05044ec0a9a75232cad458027ca83437aae3f4da
+    introduced_in_commits: []
 severities:
   - score: '4.6'
     scoring_system: cvssv3.1

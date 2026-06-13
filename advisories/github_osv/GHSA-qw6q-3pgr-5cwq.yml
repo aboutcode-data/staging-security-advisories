@@ -102,7 +102,18 @@ summary: "KubeVirt Arbitrary Container File Read\n### Summary\n_Short summary of
   \ 1 qemu qemu 73 Jan  1  1970 /etc/passwd\n```\n\n### Impact\n_What kind of vulnerability\
   \ is it? Who is impacted?_\n\nThis vulnerability breaches the container-to-VM isolation boundary,\
   \ compromising the confidentiality of storage data."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/kubevirt/kubevirt
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/kubevirt/kubevirt
+        commit: a81b27d4600cf654274dd197119658382affdb08
+      - vcs_url: https://github.com/kubevirt/kubevirt
+        commit: 9dc798cb1efe924a9a2b97b6e016452dec5e3849
+      - vcs_url: https://github.com/kubevirt/kubevirt
+        commit: 09eafa068ec01eca0e96ebafeeb9522a878dbf64
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1

@@ -6,7 +6,20 @@ aliases:
 summary: |
   Kubernetes allows Command Injection affecting Windows nodes via nodes/*/logs/query API
   A security vulnerability has been discovered in Kubernetes windows nodes that could allow a user with the ability to query a node's '/logs' endpoint to execute arbitrary commands on the host.  This CVE affects only Windows worker nodes. Your worker node is vulnerable to this issue if it is running one of the affected versions listed below.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/kubernetes/kubernetes
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/kubernetes/kubernetes
+        commit: 5fe148234f8ab1184f26069c4f7bef6c37efe347
+      - vcs_url: https://github.com/kubernetes/kubernetes
+        commit: 45f4ccc2153bbb782253704cbe24c05e22b5d60c
+      - vcs_url: https://github.com/kubernetes/kubernetes
+        commit: fb0187c2bf7061258bb89891edb1237261eb7abc
+      - vcs_url: https://github.com/kubernetes/kubernetes
+        commit: 75c83a6871dc030675288c6d63c275a43c2f0d55
+    introduced_in_commits: []
 severities:
   - score: '5.9'
     scoring_system: cvssv3.1
@@ -19,8 +32,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-20
   - CWE-77
+  - CWE-20
 references:
   - url: https://github.com/kubernetes/kubernetes
     reference_type:

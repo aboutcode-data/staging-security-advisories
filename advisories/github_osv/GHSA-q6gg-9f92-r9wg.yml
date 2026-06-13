@@ -29,7 +29,14 @@ summary: "Traefik Client Plugin's Path Traversal Vulnerability Allows Arbitrary 
   \ all Traefik versions.**\nThis vulnerability can allow an attacker to perform arbitrary file\
   \ write outside the intended plugin extraction directory by crafting a malicious ZIP archive\
   \ that includes `../` (directory traversal) in file paths."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/traefik/traefik
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/traefik/traefik
+        commit: 5ef853a0c53068f69a6c229a5815a0dc6e0a8800
+    introduced_in_commits: []
 severities:
   - score: '7.3'
     scoring_system: cvssv4

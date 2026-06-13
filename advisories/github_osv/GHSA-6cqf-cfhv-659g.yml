@@ -49,7 +49,14 @@ summary: |
   ### Impact
 
   The impact is significant as malicious actors can disrupt business operations by systematically removing shared files and links. This leads to denial of service for legitimate users, potential data loss in collaborative environments, and breach of data confidentiality agreements. In organizational settings, this could affect critical file sharing for projects, presentations, or document collaboration.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/filebrowser/filebrowser
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/filebrowser/filebrowser
+        commit: 291223b3cefe1e50fae8f73d70464b1dc25351a4
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
@@ -67,8 +74,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-639
   - CWE-285
+  - CWE-639
 references:
   - url: https://github.com/filebrowser/filebrowser
     reference_type:

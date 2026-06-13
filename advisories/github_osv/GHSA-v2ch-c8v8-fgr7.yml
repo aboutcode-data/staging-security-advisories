@@ -118,7 +118,14 @@ summary: "Versity panic induced by AWS chunked data sent to port\nSending AWS ch
   \ this, however the Versity behaviour remains a problem. At the very least this is a potential\
   \ DDOS vulnerability. There is no structured exception handling in Versity at all and no defensive\
   \ coding such as verifying callbacks are non-null before attempting to use them."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/versity/versitygw
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/versity/versitygw
+        commit: 0972af078325ab5c6acd37abffe6bea345ac7db0
+    introduced_in_commits: []
 severities:
   - score: '7.7'
     scoring_system: cvssv4

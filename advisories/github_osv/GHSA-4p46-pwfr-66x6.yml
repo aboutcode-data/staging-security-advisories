@@ -10,7 +10,14 @@ summary: |
   On 64-bit targets operations using `ring::aead::{AES_128_GCM, AES_256_GCM}` may panic when overflow checking is enabled, when encrypting/decrypting approximately 68,719,476,700 bytes (about 64 gigabytes) of data in a single chunk. Protocols like TLS and SSH are not affected by this because those protocols break large amounts of data into small chunks. Similarly, most applications will not attempt to encrypt/decrypt 64GB of data in one chunk.
 
   Overflow checking is not enabled in release mode by default, but `RUSTFLAGS="-C overflow-checks"` or `overflow-checks = true` in the Cargo.toml profile can override this. Overflow checking is usually enabled by default in debug mode.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/briansmith/ring
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/briansmith/ring
+        commit: ec2d3cf1d91f148c84e4806b4f0b3c98f6df3b38
+    introduced_in_commits: []
 severities:
   - score: '6.6'
     scoring_system: cvssv4

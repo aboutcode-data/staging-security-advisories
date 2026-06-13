@@ -32,7 +32,14 @@ summary: |
 
   - If you are not immediately updating Router to a patched version, you should apply any included access control requirements to *both* the appropriate interface types/fields and their implementations.
   - Customers not using Apollo Router access control features (`@authenticated`, `@requiresScopes`, or `@policy` directives) or not specifying inconsistent access control requirements on polymorphic types/fields are not affected and do not need to take action.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/apollographql/router
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apollographql/router
+        commit: 75ca43ecb9d38423b63d09896702f9da425cc754
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

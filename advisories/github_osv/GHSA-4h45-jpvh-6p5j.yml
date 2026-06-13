@@ -32,7 +32,14 @@ summary: "Rancher affected by unauthenticated Denial of Service\n### Impact\nA v
   \ for security related inquiries.\n- Open an issue in the [Rancher](https://github.com/rancher/rancher/issues/new/choose)\
   \ repository.\n- Verify with our [support matrix](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/)\
   \ and [product support lifecycle](https://www.suse.com/lifecycle/)."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/rancher/rancher
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/rancher/rancher
+        commit: aee95d4e2a41ba2df6f88c9634d4fe1f42dee4d9
+    introduced_in_commits: []
 severities:
   - score: '8.2'
     scoring_system: cvssv3.1
@@ -66,5 +73,5 @@ references:
     reference_type:
     reference_id:
   - url: https://github.com/rancher/rancher/security/advisories/GHSA-4h45-jpvh-6p5j
-    reference_type:
-    reference_id:
+    reference_type: other
+    reference_id: GHSA-4h45-jpvh-6p5j

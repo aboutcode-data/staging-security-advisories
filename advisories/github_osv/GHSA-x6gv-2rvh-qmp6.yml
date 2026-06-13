@@ -48,7 +48,21 @@ summary: |
 
   - [x] The action should exclude `.git/` and other common sensitive file(s) by default from all packaging operations.
   - [x] A `deployignore` or similar mechanism should be introduced to give users finer control of what files or directories are included for deployed artifacts
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/boldestdungeon/steam-workshop-deploy
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/boldestdungeon/steam-workshop-deploy
+        commit: 0ba85729da32108e1cc498d1b3d6760857b5c04d
+    introduced_in_commits: []
+  - purl: pkg:github/m00nl1ght-dev/steam-workshop-deploy
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/m00nl1ght-dev/steam-workshop-deploy
+        commit: 913f0844e2153d798189397036918f4ceb0911e0
+    introduced_in_commits: []
 severities:
   - score: '10.0'
     scoring_system: cvssv3.1
@@ -61,9 +75,9 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-522
   - CWE-527
   - CWE-212
+  - CWE-522
 references:
   - url: https://github.com/BoldestDungeon/steam-workshop-deploy
     reference_type:

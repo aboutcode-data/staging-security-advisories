@@ -12,7 +12,14 @@ summary: |
   This vulnerability applies only if all of the following conditions are met:
   - `enableSCIM` feature flag set to true
   - `user_sync_enabled` config option in the `[auth.scim]` block set to true
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/grafana/grafana
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/grafana/grafana
+        commit: ca5d89812015ef2db3acc62826f73650450b331e
+    introduced_in_commits: []
 severities:
   - score: '10.0'
     scoring_system: cvssv3.1

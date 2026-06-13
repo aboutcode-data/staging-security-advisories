@@ -6,7 +6,25 @@ aliases:
 summary: |
   Free5GC is vulnerable to DoS via the Nudm_SubscriberDataManagement API
   An issue was discovered in Free5GC v4.0.0 and v4.0.1 allowing an attacker to cause a denial of service via the Nudm_SubscriberDataManagement API.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/free5gc/udm
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/free5gc/udm
+        commit: ca9976857909a422dcff5bf2228756fc2bfc80d1
+      - vcs_url: https://github.com/free5gc/udm
+        commit: e776c42177817f75e75e7a587c58c2a027beed81
+      - vcs_url: https://github.com/free5gc/udm
+        commit: 57c56a3ad4bc53a62cab259045e78ec9abdb98ca
+    introduced_in_commits: []
+  - purl: pkg:github/free5gc/openapi
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/free5gc/openapi
+        commit: d50c83e8fe7ebf9a62d9de99517e21a17f627b52
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1

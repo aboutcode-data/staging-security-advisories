@@ -34,7 +34,14 @@ summary: "go-viper's mapstructure May Leak Sensitive Information in Logs When Pr
   \ and a `map` is provided, we see the above information leak -- the previous example had a\
   \ `map` type field with a `string` value provided).\n\nThis was rated 4.5 Medium by HashiCorp\
   \ in the past iteration."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/go-viper/mapstructure
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/go-viper/mapstructure
+        commit: 742921c9ba2854d27baa64272487fc5075d2c39c
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1

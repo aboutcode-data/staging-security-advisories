@@ -153,7 +153,18 @@ summary: "KubeVirt Affected by an Authentication Bypass in Kubernetes Aggregatio
   \n### Impact\n_What kind of vulnerability is it? Who is impacted?_\n\nThe `virt-api` component\
   \ may allow an attacker to bypass existing RBAC controls by directly communicating with the\
   \ aggregated API server, impersonating the Kubernetes API server and its aggregator component."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/kubevirt/kubevirt
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/kubevirt/kubevirt
+        commit: b9773bc588e6e18ece896a2dad5336ef7a653074
+      - vcs_url: https://github.com/kubevirt/kubevirt
+        commit: af2f08a9a186eccc650f87c30ab3e07b669e8b5b
+      - vcs_url: https://github.com/kubevirt/kubevirt
+        commit: 231dc69723f331dc02f65a31ab4c3d6869f40d6a
+    introduced_in_commits: []
 severities:
   - score: '4.7'
     scoring_system: cvssv3.1
@@ -166,8 +177,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-287
   - CWE-295
+  - CWE-287
 references:
   - url: https://github.com/kubevirt/kubevirt
     reference_type:

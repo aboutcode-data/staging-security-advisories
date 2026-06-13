@@ -6,7 +6,18 @@ aliases:
 summary: |
   Mattermost allows other users to determine when users had read channels via channel member objects
   Mattermost versions 10.11.x <= 10.11.3, and 10.5.x <= 10.5.11 fail to enforce access permissions on the Agents plugin which allows other users to determine when users had read channels via channel member objects.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: ba86dfc5876b354b9d3c20ff45c08ca6f8426149
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 98acefe911dd9de7edf47a7d825dd99f53141a52
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: d72d437f1567ba0b639b6e4fd73bab06c51baab5
+    introduced_in_commits: []
 severities:
   - score: '3.0'
     scoring_system: cvssv3.1

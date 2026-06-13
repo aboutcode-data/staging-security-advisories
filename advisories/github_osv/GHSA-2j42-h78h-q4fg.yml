@@ -57,7 +57,14 @@ summary: "Beego allows Reflected/Stored XSS in Beego's RenderForm() Function Due
   \ := template.HTMLEscapeString(label)\nescapedType := template.HTMLEscapeString(fType)\n\n\
   return fmt.Sprintf(`%v<input%v%v name=\"%v\" type=\"%v\" value=\"%v\"%v>`, \n    escapedLabel,\
   \ id, class, escapedName, escapedType, valueStr, requiredString)\n```"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/beego/beego
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/beego/beego
+        commit: 939bb18c66406466715ddadd25dd9ffa6f169e25
+    introduced_in_commits: []
 severities:
   - score: '9.3'
     scoring_system: cvssv3.1

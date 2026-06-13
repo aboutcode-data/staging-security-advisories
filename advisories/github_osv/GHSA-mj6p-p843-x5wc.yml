@@ -6,7 +6,14 @@ aliases:
 summary: |
   Observability Operator is vulnerable to Incorrect Privilege Assignment through its Custom Resource MonitorStack
   A flaw was found in the Observability Operator. The Operator creates a ServiceAccount with *ClusterRole* upon deployment of the *Namespace-Scoped* Custom Resource MonitorStack. This issue allows an adversarial Kubernetes Account with only namespaced-level roles, for example, a tenant controlling a namespace, to create a MonitorStack in the authorized namespace and then elevate permission to the cluster level by impersonating the ServiceAccount created by the Operator, resulting in privilege escalation and other issues.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/rhobs/observability-operator
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/rhobs/observability-operator
+        commit: 98b927fab755decd6e030ac6af5c005879bab020
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1

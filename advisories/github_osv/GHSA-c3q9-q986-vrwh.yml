@@ -6,7 +6,14 @@ aliases:
 summary: |
   Nomad is vulnerable to unintentional exposure of the workload identity token and client secret token in audit logs
   Nomad Community and Nomad Enterprise (“Nomad”) are vulnerable to unintentional exposure of the workload identity token and client secret token in audit logs. This vulnerability, identified as CVE-2025-1296, is fixed in Nomad Community Edition 1.9.7 and Nomad Enterprise 1.9.7, 1.8.11, and 1.7.19.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/hashicorp/nomad
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/hashicorp/nomad
+        commit: dc482bf9058faf7a192486eb52caa1d42646f6b3
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1

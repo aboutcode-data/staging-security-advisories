@@ -27,7 +27,14 @@ summary: "Fiber Crashes in BodyParser Due to Unvalidated Large Slice Index in De
   \ Impact\n\n- Application panic or crash on malicious or malformed input.\n- Potential denial\
   \ of service (DoS) via memory exhaustion or server crash.\n- Lack of defensive checks in the\
   \ parsing code causes instability."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/gofiber/fiber
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/gofiber/fiber
+        commit: e115c08b8f059a4a031b492aa9eef0712411853d
+    introduced_in_commits: []
 severities:
   - score: '8.7'
     scoring_system: cvssv4

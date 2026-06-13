@@ -70,7 +70,14 @@ summary: "gnark is vulnerable to signature malleability in EdDSA and ECDSA due t
   \ to be exploitable (requires finding a preimage for `H(R || A || M)`), then it is additionally\
   \ fixed in https://github.com/Consensys/gnark/pull/1684 (commit https://github.com/Consensys/gnark/commit/69638c5f14b77ae0ebee23e1d8f64f3bb4e22fd5\
   \ on master). Thanks for additional reporting by https://github.com/kexinoh."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/consensys/gnark
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/consensys/gnark
+        commit: 0ba6730f05537a351517998add89a61a0d82716e
+    introduced_in_commits: []
 severities:
   - score: '9.1'
     scoring_system: cvssv3.1

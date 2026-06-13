@@ -46,7 +46,18 @@ summary: "RatPanel can perform remote command execution without authorization\n#
   \ who have exposed their admin panel login URL or use weak login URL paths—are vulnerable\
   \ to unauthorized access. Additionally, versions v2.5.1 to v2.5.5 are susceptible to server\
   \ and hosted machine takeover."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/tnborg/panel
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/tnborg/panel
+        commit: 4985eb2e1f388ecd6faf331941c13cb97368ec1d
+      - vcs_url: https://github.com/tnborg/panel
+        commit: ed5c74c7534230ba685273504af4c1e1e3598ff1
+      - vcs_url: https://github.com/tnborg/panel
+        commit: 91ecd04c270061429f9df5ec19cd6b96a9f595f2
+    introduced_in_commits: []
 severities:
   - score: '7.7'
     scoring_system: cvssv4
@@ -59,9 +70,9 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-305
   - CWE-22
   - CWE-436
+  - CWE-305
 references:
   - url: https://github.com/tnborg/panel
     reference_type:

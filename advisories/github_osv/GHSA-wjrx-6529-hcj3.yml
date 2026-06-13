@@ -6,7 +6,14 @@ aliases:
 summary: |
   HashiCorp go-getter Vulnerable to Symlink Attacks
   HashiCorp's go-getter library subdirectory download feature is vulnerable to symlink attacks leading to unauthorized read access beyond the designated directory boundaries. This vulnerability, identified as CVE-2025-8959, is fixed in go-getter 1.7.9.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/hashicorp/go-getter
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/hashicorp/go-getter
+        commit: 87541b2501c00df5eaedea6acc61a2a4a4efa5b7
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

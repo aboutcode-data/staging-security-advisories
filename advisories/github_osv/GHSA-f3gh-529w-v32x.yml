@@ -39,7 +39,14 @@ summary: "IDOR Vulnerabilities in ZITADEL's Admin API that Primarily Impact LDAP
   \ us at security@zitadel.com\n\n### Credit\n\nThis vulnerability was discovered by Amit Laish,\
   \ a senior security researcher from GE Vernova and we want to thank him for reporting this\
   \ to us!"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/zitadel/zitadel
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/zitadel/zitadel
+        commit: d9d8339813f1c43d3eb7d8d80f11fdabb2fd2ee4
+    introduced_in_commits: []
 severities:
   - score: '9.0'
     scoring_system: cvssv3.1
@@ -52,8 +59,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-863
   - CWE-639
+  - CWE-863
 references:
   - url: https://github.com/zitadel/zitadel
     reference_type:

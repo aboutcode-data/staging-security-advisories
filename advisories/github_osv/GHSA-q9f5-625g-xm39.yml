@@ -22,7 +22,14 @@ summary: "OWASP Coraza WAF has parser confusion which leads to wrong URI in `REQ
   \n\tif err != nil {\n\t\tpanic(err)\n\t}\n\n\ttx := waf.NewTransaction()\n\n\ttx.ProcessURI(testURL,\
   \ \"GET\", \"HTTP/1.1\")\n\n\tin := tx.ProcessRequestHeaders()\n\n\tif in != nil {\n\t\tfmt.Printf(\"\
   %+v\\n\", in)\n\t}\n}\n```\n\n### Impact\n\nPotential bypass of rules using `REQUEST_FILENAME`."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/corazawaf/coraza
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/corazawaf/coraza
+        commit: 4722c9ad0d502abd56b8d6733c6b47eb4111742d
+    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1

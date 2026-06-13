@@ -149,7 +149,14 @@ summary: |
   - Potential cluster-wide compromise through system namespace access
 
   **Severity:** High - This vulnerability fundamentally breaks the multi-tenant security model that Capsule is designed to provide, allowing authenticated users to escape their tenant boundaries and access system-level resources.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/projectcapsule/capsule
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/projectcapsule/capsule
+        commit: e1f47feade6e1695b2204407607d07c3b3994f6e
+    introduced_in_commits: []
 severities:
   - score: '9.0'
     scoring_system: cvssv3.1

@@ -12,7 +12,16 @@ summary: "OpenBao is Vulnerable to Privileged Operator Identity Group Root Escal
   \ policy to grant root-equivalent permissions through the `sudo` capability.\n\n### Patches\n\
   \nPatched in version 2.4.4. \n\n### Workarounds\n\nUsers should audit the use of identity\
   \ subsystem and deny operators access if it is not in use."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/openbao/openbao
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openbao/openbao
+        commit: 747a1378c2756f86296ad9450f74f6faeecc2eb7
+      - vcs_url: https://github.com/openbao/openbao
+        commit: 16bb0ccd37a502930a289d434cbe4e7b4edd66e5
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv4
@@ -25,8 +34,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-269
   - CWE-266
+  - CWE-269
 references:
   - url: https://github.com/openbao/openbao
     reference_type:

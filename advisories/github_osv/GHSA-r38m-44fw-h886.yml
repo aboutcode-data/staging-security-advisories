@@ -23,7 +23,14 @@ summary: "AEADs/ascon-aead: Plaintext exposed in decrypt_in_place_detached even 
   ### Impact\nIf a program continues to use the result of `decrypt_in_place_detached` after\
   \ a decryption failure, the result will be unauthenticated. This may permit some forms of\
   \ chosen ciphertext attacks (CCAs)."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/rustcrypto/aeads
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/rustcrypto/aeads
+        commit: d1d749ba57e38e65b0e037cd744d0b17f7254037
+    introduced_in_commits: []
 severities:
   - score: '5.7'
     scoring_system: cvssv4

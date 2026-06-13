@@ -18,7 +18,14 @@ summary: "Privileged OpenBao Operator May Execute Code on the Underlying Host\n#
   \ processes this may enable code execution.\n\n### References\n\nThis issue was disclosed\
   \ to HashiCorp and is the OpenBao equivalent of the following tickets:\n\n- https://discuss.hashicorp.com/t/hcsec-2025-14-privileged-vault-operator-may-execute-code-on-the-underlying-host/76033\n\
   - https://nvd.nist.gov/vuln/detail/CVE-2025-6000"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/openbao/openbao
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openbao/openbao
+        commit: a14053c9679d6e9cf370f00cf933476cda6d84a2
+    introduced_in_commits: []
 severities:
   - score: '9.1'
     scoring_system: cvssv3.1

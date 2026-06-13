@@ -25,7 +25,14 @@ summary: |
 
   ### Impact
   Anyone who has used this workflow action with a steam account is affected and has had valid authentication tokens leaked in the job logs. This is particularly bad for public repositories, as anyone with a GitHub account can access the logs and view the token.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/buildalon/setup-steamcmd
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/buildalon/setup-steamcmd
+        commit: c3301963a182b14fd7a5b4991e6ae91ed39e4a5c
+    introduced_in_commits: []
 severities:
   - score: '8.7'
     scoring_system: cvssv4

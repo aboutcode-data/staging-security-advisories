@@ -18,7 +18,14 @@ summary: "containerd CRI server: Host memory exhaustion through Attach goroutine
   \ an issue in [containerd](https://github.com/containerd/containerd/issues/new/choose)\n*\
   \ Email us at [security@containerd.io](mailto:security@containerd.io)\n\nTo report a security\
   \ issue in containerd:\n\n* [Report a new vulnerability](https://github.com/containerd/containerd/security/advisories/new)"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/containerd/containerd
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/containerd/containerd
+        commit: 083b53cd6f19b5de7717b0ce92c11bdf95e612df
+    introduced_in_commits: []
 severities:
   - score: '6.9'
     scoring_system: cvssv4

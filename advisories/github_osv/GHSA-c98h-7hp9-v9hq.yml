@@ -28,7 +28,14 @@ summary: "Bare Metal Operator (BMO) can expose any secret from other namespaces 
   \n### Credits\n\nMetal3 Security Team thanks [WHALEEYE](https://github.com/WHALEEYE) and [debuggerchen](https://github.com/debuggerchen)\
   \ of [Lab for Internet and Security Technology](https://users.cs.northwestern.edu/~list/)\
   \ for responsible vulnerability disclosure."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/metal3-io/baremetal-operator
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/metal3-io/baremetal-operator
+        commit: 19f8443b1fe182f76dd81b43122e8dd102f8b94c
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
@@ -41,8 +48,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-200
   - CWE-653
+  - CWE-200
 references:
   - url: https://github.com/metal3-io/baremetal-operator
     reference_type:

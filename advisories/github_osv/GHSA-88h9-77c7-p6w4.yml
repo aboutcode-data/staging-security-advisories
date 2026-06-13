@@ -32,7 +32,14 @@ summary: "Evervault Go SDK: Incomplete PCR Validation in Enclave Attestation for
   \ 32),\n            }\n            // act\n            v := verifyPCRs(expectedPCRs, actualDocument)\n\
   \            \n            // assert\n            // Verify should not pass but it does\n\
   \            \n            assert.Equal(true, v)\n}\n```"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/evervault/evervault-go
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/evervault/evervault-go
+        commit: 7c824d289bba11ec0bea46a338023f5b128bbb28
+    introduced_in_commits: []
 severities:
   - score: '8.7'
     scoring_system: cvssv3.1

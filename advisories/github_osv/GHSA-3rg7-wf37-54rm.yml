@@ -19,6 +19,11 @@ summary: |
 
   We would like to thank Andrew Atkinson for discovering the issue, Chris Smith for reporting it and Nicolas Grekas for providing the fix.
 impacted_packages:
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=2.0.0|<5.4.50
+    fixed_versions: vers:composer/5.4.50
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:composer/symfony/http-foundation
     affected_versions: vers:composer/<5.4.50
     fixed_versions: vers:composer/5.4.50
@@ -35,11 +40,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/symfony
-    affected_versions: vers:composer/>=2.0.0|<5.4.50
-    fixed_versions: vers:composer/5.4.50
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/symfony
     affected_versions: vers:composer/>=6.0.0|<6.4.29
     fixed_versions: vers:composer/6.4.29
     fixed_in_commits: []
@@ -48,6 +48,13 @@ impacted_packages:
     affected_versions: vers:composer/>=7.0.0|<7.3.7
     fixed_versions: vers:composer/7.3.7
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/symfony/symfony
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/symfony/symfony
+        commit: 9962b91b12bb791322fa73836b350836b6db7cac
     introduced_in_commits: []
 severities:
   - score: '7.3'
@@ -63,24 +70,24 @@ severities:
 weaknesses:
   - CWE-647
 references:
-  - url: https://github.com/FriendsOfPHP/security-advisories/blob/master/symfony/http-foundation/CVE-2025-64500.yaml
-    reference_type:
-    reference_id:
-  - url: https://github.com/FriendsOfPHP/security-advisories/blob/master/symfony/symfony/CVE-2025-64500.yaml
-    reference_type:
-    reference_id:
   - url: https://github.com/symfony/symfony
     reference_type:
     reference_id:
   - url: https://github.com/symfony/symfony/commit/9962b91b12bb791322fa73836b350836b6db7cac
     reference_type:
     reference_id:
-  - url: https://github.com/symfony/symfony/security/advisories/GHSA-3rg7-wf37-54rm
-    reference_type:
-    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2025-64500
     reference_type:
-    reference_id:
+    reference_id: CVE-2025-64500
   - url: https://symfony.com/blog/cve-2025-64500-incorrect-parsing-of-path-info-can-lead-to-limited-authorization-bypass
     reference_type:
-    reference_id:
+    reference_id: CVE-2025-64500-INCORRECT-PARSING-OF-PATH-INFO-CAN-LEAD-TO-LIMITED-AUTHORIZATION-BYPASS
+  - url: https://github.com/FriendsOfPHP/security-advisories/blob/master/symfony/http-foundation/CVE-2025-64500.yaml
+    reference_type:
+    reference_id: CVE-2025-64500.YAML
+  - url: https://github.com/FriendsOfPHP/security-advisories/blob/master/symfony/symfony/CVE-2025-64500.yaml
+    reference_type:
+    reference_id: CVE-2025-64500.YAML
+  - url: https://github.com/symfony/symfony/security/advisories/GHSA-3rg7-wf37-54rm
+    reference_type:
+    reference_id: GHSA-3rg7-wf37-54rm

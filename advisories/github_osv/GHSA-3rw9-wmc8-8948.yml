@@ -19,7 +19,14 @@ summary: "Coder accepts an APIKey beyond the linked OIDC expiry if there is no r
   \ \n\n### Impact\nThis could allow a user to access the Coder service beyond the lifetime\
   \ of the token issued by the OpenID provider, potentially indefinitely, even if they are no\
   \ loner authorized via OIDC."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/coder/coder
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/coder/coder
+        commit: 1a4160803589034ce1518e24a78f232c8d08f996
+    introduced_in_commits: []
 severities:
   - score: '2.3'
     scoring_system: cvssv4

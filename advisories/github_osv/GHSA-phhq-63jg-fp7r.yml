@@ -30,7 +30,14 @@ summary: |
   ### Workarounds
 
   Explicitly mount an `emptyDir` to all `VOLUME` locations. If the initial data in these locations is needed by the application, the image needs to be modified to remove the `config.volumes` entries.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/edgelesssys/contrast
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/edgelesssys/contrast
+        commit: 635b471ddbb512b6661e6f1d767aab818bd50bda
+    introduced_in_commits: []
 severities:
   - score: '3.5'
     scoring_system: cvssv3.1
@@ -43,8 +50,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-693
   - CWE-552
+  - CWE-693
 references:
   - url: https://github.com/edgelesssys/contrast
     reference_type:

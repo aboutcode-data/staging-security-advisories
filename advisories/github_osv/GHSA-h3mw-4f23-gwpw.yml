@@ -89,7 +89,14 @@ summary: "esm.sh CDN service has arbitrary file write via tarslip\n### Summary\n
   - Enables XSS in browsers, RCE in Electron applications\n- Difficult to detect as traffic\
   \ appears legitimate\n\n### Patch\n1. Path validation is required when unpacking a tar file.\n\
   2. `X-Npmrc` whitelist logic is required."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/esm-dev/esm.sh
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/esm-dev/esm.sh
+        commit: 9d77b88c320733ff6689d938d85d246a3af9af16
+    introduced_in_commits: []
 severities:
   - score: '8.2'
     scoring_system: cvssv3.1
