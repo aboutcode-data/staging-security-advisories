@@ -15,7 +15,14 @@ summary: "`docker cp` allows unexpected chmod of host files in Moby Docker Engin
   [Moby security policy](https://github.com/moby/moby/blob/master/SECURITY.md).\n\n## For more\
   \ information\nIf you have any questions or comments about this advisory:\n\n* [Open an issue](https://github.com/moby/moby/issues/new)\n\
   * Email us at \uFEFF security@docker.com \uFEFF if you think you’ve found a security bug"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/moby/moby
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/moby/moby
+        commit: bce32e5c93be4caf1a592582155b9cb837fc129a
+    introduced_in_commits: []
 severities:
   - score: '2.8'
     scoring_system: cvssv3.1
@@ -48,9 +55,9 @@ references:
   - url: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZNFADTCHHYWVM6W4NJ6CB4FNFM2VMBIB
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2021-41089
+    reference_type:
+    reference_id:
   - url: https://pkg.go.dev/vuln/GO-2024-2913
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2021-41089
-    reference_type:
-    reference_id: CVE-2021-41089

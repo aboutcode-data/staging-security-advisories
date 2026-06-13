@@ -20,15 +20,22 @@ summary: "tgstation-server's DreamMaker environment files outside the deployment
   _Is there a way for users to fix or remediate the vulnerability without upgrading?_\n\nDo\
   \ not give un-trusted users the Deployment permission to set a .dme path on instances."
 impacted_packages:
+  - purl: pkg:nuget/Tgstation.Server.Host
+    affected_versions: vers:nuget/>=4.0.0|<6.8.0
+    fixed_versions: vers:nuget/6.8.0
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:nuget/Tgstation.Server.Api
     affected_versions: vers:nuget/>=4.0.0|<6.8.0
     fixed_versions: vers:nuget/6.8.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Tgstation.Server.Host
-    affected_versions: vers:nuget/>=4.0.0|<6.8.0
-    fixed_versions: vers:nuget/6.8.0
-    fixed_in_commits: []
+  - purl: pkg:github/tgstation/tgstation-server
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/tgstation/tgstation-server
+        commit: 374852fe5ae306415eb5aafb2d16b06897d7afe4
     introduced_in_commits: []
 severities:
   - score: '8.4'

@@ -19,15 +19,22 @@ summary: "OneUptime Vulnerable to a Privilege Escalation via Local Storage Key M
   \ see all the list of users who signed up to OneUptome. \n\n\n## Patch\nThis has been patched\
   \ in 7.0.1815"
 impacted_packages:
+  - purl: pkg:npm/%40oneuptime/model
+    affected_versions: vers:npm/<7.0.1815
+    fixed_versions: vers:npm/7.0.1815
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:npm/%40oneuptime/common-server
     affected_versions: vers:npm/<7.0.1815
     fixed_versions: vers:npm/7.0.1815
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:npm/%40oneuptime/model
-    affected_versions: vers:npm/<7.0.1815
-    fixed_versions: vers:npm/7.0.1815
-    fixed_in_commits: []
+  - purl: pkg:github/oneuptime/oneuptime
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/oneuptime/oneuptime
+        commit: 14016d23d834038dd65d3a96cf71af04b556a32c
     introduced_in_commits: []
 severities:
   - score: '8.3'
@@ -46,12 +53,12 @@ references:
   - url: https://github.com/OneUptime/oneuptime
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2024-29194
+  - url: https://github.com/OneUptime/oneuptime/commit/14016d23d834038dd65d3a96cf71af04b556a32c
     reference_type:
     reference_id:
-  - url: https://github.com/OneUptime/oneuptime/commit/14016d23d834038dd65d3a96cf71af04b556a32c
-    reference_type: other
-    reference_id: 14016d23d834038dd65d3a96cf71af04b556a32c
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2024-29194
+    reference_type:
+    reference_id: CVE-2024-29194
   - url: https://github.com/OneUptime/oneuptime/security/advisories/GHSA-246p-xmg8-wmcq
-    reference_type: other
+    reference_type:
     reference_id: GHSA-246p-xmg8-wmcq

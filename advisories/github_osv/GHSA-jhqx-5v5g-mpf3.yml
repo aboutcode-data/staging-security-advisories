@@ -34,6 +34,16 @@ summary: |
 
   * CVE-Pending
 impacted_packages:
+  - purl: pkg:maven/org.geoserver.web/gs-web-app
+    affected_versions: vers:maven/<2.23.5
+    fixed_versions: vers:maven/2.23.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.geoserver.web/gs-web-app
+    affected_versions: vers:maven/>=2.24.0|<2.24.3
+    fixed_versions: vers:maven/2.24.3
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:maven/org.geoserver/gs-gwc
     affected_versions: vers:maven/<2.23.5
     fixed_versions: vers:maven/2.23.5
@@ -44,15 +54,12 @@ impacted_packages:
     fixed_versions: vers:maven/2.24.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/org.geoserver.web/gs-web-app
-    affected_versions: vers:maven/<2.23.5
-    fixed_versions: vers:maven/2.23.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.geoserver.web/gs-web-app
-    affected_versions: vers:maven/>=2.24.0|<2.24.3
-    fixed_versions: vers:maven/2.24.3
-    fixed_in_commits: []
+  - purl: pkg:github/geowebcache/geowebcache
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/geowebcache/geowebcache
+        commit: c7f76bd8a1d67c3b986146e7a5e0b14dd64a8fef
     introduced_in_commits: []
 severities:
   - score: '7.5'
@@ -71,18 +78,18 @@ references:
   - url: https://github.com/geoserver/geoserver
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2024-24749
+  - url: https://github.com/GeoWebCache/geowebcache/commit/c7f76bd8a1d67c3b986146e7a5e0b14dd64a8fef
     reference_type:
     reference_id:
   - url: https://github.com/GeoWebCache/geowebcache/pull/1211
-    reference_type: other
-    reference_id: 1211
+    reference_type:
+    reference_id:
   - url: http://seclists.org/fulldisclosure/2024/Feb/13
     reference_type: mailing_list
     reference_id: 13
-  - url: https://github.com/GeoWebCache/geowebcache/commit/c7f76bd8a1d67c3b986146e7a5e0b14dd64a8fef
-    reference_type: other
-    reference_id: c7f76bd8a1d67c3b986146e7a5e0b14dd64a8fef
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2024-24749
+    reference_type:
+    reference_id: CVE-2024-24749
   - url: https://github.com/geoserver/geoserver/security/advisories/GHSA-jhqx-5v5g-mpf3
-    reference_type: other
+    reference_type:
     reference_id: GHSA-jhqx-5v5g-mpf3

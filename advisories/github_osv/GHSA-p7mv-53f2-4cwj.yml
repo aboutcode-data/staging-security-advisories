@@ -44,7 +44,14 @@ summary: "CometBFT Vote Extensions: Panic when receiving a Pre-commit with an in
   \ up for security notification emails, please see https://github.com/interchainio/security.\
   \  \n\nA Github Security Advisory for this issue is available in the CometBFT [repository](https://github.com/cometbft/cometbft/security/advisories/GHSA-p7mv-53f2-4cwj).\
   \ For more information about CometBFT, see https://docs.cometbft.com/."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/cometbft/cometbft
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/cometbft/cometbft
+        commit: 17d3bb66664cab6d6798c17e27198e15bbac1905
+    introduced_in_commits: []
 severities:
   - score: '8.3'
     scoring_system: cvssv4
@@ -63,6 +70,9 @@ references:
     reference_type:
     reference_id:
   - url: https://github.com/cometbft/cometbft
+    reference_type:
+    reference_id:
+  - url: https://github.com/cometbft/cometbft/commit/17d3bb66664cab6d6798c17e27198e15bbac1905
     reference_type:
     reference_id:
   - url: https://github.com/cometbft/cometbft/releases/tag/v0.38.15

@@ -23,6 +23,11 @@ impacted_packages:
     fixed_versions: vers:maven/10.1.25
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
+    affected_versions: vers:maven/>=9.0.0-M1|<9.0.90
+    fixed_versions: vers:maven/9.0.90
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat/tomcat-coyote
     affected_versions: vers:maven/>=11.0.0-M1|<11.0.0-M21
     fixed_versions: vers:maven/11.0.0-M21
@@ -48,10 +53,16 @@ impacted_packages:
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
-    affected_versions: vers:maven/>=9.0.0-M1|<9.0.90
-    fixed_versions: vers:maven/9.0.90
-    fixed_in_commits: []
+  - purl: pkg:github/apache/tomcat
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/tomcat
+        commit: 9fec9a82887853402833a80b584e3762c7423f5f
+      - vcs_url: https://github.com/apache/tomcat
+        commit: 2344a4c0d03e307ba6b8ab6dc8b894cc8bac63f2
+      - vcs_url: https://github.com/apache/tomcat
+        commit: 2afae300c9ac9c0e516e2e9de580847d925365c3
     introduced_in_commits: []
 severities:
   - score: '7.5'
@@ -70,8 +81,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-400
   - CWE-755
+  - CWE-400
 references:
   - url: https://github.com/apache/tomcat
     reference_type:
@@ -85,10 +96,10 @@ references:
   - url: https://github.com/apache/tomcat/commit/9fec9a82887853402833a80b584e3762c7423f5f
     reference_type:
     reference_id:
-  - url: https://lists.debian.org/debian-lts-announce/2025/07/msg00009.html
+  - url: https://lists.apache.org/thread/4kqf0bc9gxymjc2x7v3p7dvplnl77y8l
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2024-34750
+  - url: https://lists.debian.org/debian-lts-announce/2025/07/msg00009.html
     reference_type:
     reference_id:
   - url: https://security.netapp.com/advisory/ntap-20240816-0004
@@ -103,6 +114,6 @@ references:
   - url: https://tomcat.apache.org/security-9.html
     reference_type:
     reference_id:
-  - url: https://lists.apache.org/thread/4kqf0bc9gxymjc2x7v3p7dvplnl77y8l
-    reference_type: advisory
-    reference_id: 4kqf0bc9gxymjc2x7v3p7dvplnl77y8l
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2024-34750
+    reference_type:
+    reference_id: CVE-2024-34750

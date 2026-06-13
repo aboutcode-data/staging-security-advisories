@@ -20,7 +20,14 @@ summary: |
   - Disable NTS-KE server functionality
   - Increase system resource limits (`RLIMIT_NOFILE`) to make the attack more difficult
   - Lower the `key-exchange-timeout-ms` configuration setting to make the attack more difficult
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/pendulum-project/ntpd-rs
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/pendulum-project/ntpd-rs
+        commit: 6049687006ea5b26eeac927964b5fcc80d7bde50
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

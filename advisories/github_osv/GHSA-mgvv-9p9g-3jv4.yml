@@ -42,7 +42,14 @@ summary: |
   The main exploitable configuration is one where Git for Windows has been installed but not added to `PATH`. This is one of the options in its installer, though not the default option. Alternatively, an affected program that sanitizes its `PATH` to remove seemingly nonessential directories could allow exploitation. But for the most part, if the target user has configured a `PATH` in which the real `git.exe` can be found, then this cannot be exploited.
 
   This vulnerability is comparable to [CVE-2022-24765](https://github.com/git-for-windows/git/security/advisories/GHSA-vw2c-22j4-2fh2), in which an uncontrolled path like `C:\.git\config`, which a limited user can create, could supply configuration used by other users. However, in this case, exploitation is slightly simpler because, rather than using configuration, an executable is directly run.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/byron/gitoxide
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/byron/gitoxide
+        commit: 6cd8b4665bb7582f744c3244abaef812be39ec35
+    introduced_in_commits: []
 severities:
   - score: '6.8'
     scoring_system: cvssv3.1
@@ -65,12 +72,12 @@ references:
   - url: https://github.com/Byron/gitoxide
     reference_type:
     reference_id:
-  - url: https://github.com/git-for-windows/git/security/advisories/GHSA-vw2c-22j4-2fh2
+  - url: https://github.com/Byron/gitoxide/blob/6cd8b4665bb7582f744c3244abaef812be39ec35/gix-path/src/env/git.rs#L9-L14
     reference_type:
     reference_id:
   - url: https://github.com/Byron/gitoxide/security/advisories/GHSA-mgvv-9p9g-3jv4
-    reference_type: other
-    reference_id: GHSA-mgvv-9p9g-3jv4
-  - url: https://github.com/Byron/gitoxide/blob/6cd8b4665bb7582f744c3244abaef812be39ec35/gix-path/src/env/git.rs#L9-L14
-    reference_type: other
-    reference_id: git.rs#L9-L14
+    reference_type:
+    reference_id:
+  - url: https://github.com/git-for-windows/git/security/advisories/GHSA-vw2c-22j4-2fh2
+    reference_type:
+    reference_id:

@@ -22,7 +22,16 @@ summary: |
 
   ### References
   Whereas https://github.com/whisperfish/rust-phonenumber/issues/69 did not provide an example code path, property testing found a few: `+dwPAA;phone-context=AA`.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/whisperfish/rust-phonenumber
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/whisperfish/rust-phonenumber
+        commit: f69abee1481fac0d6d531407bae90020e39c6407
+      - vcs_url: https://github.com/whisperfish/rust-phonenumber
+        commit: b792151b17fc90231c232a23935830c2266f3203
+    introduced_in_commits: []
 severities:
   - score: '8.6'
     scoring_system: cvssv3.1
@@ -40,11 +49,26 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-392
   - CWE-1284
+  - CWE-392
   - CWE-248
 references:
   - url: https://github.com/whisperfish/rust-phonenumber
+    reference_type:
+    reference_id:
+  - url: https://github.com/whisperfish/rust-phonenumber/commit/b792151b17fc90231c232a23935830c2266f3203
+    reference_type:
+    reference_id:
+  - url: https://github.com/whisperfish/rust-phonenumber/commit/f69abee1481fac0d6d531407bae90020e39c6407
+    reference_type:
+    reference_id:
+  - url: https://github.com/whisperfish/rust-phonenumber/issues/69
+    reference_type:
+    reference_id:
+  - url: https://github.com/whisperfish/rust-phonenumber/pull/52
+    reference_type:
+    reference_id:
+  - url: https://github.com/whisperfish/rust-phonenumber/security/advisories/GHSA-mjw4-jj88-v687
     reference_type:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-39697
@@ -53,18 +77,3 @@ references:
   - url: https://rustsec.org/advisories/RUSTSEC-2024-0369.html
     reference_type:
     reference_id:
-  - url: https://github.com/whisperfish/rust-phonenumber/pull/52
-    reference_type: other
-    reference_id: 52
-  - url: https://github.com/whisperfish/rust-phonenumber/issues/69
-    reference_type: other
-    reference_id: 69
-  - url: https://github.com/whisperfish/rust-phonenumber/commit/b792151b17fc90231c232a23935830c2266f3203
-    reference_type: other
-    reference_id: b792151b17fc90231c232a23935830c2266f3203
-  - url: https://github.com/whisperfish/rust-phonenumber/commit/f69abee1481fac0d6d531407bae90020e39c6407
-    reference_type: other
-    reference_id: f69abee1481fac0d6d531407bae90020e39c6407
-  - url: https://github.com/whisperfish/rust-phonenumber/security/advisories/GHSA-mjw4-jj88-v687
-    reference_type: other
-    reference_id: GHSA-mjw4-jj88-v687

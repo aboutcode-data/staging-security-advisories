@@ -62,7 +62,14 @@ summary: |
   ### Impact
 
   For users accessing keyring or APK repository content using HTTP basic auth, credentials were being logged in plaintext, depending on the user's logging settings. If you use apko in continuous integration jobs, it is likely that the credentials leak via logs of these jobs. Depending on the accessibility of these logs, this could be a company-internal or public leakage of credentials.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/chainguard-dev/apko
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/chainguard-dev/apko
+        commit: 2c0533e4d52e83031a04f6a83ec63fc2a11eff01
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -75,18 +82,18 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-522
   - CWE-532
+  - CWE-522
 references:
   - url: https://github.com/chainguard-dev/apko
+    reference_type:
+    reference_id:
+  - url: https://github.com/chainguard-dev/apko/commit/2c0533e4d52e83031a04f6a83ec63fc2a11eff01
+    reference_type:
+    reference_id:
+  - url: https://github.com/chainguard-dev/apko/security/advisories/GHSA-v6mg-7f7p-qmqp
     reference_type:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-36127
     reference_type:
     reference_id:
-  - url: https://github.com/chainguard-dev/apko/commit/2c0533e4d52e83031a04f6a83ec63fc2a11eff01
-    reference_type: other
-    reference_id: 2c0533e4d52e83031a04f6a83ec63fc2a11eff01
-  - url: https://github.com/chainguard-dev/apko/security/advisories/GHSA-v6mg-7f7p-qmqp
-    reference_type: other
-    reference_id: GHSA-v6mg-7f7p-qmqp

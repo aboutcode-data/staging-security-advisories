@@ -26,15 +26,29 @@ summary: |
 
   As an guest browser session has been cached on a 404 page, every missing image or directly reaching a 404 page will logout the customer or clear his cart.
 impacted_packages:
+  - purl: pkg:composer/shopware/storefront
+    affected_versions: vers:composer/>=6.5.8+0|<6.5.8+7
+    fixed_versions: vers:composer/6.5.8+7
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:composer/shopware/platform
     affected_versions: vers:composer/>=6.5.8+0|<6.5.8+7
     fixed_versions: vers:composer/6.5.8+7
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/shopware/storefront
-    affected_versions: vers:composer/>=6.5.8+0|<6.5.8+7
-    fixed_versions: vers:composer/6.5.8+7
-    fixed_in_commits: []
+  - purl: pkg:github/shopware/storefront
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/shopware/storefront
+        commit: 3477e4a425d3c54b4bfae82d703fe3838dc21d3e
+    introduced_in_commits: []
+  - purl: pkg:github/shopware/shopware
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/shopware/shopware
+        commit: 7d9cb03225efca5f97e69b800d8747598dd15ce3
     introduced_in_commits: []
 severities:
   - score: '7.5'
@@ -53,15 +67,15 @@ references:
   - url: https://github.com/shopware/shopware
     reference_type:
     reference_id:
-  - url: https://github.com/shopware/storefront/commit/3477e4a425d3c54b4bfae82d703fe3838dc21d3e
-    reference_type: other
-    reference_id: 3477e4a425d3c54b4bfae82d703fe3838dc21d3e
   - url: https://github.com/shopware/shopware/commit/7d9cb03225efca5f97e69b800d8747598dd15ce3
-    reference_type: other
-    reference_id: 7d9cb03225efca5f97e69b800d8747598dd15ce3
-  - url: https://github.com/shopware/shopware/security/advisories/GHSA-c2f9-4jmm-v45m
-    reference_type: other
-    reference_id: GHSA-c2f9-4jmm-v45m
+    reference_type:
+    reference_id:
   - url: https://github.com/shopware/shopware/releases/tag/v6.5.8.7
-    reference_type: other
-    reference_id: v6.5.8.7
+    reference_type:
+    reference_id:
+  - url: https://github.com/shopware/storefront/commit/3477e4a425d3c54b4bfae82d703fe3838dc21d3e
+    reference_type:
+    reference_id:
+  - url: https://github.com/shopware/shopware/security/advisories/GHSA-c2f9-4jmm-v45m
+    reference_type:
+    reference_id: GHSA-c2f9-4jmm-v45m

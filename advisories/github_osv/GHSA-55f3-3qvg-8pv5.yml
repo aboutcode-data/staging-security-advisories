@@ -61,7 +61,14 @@ summary: |
   ```
 
   This should not print the contents of the `outside.file`. Other runtimes like Wasmtime can successfully block this call. But Wasmer prints the contents of the file.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/wasmerio/wasmer
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/wasmerio/wasmer
+        commit: b9483d022c602b994103f78ecfe46f017f8ac662
+    introduced_in_commits: []
 severities:
   - score: '2.9'
     scoring_system: cvssv3.1

@@ -16,7 +16,14 @@ summary: |
   When using AWS WebIdentityTokens with the object_store crate, in the event of a failure and automatic retry, the underlying reqwest error, including the full URL with the credentials, potentially in the parameters, is written to the logs. 
 
   Thanks to Paul Hatcherian for reporting this vulnerability
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/apache/arrow-rs
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/arrow-rs
+        commit: 4978e32654235f569062f2cad6c7361e410f1254
+    introduced_in_commits: []
 severities:
   - score: '3.8'
     scoring_system: cvssv3.1
@@ -45,6 +52,9 @@ references:
   - url: https://github.com/apache/arrow-rs/pull/6074
     reference_type:
     reference_id:
+  - url: https://lists.apache.org/thread/3t0povdppnt2czv6crlsqhvyko93kcrg
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-41178
     reference_type:
     reference_id:
@@ -52,8 +62,5 @@ references:
     reference_type:
     reference_id:
   - url: http://www.openwall.com/lists/oss-security/2024/07/23/3
-    reference_type: other
-    reference_id: 3
-  - url: https://lists.apache.org/thread/3t0povdppnt2czv6crlsqhvyko93kcrg
-    reference_type: advisory
-    reference_id: 3t0povdppnt2czv6crlsqhvyko93kcrg
+    reference_type:
+    reference_id:

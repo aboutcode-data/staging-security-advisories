@@ -53,7 +53,18 @@ summary: "Container escape at build time\n### Impact\n_What kind of vulnerabilit
   \ modification with this exploit.  With \"setenfoce 1\" set, which is the recommendation,\
   \ files can not be changed.  However, the contents of the `/` directory can be displayed.\
   \  I.e., `ls -alF /` will show the contents of the host directory.\n\n### References\n\nUnknown."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/containers/buildah
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/containers/buildah
+        commit: 3deda19137f5dec0285bbb832bd93c22d860b087
+      - vcs_url: https://github.com/containers/buildah
+        commit: 9de9c20ff368beb84b84fe660773d352519dc1c5
+      - vcs_url: https://github.com/containers/buildah
+        commit: a030f7b8cd373075affef1f86de43a87e502f3d8
+    introduced_in_commits: []
 severities:
   - score: HIGH
     scoring_system: generic_textual
@@ -75,12 +86,12 @@ references:
   - url: https://github.com/containers/buildah/commit/a030f7b8cd373075affef1f86de43a87e502f3d8
     reference_type:
     reference_id:
+  - url: https://github.com/containers/buildah/security/advisories/GHSA-pmf3-c36m-g5cf
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-1753
     reference_type:
     reference_id:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2265513
     reference_type: bug
     reference_id: 2265513
-  - url: https://github.com/containers/buildah/security/advisories/GHSA-pmf3-c36m-g5cf
-    reference_type: other
-    reference_id: GHSA-pmf3-c36m-g5cf

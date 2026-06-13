@@ -26,7 +26,14 @@ summary: "Bad documentation of error handling in ParseWithClaims can lead to pot
   \ || errors.Is(err, jwt.ErrTokenNotValidYet) {\n\t// Token is either expired or not active\
   \ yet\n\tfmt.Println(\"Timing is everything\")\n} else {\n\tfmt.Println(\"Couldn't handle\
   \ this token:\", err)\n}\n```"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/golang-jwt/jwt
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/golang-jwt/jwt
+        commit: 7b1c1c00a171c6c79bbdb40e4ce7d197060c1c2c
+    introduced_in_commits: []
 severities:
   - score: '3.1'
     scoring_system: cvssv3.1
@@ -44,8 +51,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-347
   - CWE-755
+  - CWE-347
 references:
   - url: https://github.com/golang-jwt/jwt
     reference_type:

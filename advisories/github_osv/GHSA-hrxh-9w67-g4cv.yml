@@ -86,7 +86,14 @@ summary: |
   Type of Vulnerability: Improper permissions and ownership handling on symlink targets (Insecure Handling of Symlinks)
 
   Impact: This vulnerability allows unprivileged users to modify permissions and ownership of sensitive system files by creating symlinks to those files in directories that are subsequently copied by an administrator with rclone --links --metadata. This can lead to unauthorized access, privilege escalation, and potential system compromise.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/rclone/rclone
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/rclone/rclone
+        commit: 01ccf204f42b4f68541b16843292439090a2dcf0
+    introduced_in_commits: []
 severities:
   - score: '5.5'
     scoring_system: cvssv3.1
@@ -109,12 +116,12 @@ references:
   - url: https://github.com/rclone/rclone
     reference_type:
     reference_id:
+  - url: https://github.com/rclone/rclone/commit/01ccf204f42b4f68541b16843292439090a2dcf0
+    reference_type:
+    reference_id:
+  - url: https://github.com/rclone/rclone/security/advisories/GHSA-hrxh-9w67-g4cv
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-52522
     reference_type:
     reference_id:
-  - url: https://github.com/rclone/rclone/commit/01ccf204f42b4f68541b16843292439090a2dcf0
-    reference_type: other
-    reference_id: 01ccf204f42b4f68541b16843292439090a2dcf0
-  - url: https://github.com/rclone/rclone/security/advisories/GHSA-hrxh-9w67-g4cv
-    reference_type: other
-    reference_id: GHSA-hrxh-9w67-g4cv

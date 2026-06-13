@@ -19,7 +19,16 @@ summary: "CometBFT is unstability during blocksync when syncing from malicious p
   \ security efforts, please reach out to our official communication channel at [security@interchain.io](mailto:security@interchain.io).\n\
   \nFor more information about CometBFT, please see https://docs.cometbft.com/.\n\nFor more\
   \ information about the Interchain Foundation’s engagement with Amulet, please see https://github.com/interchainio/security."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/cometbft/cometbft
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/cometbft/cometbft
+        commit: 8ba2e4f52d5e626e019501ba6420cc86d5de7857
+      - vcs_url: https://github.com/cometbft/cometbft
+        commit: 07866e11139127e415bd0339ac377b6e6a845533
+    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual

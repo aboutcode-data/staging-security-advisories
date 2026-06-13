@@ -10,11 +10,6 @@ summary: |
   This is the same as  CVE-2024-22243 https://spring.io/security/cve-2024-22243, but with different input.
 impacted_packages:
   - purl: pkg:maven/org.springframework/spring-web
-    affected_versions: vers:maven/<5.3.33
-    fixed_versions: vers:maven/5.3.33
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.springframework/spring-web
     affected_versions: vers:maven/>=6.1.0|<6.1.5
     fixed_versions: vers:maven/6.1.5
     fixed_in_commits: []
@@ -23,6 +18,22 @@ impacted_packages:
     affected_versions: vers:maven/>=6.0.0|<6.0.18
     fixed_versions: vers:maven/6.0.18
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.springframework/spring-web
+    affected_versions: vers:maven/<5.3.33
+    fixed_versions: vers:maven/5.3.33
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/spring-projects/spring-framework
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/spring-projects/spring-framework
+        commit: f2fd2f12269c6a781c5b2c20b3c24141055a3d68
+      - vcs_url: https://github.com/spring-projects/spring-framework
+        commit: 297cbae2990e1413537c55845a7e0ea0ffd9f9bb
+      - vcs_url: https://github.com/spring-projects/spring-framework
+        commit: 381f790329a48b74c2a49fc1384dd68ca9153501
     introduced_in_commits: []
 severities:
   - score: '8.1'
@@ -50,12 +61,12 @@ references:
   - url: https://github.com/spring-projects/spring-framework/commit/f2fd2f12269c6a781c5b2c20b3c24141055a3d68
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2024-22259
-    reference_type:
-    reference_id:
   - url: https://security.netapp.com/advisory/ntap-20240524-0002
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2024-22259
+    reference_type:
+    reference_id: CVE-2024-22259
   - url: https://spring.io/security/cve-2024-22259
-    reference_type: other
-    reference_id: cve-2024-22259
+    reference_type:
+    reference_id: CVE-2024-22259

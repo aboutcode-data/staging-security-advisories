@@ -18,7 +18,20 @@ summary: "quiche vulnerable to unbounded storage of information related to conne
   \ at a slower rate than they are received, leading to storage of information related to connection\
   \ IDs in an unbounded queue. \n\n### Patches\n\nQuiche versions 0.19.2 and 0.20.1 are the\
   \ earliest to address this problem. There is no workaround for affected versions."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/cloudflare/quiche
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/cloudflare/quiche
+        commit: a983998c4408605905ee9a6ab0fc00e68436ac67
+      - vcs_url: https://github.com/cloudflare/quiche
+        commit: 5be8143126f8cfa8a483d4a5ae475b9a46053fa1
+      - vcs_url: https://github.com/cloudflare/quiche
+        commit: 0c5733a84c41e9e178adc866b11ce59ac264f5af
+      - vcs_url: https://github.com/cloudflare/quiche
+        commit: 7ab42af5f5e97f20f1d63b7ea2f9ab0536678c40
+    introduced_in_commits: []
 severities:
   - score: '3.7'
     scoring_system: cvssv3.1
@@ -54,9 +67,9 @@ references:
   - url: https://github.com/cloudflare/quiche/releases/tag/0.20.1
     reference_type:
     reference_id:
+  - url: https://github.com/cloudflare/quiche/security/advisories/GHSA-xhg9-xwch-vr7x
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-1410
     reference_type:
     reference_id:
-  - url: https://github.com/cloudflare/quiche/security/advisories/GHSA-xhg9-xwch-vr7x
-    reference_type: other
-    reference_id: GHSA-xhg9-xwch-vr7x

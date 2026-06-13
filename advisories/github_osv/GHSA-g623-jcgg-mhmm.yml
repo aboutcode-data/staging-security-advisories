@@ -35,7 +35,14 @@ summary: |
 
   * Open an issue in [the Argo CD issue tracker](https://github.com/argoproj/argo-cd/issues) or [discussions](https://github.com/argoproj/argo-cd/discussions)
   * Join us on [Slack](https://argoproj.github.io/community/join-slack) in channel #argo-cd
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/argoproj/argo-cd
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/argoproj/argo-cd
+        commit: 3b8f673f06c2d228e01cbc830e5cb57cef008978
+    introduced_in_commits: []
 severities:
   - score: '6.4'
     scoring_system: cvssv3.1
@@ -51,18 +58,18 @@ weaknesses:
   - CWE-269
   - CWE-863
 references:
+  - url: https://argo-cd.readthedocs.io/en/latest/operator-manual/rbac
+    reference_type:
+    reference_id:
   - url: https://github.com/argoproj/argo-cd
+    reference_type:
+    reference_id:
+  - url: https://github.com/argoproj/argo-cd/commit/3b8f673f06c2d228e01cbc830e5cb57cef008978
+    reference_type:
+    reference_id:
+  - url: https://github.com/argoproj/argo-cd/security/advisories/GHSA-g623-jcgg-mhmm
     reference_type:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2023-50726
     reference_type:
     reference_id:
-  - url: https://github.com/argoproj/argo-cd/commit/3b8f673f06c2d228e01cbc830e5cb57cef008978
-    reference_type: other
-    reference_id: 3b8f673f06c2d228e01cbc830e5cb57cef008978
-  - url: https://github.com/argoproj/argo-cd/security/advisories/GHSA-g623-jcgg-mhmm
-    reference_type: other
-    reference_id: GHSA-g623-jcgg-mhmm
-  - url: https://argo-cd.readthedocs.io/en/latest/operator-manual/rbac
-    reference_type: other
-    reference_id: rbac

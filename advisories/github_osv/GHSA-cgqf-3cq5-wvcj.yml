@@ -14,7 +14,14 @@ summary: "Apollo Router's Compressed Payloads do not respect HTTP Payload Limits
   \n### Workarounds\nIf you are unable to upgrade, you may be able to implement mitigations\
   \ at proxies or load balancers positioned in front of your Router fleet (e.g. Nginx, HAProxy,\
   \ or cloud-native WAF services) by creating limits on HTTP body upload size."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/apollographql/router
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apollographql/router
+        commit: 9e9527c73c8f34fc8438b09066163cd42520f413
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -33,8 +40,8 @@ references:
     reference_type:
     reference_id:
   - url: https://github.com/apollographql/router/commit/9e9527c73c8f34fc8438b09066163cd42520f413
-    reference_type: other
-    reference_id: 9e9527c73c8f34fc8438b09066163cd42520f413
+    reference_type:
+    reference_id:
   - url: https://github.com/apollographql/router/security/advisories/GHSA-cgqf-3cq5-wvcj
-    reference_type: other
-    reference_id: GHSA-cgqf-3cq5-wvcj
+    reference_type:
+    reference_id:

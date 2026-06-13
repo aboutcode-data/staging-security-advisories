@@ -6,7 +6,14 @@ aliases:
 summary: |
   HashiCorp Nomad is vulnerable to path escape through archive unpacking during migration
   HashiCorp Nomad and Nomad Enterprise 1.6.12 up to 1.7.9, and 1.8.1 archive unpacking during migration is vulnerable to path escaping of the allocation directory. This vulnerability, CVE-2024-6717, is fixed in Nomad 1.6.13, 1.7.10, and 1.8.2.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/hashicorp/nomad
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/hashicorp/nomad
+        commit: ef6cdec8847e0698d386d1fd3761743df758ef99
+    introduced_in_commits: []
 severities:
   - score: '7.7'
     scoring_system: cvssv3.1
@@ -21,6 +28,9 @@ severities:
 weaknesses:
   - CWE-610
 references:
+  - url: https://discuss.hashicorp.com/t/hcsec-2024-15-nomad-vulnerable-to-allocation-directory-path-escape-through-archive-unpacking/68781
+    reference_type:
+    reference_id:
   - url: https://github.com/hashicorp/nomad
     reference_type:
     reference_id:
@@ -33,6 +43,3 @@ references:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-6717
     reference_type:
     reference_id:
-  - url: https://discuss.hashicorp.com/t/hcsec-2024-15-nomad-vulnerable-to-allocation-directory-path-escape-through-archive-unpacking/68781
-    reference_type: other
-    reference_id: 68781

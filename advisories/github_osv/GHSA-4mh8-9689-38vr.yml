@@ -9,7 +9,14 @@ summary: In snapd versions prior to 2.62, when using AppArmor for enforcement of
   a malicious snap which used the 'home' plug could use this vulnerability to install arbitrary
   scripts into the users PATH which may then be run by the user outside of the expected snap
   sandbox and hence allow them to escape confinement.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/snapcore/snapd
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/snapcore/snapd
+        commit: aa191f97713de8dc3ce3ac818539f0b976eb8ef6
+    introduced_in_commits: []
 severities:
   - score: '6.3'
     scoring_system: cvssv3.1
@@ -27,6 +34,12 @@ references:
   - url: https://github.com/snapcore/snapd
     reference_type:
     reference_id:
+  - url: https://github.com/snapcore/snapd/commit/aa191f97713de8dc3ce3ac818539f0b976eb8ef6
+    reference_type:
+    reference_id:
+  - url: https://github.com/snapcore/snapd/pull/13689
+    reference_type:
+    reference_id:
   - url: https://gld.mcphail.uk/posts/explaining-cve-2024-1724
     reference_type:
     reference_id:
@@ -36,9 +49,3 @@ references:
   - url: https://pkg.go.dev/vuln/GO-2024-3007
     reference_type:
     reference_id:
-  - url: https://github.com/snapcore/snapd/pull/13689
-    reference_type: other
-    reference_id: 13689
-  - url: https://github.com/snapcore/snapd/commit/aa191f97713de8dc3ce3ac818539f0b976eb8ef6
-    reference_type: other
-    reference_id: aa191f97713de8dc3ce3ac818539f0b976eb8ef6

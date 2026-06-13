@@ -23,7 +23,14 @@ summary: "Potential memory exhaustion attack due to sparse slice deserialization
   \ behaviour without fixing it in this project, so all uses of Decode that fall under this\
   \ umbrella are affected. A fix that doesn't require a major change may also be harder to find,\
   \ since it could break compatibility with some other intended use-cases."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/gorilla/schema
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/gorilla/schema
+        commit: cd59f2f12cbdfa9c06aa63e425d1fe4a806967ff
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -41,15 +48,15 @@ references:
   - url: https://github.com/gorilla/schema
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2024-37298
+  - url: https://github.com/gorilla/schema/blob/main/decoder.go#L223
     reference_type:
     reference_id:
   - url: https://github.com/gorilla/schema/commit/cd59f2f12cbdfa9c06aa63e425d1fe4a806967ff
-    reference_type: other
-    reference_id: cd59f2f12cbdfa9c06aa63e425d1fe4a806967ff
-  - url: https://github.com/gorilla/schema/blob/main/decoder.go#L223
-    reference_type: other
-    reference_id: decoder.go#L223
+    reference_type:
+    reference_id:
   - url: https://github.com/gorilla/schema/security/advisories/GHSA-3669-72x9-r9p3
-    reference_type: other
-    reference_id: GHSA-3669-72x9-r9p3
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2024-37298
+    reference_type:
+    reference_id:

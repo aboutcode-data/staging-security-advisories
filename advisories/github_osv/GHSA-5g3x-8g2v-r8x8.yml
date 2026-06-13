@@ -6,7 +6,14 @@ aliases:
 summary: |
   Volcano has insecure permissions
   Insecure permissions in volcano v1.8.2 allows attackers to access sensitive data and escalate privileges by obtaining the service account's token.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/volcano-sh/volcano
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/volcano-sh/volcano
+        commit: 55963f71c76cb85cea1cdb9582ea7d58cfbedcf8
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
@@ -26,6 +33,9 @@ severities:
 weaknesses:
   - CWE-1259
 references:
+  - url: https://gist.github.com/HouqiyuA/a0e05a26ecc80bd970ac4649faecc930
+    reference_type:
+    reference_id:
   - url: https://github.com/volcano-sh/volcano
     reference_type:
     reference_id:
@@ -44,6 +54,3 @@ references:
   - url: https://pkg.go.dev/vuln/GO-2024-3034
     reference_type:
     reference_id:
-  - url: https://gist.github.com/HouqiyuA/a0e05a26ecc80bd970ac4649faecc930
-    reference_type: other
-    reference_id: a0e05a26ecc80bd970ac4649faecc930

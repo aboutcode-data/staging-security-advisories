@@ -32,7 +32,14 @@ summary: |
   This attack only allows accessing blobs (both config and layers) by digest. Manifests cannot be accessed.
 
   This attack requires the attacker to know the name of a private image and its layer digests. A scenario where this might happen is if a project has public CI build logs but publishes the image to a private repository. Many image build tools log layer digests.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/project-zot/zot
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/project-zot/zot
+        commit: aaee0220e46bdadd12115ac67c19f9d3153eb1df
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1
@@ -55,12 +62,12 @@ references:
   - url: https://github.com/project-zot/zot
     reference_type:
     reference_id:
+  - url: https://github.com/project-zot/zot/commit/aaee0220e46bdadd12115ac67c19f9d3153eb1df
+    reference_type:
+    reference_id:
+  - url: https://github.com/project-zot/zot/security/advisories/GHSA-55r9-5mx9-qq7r
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-39897
     reference_type:
     reference_id:
-  - url: https://github.com/project-zot/zot/commit/aaee0220e46bdadd12115ac67c19f9d3153eb1df
-    reference_type: other
-    reference_id: aaee0220e46bdadd12115ac67c19f9d3153eb1df
-  - url: https://github.com/project-zot/zot/security/advisories/GHSA-55r9-5mx9-qq7r
-    reference_type: other
-    reference_id: GHSA-55r9-5mx9-qq7r

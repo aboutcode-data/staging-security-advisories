@@ -6,7 +6,14 @@ aliases:
 summary: |
   Rhai stack overflow vulenrability
   A stack overflow vulnerability was found in version 1.18.0 of rhai. The flaw position is: (/ SRC/rhai/SRC/eval/STMT. Rs in rhai: : eval: : STMT: : _ $LT $impl $u20 $rhai.. engine.. Engine$GT$::eval_stmt::h3f1d68ce37fc6e96). Due to the stack overflow is a recursive call/SRC/rhai/SRC/eval/STMT. Rs file eval_stmt_block function.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/rhaiscript/rhai
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/rhaiscript/rhai
+        commit: 308d07a11d3bff0d230f685a6320292181e5a445
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -27,6 +34,9 @@ weaknesses:
   - CWE-120
   - CWE-674
 references:
+  - url: https://github.com/MageWeiG/VulnerabilityCollection/blob/main/CVE-2024-36760/info.md
+    reference_type:
+    reference_id:
   - url: https://github.com/rhaiscript/rhai
     reference_type:
     reference_id:
@@ -36,6 +46,3 @@ references:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-36760
     reference_type:
     reference_id:
-  - url: https://github.com/MageWeiG/VulnerabilityCollection/blob/main/CVE-2024-36760/info.md
-    reference_type: other
-    reference_id: info.md

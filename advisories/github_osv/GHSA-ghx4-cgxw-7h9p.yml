@@ -6,7 +6,14 @@ aliases:
 summary: |
   LocalAI Cross-site Scripting vulnerability
   localai <=2.20.1 is vulnerable to Cross Site Scripting (XSS). When calling the delete model API and passing inappropriate parameters, it can cause a one-time storage XSS, which will trigger the payload when a user accesses the homepage.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mudler/localai
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mudler/localai
+        commit: a1634b219a4e52813e70ff07e6376a01449c4515
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
@@ -27,6 +34,9 @@ weaknesses:
   - CWE-79
   - CWE-352
 references:
+  - url: https://gist.github.com/AfterSnows/1bd7ee5a3a42dbb5f5ff67f7f9c8ccec
+    reference_type:
+    reference_id:
   - url: https://github.com/advisories/GHSA-ghx4-cgxw-7h9p
     reference_type:
     reference_id:
@@ -36,15 +46,12 @@ references:
   - url: https://github.com/mudler/LocalAI/blob/master/core/http/views/index.html#L75
     reference_type:
     reference_id:
+  - url: https://github.com/mudler/localai/commit/a1634b219a4e52813e70ff07e6376a01449c4515
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-48057
     reference_type:
     reference_id:
-  - url: https://gist.github.com/AfterSnows/1bd7ee5a3a42dbb5f5ff67f7f9c8ccec
-    reference_type: other
-    reference_id: 1bd7ee5a3a42dbb5f5ff67f7f9c8ccec
-  - url: https://github.com/mudler/localai/commit/a1634b219a4e52813e70ff07e6376a01449c4515
-    reference_type: other
-    reference_id: a1634b219a4e52813e70ff07e6376a01449c4515
   - url: https://rumbling-slice-eb0.notion.site/LocalAI-deleted-model-with-storage-XSS-CSRF-vulnerability-in-mudler-localai-101e3cda9e8c80e0ac12fe418d5dd982?pvs=4
-    reference_type: other
-    reference_id: LocalAI-deleted-model-with-storage-XSS-CSRF-vulnerability-in-mudler-localai-101e3cda9e8c80e0ac12fe418d5dd982?pvs=4
+    reference_type:
+    reference_id:

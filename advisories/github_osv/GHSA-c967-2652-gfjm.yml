@@ -16,7 +16,14 @@ summary: "CasaOS Username Enumeration\n### Summary\n\nThe Casa OS Login page has
   \ can be vice versa like:\n\nIf the password is incorrect, then throw an error \"Invalid password\"\
   \ else throw an error \"User does not exist\".\n\n### Mitigation\n\nSince this is the condition\
   \ we have to implement a single error which can be \"Username/Password is Incorrect!!!\""
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/icewhaletech/casaos-userservice
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/icewhaletech/casaos-userservice
+        commit: c75063d7ca5800948e9c09c0a6efe9809b5d39f7
+    introduced_in_commits: []
 severities:
   - score: '6.2'
     scoring_system: cvssv3.1
@@ -34,15 +41,15 @@ references:
   - url: https://github.com/IceWhaleTech/CasaOS-UserService
     reference_type:
     reference_id:
+  - url: https://github.com/IceWhaleTech/CasaOS-UserService/commit/c75063d7ca5800948e9c09c0a6efe9809b5d39f7
+    reference_type:
+    reference_id:
+  - url: https://github.com/IceWhaleTech/CasaOS-UserService/releases/tag/v0.4.7
+    reference_type:
+    reference_id:
+  - url: https://github.com/IceWhaleTech/CasaOS-UserService/security/advisories/GHSA-c967-2652-gfjm
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-24766
     reference_type:
     reference_id:
-  - url: https://github.com/IceWhaleTech/CasaOS-UserService/commit/c75063d7ca5800948e9c09c0a6efe9809b5d39f7
-    reference_type: other
-    reference_id: c75063d7ca5800948e9c09c0a6efe9809b5d39f7
-  - url: https://github.com/IceWhaleTech/CasaOS-UserService/security/advisories/GHSA-c967-2652-gfjm
-    reference_type: other
-    reference_id: GHSA-c967-2652-gfjm
-  - url: https://github.com/IceWhaleTech/CasaOS-UserService/releases/tag/v0.4.7
-    reference_type: other
-    reference_id: v0.4.7

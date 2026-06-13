@@ -35,7 +35,14 @@ summary: "Un-sanitized metric name or labels can be used to take over exported m
   \nDevelopers must validate user input before using it as metric names, label names or values.\
   \ This follows common practice of not trusting any user input without sanitization.\n\n###\
   \ Credits\n\nWe would like to thank Jonas Dörr for bringing out attention to the issue."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/swift-server/swift-prometheus
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/swift-server/swift-prometheus
+        commit: bfcd4bbfabe11aae4b035424ee9724582e288501
+    introduced_in_commits: []
 severities:
   - score: '5.9'
     scoring_system: cvssv3.1
@@ -53,12 +60,12 @@ references:
   - url: https://github.com/swift-server/swift-prometheus
     reference_type:
     reference_id:
+  - url: https://github.com/swift-server/swift-prometheus/commit/bfcd4bbfabe11aae4b035424ee9724582e288501
+    reference_type:
+    reference_id:
+  - url: https://github.com/swift-server/swift-prometheus/security/advisories/GHSA-x768-cvr2-345r
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-28867
     reference_type:
     reference_id:
-  - url: https://github.com/swift-server/swift-prometheus/commit/bfcd4bbfabe11aae4b035424ee9724582e288501
-    reference_type: other
-    reference_id: bfcd4bbfabe11aae4b035424ee9724582e288501
-  - url: https://github.com/swift-server/swift-prometheus/security/advisories/GHSA-x768-cvr2-345r
-    reference_type: other
-    reference_id: GHSA-x768-cvr2-345r

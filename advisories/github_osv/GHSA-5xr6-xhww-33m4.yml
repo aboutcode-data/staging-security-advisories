@@ -27,7 +27,14 @@ summary: "Artifact poisoning vulnerability in action-download-artifact v5 and ea
   \ is affected, the severity ranges from downstream contamination (such as publishing attacker-controlled\
   \ artifacts) to direct workflow compromise (if the retrieved artifact is then executed in\
   \ a privileged workflow context, such as `push` or `pull_request_target`)."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/dawidd6/action-download-artifact
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/dawidd6/action-download-artifact
+        commit: bf251b5aa9c2f7eeb574a96ee720e24f801b7c11
+    introduced_in_commits: []
 severities:
   - score: '8.7'
     scoring_system: cvssv4

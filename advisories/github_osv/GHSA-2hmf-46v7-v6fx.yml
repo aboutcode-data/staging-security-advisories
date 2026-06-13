@@ -6,7 +6,14 @@ aliases:
 summary: |
   gqlparser denial of service vulnerability via the parserDirectives function
   An issue in vektah gqlparser open-source-library v.2.5.10 allows a remote attacker to cause a denial of service via a crafted script to the parserDirectives function.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/vektah/gqlparser
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/vektah/gqlparser
+        commit: 36a3658873bf5a107f42488dfc392949cdd02977
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
@@ -22,6 +29,9 @@ weaknesses:
   - CWE-400
   - CWE-770
 references:
+  - url: https://gist.github.com/uvzz/d3ed9d4532be16ec1040a2cf3dfec8d1
+    reference_type:
+    reference_id:
   - url: https://github.com/99designs/gqlgen/issues/3118
     reference_type:
     reference_id:
@@ -40,6 +50,3 @@ references:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2023-49559
     reference_type:
     reference_id:
-  - url: https://gist.github.com/uvzz/d3ed9d4532be16ec1040a2cf3dfec8d1
-    reference_type: other
-    reference_id: d3ed9d4532be16ec1040a2cf3dfec8d1
