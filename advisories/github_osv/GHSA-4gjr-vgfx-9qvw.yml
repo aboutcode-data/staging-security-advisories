@@ -6,7 +6,14 @@ aliases:
 summary: |
   AList vulnerable to Improper Preservation of Permissions
   Alist v3.4.0 is vulnerable to File Upload. A user with only file upload permission can upload any file to any folder (even a password protected one). Version 3.5.1 contains a patch.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/alist-org/alist
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/alist-org/alist
+        commit: 85e1350af82e1759ca6580895e48ab969eb566cf
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
@@ -33,4 +40,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2022-45968
     reference_type:
-    reference_id: CVE-2022-45968
+    reference_id:

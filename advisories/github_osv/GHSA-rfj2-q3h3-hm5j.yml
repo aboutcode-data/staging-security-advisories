@@ -37,7 +37,18 @@ summary: |
 
   [policy]: https://www.rust-lang.org/policies/security
   [patches]: https://github.com/rust-lang/wg-security-response/tree/master/patches
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/rust-lang/cargo
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/rust-lang/cargo
+        commit: dafe4a7ea016739680ec7998aebe1bc6de131a5b
+      - vcs_url: https://github.com/rust-lang/cargo
+        commit: 15f1e4b0bf4b4fc20369e0a85d9b77957c4dd52a
+      - vcs_url: https://github.com/rust-lang/cargo
+        commit: 97b80919e404b0768ea31ae329c3b4da54bed05a
+    introduced_in_commits: []
 severities:
   - score: '3.9'
     scoring_system: cvssv3.1
@@ -68,9 +79,9 @@ references:
   - url: https://github.com/rust-lang/cargo/security/advisories/GHSA-rfj2-q3h3-hm5j
     reference_type:
     reference_id:
-  - url: https://security.gentoo.org/glsa/202210-09
-    reference_type:
-    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2022-36113
     reference_type:
-    reference_id: CVE-2022-36113
+    reference_id:
+  - url: https://security.gentoo.org/glsa/202210-09
+    reference_type:
+    reference_id: GLSA-202210-09

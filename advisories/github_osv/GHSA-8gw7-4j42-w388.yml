@@ -61,7 +61,14 @@ summary: "Cosign bundle can be crafted to successfully verify a blob even if the
   \ version of Cosign, `1.12.0`.\n\n### Workarounds\n\nThere are no workarounds, users should\
   \ update.\n\n\n## For more information\nIf you have any questions or comments about this advisory:\n\
   * Open an issue in [cosign](https://github.com/sigstore/cosign)\n* Send us a message on [Slack](https://sigstore.slack.com/)."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/sigstore/cosign
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/sigstore/cosign
+        commit: 80b79ed8b4d28ccbce3d279fd273606b5cddcc25
+    introduced_in_commits: []
 severities:
   - score: '5.5'
     scoring_system: cvssv3.1
@@ -90,4 +97,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2022-36056
     reference_type:
-    reference_id: CVE-2022-36056
+    reference_id:

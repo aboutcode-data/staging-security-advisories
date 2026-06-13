@@ -10,7 +10,14 @@ summary: |
   The use after free is caused by Cranelift failing to emit stack maps when there are safepoints inside cold blocks. Cold blocks occur when epoch interruption is enabled. Cold blocks are emitted at the end of compiled functions, and change the order blocks are emitted versus defined. This reordering accidentally caused Cranelift to skip emitting some stack maps because it expected to emit the stack maps in block definition order, rather than block emission order. When Wasmtime would eventually collect garbage, it would fail to find live references on the stack because of the missing stack maps, think that they were unreferenced garbage, and therefore reclaim them. Then after the collection ended, the Wasm code could use the reclaimed-too-early references, which is a use after free.
 
   This bug was discovered while extending our fuzz targets for `externref`s and GC in Wasmtime. The updated fuzz target thoroughly exercises these code paths and feature combinations now. We have also added a regression test for this bug. Released versions 0.34.2 and 0.35.2, which fix the vulnerability. We recommend all Wasmtime users upgrade to these patched versions. If upgrading is not an option for you at this time, you can avoid the vulnerability by either disabling the Wasm reference types proposal or by disabling epoch interruption if you were previously enabling it.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/bytecodealliance/wasmtime
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/bytecodealliance/wasmtime
+        commit: 666c2554ea0e1728c35aa41178cf235920db888a
+    introduced_in_commits: []
 severities:
   - score: '8.1'
     scoring_system: cvssv3.1
@@ -34,9 +41,6 @@ references:
   - url: https://github.com/bytecodealliance/wasmtime/commit/666c2554ea0e1728c35aa41178cf235920db888a
     reference_type:
     reference_id:
-  - url: https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-gwc9-348x-qwv2
-    reference_type:
-    reference_id:
   - url: https://github.com/WebAssembly/reference-types
     reference_type:
     reference_id:
@@ -49,3 +53,6 @@ references:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2022-24791
     reference_type:
     reference_id: CVE-2022-24791
+  - url: https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-gwc9-348x-qwv2
+    reference_type:
+    reference_id: GHSA-gwc9-348x-qwv2

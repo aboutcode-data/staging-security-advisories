@@ -19,7 +19,14 @@ summary: "Zip slip directory exploit in github.com/deislabs/oras\n### Impact\nTh
   - [Zip Slip](https://github.com/snyk/zip-slip-vulnerability)\n\n### For more information\n\
   If you have any questions or comments about this advisory:\n* Open an issue on the [GitHub\
   \ repo](https://github.com/deislabs/oras)\n* Email the [list of maintainers](https://github.com/deislabs/oras/blob/main/MAINTAINERS)"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/deislabs/oras
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/deislabs/oras
+        commit: 96cd90423303f1bb42bd043cb4c36085e6e91e8e
+    introduced_in_commits: []
 severities:
   - score: '7.7'
     scoring_system: cvssv3.1
@@ -47,12 +54,12 @@ references:
   - url: https://github.com/deislabs/oras/security/advisories/GHSA-g5v4-5x39-vwhx
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2021-21272
+    reference_type:
+    reference_id:
   - url: https://pkg.go.dev/github.com/deislabs/oras/pkg/oras
     reference_type:
     reference_id:
   - url: https://pkg.go.dev/vuln/GO-2021-0099
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2021-21272
-    reference_type:
-    reference_id: CVE-2021-21272

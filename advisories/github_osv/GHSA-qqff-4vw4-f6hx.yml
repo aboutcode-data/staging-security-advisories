@@ -76,7 +76,14 @@ summary: |
   * The attack can only work if the 8 bytes immediately following the exfiltrated data contains a valid in-bounds Cap'n Proto pointer. The easiest way to achieve this is if the pointer is null, i.e. 8 bytes of zero.
     * The attacker must specify exactly how much data to exfiltrate, so must guess exactly where such a valid pointer will exist.
     * If the exfiltrated data is not followed by a valid pointer, the attack will throw an exception. If an application has chosen to ignore exceptions (e.g. by compiling with `-fno-exceptions` and not registering an alternative exception callback) then the attack may be able to proceed anyway.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/capnproto/capnproto
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/capnproto/capnproto
+        commit: 25d34c67863fd960af34fc4f82a7ca3362ee74b9
+    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1
@@ -100,9 +107,6 @@ references:
   - url: https://github.com/capnproto/capnproto/commit/25d34c67863fd960af34fc4f82a7ca3362ee74b9
     reference_type:
     reference_id:
-  - url: https://github.com/capnproto/capnproto/security/advisories/GHSA-qqff-4vw4-f6hx
-    reference_type:
-    reference_id:
   - url: https://github.com/capnproto/capnproto/tree/master/security-advisories/2022-11-30-0-pointer-list-bounds.md
     reference_type:
     reference_id:
@@ -124,3 +128,6 @@ references:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2022-46149
     reference_type:
     reference_id: CVE-2022-46149
+  - url: https://github.com/capnproto/capnproto/security/advisories/GHSA-qqff-4vw4-f6hx
+    reference_type:
+    reference_id: GHSA-qqff-4vw4-f6hx

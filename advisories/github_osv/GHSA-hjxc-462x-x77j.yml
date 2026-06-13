@@ -7,6 +7,13 @@ summary: |
   TOCTOU Race Condition in Yarn
   The package integrity validation in yarn < 1.19.0 contains a TOCTOU vulnerability where the hash is computed before writing a package to cache. It's not computed again when reading from the cache. This may lead to a cache pollution attack. This issue is fixed in 1.19.0.
 impacted_packages:
+  - purl: pkg:github/yarnpkg/yarn
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/yarnpkg/yarn
+        commit: 0474b8c66a8ea298f5e4dedc67b2de464297ad1c
+    introduced_in_commits: []
   - purl: pkg:npm/yarn
     affected_versions: vers:npm/<1.19.0
     fixed_versions: vers:npm/1.19.0

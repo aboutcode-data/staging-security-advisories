@@ -47,7 +47,14 @@ summary: |
   ## Acknowledgements
 
   This issue was responsibly reported by Evan Richter at ForAllSecure and found with [Mayhem](https://forallsecure.com/mayhem-for-code) and [cargo fuzz](https://github.com/rust-fuzz/cargo-fuzz).
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/rust-osdev/linked-list-allocator
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/rust-osdev/linked-list-allocator
+        commit: 013b0758643943e8df5b17bbb495460ff47e8bbf
+    introduced_in_commits: []
 severities:
   - score: '8.4'
     scoring_system: cvssv3.1
@@ -75,9 +82,9 @@ references:
   - url: https://github.com/rust-osdev/linked-list-allocator/security/advisories/GHSA-xg8p-34w2-j49j
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2022-36086
+    reference_type:
+    reference_id:
   - url: https://rustsec.org/advisories/RUSTSEC-2022-0063.html
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2022-36086
-    reference_type:
-    reference_id: CVE-2022-36086

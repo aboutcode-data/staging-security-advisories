@@ -35,7 +35,14 @@ summary: "Duplicate Advisory: Unencrypted md5 plaintext hash in metadata in AWS 
   \ nil\n\t\t}\n\t}\n\treturn \"\", fmt.Errorf(\"No plaintext found!\")\n}\n```\n\nThe PoC will\
   \ only work on old versions of the library, as the hash has been removed from being calculated\
   \ as well."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/aws/aws-sdk-go
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/aws/aws-sdk-go
+        commit: 35fa6ddf45c061e0f08d3a3b5119f8f4da38f6d1
+    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual

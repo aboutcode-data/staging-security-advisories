@@ -6,7 +6,14 @@ aliases:
 summary: |
   Off-by-one Error in v2fly/v2ray-core
   v2fly/v2ray-core prior to 4.44.0 is vulnerable to an off-by-one error. Indexing operations on arrays, slices, or strings should use an index at most one less than the length. If the index is checked for being less than or equal to the length (`<=`), instead of less than the length (`<`), the index could be out of bounds.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/v2fly/v2ray-core
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/v2fly/v2ray-core
+        commit: c1af2bfd7aa59a4482aa7f6ec4b9208c1d350b5c
+    introduced_in_commits: []
 severities:
   - score: '9.1'
     scoring_system: cvssv3.1
@@ -32,4 +39,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2021-4070
     reference_type:
-    reference_id: CVE-2021-4070
+    reference_id:

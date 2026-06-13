@@ -22,7 +22,14 @@ summary: "Helm vulnerable to denial of service through string value parsing\nFuz
   \ usage before passing them to the _strvals_ functions.\n\n### For more information\n\nHelm's\
   \ security policy is spelled out in detail in our [SECURITY](https://github.com/helm/community/blob/master/SECURITY.md)\
   \ document.\n\n### Credits\n\nDisclosed by Ada Logics in a fuzzing audit sponsored by CNCF."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/helm/helm
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/helm/helm
+        commit: 3636f6824757ff734cb265b8770efe48c1fb3737
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
@@ -46,9 +53,9 @@ references:
   - url: https://github.com/helm/helm/security/advisories/GHSA-6rx9-889q-vv2r
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2022-23524
+    reference_type:
+    reference_id:
   - url: https://pkg.go.dev/vuln/GO-2022-1167
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2022-23524
-    reference_type:
-    reference_id: CVE-2022-23524

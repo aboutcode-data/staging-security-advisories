@@ -17,7 +17,14 @@ summary: "Lookup operations do not take into account wildcards in SpiceDB\n### I
   \n### For more information\nIf you have any questions or comments about this advisory:\n*\
   \ Open an issue in [SpiceDB](https://github.com/authzed/spicedb)\n* Ask a question in the\
   \ [SpiceDB Discord](https://authzed.com/discord)"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/authzed/spicedb
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/authzed/spicedb
+        commit: 15bba2e2d2a4bda336a37a7fe8ef8a35028cd970
+    introduced_in_commits: []
 severities:
   - score: '8.1'
     scoring_system: cvssv3.1
@@ -30,8 +37,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-20
   - CWE-155
+  - CWE-20
 references:
   - url: https://github.com/authzed/spicedb
     reference_type:
@@ -50,4 +57,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2022-21646
     reference_type:
-    reference_id: CVE-2022-21646
+    reference_id:

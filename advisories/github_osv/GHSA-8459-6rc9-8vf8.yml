@@ -7,7 +7,16 @@ summary: "Path traversal in github.com/cloudflare/cfrpki/cmd/octorpki\n### Impac
   \ ROA file which octorpki downloads, it is possible to bypass the current directory traversal\
   \ mitigation to allow writing outside of the current directory. \n\n### Patches\n\nNo patch\
   \ release has been made"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/cloudflare/cfrpki
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/cloudflare/cfrpki
+        commit: eb9cc4db7b7b79e44f56dfaa959fccdfb2af8284
+      - vcs_url: https://github.com/cloudflare/cfrpki
+        commit: a053a808feeb3115c76b6cc263ee55598ce6e8cd
+    introduced_in_commits: []
 severities:
   - score: LOW
     scoring_system: generic_textual

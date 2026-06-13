@@ -6,7 +6,14 @@ aliases:
 summary: |
   Alist vulnerable to Path Traversal
   In versions of Alist prior to 3.6.0, a user with only file upload permission can bypass the base path restriction by using '... /' to bypass the base path restriction and upload files to an arbitrary path.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/alist-org/alist
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/alist-org/alist
+        commit: b5bf5f43253175b55fa2cb511fea601e677d2d83
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
@@ -32,4 +39,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2022-45969
     reference_type:
-    reference_id: CVE-2022-45969
+    reference_id:

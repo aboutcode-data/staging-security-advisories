@@ -14,14 +14,21 @@ summary: |
   Additionally, the token value is only displayed once when it is generated.
 impacted_packages:
   - purl: pkg:maven/org.jenkins-ci.plugins/metrics
+    affected_versions: vers:maven/<4.0.2.7.1
+    fixed_versions: vers:maven/4.0.2.7.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/metrics
     affected_versions: vers:maven/4.0.2.8
     fixed_versions: vers:maven/4.0.2.8.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/org.jenkins-ci.plugins/metrics
-    affected_versions: vers:maven/<4.0.2.7.1
-    fixed_versions: vers:maven/4.0.2.7.1
-    fixed_in_commits: []
+  - purl: pkg:github/jenkinsci/metrics-plugin
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/jenkinsci/metrics-plugin
+        commit: 9810480370d4c5e04a2b710934db5461bde0d1b6
     introduced_in_commits: []
 severities:
   - score: '5.5'

@@ -7,7 +7,14 @@ summary: |
   Path resolution in `hyper-staticfile` didn't correctly validate Windows paths, meaning paths like `/foo/bar/c:/windows/web/screen/img101.png` would be allowed and respond with the contents of `c:/windows/web/screen/img101.png`. Thus users could potentially read files anywhere on the filesystem.
 
   This only impacts Windows. Linux and other unix likes are not impacted by this.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/stephank/hyper-staticfile
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/stephank/hyper-staticfile
+        commit: 1e40e31d64bc6b32e595d24074092dcf84410b2b
+    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual

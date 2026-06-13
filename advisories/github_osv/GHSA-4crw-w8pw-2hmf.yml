@@ -6,7 +6,14 @@ aliases:
 summary: |
   Buildah (as part of Podman) vulnerable to Link Following
   A vulnerability was found in buildah. Incorrect following of symlinks while reading .containerignore and .dockerignore results in information disclosure.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/containers/podman
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/containers/podman
+        commit: c8eeab21cf0a4f670be0cd399dd06fd5d4e06dfe
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
@@ -21,9 +28,6 @@ severities:
 weaknesses:
   - CWE-59
 references:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2144983
-    reference_type:
-    reference_id:
   - url: https://github.com/containers/podman/commit/c8eeab21cf0a4f670be0cd399dd06fd5d4e06dfe
     reference_type:
     reference_id:
@@ -32,4 +36,7 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2022-4122
     reference_type:
-    reference_id: CVE-2022-4122
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2144983
+    reference_type: bug
+    reference_id: 2144983

@@ -32,7 +32,14 @@ summary: "Reject unauthorized access with GitHub PATs\n### Impact\n_What kind of
   * https://docs.github.com/en/enterprise-server@3.0/rest/reference/apps#check-a-token\n\n###\
   \ For more information\nIf you have any questions or comments about this advisory\n\n* Email\
   \ us at [vela@target.com](mailto:vela@target.com)"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/go-vela/server
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/go-vela/server
+        commit: cb4352918b8ecace9fe969b90404d337b0744d46
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -45,9 +52,9 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-863
-  - CWE-862
   - CWE-285
+  - CWE-862
+  - CWE-863
 references:
   - url: https://github.com/go-vela/server
     reference_type:
@@ -64,9 +71,9 @@ references:
   - url: https://github.com/go-vela/server/security/advisories/GHSA-8j3f-mhq8-gmh4
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2021-21432
+    reference_type:
+    reference_id:
   - url: https://pkg.go.dev/github.com/go-vela/server
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2021-21432
-    reference_type:
-    reference_id: CVE-2021-21432

@@ -30,7 +30,14 @@ summary: "Opened exploitable ports in default docker-compose.yaml in go-ipfs\n##
   If you have any questions or comments about this advisory:\n* Please first read https://docs.ipfs.io/reference/http/api/\
   \ about best practices\n* Ask in [IPFS Discord #ipfs-chatter](https://discord.gg/ipfs)\n*\
   \ Open an issue in [go-ipfs](https://github.com/ipfs/go-ipfs)"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/ipfs/go-ipfs
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/ipfs/go-ipfs
+        commit: 816a128aaf963d72c4930852ce32b9a4e31924a1
+    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual

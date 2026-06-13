@@ -20,7 +20,14 @@ summary: "Helm vulnerable to denial of service through schema file\nFuzz testing
   \ formatted before passing them to the `_chartutil_` functions.\n\n### For more information\n\
   \nHelm's security policy is spelled out in detail in our [SECURITY](https://github.com/helm/community/blob/master/SECURITY.md)\
   \ document.\n\n### Credits\n\nDisclosed by Ada Logics in a fuzzing audit sponsored by CNCF."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/helm/helm
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/helm/helm
+        commit: bafafa8bb1b571b61d7a9528da8d40c307dade3d
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
@@ -44,9 +51,9 @@ references:
   - url: https://github.com/helm/helm/security/advisories/GHSA-67fx-wx78-jx33
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2022-23526
+    reference_type:
+    reference_id:
   - url: https://pkg.go.dev/vuln/GO-2022-1166
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2022-23526
-    reference_type:
-    reference_id: CVE-2022-23526

@@ -6,7 +6,14 @@ aliases:
 summary: |
   Unsafe parsing in SWHKD
   SWHKD 1.1.5 allows unsafe parsing via the -c option. An information leak might occur but there is a simple denial of service (memory exhaustion) upon an attempt to parse a large or infinite file (such as a block or character device).
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/waycrate/swhkd
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/waycrate/swhkd
+        commit: b4e6dc76f4845ab03104187a42ac6d1bbc1e0021
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
@@ -19,8 +26,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-770
   - CWE-400
+  - CWE-770
 references:
   - url: https://github.com/waycrate/swhkd
     reference_type:
@@ -34,9 +41,9 @@ references:
   - url: https://github.com/waycrate/swhkd/releases/tag/1.2.0
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2022-27819
+    reference_type:
+    reference_id:
   - url: http://www.openwall.com/lists/oss-security/2022/04/14/1
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2022-27819
-    reference_type:
-    reference_id: CVE-2022-27819

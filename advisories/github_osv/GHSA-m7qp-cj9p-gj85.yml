@@ -6,7 +6,14 @@ aliases:
 summary: |
   OpenShift OSIN vulnerable to Observable Timing Discrepancy
   A vulnerability was found in OpenShift OSIN. It has been classified as problematic. This affects the function `ClientSecretMatches/CheckClientSecret`. The manipulation of the argument secret leads to observable timing discrepancy. The name of the patch is 8612686d6dda34ae9ef6b5a974e4b7accb4fea29. It is recommended to apply a patch to fix this issue. The associated identifier of this vulnerability is VDB-216987.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/openshift/osin
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openshift/osin
+        commit: 8612686d6dda34ae9ef6b5a974e4b7accb4fea29
+    introduced_in_commits: []
 severities:
   - score: '5.9'
     scoring_system: cvssv3.1
@@ -31,6 +38,9 @@ references:
   - url: https://github.com/openshift/osin/pull/200
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2021-4294
+    reference_type:
+    reference_id:
   - url: https://pkg.go.dev/vuln/GO-2022-1201
     reference_type:
     reference_id:
@@ -40,6 +50,3 @@ references:
   - url: https://vuldb.com/?id.216987
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2021-4294
-    reference_type:
-    reference_id: CVE-2021-4294

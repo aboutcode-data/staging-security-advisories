@@ -55,7 +55,14 @@ summary: |
   Upgrade the NATS server if using NATS Accounts (with private Exports; Account owners can create those at any time though).
 
   Audit all accounts JWTs to scan for exploit attempts; a Python script to audit the accounts can be found at <https://gist.github.com/philpennock/09d49524ad98043ff11d8a40c2bb0d5a>.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/nats-io/jwt
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/nats-io/jwt
+        commit: 6c72fdd73e82fa9ebb151d84773baf4e9164c4ab
+    introduced_in_commits: []
 severities:
   - score: CRITICAL
     scoring_system: generic_textual

@@ -6,7 +6,14 @@ aliases:
 summary: |
   socks Infinite Loop vulnerability
   The `RemoteAddr` and `LocalAddr` methods on the returned `net.Conn` may call themselves, leading to an infinite loop which will crash the program due to a stack overflow.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/btcsuite/go-socks
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/btcsuite/go-socks
+        commit: 233bccbb1abe02f05750f7ace66f5bffdb13defc
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

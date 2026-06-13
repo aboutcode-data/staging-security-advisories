@@ -6,7 +6,14 @@ aliases:
 summary: |
   leanote vulnerable to cross-site scripting
   A vulnerability, which was classified as problematic, has been found in leanote. This issue affects the function define of the file `public/js/plugins/history.js`. The manipulation of the argument content leads to cross site scripting. The attack may be initiated remotely. The name of the patch is https:/github.com/leanote/leanote/commit/0f9733c890077942150696dcc6d2b1482b7a0a19. It is recommended to apply a patch to fix this issue. The identifier VDB-216461 was assigned to this vulnerability.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/leanote/leanote
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/leanote/leanote
+        commit: 0f9733c890077942150696dcc6d2b1482b7a0a19
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
@@ -27,12 +34,12 @@ references:
   - url: https://github.com/leanote/leanote/commit/0f9733c890077942150696dcc6d2b1482b7a0a19
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2021-4263
+    reference_type:
+    reference_id:
   - url: https://vuldb.com/?ctiid.216461
     reference_type:
     reference_id:
   - url: https://vuldb.com/?id.216461
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2021-4263
-    reference_type:
-    reference_id: CVE-2021-4263

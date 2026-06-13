@@ -24,15 +24,22 @@ summary: |
   ### Credits
   We thank [Mohit Kumar](https://www.linkedin.com/in/mohit-kumar-4ab6b3bb) for reporting this vulnerability!
 impacted_packages:
+  - purl: pkg:maven/com.wire.bots/lithium
+    affected_versions: vers:maven/<3.4.2
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:maven/com.wire/lithium
     affected_versions: vers:maven/<3.4.2
     fixed_versions: vers:maven/3.4.2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/com.wire.bots/lithium
-    affected_versions: vers:maven/<3.4.2
+  - purl: pkg:github/wireapp/lithium
+    affected_versions:
     fixed_versions:
-    fixed_in_commits: []
+    fixed_in_commits:
+      - vcs_url: https://github.com/wireapp/lithium
+        commit: 8b9b406d608fe482ec0e7adf8705834bca92d7df
     introduced_in_commits: []
 severities:
   - score: '8.1'
@@ -56,4 +63,4 @@ references:
     reference_id:
   - url: https://github.com/wireapp/lithium/security/advisories/GHSA-f36p-42jv-8rh2
     reference_type:
-    reference_id:
+    reference_id: GHSA-f36p-42jv-8rh2

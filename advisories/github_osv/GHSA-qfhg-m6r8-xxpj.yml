@@ -7,6 +7,13 @@ summary: |
   Incorrect Authorization in Drupal core
   The QuickEdit module does not properly check access to fields in some circumstances, which can lead to unintended disclosure of field data. Sites are only affected if the QuickEdit module (which comes with the Standard profile) is installed.
 impacted_packages:
+  - purl: pkg:github/drupal/core
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/drupal/core
+        commit: 8e8e3d2ddd72471ba886346ecabfb5d98fd27d9b
+    introduced_in_commits: []
   - purl: pkg:composer/drupal/core
     affected_versions: vers:composer/>=8.0.0|<8.9.19
     fixed_versions: vers:composer/8.9.19
@@ -34,8 +41,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-863
   - CWE-284
+  - CWE-863
 references:
   - url: https://github.com/drupal/core
     reference_type:

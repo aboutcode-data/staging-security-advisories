@@ -16,7 +16,14 @@ summary: "Candy Machine Set Collection During Mint Missing Check\nA problem with
   \  If the CM is closed, (we think?) it doesn't get to the check.\nThe fix needs to be in set_collection_during_mint\
   \ that current program ID id candy_machine_v2.  It checks previous program ID but doesn't\
   \ check current.\n\nNOTE: THIS DOES NOT AFFECT Cmv3"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/metaplex-foundation/metaplex-program-library
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/metaplex-foundation/metaplex-program-library
+        commit: e6b3aff603ac06236bf77c2ec21ead93c6836dce
+    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual

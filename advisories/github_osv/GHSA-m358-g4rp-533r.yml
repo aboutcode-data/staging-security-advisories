@@ -6,7 +6,14 @@ aliases:
 summary: |
   SQL Injection in Casdoor
   The query API in Casdoor before 1.13.1 has a SQL injection vulnerability related to the field and value parameters, as demonstrated by api/get-organizations.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/casdoor/casdoor
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/casdoor/casdoor
+        commit: 5ec0c7a89005819960d8fe07f5ddda13d1371b8c
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -41,4 +48,7 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2022-24124
     reference_type:
+    reference_id:
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/webapps/50792.go
+    reference_type: exploit
     reference_id: CVE-2022-24124

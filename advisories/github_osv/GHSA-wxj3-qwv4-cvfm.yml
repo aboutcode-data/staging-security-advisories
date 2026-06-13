@@ -6,7 +6,14 @@ aliases:
 summary: |
   Privilege Escalation in Docker
   Docker 1.0.0 uses world-readable and world-writable permissions on the management socket, which allows local users to gain privileges via unspecified vectors.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/docker/docker
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/docker/docker
+        commit: 707ef9618b3b26a0534a0af732a22f159eccfaa5
+    introduced_in_commits: []
 severities:
   - score: '8.4'
     scoring_system: cvssv3.1

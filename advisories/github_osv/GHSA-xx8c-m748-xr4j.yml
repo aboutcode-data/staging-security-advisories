@@ -9,7 +9,14 @@ summary: |
 
   ### Specific Go Packages Affected
   github.com/kubernetes/kubernetes/pkg/apiserver
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/kubernetes/kubernetes
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/kubernetes/kubernetes
+        commit: 9e6912384a5bc714f2a780b870944a8cee264a22
+    introduced_in_commits: []
 severities:
   - score: '7.7'
     scoring_system: cvssv3.1
@@ -24,9 +31,6 @@ severities:
 weaknesses:
   - CWE-284
 references:
-  - url: https://access.redhat.com/errata/RHSA-2016:0070
-    reference_type:
-    reference_id:
   - url: https://access.redhat.com/errata/RHSA-2016:0351
     reference_type:
     reference_id:
@@ -44,4 +48,7 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2016-1905
     reference_type:
-    reference_id: CVE-2016-1905
+    reference_id:
+  - url: https://access.redhat.com/errata/RHSA-2016:0070
+    reference_type:
+    reference_id: RHSA-2016:0070

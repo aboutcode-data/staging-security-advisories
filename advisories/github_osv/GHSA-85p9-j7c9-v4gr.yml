@@ -6,7 +6,14 @@ aliases:
 summary: |
   containers/image library Insufficiently Protects Credentials
   The containers/image library used by the container tools Podman, Buildah, and Skopeo in Red Hat Enterprise Linux version 8 and CRI-O in OpenShift Container Platform, does not enforce TLS connections to the container registry authorization service. An attacker could use this vulnerability to launch a MiTM attack and steal login credentials or bearer tokens.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/containers/image
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/containers/image
+        commit: 634605d06e738aec8332bcfd69162e7509ac7aaf
+    introduced_in_commits: []
 severities:
   - score: '6.4'
     scoring_system: cvssv3.1
@@ -48,9 +55,9 @@ references:
   - url: https://github.com/containers/image/pull/669
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2019-10214
+    reference_type:
+    reference_id:
   - url: https://pkg.go.dev/vuln/GO-2021-0081
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2019-10214
-    reference_type:
-    reference_id: CVE-2019-10214

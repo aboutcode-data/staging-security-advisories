@@ -12,14 +12,28 @@ summary: |
   Matrix Project Plugin 1.20 and 1.18.1 escapes HTML metacharacters in node and label names, and label descriptions.
 impacted_packages:
   - purl: pkg:maven/org.jenkins-ci.plugins/matrix-project
+    affected_versions: vers:maven/<1.18.1
+    fixed_versions: vers:maven/1.18.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/matrix-project
     affected_versions: vers:maven/1.19
     fixed_versions: vers:maven/1.20
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/org.jenkins-ci.plugins/matrix-project
-    affected_versions: vers:maven/<1.18.1
-    fixed_versions: vers:maven/1.18.1
-    fixed_in_commits: []
+  - purl: pkg:github/cveproject/cvelist
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/cveproject/cvelist
+        commit: 2d78eb36f4d084db7fb35f1535d8d84fdcb7d859
+    introduced_in_commits: []
+  - purl: pkg:github/jenkinsci/matrix-project-plugin
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/jenkinsci/matrix-project-plugin
+        commit: 78cc60556304965ffb2dd8c017bf61d4f153f5ea
     introduced_in_commits: []
 severities:
   - score: '5.4'

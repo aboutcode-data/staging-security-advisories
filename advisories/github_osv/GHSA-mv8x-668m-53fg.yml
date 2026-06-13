@@ -12,7 +12,14 @@ summary: "Elrond-go has improper initialization\n### Impact\nRead only calls bet
   \ and understanding of this issue, anyone can check this integration test https://github.com/ElrondNetwork/elrond-go/blob/8e402fa6d7e91e779980122d3798b2bf50892945/integrationTests/vm/txsFee/asyncESDT_test.go#L452\
   \ that proves the fix and prevents a future code regression. \n\n### For more information\n\
   If you have any questions or comments about this advisory:\n* Open an issue in elrond-go ([http://github.com/ElrondNetwork/elrond-go/issues](https://github.com/ElrondNetwork/elrond-go/issues))"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/elrondnetwork/elrond-go
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/elrondnetwork/elrond-go
+        commit: 8e402fa6d7e91e779980122d3798b2bf50892945
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
@@ -41,4 +48,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2022-36061
     reference_type:
-    reference_id: CVE-2022-36061
+    reference_id:

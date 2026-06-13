@@ -6,7 +6,14 @@ aliases:
 summary: |
   Gophish before 0.12.0 vulnerable to Open Redirect
   This affects the package github.com/gophish/gophish before 0.12.0. The Open Redirect vulnerability exists in the next query parameter. The application uses url.Parse(r.FormValue("next")) to extract path and eventually redirect user to a relative URL, but if next parameter starts with multiple backslashes like \\\\\\example.com, browser will redirect user to http://example.com.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/gophish/gophish
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/gophish/gophish
+        commit: 2a452bda89ffdb85f929fa78290bce1f456881dc
+    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1
@@ -33,9 +40,9 @@ references:
   - url: https://github.com/gophish/gophish/releases/tag/v0.12.0
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2022-25295
+    reference_type:
+    reference_id:
   - url: https://security.snyk.io/vuln/SNYK-GOLANG-GITHUBCOMGOPHISHGOPHISH-2404177
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2022-25295
-    reference_type:
-    reference_id: CVE-2022-25295

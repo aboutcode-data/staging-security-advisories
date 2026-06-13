@@ -6,7 +6,14 @@ aliases:
 summary: |
   Improper Input Validation in vault-ssh-helper
   HashiCorp vault-ssh-helper (github.com/hashicorp/vault-ssh-helper/helper) up to and including version 0.1.6 incorrectly accepted Vault-issued SSH OTPs for the subnet in which a host's network interface was located, rather than the specific IP address assigned to that interface. Fixed in 0.2.0.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/hashicorp/vault-ssh-helper
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/hashicorp/vault-ssh-helper
+        commit: 83effd08cbcbe4b993d776bd9b39465cd9e4603f
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -32,4 +39,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2020-24359
     reference_type:
-    reference_id: CVE-2020-24359
+    reference_id:

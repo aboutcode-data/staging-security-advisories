@@ -10,7 +10,14 @@ summary: |
   Arbitrary Read implementations can read from the uninitialized buffer (memory exposure) and also can return incorrect number of bytes written to the buffer. Reading from uninitialized memory produces undefined values that can quickly invoke undefined behavior.
 
   The problem was fixed in commit `cdff034` by zero-initializing the buffer before passing it to a user-provided Read implementation.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/tectonic-typesetting/tectonic
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/tectonic-typesetting/tectonic
+        commit: cdff034e6d93cdfdafd13d8c6956e22fa5a57b79
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
@@ -34,12 +41,12 @@ references:
   - url: https://github.com/tectonic-typesetting/tectonic/issues/752
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2021-45703
+    reference_type:
+    reference_id:
   - url: https://raw.githubusercontent.com/rustsec/advisory-db/main/crates/tectonic_xdv/RUSTSEC-2021-0112.md
     reference_type:
     reference_id:
   - url: https://rustsec.org/advisories/RUSTSEC-2021-0112.html
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2021-45703
-    reference_type:
-    reference_id: CVE-2021-45703
