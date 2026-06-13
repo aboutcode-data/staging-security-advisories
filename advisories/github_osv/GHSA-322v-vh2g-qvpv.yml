@@ -6,7 +6,14 @@ aliases:
 summary: |
   Mattermost Fails to Restrict Certain Operations on System Admins
   Mattermost versions 10.5.x <= 10.5.1, 10.4.x <= 10.4.3, 9.11.x <= 9.11.9 fail to restrict certain operations on system admins to only other system admins, which allows delegated granular administration users with the "Edit Other Users" permission to perform unauthorized modifications to system administrators via improper permission validation.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: aa4623a9319943d9f54383b22b55e7d06a324e20
+    introduced_in_commits: []
 severities:
   - score: '4.7'
     scoring_system: cvssv3.1

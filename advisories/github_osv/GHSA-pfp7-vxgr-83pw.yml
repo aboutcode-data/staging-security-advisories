@@ -11,7 +11,14 @@ summary: |
   When removing the first column from a TooDee object, the DrainCol return object could cause a heap buffer overflow vulnerability when it is dropped.
 
   The issue was fixed in commit `e6e16d5` by reducing the copied size by one.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/antonmarsden/toodee
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/antonmarsden/toodee
+        commit: e6e16d5a97e6258ffbedbae1bde65b45c60f242f
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv4

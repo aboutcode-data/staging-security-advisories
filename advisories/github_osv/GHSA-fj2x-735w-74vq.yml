@@ -34,7 +34,14 @@ summary: "gnark-crypto allows unchecked memory allocation during vector deserial
   \ to gnark-crypto v0.18 and v0.19.\n\n### Workarounds\n\nThe user could manually peek into\
   \ the first 4 bytes of the serialized data to estimate if the header would allocate large\
   \ amounts of memory."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/consensys/gnark-crypto
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/consensys/gnark-crypto
+        commit: 2e7bf9190a0aac896eeec3876c87c77a35661be7
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

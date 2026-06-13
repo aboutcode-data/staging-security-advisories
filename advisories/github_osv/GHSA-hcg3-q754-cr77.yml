@@ -6,7 +6,14 @@ aliases:
 summary: |
   golang.org/x/crypto Vulnerable to Denial of Service (DoS) via Slow or Incomplete Key Exchange
   SSH servers which implement file transfer protocols are vulnerable to a denial of service attack from clients which complete the key exchange slowly, or not at all, causing pending content to be read into memory, but never transmitted.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/golang/crypto
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/golang/crypto
+        commit: 7292932d45d55c7199324ab0027cc86e8198aa22
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

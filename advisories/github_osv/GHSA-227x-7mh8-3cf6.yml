@@ -31,7 +31,35 @@ summary: |
 
   ### How do I mitigate this vulnerability?
   Update to a fixed version.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/gardener/gardener-extension-provider-gcp
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/gardener/gardener-extension-provider-gcp
+        commit: 51111b4f60c33c60dfdf18b1fc50f7ec8d8f70ac
+    introduced_in_commits: []
+  - purl: pkg:github/gardener/gardener-extension-provider-azure
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/gardener/gardener-extension-provider-azure
+        commit: 4573a4404969f89781ed6cf72e90554bc6ae2020
+    introduced_in_commits: []
+  - purl: pkg:github/gardener/gardener-extension-provider-openstack
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/gardener/gardener-extension-provider-openstack
+        commit: 2ed6f0fe1be90fbef5d6093eb0b8325c8421b8d8
+    introduced_in_commits: []
+  - purl: pkg:github/gardener/gardener-extension-provider-aws
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/gardener/gardener-extension-provider-aws
+        commit: cb5045fc146248296994804bbfe27bd896938bf2
+    introduced_in_commits: []
 severities:
   - score: '9.9'
     scoring_system: cvssv3.1
@@ -44,8 +72,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-20
   - CWE-94
+  - CWE-20
 references:
   - url: https://github.com/gardener/gardener-extension-provider-aws
     reference_type:

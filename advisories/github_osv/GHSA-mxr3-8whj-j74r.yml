@@ -26,7 +26,14 @@ summary: "Harden-Runner allows evasion of 'disable-sudo' policy\n### Summary\nHa
   •\tHarden-Runner now includes detections to alert on attempts to evade the `disable-sudo`\
   \ policy.\n\n\n### Credits\nReported by @loresuso and @darryk10. We would like to thank them\
   \ for collaborating with us to mitigate the vulnerability."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/step-security/harden-runner
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/step-security/harden-runner
+        commit: 0634a2670c59f64b4a01f0f96f84700a4088b9f0
+    introduced_in_commits: []
 severities:
   - score: '6.0'
     scoring_system: cvssv3.1
@@ -39,9 +46,9 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-268
   - CWE-272
   - CWE-250
+  - CWE-268
 references:
   - url: https://github.com/step-security/harden-runner
     reference_type:

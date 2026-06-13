@@ -81,7 +81,14 @@ summary: "NATS Server may fail to authorize certain Jetstream admin APIs\n## Adv
   # And indeed, the stream data is gone on account TEST:\n$ du -h tmp/jetstream\n  0B\ttmp/jetstream\n\
   \n$ nats -s nats://localhost:4233 --user a --password a stream ls\nNo Streams defined\n\n\
   ```"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/nats-io/nats-server
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/nats-io/nats-server
+        commit: 3e7e4645a24e829a36b4210f2d7c34dea7f7a424
+    introduced_in_commits: []
 severities:
   - score: '9.6'
     scoring_system: cvssv3.1
@@ -94,13 +101,16 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-287
   - CWE-285
+  - CWE-287
 references:
   - url: https://advisories.nats.io/CVE/secnote-2025-01.txt
     reference_type:
     reference_id:
   - url: https://github.com/nats-io/nats-server
+    reference_type:
+    reference_id:
+  - url: https://github.com/nats-io/nats-server/commit/3e7e4645a24e829a36b4210f2d7c34dea7f7a424
     reference_type:
     reference_id:
   - url: https://github.com/nats-io/nats-server/security/advisories/GHSA-fhg8-qxh5-7q3w

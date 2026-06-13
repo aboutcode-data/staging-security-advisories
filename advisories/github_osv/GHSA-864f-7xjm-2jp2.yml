@@ -6,7 +6,14 @@ aliases:
 summary: |
   CNCF K3s Kubernetes kubelet configuration exposes credentials
   CNCF K3s 1.32 before 1.32.4-rc1+k3s1 has a Kubernetes kubelet configuration change with the unintended consequence that, in some situations, ReadOnlyPort is set to 10255. For example, the default behavior of a K3s online installation might allow unauthenticated access to this port, exposing credentials.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/k3s-io/k3s
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/k3s-io/k3s
+        commit: 097b63e588e3c844cdf9b967bcd0a69f4fc0aa0a
+    introduced_in_commits: []
 severities:
   - score: '6.8'
     scoring_system: cvssv3.1

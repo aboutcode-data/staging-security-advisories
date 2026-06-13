@@ -20,7 +20,14 @@ summary: |
   ### Workarounds
 
   Don't blindly paste and execute commands copied from tracexec that contains environment variable where the key starts with a dash.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/kxxt/tracexec
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/kxxt/tracexec
+        commit: 0dbe63214c8686df5bb62dbe6142cce27868ecff
+    introduced_in_commits: []
 severities:
   - score: '1.0'
     scoring_system: cvssv4
@@ -33,8 +40,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-88
   - CWE-77
+  - CWE-88
 references:
   - url: https://github.com/kxxt/tracexec
     reference_type:

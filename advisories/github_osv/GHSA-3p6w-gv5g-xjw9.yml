@@ -8,7 +8,16 @@ summary: |
   When tlsInsecure=False appears in a connection string, certificate validation is disabled.
 
   This vulnerability affects MongoDB Rust Driver versions prior to v3.2.5.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mongodb/mongo-rust-driver
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mongodb/mongo-rust-driver
+        commit: b918cd6676331c45f26dd1acd13e230aaf17fe6d
+      - vcs_url: https://github.com/mongodb/mongo-rust-driver
+        commit: 21ed6aeeea386628621b36a6af2a1a248cc87dcf
+    introduced_in_commits: []
 severities:
   - score: '8.0'
     scoring_system: cvssv3.1

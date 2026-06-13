@@ -7,7 +7,16 @@ summary: |
   Grafana Tempo Operator Vulnerable to Exposure of Sensitive Information to an Unauthorized Actor
   A flaw was found in the Tempo Operator. When the Jaeger UI Monitor Tab functionality is enabled in a Tempo instance managed by the Tempo Operator, the Operator creates a ClusterRoleBinding for the Service Account of the Tempo instance to grant the cluster-monitoring-view ClusterRole.
   This can be exploited if a user has 'create' permissions on TempoStack and 'get' permissions on Secret in a namespace (for example, a user has ClusterAdmin permissions for a specific namespace), as the user can read the token of the Tempo service account and therefore has access to see all cluster metrics.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/grafana/tempo-operator
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/grafana/tempo-operator
+        commit: 60b538c45f76755262e211d8df0e601a716308c7
+      - vcs_url: https://github.com/grafana/tempo-operator
+        commit: 8d1c7f13cb0f8db490144b04665b1fd6a2d56307
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1

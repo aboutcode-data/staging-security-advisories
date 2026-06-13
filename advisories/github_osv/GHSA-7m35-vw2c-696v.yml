@@ -6,7 +6,14 @@ aliases:
 summary: |
   GoBGP panics due to a zero value for softwareVersionLen
   An issue was discovered in GoBGP before 3.35.0 (introduced in v3.11.0). pkg/packet/bgp/bgp.go allows attackers to cause a panic via a zero value for softwareVersionLen.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/osrg/gobgp
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/osrg/gobgp
+        commit: 08a001e06d90e8bcc190084c66992f46f62c0986
+    introduced_in_commits: []
 severities:
   - score: '8.6'
     scoring_system: cvssv3.1

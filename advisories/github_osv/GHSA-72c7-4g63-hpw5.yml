@@ -23,7 +23,14 @@ summary: "go-witness is Vulnerable to Improper Verification of AWS EC2 Identity 
   \ in `go-witness` 0.9.1 and `witness` 0.10.1.\n\n### Resources\n[^1]: [AWS Security Bulletin\
   \ on IMDS Impersonation](https://aws.amazon.com/security/security-bulletins/rss/aws-2025-021/)\n\
   [^2]: [Verification of instance identity documents](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/verify-iid.html#verify-signature)"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/in-toto/go-witness
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/in-toto/go-witness
+        commit: 04ff20b600e28ce8fd1aa287534dd383a1cfefb9
+    introduced_in_commits: []
 severities:
   - score: '6.9'
     scoring_system: cvssv4

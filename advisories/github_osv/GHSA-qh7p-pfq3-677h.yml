@@ -6,7 +6,14 @@ aliases:
 summary: |
   Consul event endpoint is vulnerable to denial of service
   Consul and Consul Enterprise’s (“Consul”) event endpoint is vulnerable to denial of service (DoS) due to lack of maximum value on the Content Length header. This vulnerability, CVE-2025-11375, is fixed in Consul Community Edition 1.22.0 and Consul Enterprise 1.22.0, 1.21.6, 1.20.8 and 1.18.12.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/hashicorp/consul
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/hashicorp/consul
+        commit: e794201d0c618333d81ad775270f7b32801178fb
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1

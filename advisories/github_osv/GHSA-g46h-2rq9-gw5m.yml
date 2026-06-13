@@ -21,7 +21,16 @@ summary: "OpenBao has potential Denial of Service vulnerability when processing 
   - https://nvd.nist.gov/vuln/detail/CVE-2025-6203\n\nHashiCorp attributes the problem to the\
   \ audit subsystem. For OpenBao, it was noted the problem was additionally in the requests\
   \ handling logic."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/openbao/openbao
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openbao/openbao
+        commit: 788536bd3e10818a7b4fb00aac6affc23388e5a9
+      - vcs_url: https://github.com/openbao/openbao
+        commit: d418f238bc99adc72c73109faf574cc2b672880c
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

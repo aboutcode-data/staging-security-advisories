@@ -12,7 +12,14 @@ summary: "Helm Allows A Specially Crafted JSON Schema To Cause A Stack Overflow\
   \ a large number of nested references. These JSON Schema files are larger than 10 MiB.\n\n\
   ### For more information\nHelm's security policy is spelled out in detail in our [SECURITY](https://github.com/helm/community/blob/master/SECURITY.md)\
   \ document.\n\n### Credits\nDisclosed by Jakub Ciolek at AlphaSense."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/helm/helm
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/helm/helm
+        commit: d8ca55fc669645c10c0681d49723f4bb8c0b1ce7
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
@@ -25,8 +32,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-674
   - CWE-121
+  - CWE-674
 references:
   - url: https://github.com/helm/helm
     reference_type:

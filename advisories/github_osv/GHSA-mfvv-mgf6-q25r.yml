@@ -6,7 +6,14 @@ aliases:
 summary: |
   GoBGP crashes in the flowspec parser
   An issue was discovered in GoBGP before 3.35.0. An attacker can cause a crash in the pkg/packet/bgp/bgp.go flowspec parser by sending fewer than 20 bytes in a certain context.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/osrg/gobgp
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/osrg/gobgp
+        commit: ca7383f450f7b296c5389feceef2467de5ab6e5a
+    introduced_in_commits: []
 severities:
   - score: '6.8'
     scoring_system: cvssv3.1

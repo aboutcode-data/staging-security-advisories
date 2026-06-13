@@ -20,7 +20,14 @@ summary: "SurrealDB is Vulnerable to Unauthorized Data Exposure via LIVE Query S
   \ v3.0.0-alpha.7 will be patched.\n\n### Workarounds\nAssess the impact of users with permissions\
   \ on table records effectively having full read access to the table, use separate tables if\
   \ required, with impacts to functionality."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/surrealdb/surrealdb
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/surrealdb/surrealdb
+        commit: d81169a06b89f0c588134ddf2d62eeb8d5e8fd0c
+    introduced_in_commits: []
 severities:
   - score: '6.9'
     scoring_system: cvssv4

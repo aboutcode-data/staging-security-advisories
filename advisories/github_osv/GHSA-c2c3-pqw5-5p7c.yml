@@ -24,7 +24,14 @@ summary: |
   Any instance with `ProxyOn` enabled (`proxyon` in the JSON config) is affected.
 
   As far as I'm able to tell, the impact is limited to spoofing the `RemoteIP` field.  This isn't ideal, but it probably has less practical impact on an MTA than, say, a web server.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/phires/go-guerrilla
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/phires/go-guerrilla
+        commit: 7673947f2d5204a135d7ae0b7f80759e548abee6
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
@@ -42,12 +49,15 @@ references:
   - url: https://github.com/phires/go-guerrilla
     reference_type:
     reference_id:
-  - url: https://github.com/phires/go-guerrilla/commit/d08fe22f8022d2bdedc136f9e4ba96f2fbbebf18
+  - url: https://github.com/phires/go-guerrilla/commit/7673947f2d5204a135d7ae0b7f80759e548abee6
     reference_type:
     reference_id:
   - url: https://github.com/phires/go-guerrilla/security/advisories/GHSA-c2c3-pqw5-5p7c
     reference_type:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2025-31135
+    reference_type:
+    reference_id:
+  - url: https://pkg.go.dev/vuln/GO-2025-3588
     reference_type:
     reference_id:

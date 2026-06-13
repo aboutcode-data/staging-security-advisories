@@ -9,7 +9,14 @@ summary: |
   In practice this would nearly always result in OpenSSL treating the properties as an empty string (due to `CString::drop`'s behavior).
 
   The maintainers thank [quitbug](https://github.com/quitbug/) for reporting this vulnerability to us.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/sfackler/rust-openssl
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/sfackler/rust-openssl
+        commit: 87085bd67896b7f92e6de35d081f607a334beae4
+    introduced_in_commits: []
 severities:
   - score: '6.3'
     scoring_system: cvssv4

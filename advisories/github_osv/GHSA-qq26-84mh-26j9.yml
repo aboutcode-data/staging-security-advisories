@@ -42,7 +42,14 @@ summary: "Deno's --deny-read check does not prevent permission bypass\n### Summa
   \ read access to \"./test1.txt\", run again with the --allow-read flag\n    const fileInfo\
   \ = Deno.statSync(\"./test1.txt\");\n                          ^\n    ...\n```\n\n\n### Impact\n\
   \nPermission model bypass"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/denoland/deno
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/denoland/deno
+        commit: 1ab2268c0bcbf9b0468e0e36963f77f8c31c73ec
+    introduced_in_commits: []
 severities:
   - score: '3.3'
     scoring_system: cvssv3.1

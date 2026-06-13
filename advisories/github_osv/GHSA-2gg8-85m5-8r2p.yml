@@ -6,7 +6,14 @@ aliases:
 summary: |
   Chaos Mesh's Chaos Controller Manager is Missing Authentication for Critical Function
   The Chaos Controller Manager in Chaos Mesh exposes a GraphQL debugging server without authentication to the entire Kubernetes cluster, which provides an API to kill arbitrary processes in any Kubernetes pod, leading to cluster-wide denial of service.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/chaos-mesh/chaos-mesh
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/chaos-mesh/chaos-mesh
+        commit: 67281c36f8068bf103149318cd0a466417213a28
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

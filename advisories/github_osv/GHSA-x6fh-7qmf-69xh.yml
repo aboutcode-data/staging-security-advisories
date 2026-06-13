@@ -6,7 +6,14 @@ aliases:
 summary: |
   Slack Nebula may accept arbitrary source IP addresses
   Slack Nebula before 1.9.7 mishandles CIDR in some configurations and thus accepts arbitrary source IP addresses within the Nebula network.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/slackhq/nebula
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/slackhq/nebula
+        commit: e264a0ff888c7bf0568579306755a60fc42f6ecc
+    introduced_in_commits: []
 severities:
   - score: '4.9'
     scoring_system: cvssv3.1

@@ -12,6 +12,20 @@ impacted_packages:
     fixed_versions: vers:pypi/0.3.27
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:github/langchain-ai/langchain-community
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/langchain-ai/langchain-community
+        commit: e842452108089524e22c3a2ced851c021884556f
+    introduced_in_commits: []
+  - purl: pkg:github/langchain-ai/langchain
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/langchain-ai/langchain
+        commit: d79b5813a0b3b243c612b77013768995e46c4337
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -24,8 +38,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-611
   - CWE-200
+  - CWE-611
 references:
   - url: https://github.com/langchain-ai/langchain/blob/d79b5813a0b3b243c612b77013768995e46c4337/libs/langchain/langchain/document_loaders/evernote.py#L1-L23
     reference_type:
@@ -41,4 +55,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2025-6984
     reference_type:
-    reference_id:
+    reference_id: CVE-2025-6984

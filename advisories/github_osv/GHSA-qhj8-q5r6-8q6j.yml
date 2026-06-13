@@ -12,7 +12,14 @@ summary: |
 
   ### Workarounds
   The affected method isn’t used internally, so avoiding calling `RoomMember::normalized_power_level()` prevents the panic.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/matrix-org/matrix-rust-sdk
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/matrix-org/matrix-rust-sdk
+        commit: ce3b67f801446387972ff120e907ca828a9f1207
+    introduced_in_commits: []
 severities:
   - score: '2.7'
     scoring_system: cvssv4

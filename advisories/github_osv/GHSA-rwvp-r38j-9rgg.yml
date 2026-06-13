@@ -6,7 +6,14 @@ aliases:
 summary: |
   rardecode: DoS risk due to unrestricted RAR dictionary sizes
   rardecode versions <= 2.1.1 fail to restrict the dictionary size when reading large RAR dictionary sizes, which allows an attacker to provide a specially crafted RAR file and cause Denial of Service via an Out Of Memory Crash.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/nwaples/rardecode
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/nwaples/rardecode
+        commit: 52fb4e825c936636f251f7e7deded39ab11df9a9
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1

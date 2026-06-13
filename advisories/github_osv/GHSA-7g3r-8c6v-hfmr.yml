@@ -6,7 +6,14 @@ aliases:
 summary: |
   Consul key/value endpoint is vulnerable to denial of service
   Consul and Consul Enterprise’s (“Consul”) key/value endpoint is vulnerable to denial of service (DoS) due to incorrect Content Length header validation. This vulnerability, CVE-2025-11374, is fixed in Consul Community Edition 1.22.0 and Consul Enterprise 1.22.0, 1.21.6, 1.20.8 and 1.18.12.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/hashicorp/consul
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/hashicorp/consul
+        commit: 72a358cd02533477536ad4bd2b781f520fa7fac6
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1

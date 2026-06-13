@@ -34,7 +34,14 @@ summary: "PyPI publish GitHub Action vulnerable to injectable expression expansi
   \ precedence.\n\nIn particular, the action is **not** vulnerable in many popular configurations,\
   \ i.e. those where `pull_request` or `release` or a `push: tags` event is used to call the\
   \ action."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/pypa/gh-action-pypi-publish
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/pypa/gh-action-pypi-publish
+        commit: 77db1b7cf7dcea2e403bb4350516284282740dd6
+    introduced_in_commits: []
 severities:
   - score: '0.0'
     scoring_system: cvssv3.1

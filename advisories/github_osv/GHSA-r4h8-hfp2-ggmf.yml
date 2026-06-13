@@ -45,7 +45,16 @@ summary: "Hoverfly is vulnerable to Remote Code Execution through an insecure mi
   \ an attacker can upload a malicious payload or directly execute arbitrary commands (including\
   \ reverse shells) on the host server with the privileges of the hoverfly process.\n\nReporter:\n\
   @kr1shna4garwal"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/spectolabs/hoverfly
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/spectolabs/hoverfly
+        commit: 17e60a9bc78826deb4b782dca1c1abd3dbe60d40
+      - vcs_url: https://github.com/spectolabs/hoverfly
+        commit: a9d4da7bd7269651f54542ab790d0c613d568d3e
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
@@ -58,8 +67,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-20
   - CWE-78
+  - CWE-20
 references:
   - url: https://github.com/SpectoLabs/hoverfly
     reference_type:

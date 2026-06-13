@@ -6,7 +6,21 @@ aliases:
 summary: |
   Mattermost Playbooks fails to validate the uniqueness and quantity of task actions
   Mattermost versions 10.4.x <= 10.4.2, 10.5.x <= 10.5.0, 9.11.x <= 9.11.10 fail to validate the uniqueness and quantity of task actions within the UpdateRunTaskActions GraphQL operation, which allows an attacker to create task items containing an excessive number of actions triggered by specific posts, overloading the server and leading to a denial-of-service (DoS) condition.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 2b5275d87136f07e016c8eca09a2f004b31afc8a
+    introduced_in_commits: []
+  - purl: pkg:github/mattermost/mattermost-plugin-playbooks
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost-plugin-playbooks
+        commit: bf2633dad09f5768ce2bea4b7c5ffb74050052a8
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1

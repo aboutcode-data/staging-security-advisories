@@ -53,7 +53,14 @@ summary: "Deno's --deny-write check does not prevent permission bypass\n### Summ
   \ access to \"./test.txt\", run again with the --allow-write flag\n    Deno.utimeSync(\"./test.txt\"\
   , new Date(\"2000-01-01\"), new Date(\"2000-01-01\"));\n         ^\n    ...\n```\n\n\n###\
   \ Impact\n\nPermission model bypass"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/denoland/deno
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/denoland/deno
+        commit: 992e998dfe436cdc9325232759af8be92f11739b
+    introduced_in_commits: []
 severities:
   - score: '3.3'
     scoring_system: cvssv3.1

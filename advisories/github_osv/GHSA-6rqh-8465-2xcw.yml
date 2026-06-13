@@ -6,7 +6,22 @@ aliases:
 summary: |
   Mattermost vulnerable to Incorrect Implementation of Authentication Algorithm
   Mattermost versions 10.5.x <= 10.5.1, 10.4.x <= 10.4.3, 9.11.x <= 9.11.9 fail to invalidate the cache when a user account is converted to a bot which allows an attacker to login to the bot exactly one time via normal credentials.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 40fd60714bd055e00c16301ba6dc0fddfc44e15e
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: bcd7a4c2bd856dbb40fcda227b363fa5f6f548a7
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 124547a9ef424431e1e6cf09bdba6c1099d415de
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 88523ceed8a7547c4a4203a30e7c3a8097346280
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: fd356b62b4dd3318d2c8019d2310abdd6ce24c8c
+    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1

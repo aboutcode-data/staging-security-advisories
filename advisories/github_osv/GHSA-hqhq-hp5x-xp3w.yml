@@ -6,7 +6,14 @@ aliases:
 summary: |
   GoBGP does not properly check the input length
   An issue was discovered in GoBGP before 3.35.0. pkg/packet/mrt/mrt.go does not properly check the input length, e.g., by ensuring that there are 12 bytes or 36 bytes (depending on the address family).
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/osrg/gobgp
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/osrg/gobgp
+        commit: 5153bafbe8dbe1a2f02a70bbf0365e98b80e47b0
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1

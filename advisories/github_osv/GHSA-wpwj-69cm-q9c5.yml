@@ -23,7 +23,14 @@ summary: "go-mail has insufficient address encoding when passing mail addresses 
   \ of quoted local parts, this should not affect your code.\n\n### Patches\nThe vulnerability\
   \ has been fixed with PR #496 and the fix has been shipped with the go-mail v0.7.1 release.\n\
   \nIssue #495 holds the full report and discussion."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/wneessen/go-mail
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/wneessen/go-mail
+        commit: 42e92cfe027be04aff72921adb0f72f11d517479
+    introduced_in_commits: []
 severities:
   - score: '8.2'
     scoring_system: cvssv4

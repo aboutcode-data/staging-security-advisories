@@ -1,7 +1,8 @@
 advisory_id: GHSA-m5qc-5hw7-8vg7
 datasource_id: github_osv/GHSA-m5qc-5hw7-8vg7
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/04/GHSA-m5qc-5hw7-8vg7/GHSA-m5qc-5hw7-8vg7.json
-aliases: []
+aliases:
+  - CVE-2025-71319
 summary: "image-size Denial of Service via Infinite Loop during Image Processing\n### Summary\n\
   \n`image-size` is vulnerable to a Denial of Service vulnerability when processing specially\
   \ crafted images.\n\nThe issue occurs because of an infine loop in `findBox` when processing\
@@ -87,6 +88,13 @@ impacted_packages:
     fixed_versions: vers:npm/2.0.2
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:github/image-size/image-size
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/image-size/image-size
+        commit: 8994131c7c3ee8da1699e04700c95e0e683a0c68
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -109,4 +117,4 @@ references:
     reference_id:
   - url: https://github.com/image-size/image-size/security/advisories/GHSA-m5qc-5hw7-8vg7
     reference_type:
-    reference_id:
+    reference_id: GHSA-m5qc-5hw7-8vg7

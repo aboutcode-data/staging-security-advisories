@@ -33,7 +33,14 @@ summary: "esm.sh has arbitrary file write via path traversal in `X-Zone-Id` head
   \ />\n\n---\n\n## Remediation\n\nSimply remove any .. in the `X-Zone-Id` header before actually\
   \ process the file.\n\n## Credits\n\n- [Ai Ho (Jessie)](https://github.com/j3ssie)\n- [CL\
   \ Yang](https://github.com/A11riseforme)"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/esm-dev/esm.sh
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/esm-dev/esm.sh
+        commit: 833a29f42aeb0acbd7089a71be11dd0a292d3151
+    introduced_in_commits: []
 severities:
   - score: '5.5'
     scoring_system: cvssv4
@@ -69,3 +76,6 @@ references:
   - url: https://pkg.go.dev/vuln/GO-2025-3967
     reference_type:
     reference_id:
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/webapps/52461.c
+    reference_type: exploit
+    reference_id: CVE-2025-59342

@@ -68,7 +68,14 @@ summary: |
   An attacker with the ability to mount a collision attack on SHA-1 like the [SHAttered](https://shattered.io/) or [SHA-1 is a Shambles](https://sha-mbles.github.io/) attacks could create two distinct Git objects with the same hash. This is becoming increasingly affordable for well‐resourced attackers, with the Shambles researchers in 2020 estimating $45k for a chosen‐prefix collision or $11k for a classical collision, and projecting less than $10k for a chosen‐prefix collision by 2025. The result could be used to disguise malicious repository contents, or potentially exploit assumptions in the logic of programs using gitoxide to cause further vulnerabilities.
 
   This vulnerability affects any user of gitoxide, including `gix-*` library crates, that reads or writes Git objects.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/gitoxidelabs/gitoxide
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/gitoxidelabs/gitoxide
+        commit: f253f02a6658b3b7612a50d56c71f5ae4da4ca21
+    introduced_in_commits: []
 severities:
   - score: '6.8'
     scoring_system: cvssv3.1

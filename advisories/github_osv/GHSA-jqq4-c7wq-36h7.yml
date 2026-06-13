@@ -33,7 +33,14 @@ summary: "risc0 vulnerable to arbitrary code execution in guest via memory safet
   \ to version `>=0.9`. This application includes a zkVM guest, which is vulnerable in versions\
   \ prior to `0.9`. Instances of the `RiscZeroSetVerifier` operated by RISC Zero have been disabled\
   \ via the estop mechanism outlined in the [Verifier Management Design](https://github.com/risc0/risc0-ethereum/blob/release-2.0/contracts/version-management-design.md#base-verifier-implementations)."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/risc0/risc0
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/risc0/risc0
+        commit: 3f00e1fa0159599c1601e788021f2169d1f0a4dc
+    introduced_in_commits: []
 severities:
   - score: '9.3'
     scoring_system: cvssv4

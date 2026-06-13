@@ -57,7 +57,18 @@ summary: "Argo Workflow has a Zipslip Vulnerability\n### **Vulnerability Descrip
   \ like `/etc/` within the container, potentially overwriting critical configuration files\
   \ such as `/etc/passwd`, `/etc/hosts`, or `/etc/crontab`, which could lead to privilege escalation\
   \ or persistent access within the compromised container."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/argoproj/argo-workflows
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/argoproj/argo-workflows
+        commit: 946a2d6b9ac3309371fe47f49ae94c33ca7d488d
+      - vcs_url: https://github.com/argoproj/argo-workflows
+        commit: 9f6bc5d236cd1b24d607943384511d71ad17a4c3
+      - vcs_url: https://github.com/argoproj/argo-workflows
+        commit: 5659ad9b641fcf52c04ed594cd6493f9170f6011
+    introduced_in_commits: []
 severities:
   - score: '8.1'
     scoring_system: cvssv3.1
@@ -70,8 +81,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-22
   - CWE-23
+  - CWE-22
 references:
   - url: https://github.com/argoproj/argo-workflows
     reference_type:

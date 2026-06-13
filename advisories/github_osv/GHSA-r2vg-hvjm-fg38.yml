@@ -11,24 +11,31 @@ summary: |
   To mitigate this, a check should be added to the `CancelOrderRoute` which verifies that the feature is enabled.
 impacted_packages:
   - purl: pkg:composer/shopware/platform
+    affected_versions: vers:composer/<6.6.10+7
+    fixed_versions: vers:composer/6.6.10+7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/shopware/core
     affected_versions: vers:composer/>=6.7.0+0|<6.7.3+1
     fixed_versions: vers:composer/6.7.3+1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/shopware/core
+    affected_versions: vers:composer/<6.6.10+7
+    fixed_versions: vers:composer/6.6.10+7
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/shopware/platform
-    affected_versions: vers:composer/<6.6.10+7
-    fixed_versions: vers:composer/6.6.10+7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/shopware/core
     affected_versions: vers:composer/>=6.7.0+0|<6.7.3+1
     fixed_versions: vers:composer/6.7.3+1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/shopware/core
-    affected_versions: vers:composer/<6.6.10+7
-    fixed_versions: vers:composer/6.6.10+7
-    fixed_in_commits: []
+  - purl: pkg:github/shopware/shopware
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/shopware/shopware
+        commit: b157508aef2c820e7ff89ebd5848d3019f22b592
     introduced_in_commits: []
 severities:
   - score: '4.3'
@@ -52,4 +59,4 @@ references:
     reference_id:
   - url: https://github.com/shopware/shopware/security/advisories/GHSA-r2vg-hvjm-fg38
     reference_type:
-    reference_id:
+    reference_id: GHSA-r2vg-hvjm-fg38

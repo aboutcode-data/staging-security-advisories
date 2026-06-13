@@ -13,7 +13,14 @@ summary: "OpenBao and Vault Leak []byte Fields in Audit Logs\n### Impact\n\nOpen
   \ v2.4.2 will patch this issue.\n\n### Workarounds\n\nIf users do not use the above functionality,\
   \ they are not impacted. To prohibit the use of `sys/raw` globally, ensure `raw_storage_endpoint=false`\
   \ is set or missing from the server configuration."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/openbao/openbao
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openbao/openbao
+        commit: cc2c476bac66e1d94776c2629793daec3af625f8
+    introduced_in_commits: []
 severities:
   - score: '5.7'
     scoring_system: cvssv4

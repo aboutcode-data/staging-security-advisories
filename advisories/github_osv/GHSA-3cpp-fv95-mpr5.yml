@@ -30,6 +30,11 @@ summary: "Shopware vulnerable to Server-Side Request Forgery (SSRF) – order in
   \ height=\"100\"/>\n```\n4. Press the preview button to view the PFD.\n5. Observe that the\
   \ image is shown in the PDF."
 impacted_packages:
+  - purl: pkg:composer/shopware/core
+    affected_versions: vers:composer/<6.6.10+7
+    fixed_versions: vers:composer/6.6.10+7
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:composer/shopware/platform
     affected_versions: vers:composer/>=6.7.0+0|<6.7.3+1
     fixed_versions: vers:composer/6.7.3+1
@@ -45,10 +50,12 @@ impacted_packages:
     fixed_versions: vers:composer/6.7.3+1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/shopware/core
-    affected_versions: vers:composer/<6.6.10+7
-    fixed_versions: vers:composer/6.6.10+7
-    fixed_in_commits: []
+  - purl: pkg:github/shopware/shopware
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/shopware/shopware
+        commit: f32737b34798d4800b81c67efee17905380d2be4
     introduced_in_commits: []
 severities:
   - score: '2.7'
@@ -72,4 +79,4 @@ references:
     reference_id:
   - url: https://github.com/shopware/shopware/security/advisories/GHSA-3cpp-fv95-mpr5
     reference_type:
-    reference_id:
+    reference_id: GHSA-3cpp-fv95-mpr5

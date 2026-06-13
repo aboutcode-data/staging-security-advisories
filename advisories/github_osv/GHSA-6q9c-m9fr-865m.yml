@@ -15,7 +15,14 @@ summary: "vet MCP Server SSE Transport DNS Rebinding Vulnerability\nSafeDep `vet
   \ the sqlite3 query MCP tool.\n\n### Patches\n\n* `v1.12.5` is released that patches the issue\
   \ with `Host` and `Origin` header allow list and validation\n\n### Workarounds\n\n* Use `stdio`\
   \ (default) transport for SSE server"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/safedep/vet
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/safedep/vet
+        commit: 0ae3560ba11846375812377299fe078d45cc3d48
+    introduced_in_commits: []
 severities:
   - score: '2.1'
     scoring_system: cvssv4

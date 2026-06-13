@@ -7,7 +7,14 @@ summary: |
   The safe function `any_as_u8_slice` can create byte slices that reference uninitialized memory when used with types containing padding bytes.
 
   The function uses `slice::from_raw_parts` to create a `&[u8]` covering the entire size of a type, including padding bytes. According to Rust's documentation, `from_raw_parts` requires all bytes to be properly initialized, but padding bytes in structs are not guaranteed to be initialized. This violates the safety contract and causes undefined behavior.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/alexpyattaev/borrowck_sacrifices
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/alexpyattaev/borrowck_sacrifices
+        commit: 1bdaa14da68a6e8207f9e81359116f53139800f2
+    introduced_in_commits: []
 severities:
   - score: '2.0'
     scoring_system: cvssv4

@@ -42,7 +42,16 @@ summary: |
   ## The Fix
 
   quic-go needs to be able to handle misbehaving server implementations, including those that prematurely send a HANDSHAKE_DONE frame. We now discard Initial keys when receiving a HANDSHAKE_DONE frame, thereby correctly handling premature HANDSHAKE_DONE frames. The fix was implemented in https://github.com/quic-go/quic-go/pull/5354.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/quic-go/quic-go
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/quic-go/quic-go
+        commit: bc5bccf10fd02728eef150683eb4dfaa5c0e749c
+      - vcs_url: https://github.com/quic-go/quic-go
+        commit: ce7c9ea8834b9d2ed79efa9269467f02c0895d42
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -55,8 +64,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-755
   - CWE-617
+  - CWE-755
 references:
   - url: https://github.com/quic-go/quic-go
     reference_type:

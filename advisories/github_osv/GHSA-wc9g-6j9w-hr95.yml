@@ -52,6 +52,13 @@ summary: "YesWiki Vulnerable to Unauthenticated Site Backup Creation and Downloa
   \ and fill up the file system with archives. \n\nSite Compromise - A malicious attacker can\
   \ download the archive which will contain sensitive site information."
 impacted_packages:
+  - purl: pkg:github/yeswiki/yeswiki
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/yeswiki/yeswiki
+        commit: 0d4efc880a727599fa4f6d7a64cc967afe475530
+    introduced_in_commits: []
   - purl: pkg:composer/yeswiki/yeswiki
     affected_versions: vers:composer/<=4.5.3
     fixed_versions: vers:composer/4.5.4
@@ -69,8 +76,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-862
   - CWE-287
+  - CWE-862
 references:
   - url: https://github.com/YesWiki/yeswiki
     reference_type:
@@ -78,9 +85,9 @@ references:
   - url: https://github.com/YesWiki/yeswiki/commit/0d4efc880a727599fa4f6d7a64cc967afe475530
     reference_type:
     reference_id:
-  - url: https://github.com/YesWiki/yeswiki/security/advisories/GHSA-wc9g-6j9w-hr95
-    reference_type:
-    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2025-46348
     reference_type:
-    reference_id:
+    reference_id: CVE-2025-46348
+  - url: https://github.com/YesWiki/yeswiki/security/advisories/GHSA-wc9g-6j9w-hr95
+    reference_type:
+    reference_id: GHSA-wc9g-6j9w-hr95

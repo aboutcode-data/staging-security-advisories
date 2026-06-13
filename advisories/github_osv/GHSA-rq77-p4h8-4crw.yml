@@ -29,7 +29,14 @@ summary: "gorilla/csrf CSRF vulnerability due to broken Referer validation\n### 
   \ an attacker who has gained XSS on a subdomain or top level domain to perform authenticated\
   \ form submissions against gorilla/csrf protected targets that share the same top level domain.\n\
   \nThis bug has existed in gorilla/csrf since its initial release in 2015."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/gorilla/csrf
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/gorilla/csrf
+        commit: 9dd6af1f6d30fc79fb0d972394deebdabad6b5eb
+    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv4

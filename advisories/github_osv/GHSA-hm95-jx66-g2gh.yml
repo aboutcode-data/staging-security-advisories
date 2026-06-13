@@ -6,7 +6,14 @@ aliases:
 summary: |
   Mattermost Open Redirect vulnerability
   Mattermost versions 10.5.x <= 10.5.9 fail to properly validate redirect URLs which allows attackers to redirect users to malicious sites via crafted OAuth login URLs.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 39bd251fe4f66b7e847fc6d653221886347ff160
+    introduced_in_commits: []
 severities:
   - score: '3.1'
     scoring_system: cvssv3.1

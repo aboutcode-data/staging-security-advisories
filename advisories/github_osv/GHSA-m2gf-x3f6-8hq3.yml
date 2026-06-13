@@ -27,7 +27,14 @@ summary: |
 
   ### Impact
   Both of these scripts result in opening calc.exe on Windows, thus allowing a Command Line Injection attack when user-provided arguments are passed if the script being executed by the child process is a batch script.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/denoland/deno
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/denoland/deno
+        commit: 8a0990ccd37bafd8768176ca64b906ba2da2d822
+    introduced_in_commits: []
 severities:
   - score: '8.1'
     scoring_system: cvssv3.1

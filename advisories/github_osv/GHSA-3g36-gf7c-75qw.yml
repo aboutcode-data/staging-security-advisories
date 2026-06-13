@@ -6,7 +6,21 @@ aliases:
 summary: |
   Mattermost Playbooks fails to properly validate the props used by the RetrospectivePost custom post type
   Mattermost versions 10.4.x <= 10.4.2, 10.5.x <= 10.5.0, 9.11.x <= 9.11.10 fail to properly validate the props used by the RetrospectivePost custom post type in the Playbooks plugin, which allows an attacker to create a specially crafted post with maliciously crafted props and cause a denial of service (DoS) of the web app for all users.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost-plugin-playbooks
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost-plugin-playbooks
+        commit: 4c823090e281cb9c0d5c17ee2e5db275117540d1
+    introduced_in_commits: []
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 2b5275d87136f07e016c8eca09a2f004b31afc8a
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1

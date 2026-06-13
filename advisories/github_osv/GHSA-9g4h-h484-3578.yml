@@ -6,7 +6,14 @@ aliases:
 summary: |
   HashiCorp Vault and Vault Enterprise's AWS Auth method may be susceptible to authentication bypass
   Vault and Vault Enterprise's ("Vault") AWS Auth method may be susceptible to authentication bypass if the role of the configured bound_principal_iam is the same across AWS accounts, or uses a wildcard. This vulnerability is fixed in Vault Community Edition 1.21.0 and Vault Enterprise 1.21.0, 1.20.5, 1.19.11, and 1.16.27.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/hashicorp/vault
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/hashicorp/vault
+        commit: 8d07273d14ae7f5a48cc96f66cc86615dea83390
+    introduced_in_commits: []
 severities:
   - score: '8.1'
     scoring_system: cvssv3.1

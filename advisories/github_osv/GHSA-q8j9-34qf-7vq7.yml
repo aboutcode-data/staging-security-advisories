@@ -43,7 +43,16 @@ summary: "Silver has unrestricted traffic between Wireguard clients\n### Summary
   \ and beacons' wireguard config/client\n3. Only allow specific one-way traffic when the operator\
   \ request to open a Wireguard port forward.\n\n### Vulnerable versions\nAll versions containing\
   \ wireguard functionality."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/bishopfox/sliver
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/bishopfox/sliver
+        commit: 8e5c5f14506d6d60ebb3362e6b9857ab1e0d76ff
+      - vcs_url: https://github.com/bishopfox/sliver
+        commit: 9122878cbbcae543eb8210f616550382af2065fd
+    introduced_in_commits: []
 severities:
   - score: '6.3'
     scoring_system: cvssv3.1

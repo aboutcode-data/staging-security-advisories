@@ -73,8 +73,17 @@ summary: "Actual Sync-server Gocardless service is logging sensitive data includ
 impacted_packages:
   - purl: pkg:npm/%40actual-app/sync-server
     affected_versions: vers:npm/<=25.10.0
-    fixed_versions:
+    fixed_versions: vers:npm/25.11.0
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/actualbudget/actual
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/actualbudget/actual
+        commit: 36c40d90d2fe09eb1f25a6e2f77f6dd40638b267
+      - vcs_url: https://github.com/actualbudget/actual
+        commit: 97482a082d502887ef22514b93e35e4c67f4f30f
     introduced_in_commits: []
 severities:
   - score: '4.2'
@@ -88,8 +97,9 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-209
+  - CWE-215
   - CWE-219
+  - CWE-209
 references:
   - url: https://github.com/actualbudget/actual
     reference_type:
@@ -108,4 +118,4 @@ references:
     reference_id:
   - url: https://github.com/actualbudget/actual/security/advisories/GHSA-xvp7-8vm8-xfxx
     reference_type:
-    reference_id:
+    reference_id: GHSA-xvp7-8vm8-xfxx
