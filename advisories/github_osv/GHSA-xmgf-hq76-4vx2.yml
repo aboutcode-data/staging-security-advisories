@@ -6,7 +6,14 @@ aliases:
 summary: |
   rust-opennssl has an Out-of-bounds read in PEM password callback when returning an oversized length
   The `*_from_pem_callback` APIs did not validate the length returned by the user's callback. A password callback that returns a value larger than the buffer it was given can cause some versions of OpenSSL to over-read this buffer. OpenSSL 3.x is not affected by this.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/rust-openssl/rust-openssl
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/rust-openssl/rust-openssl
+        commit: 5af6895c907773699f37f583f409b862284062b1
+    introduced_in_commits: []
 severities:
   - score: '1.7'
     scoring_system: cvssv4
@@ -31,12 +38,12 @@ references:
   - url: https://github.com/rust-openssl/rust-openssl/pull/2605
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-41677
+  - url: https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
     reference_type:
     reference_id:
   - url: https://github.com/rust-openssl/rust-openssl/security/advisories/GHSA-xmgf-hq76-4vx2
-    reference_type: other
-    reference_id: GHSA-xmgf-hq76-4vx2
-  - url: https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
-    reference_type: other
-    reference_id: openssl-v0.10.78
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-41677
+    reference_type:
+    reference_id:

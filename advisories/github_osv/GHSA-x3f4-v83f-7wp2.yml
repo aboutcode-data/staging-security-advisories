@@ -81,7 +81,14 @@ summary: |
   The default `AllowedOrigins` at `cmd/root.go:39` is `["*"]`, so even the OAuth endpoint's validation is a no-op by default. Recommend changing the default to require explicit configuration.
 
   Koda Reef
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/authorizerdev/authorizer
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/authorizerdev/authorizer
+        commit: 6d9bef1aaba3f867f8c769b93eb7fc80e4e7b0a2
+    introduced_in_commits: []
 severities:
   - score: '8.6'
     scoring_system: cvssv4

@@ -11,7 +11,14 @@ summary: "Daptin has Unauthenticated Path Traversal and Zip Slip\n### Impact\nTh
   \ The vulnerability affects all versions <= v0.11.3 (latest).\n\n### Workarounds\n\nRestrict\
   \ access to the cloudstore.file.upload action through authentication and authorization controls\
   \ until a patch is available."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/daptin/daptin
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/daptin/daptin
+        commit: 8d626bbb14f82160a08cbca53e0749f475f5742c
+    introduced_in_commits: []
 severities:
   - score: '10.0'
     scoring_system: cvssv3.1

@@ -1,0 +1,43 @@
+advisory_id: GHSA-jqp3-qrgh-4846
+datasource_id: github_osv/GHSA-jqp3-qrgh-4846
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-jqp3-qrgh-4846/GHSA-jqp3-qrgh-4846.json
+aliases:
+  - CVE-2026-24178
+summary: |
+  NVIDIA NVFlare Dashboard: Authorization bypass through user-controlled key via user management and authentication system
+  NVIDIA NVFlare Dashboard contains a vulnerability in the user management and authentication system where an unauthenticated attacker may cause authorization bypass through user-controlled key. A successful exploit of this vulnerability may lead to privilege escalation, data tampering, information disclosure, code execution, and denial of service.
+impacted_packages:
+  - purl: pkg:pypi/nvflare
+    affected_versions: vers:pypi/<2.7.2
+    fixed_versions: vers:pypi/2.7.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '9.8'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-jqp3-qrgh-4846/GHSA-jqp3-qrgh-4846.json
+  - score: CRITICAL
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-639
+references:
+  - url: https://github.com/NVIDIA/NVFlare
+    reference_type:
+    reference_id:
+  - url: https://github.com/pypa/advisory-database/tree/main/vulns/nvflare/PYSEC-2026-100.yaml
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-24178
+    reference_type:
+    reference_id:
+  - url: https://nvidia.custhelp.com/app/answers/detail/a_id/5819
+    reference_type:
+    reference_id:
+  - url: https://www.cve.org/CVERecord?id=CVE-2026-24178
+    reference_type:
+    reference_id:

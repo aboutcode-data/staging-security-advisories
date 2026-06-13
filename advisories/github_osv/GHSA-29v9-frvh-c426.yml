@@ -58,7 +58,14 @@ summary: |
   application-layer validation.
   - **On AWS EC2 specifically:** enforce IMDSv2 on the instance. This eliminates the cloud-metadata exfil path even if the
   SSRF primitive remains reachable.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/monetr/monetr
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/monetr/monetr
+        commit: c260caa3c573a4a396ec2d264c7641a5d958385b
+    introduced_in_commits: []
 severities:
   - score: '8.3'
     scoring_system: cvssv4
@@ -78,18 +85,18 @@ references:
   - url: https://github.com/monetr/monetr
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-41644
+  - url: https://github.com/monetr/monetr/commit/c260caa3c573a4a396ec2d264c7641a5d958385b
     reference_type:
     reference_id:
   - url: https://github.com/monetr/monetr/pull/3122
-    reference_type: other
-    reference_id: 3122
-  - url: https://github.com/monetr/monetr/commit/c260caa3c573a4a396ec2d264c7641a5d958385b
-    reference_type: other
-    reference_id: c260caa3c573a4a396ec2d264c7641a5d958385b
-  - url: https://github.com/monetr/monetr/security/advisories/GHSA-29v9-frvh-c426
-    reference_type: other
-    reference_id: GHSA-29v9-frvh-c426
+    reference_type:
+    reference_id:
   - url: https://github.com/monetr/monetr/releases/tag/v1.12.5
-    reference_type: other
-    reference_id: v1.12.5
+    reference_type:
+    reference_id:
+  - url: https://github.com/monetr/monetr/security/advisories/GHSA-29v9-frvh-c426
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-41644
+    reference_type:
+    reference_id:

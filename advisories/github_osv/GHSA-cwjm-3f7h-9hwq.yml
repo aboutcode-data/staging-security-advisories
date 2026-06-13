@@ -51,7 +51,14 @@ summary: "Traefik's ACME TLS-ALPN fast path lacks timeouts and close on handshak
   \ let us know if you would like a PoC or further details. We have not made any code changes\
   \ in this report.\n\nLet us know if you have any questions or need clarification\\!\n\nBest\
   \ wishes,  \nPavel Kohout  \n Aisle Research  \n</details>"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/traefik/traefik
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/traefik/traefik
+        commit: e9f3089e9045812bcf1b410a9d40568917b26c3d
+    introduced_in_commits: []
 severities:
   - score: '5.9'
     scoring_system: cvssv3.1
@@ -69,18 +76,18 @@ references:
   - url: https://github.com/traefik/traefik
     reference_type:
     reference_id:
+  - url: https://github.com/traefik/traefik/commit/e9f3089e9045812bcf1b410a9d40568917b26c3d
+    reference_type:
+    reference_id:
+  - url: https://github.com/traefik/traefik/releases/tag/v2.11.35
+    reference_type:
+    reference_id:
+  - url: https://github.com/traefik/traefik/releases/tag/v3.6.7
+    reference_type:
+    reference_id:
+  - url: https://github.com/traefik/traefik/security/advisories/GHSA-cwjm-3f7h-9hwq
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-22045
     reference_type:
     reference_id:
-  - url: https://github.com/traefik/traefik/commit/e9f3089e9045812bcf1b410a9d40568917b26c3d
-    reference_type: other
-    reference_id: e9f3089e9045812bcf1b410a9d40568917b26c3d
-  - url: https://github.com/traefik/traefik/security/advisories/GHSA-cwjm-3f7h-9hwq
-    reference_type: other
-    reference_id: GHSA-cwjm-3f7h-9hwq
-  - url: https://github.com/traefik/traefik/releases/tag/v2.11.35
-    reference_type: other
-    reference_id: v2.11.35
-  - url: https://github.com/traefik/traefik/releases/tag/v3.6.7
-    reference_type: other
-    reference_id: v3.6.7

@@ -15,7 +15,14 @@ summary: |
 
   ### Impact
   Vulnerable applications using AES keywrap and allowing attacker controlled buffer sizes could have an attacker trigger an out-of-bounds write.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/rust-openssl/rust-openssl
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/rust-openssl/rust-openssl
+        commit: 718d07ff8ff7be417d5b7a6a0047f1607520b3b6
+    introduced_in_commits: []
 severities:
   - score: '7.2'
     scoring_system: cvssv4
@@ -39,12 +46,12 @@ references:
   - url: https://github.com/rust-openssl/rust-openssl/pull/2604
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-41678
+  - url: https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
     reference_type:
     reference_id:
   - url: https://github.com/rust-openssl/rust-openssl/security/advisories/GHSA-8c75-8mhr-p7r9
-    reference_type: other
-    reference_id: GHSA-8c75-8mhr-p7r9
-  - url: https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
-    reference_type: other
-    reference_id: openssl-v0.10.78
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-41678
+    reference_type:
+    reference_id:

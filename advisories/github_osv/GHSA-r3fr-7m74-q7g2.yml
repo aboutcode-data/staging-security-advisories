@@ -22,7 +22,14 @@ summary: |
   The slicing logic dynamically calculates `bytes[2...(2-1)]`, which becomes **`bytes[2...1]`**. Swift's `ClosedRange` operator (`...`) requires the lower bound to be less than or equal to the upper bound. Because 2 is not less than 1, Swift detects an out-of-bounds access attempt and immediately triggers a runtime trap (`Fatal error: Range requires lowerBound <= upperBound`), crashing the host application.
 
   If an attacker publishes this 4-byte malformed payload to a shared topic with the `RETAIN` flag set to true, the MQTT broker will persist the payload. Any time a vulnerable client connects and subscribes to that topic, the broker will automatically push the malformed packet. The app will instantly crash in the background before the user can even interact with it. This effectively "bricks" the mobile application (a persistent DoS) until the retained message is manually wiped from the broker database.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/emqx/cocoamqtt
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/emqx/cocoamqtt
+        commit: 010bca6f61b97d726252f61641d331a2bf82b338
+    introduced_in_commits: []
 severities:
   - score: '5.7'
     scoring_system: cvssv3.1

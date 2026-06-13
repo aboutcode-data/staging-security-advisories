@@ -46,7 +46,14 @@ summary: |
   - **Security impact:** Unauthenticated attackers can confirm valid usernames one at a time, improving the effectiveness of credential stuffing, password spraying, phishing, and other targeted account attacks
   - **Attack preconditions:** None beyond network access to the login endpoint
   - **Confidentiality impact:** Low to moderate, depending on the sensitivity of account existence in the target environment
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/enchant97/note-mark
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/enchant97/note-mark
+        commit: cf4c6f6acf70b569d80396d323b067c00d45c034
+    introduced_in_commits: []
 severities:
   - score: '3.7'
     scoring_system: cvssv3.1
@@ -64,12 +71,12 @@ references:
   - url: https://github.com/enchant97/note-mark
     reference_type:
     reference_id:
+  - url: https://github.com/enchant97/note-mark/commit/cf4c6f6acf70b569d80396d323b067c00d45c034
+    reference_type:
+    reference_id:
+  - url: https://github.com/enchant97/note-mark/security/advisories/GHSA-w6m9-39cv-2fwp
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-40263
     reference_type:
     reference_id:
-  - url: https://github.com/enchant97/note-mark/commit/cf4c6f6acf70b569d80396d323b067c00d45c034
-    reference_type: other
-    reference_id: cf4c6f6acf70b569d80396d323b067c00d45c034
-  - url: https://github.com/enchant97/note-mark/security/advisories/GHSA-w6m9-39cv-2fwp
-    reference_type: other
-    reference_id: GHSA-w6m9-39cv-2fwp

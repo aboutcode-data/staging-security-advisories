@@ -96,7 +96,14 @@ summary: |
   An authenticated user can use the application server as a blind SSRF primitive against internal HTTP services. This can expose internal network reachability, trigger internal webhooks or administrative endpoints, and expand the attack surface beyond the public deployment boundary.
 
   Because the sink is reached after ordinary user content submission, the issue is practical to exploit in real deployments where normal users can post to public communities.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/lemmynet/lemmy
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/lemmynet/lemmy
+        commit: 1f06693b708020c5c3a3752bd2f1c6006a75e9bc
+    introduced_in_commits: []
 severities:
   - score: '6.3'
     scoring_system: cvssv3.1
@@ -117,12 +124,12 @@ references:
   - url: https://github.com/LemmyNet/lemmy/commit/1f06693b708020c5c3a3752bd2f1c6006a75e9bc
     reference_type:
     reference_id:
+  - url: https://github.com/LemmyNet/lemmy/releases/tag/0.19.18
+    reference_type:
+    reference_id:
+  - url: https://github.com/LemmyNet/lemmy/security/advisories/GHSA-3jvj-v6w2-h948
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-42180
     reference_type:
     reference_id:
-  - url: https://github.com/LemmyNet/lemmy/releases/tag/0.19.18
-    reference_type: other
-    reference_id: 0.19.18
-  - url: https://github.com/LemmyNet/lemmy/security/advisories/GHSA-3jvj-v6w2-h948
-    reference_type: other
-    reference_id: GHSA-3jvj-v6w2-h948

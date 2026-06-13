@@ -12,7 +12,14 @@ summary: |
   Schema-free decoding (i.e. using `basicnode.Prototype.Any`) allows arbitrary nesting depth. Schema-bound decoding limits nesting to the schema's structure, but any field typed as `Any` in the schema permits unconstrained nesting within that field.
 
   The fix caps the preallocation size hint to 1024 entries and decrements the allocation budget when collection sizes are declared. The declared length is still used for entry-count validation, and collections grow dynamically as entries are decoded, so correctly-formed data is unaffected, even beyond the preallocation limit.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/ipld/go-ipld-prime
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/ipld/go-ipld-prime
+        commit: e43bf4a27055fe8d895671a731ee5041e2d983a9
+    introduced_in_commits: []
 severities:
   - score: '6.2'
     scoring_system: cvssv3.1
@@ -36,9 +43,9 @@ references:
   - url: https://github.com/ipld/go-ipld-prime/releases/tag/v0.22.0
     reference_type:
     reference_id:
+  - url: https://github.com/ipld/go-ipld-prime/security/advisories/GHSA-378j-3jfj-8r9f
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-35480
     reference_type:
     reference_id:
-  - url: https://github.com/ipld/go-ipld-prime/security/advisories/GHSA-378j-3jfj-8r9f
-    reference_type: other
-    reference_id: GHSA-378j-3jfj-8r9f

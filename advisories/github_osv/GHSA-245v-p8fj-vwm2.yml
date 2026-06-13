@@ -38,7 +38,14 @@ summary: |
 
   ### Impact
   Any charm deployment where a resource could be modified to inject security vulnerabilities into another workload. The most obvious is OCI containers as one gets execution escalation, but if a file resource had security controls in it, this could also be leveraged. For the file case, this would need to be examined on a case-by-case basis.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/juju/juju
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/juju/juju
+        commit: 26ff93c903d55b0712c6fb3f6b254710edb971d4
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
@@ -61,12 +68,12 @@ references:
   - url: https://github.com/juju/juju
     reference_type:
     reference_id:
+  - url: https://github.com/juju/juju/commit/26ff93c903d55b0712c6fb3f6b254710edb971d4
+    reference_type:
+    reference_id:
+  - url: https://github.com/juju/juju/security/advisories/GHSA-245v-p8fj-vwm2
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2025-68153
     reference_type:
     reference_id:
-  - url: https://github.com/juju/juju/commit/26ff93c903d55b0712c6fb3f6b254710edb971d4
-    reference_type: other
-    reference_id: 26ff93c903d55b0712c6fb3f6b254710edb971d4
-  - url: https://github.com/juju/juju/security/advisories/GHSA-245v-p8fj-vwm2
-    reference_type: other
-    reference_id: GHSA-245v-p8fj-vwm2

@@ -6,7 +6,14 @@ aliases:
 summary: |
   uutils coreutils has a Time-of-check Time-of-use (TOCTOU) Race Condition
   The mkdir utility in uutils coreutils incorrectly applies permissions when using the -m flag by creating a directory with umask-derived permissions (typically 0755) before subsequently changing them to the requested mode via a separate chmod system call. In multi-user environments, this introduces a brief window where a directory intended to be private is accessible to other users, potentially leading to unauthorized data access.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/uutils/coreutils
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/uutils/coreutils
+        commit: 037b9583bc03d814e8516df54ebcda6f681fe1f8
+    introduced_in_commits: []
 severities:
   - score: '3.3'
     scoring_system: cvssv3.1
@@ -27,12 +34,12 @@ references:
   - url: https://github.com/uutils/coreutils/commit/037b9583bc03d814e8516df54ebcda6f681fe1f8
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-35353
+  - url: https://github.com/uutils/coreutils/pull/10036
     reference_type:
     reference_id:
   - url: https://github.com/uutils/coreutils/releases/tag/0.6.0
-    reference_type: advisory
-    reference_id: 0.6.0
-  - url: https://github.com/uutils/coreutils/pull/10036
-    reference_type: bug
-    reference_id: 10036
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-35353
+    reference_type:
+    reference_id:

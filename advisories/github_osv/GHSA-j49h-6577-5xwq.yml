@@ -25,7 +25,14 @@ summary: "gmrtd ReadFile Vulnerable to Denial of Service via Excessive TLV Lengt
   \ to retrieve a file  \n- Rejection of APDUs that exceed the requested response length  \n\
   \n## Recommendation\n\nUsers should **upgrade to v0.17.2 or later**.\n\nNo additional mitigation\
   \ is required once the library is updated.\n\n## Credits\n\nDiscovered and reported by **@ramrunner**."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/gmrtd/gmrtd
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/gmrtd/gmrtd
+        commit: 54469a95e5a20a8602ac1457b2110bfeb80c8891
+    introduced_in_commits: []
 severities:
   - score: '5.9'
     scoring_system: cvssv4
@@ -44,15 +51,15 @@ references:
   - url: https://github.com/gmrtd/gmrtd
     reference_type:
     reference_id:
+  - url: https://github.com/gmrtd/gmrtd/commit/54469a95e5a20a8602ac1457b2110bfeb80c8891
+    reference_type:
+    reference_id:
+  - url: https://github.com/gmrtd/gmrtd/releases/tag/v0.17.2
+    reference_type:
+    reference_id:
+  - url: https://github.com/gmrtd/gmrtd/security/advisories/GHSA-j49h-6577-5xwq
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-24738
     reference_type:
     reference_id:
-  - url: https://github.com/gmrtd/gmrtd/commit/54469a95e5a20a8602ac1457b2110bfeb80c8891
-    reference_type: other
-    reference_id: 54469a95e5a20a8602ac1457b2110bfeb80c8891
-  - url: https://github.com/gmrtd/gmrtd/security/advisories/GHSA-j49h-6577-5xwq
-    reference_type: other
-    reference_id: GHSA-j49h-6577-5xwq
-  - url: https://github.com/gmrtd/gmrtd/releases/tag/v0.17.2
-    reference_type: other
-    reference_id: v0.17.2

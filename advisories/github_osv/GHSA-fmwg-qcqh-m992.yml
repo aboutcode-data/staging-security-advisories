@@ -40,7 +40,14 @@ summary: "Gotenberg Vulnerable to ReDoS via extraHttpHeaders scope feature\n### 
   \ vulnerability which only impacts the availability of the service and/or server on which\
   \ gotenberg is running. All instances where attackers can reach the `/forms/chromium/screenshot/url`\
   \ endpoint specifing the `extraHttpHeaders` field are affected."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/gotenberg/gotenberg
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/gotenberg/gotenberg
+        commit: cfb48d9af48cb236244eabe5c67fe1d30fb3fe25
+    introduced_in_commits: []
 severities:
   - score: '8.7'
     scoring_system: cvssv4
@@ -61,9 +68,9 @@ references:
   - url: https://github.com/gotenberg/gotenberg/commit/cfb48d9af48cb236244eabe5c67fe1d30fb3fe25
     reference_type:
     reference_id:
+  - url: https://github.com/gotenberg/gotenberg/security/advisories/GHSA-fmwg-qcqh-m992
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-35458
     reference_type:
     reference_id:
-  - url: https://github.com/gotenberg/gotenberg/security/advisories/GHSA-fmwg-qcqh-m992
-    reference_type: other
-    reference_id: GHSA-fmwg-qcqh-m992

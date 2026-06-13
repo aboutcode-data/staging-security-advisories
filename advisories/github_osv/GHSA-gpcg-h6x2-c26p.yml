@@ -6,7 +6,14 @@ aliases:
 summary: |
   uutils coreutils has an Improper Input Validation issue
   An argument parsing error in the kill utility of uutils coreutils incorrectly interprets kill -1 as a request to send the default signal (SIGTERM) to PID -1. Sending a signal to PID -1 causes the kernel to terminate all processes visible to the caller, potentially leading to a system crash or massive process termination. This differs from GNU coreutils, which correctly recognizes -1 as a signal number in this context and would instead report a missing PID argument.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/uutils/coreutils
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/uutils/coreutils
+        commit: 2d3aebce6712841bc08b9b94e9078be50a25fc10
+    introduced_in_commits: []
 severities:
   - score: '5.5'
     scoring_system: cvssv3.1
@@ -27,12 +34,12 @@ references:
   - url: https://github.com/uutils/coreutils/commit/2d3aebce6712841bc08b9b94e9078be50a25fc10
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-35369
+  - url: https://github.com/uutils/coreutils/pull/9700
     reference_type:
     reference_id:
   - url: https://github.com/uutils/coreutils/releases/tag/0.6.0
-    reference_type: advisory
-    reference_id: 0.6.0
-  - url: https://github.com/uutils/coreutils/pull/9700
-    reference_type: bug
-    reference_id: 9700
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-35369
+    reference_type:
+    reference_id:

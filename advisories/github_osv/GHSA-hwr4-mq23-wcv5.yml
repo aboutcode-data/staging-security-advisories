@@ -42,7 +42,14 @@ summary: |
   ### Workarounds
 
   Disable the topic selector cache by setting `topic_selector_cache` to `-1` in the Caddyfile, or by passing a cache size of `0` when using the library directly. This eliminates the vulnerability at the cost of reduced performance.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/dunglas/mercure
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/dunglas/mercure
+        commit: 4964a69be904fd61e35b5f1e691271663b6fdd64
+    introduced_in_commits: []
 severities:
   - score: '7.1'
     scoring_system: cvssv4
@@ -60,15 +67,15 @@ references:
   - url: https://github.com/dunglas/mercure
     reference_type:
     reference_id:
+  - url: https://github.com/dunglas/mercure/commit/4964a69be904fd61e35b5f1e691271663b6fdd64
+    reference_type:
+    reference_id:
   - url: https://github.com/dunglas/mercure/releases/tag/v0.22.0
+    reference_type:
+    reference_id:
+  - url: https://github.com/dunglas/mercure/security/advisories/GHSA-hwr4-mq23-wcv5
     reference_type:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-39972
     reference_type:
     reference_id:
-  - url: https://github.com/dunglas/mercure/commit/4964a69be904fd61e35b5f1e691271663b6fdd64
-    reference_type: other
-    reference_id: 4964a69be904fd61e35b5f1e691271663b6fdd64
-  - url: https://github.com/dunglas/mercure/security/advisories/GHSA-hwr4-mq23-wcv5
-    reference_type: other
-    reference_id: GHSA-hwr4-mq23-wcv5

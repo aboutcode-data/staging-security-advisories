@@ -11,7 +11,14 @@ summary: |
 
   ### Impact
   This is a confidentiality issue. In environments where untrusted or lower-trust users can author templated ExternalSecret resources and the controller can perform DNS resolution, fetched secret material can be exfiltrated through DNS without requiring direct outbound access from the attacker’s workload.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/external-secrets/external-secrets
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/external-secrets/external-secrets
+        commit: 6800989bdc12782ca2605d3b8bf7f2876a16551a
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
@@ -34,15 +41,15 @@ references:
   - url: https://github.com/external-secrets/external-secrets
     reference_type:
     reference_id:
+  - url: https://github.com/external-secrets/external-secrets/commit/6800989bdc12782ca2605d3b8bf7f2876a16551a
+    reference_type:
+    reference_id:
+  - url: https://github.com/external-secrets/external-secrets/releases/tag/v2.3.0
+    reference_type:
+    reference_id:
+  - url: https://github.com/external-secrets/external-secrets/security/advisories/GHSA-r2pg-r6h7-crf3
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-34984
     reference_type:
     reference_id:
-  - url: https://github.com/external-secrets/external-secrets/commit/6800989bdc12782ca2605d3b8bf7f2876a16551a
-    reference_type: other
-    reference_id: 6800989bdc12782ca2605d3b8bf7f2876a16551a
-  - url: https://github.com/external-secrets/external-secrets/security/advisories/GHSA-r2pg-r6h7-crf3
-    reference_type: other
-    reference_id: GHSA-r2pg-r6h7-crf3
-  - url: https://github.com/external-secrets/external-secrets/releases/tag/v2.3.0
-    reference_type: other
-    reference_id: v2.3.0

@@ -109,7 +109,14 @@ summary: |
   This issue upgrades an attacker-controlled external page into an internal image fetch primitive. It can be used to retrieve internal image resources, expose content that is otherwise reachable only from the application host, and publish those internal resources through Lemmy's own thumbnail serving path.
 
   Because the vulnerable mode is the documented default behavior for link previews, the issue is relevant even without non-default privacy settings.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/lemmynet/lemmy
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/lemmynet/lemmy
+        commit: 9ffe586dafac1a46acf17edf90e0165e5503b2f1
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
@@ -130,15 +137,15 @@ references:
   - url: https://github.com/LemmyNet/lemmy/commit/9ffe586dafac1a46acf17edf90e0165e5503b2f1
     reference_type:
     reference_id:
+  - url: https://github.com/LemmyNet/lemmy/releases/tag/0.19.18
+    reference_type:
+    reference_id:
+  - url: https://github.com/LemmyNet/lemmy/security/advisories/GHSA-h6hf-9846-xwrq
+    reference_type:
+    reference_id:
   - url: https://join-lemmy.org/news/2026-04-20_-_Lemmy_Release_v0.19.18
     reference_type:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-42181
     reference_type:
     reference_id:
-  - url: https://github.com/LemmyNet/lemmy/releases/tag/0.19.18
-    reference_type: other
-    reference_id: 0.19.18
-  - url: https://github.com/LemmyNet/lemmy/security/advisories/GHSA-h6hf-9846-xwrq
-    reference_type: other
-    reference_id: GHSA-h6hf-9846-xwrq

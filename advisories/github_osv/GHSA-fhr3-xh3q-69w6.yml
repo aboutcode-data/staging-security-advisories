@@ -6,7 +6,14 @@ aliases:
 summary: |
   uutils coreutils has an Incorrect Provision of Specified Functionality Issue
   A logic error in the tr utility of uutils coreutils causes the program to incorrectly define the [:graph:] and [:print:] character classes. The implementation mistakenly includes the ASCII space character (0x20) in the [:graph:] class and excludes it from the [:print:] class, effectively reversing the standard behavior established by POSIX and GNU coreutils. This vulnerability leads to unintended data modification or loss when the utility is used in automated scripts or data-cleaning pipelines that rely on standard character class semantics. For example, a command executed to delete all graphical characters while intending to preserve whitespace will incorrectly delete all ASCII spaces, potentially resulting in data corruption or logic failures in downstream processing.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/uutils/coreutils
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/uutils/coreutils
+        commit: 358063f3367cb23a1e5db314cfdbfeb607749b3d
+    introduced_in_commits: []
 severities:
   - score: '3.3'
     scoring_system: cvssv3.1
@@ -27,12 +34,12 @@ references:
   - url: https://github.com/uutils/coreutils/commit/358063f3367cb23a1e5db314cfdbfeb607749b3d
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-35379
+  - url: https://github.com/uutils/coreutils/pull/11405
     reference_type:
     reference_id:
   - url: https://github.com/uutils/coreutils/releases/tag/0.8.0
-    reference_type: advisory
-    reference_id: 0.8.0
-  - url: https://github.com/uutils/coreutils/pull/11405
-    reference_type: bug
-    reference_id: 11405
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-35379
+    reference_type:
+    reference_id:

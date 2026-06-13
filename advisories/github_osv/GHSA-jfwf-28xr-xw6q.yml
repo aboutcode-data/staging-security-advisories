@@ -84,7 +84,16 @@ summary: |
   - the unauthenticated `operations/fsinfo` exploit worked
   - command execution occurred on the host
   - the issue was reproducible through direct host execution
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/rclone/rclone
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/rclone/rclone
+        commit: bf55d5e6d37fd86164a87782191f9e1ffcaafa82
+      - vcs_url: https://github.com/rclone/rclone
+        commit: 2a9e952b38e03a96bf40c9eb6e8e22199865ee3b
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
@@ -102,33 +111,33 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-306
   - CWE-78
+  - CWE-306
 references:
   - url: https://github.com/rclone/rclone
+    reference_type:
+    reference_id:
+  - url: https://github.com/rclone/rclone/blob/bf55d5e6d37fd86164a87782191f9e1ffcaafa82/backend/webdav/webdav.go
+    reference_type:
+    reference_id:
+  - url: https://github.com/rclone/rclone/blob/bf55d5e6d37fd86164a87782191f9e1ffcaafa82/fs/operations/rc.go
+    reference_type:
+    reference_id:
+  - url: https://github.com/rclone/rclone/blob/bf55d5e6d37fd86164a87782191f9e1ffcaafa82/fs/rc/cache.go
+    reference_type:
+    reference_id:
+  - url: https://github.com/rclone/rclone/commit/2a9e952b38e03a96bf40c9eb6e8e22199865ee3b
+    reference_type:
+    reference_id:
+  - url: https://github.com/rclone/rclone/releases/tag/v1.73.5
+    reference_type:
+    reference_id:
+  - url: https://github.com/rclone/rclone/security/advisories/GHSA-jfwf-28xr-xw6q
     reference_type:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-41179
     reference_type:
     reference_id:
-  - url: https://github.com/rclone/rclone/commit/2a9e952b38e03a96bf40c9eb6e8e22199865ee3b
-    reference_type: other
-    reference_id: 2a9e952b38e03a96bf40c9eb6e8e22199865ee3b
-  - url: https://github.com/rclone/rclone/blob/bf55d5e6d37fd86164a87782191f9e1ffcaafa82/fs/rc/cache.go
-    reference_type: other
-    reference_id: cache.go
-  - url: https://github.com/rclone/rclone/security/advisories/GHSA-jfwf-28xr-xw6q
-    reference_type: other
-    reference_id: GHSA-jfwf-28xr-xw6q
-  - url: https://github.com/rclone/rclone/blob/bf55d5e6d37fd86164a87782191f9e1ffcaafa82/fs/operations/rc.go
-    reference_type: other
-    reference_id: rc.go
-  - url: https://github.com/rclone/rclone/releases/tag/v1.73.5
-    reference_type: other
-    reference_id: v1.73.5
   - url: https://rclone.org/changelog/#v1-73-5-2026-04-19
-    reference_type: other
-    reference_id: '#v1-73-5-2026-04-19'
-  - url: https://github.com/rclone/rclone/blob/bf55d5e6d37fd86164a87782191f9e1ffcaafa82/backend/webdav/webdav.go
-    reference_type: other
-    reference_id: webdav.go
+    reference_type:
+    reference_id:

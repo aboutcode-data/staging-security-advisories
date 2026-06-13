@@ -64,7 +64,14 @@ summary: |
   ```
   - Potential crash / denial of service in release-builds (e.g., SIGSEGV, Illegal instruction)
   - Violates Rust’s safety guarantees despite using only safe code
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/becheran/grid
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/becheran/grid
+        commit: be213bd3528727148bef2d523c89e95d1fd9c072
+    introduced_in_commits: []
 severities:
   - score: '6.2'
     scoring_system: cvssv3.1
@@ -82,15 +89,15 @@ references:
   - url: https://github.com/becheran/grid
     reference_type:
     reference_id:
+  - url: https://github.com/becheran/grid/commit/be213bd3528727148bef2d523c89e95d1fd9c072
+    reference_type:
+    reference_id:
+  - url: https://github.com/becheran/grid/releases/tag/v1.0.1
+    reference_type:
+    reference_id:
+  - url: https://github.com/becheran/grid/security/advisories/GHSA-38c5-483c-4qqp
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-42199
     reference_type:
     reference_id:
-  - url: https://github.com/becheran/grid/commit/be213bd3528727148bef2d523c89e95d1fd9c072
-    reference_type: other
-    reference_id: be213bd3528727148bef2d523c89e95d1fd9c072
-  - url: https://github.com/becheran/grid/security/advisories/GHSA-38c5-483c-4qqp
-    reference_type: other
-    reference_id: GHSA-38c5-483c-4qqp
-  - url: https://github.com/becheran/grid/releases/tag/v1.0.1
-    reference_type: other
-    reference_id: v1.0.1

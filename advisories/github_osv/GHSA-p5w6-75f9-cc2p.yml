@@ -49,7 +49,14 @@ summary: |
   - **Security impact:** Full binary contents of private note assets can be disclosed to unauthenticated users who know the required identifiers
   - **Attack preconditions:** The attacker must know both the target `noteID` and `assetID`; no authentication is required
   - **Attack complexity:** High, because successful exploitation depends on prior disclosure of both UUIDs rather than feasible online guessing
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/enchant97/note-mark
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/enchant97/note-mark
+        commit: 6593898855add151eb9965d96998b05e14c62026
+    introduced_in_commits: []
 severities:
   - score: '5.9'
     scoring_system: cvssv3.1
@@ -67,15 +74,15 @@ references:
   - url: https://github.com/enchant97/note-mark
     reference_type:
     reference_id:
+  - url: https://github.com/enchant97/note-mark/commit/6593898855add151eb9965d96998b05e14c62026
+    reference_type:
+    reference_id:
+  - url: https://github.com/enchant97/note-mark/releases/tag/v0.19.2
+    reference_type:
+    reference_id:
+  - url: https://github.com/enchant97/note-mark/security/advisories/GHSA-p5w6-75f9-cc2p
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-40265
     reference_type:
     reference_id:
-  - url: https://github.com/enchant97/note-mark/commit/6593898855add151eb9965d96998b05e14c62026
-    reference_type: other
-    reference_id: 6593898855add151eb9965d96998b05e14c62026
-  - url: https://github.com/enchant97/note-mark/security/advisories/GHSA-p5w6-75f9-cc2p
-    reference_type: other
-    reference_id: GHSA-p5w6-75f9-cc2p
-  - url: https://github.com/enchant97/note-mark/releases/tag/v0.19.2
-    reference_type: other
-    reference_id: v0.19.2
