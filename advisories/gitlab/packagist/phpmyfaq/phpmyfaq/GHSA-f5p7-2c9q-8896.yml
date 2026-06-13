@@ -1,0 +1,31 @@
+advisory_id: packagist/phpmyfaq/phpmyfaq/GHSA-f5p7-2c9q-8896
+datasource_id: gitlab/packagist/phpmyfaq/phpmyfaq/GHSA-f5p7-2c9q-8896
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/packagist/phpmyfaq/phpmyfaq/GHSA-f5p7-2c9q-8896.yml
+aliases:
+  - GHSA-f5p7-2c9q-8896
+summary: |
+  phpMyFAQ has Stored XSS in FAQ Question/Answer via Encode-Decode Bypass of removeAttributes() Sanitization
+  The FAQ creation and update endpoints in phpMyFAQ apply `FILTER_SANITIZE_SPECIAL_CHARS` (which HTML-encodes input), then immediately call `html_entity_decode()` which reverses the encoding, followed by `Filter::removeAttributes()` which only strips HTML attributes — not tags. This allows `<script>`, `<iframe>`, `<object>`, and `<embed>` tags to be stored in the database and rendered unescaped via `{{ answer|raw }}` and `{{ question|raw }}` in the Twig template, causing JavaScript execution in every visitor's browser.
+impacted_packages:
+  - purl: pkg:composer/phpmyfaq/phpmyfaq
+    affected_versions: vers:composer/<4.1.2
+    fixed_versions: vers:composer/4.1.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/packagist/phpmyfaq/phpmyfaq/GHSA-f5p7-2c9q-8896.yml
+weaknesses:
+  - CWE-1035
+  - CWE-937
+  - CWE-79
+references:
+  - url: https://github.com/advisories/GHSA-f5p7-2c9q-8896
+    reference_type:
+    reference_id: GHSA-f5p7-2c9q-8896
+  - url: https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-f5p7-2c9q-8896
+    reference_type:
+    reference_id: GHSA-f5p7-2c9q-8896
