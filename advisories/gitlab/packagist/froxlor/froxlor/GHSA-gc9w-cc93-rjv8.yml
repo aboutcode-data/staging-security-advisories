@@ -8,7 +8,7 @@ summary: |
   `PhpHelper::parseArrayToString()` writes string values into single-quoted PHP string literals without escaping single quotes. When an admin with `change_serversettings` permission adds or updates a MySQL server via the API, the `privileged_user` parameter (which has no input validation) is written unescaped into `lib/userdata.inc.php`. Since this file is `require`d on every request via `Database::getDB()`, an attacker can inject arbitrary PHP code that executes as the web server user on every subsequent page load.
 impacted_packages:
   - purl: pkg:composer/froxlor/froxlor
-    affected_versions: vers:composer/<2.3.6
+    affected_versions: vers:composer/<0.0.0
     fixed_versions: vers:composer/2.3.6
     fixed_in_commits: []
     introduced_in_commits: []
@@ -19,8 +19,8 @@ severities:
     published_at: None
     url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/packagist/froxlor/froxlor/GHSA-gc9w-cc93-rjv8.yml
 weaknesses:
-  - CWE-1035
   - CWE-94
+  - CWE-1035
   - CWE-937
 references:
   - url: https://github.com/froxlor/froxlor
