@@ -11,16 +11,16 @@ summary: 'An issue was discovered in middleware.py in OpenStack Swauth through 1
   X-Auth-Token header of a new request. NOTE: github.com/openstack/swauth URLs do not mean that
   Swauth is maintained by an official OpenStack project team.'
 impacted_packages:
-  - purl: pkg:github/openstack/swauth
-    affected_versions:
-    fixed_versions:
+  - purl: pkg:pypi/swauth
+    affected_versions: vers:pypi/1.0.8|1.1.0|1.2.0
+    fixed_versions: vers:pypi/1.3.0
     fixed_in_commits:
       - vcs_url: https://github.com/openstack/swauth
         commit: 70af7986265a3defea054c46efc82d0698917298
     introduced_in_commits: []
-  - purl: pkg:pypi/swauth
-    affected_versions: vers:pypi/1.0.8|1.1.0|1.2.0
-    fixed_versions: vers:pypi/1.3.0
+  - purl: pkg:github/openstack/swauth
+    affected_versions:
+    fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/openstack/swauth
         commit: 70af7986265a3defea054c46efc82d0698917298

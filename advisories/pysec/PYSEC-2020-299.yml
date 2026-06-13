@@ -17,16 +17,16 @@ summary: In affected versions of TensorFlow the tf.raw_ops.ImmutableConst operat
   opaque handle since the needed virtual method is not overridden. This is fixed in versions
   1.15.5, 2.0.4, 2.1.3, 2.2.2, 2.3.2, and 2.4.0.
 impacted_packages:
-  - purl: pkg:github/tensorflow/tensorflow
-    affected_versions:
-    fixed_versions:
+  - purl: pkg:pypi/tensorflow-cpu
+    affected_versions: vers:pypi/1.15.0|2.1.0|2.1.1|2.1.2|2.2.0|2.2.1|2.3.0|2.3.1
+    fixed_versions: vers:pypi/1.15.5|2.0.4|2.1.3|2.2.2|2.3.2
     fixed_in_commits:
       - vcs_url: https://github.com/tensorflow/tensorflow
         commit: c1e1fc899ad5f8c725dcbb6470069890b5060bc7
     introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow-cpu
-    affected_versions: vers:pypi/1.15.0|2.1.0|2.1.1|2.1.2|2.2.0|2.2.1|2.3.0|2.3.1
-    fixed_versions: vers:pypi/1.15.5|2.0.4|2.1.3|2.2.2|2.3.2
+  - purl: pkg:github/tensorflow/tensorflow
+    affected_versions:
+    fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/tensorflow/tensorflow
         commit: c1e1fc899ad5f8c725dcbb6470069890b5060bc7
@@ -39,4 +39,4 @@ references:
     reference_id:
   - url: https://github.com/tensorflow/tensorflow/security/advisories/GHSA-hhvc-g5hv-48c6
     reference_type:
-    reference_id:
+    reference_id: GHSA-hhvc-g5hv-48c6

@@ -22,16 +22,16 @@ summary: 'OAuthenticator is an OAuth login mechanism for JupyterHub. In oauthent
   = ...`. If any users have been authorized during this time who should not have been, they
   must be deleted via the API or admin interface, per the referenced documentation.'
 impacted_packages:
-  - purl: pkg:github/jupyterhub/oauthenticator
-    affected_versions:
-    fixed_versions:
+  - purl: pkg:pypi/oauthenticator
+    affected_versions: vers:pypi/0.12.0|0.12.1
+    fixed_versions: vers:pypi/0.12.2
     fixed_in_commits:
       - vcs_url: https://github.com/jupyterhub/oauthenticator
         commit: a4aac191c16cf6281f3d346615aefa75702b02d7
     introduced_in_commits: []
-  - purl: pkg:pypi/oauthenticator
-    affected_versions: vers:pypi/0.12.0|0.12.1
-    fixed_versions: vers:pypi/0.12.2
+  - purl: pkg:github/jupyterhub/oauthenticator
+    affected_versions:
+    fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/jupyterhub/oauthenticator
         commit: a4aac191c16cf6281f3d346615aefa75702b02d7
@@ -45,9 +45,9 @@ references:
   - url: https://github.com/jupyterhub/oauthenticator/commit/a4aac191c16cf6281f3d346615aefa75702b02d7
     reference_type:
     reference_id:
-  - url: https://github.com/jupyterhub/oauthenticator/security/advisories/GHSA-384w-5v3f-q499
-    reference_type:
-    reference_id:
   - url: https://jupyterhub.readthedocs.io/en/1.2.2/getting-started/authenticators-users-basics.html#add-or-remove-users-from-the-hub
     reference_type:
     reference_id:
+  - url: https://github.com/jupyterhub/oauthenticator/security/advisories/GHSA-384w-5v3f-q499
+    reference_type:
+    reference_id: GHSA-384w-5v3f-q499

@@ -16,16 +16,16 @@ summary: In Tensorflow before versions 1.15.4, 2.0.3, 2.1.2, 2.2.1 and 2.3.1, th
   In this case, this results in a segmentation fault The issue is patched in commit da8558533d925694483d2c136a9220d6d49d843c,
   and is released in TensorFlow versions 1.15.4, 2.0.3, 2.1.2, 2.2.1, or 2.3.1.
 impacted_packages:
-  - purl: pkg:github/tensorflow/tensorflow
-    affected_versions:
-    fixed_versions:
+  - purl: pkg:pypi/tensorflow-cpu
+    affected_versions: vers:pypi/1.15.0|2.1.0|2.1.1|2.2.0|2.3.0
+    fixed_versions: vers:pypi/1.15.4|2.0.3|2.1.2|2.2.1|2.3.1
     fixed_in_commits:
       - vcs_url: https://github.com/tensorflow/tensorflow
         commit: da8558533d925694483d2c136a9220d6d49d843c
     introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow-cpu
-    affected_versions: vers:pypi/1.15.0|2.1.0|2.1.1|2.2.0|2.3.0
-    fixed_versions: vers:pypi/1.15.4|2.0.3|2.1.2|2.2.1|2.3.1
+  - purl: pkg:github/tensorflow/tensorflow
+    affected_versions:
+    fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/tensorflow/tensorflow
         commit: da8558533d925694483d2c136a9220d6d49d843c
@@ -44,4 +44,4 @@ references:
     reference_id:
   - url: https://github.com/tensorflow/tensorflow/security/advisories/GHSA-4g9f-63rx-5cw4
     reference_type:
-    reference_id:
+    reference_id: GHSA-4g9f-63rx-5cw4
