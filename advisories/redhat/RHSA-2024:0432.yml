@@ -34,6 +34,11 @@ summary: "An update for kernel is now available for Red Hat Enterprise Linux 9.0
   \ for an nvme-o-FC LUN when performing I/O\noperations\n\n* XFS: sync to upstream v5.15\n\n\
   * AMDSERVER 9.4 Bug, Turin: Support larger microcode patches"
 impacted_packages:
+  - purl: pkg:rpm/redhat/kernel-tools-libs-devel?arch=x86_64
+    affected_versions: vers:rpm/<5.14.0-70.85.1.el9_0
+    fixed_versions: vers:rpm/5.14.0-70.85.1.el9_0
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debug-devel?arch=aarch64
     affected_versions: vers:rpm/<5.14.0-70.85.1.el9_0
     fixed_versions: vers:rpm/5.14.0-70.85.1.el9_0
@@ -45,6 +50,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-devel?arch=aarch64
+    affected_versions: vers:rpm/<5.14.0-70.85.1.el9_0
+    fixed_versions: vers:rpm/5.14.0-70.85.1.el9_0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-debug-devel?arch=s390x
     affected_versions: vers:rpm/<5.14.0-70.85.1.el9_0
     fixed_versions: vers:rpm/5.14.0-70.85.1.el9_0
     fixed_in_commits: []
@@ -404,16 +414,6 @@ impacted_packages:
     fixed_versions: vers:rpm/5.14.0-70.85.1.el9_0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-tools-libs-devel?arch=x86_64
-    affected_versions: vers:rpm/<5.14.0-70.85.1.el9_0
-    fixed_versions: vers:rpm/5.14.0-70.85.1.el9_0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debug-devel?arch=s390x
-    affected_versions: vers:rpm/<5.14.0-70.85.1.el9_0
-    fixed_versions: vers:rpm/5.14.0-70.85.1.el9_0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debug-devel-matched?arch=s390x
     affected_versions: vers:rpm/<5.14.0-70.85.1.el9_0
     fixed_versions: vers:rpm/5.14.0-70.85.1.el9_0
@@ -582,16 +582,7 @@ severities:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2024_0432.json
 weaknesses: []
 references:
-  - url: https://access.redhat.com/errata/RHSA-2024:0432
-    reference_type:
-    reference_id:
   - url: https://access.redhat.com/security/updates/classification/#important
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2221463
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2241924
     reference_type:
     reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2024_0432.json
@@ -609,15 +600,24 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2187773
     reference_type: bug
     reference_id: 2187773
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2221463
+    reference_type: bug
+    reference_id: 2221463
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2237750
     reference_type: bug
     reference_id: 2237750
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2237757
     reference_type: bug
     reference_id: 2237757
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2241924
+    reference_type: bug
+    reference_id: 2241924
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2244723
     reference_type: bug
     reference_id: 2244723
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2246944
     reference_type: bug
     reference_id: 2246944
+  - url: https://access.redhat.com/errata/RHSA-2024:0432
+    reference_type:
+    reference_id: RHSA-2024:0432
