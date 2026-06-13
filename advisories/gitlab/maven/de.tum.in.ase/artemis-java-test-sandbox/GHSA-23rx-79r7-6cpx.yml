@@ -11,17 +11,17 @@ summary: |
   ## Original Description
   Artemis Java Test Sandbox versions less than 1.7.6 are vulnerable to a sandbox escape when an attacker crafts a special subclass of InvocationTargetException. An attacker can abuse this issue to execute arbitrary Java when a victim executes the supposedly sandboxed code.
 impacted_packages:
-  - purl: pkg:maven/de.tum.in.ase/artemis-java-test-sandbox
-    affected_versions: vers:maven/<1.7.6
-    fixed_versions: vers:maven/1.7.6
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/ls1intum/ares
     affected_versions:
     fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/ls1intum/ares
         commit: af4f28a56e2fe600d8750b3b415352a0a3217392
+    introduced_in_commits: []
+  - purl: pkg:maven/de.tum.in.ase/artemis-java-test-sandbox
+    affected_versions: vers:maven/<1.7.6
+    fixed_versions: vers:maven/1.7.6
+    fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: None
