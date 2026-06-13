@@ -5,11 +5,11 @@ aliases:
   - GHSA-4jvx-93h3-f45h
 summary: |
   OpenC3 COSMOS allows arbitrary writes to plugins directory via path-traversed config filenames
-  OpenC3 COSMOS contains a design flaw in the `save_tool_config()` function that allows saving tool configuration files at arbitrary locations inside the shared `/plugins` directory tree by supplying crafted configuration filenames. Although the implementation sufficiently mitigates standard path traversal attacks, by canonicalizing filename to an absolute path, all plugins share this same root directory. That enables users to create arbitrary file structures and overwrite existing configuration files within the shared `/plugins` directory.
+  This advisory has been withdrawn.
 impacted_packages:
   - purl: pkg:gem/openc3
-    affected_versions: vers:gem/<6.10.5|>=7.0.0.pre.rc1|<7.0.0-rc3
-    fixed_versions: vers:gem/6.10.5|7.0.0-rc3
+    affected_versions: vers:gem/<0
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/openc3/cosmos
@@ -17,9 +17,9 @@ impacted_packages:
     fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/openc3/cosmos
-        commit: 9957a9fa460c0c0cf5cdbf6a5931bbdd025246a5
-      - vcs_url: https://github.com/openc3/cosmos
         commit: e6efccbd148ba0e3361c5891027f2373aa140d42
+      - vcs_url: https://github.com/openc3/cosmos
+        commit: 9957a9fa460c0c0cf5cdbf6a5931bbdd025246a5
     introduced_in_commits: []
 severities:
   - score: None

@@ -5,11 +5,11 @@ aliases:
   - GHSA-wgx6-g857-jjf7
 summary: |
   OpenC3 COSMOS: Hijacked session token can be used to reset password for persistence
-  The OpenC3 password change functionality allows a user to change their password without providing the old password, by accepting a valid session token instead. In assumed breach scenarios, this behaviour can be exploited by an attacker who has already obtained a valid session token, to gain persistence in hijacked account (including admin) and prevent legitimate users from accessing the account.
+  This advisory has been withdrawn.
 impacted_packages:
   - purl: pkg:gem/openc3
-    affected_versions: vers:gem/<6.10.5|>=7.0.0.pre.rc1|<7.0.0-rc3
-    fixed_versions: vers:gem/6.10.5|7.0.0-rc3
+    affected_versions: vers:gem/<0
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/openc3/cosmos
@@ -26,8 +26,8 @@ severities:
     published_at: None
     url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/gem/openc3/GHSA-wgx6-g857-jjf7.yml
 weaknesses:
-  - CWE-620
   - CWE-1035
+  - CWE-620
   - CWE-937
 references:
   - url: https://github.com/OpenC3/cosmos

@@ -7,17 +7,17 @@ summary: |
   XSS via parse_inline()
   There's a flaw that allows a cross-site scripting (XSS) attack. This flaw exists because the `parse_inline()` function in markdown.c does not validate input before returning it to users. This may allow a remote attacker to create a specially crafted request that would execute arbitrary script code in a user's browser session within the trust relationship between their browser and the server.
 impacted_packages:
-  - purl: pkg:gem/redcarpet
-    affected_versions: vers:gem/<3.2.3
-    fixed_versions: vers:gem/3.2.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/vmg/redcarpet
     affected_versions:
     fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/vmg/redcarpet
         commit: a6c759d7e7cbdd8cb8a1876f97a38b1befe221d5
+    introduced_in_commits: []
+  - purl: pkg:gem/redcarpet
+    affected_versions: vers:gem/<3.2.3
+    fixed_versions: vers:gem/3.2.3
+    fixed_in_commits: []
     introduced_in_commits: []
 severities: []
 weaknesses: []
