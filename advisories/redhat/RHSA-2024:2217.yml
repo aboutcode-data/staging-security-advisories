@@ -23,7 +23,27 @@ summary: |
 
   For detailed information on changes in this release, see the Red Hat Enterprise Linux 9.4 Release Notes linked from the References section.
 impacted_packages:
+  - purl: pkg:rpm/redhat/motif-debugsource?arch=s390x
+    affected_versions: vers:rpm/<2.3.4-28.el9
+    fixed_versions: vers:rpm/2.3.4-28.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/motif-debuginfo?arch=s390x
+    affected_versions: vers:rpm/<2.3.4-28.el9
+    fixed_versions: vers:rpm/2.3.4-28.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/motif-devel-debuginfo?arch=s390x
+    affected_versions: vers:rpm/<2.3.4-28.el9
+    fixed_versions: vers:rpm/2.3.4-28.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/motif?arch=src
+    affected_versions: vers:rpm/<2.3.4-28.el9
+    fixed_versions: vers:rpm/2.3.4-28.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/motif?arch=i686
     affected_versions: vers:rpm/<2.3.4-28.el9
     fixed_versions: vers:rpm/2.3.4-28.el9
     fixed_in_commits: []
@@ -74,11 +94,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/motif-devel-debuginfo?arch=ppc64le
-    affected_versions: vers:rpm/<2.3.4-28.el9
-    fixed_versions: vers:rpm/2.3.4-28.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/motif?arch=i686
     affected_versions: vers:rpm/<2.3.4-28.el9
     fixed_versions: vers:rpm/2.3.4-28.el9
     fixed_in_commits: []
@@ -138,21 +153,6 @@ impacted_packages:
     fixed_versions: vers:rpm/2.3.4-28.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/motif-debugsource?arch=s390x
-    affected_versions: vers:rpm/<2.3.4-28.el9
-    fixed_versions: vers:rpm/2.3.4-28.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/motif-debuginfo?arch=s390x
-    affected_versions: vers:rpm/<2.3.4-28.el9
-    fixed_versions: vers:rpm/2.3.4-28.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/motif-devel-debuginfo?arch=s390x
-    affected_versions: vers:rpm/<2.3.4-28.el9
-    fixed_versions: vers:rpm/2.3.4-28.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: Moderate
     scoring_system: rhas
@@ -162,9 +162,6 @@ severities:
 weaknesses: []
 references:
   - url: https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/9.4_release_notes/index
-    reference_type:
-    reference_id:
-  - url: https://access.redhat.com/errata/RHSA-2024:2217
     reference_type:
     reference_id:
   - url: https://access.redhat.com/security/updates/classification/#moderate
@@ -179,3 +176,6 @@ references:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2024_2217.json
     reference_type:
     reference_id:
+  - url: https://access.redhat.com/errata/RHSA-2024:2217
+    reference_type:
+    reference_id: RHSA-2024:2217
