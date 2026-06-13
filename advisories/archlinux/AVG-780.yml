@@ -6,6 +6,20 @@ aliases:
   - CVE-2018-10933
 summary: authentication bypass
 impacted_packages:
+  - purl: pkg:github/blacknbunny/libssh-authentication-bypass
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/blacknbunny/libssh-authentication-bypass
+        commit: 5dc55fbf5518f2e11503f08fa84a3640e60c7ec9
+    introduced_in_commits: []
+  - purl: pkg:github/jas502n/cve-2018-10933
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/jas502n/cve-2018-10933
+        commit: 05ee62e7ed7d4cd10e71ea10b28da990e37a24f4
+    introduced_in_commits: []
   - purl: pkg:alpm/archlinux/libssh
     affected_versions: vers:alpm/0.8.3-1
     fixed_versions: vers:alpm/0.8.4-1
@@ -25,3 +39,15 @@ references:
   - url: https://security.archlinux.org/AVG-780
     reference_type:
     reference_id: AVG-780
+  - url: https://github.com/blacknbunny/libSSH-Authentication-Bypass/blob/5dc55fbf5518f2e11503f08fa84a3640e60c7ec9/libsshauthbypass.py
+    reference_type: exploit
+    reference_id: CVE-2018-10933
+  - url: https://github.com/jas502n/CVE-2018-10933/blob/05ee62e7ed7d4cd10e71ea10b28da990e37a24f4/libssh-CVE-2018-10933-jas502n.py
+    reference_type: exploit
+    reference_id: CVE-2018-10933
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/remote/45638.py
+    reference_type: exploit
+    reference_id: CVE-2018-10933
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/remote/46307.py
+    reference_type: exploit
+    reference_id: CVE-2018-10933

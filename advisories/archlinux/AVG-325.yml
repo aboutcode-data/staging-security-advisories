@@ -10,6 +10,13 @@ impacted_packages:
     fixed_versions: vers:alpm/4.9.34-1
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:github/rapid7/metasploit-framework
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/rapid7/metasploit-framework
+        commit: 8877582086acca0f4ec1cf9bd371bbab53e642f4
+    introduced_in_commits: []
 severities:
   - score: High
     scoring_system: archlinux
@@ -21,3 +28,9 @@ references:
   - url: https://security.archlinux.org/AVG-325
     reference_type:
     reference_id: AVG-325
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/solaris/local/45625.rb
+    reference_type: exploit
+    reference_id: CVE-2017-3630;CVE-2017-3629;CVE-2017-1000364;CVE-2017-3631
+  - url: https://raw.githubusercontent.com/rapid7/metasploit-framework/8877582086acca0f4ec1cf9bd371bbab53e642f4/modules/exploits/solaris/local/rsh_stack_clash_priv_esc.rb
+    reference_type: exploit
+    reference_id: CVE-2017-3630;CVE-2017-3629;CVE-2017-1000364;CVE-2017-3631
