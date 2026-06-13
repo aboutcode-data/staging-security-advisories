@@ -58,7 +58,16 @@ summary: |
   1. The attacker adds a package to ghcr.io with attestations that can be fetched via the `orgs/$owner/attestations/$checksumref` GitHub endpoint.
   2. The attacker registers on Minder and makes Minder fetch the attestations.
   3. Minder fetches attestations and crashes thereby being denied of service.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/stacklok/minder
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/stacklok/minder
+        commit: daccbc12e364e2d407d56b87a13f7bb24cbdb074
+      - vcs_url: https://github.com/stacklok/minder
+        commit: fe321d345b4f738de6a06b13207addc72b59f892
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
@@ -76,15 +85,15 @@ references:
   - url: https://github.com/stacklok/minder
     reference_type:
     reference_id:
+  - url: https://github.com/stacklok/minder/blob/daccbc12e364e2d407d56b87a13f7bb24cbdb074/internal/verifier/sigstore/container/container.go#L271-L300
+    reference_type:
+    reference_id:
+  - url: https://github.com/stacklok/minder/commit/fe321d345b4f738de6a06b13207addc72b59f892
+    reference_type:
+    reference_id:
+  - url: https://github.com/stacklok/minder/security/advisories/GHSA-8fmj-33gw-g7pw
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-35238
     reference_type:
     reference_id:
-  - url: https://github.com/stacklok/minder/blob/daccbc12e364e2d407d56b87a13f7bb24cbdb074/internal/verifier/sigstore/container/container.go#L271-L300
-    reference_type: other
-    reference_id: container.go#L271-L300
-  - url: https://github.com/stacklok/minder/commit/fe321d345b4f738de6a06b13207addc72b59f892
-    reference_type: other
-    reference_id: fe321d345b4f738de6a06b13207addc72b59f892
-  - url: https://github.com/stacklok/minder/security/advisories/GHSA-8fmj-33gw-g7pw
-    reference_type: other
-    reference_id: GHSA-8fmj-33gw-g7pw

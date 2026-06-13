@@ -29,7 +29,16 @@ summary: "Minder's GitHub Webhook Handler vulnerable to DoS from un-validated re
   \ WARNING, SAVE ALL WORK BEFORE DOING THIS.\n\nOn my local machine, this causes the machine\
   \ to freeze, and Go finally performs a sigkill: \n\n```\nsignal: killed\nFAIL      github.com/stacklok/minder/internal/controlplane\
   \          30.759s\nFAIL\n```"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/stacklok/minder
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/stacklok/minder
+        commit: ee66f6c0763212503c898cfefb65ce1450c7f5ac
+      - vcs_url: https://github.com/stacklok/minder
+        commit: 3e5a527d2f1b535159206161d1d519602c75bd0d
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -59,12 +68,12 @@ references:
   - url: https://github.com/stacklok/minder/blob/ee66f6c0763212503c898cfefb65ce1450c7f5ac/internal/controlplane/handlers_githubwebhooks_test.go#L278-L283
     reference_type:
     reference_id:
+  - url: https://github.com/stacklok/minder/commit/3e5a527d2f1b535159206161d1d519602c75bd0d
+    reference_type:
+    reference_id:
+  - url: https://github.com/stacklok/minder/security/advisories/GHSA-9c5w-9q3f-3hv7
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-34084
     reference_type:
     reference_id:
-  - url: https://github.com/stacklok/minder/commit/3e5a527d2f1b535159206161d1d519602c75bd0d
-    reference_type: other
-    reference_id: 3e5a527d2f1b535159206161d1d519602c75bd0d
-  - url: https://github.com/stacklok/minder/security/advisories/GHSA-9c5w-9q3f-3hv7
-    reference_type: other
-    reference_id: GHSA-9c5w-9q3f-3hv7

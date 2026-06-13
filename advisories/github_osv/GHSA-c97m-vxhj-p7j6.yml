@@ -6,7 +6,14 @@ aliases:
 summary: |
   goldmark vulnerable to Cross-site Scripting (XSS)
   Versions of the package github.com/yuin/goldmark/renderer/html before 1.7.17 are vulnerable to Cross-site Scripting (XSS) due to improper ordering of URL validation and normalization. The renderer validates link destinations using a prefix-based check (IsDangerousURL) before resolving HTML entities. This allows an attacker to bypass protocol filtering by encoding dangerous schemes using HTML5 named character references. For example, a payload such as javascript&colon;alert(1) is not recognized as dangerous during validation, leading to arbitrary script execution in the context of applications that render the URL.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/yuin/goldmark
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/yuin/goldmark
+        commit: cb46bbc4eca29d55aa9721e04ad207c23ccc44f9
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1

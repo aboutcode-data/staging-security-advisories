@@ -113,7 +113,14 @@ summary: |
   1. Enforce `.goshs` authorization checks for all state-changing operations, not just read/list flows. Before `PUT`, multipart upload, delete, and mkdir, resolve the effective folder ACL and deny the request unless the caller satisfies `acl.Auth`.
   2. Protect `.goshs` as a special file in mutation handlers. The application already prevents serving `.goshs`; it should also reject deletion, overwrite, or replacement of `.goshs` through HTTP routes unless the request is properly authorized.
   3. Add regression tests covering protected folders for every mutation path. The test suite should verify that `PUT`, `POST /upload`, `?delete`, and `?mkdir` all fail without valid credentials when a `.goshs` file is present.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/patrickhener/goshs
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/patrickhener/goshs
+        commit: f212c4f4a126556bab008f79758e21a839ef2c0f
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
@@ -136,15 +143,15 @@ references:
   - url: https://github.com/patrickhener/goshs
     reference_type:
     reference_id:
+  - url: https://github.com/patrickhener/goshs/commit/f212c4f4a126556bab008f79758e21a839ef2c0f
+    reference_type:
+    reference_id:
+  - url: https://github.com/patrickhener/goshs/releases/tag/v2.0.0-beta.4
+    reference_type:
+    reference_id:
+  - url: https://github.com/patrickhener/goshs/security/advisories/GHSA-wvhv-qcqf-f3cx
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-40189
     reference_type:
     reference_id:
-  - url: https://github.com/patrickhener/goshs/commit/f212c4f4a126556bab008f79758e21a839ef2c0f
-    reference_type: other
-    reference_id: f212c4f4a126556bab008f79758e21a839ef2c0f
-  - url: https://github.com/patrickhener/goshs/security/advisories/GHSA-wvhv-qcqf-f3cx
-    reference_type: other
-    reference_id: GHSA-wvhv-qcqf-f3cx
-  - url: https://github.com/patrickhener/goshs/releases/tag/v2.0.0-beta.4
-    reference_type: other
-    reference_id: v2.0.0-beta.4

@@ -17,7 +17,21 @@ summary: |
 
   ### References
   Spacemesh protocol whitepaper: https://spacemesh.io/blog/spacemesh-white-paper-1/, specifically sections 4.4.2 ("ATX Contents") and 4.4.3 ("ATX validity")
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/spacemeshos/go-spacemesh
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/spacemeshos/go-spacemesh
+        commit: 9aff88d54be809ac43d60e8a8b4d65359c356b87
+    introduced_in_commits: []
+  - purl: pkg:github/spacemeshos/api
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/spacemeshos/api
+        commit: 1d5bd972bbe225d024c3e0ae5214ddb6b481716e
+    introduced_in_commits: []
 severities:
   - score: '8.2'
     scoring_system: cvssv3.1
@@ -32,7 +46,16 @@ severities:
 weaknesses:
   - CWE-754
 references:
+  - url: https://github.com/spacemeshos/api/commit/1d5bd972bbe225d024c3e0ae5214ddb6b481716e
+    reference_type:
+    reference_id:
   - url: https://github.com/spacemeshos/go-spacemesh
+    reference_type:
+    reference_id:
+  - url: https://github.com/spacemeshos/go-spacemesh/commit/9aff88d54be809ac43d60e8a8b4d65359c356b87
+    reference_type:
+    reference_id:
+  - url: https://github.com/spacemeshos/go-spacemesh/security/advisories/GHSA-jcqq-g64v-gcm7
     reference_type:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-34360
@@ -44,12 +67,3 @@ references:
   - url: https://spacemesh.io/blog/spacemesh-white-paper-1
     reference_type:
     reference_id:
-  - url: https://github.com/spacemeshos/api/commit/1d5bd972bbe225d024c3e0ae5214ddb6b481716e
-    reference_type: other
-    reference_id: 1d5bd972bbe225d024c3e0ae5214ddb6b481716e
-  - url: https://github.com/spacemeshos/go-spacemesh/commit/9aff88d54be809ac43d60e8a8b4d65359c356b87
-    reference_type: other
-    reference_id: 9aff88d54be809ac43d60e8a8b4d65359c356b87
-  - url: https://github.com/spacemeshos/go-spacemesh/security/advisories/GHSA-jcqq-g64v-gcm7
-    reference_type: other
-    reference_id: GHSA-jcqq-g64v-gcm7

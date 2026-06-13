@@ -76,19 +76,26 @@ summary: "OpenEXR: integer overflow to OOB write in uncompress_b44_impl()\n### S
   \ crash (most likely) to corruption of adjacent heap allocations (layout-dependent)."
 impacted_packages:
   - purl: pkg:pypi/openexr
-    affected_versions: vers:pypi/<=3.4.7
-    fixed_versions: vers:pypi/3.4.8
+    affected_versions: vers:pypi/>=3.3.0|<=3.3.8
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/openexr
-    affected_versions: vers:pypi/>=3.3.0|<=3.3.8
-    fixed_versions:
+    affected_versions: vers:pypi/<=3.4.7
+    fixed_versions: vers:pypi/3.4.8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/openexr
     affected_versions: vers:pypi/>=3.2.0|<=3.2.6
     fixed_versions:
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/academysoftwarefoundation/openexr
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/academysoftwarefoundation/openexr
+        commit: 35e7aa35e22c1975606be86e859f31cc1fc598ee
     introduced_in_commits: []
 severities:
   - score: '8.4'

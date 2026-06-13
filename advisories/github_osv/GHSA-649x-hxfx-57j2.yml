@@ -25,7 +25,22 @@ summary: "Vitess vulnerable to infinite memory consumption and vtgate crash\n###
   \ when the `_utf16` introducer is used with leading `0x00` bytes and then decode to UTF-16,\
   \ resulting in the output of `ÿ` here. \n\n### PoC\n\n```\nselect _utf16 0xFF\n```\n\n###\
   \ Impact\n\nDenial of service attack by triggering unbounded memory usage."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/vitessio/vitess
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/vitessio/vitess
+        commit: d438adf7e34a6cf00fe441db80842ec669a99202
+      - vcs_url: https://github.com/vitessio/vitess
+        commit: 2fd5ba1dbf6e9b32fdfdaf869d130066b1b5c0df
+      - vcs_url: https://github.com/vitessio/vitess
+        commit: 8f6cfaaa643a08dc111395a75a2d250ee746cfa8
+      - vcs_url: https://github.com/vitessio/vitess
+        commit: 9df4b66550e46b5d7079e21ed0e1b0f49f92b055
+      - vcs_url: https://github.com/vitessio/vitess
+        commit: c46dc5b6a4329a10589ca928392218d96031ac8d
+    introduced_in_commits: []
 severities:
   - score: '4.9'
     scoring_system: cvssv3.1
@@ -43,27 +58,27 @@ references:
   - url: https://github.com/vitessio/vitess
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2024-32886
+  - url: https://github.com/vitessio/vitess/blob/8f6cfaaa643a08dc111395a75a2d250ee746cfa8/go/mysql/collations/charset/convert.go#L73-L79
+    reference_type:
+    reference_id:
+  - url: https://github.com/vitessio/vitess/blob/8f6cfaaa643a08dc111395a75a2d250ee746cfa8/go/mysql/collations/charset/unicode/utf16.go#L69-L71
     reference_type:
     reference_id:
   - url: https://github.com/vitessio/vitess/commit/2fd5ba1dbf6e9b32fdfdaf869d130066b1b5c0df
-    reference_type: other
-    reference_id: 2fd5ba1dbf6e9b32fdfdaf869d130066b1b5c0df
+    reference_type:
+    reference_id:
   - url: https://github.com/vitessio/vitess/commit/9df4b66550e46b5d7079e21ed0e1b0f49f92b055
-    reference_type: other
-    reference_id: 9df4b66550e46b5d7079e21ed0e1b0f49f92b055
+    reference_type:
+    reference_id:
   - url: https://github.com/vitessio/vitess/commit/c46dc5b6a4329a10589ca928392218d96031ac8d
-    reference_type: other
-    reference_id: c46dc5b6a4329a10589ca928392218d96031ac8d
-  - url: https://github.com/vitessio/vitess/blob/8f6cfaaa643a08dc111395a75a2d250ee746cfa8/go/mysql/collations/charset/convert.go#L73-L79
-    reference_type: other
-    reference_id: convert.go#L73-L79
+    reference_type:
+    reference_id:
   - url: https://github.com/vitessio/vitess/commit/d438adf7e34a6cf00fe441db80842ec669a99202
-    reference_type: other
-    reference_id: d438adf7e34a6cf00fe441db80842ec669a99202
+    reference_type:
+    reference_id:
   - url: https://github.com/vitessio/vitess/security/advisories/GHSA-649x-hxfx-57j2
-    reference_type: other
-    reference_id: GHSA-649x-hxfx-57j2
-  - url: https://github.com/vitessio/vitess/blob/8f6cfaaa643a08dc111395a75a2d250ee746cfa8/go/mysql/collations/charset/unicode/utf16.go#L69-L71
-    reference_type: other
-    reference_id: utf16.go#L69-L71
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2024-32886
+    reference_type:
+    reference_id:

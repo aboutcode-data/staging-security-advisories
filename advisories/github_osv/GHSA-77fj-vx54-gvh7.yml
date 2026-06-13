@@ -17,7 +17,14 @@ summary: "Go Markdown has an Out-of-bounds Read in SmartypantsRenderer\n### Summ
   \tsp.Process(&buf, src) // panics: slice bounds out of range\n\n\tfmt.Printf(\"Output: %q\\\
   n\", buf.String())\n}\n```\n\n### Impact\nThis vulnerability will lead to a Denial of Service\
   \ / panic on the processing service.\n\n\n-- The Datadog Security Team"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/gomarkdown/markdown
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/gomarkdown/markdown
+        commit: 759bbc3e32073c3bc4e25969c132fc520eda2778
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -35,12 +42,12 @@ references:
   - url: https://github.com/gomarkdown/markdown
     reference_type:
     reference_id:
+  - url: https://github.com/gomarkdown/markdown/commit/759bbc3e32073c3bc4e25969c132fc520eda2778
+    reference_type:
+    reference_id:
+  - url: https://github.com/gomarkdown/markdown/security/advisories/GHSA-77fj-vx54-gvh7
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-40890
     reference_type:
     reference_id:
-  - url: https://github.com/gomarkdown/markdown/commit/759bbc3e32073c3bc4e25969c132fc520eda2778
-    reference_type: other
-    reference_id: 759bbc3e32073c3bc4e25969c132fc520eda2778
-  - url: https://github.com/gomarkdown/markdown/security/advisories/GHSA-77fj-vx54-gvh7
-    reference_type: other
-    reference_id: GHSA-77fj-vx54-gvh7

@@ -60,7 +60,14 @@ summary: |
   Or write a timed task to execute any command.
   ### Impact
   The ability to write arbitrary files on the host where the service is deployed can lead to a host takeover
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/1panel-dev/1panel
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/1panel-dev/1panel
+        commit: e037b69f52799e110af8e98f39a3627ad0285ea6
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
@@ -78,12 +85,15 @@ references:
   - url: https://github.com/1Panel-dev/1Panel
     reference_type:
     reference_id:
+  - url: https://github.com/1Panel-dev/1Panel/commit/e037b69f52799e110af8e98f39a3627ad0285ea6
+    reference_type:
+    reference_id:
+  - url: https://github.com/1Panel-dev/1Panel/security/advisories/GHSA-f8ch-w75v-c847
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-34352
     reference_type:
     reference_id:
   - url: https://pkg.go.dev/vuln/GO-2024-2830
     reference_type:
     reference_id:
-  - url: https://github.com/1Panel-dev/1Panel/security/advisories/GHSA-f8ch-w75v-c847
-    reference_type: other
-    reference_id: GHSA-f8ch-w75v-c847

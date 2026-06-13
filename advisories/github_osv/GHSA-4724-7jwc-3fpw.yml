@@ -16,7 +16,16 @@ summary: |
 
   The value of the originalUrl parameter can be arbitrarily chosen by a malicious user that creates the snapshot (Note: by editing the query thanks to a web proxy like Burp)
   When another user opens the URL of the snapshot, they will be presented with the regular web interface delivered by the trusted Grafana server. The issue here is that the ”Open original dashboard” button no longer points to the to the real original dashboard but to the attacker’s (injected) URL.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/grafana/grafana
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/grafana/grafana
+        commit: d7dcea71ea763780dc286792a0afd560bff2985c
+      - vcs_url: https://github.com/grafana/grafana
+        commit: 239888f22983010576bb3a9135a7294e88c0c74a
+    introduced_in_commits: []
 severities:
   - score: '6.7'
     scoring_system: cvssv3.1

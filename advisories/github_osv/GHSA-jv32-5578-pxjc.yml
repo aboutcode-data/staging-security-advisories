@@ -34,7 +34,16 @@ summary: "Grafana Data source and plugin proxy endpoints leaking authentication 
   \n### Security announcements\n\nWe maintain a [security category](https://community.grafana.com/c/support/security-announcements)\
   \ on our blog, where we will always post a summary, remediation, and mitigation details for\
   \ any patch containing security fixes.\n\nYou can also subscribe to our [RSS feed](https://grafana.com/tags/security/index.xml)."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/grafana/grafana
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/grafana/grafana
+        commit: 4dd56e4dabce10007bf4ba1059bf54178c35b177
+      - vcs_url: https://github.com/grafana/grafana
+        commit: 9da278c044ba605eb5a1886c48df9a2cb0d3885f
+    introduced_in_commits: []
 severities:
   - score: '4.9'
     scoring_system: cvssv3.1

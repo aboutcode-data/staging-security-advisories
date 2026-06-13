@@ -55,7 +55,14 @@ summary: |
   ## Credits
 
   Thanks Alex “Scalar” Sol for finding and reporting the issue, and to @sangsoo-osec who independently found the same issue and demonstrated that the V4 variant was also exploitable.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/zcashfoundation/zebra
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/zcashfoundation/zebra
+        commit: 1f605eca5c55e3b65229fa01a97d9aa84fd37447
+    introduced_in_commits: []
 severities:
   - score: '9.1'
     scoring_system: cvssv3.1
@@ -81,9 +88,9 @@ references:
   - url: https://github.com/ZcashFoundation/zebra/commit/1f605eca5c55e3b65229fa01a97d9aa84fd37447
     reference_type:
     reference_id:
+  - url: https://github.com/ZcashFoundation/zebra/security/advisories/GHSA-8m29-fpq5-89jj
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-41583
     reference_type:
     reference_id:
-  - url: https://github.com/ZcashFoundation/zebra/security/advisories/GHSA-8m29-fpq5-89jj
-    reference_type: other
-    reference_id: GHSA-8m29-fpq5-89jj

@@ -45,7 +45,14 @@ summary: |
 
   * Normalize HTTP paths or reject HTTP paths containing relative path expressions in the layers in front of Heimdall - this is good practice anyway. Some proxies do that by default, such as Traefik; others, such as Envoy, require additional configuration (for Envoy see [`normalize_path`](https://www.envoyproxy.io/docs/envoy/latest/api-v3/extensions/filters/network/http_connection_manager/v3/http_connection_manager.proto#envoy-v3-api-field-extensions-filters-network-http-connection-manager-v3-httpconnectionmanager-normalize-path)).
   * Include the ID of the rule expected to be executed in the JWT issued by heimdall and check that value in the consuming project's service.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/dadrus/heimdall
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/dadrus/heimdall
+        commit: b5dfa484b7a8c2ce6d8691c026f9da867719947a
+    introduced_in_commits: []
 severities:
   - score: '7.8'
     scoring_system: cvssv4
@@ -64,6 +71,18 @@ references:
   - url: https://github.com/dadrus/heimdall
     reference_type:
     reference_id:
+  - url: https://github.com/dadrus/heimdall/commit/b5dfa484b7a8c2ce6d8691c026f9da867719947a
+    reference_type:
+    reference_id:
+  - url: https://github.com/dadrus/heimdall/pull/3209
+    reference_type:
+    reference_id:
+  - url: https://github.com/dadrus/heimdall/releases/tag/v0.17.14
+    reference_type:
+    reference_id:
+  - url: https://github.com/dadrus/heimdall/security/advisories/GHSA-3q34-rx83-r6mq
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-42274
     reference_type:
     reference_id:
@@ -73,15 +92,3 @@ references:
   - url: https://www.rfc-editor.org/rfc/rfc3986#section-6.2.2.3
     reference_type:
     reference_id:
-  - url: https://github.com/dadrus/heimdall/pull/3209
-    reference_type: other
-    reference_id: 3209
-  - url: https://github.com/dadrus/heimdall/commit/b5dfa484b7a8c2ce6d8691c026f9da867719947a
-    reference_type: other
-    reference_id: b5dfa484b7a8c2ce6d8691c026f9da867719947a
-  - url: https://github.com/dadrus/heimdall/security/advisories/GHSA-3q34-rx83-r6mq
-    reference_type: other
-    reference_id: GHSA-3q34-rx83-r6mq
-  - url: https://github.com/dadrus/heimdall/releases/tag/v0.17.14
-    reference_type: other
-    reference_id: v0.17.14

@@ -20,7 +20,14 @@ summary: |
   If you are using Trivy v0.51.2 or later, you are not affected. If you are using Trivy v0.51.1 or prior, you should ensure you only scan images from trusted registries.
 
   This vulnerability only applies when scanning container images directly from a registry. If you use Docker, containerd or other runtime to pull images locally and scan them with Trivy, you are not affected. To enforce this behavior, you can use the `--image-src` flag to select which sources you trust.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/aquasecurity/trivy
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/aquasecurity/trivy
+        commit: e7f14f729de259551203f313e57d2d9d3aa2ff87
+    introduced_in_commits: []
 severities:
   - score: '5.5'
     scoring_system: cvssv3.1
@@ -38,12 +45,12 @@ references:
   - url: https://github.com/aquasecurity/trivy
     reference_type:
     reference_id:
+  - url: https://github.com/aquasecurity/trivy/commit/e7f14f729de259551203f313e57d2d9d3aa2ff87
+    reference_type:
+    reference_id:
+  - url: https://github.com/aquasecurity/trivy/security/advisories/GHSA-xcq4-m2r3-cmrj
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-35192
     reference_type:
     reference_id:
-  - url: https://github.com/aquasecurity/trivy/commit/e7f14f729de259551203f313e57d2d9d3aa2ff87
-    reference_type: other
-    reference_id: e7f14f729de259551203f313e57d2d9d3aa2ff87
-  - url: https://github.com/aquasecurity/trivy/security/advisories/GHSA-xcq4-m2r3-cmrj
-    reference_type: other
-    reference_id: GHSA-xcq4-m2r3-cmrj

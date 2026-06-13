@@ -73,7 +73,16 @@ summary: |
   - Change default cache key generation to include path + normalized query string (or canonicalized original URL).
   - Keep ability for custom key generators.
   - Add explicit documentation warning that path-only keying is unsafe for query-dependent responses.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/gofiber/fiber
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/gofiber/fiber
+        commit: 9a0d12c07ed895b84c72987f9288b04137afe5de
+      - vcs_url: https://github.com/gofiber/fiber
+        commit: 050ff1ff18511c1475b8ec627460216aaecddd4e
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
@@ -86,11 +95,17 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-524
-  - CWE-200
   - CWE-436
+  - CWE-200
+  - CWE-524
 references:
   - url: https://github.com/gofiber/fiber
+    reference_type:
+    reference_id:
+  - url: https://github.com/gofiber/fiber/blob/main/middleware/cache/cache_test.go#L599-L621
+    reference_type:
+    reference_id:
+  - url: https://github.com/gofiber/fiber/blob/main/middleware/cache/config.go#L90-L92
     reference_type:
     reference_id:
   - url: https://github.com/gofiber/fiber/commit/050ff1ff18511c1475b8ec627460216aaecddd4e
@@ -99,15 +114,9 @@ references:
   - url: https://github.com/gofiber/fiber/commit/9a0d12c07ed895b84c72987f9288b04137afe5de
     reference_type:
     reference_id:
+  - url: https://github.com/gofiber/fiber/security/advisories/GHSA-35hp-hqmv-8qg8
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-30246
     reference_type:
     reference_id:
-  - url: https://github.com/gofiber/fiber/blob/main/middleware/cache/cache_test.go#L599-L621
-    reference_type: other
-    reference_id: cache_test.go#L599-L621
-  - url: https://github.com/gofiber/fiber/blob/main/middleware/cache/config.go#L90-L92
-    reference_type: other
-    reference_id: config.go#L90-L92
-  - url: https://github.com/gofiber/fiber/security/advisories/GHSA-35hp-hqmv-8qg8
-    reference_type: other
-    reference_id: GHSA-35hp-hqmv-8qg8

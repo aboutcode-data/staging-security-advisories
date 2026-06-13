@@ -52,7 +52,14 @@ summary: |
   1. Ensure that outgoing requests always sanitize the `Host` header
   2. Ensure that outgoing requests always provide the hostname in the URL and use that hostname in the `allowed_outbound_hosts` list instead of `self`
   3. When using Spin 2.4, use [application-internal service chaining](https://developer.fermyon.com/spin/v2/http-outbound#local-service-chaining) for intra-application requests
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/fermyon/spin
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/fermyon/spin
+        commit: b3db535c9edb72278d4db3a201f0ed214e561354
+    introduced_in_commits: []
 severities:
   - score: '9.1'
     scoring_system: cvssv3.1
@@ -70,12 +77,12 @@ references:
   - url: https://github.com/fermyon/spin
     reference_type:
     reference_id:
+  - url: https://github.com/fermyon/spin/commit/b3db535c9edb72278d4db3a201f0ed214e561354
+    reference_type:
+    reference_id:
+  - url: https://github.com/fermyon/spin/security/advisories/GHSA-f3h7-gpjj-wcvh
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-32980
     reference_type:
     reference_id:
-  - url: https://github.com/fermyon/spin/commit/b3db535c9edb72278d4db3a201f0ed214e561354
-    reference_type: other
-    reference_id: b3db535c9edb72278d4db3a201f0ed214e561354
-  - url: https://github.com/fermyon/spin/security/advisories/GHSA-f3h7-gpjj-wcvh
-    reference_type: other
-    reference_id: GHSA-f3h7-gpjj-wcvh

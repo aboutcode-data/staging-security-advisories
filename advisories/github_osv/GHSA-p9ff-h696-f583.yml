@@ -29,19 +29,26 @@ summary: "Vite Vulnerable to Arbitrary File Read via Vite Dev Server WebSocket\n
   \ />"
 impacted_packages:
   - purl: pkg:npm/vite
-    affected_versions: vers:npm/<=8.0.4
-    fixed_versions: vers:npm/8.0.5
+    affected_versions: vers:npm/<=7.3.1
+    fixed_versions: vers:npm/7.3.2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:npm/vite
-    affected_versions: vers:npm/<=7.3.1
-    fixed_versions: vers:npm/7.3.2
+    affected_versions: vers:npm/<=8.0.4
+    fixed_versions: vers:npm/8.0.5
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:npm/vite
     affected_versions: vers:npm/<=6.4.1
     fixed_versions: vers:npm/6.4.2
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/vitejs/vite
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/vitejs/vite
+        commit: f02d9fde0b195afe3ea2944414186962fbbe41e0
     introduced_in_commits: []
 severities:
   - score: '8.2'
@@ -78,7 +85,7 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-39363
     reference_type:
-    reference_id:
+    reference_id: CVE-2026-39363
   - url: https://github.com/vitejs/vite/security/advisories/GHSA-p9ff-h696-f583
-    reference_type: other
+    reference_type:
     reference_id: GHSA-p9ff-h696-f583

@@ -10,7 +10,14 @@ summary: |
   Note that running HTTP-based MCP servers locally without authentication is not recommended per MCP security best practices. This issue does not affect servers using stdio transport.
 
   Servers created via `StreamableHTTPHandler` or `SSEHandler` now have this protection enabled by default when binding to `localhost`. Users are advised to update to version `1.4.0` to receive this automatic protection.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/modelcontextprotocol/go-sdk
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/modelcontextprotocol/go-sdk
+        commit: 67bd3f2e2b53ce11a16db8d976cdb8ff1e986b6d
+    introduced_in_commits: []
 severities:
   - score: '8.1'
     scoring_system: cvssv3.1
@@ -33,18 +40,18 @@ references:
   - url: https://github.com/modelcontextprotocol/go-sdk
     reference_type:
     reference_id:
+  - url: https://github.com/modelcontextprotocol/go-sdk/commit/67bd3f2e2b53ce11a16db8d976cdb8ff1e986b6d
+    reference_type:
+    reference_id:
+  - url: https://github.com/modelcontextprotocol/go-sdk/pull/760
+    reference_type:
+    reference_id:
+  - url: https://github.com/modelcontextprotocol/go-sdk/releases/tag/v1.4.0
+    reference_type:
+    reference_id:
+  - url: https://github.com/modelcontextprotocol/go-sdk/security/advisories/GHSA-xw59-hvm2-8pj6
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-34742
     reference_type:
     reference_id:
-  - url: https://github.com/modelcontextprotocol/go-sdk/commit/67bd3f2e2b53ce11a16db8d976cdb8ff1e986b6d
-    reference_type: other
-    reference_id: 67bd3f2e2b53ce11a16db8d976cdb8ff1e986b6d
-  - url: https://github.com/modelcontextprotocol/go-sdk/pull/760
-    reference_type: other
-    reference_id: 760
-  - url: https://github.com/modelcontextprotocol/go-sdk/security/advisories/GHSA-xw59-hvm2-8pj6
-    reference_type: other
-    reference_id: GHSA-xw59-hvm2-8pj6
-  - url: https://github.com/modelcontextprotocol/go-sdk/releases/tag/v1.4.0
-    reference_type: other
-    reference_id: v1.4.0

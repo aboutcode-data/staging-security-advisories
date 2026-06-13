@@ -25,7 +25,14 @@ summary: "goshs has Cross-Origin Arbitrary File Write via Missing CSRF on PUT an
   543\" height=\"376\" alt=\"스크린샷 2026-04-17 오후 11 08 13\" src=\"https://github.com/user-attachments/assets/a695cbc8-133e-4e80-a2f5-9fe9fd36b569\"\
   \ />\n\n\n\n\n### Impact\n- Arbitrary file write to the goshs webroot from any website the\
   \ victim visits\n- File overwrite — existing files can be silently replaced"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/patrickhener/goshs
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/patrickhener/goshs
+        commit: 0e715b94e10c3d1aa552276000f15f104dee2f32
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
@@ -43,15 +50,15 @@ references:
   - url: https://github.com/patrickhener/goshs
     reference_type:
     reference_id:
+  - url: https://github.com/patrickhener/goshs/commit/0e715b94e10c3d1aa552276000f15f104dee2f32
+    reference_type:
+    reference_id:
+  - url: https://github.com/patrickhener/goshs/releases/tag/v2.0.2
+    reference_type:
+    reference_id:
+  - url: https://github.com/patrickhener/goshs/security/advisories/GHSA-rhf7-wvw3-vjvm
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-42091
     reference_type:
     reference_id:
-  - url: https://github.com/patrickhener/goshs/commit/0e715b94e10c3d1aa552276000f15f104dee2f32
-    reference_type: other
-    reference_id: 0e715b94e10c3d1aa552276000f15f104dee2f32
-  - url: https://github.com/patrickhener/goshs/security/advisories/GHSA-rhf7-wvw3-vjvm
-    reference_type: other
-    reference_id: GHSA-rhf7-wvw3-vjvm
-  - url: https://github.com/patrickhener/goshs/releases/tag/v2.0.2
-    reference_type: other
-    reference_id: v2.0.2
