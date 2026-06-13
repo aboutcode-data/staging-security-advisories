@@ -1,0 +1,38 @@
+advisory_id: maven/org.jdbi/jdbi3-freemarker/GHSA-mggx-p7jf-jgw4
+datasource_id: gitlab/maven/org.jdbi/jdbi3-freemarker/GHSA-mggx-p7jf-jgw4
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/maven/org.jdbi/jdbi3-freemarker/GHSA-mggx-p7jf-jgw4.yml
+aliases:
+  - GHSA-mggx-p7jf-jgw4
+summary: |
+  jdbi3-freemarker Vulnerable to Improper Neutralization of Special Elements Used in FreeMarker Template Engine
+  **Description**
+
+  An Improper Neutralization of Special Elements Used in a Template Engine (CWE-1336) vulnerability in Jdbi allows arbitrary command execution when an application using `jdbi3-freemarker` permits attacker-influenced text to reach `FreemarkerEngine.parse()` as template source. This affects `org.jdbi:jdbi3-freemarker` through version 3.52.1.
+
+  The developer opts into FreeMarker-backed SQL templating, but does not explicitly opt into reflective Java class loading from template source.
+
+  Jdbi’s FreeMarker integration should not expose unrestricted Java class instantiation by default in a SQL templating module. While the SQL injection risk is acknowledged, Jdbi’s documentation explicitly supports and demonstrates dynamic SQL templating through defined attributes, including substitution of non-bindable SQL elements such `ORDER BY` columns.
+impacted_packages:
+  - purl: pkg:maven/org.jdbi/jdbi3-freemarker
+    affected_versions: vers:maven/<3.53.0
+    fixed_versions: vers:maven/3.53.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/maven/org.jdbi/jdbi3-freemarker/GHSA-mggx-p7jf-jgw4.yml
+weaknesses:
+  - CWE-94
+  - CWE-1035
+  - CWE-937
+  - CWE-1336
+references:
+  - url: https://github.com/advisories/GHSA-mggx-p7jf-jgw4
+    reference_type:
+    reference_id: GHSA-mggx-p7jf-jgw4
+  - url: https://github.com/jdbi/jdbi/security/advisories/GHSA-mggx-p7jf-jgw4
+    reference_type:
+    reference_id: GHSA-mggx-p7jf-jgw4

@@ -5,16 +5,11 @@ aliases:
   - GHSA-vp6r-9m58-5xv8
 summary: |
   OmniFaces: EL injection via crafted resource name in wildcard CDN mapping
-  Server-side EL injection leading to Remote Code Execution (RCE). Affects applications that use `CDNResourceHandler` with a wildcard CDN mapping (e.g. `libraryName:*=https://cdn.example.com/*`). An attacker can craft a resource request
-  URL containing an EL expression in the resource name, which is evaluated server-side.
-
-  The severity depends on the EL implementation and the objects available in the EL context. In the worst case this leads to Remote Code Execution (RCE). At minimum it allows information disclosure and denial of service.
-
-  Applications using `CDNResourceHandler` without wildcard mappings (i.e. only explicit resource-to-URL mappings) are **not** affected.
+  This advisory has been withdrawn.
 impacted_packages:
   - purl: pkg:maven/org.omnifaces/omnifaces
-    affected_versions: vers:maven/<1.14.2|>=2.0-RC1|<2.7.32|>=3.0-RC1|<3.14.16|>=4.0-M1|<4.7.5|>=5.0-M1|<5.2.3
-    fixed_versions: vers:maven/1.14.2|2.7.32|3.14.16|4.7.5|5.2.3
+    affected_versions: vers:maven/<0
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
