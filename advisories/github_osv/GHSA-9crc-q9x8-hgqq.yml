@@ -55,11 +55,6 @@ summary: |
   This vulnerability can result in remote code execution for users that are using Vitest serve API.
 impacted_packages:
   - purl: pkg:npm/vitest
-    affected_versions: vers:npm/<=0.0.125
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:npm/vitest
     affected_versions: vers:npm/>=1.0.0|<1.6.1
     fixed_versions: vers:npm/1.6.1
     fixed_in_commits: []
@@ -73,6 +68,24 @@ impacted_packages:
     affected_versions: vers:npm/>=3.0.0|<3.0.5
     fixed_versions: vers:npm/3.0.5
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/vitest
+    affected_versions: vers:npm/<=0.0.125
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/vitest-dev/vitest
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/vitest-dev/vitest
+        commit: 7ce9fbb4972d45c6fd34c843645ef6f549bbb241
+      - vcs_url: https://github.com/vitest-dev/vitest
+        commit: 9a581e1c43e5c02b11e2a8026a55ce6a8cb35114
+      - vcs_url: https://github.com/vitest-dev/vitest
+        commit: 191ef9e34c867d0efd04f49b3d38193a68e825dc
+      - vcs_url: https://github.com/vitest-dev/vitest
+        commit: e0fe1d81e2d4bcddb1c6ca3c5c3970d8ba697383
     introduced_in_commits: []
 severities:
   - score: '9.6'
@@ -106,12 +119,12 @@ references:
   - url: https://github.com/vitest-dev/vitest/commit/e0fe1d81e2d4bcddb1c6ca3c5c3970d8ba697383
     reference_type:
     reference_id:
-  - url: https://github.com/vitest-dev/vitest/security/advisories/GHSA-9crc-q9x8-hgqq
+  - url: https://vitest.dev/config/#api
     reference_type:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2025-24964
     reference_type:
-    reference_id:
-  - url: https://vitest.dev/config/#api
+    reference_id: CVE-2025-24964
+  - url: https://github.com/vitest-dev/vitest/security/advisories/GHSA-9crc-q9x8-hgqq
     reference_type:
-    reference_id:
+    reference_id: GHSA-9crc-q9x8-hgqq

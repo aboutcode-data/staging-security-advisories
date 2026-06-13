@@ -22,7 +22,14 @@ summary: "kube-audit-rest's example logging configuration could disclose secret 
   ])\n            del(.request.oldObject.metadata.annotations.[\"kubectl.kubernetes.io/last-applied-configuration\"\
   ])\n          }\n```\n\n\n### References\n_Are there any links users can visit to find out\
   \ more?_"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/richardoc/kube-audit-rest
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/richardoc/kube-audit-rest
+        commit: db1aa5b867256b0a7bf206544c6981ab068b73dc
+    introduced_in_commits: []
 severities:
   - score: '5.1'
     scoring_system: cvssv4
@@ -35,8 +42,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-532
   - CWE-200
+  - CWE-532
 references:
   - url: https://github.com/RichardoC/kube-audit-rest
     reference_type:

@@ -17,7 +17,18 @@ summary: "Coder logs sensitive objects unsanitized\n## Summary\nWorkspace Agent 
   - https://github.com/coder/coder/releases/tag/v2.26.5\n\n## Workarounds\nOne potential workaround\
   \ is to disable Workspace Agent Logs by setting following configuration option\n`CODER_AGENT_LOGGING_HUMAN=/dev/null`\
   \ \n> platform operators are advised to upgrade their deployments"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/coder/coder
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/coder/coder
+        commit: e2a46393fce40bc630df3293c1ee66a596277289
+      - vcs_url: https://github.com/coder/coder
+        commit: a75205a559211c8aa494b1a16750d114b263f24a
+      - vcs_url: https://github.com/coder/coder
+        commit: 06c6abbe0935f9213c1588add60a396da5762e1c
+    introduced_in_commits: []
 severities:
   - score: '7.8'
     scoring_system: cvssv3.1

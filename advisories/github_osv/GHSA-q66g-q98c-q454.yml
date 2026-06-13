@@ -6,7 +6,14 @@ aliases:
 summary: |
   Mattermost has missing redirect URL validation
   Mattermost versions 10.11.x <= 10.11.4 fail to validate redirect URLs on the /error page, which allows an attacker to redirect a victim to a malicious site via a crafted link opened in a new tab.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: dad6bd7a1509054580a0898bbc0e026aac3b30cb
+    introduced_in_commits: []
 severities:
   - score: '3.1'
     scoring_system: cvssv3.1

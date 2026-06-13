@@ -7,7 +7,14 @@ summary: |
   The function `reciprocal_mg10` is marked as safe but can trigger undefined behavior (out-of-bounds access) because it relies on `debug_assert!` for safety checks instead of `assert!`.
 
   When compiled in release mode, the `debug_assert!` is optimized out, potentially allowing invalid inputs to cause memory corruption.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/recmo/uint
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/recmo/uint
+        commit: 17c9b3e9062f74a39701e68dec358375595d33d7
+    introduced_in_commits: []
 severities:
   - score: '6.6'
     scoring_system: cvssv4

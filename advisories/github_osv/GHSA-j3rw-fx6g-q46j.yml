@@ -24,7 +24,16 @@ summary: |
   Thanks to Sylabs for finding this issue, fixing it in https://github.com/sylabs/singularity/security/advisories/GHSA-wwrx-w7c9-rf87 which was easy to import into Apptainer, and disclosing it early to the Apptainer project for a coordinated release.
 
   The related upstream runc disclosure which inspired the investigation is https://github.com/opencontainers/runc/security/advisories/GHSA-cgrx-mc8f-2prm.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/apptainer/apptainer
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apptainer/apptainer
+        commit: 4313b42717e18a4add7dd7503528bc15af905981
+      - vcs_url: https://github.com/apptainer/apptainer
+        commit: 82f17900a0c31bc769bf9b4612d271c7068d8bf2
+    introduced_in_commits: []
 severities:
   - score: '4.5'
     scoring_system: cvssv3.1

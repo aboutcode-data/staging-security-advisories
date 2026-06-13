@@ -6,7 +6,16 @@ aliases:
 summary: |
   Vaultwarden vulnerable to user impersonation
   An issue in the component src/api/identity.rs of Vaultwarden prior to v1.32.5 allows attackers to impersonate users, including Administrators, via a crafted authorization request.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/dani-garcia/vaultwarden
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/dani-garcia/vaultwarden
+        commit: 20d9e885bfcd7df7828d92c6e59ed5fe7b40a879
+      - vcs_url: https://github.com/dani-garcia/vaultwarden
+        commit: 37c14c3c69b244ec50f5c62b4c9260171607c1d8
+    introduced_in_commits: []
 severities:
   - score: '7.7'
     scoring_system: cvssv4

@@ -6,7 +6,21 @@ aliases:
 summary: |
   Mattermost GitHub Plugin Bot Identity Validation Bypass Allows Arbitrary GitHub Reaction Injection
   Mattermost versions 10.11.x <= 10.11.6 and Mattermost GitHub plugin versions <=2.4.0 fail to validate plugin bot identity in reaction forwarding which allows attackers to hijack the GitHub reaction feature to make users add reactions to arbitrary GitHub objects via crafted notification posts.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 3b05384dd0146c1be3caa620a42e00e46027055d
+    introduced_in_commits: []
+  - purl: pkg:github/mattermost/mattermost-plugin-github
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost-plugin-github
+        commit: 0deffcfc6bee7eaf01f7c99100e3d12e8d9df68c
+    introduced_in_commits: []
 severities:
   - score: '3.0'
     scoring_system: cvssv3.1

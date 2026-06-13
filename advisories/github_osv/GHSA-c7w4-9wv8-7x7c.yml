@@ -66,7 +66,21 @@ summary: |
   While this proof-of-concept demonstrates local file inclusion, the root cause of the issue is the unsafe construction of database connection URIs from user input. Not all database connector libraries used in WhoDB were inspected; there may be libraries which allow for even more impactful parameters.
 
   The attack requires no user authentication to WhoDB (only authentication to any database server, such as an attacker-controlled one) and no special configuration - the default configuration of the application is vulnerable.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/clidey/whodb
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/clidey/whodb
+        commit: 8d67b767e00552e5eba2b1537179b74bfa662ee1
+    introduced_in_commits: []
+  - purl: pkg:github/go-sql-driver/mysql
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/go-sql-driver/mysql
+        commit: 7403860363ca112af503b4612568c3096fecb466
+    introduced_in_commits: []
 severities:
   - score: '8.6'
     scoring_system: cvssv3.1

@@ -18,7 +18,14 @@ summary: "frost-core: refresh shares with smaller min_signers will reduce securi
   \ the refresh share functionality, or if you didn't try to change the `min_signers` parameter\
   \ using the refresh share functionality.\n\n### References\n\nThank you [BlockSec](https://blocksec.com/)\
   \ for reporting the finding"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/zcashfoundation/frost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/zcashfoundation/frost
+        commit: 379ef689c733b3d9c80fd409071d4f3af4dafed2
+    introduced_in_commits: []
 severities:
   - score: '6.0'
     scoring_system: cvssv4
@@ -31,8 +38,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-269
   - CWE-325
+  - CWE-269
 references:
   - url: https://github.com/ZcashFoundation/frost
     reference_type:

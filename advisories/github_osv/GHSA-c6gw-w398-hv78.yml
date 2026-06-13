@@ -16,7 +16,14 @@ summary: |
 
   ### References
   This is the same sort of issue as in the golang.org/x/oauth2/jws package as CVE-2025-22868 and Go issue https://go.dev/issue/71490.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/go-jose/go-jose
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/go-jose/go-jose
+        commit: 99b346cec4e86d102284642c5dcbe9bb0cacfc22
+    introduced_in_commits: []
 severities:
   - score: '6.9'
     scoring_system: cvssv4
@@ -29,8 +36,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-770
   - CWE-400
+  - CWE-770
 references:
   - url: https://github.com/go-jose/go-jose
     reference_type:

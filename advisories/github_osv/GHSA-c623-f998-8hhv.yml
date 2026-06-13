@@ -54,7 +54,14 @@ summary: "SIPGO is Vulnerable to Response DoS via Nil Pointer Dereference\n### D
   \    python3 sipgo-response-dos.py <target_ip> <target_port>\n    ```\n\n3. Observe that the\
   \ target application crashes with a SIGSEGV panic.\n\n> Note: The key element is the missing\
   \ To header in any SIP request, which triggers the nil pointer dereference."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/emiago/sipgo
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/emiago/sipgo
+        commit: dc9669364a154ec6d134e542f6a63c31b5afe6e8
+    introduced_in_commits: []
 severities:
   - score: '8.7'
     scoring_system: cvssv4

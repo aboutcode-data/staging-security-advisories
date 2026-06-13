@@ -17,7 +17,16 @@ summary: "RCE via ZipSlip and symbolic links in argoproj/argo-workflows\n### Sum
   \ hence alter arbitrary files in this way. \n\n### Impact\nThe attacker can overwrite the\
   \ file /var/run/argo/argoexec with a script of their choice, which will be executed at the\
   \ pod's start."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/argoproj/argo-workflows
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/argoproj/argo-workflows
+        commit: 5291e0b01f94ba864f96f795bb500f2cfc5ad799
+      - vcs_url: https://github.com/argoproj/argo-workflows
+        commit: 6b92af23f35aed4d4de8b04adcaf19d68f006de1
+    introduced_in_commits: []
 severities:
   - score: '8.1'
     scoring_system: cvssv3.1
@@ -30,8 +39,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-78
   - CWE-23
+  - CWE-78
   - CWE-59
 references:
   - url: https://github.com/advisories/GHSA-p84v-gxvw-73pf

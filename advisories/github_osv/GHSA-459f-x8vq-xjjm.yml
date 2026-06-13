@@ -24,7 +24,14 @@ summary: |
   ### Impact
 
   Any web server that runs with elevated privileges (e.g., root/administrator) and handles user-supplied file uploads is primarily impacted.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/static-web-server/static-web-server
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/static-web-server/static-web-server
+        commit: 308f0d26ceb9c2c8bd219315d0f53914763357f2
+    introduced_in_commits: []
 severities:
   - score: '5.5'
     scoring_system: cvssv4

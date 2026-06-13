@@ -54,7 +54,14 @@ summary: "github.com/go-acme/lego/v4/acme/api does not enforce HTTPS\n## Summary
   \nfunc (r *httpsOnlyRoundTripper) RoundTrip(req *http.Request) (*http.Response, error) {\n\
   \tif req.URL.Scheme != \"https\" {\n\t\treturn nil, fmt.Errorf(\"non-https request is being\
   \ sent\")\n\t}\n\treturn r.inner.RoundTrip(req)\n}\n```\n\n</details>\n\n_"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/go-acme/lego
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/go-acme/lego
+        commit: 238454b5f74f3cfcbb244ff0d0dc914a4ad44b96
+    introduced_in_commits: []
 severities:
   - score: '2.3'
     scoring_system: cvssv4

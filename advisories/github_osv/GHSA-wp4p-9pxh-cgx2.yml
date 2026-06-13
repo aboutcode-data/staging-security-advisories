@@ -43,7 +43,14 @@ summary: "argo-cd vulnerable unauthenticated DoS via malformed Gogs webhook payl
   \ here>\n```\n\n### For more information\n\n* Open an issue in [the Argo CD issue tracker](https://github.com/argoproj/argo-cd/issues)\
   \ or [discussions](https://github.com/argoproj/argo-cd/discussions)\n* Join us on [Slack](https://argoproj.github.io/community/join-slack)\
   \ in channel #argo-cd\n\n### Credit\n\nSangjun Song (s0ngsari) at Theori (theori.io)"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/argoproj/argo-cd
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/argoproj/argo-cd
+        commit: 761fc27068d2d4cd24e1f784eb2a9033b5ee7f43
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

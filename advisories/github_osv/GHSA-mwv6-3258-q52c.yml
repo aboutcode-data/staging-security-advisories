@@ -9,13 +9,13 @@ summary: |
   A malicious HTTP request can be crafted and sent to any App Router endpoint that, when deserialized, can cause the server process to hang and consume CPU. This can result in denial of service in unpatched environments.
 impacted_packages:
   - purl: pkg:npm/next
-    affected_versions: vers:npm/>=13.3.0|<14.2.34
-    fixed_versions: vers:npm/14.2.34
+    affected_versions: vers:npm/>=15.0.0-canary.0|<15.0.6
+    fixed_versions: vers:npm/15.0.6
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:npm/next
-    affected_versions: vers:npm/>=15.0.0-canary.0|<15.0.6
-    fixed_versions: vers:npm/15.0.6
+    affected_versions: vers:npm/>=13.3.0|<14.2.34
+    fixed_versions: vers:npm/14.2.34
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:npm/next
@@ -70,14 +70,11 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-502
-  - CWE-1395
   - CWE-400
+  - CWE-1395
+  - CWE-502
 references:
   - url: https://github.com/vercel/next.js
-    reference_type:
-    reference_id:
-  - url: https://github.com/vercel/next.js/security/advisories/GHSA-mwv6-3258-q52c
     reference_type:
     reference_id:
   - url: https://nextjs.org/blog/security-update-2025-12-11
@@ -86,3 +83,6 @@ references:
   - url: https://www.cve.org/CVERecord?id=CVE-2025-55184
     reference_type:
     reference_id:
+  - url: https://github.com/vercel/next.js/security/advisories/GHSA-mwv6-3258-q52c
+    reference_type:
+    reference_id: GHSA-mwv6-3258-q52c

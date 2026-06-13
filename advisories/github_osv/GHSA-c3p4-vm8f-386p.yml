@@ -39,7 +39,16 @@ summary: |
   ### Impact
 
   An attacker can use any non-existent username to bypass the authentication system and gain access to various read-only data in Navidrome, such as user playlists. However, any attempt to modify data fails due to insufficient permissions, limiting the impact to unauthorized viewing of information.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/navidrome/navidrome
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/navidrome/navidrome
+        commit: 287079a9e409fb6b9708ca384d7daa7b5185c1a0
+      - vcs_url: https://github.com/navidrome/navidrome
+        commit: 09ae41a2da66264c60ef307882362d2e2d8d8b89
+    introduced_in_commits: []
 severities:
   - score: '6.9'
     scoring_system: cvssv4

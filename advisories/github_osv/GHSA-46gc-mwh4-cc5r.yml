@@ -13,7 +13,16 @@ summary: "Docker MCP Plugin and Docker MCP Gateway have DNS Rebinding vulnerabil
   \ stdio mode, which does not listen on any network ports.\n\n\n### Patches\nPatch available\
   \ in version v0.28.0\n\n### Workarounds\nDo not start the MCP gateway in sse or streaming\
   \ mode (use default stdio)"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/docker/mcp-gateway
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/docker/mcp-gateway
+        commit: 6b076b2479d8d1345c50c112119c62978d46858e
+      - vcs_url: https://github.com/docker/mcp-gateway
+        commit: fe073985c8eb6e0c9317d2f198c07686f70ea06d
+    introduced_in_commits: []
 severities:
   - score: '7.3'
     scoring_system: cvssv4

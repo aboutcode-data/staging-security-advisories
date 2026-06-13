@@ -19,7 +19,14 @@ summary: "Envoy Admin Interface Exposed through prometheus metrics endpoint\n###
   \n      value:\n        path: \"/stats/prometheus\"\n        headers:\n          - name: \"\
   :method\"\n            exact_match: GET\n```\n\n### References\n- Envoy Admin Interface: https://www.envoyproxy.io/docs/envoy/latest/operations/admin\n\
   - Envoy Configuration Best Practices: https://www.envoyproxy.io/docs/envoy/latest/configuration/best_practices/edge"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/envoyproxy/gateway
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/envoyproxy/gateway
+        commit: 3eb3301ab3dbf12b201b47bdb6074d1233be07bd
+    introduced_in_commits: []
 severities:
   - score: '7.1'
     scoring_system: cvssv3.1

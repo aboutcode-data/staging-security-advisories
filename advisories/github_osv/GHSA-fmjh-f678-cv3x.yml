@@ -6,7 +6,14 @@ aliases:
 summary: |
   github.com/nyaruka/phonenumbers Vulnerable to Improper Validation of Syntactic Correctness of Input
   Versions of the package github.com/nyaruka/phonenumbers before 1.2.2 are vulnerable to Improper Validation of Syntactic Correctness of Input in the phonenumbers.Parse() function. An attacker can cause a panic by providing crafted input causing a "runtime error: slice bounds out of range".
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/nyaruka/phonenumbers
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/nyaruka/phonenumbers
+        commit: 0479e35488e8a002a261cdb515ef8a7f80ca37fe
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1

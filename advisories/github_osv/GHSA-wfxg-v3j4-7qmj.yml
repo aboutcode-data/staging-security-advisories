@@ -6,7 +6,16 @@ aliases:
 summary: |
   Memos Server-Side Request Forgery (SSRF)
   elestio memos v0.23.0 is vulnerable to Server-Side Request Forgery (SSRF) due to insufficient validation of user-supplied URLs, which can be exploited to perform SSRF attacks.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/usememos/memos
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/usememos/memos
+        commit: f8c973c938742827baaf6665cfe66805dc8e8d02
+      - vcs_url: https://github.com/usememos/memos
+        commit: f17774cb3b9612495d89576a91ab3480018cb0b6
+    introduced_in_commits: []
 severities:
   - score: '6.9'
     scoring_system: cvssv4

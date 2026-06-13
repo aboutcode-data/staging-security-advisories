@@ -13,7 +13,21 @@ summary: "Argo CD does not scrub secret values from patch errors\n### Impact\n\n
   - v2.13.4\n- v2.12.10\n- v2.11.13\n\n### Workarounds\nThere is no workaround other than upgrading.\n\
   \n### References\nFixed with commit https://github.com/argoproj/argo-cd/commit/6f5537bdf15ddbaa0f27a1a678632ff0743e4107\
   \ & https://github.com/argoproj/gitops-engine/commit/7e21b91e9d0f64104c8a661f3f390c5e6d73ddca"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/argoproj/gitops-engine
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/argoproj/gitops-engine
+        commit: 7e21b91e9d0f64104c8a661f3f390c5e6d73ddca
+    introduced_in_commits: []
+  - purl: pkg:github/argoproj/argo-cd
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/argoproj/argo-cd
+        commit: 6f5537bdf15ddbaa0f27a1a678632ff0743e4107
+    introduced_in_commits: []
 severities:
   - score: '6.8'
     scoring_system: cvssv3.1
@@ -26,8 +40,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-209
   - CWE-200
+  - CWE-209
 references:
   - url: https://github.com/argoproj/argo-cd
     reference_type:

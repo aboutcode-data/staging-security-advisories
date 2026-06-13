@@ -34,6 +34,15 @@ impacted_packages:
     fixed_versions: vers:maven/16.4.1
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:github/xwiki/xwiki-platform
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/xwiki/xwiki-platform
+        commit: 67021db9b8ed26c2236a653269302a86bf01ef40
+      - vcs_url: https://github.com/xwiki/xwiki-platform
+        commit: 568447cad5172d97d6bbcfda9f6183689c2cf086
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
@@ -46,8 +55,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-95
   - CWE-94
+  - CWE-95
 references:
   - url: https://github.com/xwiki/xwiki-platform
     reference_type:
@@ -61,15 +70,21 @@ references:
   - url: https://github.com/xwiki/xwiki-platform/commit/67021db9b8ed26c2236a653269302a86bf01ef40
     reference_type:
     reference_id:
-  - url: https://github.com/xwiki/xwiki-platform/security/advisories/GHSA-rr6p-3pfg-562j
-    reference_type:
-    reference_id:
   - url: https://jira.xwiki.org/browse/XWIKI-22149
-    reference_type:
-    reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2025-24893
     reference_type:
     reference_id:
   - url: https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-24893
     reference_type:
     reference_id:
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/webapps/52136.txt
+    reference_type: exploit
+    reference_id: CVE-2025-24893
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/webapps/52429.txt
+    reference_type: exploit
+    reference_id: CVE-2025-24893
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2025-24893
+    reference_type:
+    reference_id: CVE-2025-24893
+  - url: https://github.com/xwiki/xwiki-platform/security/advisories/GHSA-rr6p-3pfg-562j
+    reference_type:
+    reference_id: GHSA-rr6p-3pfg-562j

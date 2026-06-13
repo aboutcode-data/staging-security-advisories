@@ -11,7 +11,14 @@ summary: "SFTPGo has insufficient sanitization of user provided rsync command\n#
   \ an authenticated remote user can use some options of the rsync command to read or write\
   \ files with the permissions of the SFTPGo server process. \n\n### Patches\nThis issue was\
   \ fixed in version v2.6.5 by checking the client provided arguments.\n\nhttps://github.com/drakkan/sftpgo/commit/b347ab6051f6c501da205c09315fe99cd1fa3ba1"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/drakkan/sftpgo
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/drakkan/sftpgo
+        commit: b347ab6051f6c501da205c09315fe99cd1fa3ba1
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

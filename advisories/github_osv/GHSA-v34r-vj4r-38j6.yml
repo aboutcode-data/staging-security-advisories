@@ -52,7 +52,14 @@ summary: |
   ### Impact
 
   User credentials/token used to authenticate against a private maven repository can be leaked in clear-text in console or CI logs.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/updatecli/updatecli
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/updatecli/updatecli
+        commit: 344b28091ffeca5ed32e8d0f9eda542842fcd3fa
+    introduced_in_commits: []
 severities:
   - score: '7.1'
     scoring_system: cvssv3.1

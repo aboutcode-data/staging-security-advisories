@@ -20,7 +20,14 @@ summary: |
 
   ### Impact
   All IP-based access control is rendered ineffective: remote clients can masquerade as localhost or any whitelisted IP, defeating AllowIPs, API IP whitelists, and “localhost-only” protections.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/1panel-dev/1panel
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/1panel-dev/1panel
+        commit: 94f7d78cc9768ee244da33e09408017d1f68b5ed
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1

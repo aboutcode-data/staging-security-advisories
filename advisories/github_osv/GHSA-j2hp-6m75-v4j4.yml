@@ -11,7 +11,14 @@ summary: "imgproxy is vulnerable to SSRF against 0.0.0.0\n### Summary\n\nImgprox
   }\n```\n\nThis check is insufficient to prevent accessing services on the local host, as services\
   \ may receive traffic on `0.0.0.0`. Go's `IsLoopback` ([source](https://github.com/golang/go/blob/40b3c0e58a0ae8dec4684a009bf3806769e0fc41/src/net/ip.go#L126-L131))\
   \ strictly follows the definition of loopback IPs beginning with `127`. `0.0.0.0` is not blocked."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/imgproxy/imgproxy
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/imgproxy/imgproxy
+        commit: 3d4fed6842aa8930ec224d0ad75b0079b858e081
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1

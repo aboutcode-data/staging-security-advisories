@@ -27,7 +27,14 @@ summary: "SiYuan has an arbitrary file deletion vulnerability\n### Summary\nA **
   \t\treturn\n\t}\n\t...\n}\n```\n\n\n\n### PoC\n```\ncurl \"http://127.0.0.1:6806/api/history/getDocHistoryContent\"\
   \ -X POST -H \"Content-Type: application/json\" -d '{\"historyPath\":\"<abs_filepath_of_a_file>\"\
   }'\n```\n\n### Impact\narbitrary file deletion vulnerability"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/siyuan-note/siyuan
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/siyuan-note/siyuan
+        commit: d9887aeec1b27073bec66299a9a4181dc42969f3
+    introduced_in_commits: []
 severities:
   - score: '8.7'
     scoring_system: cvssv4
@@ -40,8 +47,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-459
   - CWE-552
+  - CWE-459
 references:
   - url: https://github.com/siyuan-note/siyuan
     reference_type:

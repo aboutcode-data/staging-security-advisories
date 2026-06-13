@@ -6,7 +6,14 @@ aliases:
 summary: |
   Elasticsearch Packetbeat has Excessive Allocation of Memory and CPU via Malicious IPv4 Fragments
   Allocation of resources without limits or throttling (CWE-770) allows an unauthenticated remote attacker to cause excessive allocation (CAPEC-130) of memory and CPU via the integration of malicious IPv4 fragments, leading to denial-of-service in Packetbeat.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/elastic/beats
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/elastic/beats
+        commit: 28cfc80d2f4e80bfd1c72eb3f849d777751ab870
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

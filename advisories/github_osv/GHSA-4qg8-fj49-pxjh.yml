@@ -20,7 +20,14 @@ summary: |
   ### Workarounds
 
   There are no workarounds with the service itself. If the service is behind a load balancer, configure the load balancer to reject excessively large requests.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/sigstore/timestamp-authority
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/sigstore/timestamp-authority
+        commit: 0cae34e197d685a14904e0bad135b89d13b69421
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

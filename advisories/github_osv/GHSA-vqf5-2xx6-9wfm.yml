@@ -56,7 +56,14 @@ summary: "GitHub PAT written to debug artifacts\n### Impact summary\n\nIn some c
   \ introduced the `actions/artifacts v4` library, allowing for `GITHUB_TOKEN` exposure in the\
   \ CodeQL Action debug artifacts before the token was revoked](https://github.com/github/codeql-action/pull/2482)\n\
   - [Related security advisory for the CodeQL CLI](https://github.com/github/codeql-cli-binaries/security/advisories/GHSA-gqh3-9prg-j95m)"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/github/codeql-action
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/github/codeql-action
+        commit: 519de26711ecad48bde264c51e414658a82ef3fa
+    introduced_in_commits: []
 severities:
   - score: '7.1'
     scoring_system: cvssv4
@@ -69,8 +76,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-532
   - CWE-215
+  - CWE-532
 references:
   - url: https://docs.github.com/en/code-security/code-scanning/troubleshooting-code-scanning/logs-not-detailed-enough
     reference_type:

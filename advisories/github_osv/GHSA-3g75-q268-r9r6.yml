@@ -34,7 +34,14 @@ summary: "Amazon S3 Encryption Client has a Key Commitment Issue\n## Summary\n\n
   \ asks that they contact AWS Security through the issue reporting page or directly via email\
   \ to [aws-security@amazon.com](mailto:aws-security@amazon.com). Please do not create a public\
   \ GitHub issue."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/aws/amazon-s3-encryption-client-go
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/aws/amazon-s3-encryption-client-go
+        commit: 3e1740ec014e234e6d454291615011122e642b5d
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1

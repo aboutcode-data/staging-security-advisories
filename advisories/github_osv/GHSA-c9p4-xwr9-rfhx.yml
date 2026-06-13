@@ -20,7 +20,16 @@ summary: |
 
   ### Impact
   Any Zot configuration that relies on group-based authorization will not respect group remove/revocation by an IdP.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/project-zot/zot
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/project-zot/zot
+        commit: 5e30fec65c49e3139907e2819ccb39b2e3bd784e
+      - vcs_url: https://github.com/project-zot/zot
+        commit: 002ac62d8a15bf0cba010b3ba7bde86f9837b613
+    introduced_in_commits: []
 severities:
   - score: '7.3'
     scoring_system: cvssv3.1

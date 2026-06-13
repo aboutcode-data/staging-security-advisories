@@ -11,7 +11,14 @@ summary: "Babylon Nil BlockHash in BLS vote extensions triggers panics in consen
   \ a runtime panic.\n\n### Impact\n\nIntermittent validator crashes at epoch boundaries, which\
   \ would slow down the creation of the epoch boundary block.\n\n### Finder \n\nVulnerability\
   \ discovered by:\n\n- @GrumpyLaurie55348"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/babylonlabs-io/babylon
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/babylonlabs-io/babylon
+        commit: f79ad58c1d5bcab3451cb7a47c91e713935917d7
+    introduced_in_commits: []
 severities:
   - score: '8.7'
     scoring_system: cvssv4

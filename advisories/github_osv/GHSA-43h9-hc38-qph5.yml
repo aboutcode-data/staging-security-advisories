@@ -8,7 +8,14 @@ summary: |
   A security vulnerability has been detected in actiontech sqle up to 4.2511.0. The impacted element is an unknown function of the file sqle/utils/jwt.go of the component JWT Secret Handler. The manipulation of the argument JWTSecretKey leads to use of hard-coded cryptographic key.
 
   The attack is possible to be carried out remotely. The attack's complexity is rated as high. The exploitability is regarded as difficult. The exploit has been disclosed publicly and may be used. The project was informed of the problem early through an issue report and is planning to fix this flaw in an upcoming release.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/actiontech/sqle
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/actiontech/sqle
+        commit: 4714f83f33e0d7aa647036eb756e928aa4174014
+    introduced_in_commits: []
 severities:
   - score: '3.7'
     scoring_system: cvssv3.1

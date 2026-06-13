@@ -11,7 +11,14 @@ summary: "OpenBao Userpass and LDAP User Lockout Bypass\n### Impact\n\nAttackers
   \n### References\n\nThis issue was disclosed to HashiCorp and is the OpenBao equivalent of\
   \ the following tickets:\n\n- https://discuss.hashicorp.com/t/hcsec-2025-16-vault-userpass-and-ldap-user-lockout-bypass/76035\n\
   - https://nvd.nist.gov/vuln/detail/CVE-2025-6004"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/openbao/openbao
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openbao/openbao
+        commit: c52795c1ef746c7f2c510f9225aa8ccbbd44f9fc
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1

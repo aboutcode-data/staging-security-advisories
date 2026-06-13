@@ -19,11 +19,6 @@ summary: |
   ### Impact
   This vulnerability can lead to Arbitrary Memory Disclosure due to an out of bounds read on 32-bit systems.
 impacted_packages:
-  - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
-    affected_versions: vers:nuget/<14.10.0
-    fixed_versions: vers:nuget/14.10.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-HDRI-AnyCPU
     affected_versions: vers:nuget/<14.10.0
     fixed_versions: vers:nuget/14.10.0
@@ -49,6 +44,18 @@ impacted_packages:
     fixed_versions: vers:nuget/14.10.0
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
+    affected_versions: vers:nuget/<14.10.0
+    fixed_versions: vers:nuget/14.10.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/dlemstra/magick.net
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/dlemstra/magick.net
+        commit: 2dfa08e15cfd11016a79615994787b14f9048b1c
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -71,4 +78,4 @@ references:
     reference_id:
   - url: https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-6hjr-v6g4-3fm8
     reference_type:
-    reference_id:
+    reference_id: GHSA-6hjr-v6g4-3fm8

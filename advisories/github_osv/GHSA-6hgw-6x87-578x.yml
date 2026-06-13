@@ -86,6 +86,31 @@ summary: |
   - UBSan build: Reproduces with `halt_on_error=1`; aborts at `MagickCore/splay-tree.c:372`.
   - Non-sanitized Homebrew build (macOS arm64, clang 20.1.8): No crash; repro completes silently.
 impacted_packages:
+  - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
+    affected_versions: vers:nuget/<14.8.0
+    fixed_versions: vers:nuget/14.8.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-AnyCPU
+    affected_versions: vers:nuget/<14.8.0
+    fixed_versions: vers:nuget/14.8.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-x64
+    affected_versions: vers:nuget/<14.8.0
+    fixed_versions: vers:nuget/14.8.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-x86
+    affected_versions: vers:nuget/<14.8.0
+    fixed_versions: vers:nuget/14.8.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-x64
+    affected_versions: vers:nuget/<14.8.0
+    fixed_versions: vers:nuget/14.8.0
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-x86
     affected_versions: vers:nuget/<14.8.0
     fixed_versions: vers:nuget/14.8.0
@@ -96,37 +121,12 @@ impacted_packages:
     fixed_versions: vers:nuget/14.8.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q8-OpenMP-arm64
-    affected_versions: vers:nuget/<14.8.0
-    fixed_versions: vers:nuget/14.8.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q8-OpenMP-x64
-    affected_versions: vers:nuget/<14.8.0
-    fixed_versions: vers:nuget/14.8.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q8-arm64
-    affected_versions: vers:nuget/<14.8.0
-    fixed_versions: vers:nuget/14.8.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q8-x64
     affected_versions: vers:nuget/<14.8.0
     fixed_versions: vers:nuget/14.8.0
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q8-x86
-    affected_versions: vers:nuget/<14.8.0
-    fixed_versions: vers:nuget/14.8.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
-    affected_versions: vers:nuget/<14.8.0
-    fixed_versions: vers:nuget/14.8.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-HDRI-AnyCPU
     affected_versions: vers:nuget/<14.8.0
     fixed_versions: vers:nuget/14.8.0
     fixed_in_commits: []
@@ -146,16 +146,6 @@ impacted_packages:
     fixed_versions: vers:nuget/14.8.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-HDRI-x64
-    affected_versions: vers:nuget/<14.8.0
-    fixed_versions: vers:nuget/14.8.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-HDRI-x86
-    affected_versions: vers:nuget/<14.8.0
-    fixed_versions: vers:nuget/14.8.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-OpenMP-arm64
     affected_versions: vers:nuget/<14.8.0
     fixed_versions: vers:nuget/14.8.0
@@ -171,7 +161,17 @@ impacted_packages:
     fixed_versions: vers:nuget/14.8.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-x64
+  - purl: pkg:nuget/Magick.NET-Q8-OpenMP-arm64
+    affected_versions: vers:nuget/<14.8.0
+    fixed_versions: vers:nuget/14.8.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q8-OpenMP-x64
+    affected_versions: vers:nuget/<14.8.0
+    fixed_versions: vers:nuget/14.8.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q8-arm64
     affected_versions: vers:nuget/<14.8.0
     fixed_versions: vers:nuget/14.8.0
     fixed_in_commits: []
@@ -196,9 +196,9 @@ references:
   - url: https://github.com/ImageMagick/ImageMagick
     reference_type:
     reference_id:
-  - url: https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-6hgw-6x87-578x
-    reference_type:
-    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2025-55160
     reference_type:
-    reference_id:
+    reference_id: CVE-2025-55160
+  - url: https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-6hgw-6x87-578x
+    reference_type:
+    reference_id: GHSA-6hgw-6x87-578x

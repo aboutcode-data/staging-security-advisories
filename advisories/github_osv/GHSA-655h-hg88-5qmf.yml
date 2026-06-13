@@ -7,7 +7,14 @@ summary: |
   The API of `xcb::Connection` has constructors which allow an arbitrary `RawFd` to be used as a socket connection. On either failure of these constructors or on the drop of `Connection`, it closes the associated file descriptor. Thus, a program which uses an `OwnedFd` (such as a `UnixStream`) as the file descriptor can close the file descriptor and continue to attempt using it or close an already-closed file descriptor, violating I/O safety.
 
   Starting in version 1.6.0, `xcb` provides `Connection::connect_with_fd` and `Connection::connect_with_fd_and_extensions` as safe alternatives and deprecates the problematic functions.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/rust-x-bindings/rust-xcb
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/rust-x-bindings/rust-xcb
+        commit: da830976870c1174e3b33eb0643177be3991c002
+    introduced_in_commits: []
 severities:
   - score: '1.7'
     scoring_system: cvssv4

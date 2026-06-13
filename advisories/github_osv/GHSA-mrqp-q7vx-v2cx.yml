@@ -19,14 +19,23 @@ summary: "Instaclustr Cassandra-Lucene-Index allows bypass of Cassandra RBAC\n**
   \  \nReview users in Cassandra to validate all superuser privileges."
 impacted_packages:
   - purl: pkg:maven/com.instaclustr/cassandra-lucene-index-plugin
+    affected_versions: vers:maven/>=4.1.0-1.0.0|<4.1.8-1.0.1
+    fixed_versions: vers:maven/4.1.8-1.0.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/com.instaclustr/cassandra-lucene-index-plugin
     affected_versions: vers:maven/>=4.0-rc1-1.0.0|<4.0.17-1.0.0
     fixed_versions: vers:maven/4.0.17-1.0.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/com.instaclustr/cassandra-lucene-index-plugin
-    affected_versions: vers:maven/>=4.1.0-1.0.0|<4.1.8-1.0.1
-    fixed_versions: vers:maven/4.1.8-1.0.1
-    fixed_in_commits: []
+  - purl: pkg:github/instaclustr/cassandra-lucene-index
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/instaclustr/cassandra-lucene-index
+        commit: 94380b165bd3e597d3e22e47f8cc674ec7c7bf7f
+      - vcs_url: https://github.com/instaclustr/cassandra-lucene-index
+        commit: 44ab4b639c9354a6335f40b1cf6178c745c6e101
     introduced_in_commits: []
 severities:
   - score: '8.8'
@@ -52,9 +61,9 @@ references:
   - url: https://github.com/instaclustr/cassandra-lucene-index/commit/94380b165bd3e597d3e22e47f8cc674ec7c7bf7f
     reference_type:
     reference_id:
-  - url: https://github.com/instaclustr/cassandra-lucene-index/security/advisories/GHSA-mrqp-q7vx-v2cx
-    reference_type:
-    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2025-26511
     reference_type:
-    reference_id:
+    reference_id: CVE-2025-26511
+  - url: https://github.com/instaclustr/cassandra-lucene-index/security/advisories/GHSA-mrqp-q7vx-v2cx
+    reference_type:
+    reference_id: GHSA-mrqp-q7vx-v2cx

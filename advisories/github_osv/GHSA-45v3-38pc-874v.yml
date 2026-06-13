@@ -15,7 +15,16 @@ summary: |
 
   ### Impact
   This could lead to denial of service scenarios, particularly in CI/CD environments during signature verification processes because timestamp signature would fail due to the presence of a revoked certificate(s) potentially disrupting operations.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/notaryproject/notation-go
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/notaryproject/notation-go
+        commit: e7005a6d13e5ba472d4e166fbb085152f909e102
+      - vcs_url: https://github.com/notaryproject/notation-go
+        commit: e99be1954a15673020150c5f8800b8174cd7428d
+    introduced_in_commits: []
 severities:
   - score: '4.0'
     scoring_system: cvssv3.1
@@ -33,13 +42,7 @@ references:
   - url: https://github.com/notaryproject/notation-go
     reference_type:
     reference_id:
-  - url: https://github.com/notaryproject/notation-go/commit/e7005a6d13e5ba472d4e166fbb085152f909e102
-    reference_type:
-    reference_id:
   - url: https://github.com/notaryproject/notation-go/commit/e99be1954a15673020150c5f8800b8174cd7428d
-    reference_type:
-    reference_id:
-  - url: https://github.com/notaryproject/notation-go/security/advisories/GHSA-45v3-38pc-874v
     reference_type:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-56138
@@ -48,3 +51,9 @@ references:
   - url: https://pkg.go.dev/vuln/GO-2025-3381
     reference_type:
     reference_id:
+  - url: https://github.com/notaryproject/notation-go/commit/e7005a6d13e5ba472d4e166fbb085152f909e102
+    reference_type: other
+    reference_id: e7005a6d13e5ba472d4e166fbb085152f909e102
+  - url: https://github.com/notaryproject/notation-go/security/advisories/GHSA-45v3-38pc-874v
+    reference_type: other
+    reference_id: GHSA-45v3-38pc-874v

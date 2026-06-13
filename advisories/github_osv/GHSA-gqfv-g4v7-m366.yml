@@ -23,7 +23,14 @@ summary: "SiYuan: ZipSlip -> Arbitrary File Overwrite -> RCE\n### Summary\nFunct
   open('exp.zip', 'wb').write(gz)\n```\n\n### Impact\nThe exploit is possible only if the attacker\
   \ has access to **import** functionality. It's possible to achieve code execution and some\
   \ persistence within the container"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/siyuan-note/siyuan
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/siyuan-note/siyuan
+        commit: dae6158860cc704e353454565c96e874278c6f47
+    introduced_in_commits: []
 severities:
   - score: '7.8'
     scoring_system: cvssv3.1

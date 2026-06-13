@@ -30,7 +30,14 @@ summary: |
   If you have any questions or comments about this advisory:
   * For general questions, start a discussion in the Git LFS [discussion forum](https://github.com/git-lfs/git-lfs/discussions).
   * For reports of additional vulnerabilities, please follow the Git LFS [security reporting policy](https://github.com/git-lfs/git-lfs/blob/main/SECURITY.md).
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/git-lfs/git-lfs
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/git-lfs/git-lfs
+        commit: 0345b6f816e611d050c0df67b61f0022916a1c90
+    introduced_in_commits: []
 severities:
   - score: '8.5'
     scoring_system: cvssv4
@@ -43,19 +50,10 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-74
   - CWE-436
+  - CWE-74
 references:
   - url: https://github.com/git-lfs/git-lfs
-    reference_type:
-    reference_id:
-  - url: https://github.com/git-lfs/git-lfs/commit/0345b6f816e611d050c0df67b61f0022916a1c90
-    reference_type:
-    reference_id:
-  - url: https://github.com/git-lfs/git-lfs/releases/tag/v3.6.1
-    reference_type:
-    reference_id:
-  - url: https://github.com/git-lfs/git-lfs/security/advisories/GHSA-q6r2-x2cc-vrp7
     reference_type:
     reference_id:
   - url: https://lists.debian.org/debian-lts-announce/2025/01/msg00022.html
@@ -67,3 +65,12 @@ references:
   - url: https://pkg.go.dev/vuln/GO-2025-3390
     reference_type:
     reference_id:
+  - url: https://github.com/git-lfs/git-lfs/commit/0345b6f816e611d050c0df67b61f0022916a1c90
+    reference_type: other
+    reference_id: 0345b6f816e611d050c0df67b61f0022916a1c90
+  - url: https://github.com/git-lfs/git-lfs/security/advisories/GHSA-q6r2-x2cc-vrp7
+    reference_type: other
+    reference_id: GHSA-q6r2-x2cc-vrp7
+  - url: https://github.com/git-lfs/git-lfs/releases/tag/v3.6.1
+    reference_type: other
+    reference_id: v3.6.1

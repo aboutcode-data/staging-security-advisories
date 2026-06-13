@@ -16,7 +16,14 @@ summary: "podman kube play symlink traversal vulnerability\n### Impact\n\nThe po
   \n### Workarounds\n\nDon't use podman kube play with ConfigMap or Secret volume mounts.\n\n\
   ### PR with test for CI\n\nAdding on 9/8/2025 by @TomSweeneyRedHat , this is the PR containing\
   \ the test in CI: https://github.com/containers/podman/pull/27001"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/containers/podman
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/containers/podman
+        commit: 43fbde4e665fe6cee6921868f04b7ccd3de5ad89
+    introduced_in_commits: []
 severities:
   - score: '8.1'
     scoring_system: cvssv3.1

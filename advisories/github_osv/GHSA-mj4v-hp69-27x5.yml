@@ -53,7 +53,14 @@ summary: |
   It's a remote code execution vulnerability. Because of the sandbox we can show only Denial of Service impact. Any vulnerability will be exists in v8go that cause to escape sandbox, different impacts can be show.
 
   **Note:** Plenti is using V8GO and V8GO is using V8 version of 11.1.278. This version released at 25 January 2023. After this date some RCE vulnerabilities founded in V8 like [CVE-2024-5830](https://github.com/advisories/GHSA-fchp-8m28-g68f),
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/plentico/plenti
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/plentico/plenti
+        commit: c3e72a9ebbc2a03f4b0f3104becbfc25e390cb8e
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1

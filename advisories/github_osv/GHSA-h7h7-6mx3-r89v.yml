@@ -11,7 +11,14 @@ summary: "Fyrox has unsound usages of `Vec::from_raw_parts`\nThe library provide
   \ of `Copy` to `Pod`, which can make sure `T` should be plain data. This was patched in the\
   \ latest version of [master](https://github.com/FyroxEngine/Fyrox/blob/3f9ad6f9667047dac051b0e97d544e5b38e5ae72/fyrox-core/src/lib.rs#L351-L360)\
   \ branch, but still not on the latest release (0.28.1)."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/fyroxengine/fyrox
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/fyroxengine/fyrox
+        commit: 474e3b01a884366cdb7d704f7456ef692e992232
+    introduced_in_commits: []
 severities:
   - score: LOW
     scoring_system: generic_textual

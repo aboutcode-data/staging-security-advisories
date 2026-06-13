@@ -6,7 +6,14 @@ aliases:
 summary: |
   memos vulnerability allows arbitrarily reactions deletion
   Incorrect access control in usememos memos v0.25.2 allows attackers with low-level privileges to arbitrarily delete reactions made to other users' Memos.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/usememos/memos
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/usememos/memos
+        commit: 769dcd0cf9be83d472829f6e7903b201e42f6b3c
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1

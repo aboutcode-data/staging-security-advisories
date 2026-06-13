@@ -24,7 +24,14 @@ summary: |
 
   ### Workarounds
   Configure the `portmap` plugin to use the `iptables` backend. It does not have this vulnerability.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/containernetworking/plugins
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/containernetworking/plugins
+        commit: 9b3772e1a7abf93cbb7c6526a28bc0d27b830e02
+    introduced_in_commits: []
 severities:
   - score: '6.6'
     scoring_system: cvssv3.1

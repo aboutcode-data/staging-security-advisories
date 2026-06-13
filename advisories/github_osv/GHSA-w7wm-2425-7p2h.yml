@@ -26,7 +26,14 @@ summary: |
   ### Workarounds
 
   Connections that purely authenticate based on a known Coordinator's root certificate, e.g. the one retrieved when using the `marblerun manifest set` CLI command, are not affected.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/edgelesssys/marblerun
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/edgelesssys/marblerun
+        commit: e4864f9f1d0f12a4a7d28514da43bcc75603a5b5
+    introduced_in_commits: []
 severities:
   - score: '7.1'
     scoring_system: cvssv3.1

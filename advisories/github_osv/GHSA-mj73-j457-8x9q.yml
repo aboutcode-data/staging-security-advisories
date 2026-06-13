@@ -5,7 +5,14 @@ aliases: []
 summary: |
   maxminddb's `Reader::open_mmap` unsoundly marks unsafe memmap operation as safe
   maxminddb prior to version 0.27 declared `Reader::open_mmap` as safe despite wrapping an inherently unsafe memmap2 operation with no extra step done to guarantee safety. This could have led to undefined behaviour if the file were to be modified on disk while the memory map was still active.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/oschwald/maxminddb-rust
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/oschwald/maxminddb-rust
+        commit: 98f0e4fff9678c841ed33f3b8a46322f6163c32a
+    introduced_in_commits: []
 severities:
   - score: '1.0'
     scoring_system: cvssv4

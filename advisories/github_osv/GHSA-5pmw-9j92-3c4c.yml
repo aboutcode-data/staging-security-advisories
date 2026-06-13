@@ -11,7 +11,14 @@ summary: "OpenH264 Rust API Openh264 Decoding Functions Heap Overflow Vulnerabil
   \ you rely on our `source` feature only, >=0.6.6 should be safe,\n- if you rely on `libloading`,\
   \ you must upgrade to 0.8.0 _and_ use their latest DLL >=2.6.0. \n\nUsers handling untrusted\
   \ video files should update immediately."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/ralfbiedert/openh264-rs
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/ralfbiedert/openh264-rs
+        commit: 3a822fff0b4c9a984622ca2b179fe8898ac54b14
+    introduced_in_commits: []
 severities:
   - score: '8.6'
     scoring_system: cvssv4

@@ -21,7 +21,14 @@ summary: |
 
   1. Do not heavily modify the default settings in a way that ends up with shorter or less frequent regulation bans. The default settings effectively mitigate any potential for this issue to be exploited.
   2. Disable the ability for users to login via an email address.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/authelia/authelia
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/authelia/authelia
+        commit: d4a54189aa6563912f9427b96dcb01eacafa785c
+    introduced_in_commits: []
 severities:
   - score: '2.3'
     scoring_system: cvssv4

@@ -6,7 +6,14 @@ aliases:
 summary: |
   go-crypto-winnative BCryptGenerateSymmetricKey memory leak
   Calls to `cng.TLS1PRF` don't release the key handle, producing a small memory leak every time.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/microsoft/go-crypto-winnative
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/microsoft/go-crypto-winnative
+        commit: f49c8e1379ea4b147d5bff1b3be5b0ff45792e41
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

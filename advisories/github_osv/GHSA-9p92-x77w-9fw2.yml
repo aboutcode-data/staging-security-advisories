@@ -6,7 +6,20 @@ aliases:
 summary: |
   Mattermost makes Use of Weak Hash
   Mattermost versions 10.8.x <= 10.8.3, 10.5.x <= 10.5.8, 9.11.x <= 9.11.17, 10.10.x <= 10.10.1, 10.9.x <= 10.9.3 fail to properly validate cache keys for link metadata which allows authenticated users to access unauthorized posts and poison link previews via hash collision attacks on FNV-1 hashing.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: a8a4badc130be101e5bc4b7916bbcd2f966c4b79
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 356880c8430b77a4a390c89d5a33f6928188d137
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 944ad5cdd9876ef61c78c8275906262a4118755a
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: cd87e5c877373f109742aa90a3fa136c14774325
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1

@@ -40,7 +40,16 @@ summary: "CometBFT allows a malicious peer to make node stuck in blocksync\nName
   \ For more information about CometBFT, see https://docs.cometbft.com/.\n\nEDIT:\n\nPlease\
   \ notice that this has been updated to be `informational` severity.  This can be avoided by\
   \ ensuring that one is not connected to a malicious peer during blocksync."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/cometbft/cometbft
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/cometbft/cometbft
+        commit: 2cebfde06ae5073c0b296a9d2ca6ab4b95397ea5
+      - vcs_url: https://github.com/cometbft/cometbft
+        commit: 0ee80cd609c7ae9fe856bdd1c6d38553fdae90ce
+    introduced_in_commits: []
 severities:
   - score: '6.9'
     scoring_system: cvssv4

@@ -6,7 +6,18 @@ aliases:
 summary: |
   kube-controller-manager is vulnerable to half-blind Server Side Request Forgery through in-tree Portworx StorageClass
   A half-blind Server Side Request Forgery (SSRF) vulnerability exists in kube-controller-manager when using the in-tree Portworx StorageClass. This vulnerability allows authorized users to leak arbitrary information from unprotected endpoints in the control plane’s host network (including link-local or loopback services).
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/kubernetes/kubernetes
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/kubernetes/kubernetes
+        commit: dbe17dfe7773563eac95534040f413ada6d2b421
+      - vcs_url: https://github.com/kubernetes/kubernetes
+        commit: 7506ce804c20696ba32cdb72126270ceaed06e24
+      - vcs_url: https://github.com/kubernetes/kubernetes
+        commit: 97650c1c4fe15cbb7756ba95b3edc8a8665063ca
+    introduced_in_commits: []
 severities:
   - score: '5.8'
     scoring_system: cvssv3.1
