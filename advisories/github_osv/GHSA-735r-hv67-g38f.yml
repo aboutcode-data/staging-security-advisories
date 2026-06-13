@@ -12,7 +12,14 @@ summary: "vitess allows users to create keyspaces that can deny access to alread
   \n### Workarounds\nDelete the offending keyspace using a CLI client (vtctldclient) \n```\n\
   vtctldclient --server ... DeleteKeyspace a/b\n```\n\nFound during a security audit sponsored\
   \ by the [CNCF](https://cncf.io) and facilitated by [OSTIF](https://ostif.org)."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/vitessio/vitess
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/vitessio/vitess
+        commit: adf10196760ad0b3991a7aa7a8580a544e6ddf88
+    introduced_in_commits: []
 severities:
   - score: '4.1'
     scoring_system: cvssv3.1

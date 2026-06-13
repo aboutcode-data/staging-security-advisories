@@ -6,7 +6,14 @@ aliases:
 summary: |
   Kiali content spoofing vulnerability
   A content spoofing vulnerability was found in Kiali. It was discovered that Kiali does not implement error handling when the page or endpoint being accessed cannot be found. This issue allows an attacker to perform arbitrary text injection when an error response is retrieved from the URL being accessed.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/kiali/kiali
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/kiali/kiali
+        commit: aab7694f850f04d7fd875fac5f720a93ccdf01ad
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1

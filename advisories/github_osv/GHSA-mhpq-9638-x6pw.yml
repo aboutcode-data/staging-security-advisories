@@ -10,7 +10,14 @@ summary: |
   ## Original Description
 
   An attacker controlled input of a PBES2 encrypted JWE blob can have a very large p2c value that, when decrypted, produces a denial-of-service.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/dvsekhvalnov/jose2go
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/dvsekhvalnov/jose2go
+        commit: a4584e9dd7128608fedbc67892eba9697f0d5317
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1

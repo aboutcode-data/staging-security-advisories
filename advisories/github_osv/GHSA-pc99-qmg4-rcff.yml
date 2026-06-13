@@ -35,7 +35,14 @@ summary: "act vulnerable to arbitrary file upload in artifact server\n### Impact
   \ to use ValidPath() to check against path traversal. See more here: https://pkg.go.dev/io/fs#FS\n\
   2. Clean the user-provided paths manually\n\n### Patches\nVersion 0.2.40 contains a patch.\n\
   \n### Workarounds\nAvoid use of artifact server with `--artifact-server-path`"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/nektos/act
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/nektos/act
+        commit: 63ae215071f94569d910964bdee866d91d6e3a10
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1

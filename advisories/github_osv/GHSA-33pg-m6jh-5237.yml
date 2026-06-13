@@ -46,7 +46,14 @@ summary: |
   * [CVE-2023-28842: Encrypted overlay network with a single endpoint is unauthenticated](https://github.com/moby/moby/security/advisories/GHSA-6wrf-mxfj-pf5p)
   * [GHSA-vwm3-crmr-xfxw: The Swarm VXLAN port may be exposed to attack due to ambiguous documentation](https://github.com/moby/moby/security/advisories/GHSA-vwm3-crmr-xfxw)
   * [GHSA-gvm4-2qqg-m333: Security issues in encrypted overlay networks](https://github.com/moby/libnetwork/security/advisories/GHSA-gvm4-2qqg-m333) (libnetwork)
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/moby/libnetwork
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/moby/libnetwork
+        commit: d9fae4c73daf76c3b0f77e14b45b8bf612ba764d
+    introduced_in_commits: []
 severities:
   - score: '6.8'
     scoring_system: cvssv3.1
@@ -59,8 +66,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-636
   - CWE-311
+  - CWE-636
 references:
   - url: https://github.com/moby/libnetwork/blob/d9fae4c73daf76c3b0f77e14b45b8bf612ba764d/drivers/overlay/encryption.go#L205-L207
     reference_type:

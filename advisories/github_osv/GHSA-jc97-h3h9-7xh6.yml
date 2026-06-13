@@ -9,7 +9,16 @@ summary: "Regular Expression Denial of Service in Deno.upgradeWebSocket API\n###
   \ used for splitting the Connection/Upgrade header. A specially crafted Connection/Upgrade\
   \ header can be used to significantly slow down a web socket server. \n\n### Patches\nIt is\
   \ recommended that users upgrade to Deno 1.31.0."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/denoland/deno
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/denoland/deno
+        commit: 2b247be517d789a37e532849e2e40b724af0918f
+      - vcs_url: https://github.com/denoland/deno
+        commit: cf06a7c7e672880e1b38598fe445e2c50b4a9d06
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1

@@ -6,7 +6,14 @@ aliases:
 summary: |
   gosqljson SQL Injection vulnerability
   A vulnerability, which was classified as critical, has been found in elgs gosqljson. This issue affects the function `QueryDbToArray/QueryDbToMap/ExecDb` of the file `gosqljson.go`. The manipulation of the argument sqlStatement leads to sql injection. The name of the patch is 2740b331546cb88eb61771df4c07d389e9f0363a. It is recommended to apply a patch to fix this issue. The associated identifier of this vulnerability is VDB-217631.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/elgs/gosqljson
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/elgs/gosqljson
+        commit: 2740b331546cb88eb61771df4c07d389e9f0363a
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
@@ -27,6 +34,9 @@ references:
   - url: https://github.com/elgs/gosqljson/commit/2740b331546cb88eb61771df4c07d389e9f0363a
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2014-125064
+    reference_type:
+    reference_id:
   - url: https://pkg.go.dev/vuln/GO-2023-1494
     reference_type:
     reference_id:
@@ -36,6 +46,3 @@ references:
   - url: https://vuldb.com/?id.217631
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2014-125064
-    reference_type:
-    reference_id: CVE-2014-125064

@@ -20,7 +20,14 @@ summary: "Denial of service (DoS) when processing Git credentials\n### Impact\n\
   \ or [Wrangler](https://github.com/rancher/wrangler/issues/new) repository.\n* Verify our\
   \ [support matrix](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/)\
   \ and [product support lifecycle](https://www.suse.com/lifecycle/)."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/rancher/wrangler
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/rancher/wrangler
+        commit: 341018c8fef3e12867c7cb2649bd2cecac75f287
+    introduced_in_commits: []
 severities:
   - score: '5.9'
     scoring_system: cvssv3.1

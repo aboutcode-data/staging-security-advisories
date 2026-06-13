@@ -6,7 +6,14 @@ aliases:
 summary: |
   Tungstenite allows remote attackers to cause a denial of service
   The Tungstenite crate through 0.20.0 for Rust allows remote attackers to cause a denial of service (minutes of CPU consumption) via an excessive length of an HTTP header in a client handshake. The length affects both how many times a parse is attempted (e.g., thousands of times) and the average amount of data for each parse attempt (e.g., millions of bytes).
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/snapview/tungstenite-rs
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/snapview/tungstenite-rs
+        commit: 8b3ecd3cc0008145ab4bc8d0657c39d09db8c7e2
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

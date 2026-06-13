@@ -7,6 +7,13 @@ summary: |
   hson-java vulnerable to denial of service
   An issue in hjson-java up to v3.0.0 allows attackers to cause a Denial of Service (DoS) via supplying a crafted JSON string to string a `StringIndexOutOfBoundsException`.
 impacted_packages:
+  - purl: pkg:github/hjson/hjson-java
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/hjson/hjson-java
+        commit: aff0b607929b4397d93dc0d029a56aeefb242602
+    introduced_in_commits: []
   - purl: pkg:maven/org.hjson/hjson
     affected_versions: vers:maven/<3.0.1
     fixed_versions: vers:maven/3.0.1
@@ -38,4 +45,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2023-39685
     reference_type:
-    reference_id:
+    reference_id: CVE-2023-39685

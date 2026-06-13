@@ -6,7 +6,14 @@ aliases:
 summary: |
   Croc sender may place ANSI or CSI escape sequences in filename to attach receiver's terminal device
   An issue was discovered in Croc before 9.6.16. A sender may place ANSI or CSI escape sequences in a filename to attack the terminal device of a receiver.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/schollz/croc
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/schollz/croc
+        commit: 3f12f75fae2e844c555ec01eeba0b8474938e93a
+    introduced_in_commits: []
 severities:
   - score: '7.8'
     scoring_system: cvssv3.1

@@ -6,7 +6,14 @@ aliases:
 summary: |
   Cros secrets may be disclosed to untrusted relay
   An issue was discovered in Croc before 9.6.16. When a custom shared secret is used, the sender and receiver may divulge parts of this secret to an untrusted Relay, as part of composing a room name.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/schollz/croc
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/schollz/croc
+        commit: 0f1ca436cd8e608738da0b23bf594537cfbe6213
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1

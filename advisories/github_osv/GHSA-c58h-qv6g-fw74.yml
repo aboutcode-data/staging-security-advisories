@@ -6,7 +6,14 @@ aliases:
 summary: |
   IO FinNet tss-lib vulnerable to replay attacks involving proofs
   An issue was discovered in IO FinNet tss-lib before 2.0.0. The parameter ssid for defining a session id is not used through the MPC implementation, which makes replaying and spoofing of messages easier. In particular, the Schnorr proof of knowledge implemented in sch.go does not utilize a session id, context, or random nonce in the generation of the challenge. This could allow a malicious user or an eavesdropper to replay a valid proof sent in the past.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/bnb-chain/tss-lib
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/bnb-chain/tss-lib
+        commit: 1a14f3ac9ecbf6115e80d44c7fff16bcc3139250
+    introduced_in_commits: []
 severities:
   - score: '6.8'
     scoring_system: cvssv3.1

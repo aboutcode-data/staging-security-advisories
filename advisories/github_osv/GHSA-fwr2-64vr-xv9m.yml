@@ -18,7 +18,18 @@ summary: "Argo CD cluster secret might leak in cluster details page\n### Impact\
   \ more information\n\n* Open an issue in [the Argo CD issue tracker](https://github.com/argoproj/argo-cd/issues)\
   \ or [discussions](https://github.com/argoproj/argo-cd/discussions)\n* Join us on [Slack](https://argoproj.github.io/community/join-slack)\
   \ in channel #argo-cd"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/argoproj/argo-cd
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/argoproj/argo-cd
+        commit: 44e52c4ae76e6da1343bdd54e57a822d93549f28
+      - vcs_url: https://github.com/argoproj/argo-cd
+        commit: 7122b83fc346ec2729227405a2f9c2aa84b0bf80
+      - vcs_url: https://github.com/argoproj/argo-cd
+        commit: 4b2e5b06bff2ffd8ed1970654ddd8e55fc4a41c4
+    introduced_in_commits: []
 severities:
   - score: '9.9'
     scoring_system: cvssv3.1
@@ -31,8 +42,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-532
   - CWE-200
+  - CWE-532
 references:
   - url: https://github.com/argoproj/argo-cd
     reference_type:

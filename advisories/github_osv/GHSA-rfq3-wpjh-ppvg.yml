@@ -7,6 +7,13 @@ summary: |
   WSO2 Registry Stored Cross Site Scripting (XSS) vulnerability
   WSO2 Registry has been identified as vulnerable due to improper output encoding, a Stored Cross Site Scripting (XSS) attack can be carried out by an attacker injecting a malicious payload into the Registry feature of the Management Console.
 impacted_packages:
+  - purl: pkg:github/wso2/carbon-registry
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/wso2/carbon-registry
+        commit: 878fc7e53c90acc85e303d2af73440014a68b246
+    introduced_in_commits: []
   - purl: pkg:maven/org.wso2.carbon.registry/carbon-registry
     affected_versions: vers:maven/<4.7.37
     fixed_versions: vers:maven/4.7.37
@@ -32,9 +39,9 @@ references:
   - url: https://github.com/wso2/carbon-registry/commit/878fc7e53c90acc85e303d2af73440014a68b246
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2023-6911
-    reference_type:
-    reference_id:
   - url: https://security.docs.wso2.com/en/latest/security-announcements/security-advisories/2021/WSO2-2020-1225
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2023-6911
+    reference_type:
+    reference_id: CVE-2023-6911

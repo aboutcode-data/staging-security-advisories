@@ -6,7 +6,14 @@ aliases:
 summary: |
   kube-apiserver authentication bypass vulnerability
   An authentication bypass vulnerability was discovered in kube-apiserver. This issue could allow a remote, authenticated attacker who has been given permissions "update, patch" the "pods/ephemeralcontainers" subresource beyond what the default is. They would then need to create a new pod or patch one that they already have access to. This might allow evasion of SCC admission restrictions, thereby gaining control of a privileged pod.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/openshift/apiserver-library-go
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openshift/apiserver-library-go
+        commit: a994128188486d2dce99a528fbcc017d276081e0
+    introduced_in_commits: []
 severities:
   - score: '8.0'
     scoring_system: cvssv3.1

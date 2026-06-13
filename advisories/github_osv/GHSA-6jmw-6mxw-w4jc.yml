@@ -6,7 +6,14 @@ aliases:
 summary: |
   BER/CER/DER decoder panics on invalid input
   NLnet Labs’ bcder library up to and including version 0.7.2 panics while decoding certain invalid input data rather than rejecting the data with an error. This can affect both the actual decoding stage as well as accessing content of types that utilized delayed decoding.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/nlnetlabs/bcder
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/nlnetlabs/bcder
+        commit: 4da91c3fd853e3d466d8581cf1d82b7f3255de56
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

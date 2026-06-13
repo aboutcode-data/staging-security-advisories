@@ -6,7 +6,14 @@ aliases:
 summary: |
   Croc requires senders to provide local IP addresses in cleartext
   An issue was discovered in Croc before 9.6.16. The protocol requires a sender to provide its local IP addresses in cleartext via an `ips?` message.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/schollz/croc
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/schollz/croc
+        commit: 6f5f16aa1c16b1ec6f31fec35be15de466d9701b
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1

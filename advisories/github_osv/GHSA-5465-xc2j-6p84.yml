@@ -6,7 +6,14 @@ aliases:
 summary: |
   github.com/openshift/apiserver-library-go Improper Input Validation vulnerability
   A flaw was found in github.com/openshift/apiserver-library-go, used in OpenShift 4.12 and 4.11, that contains an issue that can allow low-privileged users to set the seccomp profile for pods they control to "unconfined." By default, the seccomp profile used in the restricted-v2 Security Context Constraint (SCC) is "runtime/default," allowing users to disable seccomp for pods they can create and modify.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/openshift/apiserver-library-go
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openshift/apiserver-library-go
+        commit: 30f75d79e424ca462c6de53ee8b93f91183763e6
+    introduced_in_commits: []
 severities:
   - score: '6.3'
     scoring_system: cvssv3.1

@@ -6,7 +6,21 @@ aliases:
 summary: |
   sjqzhang go-fastdfs vulnerable to path traversal
   sjqzhang go-fastdfs up to 1.4.3 is vulnerable to path traversal in the function upload of the file `/group1/upload` of the component `File Upload Handler`. The attack may be launched remotely and the exploit has been disclosed to the public and may be used.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/sjqzhang/go-fastdfs
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/sjqzhang/go-fastdfs
+        commit: 61cbff5124c61e292994099372b11c06cdb5b80b
+    introduced_in_commits: []
+  - purl: pkg:github/yangyanglo/forcve
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/yangyanglo/forcve
+        commit: 93a16663cd32a36d37d8a0f0102e1592254d0279
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1

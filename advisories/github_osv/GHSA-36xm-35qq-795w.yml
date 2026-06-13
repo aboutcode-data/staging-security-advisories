@@ -9,7 +9,14 @@ summary: |
   A caller could use this flaw to submit thread-unsafe data into inventory, then access it as a reference simultaneously from multiple threads.
 
   The flaw was corrected by enforcing that data submitted by the caller into inventory is `Sync`.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/dtolnay/inventory
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/dtolnay/inventory
+        commit: e1e347d2725b9c9dd4a70b63eb08532ca9687652
+    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual

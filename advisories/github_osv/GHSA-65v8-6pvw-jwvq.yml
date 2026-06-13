@@ -6,7 +6,14 @@ aliases:
 summary: |
   Answer vulnerable to Insertion of Sensitive Information Into Sent Data
   answerdev/answer is an open-source knowledge-based community software. Answer prior to 1.0.8 does not strip EXIF geolocation data from user-uploaded logos. As a result, anyone can get sensitive information like a user's device ID, geolocation, system information, system version, etc.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/answerdev/answer
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/answerdev/answer
+        commit: ac3f2f047ee00b4edaea7530e570ab67ff87cd6a
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1

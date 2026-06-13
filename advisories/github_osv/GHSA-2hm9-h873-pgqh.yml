@@ -32,7 +32,14 @@ summary: |
   Upgrade to v1.3.2 and update any offending models.
 
     **[BREAKING]** If your model contained cycles or a relation definition that has the relation itself in its evaluation path, then Checks and queries that require evaluation will no longer be evaluated on v1.3.2+ and will return errors instead. You will need to update your models to remove the cycles.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/openfga/openfga
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openfga/openfga
+        commit: 725296025fd81227c89525808652c6acd4a605f6
+    introduced_in_commits: []
 severities:
   - score: '5.9'
     scoring_system: cvssv3.1

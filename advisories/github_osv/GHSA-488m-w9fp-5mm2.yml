@@ -7,6 +7,17 @@ summary: |
   Infinispan circular object references causes out of memory errors
   A flaw was found in Infinispan, which does not detect circular object references when unmarshalling. An authenticated attacker with sufficient permissions could insert a maliciously constructed object into the cache and use it to cause out of memory errors and achieve a denial of service.
 impacted_packages:
+  - purl: pkg:github/infinispan/protostream
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/infinispan/protostream
+        commit: 4501b6b307a6bab545346f66238f8be7e42f83eb
+      - vcs_url: https://github.com/infinispan/protostream
+        commit: 4ef66958f2c4890ae1c6a7acd629d27bd88aa4cb
+      - vcs_url: https://github.com/infinispan/protostream
+        commit: 50320b5987dc87bc04b616b87e8cf93472ee19c1
+    introduced_in_commits: []
   - purl: pkg:maven/org.infinispan.protostream/protostream
     affected_versions: vers:maven/<4.6.2.Final
     fixed_versions: vers:maven/4.6.2.Final
@@ -31,12 +42,6 @@ severities:
 weaknesses:
   - CWE-1047
 references:
-  - url: https://access.redhat.com/errata/RHSA-2023:5396
-    reference_type:
-    reference_id:
-  - url: https://access.redhat.com/security/cve/CVE-2023-5236
-    reference_type:
-    reference_id:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2240999
     reference_type:
     reference_id:
@@ -61,9 +66,15 @@ references:
   - url: https://issues.redhat.com/browse/ISPN-14534
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2023-5236
-    reference_type:
-    reference_id:
   - url: https://security.netapp.com/advisory/ntap-20240125-0004
     reference_type:
     reference_id:
+  - url: https://access.redhat.com/security/cve/CVE-2023-5236
+    reference_type:
+    reference_id: CVE-2023-5236
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2023-5236
+    reference_type:
+    reference_id: CVE-2023-5236
+  - url: https://access.redhat.com/errata/RHSA-2023:5396
+    reference_type:
+    reference_id: RHSA-2023:5396

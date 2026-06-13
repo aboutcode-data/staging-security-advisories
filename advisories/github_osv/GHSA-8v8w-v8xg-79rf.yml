@@ -18,7 +18,18 @@ summary: "tj-actions/branch-names's Improper Sanitization of Branch Name Leads t
   foo` will download and run a script from a Gist. This allows an attacker to inject a payload\
   \ of arbitrary complexity.\n\n### Impact\nAn attacker can use this vulnerability to steal\
   \ secrets from or abuse `GITHUB_TOKEN` permissions.\n\n### Reference\n- https://securitylab.github.com/research/github-actions-untrusted-input"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/tj-actions/branch-names
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/tj-actions/branch-names
+        commit: 6c999acf206f5561e19f46301bb310e9e70d8815
+      - vcs_url: https://github.com/tj-actions/branch-names
+        commit: 4923d1ca41f928c24f1c1b3af9daaadfb71e6337
+      - vcs_url: https://github.com/tj-actions/branch-names
+        commit: 726fe9ba5e9da4fcc716223b7994ffd0358af060
+    introduced_in_commits: []
 severities:
   - score: '9.3'
     scoring_system: cvssv3.1
@@ -52,5 +63,5 @@ references:
     reference_type:
     reference_id:
   - url: https://securitylab.github.com/research/github-actions-untrusted-input
-    reference_type:
-    reference_id:
+    reference_type: other
+    reference_id: github-actions-untrusted-input

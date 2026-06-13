@@ -28,7 +28,16 @@ summary: |
 
   ### Impact
   Service providers running untrusted Wasm code on Wasmer can unexpectedly expose the host filesystem.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/wasmerio/wasmer
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/wasmerio/wasmer
+        commit: 4d63febf9d8b257b0531963b85df48d45d0dbf3c
+      - vcs_url: https://github.com/wasmerio/wasmer
+        commit: e3923612c23123025c26f982d390e34df7df030f
+    introduced_in_commits: []
 severities:
   - score: '8.4'
     scoring_system: cvssv3.1
