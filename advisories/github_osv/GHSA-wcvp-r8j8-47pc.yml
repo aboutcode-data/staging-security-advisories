@@ -10,7 +10,14 @@ summary: |
   This could result in elements in the array being freed twice if the iterator panics. Uninitialized or previously freed elements could also be exposed if the len() didn't match the number of elements.
 
   These issues were fixed in commit `ced70c17` by temporarily setting the length of the array smaller while processing it and adding assertions on the number of elements returned by the iterator.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/antonmarsden/toodee
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/antonmarsden/toodee
+        commit: ced70c172486fb4827c172cd8238053df3d1dcdb
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
@@ -34,9 +41,9 @@ references:
   - url: https://github.com/antonmarsden/toodee/issues/13
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2021-28028
+    reference_type:
+    reference_id:
   - url: https://rustsec.org/advisories/RUSTSEC-2021-0028.html
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2021-28028
-    reference_type:
-    reference_id: CVE-2021-28028

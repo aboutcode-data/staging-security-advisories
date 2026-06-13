@@ -50,7 +50,14 @@ summary: "Geth Node Vulnerable to DoS via maliciously crafted p2p message\n### I
   \ is not vulnerable.\n\n### For more information\nIf you have any questions or comments about\
   \ this advisory:\n* Open an issue in [go-ethereum](https://github.com/ethereum/go-ethereum/)\n\
   * Email us at [security@ethereum.org](mailto:security@ethereum.org)"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/ethereum/go-ethereum
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/ethereum/go-ethereum
+        commit: e40b37718326b8b4873b3b00a0db2e6c6d9ea738
+    introduced_in_commits: []
 severities:
   - score: '5.7'
     scoring_system: cvssv3.1

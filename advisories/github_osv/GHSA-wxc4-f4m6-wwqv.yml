@@ -6,7 +6,14 @@ aliases:
 summary: |
   Excessive Platform Resource Consumption within a Loop in Kubernetes
   The Kubernetes API Server component in versions 1.1-1.14, and versions prior to 1.15.10, 1.16.7 and 1.17.3 allows an authorized user who sends malicious YAML payloads to cause the kube-apiserver to consume excessive CPU cycles while parsing YAML.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/go-yaml/yaml
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/go-yaml/yaml
+        commit: 53403b58ad1b561927d19068c655246f2db79d48
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
@@ -39,12 +46,12 @@ references:
   - url: https://groups.google.com/d/msg/kubernetes-announce/ALL9s73E5ck/4yHe8J-PBAAJ
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2019-11254
+    reference_type:
+    reference_id:
   - url: https://pkg.go.dev/vuln/GO-2020-0036
     reference_type:
     reference_id:
   - url: https://security.netapp.com/advisory/ntap-20200413-0003
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2019-11254
-    reference_type:
-    reference_id: CVE-2019-11254

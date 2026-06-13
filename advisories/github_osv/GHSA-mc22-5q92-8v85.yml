@@ -41,7 +41,14 @@ summary: "Memory Safety Issue when using patch or merge on state and assign the 
   \nIf you have any questions or comments about this advisory:\n* Open an issue on our repository\
   \ [tremor-rs/tremor-runtime](https://github.com/tremor-rs/tremor-runtime)\n* Please join our\
   \ discord https://chat.tremor.rs and reach out to the team."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/tremor-rs/tremor-runtime
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/tremor-rs/tremor-runtime
+        commit: 1a2efcdbe68e5e7fd0a05836ac32d2cde78a0b2e
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
@@ -54,8 +61,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-416
   - CWE-825
+  - CWE-416
 references:
   - url: https://github.com/tremor-rs/tremor-runtime
     reference_type:
@@ -74,4 +81,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2021-39228
     reference_type:
-    reference_id: CVE-2021-39228
+    reference_id:

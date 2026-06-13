@@ -25,15 +25,22 @@ summary: |
   * Open an issue in [MetaMask/eth-ledger-bridge-keyring on GitHub](https://github.com/MetaMask/eth-ledger-bridge-keyring)
   * Email the MetaMask team at [hello@metamask.io](mailto:hello@metamask.io)
 impacted_packages:
+  - purl: pkg:npm/%40metamask/eth-ledger-bridge-keyring
+    affected_versions: vers:npm/<0.2.2
+    fixed_versions: vers:npm/0.2.2
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:npm/eth-ledger-bridge-keyring
     affected_versions: vers:npm/<0.2.1
     fixed_versions: vers:npm/0.2.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:npm/%40metamask/eth-ledger-bridge-keyring
-    affected_versions: vers:npm/<0.2.2
-    fixed_versions: vers:npm/0.2.2
-    fixed_in_commits: []
+  - purl: pkg:github/metamask/eth-ledger-bridge-keyring
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/metamask/eth-ledger-bridge-keyring
+        commit: f32e529d13a53e55f558d903534d631846dc26ce
     introduced_in_commits: []
 severities:
   - score: '7.5'
@@ -49,16 +56,10 @@ severities:
 weaknesses:
   - CWE-287
 references:
-  - url: https://github.com/advisories/GHSA-vg44-fw64-cpjx
-    reference_type:
-    reference_id:
   - url: https://github.com/MetaMask/eth-ledger-bridge-keyring/commit/f32e529d13a53e55f558d903534d631846dc26ce
     reference_type:
     reference_id:
   - url: https://github.com/MetaMask/eth-ledger-bridge-keyring/pull/14
-    reference_type:
-    reference_id:
-  - url: https://github.com/MetaMask/eth-ledger-bridge-keyring/security/advisories/GHSA-vg44-fw64-cpjx
     reference_type:
     reference_id:
   - url: https://snyk.io/vuln/SNYK-JS-ETHLEDGERBRIDGEKEYRING-561121
@@ -70,3 +71,9 @@ references:
   - url: https://www.npmjs.com/advisories/1498
     reference_type:
     reference_id:
+  - url: https://github.com/advisories/GHSA-vg44-fw64-cpjx
+    reference_type:
+    reference_id: GHSA-vg44-fw64-cpjx
+  - url: https://github.com/MetaMask/eth-ledger-bridge-keyring/security/advisories/GHSA-vg44-fw64-cpjx
+    reference_type:
+    reference_id: GHSA-vg44-fw64-cpjx

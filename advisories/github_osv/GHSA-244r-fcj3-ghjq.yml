@@ -8,6 +8,11 @@ summary: |
   A flaw was found in RESTEasy in all current versions of RESTEasy up to 4.6.0.Final. The endpoint class and method names are returned as part of the exception response when RESTEasy cannot convert one of the request URI path or query values to the matching JAX-RS resource method's parameter value. The highest threat from this vulnerability is to data confidentiality.
 impacted_packages:
   - purl: pkg:maven/org.jboss.resteasy/resteasy-core
+    affected_versions: vers:maven/>=3.0.0|<3.16.0
+    fixed_versions: vers:maven/3.16.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.jboss.resteasy/resteasy-core
     affected_versions: vers:maven/>=4.6.0|<4.6.1
     fixed_versions: vers:maven/4.6.1
     fixed_in_commits: []
@@ -15,11 +20,6 @@ impacted_packages:
   - purl: pkg:maven/org.jboss.resteasy/resteasy-core
     affected_versions: vers:maven/>=4.0.0|<4.5.10
     fixed_versions: vers:maven/4.5.10
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.jboss.resteasy/resteasy-core
-    affected_versions: vers:maven/>=3.0.0|<3.16.0
-    fixed_versions: vers:maven/3.16.0
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -34,8 +34,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-668
   - CWE-209
+  - CWE-668
 references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1935927
     reference_type:

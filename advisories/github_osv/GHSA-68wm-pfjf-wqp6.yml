@@ -89,7 +89,14 @@ summary: "Authelia vulnerable to an authentication bypassed with malformed reque
   \ has this vulnerability), and requires the attacker have gathered knowledge about the system\
   \ for this likely to be exploited.\n - Availability (High -> None): This attack does not alter\
   \ availability directly."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/authelia/authelia
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/authelia/authelia
+        commit: c62dbd43d6e69ae81530e7c4f8763857f8ff1dda
+    introduced_in_commits: []
 severities:
   - score: '10.0'
     scoring_system: cvssv3.1
@@ -115,4 +122,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2021-32637
     reference_type:
-    reference_id: CVE-2021-32637
+    reference_id:

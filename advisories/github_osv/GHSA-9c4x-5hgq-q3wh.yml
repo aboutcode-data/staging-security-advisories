@@ -27,7 +27,16 @@ summary: "Instance config inline secret exposure in Grafana\n### Impact\nSome in
   \ listens on through `http_listen_address` in the `server` block. `127.0.0.1` is the most\
   \ restrictive, `0.0.0.0` is the default. \n* Configure Grafana Agent to use HTTPS with client\
   \ authentication. \n* Use firewall rules to restrict external access to Grafana Agent's API."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/grafana/agent
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/grafana/agent
+        commit: a5479755e946e5c7cddb793ee9adda8f5692ba11
+      - vcs_url: https://github.com/grafana/agent
+        commit: af7fb01e31fe2d389e5f1c36b399ddc46b412b21
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
@@ -40,8 +49,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-200
   - CWE-312
+  - CWE-200
 references:
   - url: https://github.com/grafana/agent
     reference_type:

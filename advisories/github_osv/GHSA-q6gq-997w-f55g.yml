@@ -10,7 +10,14 @@ summary: |
 
   ### Original Description
   Go before 1.13.15 and 14.x before 1.14.7 can have an infinite read loop in ReadUvarint and ReadVarint in encoding/binary via invalid inputs.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/ulikunitz/xz
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/ulikunitz/xz
+        commit: 69c6093c7b2397b923acf82cb378f55ab2652b9b
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -67,6 +74,9 @@ references:
   - url: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WV2VWKFTH4EJGZBZALVUJQJOAQB5MDQ4
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2020-16845
+    reference_type:
+    reference_id:
   - url: https://security.netapp.com/advisory/ntap-20200924-0002
     reference_type:
     reference_id:
@@ -76,6 +86,3 @@ references:
   - url: https://www.oracle.com/security-alerts/cpuApr2021.html
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2020-16845
-    reference_type:
-    reference_id: CVE-2020-16845

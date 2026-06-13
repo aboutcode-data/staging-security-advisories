@@ -20,7 +20,14 @@ summary: "The pattern '/\\domain.com' is not disallowed when redirecting, allowi
   \ \"https://\"):\n \t\tredirectURL, err := url.Parse(redirect)\n```\n\nThis patch will be\
   \ applied to the next release, which is scheduled for when this is publicly disclosed.\n\n\
   ### Workarounds\n\nAt this stage there is no work around."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/oauth2-proxy/oauth2_proxy
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/oauth2-proxy/oauth2_proxy
+        commit: a316f8a06f3c0ca2b5fc5fa18a91781b313607b2
+    introduced_in_commits: []
 severities:
   - score: '5.9'
     scoring_system: cvssv3.1
@@ -49,4 +56,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2020-5233
     reference_type:
-    reference_id: CVE-2020-5233
+    reference_id:

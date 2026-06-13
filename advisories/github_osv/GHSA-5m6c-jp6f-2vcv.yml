@@ -8,7 +8,14 @@ summary: |
   ### Impact
   As users can provide a redirect address for the proxy to send the authenticated user to at the end of the authentication flow. This is expected to be the original URL that the user was trying to access.
   This redirect URL is checked within the proxy and validated before redirecting the user to prevent malicious actors providing redirects to potentially harmful sites.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/oauth2-proxy/oauth2-proxy
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/oauth2-proxy/oauth2-proxy
+        commit: ee5662e0f5001d76ec76562bb605abbd07c266a2
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1
@@ -34,4 +41,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2020-4037
     reference_type:
-    reference_id: CVE-2020-4037
+    reference_id:

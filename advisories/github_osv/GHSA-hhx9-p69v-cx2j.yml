@@ -12,6 +12,15 @@ impacted_packages:
     fixed_versions: vers:pypi/1.10.11
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:github/apache/airflow
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/airflow
+        commit: 180bca4f993b7b778a8d2c65d3d357652218922b
+      - vcs_url: https://github.com/apache/airflow
+        commit: 9e305d6b810a2a21e2591a80a80ec41acb3afed0
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
@@ -29,10 +38,10 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-306
   - CWE-1188
   - CWE-287
   - CWE-1056
+  - CWE-306
 references:
   - url: http://packetstormsecurity.com/files/162908/Apache-Airflow-1.10.10-Remote-Code-Execution.html
     reference_type:
@@ -41,9 +50,6 @@ references:
     reference_type:
     reference_id:
   - url: https://airflow.apache.org/docs/apache-airflow/1.10.11/security.html#api-authentication
-    reference_type:
-    reference_id:
-  - url: https://github.com/advisories/GHSA-hhx9-p69v-cx2j
     reference_type:
     reference_id:
   - url: https://github.com/apache/airflow
@@ -73,3 +79,9 @@ references:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2020-13927
     reference_type:
     reference_id: CVE-2020-13927
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/webapps/49927.py
+    reference_type: exploit
+    reference_id: CVE-2020-13927;CVE-2020-11978
+  - url: https://github.com/advisories/GHSA-hhx9-p69v-cx2j
+    reference_type:
+    reference_id: GHSA-hhx9-p69v-cx2j

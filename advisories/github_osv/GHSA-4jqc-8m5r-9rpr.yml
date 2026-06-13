@@ -7,14 +7,14 @@ summary: |
   Prototype Pollution in set-value
   This affects the package `set-value`. A type confusion vulnerability can lead to a bypass of CVE-2019-10747 when the user-provided keys used in the path parameter are arrays.
 impacted_packages:
-  - purl: pkg:npm/set-value
-    affected_versions: vers:npm/>=4.0.0|<4.0.1
-    fixed_versions: vers:npm/4.0.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:nuget/set-value-nuget
     affected_versions: vers:nuget/<2.0.0
     fixed_versions: vers:nuget/2.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/set-value
+    affected_versions: vers:npm/>=4.0.0|<4.0.1
+    fixed_versions: vers:npm/4.0.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:npm/set-value
@@ -26,6 +26,17 @@ impacted_packages:
     affected_versions: vers:npm/>=3.0.0|<3.0.3
     fixed_versions: vers:npm/3.0.3
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/jonschlinkert/set-value
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/jonschlinkert/set-value
+        commit: cb12f14955dde6e61829d70d1851bfea6a3c31ad
+      - vcs_url: https://github.com/jonschlinkert/set-value
+        commit: 09c4b108fea3c0260008590053ff13da64913245
+      - vcs_url: https://github.com/jonschlinkert/set-value
+        commit: 7cf8073bb06bf0c15e08475f9f952823b4576452
     introduced_in_commits: []
 severities:
   - score: '7.3'

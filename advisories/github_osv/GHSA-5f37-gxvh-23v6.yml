@@ -27,6 +27,20 @@ impacted_packages:
     fixed_versions: vers:composer/5.2.18
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:github/opsxcq/exploit-cve-2016-10033
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/opsxcq/exploit-cve-2016-10033
+        commit: 1f6642cf116ecb6b6b96b5ec966915d5100adfe3
+    introduced_in_commits: []
+  - purl: pkg:github/rapid7/metasploit-framework
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/rapid7/metasploit-framework
+        commit: 1f4ff30adb09c836dc9cb5f2c2024a244cebd08d
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
@@ -39,8 +53,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-88
   - CWE-77
+  - CWE-88
 references:
   - url: http://packetstormsecurity.com/files/140291/PHPMailer-Remote-Code-Execution.html
     reference_type:
@@ -54,22 +68,13 @@ references:
   - url: http://seclists.org/fulldisclosure/2016/Dec/78
     reference_type:
     reference_id:
-  - url: https://github.com/FriendsOfPHP/security-advisories/blob/master/phpmailer/phpmailer/CVE-2016-10033.yaml
-    reference_type:
-    reference_id:
   - url: https://github.com/PHPMailer/PHPMailer
     reference_type:
     reference_id:
   - url: https://github.com/PHPMailer/PHPMailer/releases/tag/v5.2.18
     reference_type:
     reference_id:
-  - url: https://github.com/PHPMailer/PHPMailer/security/advisories/GHSA-5f37-gxvh-23v6
-    reference_type:
-    reference_id:
   - url: https://github.com/PHPMailer/PHPMailer/wiki/About-the-CVE-2016-10033-and-CVE-2016-10045-vulnerabilities
-    reference_type:
-    reference_id:
-  - url: https://legalhackers.com/advisories/PHPMailer-Exploit-Remote-Code-Exec-CVE-2016-10033-Vuln.html
     reference_type:
     reference_id:
   - url: https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2016-10033
@@ -108,6 +113,48 @@ references:
   - url: http://www.rapid7.com/db/modules/exploit/multi/http/phpmailer_arg_injection
     reference_type:
     reference_id:
+  - url: https://exploitbox.io/vuln/WordPress-Exploit-4-6-RCE-CODE-EXEC-CVE-2016-10033.html
+    reference_type: exploit
+    reference_id: CVE-2016-10033
+  - url: https://github.com/opsxcq/exploit-CVE-2016-10033/commit/1f6642cf116ecb6b6b96b5ec966915d5100adfe3
+    reference_type: exploit
+    reference_id: CVE-2016-10033
+  - url: https://github.com/rapid7/metasploit-framework/blob/1f4ff30adb09c836dc9cb5f2c2024a244cebd08d/modules/exploits/unix/webapp/wp_phpmailer_host_header.rb
+    reference_type: exploit
+    reference_id: CVE-2016-10033
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/webapps/41962.sh
+    reference_type: exploit
+    reference_id: CVE-2016-10033
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/php/remote/42024.rb
+    reference_type: exploit
+    reference_id: CVE-2016-10033
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/php/webapps/40968.sh
+    reference_type: exploit
+    reference_id: CVE-2016-10033
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/php/webapps/40970.php
+    reference_type: exploit
+    reference_id: CVE-2016-10033
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/php/webapps/40974.py
+    reference_type: exploit
+    reference_id: CVE-2016-10033
+  - url: https://legalhackers.com/advisories/PHPMailer-Exploit-Remote-Code-Exec-CVE-2016-10033-Vuln.html
+    reference_type: exploit
+    reference_id: CVE-2016-10033
   - url: https://nvd.nist.gov/vuln/detail/CVE-2016-10033
     reference_type:
     reference_id: CVE-2016-10033
+  - url: https://github.com/FriendsOfPHP/security-advisories/blob/master/phpmailer/phpmailer/CVE-2016-10033.yaml
+    reference_type:
+    reference_id: CVE-2016-10033.YAML
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/php/webapps/40969.py
+    reference_type: exploit
+    reference_id: CVE-2016-10045;CVE-2016-10033
+  - url: https://exploitbox.io/vuln/Vanilla-Forums-Exploit-RCE-0day-Remote-Code-Exec-CVE-2016-10033.html
+    reference_type: exploit
+    reference_id: CVE-2016-10073;CVE-2016-10033
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/php/remote/41996.sh
+    reference_type: exploit
+    reference_id: CVE-2016-10073;CVE-2016-10033
+  - url: https://github.com/PHPMailer/PHPMailer/security/advisories/GHSA-5f37-gxvh-23v6
+    reference_type:
+    reference_id: GHSA-5f37-gxvh-23v6

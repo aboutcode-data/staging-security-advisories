@@ -8,6 +8,13 @@ summary: raspap-webgui in RaspAP 2.6.6 allows attackers to execute commands as r
   as root with no password; however, the www-data account can also overwrite /etc/raspap/hostapd/enablelog.sh
   with any executable content.
 impacted_packages:
+  - purl: pkg:github/raspap/raspap-webgui
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/raspap/raspap-webgui
+        commit: fabc48c7daae4013b9888f266332e510b196a062
+    introduced_in_commits: []
   - purl: pkg:composer/billz/raspap-webgui
     affected_versions: vers:composer/<=2.6.6
     fixed_versions:

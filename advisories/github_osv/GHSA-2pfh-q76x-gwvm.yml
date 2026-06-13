@@ -8,6 +8,11 @@ summary: |
   A flaw was found in Ansible, where a user's controller is vulnerable to template injection. This issue can occur through facts used in the template if the user is trying to put templates in multi-line YAML strings and the facts being handled do not routinely include special template characters. This flaw allows attackers to perform command injection, which discloses sensitive information. The highest threat from this vulnerability is to confidentiality and integrity.
 impacted_packages:
   - purl: pkg:pypi/ansible
+    affected_versions: vers:pypi/>=2.11.0a1|<2.11.2rc1
+    fixed_versions: vers:pypi/2.11.2rc1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/ansible
     affected_versions: vers:pypi/<2.9.23rc1
     fixed_versions: vers:pypi/2.9.23rc1
     fixed_in_commits: []
@@ -17,10 +22,16 @@ impacted_packages:
     fixed_versions: vers:pypi/2.10.11rc1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:pypi/ansible
-    affected_versions: vers:pypi/>=2.11.0a1|<2.11.2rc1
-    fixed_versions: vers:pypi/2.11.2rc1
-    fixed_in_commits: []
+  - purl: pkg:github/ansible/ansible
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/ansible/ansible
+        commit: 8b17e5b9229ffaecfe10a4881bc3f87dd2c184e1
+      - vcs_url: https://github.com/ansible/ansible
+        commit: 8aa850e3573e48c9a2f12aef84e8a3a6f5ba4847
+      - vcs_url: https://github.com/ansible/ansible
+        commit: 03aff644cc1c00e1f7551195c68fbd0d13a39e6e
     introduced_in_commits: []
 severities:
   - score: '7.1'
@@ -39,9 +50,9 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-20
   - CWE-77
   - CWE-94
+  - CWE-20
 references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1968412
     reference_type:

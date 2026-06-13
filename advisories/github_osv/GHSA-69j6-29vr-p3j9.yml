@@ -75,7 +75,14 @@ summary: "Authentication bypass for viewing and deletions of snapshots\nToday we
   \ and sign in to the community site, or via updates from our [Security Announcements RSS feed](https://community.grafana.com/c/security-announcements.rss).\n\
   \n## Acknowledgement\n\nWe would like to thank [Tran Viet Tuan](https://github.com/theblackturtle)\
   \ for responsibly disclosing the initially discovered vulnerability to us."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/grafana/grafana
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/grafana/grafana
+        commit: 2d456a6375855364d098ede379438bf7f0667269
+    introduced_in_commits: []
 severities:
   - score: '7.3'
     scoring_system: cvssv3.1
@@ -88,8 +95,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-862
   - CWE-287
+  - CWE-862
 references:
   - url: https://github.com/grafana/grafana
     reference_type:
