@@ -6,13 +6,13 @@ aliases:
 summary: A vulnerability in Icinga could lead to privilege escalation.
 impacted_packages:
   - purl: pkg:ebuild/net-analyzer/icinga
-    affected_versions:
-    fixed_versions: vers:ebuild/>=1.13.4
+    affected_versions: vers:ebuild/<1.13.4
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/net-analyzer/icinga
-    affected_versions: vers:ebuild/<1.13.4
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.13.4
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -23,12 +23,6 @@ severities:
     url:
 weaknesses: []
 references:
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/local/40921.sh
-    reference_type: exploit
-    reference_id: CVE-2016-9566
-  - url: https://legalhackers.com/advisories/Nagios-Exploit-Root-PrivEsc-CVE-2016-9566.html
-    reference_type: exploit
-    reference_id: CVE-2016-9566
   - url: https://security.gentoo.org/glsa/201612-51
     reference_type:
     reference_id: GLSA-201612-51

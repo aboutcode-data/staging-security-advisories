@@ -16,13 +16,13 @@ summary: |
       which may allow remote Denial of Service.
 impacted_packages:
   - purl: pkg:ebuild/net-misc/dhcp
-    affected_versions:
-    fixed_versions: vers:ebuild/>=4.2.4_p2
+    affected_versions: vers:ebuild/<4.2.4_p2
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/net-misc/dhcp
-    affected_versions: vers:ebuild/<4.2.4_p2
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=4.2.4_p2
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -33,12 +33,6 @@ severities:
     url:
 weaknesses: []
 references:
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/dos/37538.py
-    reference_type: exploit
-    reference_id: CVE-2012-3571;OSVDB-84255
-  - url: https://www.securityfocus.com/bid/54665/info
-    reference_type: exploit
-    reference_id: CVE-2012-3571;OSVDB-84255
   - url: https://security.gentoo.org/glsa/201301-06
     reference_type:
     reference_id: GLSA-201301-06

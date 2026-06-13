@@ -17,8 +17,13 @@ summary: |
       wpa_supplicant that allows attackers to conduct a Man in the Middle attack.
 impacted_packages:
   - purl: pkg:ebuild/net-wireless/hostapd
-    affected_versions:
-    fixed_versions: vers:ebuild/>=2.6-r1
+    affected_versions: vers:ebuild/<2.6-r1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/net-wireless/wpa_supplicant
+    affected_versions: vers:ebuild/<2.6-r3
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/net-wireless/wpa_supplicant
@@ -27,13 +32,8 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/net-wireless/hostapd
-    affected_versions: vers:ebuild/<2.6-r1
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/net-wireless/wpa_supplicant
-    affected_versions: vers:ebuild/<2.6-r3
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.6-r1
     fixed_in_commits: []
     introduced_in_commits: []
 severities:

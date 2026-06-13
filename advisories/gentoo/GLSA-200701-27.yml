@@ -8,13 +8,13 @@ summary: |
       the execution of arbitrary Samba commands.
 impacted_packages:
   - purl: pkg:ebuild/www-client/elinks
-    affected_versions:
-    fixed_versions: vers:ebuild/>=0.11.2
+    affected_versions: vers:ebuild/<0.11.2
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/www-client/elinks
-    affected_versions: vers:ebuild/<0.11.2
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=0.11.2
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -25,6 +25,15 @@ severities:
     url:
 weaknesses: []
 references:
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/remote/2784.html
+    reference_type: exploit
+    reference_id: CVE-2006-5925
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/remote/29033.html
+    reference_type: exploit
+    reference_id: CVE-2006-5925;OSVDB-30437
+  - url: https://www.securityfocus.com/bid/21082/info
+    reference_type: exploit
+    reference_id: CVE-2006-5925;OSVDB-30437
   - url: https://security.gentoo.org/glsa/200701-27
     reference_type:
     reference_id: GLSA-200701-27

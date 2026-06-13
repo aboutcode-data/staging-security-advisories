@@ -10,13 +10,20 @@ summary: |
       cause a Denial of Service condition.
 impacted_packages:
   - purl: pkg:ebuild/dev-libs/icu
-    affected_versions:
-    fixed_versions: vers:ebuild/>=55.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/dev-libs/icu
     affected_versions: vers:ebuild/<55.1
     fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/pedrib/poc
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/pedrib/poc
+        commit: a2842a650de88c582e963493d5e2711aa4a1b747
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-libs/icu
+    affected_versions:
+    fixed_versions: vers:ebuild/>=55.1
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -27,6 +34,12 @@ severities:
     url:
 weaknesses: []
 references:
+  - url: https://github.com/pedrib/PoC/blob/a2842a650de88c582e963493d5e2711aa4a1b747/advisories/i-c-u-fail.txt
+    reference_type: exploit
+    reference_id: CVE-2014-8147;CVE-2014-8146
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/local/43887.txt
+    reference_type: exploit
+    reference_id: CVE-2014-8147;CVE-2014-8146
   - url: https://security.gentoo.org/glsa/201507-04
     reference_type:
     reference_id: GLSA-201507-04

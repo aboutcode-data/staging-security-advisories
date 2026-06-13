@@ -70,13 +70,13 @@ summary: |
       of which could lead to arbitrary code execution.
 impacted_packages:
   - purl: pkg:ebuild/dev-db/phpmyadmin
-    affected_versions:
-    fixed_versions: vers:ebuild/>=4.6.5.1
+    affected_versions: vers:ebuild/<4.6.5.1
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/dev-db/phpmyadmin
-    affected_versions: vers:ebuild/<4.6.5.1
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=4.6.5.1
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -87,9 +87,6 @@ severities:
     url:
 weaknesses: []
 references:
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/php/webapps/40185.py
-    reference_type: exploit
-    reference_id: CVE-2016-5734
   - url: https://security.gentoo.org/glsa/201701-32
     reference_type:
-    reference_id: GLSA-201701-32
+    reference_id:

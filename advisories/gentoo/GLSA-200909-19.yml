@@ -9,13 +9,13 @@ summary: |
       arbitrary code, or a Denial of Service.
 impacted_packages:
   - purl: pkg:ebuild/net-dns/dnsmasq
-    affected_versions:
-    fixed_versions: vers:ebuild/>=2.5.0
+    affected_versions: vers:ebuild/<2.5.0
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/net-dns/dnsmasq
-    affected_versions: vers:ebuild/<2.5.0
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.5.0
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -26,6 +26,9 @@ severities:
     url:
 weaknesses: []
 references:
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/windows/dos/9617.txt
+    reference_type: exploit
+    reference_id: CVE-2009-2958;CVE-2009-2957;OSVDB-57593;OSVDB-57592
   - url: https://security.gentoo.org/glsa/200909-19
     reference_type:
     reference_id: GLSA-200909-19

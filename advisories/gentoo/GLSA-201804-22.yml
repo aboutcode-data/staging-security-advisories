@@ -40,8 +40,13 @@ summary: |
       Chrome, the worst of which could result in the execution of arbitrary code.
 impacted_packages:
   - purl: pkg:ebuild/www-client/chromium
-    affected_versions:
-    fixed_versions: vers:ebuild/>=66.0.3359.117
+    affected_versions: vers:ebuild/<66.0.3359.117
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/www-client/google-chrome
+    affected_versions: vers:ebuild/<66.0.3359.117
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/www-client/google-chrome
@@ -50,13 +55,8 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/www-client/chromium
-    affected_versions: vers:ebuild/<66.0.3359.117
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/www-client/google-chrome
-    affected_versions: vers:ebuild/<66.0.3359.117
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=66.0.3359.117
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -67,6 +67,12 @@ severities:
     url:
 weaknesses: []
 references:
+  - url: https://bugs.chromium.org/p/project-zero/issues/detail?id=1546
+    reference_type: exploit
+    reference_id: CVE-2018-6092
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/dos/44860.js
+    reference_type: exploit
+    reference_id: CVE-2018-6092
   - url: https://security.gentoo.org/glsa/201804-22
     reference_type:
     reference_id: GLSA-201804-22

@@ -14,13 +14,13 @@ summary: |
       Service and username disclosure.
 impacted_packages:
   - purl: pkg:ebuild/net-misc/asterisk
-    affected_versions:
-    fixed_versions: vers:ebuild/>=1.2.32
+    affected_versions: vers:ebuild/<1.2.32
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/net-misc/asterisk
-    affected_versions: vers:ebuild/<1.2.32
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.2.32
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -34,6 +34,3 @@ references:
   - url: https://security.gentoo.org/glsa/200905-01
     reference_type:
     reference_id: GLSA-200905-01
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/dos/5749.pl
-    reference_type: exploit
-    reference_id: OSVDB-46014;CVE-2008-2119

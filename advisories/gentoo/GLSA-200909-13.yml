@@ -8,13 +8,13 @@ summary: |
       found in irssi which might result in the execution of arbitrary code.
 impacted_packages:
   - purl: pkg:ebuild/net-irc/irssi
-    affected_versions:
-    fixed_versions: vers:ebuild/>=0.8.13-r1
+    affected_versions: vers:ebuild/<0.8.13-r1
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/net-irc/irssi
-    affected_versions: vers:ebuild/<0.8.13-r1
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=0.8.13-r1
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -25,6 +25,12 @@ severities:
     url:
 weaknesses: []
 references:
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/dos/33041.txt
+    reference_type: exploit
+    reference_id: CVE-2009-1959;OSVDB-54977
+  - url: https://www.securityfocus.com/bid/35399/info
+    reference_type: exploit
+    reference_id: CVE-2009-1959;OSVDB-54977
   - url: https://security.gentoo.org/glsa/200909-13
     reference_type:
     reference_id: GLSA-200909-13

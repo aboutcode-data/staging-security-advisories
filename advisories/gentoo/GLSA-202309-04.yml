@@ -8,8 +8,13 @@ summary: An arbitrary file overwrite vulnerability has been discovered in RAR an
   resulting in arbitrary code execution.
 impacted_packages:
   - purl: pkg:ebuild/app-arch/rar
-    affected_versions:
-    fixed_versions: vers:ebuild/>=6.23
+    affected_versions: vers:ebuild/<6.23
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/app-arch/unrar
+    affected_versions: vers:ebuild/<6.2.10
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/app-arch/unrar
@@ -18,13 +23,8 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/app-arch/rar
-    affected_versions: vers:ebuild/<6.23
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/app-arch/unrar
-    affected_versions: vers:ebuild/<6.2.10
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=6.23
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
