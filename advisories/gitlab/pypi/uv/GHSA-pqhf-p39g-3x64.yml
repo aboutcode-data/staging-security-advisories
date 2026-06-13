@@ -18,6 +18,11 @@ summary: |
   When using wheel distributions, installation of the malicious package is not sufficient for execution of malicious code, the vicim would need to perform a separate invocation, e.g., `python -c "import $package"`.
   - If a ZIP-based source distribution (which are less common than tarball source distributions), is encountered, malicious code can be executed during package resolution or installation. uv may invoke the malicious code when building the source distribution into a wheel.
 impacted_packages:
+  - purl: pkg:pypi/uv
+    affected_versions: vers:pypi/<0.9.6
+    fixed_versions: vers:pypi/0.9.6
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:github/astral-sh/uv
     affected_versions:
     fixed_versions:
@@ -25,17 +30,12 @@ impacted_packages:
       - vcs_url: https://github.com/astral-sh/uv
         commit: da659fee4898a73dbc75070f3e82d49f745e4628
     introduced_in_commits: []
-  - purl: pkg:pypi/uv
-    affected_versions: vers:pypi/<0.9.6
-    fixed_versions: vers:pypi/0.9.6
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities: []
 weaknesses:
-  - CWE-20
   - CWE-436
-  - CWE-1035
+  - CWE-20
   - CWE-937
+  - CWE-1035
 references:
   - url: https://github.com/astral-sh/uv
     reference_type:
