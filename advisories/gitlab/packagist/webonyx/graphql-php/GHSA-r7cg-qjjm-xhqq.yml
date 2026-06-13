@@ -1,0 +1,44 @@
+advisory_id: packagist/webonyx/graphql-php/GHSA-r7cg-qjjm-xhqq
+datasource_id: gitlab/packagist/webonyx/graphql-php/GHSA-r7cg-qjjm-xhqq
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/packagist/webonyx/graphql-php/GHSA-r7cg-qjjm-xhqq.yml
+aliases:
+  - GHSA-r7cg-qjjm-xhqq
+summary: |
+  webonyx/graphql-php has unbounded recursion in parser that causes stack overflow on crafted nested input
+  `GraphQL\Language\Parser` is a recursive descent parser with no recursion depth limit and no `zend.max_allowed_stack_size` interaction. Crafted nested queries trigger a SIGSEGV in the PHP runtime, killing the FPM/CLI worker process. Smallest crashing payload is approximately 74 KB.
+impacted_packages:
+  - purl: pkg:composer/webonyx/graphql-php
+    affected_versions: vers:composer/<15.32.3
+    fixed_versions: vers:composer/15.32.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/webonyx/graphql-php
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/webonyx/graphql-php
+        commit: 7b7f2080ca5f7d5340a696fc5701b19a9222d2c2
+    introduced_in_commits: []
+severities:
+  - score: None
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:H
+    published_at: None
+    url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/packagist/webonyx/graphql-php/GHSA-r7cg-qjjm-xhqq.yml
+weaknesses:
+  - CWE-1035
+  - CWE-937
+  - CWE-674
+references:
+  - url: https://github.com/webonyx/graphql-php/commit/7b7f2080ca5f7d5340a696fc5701b19a9222d2c2
+    reference_type:
+    reference_id:
+  - url: https://github.com/webonyx/graphql-php/releases/tag/v15.32.3
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-r7cg-qjjm-xhqq
+    reference_type:
+    reference_id: GHSA-r7cg-qjjm-xhqq
+  - url: https://github.com/webonyx/graphql-php/security/advisories/GHSA-r7cg-qjjm-xhqq
+    reference_type:
+    reference_id: GHSA-r7cg-qjjm-xhqq
