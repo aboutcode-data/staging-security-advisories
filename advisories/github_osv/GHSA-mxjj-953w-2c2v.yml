@@ -22,6 +22,11 @@ summary: |
   ### Attribution
   This vulnerability has been reported by members of the Aivul Team from Qihoo 360.
 impacted_packages:
+  - purl: pkg:pypi/tensorflow-cpu
+    affected_versions: vers:pypi/>=2.0.0|<2.0.3
+    fixed_versions: vers:pypi/2.0.3
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:pypi/tensorflow
     affected_versions: vers:pypi/<1.15.4
     fixed_versions: vers:pypi/1.15.4
@@ -53,11 +58,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/tensorflow-cpu
-    affected_versions: vers:pypi/>=2.0.0|<2.0.3
-    fixed_versions: vers:pypi/2.0.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow-cpu
     affected_versions: vers:pypi/>=2.1.0|<2.1.2
     fixed_versions: vers:pypi/2.1.2
     fixed_in_commits: []
@@ -96,6 +96,13 @@ impacted_packages:
     affected_versions: vers:pypi/2.3.0
     fixed_versions: vers:pypi/2.3.1
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/tensorflow/tensorflow
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/tensorflow/tensorflow
+        commit: 8ee24e7949a203d234489f9da2c5bf45a7d5157d
     introduced_in_commits: []
 severities:
   - score: '7.4'
@@ -138,9 +145,9 @@ references:
   - url: https://github.com/tensorflow/tensorflow/releases/tag/v2.3.1
     reference_type:
     reference_id:
-  - url: https://github.com/tensorflow/tensorflow/security/advisories/GHSA-mxjj-953w-2c2v
-    reference_type:
-    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2020-15208
     reference_type:
-    reference_id:
+    reference_id: CVE-2020-15208
+  - url: https://github.com/tensorflow/tensorflow/security/advisories/GHSA-mxjj-953w-2c2v
+    reference_type:
+    reference_id: GHSA-mxjj-953w-2c2v

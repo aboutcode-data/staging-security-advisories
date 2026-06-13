@@ -22,19 +22,9 @@ summary: |
   ### Attribution
   This vulnerability has been discovered from a variant analysis of [GHSA-cvpc-8phh-8f45](https://github.com/tensorflow/tensorflow/security/advisories/GHSA-cvpc-8phh-8f45).
 impacted_packages:
-  - purl: pkg:pypi/tensorflow-gpu
-    affected_versions: vers:pypi/2.2.0
-    fixed_versions: vers:pypi/2.2.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:pypi/tensorflow-cpu
-    affected_versions: vers:pypi/2.3.0
-    fixed_versions: vers:pypi/2.3.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow-gpu
-    affected_versions: vers:pypi/2.3.0
-    fixed_versions: vers:pypi/2.3.1
+    affected_versions: vers:pypi/>=2.0.0|<2.0.3
+    fixed_versions: vers:pypi/2.0.3
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/tensorflow
@@ -68,11 +58,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/tensorflow-cpu
-    affected_versions: vers:pypi/>=2.0.0|<2.0.3
-    fixed_versions: vers:pypi/2.0.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow-cpu
     affected_versions: vers:pypi/>=2.1.0|<2.1.2
     fixed_versions: vers:pypi/2.1.2
     fixed_in_commits: []
@@ -96,6 +81,38 @@ impacted_packages:
     affected_versions: vers:pypi/>=2.1.0|<2.1.2
     fixed_versions: vers:pypi/2.1.2
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow-gpu
+    affected_versions: vers:pypi/2.2.0
+    fixed_versions: vers:pypi/2.2.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow-cpu
+    affected_versions: vers:pypi/2.3.0
+    fixed_versions: vers:pypi/2.3.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow-gpu
+    affected_versions: vers:pypi/2.3.0
+    fixed_versions: vers:pypi/2.3.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/tensorflow/tensorflow
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/tensorflow/tensorflow
+        commit: d58c96946b2880991d63d1dacacb32f0a4dfa453
+      - vcs_url: https://github.com/tensorflow/tensorflow
+        commit: f4159ccef23d11eb58ee4263beaaeac1be3343c7
+      - vcs_url: https://github.com/tensorflow/tensorflow
+        commit: f50a14b00560a383865c2273e4a9094add3888d5
+      - vcs_url: https://github.com/tensorflow/tensorflow
+        commit: 8c2092e9f9ef78b3f9060f8bf5ce7a49d1ccdc8f
+      - vcs_url: https://github.com/tensorflow/tensorflow
+        commit: 1c8709b437fec10875b0cf271889afec9bbf582e
+      - vcs_url: https://github.com/tensorflow/tensorflow
+        commit: 094329d0dcb8290bed2b1ee420934971f422c86d
     introduced_in_commits: []
 severities:
   - score: '6.5'
@@ -153,9 +170,9 @@ references:
   - url: https://github.com/tensorflow/tensorflow/releases/tag/v2.3.1
     reference_type:
     reference_id:
-  - url: https://github.com/tensorflow/tensorflow/security/advisories/GHSA-x9j7-x98r-r4w2
-    reference_type:
-    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2020-15210
     reference_type:
-    reference_id:
+    reference_id: CVE-2020-15210
+  - url: https://github.com/tensorflow/tensorflow/security/advisories/GHSA-x9j7-x98r-r4w2
+    reference_type:
+    reference_id: GHSA-x9j7-x98r-r4w2

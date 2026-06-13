@@ -31,34 +31,69 @@ summary: |
 
   All OpenShift Container Platform 4.13 users are advised to upgrade to these updated packages and images when they are available in the appropriate release channel. To check for available updates, use the OpenShift CLI (oc) or web console. Instructions for upgrading a cluster are available at https://docs.openshift.com/container-platform/4.13/updating/updating-cluster-cli.html
 impacted_packages:
-  - purl: pkg:rpm/redhat/NetworkManager-team?arch=aarch64&epoch=1
+  - purl: pkg:rpm/redhat/NetworkManager-ovs-debuginfo?arch=s390x&epoch=1
     affected_versions: vers:rpm/<1.42.2-24.el9_2
     fixed_versions: vers:rpm/1.42.2-24.el9_2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/NetworkManager-cloud-setup?arch=aarch64&epoch=1
+  - purl: pkg:rpm/redhat/NetworkManager-ppp-debuginfo?arch=s390x&epoch=1
     affected_versions: vers:rpm/<1.42.2-24.el9_2
     fixed_versions: vers:rpm/1.42.2-24.el9_2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/NetworkManager-libnm?arch=aarch64&epoch=1
+  - purl: pkg:rpm/redhat/NetworkManager-team-debuginfo?arch=s390x&epoch=1
     affected_versions: vers:rpm/<1.42.2-24.el9_2
     fixed_versions: vers:rpm/1.42.2-24.el9_2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/NetworkManager-libnm-devel?arch=aarch64&epoch=1
+  - purl: pkg:rpm/redhat/NetworkManager-tui-debuginfo?arch=s390x&epoch=1
     affected_versions: vers:rpm/<1.42.2-24.el9_2
     fixed_versions: vers:rpm/1.42.2-24.el9_2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/NetworkManager-ovs?arch=aarch64&epoch=1
+  - purl: pkg:rpm/redhat/NetworkManager-wifi-debuginfo?arch=s390x&epoch=1
     affected_versions: vers:rpm/<1.42.2-24.el9_2
     fixed_versions: vers:rpm/1.42.2-24.el9_2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/NetworkManager-ppp?arch=aarch64&epoch=1
+  - purl: pkg:rpm/redhat/NetworkManager-wwan-debuginfo?arch=s390x&epoch=1
     affected_versions: vers:rpm/<1.42.2-24.el9_2
     fixed_versions: vers:rpm/1.42.2-24.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/buildah?arch=s390x&epoch=1
+    affected_versions: vers:rpm/<1.29.1-4.rhaos4.13.el9
+    fixed_versions: vers:rpm/1.29.1-4.rhaos4.13.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/buildah-tests?arch=s390x&epoch=1
+    affected_versions: vers:rpm/<1.29.1-4.rhaos4.13.el9
+    fixed_versions: vers:rpm/1.29.1-4.rhaos4.13.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/buildah-debugsource?arch=s390x&epoch=1
+    affected_versions: vers:rpm/<1.29.1-4.rhaos4.13.el9
+    fixed_versions: vers:rpm/1.29.1-4.rhaos4.13.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/buildah-debuginfo?arch=s390x&epoch=1
+    affected_versions: vers:rpm/<1.29.1-4.rhaos4.13.el9
+    fixed_versions: vers:rpm/1.29.1-4.rhaos4.13.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/buildah-tests-debuginfo?arch=s390x&epoch=1
+    affected_versions: vers:rpm/<1.29.1-4.rhaos4.13.el9
+    fixed_versions: vers:rpm/1.29.1-4.rhaos4.13.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/conmon?arch=s390x&epoch=3
+    affected_versions: vers:rpm/<2.1.7-4.rhaos4.13.el9
+    fixed_versions: vers:rpm/2.1.7-4.rhaos4.13.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/cri-tools?arch=s390x
+    affected_versions: vers:rpm/<1.26.0-6.el9
+    fixed_versions: vers:rpm/1.26.0-6.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/NetworkManager?arch=src&epoch=1
@@ -182,6 +217,36 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/NetworkManager-bluetooth?arch=aarch64&epoch=1
+    affected_versions: vers:rpm/<1.42.2-24.el9_2
+    fixed_versions: vers:rpm/1.42.2-24.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/NetworkManager-cloud-setup?arch=aarch64&epoch=1
+    affected_versions: vers:rpm/<1.42.2-24.el9_2
+    fixed_versions: vers:rpm/1.42.2-24.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/NetworkManager-libnm?arch=aarch64&epoch=1
+    affected_versions: vers:rpm/<1.42.2-24.el9_2
+    fixed_versions: vers:rpm/1.42.2-24.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/NetworkManager-libnm-devel?arch=aarch64&epoch=1
+    affected_versions: vers:rpm/<1.42.2-24.el9_2
+    fixed_versions: vers:rpm/1.42.2-24.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/NetworkManager-ovs?arch=aarch64&epoch=1
+    affected_versions: vers:rpm/<1.42.2-24.el9_2
+    fixed_versions: vers:rpm/1.42.2-24.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/NetworkManager-ppp?arch=aarch64&epoch=1
+    affected_versions: vers:rpm/<1.42.2-24.el9_2
+    fixed_versions: vers:rpm/1.42.2-24.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/NetworkManager-team?arch=aarch64&epoch=1
     affected_versions: vers:rpm/<1.42.2-24.el9_2
     fixed_versions: vers:rpm/1.42.2-24.el9_2
     fixed_in_commits: []
@@ -1811,11 +1876,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.1.13-3.rhaos4.13.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-tools-debuginfo?arch=s390x
-    affected_versions: vers:rpm/<1.26.0-6.el9
-    fixed_versions: vers:rpm/1.26.0-6.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/runc-debugsource?arch=x86_64&epoch=4
     affected_versions: vers:rpm/<1.1.13-3.rhaos4.13.el9
     fixed_versions: vers:rpm/1.1.13-3.rhaos4.13.el9
@@ -2411,66 +2471,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.42.2-24.el9_2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/NetworkManager-ovs-debuginfo?arch=s390x&epoch=1
-    affected_versions: vers:rpm/<1.42.2-24.el9_2
-    fixed_versions: vers:rpm/1.42.2-24.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/NetworkManager-ppp-debuginfo?arch=s390x&epoch=1
-    affected_versions: vers:rpm/<1.42.2-24.el9_2
-    fixed_versions: vers:rpm/1.42.2-24.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/NetworkManager-team-debuginfo?arch=s390x&epoch=1
-    affected_versions: vers:rpm/<1.42.2-24.el9_2
-    fixed_versions: vers:rpm/1.42.2-24.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/NetworkManager-tui-debuginfo?arch=s390x&epoch=1
-    affected_versions: vers:rpm/<1.42.2-24.el9_2
-    fixed_versions: vers:rpm/1.42.2-24.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/NetworkManager-wifi-debuginfo?arch=s390x&epoch=1
-    affected_versions: vers:rpm/<1.42.2-24.el9_2
-    fixed_versions: vers:rpm/1.42.2-24.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/NetworkManager-wwan-debuginfo?arch=s390x&epoch=1
-    affected_versions: vers:rpm/<1.42.2-24.el9_2
-    fixed_versions: vers:rpm/1.42.2-24.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/buildah?arch=s390x&epoch=1
-    affected_versions: vers:rpm/<1.29.1-4.rhaos4.13.el9
-    fixed_versions: vers:rpm/1.29.1-4.rhaos4.13.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/buildah-tests?arch=s390x&epoch=1
-    affected_versions: vers:rpm/<1.29.1-4.rhaos4.13.el9
-    fixed_versions: vers:rpm/1.29.1-4.rhaos4.13.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/buildah-debugsource?arch=s390x&epoch=1
-    affected_versions: vers:rpm/<1.29.1-4.rhaos4.13.el9
-    fixed_versions: vers:rpm/1.29.1-4.rhaos4.13.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/buildah-debuginfo?arch=s390x&epoch=1
-    affected_versions: vers:rpm/<1.29.1-4.rhaos4.13.el9
-    fixed_versions: vers:rpm/1.29.1-4.rhaos4.13.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/buildah-tests-debuginfo?arch=s390x&epoch=1
-    affected_versions: vers:rpm/<1.29.1-4.rhaos4.13.el9
-    fixed_versions: vers:rpm/1.29.1-4.rhaos4.13.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/conmon?arch=s390x&epoch=3
-    affected_versions: vers:rpm/<2.1.7-4.rhaos4.13.el9
-    fixed_versions: vers:rpm/2.1.7-4.rhaos4.13.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/conmon-debugsource?arch=s390x&epoch=3
     affected_versions: vers:rpm/<2.1.7-4.rhaos4.13.el9
     fixed_versions: vers:rpm/2.1.7-4.rhaos4.13.el9
@@ -2496,12 +2496,12 @@ impacted_packages:
     fixed_versions: vers:rpm/1.26.5-20.rhaos4.13.git2e90133.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-tools?arch=s390x
+  - purl: pkg:rpm/redhat/cri-tools-debugsource?arch=s390x
     affected_versions: vers:rpm/<1.26.0-6.el9
     fixed_versions: vers:rpm/1.26.0-6.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-tools-debugsource?arch=s390x
+  - purl: pkg:rpm/redhat/cri-tools-debuginfo?arch=s390x
     affected_versions: vers:rpm/<1.26.0-6.el9
     fixed_versions: vers:rpm/1.26.0-6.el9
     fixed_in_commits: []
