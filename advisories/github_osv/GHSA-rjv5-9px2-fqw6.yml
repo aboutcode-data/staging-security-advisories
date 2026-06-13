@@ -84,7 +84,14 @@ summary: "Gogs has authorization bypass in repository deletion API\n### Summary\
   \ & Data Destruction The most critical aspect of this vulnerability is the violation of the\
   \ Principle of Least Privilege. It allows a user with the lowest level of access (Read-Only)\
   \ to execute the most destructive action possible (Delete)."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/gogs/gogs
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/gogs/gogs
+        commit: 961a79e8f9f2b3190ea804bcf635e4b43b123272
+    introduced_in_commits: []
 severities:
   - score: '5.7'
     scoring_system: cvssv4

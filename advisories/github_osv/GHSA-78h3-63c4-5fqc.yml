@@ -118,7 +118,14 @@ summary: "WeKnora has Command Injection in MCP stdio test\n### Vulnerability
   \ and internal service access permissions\n- **Cross-Tenant Boundary Impact**: Execution occurs\
   \ in a shared backend runtime; depending on deployment configuration, impact may extend beyond\
   \ tenant boundaries (**exact scope is uncertain** and varies by deployment setup)"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/tencent/weknora
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/tencent/weknora
+        commit: f7900a5e9a18c99d25cec9589ead9e4e59ce04bb
+    introduced_in_commits: []
 severities:
   - score: '9.9'
     scoring_system: cvssv3.1
@@ -136,15 +143,15 @@ references:
   - url: https://github.com/Tencent/WeKnora
     reference_type:
     reference_id:
+  - url: https://github.com/Tencent/WeKnora/commit/f7900a5e9a18c99d25cec9589ead9e4e59ce04bb
+    reference_type:
+    reference_id:
+  - url: https://github.com/Tencent/WeKnora/security/advisories/GHSA-78h3-63c4-5fqc
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-22688
     reference_type:
     reference_id:
   - url: https://pkg.go.dev/vuln/GO-2026-4292
     reference_type:
     reference_id:
-  - url: https://github.com/Tencent/WeKnora/commit/f7900a5e9a18c99d25cec9589ead9e4e59ce04bb
-    reference_type: other
-    reference_id: f7900a5e9a18c99d25cec9589ead9e4e59ce04bb
-  - url: https://github.com/Tencent/WeKnora/security/advisories/GHSA-78h3-63c4-5fqc
-    reference_type: other
-    reference_id: GHSA-78h3-63c4-5fqc

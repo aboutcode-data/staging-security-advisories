@@ -101,7 +101,14 @@ summary: |
   ### Impact
 
   Any deployment using `trusted_ca_cert_file` or `trusted_ca_certs_pem_files` for mTLS will silently degrade to accepting any system-trusted client certificate if the CA file becomes unavailable. This can happen due to a typo in the path, file rotation, corruption, or permission changes. The server gives no indication that mTLS is misconfigured.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/caddyserver/caddy
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/caddyserver/caddy
+        commit: d42d39b4bc237c628f9a95363b28044cb7a7fe72
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv4
@@ -116,10 +123,19 @@ severities:
 weaknesses:
   - CWE-755
 references:
+  - url: https://gist.github.com/moscowchill/9566c79c76c0b64c57f8bd0716f97c48
+    reference_type:
+    reference_id:
   - url: https://github.com/caddyserver/caddy
     reference_type:
     reference_id:
   - url: https://github.com/caddyserver/caddy/commit/d42d39b4bc237c628f9a95363b28044cb7a7fe72
+    reference_type:
+    reference_id:
+  - url: https://github.com/caddyserver/caddy/releases/tag/v2.11.1
+    reference_type:
+    reference_id:
+  - url: https://github.com/caddyserver/caddy/security/advisories/GHSA-hffm-g8v7-wrv7
     reference_type:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-27586
@@ -128,12 +144,3 @@ references:
   - url: https://pkg.go.dev/vuln/GO-2026-4539
     reference_type:
     reference_id:
-  - url: https://gist.github.com/moscowchill/9566c79c76c0b64c57f8bd0716f97c48
-    reference_type: other
-    reference_id: 9566c79c76c0b64c57f8bd0716f97c48
-  - url: https://github.com/caddyserver/caddy/security/advisories/GHSA-hffm-g8v7-wrv7
-    reference_type: other
-    reference_id: GHSA-hffm-g8v7-wrv7
-  - url: https://github.com/caddyserver/caddy/releases/tag/v2.11.1
-    reference_type: other
-    reference_id: v2.11.1

@@ -122,7 +122,14 @@ summary: "Kata Container to Guest micro VM privilege escalation\n### Summary\n\n
   \  16:31   0:00 bash -i\nroot         377  0.0  0.0   7480   256 ?        R    17:33   0:00\
   \ ps auxw\nroot@localhost:/#\n```\n\n### Impact\nContainer to Guest micro VM Escape (no escape\
   \ to Host, no persistence of the overwritten image)"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/kata-containers/kata-containers
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/kata-containers/kata-containers
+        commit: 6a672503973bf7c687053e459bfff8a9652e16bf
+    introduced_in_commits: []
 severities:
   - score: '5.2'
     scoring_system: cvssv4
@@ -140,15 +147,15 @@ references:
   - url: https://github.com/kata-containers/kata-containers
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-24834
+  - url: https://github.com/kata-containers/kata-containers/commit/6a672503973bf7c687053e459bfff8a9652e16bf
     reference_type:
     reference_id:
   - url: https://github.com/kata-containers/kata-containers/releases/tag/3.27.0
-    reference_type: other
-    reference_id: 3.27.0
-  - url: https://github.com/kata-containers/kata-containers/commit/6a672503973bf7c687053e459bfff8a9652e16bf
-    reference_type: other
-    reference_id: 6a672503973bf7c687053e459bfff8a9652e16bf
+    reference_type:
+    reference_id:
   - url: https://github.com/kata-containers/kata-containers/security/advisories/GHSA-wwj6-vghv-5p64
-    reference_type: other
-    reference_id: GHSA-wwj6-vghv-5p64
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-24834
+    reference_type:
+    reference_id:

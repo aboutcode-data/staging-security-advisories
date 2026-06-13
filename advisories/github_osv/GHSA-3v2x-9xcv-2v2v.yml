@@ -35,7 +35,14 @@ summary: "SurrealDB Affected by Confused Deputy Privilege Escalation through Fut
   \ fields and events, and recommended to minimise these instances.\n\n### References\n[Futures](https://surrealdb.com/docs/surrealql/datamodel/futures)\n\
   [Closures](https://surrealdb.com/docs/surrealql/datamodel/closures)\n[SurrealDB Environment\
   \ Variables](https://surrealdb.com/docs/surrealdb/cli/env)"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/surrealdb/surrealdb
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/surrealdb/surrealdb
+        commit: f515c91363ee735aa1bc08580d9e7fa0de6e736f
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv4
@@ -50,6 +57,9 @@ severities:
 weaknesses:
   - CWE-441
 references:
+  - url: https://github.com/surrealdb/surrealdb
+    reference_type:
+    reference_id:
   - url: https://github.com/surrealdb/surrealdb/commit/f515c91363ee735aa1bc08580d9e7fa0de6e736f
     reference_type:
     reference_id:
@@ -62,6 +72,3 @@ references:
   - url: https://github.com/surrealdb/surrealdb/security/advisories/GHSA-3v2x-9xcv-2v2v
     reference_type:
     reference_id:
-  - url: https://github.com/surrealdb/surrealdb
-    reference_type: other
-    reference_id: surrealdb

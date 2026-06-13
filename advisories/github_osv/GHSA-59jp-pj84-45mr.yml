@@ -29,7 +29,14 @@ summary: "Fulcio is vulnerable to Server-Side Request Forgery (SSRF) via MetaIss
   \ URL\n5. HTTP request goes to `attacker.com`, not `amazonaws.com`\n6. Attacker returns OIDC\
   \ discovery with `jwks_uri` pointing to internal service\n7. Fulcio fetches from internal\
   \ service → SSRF"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/sigstore/fulcio
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/sigstore/fulcio
+        commit: eaae2f2be56df9dea5f9b439ec81bedae4c0978d
+    introduced_in_commits: []
 severities:
   - score: '5.8'
     scoring_system: cvssv3.1
@@ -47,12 +54,12 @@ references:
   - url: https://github.com/sigstore/fulcio
     reference_type:
     reference_id:
+  - url: https://github.com/sigstore/fulcio/commit/eaae2f2be56df9dea5f9b439ec81bedae4c0978d
+    reference_type:
+    reference_id:
+  - url: https://github.com/sigstore/fulcio/security/advisories/GHSA-59jp-pj84-45mr
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-22772
     reference_type:
     reference_id:
-  - url: https://github.com/sigstore/fulcio/commit/eaae2f2be56df9dea5f9b439ec81bedae4c0978d
-    reference_type: other
-    reference_id: eaae2f2be56df9dea5f9b439ec81bedae4c0978d
-  - url: https://github.com/sigstore/fulcio/security/advisories/GHSA-59jp-pj84-45mr
-    reference_type: other
-    reference_id: GHSA-59jp-pj84-45mr

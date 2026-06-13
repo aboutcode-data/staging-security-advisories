@@ -103,7 +103,14 @@ summary: "Mailpit is Vulnerable to Server-Side Request Forgery (SSRF) via Link C
   \  }\n\n  func isValidLinkURL(str string) bool {\n        u, err := url.Parse(str)\n     \
   \   return err == nil && (u.Scheme == \"http\" || u.Scheme == \"https\") && u.Hostname() !=\
   \ \"\"\n  }\n\n```\nThis fix should mitigate the reported SSRF."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/axllent/mailpit
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/axllent/mailpit
+        commit: 10ad4df8cc0cd9e51dea1b4410009545eef7fbf5
+    introduced_in_commits: []
 severities:
   - score: '5.8'
     scoring_system: cvssv3.1
@@ -121,15 +128,15 @@ references:
   - url: https://github.com/axllent/mailpit
     reference_type:
     reference_id:
+  - url: https://github.com/axllent/mailpit/commit/10ad4df8cc0cd9e51dea1b4410009545eef7fbf5
+    reference_type:
+    reference_id:
+  - url: https://github.com/axllent/mailpit/releases/tag/v1.29.2
+    reference_type:
+    reference_id:
+  - url: https://github.com/axllent/mailpit/security/advisories/GHSA-mpf7-p9x7-96r3
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-27808
     reference_type:
     reference_id:
-  - url: https://github.com/axllent/mailpit/commit/10ad4df8cc0cd9e51dea1b4410009545eef7fbf5
-    reference_type: other
-    reference_id: 10ad4df8cc0cd9e51dea1b4410009545eef7fbf5
-  - url: https://github.com/axllent/mailpit/security/advisories/GHSA-mpf7-p9x7-96r3
-    reference_type: other
-    reference_id: GHSA-mpf7-p9x7-96r3
-  - url: https://github.com/axllent/mailpit/releases/tag/v1.29.2
-    reference_type: other
-    reference_id: v1.29.2

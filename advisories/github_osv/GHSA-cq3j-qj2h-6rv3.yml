@@ -40,7 +40,14 @@ summary: "Container and Containerization archive extraction does not guard again
   \ operations can extract a file into any user-writable location on the system using carefully\
   \ chosen pathnames. This advisory is **not** a privilege escalation, the affected files can\
   \ only be written to already user-writable locations."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/apple/containerization
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apple/containerization
+        commit: 3e93416b9a6d7b4c25fff7e9dea22a9ca687ee52
+    introduced_in_commits: []
 severities:
   - score: '1.9'
     scoring_system: cvssv4
@@ -62,5 +69,5 @@ references:
     reference_type:
     reference_id:
   - url: https://github.com/apple/containerization/security/advisories/GHSA-cq3j-qj2h-6rv3
-    reference_type: other
-    reference_id: GHSA-cq3j-qj2h-6rv3
+    reference_type:
+    reference_id:

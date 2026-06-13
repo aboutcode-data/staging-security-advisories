@@ -123,7 +123,16 @@ summary: "SM2-PKE has 32-bit Biased Nonce Vulnerability\n### Summary\n\nA critic
   \ If the aforementioned vulnerabilities cannot be fixed within 90 days of submission, the\
   \ organization reserves the right to publicly disclose all information about the issues after\
   \ this timeframe."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/rustcrypto/elliptic-curves
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/rustcrypto/elliptic-curves
+        commit: 4781762f23ff22ab34763410f648128055c93731
+      - vcs_url: https://github.com/rustcrypto/elliptic-curves
+        commit: e4f77788130d065d760e57fb109370827110a525
+    introduced_in_commits: []
 severities:
   - score: '8.7'
     scoring_system: cvssv4
@@ -138,27 +147,27 @@ severities:
 weaknesses:
   - CWE-331
 references:
+  - url: https://crates.io/crates/sm2/0.14.0-pre.0
+    reference_type:
+    reference_id:
+  - url: https://crates.io/crates/sm2/0.14.0-rc.0
+    reference_type:
+    reference_id:
   - url: https://github.com/RustCrypto/elliptic-curves
+    reference_type:
+    reference_id:
+  - url: https://github.com/RustCrypto/elliptic-curves/commit/4781762f23ff22ab34763410f648128055c93731
+    reference_type:
+    reference_id:
+  - url: https://github.com/RustCrypto/elliptic-curves/commit/e4f77788130d065d760e57fb109370827110a525
+    reference_type:
+    reference_id:
+  - url: https://github.com/RustCrypto/elliptic-curves/pull/1600
+    reference_type:
+    reference_id:
+  - url: https://github.com/RustCrypto/elliptic-curves/security/advisories/GHSA-w3g8-fp6j-wvqw
     reference_type:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-22698
     reference_type:
     reference_id:
-  - url: https://crates.io/crates/sm2/0.14.0-pre.0
-    reference_type: other
-    reference_id: 0.14.0-pre.0
-  - url: https://crates.io/crates/sm2/0.14.0-rc.0
-    reference_type: other
-    reference_id: 0.14.0-rc.0
-  - url: https://github.com/RustCrypto/elliptic-curves/pull/1600
-    reference_type: other
-    reference_id: 1600
-  - url: https://github.com/RustCrypto/elliptic-curves/commit/4781762f23ff22ab34763410f648128055c93731
-    reference_type: other
-    reference_id: 4781762f23ff22ab34763410f648128055c93731
-  - url: https://github.com/RustCrypto/elliptic-curves/commit/e4f77788130d065d760e57fb109370827110a525
-    reference_type: other
-    reference_id: e4f77788130d065d760e57fb109370827110a525
-  - url: https://github.com/RustCrypto/elliptic-curves/security/advisories/GHSA-w3g8-fp6j-wvqw
-    reference_type: other
-    reference_id: GHSA-w3g8-fp6j-wvqw

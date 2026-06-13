@@ -55,7 +55,14 @@ summary: "RustCrypto: Signatures has timing side-channel in ML-DSA decomposition
   \    }\n     }\n```\n\nSee our blog post on [how we avoided side-channels in our Go implementation\
   \ of ML-DSA](https://blog.trailofbits.com/2025/11/14/how-we-avoided-side-channels-in-our-new-post-quantum-go-cryptography-libraries/)\
   \ for more information."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/rustcrypto/signatures
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/rustcrypto/signatures
+        commit: 035d9eef98486ecd00a8bf418c7817eb14dd6558
+    introduced_in_commits: []
 severities:
   - score: '6.4'
     scoring_system: cvssv3.1
@@ -73,18 +80,18 @@ references:
   - url: https://github.com/RustCrypto/signatures
     reference_type:
     reference_id:
+  - url: https://github.com/RustCrypto/signatures/commit/035d9eef98486ecd00a8bf418c7817eb14dd6558
+    reference_type:
+    reference_id:
+  - url: https://github.com/RustCrypto/signatures/pull/1144
+    reference_type:
+    reference_id:
+  - url: https://github.com/RustCrypto/signatures/security/advisories/GHSA-hcp2-x6j4-29j7
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-22705
     reference_type:
     reference_id:
   - url: https://rustsec.org/advisories/RUSTSEC-2025-0144.html
     reference_type:
     reference_id:
-  - url: https://github.com/RustCrypto/signatures/commit/035d9eef98486ecd00a8bf418c7817eb14dd6558
-    reference_type: other
-    reference_id: 035d9eef98486ecd00a8bf418c7817eb14dd6558
-  - url: https://github.com/RustCrypto/signatures/pull/1144
-    reference_type: other
-    reference_id: 1144
-  - url: https://github.com/RustCrypto/signatures/security/advisories/GHSA-hcp2-x6j4-29j7
-    reference_type: other
-    reference_id: GHSA-hcp2-x6j4-29j7

@@ -27,6 +27,15 @@ summary: |
 
   We would like to thank Claudia Bartolini (TIM S.p.A), Marco Ventura (TIM S.p.A), and Massimiliano Brolli (TIM S.p.A) for reporting this issue.
 impacted_packages:
+  - purl: pkg:github/wildfly/wildfly-core
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/wildfly/wildfly-core
+        commit: 11e873031c522a0b36afb59880ce4dd59efd0bc0
+      - vcs_url: https://github.com/wildfly/wildfly-core
+        commit: a6f9d7534aa44de741337756f8377ad3a81f7695
+    introduced_in_commits: []
   - purl: pkg:maven/org.wildfly.core/wildfly-elytron-integration
     affected_versions: vers:maven/>=32.0.0.Beta1|<32.0.0.Beta3
     fixed_versions: vers:maven/32.0.0.Beta3
@@ -51,6 +60,9 @@ severities:
 weaknesses:
   - CWE-307
 references:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2337621
+    reference_type:
+    reference_id:
   - url: https://github.com/wildfly/wildfly-core
     reference_type:
     reference_id:
@@ -66,18 +78,15 @@ references:
   - url: https://github.com/wildfly/wildfly-core/pull/6635
     reference_type:
     reference_id:
-  - url: https://github.com/wildfly/wildfly-core/security/advisories/GHSA-qhp6-6p8p-2rqh
-    reference_type:
-    reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2025-23368
+  - url: https://www.gruppotim.it/it/footer/red-team.html
     reference_type:
     reference_id:
   - url: https://access.redhat.com/security/cve/CVE-2025-23368
-    reference_type: advisory
+    reference_type:
     reference_id: CVE-2025-23368
-  - url: https://www.gruppotim.it/it/footer/red-team.html
-    reference_type: advisory
-    reference_id: red-team.html
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2337621
-    reference_type: bug
-    reference_id: show_bug.cgi?id=2337621
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2025-23368
+    reference_type:
+    reference_id: CVE-2025-23368
+  - url: https://github.com/wildfly/wildfly-core/security/advisories/GHSA-qhp6-6p8p-2rqh
+    reference_type:
+    reference_id: GHSA-qhp6-6p8p-2rqh

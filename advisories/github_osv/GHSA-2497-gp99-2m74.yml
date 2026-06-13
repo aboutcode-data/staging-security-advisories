@@ -21,7 +21,21 @@ summary: "Pterodactyl endlessly reprocesses/reuploads activity log data due to S
   \n\n  \n\n### Impact \nBy successfully exploiting this vulnerability you can trigger a situation\
   \ where wings will keep uploading the same activity data to the panel repeatedly (growing\
   \ each time to include new activity) until the panels’ database server runs out of disk space."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/pterodactyl/wings
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/pterodactyl/wings
+        commit: 9ffbcdcdb1163da823cf9959b9602df9f7dcb54a
+    introduced_in_commits: []
+  - purl: pkg:github/pterodactyl/panel
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/pterodactyl/panel
+        commit: 09caa0d4995bd924b53b9a9e9b4883ac27bd5607
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
@@ -42,24 +56,24 @@ weaknesses:
   - CWE-400
   - CWE-770
 references:
+  - url: https://github.com/pterodactyl/panel/commit/09caa0d4995bd924b53b9a9e9b4883ac27bd5607
+    reference_type:
+    reference_id:
+  - url: https://github.com/pterodactyl/panel/releases/tag/v1.12.0
+    reference_type:
+    reference_id:
   - url: https://github.com/pterodactyl/wings
+    reference_type:
+    reference_id:
+  - url: https://github.com/pterodactyl/wings/blob/9ffbcdcdb1163da823cf9959b9602df9f7dcb54a/internal/cron/activity_cron.go#L81
+    reference_type:
+    reference_id:
+  - url: https://github.com/pterodactyl/wings/blob/9ffbcdcdb1163da823cf9959b9602df9f7dcb54a/internal/cron/sftp_cron.go#L86
+    reference_type:
+    reference_id:
+  - url: https://github.com/pterodactyl/wings/security/advisories/GHSA-2497-gp99-2m74
     reference_type:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-21696
     reference_type:
     reference_id:
-  - url: https://github.com/pterodactyl/panel/commit/09caa0d4995bd924b53b9a9e9b4883ac27bd5607
-    reference_type: other
-    reference_id: 09caa0d4995bd924b53b9a9e9b4883ac27bd5607
-  - url: https://github.com/pterodactyl/wings/blob/9ffbcdcdb1163da823cf9959b9602df9f7dcb54a/internal/cron/activity_cron.go#L81
-    reference_type: other
-    reference_id: activity_cron.go#L81
-  - url: https://github.com/pterodactyl/wings/security/advisories/GHSA-2497-gp99-2m74
-    reference_type: other
-    reference_id: GHSA-2497-gp99-2m74
-  - url: https://github.com/pterodactyl/wings/blob/9ffbcdcdb1163da823cf9959b9602df9f7dcb54a/internal/cron/sftp_cron.go#L86
-    reference_type: other
-    reference_id: sftp_cron.go#L86
-  - url: https://github.com/pterodactyl/panel/releases/tag/v1.12.0
-    reference_type: other
-    reference_id: v1.12.0

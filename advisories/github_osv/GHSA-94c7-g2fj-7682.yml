@@ -29,7 +29,16 @@ summary: "SiYuan Vulnerable to Arbitrary File Read via File Copy Functionality\n
   \ both user data and the underlying server environment.\n\n### Tested version:\n<img width=\"\
   1118\" height=\"650\" alt=\"image\" src=\"https://github.com/user-attachments/assets/c98cbbcc-2a28-4a15-b84e-4a7120649c5e\"\
   \ />\n\n### Solution\n\nhttps://github.com/siyuan-note/siyuan/issues/16860"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/siyuan-note/siyuan
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/siyuan-note/siyuan
+        commit: b2274baba2e11c8cf8901b0c5c871e5b27f1f6dd
+      - vcs_url: https://github.com/siyuan-note/siyuan
+        commit: f8f4b517077b92c90c0d7b51ac11be1b34b273ad
+    introduced_in_commits: []
 severities:
   - score: '8.3'
     scoring_system: cvssv4
@@ -47,18 +56,18 @@ references:
   - url: https://github.com/siyuan-note/siyuan
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-23851
+  - url: https://github.com/siyuan-note/siyuan/commit/b2274baba2e11c8cf8901b0c5c871e5b27f1f6dd
+    reference_type:
+    reference_id:
+  - url: https://github.com/siyuan-note/siyuan/commit/f8f4b517077b92c90c0d7b51ac11be1b34b273ad
     reference_type:
     reference_id:
   - url: https://github.com/siyuan-note/siyuan/issues/16860
-    reference_type: other
-    reference_id: 16860
-  - url: https://github.com/siyuan-note/siyuan/commit/b2274baba2e11c8cf8901b0c5c871e5b27f1f6dd
-    reference_type: other
-    reference_id: b2274baba2e11c8cf8901b0c5c871e5b27f1f6dd
-  - url: https://github.com/siyuan-note/siyuan/commit/f8f4b517077b92c90c0d7b51ac11be1b34b273ad
-    reference_type: other
-    reference_id: f8f4b517077b92c90c0d7b51ac11be1b34b273ad
+    reference_type:
+    reference_id:
   - url: https://github.com/siyuan-note/siyuan/security/advisories/GHSA-94c7-g2fj-7682
-    reference_type: other
-    reference_id: GHSA-94c7-g2fj-7682
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-23851
+    reference_type:
+    reference_id:

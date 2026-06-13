@@ -95,7 +95,14 @@ summary: "Traefik: TCP readTimeout bypass via STARTTLS on Postgres\n## Impact\n\
   \ affected; no Postgres configuration is required. At sufficient concurrency, Traefik can\
   \ hit process limits (FD exhaustion/goroutine pressure/memory), taking the proxy offline.\n\
   \n</details>"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/traefik/traefik
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/traefik/traefik
+        commit: 31e566e9f1d7888ccb6fbc18bfed427203c35678
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -113,15 +120,15 @@ references:
   - url: https://github.com/traefik/traefik
     reference_type:
     reference_id:
+  - url: https://github.com/traefik/traefik/commit/31e566e9f1d7888ccb6fbc18bfed427203c35678
+    reference_type:
+    reference_id:
+  - url: https://github.com/traefik/traefik/releases/tag/v3.6.8
+    reference_type:
+    reference_id:
+  - url: https://github.com/traefik/traefik/security/advisories/GHSA-89p3-4642-cr2w
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-25949
     reference_type:
     reference_id:
-  - url: https://github.com/traefik/traefik/commit/31e566e9f1d7888ccb6fbc18bfed427203c35678
-    reference_type: other
-    reference_id: 31e566e9f1d7888ccb6fbc18bfed427203c35678
-  - url: https://github.com/traefik/traefik/security/advisories/GHSA-89p3-4642-cr2w
-    reference_type: other
-    reference_id: GHSA-89p3-4642-cr2w
-  - url: https://github.com/traefik/traefik/releases/tag/v3.6.8
-    reference_type: other
-    reference_id: v3.6.8

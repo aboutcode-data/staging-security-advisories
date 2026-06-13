@@ -30,7 +30,16 @@ summary: "esm.sh is vulnerable to full-response SSRF\n### Summary\n\nesh.sh is v
   \ keys (SK) by accessing the metadata service address.\n\n### Fix\n\nIt is recommended to\
   \ use `safeurl.Client` as a replacement for `http.Client`.\n\nhttps://github.com/esm-dev/esm.sh/blob/f80ff8c8d58749e77fa964abde468fc61f8bd89e/internal/fetch/fetch.go#L13\n\
   \nhttps://github.com/doyensec/safeurl"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/esm-dev/esm.sh
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/esm-dev/esm.sh
+        commit: 0593516c4cfab49ad3b4900416a8432ff2e23eb0
+      - vcs_url: https://github.com/esm-dev/esm.sh
+        commit: f80ff8c8d58749e77fa964abde468fc61f8bd89e
+    introduced_in_commits: []
 severities:
   - score: '8.7'
     scoring_system: cvssv4
@@ -48,24 +57,24 @@ references:
   - url: https://github.com/esm-dev/esm.sh
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2025-50180
+  - url: https://github.com/esm-dev/esm.sh/blob/f80ff8c8d58749e77fa964abde468fc61f8bd89e/internal/fetch/fetch.go#L13
+    reference_type:
+    reference_id:
+  - url: https://github.com/esm-dev/esm.sh/blob/f80ff8c8d58749e77fa964abde468fc61f8bd89e/server/router.go#L511
     reference_type:
     reference_id:
   - url: https://github.com/esm-dev/esm.sh/commit/0593516c4cfab49ad3b4900416a8432ff2e23eb0
-    reference_type: other
-    reference_id: 0593516c4cfab49ad3b4900416a8432ff2e23eb0
+    reference_type:
+    reference_id:
   - url: https://github.com/esm-dev/esm.sh/pull/1149
-    reference_type: other
-    reference_id: 1149
-  - url: https://github.com/esm-dev/esm.sh/blob/f80ff8c8d58749e77fa964abde468fc61f8bd89e/internal/fetch/fetch.go#L13
-    reference_type: other
-    reference_id: fetch.go#L13
-  - url: https://github.com/esm-dev/esm.sh/security/advisories/GHSA-3c9r-837r-qqm4
-    reference_type: other
-    reference_id: GHSA-3c9r-837r-qqm4
-  - url: https://github.com/esm-dev/esm.sh/blob/f80ff8c8d58749e77fa964abde468fc61f8bd89e/server/router.go#L511
-    reference_type: other
-    reference_id: router.go#L511
+    reference_type:
+    reference_id:
   - url: https://github.com/esm-dev/esm.sh/releases/tag/v137
-    reference_type: other
-    reference_id: v137
+    reference_type:
+    reference_id:
+  - url: https://github.com/esm-dev/esm.sh/security/advisories/GHSA-3c9r-837r-qqm4
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2025-50180
+    reference_type:
+    reference_id:

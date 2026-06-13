@@ -56,7 +56,14 @@ summary: |
 
   * Ensure `session_start()` is called immediately at the entry point of your worker script to overwrite any residual data (though this may not cover all edge cases if middleware runs before the controller).
   * Manually unset `$_SESSION` at the very beginning of the worker loop, before handling the request.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/php/frankenphp
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/php/frankenphp
+        commit: 24d6c991a7761b638190eb081deae258143e9735
+    introduced_in_commits: []
 severities:
   - score: '8.7'
     scoring_system: cvssv4
@@ -69,22 +76,22 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-269
-  - CWE-613
   - CWE-384
+  - CWE-613
+  - CWE-269
 references:
   - url: https://github.com/php/frankenphp
+    reference_type:
+    reference_id:
+  - url: https://github.com/php/frankenphp/commit/24d6c991a7761b638190eb081deae258143e9735
+    reference_type:
+    reference_id:
+  - url: https://github.com/php/frankenphp/releases/tag/v1.11.2
+    reference_type:
+    reference_id:
+  - url: https://github.com/php/frankenphp/security/advisories/GHSA-r3xh-3r3w-47gp
     reference_type:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-24894
     reference_type:
     reference_id:
-  - url: https://github.com/php/frankenphp/commit/24d6c991a7761b638190eb081deae258143e9735
-    reference_type: other
-    reference_id: 24d6c991a7761b638190eb081deae258143e9735
-  - url: https://github.com/php/frankenphp/security/advisories/GHSA-r3xh-3r3w-47gp
-    reference_type: other
-    reference_id: GHSA-r3xh-3r3w-47gp
-  - url: https://github.com/php/frankenphp/releases/tag/v1.11.2
-    reference_type: other
-    reference_id: v1.11.2

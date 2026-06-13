@@ -42,15 +42,22 @@ summary: |
 
   Thanks @johnatzeropath, @LeftenantZero, and @yueyueL for reporting.
 impacted_packages:
+  - purl: pkg:npm/moltbot
+    affected_versions: vers:npm/<=0.1.0
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:npm/openclaw
     affected_versions: vers:npm/>=2026.1.20|<2026.2.1
     fixed_versions: vers:npm/2026.2.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:npm/moltbot
-    affected_versions: vers:npm/<=0.1.0
+  - purl: pkg:github/openclaw/openclaw
+    affected_versions:
     fixed_versions:
-    fixed_in_commits: []
+    fixed_in_commits:
+      - vcs_url: https://github.com/openclaw/openclaw
+        commit: a1e89afcc19efd641c02b24d66d689f181ae2b5c
     introduced_in_commits: []
 severities:
   - score: '7.5'
@@ -74,18 +81,18 @@ references:
   - url: https://github.com/openclaw/openclaw
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-28458
+  - url: https://github.com/openclaw/openclaw/commit/a1e89afcc19efd641c02b24d66d689f181ae2b5c
     reference_type:
     reference_id:
-  - url: https://github.com/openclaw/openclaw/commit/a1e89afcc19efd641c02b24d66d689f181ae2b5c
-    reference_type: other
-    reference_id: a1e89afcc19efd641c02b24d66d689f181ae2b5c
-  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-mr32-vwc2-5j6h
-    reference_type: advisory
-    reference_id: GHSA-mr32-vwc2-5j6h
-  - url: https://www.vulncheck.com/advisories/openclaw-missing-authentication-in-browser-relay-cdp-websocket-endpoint
-    reference_type: advisory
-    reference_id: openclaw-missing-authentication-in-browser-relay-cdp-websocket-endpoint
   - url: https://github.com/openclaw/openclaw/releases/tag/v2026.2.1
-    reference_type: other
-    reference_id: v2026.2.1
+    reference_type:
+    reference_id:
+  - url: https://www.vulncheck.com/advisories/openclaw-missing-authentication-in-browser-relay-cdp-websocket-endpoint
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-28458
+    reference_type:
+    reference_id: CVE-2026-28458
+  - url: https://github.com/openclaw/openclaw/security/advisories/GHSA-mr32-vwc2-5j6h
+    reference_type:
+    reference_id: GHSA-mr32-vwc2-5j6h

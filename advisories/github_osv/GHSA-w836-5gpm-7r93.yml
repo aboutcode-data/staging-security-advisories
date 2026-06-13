@@ -23,7 +23,14 @@ summary: "SiYuan has a Reflected Cross-Site Scripting (XSS) via /api/icon/getDyn
   \ is loaded directly. It also prevents using legitimate characters like < or > in icon text.\n\
   \n### Note\nTested version:\n<img width=\"1368\" height=\"699\" alt=\"image\" src=\"https://github.com/user-attachments/assets/a7466b8f-a88b-461d-8d9e-7178af7ab076\"\
   \ />"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/siyuan-note/siyuan
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/siyuan-note/siyuan
+        commit: 5c0cc375b47567e15edd2119066b09bb0aa18777
+    introduced_in_commits: []
 severities:
   - score: '4.6'
     scoring_system: cvssv3.1
@@ -46,15 +53,15 @@ references:
   - url: https://github.com/siyuan-note/siyuan
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-23847
+  - url: https://github.com/siyuan-note/siyuan/commit/5c0cc375b47567e15edd2119066b09bb0aa18777
     reference_type:
     reference_id:
   - url: https://github.com/siyuan-note/siyuan/issues/16844
-    reference_type: other
-    reference_id: 16844
-  - url: https://github.com/siyuan-note/siyuan/commit/5c0cc375b47567e15edd2119066b09bb0aa18777
-    reference_type: other
-    reference_id: 5c0cc375b47567e15edd2119066b09bb0aa18777
+    reference_type:
+    reference_id:
   - url: https://github.com/siyuan-note/siyuan/security/advisories/GHSA-w836-5gpm-7r93
-    reference_type: other
-    reference_id: GHSA-w836-5gpm-7r93
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-23847
+    reference_type:
+    reference_id:

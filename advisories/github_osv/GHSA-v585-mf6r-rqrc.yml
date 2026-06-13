@@ -29,6 +29,13 @@ summary: "Craft Commerce has Stored XSS in Tax Zones (Name & Description) Leadin
   \ login modal overlay. Since it’s on the trusted domain, administrators will likely enter\
   \ their credentials, sending them directly to the attacker.\n\n### References:\n\nhttps://github.com/craftcms/commerce/commit/fa273330807807d05b564d37c88654cd772839ee"
 impacted_packages:
+  - purl: pkg:github/craftcms/commerce
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/craftcms/commerce
+        commit: fa273330807807d05b564d37c88654cd772839ee
+    introduced_in_commits: []
   - purl: pkg:composer/craftcms/commerce
     affected_versions: vers:composer/<=5.5.1
     fixed_versions: vers:composer/5.5.2
@@ -56,18 +63,18 @@ references:
   - url: https://github.com/craftcms/commerce
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-25489
+  - url: https://github.com/craftcms/commerce/commit/fa273330807807d05b564d37c88654cd772839ee
     reference_type:
     reference_id:
   - url: https://github.com/craftcms/commerce/releases/tag/4.10.1
-    reference_type: other
-    reference_id: 4.10.1
+    reference_type:
+    reference_id:
   - url: https://github.com/craftcms/commerce/releases/tag/5.5.2
-    reference_type: other
-    reference_id: 5.5.2
-  - url: https://github.com/craftcms/commerce/commit/fa273330807807d05b564d37c88654cd772839ee
-    reference_type: other
-    reference_id: fa273330807807d05b564d37c88654cd772839ee
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-25489
+    reference_type:
+    reference_id: CVE-2026-25489
   - url: https://github.com/craftcms/commerce/security/advisories/GHSA-v585-mf6r-rqrc
-    reference_type: other
+    reference_type:
     reference_id: GHSA-v585-mf6r-rqrc

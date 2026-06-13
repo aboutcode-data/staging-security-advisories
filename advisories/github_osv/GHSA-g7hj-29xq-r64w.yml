@@ -1,0 +1,40 @@
+advisory_id: GHSA-g7hj-29xq-r64w
+datasource_id: github_osv/GHSA-g7hj-29xq-r64w
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-g7hj-29xq-r64w/GHSA-g7hj-29xq-r64w.json
+aliases:
+  - CVE-2025-70959
+summary: |
+  Tendenci CMS Contains a Cross-site Scripting Vulnerability in its Jobs Module
+  A stored cross-site scripting (XSS) vulnerability in the Jobs module of Tendenci CMS v15.3.7 allows attackers to execute arbitrary web scripts or HTML via injecting a crafted payload.
+impacted_packages:
+  - purl: pkg:pypi/tendenci
+    affected_versions: vers:pypi/<=15.3.7
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.4'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-g7hj-29xq-r64w/GHSA-g7hj-29xq-r64w.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-79
+references:
+  - url: https://github.com/emirhanyucelll/tendenci/blob/main/Readme.md
+    reference_type:
+    reference_id:
+  - url: https://github.com/pypa/advisory-database/tree/main/vulns/tendenci/PYSEC-2026-137.yaml
+    reference_type:
+    reference_id:
+  - url: https://github.com/tendenci/tendenci
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2025-70959
+    reference_type:
+    reference_id:

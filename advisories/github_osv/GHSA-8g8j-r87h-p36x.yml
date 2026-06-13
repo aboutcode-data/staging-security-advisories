@@ -18,7 +18,14 @@ summary: "Vitess users with backup storage access can gain unauthorized access t
   \ they can specify a value such as `cat` or `tee` in the `--external-decompressor` flag value\
   \ for `vttablet` and `vtbackup` to ensure that a harmless command is always used. \n\n###\
   \ References\n\nUsers can read more about the issue here: https://github.com/vitessio/vitess/issues/19459"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/vitessio/vitess
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/vitessio/vitess
+        commit: 4c0173293907af9cb942a6683c465c3f1e9fdb5c
+    introduced_in_commits: []
 severities:
   - score: '8.4'
     scoring_system: cvssv4

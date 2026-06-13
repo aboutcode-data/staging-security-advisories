@@ -9,7 +9,14 @@ summary: |
   It was discovered that subclasses of such classes would use the type of the subclass when attempting to access to data of `NativeSub` contained within Python objects, amounting to memory corruption.
 
   PyO3 0.28.2 fixed the issue by using the type of (e.g.) `NativeSub` correctly.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/pyo3/pyo3
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/pyo3/pyo3
+        commit: 75abd8602896b350fd8c778e52e0a74b4644ccca
+    introduced_in_commits: []
 severities:
   - score: '7.2'
     scoring_system: cvssv4

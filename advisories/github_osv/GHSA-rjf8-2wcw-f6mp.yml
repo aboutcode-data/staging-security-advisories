@@ -81,7 +81,14 @@ summary: |
   # Impact
 
   JavaScript execution, most likely leading to an account takeover, depending on the site's constraint (CSP, etc…).
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/salvo-rs/salvo
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/salvo-rs/salvo
+        commit: 16efeba312a274739606ce76366d921768628654
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
@@ -99,12 +106,12 @@ references:
   - url: https://github.com/salvo-rs/salvo
     reference_type:
     reference_id:
+  - url: https://github.com/salvo-rs/salvo/blob/16efeba312a274739606ce76366d921768628654/crates/serve-static/src/dir.rs#L593
+    reference_type:
+    reference_id:
+  - url: https://github.com/salvo-rs/salvo/security/advisories/GHSA-rjf8-2wcw-f6mp
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-22256
     reference_type:
     reference_id:
-  - url: https://github.com/salvo-rs/salvo/blob/16efeba312a274739606ce76366d921768628654/crates/serve-static/src/dir.rs#L593
-    reference_type: other
-    reference_id: dir.rs#L593
-  - url: https://github.com/salvo-rs/salvo/security/advisories/GHSA-rjf8-2wcw-f6mp
-    reference_type: other
-    reference_id: GHSA-rjf8-2wcw-f6mp

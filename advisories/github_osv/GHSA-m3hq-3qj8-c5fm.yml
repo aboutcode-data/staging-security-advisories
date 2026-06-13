@@ -12,6 +12,17 @@ impacted_packages:
     fixed_versions: vers:gem/1.5.1
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:github/fog/fog-kubevirt
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/fog/fog-kubevirt
+        commit: 9603d79a239a0f68bedfc679cd1b65fbf6ec4753
+      - vcs_url: https://github.com/fog/fog-kubevirt
+        commit: 8adb03e07972d6e19a7713ecf2a827aa2cfe4b9e
+      - vcs_url: https://github.com/fog/fog-kubevirt
+        commit: 8371e9ded99f9ec3e74caf2f283836109763e450
+    introduced_in_commits: []
 severities:
   - score: '8.1'
     scoring_system: cvssv3.1
@@ -26,6 +37,9 @@ severities:
 weaknesses:
   - CWE-295
 references:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2433784
+    reference_type:
+    reference_id:
   - url: https://github.com/fog/fog-kubevirt
     reference_type:
     reference_id:
@@ -44,21 +58,18 @@ references:
   - url: https://github.com/fog/fog-kubevirt/releases/tag/v1.5.1
     reference_type:
     reference_id:
-  - url: https://github.com/rubysec/ruby-advisory-db/blob/master/gems/fog-kubevirt/CVE-2026-1530.yml
+  - url: https://access.redhat.com/security/cve/CVE-2026-1530
     reference_type:
-    reference_id:
+    reference_id: CVE-2026-1530
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-1530
     reference_type:
-    reference_id:
-  - url: https://access.redhat.com/security/cve/CVE-2026-1530
-    reference_type: advisory
     reference_id: CVE-2026-1530
+  - url: https://github.com/rubysec/ruby-advisory-db/blob/master/gems/fog-kubevirt/CVE-2026-1530.yml
+    reference_type:
+    reference_id: CVE-2026-1530.YML
   - url: https://access.redhat.com/errata/RHSA-2026:5970
-    reference_type: advisory
+    reference_type:
     reference_id: RHSA-2026:5970
   - url: https://access.redhat.com/errata/RHSA-2026:5971
-    reference_type: advisory
+    reference_type:
     reference_id: RHSA-2026:5971
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2433784
-    reference_type: bug
-    reference_id: show_bug.cgi?id=2433784

@@ -41,7 +41,14 @@ summary: "chi has an open redirect vulnerability in the RedirectSlashes middlewa
   \ a greate reputation / business impact for the affected legitimate website.\n\nIn order to\
   \ exploit this vulnerability the attacker does not need to be authenticated or have ay other\
   \ priviledge / knowledge regarding the affected application.\n\nCVSS Score: [4.7 (Medium)](https://www.first.org/cvss/calculator/3-0#CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:N/A:N)"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/go-chi/chi
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/go-chi/chi
+        commit: 6eb35881c0e438ffb663ddbad3a61babaa5e5d8a
+    introduced_in_commits: []
 severities:
   - score: '4.7'
     scoring_system: cvssv3.1
@@ -66,5 +73,5 @@ references:
     reference_type:
     reference_id:
   - url: https://github.com/go-chi/chi/security/advisories/GHSA-mqqf-5wvp-8fh8
-    reference_type: other
-    reference_id: GHSA-mqqf-5wvp-8fh8
+    reference_type:
+    reference_id:

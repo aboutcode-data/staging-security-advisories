@@ -165,7 +165,16 @@ summary: |
   ## Mitigation
 
   Add a context size limit to prevent unbounded memory allocation during policy evaluation.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/kyverno/kyverno
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/kyverno/kyverno
+        commit: f5617f60920568a301740485472bf704892175b7
+      - vcs_url: https://github.com/kyverno/kyverno
+        commit: 7a651be3a8c78dcabfbf4178b8d89026bf3b850f
+    introduced_in_commits: []
 severities:
   - score: '7.7'
     scoring_system: cvssv3.1
@@ -180,18 +189,18 @@ severities:
 weaknesses:
   - CWE-770
 references:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-23881
+  - url: https://github.com/kyverno/kyverno
     reference_type:
     reference_id:
   - url: https://github.com/kyverno/kyverno/commit/7a651be3a8c78dcabfbf4178b8d89026bf3b850f
-    reference_type: other
-    reference_id: 7a651be3a8c78dcabfbf4178b8d89026bf3b850f
+    reference_type:
+    reference_id:
   - url: https://github.com/kyverno/kyverno/commit/f5617f60920568a301740485472bf704892175b7
-    reference_type: other
-    reference_id: f5617f60920568a301740485472bf704892175b7
+    reference_type:
+    reference_id:
   - url: https://github.com/kyverno/kyverno/security/advisories/GHSA-r2rj-wwm5-x6mq
-    reference_type: other
-    reference_id: GHSA-r2rj-wwm5-x6mq
-  - url: https://github.com/kyverno/kyverno
-    reference_type: other
-    reference_id: kyverno
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-23881
+    reference_type:
+    reference_id:

@@ -19,6 +19,11 @@ summary: "ImageMagick: Possible memory leak in ASHLAR encoder\nA memory leak in 
   \ rerun with: -s\n==880062== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)\n\
   ```"
 impacted_packages:
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-x86
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
     affected_versions: vers:nuget/<14.10.3
     fixed_versions: vers:nuget/14.10.3
@@ -30,11 +35,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-HDRI-x64
-    affected_versions: vers:nuget/<14.10.3
-    fixed_versions: vers:nuget/14.10.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-HDRI-x86
     affected_versions: vers:nuget/<14.10.3
     fixed_versions: vers:nuget/14.10.3
     fixed_in_commits: []
@@ -113,6 +113,13 @@ impacted_packages:
     affected_versions: vers:nuget/<14.10.3
     fixed_versions: vers:nuget/14.10.3
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/imagemagick/imagemagick
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/imagemagick/imagemagick
+        commit: 30ce0e8efbd72fd6b50ed3a10ae22f57c8901137
     introduced_in_commits: []
 severities:
   - score: '5.3'

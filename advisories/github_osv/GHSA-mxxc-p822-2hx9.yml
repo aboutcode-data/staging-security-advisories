@@ -11,7 +11,14 @@ summary: "Skipper Ingress Controller Allows Unauthorized Access to Internal Serv
   \ list targets of an ExternalName by using `-kubernetes-only-allowed-external-names=true`\
   \ and allow list via regular expressions `-kubernetes-allowed-external-name '^[a-z][a-z0-9-.]+[.].allowed.example$'`\
   \ \n\n### References\n\nhttps://kubernetes.io/docs/concepts/services-networking/service/#externalname"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/zalando/skipper
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/zalando/skipper
+        commit: a4c87ce029a58eb8e1c2c1f93049194a39cf6219
+    introduced_in_commits: []
 severities:
   - score: '8.1'
     scoring_system: cvssv3.1
@@ -24,24 +31,24 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-441
   - CWE-918
+  - CWE-441
 references:
   - url: https://github.com/zalando/skipper
+    reference_type:
+    reference_id:
+  - url: https://github.com/zalando/skipper/commit/a4c87ce029a58eb8e1c2c1f93049194a39cf6219
     reference_type:
     reference_id:
   - url: https://github.com/zalando/skipper/releases/tag/v0.24.0
     reference_type:
     reference_id:
+  - url: https://github.com/zalando/skipper/security/advisories/GHSA-mxxc-p822-2hx9
+    reference_type:
+    reference_id:
+  - url: https://kubernetes.io/docs/concepts/services-networking/service/#externalname
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-24470
     reference_type:
     reference_id:
-  - url: https://github.com/zalando/skipper/commit/a4c87ce029a58eb8e1c2c1f93049194a39cf6219
-    reference_type: other
-    reference_id: a4c87ce029a58eb8e1c2c1f93049194a39cf6219
-  - url: https://kubernetes.io/docs/concepts/services-networking/service/#externalname
-    reference_type: other
-    reference_id: '#externalname'
-  - url: https://github.com/zalando/skipper/security/advisories/GHSA-mxxc-p822-2hx9
-    reference_type: other
-    reference_id: GHSA-mxxc-p822-2hx9

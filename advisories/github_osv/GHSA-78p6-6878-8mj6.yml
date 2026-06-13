@@ -66,7 +66,14 @@ summary: "SM2-PKE has Unchecked AffinePoint Decoding (unwrap) in decrypt()\n### 
   \ https://googleprojectzero.blogspot.com/p/vulnerability-disclosure-policy.html). If the aforementioned\
   \ vulnerabilities cannot be fixed within 90 days of submission, we reserve the right to publicly\
   \ disclose all information about the issues after this timeframe."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/rustcrypto/elliptic-curves
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/rustcrypto/elliptic-curves
+        commit: 085b7bee647029bd189e1375203418205006bcab
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -84,15 +91,15 @@ references:
   - url: https://github.com/RustCrypto/elliptic-curves
     reference_type:
     reference_id:
+  - url: https://github.com/RustCrypto/elliptic-curves/commit/085b7bee647029bd189e1375203418205006bcab
+    reference_type:
+    reference_id:
+  - url: https://github.com/RustCrypto/elliptic-curves/pull/1602
+    reference_type:
+    reference_id:
+  - url: https://github.com/RustCrypto/elliptic-curves/security/advisories/GHSA-78p6-6878-8mj6
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-22699
     reference_type:
     reference_id:
-  - url: https://github.com/RustCrypto/elliptic-curves/commit/085b7bee647029bd189e1375203418205006bcab
-    reference_type: other
-    reference_id: 085b7bee647029bd189e1375203418205006bcab
-  - url: https://github.com/RustCrypto/elliptic-curves/pull/1602
-    reference_type: other
-    reference_id: 1602
-  - url: https://github.com/RustCrypto/elliptic-curves/security/advisories/GHSA-78p6-6878-8mj6
-    reference_type: other
-    reference_id: GHSA-78p6-6878-8mj6

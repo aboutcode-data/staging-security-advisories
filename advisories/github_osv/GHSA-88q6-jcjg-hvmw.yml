@@ -32,7 +32,14 @@ summary: "jose-swift has JWT Signature Verification Bypass via None Algorithm\n#
   \ claims\n\n  The attack requires no knowledge of the signing key and works against all signature\
   \ algorithms (HS256, RS256, ES256, etc.) since the attacker simply bypasses signature verification\
   \ entirely.\n\n### Credits\nReported by Louis Nyffenegger - https://pentesterlab.com/"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/beatt83/jose-swift
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/beatt83/jose-swift
+        commit: 13e5ae6f23ef1487b0dad72540eff414272bd7ca
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv4

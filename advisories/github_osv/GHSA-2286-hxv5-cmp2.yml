@@ -69,7 +69,14 @@ summary: "Sliver Vulnerable to Website Path Traversal / Arbitrary File Read (Aut
   \ content by `Path` in `Website.ToProtobuf`; read by content ID instead.\n\n## Notes\n- This\
   \ issue requires an authenticated operator account with sufficient permissions (`PermissionAll`).\n\
   - The PoC demonstrates reading `/etc/hosts` but can target any readable server file."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/bishopfox/sliver
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/bishopfox/sliver
+        commit: 818127349ccec812876693c4ca74ebf4350ec6b7
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
@@ -87,12 +94,12 @@ references:
   - url: https://github.com/BishopFox/sliver
     reference_type:
     reference_id:
+  - url: https://github.com/BishopFox/sliver/commit/818127349ccec812876693c4ca74ebf4350ec6b7
+    reference_type:
+    reference_id:
+  - url: https://github.com/BishopFox/sliver/security/advisories/GHSA-2286-hxv5-cmp2
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-25760
     reference_type:
     reference_id:
-  - url: https://github.com/BishopFox/sliver/commit/818127349ccec812876693c4ca74ebf4350ec6b7
-    reference_type: other
-    reference_id: 818127349ccec812876693c4ca74ebf4350ec6b7
-  - url: https://github.com/BishopFox/sliver/security/advisories/GHSA-2286-hxv5-cmp2
-    reference_type: other
-    reference_id: GHSA-2286-hxv5-cmp2

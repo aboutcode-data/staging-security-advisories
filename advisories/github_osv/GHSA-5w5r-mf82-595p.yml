@@ -27,7 +27,16 @@ summary: |
   This vulnerability allows safe Rust code to trigger UB, which violates Rust's safety guarantees.
 
   The issue is resolved in version `0.24.0` by making constructor functions unsafe and mark the fields of struct as visible only in the crate.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/capnproto/capnproto-rust
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/capnproto/capnproto-rust
+        commit: e3aeec213e6d1b30a182bf61682a370f20d8a02c
+      - vcs_url: https://github.com/capnproto/capnproto-rust
+        commit: 7b981f4c75a975c80444cd38729bcdf12bf3eabf
+    introduced_in_commits: []
 severities:
   - score: '9.3'
     scoring_system: cvssv4

@@ -64,7 +64,14 @@ summary: |
       Elem::new((r1.0 + m - 1) % m)
   }
   ```
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/rustcrypto/signatures
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/rustcrypto/signatures
+        commit: 10f4ff04cb43ef2b789ee06e885f11cd054b1335
+    introduced_in_commits: []
 severities:
   - score: '5.5'
     scoring_system: cvssv4
@@ -77,8 +84,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-193
   - CWE-682
+  - CWE-193
 references:
   - url: https://github.com/RustCrypto/signatures
     reference_type:

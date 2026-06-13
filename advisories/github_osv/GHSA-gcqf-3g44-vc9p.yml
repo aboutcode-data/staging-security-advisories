@@ -74,7 +74,14 @@ summary: |
   It is believed that only programs compiled with panic = "abort" are affected significantly. The only potential impact that can be seen is Denial of Service, though an attacker able to repeatedly send GET requests without those requests getting blocked by rate limiting, DDoS protection, etc. would be able to keep a server down indefinitely. As only a single unblocked request is needed to trigger the panic, merely having a rate limiter may not be enough to prevent this.
 
   Though the impact in the worst case is significant, the real-world risk of this vulnerability appears to be limited, as it would be expected that anyone for whom uptime is a significant concern would not compile their program with panic = "abort".
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/actix/actix-web
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/actix/actix-web
+        commit: 0383f4bdd1210e726143ca1ebcf01169b67a4b6c
+    introduced_in_commits: []
 severities:
   - score: '6.9'
     scoring_system: cvssv4

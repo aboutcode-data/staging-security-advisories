@@ -33,6 +33,11 @@ summary: |
   Note that although the advisory describes two bugs, they each enable exactly the same attack vector (that an attacker who controls input to `parsePatch` can cause a DOS). Fixing one bug without fixing the other therefore does not fix the vulnerability and does not provide any security benefit. Therefore we assume that the bugs cannot possibly constitute Independently Fixable Vulnerabilities in the sense of CVE CNA rule 4.2.11, but rather that this advisory is properly construed under the rules as describing a single Vulnerability.
 impacted_packages:
   - purl: pkg:npm/diff
+    affected_versions: vers:npm/>=6.0.0|<8.0.3
+    fixed_versions: vers:npm/8.0.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/diff
     affected_versions: vers:npm/>=5.0.0|<5.2.2
     fixed_versions: vers:npm/5.2.2
     fixed_in_commits: []
@@ -47,10 +52,12 @@ impacted_packages:
     fixed_versions: vers:npm/3.5.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:npm/diff
-    affected_versions: vers:npm/>=6.0.0|<8.0.3
-    fixed_versions: vers:npm/8.0.3
-    fixed_in_commits: []
+  - purl: pkg:github/kpdecker/jsdiff
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/kpdecker/jsdiff
+        commit: 15a1585230748c8ae6f8274c202e0c87309142f5
     introduced_in_commits: []
 severities:
   - score: '2.7'

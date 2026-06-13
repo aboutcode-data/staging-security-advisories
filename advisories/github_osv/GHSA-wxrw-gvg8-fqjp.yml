@@ -51,7 +51,14 @@ summary: |
   - Unauthenticated remote denial of service (availability)
   - Resource exhaustion through unbounded session growth in DNS bootstrap path
   - Estimated CVSS v3.1: `CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H` (**7.5 High**)
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/bishopfox/sliver
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/bishopfox/sliver
+        commit: 2b65089b27c553e79e69f1067cad1339e4f3d937
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -64,8 +71,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-306
   - CWE-400
+  - CWE-306
 references:
   - url: https://github.com/BishopFox/sliver
     reference_type:
@@ -73,12 +80,12 @@ references:
   - url: https://github.com/BishopFox/sliver/commit/2b65089b27c553e79e69f1067cad1339e4f3d937
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-25791
+  - url: https://github.com/BishopFox/sliver/releases/tag/v1.7.0
     reference_type:
     reference_id:
   - url: https://github.com/BishopFox/sliver/security/advisories/GHSA-wxrw-gvg8-fqjp
-    reference_type: other
-    reference_id: GHSA-wxrw-gvg8-fqjp
-  - url: https://github.com/BishopFox/sliver/releases/tag/v1.7.0
-    reference_type: other
-    reference_id: v1.7.0
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-25791
+    reference_type:
+    reference_id:

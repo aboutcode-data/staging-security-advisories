@@ -24,7 +24,14 @@ summary: |
   ```
 
   to your `clippy.toml` file. This will trigger the `clippy::disallowed_types` lint, which is warn-by-default and can be explicitly denied.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/time-rs/time
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/time-rs/time
+        commit: 1c63dc7985b8fa26bd8c689423cc56b7a03841ee
+    introduced_in_commits: []
 severities:
   - score: '6.8'
     scoring_system: cvssv4
@@ -42,21 +49,21 @@ references:
   - url: https://github.com/time-rs/time
     reference_type:
     reference_id:
+  - url: https://github.com/time-rs/time/blob/main/CHANGELOG.md#0347-2026-02-05
+    reference_type:
+    reference_id:
+  - url: https://github.com/time-rs/time/commit/1c63dc7985b8fa26bd8c689423cc56b7a03841ee
+    reference_type:
+    reference_id:
+  - url: https://github.com/time-rs/time/releases/tag/v0.3.47
+    reference_type:
+    reference_id:
+  - url: https://github.com/time-rs/time/security/advisories/GHSA-r6v5-fh4h-64xc
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-25727
     reference_type:
     reference_id:
   - url: https://rustsec.org/advisories/RUSTSEC-2026-0009.html
     reference_type:
     reference_id:
-  - url: https://github.com/time-rs/time/commit/1c63dc7985b8fa26bd8c689423cc56b7a03841ee
-    reference_type: other
-    reference_id: 1c63dc7985b8fa26bd8c689423cc56b7a03841ee
-  - url: https://github.com/time-rs/time/blob/main/CHANGELOG.md#0347-2026-02-05
-    reference_type: other
-    reference_id: CHANGELOG.md#0347-2026-02-05
-  - url: https://github.com/time-rs/time/security/advisories/GHSA-r6v5-fh4h-64xc
-    reference_type: other
-    reference_id: GHSA-r6v5-fh4h-64xc
-  - url: https://github.com/time-rs/time/releases/tag/v0.3.47
-    reference_type: other
-    reference_id: v0.3.47

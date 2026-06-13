@@ -24,7 +24,14 @@ summary: |
   ## Workarounds
 
   Disable the search endpoint with `--enable_retrieve_api=false`.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/sigstore/rekor
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/sigstore/rekor
+        commit: 60ef2bceba192c5bf9327d003bceea8bf1f8275f
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
@@ -42,15 +49,15 @@ references:
   - url: https://github.com/sigstore/rekor
     reference_type:
     reference_id:
+  - url: https://github.com/sigstore/rekor/commit/60ef2bceba192c5bf9327d003bceea8bf1f8275f
+    reference_type:
+    reference_id:
+  - url: https://github.com/sigstore/rekor/releases/tag/v1.5.0
+    reference_type:
+    reference_id:
+  - url: https://github.com/sigstore/rekor/security/advisories/GHSA-4c4x-jm2x-pf9j
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-24117
     reference_type:
     reference_id:
-  - url: https://github.com/sigstore/rekor/commit/60ef2bceba192c5bf9327d003bceea8bf1f8275f
-    reference_type: other
-    reference_id: 60ef2bceba192c5bf9327d003bceea8bf1f8275f
-  - url: https://github.com/sigstore/rekor/security/advisories/GHSA-4c4x-jm2x-pf9j
-    reference_type: other
-    reference_id: GHSA-4c4x-jm2x-pf9j
-  - url: https://github.com/sigstore/rekor/releases/tag/v1.5.0
-    reference_type: other
-    reference_id: v1.5.0

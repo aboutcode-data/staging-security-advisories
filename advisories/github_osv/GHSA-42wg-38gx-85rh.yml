@@ -52,7 +52,14 @@ summary: "Vikunja has Path Traversal in CLI Restore\n### Summary\n\nPath Travers
   \ is wiped before archive validation, even a failed exploitation attempt results in a complete\
   \ loss of application data for that instance, impacting all end-users of the affected Vikunja\
   \ installation."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/go-vikunja/vikunja
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/go-vikunja/vikunja
+        commit: 1b3d8dc59cb5f2b759ab0ad2bc9915b993e3cb73
+    introduced_in_commits: []
 severities:
   - score: '7.2'
     scoring_system: cvssv3.1
@@ -74,12 +81,12 @@ references:
   - url: https://github.com/go-vikunja/vikunja/commit/1b3d8dc59cb5f2b759ab0ad2bc9915b993e3cb73
     reference_type:
     reference_id:
+  - url: https://github.com/go-vikunja/vikunja/security/advisories/GHSA-42wg-38gx-85rh
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-27819
     reference_type:
     reference_id:
-  - url: https://github.com/go-vikunja/vikunja/security/advisories/GHSA-42wg-38gx-85rh
-    reference_type: other
-    reference_id: GHSA-42wg-38gx-85rh
   - url: https://vikunja.io/changelog/vikunja-v2.0.0-was-released
-    reference_type: other
-    reference_id: vikunja-v2.0.0-was-released
+    reference_type:
+    reference_id:

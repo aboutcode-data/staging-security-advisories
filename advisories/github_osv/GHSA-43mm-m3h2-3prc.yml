@@ -69,7 +69,14 @@ summary: "File Browser Vulnerable to Username Enumeration via Timing Attack in /
   \ brute-force attacks or credential stuffing against specific, known-valid accounts (e.g.,\
   \ 'admin', 'root', employee names).\n\n\nI remain at your disposal for any questions you may\
   \ have on this matter. Thank you very much.\n\nSincerely, [Felix Sanchez (GUCHI)](https://guchihacker.github.io/)"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/filebrowser/filebrowser
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/filebrowser/filebrowser
+        commit: 24781badd413ee20333aba5cce1919d676e01889
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
@@ -88,12 +95,12 @@ references:
   - url: https://github.com/filebrowser/filebrowser
     reference_type:
     reference_id:
+  - url: https://github.com/filebrowser/filebrowser/commit/24781badd413ee20333aba5cce1919d676e01889
+    reference_type:
+    reference_id:
+  - url: https://github.com/filebrowser/filebrowser/security/advisories/GHSA-43mm-m3h2-3prc
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-23849
     reference_type:
     reference_id:
-  - url: https://github.com/filebrowser/filebrowser/commit/24781badd413ee20333aba5cce1919d676e01889
-    reference_type: other
-    reference_id: 24781badd413ee20333aba5cce1919d676e01889
-  - url: https://github.com/filebrowser/filebrowser/security/advisories/GHSA-43mm-m3h2-3prc
-    reference_type: other
-    reference_id: GHSA-43mm-m3h2-3prc

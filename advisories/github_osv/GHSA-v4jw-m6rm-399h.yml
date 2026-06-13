@@ -12,6 +12,13 @@ impacted_packages:
     fixed_versions: vers:maven/26.5.2
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:github/keycloak/keycloak
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/keycloak/keycloak
+        commit: 9d0f679ecea405958f167fcd0f4a6db6ae32c3fa
+    introduced_in_commits: []
 severities:
   - score: '4.9'
     scoring_system: cvssv3.1
@@ -24,9 +31,12 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-284
   - CWE-266
+  - CWE-284
 references:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2428881
+    reference_type:
+    reference_id:
   - url: https://github.com/keycloak/keycloak
     reference_type:
     reference_id:
@@ -36,18 +46,15 @@ references:
   - url: https://github.com/keycloak/keycloak/issues/45873
     reference_type:
     reference_id:
+  - url: https://access.redhat.com/security/cve/CVE-2026-0871
+    reference_type:
+    reference_id: CVE-2026-0871
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-0871
     reference_type:
-    reference_id:
-  - url: https://access.redhat.com/security/cve/CVE-2026-0871
-    reference_type: advisory
     reference_id: CVE-2026-0871
   - url: https://access.redhat.com/errata/RHSA-2026:2365
-    reference_type: advisory
+    reference_type:
     reference_id: RHSA-2026:2365
   - url: https://access.redhat.com/errata/RHSA-2026:2366
-    reference_type: advisory
+    reference_type:
     reference_id: RHSA-2026:2366
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2428881
-    reference_type: bug
-    reference_id: show_bug.cgi?id=2428881

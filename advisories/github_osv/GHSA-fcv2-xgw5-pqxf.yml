@@ -16,7 +16,14 @@ summary: "sigstore legacy TUF client allows for arbitrary file writes with targe
   \ that the calling process has.\n\n## Workarounds\n\nUsers can disable disk caching for the\
   \ legacy client by setting `SIGSTORE_NO_CACHE=true` in the environment, migrate to https://github.com/sigstore/sigstore-go/tree/main/pkg/tuf,\
   \ or upgrade to the latest sigstore/sigstore release."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/sigstore/sigstore
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/sigstore/sigstore
+        commit: 8ec410a2993ea78083aecf0e473a85453039496e
+    introduced_in_commits: []
 severities:
   - score: '5.8'
     scoring_system: cvssv3.1
@@ -34,18 +41,18 @@ references:
   - url: https://github.com/sigstore/sigstore
     reference_type:
     reference_id:
+  - url: https://github.com/sigstore/sigstore/commit/8ec410a2993ea78083aecf0e473a85453039496e
+    reference_type:
+    reference_id:
+  - url: https://github.com/sigstore/sigstore/releases/tag/v1.10.4
+    reference_type:
+    reference_id:
+  - url: https://github.com/sigstore/sigstore/security/advisories/GHSA-fcv2-xgw5-pqxf
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-24137
     reference_type:
     reference_id:
   - url: https://pkg.go.dev/vuln/GO-2026-4358
     reference_type:
     reference_id:
-  - url: https://github.com/sigstore/sigstore/commit/8ec410a2993ea78083aecf0e473a85453039496e
-    reference_type: other
-    reference_id: 8ec410a2993ea78083aecf0e473a85453039496e
-  - url: https://github.com/sigstore/sigstore/security/advisories/GHSA-fcv2-xgw5-pqxf
-    reference_type: other
-    reference_id: GHSA-fcv2-xgw5-pqxf
-  - url: https://github.com/sigstore/sigstore/releases/tag/v1.10.4
-    reference_type: other
-    reference_id: v1.10.4

@@ -24,7 +24,14 @@ summary: |
   Unauthenticated remote attackers can exhaust memory and cpu resource of sliver server and crash it when they have GzipEncoderID, which can be easily retrived from implant's http traffic, or by brute-forcing.
 
   A fixed version is available at https://github.com/BishopFox/sliver/releases/tag/v1.7.2.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/bishopfox/sliver
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/bishopfox/sliver
+        commit: 0cf5a47cfdf94b6ab481ec3ea0db09f31654c0f0
+    introduced_in_commits: []
 severities:
   - score: '7.7'
     scoring_system: cvssv4

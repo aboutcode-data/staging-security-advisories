@@ -57,7 +57,14 @@ summary: |
   [poc.zip](https://github.com/user-attachments/files/25080027/poc.zip)
   [PR_DESCRIPTION.md](https://github.com/user-attachments/files/25080028/PR_DESCRIPTION.md)
   [attack_scenario.md](https://github.com/user-attachments/files/25080029/attack_scenario.md)
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/bitnami-labs/sealed-secrets
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/bitnami-labs/sealed-secrets
+        commit: d57ee4a8357d250e602b995399b525496ab688c1
+    introduced_in_commits: []
 severities:
   - score: '4.9'
     scoring_system: cvssv3.1
@@ -81,9 +88,9 @@ references:
   - url: https://github.com/bitnami-labs/sealed-secrets/releases/tag/v0.36.0
     reference_type:
     reference_id:
+  - url: https://github.com/bitnami-labs/sealed-secrets/security/advisories/GHSA-465p-v42x-3fmj
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-22728
     reference_type:
     reference_id:
-  - url: https://github.com/bitnami-labs/sealed-secrets/security/advisories/GHSA-465p-v42x-3fmj
-    reference_type: other
-    reference_id: GHSA-465p-v42x-3fmj

@@ -6,7 +6,14 @@ aliases:
 summary: |
   Gitea has improper access control for uploaded attachments
   Gitea does not properly verify repository context when deleting attachments. A user who previously uploaded an attachment to a repository may be able to delete it after losing access to that repository by making the request through a different repository they can access.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/go-gitea/gitea
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/go-gitea/gitea
+        commit: fbea2c68e8df11cfa94e8ead913b79946780ed30
+    introduced_in_commits: []
 severities:
   - score: '2.3'
     scoring_system: cvssv4
@@ -30,12 +37,12 @@ references:
   - url: https://github.com/go-gitea/gitea/commit/fbea2c68e8df11cfa94e8ead913b79946780ed30
     reference_type:
     reference_id:
+  - url: https://github.com/go-gitea/gitea/pull/36320
+    reference_type:
+    reference_id:
+  - url: https://github.com/go-gitea/gitea/releases/tag/v1.25.4
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-20736
     reference_type:
     reference_id:
-  - url: https://github.com/go-gitea/gitea/pull/36320
-    reference_type: other
-    reference_id: 36320
-  - url: https://github.com/go-gitea/gitea/releases/tag/v1.25.4
-    reference_type: other
-    reference_id: v1.25.4

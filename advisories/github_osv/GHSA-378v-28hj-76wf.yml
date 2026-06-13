@@ -8,14 +8,21 @@ summary: |
   This affects versions of the package bn.js before 4.12.3 and 5.2.3. Calling maskn(0) on any BN instance corrupts the internal state, causing toString(), divmod(), and other methods to enter an infinite loop, hanging the process indefinitely.
 impacted_packages:
   - purl: pkg:npm/bn.js
+    affected_versions: vers:npm/>=5.0.0|<5.2.3
+    fixed_versions: vers:npm/5.2.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/bn.js
     affected_versions: vers:npm/<4.12.3
     fixed_versions: vers:npm/4.12.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:npm/bn.js
-    affected_versions: vers:npm/>=5.0.0|<5.2.3
-    fixed_versions: vers:npm/5.2.3
-    fixed_in_commits: []
+  - purl: pkg:github/indutny/bn.js
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/indutny/bn.js
+        commit: 33df26b5771e824f303a79ec6407409376baa64b
     introduced_in_commits: []
 severities:
   - score: '5.3'
@@ -36,33 +43,33 @@ severities:
 weaknesses:
   - CWE-835
 references:
+  - url: https://gist.github.com/Kr0emer/02370d18328c28b5dd7f9ac880d22a91
+    reference_type:
+    reference_id:
   - url: https://github.com/indutny/bn.js
+    reference_type:
+    reference_id:
+  - url: https://github.com/indutny/bn.js/commit/33df26b5771e824f303a79ec6407409376baa64b
+    reference_type:
+    reference_id:
+  - url: https://github.com/indutny/bn.js/issues/186
+    reference_type:
+    reference_id:
+  - url: https://github.com/indutny/bn.js/issues/316
     reference_type:
     reference_id:
   - url: https://github.com/indutny/bn.js/issues/316#issuecomment-3924217358
     reference_type:
     reference_id:
+  - url: https://github.com/indutny/bn.js/pull/317
+    reference_type:
+    reference_id:
   - url: https://github.com/indutny/bn.js/releases/tag/v5.2.3
+    reference_type:
+    reference_id:
+  - url: https://security.snyk.io/vuln/SNYK-JS-BNJS-15274301
     reference_type:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-2739
     reference_type:
-    reference_id:
-  - url: https://gist.github.com/Kr0emer/02370d18328c28b5dd7f9ac880d22a91
-    reference_type: other
-    reference_id: 02370d18328c28b5dd7f9ac880d22a91
-  - url: https://github.com/indutny/bn.js/issues/186
-    reference_type: other
-    reference_id: 186
-  - url: https://github.com/indutny/bn.js/issues/316
-    reference_type: other
-    reference_id: 316
-  - url: https://github.com/indutny/bn.js/pull/317
-    reference_type: other
-    reference_id: 317
-  - url: https://github.com/indutny/bn.js/commit/33df26b5771e824f303a79ec6407409376baa64b
-    reference_type: other
-    reference_id: 33df26b5771e824f303a79ec6407409376baa64b
-  - url: https://security.snyk.io/vuln/SNYK-JS-BNJS-15274301
-    reference_type: other
-    reference_id: SNYK-JS-BNJS-15274301
+    reference_id: CVE-2026-2739
