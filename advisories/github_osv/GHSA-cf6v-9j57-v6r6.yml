@@ -6,7 +6,14 @@ aliases:
 summary: |
   code.gitea.io/gitea Open Redirect vulnerability
   Open Redirect in GitHub repository go-gitea/gitea prior to 1.19.4. This is most likely a post-auth redirect plus it is a POST based request scenario, so less likely that can be exploited or chained with other bugs that can cause phishing or credential theft.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/go-gitea/gitea
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/go-gitea/gitea
+        commit: 9aaaf980f0ba15611f30568bd67bce3ec12954e2
+    introduced_in_commits: []
 severities:
   - score: '3.0'
     scoring_system: cvssv3.1
@@ -35,4 +42,4 @@ references:
     reference_id:
   - url: https://security.gentoo.org/glsa/202312-13
     reference_type:
-    reference_id:
+    reference_id: GLSA-202312-13

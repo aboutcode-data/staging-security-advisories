@@ -12,7 +12,14 @@ summary: "Minio console object names with RIGHT-TO-LEFT OVERRIDE unicode charact
   \ <18384552+dvaldivia@users.noreply.github.com>\n```\n\n### Workarounds\nWorkarounds are to\
   \ remove the concerned file and rewrite it properly with the right file and extensions.  Avoid\
   \ using RTLO characters in your filenames."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/minio/console
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/minio/console
+        commit: 17e791afb90c9ad27c65f63c6be14f2f6a3a9d60
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1

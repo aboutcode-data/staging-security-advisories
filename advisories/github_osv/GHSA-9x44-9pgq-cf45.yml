@@ -409,7 +409,16 @@ summary: "avro vulnerable to denial of service via attacker-controlled parameter
   \        0.027s\n```\n\n### Impact\nAny use case of the avro Unmarshalling routine that accepts\
   \ untrusted input is affected. \n\nThe impact is that an attacker can crash the running application\
   \ and cause denial of service."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/hamba/avro
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/hamba/avro
+        commit: 3abfe1e6382c5dccf2e1a00260c51a64bc1f1ca1
+      - vcs_url: https://github.com/hamba/avro
+        commit: b4a402f41cf44b6094b5131286830ba9bb1eb290
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

@@ -10,7 +10,14 @@ summary: |
   This capability allows users to work around security headers and HTTP/1.1 framing headers by injecting entirely false responses or other new headers. The injected false responses may also be treated as the response to subsequent requests, which can lead to XSS, cache poisoning, and a number of other flaws.
 
   This issue was resolved by adding a default channel handler that polices outbound headers. This channel handler is added by default to channel pipelines, but can be removed by users if they are doing this validation themselves.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/apple/swift-nio
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apple/swift-nio
+        commit: a16e2f54a25b2af217044e5168997009a505930f
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1

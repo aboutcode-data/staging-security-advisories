@@ -6,7 +6,14 @@ aliases:
 summary: |
   libheif vulnerable to segmentation fault via floating point exception
   A Segmentation fault caused by a floating point exception exists in libheif 1.15.1 using crafted heif images via the heif::Fraction::round() function in box.cc, which causes a denial of service.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/strukturag/libheif
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/strukturag/libheif
+        commit: e05e15b57a38ec411cb9acb38512a1c36ff62991
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1

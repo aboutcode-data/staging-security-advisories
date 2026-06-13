@@ -171,7 +171,16 @@ summary: "Fabric vulnerable to crosslinking transaction attack\n# Short summary\
   \ similarly.\n\n2. The first transaction of different size is bigger in the new split: `|$$$$$$$$$$$$|************@@@@|@@@@@@@|...|%%%%%%%|`\
   \ \nIn that case, once this transaction is parsed, the extra bytes are skipped, so encoding\
   \ the transaction to bytes yields a shorter byte array, and we detect a tempering."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/hyperledger/fabric
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/hyperledger/fabric
+        commit: 389b2e66de9a6fbc6043216d554c97bbbdf0e008
+      - vcs_url: https://github.com/hyperledger/fabric
+        commit: 93bef10bd3ce3c54d7f3b064f765dbde61da7def
+    introduced_in_commits: []
 severities:
   - score: '7.1'
     scoring_system: cvssv3.1

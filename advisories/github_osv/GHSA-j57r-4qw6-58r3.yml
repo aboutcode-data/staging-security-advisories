@@ -23,7 +23,14 @@ summary: "rusty_paseto vulnerable to private key extraction due to ed25519-dalek
   \ reported the vulnerability to the repository by discovering during a `cargo-audit` run on\
   \ 2023-11-05 and opened [issue 28](https://github.com/rrrodzilla/rusty_paseto/issues/28).\
   \ This advisory was created at that time to notify existing users."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/rrrodzilla/rusty_paseto
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/rrrodzilla/rusty_paseto
+        commit: 42718c1b757c1dfabb80621f2f48b8268f7fa24e
+    introduced_in_commits: []
 severities:
   - score: LOW
     scoring_system: generic_textual

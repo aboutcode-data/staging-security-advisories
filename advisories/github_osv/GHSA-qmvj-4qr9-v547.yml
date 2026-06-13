@@ -20,7 +20,18 @@ summary: "Knative Serving vulnerable to attacker-controlled pod causing denial o
   \ in v1.10.5, v1.11.3 and v1.12.0\n\n### Credits\nThe vulnerability was reported by Ada Logics\
   \ during an ongoing security audit of Knative involving Ada Logics, the Knative maintainers,\
   \ OSTIF and CNCF."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/knative/serving
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/knative/serving
+        commit: 012ee2509231b80b7842139bfabc30516d3026ca
+      - vcs_url: https://github.com/knative/serving
+        commit: fff40ef7bac9be8380ec3d1c70fc15b57093382a
+      - vcs_url: https://github.com/knative/serving
+        commit: 101f814112b9ca0767f457e7e616b46205551cf1
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1

@@ -16,7 +16,14 @@ summary: "VTAdmin users that can create shards can deny access to other function
   \ like\n```\n% etcdctl --endpoints \"http://${ETCD_SERVER}\" del /vitess/global/keyspaces/commerce/shards/a/b/Shard\n\
   ```\n\n### References\nhttps://github.com/vitessio/vitess/issues/12842\n\nFound during a security\
   \ audit sponsored by the [CNCF](https://cncf.io) and facilitated by [OSTIF](https://ostif.org)."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/vitessio/vitess
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/vitessio/vitess
+        commit: 9dcbd7de3180f47e94f54989fb5c66daea00c920
+    introduced_in_commits: []
 severities:
   - score: '4.1'
     scoring_system: cvssv3.1

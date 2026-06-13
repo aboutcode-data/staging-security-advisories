@@ -18,7 +18,14 @@ summary: |
   The risk can be mitigated if untrusted peers can be prevented from communicating with the service. This mitigation is not available to many services.
 
   The issue is fixed by rewriting the parsing code to correctly handle the condition. The issue was found by automated fuzzing by oss-fuzz.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/apple/swift-nio-http2
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apple/swift-nio-http2
+        commit: ac2a5afce3dbb6795b4f78ec3f19726dc28f5617
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

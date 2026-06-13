@@ -7,7 +7,14 @@ summary: |
   This function returned a reference into an OpenSSL datastructure, but there was no way to ensure OpenSSL would not mutate the datastructure behind one's back.
 
   Use of this function should be replaced with `X509StoreRef::all_certificates`.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/sfackler/rust-openssl
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/sfackler/rust-openssl
+        commit: cf9681a55cabd4cb9f1475bde17b5079f2a0384e
+    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual

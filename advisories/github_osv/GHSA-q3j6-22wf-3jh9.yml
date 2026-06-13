@@ -32,7 +32,16 @@ summary: |
 
   ### Workarounds
   If you are using the stubs at `github.com/ipfs/go-bitswap` and not taking advantage of the features provided by the server, refactoring your code to use the new split API will allows you to run in a client-only mode using: [`github.com/ipfs/go-bitswap/client`](https://pkg.go.dev/github.com/ipfs/go-bitswap/client).
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/ipfs/boxo
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/ipfs/boxo
+        commit: 9cb5cb54d40b57084d1221ba83b9e6bb3fcc3197
+      - vcs_url: https://github.com/ipfs/boxo
+        commit: 62cbac40b96f49e39cd7fedc77ee6b56adce4916
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -45,8 +54,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-770
   - CWE-400
+  - CWE-770
 references:
   - url: https://github.com/ipfs/boxo/commit/62cbac40b96f49e39cd7fedc77ee6b56adce4916
     reference_type:

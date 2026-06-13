@@ -6,7 +6,14 @@ aliases:
 summary: |
   Algernon engine and themes vulnerable to Cross-site Scripting
   All versions of the package github.com/xyproto/algernon/engine; all versions of the package github.com/xyproto/algernon/themes are vulnerable to Cross-site Scripting (XSS) via the `themes.NoPage(filename, theme)` function due to improper user input sanitization. Exploiting this vulnerability is possible when a file/resource is not found.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/xyproto/algernon
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/xyproto/algernon
+        commit: aab484608651852d02a8a93f40baf53ed93e639a
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1

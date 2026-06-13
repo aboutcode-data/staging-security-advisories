@@ -51,7 +51,14 @@ summary: "### Summary\nPipelines do not validate child UIDs, which means that a 
   \ this does not grant any additional capabilities**.\n\nWorst case example would be a supply\
   \ chain attack where a malicious TaskRun triggered from Triggers/Workflows intercepts and\
   \ replaces a task in a trusted Pipeline."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/tektoncd/pipeline
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/tektoncd/pipeline
+        commit: 2d38f5fa840291395178422d34b36b1bc739e2a2
+    introduced_in_commits: []
 severities:
   - score: '3.7'
     scoring_system: cvssv3.1

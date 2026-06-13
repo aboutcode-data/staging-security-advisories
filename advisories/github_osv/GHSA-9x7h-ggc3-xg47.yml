@@ -6,7 +6,16 @@ aliases:
 summary: |
   imgproxy is vulnerable to Server-Side Request Forgery
   imgproxy prior to version 3.15.0 is vulnerable to Server-Side Request Forgery (SSRF) due to a lack of sanitization of the imageURL parameter.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/imgproxy/imgproxy
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/imgproxy/imgproxy
+        commit: 1a9768a2c682e88820064aa3d9a05ea234ff3cc4
+      - vcs_url: https://github.com/imgproxy/imgproxy
+        commit: ee9e8f0cb101ec22318caffd552a23cc0548d5ce
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1

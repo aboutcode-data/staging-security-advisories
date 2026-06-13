@@ -26,7 +26,14 @@ summary: "ginuerzh/gost vulnerable to Timing Attack\n[Timing attacks](https://en
   \ := subtle.ConstantTimeCompare([]byte(password), []byte(v)) == 0\n+\treturn ok && (v == \"\
   \" || passOk)\n }\n \n // Add adds a key-value pair to the Authenticator.\n-- \n2.25.1\n\n\
   ```"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/ginuerzh/gost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/ginuerzh/gost
+        commit: 1c62376e0880e4094bd3731e06bd4f7842638f6a
+    introduced_in_commits: []
 severities:
   - score: '5.9'
     scoring_system: cvssv3.1

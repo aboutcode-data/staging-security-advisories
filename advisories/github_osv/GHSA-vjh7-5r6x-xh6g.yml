@@ -9,7 +9,14 @@ summary: "CasaOS Gateway vulnerable to incorrect identification of source IP add
   \ in 391dd7f. This patch is part of CasaOS 0.4.4.\n\n### Workarounds\n\nUsers should upgrade\
   \ to CasaOS 0.4.4. If they can't, they should temporarily restrict access to CasaOS to untrusted\
   \ users, for instance by not exposing it publicly. \n\n### References\n\n- 391dd7f\n- https://www.sonarsource.com/blog/security-vulnerabilities-in-casaos/"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/icewhaletech/casaos-gateway
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/icewhaletech/casaos-gateway
+        commit: 391dd7f0f239020c46bf057cfa25f82031fc15f7
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
@@ -22,8 +29,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-306
   - CWE-348
+  - CWE-306
 references:
   - url: https://github.com/IceWhaleTech/CasaOS-Gateway
     reference_type:

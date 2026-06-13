@@ -6,7 +6,14 @@ aliases:
 summary: |
   Mattermost vulnerable to excessive memory consumption
   Mattermost fails to properly sanitize the request to `/api/v4/redirect_location` allowing an attacker, sending a specially crafted request to `/api/v4/redirect_location`, to fill up the memory due to caching large items.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 77f094c7ee8c7a00be01c2df72f948a62c690b66
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1

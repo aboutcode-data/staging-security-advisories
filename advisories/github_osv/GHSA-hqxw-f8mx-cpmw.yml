@@ -24,7 +24,14 @@ summary: "distribution catalog API endpoint can lead to OOM via malicious user i
   \ issue in [distribution repository](https://github.com/distribution/distribution)\n* Email\
   \ us at [cncf-distribution-security@lists.cncf.io](mailto:cncf-distribution-security@lists.cncf.io)\n\
   \n[1] [faulty commit](https://github.com/distribution/distribution/blob/b7e26bac741c76cb792f8e14c41a2163b5dae8df/registry/handlers/catalog.go#L45)"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/distribution/distribution
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/distribution/distribution
+        commit: f55a6552b006a381d9167e328808565dd2bf77dc
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -37,8 +44,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-475
   - CWE-770
+  - CWE-475
 references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2189886
     reference_type:

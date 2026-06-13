@@ -17,7 +17,14 @@ summary: "OpenFGA vulnerable to denial of service due to circular relationship\n
   \ invalid authorization model (as identified by running `./openfga validate-models`) as a\
   \ parameter of your Check and ListObjects calls, this upgrade is backwards compatible. \n\n\
   Otherwise, OpenFGA v1.1.1 will start returning HTTP 400 status codes on those calls."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/openfga/openfga
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openfga/openfga
+        commit: 087ce392595f3c319ab3028b5089118ea4063452
+    introduced_in_commits: []
 severities:
   - score: '5.9'
     scoring_system: cvssv3.1

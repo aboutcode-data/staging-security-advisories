@@ -6,7 +6,14 @@ aliases:
 summary: |
   Mattermost password hash disclosure vulnerability
   Mattermost fails to properly sanitize the user object when updating the username, resulting in the password hash being included in the response body.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 698f4a97da564e2c1f2bf1fbd01755cefa3b7881
+    introduced_in_commits: []
 severities:
   - score: '4.9'
     scoring_system: cvssv3.1

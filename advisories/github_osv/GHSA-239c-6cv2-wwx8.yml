@@ -30,7 +30,14 @@ summary: |
   Users that can control which payload is parsed with JSONDecoder can ensure that fields that are intended to initialize Swift integer types use a JSON numeric constant without a fractional part. This will avoid the crash, but it is rare that a user has full control on the JSON payload they will parse.
 
   As a workaround, users that can alter their current software but cannot perform an upgrade can perform JSON parsing directly (e.g., through the JSONSerialization class) rather than using the JSONDecoder class.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/apple/swift-corelibs-foundation
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apple/swift-corelibs-foundation
+        commit: b541491f73b39007a38f3ff5a0cbe89d09ef1614
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

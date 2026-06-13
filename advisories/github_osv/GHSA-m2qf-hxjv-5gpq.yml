@@ -15,6 +15,15 @@ summary: |
 
   This happens because vulnerable versions of Flask only set the `Vary: Cookie` header when the session is accessed or modified, not when it is refreshed (re-sent to update the expiration) without being accessed or modified.
 impacted_packages:
+  - purl: pkg:github/pallets/flask
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/pallets/flask
+        commit: 70f906c51ce49c485f1d355703e9cc3386b1cc2b
+      - vcs_url: https://github.com/pallets/flask
+        commit: afd63b16170b7c047f5758eb910c416511e9c965
+    introduced_in_commits: []
   - purl: pkg:pypi/flask
     affected_versions: vers:pypi/>=2.3.0|<2.3.2
     fixed_versions: vers:pypi/2.3.2
@@ -59,16 +68,10 @@ references:
   - url: https://github.com/pallets/flask/releases/tag/2.3.2
     reference_type:
     reference_id:
-  - url: https://github.com/pallets/flask/security/advisories/GHSA-m2qf-hxjv-5gpq
-    reference_type:
-    reference_id:
   - url: https://github.com/pypa/advisory-database/tree/main/vulns/flask/PYSEC-2023-62.yaml
     reference_type:
     reference_id:
   - url: https://lists.debian.org/debian-lts-announce/2023/08/msg00024.html
-    reference_type:
-    reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2023-30861
     reference_type:
     reference_id:
   - url: https://security.netapp.com/advisory/ntap-20230818-0006
@@ -77,3 +80,9 @@ references:
   - url: https://www.debian.org/security/2023/dsa-5442
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2023-30861
+    reference_type:
+    reference_id: CVE-2023-30861
+  - url: https://github.com/pallets/flask/security/advisories/GHSA-m2qf-hxjv-5gpq
+    reference_type:
+    reference_id: GHSA-m2qf-hxjv-5gpq

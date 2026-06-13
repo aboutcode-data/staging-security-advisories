@@ -8,7 +8,14 @@ summary: |
   Versions of the package github.com/gin-gonic/gin before version 1.9.0 are vulnerable to Improper Input Validation by allowing an attacker to use a specially crafted request via the X-Forwarded-Prefix header, potentially leading to cache poisoning.
 
   **Note:** Although this issue does not pose a significant threat on its own it can serve as an input vector for other more impactful vulnerabilities. However, successful exploitation may depend on the server configuration and whether the header is used in the application logic.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/t0rchwo0d/gin
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/t0rchwo0d/gin
+        commit: fd9f98e70fb4107ee68c783482d231d35e60507b
+    introduced_in_commits: []
 severities:
   - score: '5.6'
     scoring_system: cvssv3.1
@@ -21,8 +28,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-20
   - CWE-77
+  - CWE-20
 references:
   - url: https://github.com/gin-gonic/gin
     reference_type:

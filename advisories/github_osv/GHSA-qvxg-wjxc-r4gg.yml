@@ -20,7 +20,14 @@ summary: "Vapor vulnerable to denial of service in URLEncodedFormDecoder\nVapor 
   \ for: .jsonAPI)\nContentConfiguration.global = contentConfig\n```\n\n### For more information\n\
   If you have any questions or comments about this advisory:\n* Open an issue in [the Vapor\
   \ repo](https://github.com/vapor/vapor)\n* Ask in [Vapor Discord](http://vapor.team)"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/vapor/vapor
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/vapor/vapor
+        commit: 6c63226a4ab82ce53730eb1afb9ca63866fcf033
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -33,9 +40,9 @@ severities:
     published_at: None
     url:
 weaknesses:
+  - CWE-121
   - CWE-120
   - CWE-674
-  - CWE-121
 references:
   - url: https://github.com/vapor/vapor
     reference_type:

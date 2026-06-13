@@ -11,7 +11,14 @@ summary: |
   `tempfile` v0.4.26 ships with affected `remove_dir_all` v0.5.3 and so blocks my deployment of v12 to openSUSE distribution because it imposes a clean `cargo audit`
 
   Updating `tempfile` is warranted
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/xampprocky/remove_dir_all
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/xampprocky/remove_dir_all
+        commit: 7247a8b6ee59fc99bbb69ca6b3ca4bfd8c809ead
+    introduced_in_commits: []
 severities:
   - score: LOW
     scoring_system: generic_textual

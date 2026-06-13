@@ -27,7 +27,18 @@ summary: "otelgrpc DoS vulnerability due to unbound cardinality metrics\n### Sum
   \ option with [`noop.NewMeterProvider`](https://pkg.go.dev/go.opentelemetry.io/otel/metric/noop#NewMeterProvider).\n\
   \n### Solution provided by upgrading\n\nIn PR [#4322](https://github.com/open-telemetry/opentelemetry-go-contrib/pull/4322),\
   \ to be released with v0.46.0, the attributes were removed.\n\n### References\n\n- [#4322](https://github.com/open-telemetry/opentelemetry-go-contrib/pull/4322)"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/open-telemetry/opentelemetry-go-contrib
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/open-telemetry/opentelemetry-go-contrib
+        commit: 04c5dcbb5b35f14b4e6793b245919c72addbc7d0
+      - vcs_url: https://github.com/open-telemetry/opentelemetry-go-contrib
+        commit: b44dfc9092b157625a5815cb437583cee663333b
+      - vcs_url: https://github.com/open-telemetry/opentelemetry-go-contrib
+        commit: 9d4eb7e7706038b07d33f83f76afbe13f53d171d
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

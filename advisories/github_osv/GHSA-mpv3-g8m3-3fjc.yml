@@ -7,7 +7,14 @@ summary: "Grafana vulnerable to Authentication Bypass by Spoofing\nGrafana is va
   \ AD accounts based on the email claim. \n\nOn Azure AD, the profile email field is not unique\
   \ and can be easily modified. \n\nThis leads to account takeover and authentication bypass\
   \ when Azure AD OAuth is configured with a multi-tenant app."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/grafana/grafana
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/grafana/grafana
+        commit: 69fc4e6bc0be2a82085ab3885c2262a4d49e97d8
+    introduced_in_commits: []
 severities:
   - score: '9.4'
     scoring_system: cvssv3.1

@@ -66,7 +66,16 @@ summary: "syncthing vulnerable to Cross-site Scripting (XSS) in Web GUI\n## Impa
   \ should not be set to ```true``` or input sanitized.\n\n##### HTML Injection in \"Edit Folder\"\
   \n\n<img width=\"672\" alt=\"shared-with-2\" src=\"https://user-images.githubusercontent.com/9484134/205084067-b33f8536-e350-4de1-86f6-3d4a12a683c3.png\"\
   >"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/syncthing/syncthing
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/syncthing/syncthing
+        commit: f5e5af391a6583047c64ef8c51642003a79b75cf
+      - vcs_url: https://github.com/syncthing/syncthing
+        commit: 73c52eafb6566435dffd979c3c49562b6d5a4238
+    introduced_in_commits: []
 severities:
   - score: '4.6'
     scoring_system: cvssv3.1

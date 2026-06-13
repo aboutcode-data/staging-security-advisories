@@ -134,14 +134,25 @@ summary: "Administration Console authentication bypass in openfire xmppserver\nA
   - [Jetty CVE-2021-34429](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-34429)"
 impacted_packages:
   - purl: pkg:maven/org.igniterealtime.openfire/xmppserver
+    affected_versions: vers:maven/>=4.7.0|<4.7.5
+    fixed_versions: vers:maven/4.7.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.igniterealtime.openfire/xmppserver
     affected_versions: vers:maven/>=3.10.0|<4.6.8
     fixed_versions: vers:maven/4.6.8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/org.igniterealtime.openfire/xmppserver
-    affected_versions: vers:maven/>=4.7.0|<4.7.5
-    fixed_versions: vers:maven/4.7.5
-    fixed_in_commits: []
+  - purl: pkg:github/igniterealtime/openfire
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/igniterealtime/openfire
+        commit: a3b5ebd5032ff7be9d3ada5bf52bea2df96ec881
+      - vcs_url: https://github.com/igniterealtime/openfire
+        commit: 71f3def2adeaac62729cf544b645c6819c3d9868
+      - vcs_url: https://github.com/igniterealtime/openfire
+        commit: 2ac00a1ff42f5d3547ef58e21f8cdec992bfcf97
     introduced_in_commits: []
 severities:
   - score: '8.6'
@@ -178,15 +189,15 @@ references:
   - url: https://github.com/igniterealtime/Openfire/releases/tag/v4.7.5
     reference_type:
     reference_id:
-  - url: https://github.com/igniterealtime/Openfire/security/advisories/GHSA-gw42-f939-fhvm
-    reference_type:
-    reference_id:
   - url: https://igniterealtime.atlassian.net/browse/OF-2595
-    reference_type:
-    reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2023-32315
     reference_type:
     reference_id:
   - url: https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2023-32315
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2023-32315
+    reference_type:
+    reference_id: CVE-2023-32315
+  - url: https://github.com/igniterealtime/Openfire/security/advisories/GHSA-gw42-f939-fhvm
+    reference_type:
+    reference_id: GHSA-gw42-f939-fhvm
