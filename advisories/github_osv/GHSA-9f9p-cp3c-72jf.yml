@@ -31,7 +31,16 @@ summary: |
   ### A note on timing from @jbr on behalf of `trillium-rs`
 
   @divergentdave filed this vulnerability many months ago but I did not see it until the evening of Jan 23, 2024. Patches were issued less than 24h after reading the vulnerability. The [security policy](https://github.com/trillium-rs/trillium/blob/main/SECURITY.md) has been [updated](https://github.com/trillium-rs/trillium/commit/b27950ceae52aa7a0f482494fe67b6069234d417) to avoid delays like this in the future.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/trillium-rs/trillium
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/trillium-rs/trillium
+        commit: 8d468f85e27b8d0943d6f43ce9f8c7397141a999
+      - vcs_url: https://github.com/trillium-rs/trillium
+        commit: 16a42b3f8378a3fa4e61ece3e3e37e6a530df51d
+    introduced_in_commits: []
 severities:
   - score: '6.8'
     scoring_system: cvssv3.1
@@ -44,8 +53,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-113
   - CWE-436
+  - CWE-113
 references:
   - url: https://github.com/trillium-rs/trillium
     reference_type:

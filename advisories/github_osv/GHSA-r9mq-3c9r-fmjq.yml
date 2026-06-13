@@ -41,6 +41,17 @@ impacted_packages:
     fixed_versions: vers:npm/3.0.5
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:github/vendure-ecommerce/vendure
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/vendure-ecommerce/vendure
+        commit: 801980e8f599c28c5059657a9d85dd03e3827992
+      - vcs_url: https://github.com/vendure-ecommerce/vendure
+        commit: e2ee0c43159b3d13b51b78654481094fdd4850c5
+      - vcs_url: https://github.com/vendure-ecommerce/vendure
+        commit: e4b58af6822d38a9c92a1d8573e19288b8edaa1c
+    introduced_in_commits: []
 severities:
   - score: '9.1'
     scoring_system: cvssv3.1
@@ -53,24 +64,24 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-20
   - CWE-22
+  - CWE-20
 references:
   - url: https://github.com/vendure-ecommerce/vendure
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2024-48914
+  - url: https://github.com/vendure-ecommerce/vendure/blob/801980e8f599c28c5059657a9d85dd03e3827992/packages/asset-server-plugin/src/plugin.ts#L352-L358
     reference_type:
     reference_id:
   - url: https://github.com/vendure-ecommerce/vendure/commit/e2ee0c43159b3d13b51b78654481094fdd4850c5
-    reference_type: other
-    reference_id: e2ee0c43159b3d13b51b78654481094fdd4850c5
+    reference_type:
+    reference_id:
   - url: https://github.com/vendure-ecommerce/vendure/commit/e4b58af6822d38a9c92a1d8573e19288b8edaa1c
-    reference_type: other
-    reference_id: e4b58af6822d38a9c92a1d8573e19288b8edaa1c
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2024-48914
+    reference_type:
+    reference_id: CVE-2024-48914
   - url: https://github.com/vendure-ecommerce/vendure/security/advisories/GHSA-r9mq-3c9r-fmjq
-    reference_type: other
+    reference_type:
     reference_id: GHSA-r9mq-3c9r-fmjq
-  - url: https://github.com/vendure-ecommerce/vendure/blob/801980e8f599c28c5059657a9d85dd03e3827992/packages/asset-server-plugin/src/plugin.ts#L352-L358
-    reference_type: other
-    reference_id: plugin.ts#L352-L358

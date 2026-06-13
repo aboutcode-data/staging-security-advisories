@@ -13,7 +13,16 @@ summary: "CubeFS timing attack can leak user passwords\nA vulnerability was foun
   \ in collaboration with [OSTIF](https://ostif.org/) and the [CNCF](https://www.cncf.io/).\n\
   \nThe issue has been patched in v3.3.1. For impacted users, there is no other way to mitigate\
   \ the issue besides upgrading."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/cubefs/cubefs
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/cubefs/cubefs
+        commit: c21d034d2fcd051ffd64afeafc68cbcb39d26551
+      - vcs_url: https://github.com/cubefs/cubefs
+        commit: 6a0d5fa45a77ff20c752fa9e44738bf5d86c84bd
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
@@ -36,15 +45,15 @@ references:
   - url: https://github.com/cubefs/cubefs
     reference_type:
     reference_id:
+  - url: https://github.com/cubefs/cubefs/commit/6a0d5fa45a77ff20c752fa9e44738bf5d86c84bd
+    reference_type:
+    reference_id:
   - url: https://github.com/cubefs/cubefs/commit/c21d034d2fcd051ffd64afeafc68cbcb39d26551
+    reference_type:
+    reference_id:
+  - url: https://github.com/cubefs/cubefs/security/advisories/GHSA-8579-7p32-f398
     reference_type:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2023-46739
     reference_type:
     reference_id:
-  - url: https://github.com/cubefs/cubefs/commit/6a0d5fa45a77ff20c752fa9e44738bf5d86c84bd
-    reference_type: other
-    reference_id: 6a0d5fa45a77ff20c752fa9e44738bf5d86c84bd
-  - url: https://github.com/cubefs/cubefs/security/advisories/GHSA-8579-7p32-f398
-    reference_type: other
-    reference_id: GHSA-8579-7p32-f398

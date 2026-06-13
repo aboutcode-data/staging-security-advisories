@@ -13,7 +13,14 @@ summary: "`goreleaser release --debug` shows secrets\n### Summary\nHello \U0001F
   ```\n\n- run `goreleaser release --debug`\n\nYou should see your secret value in the gorelease\
   \ log. The log shows also the `GITHUB_TOKEN`\n\nExample:\n\n```\nrunning                 \
   \                       cmd= ....\nSECRET_1=secret_value\n```"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/goreleaser/goreleaser
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/goreleaser/goreleaser
+        commit: d5b6a533ca1dc3366983d5d31ee2d2b6232b83c0
+    introduced_in_commits: []
 severities:
   - score: '5.5'
     scoring_system: cvssv3.1

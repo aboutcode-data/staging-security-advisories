@@ -17,7 +17,14 @@ summary: "CRI-O's pods can break out of resource confinement on cgroupv2\n### Im
   \ users upgrade to?_\n1.29.1, 1.28.3, 1.27.3\n\n### Workarounds\n_Is there a way for users\
   \ to fix or remediate the vulnerability without upgrading?_\nuse cgroupv1\n\n### References\n\
   _Are there any links users can visit to find out more?_"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/cri-o/cri-o
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/cri-o/cri-o
+        commit: 75effcb1a25851a736e82dba1f7d8cee93ee159e
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
@@ -33,6 +40,12 @@ weaknesses:
   - CWE-400
   - CWE-770
 references:
+  - url: https://access.redhat.com/errata/RHSA-2024:0207
+    reference_type:
+    reference_id:
+  - url: https://access.redhat.com/security/cve/CVE-2023-6476
+    reference_type:
+    reference_id:
   - url: https://github.com/cri-o/cri-o
     reference_type:
     reference_id:
@@ -54,12 +67,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2253994
     reference_type: bug
     reference_id: 2253994
-  - url: https://access.redhat.com/security/cve/CVE-2023-6476
-    reference_type: advisory
-    reference_id: CVE-2023-6476
   - url: https://access.redhat.com/errata/RHSA-2024:0195
     reference_type:
     reference_id: RHSA-2024:0195
-  - url: https://access.redhat.com/errata/RHSA-2024:0207
-    reference_type: advisory
-    reference_id: RHSA-2024:0207

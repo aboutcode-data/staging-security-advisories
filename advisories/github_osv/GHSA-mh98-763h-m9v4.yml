@@ -63,7 +63,14 @@ summary: "JUJU_CONTEXT_ID is a predictable authentication secret\n`JUJU_CONTEXT_
   \ thousand attempts per second to guess the start time and the current offset in the random\
   \ source, then using secret-get hook tool, get some sort of secret, such as credentials to\
   \ a system."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/juju/juju
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/juju/juju
+        commit: ecd7e2d0e9867576b9da04871e22232f06fa0cc7
+    introduced_in_commits: []
 severities:
   - score: '8.7'
     scoring_system: cvssv3.1
@@ -81,14 +88,17 @@ severities:
     published_at: None
     url:
 weaknesses:
+  - CWE-337
   - CWE-1391
   - CWE-340
-  - CWE-337
 references:
   - url: https://github.com/juju/juju
     reference_type:
     reference_id:
   - url: https://github.com/juju/juju/commit/ecd7e2d0e9867576b9da04871e22232f06fa0cc7
+    reference_type:
+    reference_id:
+  - url: https://github.com/juju/juju/security/advisories/GHSA-mh98-763h-m9v4
     reference_type:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-7558
@@ -97,6 +107,3 @@ references:
   - url: https://pkg.go.dev/vuln/GO-2024-3173
     reference_type:
     reference_id:
-  - url: https://github.com/juju/juju/security/advisories/GHSA-mh98-763h-m9v4
-    reference_type: bug
-    reference_id: GHSA-mh98-763h-m9v4

@@ -10,7 +10,14 @@ summary: |
   This allows users to include arbitrary embeds in posts, which are then broadcasted via websockets. This can be exploited in many ways, for example to create permalinks with fully customizable content or to trigger a client Side Denial of Service (DoS) by sending a permalink with a non-string message.
 
   The advisory metadata references the appropriate go pseudo version available from pkg.go.dev
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 69a8b3df0f9fd3a7a5b792ec678b6191618d039b
+    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1
@@ -42,9 +49,9 @@ references:
   - url: https://github.com/mattermost/mattermost/pull/27763
     reference_type:
     reference_id:
+  - url: https://mattermost.com/security-updates
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-47003
     reference_type:
     reference_id:
-  - url: https://mattermost.com/security-updates
-    reference_type: other
-    reference_id: security-updates

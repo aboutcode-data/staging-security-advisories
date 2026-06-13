@@ -20,6 +20,15 @@ impacted_packages:
     fixed_versions: vers:composer/24.4.0
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:github/librenms/librenms
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/librenms/librenms
+        commit: a61c11db7e8ef6a437ab55741658be2be7d14d34
+      - vcs_url: https://github.com/librenms/librenms
+        commit: 19344f0584d4d6d4526fdf331adc60530e3f685b
+    introduced_in_commits: []
 severities:
   - score: '7.1'
     scoring_system: cvssv3.1
@@ -34,18 +43,18 @@ severities:
 weaknesses:
   - CWE-79
 references:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2024-32479
+  - url: https://github.com/librenms/librenms
+    reference_type:
+    reference_id:
+  - url: https://github.com/librenms/librenms/blob/a61c11db7e8ef6a437ab55741658be2be7d14d34/app/Http/Controllers/ServiceTemplateController.php#L67C23-L67C23
     reference_type:
     reference_id:
   - url: https://github.com/librenms/librenms/commit/19344f0584d4d6d4526fdf331adc60530e3f685b
-    reference_type: other
-    reference_id: 19344f0584d4d6d4526fdf331adc60530e3f685b
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2024-32479
+    reference_type:
+    reference_id: CVE-2024-32479
   - url: https://github.com/librenms/librenms/security/advisories/GHSA-72m9-7c8x-pmmw
-    reference_type: other
+    reference_type:
     reference_id: GHSA-72m9-7c8x-pmmw
-  - url: https://github.com/librenms/librenms
-    reference_type: other
-    reference_id: librenms
-  - url: https://github.com/librenms/librenms/blob/a61c11db7e8ef6a437ab55741658be2be7d14d34/app/Http/Controllers/ServiceTemplateController.php#L67C23-L67C23
-    reference_type: other
-    reference_id: ServiceTemplateController.php#L67C23-L67C23

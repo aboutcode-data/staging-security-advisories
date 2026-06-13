@@ -6,7 +6,14 @@ aliases:
 summary: |
   Missing connection timeout in Aardvark-dns
   A flaw was found in Aardvark-dns versions 1.12.0 and 1.12.1. They contain a denial of service vulnerability due to serial processing of TCP DNS queries. This flaw allows a malicious client to keep a TCP connection open indefinitely, causing other DNS queries to time out and resulting in a denial of service for all other containers using aardvark-dns.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/containers/aardvark-dns
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/containers/aardvark-dns
+        commit: aa109bbd6743abd7027e589cc4b871dd2dce7d50
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

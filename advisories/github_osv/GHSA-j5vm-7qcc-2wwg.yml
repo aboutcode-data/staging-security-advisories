@@ -23,7 +23,14 @@ summary: |
   - Be aware that `kopia repo status --json` will write the credentials to the output without scrubbing them.
   - Avoid executing `kopia repo status` with the `--json` flag in an insecure environment where.
   - Avoid logging the output of the `kopia repo status --json` command.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/kopia/kopia
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/kopia/kopia
+        commit: 1d6f852cd6534f4bea978cbdc85c583803d79f77
+    introduced_in_commits: []
 severities:
   - score: '2.0'
     scoring_system: cvssv3.1

@@ -12,6 +12,13 @@ impacted_packages:
     fixed_versions: vers:maven/4.0.0
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:github/pac4j/pac4j
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/pac4j/pac4j
+        commit: 5834aeb22ad3a4369dfa572be60d7b20f5784a8f
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
@@ -31,10 +38,16 @@ severities:
 weaknesses:
   - CWE-502
 references:
+  - url: https://github.com/frohoff/ysoserial
+    reference_type:
+    reference_id:
   - url: https://github.com/pac4j/pac4j
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2023-25581
+  - url: https://github.com/pac4j/pac4j/blob/5834aeb22ad3a4369dfa572be60d7b20f5784a8f/pac4j-core/src/main/java/org/pac4j/core/profile/InternalAttributeHandler.java#L95
+    reference_type:
+    reference_id:
+  - url: https://portswigger.net/web-security/deserialization
     reference_type:
     reference_id:
   - url: https://securitylab.github.com/advisories
@@ -43,12 +56,6 @@ references:
   - url: https://securitylab.github.com/advisories/GHSL-2022-085_pac4j
     reference_type:
     reference_id:
-  - url: https://portswigger.net/web-security/deserialization
-    reference_type: other
-    reference_id: deserialization
-  - url: https://github.com/pac4j/pac4j/blob/5834aeb22ad3a4369dfa572be60d7b20f5784a8f/pac4j-core/src/main/java/org/pac4j/core/profile/InternalAttributeHandler.java#L95
-    reference_type: other
-    reference_id: InternalAttributeHandler.java#L95
-  - url: https://github.com/frohoff/ysoserial
-    reference_type: other
-    reference_id: ysoserial
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2023-25581
+    reference_type:
+    reference_id: CVE-2023-25581

@@ -65,7 +65,16 @@ summary: |
   A malicious user with access to create workflows can continually submit workflows that do nothing except create and then clean up multiple daemon pods, resulting in a crash-loop that prevents other users' workflows from running. This can be done with only a handful of pods and very little cpu and memory, meaning typical multi-tenant Kubernetes controls such as Pod count and resource quotas are not effective at preventing it.
 
   Because the panic log does not in any way suggest that the issue has anything to do with the daemon pods, and an attacker could easily disguise these daemon pods as part of a genuine workflow, it would be difficult for administrators to discover the root cause of the DoS and the individuals responsible to remove their access.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/argoproj/argo-workflows
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/argoproj/argo-workflows
+        commit: ce7f9bfb9b45f009b3e85fabe5e6410de23c7c5f
+      - vcs_url: https://github.com/argoproj/argo-workflows
+        commit: 524406451f4dfa57bf3371fb85becdb56a2b309a
+    introduced_in_commits: []
 severities:
   - score: '5.7'
     scoring_system: cvssv3.1
@@ -83,24 +92,24 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-1108
   - CWE-362
+  - CWE-1108
 references:
   - url: https://github.com/argoproj/argo-workflows
+    reference_type:
+    reference_id:
+  - url: https://github.com/argoproj/argo-workflows/blob/ce7f9bfb9b45f009b3e85fabe5e6410de23c7c5f/workflow/metrics/metrics_k8s_request.go#L75
+    reference_type:
+    reference_id:
+  - url: https://github.com/argoproj/argo-workflows/commit/524406451f4dfa57bf3371fb85becdb56a2b309a
+    reference_type:
+    reference_id:
+  - url: https://github.com/argoproj/argo-workflows/pull/13641
+    reference_type:
+    reference_id:
+  - url: https://github.com/argoproj/argo-workflows/security/advisories/GHSA-ghjw-32xw-ffwr
     reference_type:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-47827
     reference_type:
     reference_id:
-  - url: https://github.com/argoproj/argo-workflows/pull/13641
-    reference_type: other
-    reference_id: 13641
-  - url: https://github.com/argoproj/argo-workflows/commit/524406451f4dfa57bf3371fb85becdb56a2b309a
-    reference_type: other
-    reference_id: 524406451f4dfa57bf3371fb85becdb56a2b309a
-  - url: https://github.com/argoproj/argo-workflows/security/advisories/GHSA-ghjw-32xw-ffwr
-    reference_type: other
-    reference_id: GHSA-ghjw-32xw-ffwr
-  - url: https://github.com/argoproj/argo-workflows/blob/ce7f9bfb9b45f009b3e85fabe5e6410de23c7c5f/workflow/metrics/metrics_k8s_request.go#L75
-    reference_type: other
-    reference_id: metrics_k8s_request.go#L75

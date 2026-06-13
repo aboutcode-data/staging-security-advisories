@@ -16,7 +16,14 @@ summary: |
   ### Credits
 
   Maintainers would like to thank Alex Chapman for discovering the vulnerability; @awprice, @nathanburrell, @raulgomis, @chris-walz, @erin-jensby, @bassmatt, @mark-adams, @dbaxa for working on it and Zac Ellis for responsibly disclosing it to security@docker.com
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/moby/moby
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/moby/moby
+        commit: 64bd4485b3a66a597c02c95f5776395e540b2c7c
+    introduced_in_commits: []
 severities:
   - score: '6.8'
     scoring_system: cvssv3.1
@@ -46,15 +53,15 @@ references:
   - url: https://github.com/moby/moby/security/advisories/GHSA-7452-xqpj-6rpc
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2021-21284
+    reference_type:
+    reference_id:
   - url: https://security.netapp.com/advisory/ntap-20210226-0005
     reference_type:
     reference_id:
   - url: https://www.debian.org/security/2021/dsa-4865
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2021-21284
-    reference_type:
-    reference_id: CVE-2021-21284
   - url: https://security.gentoo.org/glsa/202107-23
     reference_type:
     reference_id: GLSA-202107-23

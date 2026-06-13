@@ -6,7 +6,14 @@ aliases:
 summary: |
   Vault SSH Secrets Engine Configuration Did Not Restrict Valid Principals By Default
   Vault’s SSH secrets engine did not require the valid_principals list to contain a value by default. If the valid_principals and default_user fields of the SSH secrets engine configuration are not set, an SSH certificate requested by an authorized user to Vault’s SSH secrets engine could be used to authenticate as any user on the host. Fixed in Vault Community Edition 1.17.6, and in Vault Enterprise 1.17.6, 1.16.10, and 1.15.15.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/openbao/openbao
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openbao/openbao
+        commit: d5b4e922469830ac335b21dc0e8f9878c501a884
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -26,6 +33,9 @@ severities:
 weaknesses:
   - CWE-732
 references:
+  - url: https://discuss.hashicorp.com/t/hcsec-2024-20-vault-ssh-secrets-engine-configuration-did-not-restrict-valid-principals-by-default/70251
+    reference_type:
+    reference_id:
   - url: https://github.com/hashicorp/vault
     reference_type:
     reference_id:
@@ -47,6 +57,3 @@ references:
   - url: https://security.netapp.com/advisory/ntap-20250110-0007
     reference_type:
     reference_id:
-  - url: https://discuss.hashicorp.com/t/hcsec-2024-20-vault-ssh-secrets-engine-configuration-did-not-restrict-valid-principals-by-default/70251
-    reference_type: other
-    reference_id: 70251

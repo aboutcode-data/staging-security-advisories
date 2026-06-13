@@ -12,6 +12,15 @@ impacted_packages:
     fixed_versions: vers:maven/0.9.0
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:github/eclipse-edc/connector
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/eclipse-edc/connector
+        commit: bcb2e42aee82ce1863be3dcbdab29919d39a0e97
+      - vcs_url: https://github.com/eclipse-edc/connector
+        commit: 04899e91dcdb4a407db4eb7af3e7b6ff9a9e9ad6
+    introduced_in_commits: []
 severities:
   - score: '7.3'
     scoring_system: cvssv3.1
@@ -29,8 +38,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-303
   - CWE-287
+  - CWE-303
 references:
   - url: https://github.com/eclipse-edc/Connector
     reference_type:
@@ -38,18 +47,18 @@ references:
   - url: https://github.com/eclipse-edc/Connector/blob/bcb2e42aee82ce1863be3dcbdab29919d39a0e97/extensions/control-plane/transfer/transfer-data-plane/src/main/java/org/eclipse/edc/connector/controlplane/transfer/dataplane/api/ConsumerPullTransferTokenValidationApiController.java
     reference_type:
     reference_id:
+  - url: https://github.com/eclipse-edc/Connector/commit/04899e91dcdb4a407db4eb7af3e7b6ff9a9e9ad6
+    reference_type:
+    reference_id:
+  - url: https://github.com/eclipse-edc/Connector/releases/tag/v0.9.0
+    reference_type:
+    reference_id:
   - url: https://gitlab.eclipse.org/security/cve-assignment/-/issues/28
+    reference_type:
+    reference_id:
+  - url: https://gitlab.eclipse.org/security/vulnerability-reports/-/issues/234
     reference_type:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-8642
     reference_type:
-    reference_id:
-  - url: https://github.com/eclipse-edc/Connector/commit/04899e91dcdb4a407db4eb7af3e7b6ff9a9e9ad6
-    reference_type: other
-    reference_id: 04899e91dcdb4a407db4eb7af3e7b6ff9a9e9ad6
-  - url: https://gitlab.eclipse.org/security/vulnerability-reports/-/issues/234
-    reference_type: other
-    reference_id: 234
-  - url: https://github.com/eclipse-edc/Connector/releases/tag/v0.9.0
-    reference_type: other
-    reference_id: v0.9.0
+    reference_id: CVE-2024-8642

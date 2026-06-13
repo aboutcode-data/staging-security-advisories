@@ -36,7 +36,16 @@ summary: "Evmos transaction execution not accounting for all state transition af
   \ more information\nIf you have any questions or comments about this advisory:\n\nReach out\
   \ to the Core Team in [Discord](https://discord.gg/evmos)\nOpen a discussion in [evmos/evmos](https://github.com/evmos/evmos/discussions)\n\
   Email us at [security@evmos.org](mailto:security@evmos.org) for security questions"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/evmos/evmos
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/evmos/evmos
+        commit: 08982b5ee726b97bc50eaf58d1914829648b6a5f
+      - vcs_url: https://github.com/evmos/evmos
+        commit: b196a522ba4951890b40992e9f97aa610f8b5f9c
+    introduced_in_commits: []
 severities:
   - score: '9.1'
     scoring_system: cvssv3.1
@@ -57,18 +66,18 @@ references:
   - url: https://github.com/evmos/evmos/blob/b196a522ba4951890b40992e9f97aa610f8b5f9c/x/evm/statedb/statedb.go#L33-L55
     reference_type:
     reference_id:
+  - url: https://github.com/evmos/evmos/blob/b196a522ba4951890b40992e9f97aa610f8b5f9c/x/evm/statedb/statedb.go#L460-L465
+    reference_type:
+    reference_id:
   - url: https://github.com/evmos/evmos/blob/b196a522ba4951890b40992e9f97aa610f8b5f9c/x/evm/statedb/state_object.go#L53-L68
+    reference_type:
+    reference_id:
+  - url: https://github.com/evmos/evmos/commit/08982b5ee726b97bc50eaf58d1914829648b6a5f
+    reference_type:
+    reference_id:
+  - url: https://github.com/evmos/evmos/security/advisories/GHSA-3fp5-2xwh-fxm6
     reference_type:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-32644
     reference_type:
     reference_id:
-  - url: https://github.com/evmos/evmos/commit/08982b5ee726b97bc50eaf58d1914829648b6a5f
-    reference_type: other
-    reference_id: 08982b5ee726b97bc50eaf58d1914829648b6a5f
-  - url: https://github.com/evmos/evmos/security/advisories/GHSA-3fp5-2xwh-fxm6
-    reference_type: other
-    reference_id: GHSA-3fp5-2xwh-fxm6
-  - url: https://github.com/evmos/evmos/blob/b196a522ba4951890b40992e9f97aa610f8b5f9c/x/evm/statedb/statedb.go#L460-L465
-    reference_type: other
-    reference_id: statedb.go#L460-L465

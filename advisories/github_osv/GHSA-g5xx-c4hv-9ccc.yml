@@ -52,7 +52,16 @@ summary: "CometBFT's state syncing validator from malicious node may lead to a c
   \ more information about CometBFT, please see [https://docs.cometbft.com/](https://docs.cometbft.com/).\n\
   \nFor more information about the Interchain Foundation’s engagement with Amulet, please see\
   \ [https://github.com/interchainio/security](https://github.com/interchainio/security)."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/cometbft/cometbft
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/cometbft/cometbft
+        commit: 52c00a537f8f56ed94b4a5c8af6e3fecff468b55
+      - vcs_url: https://github.com/cometbft/cometbft
+        commit: 3937e00a339ee6b861d75997b4f6c87d867b74f2
+    introduced_in_commits: []
 severities:
   - score: '4.7'
     scoring_system: cvssv3.1

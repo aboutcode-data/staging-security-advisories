@@ -41,7 +41,18 @@ summary: "Parsing JSON serialized payload without protected field can lead to se
   \ in goroutine 1\n        /usr/local/go/src/testing/testing.go:1648 +0x3ad\nexit status 2\n\
   FAIL    poc     0.005s\n```\n\n### Impact\n\nThe vulnerability can be used to crash / DOS\
   \ a system doing JWS verification."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/lestrrat-go/jwx
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/lestrrat-go/jwx
+        commit: 0e8802ce6842625845d651456493e7c87625601f
+      - vcs_url: https://github.com/lestrrat-go/jwx
+        commit: 8c53d0ae52d5ab1e2b37c5abb67def9e7958fd65
+      - vcs_url: https://github.com/lestrrat-go/jwx
+        commit: d69a721931a5c48b9850a42404f18e143704adcd
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1
@@ -59,18 +70,18 @@ references:
   - url: https://github.com/lestrrat-go/jwx
     reference_type:
     reference_id:
+  - url: https://github.com/lestrrat-go/jwx/commit/0e8802ce6842625845d651456493e7c87625601f
+    reference_type:
+    reference_id:
+  - url: https://github.com/lestrrat-go/jwx/commit/8c53d0ae52d5ab1e2b37c5abb67def9e7958fd65
+    reference_type:
+    reference_id:
+  - url: https://github.com/lestrrat-go/jwx/commit/d69a721931a5c48b9850a42404f18e143704adcd
+    reference_type:
+    reference_id:
+  - url: https://github.com/lestrrat-go/jwx/security/advisories/GHSA-pvcr-v8j8-j5q3
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-21664
     reference_type:
     reference_id:
-  - url: https://github.com/lestrrat-go/jwx/commit/0e8802ce6842625845d651456493e7c87625601f
-    reference_type: other
-    reference_id: 0e8802ce6842625845d651456493e7c87625601f
-  - url: https://github.com/lestrrat-go/jwx/commit/8c53d0ae52d5ab1e2b37c5abb67def9e7958fd65
-    reference_type: other
-    reference_id: 8c53d0ae52d5ab1e2b37c5abb67def9e7958fd65
-  - url: https://github.com/lestrrat-go/jwx/commit/d69a721931a5c48b9850a42404f18e143704adcd
-    reference_type: other
-    reference_id: d69a721931a5c48b9850a42404f18e143704adcd
-  - url: https://github.com/lestrrat-go/jwx/security/advisories/GHSA-pvcr-v8j8-j5q3
-    reference_type: other
-    reference_id: GHSA-pvcr-v8j8-j5q3

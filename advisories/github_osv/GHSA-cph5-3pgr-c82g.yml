@@ -91,7 +91,14 @@ summary: "Gnark out-of-memory during deserialization with crafted inputs\nThanks
   \nThere are no convenient work-arounds currently. The best approach currently is to run key\
   \ verification as a separate service which halts the verification pipeline in case of OOM\
   \ when verification keys come from untrusted sources."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/consensys/gnark
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/consensys/gnark
+        commit: 47ae846339add2bdf9983e499342bfdfe195191d
+    introduced_in_commits: []
 severities:
   - score: '5.5'
     scoring_system: cvssv3.1
@@ -117,15 +124,15 @@ references:
   - url: https://github.com/Consensys/gnark
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2024-50354
+  - url: https://github.com/Consensys/gnark/commit/47ae846339add2bdf9983e499342bfdfe195191d
     reference_type:
     reference_id:
   - url: https://github.com/Consensys/gnark/pull/1307
-    reference_type: other
-    reference_id: 1307
-  - url: https://github.com/Consensys/gnark/commit/47ae846339add2bdf9983e499342bfdfe195191d
-    reference_type: other
-    reference_id: 47ae846339add2bdf9983e499342bfdfe195191d
+    reference_type:
+    reference_id:
   - url: https://github.com/Consensys/gnark/security/advisories/GHSA-cph5-3pgr-c82g
-    reference_type: other
-    reference_id: GHSA-cph5-3pgr-c82g
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2024-50354
+    reference_type:
+    reference_id:

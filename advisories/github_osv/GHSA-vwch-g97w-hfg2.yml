@@ -11,7 +11,14 @@ summary: "CubeFS leaks users key in logs\nCubeFS was found to leak users secret 
   \ during an ongoing security audit carried out by [Ada Logics](https://adalogics.com/) in\
   \ collaboration with [OSTIF](https://ostif.org/) and the [CNCF](https://www.cncf.io/).\n\n\
   The issue has been patched in v3.3.1. There is no other mitigation than upgrading CubeFS."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/cubefs/cubefs
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/cubefs/cubefs
+        commit: 8dccce6ac8dff3db44d7e9074094c7303a5ff5dd
+    introduced_in_commits: []
 severities:
   - score: '4.8'
     scoring_system: cvssv3.1
@@ -34,12 +41,12 @@ references:
   - url: https://github.com/cubefs/cubefs
     reference_type:
     reference_id:
+  - url: https://github.com/cubefs/cubefs/commit/8dccce6ac8dff3db44d7e9074094c7303a5ff5dd
+    reference_type:
+    reference_id:
+  - url: https://github.com/cubefs/cubefs/security/advisories/GHSA-vwch-g97w-hfg2
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2023-46742
     reference_type:
     reference_id:
-  - url: https://github.com/cubefs/cubefs/commit/8dccce6ac8dff3db44d7e9074094c7303a5ff5dd
-    reference_type: other
-    reference_id: 8dccce6ac8dff3db44d7e9074094c7303a5ff5dd
-  - url: https://github.com/cubefs/cubefs/security/advisories/GHSA-vwch-g97w-hfg2
-    reference_type: other
-    reference_id: GHSA-vwch-g97w-hfg2

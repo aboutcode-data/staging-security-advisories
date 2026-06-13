@@ -6,7 +6,20 @@ aliases:
 summary: |
   Mattermost's detailed error messages reveal the full file path
   Mattermost versions 9.6.x <= 9.6.0, 9.5.x <= 9.5.2, 9.4.x <= 9.4.4 and 8.1.x <= 8.1.11 fail to remove detailed error messages in API requests even if the developer mode is off which allows an attacker to get information about the server such as the full path were files are stored
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 2a48b5b3428cae494452125401e4f72780543ac8
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: aa222c66b799c12e32eeb8eae6f555bf6140375b
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 93738756ff79777c6e340c8de63a7b4b0f881d27
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: c84c25b20c8b8726a2f126ae9370a72498096172
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1
@@ -36,9 +49,9 @@ references:
   - url: https://github.com/mattermost/mattermost/commit/c84c25b20c8b8726a2f126ae9370a72498096172
     reference_type:
     reference_id:
+  - url: https://mattermost.com/security-updates
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-32046
     reference_type:
     reference_id:
-  - url: https://mattermost.com/security-updates
-    reference_type: other
-    reference_id: security-updates

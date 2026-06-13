@@ -6,7 +6,20 @@ aliases:
 summary: |
   Mattermost crashes web clients via a malformed custom status
   Mattermost versions 9.6.0, 9.5.x before 9.5.3, 9.4.x before 9.4.5, and 8.1.x before 8.1.12 fail to handle JSON parsing errors in custom status values, which allows an authenticated attacker to crash other users' web clients via a malformed custom status.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: f84f8ed65f6a5faba974426424b684635455a527
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 41333a0babf565453d89287549bec1e546e75ce7
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 6cbab0f7ece104681f73dd12c75d9f22d567125e
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: a99dadd80c57d376185ca06f8f70919a6f135bc6
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1
@@ -36,9 +49,9 @@ references:
   - url: https://github.com/mattermost/mattermost/commit/f84f8ed65f6a5faba974426424b684635455a527
     reference_type:
     reference_id:
+  - url: https://mattermost.com/security-updates
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-4182
     reference_type:
     reference_id:
-  - url: https://mattermost.com/security-updates
-    reference_type: other
-    reference_id: security-updates

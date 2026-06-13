@@ -6,7 +6,16 @@ aliases:
 summary: |
   snapd Race Condition vulnerability
   Race condition in snap-confine's `must_mkdir_and_open_with_perms()`
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/snapcore/snapd
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/snapcore/snapd
+        commit: 6226cdc57052f4b7057d92f2e549aa169e35cd2d
+      - vcs_url: https://github.com/snapcore/snapd
+        commit: 21ebc51f00b8a1417888faa2e83a372fd29d0f5e
+    introduced_in_commits: []
 severities:
   - score: '7.8'
     scoring_system: cvssv3.1

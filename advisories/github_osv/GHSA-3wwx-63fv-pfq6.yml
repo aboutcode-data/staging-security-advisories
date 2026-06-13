@@ -69,7 +69,16 @@ summary: |
   If you have any questions or comments about this advisory, please reach out on [Slack](https://docs.cilium.io/en/latest/community/community/#slack).
 
   If you think you have found a vulnerability affecting Cilium, we strongly encourage you to report it to our security mailing list at [security@cilium.io](mailto:security@cilium.io). This is a private mailing list for the Cilium security team, and your report will be treated with top priority.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/cilium/cilium
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/cilium/cilium
+        commit: 02d28d9ac9afcaddd301fae6fb4d6cda8c2d0c45
+      - vcs_url: https://github.com/cilium/cilium
+        commit: 9c01afb5646af3f0c696421a410dc66c513b6524
+    introduced_in_commits: []
 severities:
   - score: '4.0'
     scoring_system: cvssv3.1
@@ -82,8 +91,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-276
   - CWE-1038
+  - CWE-276
 references:
   - url: https://github.com/cilium/cilium
     reference_type:
@@ -94,9 +103,9 @@ references:
   - url: https://github.com/cilium/cilium/commit/9c01afb5646af3f0c696421a410dc66c513b6524
     reference_type:
     reference_id:
+  - url: https://github.com/cilium/cilium/security/advisories/GHSA-3wwx-63fv-pfq6
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-47825
     reference_type:
     reference_id:
-  - url: https://github.com/cilium/cilium/security/advisories/GHSA-3wwx-63fv-pfq6
-    reference_type: other
-    reference_id: GHSA-3wwx-63fv-pfq6

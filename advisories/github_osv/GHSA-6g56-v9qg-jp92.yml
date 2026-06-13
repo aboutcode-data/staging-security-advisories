@@ -6,7 +6,14 @@ aliases:
 summary: |
   Heketi Arbitrary Code Execution
   A security-check flaw was found in the way the Heketi 5 server API handled user requests. An authenticated Heketi user could send specially crafted requests to the Heketi server, resulting in remote command execution as the user running Heketi server and possibly privilege escalation.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/heketi/heketi
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/heketi/heketi
+        commit: 787bae461b23003a4daa4d1d639016a754cf6b00
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
@@ -19,9 +26,9 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-20
-  - CWE-78
   - CWE-94
+  - CWE-78
+  - CWE-20
 references:
   - url: https://access.redhat.com/errata/RHSA-2017:3481
     reference_type:

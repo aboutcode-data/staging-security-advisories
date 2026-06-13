@@ -6,7 +6,14 @@ aliases:
 summary: |
   Hashicorp Consul Cross-site Scripting vulnerability
   A vulnerability was identified in Consul and Consul Enterprise such that the server response did not explicitly set a Content-Type HTTP header, allowing user-provided inputs to be misinterpreted and lead to reflected XSS.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/hashicorp/consul
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/hashicorp/consul
+        commit: 07fae7bb0be8593cc98c38b1ef4a49ed9188932f
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
@@ -26,6 +33,9 @@ severities:
 weaknesses:
   - CWE-79
 references:
+  - url: https://discuss.hashicorp.com/t/hcsec-2024-24-consul-vulnerable-to-reflected-xss-on-content-type-error-manipulation
+    reference_type:
+    reference_id:
   - url: https://github.com/advisories/GHSA-99wr-c2px-grmh
     reference_type:
     reference_id:
@@ -41,6 +51,3 @@ references:
   - url: https://security.netapp.com/advisory/ntap-20250110-0006
     reference_type:
     reference_id:
-  - url: https://discuss.hashicorp.com/t/hcsec-2024-24-consul-vulnerable-to-reflected-xss-on-content-type-error-manipulation
-    reference_type: other
-    reference_id: hcsec-2024-24-consul-vulnerable-to-reflected-xss-on-content-type-error-manipulation

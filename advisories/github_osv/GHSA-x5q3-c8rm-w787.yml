@@ -26,7 +26,14 @@ summary: "PAM module may allow accessing with the credentials of another user\nA
   \nNow, while those tools should likely be fixed to only read the PAM_USER once pam gave them\
   \ the final ok, I think authd should not allow changing the user at all when it has been provided\
   \ by PAM.\n</details>"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/ubuntu/authd
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/ubuntu/authd
+        commit: 63e527496b013bed46904c1c58be593c13ebdce5
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
@@ -52,6 +59,9 @@ references:
   - url: https://github.com/ubuntu/authd/commit/63e527496b013bed46904c1c58be593c13ebdce5
     reference_type:
     reference_id:
+  - url: https://github.com/ubuntu/authd/security/advisories/GHSA-x5q3-c8rm-w787
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-9313
     reference_type:
     reference_id:
@@ -59,8 +69,5 @@ references:
     reference_type:
     reference_id:
   - url: https://www.cve.org/CVERecord?id=CVE-2024-9313
-    reference_type: bug
-    reference_id: CVERecord?id=CVE-2024-9313
-  - url: https://github.com/ubuntu/authd/security/advisories/GHSA-x5q3-c8rm-w787
-    reference_type: bug
-    reference_id: GHSA-x5q3-c8rm-w787
+    reference_type:
+    reference_id:

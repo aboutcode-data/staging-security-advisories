@@ -74,7 +74,16 @@ summary: "Dex discarding TLSconfig and always serves deprecated TLS 1.0/1.1 and 
   \   256       ECDH: X25519 (253 bits)\n        TLS_AES_256_GCM_SHA384                    \
   \        256       ECDH: X25519 (253 bits)\n```\n\n### Impact\nTLS 1.0 and TLS 1.1 connections\
   \ can be decrypted by the attacker, and hence decrypt the traffic to Dex."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/dexidp/dex
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/dexidp/dex
+        commit: 5bbdb4420254ba73b9c4df4775fe7bdacf233b17
+      - vcs_url: https://github.com/dexidp/dex
+        commit: 70d7a2c7c1bb2646b1a540e49616cbc39622fb83
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

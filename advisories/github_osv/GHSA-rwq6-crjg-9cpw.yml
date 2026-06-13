@@ -23,7 +23,14 @@ summary: "ic-cdk has a memory leak when calling a canister method via `ic_cdk::c
   \ (without updating `ic_cdk`) also frees the leaked memory but it's only a temporary solution.\n\
   \n### References\n- [dfinity/cdk-rs/pull/509](https://github.com/dfinity/cdk-rs/pull/509)\n\
   - [ic_cdk docs](https://docs.rs/ic-cdk/latest/ic_cdk/)\n- [Internet Computer Specification](https://internetcomputer.org/docs/current/references/ic-interface-spec)"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/dfinity/cdk-rs
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/dfinity/cdk-rs
+        commit: bd17d57a7b8ca59665fea5fad6143ca02724d03b
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -52,7 +59,13 @@ references:
   - url: https://github.com/dfinity/cdk-rs/commit/bd17d57a7b8ca59665fea5fad6143ca02724d03b
     reference_type:
     reference_id:
+  - url: https://github.com/dfinity/cdk-rs/pull/509
+    reference_type:
+    reference_id:
   - url: https://github.com/dfinity/cdk-rs/security/advisories/GHSA-rwq6-crjg-9cpw
+    reference_type:
+    reference_id:
+  - url: https://internetcomputer.org/docs/current/references/ic-interface-spec
     reference_type:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-7884
@@ -61,9 +74,3 @@ references:
   - url: https://rustsec.org/advisories/RUSTSEC-2024-0372.html
     reference_type:
     reference_id:
-  - url: https://github.com/dfinity/cdk-rs/pull/509
-    reference_type: other
-    reference_id: 509
-  - url: https://internetcomputer.org/docs/current/references/ic-interface-spec
-    reference_type: other
-    reference_id: ic-interface-spec

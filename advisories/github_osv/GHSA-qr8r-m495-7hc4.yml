@@ -23,7 +23,14 @@ summary: "Validation of `VoteExtensionsEnableHeight` can cause chain halt in Go 
   \ it to the Cosmos Bug Bounty Program on HackerOne on January 15, 2024. If you believe you\
   \ have found a bug in the Interchain Stack or would like to contribute to the program by reporting\
   \ a bug, please see https://hackerone.com/cosmos."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/cometbft/cometbft
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/cometbft/cometbft
+        commit: 5fbc97378b94b0945febe9549399e7c9c5df13ed
+    introduced_in_commits: []
 severities:
   - score: HIGH
     scoring_system: generic_textual

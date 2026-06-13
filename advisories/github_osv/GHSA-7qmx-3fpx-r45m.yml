@@ -101,7 +101,14 @@ summary: "Wasmtime race condition could lead to WebAssembly control-flow integri
   * Dropping a [`wasmtime::UnknownImportError`](https://docs.rs/wasmtime/latest/wasmtime/struct.UnknownImportError.html)\n\
   * Dropping a [`wasmtime::Linker`](https://docs.rs/wasmtime/latest/wasmtime/struct.Linker.html)\n\
   \nThe change which introduced this bug was [#7969](https://github.com/bytecodealliance/wasmtime/pull/7969)"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/bytecodealliance/wasmtime
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/bytecodealliance/wasmtime
+        commit: 0ebe54d05f0e1f6c64b7c8bb48c9e9f6c95cacba
+    introduced_in_commits: []
 severities:
   - score: '2.9'
     scoring_system: cvssv3.1
@@ -131,6 +138,9 @@ references:
     reference_type:
     reference_id:
   - url: https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-7qmx-3fpx-r45m
+    reference_type:
+    reference_id:
+  - url: https://github.com/pypa/advisory-database/tree/main/vulns/wasmtime/PYSEC-2024-311.yaml
     reference_type:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-47813

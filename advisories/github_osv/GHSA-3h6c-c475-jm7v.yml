@@ -6,7 +6,14 @@ aliases:
 summary: |
   Arbitrary Code Execution in Gitea
   The git hook feature in Gitea 1.1.0 through 1.12.5 allows for authenticated remote code execution.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/go-gitea/gitea
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/go-gitea/gitea
+        commit: 8fe8ab5cbf2977f3a01ea12361df2cd76dce3ea9
+    introduced_in_commits: []
 severities:
   - score: '7.2'
     scoring_system: cvssv3.1

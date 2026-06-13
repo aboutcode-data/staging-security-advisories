@@ -10,7 +10,16 @@ summary: |
       - The certificate’s timestamp, i.e /time path, is not verified, meaning that the certificate effectively has no expiration time. The [IC spec](https://internetcomputer.org/docs/current/references/ic-interface-spec#http-query) doesn’t specify an expiry times, it gives some suggestions, quoting: "A reasonable expiry time for timestamps in R.signatures and the certificate Cert is 5 minutes (analogously to the maximum allowed ingress expiry enforced by the IC mainnet). Delegations require expiry times of at least a week since the IC mainnet refreshes the delegations only after replica upgrades which typically happen once a week". For reference you can check how is this implemented in the agent-rs ([here](https://github.com/dfinity/agent-rs/blob/608a3f4cfdcdfc5ca1ca74a1b9d33f2137a2d324/ic-agent/src/agent/mod.rs#L820) and [here](https://github.com/dfinity/agent-rs/blob/608a3f4cfdcdfc5ca1ca74a1b9d33f2137a2d324/ic-agent/src/agent/mod.rs#L876-L887)).
 
   **Additionally**, seems [replica signed queries](https://internetcomputer.org/blog/features/replica-signed-queries) aren’t implemented
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/astroxnetwork/agent_dart
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/astroxnetwork/agent_dart
+        commit: 0d200686aabcd9313c7bc3e675cbdc82f6b775cf
+      - vcs_url: https://github.com/astroxnetwork/agent_dart
+        commit: f50971dfae3f536c1720f0084f28afbcf5d99cb5
+    introduced_in_commits: []
 severities:
   - score: '0.0'
     scoring_system: cvssv3.1
@@ -34,18 +43,18 @@ references:
   - url: https://github.com/AstroxNetwork/agent_dart
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2024-48915
+  - url: https://github.com/AstroxNetwork/agent_dart/blob/f50971dfae3f536c1720f0084f28afbcf5d99cb5/lib/agent/certificate.dart#L162
+    reference_type:
+    reference_id:
+  - url: https://github.com/AstroxNetwork/agent_dart/blob/main/lib/agent/certificate.dart
     reference_type:
     reference_id:
   - url: https://github.com/AstroxNetwork/agent_dart/commit/0d200686aabcd9313c7bc3e675cbdc82f6b775cf
-    reference_type: other
-    reference_id: 0d200686aabcd9313c7bc3e675cbdc82f6b775cf
-  - url: https://github.com/AstroxNetwork/agent_dart/blob/main/lib/agent/certificate.dart
-    reference_type: other
-    reference_id: certificate.dart
-  - url: https://github.com/AstroxNetwork/agent_dart/blob/f50971dfae3f536c1720f0084f28afbcf5d99cb5/lib/agent/certificate.dart#L162
-    reference_type: other
-    reference_id: certificate.dart#L162
+    reference_type:
+    reference_id:
   - url: https://github.com/AstroxNetwork/agent_dart/security/advisories/GHSA-fmj7-7gfw-64pg
-    reference_type: other
-    reference_id: GHSA-fmj7-7gfw-64pg
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2024-48915
+    reference_type:
+    reference_id:

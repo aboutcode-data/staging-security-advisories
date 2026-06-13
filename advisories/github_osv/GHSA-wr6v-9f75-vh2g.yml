@@ -15,7 +15,16 @@ summary: |
   Avoid using BuildKit frontends from untrusted sources. A frontend image is usually specified as the `#syntax` line on your Dockerfile, or with `--frontend` flag when using `buildctl build` command.
 
   ### References
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/moby/buildkit
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/moby/buildkit
+        commit: 92cc595cfb12891d4b3ae476e067c74250e4b71e
+      - vcs_url: https://github.com/moby/buildkit
+        commit: 5026d95aa3336e97cfe46e3764f52d08bac7a10e
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1

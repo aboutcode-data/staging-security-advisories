@@ -8,7 +8,14 @@ summary: "Grafana plugin SDK Information Leakage\nThe grafana plugin SDK bundles
   \ being built, as retrieved by running `git remote get-url origin`.\n \nIf credentials are\
   \ included in the repository URI (for instance, to allow for fetching of private dependencies),\
   \ the final binary will contain the full URI, including said credentials."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/grafana/grafana-plugin-sdk-go
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/grafana/grafana-plugin-sdk-go
+        commit: aaa26d1bebaaf6160c37d3f1226a750eab70ca41
+    introduced_in_commits: []
 severities:
   - score: '5.9'
     scoring_system: cvssv3.1

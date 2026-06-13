@@ -62,7 +62,16 @@ summary: "Nginx-UI vulnerable to arbitrary file write through the Import Certifi
   \n![image](https://user-images.githubusercontent.com/26652608/299331664-6415a8c1-6611-4e53-8137-3e574c58da28.png)\n\
   \n\n\n### Impact\n\nArbitrary write/overwrite into the host file system with a risk of remote\
   \ code execution if the app restarts."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/0xjacky/nginx-ui
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/0xjacky/nginx-ui
+        commit: 8581bdd3c6f49ab345b773517ba9173fa7fc6199
+      - vcs_url: https://github.com/0xjacky/nginx-ui
+        commit: f20d97a9fdc2a83809498b35b6abc0239ec7fdda
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1

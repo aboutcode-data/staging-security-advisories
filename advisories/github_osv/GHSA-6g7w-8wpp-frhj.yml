@@ -37,7 +37,22 @@ summary: "Denial of Service Vulnerability in Rustls Library\n### Summary\n`rustl
   \ this infinite loop even if the client closes the socket.\n\n### Impact\n\nThis is a DOS.\n\
   \nA multithread non-async server that uses `rustls` could be attacked by getting few requests\
   \ like above (each request could cause one thread to spin) and stop handling normal requests."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/rustls/rustls
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/rustls/rustls
+        commit: 2123576840aa31043a31b0770e6572136fbe0c2d
+      - vcs_url: https://github.com/rustls/rustls
+        commit: 6e938bcfe82a9da7a2e1cbf10b928c7eca26426e
+      - vcs_url: https://github.com/rustls/rustls
+        commit: f45664fbded03d833dffd806503d3c8becd1b71e
+      - vcs_url: https://github.com/rustls/rustls
+        commit: 5374108df698e78c3e9ef8265cac311556be24af
+      - vcs_url: https://github.com/rustls/rustls
+        commit: ebcb4782f23b4edf9b10a7065d9e8d4362439d9c
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -52,10 +67,25 @@ severities:
 weaknesses:
   - CWE-835
 references:
+  - url: https://github.com/rustls/rustls
+    reference_type:
+    reference_id:
+  - url: https://github.com/rustls/rustls/commit/2123576840aa31043a31b0770e6572136fbe0c2d
+    reference_type:
+    reference_id:
   - url: https://github.com/rustls/rustls/commit/5374108df698e78c3e9ef8265cac311556be24af
     reference_type:
     reference_id:
+  - url: https://github.com/rustls/rustls/commit/6e938bcfe82a9da7a2e1cbf10b928c7eca26426e
+    reference_type:
+    reference_id:
   - url: https://github.com/rustls/rustls/commit/ebcb4782f23b4edf9b10a7065d9e8d4362439d9c
+    reference_type:
+    reference_id:
+  - url: https://github.com/rustls/rustls/commit/f45664fbded03d833dffd806503d3c8becd1b71e
+    reference_type:
+    reference_id:
+  - url: https://github.com/rustls/rustls/security/advisories/GHSA-6g7w-8wpp-frhj
     reference_type:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-32650
@@ -64,18 +94,3 @@ references:
   - url: https://rustsec.org/advisories/RUSTSEC-2024-0336.html
     reference_type:
     reference_id:
-  - url: https://github.com/rustls/rustls/commit/2123576840aa31043a31b0770e6572136fbe0c2d
-    reference_type: other
-    reference_id: 2123576840aa31043a31b0770e6572136fbe0c2d
-  - url: https://github.com/rustls/rustls/commit/6e938bcfe82a9da7a2e1cbf10b928c7eca26426e
-    reference_type: other
-    reference_id: 6e938bcfe82a9da7a2e1cbf10b928c7eca26426e
-  - url: https://github.com/rustls/rustls/commit/f45664fbded03d833dffd806503d3c8becd1b71e
-    reference_type: other
-    reference_id: f45664fbded03d833dffd806503d3c8becd1b71e
-  - url: https://github.com/rustls/rustls/security/advisories/GHSA-6g7w-8wpp-frhj
-    reference_type: other
-    reference_id: GHSA-6g7w-8wpp-frhj
-  - url: https://github.com/rustls/rustls
-    reference_type: other
-    reference_id: rustls

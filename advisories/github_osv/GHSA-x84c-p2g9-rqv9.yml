@@ -42,7 +42,14 @@ summary: |
     - https://docs.docker.com/reference/cli/docker/container/run/#sysctl
   - sysctl configuration using `docker compose`:
     - https://docs.docker.com/compose/compose-file/compose-file-v3/#sysctls
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/moby/moby
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/moby/moby
+        commit: 7cef0d9cd1cf221d8c0b7b7aeda69552649e0642
+    introduced_in_commits: []
 severities:
   - score: '4.7'
     scoring_system: cvssv3.1
@@ -60,12 +67,12 @@ references:
   - url: https://github.com/moby/moby
     reference_type:
     reference_id:
+  - url: https://github.com/moby/moby/commit/7cef0d9cd1cf221d8c0b7b7aeda69552649e0642
+    reference_type:
+    reference_id:
+  - url: https://github.com/moby/moby/security/advisories/GHSA-x84c-p2g9-rqv9
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-32473
     reference_type:
     reference_id:
-  - url: https://github.com/moby/moby/commit/7cef0d9cd1cf221d8c0b7b7aeda69552649e0642
-    reference_type: other
-    reference_id: 7cef0d9cd1cf221d8c0b7b7aeda69552649e0642
-  - url: https://github.com/moby/moby/security/advisories/GHSA-x84c-p2g9-rqv9
-    reference_type: other
-    reference_id: GHSA-x84c-p2g9-rqv9

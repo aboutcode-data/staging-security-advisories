@@ -6,7 +6,20 @@ aliases:
 summary: |
   Mattermost Server Improper Access Control
   Improper Access Control in Mattermost Server versions 9.5.x before 9.5.2, 9.4.x before 9.4.4, 9.3.x before 9.3.3, 8.1.x before 8.1.11 lacked proper access control in the `/api/v4/users/me/teams` endpoint allowing a team admin to get the invite ID of their team, thus allowing them to invite users, even if the "Add Members" permission was explicitly removed from team admins.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 5cce9fed7363386afebd81a58fb5fab7d2729c8f
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: a5784f34ba6592c6454b8742f24af9d06279e347
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: dd3fe2991a70a41790d6bef5d31afc5957525f3c
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 0dc03fbc6e3c9afb14137e72ab3fa6f5a0125b9c
+    introduced_in_commits: []
 severities:
   - score: '4.7'
     scoring_system: cvssv3.1
@@ -41,12 +54,12 @@ references:
   - url: https://github.com/mattermost/mattermost/commit/dd3fe2991a70a41790d6bef5d31afc5957525f3c
     reference_type:
     reference_id:
+  - url: https://mattermost.com/security-updates
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-29221
     reference_type:
     reference_id:
   - url: https://pkg.go.dev/vuln/GO-2024-2706
     reference_type:
     reference_id:
-  - url: https://mattermost.com/security-updates
-    reference_type: other
-    reference_id: security-updates

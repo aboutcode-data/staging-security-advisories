@@ -6,7 +6,14 @@ aliases:
 summary: |
   Hashicorp Consul Improper Neutralization of HTTP Headers for Scripting Syntax vulnerability
   A vulnerability was identified in Consul and Consul Enterprise ("Consul") such that using Headers in L7 traffic intentions could bypass HTTP header based access rules.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/hashicorp/consul
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/hashicorp/consul
+        commit: d9206fc7e284a9244af4d62f8653a63ca30bd00c
+    introduced_in_commits: []
 severities:
   - score: '8.3'
     scoring_system: cvssv3.1
@@ -24,9 +31,12 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-116
   - CWE-644
+  - CWE-116
 references:
+  - url: https://discuss.hashicorp.com/t/hcsec-2024-23-consul-l7-intentions-vulnerable-to-headers-bypass
+    reference_type:
+    reference_id:
   - url: https://github.com/hashicorp/consul
     reference_type:
     reference_id:
@@ -42,6 +52,3 @@ references:
   - url: https://security.netapp.com/advisory/ntap-20250110-0005
     reference_type:
     reference_id:
-  - url: https://discuss.hashicorp.com/t/hcsec-2024-23-consul-l7-intentions-vulnerable-to-headers-bypass
-    reference_type: other
-    reference_id: hcsec-2024-23-consul-l7-intentions-vulnerable-to-headers-bypass

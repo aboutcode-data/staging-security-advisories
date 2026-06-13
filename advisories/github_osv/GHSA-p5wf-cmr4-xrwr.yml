@@ -13,7 +13,14 @@ summary: "Permissive Regular Expression in tacquito\n### Impact\nThe CVE is for 
   \ has been patched, and users should update to the latest github repo commit to get the patch.\
   \ \n\n### Workarounds\nUsers should be able to add boundary conditions anchors '^' and '$'\
   \ to their command configs to remediate the vulnerability without the upgrade"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/facebookincubator/tacquito
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/facebookincubator/tacquito
+        commit: 07b49d1358e6ec0b5aa482fcd284f509191119e2
+    introduced_in_commits: []
 severities:
   - score: '7.6'
     scoring_system: cvssv3.1
@@ -46,5 +53,5 @@ references:
     reference_type:
     reference_id:
   - url: https://www.facebook.com/security/advisories/cve-2024-49400
-    reference_type: other
-    reference_id: cve-2024-49400
+    reference_type:
+    reference_id:

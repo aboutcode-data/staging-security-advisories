@@ -11,7 +11,14 @@ summary: |
   I also presented this attack in the IETF QUIC working group session at IETF 119: https://youtu.be/JqXtYcZAtIA?si=nJ31QKLBSTRXY35U&t=3683
 
   There's no way to mitigate this attack, please update quic-go to a version that contains the fix.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/quic-go/quic-go
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/quic-go/quic-go
+        commit: 4a99b816ae3ab03ae5449d15aac45147c85ed47a
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -27,21 +34,21 @@ weaknesses:
   - CWE-400
   - CWE-770
 references:
+  - url: https://github.com/quic-go/quic-go
+    reference_type:
+    reference_id:
+  - url: https://github.com/quic-go/quic-go/commit/4a99b816ae3ab03ae5449d15aac45147c85ed47a
+    reference_type:
+    reference_id:
+  - url: https://github.com/quic-go/quic-go/security/advisories/GHSA-c33x-xqrf-c478
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-22189
     reference_type:
     reference_id:
   - url: https://seemann.io/posts/2024-03-19-exploiting-quics-connection-id-management
-    reference_type: other
-    reference_id: '2024-03-19-exploiting-quics-connection-id-management'
-  - url: https://github.com/quic-go/quic-go/commit/4a99b816ae3ab03ae5449d15aac45147c85ed47a
-    reference_type: other
-    reference_id: 4a99b816ae3ab03ae5449d15aac45147c85ed47a
-  - url: https://github.com/quic-go/quic-go/security/advisories/GHSA-c33x-xqrf-c478
-    reference_type: other
-    reference_id: GHSA-c33x-xqrf-c478
-  - url: https://github.com/quic-go/quic-go
-    reference_type: other
-    reference_id: quic-go
+    reference_type:
+    reference_id:
   - url: https://www.youtube.com/watch?v=JqXtYcZAtIA&t=3683s
-    reference_type: other
-    reference_id: watch?v=JqXtYcZAtIA&t=3683s
+    reference_type:
+    reference_id:
