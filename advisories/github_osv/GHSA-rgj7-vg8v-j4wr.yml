@@ -44,7 +44,14 @@ summary: "Ech0's Unauthenticated Like Endpoint Enables Arbitrary Engagement Metr
   \ \n Require authentication for likes and enforce **one like per principal**, **or** keep\
   \ anonymous likes but add **rate limiting**, **proof-of-work / captcha**, or **signed tokens**\
   \ tied to anon sessions; document that counts are **not** auditor-grade metrics."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/lin-snow/ech0
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/lin-snow/ech0
+        commit: a7e8b8e84bd1e3db090dfb720f2c6c433356b442
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
@@ -57,8 +64,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-306
   - CWE-862
+  - CWE-306
 references:
   - url: https://github.com/lin-snow/Ech0
     reference_type:

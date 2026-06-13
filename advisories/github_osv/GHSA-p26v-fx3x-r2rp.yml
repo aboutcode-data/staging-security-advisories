@@ -1,0 +1,50 @@
+advisory_id: GHSA-p26v-fx3x-r2rp
+datasource_id: github_osv/GHSA-p26v-fx3x-r2rp
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-p26v-fx3x-r2rp/GHSA-p26v-fx3x-r2rp.json
+aliases: []
+summary: |
+  Duplicate Advisory: phpMyFAQ's Missing CONFIGURATION_EDIT Permission Check on 12 Admin API Configuration Tab Endpoints Allows Information Disclosure by Any Authenticated User
+  ### Duplicate Advisory
+  This advisory has been withdrawn because it is a duplicate of GHSA-pqh6-8fxf-jx22. This link is maintained to preserve external references.
+
+  ### Original Description
+  phpMyFAQ before 4.1.2 contains missing permission checks in ConfigurationTabController.php where 12 endpoints use userIsAuthenticated() instead of userHasPermission(CONFIGURATION_EDIT). Any authenticated user can enumerate system configuration metadata including permission model, cache backend, mail provider, and translation provider by querying /admin/api/configuration endpoints, violating least privilege access control.
+impacted_packages:
+  - purl: pkg:composer/thorsten/phpmyfaq
+    affected_versions: vers:composer/<4.1.2
+    fixed_versions: vers:composer/4.1.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/phpmyfaq/phpmyfaq
+    affected_versions: vers:composer/<4.1.2
+    fixed_versions: vers:composer/4.1.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '4.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-p26v-fx3x-r2rp/GHSA-p26v-fx3x-r2rp.json
+  - score: '5.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-p26v-fx3x-r2rp/GHSA-p26v-fx3x-r2rp.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-862
+references:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-45007
+    reference_type:
+    reference_id:
+  - url: https://www.vulncheck.com/advisories/phpmyfaq-missing-permission-check-on-12-configuration-api-endpoints-allows-information-disclosure
+    reference_type:
+    reference_id:
+  - url: https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-rm98-82fr-mcfx
+    reference_type:
+    reference_id: GHSA-rm98-82fr-mcfx

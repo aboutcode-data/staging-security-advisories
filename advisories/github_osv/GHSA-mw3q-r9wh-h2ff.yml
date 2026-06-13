@@ -25,7 +25,14 @@ summary: |
 
   - Fix commit: (link to the merged PR commit, once merged)
   - Affected code: [`primitives/trie/src/trie.rs`](https://github.com/nimiq/core-rs-albatross/blob/albatross/primitives/trie/src/trie.rs) — `put_chunk` (around line 819) and `put_raw` (around line 351)
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/nimiq/core-rs-albatross
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/nimiq/core-rs-albatross
+        commit: 0fb8766adea91e038af00e635a6eb92756e50172
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -53,5 +60,8 @@ references:
     reference_type:
     reference_id:
   - url: https://github.com/nimiq/core-rs-albatross/security/advisories/GHSA-mw3q-r9wh-h2ff
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-46545
     reference_type:
     reference_id:

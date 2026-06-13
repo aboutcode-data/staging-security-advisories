@@ -6,7 +6,18 @@ aliases:
 summary: |
   Mattermost has a Missing Authorization vulnerability
   Mattermost versions 10.11.x <= 10.11.1, 10.10.x <= 10.10.2, 10.5.x <= 10.5.10 fail to verify a user has permission to join a Mattermost team using the original invite token which allows any attacked to join any team on a Mattermost server regardless of restrictions via manipulating the OAuth state.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 2096f975b2c0ebe95fb1078c3b1a527da574796d
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 39bd251fe4f66b7e847fc6d653221886347ff160
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: e14175eb65393bebc16dbb68a8105b3094b0f0dd
+    introduced_in_commits: []
 severities:
   - score: '8.1'
     scoring_system: cvssv3.1

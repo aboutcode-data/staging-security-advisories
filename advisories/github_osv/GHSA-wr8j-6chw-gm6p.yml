@@ -75,7 +75,14 @@ summary: |
 
   Upstream issue: https://github.com/free5gc/free5gc/issues/803
   Upstream fix: https://github.com/free5gc/pcf/pull/62
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/free5gc/pcf
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/free5gc/pcf
+        commit: df535f5524314620715e842baf9723efbeb481a7
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -88,8 +95,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-476
   - CWE-754
+  - CWE-476
 references:
   - url: https://github.com/free5gc/free5gc
     reference_type:
@@ -104,5 +111,8 @@ references:
     reference_type:
     reference_id:
   - url: https://github.com/free5gc/pcf/pull/62
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-44316
     reference_type:
     reference_id:

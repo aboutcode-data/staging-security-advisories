@@ -1,0 +1,50 @@
+advisory_id: GHSA-478m-mrw4-qf2w
+datasource_id: github_osv/GHSA-478m-mrw4-qf2w
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-478m-mrw4-qf2w/GHSA-478m-mrw4-qf2w.json
+aliases: []
+summary: |
+  Duplicate Advisory: phpMyFAQ has stored XSS via | raw Filter in search.twig — html_entity_decode(strip_tags()) Bypass in Search Result Rendering
+  ### Duplicate Advisory
+  This advisory has been withdrawn because it is a duplicate of GHSA-pqh6-8fxf-jx22. This link is maintained to preserve external references.
+
+  ### Original Description
+  phpMyFAQ before 4.1.2 contains a stored cross-site scripting vulnerability in search.twig where result.question and result.answerPreview are rendered with the raw filter, disabling autoescape protection. Attackers with FAQ editor privileges can inject HTML-entity-encoded payloads that bypass html_entity_decode(strip_tags()) processing in SearchController.php, executing arbitrary JavaScript in every visitor's browser context including administrators.
+impacted_packages:
+  - purl: pkg:composer/thorsten/phpmyfaq
+    affected_versions: vers:composer/<4.1.2
+    fixed_versions: vers:composer/4.1.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/phpmyfaq/phpmyfaq
+    affected_versions: vers:composer/<4.1.2
+    fixed_versions: vers:composer/4.1.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.9'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:H/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-478m-mrw4-qf2w/GHSA-478m-mrw4-qf2w.json
+  - score: '8.2'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:P/VC:H/VI:L/VA:N/SC:H/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-478m-mrw4-qf2w/GHSA-478m-mrw4-qf2w.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-79
+references:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-46361
+    reference_type:
+    reference_id:
+  - url: https://www.vulncheck.com/advisories/phpmyfaq-stored-cross-site-scripting-via-raw-filter-in-search-twig
+    reference_type:
+    reference_id:
+  - url: https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-pqh6-8fxf-jx22
+    reference_type:
+    reference_id: GHSA-pqh6-8fxf-jx22

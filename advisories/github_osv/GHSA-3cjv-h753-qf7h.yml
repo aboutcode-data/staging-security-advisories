@@ -6,7 +6,14 @@ aliases:
 summary: |
   Crabbox contains a path traversal vulnerability in the Islo provider's workspace path resolution
   Crabbox before 0.9.0 contains a path traversal vulnerability in the Islo provider's workspace path resolution that allows attackers to supply absolute or relative paths that resolve outside the intended /workspace directory. Attackers can craft a malicious .crabbox.yaml or crabbox.yaml file with traversal sequences to cause arbitrary file deletion and overwrite when sync.delete is enabled, as the workspace preparation logic executes rm -rf and mkdir -p operations on the resolved path without proper validation.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/openclaw/crabbox
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openclaw/crabbox
+        commit: 6b07193fb5670aac315ea47215651c67b8127868
+    introduced_in_commits: []
 severities:
   - score: '7.1'
     scoring_system: cvssv3.1

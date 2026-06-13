@@ -1,0 +1,54 @@
+advisory_id: GHSA-f3cj-mjqm-fhvj
+datasource_id: github_osv/GHSA-f3cj-mjqm-fhvj
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-f3cj-mjqm-fhvj/GHSA-f3cj-mjqm-fhvj.json
+aliases:
+  - CVE-2026-6365
+summary: |
+  Drupal core is Vulnerable to Cross-Site Scripting
+  Improper Neutralization of Input During Web Page Generation ("Cross-site Scripting") vulnerability in Drupal Drupal core allows Cross-Site Scripting (XSS).
+
+  This issue affects Drupal core: from 8.0.0 before 10.5.9, from 10.6.0 before 10.6.7, from 11.0.0 before 11.2.11, from 11.3.0 before 11.3.7.
+impacted_packages:
+  - purl: pkg:composer/drupal/core
+    affected_versions: vers:composer/>=10.6.0|<10.6.7
+    fixed_versions: vers:composer/10.6.7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/drupal/core
+    affected_versions: vers:composer/>=11.0.0|<11.2.11
+    fixed_versions: vers:composer/11.2.11
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/drupal/core
+    affected_versions: vers:composer/>=11.3.0|<11.3.7
+    fixed_versions: vers:composer/11.3.7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/drupal/core
+    affected_versions: vers:composer/>=8.0.0|<10.5.9
+    fixed_versions: vers:composer/10.5.9
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.1'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-f3cj-mjqm-fhvj/GHSA-f3cj-mjqm-fhvj.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-79
+references:
+  - url: https://github.com/drupal/core
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-6365
+    reference_type:
+    reference_id:
+  - url: https://www.drupal.org/sa-core-2026-001
+    reference_type:
+    reference_id:

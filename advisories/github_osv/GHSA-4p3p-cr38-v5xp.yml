@@ -40,7 +40,16 @@ summary: "Omni is Vulnerable to DoS via Empty Create/Update Resource Requests\n#
   \ == nil || resource.Metadata == nil {\n        return false\n    }\n    res, err := grpcomni.CreateResource(resource)\n\
   \    if err != nil {\n        return false\n    }\n    // ... rest of function\n}\n```\n\n\
   ## Credits\n- @1c3t0rm\n- @nicomda"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/siderolabs/omni
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/siderolabs/omni
+        commit: 1fd954af64985a8b3dbf5b11deddbf7cd953f5ae
+      - vcs_url: https://github.com/siderolabs/omni
+        commit: 1396083f766a1b0380e9949968d7fc17b7afecaa
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1

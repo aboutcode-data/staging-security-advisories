@@ -6,7 +6,14 @@ aliases:
 summary: |
   HashiCorp Nomad vulnerable to a path traversal
   HashiCorp Nomad and Nomad Enterprise prior to 2.0.1 are vulnerable to code execution on the client host through a path traversal attack. This vulnerability (CVE-2026-7474) is fixed in Nomad 2.0.1, 1.11.5 and 1.10.11.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/hashicorp/nomad
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/hashicorp/nomad
+        commit: cd7240c4099ad33eda279924fb3a9459b162d120
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1

@@ -1,0 +1,52 @@
+advisory_id: GHSA-4x37-hw65-52w8
+datasource_id: github_osv/GHSA-4x37-hw65-52w8
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-4x37-hw65-52w8/GHSA-4x37-hw65-52w8.json
+aliases:
+  - CVE-2026-37979
+summary: |
+  Keycloak: Information disclosure via OIDC token introspection endpoint audience bypass
+  A flaw was found in Keycloak. This access control vulnerability in Keycloak's OpenID Connect (OIDC) token introspection endpoint allows a confidential client to bypass audience restrictions. An attacker-controlled client with valid credentials can retrieve sensitive token claims intended for other resource servers, compromising the confidentiality of lightweight access tokens. This issue can be exploited remotely by any confidential client in the realm with valid credentials.
+impacted_packages:
+  - purl: pkg:maven/org.keycloak/keycloak-services
+    affected_versions: vers:maven/<26.6.2
+    fixed_versions: vers:maven/26.6.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-4x37-hw65-52w8/GHSA-4x37-hw65-52w8.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-284
+references:
+  - url: https://access.redhat.com/errata/RHSA-2026:19596
+    reference_type:
+    reference_id:
+  - url: https://access.redhat.com/errata/RHSA-2026:19597
+    reference_type:
+    reference_id:
+  - url: https://access.redhat.com/security/cve/CVE-2026-37979
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2455328
+    reference_type:
+    reference_id:
+  - url: https://github.com/keycloak/keycloak
+    reference_type:
+    reference_id:
+  - url: https://github.com/keycloak/keycloak/issues/49113
+    reference_type:
+    reference_id:
+  - url: https://github.com/keycloak/keycloak/releases/tag/26.6.2
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-37979
+    reference_type:
+    reference_id:

@@ -4,19 +4,18 @@ datasource_url: https://github.com/github/advisory-database/blob/main/advisories
 aliases:
   - CVE-2026-44741
 summary: "Pimcore Admin Classic Bundle Vulnerable to SQL Injection in Translation Grid Date\
-  \ Filter via Unsanitized Property Parameter\n# GitHub Security Advisory Draft — GM-369\n\n\
-  ## Summary\nSQL injection in Pimcore's translation grid date filter — the user-supplied `property`\
-  \ field from the filter JSON is interpolated directly into a `UNIX_TIMESTAMP(DATE(FROM_UNIXTIME(...)))`\
-  \ SQL expression without parameterization or allowlist validation.\n\n## Affected Component\n\
-  - **Package:** `pimcore/admin-ui-classic-bundle`\n- **File:** `src/Controller/Admin/TranslationController.php`\n\
-  - **Lines:** 565 (input), 569 (inadequate sanitization), 593 (injection point)\n- **Endpoint:**\
-  \ `POST /admin/translation/translations`\n\n## Description\nThe translation grid endpoint\
-  \ processes JSON filter parameters. When a filter has `type: \"date\"`, the `property` field\
-  \ is extracted and used to construct a SQL expression:\n\n```php\n$fieldname = $filter[$propertyField];\
-  \              // Line 565 — user input\n$fieldname = str_replace('--', '', $fieldname); \
-  \   // Line 569 — trivially bypassable\n$fieldname = $tableName . '.' . $fieldname;      \
-  \  // Line 577\n$fieldname = \"UNIX_TIMESTAMP(DATE(FROM_UNIXTIME({$fieldname})))\";  // Line\
-  \ 593 — injection\n```\n\nThe `str_replace('--', '')` sanitization is trivially bypassable\
+  \ Filter via Unsanitized Property Parameter\n# GM-369\n\n## Summary\nSQL injection in Pimcore's\
+  \ translation grid date filter — the user-supplied `property` field from the filter JSON is\
+  \ interpolated directly into a `UNIX_TIMESTAMP(DATE(FROM_UNIXTIME(...)))` SQL expression without\
+  \ parameterization or allowlist validation.\n\n## Affected Component\n- **Package:** `pimcore/admin-ui-classic-bundle`\n\
+  - **File:** `src/Controller/Admin/TranslationController.php`\n- **Lines:** 565 (input), 569\
+  \ (inadequate sanitization), 593 (injection point)\n- **Endpoint:** `POST /admin/translation/translations`\n\
+  \n## Description\nThe translation grid endpoint processes JSON filter parameters. When a filter\
+  \ has `type: \"date\"`, the `property` field is extracted and used to construct a SQL expression:\n\
+  \n```php\n$fieldname = $filter[$propertyField];              // Line 565 — user input\n$fieldname\
+  \ = str_replace('--', '', $fieldname);    // Line 569 — trivially bypassable\n$fieldname =\
+  \ $tableName . '.' . $fieldname;        // Line 577\n$fieldname = \"UNIX_TIMESTAMP(DATE(FROM_UNIXTIME({$fieldname})))\"\
+  ;  // Line 593 — injection\n```\n\nThe `str_replace('--', '')` sanitization is trivially bypassable\
   \ (use `/**/` comments or `----`). In non-language mode, `$fieldname` is concatenated directly\
   \ into the SQL condition without quoting or parameterization.\n\n## Impact\nAuthenticated\
   \ user with translations view permission can extract arbitrary database data via UNION-based\
@@ -69,6 +68,13 @@ impacted_packages:
     affected_versions: vers:composer/<=2.3.5
     fixed_versions: vers:composer/2.3.6
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/pimcore/admin-ui-classic-bundle
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/pimcore/admin-ui-classic-bundle
+        commit: 80e57a23d9e19574eddfe9b08e8f26785b2b0d90
     introduced_in_commits: []
 severities:
   - score: '8.8'

@@ -8,7 +8,14 @@ summary: |
   sqls-server/sqls 0.2.28 is vulnerable to command injection in the config command because the openEditor function passes the EDITOR environment variable and config file path to sh -c without sanitization, allowing attackers to execute arbitrary commands.
 
   This issue has been patched via commit https://github.com/sqls-server/sqls/commit/468a23fc89af89f632cc023a10c031e4bc781797.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/sqls-server/sqls
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/sqls-server/sqls
+        commit: 468a23fc89af89f632cc023a10c031e4bc781797
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

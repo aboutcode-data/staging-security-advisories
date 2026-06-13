@@ -28,7 +28,16 @@ summary: "NeuVector telemetry sender is vulnerable to MITM and DoS\n### Impact\n
   - Open an issue in the [NeuVector](https://github.com/neuvector/neuvector/issues/new/choose)\
   \ repository.\n- Verify with our [support matrix](https://www.suse.com/suse-neuvector/support-matrix/all-supported-versions/neuvector-v-all-versions/)\
   \ and [product support lifecycle](https://www.suse.com/lifecycle/#suse-security)."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/neuvector/neuvector
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/neuvector/neuvector
+        commit: 06424701e69bf1eb76ff90180d78853fded93021
+      - vcs_url: https://github.com/neuvector/neuvector
+        commit: 415737cbec581a5dc5f204fac1c78b7f29ad7dc2
+    introduced_in_commits: []
 severities:
   - score: '8.6'
     scoring_system: cvssv3.1

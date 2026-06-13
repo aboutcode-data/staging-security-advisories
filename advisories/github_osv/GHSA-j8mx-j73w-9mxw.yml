@@ -1,0 +1,136 @@
+advisory_id: GHSA-j8mx-j73w-9mxw
+datasource_id: github_osv/GHSA-j8mx-j73w-9mxw
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-j8mx-j73w-9mxw/GHSA-j8mx-j73w-9mxw.json
+aliases:
+  - CVE-2026-7860
+summary: |
+  Vaadin Build Plugins is Affected by a Possible Information Disclosure Vulnerability
+  A possible information disclosure vulnerability exists in the Vaadin Maven plugin and Vaadin Gradle plugin that exposes the full set of environment variables in build logs whenever the frontend build process exits with a non-zero status. Because the build environment may contain credentials supplied as secrets, any failed frontend build can expose those secrets in clear text in CI logs and archived build artifacts.
+
+
+  Users of affected versions should apply the following mitigation or upgrade. Releases that have fixed this issue include:
+
+
+  | Product version | Mitigation |
+  |---|---|
+  | `Vaadin 23.0.0 - 23.6.10` | `Upgrade to 23.6.11` |
+  | `Vaadin 24.0.0 - 24.9.17` | `Upgrade to 24.9.18` |
+  | `Vaadin 24.10.0 - 24.10.3` | `Upgrade to 24.10.4` |
+  | `Vaadin 25.0.0 - 25.0.11` | `Upgrade to 25.0.12` |
+  | `Vaadin 25.1.0 - 25.1.4` | `Upgrade to 25.1.5 or newer` |
+
+  Please note that Vaadin versions 10-13 and 15-22 are no longer supported and you should update either to the latest 23, 24, or 25 version.
+
+  | Maven coordinates | Vulnerable version | Fixed version |
+  |---|---|---|
+  | `com.vaadin:flow-plugin-base` | `23.0.0 - 23.6.10` | `≥ 23.6.11` |
+  | `com.vaadin:flow-plugin-base` | `24.0.0 - 24.9.17` | `≥ 24.9.18` |
+  | `com.vaadin:flow-plugin-base` | `24.0.0 - 24.10.3` | `≥ 24.10.4` |
+  | `com.vaadin:flow-plugin-base` | `25.0.0 - 25.0.11` | `≥ 25.0.12` |
+  | `com.vaadin:flow-plugin-base` | `25.1.0 - 25.1.4` | `≥ 25.1.5` |
+  | `com.vaadin:flow-maven-plugin` | `23.0.0 - 23.6.10` | `≥ 23.6.11` |
+  | `com.vaadin:flow-maven-plugin` | `24.0.0 - 24.9.17` | `≥ 24.9.18` |
+  | `com.vaadin:flow-maven-plugin` | `24.0.0 - 24.10.3` | `≥ 24.10.4` |
+  | `com.vaadin:flow-maven-plugin` | `25.0.0 - 25.0.11` | `≥ 25.0.12` |
+  | `com.vaadin:flow-maven-plugin` | `25.1.0 - 25.1.4` | `≥ 25.1.5` |
+  | `com.vaadin:flow-gradle-plugin` | `24.0.0 - 24.9.17` | `≥ 24.9.18` |
+  | `com.vaadin:flow-gradle-plugin` | `24.0.0 - 24.10.3` | `≥ 24.10.4` |
+  | `com.vaadin:flow-gradle-plugin` | `25.0.0 - 25.0.11` | `≥ 25.0.12` |
+  | `com.vaadin:flow-gradle-plugin` | `25.1.0 - 25.1.4` | `≥ 25.1.5` |
+impacted_packages:
+  - purl: pkg:maven/com.vaadin/flow-plugins
+    affected_versions: vers:maven/<23.6.10
+    fixed_versions: vers:maven/23.6.11
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/com.vaadin/flow-plugins
+    affected_versions: vers:maven/<24.9.17
+    fixed_versions: vers:maven/24.9.18
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/com.vaadin/flow-plugins
+    affected_versions: vers:maven/>=24.10.0|<24.10.4
+    fixed_versions: vers:maven/24.10.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/com.vaadin/flow-plugins
+    affected_versions: vers:maven/<25.0.11
+    fixed_versions: vers:maven/25.0.12
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/com.vaadin/flow-plugins
+    affected_versions: vers:maven/>=25.1.0|<25.1.5
+    fixed_versions: vers:maven/25.1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/com.vaadin/flow-maven-plugin
+    affected_versions: vers:maven/<23.6.10
+    fixed_versions: vers:maven/23.6.11
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/com.vaadin/flow-maven-plugin
+    affected_versions: vers:maven/<24.9.17
+    fixed_versions: vers:maven/24.9.18
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/com.vaadin/flow-maven-plugin
+    affected_versions: vers:maven/>=24.10.0|<24.10.4
+    fixed_versions: vers:maven/24.10.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/com.vaadin/flow-maven-plugin
+    affected_versions: vers:maven/<25.0.11
+    fixed_versions: vers:maven/25.0.12
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/com.vaadin/flow-maven-plugin
+    affected_versions: vers:maven/>=25.1.0|<25.1.5
+    fixed_versions: vers:maven/25.1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/com.vaadin/flow-gradle-plugin
+    affected_versions: vers:maven/<24.9.17
+    fixed_versions: vers:maven/24.9.18
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/com.vaadin/flow-gradle-plugin
+    affected_versions: vers:maven/>=24.10.0|<24.10.4
+    fixed_versions: vers:maven/24.10.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/com.vaadin/flow-gradle-plugin
+    affected_versions: vers:maven/<25.0.11
+    fixed_versions: vers:maven/25.0.12
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/com.vaadin/flow-gradle-plugin
+    affected_versions: vers:maven/>=25.1.0|<25.1.5
+    fixed_versions: vers:maven/25.1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '1.6'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:L/AC:H/AT:P/PR:L/UI:P/VC:H/VI:N/VA:N/SC:H/SI:H/SA:N/E:U/S:N/AU:N/R:A/V:C/RE:L/U:Green
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-j8mx-j73w-9mxw/GHSA-j8mx-j73w-9mxw.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-209
+references:
+  - url: https://github.com/vaadin/flow
+    reference_type:
+    reference_id:
+  - url: https://github.com/vaadin/flow/pull/24219
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-7860
+    reference_type:
+    reference_id:
+  - url: https://vaadin.com/security/cve-2026-7860
+    reference_type:
+    reference_id:

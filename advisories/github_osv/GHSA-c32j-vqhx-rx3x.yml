@@ -33,9 +33,21 @@ summary: |
   `JWT::EncodedToken#verify_signature!(key_finder:)`
 impacted_packages:
   - purl: pkg:gem/jwt
-    affected_versions: vers:gem/<3.2.0
+    affected_versions: vers:gem/>=3.0.0|<3.2.0
     fixed_versions: vers:gem/3.2.0
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:gem/jwt
+    affected_versions: vers:gem/<2.10.3
+    fixed_versions: vers:gem/2.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/jwt/ruby-jwt
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/jwt/ruby-jwt
+        commit: db560b769a07bd9724e77ff505011ac01872106f
     introduced_in_commits: []
 severities:
   - score: '7.4'
@@ -49,8 +61,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-1391
   - CWE-287
+  - CWE-1391
   - CWE-326
 references:
   - url: https://github.com/jwt/ruby-jwt
@@ -59,9 +71,21 @@ references:
   - url: https://github.com/jwt/ruby-jwt/commit/db560b769a07bd9724e77ff505011ac01872106f
     reference_type:
     reference_id:
+  - url: https://github.com/jwt/ruby-jwt/issues/724
+    reference_type:
+    reference_id:
+  - url: https://github.com/jwt/ruby-jwt/releases/tag/v2.10.3
+    reference_type:
+    reference_id:
   - url: https://github.com/jwt/ruby-jwt/releases/tag/v3.2.0
     reference_type:
     reference_id:
   - url: https://github.com/jwt/ruby-jwt/security/advisories/GHSA-c32j-vqhx-rx3x
+    reference_type:
+    reference_id:
+  - url: https://github.com/rubysec/ruby-advisory-db/blob/master/gems/jwt/CVE-2026-45363.yml
+    reference_type:
+    reference_id:
+  - url: https://www.cve.org/CVERecord?id=CVE-2026-45363
     reference_type:
     reference_id:

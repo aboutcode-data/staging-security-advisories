@@ -82,7 +82,14 @@ summary: |
   | `httpserver/server.go` | Resolves `~/.config/goshs/known_hosts` via `config.Dir()`, passes it to `tunnel.Start()`; fatal-exits on `HostKeyMismatchError` |
 
   **Implementation uses only already-vendored dependencies** (`golang.org/x/crypto/ssh/knownhosts` is part of the existing `golang.org/x/crypto` direct dependency — no new modules added).
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/patrickhener/goshs
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/patrickhener/goshs
+        commit: 8f409cb08aacc6e94704334e8b1fb2cd50f5dd98
+    introduced_in_commits: []
 severities:
   - score: '7.4'
     scoring_system: cvssv3.1
@@ -95,8 +102,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-322
   - CWE-295
+  - CWE-322
 references:
   - url: https://github.com/patrickhener/goshs
     reference_type:

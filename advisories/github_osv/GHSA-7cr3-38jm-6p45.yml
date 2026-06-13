@@ -6,7 +6,14 @@ aliases:
 summary: |
   Mattermost has a Missing Authorization vulnerability
   Mattermost versions 10.5.x <= 10.5.10, 10.11.x <= 10.11.2 fail to properly validate guest user permissions when accessing channel information which allows guest users to discover active public channels and their metadata via the `/api/v4/teams/{team_id}/channels/ids` endpoint
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: e8c7e7d0252bbf1e098aae4a5ea05d945afd7e70
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1

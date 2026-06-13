@@ -34,7 +34,14 @@ summary: |
   If you are using `shivammathur/setup-php@v2`, no action is needed on your end. Users who pin the setup-php release version or release version SHA should upgrade to a patched version.
 
   The fix validates PHP version inputs, constrains manifest-derived versions, hardens script generation at the execution, and includes additional checks in related input-handling paths.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/shivammathur/setup-php
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/shivammathur/setup-php
+        commit: eeef37e059fb5368a5bc8ed8ce45ff54bd39b80b
+    introduced_in_commits: []
 severities:
   - score: '5.6'
     scoring_system: cvssv3.1

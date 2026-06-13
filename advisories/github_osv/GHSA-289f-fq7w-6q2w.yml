@@ -1,7 +1,8 @@
 advisory_id: GHSA-289f-fq7w-6q2w
 datasource_id: github_osv/GHSA-289f-fq7w-6q2w
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-289f-fq7w-6q2w/GHSA-289f-fq7w-6q2w.json
-aliases: []
+aliases:
+  - CVE-2026-46364
 summary: |
   phpMyFAQ has unauthenticated SQL injection via User-Agent header in BuiltinCaptcha
   ## Summary
@@ -154,6 +155,13 @@ impacted_packages:
     fixed_versions: vers:composer/4.1.2
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:github/thorsten/phpmyfaq
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/thorsten/phpmyfaq
+        commit: b9f25109fddb38eee19987183798638d07943f92
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
@@ -171,6 +179,15 @@ references:
   - url: https://github.com/thorsten/phpMyFAQ
     reference_type:
     reference_id:
-  - url: https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-289f-fq7w-6q2w
+  - url: https://github.com/thorsten/phpMyFAQ/commit/b9f25109fddb38eee19987183798638d07943f92
     reference_type:
     reference_id:
+  - url: https://www.vulncheck.com/advisories/phpmyfaq-sql-injection-via-user-agent-header-in-builtincaptcha
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-46364
+    reference_type:
+    reference_id: CVE-2026-46364
+  - url: https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-289f-fq7w-6q2w
+    reference_type:
+    reference_id: GHSA-289f-fq7w-6q2w

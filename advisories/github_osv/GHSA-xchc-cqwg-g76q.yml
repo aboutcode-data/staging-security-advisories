@@ -93,7 +93,14 @@ summary: |
 
   - **CVE-2026-28229** (GHSA-56px-hm34-xqj5): Unauthorized access to WorkflowTemplate endpoints — same root cause (missing `auth.CanI` check)
   - **CVE-2024-53862** (GHSA-h36c-m3rf-34h9): Archived workflow auth bypass — same pattern
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/argoproj/argo-workflows
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/argoproj/argo-workflows
+        commit: 09fff05e0830c14a5e36cc40597ad84881db1ab6
+    introduced_in_commits: []
 severities:
   - score: '8.5'
     scoring_system: cvssv4

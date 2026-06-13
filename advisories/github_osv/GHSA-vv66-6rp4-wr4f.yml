@@ -10,7 +10,14 @@ summary: "OpenBao's Namespace Deletion May Not Delete Data Properly\n### Impact\
   \ v2.5.3.\n\n### Workarounds\n\nUsers may manually remove mounts prior to deleting the namespace.\
   \ \n\nAudit logs may be used to identify repeated deletion attempts against the same namespace;\
   \ `sys/raw` can be used to see what leases were not correctly deleted."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/openbao/openbao
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openbao/openbao
+        commit: 6d2e0506e2b41be0eaa6643bf7b4efc9a2c09445
+    introduced_in_commits: []
 severities:
   - score: '2.3'
     scoring_system: cvssv4

@@ -29,7 +29,14 @@ summary: "Zitadel May Bypass Second Authentication Factor\n### Summary\n\nA vuln
   \n### Credits\n\nThis vulnerability was found by [zentrust partners GmbH](https://zentrust.partners)\
   \ during a scheduled penetration test. Thank you to the analysts Martin Tschirsich, Joud Zakharia,\
   \ Christopher Baumann.\nThe full report will be made public after the complete review."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/zitadel/zitadel
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/zitadel/zitadel
+        commit: b284f8474eed0cba531905101619e7ae7963156b
+    introduced_in_commits: []
 severities:
   - score: '8.7'
     scoring_system: cvssv4
@@ -42,8 +49,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-308
   - CWE-287
+  - CWE-308
 references:
   - url: https://github.com/zitadel/zitadel
     reference_type:

@@ -1,0 +1,61 @@
+advisory_id: GHSA-g8vr-x4qh-25qg
+datasource_id: github_osv/GHSA-g8vr-x4qh-25qg
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-g8vr-x4qh-25qg/GHSA-g8vr-x4qh-25qg.json
+aliases:
+  - CVE-2026-8830
+summary: |
+  Keycloak: Policy bypass during WebAuthn credential registration via client-side JavaScript manipulation
+  A flaw was found in Keycloak. An authenticated user can bypass configured WebAuthn policies during credential registration by manipulating client-side JavaScript. This occurs because the server-side processAction() fails to validate that the newly created credential's parameters, such as public key algorithms, match the realm's configured WebAuthn policies. This could lead to the creation of credentials that do not adhere to administrative security requirements, potentially weakening the overall security posture of the system by allowing non-compliant authentication methods.
+impacted_packages:
+  - purl: pkg:maven/org.keycloak/keycloak-services
+    affected_versions: vers:maven/<=26.6.2
+    fixed_versions: vers:maven/26.6.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/keycloak/keycloak
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/keycloak/keycloak
+        commit: d3da77ef363d698e7a74470ba52fcdce09e394c4
+      - vcs_url: https://github.com/keycloak/keycloak
+        commit: 47b9aef70948564151af85fd52e0d7e508c76490
+    introduced_in_commits: []
+severities:
+  - score: '4.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-g8vr-x4qh-25qg/GHSA-g8vr-x4qh-25qg.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-603
+references:
+  - url: https://access.redhat.com/security/cve/CVE-2026-8830
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2479565
+    reference_type:
+    reference_id:
+  - url: https://github.com/keycloak/keycloak
+    reference_type:
+    reference_id:
+  - url: https://github.com/keycloak/keycloak/commit/47b9aef70948564151af85fd52e0d7e508c76490
+    reference_type:
+    reference_id:
+  - url: https://github.com/keycloak/keycloak/commit/d3da77ef363d698e7a74470ba52fcdce09e394c4
+    reference_type:
+    reference_id:
+  - url: https://github.com/keycloak/keycloak/issues/49133
+    reference_type:
+    reference_id:
+  - url: https://github.com/keycloak/keycloak/pull/49344
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-8830
+    reference_type:
+    reference_id:

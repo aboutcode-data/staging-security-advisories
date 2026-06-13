@@ -109,7 +109,14 @@ summary: |
 
   Upstream issue: https://github.com/free5gc/free5gc/issues/925
   Upstream fix: https://github.com/free5gc/nef/pull/22
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/free5gc/nef
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/free5gc/nef
+        commit: 72a47f3fab4dffbd227f8d92c5f69dca93b610cb
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -122,8 +129,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-476
   - CWE-754
+  - CWE-476
 references:
   - url: https://github.com/free5gc/free5gc
     reference_type:
@@ -138,5 +145,8 @@ references:
     reference_type:
     reference_id:
   - url: https://github.com/free5gc/nef/pull/22
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-44322
     reference_type:
     reference_id:

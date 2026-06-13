@@ -94,7 +94,14 @@ summary: |
   Soundness bug in safe API surface of `diesel-async`'s MySQL backend. Affects every user of `AsyncMysqlConnection` whose queries return a temporal column.
 
   AI disclosure: this issue was found via Claude Code running Claude Opus 4.7.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/diesel-rs/diesel_async
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/diesel-rs/diesel_async
+        commit: 18f2c861c51b4a5f23a20bd749eba13737b9e4aa
+    introduced_in_commits: []
 severities:
   - score: '2.0'
     scoring_system: cvssv4

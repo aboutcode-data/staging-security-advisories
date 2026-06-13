@@ -78,7 +78,14 @@ summary: |
 
   Upstream issue: https://github.com/free5gc/free5gc/issues/887
   Upstream fix: https://github.com/free5gc/smf/pull/197
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/free5gc/smf
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/free5gc/smf
+        commit: e23ce97565f285eb99eed153743c62bf4c767c6e
+    introduced_in_commits: []
 severities:
   - score: '10.0'
     scoring_system: cvssv3.1
@@ -91,8 +98,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-306
   - CWE-862
+  - CWE-306
 references:
   - url: https://github.com/free5gc/free5gc
     reference_type:
@@ -107,5 +114,8 @@ references:
     reference_type:
     reference_id:
   - url: https://github.com/free5gc/smf/pull/197
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-44329
     reference_type:
     reference_id:

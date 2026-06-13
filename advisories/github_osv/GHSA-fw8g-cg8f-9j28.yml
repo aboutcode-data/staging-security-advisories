@@ -38,8 +38,25 @@ summary: |
 
   - CVE-2019-10215 — prior stored DOM XSS vulnerability in Prometheus query history, fixed in v2.7.2
   - CVE-2026-40179 — prior stored DOM XSS vulnerability in Prometheus web UI (hover tooltips and metrics explorer), fixed in v3.11.2
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/prometheus/prometheus
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/prometheus/prometheus
+        commit: 38f23b9075ced1de2b82d2dad8b2bebb1ecd5b7d
+    introduced_in_commits: []
 severities:
+  - score: '6.1'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-fw8g-cg8f-9j28/GHSA-fw8g-cg8f-9j28.json
+  - score: '5.1'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-fw8g-cg8f-9j28/GHSA-fw8g-cg8f-9j28.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
@@ -55,5 +72,8 @@ references:
     reference_type:
     reference_id:
   - url: https://github.com/prometheus/prometheus/security/advisories/GHSA-fw8g-cg8f-9j28
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-44903
     reference_type:
     reference_id:
