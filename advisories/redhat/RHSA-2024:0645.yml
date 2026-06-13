@@ -35,6 +35,31 @@ summary: |
 
   All OpenShift Container Platform 4.14 users are advised to upgrade to these updated packages and images when they are available in the appropriate release channel. To check for available updates, use the OpenShift CLI (oc) or web console. Instructions for upgrading a cluster are available at https://docs.openshift.com/container-platform/4.14/updating/updating_a_cluster/updating-cluster-cli.html
 impacted_packages:
+  - purl: pkg:rpm/redhat/cri-tools?arch=aarch64
+    affected_versions: vers:rpm/<1.27.0-3.el8
+    fixed_versions: vers:rpm/1.27.0-3.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/perf?arch=s390x
+    affected_versions: vers:rpm/<5.14.0-284.50.1.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.50.1.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/container-selinux?arch=src&epoch=3
+    affected_versions: vers:rpm/<2.226.0-1.rhaos4.14.el8
+    fixed_versions: vers:rpm/2.226.0-1.rhaos4.14.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/cri-tools?arch=src
+    affected_versions: vers:rpm/<1.27.0-3.el8
+    fixed_versions: vers:rpm/1.27.0-3.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/crun?arch=src
+    affected_versions: vers:rpm/<1.14-1.rhaos4.14.el8
+    fixed_versions: vers:rpm/1.14-1.rhaos4.14.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/openshift?arch=src
     affected_versions: vers:rpm/<4.14.0-202401231033.p0.g28ed2d7.assembly.stream.el8
     fixed_versions: vers:rpm/4.14.0-202401231033.p0.g28ed2d7.assembly.stream.el8
@@ -53,21 +78,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/openstack-ironic-python-agent?arch=src
     affected_versions: vers:rpm/<9.6.1-0.20240103100525.3197b9d.el9
     fixed_versions: vers:rpm/9.6.1-0.20240103100525.3197b9d.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/container-selinux?arch=src&epoch=3
-    affected_versions: vers:rpm/<2.226.0-1.rhaos4.14.el8
-    fixed_versions: vers:rpm/2.226.0-1.rhaos4.14.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-tools?arch=src
-    affected_versions: vers:rpm/<1.27.0-3.el8
-    fixed_versions: vers:rpm/1.27.0-3.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/crun?arch=src
-    affected_versions: vers:rpm/<1.14-1.rhaos4.14.el8
-    fixed_versions: vers:rpm/1.14-1.rhaos4.14.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/container-selinux?arch=src&epoch=3
@@ -530,11 +540,6 @@ impacted_packages:
     fixed_versions: vers:rpm/5.14.0-284.50.1.rt14.335.el9_2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-tools?arch=ppc64le
-    affected_versions: vers:rpm/<1.27.0-3.el8
-    fixed_versions: vers:rpm/1.27.0-3.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-rt-debug-debuginfo?arch=x86_64
     affected_versions: vers:rpm/<5.14.0-284.50.1.rt14.335.el9_2
     fixed_versions: vers:rpm/5.14.0-284.50.1.rt14.335.el9_2
@@ -593,11 +598,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/spdlog-debuginfo?arch=x86_64
     affected_versions: vers:rpm/<1.13.0-1.rhaos4.14.el9
     fixed_versions: vers:rpm/1.13.0-1.rhaos4.14.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-tools?arch=aarch64
-    affected_versions: vers:rpm/<1.27.0-3.el8
-    fixed_versions: vers:rpm/1.27.0-3.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/cri-tools-debugsource?arch=aarch64
@@ -998,6 +998,11 @@ impacted_packages:
   - purl: pkg:rpm/redhat/spdlog-debuginfo?arch=aarch64
     affected_versions: vers:rpm/<1.13.0-1.rhaos4.14.el9
     fixed_versions: vers:rpm/1.13.0-1.rhaos4.14.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/cri-tools?arch=ppc64le
+    affected_versions: vers:rpm/<1.27.0-3.el8
+    fixed_versions: vers:rpm/1.27.0-3.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/cri-tools-debugsource?arch=ppc64le
@@ -1546,11 +1551,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-zfcpdump-modules-partner?arch=s390x
-    affected_versions: vers:rpm/<5.14.0-284.50.1.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.50.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/perf?arch=s390x
     affected_versions: vers:rpm/<5.14.0-284.50.1.el9_2
     fixed_versions: vers:rpm/5.14.0-284.50.1.el9_2
     fixed_in_commits: []

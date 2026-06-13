@@ -28,39 +28,19 @@ summary: |
 
   All OpenShift Container Platform 4.15 users are advised to upgrade to these updated packages and images when they are available in the appropriate release channel. To check for available updates, use the OpenShift CLI (oc) or web console. Instructions for upgrading a cluster are available at https://docs.openshift.com/container-platform/4.15/updating/updating_a_cluster/updating-cluster-cli.html
 impacted_packages:
-  - purl: pkg:rpm/redhat/ose-aws-ecr-image-credential-provider?arch=src
-    affected_versions: vers:rpm/<4.15.0-202408091502.p0.g1e5e25d.assembly.stream.el9
-    fixed_versions: vers:rpm/4.15.0-202408091502.p0.g1e5e25d.assembly.stream.el9
+  - purl: pkg:rpm/redhat/cri-tools?arch=x86_64
+    affected_versions: vers:rpm/<1.28.0-6.el8
+    fixed_versions: vers:rpm/1.28.0-6.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ose-azure-acr-image-credential-provider?arch=src
-    affected_versions: vers:rpm/<4.15.0-202408091502.p0.g0d799a2.assembly.stream.el9
-    fixed_versions: vers:rpm/4.15.0-202408091502.p0.g0d799a2.assembly.stream.el9
+  - purl: pkg:rpm/redhat/cri-tools?arch=aarch64
+    affected_versions: vers:rpm/<1.28.0-6.el8
+    fixed_versions: vers:rpm/1.28.0-6.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ose-gcp-gcr-image-credential-provider?arch=src
-    affected_versions: vers:rpm/<4.15.0-202408091502.p0.gfc50272.assembly.stream.el9
-    fixed_versions: vers:rpm/4.15.0-202408091502.p0.gfc50272.assembly.stream.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman?arch=src&epoch=3
-    affected_versions: vers:rpm/<4.4.1-29.rhaos4.15.el9
-    fixed_versions: vers:rpm/4.4.1-29.rhaos4.15.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/runc?arch=src&epoch=4
-    affected_versions: vers:rpm/<1.1.13-4.rhaos4.15.el9
-    fixed_versions: vers:rpm/1.1.13-4.rhaos4.15.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/skopeo?arch=src&epoch=2
-    affected_versions: vers:rpm/<1.11.3-3.rhaos4.15.el9
-    fixed_versions: vers:rpm/1.11.3-3.rhaos4.15.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/buildah?arch=x86_64&epoch=1
-    affected_versions: vers:rpm/<1.29.1-23.rhaos4.15.el8
-    fixed_versions: vers:rpm/1.29.1-23.rhaos4.15.el8
+  - purl: pkg:rpm/redhat/cri-tools?arch=s390x
+    affected_versions: vers:rpm/<1.28.0-6.el9
+    fixed_versions: vers:rpm/1.28.0-6.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/buildah?arch=src&epoch=1
@@ -163,24 +143,39 @@ impacted_packages:
     fixed_versions: vers:rpm/4.15.0-202408091502.p0.g1e41aa3.assembly.stream.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/NetworkManager-ovs?arch=x86_64&epoch=1
-    affected_versions: vers:rpm/<1.42.2-24.el9_2
-    fixed_versions: vers:rpm/1.42.2-24.el9_2
+  - purl: pkg:rpm/redhat/ose-aws-ecr-image-credential-provider?arch=src
+    affected_versions: vers:rpm/<4.15.0-202408091502.p0.g1e5e25d.assembly.stream.el9
+    fixed_versions: vers:rpm/4.15.0-202408091502.p0.g1e5e25d.assembly.stream.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ose-azure-acr-image-credential-provider?arch=ppc64le
-    affected_versions: vers:rpm/<4.15.0-202408091502.p0.g0d799a2.assembly.stream.el8
-    fixed_versions: vers:rpm/4.15.0-202408091502.p0.g0d799a2.assembly.stream.el8
+  - purl: pkg:rpm/redhat/ose-azure-acr-image-credential-provider?arch=src
+    affected_versions: vers:rpm/<4.15.0-202408091502.p0.g0d799a2.assembly.stream.el9
+    fixed_versions: vers:rpm/4.15.0-202408091502.p0.g0d799a2.assembly.stream.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ose-gcp-gcr-image-credential-provider?arch=ppc64le
-    affected_versions: vers:rpm/<4.15.0-202408091502.p0.gfc50272.assembly.stream.el8
-    fixed_versions: vers:rpm/4.15.0-202408091502.p0.gfc50272.assembly.stream.el8
+  - purl: pkg:rpm/redhat/ose-gcp-gcr-image-credential-provider?arch=src
+    affected_versions: vers:rpm/<4.15.0-202408091502.p0.gfc50272.assembly.stream.el9
+    fixed_versions: vers:rpm/4.15.0-202408091502.p0.gfc50272.assembly.stream.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman?arch=ppc64le&epoch=3
-    affected_versions: vers:rpm/<4.4.1-29.rhaos4.15.el8
-    fixed_versions: vers:rpm/4.4.1-29.rhaos4.15.el8
+  - purl: pkg:rpm/redhat/podman?arch=src&epoch=3
+    affected_versions: vers:rpm/<4.4.1-29.rhaos4.15.el9
+    fixed_versions: vers:rpm/4.4.1-29.rhaos4.15.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/runc?arch=src&epoch=4
+    affected_versions: vers:rpm/<1.1.13-4.rhaos4.15.el9
+    fixed_versions: vers:rpm/1.1.13-4.rhaos4.15.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/skopeo?arch=src&epoch=2
+    affected_versions: vers:rpm/<1.11.3-3.rhaos4.15.el9
+    fixed_versions: vers:rpm/1.11.3-3.rhaos4.15.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/buildah?arch=x86_64&epoch=1
+    affected_versions: vers:rpm/<1.29.1-23.rhaos4.15.el8
+    fixed_versions: vers:rpm/1.29.1-23.rhaos4.15.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/buildah-tests?arch=x86_64&epoch=1
@@ -231,11 +226,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/cri-o-debuginfo?arch=x86_64
     affected_versions: vers:rpm/<1.28.9-5.rhaos4.15.git674ed4c.el8
     fixed_versions: vers:rpm/1.28.9-5.rhaos4.15.git674ed4c.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-tools?arch=x86_64
-    affected_versions: vers:rpm/<1.28.0-6.el8
-    fixed_versions: vers:rpm/1.28.0-6.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/cri-tools-debugsource?arch=x86_64
@@ -399,6 +389,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/NetworkManager-libnm-devel?arch=x86_64&epoch=1
+    affected_versions: vers:rpm/<1.42.2-24.el9_2
+    fixed_versions: vers:rpm/1.42.2-24.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/NetworkManager-ovs?arch=x86_64&epoch=1
     affected_versions: vers:rpm/<1.42.2-24.el9_2
     fixed_versions: vers:rpm/1.42.2-24.el9_2
     fixed_in_commits: []
@@ -751,11 +746,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/cri-o-debuginfo?arch=aarch64
     affected_versions: vers:rpm/<1.28.9-5.rhaos4.15.git674ed4c.el8
     fixed_versions: vers:rpm/1.28.9-5.rhaos4.15.git674ed4c.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-tools?arch=aarch64
-    affected_versions: vers:rpm/<1.28.0-6.el8
-    fixed_versions: vers:rpm/1.28.0-6.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/cri-tools-debugsource?arch=aarch64
@@ -1296,6 +1286,21 @@ impacted_packages:
   - purl: pkg:rpm/redhat/ose-aws-ecr-image-credential-provider?arch=ppc64le
     affected_versions: vers:rpm/<4.15.0-202408091502.p0.g1e5e25d.assembly.stream.el8
     fixed_versions: vers:rpm/4.15.0-202408091502.p0.g1e5e25d.assembly.stream.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ose-azure-acr-image-credential-provider?arch=ppc64le
+    affected_versions: vers:rpm/<4.15.0-202408091502.p0.g0d799a2.assembly.stream.el8
+    fixed_versions: vers:rpm/4.15.0-202408091502.p0.g0d799a2.assembly.stream.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ose-gcp-gcr-image-credential-provider?arch=ppc64le
+    affected_versions: vers:rpm/<4.15.0-202408091502.p0.gfc50272.assembly.stream.el8
+    fixed_versions: vers:rpm/4.15.0-202408091502.p0.gfc50272.assembly.stream.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman?arch=ppc64le&epoch=3
+    affected_versions: vers:rpm/<4.4.1-29.rhaos4.15.el8
+    fixed_versions: vers:rpm/4.4.1-29.rhaos4.15.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-catatonit?arch=ppc64le&epoch=3
@@ -2076,11 +2081,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/cri-o-debuginfo?arch=s390x
     affected_versions: vers:rpm/<1.28.9-5.rhaos4.15.git674ed4c.el9
     fixed_versions: vers:rpm/1.28.9-5.rhaos4.15.git674ed4c.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-tools?arch=s390x
-    affected_versions: vers:rpm/<1.28.0-6.el9
-    fixed_versions: vers:rpm/1.28.0-6.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/cri-tools-debugsource?arch=s390x
