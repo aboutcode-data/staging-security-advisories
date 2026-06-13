@@ -16,7 +16,14 @@ summary: |
 
   ### Backward Compatibility
   This update is not backward compatible with any authorization model that uses wildcard on a tupleset relation.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/openfga/openfga
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openfga/openfga
+        commit: b466769cc100b2065047786578718d313f52695b
+    introduced_in_commits: []
 severities:
   - score: '5.9'
     scoring_system: cvssv3.1
@@ -29,8 +36,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-863
   - CWE-285
+  - CWE-863
 references:
   - url: https://github.com/openfga/openfga
     reference_type:
@@ -46,4 +53,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2022-39341
     reference_type:
-    reference_id: CVE-2022-39341
+    reference_id:

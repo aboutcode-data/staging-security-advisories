@@ -6,7 +6,14 @@ aliases:
 summary: |
   Caddy vulnerable to Authentication Bypass due to mishandling of TLS client authentication
   Caddy before 0.10.13 mishandles TLS client authentication, as demonstrated by an authentication bypass caused by the lack of the StrictHostMatching mode.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/caddyserver/caddy
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/caddyserver/caddy
+        commit: 4d9ee000c8d2cbcdd8284007c1e0f2da7bc3c7c3
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
@@ -36,9 +43,9 @@ references:
   - url: https://github.com/caddyserver/caddy/releases/tag/v0.10.13
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2018-21246
+    reference_type:
+    reference_id:
   - url: https://pkg.go.dev/vuln/GO-2020-0043
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2018-21246
-    reference_type:
-    reference_id: CVE-2018-21246

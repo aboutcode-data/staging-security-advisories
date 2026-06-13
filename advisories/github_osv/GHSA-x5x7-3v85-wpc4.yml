@@ -8,14 +8,21 @@ summary: |
   In Apache Struts 2.3.7 through 2.3.33 and 2.5 through 2.5.12, if an application allows entering a URL in a form field and built-in URLValidator is used, it is possible to prepare a special URL which will be used to overload server process when performing validation of the URL.  NOTE: this vulnerability exists because of an incomplete fix for S2-047 / CVE-2017-7672.
 impacted_packages:
   - purl: pkg:maven/org.apache.struts/struts2-core
+    affected_versions: vers:maven/<=2.3.33
+    fixed_versions: vers:maven/2.3.34
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.struts/struts2-core
     affected_versions: vers:maven/<=2.5.12
     fixed_versions: vers:maven/2.5.13
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/org.apache.struts/struts2-core
-    affected_versions: vers:maven/<=2.3.33
-    fixed_versions: vers:maven/2.3.34
-    fixed_in_commits: []
+  - purl: pkg:github/apache/struts
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/struts
+        commit: 418a20c0594f23764fe29ced400c1219239899a
     introduced_in_commits: []
 severities:
   - score: '7.5'
