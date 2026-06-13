@@ -6,7 +6,14 @@ aliases:
 summary: |
   golang.org/x/net/html Infinite Loop vulnerability
   Go through 1.15.12 and 1.16.x through 1.16.4 has a golang.org/x/net/html infinite loop via crafted ParseFragment input.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/golang/net
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/golang/net
+        commit: 37e1c6afe02340126705deced573a85ab75209d7
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -39,9 +46,9 @@ references:
   - url: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/4CHKSFMHZVOBCZSSVRE3UEYNKARTBMTM
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2021-33194
+    reference_type:
+    reference_id:
   - url: https://pkg.go.dev/vuln/GO-2021-0238
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2021-33194
-    reference_type:
-    reference_id: CVE-2021-33194

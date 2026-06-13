@@ -6,7 +6,16 @@ aliases:
 summary: |
   Caddy allows enumeration of Certificates and Hostnames
   Caddy through 0.11.0 sends incorrect certificates for certain invalid requests, making it easier for attackers to enumerate hostnames. Specifically, when unable to match a Host header with a vhost in its configuration, it serves the X.509 certificate for a randomly selected vhost in its configuration. Repeated requests (with a nonexistent hostname in the Host header) permit full enumeration of all certificates on the server. This generally permits an attacker to easily and accurately discover the existence of and relationships among hostnames that weren't meant to be public, though this information could likely have been discovered via other methods with additional effort.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/caddyserver/caddy
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/caddyserver/caddy
+        commit: 986d4ffe3de32dcb81d334d603a2f0f1d460eb2f
+      - vcs_url: https://github.com/caddyserver/caddy
+        commit: f6e50890b3d81cb04146bd7b2c2b59e99830849a
+    introduced_in_commits: []
 severities:
   - score: '3.7'
     scoring_system: cvssv3.1
@@ -39,9 +48,9 @@ references:
   - url: https://github.com/mholt/caddy/pull/2015
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2018-19148
+    reference_type:
+    reference_id:
   - url: https://securitytrails.com/blog/caddy-web-server-ssl-bug
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2018-19148
-    reference_type:
-    reference_id: CVE-2018-19148

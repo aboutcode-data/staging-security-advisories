@@ -6,7 +6,18 @@ aliases:
 summary: |
   Mattermost Server is vulnerable to channel invisibility DoS via misformatted post
   An issue was discovered in Mattermost Server before 4.3.0, 4.2.1, and 4.1.2. It allows attackers to cause a denial of service (channel invisibility) via a misformated post.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 9adaf53e110e0e806b21903111aacb93129668cb
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: b3e4b0ac91682093276a653f7ccd5774aaa9cd06
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: ee57a5829ab162859e0e355dac6cfe6ca1a8f379
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
@@ -38,4 +49,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2017-18873
     reference_type:
-    reference_id: CVE-2017-18873
+    reference_id:

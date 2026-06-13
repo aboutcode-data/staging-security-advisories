@@ -9,6 +9,11 @@ summary: "Apache Tomcat Improper Access Control vulnerability\nRemote code execu
   \ JMX ports. \nThe issue exists because this listener wasn't updated for consistency with\
   \ the CVE-2016-3427 Oracle patch that affected credential types."
 impacted_packages:
+  - purl: pkg:maven/org.apache.tomcat/tomcat-catalina
+    affected_versions: vers:maven/<6.0.48
+    fixed_versions: vers:maven/6.0.48
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat/tomcat-catalina-jmx-remote
     affected_versions: vers:maven/<6.0.48
     fixed_versions: vers:maven/6.0.48
@@ -35,11 +40,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat/tomcat-catalina
-    affected_versions: vers:maven/<6.0.48
-    fixed_versions: vers:maven/6.0.48
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.tomcat/tomcat-catalina
     affected_versions: vers:maven/>=7.0.0|<7.0.73
     fixed_versions: vers:maven/7.0.73
     fixed_in_commits: []
@@ -58,6 +58,24 @@ impacted_packages:
     affected_versions: vers:maven/>=9.0.0.M1|<9.0.0.M12
     fixed_versions: vers:maven/9.0.0.M12
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/apache/tomcat
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/tomcat
+        commit: 0e83ad3e547fc9a75a258799ef581249b40a82a6
+      - vcs_url: https://github.com/apache/tomcat
+        commit: 292d6ccdc9edbf80859929b0af070b2ea99fa688
+      - vcs_url: https://github.com/apache/tomcat
+        commit: 7e3a037055cca4a17e90b49399fb1bab4dd7c821
+    introduced_in_commits: []
+  - purl: pkg:github/apache/tomcat80
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/tomcat80
+        commit: 0f76016a4ec45635e450ada9c84ff7ee0c5f3799
     introduced_in_commits: []
 severities:
   - score: '9.8'
@@ -73,15 +91,6 @@ severities:
 weaknesses:
   - CWE-284
 references:
-  - url: http://rhn.redhat.com/errata/RHSA-2017-0457.html
-    reference_type:
-    reference_id:
-  - url: https://access.redhat.com/errata/RHSA-2017:0455
-    reference_type:
-    reference_id:
-  - url: https://access.redhat.com/errata/RHSA-2017:0456
-    reference_type:
-    reference_id:
   - url: http://seclists.org/oss-sec/2016/q4/502
     reference_type:
     reference_id:
@@ -253,3 +262,12 @@ references:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2016-8735
     reference_type:
     reference_id: CVE-2016-8735
+  - url: https://access.redhat.com/errata/RHSA-2017:0455
+    reference_type:
+    reference_id: RHSA-2017:0455
+  - url: https://access.redhat.com/errata/RHSA-2017:0456
+    reference_type:
+    reference_id: RHSA-2017:0456
+  - url: http://rhn.redhat.com/errata/RHSA-2017-0457.html
+    reference_type:
+    reference_id: RHSA-2017-0457.html

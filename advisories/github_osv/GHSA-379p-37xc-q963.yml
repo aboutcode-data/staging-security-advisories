@@ -6,7 +6,14 @@ aliases:
 summary: |
   Mattermost Server does not check if cookies are used over SSL
   An issue was discovered in Mattermost Server before 3.0.0. It does not ensure that a cookie is used over SSL.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: bac25154d659883c801b3bb9a0687f46570f5bbf
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -33,4 +40,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2016-11076
     reference_type:
-    reference_id: CVE-2016-11076
+    reference_id:

@@ -7,6 +7,11 @@ summary: |
   Magento command injection vulnerability
   Magento versions 2.3.4 and earlier, 2.2.11 and earlier (see note), 1.14.4.4 and earlier, and 1.9.4.4 and earlier have a command injection vulnerability. Successful exploitation could lead to arbitrary code execution.
 impacted_packages:
+  - purl: pkg:composer/magento/core
+    affected_versions: vers:composer/<1.9.4+5
+    fixed_versions: vers:composer/1.9.4+5
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:composer/magento/community-edition
     affected_versions: vers:composer/<=2.2.11
     fixed_versions:
@@ -17,15 +22,17 @@ impacted_packages:
     fixed_versions: vers:composer/2.3.4-p2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/magento/core
-    affected_versions: vers:composer/<1.9.4+5
-    fixed_versions: vers:composer/1.9.4+5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:composer/magento/project-community-edition
     affected_versions: vers:composer/<=2.0.2
     fixed_versions:
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/magento/magento2
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/magento/magento2
+        commit: 52d92dbd07f09620d23693ba0c4d4bdb4ba09916
     introduced_in_commits: []
 severities:
   - score: '9.8'

@@ -44,7 +44,18 @@ summary: "Symlink following allows leaking out-of-bound manifests and JSON files
   Open an issue in [the Argo CD issue tracker](https://github.com/argoproj/argo-cd/issues) or\
   \ [discussions](https://github.com/argoproj/argo-cd/discussions)\nJoin us on [Slack](https://argoproj.github.io/community/join-slack)\
   \ in channel #argo-cd"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/argoproj/argo-cd
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/argoproj/argo-cd
+        commit: d36d95dc9f71ec61c1a93794f81ece6d61a0d943
+      - vcs_url: https://github.com/argoproj/argo-cd
+        commit: 7357cfdb58a560de70a0538c6e3bef6fe39505ea
+      - vcs_url: https://github.com/argoproj/argo-cd
+        commit: 5e767a4b9e30983330c0fdec322192281a90eb84
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1
@@ -86,4 +97,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2022-24904
     reference_type:
-    reference_id: CVE-2022-24904
+    reference_id:

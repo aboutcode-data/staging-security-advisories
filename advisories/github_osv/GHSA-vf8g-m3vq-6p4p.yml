@@ -8,6 +8,11 @@ summary: |
   Plone's URL checking infrastructure includes a method for checking if URLs valid and located in the Plone site. By passing HTML into a specially crafted url containing `<script`, `%3Cscript`, `javascript:`, or `javascript%3A`, Cross-site Scripting can be achieved.
 impacted_packages:
   - purl: pkg:pypi/plone
+    affected_versions: vers:pypi/5.0rc1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/plone
     affected_versions: vers:pypi/<=3.3.6
     fixed_versions: vers:pypi/3.3.7
     fixed_in_commits: []
@@ -32,10 +37,12 @@ impacted_packages:
     fixed_versions: vers:pypi/4.3.7
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:pypi/plone
-    affected_versions: vers:pypi/5.0rc1
+  - purl: pkg:github/plone/products.cmfplone
+    affected_versions:
     fixed_versions:
-    fixed_in_commits: []
+    fixed_in_commits:
+      - vcs_url: https://github.com/plone/products.cmfplone
+        commit: 3da710a2cd68587f0bf34f2e7ea1167d6eeee087
     introduced_in_commits: []
 severities:
   - score: '6.1'

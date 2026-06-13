@@ -18,7 +18,14 @@ summary: "Malicious HTML+XHR Artifact Privilege Escalation in Argo Workflows\nAr
   \ it is very hard to exploit. \n\nWe urge all users to upgrade to the fixed versions. Disabling\
   \ the Argo Server is the only known workaround. Note version 2.12 has been out of support\
   \ for sometime. No fix is currently planned."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/argoproj/argo-workflows
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/argoproj/argo-workflows
+        commit: 87470e1c2bf703a9110e97bb755614ce8757fdcc
+    introduced_in_commits: []
 severities:
   - score: '7.1'
     scoring_system: cvssv3.1
@@ -47,4 +54,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2022-29164
     reference_type:
-    reference_id: CVE-2022-29164
+    reference_id:

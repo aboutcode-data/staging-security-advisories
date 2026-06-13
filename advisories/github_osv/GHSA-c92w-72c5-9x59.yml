@@ -6,7 +6,14 @@ aliases:
 summary: |
   kube-state-metrics may expose secret content in metrics
   A security issue was discovered in the kube-state-metrics versions v1.7.0 and v1.7.1. An experimental feature was added to the v1.7.0 release that enabled annotations to be exposed as metrics. By default, the kube-state-metrics metrics only expose metadata about Secrets. However, a combination of the default `kubectl` behavior and this new feature can cause the entire secret content to end up in metric labels thus inadvertently exposing the secret content in metrics. This feature has been reverted and released as the v1.7.2 release. If you are running the v1.7.0 or v1.7.1 release, please upgrade to the v1.7.2 release as soon as possible.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/kubernetes/kube-state-metrics
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/kubernetes/kube-state-metrics
+        commit: 03122fe3e2df49a9a7298b8af921d3c37c430f7f
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
@@ -33,6 +40,9 @@ references:
   - url: https://github.com/kubernetes/kube-state-metrics/releases/tag/v1.7.2
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2019-10223
+    reference_type:
+    reference_id:
   - url: https://pkg.go.dev/vuln/GO-2022-0621
     reference_type:
     reference_id:
@@ -42,6 +52,3 @@ references:
   - url: http://www.openwall.com/lists/oss-security/2019/08/15/8
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2019-10223
-    reference_type:
-    reference_id: CVE-2019-10223

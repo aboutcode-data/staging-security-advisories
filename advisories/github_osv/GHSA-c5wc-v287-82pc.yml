@@ -6,7 +6,14 @@ aliases:
 summary: |
   HashiCorp Vault improper configuration of multi factor authentication
   HashiCorp Vault and Vault Enterprise from 1.10.0 to 1.10.2 did not correctly configure and enforce MFA on login after server restarts. This affects the Login MFA feature introduced in Vault and Vault Enterprise 1.10.0 and does not affect the separate Enterprise MFA feature set. Fixed in 1.10.3.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/hashicorp/vault
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/hashicorp/vault
+        commit: 15baea5fa3e71c837c33b8bcbd8f06e0fbbc110d
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
@@ -29,12 +36,12 @@ references:
   - url: https://github.com/hashicorp/vault/commit/15baea5fa3e71c837c33b8bcbd8f06e0fbbc110d
     reference_type:
     reference_id:
-  - url: https://security.gentoo.org/glsa/202207-01
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2022-30689
     reference_type:
     reference_id:
   - url: https://security.netapp.com/advisory/ntap-20220629-0006
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2022-30689
+  - url: https://security.gentoo.org/glsa/202207-01
     reference_type:
-    reference_id: CVE-2022-30689
+    reference_id: GLSA-202207-01

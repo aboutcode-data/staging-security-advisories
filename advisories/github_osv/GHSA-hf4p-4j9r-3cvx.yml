@@ -6,7 +6,14 @@ aliases:
 summary: |
   Incorrect Default Permissions in Beego
   The File Session Manager in Beego before 1.12.2 allows local users to read session files because of weak permissions for individual files.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/beego/beego
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/beego/beego
+        commit: bac2b31afecc65d9a89f9e473b8006c5edc0c8d1
+    introduced_in_commits: []
 severities:
   - score: '5.5'
     scoring_system: cvssv3.1
@@ -35,4 +42,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2019-16355
     reference_type:
-    reference_id: CVE-2019-16355
+    reference_id:

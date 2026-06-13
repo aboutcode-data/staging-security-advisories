@@ -8,6 +8,11 @@ summary: |
   Django 1.4 before 1.4.13, 1.5 before 1.5.8, 1.6 before 1.6.5, and 1.7 before 1.7b4 does not properly include the (1) Vary: Cookie or (2) Cache-Control header in responses, which allows remote attackers to obtain sensitive information or poison the cache via a request from certain browsers.
 impacted_packages:
   - purl: pkg:pypi/django
+    affected_versions: vers:pypi/>=1.7a1|<1.7b4
+    fixed_versions: vers:pypi/1.7b4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/django
     affected_versions: vers:pypi/>=1.4|<1.4.13
     fixed_versions: vers:pypi/1.4.13
     fixed_in_commits: []
@@ -22,10 +27,16 @@ impacted_packages:
     fixed_versions: vers:pypi/1.6.5
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:pypi/django
-    affected_versions: vers:pypi/>=1.7a1|<1.7b4
-    fixed_versions: vers:pypi/1.7b4
-    fixed_in_commits: []
+  - purl: pkg:github/django/django
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/django/django
+        commit: 4001ec8698f577b973c5a540801d8a0bbea1205b
+      - vcs_url: https://github.com/django/django
+        commit: 1abcf3a808b35abae5d425ed4d44cb6e886dc769
+      - vcs_url: https://github.com/django/django
+        commit: 28e23306aa53bbbb8fb87db85f99d970b051026c
     introduced_in_commits: []
 severities:
   - score: '7.4'

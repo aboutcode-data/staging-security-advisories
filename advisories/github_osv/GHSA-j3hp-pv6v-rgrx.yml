@@ -6,7 +6,21 @@ aliases:
 summary: |
   Juju uses a UNIX domain socket without setting appropriate permissions
   Juju before 1.25.12, 2.0.x before 2.0.4, and 2.1.x before 2.1.3 uses a UNIX domain socket without setting appropriate permissions, allowing privilege escalation by users on the system to root.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/juju/juju
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/juju/juju
+        commit: 0417178a3c2869537860e8b3b5e787ce1732231f
+    introduced_in_commits: []
+  - purl: pkg:github/rapid7/metasploit-framework
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/rapid7/metasploit-framework
+        commit: 321b78b0fe8fd515d1efab64996f11b4eecbc27d
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
@@ -30,9 +44,15 @@ references:
   - url: https://github.com/juju/juju/commit/0417178a3c2869537860e8b3b5e787ce1732231f
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2017-9232
+    reference_type:
+    reference_id:
   - url: https://www.exploit-db.com/exploits/44023
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2017-9232
-    reference_type:
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/local/44023.rb
+    reference_type: exploit
+    reference_id: CVE-2017-9232
+  - url: https://raw.githubusercontent.com/rapid7/metasploit-framework/321b78b0fe8fd515d1efab64996f11b4eecbc27d/modules/exploits/linux/local/juju_run_agent_priv_esc.rb
+    reference_type: exploit
     reference_id: CVE-2017-9232

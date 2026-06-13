@@ -6,7 +6,23 @@ aliases:
 summary: |
   Mattermost Server is vulnerable to DoS through maliciously crafted posts
   An issue was discovered in Mattermost Server before 4.2.0, 4.1.1, and 4.0.5. It allows crafted posts that potentially cause a web browser to hang.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/grundleborg/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/grundleborg/mattermost
+        commit: 5286318c72aa230f33f89df3b4cbdc33a0822a93
+    introduced_in_commits: []
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 5bf6f06c02c368b9c73a8be2d2d8795b3405b22b
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 5c22176c963a7393241872073547f30083efe218
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
@@ -38,4 +54,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2017-18898
     reference_type:
-    reference_id: CVE-2017-18898
+    reference_id:

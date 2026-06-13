@@ -8,11 +8,6 @@ summary: |
   Multiple cross-site scripting (XSS) vulnerabilities in js/functions.js in phpMyAdmin 4.0.x before 4.0.10.1, 4.1.x before 4.1.14.2, and 4.2.x before 4.2.6 allow remote authenticated users to inject arbitrary web script or HTML via a crafted (1) table name or (2) column name that is improperly handled during construction of an AJAX confirmation message.
 impacted_packages:
   - purl: pkg:composer/phpmyadmin/phpmyadmin
-    affected_versions: vers:composer/>=4.0.0|<4.0.10+1
-    fixed_versions: vers:composer/4.0.10+1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/phpmyadmin/phpmyadmin
     affected_versions: vers:composer/>=4.1.0|<4.1.14+2
     fixed_versions: vers:composer/4.1.14+2
     fixed_in_commits: []
@@ -21,6 +16,18 @@ impacted_packages:
     affected_versions: vers:composer/>=4.2.0|<4.2.6
     fixed_versions: vers:composer/4.2.6
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/phpmyadmin/phpmyadmin
+    affected_versions: vers:composer/>=4.0.0|<4.0.10+1
+    fixed_versions: vers:composer/4.0.10+1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/phpmyadmin/phpmyadmin
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/phpmyadmin/phpmyadmin
+        commit: 29a1f56495a7d1d98da31a614f23c0819a606a4d
     introduced_in_commits: []
 severities:
   - score: LOW

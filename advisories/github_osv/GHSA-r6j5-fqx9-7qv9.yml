@@ -6,7 +6,14 @@ aliases:
 summary: |
   Mattermost Server SAML implementation does not require encryption or signature verification as default
   An issue was discovered in Mattermost Server before 3.9.0 when SAML is used. Encryption and signature verification are not mandatory.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 4f074fed0d653a28779ac586e418341232d43e95
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -19,8 +26,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-347
   - CWE-311
+  - CWE-347
 references:
   - url: https://github.com/mattermost/mattermost
     reference_type:
@@ -33,4 +40,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2017-18909
     reference_type:
-    reference_id: CVE-2017-18909
+    reference_id:

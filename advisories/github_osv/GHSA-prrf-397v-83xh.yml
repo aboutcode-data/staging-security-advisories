@@ -7,6 +7,21 @@ summary: |
   Open redirect in ASP.NET Core
   A spoofing vulnerability exists in ASP.NET Core that could lead to an open redirect, aka 'ASP.NET Core Spoofing Vulnerability'.
 impacted_packages:
+  - purl: pkg:nuget/Microsoft.AspNetCore.App
+    affected_versions: vers:nuget/>=2.2.0|<2.2.6
+    fixed_versions: vers:nuget/2.2.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Microsoft.AspNetCore.App
+    affected_versions: vers:nuget/>=2.1.0|<2.1.12
+    fixed_versions: vers:nuget/2.1.12
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Microsoft.AspNetCore.All
+    affected_versions: vers:nuget/>=2.2.0|<2.2.6
+    fixed_versions: vers:nuget/2.2.6
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:nuget/Microsoft.AspNetCore.All
     affected_versions: vers:nuget/>=2.1.0|<2.1.12
     fixed_versions: vers:nuget/2.1.12
@@ -18,21 +33,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:nuget/Microsoft.AspNetCore.Server.HttpSys
-    affected_versions: vers:nuget/>=2.2.0|<2.2.6
-    fixed_versions: vers:nuget/2.2.6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.App
-    affected_versions: vers:nuget/>=2.2.0|<2.2.6
-    fixed_versions: vers:nuget/2.2.6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.App
-    affected_versions: vers:nuget/>=2.1.0|<2.1.12
-    fixed_versions: vers:nuget/2.1.12
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.All
     affected_versions: vers:nuget/>=2.2.0|<2.2.6
     fixed_versions: vers:nuget/2.2.6
     fixed_in_commits: []
@@ -62,9 +62,9 @@ references:
   - url: https://github.com/github/advisory-database/issues/302
     reference_type:
     reference_id:
-  - url: https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1075
-    reference_type:
-    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2019-1075
+    reference_type:
+    reference_id: CVE-2019-1075
+  - url: https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1075
     reference_type:
     reference_id: CVE-2019-1075

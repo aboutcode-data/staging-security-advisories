@@ -8,13 +8,13 @@ summary: |
   Vulnerability in the MySQL Connectors component of Oracle MySQL (subcomponent: Connector/Python). Supported versions that are affected are 8.0.13 and prior and 2.1.8 and prior. Easily exploitable vulnerability allows unauthenticated attacker with network access via TLS to compromise MySQL Connectors. Successful attacks require human interaction from a person other than the attacker. Successful attacks of this vulnerability can result in unauthorized creation, deletion or modification access to critical data or all MySQL Connectors accessible data as well as unauthorized access to critical data or complete access to all MySQL Connectors accessible data.
 impacted_packages:
   - purl: pkg:pypi/mysql-connector-python
-    affected_versions: vers:pypi/<=8.0.13
-    fixed_versions: vers:pypi/8.0.19
+    affected_versions: vers:pypi/>=2.1.0|<=2.1.8
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/mysql-connector-python
-    affected_versions: vers:pypi/>=2.1.0|<=2.1.8
-    fixed_versions:
+    affected_versions: vers:pypi/<=8.0.13
+    fixed_versions: vers:pypi/8.0.19
     fixed_in_commits: []
     introduced_in_commits: []
 severities:

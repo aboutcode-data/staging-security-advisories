@@ -8,6 +8,11 @@ summary: |
   A bug in the handling of the pipelined requests in Apache Tomcat 9.0.0.M1 to 9.0.0.M18, 8.5.0 to 8.5.12, 8.0.0.RC1 to 8.0.42, 7.0.0 to 7.0.76, and 6.0.0 to 6.0.52, when send file was used, results in the pipelined request being lost when send file processing of the previous request completed. This could result in responses appearing to be sent for the wrong request. For example, a user agent that sent requests A, B and C could see the correct response for request A, the response for request C for request B and no response for request C.
 impacted_packages:
   - purl: pkg:maven/org.apache.tomcat/tomcat
+    affected_versions: vers:maven/<=6.0.52
+    fixed_versions: vers:maven/6.0.53
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat/tomcat
     affected_versions: vers:maven/<=9.0.0.M18
     fixed_versions: vers:maven/9.0.0.M19
     fixed_in_commits: []
@@ -27,10 +32,23 @@ impacted_packages:
     fixed_versions: vers:maven/7.0.77
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/org.apache.tomcat/tomcat
-    affected_versions: vers:maven/<=6.0.52
-    fixed_versions: vers:maven/6.0.53
-    fixed_in_commits: []
+  - purl: pkg:github/apache/tomcat
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/tomcat
+        commit: 864aa1199ad2cccc9a7e7c6b977f7d7f812c9910
+      - vcs_url: https://github.com/apache/tomcat
+        commit: f5e06b8c743b1daa9eb5e817863958b6b320e044
+      - vcs_url: https://github.com/apache/tomcat
+        commit: a4efd3ca1ccbdfc398136d76c0d8b7ad5a1e4905
+    introduced_in_commits: []
+  - purl: pkg:github/apache/tomcat80
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/tomcat80
+        commit: ec10b8c785d1db91fe58946436f854dde04410fd
     introduced_in_commits: []
 severities:
   - score: '7.5'
@@ -46,24 +64,6 @@ severities:
 weaknesses:
   - CWE-200
 references:
-  - url: https://access.redhat.com/errata/RHSA-2017:1801
-    reference_type:
-    reference_id:
-  - url: https://access.redhat.com/errata/RHSA-2017:1802
-    reference_type:
-    reference_id:
-  - url: https://access.redhat.com/errata/RHSA-2017:2493
-    reference_type:
-    reference_id:
-  - url: https://access.redhat.com/errata/RHSA-2017:2494
-    reference_type:
-    reference_id:
-  - url: https://access.redhat.com/errata/RHSA-2017:3080
-    reference_type:
-    reference_id:
-  - url: https://access.redhat.com/errata/RHSA-2017:3081
-    reference_type:
-    reference_id:
   - url: https://github.com/apache/tomcat
     reference_type:
     reference_id:
@@ -223,3 +223,21 @@ references:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2017-5647
     reference_type:
     reference_id: CVE-2017-5647
+  - url: https://access.redhat.com/errata/RHSA-2017:1801
+    reference_type:
+    reference_id: RHSA-2017:1801
+  - url: https://access.redhat.com/errata/RHSA-2017:1802
+    reference_type:
+    reference_id: RHSA-2017:1802
+  - url: https://access.redhat.com/errata/RHSA-2017:2493
+    reference_type:
+    reference_id: RHSA-2017:2493
+  - url: https://access.redhat.com/errata/RHSA-2017:2494
+    reference_type:
+    reference_id: RHSA-2017:2494
+  - url: https://access.redhat.com/errata/RHSA-2017:3080
+    reference_type:
+    reference_id: RHSA-2017:3080
+  - url: https://access.redhat.com/errata/RHSA-2017:3081
+    reference_type:
+    reference_id: RHSA-2017:3081

@@ -8,6 +8,11 @@ summary: |
   Apache Tomcat 6.x before 6.0.45, 7.x before 7.0.68, 8.x before 8.0.31, and 9.x before 9.0.0.M2 does not place org.apache.catalina.manager.StatusManagerServlet on the org/apache/catalina/core/RestrictedServlets.properties list, which allows remote authenticated users to bypass intended SecurityManager restrictions and read arbitrary HTTP requests, and consequently discover session ID values, via a crafted web application.
 impacted_packages:
   - purl: pkg:maven/org.apache.tomcat/tomcat
+    affected_versions: vers:maven/<=6.0.44
+    fixed_versions: vers:maven/6.0.45
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat/tomcat
     affected_versions: vers:maven/9.0.0.M1
     fixed_versions: vers:maven/9.0.0.M2
     fixed_in_commits: []
@@ -15,11 +20,6 @@ impacted_packages:
   - purl: pkg:maven/org.apache.tomcat/tomcat
     affected_versions: vers:maven/<=8.0.30
     fixed_versions: vers:maven/8.0.31
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.tomcat/tomcat
-    affected_versions: vers:maven/<=6.0.44
-    fixed_versions: vers:maven/6.0.45
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -49,27 +49,6 @@ references:
     reference_type:
     reference_id:
   - url: http://marc.info/?l=bugtraq&m=145974991225029&w=2
-    reference_type:
-    reference_id:
-  - url: http://rhn.redhat.com/errata/RHSA-2016-1089.html
-    reference_type:
-    reference_id:
-  - url: http://rhn.redhat.com/errata/RHSA-2016-2045.html
-    reference_type:
-    reference_id:
-  - url: http://rhn.redhat.com/errata/RHSA-2016-2599.html
-    reference_type:
-    reference_id:
-  - url: http://rhn.redhat.com/errata/RHSA-2016-2807.html
-    reference_type:
-    reference_id:
-  - url: http://rhn.redhat.com/errata/RHSA-2016-2808.html
-    reference_type:
-    reference_id:
-  - url: https://access.redhat.com/errata/RHSA-2016:1087
-    reference_type:
-    reference_id:
-  - url: https://access.redhat.com/errata/RHSA-2016:1088
     reference_type:
     reference_id:
   - url: https://bto.bluecoat.com/security-advisory/sa118
@@ -198,3 +177,24 @@ references:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2016-0706
     reference_type:
     reference_id: CVE-2016-0706
+  - url: https://access.redhat.com/errata/RHSA-2016:1087
+    reference_type:
+    reference_id: RHSA-2016:1087
+  - url: https://access.redhat.com/errata/RHSA-2016:1088
+    reference_type:
+    reference_id: RHSA-2016:1088
+  - url: http://rhn.redhat.com/errata/RHSA-2016-1089.html
+    reference_type:
+    reference_id: RHSA-2016-1089.html
+  - url: http://rhn.redhat.com/errata/RHSA-2016-2045.html
+    reference_type:
+    reference_id: RHSA-2016-2045.html
+  - url: http://rhn.redhat.com/errata/RHSA-2016-2599.html
+    reference_type:
+    reference_id: RHSA-2016-2599.html
+  - url: http://rhn.redhat.com/errata/RHSA-2016-2807.html
+    reference_type:
+    reference_id: RHSA-2016-2807.html
+  - url: http://rhn.redhat.com/errata/RHSA-2016-2808.html
+    reference_type:
+    reference_id: RHSA-2016-2808.html
