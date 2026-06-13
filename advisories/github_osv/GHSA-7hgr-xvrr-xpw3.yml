@@ -23,7 +23,14 @@ summary: |
   ## Impact
 
   The attacker retains persistent access even after the victim's password change. This is especially severe in credential theft scenarios, where the victim's only recovery action does nothing against an active session. Depending on configured TTL, the attacker's window could be days or weeks.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/nhost/nhost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/nhost/nhost
+        commit: 52c70664a7e92031e592b873471939b10ca18079
+    introduced_in_commits: []
 severities:
   - score: '2.3'
     scoring_system: cvssv4

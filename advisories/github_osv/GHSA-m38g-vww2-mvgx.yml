@@ -26,7 +26,7 @@ summary: "Talos Linux has a local privilege escalation from untrusted workloads\
   \ for CVE-2026-31431 (algif_aead in-place optimization revert) was committed upstream in \
   \ Linux 6.18.22 and is included in all Talos releases from v1.13.0 and Talos 1.12.7 onwards.\n\
   \n### Workarounds\n\nThere are multiple workarounds available based on the situation, but\
-  \ upgrading is strongly recommended.\n\n#### Option 1 - Change kernel arguments\n\nAdd a kernel\
+  \ we really recommend to upgrade.\n\n#### Option 1 - Change kernel arguments\n\nAdd a kernel\
   \ argument with `initcall_blacklist=algif_aead_init` by upgrading Talos to the same version.\n\
   \n> Note: this either requires setting `machine.kernel.extraKernelArgs` if using BIOS based\
   \ boot or upgrading with a new image from factory/imager generated image by setting the extra\
@@ -41,7 +41,7 @@ summary: "Talos Linux has a local privilege escalation from untrusted workloads\
   \         localhostProfile: profiles/copy-fail-block.json\n```\n\n#### Option 3 - Block the\
   \ syscall in runtime with a eBPF program\n\nSee [copy-fail-blocker](https://github.com/cozystack/copy-fail-blocker),\
   \ this can be applied to a running system without a reboot, but it has to run before any other\
-  \ workloads are scheduled after a reboot. \n\n### Resources\n\n* https://copy.fail/\n* https://xint.io/blog/copy-fail-linux-distributions\n\
+  \ workloads are scheduled after a reboot. \n\n### References\n\n* https://copy.fail/\n* https://xint.io/blog/copy-fail-linux-distributions\n\
   * https://github.com/theori-io/copy-fail-CVE-2026-31431\n* https://github.com/Percivalll/Copy-Fail-CVE-2026-31431-Kubernetes-PoC"
 impacted_packages: []
 severities:

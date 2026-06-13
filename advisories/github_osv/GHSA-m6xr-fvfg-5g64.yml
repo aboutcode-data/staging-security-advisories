@@ -51,7 +51,14 @@ summary: "Dasel: Denial of service in dasel selector lexer due to infinite loop 
   \ += 2\n    for pos < p.srcLen && p.src[pos] != '/' {\n        pos++\n    }\n    if pos >=\
   \ p.srcLen {\n        return nil, &UnexpectedEOFError{Pos: pos}\n    }\n    pos++\n    return\
   \ ptr.To(NewToken(RegexPattern, p.src[start+2:pos-1], start, pos-start)), nil\n}\n```"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/tomwright/dasel
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/tomwright/dasel
+        commit: 95f8dd3af12958bf6ca2a737b3ec0267280f86ed
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

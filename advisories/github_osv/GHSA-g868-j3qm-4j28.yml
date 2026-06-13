@@ -1,0 +1,60 @@
+advisory_id: GHSA-g868-j3qm-4j28
+datasource_id: github_osv/GHSA-g868-j3qm-4j28
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-g868-j3qm-4j28/GHSA-g868-j3qm-4j28.json
+aliases:
+  - CVE-2026-8726
+summary: |
+  georgringer/news has SQL Injection in extension "News system" (news)
+  The extension fails to properly sanitize user input before using it in a database query. As a result, an unauthenticated attacker can inject arbitrary SQL through a URL parameter on pages using the "Date Menu of news articles" plugin. Exploitation requires the "Date Menu of news articles" plugin to be in use and the TypoScript/Plugin setting disableOverrideDemand not to be enabled.
+impacted_packages:
+  - purl: pkg:composer/georgringer/news
+    affected_versions: vers:composer/>=12.0.0|<12.3.2
+    fixed_versions: vers:composer/12.3.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/georgringer/news
+    affected_versions: vers:composer/>=13.0.0|<13.0.2
+    fixed_versions: vers:composer/13.0.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/georgringer/news
+    affected_versions: vers:composer/>=14.0.0|<14.0.3
+    fixed_versions: vers:composer/14.0.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/georgringer/news
+    affected_versions: vers:composer/<10.0.4
+    fixed_versions: vers:composer/10.0.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/georgringer/news
+    affected_versions: vers:composer/>=11.0.0|<11.4.4
+    fixed_versions: vers:composer/11.4.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.2'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-g868-j3qm-4j28/GHSA-g868-j3qm-4j28.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-89
+references:
+  - url: https://github.com/FriendsOfPHP/security-advisories/blob/master/georgringer/news/CVE-2026-8726.yaml
+    reference_type:
+    reference_id:
+  - url: https://github.com/georgringer/news
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-8726
+    reference_type:
+    reference_id:
+  - url: https://typo3.org/security/advisory/typo3-ext-sa-2026-010
+    reference_type:
+    reference_id:

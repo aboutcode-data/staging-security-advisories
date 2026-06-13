@@ -112,7 +112,14 @@ summary: |
   The proof file is written in host `/run` by host cron. It is not written by the guest process and not written by `virtiofsd`.
 
   An attacker who reaches guest root can therefore cross the Kata isolation boundary and execute commands as host root on affected runtime-rs virtio-fs deployments.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/kata-containers/kata-containers
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/kata-containers/kata-containers
+        commit: ffa59ce3aa7877d067c9a372df0c329a23a01744
+    introduced_in_commits: []
 severities:
   - score: '8.4'
     scoring_system: cvssv4

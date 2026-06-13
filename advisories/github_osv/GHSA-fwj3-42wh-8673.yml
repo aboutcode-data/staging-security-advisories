@@ -61,7 +61,14 @@ summary: |
 
   ### **Impact**
   An unauthenticated attacker with access to a public share link configured with delete permissions enabled can delete attacker-chosen files outside the shared directory, anywhere within the share owner’s storage scope. This results in unauthorized data loss and potential service disruption.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/gtsteffaniak/filebrowser
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/gtsteffaniak/filebrowser
+        commit: 112740bdd41de7d5eb01e13ba49d406bfc463f69
+    introduced_in_commits: []
 severities:
   - score: '9.1'
     scoring_system: cvssv3.1

@@ -15,7 +15,14 @@ summary: |
   Note: for this attack to be successful, Alice needs to be tricked into merging the malicious MR.  If Alice is reviewing MRs, then she is likely to notice changes to the signing policy.
 
   Reported-by: Hassan Sheet
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:gitlab/sequoia-pgp/sequoia-git
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://gitlab.com/sequoia-pgp/sequoia-git
+        commit: f9c9074bd80023456221f09c3c4ff19957ee9c58
+    introduced_in_commits: []
 severities:
   - score: '1.8'
     scoring_system: cvssv4

@@ -22,7 +22,14 @@ summary: |
   * Add admission control logic to prevent the use of Templates targeting undesired Types
   * Remove Service Account Token generation via kube-controller-manager flags
   * Restrict User RBAC on production clusters and sensitive namespaces
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/external-secrets/external-secrets
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/external-secrets/external-secrets
+        commit: 4ddd240af7fe88725d9857b9a0c198073502e288
+    introduced_in_commits: []
 severities:
   - score: '4.9'
     scoring_system: cvssv3.1

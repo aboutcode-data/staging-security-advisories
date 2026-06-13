@@ -28,7 +28,14 @@ summary: "tar has a PAX header desynchronization issue\n### Summary\n\nWhen a ta
   \ in impact -- an attacker can use this to extract (or not extract) files from a tar stream\
   \ depending on the tar parser used, which in turn can be used to obscure the presence of malicious\
   \ files."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/composefs/tar-rs
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/composefs/tar-rs
+        commit: bab14dd84b411ac16ecb56d4f2d2f7bfb88a9838
+    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual

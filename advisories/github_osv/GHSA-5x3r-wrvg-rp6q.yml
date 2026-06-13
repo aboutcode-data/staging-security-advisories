@@ -1,0 +1,49 @@
+advisory_id: GHSA-5x3r-wrvg-rp6q
+datasource_id: github_osv/GHSA-5x3r-wrvg-rp6q
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-5x3r-wrvg-rp6q/GHSA-5x3r-wrvg-rp6q.json
+aliases:
+  - CVE-2026-47244
+summary: |
+  Netty HTTP/2: Advertised MAX_CONCURRENT_STREAMS are not enforced
+  ### Impact
+  DefaultHttp2Connection.DefaultEndpoint initialises maxActiveStreams/maxStreams to Integer.MAX_VALUE, and Http2Settings never inserts SETTINGS_MAX_CONCURRENT_STREAMS by default (Http2Settings.java:305-307 only clamps a user-supplied value). Unless the application explicitly calls initialSettings().maxConcurrentStreams(n), a Netty HTTP/2 server advertises no limit and enforces none locally. Each open stream allocates a DefaultStream object, PropertyMap slots, flow-controller state and IntObjectHashMap entry; with ~2^30 permissible odd stream IDs a single TCP connection can create hundreds of thousands of long-lived stream objects. This is also the precondition for CVE-2023-44487-style Rapid-Reset amplification, where the absence of a low concurrent cap multiplies backend work.
+
+  ### Resources
+  https://www.rfc-editor.org/rfc/rfc7540.html#section-6.5.2
+impacted_packages:
+  - purl: pkg:maven/io.netty/netty-codec-http2
+    affected_versions: vers:maven/<=4.2.14.Final
+    fixed_versions: vers:maven/4.2.15.Final
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/io.netty/netty-codec-http2
+    affected_versions: vers:maven/<=4.1.134.Final
+    fixed_versions: vers:maven/4.1.135.Final
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-5x3r-wrvg-rp6q/GHSA-5x3r-wrvg-rp6q.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-400
+references:
+  - url: https://github.com/netty/netty
+    reference_type:
+    reference_id:
+  - url: https://github.com/netty/netty/releases/tag/netty-4.1.135.Final
+    reference_type:
+    reference_id:
+  - url: https://github.com/netty/netty/releases/tag/netty-4.2.15.Final
+    reference_type:
+    reference_id:
+  - url: https://github.com/netty/netty/security/advisories/GHSA-5x3r-wrvg-rp6q
+    reference_type:
+    reference_id:

@@ -1,0 +1,53 @@
+advisory_id: GHSA-fhhq-h4hg-549x
+datasource_id: github_osv/GHSA-fhhq-h4hg-549x
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-fhhq-h4hg-549x/GHSA-fhhq-h4hg-549x.json
+aliases:
+  - CVE-2025-51427
+summary: |
+  ModelScope is vulnerable to arbitrary code injection via a crafted module
+  An issue was discovered in ModelScope 1.25.0 allowing attackers to execute arbitrary code via crafted module listed in the configuration file (dey_mini.yaml) under the key ['nnet']['module'].
+impacted_packages:
+  - purl: pkg:pypi/modelscope
+    affected_versions: vers:pypi/<1.27.0
+    fixed_versions: vers:pypi/1.27.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/modelscope/modelscope
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/modelscope/modelscope
+        commit: 75d54927e112261d39598ca08c15b66a7ff3f735
+    introduced_in_commits: []
+severities:
+  - score: '7.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-fhhq-h4hg-549x/GHSA-fhhq-h4hg-549x.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-94
+references:
+  - url: https://github.com/JIRUWOZHI/vulnerability-disclosure/blob/main/CVE-2025-51427/CVE_2025_51427.md
+    reference_type:
+    reference_id:
+  - url: https://github.com/modelscope/modelscope
+    reference_type:
+    reference_id:
+  - url: https://github.com/modelscope/modelscope/commit/75d54927e112261d39598ca08c15b66a7ff3f735
+    reference_type:
+    reference_id:
+  - url: https://github.com/modelscope/modelscope/issues/1331
+    reference_type:
+    reference_id:
+  - url: https://github.com/modelscope/modelscope/pull/1333
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2025-51427
+    reference_type:
+    reference_id:

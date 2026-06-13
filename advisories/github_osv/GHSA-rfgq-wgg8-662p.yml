@@ -246,7 +246,16 @@ summary: "S3-Proxy has Security Issues in its Resource Path Matching Implementat
   \ `TestPathCleaning`\n- `github.com/gobwas/glob` — separator documentation\n- RFC 3986 §2.2\
   \ — equivalence of percent-encoded reserved characters\n- RFC 3986 §3.3 — path segment semantics\n\
   - RFC 3986 §5.2.4 — dot-segment resolution in URI paths"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/oxyno-zeta/s3-proxy
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/oxyno-zeta/s3-proxy
+        commit: af5ff57d8c6022459495b8fb50130073bca7b48a
+      - vcs_url: https://github.com/oxyno-zeta/s3-proxy
+        commit: 1320e4abd46ad18c2851fedde50dbb79df8b7a51
+    introduced_in_commits: []
 severities:
   - score: '9.4'
     scoring_system: cvssv3.1
@@ -259,8 +268,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-863
   - CWE-22
+  - CWE-863
 references:
   - url: https://github.com/oxyno-zeta/s3-proxy
     reference_type:

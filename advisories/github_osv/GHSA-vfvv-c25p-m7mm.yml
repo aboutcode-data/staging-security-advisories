@@ -14,7 +14,14 @@ summary: "rkyv: Panic safety bugs in `InlineVec::clear` and `SerVec::clear` enab
   \  \n- **CWE-416 (Use-After-Free):** Memory corruption when element reads from heap during\
   \ `Drop`\n\nBoth vulnerabilities are triggerable entirely from safe Rust via `std::panic::catch_unwind`\
   \ and require no special privileges."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/rkyv/rkyv
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/rkyv/rkyv
+        commit: 5828cf5c27b664eb4432c4a93d4769e12e5e42fb
+    introduced_in_commits: []
 severities:
   - score: '6.9'
     scoring_system: cvssv4

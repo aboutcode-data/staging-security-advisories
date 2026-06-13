@@ -1,0 +1,68 @@
+advisory_id: GHSA-hf67-5vvq-fm3r
+datasource_id: github_osv/GHSA-hf67-5vvq-fm3r
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-hf67-5vvq-fm3r/GHSA-hf67-5vvq-fm3r.json
+aliases:
+  - CVE-2026-7507
+summary: |
+  Keycloak: Session fixation in OIDC login flow that can lead to account takeover
+  A session fixation vulnerability was found in Keycloak's login-actions endpoints. An unauthenticated attacker could exploit this flaw by pre-creating an authentication session and tricking a victim into visiting a maliciously crafted link. By leveraging the /login-actions/restart endpoint—which processes session handles without adequate CSRF protection or cookie ownership validation—an attacker can reset the authentication flow state. This causes Single Sign-On (SSO) to authenticate the victim transparently upon clicking the link, allowing the attacker to hijack the required-action form without needing the victim's credentials. A successful exploit could lead to complete account takeover, including highly privileged administrative accounts.
+impacted_packages:
+  - purl: pkg:maven/org.keycloak/keycloak-services
+    affected_versions: vers:maven/<26.6.2
+    fixed_versions: vers:maven/26.6.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/keycloak/keycloak
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/keycloak/keycloak
+        commit: d791b270b9ea5203be40a9533c1c12c4d044fb52
+    introduced_in_commits: []
+severities:
+  - score: '7.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-hf67-5vvq-fm3r/GHSA-hf67-5vvq-fm3r.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-290
+references:
+  - url: https://access.redhat.com/errata/RHSA-2026:19594
+    reference_type:
+    reference_id:
+  - url: https://access.redhat.com/errata/RHSA-2026:19595
+    reference_type:
+    reference_id:
+  - url: https://access.redhat.com/errata/RHSA-2026:19596
+    reference_type:
+    reference_id:
+  - url: https://access.redhat.com/errata/RHSA-2026:19597
+    reference_type:
+    reference_id:
+  - url: https://access.redhat.com/security/cve/CVE-2026-7507
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2464145
+    reference_type:
+    reference_id:
+  - url: https://github.com/keycloak/keycloak
+    reference_type:
+    reference_id:
+  - url: https://github.com/keycloak/keycloak/commit/d791b270b9ea5203be40a9533c1c12c4d044fb52
+    reference_type:
+    reference_id:
+  - url: https://github.com/keycloak/keycloak/pull/49134
+    reference_type:
+    reference_id:
+  - url: https://github.com/keycloak/keycloak/releases/tag/26.6.2
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-7507
+    reference_type:
+    reference_id:

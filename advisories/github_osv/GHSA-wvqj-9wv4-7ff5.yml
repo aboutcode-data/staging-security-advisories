@@ -1,0 +1,54 @@
+advisory_id: GHSA-wvqj-9wv4-7ff5
+datasource_id: github_osv/GHSA-wvqj-9wv4-7ff5
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-wvqj-9wv4-7ff5/GHSA-wvqj-9wv4-7ff5.json
+aliases:
+  - CVE-2026-47385
+summary: |
+  NocoDB: Path Traversal via SQLite Source Filename
+  ### Summary
+  An authenticated user with base-create permission can attach a SQLite source pointing at
+  an arbitrary file on the NocoDB host, including NocoDB's own internal databases.
+
+  ### Details
+  The SQLite client and the base/integration create services accepted a caller-supplied
+  filename and passed it to `fs.exists` and `fs.open('w')` without restricting the location.
+  A user could point a source at `noco.db`, at a tenant database under `nc_minimal_dbs/`,
+  or at any writable path the NocoDB process can reach, and then read or overwrite its
+  contents through the regular table APIs.
+
+  ### Impact
+  Disclosure and modification of NocoDB internal state, of other tenants' databases, and
+  of any file the NocoDB process can read or write. Authentication and base-create
+  permission are required.
+
+  ### Credit
+  This issue was reported by [@Mouhebbenelwafi](https://github.com/Mouhebbenelwafi).
+impacted_packages:
+  - purl: pkg:npm/nocodb
+    affected_versions: vers:npm/<=2026.5.0
+    fixed_versions: vers:npm/2026.5.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-wvqj-9wv4-7ff5/GHSA-wvqj-9wv4-7ff5.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-22
+references:
+  - url: https://github.com/nocodb/nocodb
+    reference_type:
+    reference_id:
+  - url: https://github.com/nocodb/nocodb/releases/tag/2026.05.1
+    reference_type:
+    reference_id:
+  - url: https://github.com/nocodb/nocodb/security/advisories/GHSA-wvqj-9wv4-7ff5
+    reference_type:
+    reference_id:

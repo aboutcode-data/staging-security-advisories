@@ -85,7 +85,14 @@ summary: |
   4. Drop `'unsafe-inline'` from `script-src` after auditing the inline scripts on the page.
 
   Approach (3) is the smallest server-side change and immediately neutralises the exploit for any new publishes; approaches (1) or (2) close the class of bug at the sink so future fields with similar patterns are safe by default.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/modelcontextprotocol/registry
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/modelcontextprotocol/registry
+        commit: 78b7bbde07948049b916d76b4769faee461ff930
+    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1

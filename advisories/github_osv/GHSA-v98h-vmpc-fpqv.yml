@@ -1,0 +1,100 @@
+advisory_id: GHSA-v98h-vmpc-fpqv
+datasource_id: github_osv/GHSA-v98h-vmpc-fpqv
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-v98h-vmpc-fpqv/GHSA-v98h-vmpc-fpqv.json
+aliases:
+  - CVE-2026-47762
+summary: |
+  TinyMCE Cross-Site Scripting (XSS) vulnerability through `mce:protected` comments
+  ### Impact
+  Stored XSS vulnerability via forged mce:protected comments. Allows attackers to bypass sanitization and inject scripts that execute when content is restored. Impacts users who utilize the protect option.
+
+  ### Patches
+  Patched by validating decoded mce:protected content against configured protect regex rules before restoring. Users should upgrade to the latest patched version.
+
+  ### Workarounds
+  No official workaround available.
+
+  ### Fix
+  To avoid this vulnerability:
+
+  Upgrade to TinyMCE 8.5.1 or higher.
+  Upgrade to TinyMCE 7.9.3 or higher.
+  Upgrade to TinyMCE 5.11.1 LTS or higher for TinyMCE 5.x (only available as part of commercial [long-term support](https://www.tiny.cloud/long-term-support/) contract).
+
+  ### Acknowledgements
+  Tiny thanks [Ivan Babenko](https://github.com/he1d3n) for their help identifying this vulnerability.
+impacted_packages:
+  - purl: pkg:nuget/TinyMCE
+    affected_versions: vers:nuget/<5.11.1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/TinyMCE
+    affected_versions: vers:nuget/>=6.0.0|<7.9.3
+    fixed_versions: vers:nuget/7.9.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/TinyMCE
+    affected_versions: vers:nuget/>=8.0.0|<8.5.1
+    fixed_versions: vers:nuget/8.5.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/tinymce
+    affected_versions: vers:npm/<5.11.1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/tinymce
+    affected_versions: vers:npm/>=6.0.0|<7.9.3
+    fixed_versions: vers:npm/7.9.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/tinymce
+    affected_versions: vers:npm/>=8.0.0|<8.5.1
+    fixed_versions: vers:npm/8.5.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/tinymce/tinymce
+    affected_versions: vers:composer/<5.11.1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/tinymce/tinymce
+    affected_versions: vers:composer/>=6.0.0|<7.9.3
+    fixed_versions: vers:composer/7.9.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/tinymce/tinymce
+    affected_versions: vers:composer/>=8.0.0|<8.5.1
+    fixed_versions: vers:composer/8.5.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.7'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-v98h-vmpc-fpqv/GHSA-v98h-vmpc-fpqv.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-79
+references:
+  - url: https://github.com/tinymce/tinymce
+    reference_type:
+    reference_id:
+  - url: https://github.com/tinymce/tinymce/security/advisories/GHSA-v98h-vmpc-fpqv
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-47762
+    reference_type:
+    reference_id:
+  - url: https://www.tiny.cloud/docs/tinymce/7/7.9.3-release-notes/#overview
+    reference_type:
+    reference_id:
+  - url: https://www.tiny.cloud/docs/tinymce/8/8.5.1-release-notes/#overview
+    reference_type:
+    reference_id:

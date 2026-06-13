@@ -1,0 +1,55 @@
+advisory_id: GHSA-qhxg-623c-cfjm
+datasource_id: github_osv/GHSA-qhxg-623c-cfjm
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-qhxg-623c-cfjm/GHSA-qhxg-623c-cfjm.json
+aliases:
+  - CVE-2026-47379
+summary: |
+  NocoDB: Plaintext Password Comparison in Shared Views
+  ### Summary
+  The shared-view password check fell back to strict-equality (`===`) comparison for
+  legacy plaintext passwords, leaking the password's length and per-character prefix
+  through response timing.
+
+  ### Details
+  The bcrypt branch (hashes starting with `$2a$`/`$2b$`) was unaffected. The legacy
+  fallback in `View.ts` now uses `crypto.timingSafeEqual` and a same-length dummy
+  compare on the length-mismatch path, so total comparison time is approximately
+  length-independent. The EE dashboard model's `verifyPassword` is patched the same way.
+
+  ### Impact
+  A network-positioned attacker could mount a timing oracle against shared views whose
+  passwords predated the bcrypt migration. Exploitation requires the ability to time
+  shared-view authentication responses but no prior authentication.
+
+  ### Credit
+  This issue was reported by [@Proscan-one](https://github.com/Proscan-one).
+impacted_packages:
+  - purl: pkg:npm/nocodb
+    affected_versions: vers:npm/<=2026.5.0
+    fixed_versions: vers:npm/2026.5.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-qhxg-623c-cfjm/GHSA-qhxg-623c-cfjm.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-200
+  - CWE-203
+references:
+  - url: https://github.com/nocodb/nocodb
+    reference_type:
+    reference_id:
+  - url: https://github.com/nocodb/nocodb/releases/tag/2026.05.1
+    reference_type:
+    reference_id:
+  - url: https://github.com/nocodb/nocodb/security/advisories/GHSA-qhxg-623c-cfjm
+    reference_type:
+    reference_id:

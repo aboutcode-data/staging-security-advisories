@@ -16,7 +16,14 @@ summary: |
 
   - Do not accept `zserio`-encoded messages from non-trusted sources.
   - Allocate a maximum heap amount to `rust-zerio` to avoid impacting other applications.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/danaozhong/rust-zserio
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/danaozhong/rust-zserio
+        commit: 57f5fb4a2a8611d58dbcc1a9221349206dd99c3c
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -42,4 +49,4 @@ references:
     reference_id:
   - url: https://github.com/ndsev/zserio/security/advisories/GHSA-cwq5-8pvq-j65j
     reference_type:
-    reference_id:
+    reference_id: GHSA-cwq5-8pvq-j65j

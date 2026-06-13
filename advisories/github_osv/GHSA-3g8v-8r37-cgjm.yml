@@ -86,7 +86,14 @@ summary: "FrankenPHP: Unsafe Unicode Handling in CGI Path Splitting Allows Execu
   \ for every legitimate path while making the Unicode bypasses unrepresentable. The replacement\
   \ is a tight byte loop with no library calls in the hot path.\n\n### Credit\n\nBoth flaws\
   \ were reported by @KC1zs4."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/php/frankenphp
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/php/frankenphp
+        commit: 2d0f480329a02571d6f635dad9fdb066e1a11e81
+    introduced_in_commits: []
 severities:
   - score: '8.1'
     scoring_system: cvssv3.1
@@ -99,8 +106,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-20
   - CWE-178
+  - CWE-20
   - CWE-176
 references:
   - url: https://github.com/php/frankenphp

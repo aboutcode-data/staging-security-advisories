@@ -13,7 +13,14 @@ summary: "OpenBao's Kerberos Auth Method Accumulates Unaccessible Tokens\n### Im
   \ \n\n### Workarounds\n\nUsers may set a rate limit quota to limit the creation of these paths.\
   \ As the path is unauthenticated, it isn't possible to deny access to it.\n\n### Reporter\n\
   \nThis was discovered by an anonymous reporter."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/openbao/openbao
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openbao/openbao
+        commit: 0d82e0a5a3b6a93e8087bcbaf0b11326c12d4f4d
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1

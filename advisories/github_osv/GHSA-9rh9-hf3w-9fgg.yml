@@ -1,7 +1,8 @@
 advisory_id: GHSA-9rh9-hf3w-9fgg
 datasource_id: github_osv/GHSA-9rh9-hf3w-9fgg
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-9rh9-hf3w-9fgg/GHSA-9rh9-hf3w-9fgg.json
-aliases: []
+aliases:
+  - CVE-2026-47741
 summary: |
   shopper/framework: Race condition on Discount.usage_limit allows silent over-redemption
   ## Impact
@@ -43,6 +44,13 @@ impacted_packages:
     fixed_versions: vers:composer/2.8.0
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:github/shopperlabs/shopper
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/shopperlabs/shopper
+        commit: fcd0c5920588702df5b874f432b1042abd77a50b
+    introduced_in_commits: []
 severities:
   - score: '5.9'
     scoring_system: cvssv3.1
@@ -73,5 +81,8 @@ references:
     reference_type:
     reference_id:
   - url: https://github.com/shopperlabs/shopper/security/advisories/GHSA-9rh9-hf3w-9fgg
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-47741
     reference_type:
     reference_id:

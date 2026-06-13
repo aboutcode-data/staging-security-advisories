@@ -44,7 +44,14 @@ summary: "Kata Container has CopyFile Policy Subversion via Symlinks\n### Summar
   \ own policy implementation you may or may not be vulnerable. If you do not care about protecting\
   \ the image from the host (e.g. you are using unprotected host pull), you are not vulnerable.\n\
   \nThis was individually discovered and reported by\n\n- @calonso-nv \n- @fikriwahab\n- @kodareef5"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/kata-containers/kata-containers
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/kata-containers/kata-containers
+        commit: 1b9e49eb2763aa6ea6a99b276d3ff5e2c7f658f2
+    introduced_in_commits: []
 severities:
   - score: '8.2'
     scoring_system: cvssv3.1

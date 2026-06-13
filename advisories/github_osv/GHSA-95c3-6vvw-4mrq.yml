@@ -51,7 +51,14 @@ summary: "MCP Registry's GitHub OIDC tokens are replayable across registry deplo
   \ same instance-specific value.\n3. Consider binding the exchange to additional deployment-specific\
   \ claims so that a token captured by one registry cannot be replayed on another.\n4. Add regression\
   \ tests that cover cross-deployment replay attempts between different registry URLs."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/modelcontextprotocol/registry
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/modelcontextprotocol/registry
+        commit: 3f89fc2b1fb34fd49f3c0e1b39e964a5c67b613f
+    introduced_in_commits: []
 severities:
   - score: '4.7'
     scoring_system: cvssv3.1

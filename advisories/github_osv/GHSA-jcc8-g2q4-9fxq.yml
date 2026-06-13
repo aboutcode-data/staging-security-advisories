@@ -24,7 +24,14 @@ summary: "Argo Vulnerable to Unauthenticated Memory Exhaustion (DoS) in Webhook 
   \ Body Size:** Enforce a strict limit on webhook body size (e.g., 10MB) using `http.MaxBytesReader`.\n\
   2.  **Streaming Verification:** If possible, verify the signature in a streaming fashion or\
   \ use a temporary file for large payloads (though typically webhooks are small)."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/argoproj/argo-workflows
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/argoproj/argo-workflows
+        commit: 7abb4de6c3599e2d5d960ba4d5de4cf1df109965
+    introduced_in_commits: []
 severities:
   - score: '8.2'
     scoring_system: cvssv4

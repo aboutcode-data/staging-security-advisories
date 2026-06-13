@@ -6,7 +6,14 @@ aliases:
 summary: |
   Crabbox: environment variable exposure vulnerability
   Crabbox prior to v0.12.0 contains an environment variable exposure vulnerability that allows attackers with access to a malicious or compromised repository to forward local secrets such as API tokens, cloud credentials, and broker tokens into the remote command environment. Attackers can exploit overly permissive environment variable allowlisting in repo-local Crabbox configuration to serialize sensitive environment variables into remote command execution, exposing credentials to the remote environment.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/openclaw/crabbox
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openclaw/crabbox
+        commit: eaae40ae4ce009e60633f16f7f19600c74557f6f
+    introduced_in_commits: []
 severities:
   - score: '9.1'
     scoring_system: cvssv3.1

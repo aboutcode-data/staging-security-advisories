@@ -58,7 +58,16 @@ summary: |
 
   ### Impact
   Any user with Kubernetes RBAC permissions to read pod logs in the workflow namespace can extract artifact repository credentials.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/argoproj/argo-workflows
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/argoproj/argo-workflows
+        commit: 59f1089b9875723ddffd524513e6bd5cb37e5e31
+      - vcs_url: https://github.com/argoproj/argo-workflows
+        commit: bdd40908580f727c590c8743836e338b04fe4a87
+    introduced_in_commits: []
 severities:
   - score: '8.5'
     scoring_system: cvssv4

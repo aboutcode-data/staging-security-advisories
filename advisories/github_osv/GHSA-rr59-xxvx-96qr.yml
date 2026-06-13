@@ -178,7 +178,14 @@ summary: |
   ```
 
   The host's real hostname (kata-poc), OS (Ubuntu 24.04.3 LTS), /etc/shadow content, kernel files in /boot, and Kata binaries in /opt/kata/bin are all visible from inside the VM. The container itself runs Alpine, confirming this is the host filesystem and not the container's own filesystem.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/kata-containers/kata-containers
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/kata-containers/kata-containers
+        commit: ffa59ce3aa7877d067c9a372df0c329a23a01744
+    introduced_in_commits: []
 severities:
   - score: '5.8'
     scoring_system: cvssv4

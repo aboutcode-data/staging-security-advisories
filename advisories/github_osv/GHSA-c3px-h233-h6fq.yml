@@ -68,7 +68,14 @@ summary: |
   - **Privilege escalation**: a `"user"`-role attacker can recover or replay admin credentials, then exercise full Arcane functionality (Docker container/exec/volume control), which on a typical deployment with the host Docker socket mounted is host RCE.
   - **Configuration / secret exposure**: any environment files, OIDC client secrets, registry credentials, or files mounted into the container are reachable.
   - The scope crosses the security authority of other user accounts (S:C), since one authenticated user reads credentials belonging to other users and to the admin.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/getarcaneapp/arcane
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/getarcaneapp/arcane
+        commit: b6cbffabf61dbc3f12a28d3b5830e3c6b7e67daf
+    introduced_in_commits: []
 severities:
   - score: '7.7'
     scoring_system: cvssv3.1
@@ -90,5 +97,8 @@ references:
     reference_type:
     reference_id:
   - url: https://github.com/getarcaneapp/arcane/security/advisories/GHSA-c3px-h233-h6fq
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-47179
     reference_type:
     reference_id:

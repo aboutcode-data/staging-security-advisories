@@ -6,7 +6,16 @@ aliases:
 summary: |
   GoBGP has an out-of-bounds read in the ParseIP6Extended function
   An out-of-bounds read in the ParseIP6Extended function (/bgp/bgp.go) of gobgp v4.3.0 allows attackers to cause a Denial of Service (DoS) via supplying a crafted BGP UPDATE message.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/osrg/gobgp
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/osrg/gobgp
+        commit: 9ce8936672ebc07df524da77fa4c6ae26d92be6d
+      - vcs_url: https://github.com/osrg/gobgp
+        commit: 362cce3e325f56e7a4f792ccb9689b3bdda9e682
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

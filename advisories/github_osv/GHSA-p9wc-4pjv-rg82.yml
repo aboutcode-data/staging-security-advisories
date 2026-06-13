@@ -1,0 +1,50 @@
+advisory_id: GHSA-p9wc-4pjv-rg82
+datasource_id: github_osv/GHSA-p9wc-4pjv-rg82
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-p9wc-4pjv-rg82/GHSA-p9wc-4pjv-rg82.json
+aliases: []
+summary: |
+  Duplicate Advisory: phpMyFAQ has SQL Injection in CurrentUser::setTokenData through unescaped OAuth token fields
+  ### Duplicate Advisory
+  This advisory has been withdrawn because it is a duplicate of GHSA-pm8c-3qq3-72w7. This link is maintained to preserve external references.
+
+  ### Original Description
+  phpMyFAQ before 4.1.2 contains a sql injection vulnerability in CurrentUser::setTokenData that allows authenticated attackers to execute arbitrary SQL by injecting malicious OAuth token claims. Attackers with Azure AD accounts containing SQL metacharacters in display names or JWT claims can break out of string literals and execute arbitrary database queries.
+impacted_packages:
+  - purl: pkg:composer/thorsten/phpmyfaq
+    affected_versions: vers:composer/<4.1.2
+    fixed_versions: vers:composer/4.1.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/phpmyfaq/phpmyfaq
+    affected_versions: vers:composer/<4.1.2
+    fixed_versions: vers:composer/4.1.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-p9wc-4pjv-rg82/GHSA-p9wc-4pjv-rg82.json
+  - score: '7.7'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-p9wc-4pjv-rg82/GHSA-p9wc-4pjv-rg82.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-89
+references:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-46359
+    reference_type:
+    reference_id:
+  - url: https://www.vulncheck.com/advisories/phpmyfaq-sql-injection-in-currentuser-settokendata-via-unescaped-oauth-token-fields
+    reference_type:
+    reference_id:
+  - url: https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-pm8c-3qq3-72w7
+    reference_type:
+    reference_id: GHSA-pm8c-3qq3-72w7

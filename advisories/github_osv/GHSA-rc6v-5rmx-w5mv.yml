@@ -25,11 +25,20 @@ summary: |
 
   ### Impact
   Issues require network MITM or local directory write access to exploit. No direct key extraction or code execution. Primary impact is tunnel desync and silent security downgrade in hybrid QKD+PQC mode.
-
-  ### Patch
-  This issue has been fixed by the 1.0.1 release: https://github.com/arnika-project/arnika/releases/tag/v1.0.1.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/arnika-project/arnika
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/arnika-project/arnika
+        commit: efbd980d8b636cb59f60f2d6ece1b80a9cf36535
+    introduced_in_commits: []
 severities:
+  - score: '2.8'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:P/AC:L/PR:H/UI:R/S:U/C:L/I:L/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-rc6v-5rmx-w5mv/GHSA-rc6v-5rmx-w5mv.json
   - score: '6.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N
@@ -41,8 +50,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-294
   - CWE-345
+  - CWE-294
   - CWE-295
 references:
   - url: https://github.com/arnika-project/arnika
