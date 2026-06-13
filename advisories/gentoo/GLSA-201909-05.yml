@@ -49,13 +49,13 @@ summary: |
       of which could result in the arbitrary execution of code.
 impacted_packages:
   - purl: pkg:ebuild/net-libs/webkit-gtk
-    affected_versions:
-    fixed_versions: vers:ebuild/>=2.24.4
+    affected_versions: vers:ebuild/<2.24.4
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/net-libs/webkit-gtk
-    affected_versions: vers:ebuild/<2.24.4
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.24.4
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -66,6 +66,12 @@ severities:
     url:
 weaknesses: []
 references:
+  - url: https://bugs.chromium.org/p/project-zero/issues/detail?id=1753
+    reference_type: exploit
+    reference_id: CVE-2019-8506
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/dos/46647.js
+    reference_type: exploit
+    reference_id: CVE-2019-8506
   - url: https://bugs.chromium.org/p/project-zero/issues/detail?id=1775
     reference_type: exploit
     reference_id: CVE-2019-8518
@@ -78,6 +84,36 @@ references:
   - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/dos/46650.js
     reference_type: exploit
     reference_id: CVE-2019-8558
+  - url: https://bugs.chromium.org/p/project-zero/issues/detail?id=1818
+    reference_type: exploit
+    reference_id: CVE-2019-8649
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/dos/47162.txt
+    reference_type: exploit
+    reference_id: CVE-2019-8649
+  - url: https://bugs.chromium.org/p/project-zero/issues/detail?id=1822
+    reference_type: exploit
+    reference_id: CVE-2019-8671
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/dos/47190.txt
+    reference_type: exploit
+    reference_id: CVE-2019-8671
+  - url: https://bugs.chromium.org/p/project-zero/issues/detail?id=1825
+    reference_type: exploit
+    reference_id: CVE-2019-8672
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/dos/47191.txt
+    reference_type: exploit
+    reference_id: CVE-2019-8672
+  - url: https://bugs.chromium.org/p/project-zero/issues/detail?id=1876
+    reference_type: exploit
+    reference_id: CVE-2019-8689
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/dos/47316.txt
+    reference_type: exploit
+    reference_id: CVE-2019-8689
+  - url: https://bugs.chromium.org/p/project-zero/issues/detail?id=1880
+    reference_type: exploit
+    reference_id: CVE-2019-8690
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/dos/47237.txt
+    reference_type: exploit
+    reference_id: CVE-2019-8690
   - url: https://security.gentoo.org/glsa/201909-05
     reference_type:
     reference_id: GLSA-201909-05

@@ -9,13 +9,20 @@ summary: |
       attackers to obtain sensitive information.
 impacted_packages:
   - purl: pkg:ebuild/dev-libs/openssl
-    affected_versions:
-    fixed_versions: vers:ebuild/>=1.0.2r
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/dev-libs/openssl
     affected_versions: vers:ebuild/<1.0.2r
     fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/bbbrumley/portsmash
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/bbbrumley/portsmash
+        commit: e3e7447ba04e1a8a5637cabadf3403faf94f7a56
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-libs/openssl
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.0.2r
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -26,6 +33,12 @@ severities:
     url:
 weaknesses: []
 references:
+  - url: https://github.com/bbbrumley/portsmash/tree/e3e7447ba04e1a8a5637cabadf3403faf94f7a56
+    reference_type: exploit
+    reference_id: CVE-2018-5407
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/hardware/local/45785.md
+    reference_type: exploit
+    reference_id: CVE-2018-5407
   - url: https://security.gentoo.org/glsa/201903-10
     reference_type:
     reference_id: GLSA-201903-10

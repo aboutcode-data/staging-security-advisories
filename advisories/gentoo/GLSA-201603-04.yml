@@ -9,13 +9,13 @@ summary: |
       user to overwrite arbitrary files.
 impacted_packages:
   - purl: pkg:ebuild/sys-fs/fuse
-    affected_versions:
-    fixed_versions: vers:ebuild/>=2.9.4
+    affected_versions: vers:ebuild/<2.9.4
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/sys-fs/fuse
-    affected_versions: vers:ebuild/<2.9.4
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.9.4
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -26,12 +26,6 @@ severities:
     url:
 weaknesses: []
 references:
-  - url: https://gist.github.com/taviso/ecb70eb12d461dd85cba
-    reference_type: exploit
-    reference_id: CVE-2015-3202;OSVDB-122415
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/local/37089.txt
-    reference_type: exploit
-    reference_id: CVE-2015-3202;OSVDB-122415
   - url: https://security.gentoo.org/glsa/201603-04
     reference_type:
     reference_id: GLSA-201603-04

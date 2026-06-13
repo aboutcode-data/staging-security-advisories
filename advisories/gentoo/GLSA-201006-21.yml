@@ -9,13 +9,13 @@ summary: |
       compromise the "unrealircd" account, or cause a Denial of Service.
 impacted_packages:
   - purl: pkg:ebuild/net-irc/unrealircd
-    affected_versions:
-    fixed_versions: vers:ebuild/>=3.2.8.1-r1
+    affected_versions: vers:ebuild/<3.2.8.1-r1
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/net-irc/unrealircd
-    affected_versions: vers:ebuild/<3.2.8.1-r1
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=3.2.8.1-r1
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -30,9 +30,6 @@ references:
     reference_type: exploit
     reference_id: CVE-2010-2075;OSVDB-65445
   - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/remote/16922.rb
-    reference_type: exploit
-    reference_id: CVE-2010-2075;OSVDB-65445
-  - url: http://www.unrealircd.com/txt/unrealsecadvisory.20100612.txt
     reference_type: exploit
     reference_id: CVE-2010-2075;OSVDB-65445
   - url: https://security.gentoo.org/glsa/201006-21

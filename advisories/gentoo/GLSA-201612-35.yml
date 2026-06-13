@@ -8,13 +8,13 @@ summary: |
       arbitrary code.
 impacted_packages:
   - purl: pkg:ebuild/dev-java/xstream
-    affected_versions:
-    fixed_versions: vers:ebuild/>=1.4.8-r1
+    affected_versions: vers:ebuild/<1.4.8-r1
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/dev-java/xstream
-    affected_versions: vers:ebuild/<1.4.8-r1
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=1.4.8-r1
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -25,9 +25,6 @@ severities:
     url:
 weaknesses: []
 references:
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/java/webapps/39193.txt
-    reference_type: exploit
-    reference_id: CVE-2013-7285;OSVDB-102253
   - url: https://security.gentoo.org/glsa/201612-35
     reference_type:
     reference_id: GLSA-201612-35

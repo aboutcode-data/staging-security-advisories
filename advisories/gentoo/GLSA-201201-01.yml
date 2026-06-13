@@ -29,13 +29,13 @@ summary: |
       of which allows the execution of arbitrary PHP code.
 impacted_packages:
   - purl: pkg:ebuild/dev-db/phpmyadmin
-    affected_versions:
-    fixed_versions: vers:ebuild/>=3.4.9
+    affected_versions: vers:ebuild/<3.4.9
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/dev-db/phpmyadmin
-    affected_versions: vers:ebuild/<3.4.9
-    fixed_versions:
+    affected_versions:
+    fixed_versions: vers:ebuild/>=3.4.9
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -50,9 +50,6 @@ references:
     reference_type: exploit
     reference_id: CVE-2011-2506;CVE-2011-2505;OSVDB-73612;OSVDB-73611
   - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/php/webapps/17514.php
-    reference_type: exploit
-    reference_id: CVE-2011-2506;CVE-2011-2505;OSVDB-73612;OSVDB-73611
-  - url: http://www.xxor.se/advisories/phpMyAdmin_3.x_Multiple_Remote_Code_Executions.txt
     reference_type: exploit
     reference_id: CVE-2011-2506;CVE-2011-2505;OSVDB-73612;OSVDB-73611
   - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/php/webapps/18371.rb

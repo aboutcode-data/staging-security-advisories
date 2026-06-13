@@ -11,14 +11,21 @@ summary: |
       which might allow attackers to access sensitive information.
 impacted_packages:
   - purl: pkg:ebuild/dev-libs/openssl
+    affected_versions: vers:ebuild/<1.0.2k
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-libs/openssl
     affected_versions:
     fixed_versions: vers:ebuild/>=1.0.2k
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:ebuild/dev-libs/openssl
-    affected_versions: vers:ebuild/<1.0.2k
+  - purl: pkg:github/guidovranken/cve-2017-3730
+    affected_versions:
     fixed_versions:
-    fixed_in_commits: []
+    fixed_in_commits:
+      - vcs_url: https://github.com/guidovranken/cve-2017-3730
+        commit: 98cca4c8c706c6b3ff8b6f2fc9fb2e8c956f3263
     introduced_in_commits: []
 severities:
   - score: normal
