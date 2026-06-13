@@ -8,17 +8,17 @@ aliases:
 summary: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')
   in org.springframework.boot:spring-boot-starter-web.
 impacted_packages:
-  - purl: pkg:maven/org.springframework.boot/spring-boot-starter-web
-    affected_versions: vers:maven/<2.5.12|>=2.6.0|<2.6.6
-    fixed_versions: vers:maven/2.5.12|2.6.6
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/spring-projects/spring-framework
     affected_versions:
     fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/spring-projects/spring-framework
         commit: 002546b3e4b8d791ea6acccb81eb3168f51abb15
+    introduced_in_commits: []
+  - purl: pkg:maven/org.springframework.boot/spring-boot-starter-web
+    affected_versions: vers:maven/<2.5.12|>=2.6.0|<2.6.6
+    fixed_versions: vers:maven/2.5.12|2.6.6
+    fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: None
@@ -32,8 +32,8 @@ severities:
     published_at: None
     url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/maven/org.springframework.boot/spring-boot-starter-web/GMS-2022-560.yml
 weaknesses:
-  - CWE-1035
   - CWE-78
+  - CWE-1035
   - CWE-937
 references:
   - url: https://github.com/spring-projects/spring-boot/releases/tag/v2.5.12
