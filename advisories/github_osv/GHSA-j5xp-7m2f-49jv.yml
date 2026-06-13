@@ -1,0 +1,57 @@
+advisory_id: GHSA-j5xp-7m2f-49jv
+datasource_id: github_osv/GHSA-j5xp-7m2f-49jv
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-j5xp-7m2f-49jv/GHSA-j5xp-7m2f-49jv.json
+aliases:
+  - CVE-2026-44019
+summary: |
+  Docling Core: Insufficient validation of image reference URIs
+  ### Impact
+  In versions `>= 2.5.0, < 2.74.1`, `docling-core`  could allow local `file://` image references and accepted inline `data:` content without a decoded-size limit.
+
+  In applications that accept untrusted image references, this may allow access to local files readable by the process or excessive memory use from large inline payloads.
+
+  ### Patches
+  Patched in `docling-core` `2.74.1`.
+  The fix blocks local file URIs by default and adds a size limit for decoded inline image data.
+
+  Users should upgrade to:
+  - `docling-core` `>= 2.74.1`
+
+  ### Workarounds
+  If upgrading is not immediately possible:
+  - reject `file:` and `data:` image references from untrusted input
+  - allow only approved local or remote image sources
+  - apply input size and memory limits to processing workers
+
+  ### References
+  - Fix release: [`v2.74.1`](https://github.com/docling-project/docling-core/releases/tag/v2.74.1)
+impacted_packages:
+  - purl: pkg:pypi/docling-core
+    affected_versions: vers:pypi/>=2.5.0|<2.74.1
+    fixed_versions: vers:pypi/2.74.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.1'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-j5xp-7m2f-49jv/GHSA-j5xp-7m2f-49jv.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-400
+  - CWE-73
+references:
+  - url: https://github.com/docling-project/docling-core
+    reference_type:
+    reference_id:
+  - url: https://github.com/docling-project/docling-core/releases/tag/v2.74.1
+    reference_type:
+    reference_id:
+  - url: https://github.com/docling-project/docling-core/security/advisories/GHSA-j5xp-7m2f-49jv
+    reference_type:
+    reference_id:

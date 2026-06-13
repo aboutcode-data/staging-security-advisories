@@ -17,7 +17,14 @@ summary: "Yamux vulnerable to remote Panic via malformed WindowUpdate credit\n##
   \ the crafted frame sequence.\n### Patches\nUsers should upgrade to `yamux` `v0.13.9`\n\n\
   This vulnerability was originally submitted by @revofusion to the Ethereum Foundation bug\
   \ bounty program"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/libp2p/rust-yamux
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/libp2p/rust-yamux
+        commit: b1aae09d60c0bd6a5915a5448f4e8cbc5174db53
+    introduced_in_commits: []
 severities:
   - score: '8.7'
     scoring_system: cvssv4

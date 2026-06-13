@@ -36,7 +36,14 @@ summary: "Juju has unauthorized access to out-of-scope Kubernetes secrets\n### S
   \ is visible to both owner and grantee\n\n### Impact\n\n- the application that owns the secret\n\
   - a third application, if a secret is granted to multiple parties\n- any other application\
   \ that has secrets in the same Kubernetes secret backend"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/juju/juju
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/juju/juju
+        commit: d06919eb03ec68156818bcc304b5fe1c39a8f9e9
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1

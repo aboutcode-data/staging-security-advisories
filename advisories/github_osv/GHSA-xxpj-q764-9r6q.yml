@@ -1,0 +1,55 @@
+advisory_id: GHSA-xxpj-q764-9r6q
+datasource_id: github_osv/GHSA-xxpj-q764-9r6q
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-xxpj-q764-9r6q/GHSA-xxpj-q764-9r6q.json
+aliases:
+  - CVE-2026-47388
+summary: |
+  NocoDB: Missing Ownership Check in MCP Attachment Read
+  ### Summary
+  A low-privilege MCP token holder with knowledge of an attachment path could read any
+  file in shared storage, including attachments belonging to other bases and workspaces,
+  because the MCP `readAttachment` tool did not verify the file's ownership.
+
+  ### Details
+  The MCP `readAttachment` tool accepts caller-supplied `path`/`url` values and streams
+  the file via the storage adapter. The handler now looks up the path in
+  `nc_file_references` and requires a non-deleted row whose `base_id` matches the
+  caller's MCP context before streaming; otherwise it returns
+  `Attachment is not accessible from this MCP context`. The lookup tolerates both
+  `download/uploads/...` and `uploads/...` styles.
+
+  ### Impact
+  Arbitrary read against shared storage scoped to attachments the caller's MCP context
+  should not see. Exploitation requires an MCP token and a known attachment path.
+
+  ### Credit
+  This issue was reported by [@helwor-01](https://github.com/helwor-01).
+impacted_packages:
+  - purl: pkg:npm/nocodb
+    affected_versions: vers:npm/<=2026.5.0
+    fixed_versions: vers:npm/2026.5.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '2.3'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-xxpj-q764-9r6q/GHSA-xxpj-q764-9r6q.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-639
+references:
+  - url: https://github.com/nocodb/nocodb
+    reference_type:
+    reference_id:
+  - url: https://github.com/nocodb/nocodb/releases/tag/2026.05.1
+    reference_type:
+    reference_id:
+  - url: https://github.com/nocodb/nocodb/security/advisories/GHSA-xxpj-q764-9r6q
+    reference_type:
+    reference_id:

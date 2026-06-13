@@ -110,7 +110,14 @@ summary: |
   - Create, modify, and delete all other users
   - Change authentication method and server settings
   - Execute arbitrary commands if enableExec = true
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/filebrowser/filebrowser
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/filebrowser/filebrowser
+        commit: a63573b67eb302167b4c4f218361a2d0c138deab
+    introduced_in_commits: []
 severities:
   - score: '10.0'
     scoring_system: cvssv4
@@ -123,8 +130,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-269
   - CWE-284
+  - CWE-269
 references:
   - url: https://github.com/filebrowser/filebrowser
     reference_type:

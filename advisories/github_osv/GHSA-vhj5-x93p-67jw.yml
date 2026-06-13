@@ -79,7 +79,14 @@ summary: |
 
   ### Impact
   This is a Host header poisoning / open redirect issue. Users can be redirected to attacker-controlled domains, enabling phishing and trust-boundary abuse. Any application using these middleware paths without strict host validation (proxy/app allowlisting) is impacted.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/robjtede/actix-web-lab
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/robjtede/actix-web-lab
+        commit: 142c28b82eb59b67445a859a2a9b75e01a9964ee
+    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1

@@ -16,7 +16,14 @@ summary: |
 
   ### Workarounds
   The vulnerability can be mitigated by removing any roles with `callback_mode` set to `direct`.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/openbao/openbao
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openbao/openbao
+        commit: 6e2b2dd84f0e47cebc90d6e79609dd5274732662
+    introduced_in_commits: []
 severities:
   - score: '9.4'
     scoring_system: cvssv4
@@ -29,8 +36,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-20
   - CWE-80
+  - CWE-20
 references:
   - url: https://github.com/openbao/openbao
     reference_type:

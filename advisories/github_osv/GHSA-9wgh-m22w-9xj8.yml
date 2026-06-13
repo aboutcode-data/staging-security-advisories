@@ -1,0 +1,65 @@
+advisory_id: GHSA-9wgh-m22w-9xj8
+datasource_id: github_osv/GHSA-9wgh-m22w-9xj8
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-9wgh-m22w-9xj8/GHSA-9wgh-m22w-9xj8.json
+aliases:
+  - CVE-2026-47279
+summary: |
+  NocoDB: Hidden LTAR Column Exposure in Public Shared-View Relation Endpoints
+  ### Summary
+  The public shared-view relation endpoints accepted a caller-supplied column
+  ID without verifying that the column was visible in the shared view, so
+  anyone holding a share UUID could read links from any LTAR column on the
+  view's table — including columns the view owner had hidden.
+
+  ### Details
+  `publicMmList`, `publicHmList`, and `relDataList` already ensured that the
+  requested column belonged to the view's model, but did not check the
+  view-column entry's `show` flag. All three handlers now also fetch the
+  shared view's column entries and reject the request unless the matching
+  entry has `show=true`. The four public relation routes covered by the fix
+  are:
+
+  - `GET /api/v2/public/shared-view/:uuid/rows/:rowId/mm/:columnId` (many-to-many)
+  - `GET /api/v2/public/shared-view/:uuid/rows/:rowId/hm/:columnId` (has-many)
+  - `GET /api/v2/public/shared-view/:uuid/rows/:rowId/{ln,om}/:columnId`
+    (links / one-to-many — both share the many-to-many handler)
+  - `GET /api/v2/public/shared-view/:uuid/nested/:columnId` (form/gallery
+    picker)
+
+  ### Impact
+  Anyone holding a share UUID could enumerate the full set of linked records
+  for any hidden LTAR column on the view's table by calling the relation
+  endpoint directly, even when the same column was correctly omitted from the
+  public `/rows` response.
+
+  ### Credit
+  This issue was reported by [@leduckhuong](https://github.com/leduckhuong).
+impacted_packages:
+  - purl: pkg:npm/nocodb
+    affected_versions: vers:npm/<=2026.5.0
+    fixed_versions: vers:npm/2026.5.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-9wgh-m22w-9xj8/GHSA-9wgh-m22w-9xj8.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-284
+references:
+  - url: https://github.com/nocodb/nocodb
+    reference_type:
+    reference_id:
+  - url: https://github.com/nocodb/nocodb/releases/tag/2026.05.1
+    reference_type:
+    reference_id:
+  - url: https://github.com/nocodb/nocodb/security/advisories/GHSA-9wgh-m22w-9xj8
+    reference_type:
+    reference_id:

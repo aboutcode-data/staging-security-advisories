@@ -74,7 +74,14 @@ summary: |
 
   ### Impact
   This is a cross-site scripting (XSS) vulnerability in rendered Leaf templates. Vapor/Leaf applications that render user-controlled data inside arrays or dictionaries using `#(value)` may be impacted.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/vapor/leaf-kit
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/vapor/leaf-kit
+        commit: 6044b844caa858a0c5f2505ac166f5a057c990dc
+    introduced_in_commits: []
 severities:
   - score: '6.9'
     scoring_system: cvssv4

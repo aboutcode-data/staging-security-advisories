@@ -122,7 +122,20 @@ summary: "Incus does not verify combined fingerprint when downloading images fro
   \ export poc:945758c6900211055b3b0b6d2ab9617a9f9dbeb70e4c3b9710dc47aa01345369\nImage exported\
   \ successfully!                   \n$ cat incus.tar.xz rootfs.squashfs | sha256sum\nd3ec6f76cc1e4e49479e52c69b3d71430748f7c86d1214f44893e131392ad002\
   \  -\n```"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/lxc/incus
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/lxc/incus
+        commit: 04e97418189f743411884afb81a3384e6218b8cd
+      - vcs_url: https://github.com/lxc/incus
+        commit: 72688b7d9400c8f3c17ad0f93a7c1aeb89627307
+      - vcs_url: https://github.com/lxc/incus
+        commit: 4a80447c52d6bc05d3322feeb5395f581e7a80e4
+      - vcs_url: https://github.com/lxc/incus
+        commit: ee26f72524ab60a4abcfd4e52667c52bb24364fc
+    introduced_in_commits: []
 severities:
   - score: '7.0'
     scoring_system: cvssv4
@@ -135,8 +148,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-295
   - CWE-354
+  - CWE-295
 references:
   - url: https://github.com/lxc/incus
     reference_type:

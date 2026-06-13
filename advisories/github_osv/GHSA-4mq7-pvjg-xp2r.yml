@@ -18,7 +18,14 @@ summary: |
   Ory Oathkeeper now includes the introspection server URL in the cache key, preventing confusion of tokens.
 
   Update to the patched version of Ory Oathkeeper. If that is not immediately possible, disable caching for `oauth2_introspection` authenticators.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/ory/oathkeeper
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/ory/oathkeeper
+        commit: 198a2bc82a99e0a77bd0ffe290cbdd5285a1b17c
+    introduced_in_commits: []
 severities:
   - score: '8.1'
     scoring_system: cvssv3.1
@@ -31,8 +38,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-305
   - CWE-1289
+  - CWE-305
 references:
   - url: https://github.com/ory/oathkeeper
     reference_type:

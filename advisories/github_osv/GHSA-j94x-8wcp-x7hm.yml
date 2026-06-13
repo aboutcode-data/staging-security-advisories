@@ -57,7 +57,14 @@ summary: |
   - All Promotion creation is audited. The creating user's identity is recorded in annotations and Kubernetes events, providing a clear forensic trail.
 
   - The practical impact is limited to cloud instance metadata endpoints. Access to private and internal addresses is by design, and services at those addresses are expected to implement their own authentication and authorization.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/akuity/kargo
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/akuity/kargo
+        commit: fd25620c2473ed19bec4be4d0f181287ef0f0391
+    introduced_in_commits: []
 severities:
   - score: '5.1'
     scoring_system: cvssv4

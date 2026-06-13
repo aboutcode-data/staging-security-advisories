@@ -12,7 +12,14 @@ summary: |
 
   ### Workarounds
   Disable audit log configure event in Harbor Web Console: Go to Administration -> Configuration -> Enable Audit Log Event Type -> Uncheck "Update Configuration" and click "Save" Button.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/goharbor/harbor
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/goharbor/harbor
+        commit: 85e756486fc19333c5c300d7ac273e1580dc9350
+    introduced_in_commits: []
 severities:
   - score: '6.9'
     scoring_system: cvssv4
@@ -25,8 +32,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-532
   - CWE-312
+  - CWE-532
 references:
   - url: https://github.com/goharbor/harbor
     reference_type:

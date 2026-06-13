@@ -64,7 +64,14 @@ summary: "Vikjuna: Link Share Hash Disclosure via ReadAll Endpoint Enables Permi
   \ the `Hash` field from JSON serialization for list responses by using `json:\"-\"` and only\
   \ returning it on creation. However, the primary fix should be the authorization check since\
   \ the hash is needed in the creation response."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/go-vikunja/vikunja
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/go-vikunja/vikunja
+        commit: 9efe1fadba817923c7c7f5953c3e9e9c5683bbf3
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

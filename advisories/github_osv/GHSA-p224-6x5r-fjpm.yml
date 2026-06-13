@@ -42,7 +42,14 @@ summary: |
 
   Cloudflare normalizes URLs by default. In the Cloudflare dashboard, ensure **Normalize incoming URLs** is enabled under **Rules → Normalization**.
   See the <a href="https://developers.cloudflare.com/rules/normalization/" target="_blank" rel="noopener noreferrer">Cloudflare URL normalization docs</a>.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/ory/oathkeeper
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/ory/oathkeeper
+        commit: 8e0002140491c592db41fa141dc6ad68f417e2b2
+    introduced_in_commits: []
 severities:
   - score: '10.0'
     scoring_system: cvssv3.1

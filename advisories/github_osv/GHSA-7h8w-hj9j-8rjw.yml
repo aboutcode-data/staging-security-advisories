@@ -38,7 +38,7 @@ summary: "OpenHands is Vulnerable to Command Injection through its Git Diff Hand
   \ direct shell string formatting with proper argument array handling or rigorous path sanitization\
   \ to prevent command chaining."
 impacted_packages:
-  - purl: pkg:pypi/openhands
+  - purl: pkg:pypi/openhands-ai
     affected_versions: vers:pypi/<1.5.0
     fixed_versions: vers:pypi/1.5.0
     fixed_in_commits: []
@@ -69,12 +69,15 @@ references:
   - url: https://github.com/OpenHands/OpenHands/pull/13051
     reference_type:
     reference_id:
-  - url: https://github.com/OpenHands/OpenHands/security/advisories/GHSA-7h8w-hj9j-8rjw
-    reference_type:
-    reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33718
+  - url: https://github.com/pypa/advisory-database/tree/main/vulns/openhands-ai/PYSEC-2026-106.yaml
     reference_type:
     reference_id:
   - url: https://owasp.org/www-community/attacks/Command_Injection
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33718
+    reference_type:
+    reference_id: CVE-2026-33718
+  - url: https://github.com/OpenHands/OpenHands/security/advisories/GHSA-7h8w-hj9j-8rjw
+    reference_type:
+    reference_id: GHSA-7h8w-hj9j-8rjw

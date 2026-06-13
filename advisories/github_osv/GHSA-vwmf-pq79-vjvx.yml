@@ -261,8 +261,15 @@ summary: |
 impacted_packages:
   - purl: pkg:pypi/langflow
     affected_versions: vers:pypi/<=1.8.2
-    fixed_versions:
+    fixed_versions: vers:pypi/1.9.0
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/langflow-ai/langflow
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/langflow-ai/langflow
+        commit: 73b6612e3ef25fdae0a752d75b0fabd47328d4f0
     introduced_in_commits: []
 severities:
   - score: '9.8'
@@ -281,13 +288,10 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-306
-  - CWE-95
   - CWE-94
+  - CWE-95
+  - CWE-306
 references:
-  - url: https://github.com/advisories/GHSA-rvqx-wpfh-mfx7
-    reference_type:
-    reference_id:
   - url: https://github.com/langflow-ai/langflow
     reference_type:
     reference_id:
@@ -303,21 +307,24 @@ references:
   - url: https://github.com/langflow-ai/langflow/releases/tag/1.8.2
     reference_type:
     reference_id:
-  - url: https://github.com/langflow-ai/langflow/security/advisories/GHSA-vwmf-pq79-vjvx
-    reference_type:
-    reference_id:
-  - url: https://medium.com/@aviral23/cve-2026-33017-how-i-found-an-unauthenticated-rce-in-langflow-by-reading-the-code-they-already-dc96cdce5896
-    reference_type:
-    reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33017
-    reference_type:
-    reference_id:
   - url: https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-33017
     reference_type:
     reference_id:
   - url: https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-33017
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-33017
+    reference_type:
+    reference_id: CVE-2026-33017
   - url: https://www.sysdig.com/blog/cve-2026-33017-how-attackers-compromised-langflow-ai-pipelines-in-20-hours
     reference_type:
-    reference_id:
+    reference_id: CVE-2026-33017-HOW-ATTACKERS-COMPROMISED-LANGFLOW-AI-PIPELINES-IN-20-HOURS
+  - url: https://medium.com/@aviral23/cve-2026-33017-how-i-found-an-unauthenticated-rce-in-langflow-by-reading-the-code-they-already-dc96cdce5896
+    reference_type:
+    reference_id: CVE-2026-33017-HOW-I-FOUND-AN-UNAUTHENTICATED-RCE-IN-LANGFLOW-BY-READING-THE-CODE-THEY-ALREADY-DC96CDCE5896
+  - url: https://github.com/advisories/GHSA-rvqx-wpfh-mfx7
+    reference_type:
+    reference_id: GHSA-rvqx-wpfh-mfx7
+  - url: https://github.com/langflow-ai/langflow/security/advisories/GHSA-vwmf-pq79-vjvx
+    reference_type:
+    reference_id: GHSA-vwmf-pq79-vjvx

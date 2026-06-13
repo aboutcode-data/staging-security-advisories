@@ -10,7 +10,14 @@ summary: "Ella Core has Privilege Escalation via Database Restore by NetworkMana
   \ Admin, gaining access to user management, audit logs, debug endpoints, and operator identity\
   \ configuration that the role was explicitly denied.\n\n## Fix \n\nBackup and restore permissions\
   \ have been removed from the NetworkManager role."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/ellanetworks/core
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/ellanetworks/core
+        commit: 1e4768288a6519fcb63ec83f851584ecebb8a972
+    introduced_in_commits: []
 severities:
   - score: '7.2'
     scoring_system: cvssv3.1

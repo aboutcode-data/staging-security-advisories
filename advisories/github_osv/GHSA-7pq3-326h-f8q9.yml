@@ -300,7 +300,14 @@ summary: |
   ## Impact
 
   Arbitrary file write leads to RCE by an authenticated user. Given that the Docker socket might be mapped, this issue can lead to full host takeover.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/tobychui/zoraxy
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/tobychui/zoraxy
+        commit: 69ac755aeec5d15ba4c62099f7f1ed77a855b40b
+    introduced_in_commits: []
 severities:
   - score: '3.3'
     scoring_system: cvssv3.1

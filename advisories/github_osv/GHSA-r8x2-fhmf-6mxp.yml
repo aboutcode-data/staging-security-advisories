@@ -36,7 +36,21 @@ summary: "Heimdall: Path received via Envoy gRPC corrupted when containing query
   \n### Impact\n\nEveryone using heimdall with the envoy gRPC API may be affected. Users who\
   \ configured a deny list in heimdall (with an allow-all default rule) are affected, as attackers\
   \ can potentially circumvent a specific block rule by adding query parameters.\n\n[1] https://github.com/envoyproxy/envoy/blob/105b4acd422d67fcff908ec38d91c7676d079939/api/envoy/service/auth/v3/attribute_context.proto#L146-L147"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/envoyproxy/envoy
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/envoyproxy/envoy
+        commit: 105b4acd422d67fcff908ec38d91c7676d079939
+    introduced_in_commits: []
+  - purl: pkg:github/dadrus/heimdall
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/dadrus/heimdall
+        commit: 50321b3007db1ccafdc6b1cfd6bdc3689c19a502
+    introduced_in_commits: []
 severities:
   - score: '8.2'
     scoring_system: cvssv3.1
@@ -49,8 +63,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-863
   - CWE-116
+  - CWE-863
 references:
   - url: https://github.com/dadrus/heimdall
     reference_type:

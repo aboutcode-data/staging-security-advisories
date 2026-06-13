@@ -35,7 +35,14 @@ summary: "Unauthorized access to Argo Workflows Template\n### Summary\nWorkflow 
   \ c3VwZXJzZWNyZXQ=\\n\"}}],\"arguments\":{}}}\n```\n\n### Impact\nAny client can leaks Workflow\
   \ Template and Cluster Workflow Template data, including secrets, artifact locations, service\
   \ account usage, env vars, and resource manifests."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/argoproj/argo-workflows
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/argoproj/argo-workflows
+        commit: 34afaf9c0c36f1ba8645d483ea4752cfc4a391e8
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -48,8 +55,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-863
   - CWE-200
+  - CWE-863
 references:
   - url: https://github.com/argoproj/argo-workflows
     reference_type:

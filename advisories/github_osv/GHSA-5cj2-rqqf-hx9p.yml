@@ -97,7 +97,14 @@ summary: |
   The Provider would then able to validate the secret ID it's about to use against:
   - the relation in which the secret ID has been passed (good relation 12 or evil relation 14)
   - the application or unit name of the secret owner (good or evil)
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/juju/juju
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/juju/juju
+        commit: d06919eb03ec68156818bcc304b5fe1c39a8f9e9
+    introduced_in_commits: []
 severities:
   - score: '6.6'
     scoring_system: cvssv3.1

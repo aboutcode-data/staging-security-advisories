@@ -6,7 +6,14 @@ aliases:
 summary: |
   Mattermost fails to bound memory allocation when processing PSD image files
   Mattermost versions 11.3.x <= 11.3.0, 11.2.x <= 11.2.2, 10.11.x <= 10.11.10 fail to bound memory allocation when processing PSD image files which allows an authenticated attacker to cause server memory exhaustion and denial of service via uploading a specially crafted PSD file. Mattermost Advisory ID: MMSA-2026-00572
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 38b413a27604e8721fbe008f8ec4b4e6c47ad4f0
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1

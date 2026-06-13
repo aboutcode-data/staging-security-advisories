@@ -6,7 +6,14 @@ aliases:
 summary: |
   Mattermost Boards Plugin fails to implement authorisation checks on comment block modifications
   Mattermost Plugins versions <=11.3 11.0.3 11.2.2 10.10.11.0 fail to implement authorisation checks on comment block modifications, which allows an authorised attacker with editor permission to modify comments created by other board members.  Mattermost Advisory ID: MMSA-2025-00559
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost-plugin-boards
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost-plugin-boards
+        commit: 57c5be5b6ef59d02dd72e35094d1fae8ba6e9619
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1

@@ -69,7 +69,14 @@ summary: |
   An admin can permanently import the contents of any readable host directory into the workspace as searchable notes. Unlike globalCopyFiles, there is no blocklist - /proc/, /etc/, /run/secrets/, /home/ are all accepted.
 
   Data persists in the workspace database across restarts and is accessible to Publish Service Reader accounts. Combined with the renderSprig SQL injection ( separate advisory ), a non-admin user can then read all imported secrets without any additional privileges.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/siyuan-note/siyuan
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/siyuan-note/siyuan
+        commit: 13b6d3d45e83525654d120f32a3fdc5d9e95df0b
+    introduced_in_commits: []
 severities:
   - score: '6.8'
     scoring_system: cvssv3.1
@@ -82,8 +89,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-22
   - CWE-552
+  - CWE-22
 references:
   - url: https://github.com/siyuan-note/siyuan
     reference_type:

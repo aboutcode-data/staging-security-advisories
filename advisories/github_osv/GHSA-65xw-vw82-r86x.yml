@@ -6,7 +6,14 @@ aliases:
 summary: |
   XPath: Boolean expression infinite loop leads to denial of service via CPU exhaustion
   Boolean expressions that evaluate to true can cause an infinite loop in logicalQuery.Select, leading to 100% CPU usage. This can be triggered by top-level selectors such as "1=1" or "true()".
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/antchfx/xpath
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/antchfx/xpath
+        commit: afd4762cc342af56345a3fb4002a59281fcab494
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

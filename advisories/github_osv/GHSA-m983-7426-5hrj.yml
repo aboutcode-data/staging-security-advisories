@@ -28,7 +28,14 @@ summary: |
   - **Who is impacted:** Any deployment exposing the API to untrusted networks, and all users whose profile metadata is returned by the endpoint
   - **Security impact:** Enables remote user enumeration and disclosure of user profile metadata, which may facilitate account reconnaissance, phishing, and targeted credential attacks
   - **Attack preconditions:** None beyond network access to the affected API endpoint
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/lin-snow/ech0
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/lin-snow/ech0
+        commit: acbf1fd71011e6b9e1e6a911128056a19862f681
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1

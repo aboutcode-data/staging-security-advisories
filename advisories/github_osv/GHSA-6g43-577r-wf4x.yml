@@ -17,7 +17,14 @@ summary: |
   - Apply rate limiting or network ACLs in front of the CHF SBI interface to reduce repeated panic-trigger attempts.
   - If the recharge API is not required, temporarily disable or block external reachability to this route.
   - Ensure panic recovery, monitoring, and alerting are enabled.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/free5gc/chf
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/free5gc/chf
+        commit: 55af766f321a00afa978e806548c96f8a7d2433e
+    introduced_in_commits: []
 severities:
   - score: '7.1'
     scoring_system: cvssv4

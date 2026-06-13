@@ -1,0 +1,45 @@
+advisory_id: GHSA-5xrh-qmmq-w6ch
+datasource_id: github_osv/GHSA-5xrh-qmmq-w6ch
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-5xrh-qmmq-w6ch/GHSA-5xrh-qmmq-w6ch.json
+aliases:
+  - CVE-2026-46340
+summary: |
+  Netty: SCTP reassembly nests buffers without bound
+  For each non-complete SctpMessage fragment the handler does `fragments.put(streamId, Unpooled.wrappedBuffer(frag, byteBuf))`, wrapping the previous accumulator and the new slice into a *new* CompositeByteBuf every time. After N fragments the accumulator is an N-deep chain of composites, each holding references and component arrays; readableBytes()/getBytes() on the final buffer recurse N levels. There is no limit on N, on total bytes, or on the number of streamIdentifiers an attacker can open (each gets its own map entry). A peer that never sets the `complete` flag can grow this structure indefinitely from tiny 1-byte DATA chunks.
+impacted_packages:
+  - purl: pkg:maven/io.netty/netty-transport-sctp
+    affected_versions: vers:maven/<=4.2.14.Final
+    fixed_versions: vers:maven/4.2.15.Final
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/io.netty/netty-transport-sctp
+    affected_versions: vers:maven/<=4.1.134.Final
+    fixed_versions: vers:maven/4.1.135.Final
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-5xrh-qmmq-w6ch/GHSA-5xrh-qmmq-w6ch.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-770
+references:
+  - url: https://github.com/netty/netty
+    reference_type:
+    reference_id:
+  - url: https://github.com/netty/netty/releases/tag/netty-4.1.135.Final
+    reference_type:
+    reference_id:
+  - url: https://github.com/netty/netty/releases/tag/netty-4.2.15.Final
+    reference_type:
+    reference_id:
+  - url: https://github.com/netty/netty/security/advisories/GHSA-5xrh-qmmq-w6ch
+    reference_type:
+    reference_id:

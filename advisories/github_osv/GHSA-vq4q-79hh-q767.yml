@@ -58,7 +58,16 @@ summary: "Vikunja’s Improper Access Control Enables Bypass of Administrator-Im
   \ decision.\n* **Integrity & Confidentiality Impact:**  The attacker can regain full access\
   \ to resources and functionality that were previously restricted due to the account being\
   \ disabled."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/go-vikunja/vikunja
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/go-vikunja/vikunja
+        commit: 049f4a6be46f9460bd516f489ef9f569574bc70d
+      - vcs_url: https://github.com/go-vikunja/vikunja
+        commit: d8570c603da1f26635ce6048d6af85ede827abfb
+    introduced_in_commits: []
 severities:
   - score: '8.1'
     scoring_system: cvssv3.1
@@ -71,9 +80,9 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-863
-  - CWE-284
   - CWE-862
+  - CWE-284
+  - CWE-863
 references:
   - url: https://github.com/go-vikunja/vikunja
     reference_type:

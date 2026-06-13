@@ -1,0 +1,100 @@
+advisory_id: GHSA-vg35-5wq7-3x7w
+datasource_id: github_osv/GHSA-vg35-5wq7-3x7w
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-vg35-5wq7-3x7w/GHSA-vg35-5wq7-3x7w.json
+aliases:
+  - CVE-2026-47761
+summary: |
+  TinyMCE Cross-Site Scripting (XSS) vulnerability using media plugin `data-mce-object` injection
+  ### Impact
+  Stored XSS vulnerability in the media plugin. Attackers can inject malicious scripts via crafted `data-mce-*` attributes, which are executed when content is rendered. Impacts users of TinyMCE with the media plugin enabled.
+
+  ### Patches
+  This vulnerability has been patched in TinyMCE 8.5.1, TinyMCE 7.9.3 and TinyMCE 5.11.1 LTS by ensuring that, when using the media plugin, any content with `data-mce-object` and `data-mce-p-*` attributes are properly sanitized.
+
+  ### Workarounds
+  No official workaround available.
+
+  ### Fix
+  To avoid this vulnerability:
+
+  - Upgrade to TinyMCE 8.5.1 or higher.
+  - Upgrade to TinyMCE 7.9.3 or higher.
+  - Upgrade to TinyMCE 5.11.1 LTS or higher for TinyMCE 5.x (only available as part of commercial [long-term support](https://www.tiny.cloud/long-term-support/) contract).
+
+  ### Acknowledgements
+  Tiny thanks [Aymane MAZGUITI](https://github.com/UncleJ4ck) and [Ange Primiterra](https://github.com/ange-primiterra) for their help identifying this vulnerability.
+impacted_packages:
+  - purl: pkg:nuget/TinyMCE
+    affected_versions: vers:nuget/<5.11.1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/TinyMCE
+    affected_versions: vers:nuget/>=6.0.0|<7.9.3
+    fixed_versions: vers:nuget/7.9.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/TinyMCE
+    affected_versions: vers:nuget/>=8.0.0|<8.5.1
+    fixed_versions: vers:nuget/8.5.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/tinymce
+    affected_versions: vers:npm/<5.11.1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/tinymce
+    affected_versions: vers:npm/>=6.0.0|<7.9.3
+    fixed_versions: vers:npm/7.9.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/tinymce
+    affected_versions: vers:npm/>=8.0.0|<8.5.1
+    fixed_versions: vers:npm/8.5.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/tinymce/tinymce
+    affected_versions: vers:composer/<5.11.1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/tinymce/tinymce
+    affected_versions: vers:composer/>=6.0.0|<7.9.3
+    fixed_versions: vers:composer/7.9.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/tinymce/tinymce
+    affected_versions: vers:composer/>=8.0.0|<8.5.1
+    fixed_versions: vers:composer/8.5.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '8.7'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-vg35-5wq7-3x7w/GHSA-vg35-5wq7-3x7w.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-79
+references:
+  - url: https://github.com/tinymce/tinymce
+    reference_type:
+    reference_id:
+  - url: https://github.com/tinymce/tinymce/security/advisories/GHSA-vg35-5wq7-3x7w
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-47761
+    reference_type:
+    reference_id:
+  - url: https://www.tiny.cloud/docs/tinymce/7/7.9.3-release-notes/#overview
+    reference_type:
+    reference_id:
+  - url: https://www.tiny.cloud/docs/tinymce/8/8.5.1-release-notes/#overview
+    reference_type:
+    reference_id:

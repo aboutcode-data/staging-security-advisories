@@ -1,0 +1,49 @@
+advisory_id: GHSA-5549-c5q7-fj65
+datasource_id: github_osv/GHSA-5549-c5q7-fj65
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-5549-c5q7-fj65/GHSA-5549-c5q7-fj65.json
+aliases:
+  - CVE-2024-24769
+summary: |
+  Vantage6: No limit on emails sent for password/MFA reset
+  ### Impact
+  Users can reset their MFA token via API routes that send them an email. Currently the number of emails that is sent is not limited. This gives attackers the option to flood someones mailbox with a lot of emails, and would have adverse effects on the SMTP server which may be seen as spam sender.
+
+  Note resetting the MFA token requires a correct password, so the potential impact for this is very low.
+
+  ### Patches
+  No
+
+  ### Workarounds
+  No
+impacted_packages:
+  - purl: pkg:pypi/vantage6
+    affected_versions: vers:pypi/<5.0.0
+    fixed_versions: vers:pypi/5.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '2.1'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-5549-c5q7-fj65/GHSA-5549-c5q7-fj65.json
+  - score: LOW
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-400
+references:
+  - url: https://github.com/vantage6/vantage6
+    reference_type:
+    reference_id:
+  - url: https://github.com/vantage6/vantage6/blob/main/docs/release_notes.rst#500
+    reference_type:
+    reference_id:
+  - url: https://github.com/vantage6/vantage6/issues/1932
+    reference_type:
+    reference_id:
+  - url: https://github.com/vantage6/vantage6/security/advisories/GHSA-5549-c5q7-fj65
+    reference_type:
+    reference_id:

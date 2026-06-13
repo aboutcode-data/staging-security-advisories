@@ -8,7 +8,16 @@ summary: |
   A vulnerability in Grafana Tempo exposes the S3 SSE-C encryption key in plaintext through the /status/config endpoint, potentially allowing unauthorized users to obtain the key used to encrypt trace data stored in S3.
 
   Grafana thanks william_goodfellow for reporting this vulnerability.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/grafana/tempo
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/grafana/tempo
+        commit: 4dc3e5b0d3463a0b67498b662b85a148698b4afd
+      - vcs_url: https://github.com/grafana/tempo
+        commit: bb8ca663db34a0980c9758b40d918fda3b4dbec3
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

@@ -1,0 +1,50 @@
+advisory_id: GHSA-x9f6-9rvm-mmrg
+datasource_id: github_osv/GHSA-x9f6-9rvm-mmrg
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-x9f6-9rvm-mmrg/GHSA-x9f6-9rvm-mmrg.json
+aliases: []
+summary: |
+  Improper Access Control in vantage6 node
+  ### Impact
+  Malicious algorithms can potentially access other algorithms input and output files.
+
+  ### Patches
+  Todo
+
+  ### Workarounds
+  Verify and restrict the algorithm containers that are allowed to run on your node. See [here](https://docs.vantage6.ai/usage/running-the-node/security) on how to do this.
+
+  ### References
+  https://docs.vantage6.ai/usage/running-the-node/security
+
+  ### For more information
+  If you have any questions or comments about this advisory:
+  * Email us at [vantage6@iknl.nl](mailto:vantage6@iknl.nl)
+impacted_packages:
+  - purl: pkg:pypi/vantage6
+    affected_versions: vers:pypi/<=3.3.3
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-x9f6-9rvm-mmrg/GHSA-x9f6-9rvm-mmrg.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-284
+references:
+  - url: https://github.com/vantage6/vantage6
+    reference_type:
+    reference_id:
+  - url: https://github.com/vantage6/vantage6/issues/1932
+    reference_type:
+    reference_id:
+  - url: https://github.com/vantage6/vantage6/security/advisories/GHSA-x9f6-9rvm-mmrg
+    reference_type:
+    reference_id:

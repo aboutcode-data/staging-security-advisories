@@ -36,7 +36,14 @@ summary: "FileBrowser Quantum has Username Enumeration via Authentication Timing
   \ | VALID\nroot            | 0.0019s | invalid\nuser2           | 0.0464s | VALID\nnonexistent_test_user\
   \ | 0.0015s | invalid\n```\n\n### Impact\n\nAn unauthenticated attacker can enumerate valid\
   \ usernames by measuring authentication response times."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/gtsteffaniak/filebrowser
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/gtsteffaniak/filebrowser
+        commit: af08800667b874620edc6f44c3e2e64fec7abd85
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1

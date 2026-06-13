@@ -18,7 +18,14 @@ summary: "tar-rs `unpack_in` can chmod arbitrary directories by following symlin
   \ the permissions of the external target directory.\n\n## Fix \n\nThe fix is very simple,\
   \ we now use `fs::symlink_metadata()` in `unpack_dir`, so symlinks are detected and rejected\
   \ rather than followed.\n\n## Credit\n\nThis issue was reported by @xokdvium - thank you!"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/alexcrichton/tar-rs
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/alexcrichton/tar-rs
+        commit: 17b1fd84e632071cb8eef9d3709bf347bd266446
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1

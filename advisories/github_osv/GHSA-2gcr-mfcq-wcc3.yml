@@ -1,0 +1,72 @@
+advisory_id: GHSA-2gcr-mfcq-wcc3
+datasource_id: github_osv/GHSA-2gcr-mfcq-wcc3
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-2gcr-mfcq-wcc3/GHSA-2gcr-mfcq-wcc3.json
+aliases:
+  - CVE-2026-47676
+summary: |
+  Hono: app.mount() strips mount prefix using undecoded path, causing incorrect routing for percent-encoded paths
+  ### Summary
+
+  `app.mount()` strips the mount prefix from the incoming request path using the raw URL pathname, while route matching is performed against the percent-decoded path. This inconsistency causes the prefix to be stripped at the wrong position when the path contains percent-encoded multi-byte characters, resulting in the mounted sub-application receiving an incorrect path.
+
+  ### Details
+
+  When `app.mount(prefix, subApp)` is called, Hono calculates the number of characters to strip based on the decoded mount prefix length, but then applies that slice to the raw URL pathname. When the URL contains percent-encoded characters that expand to fewer characters when decoded (such as encoded non-ASCII characters), the two representations have different lengths, so the prefix is stripped at the wrong byte offset.
+
+  As a result, the sub-application receives a path that does not correspond to the intended sub-path — it may receive a partial or garbled path instead of the expected value after the mount prefix is removed.
+
+  This issue arises when an application uses `app.mount()` with paths that contain percent-encoded characters, particularly when the mount prefix itself or the request path contains encoded non-ASCII characters.
+
+  ### Impact
+
+  A mounted sub-application may receive an incorrectly stripped path, causing requests to be routed to unintended handlers within the sub-application.
+
+  This may lead to:
+
+  - Middleware or route handlers in the sub-application being bypassed or incorrectly matched due to the malformed path
+  - Requests reaching sub-application routes that the developer did not intend to be accessible via the mounted path
+
+  This issue affects applications that use `app.mount()` where the request URL may contain percent-encoded characters in the mount prefix or subsequent path segments.
+impacted_packages:
+  - purl: pkg:npm/hono
+    affected_versions: vers:npm/<4.12.21
+    fixed_versions: vers:npm/4.12.21
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/honojs/hono
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/honojs/hono
+        commit: 6cbb025ff87fca1a3d00d0ccca0eaf3a6385c3f1
+    introduced_in_commits: []
+severities:
+  - score: '5.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-2gcr-mfcq-wcc3/GHSA-2gcr-mfcq-wcc3.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-693
+  - CWE-444
+references:
+  - url: https://github.com/honojs/hono
+    reference_type:
+    reference_id:
+  - url: https://github.com/honojs/hono/commit/6cbb025ff87fca1a3d00d0ccca0eaf3a6385c3f1
+    reference_type:
+    reference_id:
+  - url: https://github.com/honojs/hono/releases/tag/v4.12.21
+    reference_type:
+    reference_id:
+  - url: https://github.com/honojs/hono/security/advisories/GHSA-2gcr-mfcq-wcc3
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2026-47676
+    reference_type:
+    reference_id:

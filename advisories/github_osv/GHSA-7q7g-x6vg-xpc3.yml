@@ -16,7 +16,14 @@ summary: |
 
   ### Workarounds
   This issue can be worked around either by removing any roles with `callback_mode=direct` or enforcing confirmation for every session on the token issuer side for the Client ID used by OpenBao.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/openbao/openbao
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openbao/openbao
+        commit: e32103951925723e9787e33886ab6b6ec20f4964
+    introduced_in_commits: []
 severities:
   - score: '9.6'
     scoring_system: cvssv3.1

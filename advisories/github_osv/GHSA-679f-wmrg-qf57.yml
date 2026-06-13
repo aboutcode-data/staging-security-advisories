@@ -6,7 +6,14 @@ aliases:
 summary: |
   Mattermost allows a removed team member to enumerate all public channels within a private team
   Mattermost versions 11.3.x <= 11.3.0, 11.2.x <= 11.2.2, 10.11.x <= 10.11.10 fail to properly validate team membership when searching channels which allows a removed team member to enumerate all public channels within a private team via the channel search API endpoint. Mattermost Advisory ID: MMSA-2025-00568
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: a18b80ba4c324b74b3d47951c33957305af4a099
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1

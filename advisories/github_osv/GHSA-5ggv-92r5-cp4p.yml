@@ -13,12 +13,17 @@ summary: |
   WRITE of size 4 at 0x503000002754 thread T0
   ```
 impacted_packages:
-  - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
+  - purl: pkg:nuget/Magick.NET-Q8-AnyCPU
     affected_versions: vers:nuget/<14.10.4
     fixed_versions: vers:nuget/14.10.4
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-HDRI-AnyCPU
+  - purl: pkg:nuget/Magick.NET-Q8-x64
+    affected_versions: vers:nuget/<14.10.4
+    fixed_versions: vers:nuget/14.10.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q8-x86
     affected_versions: vers:nuget/<14.10.4
     fixed_versions: vers:nuget/14.10.4
     fixed_in_commits: []
@@ -33,16 +38,6 @@ impacted_packages:
     fixed_versions: vers:nuget/14.10.4
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-HDRI-x64
-    affected_versions: vers:nuget/<14.10.4
-    fixed_versions: vers:nuget/14.10.4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-HDRI-x86
-    affected_versions: vers:nuget/<14.10.4
-    fixed_versions: vers:nuget/14.10.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-OpenMP-arm64
     affected_versions: vers:nuget/<14.10.4
     fixed_versions: vers:nuget/14.10.4
@@ -53,32 +48,12 @@ impacted_packages:
     fixed_versions: vers:nuget/14.10.4
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-OpenMP-x86
-    affected_versions: vers:nuget/<14.10.4
-    fixed_versions: vers:nuget/14.10.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-arm64
     affected_versions: vers:nuget/<14.10.4
     fixed_versions: vers:nuget/14.10.4
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-x64
-    affected_versions: vers:nuget/<14.10.4
-    fixed_versions: vers:nuget/14.10.4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-x86
-    affected_versions: vers:nuget/<14.10.4
-    fixed_versions: vers:nuget/14.10.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-HDRI-OpenMP-x64
-    affected_versions: vers:nuget/<14.10.4
-    fixed_versions: vers:nuget/14.10.4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q8-AnyCPU
     affected_versions: vers:nuget/<14.10.4
     fixed_versions: vers:nuget/14.10.4
     fixed_in_commits: []
@@ -98,12 +73,37 @@ impacted_packages:
     fixed_versions: vers:nuget/14.10.4
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q8-x64
+  - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
     affected_versions: vers:nuget/<14.10.4
     fixed_versions: vers:nuget/14.10.4
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q8-x86
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-AnyCPU
+    affected_versions: vers:nuget/<14.10.4
+    fixed_versions: vers:nuget/14.10.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-x64
+    affected_versions: vers:nuget/<14.10.4
+    fixed_versions: vers:nuget/14.10.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-x86
+    affected_versions: vers:nuget/<14.10.4
+    fixed_versions: vers:nuget/14.10.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-OpenMP-x86
+    affected_versions: vers:nuget/<14.10.4
+    fixed_versions: vers:nuget/14.10.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-x64
+    affected_versions: vers:nuget/<14.10.4
+    fixed_versions: vers:nuget/14.10.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-x86
     affected_versions: vers:nuget/<14.10.4
     fixed_versions: vers:nuget/14.10.4
     fixed_in_commits: []
@@ -128,9 +128,9 @@ references:
   - url: https://github.com/ImageMagick/ImageMagick
     reference_type:
     reference_id:
-  - url: https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-5ggv-92r5-cp4p
-    reference_type:
-    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2026-30936
     reference_type:
-    reference_id:
+    reference_id: CVE-2026-30936
+  - url: https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-5ggv-92r5-cp4p
+    reference_type:
+    reference_id: GHSA-5ggv-92r5-cp4p

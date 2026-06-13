@@ -213,7 +213,14 @@ summary: |
   ### 3. Separate keepalive from broadcast
 
   If the auth page needs a WebSocket for keepalive, create a separate endpoint (`/ws-keepalive`) that only handles ping/pong without receiving broadcast events. Do not add keepalive sessions to the broadcast push channel.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/siyuan-note/siyuan
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/siyuan-note/siyuan
+        commit: 1e370e37359778c0932673e825182ff555b504a3
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv4

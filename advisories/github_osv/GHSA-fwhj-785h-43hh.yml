@@ -68,7 +68,14 @@ summary: |
   ### Impact
 
   This is an unauthenticated denial-of-service vulnerability (panic-based request disruption and log/CPU amplification). An attacker can repeatedly trigger panics remotely without credentials, degrading service reliability and observability.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/olivetin/olivetin
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/olivetin/olivetin
+        commit: bb14c5da3e64b03f207c7f38139eb60e97c278fc
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1

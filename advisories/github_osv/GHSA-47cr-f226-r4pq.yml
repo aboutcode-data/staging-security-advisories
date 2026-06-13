@@ -56,7 +56,14 @@ summary: "Vikunja has a 2FA Bypass via Caldav Basic Auth\n### Summary\nThe Calda
   \ Basic Auth for it could be kept, but would most likely want to be a feature flag or something\
   \ along those lines. That's so users can turn it on if it's necessary, but can be notified\
   \ in the documentation that it's a more unsafe pattern if 2FA is enabled."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/go-vikunja/vikunja
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/go-vikunja/vikunja
+        commit: cdf5d30a425d032f749b78b98b828f25ad882615
+    introduced_in_commits: []
 severities:
   - score: '6.9'
     scoring_system: cvssv4

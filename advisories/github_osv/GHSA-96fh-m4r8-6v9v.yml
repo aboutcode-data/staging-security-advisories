@@ -1,0 +1,56 @@
+advisory_id: GHSA-96fh-m4r8-6v9v
+datasource_id: github_osv/GHSA-96fh-m4r8-6v9v
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-96fh-m4r8-6v9v/GHSA-96fh-m4r8-6v9v.json
+aliases:
+  - CVE-2026-47381
+summary: |
+  NocoDB: Cross-Workspace Integration Use in Connection Test
+  ### Summary
+  A user in one workspace could exercise another workspace's integration through the
+  `testConnection` endpoint by supplying its ID, because the integration was fetched in
+  a bypass scope and the caller's permission check matched any base in any workspace.
+
+  ### Details
+  The connection-test endpoint fetched the integration in `RootScopes.BYPASS` scope and
+  checked only that the integration was non-private and that the caller held an
+  owner/creator role on any base in any workspace. The permission lookup is now scoped
+  to the integration's workspace by joining on `fk_workspace_id`, and the controller
+  rejects requests where the integration's workspace differs from the request's workspace.
+
+  ### Impact
+  Cross-tenant access to integration configuration through the connection-test endpoint,
+  including the ability to drive the resolved database with the other workspace's
+  credentials. Authentication with creator-or-owner role on any base in any workspace
+  was sufficient.
+
+  ### Credit
+  This issue was reported by [@DongyangLyu](https://github.com/DongyangLyu).
+impacted_packages:
+  - purl: pkg:npm/nocodb
+    affected_versions: vers:npm/<=2026.5.0
+    fixed_versions: vers:npm/2026.5.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '6.9'
+    scoring_system: cvssv4
+    scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-96fh-m4r8-6v9v/GHSA-96fh-m4r8-6v9v.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-290
+references:
+  - url: https://github.com/nocodb/nocodb
+    reference_type:
+    reference_id:
+  - url: https://github.com/nocodb/nocodb/releases/tag/2026.05.1
+    reference_type:
+    reference_id:
+  - url: https://github.com/nocodb/nocodb/security/advisories/GHSA-96fh-m4r8-6v9v
+    reference_type:
+    reference_id:

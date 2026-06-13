@@ -80,7 +80,14 @@ summary: "Incus vulnerable to local privilege escalation through VM screenshot p
   \ in a directory controlled exclusively by the daemon, avoid predictable /tmp paths, and avoid\
   \ reusing a mutable pathname after file creation.\n\n### Credit\nThis issue was discovered\
   \ and reported by the team at 7asecurity (https://7asecurity.com/)"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/lxc/incus
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/lxc/incus
+        commit: ef006240ac2475ddea7b8406cecc7dbd1a883fdf
+    introduced_in_commits: []
 severities:
   - score: '4.7'
     scoring_system: cvssv4

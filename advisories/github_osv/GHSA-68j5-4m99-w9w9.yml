@@ -57,7 +57,14 @@ summary: |
   - **Who can exploit:** Any authenticated user granted `share=true` but denied `download`.
   - **Who is impacted:** Operators and organizations relying on download restrictions to prevent data export.
   - **What can happen:** Restricted users can still distribute and retrieve files publicly, including unauthenticated access through share URLs.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/filebrowser/filebrowser
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/filebrowser/filebrowser
+        commit: 09a26166b4f79446e7174c017380f6db45444e32
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
@@ -70,9 +77,9 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-863
   - CWE-639
   - CWE-284
+  - CWE-863
 references:
   - url: https://github.com/filebrowser/filebrowser
     reference_type:

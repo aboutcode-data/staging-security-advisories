@@ -6,7 +6,14 @@ aliases:
 summary: |
   Mattermost fails to preserve the redacted state of burn-on-read posts during deletion
   Mattermost versions 11.3.x <= 11.3.0 fail to preserve the redacted state of burn-on-read posts during deletion which allows channel members to access unrevealed burn-on-read message contents via the WebSocket post deletion event. Mattermost Advisory ID: MMSA-2026-00579
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: c6b205f0d77080ef805783de0628b9526af7faec
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1

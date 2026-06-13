@@ -9,7 +9,14 @@ summary: "Ella Core has a Denial of Service via SCTP connection cleanup deadlock
   \ interface can cause Ella Core to hang, resulting in a denial of service for all subscribers.\n\
   \n## Fix\n\nAdd deferred Radio cleanup in serveConn SCTP server so that every connection exit\
   \ path removes the radio. Remove the stale-entry scan from SCTP Notification handling."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/ellanetworks/core
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/ellanetworks/core
+        commit: 999f606c5cae261471d9e3f063d7ecd1bd754076
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1

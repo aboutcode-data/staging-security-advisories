@@ -19,7 +19,14 @@ summary: "Traefik: Deny Rule Bypass via Unauthenticated Malicious gRPC Requests 
   \ \nhttps://github.com/traefik/traefik/blob/67c64ed9b25fbb90f1086977a62827133a7aa01b/go.mod#L108\n\
   ### Impact\nIs described in https://github.com/advisories/GHSA-p77j-4mvh-x3m3\n\n</details>\n\
   \n\n----------"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/traefik/traefik
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/traefik/traefik
+        commit: 67c64ed9b25fbb90f1086977a62827133a7aa01b
+    introduced_in_commits: []
 severities:
   - score: '7.8'
     scoring_system: cvssv4
@@ -32,8 +39,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-1395
   - CWE-285
+  - CWE-1395
 references:
   - url: https://github.com/advisories/GHSA-p77j-4mvh-x3m3
     reference_type:

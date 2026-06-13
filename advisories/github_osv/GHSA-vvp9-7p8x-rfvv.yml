@@ -26,7 +26,14 @@ summary: "lz4_flex's decompression can leak information from uninitialized memor
   \ `block::decompress_into` or  `block::decompress_into_with_dict` (only block based API is\
   \ affected, frame API is not affected). Additionally the the `safe-decode` feature flag should\
   \ be enabled."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/pseitz/lz4_flex
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/pseitz/lz4_flex
+        commit: 055502ee5d297ecd6bf448ac91c055c7f6df9b6d
+    introduced_in_commits: []
 severities:
   - score: '8.2'
     scoring_system: cvssv4
@@ -39,8 +46,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-823
   - CWE-201
+  - CWE-823
 references:
   - url: https://github.com/PSeitz/lz4_flex
     reference_type:

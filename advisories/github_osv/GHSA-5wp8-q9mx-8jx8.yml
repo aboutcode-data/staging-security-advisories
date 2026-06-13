@@ -54,7 +54,16 @@ summary: "zeptoclaw has Shell allowlist-blocklist bypass via command/argument in
   \        assert!(config.validate_command(\"/usr/bin/git status; python -P -c 'import os; os.system(\\\
   \"rm -rf /\\\")'; cat /etc/pass[w]d\").is_ok());\n    }\n```\n\n### Impact\nUnauthorized command\
   \ execution.\n\n### Credit\n[@zpbrent](https://github.com/zpbrent)"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/qhkm/zeptoclaw
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/qhkm/zeptoclaw
+        commit: fe2ef07cfec5bb46b42cdd65f52b9230c03e9270
+      - vcs_url: https://github.com/qhkm/zeptoclaw
+        commit: 68916c3e4f3af107f11940b27854fc7ef517058b
+    introduced_in_commits: []
 severities:
   - score: '10.0'
     scoring_system: cvssv3.1

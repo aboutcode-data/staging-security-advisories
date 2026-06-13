@@ -1,0 +1,50 @@
+advisory_id: GHSA-cjqg-rq2h-2fvj
+datasource_id: github_osv/GHSA-cjqg-rq2h-2fvj
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-cjqg-rq2h-2fvj/GHSA-cjqg-rq2h-2fvj.json
+aliases:
+  - CVE-2026-44017
+summary: |
+  Docling: Unsafe Zip Extraction in EasyOCR Model Download
+  ### Impact
+  In versions `< 2.91.0`, The EasyOCR model download functionality extracted ZIP archives without validating member paths, enabling Zip Slip attacks. If an attacker could compromise the model download source (via supply chain attack, DNS spoofing, or MITM), they could write arbitrary files to any location writable by the process, potentially achieving:
+  - Remote code execution by overwriting Python files or system binaries
+  - Persistent backdoors by modifying startup scripts or SSH keys
+  - Data corruption or system compromise
+
+  ### Patches
+  Fixed in version 2.91.0. The extraction process now validates each archive member path using `os.path.realpath()` to ensure it remains within the target directory, raising a `SecurityError` for any path traversal attempts.
+
+  ### Workarounds
+  Ensure model downloads occur over secure, authenticated channels. Use integrity verification (checksums) for downloaded models. Run the application with minimal file system permissions.
+
+  ### References
+  - Fix release: [v2.91.0](https://github.com/docling-project/docling/releases/tag/v2.91.0)
+impacted_packages:
+  - purl: pkg:pypi/docling
+    affected_versions: vers:pypi/<2.91.0
+    fixed_versions: vers:pypi/2.91.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '7.5'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-cjqg-rq2h-2fvj/GHSA-cjqg-rq2h-2fvj.json
+  - score: HIGH
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-22
+references:
+  - url: https://github.com/docling-project/docling
+    reference_type:
+    reference_id:
+  - url: https://github.com/docling-project/docling/releases/tag/v2.91.0
+    reference_type:
+    reference_id:
+  - url: https://github.com/docling-project/docling/security/advisories/GHSA-cjqg-rq2h-2fvj
+    reference_type:
+    reference_id:

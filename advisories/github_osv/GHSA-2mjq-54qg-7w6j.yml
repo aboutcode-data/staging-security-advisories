@@ -6,7 +6,14 @@ aliases:
 summary: |
   NFS CSI driver for Kubernetes is Vulnerable to Path Traversal through Volume Identifier Parameter
   A vulnerability was discovered in the Kubernetes CSI Driver for NFS where the subDir parameter in volume identifiers was insufficiently validated. Attackers with the ability to create PersistentVolumes referencing the NFS CSI driver could craft volume identifiers containing path traversal sequences (../). During volume deletion or cleanup operations, the driver could operate on unintended directories outside the intended managed path within the NFS export. This may lead to deletion or modification of directories on the NFS server.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/kubernetes-csi/csi-driver-nfs
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/kubernetes-csi/csi-driver-nfs
+        commit: 316af2d86b913a595542dc17e8599cf81afd938f
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1

@@ -61,7 +61,14 @@ summary: |
   This was brought to our attention by Linux Containers forum user `U-00F8` who referenced a public January 2025 article by `oddlama` describing a similar attack on systems using the default systemd-cryptenroll setup.
 
   We'd also like to thank Lennart Poettering for his assistance in finding a way to quickly mitigate this attack.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/lxc/incus-os
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/lxc/incus-os
+        commit: e3b35f230d23443d27752eac27ebb2b22c957b75
+    introduced_in_commits: []
 severities:
   - score: '7.6'
     scoring_system: cvssv3.1

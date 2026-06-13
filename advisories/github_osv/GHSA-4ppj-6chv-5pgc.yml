@@ -6,7 +6,14 @@ aliases:
 summary: |
   Mattermost Microsoft Teams Plugin fails to properly mask sensitive configuration values
   Mattermost Plugins versions <=2.0.3.0 fail to properly mask sensitive configuration values which allows an attacker with access to support packets to obtain original plugin settings via exported configuration data. Mattermost Advisory ID: MMSA-2026-00606
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost-plugin-msteams
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost-plugin-msteams
+        commit: 036c761bd3cb9ece92c17f2b151dfa906cebdcf6
+    introduced_in_commits: []
 severities:
   - score: '7.6'
     scoring_system: cvssv3.1

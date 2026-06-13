@@ -18,7 +18,14 @@ summary: |
   It is generally recommended to drop any unexpected headers as early as possible when a request is handled, e.g. in the WAF.
 
   Ory Oathkeeper will correctly respect the `serve.proxy.trust_forwarded_headers` configuration going forward, thereby eliminating the attack scenario. We recommend upgrading to a fixed version even if the preconditions are not met.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/ory/oathkeeper
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/ory/oathkeeper
+        commit: e9acca14a04d246250557550065e4b4576525bd5
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1

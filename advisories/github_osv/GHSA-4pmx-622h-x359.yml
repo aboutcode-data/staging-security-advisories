@@ -6,7 +6,14 @@ aliases:
 summary: |
   Mattermost fails to verify run_create permission for empty playbookId
   Mattermost versions 11.3.x <= 11.3.0, 11.2.x <= 11.2.2 fail to verify run_create permission for empty playbookId, which allows team members to create unauthorized runs via the playbook run API. Mattermost Advisory ID: MMSA-2025-00542
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost-plugin-playbooks
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost-plugin-playbooks
+        commit: 705f54a818410f3612df3865bfde608ed471037e
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1
