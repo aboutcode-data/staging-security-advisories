@@ -6,7 +6,14 @@ aliases:
 summary: |
   Out-of-bounds write in stack
   ArrayVec::insert allows insertion of an element into the array object into the specified index. Due to a missing check on the upperbound of this index, it is possible to write out of bounds.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/arcnmx/stack-rs
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/arcnmx/stack-rs
+        commit: 369e55736f9bd29c37b1712afc2923f4028148c6
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
@@ -30,9 +37,9 @@ references:
   - url: https://github.com/arcnmx/stack-rs/issues/4
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2020-35895
+    reference_type:
+    reference_id:
   - url: https://rustsec.org/advisories/RUSTSEC-2020-0042.html
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2020-35895
-    reference_type:
-    reference_id: CVE-2020-35895

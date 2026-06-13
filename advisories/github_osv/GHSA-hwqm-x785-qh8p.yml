@@ -7,7 +7,14 @@ summary: "Incorrect Permission Assignment for Critical Resource\tin Hashicorp Co
   \ Consul and Consul Enterprise failed to enforce changes to legacy ACL token rules due to\
   \ non-propagation to secondary data centers. Introduced in 1.4.0, fixed in 1.6.6 and 1.7.4.\n\
   ### Specific Go Packages Affected\ngithub.com/hashicorp/consul/agent/structs"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/hashicorp/consul
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/hashicorp/consul
+        commit: 98eea08d3ba1b220a14cf6eedf3b6b07ae2795d7
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
@@ -39,4 +46,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2020-12797
     reference_type:
-    reference_id: CVE-2020-12797
+    reference_id:

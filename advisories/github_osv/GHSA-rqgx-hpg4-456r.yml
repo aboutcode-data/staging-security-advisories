@@ -6,7 +6,14 @@ aliases:
 summary: |
   Use-after-free in actix-codec
   An issue was discovered in the actix-codec crate before 0.3.0-beta.1 for Rust. There is a use-after-free in Framed.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/actix/actix-net
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/actix/actix-net
+        commit: c41b5d8dd4235ccca84d0b687996615c0c64d956
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
@@ -30,9 +37,9 @@ references:
   - url: https://github.com/actix/actix-net/issues/91
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2020-35902
+    reference_type:
+    reference_id:
   - url: https://rustsec.org/advisories/RUSTSEC-2020-0049.html
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2020-35902
-    reference_type:
-    reference_id: CVE-2020-35902

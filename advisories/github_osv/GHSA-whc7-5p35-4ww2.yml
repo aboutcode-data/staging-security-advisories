@@ -6,7 +6,14 @@ aliases:
 summary: |
   Use after free in actix-service
   An issue was discovered in the actix-service crate before 1.0.6 for Rust. The Cell implementation allows obtaining more than one mutable reference to the same data.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/actix/actix-net
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/actix/actix-net
+        commit: a67e38b4a07c92a3c81fa833f9eb1e91e74e39b7
+    introduced_in_commits: []
 severities:
   - score: '5.5'
     scoring_system: cvssv3.1
@@ -30,9 +37,9 @@ references:
   - url: https://github.com/actix/actix-net/pull/158
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2020-35899
+    reference_type:
+    reference_id:
   - url: https://rustsec.org/advisories/RUSTSEC-2020-0046.html
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2020-35899
-    reference_type:
-    reference_id: CVE-2020-35899

@@ -14,7 +14,14 @@ summary: |
   ### Workarounds
   There are no existing workarounds.
   You may detect attempts to craft urls that exploit this feature by looking for request paths containing pairs of forward slashes in sequence combined with a trailing slash e.g. `https://example.com//foo/`
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/andrewburian/powermux
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/andrewburian/powermux
+        commit: 5e60a8a0372b35a898796c2697c40e8daabed8e9
+    introduced_in_commits: []
 severities:
   - score: '4.7'
     scoring_system: cvssv3.1
@@ -40,4 +47,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2021-32721
     reference_type:
-    reference_id: CVE-2021-32721
+    reference_id:

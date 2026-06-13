@@ -6,7 +6,14 @@ aliases:
 summary: |
   miekg/dns parsing error leads to nil pointer dereference and DoS
   An issue was discovered in `setTA` in `scan_rr.go` in the Miek Gieben DNS library before 1.0.10 for Go. A `dns.ParseZone()` parsing error causes a segmentation violation, leading to denial of service.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/miekg/dns
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/miekg/dns
+        commit: 501e858f679edecd4a38a86317ce50271014a80d
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -33,9 +40,9 @@ references:
   - url: https://github.com/miekg/dns/pull/745/commits/f71d7d9d77d439b30a5e50900df5b1f988a50e5e
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2018-17419
+    reference_type:
+    reference_id:
   - url: https://pkg.go.dev/vuln/GO-2020-0028
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2018-17419
-    reference_type:
-    reference_id: CVE-2018-17419

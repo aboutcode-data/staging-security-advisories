@@ -28,6 +28,31 @@ summary: "Reference binding to nullptr in `SdcaOptimizer`\n### Impact\nThe imple
   \ regarding the security model and how to contact us with issues and questions.\n\n### Attribution\n\
   This vulnerability has been reported by Ying Wang and Yakun Zhang of Baidu X-Team."
 impacted_packages:
+  - purl: pkg:pypi/tensorflow
+    affected_versions: vers:pypi/<2.1.4
+    fixed_versions: vers:pypi/2.1.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow
+    affected_versions: vers:pypi/>=2.2.0|<2.2.3
+    fixed_versions: vers:pypi/2.2.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow
+    affected_versions: vers:pypi/>=2.3.0|<2.3.3
+    fixed_versions: vers:pypi/2.3.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow
+    affected_versions: vers:pypi/>=2.4.0|<2.4.2
+    fixed_versions: vers:pypi/2.4.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow-cpu
+    affected_versions: vers:pypi/<2.1.4
+    fixed_versions: vers:pypi/2.1.4
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:pypi/tensorflow-cpu
     affected_versions: vers:pypi/>=2.2.0|<2.2.3
     fixed_versions: vers:pypi/2.2.3
@@ -63,30 +88,12 @@ impacted_packages:
     fixed_versions: vers:pypi/2.4.2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow
-    affected_versions: vers:pypi/>=2.2.0|<2.2.3
-    fixed_versions: vers:pypi/2.2.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow
-    affected_versions: vers:pypi/<2.1.4
-    fixed_versions: vers:pypi/2.1.4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow
-    affected_versions: vers:pypi/>=2.3.0|<2.3.3
-    fixed_versions: vers:pypi/2.3.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow
-    affected_versions: vers:pypi/>=2.4.0|<2.4.2
-    fixed_versions: vers:pypi/2.4.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow-cpu
-    affected_versions: vers:pypi/<2.1.4
-    fixed_versions: vers:pypi/2.1.4
-    fixed_in_commits: []
+  - purl: pkg:github/tensorflow/tensorflow
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/tensorflow/tensorflow
+        commit: f7cc8755ac6683131fdfa7a8a121f9d7a9dec6fb
     introduced_in_commits: []
 severities:
   - score: '2.5'
@@ -122,9 +129,9 @@ references:
   - url: https://github.com/tensorflow/tensorflow/commit/f7cc8755ac6683131fdfa7a8a121f9d7a9dec6fb
     reference_type:
     reference_id:
-  - url: https://github.com/tensorflow/tensorflow/security/advisories/GHSA-5gqf-456p-4836
-    reference_type:
-    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2021-29572
     reference_type:
     reference_id: CVE-2021-29572
+  - url: https://github.com/tensorflow/tensorflow/security/advisories/GHSA-5gqf-456p-4836
+    reference_type:
+    reference_id: GHSA-5gqf-456p-4836

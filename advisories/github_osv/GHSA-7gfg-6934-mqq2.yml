@@ -6,7 +6,14 @@ aliases:
 summary: |
   Improper Authenication in Pion DTLS
   handleIncomingPacket in conn.go in Pion DTLS before 1.5.2 lacks a check for application data with epoch 0, which allows remote attackers to inject arbitrary unencrypted data after handshake completion.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/pion/dtls
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/pion/dtls
+        commit: fd73a5df2ff0e1fb6ae6a51e2777d7a16cc4f4e0
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
@@ -33,6 +40,9 @@ references:
   - url: https://github.com/pion/dtls/pull/128
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2019-20786
+    reference_type:
+    reference_id:
   - url: https://pkg.go.dev/vuln/GO-2020-0038
     reference_type:
     reference_id:
@@ -42,6 +52,3 @@ references:
   - url: https://www.usenix.org/system/files/sec20fall_fiterau-brostean_prepub.pdf
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2019-20786
-    reference_type:
-    reference_id: CVE-2019-20786

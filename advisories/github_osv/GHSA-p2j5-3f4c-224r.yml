@@ -8,7 +8,14 @@ summary: |
   HashiCorp Consul and Consul Enterprise did not appropriately enforce scope for local tokens issued by a primary data center, where replication to a secondary data center was not enabled. Introduced in 1.4.0, fixed in 1.6.6 and 1.7.4.
   ### Specific Go Packages Affected
   github.com/hashicorp/consul/agent
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/hashicorp/consul
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/hashicorp/consul
+        commit: 242994a016a181d6c62a5bb83189716ad13d4216
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
@@ -37,4 +44,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2020-13170
     reference_type:
-    reference_id: CVE-2020-13170
+    reference_id:

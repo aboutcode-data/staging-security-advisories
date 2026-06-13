@@ -12,14 +12,28 @@ summary: |
   Jenkins S3 publisher Plugin 0.11.7 and 0.11.5.1 requires Run/Artifacts permission to obtain information about artifacts if this permission is enabled.
 impacted_packages:
   - purl: pkg:maven/org.jenkins-ci.plugins/s3
+    affected_versions: vers:maven/<0.11.5.1
+    fixed_versions: vers:maven/0.11.5.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/s3
     affected_versions: vers:maven/0.11.6
     fixed_versions: vers:maven/0.11.7
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/org.jenkins-ci.plugins/s3
-    affected_versions: vers:maven/<0.11.5.1
-    fixed_versions: vers:maven/0.11.5.1
-    fixed_in_commits: []
+  - purl: pkg:github/jenkinsci/s3-plugin
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/jenkinsci/s3-plugin
+        commit: a146c28c849ffe643ece46eaa5940d1fd6ab048e
+    introduced_in_commits: []
+  - purl: pkg:github/cveproject/cvelist
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/cveproject/cvelist
+        commit: 2d78eb36f4d084db7fb35f1535d8d84fdcb7d859
     introduced_in_commits: []
 severities:
   - score: '4.3'

@@ -8,7 +8,14 @@ summary: |
   The `Deserialize` implementation for `VecStorage` did not maintain the invariant that the number of elements must equal `nrows * ncols`. Deserialization of specially crafted inputs could allow memory access beyond allocation of the vector.
 
   This flaw was introduced in v0.11.0 ([`086e6e`](https://github.com/dimforge/nalgebra/commit/086e6e719f53fecba6dadad2e953a487976387f5)) due to the addition of an automatically derived implementation of `Deserialize` for `MatrixVec`. `MatrixVec` was later renamed to `VecStorage` in v0.16.13 ([`0f66403`](https://github.com/dimforge/nalgebra/commit/0f66403cbbe9eeac15cedd8a906c0d6a3d8841f2)) and continued to use the automatically derived implementation of `Deserialize`.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/dimforge/nalgebra
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/dimforge/nalgebra
+        commit: a803271fcce75b7c151e92aa099dfa546db4adc5
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
@@ -39,9 +46,9 @@ references:
   - url: https://github.com/dimforge/nalgebra/pull/889
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2021-38190
+    reference_type:
+    reference_id:
   - url: https://rustsec.org/advisories/RUSTSEC-2021-0070.html
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2021-38190
-    reference_type:
-    reference_id: CVE-2021-38190

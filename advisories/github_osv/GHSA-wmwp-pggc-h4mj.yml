@@ -6,7 +6,14 @@ aliases:
 summary: |
   Cross-site Scripting in Documize
   domain/section/markdown/markdown.go in Documize before 3.5.1 mishandles untrusted Markdown content. This was addressed by adding the bluemonday HTML sanitizer to defend against XSS.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/documize/community
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/documize/community
+        commit: a4384210d4d0d6b18e6fdb7e155de96d4a1cf9f3
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
@@ -33,9 +40,9 @@ references:
   - url: https://github.com/documize/community/releases/tag/v3.5.1
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2019-19619
+    reference_type:
+    reference_id:
   - url: https://pkg.go.dev/vuln/GO-2021-0086
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2019-19619
-    reference_type:
-    reference_id: CVE-2019-19619

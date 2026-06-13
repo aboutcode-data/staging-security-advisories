@@ -6,7 +6,14 @@ aliases:
 summary: |
   Uninitialized buffer use in marc
   Affected versions of this crate passes an uninitialized buffer to a user-provided Read implementation. (Record::read()). Arbitrary Read implementations can read from the uninitialized buffer (memory exposure) and also can return incorrect number of bytes written to the buffer. Reading from uninitialized memory produces undefined values that can quickly invoke undefined behavior. This flaw was fixed in commit 6299af0 by zero-initializing the newly allocated memory (via data.resize(len, 0)) instead of exposing uninitialized memory (unsafe { data.set_len(len) }).
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/blackbeam/rust-marc
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/blackbeam/rust-marc
+        commit: 6299af0
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -30,9 +37,9 @@ references:
   - url: https://github.com/blackbeam/rust-marc/issues/7
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2021-26308
+    reference_type:
+    reference_id:
   - url: https://rustsec.org/advisories/RUSTSEC-2021-0014.html
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2021-26308
-    reference_type:
-    reference_id: CVE-2021-26308

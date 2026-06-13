@@ -7,6 +7,13 @@ summary: |
   OS Command Injection in bikeshed
   This affects the package bikeshed before 3.0.0. This can occur when an untrusted source file containing Inline Tag Command metadata is processed. When an arbitrary OS command is executed, the command output would be included in the HTML output.
 impacted_packages:
+  - purl: pkg:github/tabatkins/bikeshed
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/tabatkins/bikeshed
+        commit: b2f668fca204260b1cad28d5078e93471cb6b2dd
+    introduced_in_commits: []
   - purl: pkg:pypi/bikeshed
     affected_versions: vers:pypi/<3.0.0
     fixed_versions: vers:pypi/3.0.0

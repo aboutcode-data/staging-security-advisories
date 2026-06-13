@@ -12,7 +12,14 @@ summary: |
   As the `IO` types allow retrieving the `Expander`, this can lead to non-thread
   safe types being sent across threads as part of the `Expander` leading to data
   races.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/edarc/max7301
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/edarc/max7301
+        commit: 0a1da873ddb29bca926bad8301f8d7ab8aa97c52
+    introduced_in_commits: []
 severities:
   - score: '5.9'
     scoring_system: cvssv3.1
@@ -36,9 +43,9 @@ references:
   - url: https://github.com/edarc/max7301/issues/1
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2020-36472
+    reference_type:
+    reference_id:
   - url: https://rustsec.org/advisories/RUSTSEC-2020-0152.html
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2020-36472
-    reference_type:
-    reference_id: CVE-2020-36472

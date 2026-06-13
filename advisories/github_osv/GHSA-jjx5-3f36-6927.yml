@@ -6,7 +6,14 @@ aliases:
 summary: |
   Incorrect buffer size calculation in iced-x86
   An issue was discovered in the iced-x86 crate through 1.10.3 for Rust. In Decoder::new(), slice.get_unchecked(slice.length()) is used unsafely.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/icedland/iced
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/icedland/iced
+        commit: 3c607a003e03b773108401d109167d1840487dce
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
@@ -30,9 +37,9 @@ references:
   - url: https://github.com/icedland/iced/issues/168
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2021-38188
+    reference_type:
+    reference_id:
   - url: https://rustsec.org/advisories/RUSTSEC-2021-0068.html
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2021-38188
-    reference_type:
-    reference_id: CVE-2021-38188

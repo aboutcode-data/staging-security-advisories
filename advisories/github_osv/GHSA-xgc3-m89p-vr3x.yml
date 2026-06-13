@@ -30,11 +30,6 @@ summary: "Heap buffer overflow in `Conv2DBackpropFilter`\n### Impact\nAn attacke
   \ regarding the security model and how to contact us with issues and questions.\n\n### Attribution\n\
   This vulnerability has been reported by Yakun Zhang and Ying Wang of Baidu X-Team."
 impacted_packages:
-  - purl: pkg:pypi/tensorflow-gpu
-    affected_versions: vers:pypi/>=2.4.0|<2.4.2
-    fixed_versions: vers:pypi/2.4.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:pypi/tensorflow
     affected_versions: vers:pypi/<2.1.4
     fixed_versions: vers:pypi/2.1.4
@@ -89,6 +84,18 @@ impacted_packages:
     affected_versions: vers:pypi/>=2.3.0|<2.3.3
     fixed_versions: vers:pypi/2.3.3
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow-gpu
+    affected_versions: vers:pypi/>=2.4.0|<2.4.2
+    fixed_versions: vers:pypi/2.4.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/tensorflow/tensorflow
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/tensorflow/tensorflow
+        commit: c570e2ecfc822941335ad48f6e10df4e21f11c96
     introduced_in_commits: []
 severities:
   - score: '2.5'
@@ -125,9 +132,9 @@ references:
   - url: https://github.com/tensorflow/tensorflow/commit/c570e2ecfc822941335ad48f6e10df4e21f11c96
     reference_type:
     reference_id:
-  - url: https://github.com/tensorflow/tensorflow/security/advisories/GHSA-xgc3-m89p-vr3x
-    reference_type:
-    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2021-29540
     reference_type:
     reference_id: CVE-2021-29540
+  - url: https://github.com/tensorflow/tensorflow/security/advisories/GHSA-xgc3-m89p-vr3x
+    reference_type:
+    reference_id: GHSA-xgc3-m89p-vr3x

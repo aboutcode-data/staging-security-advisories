@@ -6,7 +6,14 @@ aliases:
 summary: |
   Cross-site Scripting in Gogs
   Cross-site scripting (XSS) vulnerability in models/issue.go in Gogs (aka Go Git Service) 0.3.1-9 through 0.5.x before 0.5.8 allows remote attackers to inject arbitrary web script or HTML via the text parameter to api/v1/markdown.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/gogits/gogs
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/gogits/gogs
+        commit: 3abc41cccab2486012b46305827433ad6f5deade
+    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual
@@ -28,6 +35,9 @@ references:
   - url: https://gogs.io/docs/intro/change_log.html
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2014-8683
+    reference_type:
+    reference_id:
   - url: https://packetstormsecurity.com/files/129118/Gogs-Markdown-Renderer-Cross-Site-Scripting.html
     reference_type:
     reference_id:
@@ -40,6 +50,3 @@ references:
   - url: https://www.securityfocus.com/archive/1/533996/100/0/threaded
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2014-8683
-    reference_type:
-    reference_id: CVE-2014-8683

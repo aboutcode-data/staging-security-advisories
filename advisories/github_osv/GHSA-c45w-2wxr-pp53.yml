@@ -28,31 +28,6 @@ summary: "Heap OOB read in `tf.raw_ops.Dequantize`\n### Impact\nDue to lack of v
   \ regarding the security model and how to contact us with issues and questions.\n\n### Attribution\n\
   This vulnerability has been reported by Yakun Zhang and Ying Wang of Baidu X-Team."
 impacted_packages:
-  - purl: pkg:pypi/tensorflow-cpu
-    affected_versions: vers:pypi/>=2.4.0|<2.4.2
-    fixed_versions: vers:pypi/2.4.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow-gpu
-    affected_versions: vers:pypi/<2.1.4
-    fixed_versions: vers:pypi/2.1.4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow-gpu
-    affected_versions: vers:pypi/>=2.2.0|<2.2.3
-    fixed_versions: vers:pypi/2.2.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow-cpu
-    affected_versions: vers:pypi/>=2.2.0|<2.2.3
-    fixed_versions: vers:pypi/2.2.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow-cpu
-    affected_versions: vers:pypi/>=2.3.0|<2.3.3
-    fixed_versions: vers:pypi/2.3.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:pypi/tensorflow
     affected_versions: vers:pypi/<2.1.4
     fixed_versions: vers:pypi/2.1.4
@@ -78,6 +53,31 @@ impacted_packages:
     fixed_versions: vers:pypi/2.1.4
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow-cpu
+    affected_versions: vers:pypi/>=2.2.0|<2.2.3
+    fixed_versions: vers:pypi/2.2.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow-cpu
+    affected_versions: vers:pypi/>=2.3.0|<2.3.3
+    fixed_versions: vers:pypi/2.3.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow-cpu
+    affected_versions: vers:pypi/>=2.4.0|<2.4.2
+    fixed_versions: vers:pypi/2.4.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow-gpu
+    affected_versions: vers:pypi/<2.1.4
+    fixed_versions: vers:pypi/2.1.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow-gpu
+    affected_versions: vers:pypi/>=2.2.0|<2.2.3
+    fixed_versions: vers:pypi/2.2.3
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:pypi/tensorflow-gpu
     affected_versions: vers:pypi/>=2.3.0|<2.3.3
     fixed_versions: vers:pypi/2.3.3
@@ -87,6 +87,13 @@ impacted_packages:
     affected_versions: vers:pypi/>=2.4.0|<2.4.2
     fixed_versions: vers:pypi/2.4.2
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/tensorflow/tensorflow
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/tensorflow/tensorflow
+        commit: 5899741d0421391ca878da47907b1452f06aaf1b
     introduced_in_commits: []
 severities:
   - score: '2.5'
@@ -122,9 +129,9 @@ references:
   - url: https://github.com/tensorflow/tensorflow/commit/5899741d0421391ca878da47907b1452f06aaf1b
     reference_type:
     reference_id:
-  - url: https://github.com/tensorflow/tensorflow/security/advisories/GHSA-c45w-2wxr-pp53
-    reference_type:
-    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2021-29582
     reference_type:
     reference_id: CVE-2021-29582
+  - url: https://github.com/tensorflow/tensorflow/security/advisories/GHSA-c45w-2wxr-pp53
+    reference_type:
+    reference_id: GHSA-c45w-2wxr-pp53

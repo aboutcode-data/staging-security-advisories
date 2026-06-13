@@ -8,13 +8,13 @@ summary: |
   Apache HttpClient versions prior to version 4.5.13 and 5.0.3 can misinterpret malformed authority component in request URIs passed to the library as java.net.URI object and pick the wrong target host for request execution.
 impacted_packages:
   - purl: pkg:maven/org.apache.httpcomponents/httpclient
-    affected_versions: vers:maven/<4.5.13
-    fixed_versions: vers:maven/4.5.13
+    affected_versions: vers:maven/>=5.0.0|<5.0.3
+    fixed_versions: vers:maven/5.0.3
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.httpcomponents/httpclient
-    affected_versions: vers:maven/>=5.0.0|<5.0.3
-    fixed_versions: vers:maven/5.0.3
+    affected_versions: vers:maven/<4.5.13
+    fixed_versions: vers:maven/4.5.13
     fixed_in_commits: []
     introduced_in_commits: []
 severities:

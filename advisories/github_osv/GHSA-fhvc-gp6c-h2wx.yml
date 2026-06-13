@@ -10,7 +10,14 @@ summary: |
   Arbitrary Read implementations can read from the uninitialized buffer (memory exposure) and also can return incorrect number of bytes written to the buffer. Reading from uninitialized memory produces undefined values that can quickly invoke undefined behavior.
 
   This flaw was fixed in commit `8026286` by zero-initializing the buffer before handing to a user-provided Read.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/bodoni/postscript
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/bodoni/postscript
+        commit: 8026286
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -34,9 +41,9 @@ references:
   - url: https://github.com/bodoni/postscript/issues/1
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2021-26953
+    reference_type:
+    reference_id:
   - url: https://rustsec.org/advisories/RUSTSEC-2021-0017.html
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2021-26953
-    reference_type:
-    reference_id: CVE-2021-26953

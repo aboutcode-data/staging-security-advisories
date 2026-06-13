@@ -9,7 +9,16 @@ summary: |
   This can result in a data race & memory corruption when types that provide internal mutability without synchronization are contained within `PinSlab<T>` or `Unordered<T, S>` and accessed concurrently from multiple threads.
 
   The flaw was corrected in commits 92f40b4 & 6a6c367 by adding trait bound `T: Send` to `Send` impls for `PinSlab<T>` & `Unordered<T, S>` and adding `T: Sync` to `Sync` impls for `PinSlab<T>` & `Unordered<T, S>`.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/udoprog/unicycle
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/udoprog/unicycle
+        commit: 6a6c367a0c25f86f998fa315ea90c328f685b194
+      - vcs_url: https://github.com/udoprog/unicycle
+        commit: 92f40b4a2c671553dfa96feacff0265206c44ce5
+    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual

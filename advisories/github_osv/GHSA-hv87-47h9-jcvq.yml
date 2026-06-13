@@ -6,7 +6,14 @@ aliases:
 summary: |
   Uncontrolled recursion in rust-yaml
   Affected versions of this crate did not prevent deep recursion while deserializing data structures. This allows an attacker to make a YAML file with deeply nested structures that causes an abort while deserializing it. The flaw was corrected by checking the recursion depth.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/chyh1990/yaml-rust
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/chyh1990/yaml-rust
+        commit: d61b49cb90391fc4f7f72a1abe597476c8651a07
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -30,9 +37,9 @@ references:
   - url: https://github.com/chyh1990/yaml-rust/pull/109
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2018-20993
+    reference_type:
+    reference_id:
   - url: https://rustsec.org/advisories/RUSTSEC-2018-0006.html
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2018-20993
-    reference_type:
-    reference_id: CVE-2018-20993

@@ -11,6 +11,13 @@ summary: "Possible request smuggling in HTTP/2 due missing validation of content
   \ to fix this one case. \n\n### Patches\nThis was fixed as part of 4.1.61.Final\n\n### Workarounds\n\
   Validation can be done by the user before proxy the request by validating the header."
 impacted_packages:
+  - purl: pkg:github/netty/netty
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/netty/netty
+        commit: b0fa4d5aab4215f3c22ce6123dd8dd5f38dc0432
+    introduced_in_commits: []
   - purl: pkg:maven/io.netty/netty-codec-http2
     affected_versions: vers:maven/>=4.0.0|<4.1.61.Final
     fixed_versions: vers:maven/4.1.61.Final
@@ -47,12 +54,6 @@ references:
     reference_type:
     reference_id:
   - url: https://github.com/netty/netty/commit/b0fa4d5aab4215f3c22ce6123dd8dd5f38dc0432
-    reference_type:
-    reference_id:
-  - url: https://github.com/netty/netty/security/advisories/GHSA-f256-j965-7f32
-    reference_type:
-    reference_id:
-  - url: https://github.com/netty/netty/security/advisories/GHSA-wm47-8v5p-wjpj
     reference_type:
     reference_id:
   - url: https://lists.apache.org/thread.html/r0b09f3e31e004fe583f677f7afa46bd30110904576c13c5ac818ac2c@%3Cissues.flink.apache.org%3E
@@ -223,3 +224,9 @@ references:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2021-21409
     reference_type:
     reference_id: CVE-2021-21409
+  - url: https://github.com/netty/netty/security/advisories/GHSA-f256-j965-7f32
+    reference_type:
+    reference_id: GHSA-f256-j965-7f32
+  - url: https://github.com/netty/netty/security/advisories/GHSA-wm47-8v5p-wjpj
+    reference_type:
+    reference_id: GHSA-wm47-8v5p-wjpj

@@ -8,7 +8,14 @@ summary: |
   The From implementation for Vec was not properly implemented, returning a vector backed by freed memory. This could lead to memory corruption or be exploited to cause undefined behavior.
 
   A fix was published in version 0.1.3.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/sagebind/isahc
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/sagebind/isahc
+        commit: 9e9f1fb44114078c000c78c72e691eeb9e7ac260
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
@@ -32,9 +39,9 @@ references:
   - url: https://github.com/sagebind/isahc/issues/2
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2019-16140
+    reference_type:
+    reference_id:
   - url: https://rustsec.org/advisories/RUSTSEC-2019-0016.html
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2019-16140
-    reference_type:
-    reference_id: CVE-2019-16140

@@ -10,7 +10,14 @@ summary: |
   If the Borrow<Idx> implementation returned a different index, the split arena would allow retrieving the index as a mutable reference creating two mutable references to the same element. This violates Rust's aliasing rules and allows for memory safety issues such as writing out of bounds and use-after-frees.
 
   The flaw was corrected in commit `6b83f9d` by storing the .borrow() value in a temporary variable.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/bennetthardwick/nano-arena
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/bennetthardwick/nano-arena
+        commit: 6b83f9d0708337a9f8b709c1624a8587021ceba2
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
@@ -34,9 +41,9 @@ references:
   - url: https://github.com/bennetthardwick/nano-arena/issues/1
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2021-28032
+    reference_type:
+    reference_id:
   - url: https://rustsec.org/advisories/RUSTSEC-2021-0031.html
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2021-28032
-    reference_type:
-    reference_id: CVE-2021-28032

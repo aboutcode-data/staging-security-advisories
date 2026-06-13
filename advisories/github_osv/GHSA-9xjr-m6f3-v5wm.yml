@@ -10,7 +10,14 @@ summary: |
   This allows an attacker to perform MitM attacks by preventing any valid CA-issued certificate, even if there's a hostname mismatch.
 
   The problem was addressed by leveraging rust-openssl's built-in support for hostname verification.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/hyperium/hyper
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/hyperium/hyper
+        commit: 01160abd92956e5f995cc45790df7a2b86c8989f
+    introduced_in_commits: []
 severities:
   - score: '4.8'
     scoring_system: cvssv3.1
@@ -34,9 +41,9 @@ references:
   - url: https://github.com/hyperium/hyper/issues/472
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2016-10932
+    reference_type:
+    reference_id:
   - url: https://rustsec.org/advisories/RUSTSEC-2016-0002.html
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2016-10932
-    reference_type:
-    reference_id: CVE-2016-10932

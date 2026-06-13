@@ -6,7 +6,18 @@ aliases:
 summary: |
   Inconsistent Interpretation of HTTP Requests in github.com/gin-gonic/gin
   When gin is exposed directly to the internet, a client's IP can be spoofed by setting the X-Forwarded-For header. This affects all versions of package github.com/gin-gonic/gin under 1.7.7.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/gin-gonic/gin
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/gin-gonic/gin
+        commit: bfc8ca285eb46dad60e037d57c545cd260636711
+      - vcs_url: https://github.com/gin-gonic/gin
+        commit: 03e5e05ae089bc989f1ca41841f05504d29e3fd9
+      - vcs_url: https://github.com/gin-gonic/gin
+        commit: 5929d521715610c9dd14898ebbe1d188d5de8937
+    introduced_in_commits: []
 severities:
   - score: '7.1'
     scoring_system: cvssv3.1
@@ -67,12 +78,12 @@ references:
   - url: https://github.com/gin-gonic/gin/releases/tag/v1.7.7
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2020-28483
+    reference_type:
+    reference_id:
   - url: https://pkg.go.dev/vuln/GO-2021-0052
     reference_type:
     reference_id:
   - url: https://snyk.io/vuln/SNYK-GOLANG-GITHUBCOMGINGONICGIN-1041736
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2020-28483
-    reference_type:
-    reference_id: CVE-2020-28483

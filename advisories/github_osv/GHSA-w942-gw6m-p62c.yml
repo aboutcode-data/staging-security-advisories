@@ -6,7 +6,14 @@ aliases:
 summary: |
   Denial of service in GJSON
   GJSON before 1.6.4 allows attackers to cause a denial of service via crafted JSON. Due to improper bounds checking, maliciously crafted JSON objects can cause an out-of-bounds panic. If parsing user input, this may be used as a denial of service vector.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/tidwall/gjson
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/tidwall/gjson
+        commit: f0ee9ebde4b619767ae4ac03e8e42addb530f6bc
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -30,9 +37,9 @@ references:
   - url: https://github.com/tidwall/gjson/issues/192
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2020-35380
+    reference_type:
+    reference_id:
   - url: https://pkg.go.dev/vuln/GO-2021-0059
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2020-35380
-    reference_type:
-    reference_id: CVE-2020-35380

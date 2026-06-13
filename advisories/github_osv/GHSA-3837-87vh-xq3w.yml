@@ -8,7 +8,14 @@ summary: |
   Affected versions of this crate unconditionally implement Sync for SyncRef<T>. This definition allows data races if &T is accessible through &SyncRef.
 
   SyncRef<T> derives Clone and Debug, and the default implementations of those traits access &T by invoking T::clone() & T::fmt(). It is possible to create data races & undefined behavior by concurrently invoking SyncRef<T>::clone() or SyncRef<T>::fmt() from multiple threads with T: !Sync.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/purpleposeidon/v9
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/purpleposeidon/v9
+        commit: 18847c50e5d36561cc91c996c3539ddb1eacf6c7
+    introduced_in_commits: []
 severities:
   - score: '8.1'
     scoring_system: cvssv3.1
@@ -32,12 +39,12 @@ references:
   - url: https://github.com/purpleposeidon/v9/issues/1
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2020-36447
+    reference_type:
+    reference_id:
   - url: https://raw.githubusercontent.com/rustsec/advisory-db/main/crates/v9/RUSTSEC-2020-0127.md
     reference_type:
     reference_id:
   - url: https://rustsec.org/advisories/RUSTSEC-2020-0127.html
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2020-36447
-    reference_type:
-    reference_id: CVE-2020-36447

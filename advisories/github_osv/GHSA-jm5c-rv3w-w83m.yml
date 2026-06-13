@@ -20,7 +20,21 @@ summary: "Denial of service in geth\n### Impact\nDenial-of-service (crash) durin
   \ References\n\nhttps://blog.ethereum.org/2020/11/12/geth_security_release/\n### For more\
   \ information\nIf you have any questions or comments about this advisory:\n* Open an issue\
   \ in [go-ethereum](https://github.com/ethereum/go-ethereum)\n* Email us at [security@ethereum.org](mailto:security@ethereum.org)"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/holiman/uint256
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/holiman/uint256
+        commit: 6785da6e3eea403260a5760029e722aa4ff1716d
+    introduced_in_commits: []
+  - purl: pkg:github/ethereum/go-ethereum
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/ethereum/go-ethereum
+        commit: 7163a6664ee664df81b9028ab3ba13b9d65a7196
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
@@ -33,9 +47,9 @@ severities:
     published_at: None
     url:
 weaknesses:
+  - CWE-400
   - CWE-191
   - CWE-125
-  - CWE-400
 references:
   - url: https://blog.ethereum.org/2020/11/12/geth_security_release
     reference_type:
@@ -55,9 +69,9 @@ references:
   - url: https://github.com/holiman/uint256/pull/80
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2020-26242
+    reference_type:
+    reference_id:
   - url: https://pkg.go.dev/vuln/GO-2021-0103
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2020-26242
-    reference_type:
-    reference_id: CVE-2020-26242

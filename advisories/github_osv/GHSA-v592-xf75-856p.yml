@@ -12,7 +12,14 @@ summary: "Erroneous Proof of Work calculation in geth\n### Impact\nAn ethash min
   \ \n\n### References\nhttps://blog.ethereum.org/2020/11/12/geth_security_release/\n\n### For\
   \ more information\nIf you have any questions or comments about this advisory:\n* Open an\
   \ issue in [go-ethereum](https://github.com/ethereum/go-ethereum)\n* Email us at [security@ethereum.org](mailto:security@ethereum.org)"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/ethereum/go-ethereum
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/ethereum/go-ethereum
+        commit: d990df909d7839640143344e79356754384dcdd0
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
@@ -44,4 +51,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2020-26240
     reference_type:
-    reference_id: CVE-2020-26240
+    reference_id:

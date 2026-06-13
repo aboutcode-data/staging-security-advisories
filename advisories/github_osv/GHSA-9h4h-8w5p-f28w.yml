@@ -8,7 +8,16 @@ summary: |
   `cmd/evm/runner.go` in Go Ethereum (aka geth) allows attackers to cause a denial of service (SEGV) via crafted bytecode.
   ### Specific Go Packages Affected
   github.com/ethereum/go-ethereum/cmd/evm
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/ethereum/go-ethereum
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/ethereum/go-ethereum
+        commit: 83e2761c3a13524bd5d6597ac08994488cf872ef
+      - vcs_url: https://github.com/ethereum/go-ethereum
+        commit: fb9f7261ec51e38eedb454594fc19f00de1a6834
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -34,4 +43,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2018-19184
     reference_type:
-    reference_id: CVE-2018-19184
+    reference_id:

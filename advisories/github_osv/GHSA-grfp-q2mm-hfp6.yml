@@ -12,7 +12,14 @@ summary: |
   1. Registering a client with allowed redirect URL `https://example.com/callback`
   2. Performing OAuth2 flow and requesting redirect URL `https://example.com/CALLBACK`
   3. Instead of an error (invalid redirect URL), the browser is redirected to `https://example.com/CALLBACK` with a potentially successful OAuth2 response, depending on the state of the overall OAuth2 flow (the user might still deny the request for example).
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/ory/fosite
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/ory/fosite
+        commit: cdee51ebe721bfc8acca0fd0b86b030ca70867bf
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
@@ -25,9 +32,9 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-20
   - CWE-178
   - CWE-601
+  - CWE-20
 references:
   - url: https://github.com/ory/fosite
     reference_type:
@@ -40,4 +47,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2020-15234
     reference_type:
-    reference_id: CVE-2020-15234
+    reference_id:

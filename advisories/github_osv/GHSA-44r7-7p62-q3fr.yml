@@ -6,7 +6,14 @@ aliases:
 summary: |
   miekg/dns insecurely generates random numbers
   The miekg Go DNS package before 1.1.25, as used in CoreDNS before 1.6.6 and other products, improperly generates random numbers because math/rand is used. The TXID becomes predictable, leading to response forgeries.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/miekg/dns
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/miekg/dns
+        commit: 8ebf2e419df7857ac8919baa05248789a8ffbf33
+    introduced_in_commits: []
 severities:
   - score: '5.9'
     scoring_system: cvssv3.1
@@ -19,8 +26,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-330
   - CWE-338
+  - CWE-330
 references:
   - url: https://github.com/coredns/coredns/issues/3519
     reference_type:
@@ -43,9 +50,9 @@ references:
   - url: https://github.com/miekg/dns/pull/1044
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2019-19794
+    reference_type:
+    reference_id:
   - url: https://pkg.go.dev/vuln/GO-2020-0008
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2019-19794
-    reference_type:
-    reference_id: CVE-2019-19794

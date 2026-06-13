@@ -27,11 +27,6 @@ summary: |
   ### References
   * [TYPO3-CORE-SA-2021-002](https://typo3.org/security/advisory/typo3-core-sa-2021-002)
 impacted_packages:
-  - purl: pkg:composer/typo3/cms-core
-    affected_versions: vers:composer/>=10.0.0|<10.4.14
-    fixed_versions: vers:composer/10.4.14
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:composer/typo3/cms-form
     affected_versions: vers:composer/<=8.7.39
     fixed_versions: vers:composer/8.7.40
@@ -50,6 +45,11 @@ impacted_packages:
   - purl: pkg:composer/typo3/cms-form
     affected_versions: vers:composer/<=11.1.0
     fixed_versions: vers:composer/11.1.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/typo3/cms-core
+    affected_versions: vers:composer/>=10.0.0|<10.4.14
+    fixed_versions: vers:composer/10.4.14
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/typo3/cms-core
@@ -89,16 +89,13 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-434
   - CWE-552
+  - CWE-434
 references:
   - url: https://github.com/FriendsOfPHP/security-advisories/blob/master/typo3/cms-core/CVE-2021-21355.yaml
     reference_type:
     reference_id:
   - url: https://github.com/FriendsOfPHP/security-advisories/blob/master/typo3/cms/CVE-2021-21355.yaml
-    reference_type:
-    reference_id:
-  - url: https://github.com/TYPO3/TYPO3.CMS/security/advisories/GHSA-2r6j-862c-m2v2
     reference_type:
     reference_id:
   - url: https://packagist.org/packages/typo3/cms-form
@@ -110,3 +107,6 @@ references:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2021-21355
     reference_type:
     reference_id: CVE-2021-21355
+  - url: https://github.com/TYPO3/TYPO3.CMS/security/advisories/GHSA-2r6j-862c-m2v2
+    reference_type:
+    reference_id: GHSA-2r6j-862c-m2v2

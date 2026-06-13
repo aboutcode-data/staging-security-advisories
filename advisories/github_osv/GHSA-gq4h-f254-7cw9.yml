@@ -14,7 +14,14 @@ summary: |
   This can allows creating data races by cloning types with internal mutability and sending them to other threads (as `T` of `ReadTicket<T>`/`WriteTicket<T>`). Such data races can cause memory corruption or other undefined behavior.
 
   The flaw was corrected in commit `a986a93` by adding `T: Send` bounds to `Send` impls of `ReadTicket<T>`/`WriteTicket<T>`.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/kvark/ticketed_lock
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/kvark/ticketed_lock
+        commit: a986a9335d591fa5c826157d1674d47aa525357f
+    introduced_in_commits: []
 severities:
   - score: '8.1'
     scoring_system: cvssv3.1

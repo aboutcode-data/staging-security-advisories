@@ -6,7 +6,14 @@ aliases:
 summary: |
   Cross-site scripting in bluemonday
   bluemonday before 1.0.5 allows XSS because certain Go lowercasing converts an uppercase Cyrillic character, defeating a protection mechanism against the "script" string.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/microcosm-cc/bluemonday
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/microcosm-cc/bluemonday
+        commit: 524f142fe46e945b7dcd291d7805c4b7dcf75bee
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
@@ -33,6 +40,9 @@ references:
   - url: https://github.com/microcosm-cc/bluemonday/releases/tag/v1.0.5
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2021-29272
+    reference_type:
+    reference_id:
   - url: https://pkg.go.dev/vuln/GO-2022-0762
     reference_type:
     reference_id:
@@ -42,6 +52,3 @@ references:
   - url: https://vuln.ryotak.me/advisories/4.txt
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2021-29272
-    reference_type:
-    reference_id: CVE-2021-29272

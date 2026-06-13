@@ -6,7 +6,14 @@ aliases:
 summary: |
   mio invalidly assumes the memory layout of std::net::SocketAddr
   The mio crate has assumed std::net::SocketAddrV4 and std::net::SocketAddrV6 have the same memory layout as the system C representation sockaddr. It has simply casted the pointers to convert the socket addresses to the system representation. The standard library does not say anything about the memory layout, and this will cause invalid memory access if the standard library changes the implementation. No warnings or errors will be emitted once the change happens.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/tokio-rs/mio
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/tokio-rs/mio
+        commit: 152e0751f0be1c9b0cbd6778645b76bcb0eba93c
+    introduced_in_commits: []
 severities:
   - score: '5.5'
     scoring_system: cvssv3.1
@@ -33,9 +40,9 @@ references:
   - url: https://github.com/tokio-rs/mio/pull/1388
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2020-35922
+    reference_type:
+    reference_id:
   - url: https://rustsec.org/advisories/RUSTSEC-2020-0081.html
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2020-35922
-    reference_type:
-    reference_id: CVE-2020-35922

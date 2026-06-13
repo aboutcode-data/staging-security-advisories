@@ -8,18 +8,23 @@ summary: |
   When responding to new h2c connection requests, Apache Tomcat versions 10.0.0-M1 to 10.0.0, 9.0.0.M1 to 9.0.41 and 8.5.0 to 8.5.61 could duplicate request headers and a limited amount of request body from one request to another meaning user A and user B could both see the results of user A's request.
 impacted_packages:
   - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
-    affected_versions: vers:maven/>=10.0.0|<10.0.2
+    affected_versions: vers:maven/>=10.0.0-M1|<10.0.2
     fixed_versions: vers:maven/10.0.2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
-    affected_versions: vers:maven/>=9.0.0|<9.0.43
+    affected_versions: vers:maven/>=9.0.0-M1|<9.0.43
     fixed_versions: vers:maven/9.0.43
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
     affected_versions: vers:maven/>=8.5.0|<8.5.63
     fixed_versions: vers:maven/8.5.63
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat/tomcat-coyote
+    affected_versions: vers:maven/>=10.0.0-M1|<10.0.2
+    fixed_versions: vers:maven/10.0.2
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
@@ -36,6 +41,9 @@ severities:
 weaknesses:
   - CWE-200
 references:
+  - url: https://github.com/apache/tomcat
+    reference_type:
+    reference_id:
   - url: https://lists.apache.org/thread.html/r7b95bc248603360501f18c8eb03bb6001ec0ee3296205b34b07105b7@%3Cannounce.apache.org%3E
     reference_type:
     reference_id:

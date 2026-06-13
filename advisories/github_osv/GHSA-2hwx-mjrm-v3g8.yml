@@ -16,6 +16,13 @@ summary: |
   ### Workarounds
   The `federation_domain_whitelist` setting can be used to restrict the homeservers communicated with over federation.
 impacted_packages:
+  - purl: pkg:github/matrix-org/synapse
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/matrix-org/synapse
+        commit: ff5c4da1289cb5e097902b3e55b771be342c29d6
+    introduced_in_commits: []
   - purl: pkg:pypi/matrix-synapse
     affected_versions: vers:pypi/>=0.99.0|<1.25.0
     fixed_versions: vers:pypi/1.25.0
@@ -38,8 +45,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-770
   - CWE-400
+  - CWE-770
 references:
   - url: https://github.com/matrix-org/synapse
     reference_type:
@@ -53,9 +60,6 @@ references:
   - url: https://github.com/matrix-org/synapse/releases/tag/v1.25.0
     reference_type:
     reference_id:
-  - url: https://github.com/matrix-org/synapse/security/advisories/GHSA-2hwx-mjrm-v3g8
-    reference_type:
-    reference_id:
   - url: https://github.com/pypa/advisory-database/tree/main/vulns/matrix-synapse/PYSEC-2021-132.yaml
     reference_type:
     reference_id:
@@ -65,3 +69,6 @@ references:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2021-21274
     reference_type:
     reference_id: CVE-2021-21274
+  - url: https://github.com/matrix-org/synapse/security/advisories/GHSA-2hwx-mjrm-v3g8
+    reference_type:
+    reference_id: GHSA-2hwx-mjrm-v3g8

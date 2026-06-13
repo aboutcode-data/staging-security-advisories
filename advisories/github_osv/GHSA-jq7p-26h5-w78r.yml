@@ -6,7 +6,14 @@ aliases:
 summary: |
   Out-of-bounds read in Apache Thrift
   In Apache Thrift 0.9.3 to 0.12.0, a server implemented in Go using TJSONProtocol or TSimpleJSONProtocol may panic when feed with invalid input data.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/apache/thrift
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/thrift
+        commit: 264a3f318ed3e9e51573f67f963c8509786bcec2
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -22,18 +29,6 @@ weaknesses:
   - CWE-125
 references:
   - url: http://mail-archives.apache.org/mod_mbox/thrift-dev/201910.mbox/%3C277A46CA87494176B1BBCF5D72624A2A%40HAGGIS%3E
-    reference_type:
-    reference_id:
-  - url: https://access.redhat.com/errata/RHSA-2020:0804
-    reference_type:
-    reference_id:
-  - url: https://access.redhat.com/errata/RHSA-2020:0805
-    reference_type:
-    reference_id:
-  - url: https://access.redhat.com/errata/RHSA-2020:0806
-    reference_type:
-    reference_id:
-  - url: https://access.redhat.com/errata/RHSA-2020:0811
     reference_type:
     reference_id:
   - url: https://github.com/apache/thrift
@@ -60,12 +55,24 @@ references:
   - url: https://pkg.go.dev/vuln/GO-2021-0101
     reference_type:
     reference_id:
-  - url: https://security.gentoo.org/glsa/202107-32
-    reference_type:
-    reference_id:
   - url: https://www.oracle.com/security-alerts/cpujul2021.html
     reference_type:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2019-0210
     reference_type:
     reference_id: CVE-2019-0210
+  - url: https://security.gentoo.org/glsa/202107-32
+    reference_type:
+    reference_id: GLSA-202107-32
+  - url: https://access.redhat.com/errata/RHSA-2020:0804
+    reference_type:
+    reference_id: RHSA-2020:0804
+  - url: https://access.redhat.com/errata/RHSA-2020:0805
+    reference_type:
+    reference_id: RHSA-2020:0805
+  - url: https://access.redhat.com/errata/RHSA-2020:0806
+    reference_type:
+    reference_id: RHSA-2020:0806
+  - url: https://access.redhat.com/errata/RHSA-2020:0811
+    reference_type:
+    reference_id: RHSA-2020:0811

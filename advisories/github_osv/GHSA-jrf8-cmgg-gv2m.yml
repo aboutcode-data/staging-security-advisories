@@ -12,7 +12,14 @@ summary: |
   CPUID is available in most, but not all, x86/x86_64 environments. The crate compiles only on these architectures, so others are unaffected. This issue is mitigated by the fact that affected programs are expected to crash deterministically every time.
 
   The flaw has been fixed in v9.0.0, by intentionally breaking compilation when targeting SGX or 32-bit x86 without SSE. This covers all affected CPUs.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/gz/rust-cpuid
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/gz/rust-cpuid
+        commit: 91b676eecd01f2163e2984215e2c0ac89e30ce75
+    introduced_in_commits: []
 severities:
   - score: '5.5'
     scoring_system: cvssv3.1
@@ -25,8 +32,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-657
   - CWE-400
+  - CWE-657
 references:
   - url: https://github.com/gz/rust-cpuid
     reference_type:
@@ -43,9 +50,9 @@ references:
   - url: https://github.com/RustSec/advisory-db/pull/614
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2021-26307
+    reference_type:
+    reference_id:
   - url: https://rustsec.org/advisories/RUSTSEC-2021-0013.html
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2021-26307
-    reference_type:
-    reference_id: CVE-2021-26307

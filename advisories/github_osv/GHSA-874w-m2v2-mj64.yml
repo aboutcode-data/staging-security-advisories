@@ -7,10 +7,24 @@ summary: |
   Double Free in Adplug
   AdPlug 2.3.1 has a double free in the `Cu6mPlayer` class in `u6m.h`.
 impacted_packages:
+  - purl: pkg:github/adplug/adplug
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/adplug/adplug
+        commit: 1a282a486a8e33fef3e15998bf6408d3515dc07e
+    introduced_in_commits: []
   - purl: pkg:nuget/adplug
     affected_versions: vers:nuget/<=2.3.1
     fixed_versions: vers:nuget/2.3.3
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/miller-alex/adplug
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/miller-alex/adplug
+        commit: 8abb9328bf27dcbdafc67ade3e75af0ffd8f7633
     introduced_in_commits: []
 severities:
   - score: '9.8'

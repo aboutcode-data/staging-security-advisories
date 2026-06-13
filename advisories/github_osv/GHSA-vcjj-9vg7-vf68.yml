@@ -55,6 +55,11 @@ summary: |
   This vulnerability has been reported by Yakun Zhang of Baidu Security.
 impacted_packages:
   - purl: pkg:pypi/tensorflow
+    affected_versions: vers:pypi/<2.3.4
+    fixed_versions: vers:pypi/2.3.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow
     affected_versions: vers:pypi/>=2.4.0|<2.4.3
     fixed_versions: vers:pypi/2.4.3
     fixed_in_commits: []
@@ -64,11 +69,6 @@ impacted_packages:
     fixed_versions: vers:pypi/2.5.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow
-    affected_versions: vers:pypi/<2.3.4
-    fixed_versions: vers:pypi/2.3.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:pypi/tensorflow-cpu
     affected_versions: vers:pypi/2.5.0
     fixed_versions: vers:pypi/2.5.1
@@ -98,6 +98,15 @@ impacted_packages:
     affected_versions: vers:pypi/2.5.0
     fixed_versions: vers:pypi/2.5.1
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/tensorflow/tensorflow
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/tensorflow/tensorflow
+        commit: 15691e456c7dc9bd6be203b09765b063bf4a380c
+      - vcs_url: https://github.com/tensorflow/tensorflow
+        commit: 149562d49faa709ea80df1d99fc41d005b81082a
     introduced_in_commits: []
 severities:
   - score: '7.8'
@@ -136,9 +145,9 @@ references:
   - url: https://github.com/tensorflow/tensorflow/commit/15691e456c7dc9bd6be203b09765b063bf4a380c
     reference_type:
     reference_id:
-  - url: https://github.com/tensorflow/tensorflow/security/advisories/GHSA-vcjj-9vg7-vf68
-    reference_type:
-    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2021-37688
     reference_type:
     reference_id: CVE-2021-37688
+  - url: https://github.com/tensorflow/tensorflow/security/advisories/GHSA-vcjj-9vg7-vf68
+    reference_type:
+    reference_id: GHSA-vcjj-9vg7-vf68

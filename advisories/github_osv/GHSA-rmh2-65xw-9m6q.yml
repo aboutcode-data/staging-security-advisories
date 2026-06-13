@@ -6,7 +6,14 @@ aliases:
 summary: |
   Infinite Loop in jsonparser
   The Library API in buger jsonparser through 2019-12-04 allows attackers to cause a denial of service (infinite loop) via a Delete call.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/buger/jsonparser
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/buger/jsonparser
+        commit: 91ac96899e492584984ded0c8f9a08f10b473717
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -39,9 +46,9 @@ references:
   - url: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6KUHKDQSEYJNROA66OMN6AAQMGAAN6WI
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2020-10675
+    reference_type:
+    reference_id:
   - url: https://pkg.go.dev/vuln/GO-2021-0089
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2020-10675
-    reference_type:
-    reference_id: CVE-2020-10675

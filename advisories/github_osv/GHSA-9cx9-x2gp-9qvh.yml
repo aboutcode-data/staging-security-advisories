@@ -25,7 +25,14 @@ summary: "CRLF vulnerability in Fiber\n### Impact\nThe filename that is given in
   \ input form or an HTTP request, [see acunetix](https://www.acunetix.com/websitesecurity/crlf-injection/)\n\
   \n### For more information\nIf you have any questions or comments about this advisory:\n*\
   \ Open an issue in [gofiber/fiber](https://github.com/gofiber/fiber)\n* Join us on [Discord](https://gofiber.io/discord)"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/gofiber/fiber
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/gofiber/fiber
+        commit: f698b5d5066cfe594102ae252cd58a1fe57cf56f
+    introduced_in_commits: []
 severities:
   - score: '4.2'
     scoring_system: cvssv3.1
@@ -38,8 +45,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-93
   - CWE-74
+  - CWE-93
 references:
   - url: https://github.com/gofiber/fiber
     reference_type:
@@ -53,9 +60,9 @@ references:
   - url: https://github.com/gofiber/fiber/security/advisories/GHSA-9cx9-x2gp-9qvh
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2020-15111
+    reference_type:
+    reference_id:
   - url: https://pkg.go.dev/vuln/GO-2021-0108
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2020-15111
-    reference_type:
-    reference_id: CVE-2020-15111

@@ -10,7 +10,14 @@ summary: |
   This allows an attacker to observe parts of the uninitialized memory in the decoded audio stream.
 
   The flaw was corrected by checking that the value read from the bitstream divides the decode buffer size, and returning a format error if it does not. If an error is returned, the decode buffer is not exposed. Regression tests and an additional fuzzer have been added to prevent similar flaws in the future.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/ruuda/claxon
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/ruuda/claxon
+        commit: 8f28ec275e412dd3af4f3cda460605512faf332c
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
@@ -37,9 +44,9 @@ references:
   - url: https://github.com/ruuda/claxon/releases/tag/v0.4.1
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2018-20992
+    reference_type:
+    reference_id:
   - url: https://rustsec.org/advisories/RUSTSEC-2018-0004.html
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2018-20992
-    reference_type:
-    reference_id: CVE-2018-20992

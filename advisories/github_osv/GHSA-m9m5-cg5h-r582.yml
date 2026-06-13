@@ -6,7 +6,14 @@ aliases:
 summary: |
   Improper random number generation in nanorand
   In versions of nanorand prior to 0.5.1, RandomGen implementations for standard unsigned integers could fail to properly generate numbers, due to using bit-shifting to truncate a 64-bit number, rather than just an as conversion. This often manifested as RNGs returning nothing but 0, including the cryptographically secure ChaCha random number generator.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/absolucy/nanorand-rs
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/absolucy/nanorand-rs
+        commit: 5ba218ac29df4786b002d7d12b47fa0c04a331f2
+    introduced_in_commits: []
 severities:
   - score: '5.1'
     scoring_system: cvssv3.1
@@ -27,12 +34,12 @@ references:
   - url: https://github.com/Absolucy/nanorand-rs/commit/5ba218ac29df4786b002d7d12b47fa0c04a331f2
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2020-35926
+    reference_type:
+    reference_id:
   - url: https://rustsec.org/advisories/RUSTSEC-2020-0089.html
     reference_type:
     reference_id:
   - url: https://twitter.com/aspenluxxxy/status/1336684692284772352
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2020-35926
-    reference_type:
-    reference_id: CVE-2020-35926

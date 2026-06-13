@@ -22,7 +22,14 @@ summary: "Websocket requests did not call AuthenticateMethod\n### Impact\n\nDepe
   \ to v1.5.2 or later.\n\n### Workarounds\n\nYou may work around this issue by making the authenticate\
   \ method a named function, then calling that function at the start of the handle method for\
   \ the websocket. Reject connections when the return value of the method is nil."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/ecnepsnai/web
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/ecnepsnai/web
+        commit: 5a78f8d5c41ce60dcf9f61aaf47a7a8dc3e0002f
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
@@ -35,9 +42,9 @@ severities:
     published_at: None
     url:
 weaknesses:
+  - CWE-400
   - CWE-476
   - CWE-304
-  - CWE-400
 references:
   - url: https://github.com/ecnepsnai/web
     reference_type:
@@ -48,9 +55,9 @@ references:
   - url: https://github.com/ecnepsnai/web/security/advisories/GHSA-5gjg-jgh4-gppm
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2021-4236
+    reference_type:
+    reference_id:
   - url: https://pkg.go.dev/vuln/GO-2021-0107
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2021-4236
-    reference_type:
-    reference_id: CVE-2021-4236

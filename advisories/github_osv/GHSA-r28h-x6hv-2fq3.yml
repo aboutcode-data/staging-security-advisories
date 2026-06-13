@@ -7,6 +7,13 @@ summary: |
   Improper Verification of Cryptographic Signature in starkbank-ecdsa
   The verify function in the Stark Bank Java ECDSA library (ecdsa-java) 1.0.0 fails to check that the signature is non-zero, which allows attackers to forge signatures on arbitrary messages.
 impacted_packages:
+  - purl: pkg:github/starkbank/ecdsa-java
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/starkbank/ecdsa-java
+        commit: ed22e484186d6c66d3686bfe39d01bdbabf219b6
+    introduced_in_commits: []
   - purl: pkg:maven/com.starkbank.ellipticcurve/starkbank-ecdsa
     affected_versions: vers:maven/<1.0.1
     fixed_versions: vers:maven/1.0.1

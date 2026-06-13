@@ -6,7 +6,14 @@ aliases:
 summary: |
   Denial of Service in miekg-dns
   A denial of service flaw was found in miekg-dns before 1.0.4. A remote attacker could use carefully timed TCP packets to block the DNS server from accepting new connections.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/miekg/dns
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/miekg/dns
+        commit: 43913f2f4fbd7dcff930b8a809e709591e4dd79e
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -33,9 +40,9 @@ references:
   - url: https://github.com/miekg/dns/pull/631
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2017-15133
+    reference_type:
+    reference_id:
   - url: https://pkg.go.dev/vuln/GO-2020-0006
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2017-15133
-    reference_type:
-    reference_id: CVE-2017-15133

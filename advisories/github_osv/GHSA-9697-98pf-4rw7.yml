@@ -24,11 +24,6 @@ summary: "Heap OOB in `UpperBound` and `LowerBound`\n### Impact\nAn attacker can
   \ Team from Qihoo 360."
 impacted_packages:
   - purl: pkg:pypi/tensorflow
-    affected_versions: vers:pypi/2.5.0
-    fixed_versions: vers:pypi/2.5.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow
     affected_versions: vers:pypi/<2.3.4
     fixed_versions: vers:pypi/2.3.4
     fixed_in_commits: []
@@ -38,6 +33,11 @@ impacted_packages:
     fixed_versions: vers:pypi/2.4.3
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow
+    affected_versions: vers:pypi/2.5.0
+    fixed_versions: vers:pypi/2.5.1
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:pypi/tensorflow-cpu
     affected_versions: vers:pypi/<2.3.4
     fixed_versions: vers:pypi/2.3.4
@@ -67,6 +67,13 @@ impacted_packages:
     affected_versions: vers:pypi/2.5.0
     fixed_versions: vers:pypi/2.5.1
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/tensorflow/tensorflow
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/tensorflow/tensorflow
+        commit: 42459e4273c2e47a3232cc16c4f4fff3b3a35c38
     introduced_in_commits: []
 severities:
   - score: '5.5'
@@ -102,9 +109,9 @@ references:
   - url: https://github.com/tensorflow/tensorflow/commit/42459e4273c2e47a3232cc16c4f4fff3b3a35c38
     reference_type:
     reference_id:
-  - url: https://github.com/tensorflow/tensorflow/security/advisories/GHSA-9697-98pf-4rw7
-    reference_type:
-    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2021-37670
     reference_type:
     reference_id: CVE-2021-37670
+  - url: https://github.com/tensorflow/tensorflow/security/advisories/GHSA-9697-98pf-4rw7
+    reference_type:
+    reference_id: GHSA-9697-98pf-4rw7

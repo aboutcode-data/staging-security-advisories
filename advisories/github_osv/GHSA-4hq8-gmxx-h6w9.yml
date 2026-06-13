@@ -12,7 +12,14 @@ summary: |
   ### Patches
 
   In version 0.4.3, all XML input is validated prior to being parsed.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/crewjam/saml
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/crewjam/saml
+        commit: da4f1a0612c0a8dd0452cf8b3c7a6518f6b4d053
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
@@ -52,12 +59,12 @@ references:
   - url: https://mattermost.com/blog/coordinated-disclosure-go-xml-vulnerabilities
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2020-27846
+    reference_type:
+    reference_id:
   - url: https://pkg.go.dev/vuln/GO-2021-0058
     reference_type:
     reference_id:
   - url: https://security.netapp.com/advisory/ntap-20210205-0002
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2020-27846
-    reference_type:
-    reference_id: CVE-2020-27846

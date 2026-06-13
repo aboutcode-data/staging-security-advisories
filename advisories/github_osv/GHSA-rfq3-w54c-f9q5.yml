@@ -20,7 +20,14 @@ summary: |
   3. Instead of an error, the browser is redirected to `http://127.0.0.1/callback` with a potentially successful OAuth2 response.
 
   These bugs are only applicable in scenarios where the attacker has control over the loopback interface (`localhost`, `127.0.0.1`, `[::1]`) where the browser performing the OAuth2 flow is running.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/ory/fosite
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/ory/fosite
+        commit: cdee51ebe721bfc8acca0fd0b86b030ca70867bf
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
@@ -33,8 +40,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-20
   - CWE-601
+  - CWE-20
 references:
   - url: https://github.com/ory/fosite
     reference_type:
@@ -50,4 +57,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2020-15233
     reference_type:
-    reference_id: CVE-2020-15233
+    reference_id:

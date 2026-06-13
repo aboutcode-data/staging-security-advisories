@@ -6,7 +6,14 @@ aliases:
 summary: |
   Observable Discrepancy in libsecp256k1-rs
   A timing vulnerability in the Scalar::check_overflow function in Parity libsecp256k1-rs before 0.3.1 potentially allows an attacker to leak information via a side-channel attack.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/paritytech/libsecp256k1
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/paritytech/libsecp256k1
+        commit: 11ba23a9766a5079918cd9f515bc100bc8164b50
+    introduced_in_commits: []
 severities:
   - score: '5.9'
     scoring_system: cvssv3.1
@@ -19,15 +26,15 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-203
   - CWE-362
+  - CWE-203
 references:
   - url: https://github.com/paritytech/libsecp256k1/commit/11ba23a9766a5079918cd9f515bc100bc8164b50
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2019-20399
     reference_type:
     reference_id:
   - url: https://rustsec.org/advisories/RUSTSEC-2020-0156.html
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2019-20399
-    reference_type:
-    reference_id: CVE-2019-20399

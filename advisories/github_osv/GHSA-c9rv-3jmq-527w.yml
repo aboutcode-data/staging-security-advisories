@@ -7,7 +7,14 @@ summary: |
   Unexpected panic when decoding tokens in branca
   Prior to 0.10.0 it was possible to have both decoding functions panic unexpectedly, by supplying tokens with an incorrect base62 encoding.
   The documentation stated that an error should have been reported instead.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/return/branca
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/return/branca
+        commit: 7da3274bd99b05dce9c3f9b4b129d0145c71820b
+    introduced_in_commits: []
 severities:
   - score: '5.5'
     scoring_system: cvssv3.1
@@ -34,9 +41,9 @@ references:
   - url: https://github.com/tuupola/branca-spec/issues/22
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2020-35918
+    reference_type:
+    reference_id:
   - url: https://rustsec.org/advisories/RUSTSEC-2020-0075.html
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2020-35918
-    reference_type:
-    reference_id: CVE-2020-35918

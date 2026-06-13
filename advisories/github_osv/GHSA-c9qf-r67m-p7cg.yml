@@ -19,6 +19,11 @@ summary: "Null pointer dereference in `CompressElement`\n### Impact\nIt is possi
   \ internally and fixed before the report was handled."
 impacted_packages:
   - purl: pkg:pypi/tensorflow
+    affected_versions: vers:pypi/2.5.0
+    fixed_versions: vers:pypi/2.5.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow
     affected_versions: vers:pypi/<2.3.4
     fixed_versions: vers:pypi/2.3.4
     fixed_in_commits: []
@@ -28,11 +33,6 @@ impacted_packages:
     fixed_versions: vers:pypi/2.4.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow
-    affected_versions: vers:pypi/2.5.0
-    fixed_versions: vers:pypi/2.5.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:pypi/tensorflow-cpu
     affected_versions: vers:pypi/<2.3.4
     fixed_versions: vers:pypi/2.3.4
@@ -62,6 +62,13 @@ impacted_packages:
     affected_versions: vers:pypi/2.5.0
     fixed_versions: vers:pypi/2.5.1
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/tensorflow/tensorflow
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/tensorflow/tensorflow
+        commit: 5dc7f6981fdaf74c8c5be41f393df705841fb7c5
     introduced_in_commits: []
 severities:
   - score: '7.7'
@@ -97,9 +104,9 @@ references:
   - url: https://github.com/tensorflow/tensorflow/commit/5dc7f6981fdaf74c8c5be41f393df705841fb7c5
     reference_type:
     reference_id:
-  - url: https://github.com/tensorflow/tensorflow/security/advisories/GHSA-c9qf-r67m-p7cg
-    reference_type:
-    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2021-37637
     reference_type:
     reference_id: CVE-2021-37637
+  - url: https://github.com/tensorflow/tensorflow/security/advisories/GHSA-c9qf-r67m-p7cg
+    reference_type:
+    reference_id: GHSA-c9qf-r67m-p7cg

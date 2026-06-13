@@ -6,7 +6,14 @@ aliases:
 summary: |
   Use after free in libflate
   An issue was discovered in the libflate crate before 0.1.25 for Rust. MultiDecoder::read has a use-after-free, leading to arbitrary code execution.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/sile/libflate
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/sile/libflate
+        commit: ffeff7c65deac5a6f886db2a59bcae4e420e4706
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
@@ -33,9 +40,9 @@ references:
   - url: https://github.com/sile/libflate/pull/37
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2019-15552
+    reference_type:
+    reference_id:
   - url: https://rustsec.org/advisories/RUSTSEC-2019-0010.html
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2019-15552
-    reference_type:
-    reference_id: CVE-2019-15552

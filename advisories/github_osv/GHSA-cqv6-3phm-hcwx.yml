@@ -22,11 +22,6 @@ summary: "Access to invalid memory during shape inference in `Cudnn*` ops\n### I
   \ questions.\n\n### Attribution\nThis vulnerability has been reported by members of the Aivul\
   \ Team from Qihoo 360."
 impacted_packages:
-  - purl: pkg:pypi/tensorflow-gpu
-    affected_versions: vers:pypi/>=2.6.0|<2.6.1
-    fixed_versions: vers:pypi/2.6.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:pypi/tensorflow
     affected_versions: vers:pypi/>=2.6.0|<2.6.1
     fixed_versions: vers:pypi/2.6.1
@@ -58,6 +53,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/tensorflow-gpu
+    affected_versions: vers:pypi/>=2.6.0|<2.6.1
+    fixed_versions: vers:pypi/2.6.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow-gpu
     affected_versions: vers:pypi/>=2.5.0|<2.5.2
     fixed_versions: vers:pypi/2.5.2
     fixed_in_commits: []
@@ -66,6 +66,13 @@ impacted_packages:
     affected_versions: vers:pypi/<2.4.4
     fixed_versions: vers:pypi/2.4.4
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/tensorflow/tensorflow
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/tensorflow/tensorflow
+        commit: af5fcebb37c8b5d71c237f4e59c6477015c78ce6
     introduced_in_commits: []
 severities:
   - score: '7.8'
@@ -97,9 +104,9 @@ references:
   - url: https://github.com/tensorflow/tensorflow/commit/af5fcebb37c8b5d71c237f4e59c6477015c78ce6
     reference_type:
     reference_id:
-  - url: https://github.com/tensorflow/tensorflow/security/advisories/GHSA-cqv6-3phm-hcwx
-    reference_type:
-    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2021-41221
     reference_type:
     reference_id: CVE-2021-41221
+  - url: https://github.com/tensorflow/tensorflow/security/advisories/GHSA-cqv6-3phm-hcwx
+    reference_type:
+    reference_id: GHSA-cqv6-3phm-hcwx

@@ -10,7 +10,14 @@ summary: |
   This can result in a memory corruption or other kinds of undefined behavior.
 
   The flaw was corrected in commit 11f396c by replacing the T: Send bound to T: Sync bound in the Sync impl for LateStatic<T>.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/richard-w/late-static
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/richard-w/late-static
+        commit: 11f396c
+    introduced_in_commits: []
 severities:
   - score: '7.0'
     scoring_system: cvssv3.1
@@ -34,9 +41,9 @@ references:
   - url: https://github.com/Richard-W/late-static/issues/1
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2020-36209
+    reference_type:
+    reference_id:
   - url: https://rustsec.org/advisories/RUSTSEC-2020-0102.html
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2020-36209
-    reference_type:
-    reference_id: CVE-2020-36209
