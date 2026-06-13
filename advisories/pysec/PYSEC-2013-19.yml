@@ -8,18 +8,18 @@ summary: Cross-site scripting (XSS) vulnerability in the AdminURLFieldWidget wid
   in Django 1.5.x before 1.5.2 and 1.6.x before 1.6 beta 2 allows remote attackers to inject
   arbitrary web script or HTML via a URLField.
 impacted_packages:
-  - purl: pkg:github/django/django
-    affected_versions:
-    fixed_versions:
+  - purl: pkg:pypi/django
+    affected_versions: vers:pypi/1.5|1.5.1
+    fixed_versions: vers:pypi/1.5.2
     fixed_in_commits:
       - vcs_url: https://github.com/django/django
         commit: 90363e388c61874add3f3557ee654a996ec75d78
       - vcs_url: https://github.com/django/django
         commit: cbe6d5568f4f5053ed7228ca3c3d0cce77cf9560
     introduced_in_commits: []
-  - purl: pkg:pypi/django
-    affected_versions: vers:pypi/1.5|1.5.1
-    fixed_versions: vers:pypi/1.5.2
+  - purl: pkg:github/django/django
+    affected_versions:
+    fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/django/django
         commit: 90363e388c61874add3f3557ee654a996ec75d78
