@@ -13,15 +13,15 @@ summary: A vulnerability was found in MicroPython 1.23.0. It has been rated as c
   It is recommended to apply a patch to fix this issue. In micropython objint component, converting
   zero from int to bytes leads to heap buffer-overflow-write at mpz_as_bytes.
 impacted_packages:
-  - purl: pkg:github/micropython/micropython
-    affected_versions:
+  - purl: pkg:pypi/micropython-os
+    affected_versions: vers:pypi/0.2.3|0.2.4|0.3|0.3.1|0.4.1|0.4.2|0.4.3|0.4.4|0.6|0.7|0.7.1|0.8
     fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/micropython/micropython
         commit: 908ab1ceca15ee6fd0ef82ca4cba770a3ec41894
     introduced_in_commits: []
-  - purl: pkg:pypi/micropython-os
-    affected_versions: vers:pypi/0.2.3|0.2.4|0.3|0.3.1|0.4.1|0.4.2|0.4.3|0.4.4|0.6|0.7|0.7.1|0.8
+  - purl: pkg:github/micropython/micropython
+    affected_versions:
     fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/micropython/micropython

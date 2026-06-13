@@ -3,22 +3,23 @@ datasource_id: pysec/PYSEC-2025-186
 datasource_url: https://osv-vulnerabilities.storage.googleapis.com/PyPI/all.zip
 aliases:
   - CVE-2025-6272
+  - GHSA-rrmw-gv85-w824
 summary: A vulnerability has been found in wasm3 0.5.0 and classified as problematic. This vulnerability
   affects the function MarkSlotAllocated of the file source/m3_compile.c. The manipulation leads
   to out-of-bounds write. An attack has to be approached locally. The exploit has been disclosed
   to the public and may be used.
 impacted_packages:
+  - purl: pkg:pypi/pywasm3
+    affected_versions: vers:pypi/0.0.1|0.0.2|0.4.8|0.4.9|0.5.0
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:github/user-attachments/files
     affected_versions:
     fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/user-attachments/files
         commit: 19516600
-    introduced_in_commits: []
-  - purl: pkg:pypi/pywasm3
-    affected_versions: vers:pypi/0.0.1|0.0.2|0.4.8|0.4.9|0.5.0
-    fixed_versions:
-    fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '1.9'

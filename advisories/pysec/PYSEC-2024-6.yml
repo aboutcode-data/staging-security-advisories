@@ -11,17 +11,16 @@ summary: cdo-local-uuid project provides a specialized UUID-generating function 
   (matching the pattern `0.x.0`) at and since `0.5.0`, before `0.15.0`. The vulnerability stems
   from a Python function, `cdo_local_uuid.local_uuid()`, and its original implementation `case_utils.local_uuid()`.
 impacted_packages:
-  - purl: pkg:github/cyber-domain-ontology/cdo-utility-local-uuid
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/cyber-domain-ontology/cdo-utility-local-uuid
-        commit: 9e78f7cb1075728d0aafc918514f32a1392cd235
-    introduced_in_commits: []
   - purl: pkg:pypi/cdo-local-uuid
     affected_versions: vers:pypi/0.4.0|0.5.0
     fixed_versions:
     fixed_in_commits:
+      - vcs_url: https://github.com/cyber-domain-ontology/cdo-utility-local-uuid
+        commit: 9e78f7cb1075728d0aafc918514f32a1392cd235
+      - vcs_url: https://github.com/casework/case-utilities-python
+        commit: 00864cd12de7c50d882dd1a74915d32e939c25f9
+      - vcs_url: https://github.com/casework/case-utilities-python
+        commit: 1cccae8eb3cf94b3a28f6490efa0fbf5c82ebd6b
       - vcs_url: https://github.com/casework/case-utilities-python
         commit: 5acb929dfb599709d1c8c90d1824dd79e0fd9e10
       - vcs_url: https://github.com/casework/case-utilities-python
@@ -38,12 +37,13 @@ impacted_packages:
         commit: fca7388f09feccd3b9ea88e6df9c7a43a5349452
       - vcs_url: https://github.com/casework/case-utilities-python
         commit: fdc32414eccfcbde6be0fd91b7f491cc0779b02d
+    introduced_in_commits: []
+  - purl: pkg:github/cyber-domain-ontology/cdo-utility-local-uuid
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
       - vcs_url: https://github.com/cyber-domain-ontology/cdo-utility-local-uuid
         commit: 9e78f7cb1075728d0aafc918514f32a1392cd235
-      - vcs_url: https://github.com/casework/case-utilities-python
-        commit: 00864cd12de7c50d882dd1a74915d32e939c25f9
-      - vcs_url: https://github.com/casework/case-utilities-python
-        commit: 1cccae8eb3cf94b3a28f6490efa0fbf5c82ebd6b
     introduced_in_commits: []
   - purl: pkg:github/casework/case-utilities-python
     affected_versions:
