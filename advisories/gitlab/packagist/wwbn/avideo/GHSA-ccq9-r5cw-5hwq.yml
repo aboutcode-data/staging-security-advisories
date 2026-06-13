@@ -5,10 +5,10 @@ aliases:
   - GHSA-ccq9-r5cw-5hwq
 summary: |
   WWBN AVideo has CORS Origin Reflection with Credentials on Sensitive API Endpoints Enables Cross-Origin Account Takeover
-  The `allowOrigin($allowAll=true)` function in `objects/functions.php` reflects any arbitrary `Origin` header back in `Access-Control-Allow-Origin` along with `Access-Control-Allow-Credentials: true`. This function is called by both `plugin/API/get.json.php` and `plugin/API/set.json.php` — the primary API endpoints that handle user data retrieval, authentication, livestream credentials, and state-changing operations. Combined with the application's `SameSite=None` session cookie policy, any website can make credentialed cross-origin requests and read authenticated API responses, enabling theft of user PII, livestream keys, and performing state changes on behalf of the victim.
+  This advisory has been withdrawn.
 impacted_packages:
   - purl: pkg:composer/wwbn/avideo
-    affected_versions: vers:composer/<=29.0.0
+    affected_versions: vers:composer/<0.0.0
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []

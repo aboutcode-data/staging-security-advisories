@@ -5,10 +5,10 @@ aliases:
   - GHSA-6rc6-p838-686f
 summary: |
   WWBN AVideo has a Path Traversal in Locale Save Endpoint Enables Arbitrary PHP File Write to Any Web-Accessible Directory (RCE)
-  The locale save endpoint (`locale/save.php`) constructs a file path by directly concatenating `$_POST['flag']` into the path at line 30 without any sanitization. The `$_POST['code']` parameter is then written verbatim to that path via `fwrite()` at line 40. An admin attacker (or any user who can CSRF an admin, since no CSRF token is checked and cookies use `SameSite=None`) can traverse out of the `locale/` directory and write arbitrary `.php` files to any writable location on the filesystem, achieving Remote Code Execution.
+  This advisory has been withdrawn.
 impacted_packages:
   - purl: pkg:composer/wwbn/avideo
-    affected_versions: vers:composer/<=29.0.0
+    affected_versions: vers:composer/<0.0.0
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []

@@ -5,10 +5,10 @@ aliases:
   - GHSA-hg7g-56h5-5pqr
 summary: |
   CAPTCHA Bypass in WWBN/AVideo via Attacker-Controlled Length Parameter and Missing Token Invalidation on Failure
-  `objects/getCaptcha.php` accepts the CAPTCHA length (`ql`) directly from the query string with no clamping or sanitization, letting any unauthenticated client force the server to generate a 1-character CAPTCHA word. Combined with a case-insensitive `strcasecmp` comparison over a ~33-character alphabet and the fact that failed validations do NOT consume the stored session token, an attacker can trivially brute-force the CAPTCHA on any endpoint that relies on `Captcha::validation()` (user registration, password recovery, contact form, etc.) in at most ~33 requests per session.
+  This advisory has been withdrawn.
 impacted_packages:
   - purl: pkg:composer/wwbn/avideo
-    affected_versions: vers:composer/<=29.0.0
+    affected_versions: vers:composer/<0.0.0
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []

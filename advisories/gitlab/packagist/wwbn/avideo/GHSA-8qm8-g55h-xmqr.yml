@@ -5,10 +5,10 @@ aliases:
   - GHSA-8qm8-g55h-xmqr
 summary: |
   WWBN AVideo is missing CSRF protection in objects/commentDelete.json.php enables mass comment deletion against moderators and content creators
-  `objects/commentDelete.json.php` is a state-mutating JSON endpoint that deletes comments but performs no CSRF validation. It does not call `forbidIfIsUntrustedRequest()`, does not verify a CSRF/global token, and does not check `Origin`/`Referer`. Because AVideo intentionally sets `session.cookie_samesite=None` (to support cross-origin embed players), a cross-site request from any attacker-controlled page automatically carries the victim's `PHPSESSID`. Any authenticated victim who has authority to delete one or more comments (site moderators, video owners, and comment authors) can be tricked into deleting comments en masse simply by visiting an attacker page.
+  This advisory has been withdrawn.
 impacted_packages:
   - purl: pkg:composer/wwbn/avideo
-    affected_versions: vers:composer/<=29.0.0
+    affected_versions: vers:composer/<0.0.0
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []

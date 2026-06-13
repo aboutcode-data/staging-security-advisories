@@ -5,10 +5,10 @@ aliases:
   - GHSA-ffw8-fwxp-h64w
 summary: |
   WWBN AVideo has Multiple CSRF Vulnerabilities in Admin JSON Endpoints (Category CRUD, Plugin Update Script)
-  Three admin-only JSON endpoints — `objects/categoryAddNew.json.php`, `objects/categoryDelete.json.php`, and `objects/pluginRunUpdateScript.json.php` — enforce only a role check (`Category::canCreateCategory()` / `User::isAdmin()`) and perform state-changing actions against the database without calling `isGlobalTokenValid()` or `forbidIfIsUntrustedRequest()`. Peer endpoints in the same directory (`pluginSwitch.json.php`, `pluginRunDatabaseScript.json.php`) do enforce the CSRF token, so the missing checks are an omission rather than a design choice. An attacker who lures a logged-in admin to a malicious page can create, update, or delete categories and force execution of any installed plugin's `updateScript()` method in the admin's session.
+  This advisory has been withdrawn.
 impacted_packages:
   - purl: pkg:composer/wwbn/avideo
-    affected_versions: vers:composer/<=29.0.0
+    affected_versions: vers:composer/<0.0.0
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
