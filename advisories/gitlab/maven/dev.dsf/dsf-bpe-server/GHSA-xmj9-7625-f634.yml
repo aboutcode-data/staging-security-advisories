@@ -5,11 +5,10 @@ aliases:
   - GHSA-xmj9-7625-f634
 summary: |
   Data Sharing Framework has an Inverted Time Comparison in OIDC JWKS and Token Cache
-  - The OIDC JWKS and Metadata Document caches used an inverted time comparison (`isBefore` instead of `isAfter`), causing the cache to **never return cached values**. Every incoming request triggered a fresh HTTP fetch of the OIDC Metadata Document and JWKS keys from the OIDC provider.
-  - The OIDC token cache for the [FHIR client connections](https://dsf.dev/operations/v2.1.0/bpe/fhir-client-connections.html) used an inverted time comparison (`isBefore` instead of `isAfter`), causing the cache to **never invalidate**. Every incoming request returned the same OIDC token even if expired.
+  This advisory has been withdrawn.
 impacted_packages:
   - purl: pkg:maven/dev.dsf/dsf-bpe-server
-    affected_versions: vers:maven/None
+    affected_versions: vers:maven/<0
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
@@ -18,9 +17,9 @@ impacted_packages:
     fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/datasharingframework/dsf
-        commit: 31c2e974dfd4351756104ee8c53dbcd666192fef
-      - vcs_url: https://github.com/datasharingframework/dsf
         commit: d3ca59b4daccde16a006fedeccce28fd1f826908
+      - vcs_url: https://github.com/datasharingframework/dsf
+        commit: 31c2e974dfd4351756104ee8c53dbcd666192fef
     introduced_in_commits: []
 severities:
   - score: None
