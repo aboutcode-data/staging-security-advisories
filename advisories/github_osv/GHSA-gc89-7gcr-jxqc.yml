@@ -27,7 +27,14 @@ summary: "Buildkit credentials inlined to Git URLs could end up in provenance at
   \ be disabled by setting `BUILDX_GIT_INFO=0`. `buildctl` does not set VCS hints based on `.git`\
   \ directory, and values would need to be passed manually with `--opt`.\n\n\n### References\n\
   - Inline credentials in URLs deprecated in RFC3986 https://www.rfc-editor.org/rfc/rfc3986#section-3.2.1"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/moby/buildkit
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/moby/buildkit
+        commit: 75123c696506bdbca1ed69906479e200f1b62604
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1

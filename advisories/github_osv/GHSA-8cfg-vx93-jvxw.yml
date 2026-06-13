@@ -6,7 +6,27 @@ aliases:
 summary: |
   Kubernetes client-go vulnerable to Sensitive Information Leak via Log File
   In Kubernetes, if the logging level is set to at least 9, authorization and bearer tokens will be written to log files. This can occur both in API server logs and client tool output like kubectl. This affects <= v1.19.5, <= v1.18.13, <= v1.17.15, < v1.20.0-alpha2.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/kubernetes/client-go
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/kubernetes/client-go
+        commit: 44e1a07f2d513e375c4b6ee6e890040b47befe86
+      - vcs_url: https://github.com/kubernetes/client-go
+        commit: e8f871a2e5fadf90fc114565abc0963967f1a373
+      - vcs_url: https://github.com/kubernetes/client-go
+        commit: 1b8383fc150c9b816b0072032cca75754c2734d0
+      - vcs_url: https://github.com/kubernetes/client-go
+        commit: 19875a3d5a2e0d4f51c976a9e0662de3c2c011e3
+    introduced_in_commits: []
+  - purl: pkg:github/kubernetes/kubernetes
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/kubernetes/kubernetes
+        commit: e99df0e5a75eb6e86123b56d53e9b7ca0fd00419
+    introduced_in_commits: []
 severities:
   - score: '4.7'
     scoring_system: cvssv3.1

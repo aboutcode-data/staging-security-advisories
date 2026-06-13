@@ -20,7 +20,14 @@ summary: |
   6. The proxy upgrades the client connection to TLS, presenting a certificate issued by a certificate authority present in the client's keychain. In the previous step the `host` was set to the common name of said certificate
   7. `rustls` accepts the certificate, having verified that the common name matches the attacker-controlled value it was given
   9. The client has been fooled by the MitM proxy into accepting the attacker-controlled certificate
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/nats-io/nats.rs
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/nats-io/nats.rs
+        commit: 9bacb86a480803ece9d1a45aa443081cf1eb815c
+    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual

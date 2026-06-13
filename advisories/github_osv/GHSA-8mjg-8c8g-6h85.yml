@@ -6,7 +6,14 @@ aliases:
 summary: |
   Kubernetes Sensitive Information leak via Log File
   In Kubernetes clusters using a logging level of at least 4, processing a malformed docker config file will result in the contents of the docker config file being leaked, which can include pull secrets or other registry credentials. This affects < v1.19.3, < v1.18.10, < v1.17.13.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/kubernetes/kubernetes
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/kubernetes/kubernetes
+        commit: 11793434dac97a49bfed0150b56ac63e5dc34634
+    introduced_in_commits: []
 severities:
   - score: '4.7'
     scoring_system: cvssv3.1

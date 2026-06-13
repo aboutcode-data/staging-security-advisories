@@ -26,7 +26,14 @@ summary: "Blst has logical error in SigValidate in Go bindings\n### Impact\n\nBl
   \ to update if their application is affected or alternatively omit the complementary infinity\
   \ check.\n\n### Credits\n\nA special thanks to Yunjong Jeong (@blukat29) for the discovery\
   \ and disclosure of this vulnerability."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/supranational/blst
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/supranational/blst
+        commit: fb91221c91c82f65bfc7f243256308977a06d48b
+    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual

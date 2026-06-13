@@ -18,6 +18,11 @@ summary: |
   - HPACK varints have an encoding quirk whereby an infinite number of 0’s can be added at the start of an integer. gRPC’s hpack parser needed to read all of them before concluding a parse.
   - gRPC’s metadata overflow check was performed per frame, so that the following sequence of frames could cause infinite buffering: HEADERS: containing a: 1 CONTINUATION: containing a: 2 CONTINUATION: containing a: 3 etc…
 impacted_packages:
+  - purl: pkg:gem/grpc
+    affected_versions: vers:gem/>=1.55.0|<1.55.2
+    fixed_versions: vers:gem/1.55.2
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:pypi/grpcio
     affected_versions: vers:pypi/<1.53.2
     fixed_versions: vers:pypi/1.53.2
@@ -49,11 +54,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:gem/grpc
-    affected_versions: vers:gem/>=1.55.0|<1.55.2
-    fixed_versions: vers:gem/1.55.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:gem/grpc
     affected_versions: vers:gem/>=1.56.0|<1.56.2
     fixed_versions: vers:gem/1.56.2
     fixed_in_commits: []
@@ -76,15 +76,15 @@ references:
   - url: https://cloud.google.com/support/bulletins#gcp-2023-022
     reference_type:
     reference_id:
-  - url: https://github.com/advisories/GHSA-496j-2rq6-j6cc
-    reference_type:
-    reference_id:
-  - url: https://github.com/rubysec/ruby-advisory-db/blob/master/gems/grpc/CVE-2023-33953.yml
+  - url: https://security.snyk.io/vuln/SNYK-RUBY-GRPC-5834442
     reference_type:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2023-33953
     reference_type:
-    reference_id:
-  - url: https://security.snyk.io/vuln/SNYK-RUBY-GRPC-5834442
+    reference_id: CVE-2023-33953
+  - url: https://github.com/rubysec/ruby-advisory-db/blob/master/gems/grpc/CVE-2023-33953.yml
     reference_type:
-    reference_id:
+    reference_id: CVE-2023-33953.YML
+  - url: https://github.com/advisories/GHSA-496j-2rq6-j6cc
+    reference_type:
+    reference_id: GHSA-496j-2rq6-j6cc

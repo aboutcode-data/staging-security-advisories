@@ -7,6 +7,15 @@ summary: |
   Collection.js vulnerable to Prototype Pollution
   Versions of the package collection.js before 6.8.1 are vulnerable to Prototype Pollution via the `extend` function in `Collection.js/dist/node/iterators/extend.js`.
 impacted_packages:
+  - purl: pkg:github/kobezzza/collection
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/kobezzza/collection
+        commit: be32c48e68f49d3be48a58e929d1ab8ff1d2d19c
+      - vcs_url: https://github.com/kobezzza/collection
+        commit: d3d937645f62f37d3115d6aa90bb510fd856e6a2
+    introduced_in_commits: []
   - purl: pkg:npm/collection.js
     affected_versions: vers:npm/<6.8.1
     fixed_versions: vers:npm/6.8.1
@@ -41,9 +50,9 @@ references:
   - url: https://github.com/kobezzza/Collection/releases/tag/v6.8.1
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2023-26113
-    reference_type:
-    reference_id:
   - url: https://security.snyk.io/vuln/SNYK-JS-COLLECTIONJS-3185148
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2023-26113
+    reference_type:
+    reference_id: CVE-2023-26113

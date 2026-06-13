@@ -14,7 +14,14 @@ summary: |
 
   ### Workarounds
   Limit read access to the controller model to only trusted users.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/juju/juju
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/juju/juju
+        commit: ef803e2a13692d355b784b7da8b4b1f01dab1556
+    introduced_in_commits: []
 severities:
   - score: '4.9'
     scoring_system: cvssv3.1
@@ -27,8 +34,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-73
   - CWE-22
+  - CWE-73
 references:
   - url: https://bugs.launchpad.net/juju/+bug/1999622
     reference_type:

@@ -27,7 +27,14 @@ summary: "Credential disclosure in syft when SYFT_ATTEST_PASSWORD environment va
   \ grep 123456\n# \"123456\" is in the output\n```\n\n### Patches\n\nThe patch has been released\
   \ in v0.70.0.\n\n### Workarounds\n\nThere are no workarounds for this vulnerability.\n\n###\
   \ References\n\nPatch pull request: https://github.com/anchore/syft/pull/1538"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/anchore/syft
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/anchore/syft
+        commit: 9995950c70e849f9921919faffbfcf46401f71f3
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
@@ -40,8 +47,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-532
   - CWE-200
+  - CWE-532
 references:
   - url: https://github.com/anchore/syft
     reference_type:

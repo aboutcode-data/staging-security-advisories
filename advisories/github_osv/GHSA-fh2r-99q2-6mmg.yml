@@ -13,7 +13,16 @@ summary: |
   The original `webpki` crate is also affected, see [GHSA-8qv2-5vq6-g2g7](https://github.com/advisories/GHSA-8qv2-5vq6-g2g7).
 
   This was previously reported in the original crate <https://github.com/briansmith/webpki/issues/69> and re-reported to us recently.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/rustls/webpki
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/rustls/webpki
+        commit: 4ea052366f342a06344aab589565179b59b342d3
+      - vcs_url: https://github.com/rustls/webpki
+        commit: dcad2406c92169b72c110dd12183fcc74035b683
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

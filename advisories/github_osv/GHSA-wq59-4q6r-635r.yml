@@ -50,7 +50,14 @@ summary: |
   The impact is limited by the fact that the flaw becomes inexploitable after a first restart, and the attacker needs to know the username of existing users on the instance.
 
   For each known user, the attacker could mess with (create/delete/change) playlists, bookmarks, media annotations, shares (which are currently global) and radios. He is also able to get the user's email address (which is PII) with the `getUser` operation. And lastly he can use the media retrieval operations which could potentially affect the availability of the system.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/navidrome/navidrome
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/navidrome/navidrome
+        commit: 1132abb0135d1ecaebc41ed97a1e908a4ae02f7c
+    introduced_in_commits: []
 severities:
   - score: '8.6'
     scoring_system: cvssv3.1

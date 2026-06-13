@@ -19,7 +19,14 @@ summary: |
   ### Workarounds
   - Condition 1: Unshare the cgroup namespace (`(docker|podman|nerdctl) run --cgroupns=private)`. This is the default behavior of Docker/Podman/nerdctl on cgroup v2 hosts.
   - Condition 2 (very rare): add `/sys/fs/cgroup` to `maskedPaths`
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/opencontainers/runc
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/opencontainers/runc
+        commit: 0d62b950e60f6980b54fe3bafd9a9c608dc1df17
+    introduced_in_commits: []
 severities:
   - score: '2.5'
     scoring_system: cvssv3.1

@@ -6,7 +6,14 @@ aliases:
 summary: |
   Elastic Beats inserts sensitive information into log file
   An issue was discovered by Elastic whereby Beats and Elastic Agent would log a raw event in its own logs at the WARN or ERROR level if ingesting that event to Elasticsearch failed with any 4xx HTTP status code except 409 or 429. Depending on the nature of the event that Beats or Elastic Agent attempted to ingest, this could lead to the insertion of sensitive or private information in the Beats or Elastic Agent logs. Elastic has released 8.11.3 and 7.17.16 that prevents this issue by limiting these types of logs to DEBUG level logging, which is disabled by default.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/elastic/beats
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/elastic/beats
+        commit: 9bd7de84ab9c31bb4e1c0a348a7b7c26817a0996
+    introduced_in_commits: []
 severities:
   - score: '6.8'
     scoring_system: cvssv3.1

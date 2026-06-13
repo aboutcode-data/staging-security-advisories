@@ -18,7 +18,14 @@ summary: "github-slug-action vulnerable to arbitrary code execution\n### Impact\
   \ is a set of blog posts by Github's security team explaining this issue.\n\n### Thanks\n\n\
   Thanks to the team of researchers from Purdue University, who are working on finding vulnerabilities\
   \ in CI/CD configurations of open-source software. Their tool detected this security vulnerability."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/rlespinasse/github-slug-action
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/rlespinasse/github-slug-action
+        commit: 102b1a064a9b145e56556e22b18b19c624538d94
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
@@ -49,5 +56,5 @@ references:
     reference_type:
     reference_id:
   - url: https://securitylab.github.com/research/github-actions-untrusted-input
-    reference_type:
-    reference_id:
+    reference_type: other
+    reference_id: github-actions-untrusted-input

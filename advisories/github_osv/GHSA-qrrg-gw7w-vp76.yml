@@ -73,7 +73,20 @@ summary: "Grafana Stored Cross-site Scripting in Graphite FunctionDescription to
   \ used. I would advise to use the same here as rst2html itself will just leave HTML untouched\
   \ when parsing the expected reStructuredText from Graphite. So now when it is applied using\
   \ dangerouslySetInnerHTML our XSS payload will survive."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/grafana/grafana
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/grafana/grafana
+        commit: ef2eb2b6bf1d7c0fb781e3e05d0d1aecd6dd438a
+      - vcs_url: https://github.com/grafana/grafana
+        commit: 42911348a76e8484396b951bef8b7bff97a84cbc
+      - vcs_url: https://github.com/grafana/grafana
+        commit: e59427c0747ae2f3feb1bfc3a4b87f0886208cc6
+      - vcs_url: https://github.com/grafana/grafana
+        commit: f9548d33f8624d6694983fe5aad181007405be8a
+    introduced_in_commits: []
 severities:
   - score: '6.2'
     scoring_system: cvssv3.1

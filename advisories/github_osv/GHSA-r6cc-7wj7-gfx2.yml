@@ -6,7 +6,16 @@ aliases:
 summary: |
   Kubernetes csi-proxy vulnerable to privilege escalation due to improper input validation
   Kubernetes is vulnerable to privilege escalation when a user that can create pods on Windows nodes running kubernetes-csi-proxy may be able to escalate to admin privileges on those nodes. Kubernetes clusters are only affected if they include Windows nodes running kubernetes-csi-proxy.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/kubernetes-csi/csi-proxy
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/kubernetes-csi/csi-proxy
+        commit: 2523e6674dedf3de27f84235efec28555da24664
+      - vcs_url: https://github.com/kubernetes-csi/csi-proxy
+        commit: 0e83a68159111e4ee510f5aa56d47ba97bda60c7
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1

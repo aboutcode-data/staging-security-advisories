@@ -9,7 +9,16 @@ summary: |
 
   ## Original Description
   Versions of the package deno before 1.31.0 are vulnerable to Regular Expression Denial of Service (ReDoS) due to the upgradeWebSocket function, which contains regexes in the form of /s*,s*/, used for splitting the Connection/Upgrade header. A specially crafted Connection/Upgrade header can be used to significantly slow down a web socket server. This issue has been patched in version 1.31.0.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/denoland/deno
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/denoland/deno
+        commit: 2b247be517d789a37e532849e2e40b724af0918f
+      - vcs_url: https://github.com/denoland/deno
+        commit: cf06a7c7e672880e1b38598fe445e2c50b4a9d06
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

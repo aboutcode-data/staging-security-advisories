@@ -6,7 +6,14 @@ aliases:
 summary: |
   Cross Site Scripting in usememos/memos
   All versions of the package github.com/usememos/memos/server prior to 0.11.0 are vulnerable to Cross-site Scripting (XSS) due to insufficient checks on external resources, which allows malicious actors to introduce links starting with a javascript: scheme.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/usememos/memos
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/usememos/memos
+        commit: b11d2130a084385eb65c3761a3c841ebe9f81ae8
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1

@@ -23,7 +23,14 @@ summary: "ewen-lbh/ffcss Late-Unicode normalization vulnerability\n### Summary\n
   \ security impact is classified as low.\n\n### Remediation\n\nA simple fix would be to initially\
   \ perform the Unicode normalization and then the rest of validations.\n\n### References\n\n\
   \ - https://sim4n6.beehiiv.com/p/unicode-characters-bypass-security-checks"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/ewen-lbh/ffcss
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/ewen-lbh/ffcss
+        commit: f9c491874b858a32fcae15045f169fd7d02f90dc
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
@@ -36,8 +43,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-176
   - CWE-74
+  - CWE-176
 references:
   - url: https://github.com/ewen-lbh/ffcss
     reference_type:

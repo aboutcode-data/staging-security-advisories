@@ -38,7 +38,14 @@ summary: |
   To report a security issue in containerd:
   * [Report a new vulnerability](https://github.com/containerd/containerd/security/advisories/new)
   * Email us at [security@containerd.io](mailto:security@containerd.io)
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/containerd/containerd
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/containerd/containerd
+        commit: 133f6bb6cd827ce35a5fb279c1ead12b9d21460a
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
@@ -51,8 +58,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-863
   - CWE-269
+  - CWE-863
 references:
   - url: https://github.com/advisories/GHSA-4wjj-jwc9-2x96
     reference_type:

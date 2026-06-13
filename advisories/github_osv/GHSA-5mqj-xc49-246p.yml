@@ -6,7 +6,14 @@ aliases:
 summary: |
   crewjam/saml vulnerable to Denial Of Service Via Deflate Decompression Bomb
   Our use of flate.NewReader does not limit the size of the input. The user could pass more than 1 MB of data in the HTTP request to the processing functions, which will be decompressed server-side using the Deflate algorithm. Therefore, after repeating the same request multiple times, it is possible to achieve a reliable crash since the operating system kills the process.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/crewjam/saml
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/crewjam/saml
+        commit: 8e9236867d176ad6338c870a84e2039aef8a5021
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

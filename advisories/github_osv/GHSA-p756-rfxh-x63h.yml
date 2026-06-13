@@ -18,7 +18,14 @@ summary: |
   ### Workarounds
 
   If users absolutely cannot upgrade to `v3` or higher than they should be extra diligent of the other GitHub actions they are using in a workflow and ensure that their GitHub actions runner is secure.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/azure/setup-kubectl
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/azure/setup-kubectl
+        commit: d449d75495d2b9d1463555bb00ca3dca77a42ab6
+    introduced_in_commits: []
 severities:
   - score: '3.0'
     scoring_system: cvssv3.1

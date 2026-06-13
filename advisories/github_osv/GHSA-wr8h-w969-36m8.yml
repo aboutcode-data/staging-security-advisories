@@ -6,7 +6,14 @@ aliases:
 summary: |
   GoPistolet vulnerable to Improper Resource Shutdown or Release
   A vulnerability was found in GoPistolet. It has been declared as problematic. This vulnerability affects unknown code of the component MTA. The manipulation leads to denial of service. Continious delivery with rolling releases is used by this product. Therefore, no version details of affected nor updated releases are available. The name of the patch is b91aa4674d460993765884e8463c70e6d886bc90. It is recommended to apply a patch to fix this issue. VDB-221506 is the identifier assigned to this vulnerability.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/gopistolet/gopistolet
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/gopistolet/gopistolet
+        commit: b91aa4674d460993765884e8463c70e6d886bc90
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -30,12 +37,12 @@ references:
   - url: https://github.com/gopistolet/gopistolet/pull/27
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2015-10085
+    reference_type:
+    reference_id:
   - url: https://vuldb.com/?ctiid.221506
     reference_type:
     reference_id:
   - url: https://vuldb.com/?id.221506
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2015-10085
-    reference_type:
-    reference_id: CVE-2015-10085

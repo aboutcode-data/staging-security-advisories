@@ -6,7 +6,14 @@ aliases:
 summary: |
   etcd denial of service vulnerability
   Etcd v3.5.4 allows remote attackers to cause a denial of service via function PageWriter.write in pagewriter.go
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/etcd-io/etcd
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/etcd-io/etcd
+        commit: 5a315ef88fbfa454e02d27b0b8acb4f89457cd90
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

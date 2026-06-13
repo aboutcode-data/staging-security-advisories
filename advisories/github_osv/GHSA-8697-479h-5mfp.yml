@@ -14,7 +14,14 @@ summary: "Weaviate denial of service vulnerability\n### Impact\nThis vulnerabili
   \ upgrading.\nUsers must upgrade to a patched version to mitigate the risk.\n\n### References\
   \ \n* https://github.com/weaviate/weaviate/releases/tag/v1.18.6\n* https://github.com/weaviate/weaviate/releases/tag/v1.19.13\n\
   * https://github.com/weaviate/weaviate/releases/tag/v1.20.6"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/weaviate/weaviate
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/weaviate/weaviate
+        commit: 2a7b208d9aca07e28969e3be82689c184ccf9118
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

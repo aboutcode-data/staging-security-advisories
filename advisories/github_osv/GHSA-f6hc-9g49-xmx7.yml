@@ -13,7 +13,14 @@ summary: "nistec has Incorrect Calculation in Multiplication of unreduced P-256 
   \ the addition inputs can't be the same.\n> \n> As part of the math/big rewrite, we went however\
   \ from always reducing the scalar to only checking its length, under the incorrect assumption\
   \ that the scalar multiplication loop didn't require reduction."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/filosottile/nistec
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/filosottile/nistec
+        commit: c58aa1223ccf3943513e1e661cebce95af137244
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

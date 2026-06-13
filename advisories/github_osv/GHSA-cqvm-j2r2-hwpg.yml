@@ -42,7 +42,16 @@ summary: |
   Connections between a russh client and server or those of a russh peer with some other misbehaving peer are most likely to be problematic. These may vulnerable to eavesdropping.
 
   Most other implementations reject such keys, so this is mainly an interoperability issue in such a case.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/warp-tech/russh
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/warp-tech/russh
+        commit: 45d2d82930bf4a675bd57abfafec8fe4065befcd
+      - vcs_url: https://github.com/warp-tech/russh
+        commit: d831a3716d3719dc76f091fcea9d94bd4ef97c6e
+    introduced_in_commits: []
 severities:
   - score: '5.9'
     scoring_system: cvssv3.1
@@ -55,8 +64,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-20
   - CWE-347
+  - CWE-20
 references:
   - url: https://github.com/warp-tech/russh
     reference_type:

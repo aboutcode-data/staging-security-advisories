@@ -85,11 +85,23 @@ summary: |
   Either one of the following solutions will work.
   1. Change the signature of the `decode` function to ensure that the algorithm is set in that call
   2. Check whether or not the secret could be a public key in the decode function and in that case, set the key to be a public key.
+
+
+  > Fixed in 4.0.0. Both encode and decode now reject combinations where the key type (PEM vs plain secret) doesn't match the algorithm family. Upgrade with npm install json-web-token@^4.
 impacted_packages:
   - purl: pkg:npm/json-web-token
     affected_versions: vers:npm/<=3.1.1
-    fixed_versions:
+    fixed_versions: vers:npm/4.0.0
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/joaquimserafim/json-web-token
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/joaquimserafim/json-web-token
+        commit: b6e56b1346f48432d29133c76b65222ad93956b7
+      - vcs_url: https://github.com/joaquimserafim/json-web-token
+        commit: acf6a462471e1b14187eb77414e9161b8b7bff7e
     introduced_in_commits: []
 severities:
   - score: '7.5'
@@ -103,8 +115,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-20
   - CWE-345
+  - CWE-20
 references:
   - url: https://github.com/joaquimserafim/json-web-token
     reference_type:
@@ -112,9 +124,12 @@ references:
   - url: https://github.com/joaquimserafim/json-web-token/blob/acf6a462471e1b14187eb77414e9161b8b7bff7e/index.js#L86
     reference_type:
     reference_id:
-  - url: https://github.com/joaquimserafim/json-web-token/security/advisories/GHSA-4xw9-cx39-r355
+  - url: https://github.com/joaquimserafim/json-web-token/commit/b6e56b1346f48432d29133c76b65222ad93956b7
     reference_type:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2023-48238
     reference_type:
-    reference_id:
+    reference_id: CVE-2023-48238
+  - url: https://github.com/joaquimserafim/json-web-token/security/advisories/GHSA-4xw9-cx39-r355
+    reference_type:
+    reference_id: GHSA-4xw9-cx39-r355

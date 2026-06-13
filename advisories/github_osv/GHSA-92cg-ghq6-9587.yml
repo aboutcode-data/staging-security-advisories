@@ -9,7 +9,14 @@ summary: |
 
   ## Original Description
   SAP BTP Security Services Integration Library ([Golang] github.com/sap/cloud-security-client-go) - versions < 0.17.0, allow under certain conditions an escalation of privileges. On successful exploitation, an unauthenticated attacker can obtain arbitrary permissions within the application.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/sap/cloud-security-client-go
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/sap/cloud-security-client-go
+        commit: 2e3bd63e152e09f267316a1071034eb5d4b7f498
+    introduced_in_commits: []
 severities:
   - score: '9.1'
     scoring_system: cvssv3.1
@@ -22,9 +29,9 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-269
   - CWE-639
   - CWE-749
+  - CWE-269
 references:
   - url: https://blogs.sap.com/2023/12/12/unveiling-critical-security-updates-sap-btp-security-note-3411067
     reference_type:
@@ -33,9 +40,6 @@ references:
     reference_type:
     reference_id:
   - url: https://github.com/SAP/cloud-security-client-go/commit/2e3bd63e152e09f267316a1071034eb5d4b7f498
-    reference_type:
-    reference_id:
-  - url: https://github.com/SAP/cloud-security-services-integration-library/security/advisories/GHSA-59c9-pxq8-9c73
     reference_type:
     reference_id:
   - url: https://me.sap.com/notes/3411067
@@ -50,3 +54,6 @@ references:
   - url: https://www.sap.com/documents/2022/02/fa865ea4-167e-0010-bca6-c68f7e60039b.html
     reference_type:
     reference_id:
+  - url: https://github.com/SAP/cloud-security-services-integration-library/security/advisories/GHSA-59c9-pxq8-9c73
+    reference_type:
+    reference_id: GHSA-59c9-pxq8-9c73

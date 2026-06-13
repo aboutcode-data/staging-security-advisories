@@ -6,7 +6,14 @@ aliases:
 summary: |
   golang.org/x/crypto/ssh Man-in-the-Middle attack
   The Go SSH library (golang.org/x/crypto/ssh) by default does not verify host keys, facilitating man-in-the-middle attacks if ClientConfig.HostKeyCallback is not set. Default behavior changed in commit e4e2799 to require explicitly registering a hostkey verification mechanism.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/golang/crypto
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/golang/crypto
+        commit: e4e2799dd7aab89f583e1d898300d96367750991
+    introduced_in_commits: []
 severities:
   - score: '8.1'
     scoring_system: cvssv3.1
@@ -44,6 +51,9 @@ references:
   - url: https://go.googlesource.com/crypto/+/e4e2799dd7aab89f583e1d898300d96367750991
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2017-3204
+    reference_type:
+    reference_id:
   - url: https://pkg.go.dev/vuln/GO-2020-0013
     reference_type:
     reference_id:
@@ -53,6 +63,3 @@ references:
   - url: https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2017-3204
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2017-3204
-    reference_type:
-    reference_id: CVE-2017-3204

@@ -33,7 +33,16 @@ summary: |
   We recommend users always excercise care in which package they download, by only including trusted dependencies in their projects. Please note that even with these vulnerabilities fixed, by design Cargo allows arbitrary code execution at build time thanks to build scripts and procedural macros: a malicious dependency will be able to cause damage regardless of these vulnerabilities.
 
   crates.io has server-side checks preventing this attack, and there are no packages on crates.io exploiting these vulnerabilities. crates.io users still need to excercise care in choosing their dependencies though, as remote code execution is allowed by design there as well.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/rust-lang/cargo
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/rust-lang/cargo
+        commit: 9835622853f08be9a4b58ebe29dcec8f43b64b33
+      - vcs_url: https://github.com/rust-lang/cargo
+        commit: f975722a0eac934c0722f111f107c4ea2f5c4365
+    introduced_in_commits: []
 severities:
   - score: LOW
     scoring_system: generic_textual

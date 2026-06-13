@@ -17,7 +17,14 @@ summary: "Capsule Proxy Authentication bypass using an empty token\nThe privileg
   \ the proxy\n```\ncurl -g -k -H 'Authorization: Bearer   f' -X 'GET' 'https://localhost:9001/api/v1/namespaces'\n\
   ```\n\n# Impact\n\nThe whole cluster is exposed to unauthorised users.\n\nThis privilege escalation\
   \ cannot be exploited if you're relying only on client certificates (SSL/TLS)."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/projectcapsule/capsule-proxy
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/projectcapsule/capsule-proxy
+        commit: 472404f7006a4152e4eec76dee07324dd1e6e823
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1

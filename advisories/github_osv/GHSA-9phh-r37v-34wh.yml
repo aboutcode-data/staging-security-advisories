@@ -12,7 +12,14 @@ summary: "lakeFS vulnerable to Arbitrary JavaScript Injection via Direct Link to
   \ the malicious HTML file to one or more repositories. It also depends on the victim receiving\
   \ and opening the link to the malicious HTML file.\n\n### Patches\nThis is fixed in lakeFS\
   \ version 0.106.0\n\n### Workarounds\nThere are no known workarounds at this time."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/treeverse/lakefs
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/treeverse/lakefs
+        commit: 2b2a9fa156ad80b0aac043e17533b546b1800603
+    introduced_in_commits: []
 severities:
   - score: '5.8'
     scoring_system: cvssv3.1

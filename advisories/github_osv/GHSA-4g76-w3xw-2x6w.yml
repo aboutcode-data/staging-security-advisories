@@ -11,7 +11,16 @@ summary: "Full authentication bypass if SASL authorization username is specified
   \nThere is no way to fix the issue without upgrading.\n\n### References\n\n* Commit that introduced\
   \ the vulnerable code: https://github.com/foxcpp/maddy/commit/55a91a37b71210f34f98f4d327c30308fe24399a\n\
   * Fix: https://github.com/foxcpp/maddy/commit/9f58cb64b39cdc01928ec463bdb198c4c2313a9c"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/foxcpp/maddy
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/foxcpp/maddy
+        commit: 55a91a37b71210f34f98f4d327c30308fe24399a
+      - vcs_url: https://github.com/foxcpp/maddy
+        commit: 9f58cb64b39cdc01928ec463bdb198c4c2313a9c
+    introduced_in_commits: []
 severities:
   - score: '9.1'
     scoring_system: cvssv3.1

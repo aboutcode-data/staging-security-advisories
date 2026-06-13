@@ -11,7 +11,16 @@ summary: "Netmaker has Hardcoded DNS Secret Key\n### Impact \nHardcoded DNS key 
   \ or later.\n\n### Workarounds\nIf using 0.17.1, can just pull the latest docker image of\
   \ backend and restart server.\n\n### References\nCredit to Project Discovery, and in particular\
   \ https://github.com/rootxharsh , https://github.com/iamnoooob, and https://github.com/projectdiscovery"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/gravitl/netmaker
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/gravitl/netmaker
+        commit: 9362c39a9a822f0e07361aa7c77af2610597e657
+      - vcs_url: https://github.com/gravitl/netmaker
+        commit: 1621c27c1d176b639e9768b2acad7693e387fd51
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
