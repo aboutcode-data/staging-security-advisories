@@ -6,7 +6,16 @@ aliases:
 summary: |
   Mattermost Incorrect Authorization vulnerability
   Mattermost versions 10.5.x <= 10.5.5, 9.11.x <= 9.11.15, 10.8.x <= 10.8.0, 10.7.x <= 10.7.2, 10.6.x <= 10.6.5 fail to properly enforce channel member management permissions when adding participants to playbook runs. This allows authenticated users with member-level permissions to bypass system admin restrictions and add or remove users to/from private channels via the playbook run participants feature, even when the 'Manage Members' permission has been explicitly removed. This can lead to unauthorized access to sensitive channel content and allow guest users to gain channel management privileges.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 4ae5d647fb8893d77dccbb57d114855939a775ce
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 31142f101e3cce6171e2b6cb4980a1aa8eaefae0
+    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1

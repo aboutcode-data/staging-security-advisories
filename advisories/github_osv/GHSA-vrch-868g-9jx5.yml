@@ -36,7 +36,14 @@ summary: "Traefik allows path traversal using url encoding\n## Impact\n\nThere i
   \ property which disables all path traversals. Steps:\n1. Decode URL\n2. Evaluate and construct\
   \ relative path (do traversal before route evaluation)\n3. Compare relative/evaluated path\
   \ to configured routes (PathPrefix/pathRegexp)\n</details>"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/traefik/traefik
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/traefik/traefik
+        commit: 08d5dfee0164aa54dd44a467870042e18e8d3f00
+    introduced_in_commits: []
 severities:
   - score: '2.9'
     scoring_system: cvssv4

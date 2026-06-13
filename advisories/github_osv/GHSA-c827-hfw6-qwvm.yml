@@ -62,7 +62,20 @@ summary: |
   As an example, Linux's various virtual file systems (e.g. `/proc`, `/sys`) can contain directories that spontaneously pop in and out of existence. Attempting to iterate over them using `rustix::fs::Dir` directly or indirectly (e.g. with the `procfs` crate) can trigger this fault condition if the implementation decides to continue on errors.
 
   An attacker knowledgeable about the implementation details of a vulnerable target can therefore try to trigger this fault condition via any one or a combination of several available APIs. If successful, the application host will quickly run out of memory, after which the application will likely be terminated by an OOM killer, leading to denial of service.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/bytecodealliance/rustix
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/bytecodealliance/rustix
+        commit: df3c3a192cf144af0da8a57417fb4addbdc611f6
+      - vcs_url: https://github.com/bytecodealliance/rustix
+        commit: eecece4a84fc58eafdc809cc2cedd374dee876a5
+      - vcs_url: https://github.com/bytecodealliance/rustix
+        commit: 31fd98ca723b93cc6101a3e29843ea5cf094e159
+      - vcs_url: https://github.com/bytecodealliance/rustix
+        commit: 87481a97f4364d12d5d6f30cdd025a0fc509b8ec
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
@@ -95,15 +108,15 @@ references:
   - url: https://github.com/bytecodealliance/rustix/commit/eecece4a84fc58eafdc809cc2cedd374dee876a5
     reference_type:
     reference_id:
-  - url: https://github.com/bytecodealliance/rustix/security/advisories/GHSA-c827-hfw6-qwvm
-    reference_type:
-    reference_id:
-  - url: https://github.com/imsnif/bandwhich/issues/284
-    reference_type:
-    reference_id:
   - url: https://github.com/imsnif/bandwhich/issues/284#issuecomment-1754321993
     reference_type:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-43806
     reference_type:
     reference_id:
+  - url: https://github.com/imsnif/bandwhich/issues/284
+    reference_type: other
+    reference_id: 284
+  - url: https://github.com/bytecodealliance/rustix/security/advisories/GHSA-c827-hfw6-qwvm
+    reference_type: other
+    reference_id: GHSA-c827-hfw6-qwvm

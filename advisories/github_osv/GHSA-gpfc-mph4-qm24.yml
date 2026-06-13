@@ -14,7 +14,14 @@ summary: "Velociraptor vulnerable to privilege escalation via UpdateConfig artif
   \ command execution and endpoint takeover.\n\nTo successfully exploit this vulnerability the\
   \ user must already have access to collect artifacts from the endpoint (i.e. have the COLLECT_CLIENT\
   \ given typically by the \"Investigator' role)."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/velocidex/velociraptor
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/velocidex/velociraptor
+        commit: 21e7fd7138ddaa798cad35fd929864f6bb0c4e9c
+    introduced_in_commits: []
 severities:
   - score: '4.7'
     scoring_system: cvssv3.1

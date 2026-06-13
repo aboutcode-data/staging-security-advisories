@@ -58,7 +58,16 @@ summary: "Incus Allocation of Resources Without Limits allows firewall rule bypa
   \ dnsmasq until another lease expires. If machine1 renews their malicious leases, machine2\
   \ will never get a lease.\n\n### Impact\n\nAll versions since a7c33301738aede3c035063e973b1d885d9bac7c,\
   \ so basically v6.12 and v6.13."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/lxc/incus
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/lxc/incus
+        commit: a7c33301738aede3c035063e973b1d885d9bac7c
+      - vcs_url: https://github.com/lxc/incus
+        commit: 2516fb19ad8428454cb4edfe70c0a5f0dc1da214
+    introduced_in_commits: []
 severities:
   - score: '3.4'
     scoring_system: cvssv3.1

@@ -20,7 +20,14 @@ summary: "Harbor timing attack risk\nIn the Harbor jobservice container, the com
   \ 1.10.18\n\n### Workarounds\nBecause the jobservice only exposes HTTP service to harbor-core\
   \ containers, blocking any inbound traffic from the external network to the jobservice container\
   \ can reduce the risk.\n\n### Credits\nThanks to Porcupiney Hairs for reporting this issue."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/goharbor/harbor
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/goharbor/harbor
+        commit: aaea068cceb4063ab89313d9785f2b40f35b0d63
+    introduced_in_commits: []
 severities:
   - score: '5.9'
     scoring_system: cvssv3.1
@@ -33,8 +40,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-208
   - CWE-362
+  - CWE-208
 references:
   - url: https://github.com/goharbor/harbor
     reference_type:

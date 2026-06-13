@@ -3,18 +3,24 @@ datasource_id: github_osv/GHSA-3q2w-42mv-cph4
 datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/06/GHSA-3q2w-42mv-cph4/GHSA-3q2w-42mv-cph4.json
 aliases:
   - CVE-2025-52903
-summary: "filebrowser Allows Shell Commands to Spawn Other Commands\n## Summary ##\n\nThe *Command\
-  \ Execution* feature of File Browser only allows the execution of shell command which have\
-  \ been predefined on a user-specific allowlist. Many tools allow the execution of arbitrary\
-  \ different commands, rendering this limitation void.\n\n## Impact ##\n\nThe concrete impact\
-  \ depends on the commands being granted to the attacker, but the large number of standard\
-  \ commands allowing the execution of subcommands makes it likely that every user having the\
-  \ `Execute commands` permissions can exploit this vulnerability. Everyone who can exploit\
-  \ it will have full code execution rights with the *uid* of the server process.\n\n## Vulnerability\
-  \ Description ##\n\nMany Linux commands allow the execution of arbitrary different commands.\
-  \ For example, if a user is authorized to run only the `find` command and nothing else, this\
-  \ restriction can be circumvented by using the `-exec` flag.\n\nSome common commands having\
-  \ the ability to launch external commands and which are included in the official container\
+summary: "filebrowser Allows Shell Commands to Spawn Other Commands\n> [!NOTE]\n> **This feature\
+  \ has been disabled by default for all installations from v2.33.8 onwards, including for existent\
+  \ installations**. To exploit this vulnerability, the instance administrator must turn on\
+  \ a feature and ignore all the warnings about known vulnerabilities. We're publishing this\
+  \ new advisory to make it clear that all vulnerabilities concerning this feature are disclosed.\n\
+  >\n> For more information about tracking vulnerability issues related to the Command Execution\
+  \ features, check https://github.com/filebrowser/filebrowser/issues/5199.\n\n## Summary ##\n\
+  \nThe *Command Execution* feature of File Browser only allows the execution of shell command\
+  \ which have been predefined on a user-specific allowlist. Many tools allow the execution\
+  \ of arbitrary different commands, rendering this limitation void.\n\n## Impact ##\n\nThe\
+  \ concrete impact depends on the commands being granted to the attacker, but the large number\
+  \ of standard commands allowing the execution of subcommands makes it likely that every user\
+  \ having the `Execute commands` permissions can exploit this vulnerability. Everyone who can\
+  \ exploit it will have full code execution rights with the *uid* of the server process.\n\n\
+  ## Vulnerability Description ##\n\nMany Linux commands allow the execution of arbitrary different\
+  \ commands. For example, if a user is authorized to run only the `find` command and nothing\
+  \ else, this restriction can be circumvented by using the `-exec` flag.\n\nSome common commands\
+  \ having the ability to launch external commands and which are included in the official container\
   \ image of Filebrowser are listed below. The website <https://gtfobins.github.io> gives a\
   \ comprehensive overview:\n\n* <https://gtfobins.github.io/gtfobins/cpio>\n* <https://gtfobins.github.io/gtfobins/find>\n\
   * <https://gtfobins.github.io/gtfobins/sed>\n* <https://gtfobins.github.io/gtfobins/git>\n\
@@ -44,7 +50,14 @@ summary: "filebrowser Allows Shell Commands to Spawn Other Commands\n## Summary 
   * [\"Distroless\" Container Images.](https://github.com/GoogleContainerTools/distroless)\n\
   * [Original Advisory](https://github.com/sbaresearch/advisories/tree/public/2025/SBA-ADV-20250326-02_Filebrowser_Shell_Commands_Can_Spawn_Other_Commands)\n\
   \ \n## Credits ##\n\n* Mathias Tausig ([SBA Research](https://www.sba-research.org/))"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/filebrowser/filebrowser
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/filebrowser/filebrowser
+        commit: 4d830f707fc4314741fd431e70c2ce50cd5a3108
+    introduced_in_commits: []
 severities:
   - score: '8.0'
     scoring_system: cvssv3.1
@@ -58,9 +71,9 @@ severities:
     url:
 weaknesses:
   - CWE-183
-  - CWE-88
   - CWE-77
   - CWE-749
+  - CWE-88
 references:
   - url: https://github.com/filebrowser/filebrowser
     reference_type:
@@ -74,7 +87,13 @@ references:
   - url: https://github.com/filebrowser/filebrowser/security/advisories/GHSA-3q2w-42mv-cph4
     reference_type:
     reference_id:
+  - url: https://github.com/GoogleContainerTools/distroless
+    reference_type:
+    reference_id:
   - url: https://github.com/sbaresearch/advisories/tree/public/2025/SBA-ADV-20250326-02_Filebrowser_Shell_Commands_Can_Spawn_Other_Commands
+    reference_type:
+    reference_id:
+  - url: https://manpages.debian.org/bookworm/util-linux/prlimit.1.en.html
     reference_type:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2025-52903

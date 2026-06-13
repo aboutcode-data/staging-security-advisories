@@ -38,7 +38,14 @@ summary: "Cromwell GitHub Actions Secrets exfiltration via `Issue_comment`\n### 
   \n- Scope GIHTUB_TOKEN permissions to just what the actions needs to do. In this case, if\
   \ it's specific for issues:\n```\npermissions:\n  issues: write\n```\n\nKindly reported by\
   \ @darryk10 @AlbertoPellitteri @loresuso"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/broadinstitute/cromwell
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/broadinstitute/cromwell
+        commit: dc2c26abd31149e296f73ce4e43a36c0c0317b0d
+    introduced_in_commits: []
 severities:
   - score: '9.1'
     scoring_system: cvssv3.1

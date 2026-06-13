@@ -18,7 +18,14 @@ summary: "xkeys seal encryption used fixed key for all encryption\n## Background
   \  \nFor any application handling auth callouts in Go, if using the nkeys library, update\
   \ the dependency, recompile and deploy that in lockstep.\n\n## Credits\n\nProblem reported\
   \ by Quentin Matillat (GitHub @tinou98)."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/nats-io/nkeys
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/nats-io/nkeys
+        commit: 58fb9d69f42ea73fffad1d14e5914dc666f3daa1
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

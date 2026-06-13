@@ -6,7 +6,14 @@ aliases:
 summary: |
   free5GC udm vulnerable to Invalid Curve Attack
   pkg/suci/suci.go in free5GC udm before 1.2.0, when Go before 1.19 is used, allows an Invalid Curve Attack because it may compute a shared secret via an uncompressed public key that has not been validated. An attacker can send arbitrary SUCIs to the UDM, which tries to decrypt them via both its private key and the attacker's public key.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/free5gc/udm
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/free5gc/udm
+        commit: 5e1479cc686f058992557669b13fd3761a1b6024
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

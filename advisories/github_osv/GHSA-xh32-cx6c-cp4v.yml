@@ -15,7 +15,14 @@ summary: "Gogs XSS allowed by stored call in PDF renderer\n### Summary\n\nA stor
   \n### PoC\n\n1. Upload the Proof of Concept file hosted at https://codeanlabs.com/wp-content/uploads/2024/05/poc_generalized_CVE-2024-4367.pdf\
   \ in a repository.\n2. Click on the file to be previewed.\n\n![poc](https://github.com/user-attachments/assets/5af1303e-8751-49c8-af2e-d0631dd18957)\n\
   \n\n### Credits\n\nEdoardo Ottavianelli"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/gogs/gogs
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/gogs/gogs
+        commit: 110117b2e5e5baa4809c819bec701e929d2d8d40
+    introduced_in_commits: []
 severities:
   - score: '6.3'
     scoring_system: cvssv3.1
@@ -36,9 +43,6 @@ references:
   - url: https://github.com/gogs/gogs/commit/110117b2e5e5baa4809c819bec701e929d2d8d40
     reference_type:
     reference_id:
-  - url: https://github.com/gogs/gogs/releases/tag/v0.13.3
-    reference_type:
-    reference_id:
   - url: https://github.com/gogs/gogs/security/advisories/GHSA-xh32-cx6c-cp4v
     reference_type:
     reference_id:
@@ -48,3 +52,6 @@ references:
   - url: https://www.hacktivesecurity.com/blog/2025/07/15/cve-2025-47943-stored-xss-in-gogs-via-pdf
     reference_type:
     reference_id:
+  - url: https://github.com/gogs/gogs/releases/tag/v0.13.3
+    reference_type: other
+    reference_id: v0.13.3

@@ -16,7 +16,14 @@ summary: "Gogs allows deletion of internal files which leads to remote command e
   Unprivileged user accounts can execute arbitrary commands on the Gogs instance with the privileges\
   \ of the account specified by `RUN_USER` in the configuration. It allows attackers to access\
   \ and alter any users' code hosted on the same instance."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/gogs/gogs
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/gogs/gogs
+        commit: 77a4a945ae9a87f77e392e9066b560edb71b5de9
+    introduced_in_commits: []
 severities:
   - score: '10.0'
     scoring_system: cvssv3.1
@@ -37,15 +44,15 @@ references:
   - url: https://github.com/gogs/gogs
     reference_type:
     reference_id:
-  - url: https://github.com/gogs/gogs/commit/77a4a945ae9a87f77e392e9066b560edb71b5de9
-    reference_type:
-    reference_id:
-  - url: https://github.com/gogs/gogs/releases/tag/v0.13.3
-    reference_type:
-    reference_id:
-  - url: https://github.com/gogs/gogs/security/advisories/GHSA-wj44-9vcg-wjq7
-    reference_type:
-    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-56731
     reference_type:
     reference_id:
+  - url: https://github.com/gogs/gogs/commit/77a4a945ae9a87f77e392e9066b560edb71b5de9
+    reference_type: other
+    reference_id: 77a4a945ae9a87f77e392e9066b560edb71b5de9
+  - url: https://github.com/gogs/gogs/security/advisories/GHSA-wj44-9vcg-wjq7
+    reference_type: other
+    reference_id: GHSA-wj44-9vcg-wjq7
+  - url: https://github.com/gogs/gogs/releases/tag/v0.13.3
+    reference_type: other
+    reference_id: v0.13.3

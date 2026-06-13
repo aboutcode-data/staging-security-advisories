@@ -19,7 +19,14 @@ summary: |
 
   ### Workarounds
   There is no workaround for the Group membership bug. But `--gitlab-project` can be set to use Project membership as the authorization checks instead of groups; it is not broken.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/oauth2-proxy/oauth2-proxy
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/oauth2-proxy/oauth2-proxy
+        commit: 0279fa7dff1752f1710707dbd1ffac839de8bbfc
+    introduced_in_commits: []
 severities:
   - score: '5.5'
     scoring_system: cvssv3.1
@@ -32,8 +39,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-863
   - CWE-285
+  - CWE-863
 references:
   - url: https://docs.gitlab.com/ee/user/group
     reference_type:

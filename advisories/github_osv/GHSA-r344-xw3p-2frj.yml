@@ -18,7 +18,14 @@ summary: "Apollo Router vulnerable to Improper Check or Handling of Exceptional 
   ```yml\n# disable defer and subscriptions:\nsupergraph:\n  defer_support: false # enabled\
   \ by default\nsubscription:\n  enabled: false # disabled by default\n```\nand continue to\
   \ use the coprocessor supergraph response.\n### References\nhttps://github.com/apollographql/router/issues/4013"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/apollographql/router
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apollographql/router
+        commit: b917b8c117b46a2d508428c0856f4927dfcfc341
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

@@ -49,7 +49,14 @@ summary: |
   ### Suggested Fix
 
   - Blacklist some function for templates like env, expandEnv and fail as they can be used to leak environment variables which leads to a full takeover.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/knadh/listmonk
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/knadh/listmonk
+        commit: d27d2c32cf3af2d0b24e29ea5a686ba149b49b3e
+    introduced_in_commits: []
 severities:
   - score: '9.0'
     scoring_system: cvssv3.1

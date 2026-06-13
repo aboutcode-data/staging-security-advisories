@@ -37,7 +37,14 @@ summary: "chi Allows Host Header Injection which Leads to Open Redirect in Redir
   \ to redirect to a different host, a flag can be added to use the Host header instead. As\
   \ this flag will be controlled by the developer they will make the decision of allowing redirects\
   \ to arbitrary hosts  based on their judgement."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/go-chi/chi
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/go-chi/chi
+        commit: 1be7ad938cc9c5b39a9dea01a5c518848928ab65
+    introduced_in_commits: []
 severities:
   - score: '5.1'
     scoring_system: cvssv4

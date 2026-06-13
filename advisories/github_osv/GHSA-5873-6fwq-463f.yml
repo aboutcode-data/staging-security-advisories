@@ -12,7 +12,14 @@ summary: "stellar-strkey vulnerable to panic in SignedPayload::from_payload\n###
   \ 0.0.8\n\n### Workarounds\nSanitize input payload before it is passed to the vulnerable function\
   \ so that bytes in `payload[32..32+4]` and parsed as a `u32` is not above 64.\n\n### References\n\
   GitHub issue #58"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/stellar/rs-stellar-strkey
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/stellar/rs-stellar-strkey
+        commit: 83adad0f5b1cda693c7ba8524d395add8077865f
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1

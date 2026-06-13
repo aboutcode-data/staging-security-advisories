@@ -11,7 +11,14 @@ summary: |
   ```
   terminated with errors error="unable to create migration driver for postgres: parse \"postgres://spicedb:<PASSWORD IN PLAINTEXT>": invalid port \"<PASSWORD IN PLAINTEXT>\" after host"
   ```
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/authzed/spicedb
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/authzed/spicedb
+        commit: ae50421b80f895e4c98d999b18e06b6f1e6f1cf8
+    introduced_in_commits: []
 severities:
   - score: '4.2'
     scoring_system: cvssv3.1

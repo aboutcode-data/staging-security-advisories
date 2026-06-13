@@ -35,7 +35,14 @@ summary: "NATS.io: Adding accounts for just the system account adds auth bypass\
   \ entries to be inside a named account in the \"accounts\" block\n\n\n## Credits\n\nProblem\
   \ reported by Alex Herrington.  \nAddressed publicly in a GitHub Discussion prior to this\
   \ advisory."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/nats-io/nats-server
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/nats-io/nats-server
+        commit: fa5b7afcb64e7e887e49afdd032358802b5c4478
+    introduced_in_commits: []
 severities:
   - score: HIGH
     scoring_system: generic_textual

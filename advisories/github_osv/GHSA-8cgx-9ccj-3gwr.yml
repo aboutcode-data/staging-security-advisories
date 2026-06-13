@@ -6,7 +6,14 @@ aliases:
 summary: |
   Mattermost fails to clear Google OAuth credentials
   Mattermost versions 10.7.x <= 10.7.0, 10.6.x <= 10.6.2, 10.5.x <= 10.5.3, 9.11.x <= 9.11.12 fail to clear Google OAuth credentials when converting user accounts to bot accounts, allowing attackers to gain unauthorized access to bot accounts via the Google OAuth signup flow.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 04676582cdd26f4fdfa78fcf60a7f8745e6b27f5
+    introduced_in_commits: []
 severities:
   - score: '4.2'
     scoring_system: cvssv3.1

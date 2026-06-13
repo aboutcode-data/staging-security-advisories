@@ -6,7 +6,16 @@ aliases:
 summary: |
   Mattermost allows guest users to view information about public teams they are not members of
   Mattermost versions 10.5.x <= 10.5.4, 9.11.x <= 9.11.13 fail to properly restrict API access to team information, allowing guest users to bypass permissions and view information about public teams they are not members of via a direct API call to /api/v4/teams/{team_id}.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 2138a5f2ca6f75e2b99f6a04ea569d0f680c4fab
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 701ddc896a107b13f457fbdbe229bce5019fc516
+    introduced_in_commits: []
 severities:
   - score: '3.1'
     scoring_system: cvssv3.1

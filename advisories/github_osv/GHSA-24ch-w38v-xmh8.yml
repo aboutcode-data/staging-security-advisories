@@ -42,7 +42,16 @@ summary: "Juju zip slip vulnerability via authenticated endpoint\n### Impact\n\n
   \ is that the incoming request be for an authenticated user\n\nhttps://github.com/juju/juju/blob/3.6/apiserver/apiserver.go#L754\n\
   \nbut no specific permission checks are done.\n\n### Workarounds\nThere are no known workarounds.\n\
   \n### References\n[F-02](https://drive.google.com/file/d/1pHRNiaA8LyMVJYwIyTqelsqJ9FmImDf0/view)"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/juju/juju
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/juju/juju
+        commit: ff39557a137c0e95d4cd3553b0f19c859c6f5d8e
+      - vcs_url: https://github.com/juju/juju
+        commit: 6356e984b82a4a7b9771ff5e51e297ad62f3b405
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1

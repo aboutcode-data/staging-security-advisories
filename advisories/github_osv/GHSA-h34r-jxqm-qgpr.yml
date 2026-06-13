@@ -23,7 +23,14 @@ summary: "juju/utils leaks private key in certs\n### Summary\n\nCerts generated 
   \ the client cert and its key would require getting the client to perform a TLS handshake\
   \ against an attacker-controlled server. At that point, an attacker could impersonate the\
   \ client."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/juju/utils
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/juju/utils
+        commit: 766f27d7bcd10433453a9764509a864c17a46a76
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1

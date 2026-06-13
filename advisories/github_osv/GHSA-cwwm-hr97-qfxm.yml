@@ -19,7 +19,14 @@ summary: "SpiceDB checks involving relations with caveats can result in no permi
   \ is returned as NO_PERMISSION when HAS_PERMISSION is the correct answer.\n\n### Patches\n\
   Upgrade to v1.44.2.\n\n### Workarounds\nDo not use caveats in your schema over an arrow’ed\
   \ relation."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/authzed/spicedb
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/authzed/spicedb
+        commit: fe8dd9f491f6975b3408c401e413a530eb181a67
+    introduced_in_commits: []
 severities:
   - score: '3.7'
     scoring_system: cvssv3.1

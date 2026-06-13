@@ -6,7 +6,14 @@ aliases:
 summary: |
   Mattermost has Insufficiently Protected Credentials
   Mattermost versions 10.5.x <= 10.5.7, 9.11.x <= 9.11.16 fail to negotiate a new token when accepting the invite which allows a user that intercepts both invite and password to send synchronization payloads to the server that originally created the invite via the REST API.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: fbf105f6ef8f6cd5a89f859f09a2d1216cd81c05
+    introduced_in_commits: []
 severities:
   - score: '2.2'
     scoring_system: cvssv3.1

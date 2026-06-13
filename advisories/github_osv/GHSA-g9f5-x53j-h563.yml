@@ -30,7 +30,14 @@ summary: "Prevent GitHub CLI and extensions from executing arbitrary commands fr
   \ to continue.\n\n### Impact\n\nSuccessful exploitation could cause users of the attacker-controlled\
   \ GitHub Enterprise Server to execute arbitrary commands.\n\n### Remediation and Mitigation\n\
   \n1. Upgrade `go-gh` to `2.12.1`"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/cli/go-gh
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/cli/go-gh
+        commit: a08820a13f257d6c5b4cb86d37db559ec6d14577
+    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual

@@ -25,7 +25,14 @@ summary: |
 
   ### Impact
   Anyone who has used this workflow action with a steam account is affected and has had valid authentication tokens leaked in the job logs. This is particularly bad for public repositories, as anyone with a GitHub account can access the logs and view the token.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/rageagainstthepixel/setup-steamcmd
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/rageagainstthepixel/setup-steamcmd
+        commit: 3e4e408e73bdd46822f1147b45eeeab050fd1ead
+    introduced_in_commits: []
 severities:
   - score: '8.7'
     scoring_system: cvssv4

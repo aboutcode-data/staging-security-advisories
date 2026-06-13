@@ -16,7 +16,14 @@ summary: "Cross-site Scripting via missing Binding syntax validation\n### Impact
   Users of the package can perform external validation of URLs provided in SAML metadata, or\
   \ restrict the ability for end-users to upload arbitrary metadata. \n\n### References\n\n\
   This issue was reported by Francesco Lacerenza from Doyensec."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/crewjam/saml
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/crewjam/saml
+        commit: b07b16cf83c4171d16da4d85608cb827f183cd79
+    introduced_in_commits: []
 severities:
   - score: '7.1'
     scoring_system: cvssv3.1

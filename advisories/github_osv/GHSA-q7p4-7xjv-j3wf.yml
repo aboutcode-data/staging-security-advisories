@@ -68,7 +68,14 @@ summary: "Fabio allows HTTP clients to manipulate custom headers it adds\n### Su
   \ Concerto RCE](https://projectdiscovery.io/blog/versa-concerto-authentication-bypass-rce).\n\
   \n### References\n-  [CVE-2024-45410](https://github.com/advisories/GHSA-62c8-mh53-4cqv) \n\
   -  [CVE-2022-31813](https://nvd.nist.gov/vuln/detail/CVE-2022-31813)\n- [Versa Concerto RCE](https://projectdiscovery.io/blog/versa-concerto-authentication-bypass-rce)"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/fabiolb/fabio
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/fabiolb/fabio
+        commit: fdaf1e966162e9dd3b347ffdd0647b39dc71a1a3
+    introduced_in_commits: []
 severities:
   - score: '9.1'
     scoring_system: cvssv3.1
@@ -81,8 +88,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-348
   - CWE-345
+  - CWE-348
 references:
   - url: https://github.com/fabiolb/fabio
     reference_type:

@@ -20,7 +20,14 @@ summary: "nosurf vulnerable to CSRF due to non-functional same-origin request ch
   \ same-origin` header in the request).\n\n### References\n\nhttps://github.com/advisories/GHSA-rq77-p4h8-4crw\n\
   https://github.com/justinas/nosurf-cve-2025-46721\nhttps://www.cve.org/CVERecord?id=CVE-2025-46721\n\
   https://github.com/justinas/nosurf/releases/tag/v1.2.0"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/justinas/nosurf
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/justinas/nosurf
+        commit: ec9bb776d8e5ba9e906b6eb70428f4e7b009feee
+    introduced_in_commits: []
 severities:
   - score: '6.0'
     scoring_system: cvssv4

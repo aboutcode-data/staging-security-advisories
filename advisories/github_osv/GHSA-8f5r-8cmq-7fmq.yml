@@ -18,7 +18,21 @@ summary: "OpenBao Inserts Sensitive Information into Log File when processing ma
   \ the affected secret is advised.\n\n### References\n\nSee also: https://discuss.hashicorp.com/t/hcsec-2025-09-vault-may-expose-sensitive-information-in-error-logs-when-processing-malformed-data-with-the-kv-v2-plugin/74717\n\
   \nSee also: https://github.com/go-viper/mapstructure/releases/tag/v2.3.0\n\nSee also: https://github.com/go-viper/mapstructure/pull/105\
   \ -> https://github.com/go-viper/mapstructure/commit/ed3f92181528ff776a0324107b8b55026e93766a"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/openbao/openbao
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openbao/openbao
+        commit: cf5e920badbf96b41253534a3fd5ff5063bf4b30
+    introduced_in_commits: []
+  - purl: pkg:github/go-viper/mapstructure
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/go-viper/mapstructure
+        commit: ed3f92181528ff776a0324107b8b55026e93766a
+    introduced_in_commits: []
 severities:
   - score: '4.5'
     scoring_system: cvssv3.1

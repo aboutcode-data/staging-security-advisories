@@ -38,7 +38,16 @@ summary: |
   # Use specific paths: "^/public/assets$", "^/public/health$"
   skip_auth_routes = ["^/public/assets$", "^/public/health$", "^/api/status$"]
    ```
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/oauth2-proxy/oauth2-proxy
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/oauth2-proxy/oauth2-proxy
+        commit: f4b33b64bd66ad28e9b0d63bea51837b83c00ca1
+      - vcs_url: https://github.com/oauth2-proxy/oauth2-proxy
+        commit: 9ffafad4b2d2f9f7668e5504565f356a7c047b77
+    introduced_in_commits: []
 severities:
   - score: '9.1'
     scoring_system: cvssv3.1

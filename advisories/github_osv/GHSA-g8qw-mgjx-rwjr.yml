@@ -26,7 +26,14 @@ summary: |
 
   ### Workarounds
   Configure the SSH server to not allow authenticating via authd, for example by setting `UsePAM no` or `KbdInteractiveAuthentication no` in the `sshd_config` (see https://documentation.ubuntu.com/authd/stable/howto/login-ssh/#ssh-configuration).
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/ubuntu/authd
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/ubuntu/authd
+        commit: 619ce8e55953b970f1765ddaad565081538151ab
+    introduced_in_commits: []
 severities:
   - score: '6.4'
     scoring_system: cvssv3.1
@@ -39,8 +46,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-269
   - CWE-266
+  - CWE-269
 references:
   - url: https://github.com/ubuntu/authd
     reference_type:

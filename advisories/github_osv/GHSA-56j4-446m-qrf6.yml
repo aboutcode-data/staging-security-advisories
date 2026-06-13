@@ -11,7 +11,14 @@ summary: |
   ### Impact
 
   Denial of Service - Due to panic in the `x/distribution` module `BeginBlocker` triggered by a error when sending fees  from `feeCollector` to `x/distribution` module - https://github.com/cosmos/cosmos-sdk/blob/main/x/distribution/keeper/allocation.go#L28 Babylon Genesis will halt
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/babylonlabs-io/babylon
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/babylonlabs-io/babylon
+        commit: fe67aebd5216e7d3afa1d7dee2a3f82e548556f3
+    introduced_in_commits: []
 severities:
   - score: '8.7'
     scoring_system: cvssv4

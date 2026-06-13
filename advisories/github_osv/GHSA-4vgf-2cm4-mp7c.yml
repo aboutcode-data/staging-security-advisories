@@ -9,7 +9,14 @@ summary: "Terraform WinDNS Provider improperly sanitizes input variables in `win
   \ to authenticated command injection in the underlyding powershell command prompt.\n\n## Patches:\n\
   \n[`83ef736 (fix: better input validation)`](https://github.com/nrkno/terraform-provider-windns/commit/c76f69610c1b502f90aaed8c4f102194530b5bce)\n\
   \  \n## Fixed versions:\n\n- `v1.0.5`"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/nrkno/terraform-provider-windns
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/nrkno/terraform-provider-windns
+        commit: c76f69610c1b502f90aaed8c4f102194530b5bce
+    introduced_in_commits: []
 severities:
   - score: '1.1'
     scoring_system: cvssv4

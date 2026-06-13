@@ -50,7 +50,14 @@ summary: "Cosmos EVM Allows Partial Precompile State Writes\n### Impact\nSetting
   \ for chains that make use of precompiles. A coordinated upgrade is necessary to patch the\
   \ issue.\n\n### Testing\nA test was introduced in the distribution precompile to ensure that\
   \ partial state writes no longer occur when a lower gas amount is set."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/cosmos/evm
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/cosmos/evm
+        commit: 0fff8c144b24effbcb3addd666150ba5989d631c
+    introduced_in_commits: []
 severities:
   - score: '8.3'
     scoring_system: cvssv4

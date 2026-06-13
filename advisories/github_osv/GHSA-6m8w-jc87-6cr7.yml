@@ -55,7 +55,14 @@ summary: "OPA server Data API HTTP path injection of Rego\n### Impact\n\nWhen ru
   \ only way to protect against malicious request paths. Path validation and sanitisation can\
   \ also be performed by connecting clients and 3rd party intermediaries, such as API gateways,\
   \ reverse proxies, etc."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/open-policy-agent/opa
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/open-policy-agent/opa
+        commit: ad2063247a14711882f18c387a511fc8094aa79c
+    introduced_in_commits: []
 severities:
   - score: '7.4'
     scoring_system: cvssv4
@@ -68,8 +75,8 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-78
   - CWE-94
+  - CWE-78
   - CWE-770
 references:
   - url: https://github.com/open-policy-agent/opa

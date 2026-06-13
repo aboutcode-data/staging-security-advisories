@@ -37,7 +37,14 @@ summary: |
   - [Go issue #22085](https://github.com/golang/go/issues/22085) for documenting the risks of exposing pprof to the internet
   - [Go issue #42834](https://github.com/golang/go/issues/42834) discusses preventing pprof registration to the default serve mux
   - [semgrep rule go.lang.security.audit.net.pprof.pprof-debug-exposure](https://semgrep.dev/r?q=go.lang.security.audit.net.pprof) checks for a variation of this issue
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/authzed/spicedb
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/authzed/spicedb
+        commit: 9bbd7d76b6eaba33fe0236014f9b175d21232999
+    introduced_in_commits: []
 severities:
   - score: '8.1'
     scoring_system: cvssv3.1

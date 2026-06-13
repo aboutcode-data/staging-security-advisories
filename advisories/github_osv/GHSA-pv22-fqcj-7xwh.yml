@@ -11,7 +11,14 @@ summary: "Inspektor Gadget Security Policies Can be Bypassed\nSecurity policies 
   \ TLS certificates on the `ig daemon` case or access to the cluster in the Kubernetes case.\
   \ \n\n### Patches\n\nThe issue has been fixed in v0.40.0\n\n### Workarounds\n\nThere is not\
   \ known workaround to fix it."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/inspektor-gadget/inspektor-gadget
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/inspektor-gadget/inspektor-gadget
+        commit: c51d419964f5b6f9344fcad4faba70e2e025212b
+    introduced_in_commits: []
 severities:
   - score: '6.7'
     scoring_system: cvssv3.1

@@ -6,7 +6,14 @@ aliases:
 summary: |
   Mattermost allows authenticated users to write files to arbitrary locations
   Mattermost versions 10.5.x <= 10.5.5, 9.11.x <= 9.11.15, 10.8.x <= 10.8.0, 10.7.x <= 10.7.2, 10.6.x <= 10.6.5 fail to sanitize filenames in the archive extractor which allows authenticated users to write files to arbitrary locations on the filesystem via uploading archives with path traversal sequences in filenames, potentially leading to remote code execution. The vulnerability impacts instances where file uploads and document search by content is enabled (FileSettings.EnableFileAttachments = true and FileSettings.ExtractContent = true). These configuration settings are enabled by default.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 65aec10162f612d98edf91cc66bf7e781868448b
+    introduced_in_commits: []
 severities:
   - score: '9.9'
     scoring_system: cvssv3.1

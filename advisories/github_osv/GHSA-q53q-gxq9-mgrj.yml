@@ -8,7 +8,14 @@ summary: |
   A cross-site scripting (XSS) vulnerability exists in Grafana caused by combining a client path traversal and open redirect. This allows attackers to redirect users to a website that hosts a frontend plugin that will execute arbitrary JavaScript. This vulnerability does not require editor permissions and if anonymous access is enabled, the XSS will work. If the Grafana Image Renderer plugin is installed, it is possible to exploit the open redirect to achieve a full read SSRF.
 
   The default Content-Security-Policy (CSP) in Grafana will block the XSS though the `connect-src` directive.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/grafana/grafana
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/grafana/grafana
+        commit: c7a690348df761d41b659224cbc50a46a0c0e4cc
+    introduced_in_commits: []
 severities:
   - score: '7.6'
     scoring_system: cvssv3.1
@@ -44,3 +51,6 @@ references:
   - url: https://www.exploit-db.com/exploits/52491
     reference_type:
     reference_id:
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/webapps/52491.txt
+    reference_type: exploit
+    reference_id: CVE-2025-4123

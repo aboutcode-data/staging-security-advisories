@@ -16,7 +16,16 @@ summary: "Jumpserver Koko vulnerable to remote code execution on the host system
   ```\nadmin> console.log(execSync(\"id; hostname;\").toString())\n/bin/sh: line 1: /bin/hostname:\
   \ Permission denied\n```\n\n### References\nThanks for **Oskar Zeino-Mahmalat** of [Sonar](https://sonarsource.com/)\
   \ found and report this vulnerability"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/jumpserver/koko
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/jumpserver/koko
+        commit: 7d80db95d17c8f42bdf50260dfc21dc2bd0452c2
+      - vcs_url: https://github.com/jumpserver/koko
+        commit: 857f8b9e41f0930dc6190a35d8601fffa5e884e7
+    introduced_in_commits: []
 severities:
   - score: '6.4'
     scoring_system: cvssv3.1

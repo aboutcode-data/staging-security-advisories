@@ -9,7 +9,14 @@ summary: |
 
   ###
   The protobuf crate before 3.7.2 for Rust allows uncontrolled recursion in the protobuf::coded_input_stream::CodedInputStream::skip_group parsing of unknown fields in untrusted input.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/stepancheg/rust-protobuf
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/stepancheg/rust-protobuf
+        commit: ee1d928785cff80cbdbedde29fbf5210654410f0
+    introduced_in_commits: []
 severities:
   - score: '5.9'
     scoring_system: cvssv3.1

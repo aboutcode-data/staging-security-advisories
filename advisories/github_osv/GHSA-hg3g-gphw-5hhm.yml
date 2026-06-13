@@ -29,7 +29,14 @@ summary: "Fiber panics when fiber.Ctx.BodyParser parses invalid range index\n###
   \ 0xc000010858?, 0x7ff424822108?}, {0xc00001c498, 0x17}, {0xc00014e2d0, 0x2, 0x2}, {0xc00002c710,\
   \ ...})\n[...]\n```\n\n### Impact\nAnyone using `fiber.Ctx.BodyParser` can/will have their\
   \ servers crashed when an invalid payload is sent"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/gofiber/fiber
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/gofiber/fiber
+        commit: e115c08b8f059a4a031b492aa9eef0712411853d
+    introduced_in_commits: []
 severities:
   - score: '7.7'
     scoring_system: cvssv4

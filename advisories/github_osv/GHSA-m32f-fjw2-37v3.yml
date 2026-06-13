@@ -15,7 +15,14 @@ summary: "Bullfrog's DNS over TCP bypasses domain filtering\n### Summary\n\nUsin
   \     dig api.github.com @1.1.1.1 +tcp || :\n\n          echo testing udp not allowed\n  \
   \        dig api.google.com @1.1.1.1 || :\n          echo testing tcp not allowed\n      \
   \    dig api.google.com @1.1.1.1 +tcp || :\n```\n\n### Impact\n\nsandbox bypass\n\n![image](https://github.com/user-attachments/assets/fba18a17-2d49-48cd-9aae-713e95b5270d)"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/bullfrogsec/bullfrog
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/bullfrogsec/bullfrog
+        commit: ae7744ae4b3a6f8ffc2e49f501e30bf1a43d4671
+    introduced_in_commits: []
 severities:
   - score: '6.2'
     scoring_system: cvssv3.1

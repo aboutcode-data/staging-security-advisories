@@ -53,7 +53,14 @@ summary: |
   3. **Potential Command Injection**: Since transcoding settings include command parameters, this could potentially lead to command injection if not properly sanitized
 
   In the threat model where administrators are trusted but regular users are not, this vulnerability represents a significant security risk when transcoding is enabled.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/navidrome/navidrome
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/navidrome/navidrome
+        commit: e5438552c63fecb6284e1b179dddae91ede869c8
+    introduced_in_commits: []
 severities:
   - score: '7.4'
     scoring_system: cvssv4

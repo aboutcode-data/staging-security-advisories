@@ -33,7 +33,14 @@ summary: |
   ### Workarounds
 
   In the function `batch_verify_multi_points`, the variable `random` (corresponding to `u` in the paper, step 12 of the [plonk](https://eprint.iacr.org/2019/953.pdf) verification process) should depend on `state_folded_digests_x`, `state_folded_digests_y`, `proof_grand_product_commitment_x`, `proof_grand_product_commitment_y` and `state_zeta` (by hashing those values for instance).
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/consensys/gnark
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/consensys/gnark
+        commit: 3421eaa7d544286abf3de8c46282b8d4da6d5da0
+    introduced_in_commits: []
 severities:
   - score: CRITICAL
     scoring_system: generic_textual

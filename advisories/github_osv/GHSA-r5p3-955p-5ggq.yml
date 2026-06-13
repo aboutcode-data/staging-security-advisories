@@ -86,7 +86,14 @@ summary: "Kyverno's Improper JMESPath Variable Evaluation Lead to Denial of Serv
   \n- Add robust `nil` handling in `getValueAsStringMap`.\n- Look into adding graceful error\
   \ handling in JMESPath substitution. Prevent evaluation errors (like undefined functions)\
   \ from resulting in `nil` values."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/kyverno/kyverno
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/kyverno/kyverno
+        commit: cbd7d4ca24de1c55396fc3295e9fc3215832be7c
+    introduced_in_commits: []
 severities:
   - score: '7.7'
     scoring_system: cvssv3.1

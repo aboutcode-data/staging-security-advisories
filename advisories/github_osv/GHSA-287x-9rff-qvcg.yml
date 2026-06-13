@@ -6,7 +6,14 @@ aliases:
 summary: |
   Rust Web Push is vulnerable to a DoS attack via a large integer in a Content-Length header
   The web-push crate before 0.10.4 for Rust allows a denial of service (memory consumption) in the built-in clients via a large integer in a Content-Length header. The patch was initially made available in version 0.10.3, but version 0.10.3 has since been yanked.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/pimeys/rust-web-push
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/pimeys/rust-web-push
+        commit: 8447ed86bf3f24629abd7022b94104bf3cd64453
+    introduced_in_commits: []
 severities:
   - score: '4.0'
     scoring_system: cvssv3.1

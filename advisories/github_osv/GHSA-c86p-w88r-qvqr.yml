@@ -9,7 +9,14 @@ summary: |
 
   ### Original Description
   A flaw was found in Rust's Ring package. A panic may be triggered when overflow checking is enabled. In the QUIC protocol, this flaw allows an attacker to induce this panic by sending a specially crafted packet. It will likely occur unintentionally in 1 out of every 2**32 packets sent or received.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/briansmith/ring
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/briansmith/ring
+        commit: ec2d3cf1d91f148c84e4806b4f0b3c98f6df3b38
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1

@@ -6,7 +6,14 @@ aliases:
 summary: |
   Mattermost fails to properly enforce access control restrictions for System Manager roles
   Mattermost versions 10.7.x <= 10.7.0, 10.5.x <= 10.5.3, 9.11.x <= 9.11.12 fails to properly enforce access control restrictions for System Manager roles, allowing authenticated users with System Manager privileges to view team details they should not have access to via direct API requests to team endpoints, even when explicitly configured with 'No access' to Teams in the System Console.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 6f33b721de76b39a7714bfe0d5e9c1306869a3e3
+    introduced_in_commits: []
 severities:
   - score: '3.1'
     scoring_system: cvssv3.1

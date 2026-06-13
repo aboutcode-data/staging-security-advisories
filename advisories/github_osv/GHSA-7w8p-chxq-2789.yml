@@ -44,7 +44,16 @@ summary: |
 
   ### Impact
   Software relying on the combination of both flags to allow access to most environment variables except a few sensitive ones will be vulnerable to malicious code trying to steal secrets using the Deno.env.toObject() method.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/denoland/deno
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/denoland/deno
+        commit: 2959e083912420988066a001c2b2d6732a1b562f
+      - vcs_url: https://github.com/denoland/deno
+        commit: 946ccda1aa19a00c478a5e6826b75053b050d753
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1

@@ -6,7 +6,14 @@ aliases:
 summary: |
   Mattermost improperly allows team administrators to modify team invites
   Mattermost versions 10.7.x <= 10.7.0, 10.6.x <= 10.6.2, 10.5.x <= 10.5.3, 9.11.x <= 9.11.12 fail to properly validate permissions when changing team privacy settings, allowing team administrators without the 'invite user' permission to access and modify team invite IDs via the /api/v4/teams/:teamId/privacy endpoint.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 02c76784380acb6802601bd24c205553b9a5a1be
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1

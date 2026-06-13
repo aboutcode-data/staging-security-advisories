@@ -8,7 +8,14 @@ summary: "Kube-proxy may unintentionally forward traffic\nKube-proxy on Windows 
   \ a LoadBalancer Service when the LoadBalancer controller does not set the `status.loadBalancer.ingress[].ip`\
   \ field. Clusters \nwhere the LoadBalancer controller sets the `status.loadBalancer.ingress[].ip`\
   \ field are unaffected."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/kubernetes/kubernetes
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/kubernetes/kubernetes
+        commit: b014610de3e5cf1bb0f7844b5758d29fc18b75e6
+    introduced_in_commits: []
 severities:
   - score: '5.8'
     scoring_system: cvssv3.1

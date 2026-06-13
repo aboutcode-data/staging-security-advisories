@@ -15,7 +15,14 @@ summary: "Possible ORM Leak Vulnerability in the Harbor\n### Impact\n\nAdministr
   \ are vulnerable to this ORM leak attack, and could potentially be exploitable by lower privileged\
   \ users to gain unauthorised access to other sensitive information. \n\n\n### Patches\nNo\
   \ available\n\n### Workarounds\nNA\n\n### References\n\n### Credit\nalex@elttam.com"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/goharbor/harbor
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/goharbor/harbor
+        commit: dce7d9f5cffbd0d0c5d27e7a2f816f65a930702c
+    introduced_in_commits: []
 severities:
   - score: '4.9'
     scoring_system: cvssv3.1

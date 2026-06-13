@@ -25,7 +25,21 @@ summary: |
   ### Workarounds
 
   Embedders who are using components or are not providing guest access to create more file descriptors (e.g. via a preopened filesystem directory) are not affected by this issue. Otherwise there is no workaround at this time and affected embeddings are recommended to update to a patched version which will not cause a panic in the host.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/bytecodealliance/wasmtime
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/bytecodealliance/wasmtime
+        commit: 037a6edadbc225decbea00a551aabf04203717d9
+    introduced_in_commits: []
+  - purl: pkg:github/webassembly/wasi
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/webassembly/wasi
+        commit: e1aa1cae4dda4c1f70f23fe11e922aae92f240a8
+    introduced_in_commits: []
 severities:
   - score: '3.5'
     scoring_system: cvssv3.1

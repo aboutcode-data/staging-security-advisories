@@ -9,7 +9,14 @@ summary: |
   Users with minimal permissions could gain unauthorized read access to GET endpoints in Alertmanager and Prometheus datasources.
 
   The issue primarily affects datasources that implement route-specific permissions, including Alertmanager and certain Prometheus-based datasources.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/grafana/grafana
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/grafana/grafana
+        commit: be8d153dc33734caba4f617ff571d18253e68fa0
+    introduced_in_commits: []
 severities:
   - score: '5.0'
     scoring_system: cvssv3.1

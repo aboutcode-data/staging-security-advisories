@@ -21,7 +21,25 @@ summary: "zkVM Underconstrained Vulnerability\nDue to a missing constraint in th
   \ do not need to take any action: zkVM version 2.1 is active on all official routers, and\
   \ version 2.0 has been disabled.\n\nSmart contract applications not using the verifier router\
   \ should update their contracts to send verification calls to the 2.1 version of the verifier."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/risc0/risc0
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/risc0/risc0
+        commit: 67f2d81c638bff5f4fcfe11a084ebb34799b7a89
+      - vcs_url: https://github.com/risc0/risc0
+        commit: 1873bbb8a56793edd1f6195242d184cf6cc5175d
+      - vcs_url: https://github.com/risc0/risc0
+        commit: 006d86c363b16d2b2ac42d32d832a209ff8ab4c9
+    introduced_in_commits: []
+  - purl: pkg:github/risc0/zirgen
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/risc0/zirgen
+        commit: e0e2918302c93e956f73ca2e44aef2b861d8c3ae
+    introduced_in_commits: []
 severities:
   - score: '2.7'
     scoring_system: cvssv4

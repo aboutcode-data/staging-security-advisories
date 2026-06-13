@@ -26,16 +26,6 @@ summary: |
 
   All OpenShift Container Platform 4.13 users are advised to upgrade to these updated packages and images when they are available in the appropriate release channel. To check for available updates, use the OpenShift CLI (oc) or web console. Instructions for upgrading a cluster are available at https://docs.openshift.com/container-platform/4.13/updating/updating-cluster-cli.html
 impacted_packages:
-  - purl: pkg:rpm/redhat/systemd-standalone-sysusers-debuginfo?arch=x86_64
-    affected_versions: vers:rpm/<252-14.el9_2.7
-    fixed_versions: vers:rpm/252-14.el9_2.7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/systemd-standalone-tmpfiles-debuginfo?arch=x86_64
-    affected_versions: vers:rpm/<252-14.el9_2.7
-    fixed_versions: vers:rpm/252-14.el9_2.7
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/cri-o?arch=src
     affected_versions: vers:rpm/<1.26.5-15.2.rhaos4.13.gitb742e63.el9
     fixed_versions: vers:rpm/1.26.5-15.2.rhaos4.13.gitb742e63.el9
@@ -44,11 +34,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/podman?arch=src&epoch=3
     affected_versions: vers:rpm/<4.4.1-8.3.rhaos4.13.el9
     fixed_versions: vers:rpm/4.4.1-8.3.rhaos4.13.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/systemd?arch=src
-    affected_versions: vers:rpm/<252-14.el9_2.7
-    fixed_versions: vers:rpm/252-14.el9_2.7
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/cri-o?arch=src
@@ -217,6 +202,16 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/systemd-resolved-debuginfo?arch=x86_64
+    affected_versions: vers:rpm/<252-14.el9_2.7
+    fixed_versions: vers:rpm/252-14.el9_2.7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/systemd-standalone-sysusers-debuginfo?arch=x86_64
+    affected_versions: vers:rpm/<252-14.el9_2.7
+    fixed_versions: vers:rpm/252-14.el9_2.7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/systemd-standalone-tmpfiles-debuginfo?arch=x86_64
     affected_versions: vers:rpm/<252-14.el9_2.7
     fixed_versions: vers:rpm/252-14.el9_2.7
     fixed_in_commits: []
@@ -1046,6 +1041,11 @@ impacted_packages:
     fixed_versions: vers:rpm/4.4.1-7.3.rhaos4.13.el8
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/systemd?arch=src
+    affected_versions: vers:rpm/<252-14.el9_2.7
+    fixed_versions: vers:rpm/252-14.el9_2.7
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: Important
     scoring_system: rhas
@@ -1060,12 +1060,12 @@ references:
   - url: https://access.redhat.com/security/updates/classification/#important
     reference_type:
     reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2265513
-    reference_type:
-    reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2024_2877.json
     reference_type:
     reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2265513
+    reference_type: bug
+    reference_id: 2265513
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2268854
     reference_type: bug
     reference_id: 2268854

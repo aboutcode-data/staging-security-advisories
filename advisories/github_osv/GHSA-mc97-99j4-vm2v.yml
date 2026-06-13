@@ -16,7 +16,14 @@ summary: "Soft Serve Public Key Authentication Bypass Vulnerability when Keyboar
   \ \n\n### Workarounds\n\nTo workaround this vulnerability without upgrading, users can _temporarily_\
   \ disable Keyboard-Interactive SSH Authentication using the `allow-keyless` setting.\n\n###\
   \ References\n\nhttps://github.com/charmbracelet/soft-serve/issues/389"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/charmbracelet/soft-serve
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/charmbracelet/soft-serve
+        commit: 407c4ec72d1006cee1ff8c1775e5bcc091c2bc89
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

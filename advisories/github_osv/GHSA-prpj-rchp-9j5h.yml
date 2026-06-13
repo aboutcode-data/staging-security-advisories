@@ -14,7 +14,14 @@ summary: "OpenBao allows cancellation of root rekey and recovery rekey operation
   \n### Workarounds\n\nIf an active proxy or load balancer sits in front of OpenBao, an operator\
   \ can deny requests to these endpoints from unauthorized IP ranges.\n\n### References\n\n\
   See the [deprecation notice](https://openbao.org/docs/deprecation/unauthed-rekey/)."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/openbao/openbao
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openbao/openbao
+        commit: fe75468822a22a88318c6079425357a02ae5b77b
+    introduced_in_commits: []
 severities:
   - score: '6.9'
     scoring_system: cvssv4

@@ -6,7 +6,14 @@ aliases:
 summary: |
   Mattermost Path Traversal vulnerability
   Mattermost versions 10.8.x <= 10.8.1, 10.7.x <= 10.7.3, 10.5.x <= 10.5.7, 9.11.x <= 9.11.16 fail to sanitize input paths of file attachments in the bulk import JSONL file, which allows a system admin to read arbitrary system files via path traversal.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: d38c27f96fcf754c36f231d1f2e9dbd48ad40bab
+    introduced_in_commits: []
 severities:
   - score: '6.8'
     scoring_system: cvssv3.1

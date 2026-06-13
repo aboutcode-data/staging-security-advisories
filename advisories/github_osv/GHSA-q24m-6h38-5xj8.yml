@@ -23,7 +23,14 @@ summary: |
 
   ### Workarounds
   Implement the `fmt.Stringer` interface in your custom credentials type with explicit stringify of object state.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/ydb-platform/ydb-go-sdk
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/ydb-platform/ydb-go-sdk
+        commit: a0d92057c4e1bbdc5e85ae8d649edb0232b8fd4c
+    introduced_in_commits: []
 severities:
   - score: '5.5'
     scoring_system: cvssv3.1

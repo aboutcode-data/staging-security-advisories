@@ -6,7 +6,14 @@ aliases:
 summary: |
   OSV-SCALIBR's Container Image Unpacking Vulnerable to Arbitrary File Write via Path Traversal
   Arbitrary file write as the OSV-SCALIBR user on the host system via a path traversal vulnerability when using OSV-SCALIBR's unpack() function for container images. Particularly, when using the CLI flag --remote-image on untrusted container images.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/google/osv-scalibr
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/google/osv-scalibr
+        commit: 2444419b1818c2d6917fc3394c947fb3276e9d59
+    introduced_in_commits: []
 severities:
   - score: '5.7'
     scoring_system: cvssv4
