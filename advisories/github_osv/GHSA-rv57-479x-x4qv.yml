@@ -8,11 +8,6 @@ summary: |
   phpMyAdmin 4.0.x before 4.0.10.16, 4.4.x before 4.4.15.7, and 4.6.x before 4.6.3 does not properly choose delimiters to prevent use of the preg_replace e (aka eval) modifier, which might allow remote attackers to execute arbitrary PHP code via a crafted string, as demonstrated by the table search-and-replace implementation.
 impacted_packages:
   - purl: pkg:composer/phpmyadmin/phpmyadmin
-    affected_versions: vers:composer/>=4.0.10+0|<4.0.10+16
-    fixed_versions: vers:composer/4.0.10+16
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/phpmyadmin/phpmyadmin
     affected_versions: vers:composer/>=4.4.15+0|<4.4.15+7
     fixed_versions: vers:composer/4.4.15+7
     fixed_in_commits: []
@@ -21,6 +16,20 @@ impacted_packages:
     affected_versions: vers:composer/>=4.6.0|<4.6.3
     fixed_versions: vers:composer/4.6.3
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/phpmyadmin/phpmyadmin
+    affected_versions: vers:composer/>=4.0.10+0|<4.0.10+16
+    fixed_versions: vers:composer/4.0.10+16
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/phpmyadmin/phpmyadmin
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/phpmyadmin/phpmyadmin
+        commit: 1cc7466db3a05e95fe57a6702f41773e6829d54b
+      - vcs_url: https://github.com/phpmyadmin/phpmyadmin
+        commit: 4bcc606225f15bac0b07780e74f667f6ac283da7
     introduced_in_commits: []
 severities:
   - score: '9.8'

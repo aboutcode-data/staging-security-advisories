@@ -6,7 +6,14 @@ aliases:
 summary: |
   Grafana XSS via a column style
   Grafana has a XSS vulnerability via a column style on the "Dashboard > Table Panel" screen. NOTE: this issue exists because of an incomplete fix for CVE-2018-12099.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/grafana/grafana
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/grafana/grafana
+        commit: 0284747c88eb9435899006d26ffaf65f89dec88e
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
@@ -38,9 +45,9 @@ references:
   - url: https://github.com/grafana/grafana/pull/23816
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2018-18624
+    reference_type:
+    reference_id:
   - url: https://security.netapp.com/advisory/ntap-20200608-0008
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2018-18624
-    reference_type:
-    reference_id: CVE-2018-18624

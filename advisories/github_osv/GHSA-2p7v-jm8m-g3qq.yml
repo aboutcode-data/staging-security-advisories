@@ -8,11 +8,6 @@ summary: |
   The Transformation implementation in phpMyAdmin 4.0.x before 4.0.10.16, 4.4.x before 4.4.15.7, and 4.6.x before 4.6.3 does not use the no-referrer Content Security Policy (CSP) protection mechanism, which makes it easier for remote attackers to conduct CSRF attacks by reading an authentication token in a Referer header, related to libraries/Header.php.
 impacted_packages:
   - purl: pkg:composer/phpmyadmin/phpmyadmin
-    affected_versions: vers:composer/>=4.0.10+0|<4.0.10+16
-    fixed_versions: vers:composer/4.0.10+16
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/phpmyadmin/phpmyadmin
     affected_versions: vers:composer/>=4.4.15+0|<4.4.15+7
     fixed_versions: vers:composer/4.4.15+7
     fixed_in_commits: []
@@ -21,6 +16,20 @@ impacted_packages:
     affected_versions: vers:composer/>=4.6.0|<4.6.3
     fixed_versions: vers:composer/4.6.3
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/phpmyadmin/phpmyadmin
+    affected_versions: vers:composer/>=4.0.10+0|<4.0.10+16
+    fixed_versions: vers:composer/4.0.10+16
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/phpmyadmin/phpmyadmin
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/phpmyadmin/phpmyadmin
+        commit: 1e5716cb96d46efc305381ae0da08e73fe340f05
+      - vcs_url: https://github.com/phpmyadmin/phpmyadmin
+        commit: 2f4950828ec241e8cbdcf13090c2582a6fa620cb
     introduced_in_commits: []
 severities:
   - score: '7.5'

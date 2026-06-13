@@ -10,7 +10,14 @@ summary: |
   This issue can result in an element being double-freed if the clone call panics.
 
   Commit `20cb73d` fixed this issue by adding a set_len(0) call before operating on the vector to avoid dropping the elements during a panic.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/qwertz19281/rust_utils
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/qwertz19281/rust_utils
+        commit: 20cb73d
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
@@ -34,9 +41,9 @@ references:
   - url: https://github.com/qwertz19281/rust_utils/issues/3
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2021-26954
+    reference_type:
+    reference_id:
   - url: https://rustsec.org/advisories/RUSTSEC-2021-0018.html
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2021-26954
-    reference_type:
-    reference_id: CVE-2021-26954

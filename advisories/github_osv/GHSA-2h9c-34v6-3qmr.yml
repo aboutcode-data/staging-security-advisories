@@ -6,7 +6,14 @@ aliases:
 summary: |
   Kubernetes in OpenShift3 Access Control Misconfiguration
   Kubernetes in OpenShift3 allows remote authenticated users to use the private images of other users should they know the name of said image.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/kubernetes/kubernetes
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/kubernetes/kubernetes
+        commit: e185b1028ac8459f7b451e1115399192e96f6ee9
+    introduced_in_commits: []
 severities:
   - score: '3.1'
     scoring_system: cvssv3.1
@@ -34,4 +41,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2015-7561
     reference_type:
-    reference_id: CVE-2015-7561
+    reference_id:

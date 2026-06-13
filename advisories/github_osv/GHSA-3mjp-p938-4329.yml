@@ -8,6 +8,11 @@ summary: |
   A malicious web application running on Apache Tomcat 9.0.0.M1 to 9.0.0.M9, 8.5.0 to 8.5.4, 8.0.0.RC1 to 8.0.36, 7.0.0 to 7.0.70 and 6.0.0 to 6.0.45 was able to bypass a configured SecurityManager via manipulation of the configuration parameters for the JSP Servlet.
 impacted_packages:
   - purl: pkg:maven/org.apache.tomcat/tomcat
+    affected_versions: vers:maven/<=6.0.45
+    fixed_versions: vers:maven/6.0.46
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat/tomcat
     affected_versions: vers:maven/<=9.0.0.M9
     fixed_versions: vers:maven/9.0.0.M10
     fixed_in_commits: []
@@ -27,10 +32,23 @@ impacted_packages:
     fixed_versions: vers:maven/7.0.71
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/org.apache.tomcat/tomcat
-    affected_versions: vers:maven/<=6.0.45
-    fixed_versions: vers:maven/6.0.46
-    fixed_in_commits: []
+  - purl: pkg:github/apache/tomcat
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/tomcat
+        commit: f603f2f4595073f9490e01699d2083112a7c09a7
+      - vcs_url: https://github.com/apache/tomcat
+        commit: f97769f50ee2613e1bf27107a01d48907fd993ac
+      - vcs_url: https://github.com/apache/tomcat
+        commit: ffa0346fba2946401630291b642f1cff66d6a2be
+    introduced_in_commits: []
+  - purl: pkg:github/apache/tomcat80
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/tomcat80
+        commit: d98fa92b9dfc90fe1ffdaa3cce1be3be84532260
     introduced_in_commits: []
 severities:
   - score: '7.5'
@@ -45,33 +63,6 @@ severities:
     url:
 weaknesses: []
 references:
-  - url: http://rhn.redhat.com/errata/RHSA-2017-0457.html
-    reference_type:
-    reference_id:
-  - url: http://rhn.redhat.com/errata/RHSA-2017-1551.html
-    reference_type:
-    reference_id:
-  - url: https://access.redhat.com/errata/RHSA-2017:0455
-    reference_type:
-    reference_id:
-  - url: https://access.redhat.com/errata/RHSA-2017:0456
-    reference_type:
-    reference_id:
-  - url: https://access.redhat.com/errata/RHSA-2017:1548
-    reference_type:
-    reference_id:
-  - url: https://access.redhat.com/errata/RHSA-2017:1549
-    reference_type:
-    reference_id:
-  - url: https://access.redhat.com/errata/RHSA-2017:1550
-    reference_type:
-    reference_id:
-  - url: https://access.redhat.com/errata/RHSA-2017:1552
-    reference_type:
-    reference_id:
-  - url: https://access.redhat.com/errata/RHSA-2017:2247
-    reference_type:
-    reference_id:
   - url: https://github.com/apache/tomcat
     reference_type:
     reference_id:
@@ -177,6 +168,9 @@ references:
   - url: https://lists.apache.org/thread.html/r9136ff5b13e4f1941360b5a309efee2c114a14855578c3a2cbe5d19c%40%3Cdev.tomcat.apache.org%3E
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2016-6796
+    reference_type:
+    reference_id:
   - url: https://security.netapp.com/advisory/ntap-20180605-0001
     reference_type:
     reference_id:
@@ -198,6 +192,30 @@ references:
   - url: http://www.debian.org/security/2016/dsa-3720
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2016-6796
+  - url: https://access.redhat.com/errata/RHSA-2017:0455
     reference_type:
-    reference_id: CVE-2016-6796
+    reference_id: RHSA-2017:0455
+  - url: https://access.redhat.com/errata/RHSA-2017:0456
+    reference_type:
+    reference_id: RHSA-2017:0456
+  - url: http://rhn.redhat.com/errata/RHSA-2017-0457.html
+    reference_type:
+    reference_id: RHSA-2017-0457.html
+  - url: https://access.redhat.com/errata/RHSA-2017:1548
+    reference_type:
+    reference_id: RHSA-2017:1548
+  - url: https://access.redhat.com/errata/RHSA-2017:1549
+    reference_type:
+    reference_id: RHSA-2017:1549
+  - url: https://access.redhat.com/errata/RHSA-2017:1550
+    reference_type:
+    reference_id: RHSA-2017:1550
+  - url: http://rhn.redhat.com/errata/RHSA-2017-1551.html
+    reference_type:
+    reference_id: RHSA-2017-1551.html
+  - url: https://access.redhat.com/errata/RHSA-2017:1552
+    reference_type:
+    reference_id: RHSA-2017:1552
+  - url: https://access.redhat.com/errata/RHSA-2017:2247
+    reference_type:
+    reference_id: RHSA-2017:2247

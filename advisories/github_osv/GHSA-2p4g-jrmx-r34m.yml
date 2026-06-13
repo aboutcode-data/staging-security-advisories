@@ -11,7 +11,14 @@ summary: |
   1. Access the following endpoint on any Rancher instance up to 2.1.4: `https://RANCHER:PORT/login?errorMsg=%68%74%74%70%73%3a%2f%2f%77%77%77%2e%6f%77%61%73%70%2e%6f%72%67%2f%69%6e%64%65%78%2e%70%68%70%2f%57%65%62%5f%50%61%72%61%6d%65%74%65%72%5f%54%61%6d%70%65%72%69%6e%67`
 
   It will display a [link](https://www.owasp.org/index.php/Web_Parameter_Tampering) to OWASP Wiki explaining Web Parameter Tampering.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/rancher/rancher
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/rancher/rancher
+        commit: e59adbc7565251919d84d6e353421104be8da06e
+    introduced_in_commits: []
 severities:
   - score: '4.7'
     scoring_system: cvssv3.1
@@ -42,4 +49,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2019-11881
     reference_type:
-    reference_id: CVE-2019-11881
+    reference_id:

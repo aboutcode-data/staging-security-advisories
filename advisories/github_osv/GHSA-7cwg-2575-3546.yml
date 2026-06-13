@@ -8,21 +8,6 @@ summary: |
   file_open in Tryton 3.x and 4.x through 4.2.2 allows remote authenticated users with certain permissions to read arbitrary files via a "same root name but with a suffix" attack. NOTE: This vulnerability exists because of an incomplete fix for CVE-2016-1242.
 impacted_packages:
   - purl: pkg:pypi/trytond
-    affected_versions: vers:pypi/>=4.0.0|<=4.0.9
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/trytond
-    affected_versions: vers:pypi/>=3.6.0|<=3.6.16
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/trytond
-    affected_versions: vers:pypi/>=3.8.0|<=3.8.14
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/trytond
     affected_versions: vers:pypi/>=3.0.0|<=3.0.17
     fixed_versions:
     fixed_in_commits: []
@@ -38,9 +23,33 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/trytond
+    affected_versions: vers:pypi/>=3.6.0|<=3.6.16
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/trytond
+    affected_versions: vers:pypi/>=3.8.0|<=3.8.14
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/trytond
+    affected_versions: vers:pypi/>=4.0.0|<=4.0.9
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/trytond
     affected_versions: vers:pypi/<=4.2.2
     fixed_versions: vers:pypi/4.2.3
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/tryton/trytond
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/tryton/trytond
+        commit: 30e978593733385db3144f8c583eeb4679575cf0
+      - vcs_url: https://github.com/tryton/trytond
+        commit: a67a7f03c30277515f530cad5950056171ed5bd1
     introduced_in_commits: []
 severities:
   - score: '5.3'

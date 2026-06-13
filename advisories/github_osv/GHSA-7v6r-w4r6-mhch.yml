@@ -6,7 +6,14 @@ aliases:
 summary: |
   Hydra has Reflected XSS via error_hint parameter
   ORY Hydra before v1.0.0-rc.3+oryOS.9 has Reflected XSS via the oauth2/fallbacks/error error_hint parameter.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/ory/hydra
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/ory/hydra
+        commit: 9b5bbd48a72096930af08402c5e07fce7dd770f3
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
@@ -36,9 +43,9 @@ references:
   - url: https://hackerone.com/reports/456333
     reference_type:
     reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2019-8400
+    reference_type:
+    reference_id:
   - url: https://www.youtube.com/watch?v=RIyZLeKEC8E
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2019-8400
-    reference_type:
-    reference_id: CVE-2019-8400

@@ -6,7 +6,14 @@ aliases:
 summary: |
   Gophish vulnerable to Server-Side Request Forgery
   Gophish before 0.11.0 allows SSRF attacks.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/gophish/gophish
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/gophish/gophish
+        commit: e3352f481e94054ffe08494c9225d3878347b005
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
@@ -35,4 +42,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2020-24710
     reference_type:
-    reference_id: CVE-2020-24710
+    reference_id:

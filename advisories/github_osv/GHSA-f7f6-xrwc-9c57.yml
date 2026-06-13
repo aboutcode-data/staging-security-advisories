@@ -7,6 +7,13 @@ summary: |
   Improper Input Validation in Jenkins
   Jenkins 2.73.1 and earlier, 2.83 and earlier bundled a version of the commons-fileupload library with the denial-of-service vulnerability known as CVE-2016-3092. The fix for that vulnerability has been backported to the version of the library bundled with Jenkins.
 impacted_packages:
+  - purl: pkg:github/jenkinsci/jenkins
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/jenkinsci/jenkins
+        commit: ea981a029cb985b71f3a0dc0f9ce3b3e3e6c001b
+    introduced_in_commits: []
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
     affected_versions: vers:maven/<=2.73.1
     fixed_versions: vers:maven/2.73.2

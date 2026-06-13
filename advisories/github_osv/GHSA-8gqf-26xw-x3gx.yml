@@ -7,11 +7,6 @@ summary: |
   Liferay Portal XSS Vulnerability
   Cross-site scripting (XSS) exists in Liferay Portal before 7.0 CE GA4 via a login name, password, or e-mail address.
 impacted_packages:
-  - purl: pkg:maven/com.liferay.portal/release.portal.bom
-    affected_versions: vers:maven/<7.0.3-GA4
-    fixed_versions: vers:maven/7.0.3-GA4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:maven/com.liferay/com.liferay.login.authentication.openid.connect.web
     affected_versions: vers:maven/1.0.0
     fixed_versions: vers:maven/1.0.1
@@ -21,6 +16,20 @@ impacted_packages:
     affected_versions: vers:maven/<1.1.20
     fixed_versions: vers:maven/1.1.20
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/com.liferay.portal/release.portal.bom
+    affected_versions: vers:maven/<7.0.3-GA4
+    fixed_versions: vers:maven/7.0.3-GA4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/liferay/liferay-portal
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/liferay/liferay-portal
+        commit: 5549148045125f000d968132235db5b1c2c18b60
+      - vcs_url: https://github.com/liferay/liferay-portal
+        commit: 79bffe0f2e74daef88ed9775e92bdfa2d56add93
     introduced_in_commits: []
 severities:
   - score: '6.1'

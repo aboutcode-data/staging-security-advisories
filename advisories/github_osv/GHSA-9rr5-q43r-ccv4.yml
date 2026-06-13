@@ -6,7 +6,18 @@ aliases:
 summary: |
   Mattermost Server does not prevent System Admin from arbitrary file creation
   An issue was discovered in Mattermost Server before 4.3.0, 4.2.1, and 4.1.2 when local storage for files is used. A System Admin can create arbitrary files.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 6be8113eb60cf5ddd2dc1c3f4db05cae0c183086
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 6d3cb2ce07fc799832081e93843b405b390057fa
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: fadd9514f6e71590aba781a7035e1de4150137b0
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv4
@@ -38,4 +49,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2017-18875
     reference_type:
-    reference_id: CVE-2017-18875
+    reference_id:

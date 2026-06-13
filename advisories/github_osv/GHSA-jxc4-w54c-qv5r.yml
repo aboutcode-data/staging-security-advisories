@@ -6,7 +6,16 @@ aliases:
 summary: |
   Mattermost Server uses weak hashing for OAuth, email verification tokens and invitations
   An issue was discovered in Mattermost Server before 3.8.2 and 3.7.5. Weak hashing was used for e-mail invitations, OAuth, and e-mail verification tokens.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: b74e85653660525d351d090a1e1874ae933bcbc8
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 247cd1e51a8c943628dc650e87e794b06aad4c2b
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv4
@@ -35,4 +44,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2017-18917
     reference_type:
-    reference_id: CVE-2017-18917
+    reference_id:

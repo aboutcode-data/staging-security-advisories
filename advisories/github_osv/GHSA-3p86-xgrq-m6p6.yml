@@ -8,11 +8,6 @@ summary: |
   Multiple cross-site scripting (XSS) vulnerabilities in the HTML Manager Interface in Apache Tomcat 5.5 before 5.5.32, 6.0 before 6.0.30, and 7.0 before 7.0.6 allow remote attackers to inject arbitrary web script or HTML, as demonstrated via the display-name tag.
 impacted_packages:
   - purl: pkg:maven/org.apache.tomcat/tomcat
-    affected_versions: vers:maven/>=5.5.0|<5.5.32
-    fixed_versions: vers:maven/5.5.32
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.tomcat/tomcat
     affected_versions: vers:maven/>=6.0.0|<6.0.30
     fixed_versions: vers:maven/6.0.30
     fixed_in_commits: []
@@ -21,6 +16,25 @@ impacted_packages:
     affected_versions: vers:maven/>=7.0.0|<7.0.6
     fixed_versions: vers:maven/7.0.6
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat/tomcat
+    affected_versions: vers:maven/>=5.5.0|<5.5.32
+    fixed_versions: vers:maven/5.5.32
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/apache/tomcat
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/tomcat
+        commit: 58223c5ecc0751c3642c810f291b8f033d33b97f
+    introduced_in_commits: []
+  - purl: pkg:github/apache/tomcat55
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/tomcat55
+        commit: 863d77c7d321245de019ac32252828e0a025c5b4
     introduced_in_commits: []
 severities:
   - score: MODERATE

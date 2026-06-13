@@ -9,7 +9,14 @@ summary: |
 
   ## Original Description
   The dio package prior to 5.0.0 for Dart allows CRLF injection if the attacker controls the HTTP method string, a different vulnerability than CVE-2020-35669.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/cfug/dio
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/cfug/dio
+        commit: 927f79e93ba39f3c3a12c190624a55653d577984
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -22,9 +29,9 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-88
-  - CWE-93
   - CWE-74
+  - CWE-93
+  - CWE-88
 references:
   - url: https://github.com/cfug/dio
     reference_type:

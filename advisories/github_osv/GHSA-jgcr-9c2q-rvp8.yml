@@ -8,14 +8,25 @@ summary: |
   Multiple cross-site scripting (XSS) vulnerabilities in Apache Struts 2.0.x before 2.0.11.1 and 2.1.x before 2.1.1 allow remote attackers to inject arbitrary web script or HTML via vectors associated with improper handling of (1) " (double quote) characters in the href attribute of an s:a tag and (2) parameters in the action attribute of an s:url tag.
 impacted_packages:
   - purl: pkg:maven/org.apache.struts/struts2-core
+    affected_versions: vers:maven/>=2.1.0|<2.1.1
+    fixed_versions: vers:maven/2.1.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.struts/struts2-core
     affected_versions: vers:maven/>=2.0.0|<2.0.11.1
     fixed_versions: vers:maven/2.0.11.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/org.apache.struts/struts2-core
-    affected_versions: vers:maven/>=2.1.0|<2.1.1
-    fixed_versions: vers:maven/2.1.1
-    fixed_in_commits: []
+  - purl: pkg:github/apache/struts
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/struts
+        commit: dae026a0f0511f83852053bae9d5a622e7f80486
+      - vcs_url: https://github.com/apache/struts
+        commit: 09147ffad2b3046ed21af0f524c5088e2ac551e6
+      - vcs_url: https://github.com/apache/struts
+        commit: bd3f2f59c9b09f70aed3ebab6bb69b464ee2d6cb
     introduced_in_commits: []
 severities:
   - score: MODERATE

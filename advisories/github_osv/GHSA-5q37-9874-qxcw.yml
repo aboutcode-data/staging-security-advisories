@@ -6,7 +6,14 @@ aliases:
 summary: |
   Mattermost Server exposes information stored by a web browser
   An issue was discovered in Mattermost Server before 2.2.0. It allows unintended access to information stored by a web browser.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: a51a8ebc264c89f227e831c01fa048dafb7ee6c6
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1
@@ -32,4 +39,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2016-11081
     reference_type:
-    reference_id: CVE-2016-11081
+    reference_id:

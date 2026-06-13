@@ -25,9 +25,9 @@ summary: |
 
   All OpenShift Container Platform 4.13 users are advised to upgrade to these updated packages and images when they are available in the appropriate release channel. To check for available updates, use the OpenShift CLI (oc) or web console. Instructions for upgrading a cluster are available at https://docs.openshift.com/container-platform/4.13/updating/updating-cluster-cli.html
 impacted_packages:
-  - purl: pkg:rpm/redhat/podman-tests?arch=aarch64&epoch=3
-    affected_versions: vers:rpm/<4.4.1-6.2.rhaos4.13.el9
-    fixed_versions: vers:rpm/4.4.1-6.2.rhaos4.13.el9
+  - purl: pkg:rpm/redhat/cri-tools?arch=ppc64le
+    affected_versions: vers:rpm/<1.26.0-4.1.el8
+    fixed_versions: vers:rpm/1.26.0-4.1.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/buildah?arch=src&epoch=1
@@ -248,11 +248,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/ignition-validate-debuginfo?arch=x86_64
     affected_versions: vers:rpm/<2.15.0-7.1.rhaos4.13.el9
     fixed_versions: vers:rpm/2.15.0-7.1.rhaos4.13.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-debugsource?arch=aarch64&epoch=3
-    affected_versions: vers:rpm/<4.4.1-6.2.rhaos4.13.el9
-    fixed_versions: vers:rpm/4.4.1-6.2.rhaos4.13.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/openshift-hyperkube?arch=x86_64
@@ -691,6 +686,16 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-remote?arch=aarch64&epoch=3
+    affected_versions: vers:rpm/<4.4.1-6.2.rhaos4.13.el9
+    fixed_versions: vers:rpm/4.4.1-6.2.rhaos4.13.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-tests?arch=aarch64&epoch=3
+    affected_versions: vers:rpm/<4.4.1-6.2.rhaos4.13.el9
+    fixed_versions: vers:rpm/4.4.1-6.2.rhaos4.13.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-debugsource?arch=aarch64&epoch=3
     affected_versions: vers:rpm/<4.4.1-6.2.rhaos4.13.el9
     fixed_versions: vers:rpm/4.4.1-6.2.rhaos4.13.el9
     fixed_in_commits: []
@@ -1218,11 +1223,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/cri-o-debuginfo?arch=ppc64le
     affected_versions: vers:rpm/<1.26.5-11.1.rhaos4.13.git919cc6e.el8
     fixed_versions: vers:rpm/1.26.5-11.1.rhaos4.13.git919cc6e.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-tools?arch=ppc64le
-    affected_versions: vers:rpm/<1.26.0-4.1.el8
-    fixed_versions: vers:rpm/1.26.0-4.1.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/cri-tools-debugsource?arch=ppc64le

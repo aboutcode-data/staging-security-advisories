@@ -6,7 +6,14 @@ aliases:
 summary: |
   Podman Elevated Container Privileges
   It has been discovered that podman before version 0.6.1 does not drop capabilities when executing a container as a non-root user. This results in unnecessary privileges being granted to the container.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/projectatomic/libpod
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/projectatomic/libpod
+        commit: bae80a0b663925ec751ad2784ca32989403cdc24
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
@@ -40,4 +47,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2018-10856
     reference_type:
-    reference_id: CVE-2018-10856
+    reference_id:

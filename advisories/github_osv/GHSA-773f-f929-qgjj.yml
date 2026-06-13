@@ -7,6 +7,11 @@ summary: |
   Liferay Portal and Liferay DXP Potentially Reveal LDAP Server Password via Unsafe Connection
   Liferay Portal before 7.3.0, and Liferay DXP 7.0 before fix pack 89, 7.1 before fix pack 17, and 7.2 before fix pack 4, does not safely test a connection to a LDAP server, which allows remote attackers to obtain the LDAP server's password via the Test LDAP Connection feature.
 impacted_packages:
+  - purl: pkg:maven/com.liferay.portal/release.portal.bom
+    affected_versions: vers:maven/<7.3.0
+    fixed_versions: vers:maven/7.3.0
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:maven/com.liferay.portal/release.dxp.bom
     affected_versions: vers:maven/>=7.0.0|<7.0.10.fp89
     fixed_versions: vers:maven/7.0.10.fp89
@@ -20,11 +25,6 @@ impacted_packages:
   - purl: pkg:maven/com.liferay.portal/release.dxp.bom
     affected_versions: vers:maven/>=7.2.0|<7.2.10.fp4
     fixed_versions: vers:maven/7.2.10.fp4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/com.liferay.portal/release.portal.bom
-    affected_versions: vers:maven/<7.3.0
-    fixed_versions: vers:maven/7.3.0
     fixed_in_commits: []
     introduced_in_commits: []
 severities:

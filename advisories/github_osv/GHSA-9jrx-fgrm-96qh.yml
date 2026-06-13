@@ -6,7 +6,14 @@ aliases:
 summary: |
   Mattermost Server is vulnerable to XSS via a Legal or Support setting
   An issue was discovered in Mattermost Server before 3.0.0. It allows XSS via a Legal or Support setting.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 5ed7c3baa5b44356e92551c05e75ef2a47e2bf9b
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
@@ -32,4 +39,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2016-11073
     reference_type:
-    reference_id: CVE-2016-11073
+    reference_id:

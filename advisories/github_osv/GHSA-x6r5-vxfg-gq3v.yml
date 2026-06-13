@@ -6,7 +6,14 @@ aliases:
 summary: |
   Helm Improper Certificate Validation
   helm Before 2.7.2 is affected by: CWE-295: Improper Certificate Validation. The impact is: Unauthorized clients could connect to the server because self-signed client certs were aloowed. The component is: helm (many files updated, see https://github.com/helm/helm/pull/3152/files/1096813bf9a425e2aa4ac755b6c991b626dfab50). The attack vector is: A malicious client could connect to the server over the network. The fixed version is: 2.7.2.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/helm/helm
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/helm/helm
+        commit: 1096813bf9a425e2aa4ac755b6c991b626dfab50
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
@@ -35,4 +42,4 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2019-1010275
     reference_type:
-    reference_id: CVE-2019-1010275
+    reference_id:
