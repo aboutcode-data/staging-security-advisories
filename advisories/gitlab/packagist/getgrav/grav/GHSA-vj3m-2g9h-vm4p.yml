@@ -1,0 +1,66 @@
+advisory_id: packagist/getgrav/grav/GHSA-vj3m-2g9h-vm4p
+datasource_id: gitlab/packagist/getgrav/grav/GHSA-vj3m-2g9h-vm4p
+datasource_url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/packagist/getgrav/grav/GHSA-vj3m-2g9h-vm4p.yml
+aliases:
+  - GHSA-vj3m-2g9h-vm4p
+summary: |
+  Grav has multiple RCE vectors: unsafe unserialize (x3), command injection in git clone, SSTI blocklist bypass
+  Multiple RCE vectors were found in Grav CMS. Three are critical, two are high.
+
+  **1. Unsafe unserialize() in JobQueue — direct RCE gadget (Critical)**
+
+  `system/src/Grav/Common/Scheduler/JobQueue.php:465` calls `unserialize(base64_decode(...))` without restricting `allowed_classes`. The `Job` class has `call_user_func_array($this->command, $this->args)` in its execution path, which is a direct gadget chain — inject a serialized `Job` with `command = 'system'` and `args = ['whoami']`.
+
+  The same codebase actually has a `Serializable` trait that correctly restricts classes, so this inconsistency stands out.
+
+  **2. Unsafe unserialize() in FileCache — arbitrary class instantiation (Critical)**
+
+  `system/src/Grav/Framework/Cache/Adapter/FileCache.php:75` does `unserialize($value, ['allowed_classes' => true])`. That `true` allows instantiation of any class. If an attacker can write to the cache directory (via any file write primitive), they get object injection → RCE.
+
+  **3. Unsafe unserialize() in Session (High)**
+
+  `system/src/Grav/Common/Session.php:116` — same `allowed_classes => true` pattern on session data. Lower severity since session storage is typically more restricted.
+
+  **4. Command injection in git clone (Critical)**
+
+  `system/src/Grav/Console/Cli/InstallCommand.php:150` — only `$this->destination` uses `escapeshellarg()`. The `$data['branch']`, `$data['url']`, and `$data['path']` variables go directly into the shell command without escaping. Admin-accessible via plugin/theme installation.
+
+  **5. SSTI blocklist bypass (High)**
+
+  `system/src/Grav/Common/Security.php:267-286` — `cleanDangerousTwig()` blocks `twig_array_map` and `twig_array_filter` but not `twig_array_reduce`. Also missing `file_get_contents` and `fwrite` from the dangerous function blocklist. An attacker who can inject Twig templates can bypass the security filter.
+
+  All five are independently exploitable. The unserialize issues are the most concerning since they don't require admin access if there's any file write primitive.
+
+  — ProScan AppSec | proscan.one
+
+
+  ---
+impacted_packages:
+  - purl: pkg:composer/getgrav/grav
+    affected_versions: vers:composer/<2.0.0-beta.2
+    fixed_versions: vers:composer/2.0.0-beta.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/getgrav/grav
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/getgrav/grav
+        commit: 5a12f9be8314682c8713e569e330f11805d0a663
+    introduced_in_commits: []
+severities: []
+weaknesses:
+  - CWE-78
+  - CWE-1035
+  - CWE-502
+  - CWE-937
+references:
+  - url: https://github.com/getgrav/grav/commit/5a12f9be8314682c8713e569e330f11805d0a663
+    reference_type:
+    reference_id:
+  - url: https://github.com/advisories/GHSA-vj3m-2g9h-vm4p
+    reference_type:
+    reference_id: GHSA-vj3m-2g9h-vm4p
+  - url: https://github.com/getgrav/grav/security/advisories/GHSA-vj3m-2g9h-vm4p
+    reference_type:
+    reference_id: GHSA-vj3m-2g9h-vm4p
