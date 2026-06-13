@@ -18,7 +18,14 @@ summary: "Vapor contains an integer overflow in URI leading to potential host sp
   \ to a host spoofing attack due to an integer overflow.\n\n### Workarounds\nValidate user\
   \ input before parsing as a URI or, if possible, use Foundation's `URL` and `URLComponents`\
   \ utilities."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/vapor/vapor
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/vapor/vapor
+        commit: 6db3d917b5ce5024a84eb265ef65691383305d70
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
@@ -37,12 +44,12 @@ references:
   - url: https://github.com/vapor/vapor
     reference_type:
     reference_id:
+  - url: https://github.com/vapor/vapor/commit/6db3d917b5ce5024a84eb265ef65691383305d70
+    reference_type:
+    reference_id:
+  - url: https://github.com/vapor/vapor/security/advisories/GHSA-r6r4-5pr8-gjcp
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-21631
     reference_type:
     reference_id:
-  - url: https://github.com/vapor/vapor/commit/6db3d917b5ce5024a84eb265ef65691383305d70
-    reference_type: other
-    reference_id: 6db3d917b5ce5024a84eb265ef65691383305d70
-  - url: https://github.com/vapor/vapor/security/advisories/GHSA-r6r4-5pr8-gjcp
-    reference_type: other
-    reference_id: GHSA-r6r4-5pr8-gjcp

@@ -6,7 +6,14 @@ aliases:
 summary: |
   Hashicorp Vault may expose sensitive log information
   Vault and Vault Enterprise (“Vault”) may expose sensitive information when enabling an audit device which specifies the `log_raw` option, which may log sensitive information to other audit devices, regardless of whether they are configured to use `log_raw`
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/hashicorp/vault
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/hashicorp/vault
+        commit: 2a72f2a8a5b57de88c22a2a94c4a5f08c6f3770b
+    introduced_in_commits: []
 severities:
   - score: '4.5'
     scoring_system: cvssv3.1
@@ -21,6 +28,12 @@ severities:
 weaknesses:
   - CWE-532
 references:
+  - url: https://developer.hashicorp.com/vault/docs/upgrading/upgrade-to-1.15.x#audit-devices-could-log-raw-data-despite-configuration
+    reference_type:
+    reference_id:
+  - url: https://discuss.hashicorp.com/t/hcsec-2024-01-vault-may-expose-sensitive-information-when-configuring-an-audit-log-device/62311
+    reference_type:
+    reference_id:
   - url: https://github.com/hashicorp/vault
     reference_type:
     reference_id:
@@ -33,9 +46,3 @@ references:
   - url: https://security.netapp.com/advisory/ntap-20240223-0005
     reference_type:
     reference_id:
-  - url: https://discuss.hashicorp.com/t/hcsec-2024-01-vault-may-expose-sensitive-information-when-configuring-an-audit-log-device/62311
-    reference_type: other
-    reference_id: 62311
-  - url: https://developer.hashicorp.com/vault/docs/upgrading/upgrade-to-1.15.x#audit-devices-could-log-raw-data-despite-configuration
-    reference_type: other
-    reference_id: upgrade-to-1.15.x#audit-devices-could-log-raw-data-despite-configuration

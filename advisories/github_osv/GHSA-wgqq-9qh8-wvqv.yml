@@ -6,7 +6,14 @@ aliases:
 summary: |
   OpenShift Hive RCE through AWS/Kubernetes client configuration leads to privilege escalation
   A flaw was found in the Hive ClusterDeployments resource in OpenShift Dedicated. In certain conditions, this issue may allow a developer account on a Hive-enabled cluster to obtain cluster-admin privileges by executing arbitrary commands on the hive/hive-controllers pod.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/openshift/hive
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openshift/hive
+        commit: 5ba846620f9dbf49301dabb0d40cc980aabef4e0
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1

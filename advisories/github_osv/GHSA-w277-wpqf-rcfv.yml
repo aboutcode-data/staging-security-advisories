@@ -9,7 +9,14 @@ summary: |
 
   ## Original Description
   The `Webhook::verify` function incorrectly compared signatures of different lengths - the two signatures would only be compared up to the length of the shorter signature. This allowed an attacker to pass in `v1,` as the signature, which would always pass verification.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/svix/svix-webhooks
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/svix/svix-webhooks
+        commit: 958821bd3b956d1436af65f70a0964d4ffb7daf6
+    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual
@@ -21,12 +28,12 @@ references:
   - url: https://github.com/svix/svix-webhooks
     reference_type:
     reference_id:
-  - url: https://github.com/svix/svix-webhooks/pull/1190
-    reference_type: other
-    reference_id: 1190
   - url: https://github.com/svix/svix-webhooks/commit/958821bd3b956d1436af65f70a0964d4ffb7daf6
-    reference_type: other
-    reference_id: 958821bd3b956d1436af65f70a0964d4ffb7daf6
+    reference_type:
+    reference_id:
+  - url: https://github.com/svix/svix-webhooks/pull/1190
+    reference_type:
+    reference_id:
   - url: https://rustsec.org/advisories/RUSTSEC-2024-0010.html
-    reference_type: other
-    reference_id: RUSTSEC-2024-0010.html
+    reference_type:
+    reference_id:

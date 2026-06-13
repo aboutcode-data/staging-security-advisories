@@ -5,7 +5,16 @@ aliases: []
 summary: "Nervos CKB node panics when processing a block which parent timestamp is too new\n\
   ### Impact\n\nAdversary can initiate DOS attack by broadcasting two consecutive blocks with\
   \ timestamps in the future. \n\n### Patches\n\nPlease upgrade to v0.34.1"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/nervosnetwork/ckb
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/nervosnetwork/ckb
+        commit: c6725bb0659b6639f384d699f815117d76107388
+      - vcs_url: https://github.com/nervosnetwork/ckb
+        commit: ae3c791068f2f76c67cd5483501f09de3fd8cc0b
+    introduced_in_commits: []
 severities:
   - score: HIGH
     scoring_system: generic_textual

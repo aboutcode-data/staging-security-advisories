@@ -14,7 +14,14 @@ summary: |
   Since this API is widely misused, as a partial mitigation golang.org/x/crypto@v0.31.0 enforces the property that, when successfully authenticating via public key, the last key passed to ServerConfig.PublicKeyCallback will be the key used to authenticate the connection. PublicKeyCallback will now be called multiple times with the same key, if necessary. Note that the client may still not control the last key passed to PublicKeyCallback if the connection is then authenticated with a different method, such as PasswordCallback, KeyboardInteractiveCallback, or NoClientAuth.
 
   Users should be using the Extensions field of the Permissions return value from the various authentication callbacks to record data associated with the authentication attempt instead of referencing external state. Once the connection is established the state corresponding to the successful authentication attempt can be retrieved via the ServerConn.Permissions field. Note that some third-party libraries misuse the Permissions type by sharing it across authentication attempts; users of third-party libraries should refer to the relevant projects for guidance.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/golang/crypto
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/golang/crypto
+        commit: b4f1988a35dee11ec3e05d6bf3e90b695fbd8909
+    introduced_in_commits: []
 severities:
   - score: '9.1'
     scoring_system: cvssv3.1
@@ -32,7 +39,22 @@ references:
   - url: https://github.com/golang/crypto
     reference_type:
     reference_id:
+  - url: https://github.com/golang/crypto/commit/b4f1988a35dee11ec3e05d6bf3e90b695fbd8909
+    reference_type:
+    reference_id:
+  - url: https://go.dev/cl/635315
+    reference_type:
+    reference_id:
+  - url: https://go.dev/issue/70779
+    reference_type:
+    reference_id:
+  - url: https://groups.google.com/g/golang-announce/c/-nPEi39gI4Q/m/cGVPJCqdAQAJ
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-45337
+    reference_type:
+    reference_id:
+  - url: https://pkg.go.dev/vuln/GO-2024-3321
     reference_type:
     reference_id:
   - url: https://security.netapp.com/advisory/ntap-20250131-0007
@@ -41,18 +63,3 @@ references:
   - url: http://www.openwall.com/lists/oss-security/2024/12/11/2
     reference_type:
     reference_id:
-  - url: https://go.dev/cl/635315
-    reference_type: other
-    reference_id: 635315
-  - url: https://go.dev/issue/70779
-    reference_type: other
-    reference_id: 70779
-  - url: https://github.com/golang/crypto/commit/b4f1988a35dee11ec3e05d6bf3e90b695fbd8909
-    reference_type: other
-    reference_id: b4f1988a35dee11ec3e05d6bf3e90b695fbd8909
-  - url: https://groups.google.com/g/golang-announce/c/-nPEi39gI4Q/m/cGVPJCqdAQAJ
-    reference_type: other
-    reference_id: cGVPJCqdAQAJ
-  - url: https://pkg.go.dev/vuln/GO-2024-3321
-    reference_type: other
-    reference_id: GO-2024-3321

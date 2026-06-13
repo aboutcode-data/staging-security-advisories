@@ -14,11 +14,6 @@ summary: |
   ### Impact
   Production environments typically disable unused endpoints and secure/restrict access to needed endpoints. A more likely victim is the developer in their local development host, who has enabled endpoints without security for the sake of easing development.
 impacted_packages:
-  - purl: pkg:maven/io.micronaut/micronaut-http-server-tck
-    affected_versions: vers:maven/<3.8.3
-    fixed_versions: vers:maven/3.8.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:maven/io.micronaut/micronaut-http-server
     affected_versions: vers:maven/<3.8.3
     fixed_versions: vers:maven/3.8.3
@@ -28,6 +23,18 @@ impacted_packages:
     affected_versions: vers:maven/<3.8.3
     fixed_versions: vers:maven/3.8.3
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/io.micronaut/micronaut-http-server-tck
+    affected_versions: vers:maven/<3.8.3
+    fixed_versions: vers:maven/3.8.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/micronaut-projects/micronaut-core
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/micronaut-projects/micronaut-core
+        commit: 01adb21e57137caaf7004313d2055c5a78b1f47b
     introduced_in_commits: []
 severities:
   - score: '5.1'
@@ -41,10 +48,13 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-15
   - CWE-664
+  - CWE-15
   - CWE-610
 references:
+  - url: https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#simple_requests
+    reference_type:
+    reference_id:
   - url: https://github.com/micronaut-projects/micronaut-core
     reference_type:
     reference_id:
@@ -56,10 +66,7 @@ references:
     reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-23639
     reference_type:
-    reference_id:
-  - url: https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#simple_requests
-    reference_type: other
-    reference_id: CORS#simple_requests
+    reference_id: CVE-2024-23639
   - url: https://github.com/micronaut-projects/micronaut-core/security/advisories/GHSA-583g-g682-crxf
-    reference_type: other
+    reference_type:
     reference_id: GHSA-583g-g682-crxf

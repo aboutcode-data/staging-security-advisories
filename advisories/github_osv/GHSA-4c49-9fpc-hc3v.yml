@@ -92,7 +92,14 @@ summary: "lxd CA certificate sign check bypass\n### Summary\nIf a `server.ca` fi
   \ data]\n* TLSv1.2 (IN), TLS header, Supplemental data (23):\n{ [5 bytes data]\n100 11659\
   \    0 11659    0     0   3401      0 --:--:--  0:00:03 --:--:--  3402\n* Connection #0 to\
   \ host 127.0.0.1 left intact\n```"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/canonical/lxd
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/canonical/lxd
+        commit: 92468bb60f4f1edf38ff0434414bea4f28afa711
+    introduced_in_commits: []
 severities:
   - score: '3.8'
     scoring_system: cvssv3.1
@@ -113,6 +120,9 @@ references:
   - url: https://github.com/canonical/lxd/commit/92468bb60f4f1edf38ff0434414bea4f28afa711
     reference_type:
     reference_id:
+  - url: https://github.com/canonical/lxd/security/advisories/GHSA-4c49-9fpc-hc3v
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-6156
     reference_type:
     reference_id:
@@ -120,8 +130,5 @@ references:
     reference_type:
     reference_id:
   - url: https://www.cve.org/CVERecord?id=CVE-2024-6156
-    reference_type: bug
-    reference_id: CVERecord?id=CVE-2024-6156
-  - url: https://github.com/canonical/lxd/security/advisories/GHSA-4c49-9fpc-hc3v
-    reference_type: bug
-    reference_id: GHSA-4c49-9fpc-hc3v
+    reference_type:
+    reference_id:

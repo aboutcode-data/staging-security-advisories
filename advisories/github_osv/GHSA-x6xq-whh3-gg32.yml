@@ -53,7 +53,14 @@ summary: "Apollo Router Coprocessors may cause Denial-of-Service when handling r
   [External Coprocessing documentation](https://www.apollographql.com/docs/router/customizations/coprocessor)\n\
   [HTTP Request Limiting documentation](https://www.apollographql.com/docs/router/configuration/overview/#request-limits)\n\
   [Native Rust Plugin documentation](https://www.apollographql.com/docs/router/customizations/native)"
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/apollographql/router
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apollographql/router
+        commit: 7a9c020608a62dcaa306b72ed0f6980f15923b14
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

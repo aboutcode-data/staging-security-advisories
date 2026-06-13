@@ -28,7 +28,14 @@ summary: "## ASA-2024-003: Missing `BlockedAddressed` Validation in Vesting Modu
   \ SDK team on April 21st, 2024.  The guidance for mitigating this additional variant is the\
   \ same as the parent advisory, so it is suggested that all chains proactively initialize module\
   \ accounts if they have not already done so."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/cosmos/cosmos-sdk
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/cosmos/cosmos-sdk
+        commit: c05850241e2d615721e3492d15fee4e1deec082b
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1

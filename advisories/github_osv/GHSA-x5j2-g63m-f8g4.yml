@@ -23,7 +23,14 @@ summary: |
   ## Mitigation status in pqc_kyber crate
 
   The issues has not been resolved in the `pqc_kyber` crate. A third-party fork that mitigates this attack vector has been published as [`safe_pqc_kyber`](https://crates.io/crates/safe_pqc_kyber).
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/bwesterb/argyle-kyber
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/bwesterb/argyle-kyber
+        commit: b5c6ad13f4eece80e59c6ebeafd787ba1519f5f6
+    introduced_in_commits: []
 severities:
   - score: '7.4'
     scoring_system: cvssv3.1

@@ -27,7 +27,14 @@ summary: "Remote Command Execution in file editing in gogs\n### Impact\n\nThe ma
   \ commit again, you can notice a file called `/tmp/poc` created on the server.\n\n### For\
   \ more information\nIf you have any questions or comments about this advisory, please post\
   \ on https://github.com/gogs/gogs/issues/7582."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/gogs/gogs
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/gogs/gogs
+        commit: c94baec9ca923f38c19f0c7c5af722b9ec04022a
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1

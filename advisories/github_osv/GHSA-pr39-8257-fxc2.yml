@@ -5,7 +5,14 @@ aliases: []
 summary: |
   Nervos CKB DoS: Process exists when p2p discovery protocol receives unsupported peer IP
   The p2p discovery protocol assumes that the peer IP must be valid IPv4 address.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/nervosnetwork/ckb
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/nervosnetwork/ckb
+        commit: d909cdebacc4747e972de4a7e5f19c8f79480361
+    introduced_in_commits: []
 severities:
   - score: LOW
     scoring_system: generic_textual

@@ -6,7 +6,14 @@ aliases:
 summary: |
   Gorush uses deprecated TLS versions
   An issue discovered in the RunHTTPServer function in Gorush v1.18.4 allows attackers to intercept and manipulate data due to use of deprecated TLS version.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/appleboy/gorush
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/appleboy/gorush
+        commit: 067cb597e485e40b790a267187bf7f00730b1c4b
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
@@ -26,6 +33,9 @@ severities:
 weaknesses:
   - CWE-327
 references:
+  - url: https://gist.github.com/nyxfqq/cfae38fada582a0f576d154be1aeb1fc
+    reference_type:
+    reference_id:
   - url: https://github.com/appleboy/gorush
     reference_type:
     reference_id:
@@ -38,6 +48,3 @@ references:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-41270
     reference_type:
     reference_id:
-  - url: https://gist.github.com/nyxfqq/cfae38fada582a0f576d154be1aeb1fc
-    reference_type: other
-    reference_id: cfae38fada582a0f576d154be1aeb1fc

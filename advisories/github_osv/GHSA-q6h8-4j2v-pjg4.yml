@@ -27,7 +27,14 @@ summary: "Minder trusts client-provided mapping from repo name to upstream ID\n#
   ```\n\n```\n$ gh api repos/Stacklok-Demo-Org/python-app | jq .id                  \n762029128\n\
   ```\n\nI've registered bad-python with the ID of python-app, and python-app with an ID of\
   \ 0.\n\n### Impact\n\nThis appears to primarily be a potential denial-of-service vulnerability."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/stacklok/minder
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/stacklok/minder
+        commit: 53868a878e93f29c43437f96dbc990b548e48d1d
+    introduced_in_commits: []
 severities:
   - score: '4.6'
     scoring_system: cvssv3.1
@@ -45,15 +52,15 @@ references:
   - url: https://github.com/stacklok/minder
     reference_type:
     reference_id:
+  - url: https://github.com/stacklok/minder/commit/53868a878e93f29c43437f96dbc990b548e48d1d
+    reference_type:
+    reference_id:
+  - url: https://github.com/stacklok/minder/security/advisories/GHSA-q6h8-4j2v-pjg4
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-27093
     reference_type:
     reference_id:
   - url: https://pkg.go.dev/vuln/GO-2024-2582
     reference_type:
     reference_id:
-  - url: https://github.com/stacklok/minder/commit/53868a878e93f29c43437f96dbc990b548e48d1d
-    reference_type: other
-    reference_id: 53868a878e93f29c43437f96dbc990b548e48d1d
-  - url: https://github.com/stacklok/minder/security/advisories/GHSA-q6h8-4j2v-pjg4
-    reference_type: other
-    reference_id: GHSA-q6h8-4j2v-pjg4

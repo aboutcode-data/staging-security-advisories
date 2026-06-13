@@ -107,16 +107,43 @@ summary: |
   ### Impact
   _What kind of vulnerability is it? Who is impacted?_
   The servers that employ this XML parsing feature of http4k are vulnerable to this XXE vulnerability
+
+  ### Follow-up patch — v6.50.0.0 (May 2026)
+
+  The original fix shipped in v5.41.0.0 / v4.50.0.0 closed the documented external-entity attack class (SSRF, local-file disclosure, code execution) by setting `ACCESS_EXTERNAL_DTD=""`, `ACCESS_EXTERNAL_SCHEMA=""`, and `isExpandEntityReferences=false` on the default `DocumentBuilderFactory`.
+
+  A residual gap remained: the parser still **accepted** documents containing `<!DOCTYPE>` declarations even though external entity resolution was blocked. This left open billion-laughs-style internal entity expansion DoS attacks against any application using `Body.xml()` or `Document.asXmlDocument()` on untrusted XML.
+
+    **v6.50.0.0** closes this residual by adding `disallow-doctype-decl=true` and `FEATURE_SECURE_PROCESSING=true` to `defaultXmlParsingConfig`. Any document containing a `<!DOCTYPE>` is now rejected at parse time.
+
+  #### Follow-up affected & fixed versions
+
+    | Version | Fixed Version |
+    |---------|---------------|
+    | `>= 5.41.0.0, < 6.50.0.0` | **6.50.0.0** |
+
+  v6.x users should upgrade to v6.50.0.0. The patch is part of the v6.50.0.0 release; no separate backport is required for the v6 line. Older v5 / v4 users remain on the v5.41.0.0 / v4.50.0.0 fix (external-entity protection); the billion-laughs residual is fixed in those lines only via http4k EE LTS releases — contact [enterprise@http4k.org](mailto:enterprise@http4k.org) if you need it.
+
+  #### Follow-up timeline
+
+    | Date/time (UTC) | Notes |
+    |-----------------|-------|
+    | 31/05/2026 17:12 | Follow-up patch merged (commit [`c0cfaf5d63`](https://github.com/http4k/http4k/commit/c0cfaf5d63)) with new tests for `<!DOCTYPE>` rejection and billion-laughs payload rejection |
+    | 31/05/2026 18:06 | http4k v6.50.0.0 released to Maven Central |
 impacted_packages:
   - purl: pkg:maven/org.http4k/http4k-format-xml
-    affected_versions: vers:maven/<=5.40.0.0
-    fixed_versions: vers:maven/5.41.0.0
+    affected_versions: vers:maven/<6.50.0.0
+    fixed_versions: vers:maven/6.50.0.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/org.http4k/http4k-format-xml
-    affected_versions: vers:maven/<4.50.0.0
-    fixed_versions: vers:maven/4.50.0.0
-    fixed_in_commits: []
+  - purl: pkg:github/http4k/http4k
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/http4k/http4k
+        commit: 25696dff2d90206cc1da42f42a1a8dbcdbcdf18c
+      - vcs_url: https://github.com/http4k/http4k
+        commit: 35297adc6d6aca4951d50d8cdf17ff87a8b19fbc
     introduced_in_commits: []
 severities:
   - score: '9.8'
@@ -131,21 +158,21 @@ severities:
     url:
 weaknesses:
   - CWE-200
-  - CWE-611
   - CWE-918
+  - CWE-611
 references:
   - url: https://github.com/http4k/http4k
     reference_type:
     reference_id:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2024-55875
+  - url: https://github.com/http4k/http4k/blob/25696dff2d90206cc1da42f42a1a8dbcdbcdf18c/core/format/xml/src/main/kotlin/org/http4k/format/Xml.kt#L42-L46
     reference_type:
     reference_id:
   - url: https://github.com/http4k/http4k/commit/35297adc6d6aca4951d50d8cdf17ff87a8b19fbc
-    reference_type: other
-    reference_id: 35297adc6d6aca4951d50d8cdf17ff87a8b19fbc
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2024-55875
+    reference_type:
+    reference_id: CVE-2024-55875
   - url: https://github.com/http4k/http4k/security/advisories/GHSA-7mj5-hjjj-8rgw
-    reference_type: other
+    reference_type:
     reference_id: GHSA-7mj5-hjjj-8rgw
-  - url: https://github.com/http4k/http4k/blob/25696dff2d90206cc1da42f42a1a8dbcdbcdf18c/core/format/xml/src/main/kotlin/org/http4k/format/Xml.kt#L42-L46
-    reference_type: other
-    reference_id: Xml.kt#L42-L46

@@ -90,7 +90,14 @@ summary: |
   While this is not a bug in yyjson itself, a defensive patch has been provided: [0eca326](https://github.com/ibireme/yyjson/commit/0eca326fe57aeeb866e6f04c9ef9ea9f8343157e)
   If you mistakenly call yyjson_mut_doc_free() twice on the same doc against the documentation,
   this patch will cause your program to crash immediately, alerting you to the incorrect usage.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/ibireme/yyjson
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/ibireme/yyjson
+        commit: 0eca326fe57aeeb866e6f04c9ef9ea9f8343157e
+    introduced_in_commits: []
 severities:
   - score: '8.6'
     scoring_system: cvssv3.1

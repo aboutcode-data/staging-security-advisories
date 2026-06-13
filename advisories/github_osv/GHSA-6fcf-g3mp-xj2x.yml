@@ -6,7 +6,14 @@ aliases:
 summary: |
   memos vulnerable to Server-Side Request Forgery in /o/get/httpmeta
   memos is a privacy-first, lightweight note-taking service. In memos 0.13.2, an SSRF vulnerability exists at the /o/get/httpmeta that allows unauthenticated users to enumerate the internal network and receive limited html values in json form. This vulnerability is fixed in 0.16.1.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/usememos/memos
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/usememos/memos
+        commit: 6ffc09d86a1302c384ef085aa70c7bddb3ce7ba9
+    introduced_in_commits: []
 severities:
   - score: '5.8'
     scoring_system: cvssv3.1
@@ -21,15 +28,15 @@ severities:
 weaknesses:
   - CWE-918
 references:
-  - url: https://nvd.nist.gov/vuln/detail/CVE-2024-29028
+  - url: https://github.com/usememos/memos
     reference_type:
     reference_id:
   - url: https://github.com/usememos/memos/commit/6ffc09d86a1302c384ef085aa70c7bddb3ce7ba9
-    reference_type: other
-    reference_id: 6ffc09d86a1302c384ef085aa70c7bddb3ce7ba9
+    reference_type:
+    reference_id:
+  - url: https://nvd.nist.gov/vuln/detail/CVE-2024-29028
+    reference_type:
+    reference_id:
   - url: https://securitylab.github.com/advisories/GHSL-2023-154_GHSL-2023-156_memos
-    reference_type: other
-    reference_id: GHSL-2023-154_GHSL-2023-156_memos
-  - url: https://github.com/usememos/memos
-    reference_type: other
-    reference_id: memos
+    reference_type:
+    reference_id:

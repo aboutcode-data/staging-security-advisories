@@ -8,19 +8,32 @@ summary: |
   An issue was discovered in Django 3.2 before 3.2.24, 4.2 before 4.2.10, and Django 5.0 before 5.0.2. The intcomma template filter was subject to a potential denial-of-service attack when used with very long strings.
 impacted_packages:
   - purl: pkg:pypi/django
-    affected_versions: vers:pypi/>=3.2|<3.2.24
-    fixed_versions: vers:pypi/3.2.24
+    affected_versions: vers:pypi/>=4.2|<4.2.10
+    fixed_versions: vers:pypi/4.2.10
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/django
-    affected_versions: vers:pypi/>=4.2|<4.2.10
-    fixed_versions: vers:pypi/4.2.10
+    affected_versions: vers:pypi/>=3.2|<3.2.24
+    fixed_versions: vers:pypi/3.2.24
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/django
     affected_versions: vers:pypi/>=5.0|<5.0.2
     fixed_versions: vers:pypi/5.0.2
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/django/django
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/django/django
+        commit: 55519d6cf8998fe4c8f5c8abffc2b10a7c3d14e9
+      - vcs_url: https://github.com/django/django
+        commit: 572ea07e84b38ea8de0551f4b4eda685d91d09d2
+      - vcs_url: https://github.com/django/django
+        commit: 16a8fe18a3b81250f4fa57e3f93f0599dc4895bc
+      - vcs_url: https://github.com/django/django
+        commit: c1171ffbd570db90ca206c30f8e2b9f691243820
     introduced_in_commits: []
 severities:
   - score: '5.9'

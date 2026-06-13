@@ -17,7 +17,14 @@ summary: "Vitess allows HTML injection in /debug/querylogz & /debug/env\n### Sum
   \ be owners / administrators of the Vitess cluster.\n\nAnyone that can influence what text\
   \ show up in queries can trigger it. This would normally be pretty much everybody interacting\
   \ with a system that uses Vitess as a backend."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/vitessio/vitess
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/vitessio/vitess
+        commit: 2b71d1b5f8ca676beeab2875525003cd45096217
+    introduced_in_commits: []
 severities:
   - score: '4.9'
     scoring_system: cvssv3.1
@@ -40,12 +47,12 @@ references:
   - url: https://github.com/vitessio/vitess
     reference_type:
     reference_id:
+  - url: https://github.com/vitessio/vitess/commit/2b71d1b5f8ca676beeab2875525003cd45096217
+    reference_type:
+    reference_id:
+  - url: https://github.com/vitessio/vitess/security/advisories/GHSA-7mwh-q3xm-qh6p
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-53257
     reference_type:
     reference_id:
-  - url: https://github.com/vitessio/vitess/commit/2b71d1b5f8ca676beeab2875525003cd45096217
-    reference_type: other
-    reference_id: 2b71d1b5f8ca676beeab2875525003cd45096217
-  - url: https://github.com/vitessio/vitess/security/advisories/GHSA-7mwh-q3xm-qh6p
-    reference_type: other
-    reference_id: GHSA-7mwh-q3xm-qh6p

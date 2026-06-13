@@ -7,7 +7,14 @@ summary: "Stack overflow when parsing specially crafted JSON ABI strings\nAffect
   \ The `JsonAbi::parse` method can be tricked into a stack overflow when processing specially\
   \ crafted input. \n\nThis stack overflow can lead to a crash of the application using this\
   \ crate, potentially causing a denial of service.\n\nThe flaw was corrected in commit [4790c47](https://github.com/alloy-rs/core/commit/4790c47518024bd391bbd6815b00f501bad76a15)."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/alloy-rs/core
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/alloy-rs/core
+        commit: 4790c47518024bd391bbd6815b00f501bad76a15
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1

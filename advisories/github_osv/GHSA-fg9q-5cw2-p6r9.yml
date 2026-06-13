@@ -6,7 +6,14 @@ aliases:
 summary: |
   kubevirt-csi: PersistentVolume allows access to HCP's root node
   A flaw was found in the kubevirt-csi component of OpenShift Virtualization's Hosted Control Plane (HCP). This issue could allow an authenticated attacker to gain access to the root HCP worker node's volume by creating a custom Persistent Volume that matches the name of a worker node.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/kubevirt/csi-driver
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/kubevirt/csi-driver
+        commit: cc28dcbb0afca0a7cb8a73bc998ab49f864ed560
+    introduced_in_commits: []
 severities:
   - score: '8.1'
     scoring_system: cvssv3.1
@@ -21,6 +28,21 @@ severities:
 weaknesses:
   - CWE-501
 references:
+  - url: https://access.redhat.com/errata/RHSA-2024:1559
+    reference_type:
+    reference_id:
+  - url: https://access.redhat.com/errata/RHSA-2024:1891
+    reference_type:
+    reference_id:
+  - url: https://access.redhat.com/errata/RHSA-2024:2047
+    reference_type:
+    reference_id:
+  - url: https://access.redhat.com/security/cve/CVE-2024-1725
+    reference_type:
+    reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2265398
+    reference_type:
+    reference_id:
   - url: https://github.com/kubevirt/csi-driver
     reference_type:
     reference_id:
@@ -33,18 +55,3 @@ references:
   - url: https://pkg.go.dev/vuln/GO-2025-3512
     reference_type:
     reference_id:
-  - url: https://access.redhat.com/security/cve/CVE-2024-1725
-    reference_type: advisory
-    reference_id: CVE-2024-1725
-  - url: https://access.redhat.com/errata/RHSA-2024:1559
-    reference_type: advisory
-    reference_id: RHSA-2024:1559
-  - url: https://access.redhat.com/errata/RHSA-2024:1891
-    reference_type: advisory
-    reference_id: RHSA-2024:1891
-  - url: https://access.redhat.com/errata/RHSA-2024:2047
-    reference_type: advisory
-    reference_id: RHSA-2024:2047
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2265398
-    reference_type: bug
-    reference_id: show_bug.cgi?id=2265398

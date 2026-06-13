@@ -6,7 +6,16 @@ aliases:
 summary: |
   Miniscript allows stack consumption
   The Miniscript (aka rust-miniscript) library for Rust allows stack consumption because it does not properly track tree depth.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/rust-bitcoin/rust-miniscript
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/rust-bitcoin/rust-miniscript
+        commit: 5b0f5e3417f027a22b066debf825dbe6644b575b
+      - vcs_url: https://github.com/rust-bitcoin/rust-miniscript
+        commit: 8f54b5e3fb7129ed9fbed53f1cb9e6e62ea4c151
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -25,8 +34,8 @@ severities:
     url:
 weaknesses:
   - CWE-787
-  - CWE-674
   - CWE-770
+  - CWE-674
 references:
   - url: https://github.com/rust-bitcoin/rust-miniscript/commit/5b0f5e3417f027a22b066debf825dbe6644b575b
     reference_type:

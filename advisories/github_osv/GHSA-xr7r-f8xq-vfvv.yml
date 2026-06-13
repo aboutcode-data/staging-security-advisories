@@ -82,7 +82,14 @@ summary: |
   ### Credits
 
   Thanks to Rory McNamara from Snyk for discovering and disclosing the original vulnerability (attack 1) to Docker, @lifubang from acmcoder for discovering how to adapt the attack to overwrite host binaries (attack 3a), and Aleksa Sarai from SUSE for discovering how to adapt the attacks to work as container breakouts using `runc exec` (attacks 2 and 3b).
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/opencontainers/runc
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/opencontainers/runc
+        commit: 02120488a4c0fc487d1ed2867e901eeed7ce8ecf
+    introduced_in_commits: []
 severities:
   - score: '8.6'
     scoring_system: cvssv3.1
@@ -95,10 +102,25 @@ severities:
     published_at: None
     url:
 weaknesses:
-  - CWE-668
   - CWE-403
+  - CWE-668
 references:
+  - url: http://packetstormsecurity.com/files/176993/runc-1.1.11-File-Descriptor-Leak-Privilege-Escalation.html
+    reference_type:
+    reference_id:
   - url: https://github.com/opencontainers/runc
+    reference_type:
+    reference_id:
+  - url: https://github.com/opencontainers/runc/commit/02120488a4c0fc487d1ed2867e901eeed7ce8ecf
+    reference_type:
+    reference_id:
+  - url: https://github.com/opencontainers/runc/releases/tag/v1.1.12
+    reference_type:
+    reference_id:
+  - url: https://github.com/opencontainers/runc/security/advisories/GHSA-xr7r-f8xq-vfvv
+    reference_type:
+    reference_id:
+  - url: https://lists.debian.org/debian-lts-announce/2024/02/msg00005.html
     reference_type:
     reference_id:
   - url: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/2NLXNE23Q5ESQUAI22Z7A63JX2WMPJ2J
@@ -110,24 +132,9 @@ references:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-21626
     reference_type:
     reference_id:
-  - url: https://github.com/opencontainers/runc/commit/02120488a4c0fc487d1ed2867e901eeed7ce8ecf
-    reference_type: other
-    reference_id: 02120488a4c0fc487d1ed2867e901eeed7ce8ecf
   - url: http://www.openwall.com/lists/oss-security/2024/02/01/1
-    reference_type: other
-    reference_id: 1
+    reference_type:
+    reference_id:
   - url: http://www.openwall.com/lists/oss-security/2024/02/02/3
-    reference_type: other
-    reference_id: 3
-  - url: https://github.com/opencontainers/runc/security/advisories/GHSA-xr7r-f8xq-vfvv
-    reference_type: other
-    reference_id: GHSA-xr7r-f8xq-vfvv
-  - url: https://lists.debian.org/debian-lts-announce/2024/02/msg00005.html
-    reference_type: other
-    reference_id: msg00005.html
-  - url: http://packetstormsecurity.com/files/176993/runc-1.1.11-File-Descriptor-Leak-Privilege-Escalation.html
-    reference_type: other
-    reference_id: runc-1.1.11-File-Descriptor-Leak-Privilege-Escalation.html
-  - url: https://github.com/opencontainers/runc/releases/tag/v1.1.12
-    reference_type: other
-    reference_id: v1.1.12
+    reference_type:
+    reference_id:

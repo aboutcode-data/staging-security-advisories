@@ -6,7 +6,16 @@ aliases:
 summary: |
   lorawan-stack Open Redirect vulnerability
   lorawan-stack is an open source LoRaWAN network server. Prior to version 3.24.1, an open redirect exists on the login page of the lorawan stack server, allowing an attacker to supply a user controlled redirect upon sign in. This issue may allows malicious actors to phish users, as users assume they were redirected to the homepage on login. Version 3.24.1 contains a fix.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/thethingsnetwork/lorawan-stack
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/thethingsnetwork/lorawan-stack
+        commit: ecdef730f176c02f7c9afce98b0457ae64de5bfc
+      - vcs_url: https://github.com/thethingsnetwork/lorawan-stack
+        commit: f06776028bdb3994847fc6067613dc61a2b3559e
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
@@ -29,6 +38,18 @@ references:
   - url: https://github.com/TheThingsNetwork/lorawan-stack
     reference_type:
     reference_id:
+  - url: https://github.com/TheThingsNetwork/lorawan-stack/blob/ecdef730f176c02f7c9afce98b0457ae64de5bfc/pkg/webui/account/views/login/index.js#L90-L90
+    reference_type:
+    reference_id:
+  - url: https://github.com/TheThingsNetwork/lorawan-stack/blob/ecdef730f176c02f7c9afce98b0457ae64de5bfc/pkg/webui/account/views/token-login/index.js#L74-L74
+    reference_type:
+    reference_id:
+  - url: https://github.com/TheThingsNetwork/lorawan-stack/commit/f06776028bdb3994847fc6067613dc61a2b3559e
+    reference_type:
+    reference_id:
+  - url: https://github.com/TheThingsNetwork/lorawan-stack/releases/tag/v3.24.1
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2023-26494
     reference_type:
     reference_id:
@@ -38,15 +59,3 @@ references:
   - url: https://securitylab.github.com/advisories/GHSL-2022-138_lorawan-stack
     reference_type:
     reference_id:
-  - url: https://github.com/TheThingsNetwork/lorawan-stack/commit/f06776028bdb3994847fc6067613dc61a2b3559e
-    reference_type: other
-    reference_id: f06776028bdb3994847fc6067613dc61a2b3559e
-  - url: https://github.com/TheThingsNetwork/lorawan-stack/blob/ecdef730f176c02f7c9afce98b0457ae64de5bfc/pkg/webui/account/views/token-login/index.js#L74-L74
-    reference_type: other
-    reference_id: index.js#L74-L74
-  - url: https://github.com/TheThingsNetwork/lorawan-stack/blob/ecdef730f176c02f7c9afce98b0457ae64de5bfc/pkg/webui/account/views/login/index.js#L90-L90
-    reference_type: other
-    reference_id: index.js#L90-L90
-  - url: https://github.com/TheThingsNetwork/lorawan-stack/releases/tag/v3.24.1
-    reference_type: other
-    reference_id: v3.24.1

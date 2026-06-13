@@ -25,7 +25,14 @@ summary: "SQLx Binary Protocol Misinterpretation caused by Truncating or Overflo
   * [`cast_sign_loss`](https://rust-lang.github.io/rust-clippy/master/#/cast_sign_loss)\n\n\
   and to manually audit the code that they flag.\n\nA fix is expected to be included in the\
   \ `0.8.1` release (still WIP as of writing)."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/launchbadge/sqlx
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/launchbadge/sqlx
+        commit: 6f2905695b9606b5f51b40ce10af63ac9e696bb8
+    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual

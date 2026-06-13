@@ -10,7 +10,14 @@ summary: "Nervos CKB BlockTimeTooNew should not be considered as invalid block\n
   \ to prevent an attacker from splitting the network by mining a block right at the  15 seconds\
   \ boundary.\n\n### Patches\n\nUpgrade to v0.33.1 or above.\n\n### Workarounds\nDon't ban peer\
   \ serving too-far-ahead block header."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/nervosnetwork/ckb
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/nervosnetwork/ckb
+        commit: 760d447c8b600df0539debe80b1625836fc72819
+    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual

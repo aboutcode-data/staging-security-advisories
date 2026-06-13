@@ -6,7 +6,16 @@ aliases:
 summary: |
   serde-json-wasm stack overflow during recursive JSON parsing
   When parsing untrusted, deeply nested JSON, the stack may overflow, possibly enabling a Denial of Service attack. This was fixed by adding a check for recursion depth.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/cosmwasm/serde-json-wasm
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/cosmwasm/serde-json-wasm
+        commit: a9a9b9bf243862bd2afbf6853fca97f30dc4f620
+      - vcs_url: https://github.com/cosmwasm/serde-json-wasm
+        commit: e78f9e28b3a2151d3175ee88ab2a001bf9515429
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1

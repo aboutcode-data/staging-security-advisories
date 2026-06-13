@@ -6,7 +6,14 @@ aliases:
 summary: |
   jose2go vulnerable to denial of service via large p2c value
   The jose2go component before 1.6.0 for Go allows attackers to cause a denial of service (CPU consumption) via a large p2c (aka PBES2 Count) value.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/dvsekhvalnov/jose2go
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/dvsekhvalnov/jose2go
+        commit: a4584e9dd7128608fedbc67892eba9697f0d5317
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
@@ -24,6 +31,12 @@ references:
   - url: https://github.com/dvsekhvalnov/jose2go
     reference_type:
     reference_id:
+  - url: https://github.com/dvsekhvalnov/jose2go/commit/a4584e9dd7128608fedbc67892eba9697f0d5317
+    reference_type:
+    reference_id:
+  - url: https://github.com/dvsekhvalnov/jose2go/compare/v1.5.0...v1.6.0
+    reference_type:
+    reference_id:
   - url: https://github.com/dvsekhvalnov/jose2go/issues/31
     reference_type:
     reference_id:
@@ -36,9 +49,3 @@ references:
   - url: https://www.blackhat.com/us-23/briefings/schedule/#three-new-attacks-against-json-web-tokens-31695
     reference_type:
     reference_id:
-  - url: https://github.com/dvsekhvalnov/jose2go/commit/a4584e9dd7128608fedbc67892eba9697f0d5317
-    reference_type: other
-    reference_id: a4584e9dd7128608fedbc67892eba9697f0d5317
-  - url: https://github.com/dvsekhvalnov/jose2go/compare/v1.5.0...v1.6.0
-    reference_type: other
-    reference_id: v1.5.0...v1.6.0

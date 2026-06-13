@@ -71,7 +71,14 @@ summary: "Grafana path traversal\nToday we are releasing Grafana 8.3.1, 8.2.7, 8
   \n## Security announcements\n\nWe maintain a [security category on our blog](https://grafana.com/tags/security/),\
   \ where we will always post a summary, remediation, and mitigation details for any patch containing\
   \ security fixes. \n\nYou can also subscribe to our [RSS feed](https://grafana.com/tags/security/index.xml)."
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/grafana/grafana
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/grafana/grafana
+        commit: c798c0e958d15d9cc7f27c72113d572fa58545ce
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
@@ -86,7 +93,19 @@ severities:
 weaknesses:
   - CWE-22
 references:
+  - url: http://packetstormsecurity.com/files/165198/Grafana-Arbitrary-File-Reading.html
+    reference_type:
+    reference_id:
+  - url: http://packetstormsecurity.com/files/165221/Grafana-8.3.0-Directory-Traversal-Arbitrary-File-Read.html
+    reference_type:
+    reference_id:
   - url: https://github.com/grafana/grafana
+    reference_type:
+    reference_id:
+  - url: https://github.com/grafana/grafana/commit/c798c0e958d15d9cc7f27c72113d572fa58545ce
+    reference_type:
+    reference_id:
+  - url: https://github.com/grafana/grafana/security/advisories/GHSA-8pjx-jj86-j47p
     reference_type:
     reference_id:
   - url: https://grafana.com/blog/2021/12/08/an-update-on-0day-cve-2021-43798-grafana-directory-traversal
@@ -102,20 +121,8 @@ references:
     reference_type:
     reference_id:
   - url: http://www.openwall.com/lists/oss-security/2021/12/09/2
-    reference_type: mailing_list
-    reference_id: 2
+    reference_type:
+    reference_id:
   - url: http://www.openwall.com/lists/oss-security/2021/12/10/4
-    reference_type: mailing_list
-    reference_id: 4
-  - url: https://github.com/grafana/grafana/commit/c798c0e958d15d9cc7f27c72113d572fa58545ce
-    reference_type: other
-    reference_id: c798c0e958d15d9cc7f27c72113d572fa58545ce
-  - url: https://github.com/grafana/grafana/security/advisories/GHSA-8pjx-jj86-j47p
-    reference_type: other
-    reference_id: GHSA-8pjx-jj86-j47p
-  - url: http://packetstormsecurity.com/files/165221/Grafana-8.3.0-Directory-Traversal-Arbitrary-File-Read.html
-    reference_type: other
-    reference_id: Grafana-8.3.0-Directory-Traversal-Arbitrary-File-Read.html
-  - url: http://packetstormsecurity.com/files/165198/Grafana-Arbitrary-File-Reading.html
-    reference_type: other
-    reference_id: Grafana-Arbitrary-File-Reading.html
+    reference_type:
+    reference_id:

@@ -6,7 +6,14 @@ aliases:
 summary: |
   Mattermost allows demoted guests to change group names
   Mattermost fails to update the permissions of the current session for a user who was just demoted to guest, allowing freshly demoted guests to change group names.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost
+        commit: 61dd452fb2fcd3ac6f7b2e050f7f0a93a92d95fc
+    introduced_in_commits: []
 severities:
   - score: '3.7'
     scoring_system: cvssv3.1
@@ -32,9 +39,9 @@ references:
   - url: https://github.com/mattermost/mattermost/commit/61dd452fb2fcd3ac6f7b2e050f7f0a93a92d95fc
     reference_type:
     reference_id:
+  - url: https://mattermost.com/security-updates
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2023-50333
     reference_type:
     reference_id:
-  - url: https://mattermost.com/security-updates
-    reference_type: other
-    reference_id: security-updates

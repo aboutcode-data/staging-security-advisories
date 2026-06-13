@@ -6,7 +6,14 @@ aliases:
 summary: |
   Mattermost Jira Plugin does not properly check security levels
   Mattermost Jira Plugin handling subscriptions fails to check the security level of an incoming issue or limit it based on the user who created the subscription resulting in registered users on Jira being able to create webhooks that give them access to all Jira issues.
-impacted_packages: []
+impacted_packages:
+  - purl: pkg:github/mattermost/mattermost-plugin-jira
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mattermost/mattermost-plugin-jira
+        commit: 5f5e084d169bf6b82d5c46a7a7eb033e1a01c6de
+    introduced_in_commits: []
 severities:
   - score: '3.4'
     scoring_system: cvssv3.1
@@ -29,12 +36,12 @@ references:
   - url: https://github.com/mattermost/mattermost-plugin-jira/commit/5f5e084d169bf6b82d5c46a7a7eb033e1a01c6de
     reference_type:
     reference_id:
+  - url: https://mattermost.com/security-updates
+    reference_type:
+    reference_id:
   - url: https://nvd.nist.gov/vuln/detail/CVE-2024-24774
     reference_type:
     reference_id:
   - url: mattermost/mattermost-plugin-jira
     reference_type:
     reference_id:
-  - url: https://mattermost.com/security-updates
-    reference_type: other
-    reference_id: security-updates

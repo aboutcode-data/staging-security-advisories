@@ -34,6 +34,71 @@ summary: |
 
   All OpenShift Container Platform 4.13 users are advised to upgrade to these updated packages and images when they are available in the appropriate release channel. To check for available updates, use the OpenShift CLI (oc) or web console. Instructions for upgrading a cluster are available at https://docs.openshift.com/container-platform/4.13/updating/updating-cluster-cli.html
 impacted_packages:
+  - purl: pkg:rpm/redhat/cri-tools?arch=src
+    affected_versions: vers:rpm/<1.26.0-4.el8
+    fixed_versions: vers:rpm/1.26.0-4.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/runc?arch=src&epoch=4
+    affected_versions: vers:rpm/<1.1.12-1.rhaos4.13.el8
+    fixed_versions: vers:rpm/1.1.12-1.rhaos4.13.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/cri-tools?arch=src
+    affected_versions: vers:rpm/<1.26.0-4.1.el9
+    fixed_versions: vers:rpm/1.26.0-4.1.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel?arch=src
+    affected_versions: vers:rpm/<5.14.0-284.50.1.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.50.1.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-rt?arch=src
+    affected_versions: vers:rpm/<5.14.0-284.50.1.rt14.335.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.50.1.rt14.335.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/runc?arch=src&epoch=4
+    affected_versions: vers:rpm/<1.1.12-1.rhaos4.13.el9
+    fixed_versions: vers:rpm/1.1.12-1.rhaos4.13.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/cri-tools?arch=x86_64
+    affected_versions: vers:rpm/<1.26.0-4.el8
+    fixed_versions: vers:rpm/1.26.0-4.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/cri-tools-debugsource?arch=x86_64
+    affected_versions: vers:rpm/<1.26.0-4.el8
+    fixed_versions: vers:rpm/1.26.0-4.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/cri-tools-debuginfo?arch=x86_64
+    affected_versions: vers:rpm/<1.26.0-4.el8
+    fixed_versions: vers:rpm/1.26.0-4.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/runc?arch=x86_64&epoch=4
+    affected_versions: vers:rpm/<1.1.12-1.rhaos4.13.el8
+    fixed_versions: vers:rpm/1.1.12-1.rhaos4.13.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/runc-debugsource?arch=x86_64&epoch=4
+    affected_versions: vers:rpm/<1.1.12-1.rhaos4.13.el8
+    fixed_versions: vers:rpm/1.1.12-1.rhaos4.13.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/runc-debuginfo?arch=x86_64&epoch=4
+    affected_versions: vers:rpm/<1.1.12-1.rhaos4.13.el8
+    fixed_versions: vers:rpm/1.1.12-1.rhaos4.13.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/cri-tools?arch=x86_64
+    affected_versions: vers:rpm/<1.26.0-4.1.el9
+    fixed_versions: vers:rpm/1.26.0-4.1.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/cri-tools-debugsource?arch=x86_64
     affected_versions: vers:rpm/<1.26.0-4.1.el9
     fixed_versions: vers:rpm/1.26.0-4.1.el9
@@ -1227,71 +1292,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/kernel-doc?arch=noarch
     affected_versions: vers:rpm/<5.14.0-284.50.1.el9_2
     fixed_versions: vers:rpm/5.14.0-284.50.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-tools?arch=src
-    affected_versions: vers:rpm/<1.26.0-4.el8
-    fixed_versions: vers:rpm/1.26.0-4.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/runc?arch=src&epoch=4
-    affected_versions: vers:rpm/<1.1.12-1.rhaos4.13.el8
-    fixed_versions: vers:rpm/1.1.12-1.rhaos4.13.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-tools?arch=src
-    affected_versions: vers:rpm/<1.26.0-4.1.el9
-    fixed_versions: vers:rpm/1.26.0-4.1.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel?arch=src
-    affected_versions: vers:rpm/<5.14.0-284.50.1.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.50.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-rt?arch=src
-    affected_versions: vers:rpm/<5.14.0-284.50.1.rt14.335.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.50.1.rt14.335.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/runc?arch=src&epoch=4
-    affected_versions: vers:rpm/<1.1.12-1.rhaos4.13.el9
-    fixed_versions: vers:rpm/1.1.12-1.rhaos4.13.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-tools?arch=x86_64
-    affected_versions: vers:rpm/<1.26.0-4.el8
-    fixed_versions: vers:rpm/1.26.0-4.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-tools-debugsource?arch=x86_64
-    affected_versions: vers:rpm/<1.26.0-4.el8
-    fixed_versions: vers:rpm/1.26.0-4.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-tools-debuginfo?arch=x86_64
-    affected_versions: vers:rpm/<1.26.0-4.el8
-    fixed_versions: vers:rpm/1.26.0-4.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/runc?arch=x86_64&epoch=4
-    affected_versions: vers:rpm/<1.1.12-1.rhaos4.13.el8
-    fixed_versions: vers:rpm/1.1.12-1.rhaos4.13.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/runc-debugsource?arch=x86_64&epoch=4
-    affected_versions: vers:rpm/<1.1.12-1.rhaos4.13.el8
-    fixed_versions: vers:rpm/1.1.12-1.rhaos4.13.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/runc-debuginfo?arch=x86_64&epoch=4
-    affected_versions: vers:rpm/<1.1.12-1.rhaos4.13.el8
-    fixed_versions: vers:rpm/1.1.12-1.rhaos4.13.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-tools?arch=x86_64
-    affected_versions: vers:rpm/<1.26.0-4.1.el9
-    fixed_versions: vers:rpm/1.26.0-4.1.el9
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
