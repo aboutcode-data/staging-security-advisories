@@ -28,9 +28,34 @@ summary: |
   updated packages and images when they are available in the appropriate release channel. To check for available updates, use the OpenShift CLI (oc) or web console. Instructions for upgrading a cluster are available at
   https://docs.redhat.com/en/documentation/openshift_container_platform/4.16/html-single/updating_clusters/index#updating-cluster-cli.
 impacted_packages:
-  - purl: pkg:rpm/redhat/podman-remote?arch=x86_64&epoch=4
-    affected_versions: vers:rpm/<4.9.4-15.rhaos4.16.el8
-    fixed_versions: vers:rpm/4.9.4-15.rhaos4.16.el8
+  - purl: pkg:rpm/redhat/podman-plugins-debuginfo?arch=ppc64le&epoch=4
+    affected_versions: vers:rpm/<4.9.4-17.rhaos4.16.el9
+    fixed_versions: vers:rpm/4.9.4-17.rhaos4.16.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-remote-debuginfo?arch=ppc64le&epoch=4
+    affected_versions: vers:rpm/<4.9.4-17.rhaos4.16.el9
+    fixed_versions: vers:rpm/4.9.4-17.rhaos4.16.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/skopeo?arch=ppc64le&epoch=2
+    affected_versions: vers:rpm/<1.14.5-4.rhaos4.16.el9
+    fixed_versions: vers:rpm/1.14.5-4.rhaos4.16.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/skopeo-tests?arch=ppc64le&epoch=2
+    affected_versions: vers:rpm/<1.14.5-4.rhaos4.16.el9
+    fixed_versions: vers:rpm/1.14.5-4.rhaos4.16.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/skopeo-debugsource?arch=ppc64le&epoch=2
+    affected_versions: vers:rpm/<1.14.5-4.rhaos4.16.el9
+    fixed_versions: vers:rpm/1.14.5-4.rhaos4.16.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/skopeo-debuginfo?arch=ppc64le&epoch=2
+    affected_versions: vers:rpm/<1.14.5-4.rhaos4.16.el9
+    fixed_versions: vers:rpm/1.14.5-4.rhaos4.16.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/butane?arch=s390x
@@ -38,32 +63,62 @@ impacted_packages:
     fixed_versions: vers:rpm/0.21.0-5.rhaos4.16.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-tests?arch=x86_64&epoch=4
-    affected_versions: vers:rpm/<4.9.4-15.rhaos4.16.el8
-    fixed_versions: vers:rpm/4.9.4-15.rhaos4.16.el8
+  - purl: pkg:rpm/redhat/butane-debugsource?arch=s390x
+    affected_versions: vers:rpm/<0.21.0-5.rhaos4.16.el8
+    fixed_versions: vers:rpm/0.21.0-5.rhaos4.16.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-debugsource?arch=x86_64&epoch=4
-    affected_versions: vers:rpm/<4.9.4-15.rhaos4.16.el8
-    fixed_versions: vers:rpm/4.9.4-15.rhaos4.16.el8
+  - purl: pkg:rpm/redhat/butane-debuginfo?arch=s390x
+    affected_versions: vers:rpm/<0.21.0-5.rhaos4.16.el8
+    fixed_versions: vers:rpm/0.21.0-5.rhaos4.16.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-catatonit-debuginfo?arch=x86_64&epoch=4
-    affected_versions: vers:rpm/<4.9.4-15.rhaos4.16.el8
-    fixed_versions: vers:rpm/4.9.4-15.rhaos4.16.el8
+  - purl: pkg:rpm/redhat/containernetworking-plugins-debuginfo?arch=s390x&epoch=1
+    affected_versions: vers:rpm/<1.4.0-6.rhaos4.16.el8
+    fixed_versions: vers:rpm/1.4.0-6.rhaos4.16.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-debuginfo?arch=x86_64&epoch=4
-    affected_versions: vers:rpm/<4.9.4-15.rhaos4.16.el8
-    fixed_versions: vers:rpm/4.9.4-15.rhaos4.16.el8
+  - purl: pkg:rpm/redhat/cri-o?arch=s390x
+    affected_versions: vers:rpm/<1.29.13-9.rhaos4.16.git6cc30d2.el8
+    fixed_versions: vers:rpm/1.29.13-9.rhaos4.16.git6cc30d2.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-gvproxy?arch=x86_64&epoch=4
-    affected_versions: vers:rpm/<4.9.4-15.rhaos4.16.el8
-    fixed_versions: vers:rpm/4.9.4-15.rhaos4.16.el8
+  - purl: pkg:rpm/redhat/cri-o-debuginfo?arch=s390x
+    affected_versions: vers:rpm/<1.29.13-9.rhaos4.16.git6cc30d2.el8
+    fixed_versions: vers:rpm/1.29.13-9.rhaos4.16.git6cc30d2.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-plugins?arch=x86_64&epoch=4
+  - purl: pkg:rpm/redhat/openshift-kube-scheduler?arch=s390x
+    affected_versions: vers:rpm/<4.16.0-202507092005.p0.ga6b193c.assembly.stream.el8
+    fixed_versions: vers:rpm/4.16.0-202507092005.p0.ga6b193c.assembly.stream.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/openshift-kubelet?arch=s390x
+    affected_versions: vers:rpm/<4.16.0-202507092005.p0.ga6b193c.assembly.stream.el8
+    fixed_versions: vers:rpm/4.16.0-202507092005.p0.ga6b193c.assembly.stream.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/openshift-clients?arch=s390x
+    affected_versions: vers:rpm/<4.16.0-202507050035.p0.gee354f6.assembly.stream.el8
+    fixed_versions: vers:rpm/4.16.0-202507050035.p0.gee354f6.assembly.stream.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ose-aws-ecr-image-credential-provider?arch=s390x
+    affected_versions: vers:rpm/<4.16.0-202507050035.p0.ga53e9de.assembly.stream.el8
+    fixed_versions: vers:rpm/4.16.0-202507050035.p0.ga53e9de.assembly.stream.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ose-azure-acr-image-credential-provider?arch=s390x
+    affected_versions: vers:rpm/<4.16.0-202507050035.p0.ge5bac33.assembly.stream.el8
+    fixed_versions: vers:rpm/4.16.0-202507050035.p0.ge5bac33.assembly.stream.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ose-gcp-gcr-image-credential-provider?arch=s390x
+    affected_versions: vers:rpm/<4.16.0-202507050035.p0.g26b43df.assembly.stream.el8
+    fixed_versions: vers:rpm/4.16.0-202507050035.p0.g26b43df.assembly.stream.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman?arch=s390x&epoch=4
     affected_versions: vers:rpm/<4.9.4-15.rhaos4.16.el8
     fixed_versions: vers:rpm/4.9.4-15.rhaos4.16.el8
     fixed_in_commits: []
@@ -308,9 +363,39 @@ impacted_packages:
     fixed_versions: vers:rpm/4.9.4-15.rhaos4.16.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ignition-debuginfo?arch=s390x
-    affected_versions: vers:rpm/<2.18.0-7.rhaos4.16.el9
-    fixed_versions: vers:rpm/2.18.0-7.rhaos4.16.el9
+  - purl: pkg:rpm/redhat/podman-gvproxy?arch=x86_64&epoch=4
+    affected_versions: vers:rpm/<4.9.4-15.rhaos4.16.el8
+    fixed_versions: vers:rpm/4.9.4-15.rhaos4.16.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-plugins?arch=x86_64&epoch=4
+    affected_versions: vers:rpm/<4.9.4-15.rhaos4.16.el8
+    fixed_versions: vers:rpm/4.9.4-15.rhaos4.16.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-remote?arch=x86_64&epoch=4
+    affected_versions: vers:rpm/<4.9.4-15.rhaos4.16.el8
+    fixed_versions: vers:rpm/4.9.4-15.rhaos4.16.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-tests?arch=x86_64&epoch=4
+    affected_versions: vers:rpm/<4.9.4-15.rhaos4.16.el8
+    fixed_versions: vers:rpm/4.9.4-15.rhaos4.16.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-debugsource?arch=x86_64&epoch=4
+    affected_versions: vers:rpm/<4.9.4-15.rhaos4.16.el8
+    fixed_versions: vers:rpm/4.9.4-15.rhaos4.16.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-catatonit-debuginfo?arch=x86_64&epoch=4
+    affected_versions: vers:rpm/<4.9.4-15.rhaos4.16.el8
+    fixed_versions: vers:rpm/4.9.4-15.rhaos4.16.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-debuginfo?arch=x86_64&epoch=4
+    affected_versions: vers:rpm/<4.9.4-15.rhaos4.16.el8
+    fixed_versions: vers:rpm/4.9.4-15.rhaos4.16.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-gvproxy-debuginfo?arch=x86_64&epoch=4
@@ -738,11 +823,6 @@ impacted_packages:
     fixed_versions: vers:rpm/4.16.0-202507092005.p0.ga6b193c.assembly.stream.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-gvproxy?arch=ppc64le&epoch=4
-    affected_versions: vers:rpm/<4.9.4-15.rhaos4.16.el8
-    fixed_versions: vers:rpm/4.9.4-15.rhaos4.16.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/openshift-kube-controller-manager?arch=aarch64
     affected_versions: vers:rpm/<4.16.0-202507092005.p0.ga6b193c.assembly.stream.el9
     fixed_versions: vers:rpm/4.16.0-202507092005.p0.ga6b193c.assembly.stream.el9
@@ -948,6 +1028,11 @@ impacted_packages:
     fixed_versions: vers:rpm/4.9.4-15.rhaos4.16.el8
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-gvproxy?arch=ppc64le&epoch=4
+    affected_versions: vers:rpm/<4.9.4-15.rhaos4.16.el8
+    fixed_versions: vers:rpm/4.9.4-15.rhaos4.16.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-plugins?arch=ppc64le&epoch=4
     affected_versions: vers:rpm/<4.9.4-15.rhaos4.16.el8
     fixed_versions: vers:rpm/4.9.4-15.rhaos4.16.el8
@@ -1133,46 +1218,6 @@ impacted_packages:
     fixed_versions: vers:rpm/4.9.4-17.rhaos4.16.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-plugins-debuginfo?arch=ppc64le&epoch=4
-    affected_versions: vers:rpm/<4.9.4-17.rhaos4.16.el9
-    fixed_versions: vers:rpm/4.9.4-17.rhaos4.16.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-remote-debuginfo?arch=ppc64le&epoch=4
-    affected_versions: vers:rpm/<4.9.4-17.rhaos4.16.el9
-    fixed_versions: vers:rpm/4.9.4-17.rhaos4.16.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/skopeo?arch=ppc64le&epoch=2
-    affected_versions: vers:rpm/<1.14.5-4.rhaos4.16.el9
-    fixed_versions: vers:rpm/1.14.5-4.rhaos4.16.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/skopeo-tests?arch=ppc64le&epoch=2
-    affected_versions: vers:rpm/<1.14.5-4.rhaos4.16.el9
-    fixed_versions: vers:rpm/1.14.5-4.rhaos4.16.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/skopeo-debugsource?arch=ppc64le&epoch=2
-    affected_versions: vers:rpm/<1.14.5-4.rhaos4.16.el9
-    fixed_versions: vers:rpm/1.14.5-4.rhaos4.16.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/skopeo-debuginfo?arch=ppc64le&epoch=2
-    affected_versions: vers:rpm/<1.14.5-4.rhaos4.16.el9
-    fixed_versions: vers:rpm/1.14.5-4.rhaos4.16.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/butane-debugsource?arch=s390x
-    affected_versions: vers:rpm/<0.21.0-5.rhaos4.16.el8
-    fixed_versions: vers:rpm/0.21.0-5.rhaos4.16.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/butane-debuginfo?arch=s390x
-    affected_versions: vers:rpm/<0.21.0-5.rhaos4.16.el8
-    fixed_versions: vers:rpm/0.21.0-5.rhaos4.16.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/containernetworking-plugins?arch=s390x&epoch=1
     affected_versions: vers:rpm/<1.4.0-6.rhaos4.16.el8
     fixed_versions: vers:rpm/1.4.0-6.rhaos4.16.el8
@@ -1183,22 +1228,7 @@ impacted_packages:
     fixed_versions: vers:rpm/1.4.0-6.rhaos4.16.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/containernetworking-plugins-debuginfo?arch=s390x&epoch=1
-    affected_versions: vers:rpm/<1.4.0-6.rhaos4.16.el8
-    fixed_versions: vers:rpm/1.4.0-6.rhaos4.16.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-o?arch=s390x
-    affected_versions: vers:rpm/<1.29.13-9.rhaos4.16.git6cc30d2.el8
-    fixed_versions: vers:rpm/1.29.13-9.rhaos4.16.git6cc30d2.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/cri-o-debugsource?arch=s390x
-    affected_versions: vers:rpm/<1.29.13-9.rhaos4.16.git6cc30d2.el8
-    fixed_versions: vers:rpm/1.29.13-9.rhaos4.16.git6cc30d2.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-o-debuginfo?arch=s390x
     affected_versions: vers:rpm/<1.29.13-9.rhaos4.16.git6cc30d2.el8
     fixed_versions: vers:rpm/1.29.13-9.rhaos4.16.git6cc30d2.el8
     fixed_in_commits: []
@@ -1231,41 +1261,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/openshift-kube-controller-manager?arch=s390x
     affected_versions: vers:rpm/<4.16.0-202507092005.p0.ga6b193c.assembly.stream.el8
     fixed_versions: vers:rpm/4.16.0-202507092005.p0.ga6b193c.assembly.stream.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/openshift-kube-scheduler?arch=s390x
-    affected_versions: vers:rpm/<4.16.0-202507092005.p0.ga6b193c.assembly.stream.el8
-    fixed_versions: vers:rpm/4.16.0-202507092005.p0.ga6b193c.assembly.stream.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/openshift-kubelet?arch=s390x
-    affected_versions: vers:rpm/<4.16.0-202507092005.p0.ga6b193c.assembly.stream.el8
-    fixed_versions: vers:rpm/4.16.0-202507092005.p0.ga6b193c.assembly.stream.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/openshift-clients?arch=s390x
-    affected_versions: vers:rpm/<4.16.0-202507050035.p0.gee354f6.assembly.stream.el8
-    fixed_versions: vers:rpm/4.16.0-202507050035.p0.gee354f6.assembly.stream.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ose-aws-ecr-image-credential-provider?arch=s390x
-    affected_versions: vers:rpm/<4.16.0-202507050035.p0.ga53e9de.assembly.stream.el8
-    fixed_versions: vers:rpm/4.16.0-202507050035.p0.ga53e9de.assembly.stream.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ose-azure-acr-image-credential-provider?arch=s390x
-    affected_versions: vers:rpm/<4.16.0-202507050035.p0.ge5bac33.assembly.stream.el8
-    fixed_versions: vers:rpm/4.16.0-202507050035.p0.ge5bac33.assembly.stream.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ose-gcp-gcr-image-credential-provider?arch=s390x
-    affected_versions: vers:rpm/<4.16.0-202507050035.p0.g26b43df.assembly.stream.el8
-    fixed_versions: vers:rpm/4.16.0-202507050035.p0.g26b43df.assembly.stream.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman?arch=s390x&epoch=4
-    affected_versions: vers:rpm/<4.9.4-15.rhaos4.16.el8
-    fixed_versions: vers:rpm/4.9.4-15.rhaos4.16.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-catatonit?arch=s390x&epoch=4
@@ -1374,6 +1369,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/ignition-debugsource?arch=s390x
+    affected_versions: vers:rpm/<2.18.0-7.rhaos4.16.el9
+    fixed_versions: vers:rpm/2.18.0-7.rhaos4.16.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ignition-debuginfo?arch=s390x
     affected_versions: vers:rpm/<2.18.0-7.rhaos4.16.el9
     fixed_versions: vers:rpm/2.18.0-7.rhaos4.16.el9
     fixed_in_commits: []

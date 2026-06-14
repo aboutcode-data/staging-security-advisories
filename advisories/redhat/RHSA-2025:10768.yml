@@ -24,19 +24,234 @@ summary: |
 
   All OpenShift Container Platform 4.18 users are advised to upgrade to these updated packages and images when they are available in the appropriate release channel. To check for available updates, use the OpenShift CLI (oc) or web console. Instructions for upgrading a cluster are available at https://docs.redhat.com/en/documentation/openshift_container_platform/4.18/html-single/updating_clusters/index#updating-cluster-cli.
 impacted_packages:
-  - purl: pkg:rpm/redhat/podman-plugins-debuginfo?arch=aarch64&epoch=5
-    affected_versions: vers:rpm/<5.2.2-10.rhaos4.18.el9
-    fixed_versions: vers:rpm/5.2.2-10.rhaos4.18.el9
+  - purl: pkg:rpm/redhat/ose-aws-ecr-image-credential-provider?arch=src
+    affected_versions: vers:rpm/<4.18.0-202507011252.p0.gc395190.assembly.stream.el8
+    fixed_versions: vers:rpm/4.18.0-202507011252.p0.gc395190.assembly.stream.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-remote-debuginfo?arch=aarch64&epoch=5
-    affected_versions: vers:rpm/<5.2.2-10.rhaos4.18.el9
-    fixed_versions: vers:rpm/5.2.2-10.rhaos4.18.el9
+  - purl: pkg:rpm/redhat/openshift-clients?arch=src
+    affected_versions: vers:rpm/<4.18.0-202507080904.p0.g4fcb2d0.assembly.stream.el8
+    fixed_versions: vers:rpm/4.18.0-202507080904.p0.g4fcb2d0.assembly.stream.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/openshift-clients?arch=src
+    affected_versions: vers:rpm/<4.18.0-202507080904.p0.g4fcb2d0.assembly.stream.el9
+    fixed_versions: vers:rpm/4.18.0-202507080904.p0.g4fcb2d0.assembly.stream.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/butane-debugsource?arch=x86_64
+    affected_versions: vers:rpm/<0.23.0-2.rhaos4.18.el8
+    fixed_versions: vers:rpm/0.23.0-2.rhaos4.18.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/cri-o?arch=x86_64
+    affected_versions: vers:rpm/<1.31.10-2.rhaos4.18.gitce48a32.el8
+    fixed_versions: vers:rpm/1.31.10-2.rhaos4.18.gitce48a32.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/toolbox-debugsource?arch=x86_64
+    affected_versions: vers:rpm/<0.0.99.5-3.rhaos4.18.el8
+    fixed_versions: vers:rpm/0.0.99.5-3.rhaos4.18.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/toolbox-debuginfo?arch=x86_64
+    affected_versions: vers:rpm/<0.0.99.5-3.rhaos4.18.el8
+    fixed_versions: vers:rpm/0.0.99.5-3.rhaos4.18.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libslirp-debugsource?arch=x86_64
+    affected_versions: vers:rpm/<4.4.0-6.rhaos4.18.el8
+    fixed_versions: vers:rpm/4.4.0-6.rhaos4.18.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/openshift-clients-redistributable?arch=x86_64
+    affected_versions: vers:rpm/<4.18.0-202507080904.p0.g4fcb2d0.assembly.stream.el8
+    fixed_versions: vers:rpm/4.18.0-202507080904.p0.g4fcb2d0.assembly.stream.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman?arch=x86_64&epoch=5
+    affected_versions: vers:rpm/<5.2.2-1.rhaos4.18.el8
+    fixed_versions: vers:rpm/5.2.2-1.rhaos4.18.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-catatonit?arch=x86_64&epoch=5
+    affected_versions: vers:rpm/<5.2.2-1.rhaos4.18.el8
+    fixed_versions: vers:rpm/5.2.2-1.rhaos4.18.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-gvproxy?arch=x86_64&epoch=5
+    affected_versions: vers:rpm/<5.2.2-1.rhaos4.18.el8
+    fixed_versions: vers:rpm/5.2.2-1.rhaos4.18.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-debugsource?arch=x86_64&epoch=5
+    affected_versions: vers:rpm/<5.2.2-1.rhaos4.18.el8
+    fixed_versions: vers:rpm/5.2.2-1.rhaos4.18.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ignition?arch=x86_64
+    affected_versions: vers:rpm/<2.18.0-8.rhaos4.18.el9
+    fixed_versions: vers:rpm/2.18.0-8.rhaos4.18.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/openshift-kube-apiserver?arch=x86_64
+    affected_versions: vers:rpm/<4.18.0-202507051134.p0.g817e6dd.assembly.stream.el9
+    fixed_versions: vers:rpm/4.18.0-202507051134.p0.g817e6dd.assembly.stream.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ose-gcp-gcr-image-credential-provider?arch=x86_64
+    affected_versions: vers:rpm/<4.18.0-202507011252.p0.g6ea2356.assembly.stream.el9
+    fixed_versions: vers:rpm/4.18.0-202507011252.p0.g6ea2356.assembly.stream.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/cri-tools-debuginfo?arch=aarch64
+    affected_versions: vers:rpm/<1.31.1-4.el8
+    fixed_versions: vers:rpm/1.31.1-4.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libslirp-devel?arch=aarch64
+    affected_versions: vers:rpm/<4.4.0-6.rhaos4.18.el8
+    fixed_versions: vers:rpm/4.4.0-6.rhaos4.18.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libslirp-debuginfo?arch=aarch64
+    affected_versions: vers:rpm/<4.4.0-6.rhaos4.18.el8
+    fixed_versions: vers:rpm/4.4.0-6.rhaos4.18.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-tests?arch=aarch64&epoch=5
+    affected_versions: vers:rpm/<5.2.2-1.rhaos4.18.el8
+    fixed_versions: vers:rpm/5.2.2-1.rhaos4.18.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/skopeo?arch=aarch64&epoch=2
+    affected_versions: vers:rpm/<1.16.1-1.rhaos4.18.el8
+    fixed_versions: vers:rpm/1.16.1-1.rhaos4.18.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/cri-o-debugsource?arch=aarch64
+    affected_versions: vers:rpm/<1.31.10-2.rhaos4.18.gitce48a32.el9
+    fixed_versions: vers:rpm/1.31.10-2.rhaos4.18.gitce48a32.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/cri-o-debuginfo?arch=aarch64
+    affected_versions: vers:rpm/<1.31.10-2.rhaos4.18.gitce48a32.el9
+    fixed_versions: vers:rpm/1.31.10-2.rhaos4.18.gitce48a32.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ignition?arch=aarch64
+    affected_versions: vers:rpm/<2.18.0-8.rhaos4.18.el9
+    fixed_versions: vers:rpm/2.18.0-8.rhaos4.18.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ignition-validate-debuginfo?arch=aarch64
+    affected_versions: vers:rpm/<2.18.0-8.rhaos4.18.el9
+    fixed_versions: vers:rpm/2.18.0-8.rhaos4.18.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/openshift-clients?arch=aarch64
+    affected_versions: vers:rpm/<4.18.0-202507080904.p0.g4fcb2d0.assembly.stream.el9
+    fixed_versions: vers:rpm/4.18.0-202507080904.p0.g4fcb2d0.assembly.stream.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/butane?arch=ppc64le
+    affected_versions: vers:rpm/<0.23.0-2.rhaos4.18.el8
+    fixed_versions: vers:rpm/0.23.0-2.rhaos4.18.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/cri-o-debuginfo?arch=ppc64le
+    affected_versions: vers:rpm/<1.31.10-2.rhaos4.18.gitce48a32.el8
+    fixed_versions: vers:rpm/1.31.10-2.rhaos4.18.gitce48a32.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ose-azure-acr-image-credential-provider?arch=ppc64le
+    affected_versions: vers:rpm/<4.18.0-202507011252.p0.g9c24d76.assembly.stream.el8
+    fixed_versions: vers:rpm/4.18.0-202507011252.p0.g9c24d76.assembly.stream.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/cri-o-debugsource?arch=ppc64le
+    affected_versions: vers:rpm/<1.31.10-2.rhaos4.18.gitce48a32.el9
+    fixed_versions: vers:rpm/1.31.10-2.rhaos4.18.gitce48a32.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/openshift-kube-scheduler?arch=ppc64le
+    affected_versions: vers:rpm/<4.18.0-202507051134.p0.g817e6dd.assembly.stream.el9
+    fixed_versions: vers:rpm/4.18.0-202507051134.p0.g817e6dd.assembly.stream.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ose-aws-ecr-image-credential-provider?arch=ppc64le
+    affected_versions: vers:rpm/<4.18.0-202507011252.p0.gc395190.assembly.stream.el9
+    fixed_versions: vers:rpm/4.18.0-202507011252.p0.gc395190.assembly.stream.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/skopeo-tests?arch=ppc64le&epoch=2
     affected_versions: vers:rpm/<1.16.1-2.rhaos4.18.el9
     fixed_versions: vers:rpm/1.16.1-2.rhaos4.18.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/butane-debugsource?arch=s390x
+    affected_versions: vers:rpm/<0.23.0-2.rhaos4.18.el8
+    fixed_versions: vers:rpm/0.23.0-2.rhaos4.18.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/butane-debuginfo?arch=s390x
+    affected_versions: vers:rpm/<0.23.0-2.rhaos4.18.el8
+    fixed_versions: vers:rpm/0.23.0-2.rhaos4.18.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/cri-tools-debugsource?arch=s390x
+    affected_versions: vers:rpm/<1.31.1-4.el8
+    fixed_versions: vers:rpm/1.31.1-4.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/openshift-clients?arch=s390x
+    affected_versions: vers:rpm/<4.18.0-202507080904.p0.g4fcb2d0.assembly.stream.el8
+    fixed_versions: vers:rpm/4.18.0-202507080904.p0.g4fcb2d0.assembly.stream.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ignition-debuginfo?arch=s390x
+    affected_versions: vers:rpm/<2.18.0-8.rhaos4.18.el9
+    fixed_versions: vers:rpm/2.18.0-8.rhaos4.18.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/skopeo-tests?arch=s390x&epoch=2
+    affected_versions: vers:rpm/<1.16.1-2.rhaos4.18.el9
+    fixed_versions: vers:rpm/1.16.1-2.rhaos4.18.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/butane-redistributable?arch=noarch
+    affected_versions: vers:rpm/<0.23.0-2.rhaos4.18.el8
+    fixed_versions: vers:rpm/0.23.0-2.rhaos4.18.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/conmon?arch=x86_64&epoch=3
+    affected_versions: vers:rpm/<2.1.12-1.rhaos4.18.el8
+    fixed_versions: vers:rpm/2.1.12-1.rhaos4.18.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/conmon-debugsource?arch=x86_64&epoch=3
+    affected_versions: vers:rpm/<2.1.12-1.rhaos4.18.el8
+    fixed_versions: vers:rpm/2.1.12-1.rhaos4.18.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/conmon-debuginfo?arch=x86_64&epoch=3
+    affected_versions: vers:rpm/<2.1.12-1.rhaos4.18.el8
+    fixed_versions: vers:rpm/2.1.12-1.rhaos4.18.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/containers-common?arch=x86_64&epoch=2
+    affected_versions: vers:rpm/<1-87.rhaos4.18.el8
+    fixed_versions: vers:rpm/1-87.rhaos4.18.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libslirp?arch=x86_64
+    affected_versions: vers:rpm/<4.4.0-6.rhaos4.18.el8
+    fixed_versions: vers:rpm/4.4.0-6.rhaos4.18.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libslirp-devel?arch=x86_64
+    affected_versions: vers:rpm/<4.4.0-6.rhaos4.18.el8
+    fixed_versions: vers:rpm/4.4.0-6.rhaos4.18.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/butane?arch=src
@@ -69,11 +284,6 @@ impacted_packages:
     fixed_versions: vers:rpm/4.18.0-202507011252.p0.gd2acdd5.assembly.stream.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ose-aws-ecr-image-credential-provider?arch=src
-    affected_versions: vers:rpm/<4.18.0-202507011252.p0.gc395190.assembly.stream.el8
-    fixed_versions: vers:rpm/4.18.0-202507011252.p0.gc395190.assembly.stream.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/ose-azure-acr-image-credential-provider?arch=src
     affected_versions: vers:rpm/<4.18.0-202507011252.p0.g9c24d76.assembly.stream.el8
     fixed_versions: vers:rpm/4.18.0-202507011252.p0.g9c24d76.assembly.stream.el8
@@ -102,11 +312,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/libslirp?arch=src
     affected_versions: vers:rpm/<4.4.0-6.rhaos4.18.el8
     fixed_versions: vers:rpm/4.4.0-6.rhaos4.18.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/openshift-clients?arch=src
-    affected_versions: vers:rpm/<4.18.0-202507080904.p0.g4fcb2d0.assembly.stream.el8
-    fixed_versions: vers:rpm/4.18.0-202507080904.p0.g4fcb2d0.assembly.stream.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman?arch=src&epoch=5
@@ -144,6 +349,11 @@ impacted_packages:
     fixed_versions: vers:rpm/4.18.0-202507011252.p0.g8c16b0b.assembly.stream.el9
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libslirp-debuginfo?arch=x86_64
+    affected_versions: vers:rpm/<4.4.0-6.rhaos4.18.el8
+    fixed_versions: vers:rpm/4.4.0-6.rhaos4.18.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/ose-aws-ecr-image-credential-provider?arch=src
     affected_versions: vers:rpm/<4.18.0-202507011252.p0.gc395190.assembly.stream.el9
     fixed_versions: vers:rpm/4.18.0-202507011252.p0.gc395190.assembly.stream.el9
@@ -169,17 +379,7 @@ impacted_packages:
     fixed_versions: vers:rpm/1.16.1-2.rhaos4.18.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/openshift-clients?arch=src
-    affected_versions: vers:rpm/<4.18.0-202507080904.p0.g4fcb2d0.assembly.stream.el9
-    fixed_versions: vers:rpm/4.18.0-202507080904.p0.g4fcb2d0.assembly.stream.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/butane?arch=x86_64
-    affected_versions: vers:rpm/<0.23.0-2.rhaos4.18.el8
-    fixed_versions: vers:rpm/0.23.0-2.rhaos4.18.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/butane-debugsource?arch=x86_64
     affected_versions: vers:rpm/<0.23.0-2.rhaos4.18.el8
     fixed_versions: vers:rpm/0.23.0-2.rhaos4.18.el8
     fixed_in_commits: []
@@ -187,11 +387,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/butane-debuginfo?arch=x86_64
     affected_versions: vers:rpm/<0.23.0-2.rhaos4.18.el8
     fixed_versions: vers:rpm/0.23.0-2.rhaos4.18.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-o?arch=x86_64
-    affected_versions: vers:rpm/<1.31.10-2.rhaos4.18.gitce48a32.el8
-    fixed_versions: vers:rpm/1.31.10-2.rhaos4.18.gitce48a32.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/cri-o-debugsource?arch=x86_64
@@ -239,14 +434,14 @@ impacted_packages:
     fixed_versions: vers:rpm/4.18.0-202507051134.p0.g817e6dd.assembly.stream.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/conmon-debuginfo?arch=aarch64&epoch=3
-    affected_versions: vers:rpm/<2.1.12-1.rhaos4.18.el8
-    fixed_versions: vers:rpm/2.1.12-1.rhaos4.18.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/openshift-kubelet?arch=x86_64
     affected_versions: vers:rpm/<4.18.0-202507051134.p0.g817e6dd.assembly.stream.el8
     fixed_versions: vers:rpm/4.18.0-202507051134.p0.g817e6dd.assembly.stream.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/openshift-clients?arch=x86_64
+    affected_versions: vers:rpm/<4.18.0-202507080904.p0.g4fcb2d0.assembly.stream.el8
+    fixed_versions: vers:rpm/4.18.0-202507080904.p0.g4fcb2d0.assembly.stream.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/ose-aws-ecr-image-credential-provider?arch=x86_64
@@ -269,81 +464,6 @@ impacted_packages:
     fixed_versions: vers:rpm/0.0.99.5-3.rhaos4.18.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/toolbox-debugsource?arch=x86_64
-    affected_versions: vers:rpm/<0.0.99.5-3.rhaos4.18.el8
-    fixed_versions: vers:rpm/0.0.99.5-3.rhaos4.18.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/toolbox-debuginfo?arch=x86_64
-    affected_versions: vers:rpm/<0.0.99.5-3.rhaos4.18.el8
-    fixed_versions: vers:rpm/0.0.99.5-3.rhaos4.18.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/conmon?arch=x86_64&epoch=3
-    affected_versions: vers:rpm/<2.1.12-1.rhaos4.18.el8
-    fixed_versions: vers:rpm/2.1.12-1.rhaos4.18.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/conmon-debugsource?arch=x86_64&epoch=3
-    affected_versions: vers:rpm/<2.1.12-1.rhaos4.18.el8
-    fixed_versions: vers:rpm/2.1.12-1.rhaos4.18.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/conmon-debuginfo?arch=x86_64&epoch=3
-    affected_versions: vers:rpm/<2.1.12-1.rhaos4.18.el8
-    fixed_versions: vers:rpm/2.1.12-1.rhaos4.18.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/containers-common?arch=x86_64&epoch=2
-    affected_versions: vers:rpm/<1-87.rhaos4.18.el8
-    fixed_versions: vers:rpm/1-87.rhaos4.18.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libslirp?arch=x86_64
-    affected_versions: vers:rpm/<4.4.0-6.rhaos4.18.el8
-    fixed_versions: vers:rpm/4.4.0-6.rhaos4.18.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libslirp-devel?arch=x86_64
-    affected_versions: vers:rpm/<4.4.0-6.rhaos4.18.el8
-    fixed_versions: vers:rpm/4.4.0-6.rhaos4.18.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libslirp-debugsource?arch=x86_64
-    affected_versions: vers:rpm/<4.4.0-6.rhaos4.18.el8
-    fixed_versions: vers:rpm/4.4.0-6.rhaos4.18.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libslirp-debuginfo?arch=x86_64
-    affected_versions: vers:rpm/<4.4.0-6.rhaos4.18.el8
-    fixed_versions: vers:rpm/4.4.0-6.rhaos4.18.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/openshift-clients?arch=x86_64
-    affected_versions: vers:rpm/<4.18.0-202507080904.p0.g4fcb2d0.assembly.stream.el8
-    fixed_versions: vers:rpm/4.18.0-202507080904.p0.g4fcb2d0.assembly.stream.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/openshift-clients-redistributable?arch=x86_64
-    affected_versions: vers:rpm/<4.18.0-202507080904.p0.g4fcb2d0.assembly.stream.el8
-    fixed_versions: vers:rpm/4.18.0-202507080904.p0.g4fcb2d0.assembly.stream.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman?arch=x86_64&epoch=5
-    affected_versions: vers:rpm/<5.2.2-1.rhaos4.18.el8
-    fixed_versions: vers:rpm/5.2.2-1.rhaos4.18.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-catatonit?arch=x86_64&epoch=5
-    affected_versions: vers:rpm/<5.2.2-1.rhaos4.18.el8
-    fixed_versions: vers:rpm/5.2.2-1.rhaos4.18.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-gvproxy?arch=x86_64&epoch=5
-    affected_versions: vers:rpm/<5.2.2-1.rhaos4.18.el8
-    fixed_versions: vers:rpm/5.2.2-1.rhaos4.18.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-plugins?arch=x86_64&epoch=5
     affected_versions: vers:rpm/<5.2.2-1.rhaos4.18.el8
     fixed_versions: vers:rpm/5.2.2-1.rhaos4.18.el8
@@ -355,11 +475,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-tests?arch=x86_64&epoch=5
-    affected_versions: vers:rpm/<5.2.2-1.rhaos4.18.el8
-    fixed_versions: vers:rpm/5.2.2-1.rhaos4.18.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-debugsource?arch=x86_64&epoch=5
     affected_versions: vers:rpm/<5.2.2-1.rhaos4.18.el8
     fixed_versions: vers:rpm/5.2.2-1.rhaos4.18.el8
     fixed_in_commits: []
@@ -429,11 +544,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.31.1-4.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ignition?arch=x86_64
-    affected_versions: vers:rpm/<2.18.0-8.rhaos4.18.el9
-    fixed_versions: vers:rpm/2.18.0-8.rhaos4.18.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/ignition-validate?arch=x86_64
     affected_versions: vers:rpm/<2.18.0-8.rhaos4.18.el9
     fixed_versions: vers:rpm/2.18.0-8.rhaos4.18.el9
@@ -459,9 +569,9 @@ impacted_packages:
     fixed_versions: vers:rpm/4.18.0-202507051134.p0.g817e6dd.assembly.stream.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/openshift-kube-apiserver?arch=x86_64
-    affected_versions: vers:rpm/<4.18.0-202507051134.p0.g817e6dd.assembly.stream.el9
-    fixed_versions: vers:rpm/4.18.0-202507051134.p0.g817e6dd.assembly.stream.el9
+  - purl: pkg:rpm/redhat/podman-remote-debuginfo?arch=aarch64&epoch=5
+    affected_versions: vers:rpm/<5.2.2-10.rhaos4.18.el9
+    fixed_versions: vers:rpm/5.2.2-10.rhaos4.18.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/openshift-kube-controller-manager?arch=x86_64
@@ -487,11 +597,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/ose-azure-acr-image-credential-provider?arch=x86_64
     affected_versions: vers:rpm/<4.18.0-202507011252.p0.g9c24d76.assembly.stream.el9
     fixed_versions: vers:rpm/4.18.0-202507011252.p0.g9c24d76.assembly.stream.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ose-gcp-gcr-image-credential-provider?arch=x86_64
-    affected_versions: vers:rpm/<4.18.0-202507011252.p0.g6ea2356.assembly.stream.el9
-    fixed_versions: vers:rpm/4.18.0-202507011252.p0.g6ea2356.assembly.stream.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman?arch=x86_64&epoch=5
@@ -540,6 +645,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/skopeo-tests?arch=x86_64&epoch=2
+    affected_versions: vers:rpm/<1.16.1-2.rhaos4.18.el9
+    fixed_versions: vers:rpm/1.16.1-2.rhaos4.18.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/skopeo?arch=aarch64&epoch=2
     affected_versions: vers:rpm/<1.16.1-2.rhaos4.18.el9
     fixed_versions: vers:rpm/1.16.1-2.rhaos4.18.el9
     fixed_in_commits: []
@@ -604,14 +714,14 @@ impacted_packages:
     fixed_versions: vers:rpm/1.31.1-4.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-tools-debuginfo?arch=aarch64
-    affected_versions: vers:rpm/<1.31.1-4.el8
-    fixed_versions: vers:rpm/1.31.1-4.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/openshift-hyperkube?arch=aarch64
     affected_versions: vers:rpm/<4.18.0-202507051134.p0.g817e6dd.assembly.stream.el8
     fixed_versions: vers:rpm/4.18.0-202507051134.p0.g817e6dd.assembly.stream.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/skopeo-tests?arch=aarch64&epoch=2
+    affected_versions: vers:rpm/<1.16.1-2.rhaos4.18.el9
+    fixed_versions: vers:rpm/1.16.1-2.rhaos4.18.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/openshift-kube-apiserver?arch=aarch64
@@ -624,9 +734,19 @@ impacted_packages:
     fixed_versions: vers:rpm/4.18.0-202507051134.p0.g817e6dd.assembly.stream.el8
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/skopeo-debugsource?arch=aarch64&epoch=2
+    affected_versions: vers:rpm/<1.16.1-2.rhaos4.18.el9
+    fixed_versions: vers:rpm/1.16.1-2.rhaos4.18.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/openshift-kube-scheduler?arch=aarch64
     affected_versions: vers:rpm/<4.18.0-202507051134.p0.g817e6dd.assembly.stream.el8
     fixed_versions: vers:rpm/4.18.0-202507051134.p0.g817e6dd.assembly.stream.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/cri-tools-debuginfo?arch=ppc64le
+    affected_versions: vers:rpm/<1.31.1-4.el8
+    fixed_versions: vers:rpm/1.31.1-4.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/openshift-kubelet?arch=aarch64
@@ -634,9 +754,24 @@ impacted_packages:
     fixed_versions: vers:rpm/4.18.0-202507051134.p0.g817e6dd.assembly.stream.el8
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/skopeo-debuginfo?arch=aarch64&epoch=2
+    affected_versions: vers:rpm/<1.16.1-2.rhaos4.18.el9
+    fixed_versions: vers:rpm/1.16.1-2.rhaos4.18.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/ose-aws-ecr-image-credential-provider?arch=aarch64
     affected_versions: vers:rpm/<4.18.0-202507011252.p0.gc395190.assembly.stream.el8
     fixed_versions: vers:rpm/4.18.0-202507011252.p0.gc395190.assembly.stream.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/butane-debugsource?arch=ppc64le
+    affected_versions: vers:rpm/<0.23.0-2.rhaos4.18.el8
+    fixed_versions: vers:rpm/0.23.0-2.rhaos4.18.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/butane-debuginfo?arch=ppc64le
+    affected_versions: vers:rpm/<0.23.0-2.rhaos4.18.el8
+    fixed_versions: vers:rpm/0.23.0-2.rhaos4.18.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/ose-azure-acr-image-credential-provider?arch=aarch64
@@ -669,6 +804,11 @@ impacted_packages:
     fixed_versions: vers:rpm/2.1.12-1.rhaos4.18.el8
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/conmon-debuginfo?arch=aarch64&epoch=3
+    affected_versions: vers:rpm/<2.1.12-1.rhaos4.18.el8
+    fixed_versions: vers:rpm/2.1.12-1.rhaos4.18.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/containers-common?arch=aarch64&epoch=2
     affected_versions: vers:rpm/<1-87.rhaos4.18.el8
     fixed_versions: vers:rpm/1-87.rhaos4.18.el8
@@ -679,19 +819,14 @@ impacted_packages:
     fixed_versions: vers:rpm/4.4.0-6.rhaos4.18.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libslirp-devel?arch=aarch64
-    affected_versions: vers:rpm/<4.4.0-6.rhaos4.18.el8
-    fixed_versions: vers:rpm/4.4.0-6.rhaos4.18.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/libslirp-debugsource?arch=aarch64
     affected_versions: vers:rpm/<4.4.0-6.rhaos4.18.el8
     fixed_versions: vers:rpm/4.4.0-6.rhaos4.18.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libslirp-debuginfo?arch=aarch64
-    affected_versions: vers:rpm/<4.4.0-6.rhaos4.18.el8
-    fixed_versions: vers:rpm/4.4.0-6.rhaos4.18.el8
+  - purl: pkg:rpm/redhat/cri-o?arch=ppc64le
+    affected_versions: vers:rpm/<1.31.10-2.rhaos4.18.gitce48a32.el8
+    fixed_versions: vers:rpm/1.31.10-2.rhaos4.18.gitce48a32.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/openshift-clients?arch=aarch64
@@ -720,11 +855,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-remote?arch=aarch64&epoch=5
-    affected_versions: vers:rpm/<5.2.2-1.rhaos4.18.el8
-    fixed_versions: vers:rpm/5.2.2-1.rhaos4.18.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-tests?arch=aarch64&epoch=5
     affected_versions: vers:rpm/<5.2.2-1.rhaos4.18.el8
     fixed_versions: vers:rpm/5.2.2-1.rhaos4.18.el8
     fixed_in_commits: []
@@ -759,27 +889,12 @@ impacted_packages:
     fixed_versions: vers:rpm/5.2.2-1.rhaos4.18.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/skopeo?arch=aarch64&epoch=2
-    affected_versions: vers:rpm/<1.16.1-1.rhaos4.18.el8
-    fixed_versions: vers:rpm/1.16.1-1.rhaos4.18.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/skopeo-tests?arch=aarch64&epoch=2
     affected_versions: vers:rpm/<1.16.1-1.rhaos4.18.el8
     fixed_versions: vers:rpm/1.16.1-1.rhaos4.18.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/cri-o?arch=aarch64
-    affected_versions: vers:rpm/<1.31.10-2.rhaos4.18.gitce48a32.el9
-    fixed_versions: vers:rpm/1.31.10-2.rhaos4.18.gitce48a32.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-o-debugsource?arch=aarch64
-    affected_versions: vers:rpm/<1.31.10-2.rhaos4.18.gitce48a32.el9
-    fixed_versions: vers:rpm/1.31.10-2.rhaos4.18.gitce48a32.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-o-debuginfo?arch=aarch64
     affected_versions: vers:rpm/<1.31.10-2.rhaos4.18.gitce48a32.el9
     fixed_versions: vers:rpm/1.31.10-2.rhaos4.18.gitce48a32.el9
     fixed_in_commits: []
@@ -799,11 +914,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.31.1-4.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ignition?arch=aarch64
-    affected_versions: vers:rpm/<2.18.0-8.rhaos4.18.el9
-    fixed_versions: vers:rpm/2.18.0-8.rhaos4.18.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/ignition-validate?arch=aarch64
     affected_versions: vers:rpm/<2.18.0-8.rhaos4.18.el9
     fixed_versions: vers:rpm/2.18.0-8.rhaos4.18.el9
@@ -815,11 +925,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/ignition-debuginfo?arch=aarch64
-    affected_versions: vers:rpm/<2.18.0-8.rhaos4.18.el9
-    fixed_versions: vers:rpm/2.18.0-8.rhaos4.18.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ignition-validate-debuginfo?arch=aarch64
     affected_versions: vers:rpm/<2.18.0-8.rhaos4.18.el9
     fixed_versions: vers:rpm/2.18.0-8.rhaos4.18.el9
     fixed_in_commits: []
@@ -839,6 +944,11 @@ impacted_packages:
     fixed_versions: vers:rpm/4.18.0-202507051134.p0.g817e6dd.assembly.stream.el9
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/cri-o-debugsource?arch=ppc64le
+    affected_versions: vers:rpm/<1.31.10-2.rhaos4.18.gitce48a32.el8
+    fixed_versions: vers:rpm/1.31.10-2.rhaos4.18.gitce48a32.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/openshift-kube-scheduler?arch=aarch64
     affected_versions: vers:rpm/<4.18.0-202507051134.p0.g817e6dd.assembly.stream.el9
     fixed_versions: vers:rpm/4.18.0-202507051134.p0.g817e6dd.assembly.stream.el9
@@ -852,6 +962,16 @@ impacted_packages:
   - purl: pkg:rpm/redhat/ose-aws-ecr-image-credential-provider?arch=aarch64
     affected_versions: vers:rpm/<4.18.0-202507011252.p0.gc395190.assembly.stream.el9
     fixed_versions: vers:rpm/4.18.0-202507011252.p0.gc395190.assembly.stream.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/cri-tools?arch=ppc64le
+    affected_versions: vers:rpm/<1.31.1-4.el8
+    fixed_versions: vers:rpm/1.31.1-4.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/cri-tools-debugsource?arch=ppc64le
+    affected_versions: vers:rpm/<1.31.1-4.el8
+    fixed_versions: vers:rpm/1.31.1-4.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/ose-azure-acr-image-credential-provider?arch=aarch64
@@ -889,69 +1009,9 @@ impacted_packages:
     fixed_versions: vers:rpm/5.2.2-10.rhaos4.18.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/skopeo-tests?arch=aarch64&epoch=2
-    affected_versions: vers:rpm/<1.16.1-2.rhaos4.18.el9
-    fixed_versions: vers:rpm/1.16.1-2.rhaos4.18.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/skopeo-debugsource?arch=aarch64&epoch=2
-    affected_versions: vers:rpm/<1.16.1-2.rhaos4.18.el9
-    fixed_versions: vers:rpm/1.16.1-2.rhaos4.18.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/skopeo-debuginfo?arch=aarch64&epoch=2
-    affected_versions: vers:rpm/<1.16.1-2.rhaos4.18.el9
-    fixed_versions: vers:rpm/1.16.1-2.rhaos4.18.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/openshift-clients?arch=aarch64
-    affected_versions: vers:rpm/<4.18.0-202507080904.p0.g4fcb2d0.assembly.stream.el9
-    fixed_versions: vers:rpm/4.18.0-202507080904.p0.g4fcb2d0.assembly.stream.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/butane?arch=ppc64le
-    affected_versions: vers:rpm/<0.23.0-2.rhaos4.18.el8
-    fixed_versions: vers:rpm/0.23.0-2.rhaos4.18.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/butane-debugsource?arch=ppc64le
-    affected_versions: vers:rpm/<0.23.0-2.rhaos4.18.el8
-    fixed_versions: vers:rpm/0.23.0-2.rhaos4.18.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/butane-debuginfo?arch=ppc64le
-    affected_versions: vers:rpm/<0.23.0-2.rhaos4.18.el8
-    fixed_versions: vers:rpm/0.23.0-2.rhaos4.18.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-o?arch=ppc64le
-    affected_versions: vers:rpm/<1.31.10-2.rhaos4.18.gitce48a32.el8
-    fixed_versions: vers:rpm/1.31.10-2.rhaos4.18.gitce48a32.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-o-debugsource?arch=ppc64le
-    affected_versions: vers:rpm/<1.31.10-2.rhaos4.18.gitce48a32.el8
-    fixed_versions: vers:rpm/1.31.10-2.rhaos4.18.gitce48a32.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-o-debuginfo?arch=ppc64le
-    affected_versions: vers:rpm/<1.31.10-2.rhaos4.18.gitce48a32.el8
-    fixed_versions: vers:rpm/1.31.10-2.rhaos4.18.gitce48a32.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-tools?arch=ppc64le
-    affected_versions: vers:rpm/<1.31.1-4.el8
-    fixed_versions: vers:rpm/1.31.1-4.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-tools-debugsource?arch=ppc64le
-    affected_versions: vers:rpm/<1.31.1-4.el8
-    fixed_versions: vers:rpm/1.31.1-4.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-tools-debuginfo?arch=ppc64le
-    affected_versions: vers:rpm/<1.31.1-4.el8
-    fixed_versions: vers:rpm/1.31.1-4.el8
+  - purl: pkg:rpm/redhat/podman-plugins-debuginfo?arch=aarch64&epoch=5
+    affected_versions: vers:rpm/<5.2.2-10.rhaos4.18.el9
+    fixed_versions: vers:rpm/5.2.2-10.rhaos4.18.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/openshift-hyperkube?arch=ppc64le
@@ -982,11 +1042,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/ose-aws-ecr-image-credential-provider?arch=ppc64le
     affected_versions: vers:rpm/<4.18.0-202507011252.p0.gc395190.assembly.stream.el8
     fixed_versions: vers:rpm/4.18.0-202507011252.p0.gc395190.assembly.stream.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ose-azure-acr-image-credential-provider?arch=ppc64le
-    affected_versions: vers:rpm/<4.18.0-202507011252.p0.g9c24d76.assembly.stream.el8
-    fixed_versions: vers:rpm/4.18.0-202507011252.p0.g9c24d76.assembly.stream.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/ose-gcp-gcr-image-credential-provider?arch=ppc64le
@@ -1114,11 +1169,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.31.10-2.rhaos4.18.gitce48a32.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-o-debugsource?arch=ppc64le
-    affected_versions: vers:rpm/<1.31.10-2.rhaos4.18.gitce48a32.el9
-    fixed_versions: vers:rpm/1.31.10-2.rhaos4.18.gitce48a32.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/cri-o-debuginfo?arch=ppc64le
     affected_versions: vers:rpm/<1.31.10-2.rhaos4.18.gitce48a32.el9
     fixed_versions: vers:rpm/1.31.10-2.rhaos4.18.gitce48a32.el9
@@ -1179,19 +1229,9 @@ impacted_packages:
     fixed_versions: vers:rpm/4.18.0-202507051134.p0.g817e6dd.assembly.stream.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/openshift-kube-scheduler?arch=ppc64le
-    affected_versions: vers:rpm/<4.18.0-202507051134.p0.g817e6dd.assembly.stream.el9
-    fixed_versions: vers:rpm/4.18.0-202507051134.p0.g817e6dd.assembly.stream.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/openshift-kubelet?arch=ppc64le
     affected_versions: vers:rpm/<4.18.0-202507051134.p0.g817e6dd.assembly.stream.el9
     fixed_versions: vers:rpm/4.18.0-202507051134.p0.g817e6dd.assembly.stream.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ose-aws-ecr-image-credential-provider?arch=ppc64le
-    affected_versions: vers:rpm/<4.18.0-202507011252.p0.gc395190.assembly.stream.el9
-    fixed_versions: vers:rpm/4.18.0-202507011252.p0.gc395190.assembly.stream.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/ose-azure-acr-image-credential-provider?arch=ppc64le
@@ -1249,11 +1289,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.16.1-2.rhaos4.18.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/skopeo-tests?arch=ppc64le&epoch=2
-    affected_versions: vers:rpm/<1.16.1-2.rhaos4.18.el9
-    fixed_versions: vers:rpm/1.16.1-2.rhaos4.18.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/skopeo-debugsource?arch=ppc64le&epoch=2
     affected_versions: vers:rpm/<1.16.1-2.rhaos4.18.el9
     fixed_versions: vers:rpm/1.16.1-2.rhaos4.18.el9
@@ -1274,16 +1309,6 @@ impacted_packages:
     fixed_versions: vers:rpm/0.23.0-2.rhaos4.18.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/butane-debugsource?arch=s390x
-    affected_versions: vers:rpm/<0.23.0-2.rhaos4.18.el8
-    fixed_versions: vers:rpm/0.23.0-2.rhaos4.18.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/butane-debuginfo?arch=s390x
-    affected_versions: vers:rpm/<0.23.0-2.rhaos4.18.el8
-    fixed_versions: vers:rpm/0.23.0-2.rhaos4.18.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/cri-o?arch=s390x
     affected_versions: vers:rpm/<1.31.10-2.rhaos4.18.gitce48a32.el8
     fixed_versions: vers:rpm/1.31.10-2.rhaos4.18.gitce48a32.el8
@@ -1300,11 +1325,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/cri-tools?arch=s390x
-    affected_versions: vers:rpm/<1.31.1-4.el8
-    fixed_versions: vers:rpm/1.31.1-4.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-tools-debugsource?arch=s390x
     affected_versions: vers:rpm/<1.31.1-4.el8
     fixed_versions: vers:rpm/1.31.1-4.el8
     fixed_in_commits: []
@@ -1392,11 +1412,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/libslirp-debuginfo?arch=s390x
     affected_versions: vers:rpm/<4.4.0-6.rhaos4.18.el8
     fixed_versions: vers:rpm/4.4.0-6.rhaos4.18.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/openshift-clients?arch=s390x
-    affected_versions: vers:rpm/<4.18.0-202507080904.p0.g4fcb2d0.assembly.stream.el8
-    fixed_versions: vers:rpm/4.18.0-202507080904.p0.g4fcb2d0.assembly.stream.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman?arch=s390x&epoch=5
@@ -1514,11 +1529,6 @@ impacted_packages:
     fixed_versions: vers:rpm/2.18.0-8.rhaos4.18.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ignition-debuginfo?arch=s390x
-    affected_versions: vers:rpm/<2.18.0-8.rhaos4.18.el9
-    fixed_versions: vers:rpm/2.18.0-8.rhaos4.18.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/ignition-validate-debuginfo?arch=s390x
     affected_versions: vers:rpm/<2.18.0-8.rhaos4.18.el9
     fixed_versions: vers:rpm/2.18.0-8.rhaos4.18.el9
@@ -1609,11 +1619,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.16.1-2.rhaos4.18.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/skopeo-tests?arch=s390x&epoch=2
-    affected_versions: vers:rpm/<1.16.1-2.rhaos4.18.el9
-    fixed_versions: vers:rpm/1.16.1-2.rhaos4.18.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/skopeo-debugsource?arch=s390x&epoch=2
     affected_versions: vers:rpm/<1.16.1-2.rhaos4.18.el9
     fixed_versions: vers:rpm/1.16.1-2.rhaos4.18.el9
@@ -1627,11 +1632,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/openshift-clients?arch=s390x
     affected_versions: vers:rpm/<4.18.0-202507080904.p0.g4fcb2d0.assembly.stream.el9
     fixed_versions: vers:rpm/4.18.0-202507080904.p0.g4fcb2d0.assembly.stream.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/butane-redistributable?arch=noarch
-    affected_versions: vers:rpm/<0.23.0-2.rhaos4.18.el8
-    fixed_versions: vers:rpm/0.23.0-2.rhaos4.18.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/openshift-ansible?arch=noarch
