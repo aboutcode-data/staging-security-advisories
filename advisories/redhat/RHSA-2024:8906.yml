@@ -41,6 +41,21 @@ summary: "A new release is now available for Red Hat Satellite 6.16 for RHEL 8 a
   \ access to entire DB from templates (CVE-2024-8553)\n\nUsers of Red Hat Satellite are advised\
   \ to upgrade to these updated packages, which fix these bugs."
 impacted_packages:
+  - purl: pkg:rpm/redhat/rubygem-pulp_rpm_client?arch=src
+    affected_versions: vers:rpm/<3.26.1-1.el9sat
+    fixed_versions: vers:rpm/3.26.1-1.el9sat
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python3.11-click?arch=noarch
+    affected_versions: vers:rpm/<8.1.3-5.el8pc
+    fixed_versions: vers:rpm/8.1.3-5.el8pc
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/createrepo_c?arch=x86_64
+    affected_versions: vers:rpm/<1.1.3-1.el9pc
+    fixed_versions: vers:rpm/1.1.3-1.el9pc
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/ansible-collection-redhat-satellite?arch=src
     affected_versions: vers:rpm/<4.2.0-1.el8sat
     fixed_versions: vers:rpm/4.2.0-1.el8sat
@@ -4461,11 +4476,6 @@ impacted_packages:
     fixed_versions: vers:rpm/3.11.2-1.el9sat
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/rubygem-pulp_rpm_client?arch=src
-    affected_versions: vers:rpm/<3.26.1-1.el9sat
-    fixed_versions: vers:rpm/3.26.1-1.el9sat
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/rubygem-puma?arch=src
     affected_versions: vers:rpm/<6.4.3-1.el9sat
     fixed_versions: vers:rpm/6.4.3-1.el9sat
@@ -5234,11 +5244,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/python3.11-charset-normalizer?arch=noarch
     affected_versions: vers:rpm/<2.1.1-5.el8pc
     fixed_versions: vers:rpm/2.1.1-5.el8pc
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python3.11-click?arch=noarch
-    affected_versions: vers:rpm/<8.1.3-5.el8pc
-    fixed_versions: vers:rpm/8.1.3-5.el8pc
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/python3.11-click-shell?arch=noarch
@@ -10311,11 +10316,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.7.17-1.el9sat
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/createrepo_c?arch=x86_64
-    affected_versions: vers:rpm/<1.1.3-1.el9pc
-    fixed_versions: vers:rpm/1.1.3-1.el9pc
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/createrepo_c-libs?arch=x86_64
     affected_versions: vers:rpm/<1.1.3-1.el9pc
     fixed_versions: vers:rpm/1.1.3-1.el9pc
@@ -10944,19 +10944,7 @@ severities:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2024_8906.json
 weaknesses: []
 references:
-  - url: https://access.redhat.com/errata/RHSA-2024:8906
-    reference_type:
-    reference_id:
   - url: https://access.redhat.com/security/updates/classification/#critical
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2299429
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2305718
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2312524
     reference_type:
     reference_id:
   - url: https://issues.redhat.com/browse/SAT-12847
@@ -11736,3 +11724,15 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2318080
     reference_type: bug
     reference_id: 2318080
+  - url: https://access.redhat.com/errata/RHSA-2024:8906
+    reference_type: advisory
+    reference_id: RHSA-2024:8906
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2299429
+    reference_type: bug
+    reference_id: show_bug.cgi?id=2299429
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2305718
+    reference_type: bug
+    reference_id: show_bug.cgi?id=2305718
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2312524
+    reference_type: bug
+    reference_id: show_bug.cgi?id=2312524
