@@ -27,7 +27,7 @@ summary: "An update is now available for Red Hat Ceph Storage 7.1.\n\nRed Hat Ce
   \ including the complete list of fixes and security updates.\n\nRefer to the release notes\
   \ going forward for the latest and most accurate fix and CVE information.\n=========================================="
 impacted_packages:
-  - purl: pkg:rpm/redhat/ceph-fuse-debuginfo?arch=x86_64&epoch=2
+  - purl: pkg:rpm/redhat/ceph-base?arch=ppc64le&epoch=2
     affected_versions: vers:rpm/<18.2.1-381.el8cp
     fixed_versions: vers:rpm/18.2.1-381.el8cp
     fixed_in_commits: []
@@ -432,6 +432,11 @@ impacted_packages:
     fixed_versions: vers:rpm/18.2.1-381.el8cp
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ceph-fuse-debuginfo?arch=x86_64&epoch=2
+    affected_versions: vers:rpm/<18.2.1-381.el8cp
+    fixed_versions: vers:rpm/18.2.1-381.el8cp
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/ceph-immutable-object-cache-debuginfo?arch=x86_64&epoch=2
     affected_versions: vers:rpm/<18.2.1-381.el8cp
     fixed_versions: vers:rpm/18.2.1-381.el8cp
@@ -795,11 +800,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/rbd-nbd-debuginfo?arch=ppc64le&epoch=2
     affected_versions: vers:rpm/<18.2.1-381.el9cp
     fixed_versions: vers:rpm/18.2.1-381.el9cp
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ceph-base?arch=ppc64le&epoch=2
-    affected_versions: vers:rpm/<18.2.1-381.el8cp
-    fixed_versions: vers:rpm/18.2.1-381.el8cp
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/ceph-common?arch=ppc64le&epoch=2
@@ -1345,9 +1345,6 @@ severities:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_2769.json
 weaknesses: []
 references:
-  - url: https://access.redhat.com/errata/RHSA-2026:2769
-    reference_type:
-    reference_id:
   - url: https://access.redhat.com/security/updates/classification/#important
     reference_type:
     reference_id:
@@ -1429,3 +1426,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2432069
     reference_type: bug
     reference_id: 2432069
+  - url: https://access.redhat.com/errata/RHSA-2026:2769
+    reference_type:
+    reference_id: RHSA-2026:2769
