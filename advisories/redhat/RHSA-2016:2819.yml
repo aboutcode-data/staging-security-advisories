@@ -18,6 +18,11 @@ summary: |
 
   * An integer overflow flaw, leading to a heap-based buffer overflow, was found in memcached's parsing of SASL authentication messages. An attacker could create a specially crafted message that would cause the memcached server to crash or, potentially, execute arbitrary code. (CVE-2016-8706)
 impacted_packages:
+  - purl: pkg:rpm/redhat/memcached?arch=x86_64
+    affected_versions: vers:rpm/<1.4.15-10.el7_3.1
+    fixed_versions: vers:rpm/1.4.15-10.el7_3.1
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/memcached-debuginfo?arch=x86_64
     affected_versions: vers:rpm/<1.4.15-10.el7_3.1
     fixed_versions: vers:rpm/1.4.15-10.el7_3.1
@@ -54,11 +59,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/memcached-devel?arch=ppc64le
-    affected_versions: vers:rpm/<1.4.15-10.el7_3.1
-    fixed_versions: vers:rpm/1.4.15-10.el7_3.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/memcached?arch=x86_64
     affected_versions: vers:rpm/<1.4.15-10.el7_3.1
     fixed_versions: vers:rpm/1.4.15-10.el7_3.1
     fixed_in_commits: []
