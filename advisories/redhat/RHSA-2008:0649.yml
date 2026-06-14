@@ -25,26 +25,6 @@ summary: |
   contain a backported patch to resolve this issue.
 impacted_packages:
   - purl: pkg:rpm/redhat/libxslt-devel?arch=x86_64
-    affected_versions: vers:rpm/<1.1.17-2.el5_2.2
-    fixed_versions: vers:rpm/1.1.17-2.el5_2.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libxslt-debuginfo?arch=x86_64
-    affected_versions: vers:rpm/<1.1.17-2.el5_2.2
-    fixed_versions: vers:rpm/1.1.17-2.el5_2.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libxslt?arch=x86_64
-    affected_versions: vers:rpm/<1.1.17-2.el5_2.2
-    fixed_versions: vers:rpm/1.1.17-2.el5_2.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libxslt-python?arch=x86_64
-    affected_versions: vers:rpm/<1.1.17-2.el5_2.2
-    fixed_versions: vers:rpm/1.1.17-2.el5_2.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libxslt-devel?arch=x86_64
     affected_versions: vers:rpm/<1.1.11-1.el4_7.2
     fixed_versions: vers:rpm/1.1.11-1.el4_7.2
     fixed_in_commits: []
@@ -75,11 +55,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/libxslt?arch=i386
-    affected_versions: vers:rpm/<1.1.17-2.el5_2.2
-    fixed_versions: vers:rpm/1.1.17-2.el5_2.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libxslt-python?arch=i386
     affected_versions: vers:rpm/<1.1.17-2.el5_2.2
     fixed_versions: vers:rpm/1.1.17-2.el5_2.2
     fixed_in_commits: []
@@ -159,11 +134,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.1.17-2.el5_2.2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libxslt?arch=ppc64
-    affected_versions: vers:rpm/<1.1.17-2.el5_2.2
-    fixed_versions: vers:rpm/1.1.17-2.el5_2.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/libxslt-debuginfo?arch=ppc64
     affected_versions: vers:rpm/<1.1.17-2.el5_2.2
     fixed_versions: vers:rpm/1.1.17-2.el5_2.2
@@ -177,11 +147,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/libxslt-debuginfo?arch=ppc64
     affected_versions: vers:rpm/<1.1.11-1.el4_7.2
     fixed_versions: vers:rpm/1.1.11-1.el4_7.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libxslt-devel?arch=ppc
-    affected_versions: vers:rpm/<1.1.17-2.el5_2.2
-    fixed_versions: vers:rpm/1.1.17-2.el5_2.2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/libxslt?arch=ppc
@@ -294,6 +259,41 @@ impacted_packages:
     fixed_versions: vers:rpm/1.1.11-1.el4_7.2
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libxslt-devel?arch=x86_64
+    affected_versions: vers:rpm/<1.1.17-2.el5_2.2
+    fixed_versions: vers:rpm/1.1.17-2.el5_2.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libxslt-debuginfo?arch=x86_64
+    affected_versions: vers:rpm/<1.1.17-2.el5_2.2
+    fixed_versions: vers:rpm/1.1.17-2.el5_2.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libxslt?arch=x86_64
+    affected_versions: vers:rpm/<1.1.17-2.el5_2.2
+    fixed_versions: vers:rpm/1.1.17-2.el5_2.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libxslt-python?arch=x86_64
+    affected_versions: vers:rpm/<1.1.17-2.el5_2.2
+    fixed_versions: vers:rpm/1.1.17-2.el5_2.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libxslt-python?arch=i386
+    affected_versions: vers:rpm/<1.1.17-2.el5_2.2
+    fixed_versions: vers:rpm/1.1.17-2.el5_2.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libxslt?arch=ppc64
+    affected_versions: vers:rpm/<1.1.17-2.el5_2.2
+    fixed_versions: vers:rpm/1.1.17-2.el5_2.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libxslt-devel?arch=ppc
+    affected_versions: vers:rpm/<1.1.17-2.el5_2.2
+    fixed_versions: vers:rpm/1.1.17-2.el5_2.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: Moderate
     scoring_system: rhas
@@ -311,12 +311,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=455848
     reference_type: bug
     reference_id: 455848
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/remote/32133.txt
-    reference_type: exploit
-    reference_id: CVE-2008-2935;OSVDB-47544
-  - url: https://www.securityfocus.com/bid/30467/info
-    reference_type: exploit
-    reference_id: CVE-2008-2935;OSVDB-47544
   - url: https://access.redhat.com/errata/RHSA-2008:0649
     reference_type:
     reference_id: RHSA-2008:0649

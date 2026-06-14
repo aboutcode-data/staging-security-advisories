@@ -24,6 +24,16 @@ summary: |
   All users of postfix should upgrade to these updated packages, which
   contain a backported patch that resolves this issue.
 impacted_packages:
+  - purl: pkg:rpm/redhat/postfix?arch=i386&epoch=2
+    affected_versions: vers:rpm/<2.2.10-1.2.1.el4_7
+    fixed_versions: vers:rpm/2.2.10-1.2.1.el4_7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postfix-pflogsumm?arch=i386&epoch=2
+    affected_versions: vers:rpm/<2.2.10-1.2.1.el4_7
+    fixed_versions: vers:rpm/2.2.10-1.2.1.el4_7
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/postfix-pflogsumm?arch=x86_64&epoch=2
     affected_versions: vers:rpm/<2.3.3-2.1.el5_2
     fixed_versions: vers:rpm/2.3.3-2.1.el5_2
@@ -90,16 +100,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/postfix-debuginfo?arch=i386&epoch=2
-    affected_versions: vers:rpm/<2.2.10-1.2.1.el4_7
-    fixed_versions: vers:rpm/2.2.10-1.2.1.el4_7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postfix?arch=i386&epoch=2
-    affected_versions: vers:rpm/<2.2.10-1.2.1.el4_7
-    fixed_versions: vers:rpm/2.2.10-1.2.1.el4_7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postfix-pflogsumm?arch=i386&epoch=2
     affected_versions: vers:rpm/<2.2.10-1.2.1.el4_7
     fixed_versions: vers:rpm/2.2.10-1.2.1.el4_7
     fixed_in_commits: []
@@ -281,9 +281,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=456314
     reference_type: bug
     reference_id: 456314
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/local/6337.sh
-    reference_type: exploit
-    reference_id: CVE-2008-2936
   - url: https://access.redhat.com/errata/RHSA-2008:0839
     reference_type:
     reference_id: RHSA-2008:0839
