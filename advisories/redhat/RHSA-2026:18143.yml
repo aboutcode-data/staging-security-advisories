@@ -20,11 +20,6 @@ summary: |
 
   For detailed information on changes in this release, see the Red Hat Enterprise Linux 10 Release Notes linked from the References section.
 impacted_packages:
-  - purl: pkg:rpm/redhat/p11-kit-devel?arch=aarch64
-    affected_versions: vers:rpm/<0.26.2-1.el10
-    fixed_versions: vers:rpm/0.26.2-1.el10
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/p11-kit-server?arch=aarch64
     affected_versions: vers:rpm/<0.26.2-1.el10
     fixed_versions: vers:rpm/0.26.2-1.el10
@@ -36,6 +31,36 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/p11-kit-client-debuginfo?arch=aarch64
+    affected_versions: vers:rpm/<0.26.2-1.el10
+    fixed_versions: vers:rpm/0.26.2-1.el10
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/p11-kit-server-debuginfo?arch=x86_64
+    affected_versions: vers:rpm/<0.26.2-1.el10
+    fixed_versions: vers:rpm/0.26.2-1.el10
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/p11-kit-trust-debuginfo?arch=x86_64
+    affected_versions: vers:rpm/<0.26.2-1.el10
+    fixed_versions: vers:rpm/0.26.2-1.el10
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/p11-kit?arch=x86_64
+    affected_versions: vers:rpm/<0.26.2-1.el10
+    fixed_versions: vers:rpm/0.26.2-1.el10
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/p11-kit-client?arch=x86_64
+    affected_versions: vers:rpm/<0.26.2-1.el10
+    fixed_versions: vers:rpm/0.26.2-1.el10
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/p11-kit-trust?arch=x86_64
+    affected_versions: vers:rpm/<0.26.2-1.el10
+    fixed_versions: vers:rpm/0.26.2-1.el10
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/p11-kit-devel?arch=aarch64
     affected_versions: vers:rpm/<0.26.2-1.el10
     fixed_versions: vers:rpm/0.26.2-1.el10
     fixed_in_commits: []
@@ -111,6 +136,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/p11-kit-client?arch=ppc64le
+    affected_versions: vers:rpm/<0.26.2-1.el10
+    fixed_versions: vers:rpm/0.26.2-1.el10
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/p11-kit?arch=src
     affected_versions: vers:rpm/<0.26.2-1.el10
     fixed_versions: vers:rpm/0.26.2-1.el10
     fixed_in_commits: []
@@ -195,36 +225,6 @@ impacted_packages:
     fixed_versions: vers:rpm/0.26.2-1.el10
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/p11-kit-server-debuginfo?arch=x86_64
-    affected_versions: vers:rpm/<0.26.2-1.el10
-    fixed_versions: vers:rpm/0.26.2-1.el10
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/p11-kit-trust-debuginfo?arch=x86_64
-    affected_versions: vers:rpm/<0.26.2-1.el10
-    fixed_versions: vers:rpm/0.26.2-1.el10
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/p11-kit?arch=x86_64
-    affected_versions: vers:rpm/<0.26.2-1.el10
-    fixed_versions: vers:rpm/0.26.2-1.el10
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/p11-kit-client?arch=x86_64
-    affected_versions: vers:rpm/<0.26.2-1.el10
-    fixed_versions: vers:rpm/0.26.2-1.el10
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/p11-kit-trust?arch=x86_64
-    affected_versions: vers:rpm/<0.26.2-1.el10
-    fixed_versions: vers:rpm/0.26.2-1.el10
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/p11-kit?arch=src
-    affected_versions: vers:rpm/<0.26.2-1.el10
-    fixed_versions: vers:rpm/0.26.2-1.el10
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: Moderate
     scoring_system: rhas
@@ -233,13 +233,7 @@ severities:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_18143.json
 weaknesses: []
 references:
-  - url: https://access.redhat.com/errata/RHSA-2026:18143
-    reference_type:
-    reference_id:
   - url: https://access.redhat.com/security/updates/classification/#moderate
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2437308
     reference_type:
     reference_id:
   - url: https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10/html/10.2_release_notes/index
@@ -254,3 +248,9 @@ references:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_18143.json
     reference_type:
     reference_id:
+  - url: https://access.redhat.com/errata/RHSA-2026:18143
+    reference_type: advisory
+    reference_id: RHSA-2026:18143
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=2437308
+    reference_type: bug
+    reference_id: show_bug.cgi?id=2437308
