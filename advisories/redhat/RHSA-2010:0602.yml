@@ -107,36 +107,6 @@ summary: |
   subsystems must be restarted ("/etc/init.d/[instance-name] restart") for
   the update to take effect.
 impacted_packages:
-  - purl: pkg:rpm/redhat/tomcat5-server-lib?arch=noarch
-    affected_versions: vers:rpm/<5.5.23-0jpp_4rh.16
-    fixed_versions: vers:rpm/5.5.23-0jpp_4rh.16
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/rhpki-manage?arch=noarch
-    affected_versions: vers:rpm/<7.3.0-19.el4
-    fixed_versions: vers:rpm/7.3.0-19.el4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/rhpki-ca?arch=noarch
-    affected_versions: vers:rpm/<7.3.0-20.el4
-    fixed_versions: vers:rpm/7.3.0-20.el4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/rhpki-kra?arch=noarch
-    affected_versions: vers:rpm/<7.3.0-14.el4
-    fixed_versions: vers:rpm/7.3.0-14.el4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/rhpki-tks?arch=noarch
-    affected_versions: vers:rpm/<7.3.0-13.el4
-    fixed_versions: vers:rpm/7.3.0-13.el4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/rhpki-ocsp?arch=noarch
-    affected_versions: vers:rpm/<7.3.0-13.el4
-    fixed_versions: vers:rpm/7.3.0-13.el4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/xml-commons-apis?arch=noarch
     affected_versions: vers:rpm/<1.3.02-2jpp_1rh
     fixed_versions: vers:rpm/1.3.02-2jpp_1rh
@@ -215,6 +185,36 @@ impacted_packages:
   - purl: pkg:rpm/redhat/tomcat5-jasper?arch=noarch
     affected_versions: vers:rpm/<5.5.23-0jpp_4rh.16
     fixed_versions: vers:rpm/5.5.23-0jpp_4rh.16
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/tomcat5-server-lib?arch=noarch
+    affected_versions: vers:rpm/<5.5.23-0jpp_4rh.16
+    fixed_versions: vers:rpm/5.5.23-0jpp_4rh.16
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/rhpki-manage?arch=noarch
+    affected_versions: vers:rpm/<7.3.0-19.el4
+    fixed_versions: vers:rpm/7.3.0-19.el4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/rhpki-ca?arch=noarch
+    affected_versions: vers:rpm/<7.3.0-20.el4
+    fixed_versions: vers:rpm/7.3.0-20.el4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/rhpki-kra?arch=noarch
+    affected_versions: vers:rpm/<7.3.0-14.el4
+    fixed_versions: vers:rpm/7.3.0-14.el4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/rhpki-tks?arch=noarch
+    affected_versions: vers:rpm/<7.3.0-13.el4
+    fixed_versions: vers:rpm/7.3.0-13.el4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/rhpki-ocsp?arch=noarch
+    affected_versions: vers:rpm/<7.3.0-13.el4
+    fixed_versions: vers:rpm/7.3.0-13.el4
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/rhpki-java-tools?arch=noarch
@@ -403,6 +403,9 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=323571
     reference_type:
     reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=457597
+    reference_type:
+    reference_id:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=503928
     reference_type:
     reference_id:
@@ -499,9 +502,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=451615
     reference_type: bug
     reference_id: 451615
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=457597
-    reference_type: bug
-    reference_id: 457597
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=457934
     reference_type: bug
     reference_id: 457934
@@ -523,21 +523,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=515698
     reference_type: bug
     reference_id: 515698
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/remote/31130.txt
-    reference_type: exploit
-    reference_id: CVE-2007-5333;OSVDB-41435
-  - url: https://www.securityfocus.com/bid/27706/info
-    reference_type: exploit
-    reference_id: CVE-2007-5333;OSVDB-41435
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/remote/33023.txt
-    reference_type: exploit
-    reference_id: CVE-2009-0580;OSVDB-55055
-  - url: https://www.securityfocus.com/bid/35196/info
-    reference_type: exploit
-    reference_id: CVE-2009-0580;OSVDB-55055
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/dos/8842.pl
-    reference_type: exploit
-    reference_id: OSVDB-55057;CVE-2009-1955
   - url: https://access.redhat.com/errata/RHSA-2010:0602
     reference_type:
     reference_id: RHSA-2010:0602

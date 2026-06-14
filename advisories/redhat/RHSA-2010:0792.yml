@@ -29,6 +29,16 @@ summary: |
   patch to correct this issue. The system must be rebooted for this update to
   take effect.
 impacted_packages:
+  - purl: pkg:rpm/redhat/kernel-debuginfo?arch=s390x
+    affected_versions: vers:rpm/<2.6.18-194.17.4.el5
+    fixed_versions: vers:rpm/2.6.18-194.17.4.el5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-headers?arch=s390x
+    affected_versions: vers:rpm/<2.6.18-194.17.4.el5
+    fixed_versions: vers:rpm/2.6.18-194.17.4.el5
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-PAE-debuginfo?arch=i686
     affected_versions: vers:rpm/<2.6.18-194.17.4.el5
     fixed_versions: vers:rpm/2.6.18-194.17.4.el5
@@ -314,17 +324,7 @@ impacted_packages:
     fixed_versions: vers:rpm/2.6.18-194.17.4.el5
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debuginfo?arch=s390x
-    affected_versions: vers:rpm/<2.6.18-194.17.4.el5
-    fixed_versions: vers:rpm/2.6.18-194.17.4.el5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debuginfo-common?arch=s390x
-    affected_versions: vers:rpm/<2.6.18-194.17.4.el5
-    fixed_versions: vers:rpm/2.6.18-194.17.4.el5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-headers?arch=s390x
     affected_versions: vers:rpm/<2.6.18-194.17.4.el5
     fixed_versions: vers:rpm/2.6.18-194.17.4.el5
     fixed_in_commits: []
@@ -333,13 +333,6 @@ impacted_packages:
     affected_versions: vers:rpm/<2.6.18-194.17.4.el5
     fixed_versions: vers:rpm/2.6.18-194.17.4.el5
     fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:github/rapid7/metasploit-framework
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/rapid7/metasploit-framework
-        commit: 294b2631591e088ef693aa366199300663fbc539
     introduced_in_commits: []
 severities:
   - score: Important
@@ -358,15 +351,6 @@ references:
   - url: http://www.redhat.com/security/updates/classification/#important
     reference_type:
     reference_id:
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/local/15285.c
-    reference_type: exploit
-    reference_id: CVE-2010-3904
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/local/44677.rb
-    reference_type: exploit
-    reference_id: CVE-2010-3904
-  - url: https://raw.githubusercontent.com/rapid7/metasploit-framework/294b2631591e088ef693aa366199300663fbc539/modules/exploits/linux/local/rds_priv_esc.rb
-    reference_type: exploit
-    reference_id: CVE-2010-3904
   - url: https://access.redhat.com/errata/RHSA-2010:0792
     reference_type:
     reference_id: RHSA-2010:0792
