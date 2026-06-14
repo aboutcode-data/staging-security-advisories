@@ -9,16 +9,16 @@ summary: attic before 0.15 does not confirm unencrypted backups with the user, w
   sensitive information by changing the manifest type byte of the repository to "unencrypted
   / without key file".
 impacted_packages:
-  - purl: pkg:pypi/attic
-    affected_versions: vers:pypi/0.6|0.6.1|0.7|0.8|0.8.1|0.9|0.10|0.11|0.12|0.13|0.14
-    fixed_versions: vers:pypi/0.15
+  - purl: pkg:github/jborg/attic
+    affected_versions:
+    fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/jborg/attic
         commit: 78f9ad1faba7193ca7f0acccbc13b1ff6ebf9072
     introduced_in_commits: []
-  - purl: pkg:github/jborg/attic
-    affected_versions:
-    fixed_versions:
+  - purl: pkg:pypi/attic
+    affected_versions: vers:pypi/0.6|0.6.1|0.7|0.8|0.8.1|0.9|0.10|0.11|0.12|0.13|0.14
+    fixed_versions: vers:pypi/0.15
     fixed_in_commits:
       - vcs_url: https://github.com/jborg/attic
         commit: 78f9ad1faba7193ca7f0acccbc13b1ff6ebf9072
@@ -38,3 +38,6 @@ references:
   - url: http://www.securityfocus.com/bid/74821
     reference_type:
     reference_id:
+  - url: https://github.com/advisories/GHSA-5x6q-ffwj-8vcf
+    reference_type:
+    reference_id: GHSA-5x6q-ffwj-8vcf

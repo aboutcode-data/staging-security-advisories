@@ -10,16 +10,16 @@ summary: The Crypto.Random.atfork function in PyCrypto before 2.6.1 does not pro
   a race condition in which a child process is created and accesses the PRNG within the same
   rate-limit period as another process.
 impacted_packages:
-  - purl: pkg:pypi/pycrypto
-    affected_versions: vers:pypi/1.9a2|1.9a5|1.9a6|2.0|2.0.1|2.1.0|2.2|2.3|2.4|2.4.1|2.5|2.6
-    fixed_versions: vers:pypi/2.6.1
+  - purl: pkg:github/dlitz/pycrypto
+    affected_versions:
+    fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/dlitz/pycrypto
         commit: 19dcf7b15d61b7dc1a125a367151de40df6ef175
     introduced_in_commits: []
-  - purl: pkg:github/dlitz/pycrypto
-    affected_versions:
-    fixed_versions:
+  - purl: pkg:pypi/pycrypto
+    affected_versions: vers:pypi/1.9a1|1.9a2|1.9a2|1.9a3|1.9a4|1.9a5|1.9a5|1.9a6|2.0|2.0.1|2.1.0a1|2.1.0a2|2.1.0b1|2.1.0|2.1.0|2.2|2.2|2.3|2.3|2.4|2.4|2.4.1|2.4.1|2.5|2.5|2.6|2.6
+    fixed_versions: vers:pypi/2.6.1
     fixed_in_commits:
       - vcs_url: https://github.com/dlitz/pycrypto
         commit: 19dcf7b15d61b7dc1a125a367151de40df6ef175
@@ -36,3 +36,6 @@ references:
   - url: http://www.openwall.com/lists/oss-security/2013/10/17/3
     reference_type:
     reference_id:
+  - url: https://github.com/advisories/GHSA-x377-f64p-hf5j
+    reference_type:
+    reference_id: GHSA-x377-f64p-hf5j

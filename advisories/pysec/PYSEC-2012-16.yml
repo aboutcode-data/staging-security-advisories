@@ -8,13 +8,6 @@ summary: PyCrypto before 2.6 does not produce appropriate prime numbers when usi
   scheme to generate a key, which reduces the signature space or public key space and makes
   it easier for attackers to conduct brute force attacks to obtain the private key.
 impacted_packages:
-  - purl: pkg:pypi/pycrypto
-    affected_versions: vers:pypi/1.9a2|1.9a5|1.9a6|2.0|2.0.1|2.1.0|2.2|2.3|2.4|2.4.1|2.5
-    fixed_versions: vers:pypi/2.6
-    fixed_in_commits:
-      - vcs_url: https://github.com/legrandin/pycrypto
-        commit: 9f912f13df99ad3421eff360d6a62d7dbec755c2
-    introduced_in_commits: []
   - purl: pkg:github/dlitz/pycrypto
     affected_versions:
     fixed_versions:
@@ -25,6 +18,13 @@ impacted_packages:
   - purl: pkg:github/legrandin/pycrypto
     affected_versions:
     fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/legrandin/pycrypto
+        commit: 9f912f13df99ad3421eff360d6a62d7dbec755c2
+    introduced_in_commits: []
+  - purl: pkg:pypi/pycrypto
+    affected_versions: vers:pypi/1.9a1|1.9a2|1.9a2|1.9a3|1.9a4|1.9a5|1.9a5|1.9a6|2.0|2.0.1|2.1.0a1|2.1.0a2|2.1.0b1|2.1.0|2.1.0|2.2|2.2|2.3|2.3|2.4|2.4.1|2.5
+    fixed_versions: vers:pypi/2.6
     fixed_in_commits:
       - vcs_url: https://github.com/legrandin/pycrypto
         commit: 9f912f13df99ad3421eff360d6a62d7dbec755c2
@@ -74,3 +74,6 @@ references:
   - url: http://www.securityfocus.com/bid/53687
     reference_type:
     reference_id:
+  - url: https://github.com/advisories/GHSA-v367-p58w-98h5
+    reference_type:
+    reference_id: GHSA-v367-p58w-98h5

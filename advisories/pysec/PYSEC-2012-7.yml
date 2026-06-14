@@ -8,9 +8,9 @@ summary: The django.http.HttpRequest.get_host function in Django 1.3.x before 1.
   before 1.4.2 allows remote attackers to generate and display arbitrary URLs via crafted username
   and password Host header values.
 impacted_packages:
-  - purl: pkg:pypi/django
-    affected_versions: vers:pypi/1.3|1.3.1|1.3.2|1.3.3|1.4|1.4.1
-    fixed_versions: vers:pypi/1.3.4|1.4.2
+  - purl: pkg:github/django/django
+    affected_versions:
+    fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/django/django
         commit: 9305c0e12d43c4df999c3301a1f0c742264a657e
@@ -19,9 +19,9 @@ impacted_packages:
       - vcs_url: https://github.com/django/django
         commit: 92d3430f12171f16f566c9050c40feefb830a4a3
     introduced_in_commits: []
-  - purl: pkg:github/django/django
-    affected_versions:
-    fixed_versions:
+  - purl: pkg:pypi/django
+    affected_versions: vers:pypi/1.0|1.1|1.2|1.2.1|1.3|1.3.1|1.3.2|1.3.3|1.4|1.4.1
+    fixed_versions: vers:pypi/1.3.4|1.4.2
     fixed_in_commits:
       - vcs_url: https://github.com/django/django
         commit: 9305c0e12d43c4df999c3301a1f0c742264a657e
@@ -84,3 +84,6 @@ references:
   - url: http://www.osvdb.org/86493
     reference_type:
     reference_id:
+  - url: https://github.com/advisories/GHSA-2655-q453-22f9
+    reference_type:
+    reference_id: GHSA-2655-q453-22f9

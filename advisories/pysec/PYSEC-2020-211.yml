@@ -8,16 +8,16 @@ summary: packet.py in pyrad before 2.1 uses weak random numbers to generate RADI
   and hash passwords, which makes it easier for remote attackers to obtain sensitive information
   via a brute force attack.
 impacted_packages:
-  - purl: pkg:pypi/pyrad
-    affected_versions: vers:pypi/1.0a1|1.0|1.1|1.2|2.0
-    fixed_versions: vers:pypi/2.1
+  - purl: pkg:github/wichert/pyrad
+    affected_versions:
+    fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/wichert/pyrad
         commit: 38f74b36814ca5b1a27d9898141126af4953bee5
     introduced_in_commits: []
-  - purl: pkg:github/wichert/pyrad
-    affected_versions:
-    fixed_versions:
+  - purl: pkg:pypi/pyrad
+    affected_versions: vers:pypi/1.0a1|1.0|1.1|1.2|2.0
+    fixed_versions: vers:pypi/2.1
     fixed_in_commits:
       - vcs_url: https://github.com/wichert/pyrad
         commit: 38f74b36814ca5b1a27d9898141126af4953bee5
@@ -49,3 +49,6 @@ references:
   - url: http://www.securityfocus.com/bid/57984
     reference_type:
     reference_id:
+  - url: https://github.com/advisories/GHSA-q4v3-wmm6-hcrx
+    reference_type:
+    reference_id: GHSA-q4v3-wmm6-hcrx

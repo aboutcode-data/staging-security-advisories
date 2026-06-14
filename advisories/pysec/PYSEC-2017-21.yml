@@ -8,16 +8,16 @@ summary: OpenStack Nova-LXD before 13.1.1 uses the wrong name for the veth pairs
   Neutron security group rules for instances, which allows remote attackers to bypass intended
   security restrictions.
 impacted_packages:
-  - purl: pkg:pypi/nova-lxd
-    affected_versions: vers:pypi/0.19.0|13.0.0.0b2|13.0.0.0b3|13.0.0|13.1.0
-    fixed_versions: vers:pypi/13.1.1
+  - purl: pkg:github/openstack/nova-lxd
+    affected_versions:
+    fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/openstack/nova-lxd
         commit: 1b76cefb92081efa1e88cd8f330253f857028bd2
     introduced_in_commits: []
-  - purl: pkg:github/openstack/nova-lxd
-    affected_versions:
-    fixed_versions:
+  - purl: pkg:pypi/nova-lxd
+    affected_versions: vers:pypi/0.19.0|13.0.0.0b2|13.0.0.0b3|13.0.0|13.0.1|13.1.0|13.1|13.2.0
+    fixed_versions: vers:pypi/13.1.1
     fixed_in_commits:
       - vcs_url: https://github.com/openstack/nova-lxd
         commit: 1b76cefb92081efa1e88cd8f330253f857028bd2
@@ -40,3 +40,6 @@ references:
   - url: http://www.ubuntu.com/usn/USN-3195-1
     reference_type:
     reference_id:
+  - url: https://github.com/advisories/GHSA-6xc7-4cx8-j3xc
+    reference_type:
+    reference_id: GHSA-6xc7-4cx8-j3xc

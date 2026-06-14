@@ -8,16 +8,16 @@ summary: |
   A vulnerability, that could result in Remote Code Execution (RCE), has been found in PlotAI. Lack of validation of LLM-generated output allows attacker to execute arbitrary Python code.
   Vendor commented out vulnerable line, further usage of the software requires uncommenting it and thus accepting the risk. The vendor does not plan to release a patch to fix this vulnerability.
 impacted_packages:
-  - purl: pkg:pypi/plotai
-    affected_versions: vers:pypi/0.0.0|0.0.1|0.0.2|0.0.3|0.0.4|0.0.5|0.0.6
-    fixed_versions: vers:pypi/0.0.7
+  - purl: pkg:github/mljar/plotai
+    affected_versions:
+    fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/mljar/plotai
         commit: bdcfb13484f0b85703a4c1ddfd71cb21840e7fde
     introduced_in_commits: []
-  - purl: pkg:github/mljar/plotai
-    affected_versions:
-    fixed_versions:
+  - purl: pkg:pypi/plotai
+    affected_versions: vers:pypi/0.0.0|0.0.1|0.0.2|0.0.3|0.0.3|0.0.4|0.0.4|0.0.5|0.0.5|0.0.6|0.0.6
+    fixed_versions: vers:pypi/0.0.7
     fixed_in_commits:
       - vcs_url: https://github.com/mljar/plotai
         commit: bdcfb13484f0b85703a4c1ddfd71cb21840e7fde
@@ -42,3 +42,6 @@ references:
   - url: https://cert.pl/posts/2025/03/CVE-2025-1497
     reference_type:
     reference_id: CVE-2025-1497
+  - url: https://github.com/advisories/GHSA-2hmp-5wqg-f24h
+    reference_type:
+    reference_id: GHSA-2hmp-5wqg-f24h

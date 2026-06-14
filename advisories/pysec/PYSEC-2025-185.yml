@@ -3,6 +3,7 @@ datasource_id: pysec/PYSEC-2025-185
 datasource_url: https://osv-vulnerabilities.storage.googleapis.com/PyPI/all.zip
 aliases:
   - CVE-2024-29370
+  - GHSA-h4pw-wxh7-4vjj
 summary: In python-jose 3.3.0 (specifically jwe.decrypt), a vulnerability allows an attacker
   to cause a Denial-of-Service (DoS) condition by crafting a malicious JSON Web Encryption (JWE)
   token with an exceptionally high compression ratio. When this token is processed by the server,
@@ -24,3 +25,6 @@ references:
   - url: https://github.com/mpdavis/python-jose/issues/344
     reference_type:
     reference_id:
+  - url: https://github.com/advisories/GHSA-h4pw-wxh7-4vjj
+    reference_type:
+    reference_id: GHSA-h4pw-wxh7-4vjj

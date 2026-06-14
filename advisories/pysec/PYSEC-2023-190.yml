@@ -8,16 +8,16 @@ summary: Versions of the package asyncua before 0.9.96 are vulnerable to Denial 
   such that an attacker can send a malformed packet and as a result, the server will enter into
   an infinite loop and consume excessive memory.
 impacted_packages:
-  - purl: pkg:pypi/asyncua
-    affected_versions: vers:pypi/0.5.0|0.5.1|0.6.0|0.6.1|0.8.0|0.8.1|0.8.2|0.8.3|0.8.4|0.9.0|0.9.1|0.9.2|0.9.3|0.9.6|0.9.8|0.9.9|0.9.10|0.9.11|0.9.12|0.9.14|0.9.90|0.9.91|0.9.92|0.9.93|0.9.94|0.9.95
-    fixed_versions: vers:pypi/0.9.96
+  - purl: pkg:github/freeopcua/opcua-asyncio
+    affected_versions:
+    fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/freeopcua/opcua-asyncio
         commit: f6603daa34a93a658f0e176cb0b9ee5a6643b262
     introduced_in_commits: []
-  - purl: pkg:github/freeopcua/opcua-asyncio
-    affected_versions:
-    fixed_versions:
+  - purl: pkg:pypi/asyncua
+    affected_versions: vers:pypi/0.5.0|0.5.1|0.6.0|0.6.1|0.8.0|0.8.1|0.8.2|0.8.3|0.8.4|0.9.0|0.9.1|0.9.2|0.9.3|0.9.4|0.9.6|0.9.7|0.9.8|0.9.8|0.9.9|0.9.10|0.9.10|0.9.11|0.9.11|0.9.12|0.9.12|0.9.13|0.9.13|0.9.14|0.9.17|0.9.18|0.9.19|0.9.90|0.9.90|0.9.91|0.9.91|0.9.92|0.9.92|0.9.93|0.9.93|0.9.94|0.9.94|0.9.95|0.9.95|0.10.0|0.10|0.10.1|0.10.2|0.10.3|0.10.4|0.10.5|0.10.6|0.10.7|0.10.8|0.10.9|0.10.11|0.10.12|0.10.14|0.10.15|0.10.17|0.90.0|0.90.1|0.90.2|0.90.3|0.90.4
+    fixed_versions: vers:pypi/0.9.96
     fixed_in_commits:
       - vcs_url: https://github.com/freeopcua/opcua-asyncio
         commit: f6603daa34a93a658f0e176cb0b9ee5a6643b262
@@ -48,3 +48,6 @@ references:
   - url: https://security.snyk.io/vuln/SNYK-PYTHON-ASYNCUA-5673709
     reference_type:
     reference_id:
+  - url: https://github.com/advisories/GHSA-gfvq-mxw3-mfq3
+    reference_type:
+    reference_id: GHSA-gfvq-mxw3-mfq3

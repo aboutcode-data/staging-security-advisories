@@ -8,16 +8,16 @@ summary: The _Rsa15 class in the RSA 1.5 algorithm implementation in jwa.py in j
   0.3.2 lacks the Random Filling protection mechanism, which makes it easier for remote attackers
   to obtain cleartext data via a Million Message Attack (MMA).
 impacted_packages:
-  - purl: pkg:pypi/jwcrypto
-    affected_versions: vers:pypi/0.2.0|0.2.1|0.3.0|0.3.1
-    fixed_versions: vers:pypi/0.4.0
+  - purl: pkg:github/latchset/jwcrypto
+    affected_versions:
+    fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/latchset/jwcrypto
         commit: eb5be5bd94c8cae1d7f3ba9801377084d8e5a7ba
     introduced_in_commits: []
-  - purl: pkg:github/latchset/jwcrypto
-    affected_versions:
-    fixed_versions:
+  - purl: pkg:pypi/jwcrypto
+    affected_versions: vers:pypi/0.1.0|0.2.0|0.2.0|0.2.1|0.2.1|0.3.0|0.3.0|0.3.1|0.3.1
+    fixed_versions: vers:pypi/0.4.0
     fixed_in_commits:
       - vcs_url: https://github.com/latchset/jwcrypto
         commit: eb5be5bd94c8cae1d7f3ba9801377084d8e5a7ba
@@ -40,3 +40,6 @@ references:
   - url: http://www.securityfocus.com/bid/92729
     reference_type:
     reference_id:
+  - url: https://github.com/advisories/GHSA-wg33-x934-3ghh
+    reference_type:
+    reference_id: GHSA-wg33-x934-3ghh
