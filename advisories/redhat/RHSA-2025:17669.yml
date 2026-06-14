@@ -26,12 +26,42 @@ summary: |
 
   All OpenShift Container Platform 4.12 users are advised to upgrade to these updated packages and images when they are available in the appropriate release channel. To check for available updates, use the OpenShift CLI (oc) or web console. Instructions for upgrading a cluster are available at https://docs.redhat.com/en/documentation/openshift_container_platform/4.12/html-single/updating_clusters/index#updating-cluster-within-minor.
 impacted_packages:
-  - purl: pkg:rpm/redhat/podman?arch=src&epoch=3
+  - purl: pkg:rpm/redhat/kernel-rt?arch=x86_64
+    affected_versions: vers:rpm/<4.18.0-372.164.1.rt7.325.el8_6
+    fixed_versions: vers:rpm/4.18.0-372.164.1.rt7.325.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman?arch=x86_64&epoch=3
+    affected_versions: vers:rpm/<4.4.1-10.rhaos4.12.el8
+    fixed_versions: vers:rpm/4.4.1-10.rhaos4.12.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-catatonit?arch=x86_64&epoch=3
+    affected_versions: vers:rpm/<4.4.1-10.rhaos4.12.el8
+    fixed_versions: vers:rpm/4.4.1-10.rhaos4.12.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel?arch=ppc64le
+    affected_versions: vers:rpm/<4.18.0-372.164.1.el8_6
+    fixed_versions: vers:rpm/4.18.0-372.164.1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-debug-modules-internal?arch=ppc64le
+    affected_versions: vers:rpm/<4.18.0-372.164.1.el8_6
+    fixed_versions: vers:rpm/4.18.0-372.164.1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-catatonit-debuginfo?arch=s390x&epoch=3
     affected_versions: vers:rpm/<4.2.0-15.rhaos4.12.el9
     fixed_versions: vers:rpm/4.2.0-15.rhaos4.12.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-remote-debuginfo?arch=s390x&epoch=3
+  - purl: pkg:rpm/redhat/podman-debuginfo?arch=s390x&epoch=3
+    affected_versions: vers:rpm/<4.2.0-15.rhaos4.12.el9
+    fixed_versions: vers:rpm/4.2.0-15.rhaos4.12.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman?arch=src&epoch=3
     affected_versions: vers:rpm/<4.2.0-15.rhaos4.12.el9
     fixed_versions: vers:rpm/4.2.0-15.rhaos4.12.el9
     fixed_in_commits: []
@@ -246,11 +276,6 @@ impacted_packages:
     fixed_versions: vers:rpm/4.18.0-372.164.1.el8_6
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-rt?arch=x86_64
-    affected_versions: vers:rpm/<4.18.0-372.164.1.rt7.325.el8_6
-    fixed_versions: vers:rpm/4.18.0-372.164.1.rt7.325.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-rt-core?arch=x86_64
     affected_versions: vers:rpm/<4.18.0-372.164.1.rt7.325.el8_6
     fixed_versions: vers:rpm/4.18.0-372.164.1.rt7.325.el8_6
@@ -334,16 +359,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/kernel-rt-debuginfo-common-x86_64?arch=x86_64
     affected_versions: vers:rpm/<4.18.0-372.164.1.rt7.325.el8_6
     fixed_versions: vers:rpm/4.18.0-372.164.1.rt7.325.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman?arch=x86_64&epoch=3
-    affected_versions: vers:rpm/<4.4.1-10.rhaos4.12.el8
-    fixed_versions: vers:rpm/4.4.1-10.rhaos4.12.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-catatonit?arch=x86_64&epoch=3
-    affected_versions: vers:rpm/<4.4.1-10.rhaos4.12.el8
-    fixed_versions: vers:rpm/4.4.1-10.rhaos4.12.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-gvproxy?arch=x86_64&epoch=3
@@ -711,11 +726,6 @@ impacted_packages:
     fixed_versions: vers:rpm/4.18.0-372.164.1.el8_6
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel?arch=ppc64le
-    affected_versions: vers:rpm/<4.18.0-372.164.1.el8_6
-    fixed_versions: vers:rpm/4.18.0-372.164.1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-core?arch=ppc64le
     affected_versions: vers:rpm/<4.18.0-372.164.1.el8_6
     fixed_versions: vers:rpm/4.18.0-372.164.1.el8_6
@@ -742,11 +752,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debug-modules-extra?arch=ppc64le
-    affected_versions: vers:rpm/<4.18.0-372.164.1.el8_6
-    fixed_versions: vers:rpm/4.18.0-372.164.1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debug-modules-internal?arch=ppc64le
     affected_versions: vers:rpm/<4.18.0-372.164.1.el8_6
     fixed_versions: vers:rpm/4.18.0-372.164.1.el8_6
     fixed_in_commits: []
@@ -936,22 +941,17 @@ impacted_packages:
     fixed_versions: vers:rpm/4.2.0-15.rhaos4.12.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-catatonit-debuginfo?arch=s390x&epoch=3
-    affected_versions: vers:rpm/<4.2.0-15.rhaos4.12.el9
-    fixed_versions: vers:rpm/4.2.0-15.rhaos4.12.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-debuginfo?arch=s390x&epoch=3
-    affected_versions: vers:rpm/<4.2.0-15.rhaos4.12.el9
-    fixed_versions: vers:rpm/4.2.0-15.rhaos4.12.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-gvproxy-debuginfo?arch=s390x&epoch=3
     affected_versions: vers:rpm/<4.2.0-15.rhaos4.12.el9
     fixed_versions: vers:rpm/4.2.0-15.rhaos4.12.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-plugins-debuginfo?arch=s390x&epoch=3
+    affected_versions: vers:rpm/<4.2.0-15.rhaos4.12.el9
+    fixed_versions: vers:rpm/4.2.0-15.rhaos4.12.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-remote-debuginfo?arch=s390x&epoch=3
     affected_versions: vers:rpm/<4.2.0-15.rhaos4.12.el9
     fixed_versions: vers:rpm/4.2.0-15.rhaos4.12.el9
     fixed_in_commits: []
