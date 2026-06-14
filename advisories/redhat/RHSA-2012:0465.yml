@@ -28,6 +28,56 @@ summary: |
   contain a backported patch to resolve this issue. After installing this
   update, the smb service will be restarted automatically.
 impacted_packages:
+  - purl: pkg:rpm/redhat/samba-winbind-clients?arch=i686
+    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
+    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba?arch=s390x
+    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
+    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-swat?arch=s390x
+    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
+    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=s390x
+    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
+    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba?arch=s390x
+    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
+    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-debuginfo?arch=s390x
+    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
+    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsmbclient?arch=s390x
+    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
+    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-common?arch=s390x
+    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
+    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-client?arch=s390x
+    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
+    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-winbind?arch=s390x
+    affected_versions: vers:rpm/<3.5.4-68.el6_0.3
+    fixed_versions: vers:rpm/3.5.4-68.el6_0.3
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/libsmbclient?arch=s390x
     affected_versions: vers:rpm/<3.5.4-68.el6_0.3
     fixed_versions: vers:rpm/3.5.4-68.el6_0.3
@@ -43,359 +93,614 @@ impacted_packages:
     fixed_versions: vers:rpm/3.5.4-68.el6_0.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-debuginfo?arch=ia64
-    affected_versions: vers:rpm/<3.0.33-3.7.el5_3.5
-    fixed_versions: vers:rpm/3.0.33-3.7.el5_3.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba?arch=ia64
-    affected_versions: vers:rpm/<3.0.33-3.7.el5_3.5
-    fixed_versions: vers:rpm/3.0.33-3.7.el5_3.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-client?arch=ia64
-    affected_versions: vers:rpm/<3.0.33-3.7.el5_3.5
-    fixed_versions: vers:rpm/3.0.33-3.7.el5_3.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-common?arch=ia64
-    affected_versions: vers:rpm/<3.0.33-3.7.el5_3.5
-    fixed_versions: vers:rpm/3.0.33-3.7.el5_3.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-swat?arch=ia64
-    affected_versions: vers:rpm/<3.0.33-3.7.el5_3.5
-    fixed_versions: vers:rpm/3.0.33-3.7.el5_3.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-client?arch=ia64
-    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
-    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-debuginfo?arch=ia64
-    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
-    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=ia64
-    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
-    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-swat?arch=ia64
-    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
-    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-common?arch=ia64
-    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
-    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient?arch=ia64
-    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
-    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba?arch=ia64
-    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
-    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-swat?arch=ia64
-    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
-    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=ia64
-    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
-    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba?arch=ia64
-    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
-    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-debuginfo?arch=ia64
-    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
-    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient?arch=ia64
-    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
-    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-common?arch=ia64
-    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
-    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-client?arch=ia64
-    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
-    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-debuginfo?arch=i386
-    affected_versions: vers:rpm/<3.0.33-3.7.el5_3.5
-    fixed_versions: vers:rpm/3.0.33-3.7.el5_3.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-common?arch=i386
-    affected_versions: vers:rpm/<3.0.33-3.7.el5_3.5
-    fixed_versions: vers:rpm/3.0.33-3.7.el5_3.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba?arch=i386
-    affected_versions: vers:rpm/<3.0.33-3.7.el5_3.5
-    fixed_versions: vers:rpm/3.0.33-3.7.el5_3.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-client?arch=i386
-    affected_versions: vers:rpm/<3.0.33-3.7.el5_3.5
-    fixed_versions: vers:rpm/3.0.33-3.7.el5_3.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-swat?arch=i386
-    affected_versions: vers:rpm/<3.0.33-3.7.el5_3.5
-    fixed_versions: vers:rpm/3.0.33-3.7.el5_3.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-client?arch=i386
-    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
-    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-debuginfo?arch=i386
-    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
-    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=i386
-    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
-    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-swat?arch=i386
-    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
-    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-common?arch=i386
-    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
-    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient?arch=i386
-    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
-    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba?arch=i386
-    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
-    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-swat?arch=i386
-    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
-    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=i386
-    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
-    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba?arch=i386
-    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
-    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-debuginfo?arch=i386
-    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
-    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient?arch=i386
-    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
-    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-common?arch=i386
-    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
-    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-client?arch=i386
-    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
-    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-debuginfo?arch=x86_64
-    affected_versions: vers:rpm/<3.0.33-3.7.el5_3.5
-    fixed_versions: vers:rpm/3.0.33-3.7.el5_3.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba?arch=x86_64
-    affected_versions: vers:rpm/<3.0.33-3.7.el5_3.5
-    fixed_versions: vers:rpm/3.0.33-3.7.el5_3.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-client?arch=x86_64
-    affected_versions: vers:rpm/<3.0.33-3.7.el5_3.5
-    fixed_versions: vers:rpm/3.0.33-3.7.el5_3.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-common?arch=x86_64
-    affected_versions: vers:rpm/<3.0.33-3.7.el5_3.5
-    fixed_versions: vers:rpm/3.0.33-3.7.el5_3.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-swat?arch=x86_64
-    affected_versions: vers:rpm/<3.0.33-3.7.el5_3.5
-    fixed_versions: vers:rpm/3.0.33-3.7.el5_3.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-client?arch=x86_64
-    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
-    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-debuginfo?arch=x86_64
-    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
-    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=x86_64
-    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
-    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-swat?arch=x86_64
-    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
-    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-common?arch=x86_64
-    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
-    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient?arch=x86_64
-    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
-    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba?arch=x86_64
-    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
-    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-swat?arch=x86_64
-    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
-    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=x86_64
-    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
-    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba?arch=x86_64
-    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
-    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-debuginfo?arch=x86_64
-    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
-    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient?arch=x86_64
-    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
-    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-common?arch=x86_64
-    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
-    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-client?arch=x86_64
-    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
-    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-winbind?arch=x86_64
+  - purl: pkg:rpm/redhat/samba-winbind-clients?arch=s390x
     affected_versions: vers:rpm/<3.5.4-68.el6_0.3
     fixed_versions: vers:rpm/3.5.4-68.el6_0.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient?arch=x86_64
+  - purl: pkg:rpm/redhat/samba-debuginfo?arch=s390x
     affected_versions: vers:rpm/<3.5.4-68.el6_0.3
     fixed_versions: vers:rpm/3.5.4-68.el6_0.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-common?arch=x86_64
+  - purl: pkg:rpm/redhat/samba?arch=s390x
     affected_versions: vers:rpm/<3.5.4-68.el6_0.3
     fixed_versions: vers:rpm/3.5.4-68.el6_0.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-client?arch=x86_64
+  - purl: pkg:rpm/redhat/samba-doc?arch=s390x
     affected_versions: vers:rpm/<3.5.4-68.el6_0.3
     fixed_versions: vers:rpm/3.5.4-68.el6_0.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-winbind-clients?arch=x86_64
+  - purl: pkg:rpm/redhat/samba-winbind-devel?arch=s390x
     affected_versions: vers:rpm/<3.5.4-68.el6_0.3
     fixed_versions: vers:rpm/3.5.4-68.el6_0.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-debuginfo?arch=x86_64
+  - purl: pkg:rpm/redhat/samba-swat?arch=s390x
     affected_versions: vers:rpm/<3.5.4-68.el6_0.3
     fixed_versions: vers:rpm/3.5.4-68.el6_0.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba?arch=x86_64
+  - purl: pkg:rpm/redhat/samba-domainjoin-gui?arch=s390x
     affected_versions: vers:rpm/<3.5.4-68.el6_0.3
     fixed_versions: vers:rpm/3.5.4-68.el6_0.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-doc?arch=x86_64
+  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=s390x
     affected_versions: vers:rpm/<3.5.4-68.el6_0.3
     fixed_versions: vers:rpm/3.5.4-68.el6_0.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-winbind-devel?arch=x86_64
-    affected_versions: vers:rpm/<3.5.4-68.el6_0.3
-    fixed_versions: vers:rpm/3.5.4-68.el6_0.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-swat?arch=x86_64
-    affected_versions: vers:rpm/<3.5.4-68.el6_0.3
-    fixed_versions: vers:rpm/3.5.4-68.el6_0.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-domainjoin-gui?arch=x86_64
-    affected_versions: vers:rpm/<3.5.4-68.el6_0.3
-    fixed_versions: vers:rpm/3.5.4-68.el6_0.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=x86_64
-    affected_versions: vers:rpm/<3.5.4-68.el6_0.3
-    fixed_versions: vers:rpm/3.5.4-68.el6_0.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba?arch=x86_64
+  - purl: pkg:rpm/redhat/samba?arch=s390x
     affected_versions: vers:rpm/<3.5.6-86.el6_1.5
     fixed_versions: vers:rpm/3.5.6-86.el6_1.5
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-debuginfo?arch=x86_64
+  - purl: pkg:rpm/redhat/samba-debuginfo?arch=s390x
     affected_versions: vers:rpm/<3.5.6-86.el6_1.5
     fixed_versions: vers:rpm/3.5.6-86.el6_1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-winbind?arch=s390x
+    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
+    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-client?arch=s390x
+    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
+    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-winbind-clients?arch=s390x
+    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
+    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-common?arch=s390x
+    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
+    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsmbclient?arch=s390x
+    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
+    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-doc?arch=s390x
+    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
+    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-swat?arch=s390x
+    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
+    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-domainjoin-gui?arch=s390x
+    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
+    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-winbind-krb5-locator?arch=s390x
+    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
+    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-winbind-devel?arch=s390x
+    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
+    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=s390x
+    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
+    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-winbind?arch=s390x
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-common?arch=s390x
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba?arch=s390x
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsmbclient?arch=s390x
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-client?arch=s390x
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-debuginfo?arch=s390x
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-winbind-clients?arch=s390x
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=s390x
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-winbind-krb5-locator?arch=s390x
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-doc?arch=s390x
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-domainjoin-gui?arch=s390x
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-winbind-devel?arch=s390x
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-swat?arch=s390x
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-debuginfo?arch=s390
+    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
+    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=s390
+    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
+    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-common?arch=s390
+    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
+    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsmbclient?arch=s390
+    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
+    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=s390
+    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
+    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-debuginfo?arch=s390
+    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
+    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsmbclient?arch=s390
+    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
+    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-common?arch=s390
+    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
+    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsmbclient?arch=s390
+    affected_versions: vers:rpm/<3.5.4-68.el6_0.3
+    fixed_versions: vers:rpm/3.5.4-68.el6_0.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-common?arch=s390
+    affected_versions: vers:rpm/<3.5.4-68.el6_0.3
+    fixed_versions: vers:rpm/3.5.4-68.el6_0.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-winbind-clients?arch=s390
+    affected_versions: vers:rpm/<3.5.4-68.el6_0.3
+    fixed_versions: vers:rpm/3.5.4-68.el6_0.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-debuginfo?arch=s390
+    affected_versions: vers:rpm/<3.5.4-68.el6_0.3
+    fixed_versions: vers:rpm/3.5.4-68.el6_0.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-winbind-devel?arch=s390
+    affected_versions: vers:rpm/<3.5.4-68.el6_0.3
+    fixed_versions: vers:rpm/3.5.4-68.el6_0.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=s390
+    affected_versions: vers:rpm/<3.5.4-68.el6_0.3
+    fixed_versions: vers:rpm/3.5.4-68.el6_0.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-debuginfo?arch=s390
+    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
+    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-winbind-clients?arch=s390
+    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
+    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-common?arch=s390
+    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
+    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsmbclient?arch=s390
+    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
+    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-winbind-devel?arch=s390
+    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
+    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=s390
+    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
+    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-common?arch=s390
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsmbclient?arch=s390
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-debuginfo?arch=s390
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-winbind-clients?arch=s390
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=s390
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-winbind-devel?arch=s390
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsmbclient?arch=i686
+    affected_versions: vers:rpm/<3.5.4-68.el6_0.3
+    fixed_versions: vers:rpm/3.5.4-68.el6_0.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-common?arch=i686
+    affected_versions: vers:rpm/<3.5.4-68.el6_0.3
+    fixed_versions: vers:rpm/3.5.4-68.el6_0.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-winbind-clients?arch=i686
+    affected_versions: vers:rpm/<3.5.4-68.el6_0.3
+    fixed_versions: vers:rpm/3.5.4-68.el6_0.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-debuginfo?arch=i686
+    affected_versions: vers:rpm/<3.5.4-68.el6_0.3
+    fixed_versions: vers:rpm/3.5.4-68.el6_0.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-winbind?arch=i686
+    affected_versions: vers:rpm/<3.5.4-68.el6_0.3
+    fixed_versions: vers:rpm/3.5.4-68.el6_0.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-client?arch=i686
+    affected_versions: vers:rpm/<3.5.4-68.el6_0.3
+    fixed_versions: vers:rpm/3.5.4-68.el6_0.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba?arch=i686
+    affected_versions: vers:rpm/<3.5.4-68.el6_0.3
+    fixed_versions: vers:rpm/3.5.4-68.el6_0.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-winbind-devel?arch=i686
+    affected_versions: vers:rpm/<3.5.4-68.el6_0.3
+    fixed_versions: vers:rpm/3.5.4-68.el6_0.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=i686
+    affected_versions: vers:rpm/<3.5.4-68.el6_0.3
+    fixed_versions: vers:rpm/3.5.4-68.el6_0.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-doc?arch=i686
+    affected_versions: vers:rpm/<3.5.4-68.el6_0.3
+    fixed_versions: vers:rpm/3.5.4-68.el6_0.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-swat?arch=i686
+    affected_versions: vers:rpm/<3.5.4-68.el6_0.3
+    fixed_versions: vers:rpm/3.5.4-68.el6_0.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-domainjoin-gui?arch=i686
+    affected_versions: vers:rpm/<3.5.4-68.el6_0.3
+    fixed_versions: vers:rpm/3.5.4-68.el6_0.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-debuginfo?arch=i686
+    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
+    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-common?arch=i686
+    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
+    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsmbclient?arch=i686
+    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
+    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba?arch=i686
+    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
+    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-winbind?arch=i686
+    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
+    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-client?arch=i686
+    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
+    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-winbind-devel?arch=i686
+    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
+    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=i686
+    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
+    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-doc?arch=i686
+    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
+    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-swat?arch=i686
+    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
+    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-domainjoin-gui?arch=i686
+    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
+    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-winbind-krb5-locator?arch=i686
+    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
+    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-common?arch=i686
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsmbclient?arch=i686
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-debuginfo?arch=i686
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-winbind-clients?arch=i686
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-winbind?arch=i686
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba?arch=i686
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-client?arch=i686
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=i686
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-winbind-devel?arch=i686
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-winbind-krb5-locator?arch=i686
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-doc?arch=i686
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-domainjoin-gui?arch=i686
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-swat?arch=i686
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-doc?arch=ppc64
+    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
+    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-swat?arch=ppc64
+    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
+    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-domainjoin-gui?arch=ppc64
+    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
+    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-winbind-krb5-locator?arch=ppc64
+    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
+    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-winbind-devel?arch=ppc64
+    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
+    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=ppc64
+    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
+    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-winbind?arch=ppc64
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-common?arch=ppc64
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba?arch=ppc64
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsmbclient?arch=ppc64
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-client?arch=ppc64
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-debuginfo?arch=ppc64
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-winbind-clients?arch=ppc64
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=ppc64
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-winbind-krb5-locator?arch=ppc64
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-doc?arch=ppc64
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-domainjoin-gui?arch=ppc64
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-winbind-devel?arch=ppc64
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-swat?arch=ppc64
+    affected_versions: vers:rpm/<3.5.10-115.el6_2
+    fixed_versions: vers:rpm/3.5.10-115.el6_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-client?arch=s390x
+    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
+    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-debuginfo?arch=s390x
+    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
+    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=s390x
+    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
+    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-swat?arch=s390x
+    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
+    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-common?arch=s390x
+    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
+    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsmbclient?arch=s390x
+    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
+    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/samba-winbind?arch=x86_64
@@ -823,6 +1128,21 @@ impacted_packages:
     fixed_versions: vers:rpm/3.5.6-86.el6_1.5
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-debuginfo?arch=ia64
+    affected_versions: vers:rpm/<3.0.33-3.7.el5_3.5
+    fixed_versions: vers:rpm/3.0.33-3.7.el5_3.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba?arch=ia64
+    affected_versions: vers:rpm/<3.0.33-3.7.el5_3.5
+    fixed_versions: vers:rpm/3.0.33-3.7.el5_3.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-client?arch=ia64
+    affected_versions: vers:rpm/<3.0.33-3.7.el5_3.5
+    fixed_versions: vers:rpm/3.0.33-3.7.el5_3.5
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/samba-client?arch=ppc64
     affected_versions: vers:rpm/<3.5.6-86.el6_1.5
     fixed_versions: vers:rpm/3.5.6-86.el6_1.5
@@ -831,6 +1151,81 @@ impacted_packages:
   - purl: pkg:rpm/redhat/samba-winbind-clients?arch=ppc64
     affected_versions: vers:rpm/<3.5.6-86.el6_1.5
     fixed_versions: vers:rpm/3.5.6-86.el6_1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-common?arch=ia64
+    affected_versions: vers:rpm/<3.0.33-3.7.el5_3.5
+    fixed_versions: vers:rpm/3.0.33-3.7.el5_3.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-swat?arch=ia64
+    affected_versions: vers:rpm/<3.0.33-3.7.el5_3.5
+    fixed_versions: vers:rpm/3.0.33-3.7.el5_3.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-client?arch=ia64
+    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
+    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-debuginfo?arch=ia64
+    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
+    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=ia64
+    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
+    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-swat?arch=ia64
+    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
+    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-common?arch=ia64
+    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
+    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsmbclient?arch=ia64
+    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
+    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba?arch=ia64
+    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
+    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-swat?arch=ia64
+    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
+    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=ia64
+    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
+    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba?arch=ia64
+    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
+    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-debuginfo?arch=ia64
+    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
+    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsmbclient?arch=ia64
+    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
+    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-swat?arch=i386
+    affected_versions: vers:rpm/<3.0.33-3.7.el5_3.5
+    fixed_versions: vers:rpm/3.0.33-3.7.el5_3.5
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/samba-common?arch=ppc64
@@ -843,664 +1238,269 @@ impacted_packages:
     fixed_versions: vers:rpm/3.5.6-86.el6_1.5
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-doc?arch=ppc64
-    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
-    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-swat?arch=ppc64
-    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
-    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-domainjoin-gui?arch=ppc64
-    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
-    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-winbind-krb5-locator?arch=ppc64
-    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
-    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-winbind-devel?arch=ppc64
-    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
-    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=ppc64
-    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
-    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-winbind?arch=ppc64
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-common?arch=ppc64
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba?arch=ppc64
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient?arch=ppc64
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-client?arch=ppc64
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-debuginfo?arch=ppc64
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-winbind-clients?arch=ppc64
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=ppc64
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-winbind-krb5-locator?arch=ppc64
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-doc?arch=ppc64
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-domainjoin-gui?arch=ppc64
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-winbind-devel?arch=ppc64
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-swat?arch=ppc64
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-client?arch=s390x
-    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
-    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-debuginfo?arch=s390x
-    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
-    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=s390x
-    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
-    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-swat?arch=s390x
-    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
-    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-common?arch=s390x
-    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
-    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient?arch=s390x
-    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
-    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba?arch=s390x
-    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
-    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-swat?arch=s390x
+  - purl: pkg:rpm/redhat/samba-common?arch=ia64
     affected_versions: vers:rpm/<3.0.33-3.39.el5_8
     fixed_versions: vers:rpm/3.0.33-3.39.el5_8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=s390x
+  - purl: pkg:rpm/redhat/samba-client?arch=ia64
     affected_versions: vers:rpm/<3.0.33-3.39.el5_8
     fixed_versions: vers:rpm/3.0.33-3.39.el5_8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba?arch=s390x
-    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
-    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
+  - purl: pkg:rpm/redhat/samba-debuginfo?arch=i386
+    affected_versions: vers:rpm/<3.0.33-3.7.el5_3.5
+    fixed_versions: vers:rpm/3.0.33-3.7.el5_3.5
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-debuginfo?arch=s390x
-    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
-    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
+  - purl: pkg:rpm/redhat/samba-common?arch=i386
+    affected_versions: vers:rpm/<3.0.33-3.7.el5_3.5
+    fixed_versions: vers:rpm/3.0.33-3.7.el5_3.5
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient?arch=s390x
-    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
-    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
+  - purl: pkg:rpm/redhat/samba?arch=i386
+    affected_versions: vers:rpm/<3.0.33-3.7.el5_3.5
+    fixed_versions: vers:rpm/3.0.33-3.7.el5_3.5
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-common?arch=s390x
-    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
-    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
+  - purl: pkg:rpm/redhat/samba-client?arch=i386
+    affected_versions: vers:rpm/<3.0.33-3.7.el5_3.5
+    fixed_versions: vers:rpm/3.0.33-3.7.el5_3.5
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-client?arch=s390x
-    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
-    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-winbind?arch=s390x
-    affected_versions: vers:rpm/<3.5.4-68.el6_0.3
-    fixed_versions: vers:rpm/3.5.4-68.el6_0.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-winbind-clients?arch=s390x
-    affected_versions: vers:rpm/<3.5.4-68.el6_0.3
-    fixed_versions: vers:rpm/3.5.4-68.el6_0.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-debuginfo?arch=s390x
-    affected_versions: vers:rpm/<3.5.4-68.el6_0.3
-    fixed_versions: vers:rpm/3.5.4-68.el6_0.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba?arch=s390x
-    affected_versions: vers:rpm/<3.5.4-68.el6_0.3
-    fixed_versions: vers:rpm/3.5.4-68.el6_0.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-doc?arch=s390x
-    affected_versions: vers:rpm/<3.5.4-68.el6_0.3
-    fixed_versions: vers:rpm/3.5.4-68.el6_0.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-winbind-devel?arch=s390x
-    affected_versions: vers:rpm/<3.5.4-68.el6_0.3
-    fixed_versions: vers:rpm/3.5.4-68.el6_0.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-swat?arch=s390x
-    affected_versions: vers:rpm/<3.5.4-68.el6_0.3
-    fixed_versions: vers:rpm/3.5.4-68.el6_0.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-domainjoin-gui?arch=s390x
-    affected_versions: vers:rpm/<3.5.4-68.el6_0.3
-    fixed_versions: vers:rpm/3.5.4-68.el6_0.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=s390x
-    affected_versions: vers:rpm/<3.5.4-68.el6_0.3
-    fixed_versions: vers:rpm/3.5.4-68.el6_0.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba?arch=s390x
+  - purl: pkg:rpm/redhat/samba?arch=x86_64
     affected_versions: vers:rpm/<3.5.6-86.el6_1.5
     fixed_versions: vers:rpm/3.5.6-86.el6_1.5
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-debuginfo?arch=s390x
+  - purl: pkg:rpm/redhat/samba-debuginfo?arch=x86_64
     affected_versions: vers:rpm/<3.5.6-86.el6_1.5
     fixed_versions: vers:rpm/3.5.6-86.el6_1.5
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-winbind?arch=s390x
-    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
-    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-client?arch=s390x
-    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
-    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-winbind-clients?arch=s390x
-    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
-    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-common?arch=s390x
-    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
-    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient?arch=s390x
-    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
-    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-doc?arch=s390x
-    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
-    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-swat?arch=s390x
-    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
-    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-domainjoin-gui?arch=s390x
-    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
-    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-winbind-krb5-locator?arch=s390x
-    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
-    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-winbind-devel?arch=s390x
-    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
-    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=s390x
-    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
-    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-winbind?arch=s390x
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-common?arch=s390x
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba?arch=s390x
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient?arch=s390x
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-client?arch=s390x
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-debuginfo?arch=s390x
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-winbind-clients?arch=s390x
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=s390x
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-winbind-krb5-locator?arch=s390x
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-doc?arch=s390x
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-domainjoin-gui?arch=s390x
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-winbind-devel?arch=s390x
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-swat?arch=s390x
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-debuginfo?arch=s390
+  - purl: pkg:rpm/redhat/samba-client?arch=i386
     affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
     fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=s390
+  - purl: pkg:rpm/redhat/samba-debuginfo?arch=i386
     affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
     fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-common?arch=s390
+  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=i386
     affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
     fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient?arch=s390
+  - purl: pkg:rpm/redhat/samba-swat?arch=i386
     affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
     fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=s390
+  - purl: pkg:rpm/redhat/samba-common?arch=i386
+    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
+    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsmbclient?arch=i386
+    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
+    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba?arch=i386
+    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
+    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-swat?arch=i386
     affected_versions: vers:rpm/<3.0.33-3.39.el5_8
     fixed_versions: vers:rpm/3.0.33-3.39.el5_8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-debuginfo?arch=s390
+  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=i386
     affected_versions: vers:rpm/<3.0.33-3.39.el5_8
     fixed_versions: vers:rpm/3.0.33-3.39.el5_8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient?arch=s390
+  - purl: pkg:rpm/redhat/samba?arch=i386
     affected_versions: vers:rpm/<3.0.33-3.39.el5_8
     fixed_versions: vers:rpm/3.0.33-3.39.el5_8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-common?arch=s390
+  - purl: pkg:rpm/redhat/samba-debuginfo?arch=i386
     affected_versions: vers:rpm/<3.0.33-3.39.el5_8
     fixed_versions: vers:rpm/3.0.33-3.39.el5_8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient?arch=s390
+  - purl: pkg:rpm/redhat/libsmbclient?arch=i386
+    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
+    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-common?arch=i386
+    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
+    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-client?arch=i386
+    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
+    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-debuginfo?arch=x86_64
+    affected_versions: vers:rpm/<3.0.33-3.7.el5_3.5
+    fixed_versions: vers:rpm/3.0.33-3.7.el5_3.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba?arch=x86_64
+    affected_versions: vers:rpm/<3.0.33-3.7.el5_3.5
+    fixed_versions: vers:rpm/3.0.33-3.7.el5_3.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-client?arch=x86_64
+    affected_versions: vers:rpm/<3.0.33-3.7.el5_3.5
+    fixed_versions: vers:rpm/3.0.33-3.7.el5_3.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-common?arch=x86_64
+    affected_versions: vers:rpm/<3.0.33-3.7.el5_3.5
+    fixed_versions: vers:rpm/3.0.33-3.7.el5_3.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-swat?arch=x86_64
+    affected_versions: vers:rpm/<3.0.33-3.7.el5_3.5
+    fixed_versions: vers:rpm/3.0.33-3.7.el5_3.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-client?arch=x86_64
+    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
+    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-debuginfo?arch=x86_64
+    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
+    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=x86_64
+    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
+    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-swat?arch=x86_64
+    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
+    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-common?arch=x86_64
+    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
+    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsmbclient?arch=x86_64
+    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
+    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba?arch=x86_64
+    affected_versions: vers:rpm/<3.0.33-3.29.el5_6.5
+    fixed_versions: vers:rpm/3.0.33-3.29.el5_6.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-swat?arch=x86_64
+    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
+    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=x86_64
+    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
+    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba?arch=x86_64
+    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
+    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-debuginfo?arch=x86_64
+    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
+    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsmbclient?arch=x86_64
+    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
+    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-common?arch=x86_64
+    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
+    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-client?arch=x86_64
+    affected_versions: vers:rpm/<3.0.33-3.39.el5_8
+    fixed_versions: vers:rpm/3.0.33-3.39.el5_8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-winbind?arch=x86_64
     affected_versions: vers:rpm/<3.5.4-68.el6_0.3
     fixed_versions: vers:rpm/3.5.4-68.el6_0.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-common?arch=s390
+  - purl: pkg:rpm/redhat/libsmbclient?arch=x86_64
     affected_versions: vers:rpm/<3.5.4-68.el6_0.3
     fixed_versions: vers:rpm/3.5.4-68.el6_0.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-winbind-clients?arch=s390
+  - purl: pkg:rpm/redhat/samba-common?arch=x86_64
     affected_versions: vers:rpm/<3.5.4-68.el6_0.3
     fixed_versions: vers:rpm/3.5.4-68.el6_0.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-debuginfo?arch=s390
+  - purl: pkg:rpm/redhat/samba-client?arch=x86_64
     affected_versions: vers:rpm/<3.5.4-68.el6_0.3
     fixed_versions: vers:rpm/3.5.4-68.el6_0.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-winbind-devel?arch=s390
+  - purl: pkg:rpm/redhat/samba-winbind-clients?arch=x86_64
     affected_versions: vers:rpm/<3.5.4-68.el6_0.3
     fixed_versions: vers:rpm/3.5.4-68.el6_0.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=s390
+  - purl: pkg:rpm/redhat/samba-debuginfo?arch=x86_64
     affected_versions: vers:rpm/<3.5.4-68.el6_0.3
     fixed_versions: vers:rpm/3.5.4-68.el6_0.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-debuginfo?arch=s390
-    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
-    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-winbind-clients?arch=s390
-    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
-    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-common?arch=s390
-    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
-    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient?arch=s390
-    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
-    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-winbind-devel?arch=s390
-    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
-    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=s390
-    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
-    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-common?arch=s390
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient?arch=s390
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-debuginfo?arch=s390
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-winbind-clients?arch=s390
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=s390
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-winbind-devel?arch=s390
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient?arch=i686
+  - purl: pkg:rpm/redhat/samba?arch=x86_64
     affected_versions: vers:rpm/<3.5.4-68.el6_0.3
     fixed_versions: vers:rpm/3.5.4-68.el6_0.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-common?arch=i686
+  - purl: pkg:rpm/redhat/samba-doc?arch=x86_64
     affected_versions: vers:rpm/<3.5.4-68.el6_0.3
     fixed_versions: vers:rpm/3.5.4-68.el6_0.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-winbind-clients?arch=i686
+  - purl: pkg:rpm/redhat/samba-winbind-devel?arch=x86_64
     affected_versions: vers:rpm/<3.5.4-68.el6_0.3
     fixed_versions: vers:rpm/3.5.4-68.el6_0.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-debuginfo?arch=i686
+  - purl: pkg:rpm/redhat/samba-swat?arch=x86_64
     affected_versions: vers:rpm/<3.5.4-68.el6_0.3
     fixed_versions: vers:rpm/3.5.4-68.el6_0.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-winbind?arch=i686
+  - purl: pkg:rpm/redhat/samba-domainjoin-gui?arch=x86_64
     affected_versions: vers:rpm/<3.5.4-68.el6_0.3
     fixed_versions: vers:rpm/3.5.4-68.el6_0.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-client?arch=i686
+  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=x86_64
     affected_versions: vers:rpm/<3.5.4-68.el6_0.3
     fixed_versions: vers:rpm/3.5.4-68.el6_0.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba?arch=i686
-    affected_versions: vers:rpm/<3.5.4-68.el6_0.3
-    fixed_versions: vers:rpm/3.5.4-68.el6_0.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-winbind-devel?arch=i686
-    affected_versions: vers:rpm/<3.5.4-68.el6_0.3
-    fixed_versions: vers:rpm/3.5.4-68.el6_0.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=i686
-    affected_versions: vers:rpm/<3.5.4-68.el6_0.3
-    fixed_versions: vers:rpm/3.5.4-68.el6_0.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-doc?arch=i686
-    affected_versions: vers:rpm/<3.5.4-68.el6_0.3
-    fixed_versions: vers:rpm/3.5.4-68.el6_0.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-swat?arch=i686
-    affected_versions: vers:rpm/<3.5.4-68.el6_0.3
-    fixed_versions: vers:rpm/3.5.4-68.el6_0.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-domainjoin-gui?arch=i686
-    affected_versions: vers:rpm/<3.5.4-68.el6_0.3
-    fixed_versions: vers:rpm/3.5.4-68.el6_0.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-debuginfo?arch=i686
-    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
-    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-winbind-clients?arch=i686
-    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
-    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-common?arch=i686
-    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
-    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient?arch=i686
-    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
-    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba?arch=i686
-    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
-    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-winbind?arch=i686
-    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
-    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-client?arch=i686
-    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
-    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-winbind-devel?arch=i686
-    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
-    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=i686
-    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
-    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-doc?arch=i686
-    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
-    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-swat?arch=i686
-    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
-    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-domainjoin-gui?arch=i686
-    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
-    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-winbind-krb5-locator?arch=i686
-    affected_versions: vers:rpm/<3.5.6-86.el6_1.5
-    fixed_versions: vers:rpm/3.5.6-86.el6_1.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-common?arch=i686
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient?arch=i686
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-debuginfo?arch=i686
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-winbind-clients?arch=i686
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-winbind?arch=i686
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba?arch=i686
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-client?arch=i686
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=i686
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-winbind-devel?arch=i686
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-winbind-krb5-locator?arch=i686
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-doc?arch=i686
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-domainjoin-gui?arch=i686
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-swat?arch=i686
-    affected_versions: vers:rpm/<3.5.10-115.el6_2
-    fixed_versions: vers:rpm/3.5.10-115.el6_2
     fixed_in_commits: []
     introduced_in_commits: []
 severities:

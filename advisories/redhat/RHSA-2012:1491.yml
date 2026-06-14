@@ -88,6 +88,11 @@ summary: |
   kernel to version kernel-rt-3.2.33-rt50, and correct these issues. The
   system must be rebooted for this update to take effect.
 impacted_packages:
+  - purl: pkg:rpm/redhat/kernel-rt-vanilla-debuginfo?arch=x86_64
+    affected_versions: vers:rpm/<3.2.33-rt50.66.el6rt
+    fixed_versions: vers:rpm/3.2.33-rt50.66.el6rt
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-rt-firmware?arch=noarch
     affected_versions: vers:rpm/<3.2.33-rt50.66.el6rt
     fixed_versions: vers:rpm/3.2.33-rt50.66.el6rt
@@ -114,11 +119,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-rt-trace?arch=x86_64
-    affected_versions: vers:rpm/<3.2.33-rt50.66.el6rt
-    fixed_versions: vers:rpm/3.2.33-rt50.66.el6rt
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-rt-vanilla-debuginfo?arch=x86_64
     affected_versions: vers:rpm/<3.2.33-rt50.66.el6rt
     fixed_versions: vers:rpm/3.2.33-rt50.66.el6rt
     fixed_in_commits: []
@@ -226,12 +226,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=864568
     reference_type: bug
     reference_id: 864568
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/local/37937.c
-    reference_type: exploit
-    reference_id: CVE-2012-0957;OSVDB-86133
-  - url: https://www.securityfocus.com/bid/55855/info
-    reference_type: exploit
-    reference_id: CVE-2012-0957;OSVDB-86133
   - url: https://access.redhat.com/errata/RHSA-2012:1491
     reference_type:
     reference_id: RHSA-2012:1491
