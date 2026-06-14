@@ -36,51 +36,6 @@ summary: |
   packages, which correct these issues and add these enhancements. The system
   must be rebooted for this update to take effect.
 impacted_packages:
-  - purl: pkg:rpm/redhat/kernel-PAE?arch=i686
-    affected_versions: vers:rpm/<2.6.18-308.el5
-    fixed_versions: vers:rpm/2.6.18-308.el5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debug-debuginfo?arch=i686
-    affected_versions: vers:rpm/<2.6.18-308.el5
-    fixed_versions: vers:rpm/2.6.18-308.el5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-xen-devel?arch=i686
-    affected_versions: vers:rpm/<2.6.18-308.el5
-    fixed_versions: vers:rpm/2.6.18-308.el5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-devel?arch=i686
-    affected_versions: vers:rpm/<2.6.18-308.el5
-    fixed_versions: vers:rpm/2.6.18-308.el5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debug?arch=i686
-    affected_versions: vers:rpm/<2.6.18-308.el5
-    fixed_versions: vers:rpm/2.6.18-308.el5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-PAE-devel?arch=i686
-    affected_versions: vers:rpm/<2.6.18-308.el5
-    fixed_versions: vers:rpm/2.6.18-308.el5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-xen?arch=i686
-    affected_versions: vers:rpm/<2.6.18-308.el5
-    fixed_versions: vers:rpm/2.6.18-308.el5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debuginfo?arch=i686
-    affected_versions: vers:rpm/<2.6.18-308.el5
-    fixed_versions: vers:rpm/2.6.18-308.el5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel?arch=i686
-    affected_versions: vers:rpm/<2.6.18-308.el5
-    fixed_versions: vers:rpm/2.6.18-308.el5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debuginfo-common?arch=i686
     affected_versions: vers:rpm/<2.6.18-308.el5
     fixed_versions: vers:rpm/2.6.18-308.el5
@@ -92,6 +47,16 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-xen-debuginfo?arch=i686
+    affected_versions: vers:rpm/<2.6.18-308.el5
+    fixed_versions: vers:rpm/2.6.18-308.el5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-PAE?arch=i686
+    affected_versions: vers:rpm/<2.6.18-308.el5
+    fixed_versions: vers:rpm/2.6.18-308.el5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-debug-debuginfo?arch=i686
     affected_versions: vers:rpm/<2.6.18-308.el5
     fixed_versions: vers:rpm/2.6.18-308.el5
     fixed_in_commits: []
@@ -311,6 +276,41 @@ impacted_packages:
     fixed_versions: vers:rpm/2.6.18-308.el5
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-xen-devel?arch=i686
+    affected_versions: vers:rpm/<2.6.18-308.el5
+    fixed_versions: vers:rpm/2.6.18-308.el5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-devel?arch=i686
+    affected_versions: vers:rpm/<2.6.18-308.el5
+    fixed_versions: vers:rpm/2.6.18-308.el5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel?arch=i686
+    affected_versions: vers:rpm/<2.6.18-308.el5
+    fixed_versions: vers:rpm/2.6.18-308.el5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-debug?arch=i686
+    affected_versions: vers:rpm/<2.6.18-308.el5
+    fixed_versions: vers:rpm/2.6.18-308.el5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-PAE-devel?arch=i686
+    affected_versions: vers:rpm/<2.6.18-308.el5
+    fixed_versions: vers:rpm/2.6.18-308.el5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-xen?arch=i686
+    affected_versions: vers:rpm/<2.6.18-308.el5
+    fixed_versions: vers:rpm/2.6.18-308.el5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-debuginfo?arch=i686
+    affected_versions: vers:rpm/<2.6.18-308.el5
+    fixed_versions: vers:rpm/2.6.18-308.el5
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: Moderate
     scoring_system: rhas
@@ -520,12 +520,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=772578
     reference_type: bug
     reference_id: 772578
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/dos/35403.c
-    reference_type: exploit
-    reference_id: CVE-2011-1083;OSVDB-71265
-  - url: https://www.securityfocus.com/bid/46630/info
-    reference_type: exploit
-    reference_id: CVE-2011-1083;OSVDB-71265
   - url: https://access.redhat.com/errata/RHSA-2012:0150
     reference_type:
     reference_id: RHSA-2012:0150

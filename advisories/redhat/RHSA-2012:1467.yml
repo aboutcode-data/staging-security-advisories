@@ -60,6 +60,11 @@ summary: |
   packages, containing the IBM Java SE 7 SR3 release. All running instances
   of IBM Java must be restarted for the update to take effect.
 impacted_packages:
+  - purl: pkg:rpm/redhat/java-1.7.0-ibm?arch=i686&epoch=1
+    affected_versions: vers:rpm/<1.7.0.3.0-1jpp.2.el6_3
+    fixed_versions: vers:rpm/1.7.0.3.0-1jpp.2.el6_3
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/java-1.7.0-ibm-demo?arch=x86_64&epoch=1
     affected_versions: vers:rpm/<1.7.0.3.0-1jpp.2.el6_3
     fixed_versions: vers:rpm/1.7.0.3.0-1jpp.2.el6_3
@@ -96,11 +101,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/java-1.7.0-ibm-plugin?arch=i686&epoch=1
-    affected_versions: vers:rpm/<1.7.0.3.0-1jpp.2.el6_3
-    fixed_versions: vers:rpm/1.7.0.3.0-1jpp.2.el6_3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-1.7.0-ibm?arch=i686&epoch=1
     affected_versions: vers:rpm/<1.7.0.3.0-1jpp.2.el6_3
     fixed_versions: vers:rpm/1.7.0.3.0-1jpp.2.el6_3
     fixed_in_commits: []
@@ -274,12 +274,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=876389
     reference_type: bug
     reference_id: 876389
-  - url: http://pastebin.com/eUucVage
-    reference_type: exploit
-    reference_id: CVE-2012-1533;OSVDB-86348
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/remote/26123.rb
-    reference_type: exploit
-    reference_id: CVE-2012-1533;OSVDB-86348
   - url: https://access.redhat.com/errata/RHSA-2012:1467
     reference_type:
     reference_id: RHSA-2012:1467
