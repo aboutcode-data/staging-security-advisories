@@ -30,16 +30,6 @@ summary: |
 
   Red Hat would like to thank Alexander Popov for reporting CVE-2017-2636 and Ralf Spenneberg for reporting CVE-2016-8650. The CVE-2017-2618 issue was discovered by Paul Moore (Red Hat Engineering).
 impacted_packages:
-  - purl: pkg:rpm/redhat/kernel?arch=ppc64le
-    affected_versions: vers:rpm/<3.10.0-514.16.1.el7
-    fixed_versions: vers:rpm/3.10.0-514.16.1.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debuginfo?arch=ppc64le
-    affected_versions: vers:rpm/<3.10.0-514.16.1.el7
-    fixed_versions: vers:rpm/3.10.0-514.16.1.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/perf-debuginfo?arch=x86_64
     affected_versions: vers:rpm/<3.10.0-514.16.1.el7
     fixed_versions: vers:rpm/3.10.0-514.16.1.el7
@@ -305,6 +295,16 @@ impacted_packages:
     fixed_versions: vers:rpm/3.10.0-514.16.1.el7
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel?arch=ppc64le
+    affected_versions: vers:rpm/<3.10.0-514.16.1.el7
+    fixed_versions: vers:rpm/3.10.0-514.16.1.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-debuginfo?arch=ppc64le
+    affected_versions: vers:rpm/<3.10.0-514.16.1.el7
+    fixed_versions: vers:rpm/3.10.0-514.16.1.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debug-debuginfo?arch=ppc64le
     affected_versions: vers:rpm/<3.10.0-514.16.1.el7
     fixed_versions: vers:rpm/3.10.0-514.16.1.el7
@@ -370,13 +370,6 @@ impacted_packages:
     fixed_versions: vers:rpm/3.10.0-514.16.1.el7
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/xairy/kernel-exploits
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/xairy/kernel-exploits
-        commit: 1b230097e769d7d13dce1e24b51d4aba1e2a0cc7
-    introduced_in_commits: []
 severities:
   - score: Important
     scoring_system: rhas
@@ -409,9 +402,3 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1419916
     reference_type: bug
     reference_id: 1419916
-  - url: https://github.com/xairy/kernel-exploits/blob/1b230097e769d7d13dce1e24b51d4aba1e2a0cc7/CVE-2016-9793/poc.c
-    reference_type: exploit
-    reference_id: CVE-2016-9793
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/local/41995.c
-    reference_type: exploit
-    reference_id: CVE-2016-9793

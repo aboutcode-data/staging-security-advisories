@@ -37,6 +37,16 @@ summary: |
 
   * With this update, the CONFIG_SLUB_DEBUG and CONFIG_SLABINFO kernel configuration options are enabled in the real-time kernel. These options turn on SLUB allocator debugging and slab information tracking, which are helpful when investigating kernel memory allocation problems. (BZ#1357997)
 impacted_packages:
+  - purl: pkg:rpm/redhat/kernel-rt-debug-devel?arch=x86_64&epoch=1
+    affected_versions: vers:rpm/<3.10.0-514.rt56.210.el6rt
+    fixed_versions: vers:rpm/3.10.0-514.rt56.210.el6rt
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-rt-trace?arch=x86_64&epoch=1
+    affected_versions: vers:rpm/<3.10.0-514.rt56.210.el6rt
+    fixed_versions: vers:rpm/3.10.0-514.rt56.210.el6rt
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-rt?arch=x86_64&epoch=1
     affected_versions: vers:rpm/<3.10.0-514.rt56.210.el6rt
     fixed_versions: vers:rpm/3.10.0-514.rt56.210.el6rt
@@ -92,16 +102,6 @@ impacted_packages:
     fixed_versions: vers:rpm/3.10.0-514.rt56.210.el6rt
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-rt-debug-devel?arch=x86_64&epoch=1
-    affected_versions: vers:rpm/<3.10.0-514.rt56.210.el6rt
-    fixed_versions: vers:rpm/3.10.0-514.rt56.210.el6rt
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-rt-trace?arch=x86_64&epoch=1
-    affected_versions: vers:rpm/<3.10.0-514.rt56.210.el6rt
-    fixed_versions: vers:rpm/3.10.0-514.rt56.210.el6rt
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-rt?arch=src&epoch=1
     affected_versions: vers:rpm/<3.10.0-514.rt56.210.el6rt
     fixed_versions: vers:rpm/3.10.0-514.rt56.210.el6rt
@@ -128,13 +128,7 @@ references:
   - url: https://access.redhat.com/security/updates/classification/#important
     reference_type:
     reference_id:
-  - url: https://access.redhat.com/security/vulnerabilities/2706661
-    reference_type:
-    reference_id:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1367091
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1382268
     reference_type:
     reference_id:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1397930
@@ -152,12 +146,18 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1378982
     reference_type: bug
     reference_id: 1378982
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1382268
+    reference_type: bug
+    reference_id: 1382268
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1400193
     reference_type: bug
     reference_id: 1400193
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1400305
     reference_type: bug
     reference_id: 1400305
+  - url: https://access.redhat.com/security/vulnerabilities/2706661
+    reference_type: other
+    reference_id: 2706661
   - url: https://access.redhat.com/errata/RHSA-2017:0113
     reference_type:
     reference_id: RHSA-2017:0113

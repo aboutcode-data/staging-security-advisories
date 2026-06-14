@@ -28,6 +28,11 @@ summary: |
 
   * There are several cluster and host settings which require reinstallation of the host if changed. The requirement to reinstall was always mentioned in documentation and a WARNING event was raised. With this release, the Administration Portal now also shows an exclamation mark icon for each host that needs to be reinstalled. When an exclamation mark icon is shown, you can find the details about it in the Action Items section of the host's details view. (BZ#1501793)
 impacted_packages:
+  - purl: pkg:rpm/redhat/rhevm?arch=noarch
+    affected_versions: vers:rpm/<4.1.8.2-0.1.el7
+    fixed_versions: vers:rpm/4.1.8.2-0.1.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/ovirt-engine-setup-plugin-ovirt-engine?arch=noarch
     affected_versions: vers:rpm/<4.1.8.2-0.1.el7
     fixed_versions: vers:rpm/4.1.8.2-0.1.el7
@@ -119,11 +124,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/ovirt-engine-restapi?arch=noarch
-    affected_versions: vers:rpm/<4.1.8.2-0.1.el7
-    fixed_versions: vers:rpm/4.1.8.2-0.1.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/rhevm?arch=noarch
     affected_versions: vers:rpm/<4.1.8.2-0.1.el7
     fixed_versions: vers:rpm/4.1.8.2-0.1.el7
     fixed_in_commits: []

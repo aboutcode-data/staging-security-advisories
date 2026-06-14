@@ -22,7 +22,32 @@ summary: |
 
   Red Hat would like to thank the Samba project for reporting CVE-2017-2619 and CVE-2017-12150 and Yihan Lian and Zhibin Hu (Qihoo 360 GearTeam), Stefan Metzmacher (SerNet), and Jeremy Allison (Google) for reporting CVE-2017-12163. Upstream acknowledges Jann Horn (Google) as the original reporter of CVE-2017-2619; and Stefan Metzmacher (SerNet) as the original reporter of CVE-2017-12150.
 impacted_packages:
-  - purl: pkg:rpm/redhat/samba-winbind?arch=x86_64
+  - purl: pkg:rpm/redhat/samba-glusterfs?arch=x86_64
+    affected_versions: vers:rpm/<3.6.23-45.el6_9
+    fixed_versions: vers:rpm/3.6.23-45.el6_9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-swat?arch=x86_64
+    affected_versions: vers:rpm/<3.6.23-45.el6_9
+    fixed_versions: vers:rpm/3.6.23-45.el6_9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-winbind-krb5-locator?arch=x86_64
+    affected_versions: vers:rpm/<3.6.23-45.el6_9
+    fixed_versions: vers:rpm/3.6.23-45.el6_9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsmbclient?arch=i686
+    affected_versions: vers:rpm/<3.6.23-45.el6_9
+    fixed_versions: vers:rpm/3.6.23-45.el6_9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=ppc
+    affected_versions: vers:rpm/<3.6.23-45.el6_9
+    fixed_versions: vers:rpm/3.6.23-45.el6_9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsmbclient?arch=ppc
     affected_versions: vers:rpm/<3.6.23-45.el6_9
     fixed_versions: vers:rpm/3.6.23-45.el6_9
     fixed_in_commits: []
@@ -38,6 +63,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/samba-debuginfo?arch=x86_64
+    affected_versions: vers:rpm/<3.6.23-45.el6_9
+    fixed_versions: vers:rpm/3.6.23-45.el6_9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/samba-winbind?arch=x86_64
     affected_versions: vers:rpm/<3.6.23-45.el6_9
     fixed_versions: vers:rpm/3.6.23-45.el6_9
     fixed_in_commits: []
@@ -73,26 +103,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/libsmbclient-devel?arch=x86_64
-    affected_versions: vers:rpm/<3.6.23-45.el6_9
-    fixed_versions: vers:rpm/3.6.23-45.el6_9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-glusterfs?arch=x86_64
-    affected_versions: vers:rpm/<3.6.23-45.el6_9
-    fixed_versions: vers:rpm/3.6.23-45.el6_9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-swat?arch=x86_64
-    affected_versions: vers:rpm/<3.6.23-45.el6_9
-    fixed_versions: vers:rpm/3.6.23-45.el6_9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/samba-winbind-krb5-locator?arch=x86_64
-    affected_versions: vers:rpm/<3.6.23-45.el6_9
-    fixed_versions: vers:rpm/3.6.23-45.el6_9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient?arch=i686
     affected_versions: vers:rpm/<3.6.23-45.el6_9
     fixed_versions: vers:rpm/3.6.23-45.el6_9
     fixed_in_commits: []
@@ -332,16 +342,6 @@ impacted_packages:
     fixed_versions: vers:rpm/3.6.23-45.el6_9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient-devel?arch=ppc
-    affected_versions: vers:rpm/<3.6.23-45.el6_9
-    fixed_versions: vers:rpm/3.6.23-45.el6_9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsmbclient?arch=ppc
-    affected_versions: vers:rpm/<3.6.23-45.el6_9
-    fixed_versions: vers:rpm/3.6.23-45.el6_9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/samba-winbind-clients?arch=ppc
     affected_versions: vers:rpm/<3.6.23-45.el6_9
     fixed_versions: vers:rpm/3.6.23-45.el6_9
@@ -378,9 +378,3 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1491206
     reference_type: bug
     reference_id: 1491206
-  - url: https://bugs.chromium.org/p/project-zero/issues/detail?id=1039
-    reference_type: exploit
-    reference_id: CVE-2017-2619
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/remote/41740.txt
-    reference_type: exploit
-    reference_id: CVE-2017-2619

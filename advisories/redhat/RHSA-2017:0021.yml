@@ -19,6 +19,46 @@ summary: |
 
   * Multiple flaws were discovered in GStreamer's H.264 and MPEG-TS plug-ins. A remote attacker could use these flaws to cause an application using GStreamer to crash. (CVE-2016-9809, CVE-2016-9812, CVE-2016-9813)
 impacted_packages:
+  - purl: pkg:rpm/redhat/gstreamer1-plugins-bad-free?arch=s390
+    affected_versions: vers:rpm/<1.4.5-6.el7_3
+    fixed_versions: vers:rpm/1.4.5-6.el7_3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/gstreamer1-plugins-bad-free-devel?arch=s390
+    affected_versions: vers:rpm/<1.4.5-6.el7_3
+    fixed_versions: vers:rpm/1.4.5-6.el7_3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/gstreamer1-plugins-bad-free-debuginfo?arch=s390x
+    affected_versions: vers:rpm/<1.4.5-6.el7_3
+    fixed_versions: vers:rpm/1.4.5-6.el7_3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/gstreamer1-plugins-bad-free?arch=s390x
+    affected_versions: vers:rpm/<1.4.5-6.el7_3
+    fixed_versions: vers:rpm/1.4.5-6.el7_3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/gstreamer1-plugins-bad-free-devel?arch=s390x
+    affected_versions: vers:rpm/<1.4.5-6.el7_3
+    fixed_versions: vers:rpm/1.4.5-6.el7_3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/gstreamer1-plugins-bad-free-debuginfo?arch=aarch64
+    affected_versions: vers:rpm/<1.4.5-6.el7_3
+    fixed_versions: vers:rpm/1.4.5-6.el7_3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/gstreamer1-plugins-bad-free?arch=aarch64
+    affected_versions: vers:rpm/<1.4.5-6.el7_3
+    fixed_versions: vers:rpm/1.4.5-6.el7_3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/gstreamer1-plugins-bad-free-devel?arch=aarch64
+    affected_versions: vers:rpm/<1.4.5-6.el7_3
+    fixed_versions: vers:rpm/1.4.5-6.el7_3
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/gstreamer1-plugins-bad-free-debuginfo?arch=x86_64
     affected_versions: vers:rpm/<1.4.5-6.el7_3
     fixed_versions: vers:rpm/1.4.5-6.el7_3
@@ -104,46 +144,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.4.5-6.el7_3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/gstreamer1-plugins-bad-free?arch=s390
-    affected_versions: vers:rpm/<1.4.5-6.el7_3
-    fixed_versions: vers:rpm/1.4.5-6.el7_3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/gstreamer1-plugins-bad-free-devel?arch=s390
-    affected_versions: vers:rpm/<1.4.5-6.el7_3
-    fixed_versions: vers:rpm/1.4.5-6.el7_3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/gstreamer1-plugins-bad-free-debuginfo?arch=s390x
-    affected_versions: vers:rpm/<1.4.5-6.el7_3
-    fixed_versions: vers:rpm/1.4.5-6.el7_3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/gstreamer1-plugins-bad-free?arch=s390x
-    affected_versions: vers:rpm/<1.4.5-6.el7_3
-    fixed_versions: vers:rpm/1.4.5-6.el7_3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/gstreamer1-plugins-bad-free-devel?arch=s390x
-    affected_versions: vers:rpm/<1.4.5-6.el7_3
-    fixed_versions: vers:rpm/1.4.5-6.el7_3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/gstreamer1-plugins-bad-free-debuginfo?arch=aarch64
-    affected_versions: vers:rpm/<1.4.5-6.el7_3
-    fixed_versions: vers:rpm/1.4.5-6.el7_3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/gstreamer1-plugins-bad-free?arch=aarch64
-    affected_versions: vers:rpm/<1.4.5-6.el7_3
-    fixed_versions: vers:rpm/1.4.5-6.el7_3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/gstreamer1-plugins-bad-free-devel?arch=aarch64
-    affected_versions: vers:rpm/<1.4.5-6.el7_3
-    fixed_versions: vers:rpm/1.4.5-6.el7_3
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: Moderate
     scoring_system: rhas
@@ -170,9 +170,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1401934
     reference_type: bug
     reference_id: 1401934
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/dos/42162.txt
-    reference_type: exploit
-    reference_id: CVE-2016-9813
   - url: https://access.redhat.com/errata/RHSA-2017:0021
     reference_type:
     reference_id: RHSA-2017:0021

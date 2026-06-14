@@ -21,7 +21,12 @@ summary: |
 
   Red Hat would like to thank Andrey Konovalov (Google) for reporting CVE-2017-6074. The CVE-2017-2634 issue was discovered by Wade Mealing (Red Hat Product Security).
 impacted_packages:
-  - purl: pkg:rpm/redhat/kernel-kdump?arch=s390x
+  - purl: pkg:rpm/redhat/kernel-debuginfo-common?arch=s390x
+    affected_versions: vers:rpm/<2.6.18-419.el5
+    fixed_versions: vers:rpm/2.6.18-419.el5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-xen?arch=ia64
     affected_versions: vers:rpm/<2.6.18-419.el5
     fixed_versions: vers:rpm/2.6.18-419.el5
     fixed_in_commits: []
@@ -161,7 +166,7 @@ impacted_packages:
     fixed_versions: vers:rpm/2.6.18-419.el5
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debuginfo-common?arch=s390x
+  - purl: pkg:rpm/redhat/kernel-kdump?arch=s390x
     affected_versions: vers:rpm/<2.6.18-419.el5
     fixed_versions: vers:rpm/2.6.18-419.el5
     fixed_in_commits: []
@@ -297,11 +302,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-xen-devel?arch=ia64
-    affected_versions: vers:rpm/<2.6.18-419.el5
-    fixed_versions: vers:rpm/2.6.18-419.el5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-xen?arch=ia64
     affected_versions: vers:rpm/<2.6.18-419.el5
     fixed_versions: vers:rpm/2.6.18-419.el5
     fixed_in_commits: []

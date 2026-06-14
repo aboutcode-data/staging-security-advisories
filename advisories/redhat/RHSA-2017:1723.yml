@@ -34,6 +34,11 @@ summary: |
 
   * Previously, a kernel panic occurred when the mcelog daemon executed a huge page memory offline. This update fixes the HugeTLB feature of the Linux kernel to check for the Page Table Entry (PTE) NULL pointer in the page_check_address() function. As a result, the kernel panic no longer occurs under the described circumstances. (BZ#1444351)
 impacted_packages:
+  - purl: pkg:rpm/redhat/python-perf?arch=i686
+    affected_versions: vers:rpm/<2.6.32-696.6.3.el6
+    fixed_versions: vers:rpm/2.6.32-696.6.3.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-doc?arch=noarch
     affected_versions: vers:rpm/<2.6.32-696.6.3.el6
     fixed_versions: vers:rpm/2.6.32-696.6.3.el6
@@ -160,11 +165,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debug?arch=i686
-    affected_versions: vers:rpm/<2.6.32-696.6.3.el6
-    fixed_versions: vers:rpm/2.6.32-696.6.3.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python-perf?arch=i686
     affected_versions: vers:rpm/<2.6.32-696.6.3.el6
     fixed_versions: vers:rpm/2.6.32-696.6.3.el6
     fixed_in_commits: []

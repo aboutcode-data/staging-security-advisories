@@ -27,17 +27,37 @@ summary: |
 
   The CVE-2016-8627 issue was discovered by Darran Lofthouse (Red Hat) and Brian Stansberry (Red Hat).
 impacted_packages:
-  - purl: pkg:rpm/redhat/jboss-as-ee-deployment?arch=src
+  - purl: pkg:rpm/redhat/jboss-as-modcluster?arch=src
     affected_versions: vers:rpm/<7.5.13-2.Final_redhat_2.1.ep6.el7
     fixed_versions: vers:rpm/7.5.13-2.Final_redhat_2.1.ep6.el7
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/jboss-as-system-jmx?arch=src
+  - purl: pkg:rpm/redhat/jboss-as-appclient?arch=src
     affected_versions: vers:rpm/<7.5.13-2.Final_redhat_2.1.ep6.el7
     fixed_versions: vers:rpm/7.5.13-2.Final_redhat_2.1.ep6.el7
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/jboss-as-osgi-service?arch=src
+  - purl: pkg:rpm/redhat/jboss-as-web?arch=src
+    affected_versions: vers:rpm/<7.5.13-2.Final_redhat_2.1.ep6.el7
+    fixed_versions: vers:rpm/7.5.13-2.Final_redhat_2.1.ep6.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/jboss-as-protocol?arch=src
+    affected_versions: vers:rpm/<7.5.13-2.Final_redhat_2.1.ep6.el7
+    fixed_versions: vers:rpm/7.5.13-2.Final_redhat_2.1.ep6.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/jbossas-core?arch=src
+    affected_versions: vers:rpm/<7.5.13-2.Final_redhat_2.1.ep6.el7
+    fixed_versions: vers:rpm/7.5.13-2.Final_redhat_2.1.ep6.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/resteasy?arch=noarch
+    affected_versions: vers:rpm/<2.3.16-1.Final_redhat_1.1.ep6.el7
+    fixed_versions: vers:rpm/2.3.16-1.Final_redhat_1.1.ep6.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/jboss-as-security?arch=noarch
     affected_versions: vers:rpm/<7.5.13-2.Final_redhat_2.1.ep6.el7
     fixed_versions: vers:rpm/7.5.13-2.Final_redhat_2.1.ep6.el7
     fixed_in_commits: []
@@ -262,21 +282,6 @@ impacted_packages:
     fixed_versions: vers:rpm/7.5.13-2.Final_redhat_2.1.ep6.el7
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/jboss-as-modcluster?arch=src
-    affected_versions: vers:rpm/<7.5.13-2.Final_redhat_2.1.ep6.el7
-    fixed_versions: vers:rpm/7.5.13-2.Final_redhat_2.1.ep6.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/jboss-as-appclient?arch=src
-    affected_versions: vers:rpm/<7.5.13-2.Final_redhat_2.1.ep6.el7
-    fixed_versions: vers:rpm/7.5.13-2.Final_redhat_2.1.ep6.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/jboss-as-web?arch=src
-    affected_versions: vers:rpm/<7.5.13-2.Final_redhat_2.1.ep6.el7
-    fixed_versions: vers:rpm/7.5.13-2.Final_redhat_2.1.ep6.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/jboss-as-network?arch=src
     affected_versions: vers:rpm/<7.5.13-2.Final_redhat_2.1.ep6.el7
     fixed_versions: vers:rpm/7.5.13-2.Final_redhat_2.1.ep6.el7
@@ -317,6 +322,21 @@ impacted_packages:
     fixed_versions: vers:rpm/7.5.13-2.Final_redhat_2.1.ep6.el7
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/jboss-as-ee-deployment?arch=src
+    affected_versions: vers:rpm/<7.5.13-2.Final_redhat_2.1.ep6.el7
+    fixed_versions: vers:rpm/7.5.13-2.Final_redhat_2.1.ep6.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/jboss-as-system-jmx?arch=src
+    affected_versions: vers:rpm/<7.5.13-2.Final_redhat_2.1.ep6.el7
+    fixed_versions: vers:rpm/7.5.13-2.Final_redhat_2.1.ep6.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/jboss-as-osgi-service?arch=src
+    affected_versions: vers:rpm/<7.5.13-2.Final_redhat_2.1.ep6.el7
+    fixed_versions: vers:rpm/7.5.13-2.Final_redhat_2.1.ep6.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/jboss-as-configadmin?arch=src
     affected_versions: vers:rpm/<7.5.13-2.Final_redhat_2.1.ep6.el7
     fixed_versions: vers:rpm/7.5.13-2.Final_redhat_2.1.ep6.el7
@@ -337,11 +357,6 @@ impacted_packages:
     fixed_versions: vers:rpm/7.5.13-2.Final_redhat_2.1.ep6.el7
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/jboss-as-protocol?arch=src
-    affected_versions: vers:rpm/<7.5.13-2.Final_redhat_2.1.ep6.el7
-    fixed_versions: vers:rpm/7.5.13-2.Final_redhat_2.1.ep6.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/jbossas-appclient?arch=src
     affected_versions: vers:rpm/<7.5.13-2.Final_redhat_2.1.ep6.el7
     fixed_versions: vers:rpm/7.5.13-2.Final_redhat_2.1.ep6.el7
@@ -353,11 +368,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/jbossas-bundles?arch=src
-    affected_versions: vers:rpm/<7.5.13-2.Final_redhat_2.1.ep6.el7
-    fixed_versions: vers:rpm/7.5.13-2.Final_redhat_2.1.ep6.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/jbossas-core?arch=src
     affected_versions: vers:rpm/<7.5.13-2.Final_redhat_2.1.ep6.el7
     fixed_versions: vers:rpm/7.5.13-2.Final_redhat_2.1.ep6.el7
     fixed_in_commits: []
@@ -385,11 +395,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/jbossweb?arch=noarch
     affected_versions: vers:rpm/<7.5.20-1.Final_redhat_1.1.ep6.el7
     fixed_versions: vers:rpm/7.5.20-1.Final_redhat_1.1.ep6.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/resteasy?arch=noarch
-    affected_versions: vers:rpm/<2.3.16-1.Final_redhat_1.1.ep6.el7
-    fixed_versions: vers:rpm/2.3.16-1.Final_redhat_1.1.ep6.el7
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/jboss-as-console?arch=noarch
@@ -583,11 +588,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/jboss-as-domain-http?arch=noarch
-    affected_versions: vers:rpm/<7.5.13-2.Final_redhat_2.1.ep6.el7
-    fixed_versions: vers:rpm/7.5.13-2.Final_redhat_2.1.ep6.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/jboss-as-security?arch=noarch
     affected_versions: vers:rpm/<7.5.13-2.Final_redhat_2.1.ep6.el7
     fixed_versions: vers:rpm/7.5.13-2.Final_redhat_2.1.ep6.el7
     fixed_in_commits: []
@@ -792,9 +792,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1403852
     reference_type: bug
     reference_id: 1403852
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/multiple/remote/41783.txt
-    reference_type: exploit
-    reference_id: CVE-2016-6816
   - url: https://access.redhat.com/errata/RHSA-2017:0245
     reference_type:
     reference_id: RHSA-2017:0245

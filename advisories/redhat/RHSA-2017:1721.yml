@@ -22,6 +22,21 @@ summary: |
 
   * Previously, httpd was unable to correctly check a boundary of an array, and in rare cases it attempted to access an element of an array that was out of bounds. Consequently, httpd terminated unexpectedly with a segmentation fault at proxy_util.c. With this update, bounds checking has been fixed, and httpd no longer crashes. (BZ#1463354)
 impacted_packages:
+  - purl: pkg:rpm/redhat/httpd-debuginfo?arch=s390
+    affected_versions: vers:rpm/<2.2.15-60.el6_9.4
+    fixed_versions: vers:rpm/2.2.15-60.el6_9.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/httpd-tools?arch=ppc64
+    affected_versions: vers:rpm/<2.2.15-60.el6_9.4
+    fixed_versions: vers:rpm/2.2.15-60.el6_9.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/httpd-devel?arch=ppc64
+    affected_versions: vers:rpm/<2.2.15-60.el6_9.4
+    fixed_versions: vers:rpm/2.2.15-60.el6_9.4
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/httpd-tools?arch=x86_64
     affected_versions: vers:rpm/<2.2.15-60.el6_9.4
     fixed_versions: vers:rpm/2.2.15-60.el6_9.4
@@ -108,21 +123,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/httpd-devel?arch=s390
-    affected_versions: vers:rpm/<2.2.15-60.el6_9.4
-    fixed_versions: vers:rpm/2.2.15-60.el6_9.4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/httpd-debuginfo?arch=s390
-    affected_versions: vers:rpm/<2.2.15-60.el6_9.4
-    fixed_versions: vers:rpm/2.2.15-60.el6_9.4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/httpd-tools?arch=ppc64
-    affected_versions: vers:rpm/<2.2.15-60.el6_9.4
-    fixed_versions: vers:rpm/2.2.15-60.el6_9.4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/httpd-devel?arch=ppc64
     affected_versions: vers:rpm/<2.2.15-60.el6_9.4
     fixed_versions: vers:rpm/2.2.15-60.el6_9.4
     fixed_in_commits: []
