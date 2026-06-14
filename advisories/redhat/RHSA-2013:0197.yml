@@ -111,9 +111,24 @@ summary: |
   discovered by David Jorm of Red Hat; and CVE-2012-2377 was discovered by
   Red Hat.
 impacted_packages:
-  - purl: pkg:rpm/redhat/rhq-core-gui?arch=noarch
+  - purl: pkg:rpm/redhat/rhq-modules-parent?arch=noarch
     affected_versions: vers:rpm/<3.0.0-22.EmbJopr5.ep5.el4
     fixed_versions: vers:rpm/3.0.0-22.EmbJopr5.ep5.el4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/rhq-jmx-plugin?arch=noarch
+    affected_versions: vers:rpm/<3.0.0-21.EmbJopr5.ep5.el4
+    fixed_versions: vers:rpm/3.0.0-21.EmbJopr5.ep5.el4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/jboss-jacc-1.1-api?arch=noarch
+    affected_versions: vers:rpm/<5.0.2-2.ep5.el4
+    fixed_versions: vers:rpm/5.0.2-2.ep5.el4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/javassist?arch=src
+    affected_versions: vers:rpm/<3.12.0-6.SP1.ep5.el4
+    fixed_versions: vers:rpm/3.12.0-6.SP1.ep5.el4
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/hibernate3?arch=noarch&epoch=1
@@ -226,6 +241,11 @@ impacted_packages:
     fixed_versions: vers:rpm/2.0.4-2.1.ep5.el4
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/rhq-core-gui?arch=noarch
+    affected_versions: vers:rpm/<3.0.0-22.EmbJopr5.ep5.el4
+    fixed_versions: vers:rpm/3.0.0-22.EmbJopr5.ep5.el4
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/rhq-core-native-system?arch=noarch
     affected_versions: vers:rpm/<3.0.0-22.EmbJopr5.ep5.el4
     fixed_versions: vers:rpm/3.0.0-22.EmbJopr5.ep5.el4
@@ -289,16 +309,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/rhq-parent?arch=noarch
     affected_versions: vers:rpm/<3.0.0-22.EmbJopr5.ep5.el4
     fixed_versions: vers:rpm/3.0.0-22.EmbJopr5.ep5.el4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/rhq-modules-parent?arch=noarch
-    affected_versions: vers:rpm/<3.0.0-22.EmbJopr5.ep5.el4
-    fixed_versions: vers:rpm/3.0.0-22.EmbJopr5.ep5.el4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/rhq-jmx-plugin?arch=noarch
-    affected_versions: vers:rpm/<3.0.0-21.EmbJopr5.ep5.el4
-    fixed_versions: vers:rpm/3.0.0-21.EmbJopr5.ep5.el4
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/rhq-platform-plugin?arch=noarch
@@ -447,11 +457,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/jboss-ejb-3.0-api?arch=noarch
-    affected_versions: vers:rpm/<5.0.2-2.ep5.el4
-    fixed_versions: vers:rpm/5.0.2-2.ep5.el4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/jboss-jacc-1.1-api?arch=noarch
     affected_versions: vers:rpm/<5.0.2-2.ep5.el4
     fixed_versions: vers:rpm/5.0.2-2.ep5.el4
     fixed_in_commits: []
@@ -1011,11 +1016,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.0.0-16.ep5.el4
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/javassist?arch=src
-    affected_versions: vers:rpm/<3.12.0-6.SP1.ep5.el4
-    fixed_versions: vers:rpm/3.12.0-6.SP1.ep5.el4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/jbossws-common?arch=src
     affected_versions: vers:rpm/<1.1.0-9.SP10.ep5.el4
     fixed_versions: vers:rpm/1.1.0-9.SP10.ep5.el4
@@ -1159,9 +1159,6 @@ severities:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2013/rhsa-2013_0197.json
 weaknesses: []
 references:
-  - url: https://access.redhat.com/errata/RHSA-2013:0197
-    reference_type:
-    reference_id:
   - url: https://access.redhat.com/knowledge/docs/
     reference_type:
     reference_id:
@@ -1216,3 +1213,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=883634
     reference_type: bug
     reference_id: 883634
+  - url: https://access.redhat.com/errata/RHSA-2013:0197
+    reference_type:
+    reference_id: RHSA-2013:0197

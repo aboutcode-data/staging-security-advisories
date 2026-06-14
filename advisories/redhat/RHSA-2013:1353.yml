@@ -62,6 +62,16 @@ summary: |
   All sudo users are advised to upgrade to this updated package, which
   contains backported patches to correct these issues.
 impacted_packages:
+  - purl: pkg:rpm/redhat/sudo?arch=i386
+    affected_versions: vers:rpm/<1.7.2p1-28.el5
+    fixed_versions: vers:rpm/1.7.2p1-28.el5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/sudo-debuginfo?arch=i386
+    affected_versions: vers:rpm/<1.7.2p1-28.el5
+    fixed_versions: vers:rpm/1.7.2p1-28.el5
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/sudo?arch=s390x
     affected_versions: vers:rpm/<1.7.2p1-28.el5
     fixed_versions: vers:rpm/1.7.2p1-28.el5
@@ -93,16 +103,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/sudo?arch=src
-    affected_versions: vers:rpm/<1.7.2p1-28.el5
-    fixed_versions: vers:rpm/1.7.2p1-28.el5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/sudo?arch=i386
-    affected_versions: vers:rpm/<1.7.2p1-28.el5
-    fixed_versions: vers:rpm/1.7.2p1-28.el5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/sudo-debuginfo?arch=i386
     affected_versions: vers:rpm/<1.7.2p1-28.el5
     fixed_versions: vers:rpm/1.7.2p1-28.el5
     fixed_in_commits: []
@@ -146,12 +146,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=949751
     reference_type: bug
     reference_id: 949751
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/osx/local/27944.rb
-    reference_type: exploit
-    reference_id: CVE-2013-1775;OSVDB-90677
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/osx/local/27965.py
-    reference_type: exploit
-    reference_id: CVE-2013-1775;OSVDB-90677
   - url: https://access.redhat.com/errata/RHSA-2013:1353
     reference_type:
     reference_id: RHSA-2013:1353

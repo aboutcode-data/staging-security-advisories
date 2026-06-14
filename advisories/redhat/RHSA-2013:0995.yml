@@ -66,6 +66,16 @@ summary: |
   the httpd service must be restarted ("service httpd restart") for this
   update to take effect.
 impacted_packages:
+  - purl: pkg:rpm/redhat/ruby193-rubygem-mysql-debuginfo?arch=x86_64
+    affected_versions: vers:rpm/<2.8.1-4.el6ost
+    fixed_versions: vers:rpm/2.8.1-4.el6ost
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ruby193-rubygem-mysql?arch=x86_64
+    affected_versions: vers:rpm/<2.8.1-4.el6ost
+    fixed_versions: vers:rpm/2.8.1-4.el6ost
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/ruby193-foreman-proxy?arch=src
     affected_versions: vers:rpm/<1.1.10001-4.el6ost
     fixed_versions: vers:rpm/1.1.10001-4.el6ost
@@ -146,16 +156,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.1.10009-3.el6ost
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ruby193-rubygem-mysql-debuginfo?arch=x86_64
-    affected_versions: vers:rpm/<2.8.1-4.el6ost
-    fixed_versions: vers:rpm/2.8.1-4.el6ost
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ruby193-rubygem-mysql?arch=x86_64
-    affected_versions: vers:rpm/<2.8.1-4.el6ost
-    fixed_versions: vers:rpm/2.8.1-4.el6ost
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/ruby193-openstack-foreman-installer?arch=x86_64
     affected_versions: vers:rpm/<0.0.18-1.el6ost
     fixed_versions: vers:rpm/0.0.18-1.el6ost
@@ -204,12 +204,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=976907
     reference_type: bug
     reference_id: 976907
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/webapps/27776.rb
-    reference_type: exploit
-    reference_id: CVE-2013-2113;OSVDB-94655
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/remote/27045.rb
-    reference_type: exploit
-    reference_id: CVE-2013-2121;OSVDB-94671
   - url: https://access.redhat.com/errata/RHSA-2013:0995
     reference_type:
     reference_id: RHSA-2013:0995

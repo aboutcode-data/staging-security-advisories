@@ -57,6 +57,11 @@ summary: |
   Firefox version 17.0.7 ESR, which corrects these issues. After installing
   the update, Firefox must be restarted for the changes to take effect.
 impacted_packages:
+  - purl: pkg:rpm/redhat/xulrunner?arch=s390x
+    affected_versions: vers:rpm/<17.0.7-1.el5_9
+    fixed_versions: vers:rpm/17.0.7-1.el5_9
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/xulrunner?arch=ppc64
     affected_versions: vers:rpm/<17.0.7-1.el5_9
     fixed_versions: vers:rpm/17.0.7-1.el5_9
@@ -247,11 +252,6 @@ impacted_packages:
     fixed_versions: vers:rpm/17.0.7-1.el5_9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/xulrunner?arch=s390x
-    affected_versions: vers:rpm/<17.0.7-1.el5_9
-    fixed_versions: vers:rpm/17.0.7-1.el5_9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/xulrunner-debuginfo?arch=s390x
     affected_versions: vers:rpm/<17.0.7-1.el5_9
     fixed_versions: vers:rpm/17.0.7-1.el5_9
@@ -433,9 +433,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=977614
     reference_type: bug
     reference_id: 977614
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/windows/remote/27429.rb
-    reference_type: exploit
-    reference_id: CVE-2013-1690;OSVDB-94584
   - url: https://access.redhat.com/errata/RHSA-2013:0981
     reference_type:
     reference_id: RHSA-2013:0981

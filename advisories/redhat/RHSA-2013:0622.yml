@@ -73,16 +73,6 @@ summary: |
   Users should upgrade to these updated packages, which correct these issues.
   The system must be rebooted for this update to take effect.
 impacted_packages:
-  - purl: pkg:rpm/redhat/kernel-rt-debuginfo-common-x86_64?arch=x86_64
-    affected_versions: vers:rpm/<3.6.11-rt30.25.el6rt
-    fixed_versions: vers:rpm/3.6.11-rt30.25.el6rt
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-rt-vanilla?arch=x86_64
-    affected_versions: vers:rpm/<3.6.11-rt30.25.el6rt
-    fixed_versions: vers:rpm/3.6.11-rt30.25.el6rt
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-rt-trace-devel?arch=x86_64
     affected_versions: vers:rpm/<3.6.11-rt30.25.el6rt
     fixed_versions: vers:rpm/3.6.11-rt30.25.el6rt
@@ -93,17 +83,7 @@ impacted_packages:
     fixed_versions: vers:rpm/3.6.11-rt30.25.el6rt
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-rt-debug?arch=x86_64
-    affected_versions: vers:rpm/<3.6.11-rt30.25.el6rt
-    fixed_versions: vers:rpm/3.6.11-rt30.25.el6rt
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-rt-vanilla-devel?arch=x86_64
-    affected_versions: vers:rpm/<3.6.11-rt30.25.el6rt
-    fixed_versions: vers:rpm/3.6.11-rt30.25.el6rt
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-rt-devel?arch=x86_64
     affected_versions: vers:rpm/<3.6.11-rt30.25.el6rt
     fixed_versions: vers:rpm/3.6.11-rt30.25.el6rt
     fixed_in_commits: []
@@ -158,6 +138,26 @@ impacted_packages:
     fixed_versions: vers:rpm/3.6.11-rt30.25.el6rt
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-rt-debuginfo-common-x86_64?arch=x86_64
+    affected_versions: vers:rpm/<3.6.11-rt30.25.el6rt
+    fixed_versions: vers:rpm/3.6.11-rt30.25.el6rt
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-rt-vanilla?arch=x86_64
+    affected_versions: vers:rpm/<3.6.11-rt30.25.el6rt
+    fixed_versions: vers:rpm/3.6.11-rt30.25.el6rt
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-rt-debug?arch=x86_64
+    affected_versions: vers:rpm/<3.6.11-rt30.25.el6rt
+    fixed_versions: vers:rpm/3.6.11-rt30.25.el6rt
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-rt-devel?arch=x86_64
+    affected_versions: vers:rpm/<3.6.11-rt30.25.el6rt
+    fixed_versions: vers:rpm/3.6.11-rt30.25.el6rt
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: Important
     scoring_system: rhas
@@ -190,24 +190,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=858396
     reference_type: bug
     reference_id: 858396
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/local/27297.c
-    reference_type: exploit
-    reference_id: CVE-2013-0268;OSVDB-90003
-  - url: http://cyseclabs.com/exploits/sockdiag_smep.c
-    reference_type: exploit
-    reference_id: CVE-2013-1763
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux_x86-64/local/44299.c
-    reference_type: exploit
-    reference_id: CVE-2013-1763
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/local/33336.c
-    reference_type: exploit
-    reference_id: CVE-2013-1763;OSVDB-90604
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux_x86-64/local/24555.c
-    reference_type: exploit
-    reference_id: CVE-2013-1763;OSVDB-90604
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux_x86-64/local/24746.c
-    reference_type: exploit
-    reference_id: CVE-2013-1763;OSVDB-90604
   - url: https://access.redhat.com/errata/RHSA-2013:0622
     reference_type:
     reference_id: RHSA-2013:0622
