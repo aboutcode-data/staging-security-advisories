@@ -110,6 +110,29 @@ impacted_packages:
     fixed_versions: vers:rpm/3.10.0-327.36.3.rt56.238.el7
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:github/dirtycow/dirtycow.github.io
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/dirtycow/dirtycow.github.io
+        commit: ad8cfe63c1db2a27b609226c040a3ce3299fff3a
+      - vcs_url: https://github.com/dirtycow/dirtycow.github.io
+        commit: 866a2fdf425d084d7a9576e866db1a80c640f841
+    introduced_in_commits: []
+  - purl: pkg:github/firefart/dirtycow
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/firefart/dirtycow
+        commit: 2580beeef4063124df89d0f650e5f199fcdd09ff
+    introduced_in_commits: []
+  - purl: pkg:github/gbonacini/cve-2016-5195
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/gbonacini/cve-2016-5195
+        commit: fd9929d60ab928a46356506e414d8961661febb5
+    introduced_in_commits: []
 severities:
   - score: Important
     scoring_system: rhas
@@ -121,18 +144,45 @@ references:
   - url: https://access.redhat.com/security/updates/classification/#important
     reference_type:
     reference_id:
-  - url: https://access.redhat.com/security/vulnerabilities/2706661
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1375944
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1384344
-    reference_type:
-    reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2016/rhsa-2016_2110.json
     reference_type:
     reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1375944
+    reference_type: bug
+    reference_id: 1375944
+  - url: https://access.redhat.com/security/vulnerabilities/2706661
+    reference_type: other
+    reference_id: 2706661
+  - url: https://github.com/dirtycow/dirtycow.github.io/blob/866a2fdf425d084d7a9576e866db1a80c640f841/dirtyc0w.c
+    reference_type: exploit
+    reference_id: CVE-2016-5195
+  - url: https://github.com/dirtycow/dirtycow.github.io/blob/ad8cfe63c1db2a27b609226c040a3ce3299fff3a/pokemon.c
+    reference_type: exploit
+    reference_id: CVE-2016-5195
+  - url: https://github.com/FireFart/dirtycow/blob/2580beeef4063124df89d0f650e5f199fcdd09ff/dirty.c
+    reference_type: exploit
+    reference_id: CVE-2016-5195
+  - url: https://github.com/gbonacini/CVE-2016-5195/blob/fd9929d60ab928a46356506e414d8961661febb5/dcow.cpp
+    reference_type: exploit
+    reference_id: CVE-2016-5195
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/local/40611.c
+    reference_type: exploit
+    reference_id: CVE-2016-5195
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/local/40616.c
+    reference_type: exploit
+    reference_id: CVE-2016-5195
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/local/40838.c
+    reference_type: exploit
+    reference_id: CVE-2016-5195
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/local/40839.c
+    reference_type: exploit
+    reference_id: CVE-2016-5195
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/local/40847.cpp
+    reference_type: exploit
+    reference_id: CVE-2016-5195
   - url: https://access.redhat.com/errata/RHSA-2016:2110
     reference_type:
     reference_id: RHSA-2016:2110
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1384344
+    reference_type: other
+    reference_id: show_bug.cgi?id=1384344

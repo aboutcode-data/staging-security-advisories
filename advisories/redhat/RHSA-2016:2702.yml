@@ -14,17 +14,17 @@ summary: |
 
   * It was found that the sandbox tool provided in policycoreutils was vulnerable to a TIOCSTI ioctl attack. A specially crafted program executed via the sandbox command could use this flaw to execute arbitrary commands in the context of the parent shell, escaping the sandbox. (CVE-2016-7545)
 impacted_packages:
+  - purl: pkg:rpm/redhat/policycoreutils-python?arch=x86_64
+    affected_versions: vers:rpm/<2.5-9.el7
+    fixed_versions: vers:rpm/2.5-9.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/policycoreutils-gui?arch=x86_64
     affected_versions: vers:rpm/<2.5-9.el7
     fixed_versions: vers:rpm/2.5-9.el7
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/policycoreutils-debuginfo?arch=x86_64
-    affected_versions: vers:rpm/<2.5-9.el7
-    fixed_versions: vers:rpm/2.5-9.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/policycoreutils-python?arch=x86_64
     affected_versions: vers:rpm/<2.5-9.el7
     fixed_versions: vers:rpm/2.5-9.el7
     fixed_in_commits: []
