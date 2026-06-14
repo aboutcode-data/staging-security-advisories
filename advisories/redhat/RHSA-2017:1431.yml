@@ -21,6 +21,16 @@ summary: |
 
   * When using post-copy migration with the virtio Random Number Generator (RNG) device, virtio-rng continued generating data while the migration was already in post-copy mode. Consequently, the migration sometimes failed and the error message "Failed to load virtio-rng:virtio" was displayed. The source code has been improved and the problem no longer occurs in the scenario described. (BZ#1450375)
 impacted_packages:
+  - purl: pkg:rpm/redhat/qemu-img-rhev?arch=x86_64&epoch=10
+    affected_versions: vers:rpm/<2.6.0-28.el7_3.10
+    fixed_versions: vers:rpm/2.6.0-28.el7_3.10
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/qemu-kvm-rhev?arch=ppc64le&epoch=10
+    affected_versions: vers:rpm/<2.6.0-28.el7_3.10
+    fixed_versions: vers:rpm/2.6.0-28.el7_3.10
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/qemu-kvm-common-rhev?arch=x86_64&epoch=10
     affected_versions: vers:rpm/<2.6.0-28.el7_3.10
     fixed_versions: vers:rpm/2.6.0-28.el7_3.10
@@ -32,11 +42,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/qemu-kvm-rhev?arch=x86_64&epoch=10
-    affected_versions: vers:rpm/<2.6.0-28.el7_3.10
-    fixed_versions: vers:rpm/2.6.0-28.el7_3.10
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/qemu-img-rhev?arch=x86_64&epoch=10
     affected_versions: vers:rpm/<2.6.0-28.el7_3.10
     fixed_versions: vers:rpm/2.6.0-28.el7_3.10
     fixed_in_commits: []
@@ -57,11 +62,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/qemu-kvm-rhev-debuginfo?arch=ppc64le&epoch=10
-    affected_versions: vers:rpm/<2.6.0-28.el7_3.10
-    fixed_versions: vers:rpm/2.6.0-28.el7_3.10
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/qemu-kvm-rhev?arch=ppc64le&epoch=10
     affected_versions: vers:rpm/<2.6.0-28.el7_3.10
     fixed_versions: vers:rpm/2.6.0-28.el7_3.10
     fixed_in_commits: []

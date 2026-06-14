@@ -34,6 +34,11 @@ summary: |
 
   * Previously, the docker daemon option did not handle correctly the "--block-registry docker.io" option. As a consequence, docker allowed pulling images from docker.io even when the "--block-registry docker.io" option was enabled. This update fixed the handling of the option, and now using "--block-registry docker.io" correctly blocks image pulling. (BZ#1395401)
 impacted_packages:
+  - purl: pkg:rpm/redhat/container-selinux?arch=x86_64&epoch=2
+    affected_versions: vers:rpm/<1.12.5-14.el7
+    fixed_versions: vers:rpm/1.12.5-14.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/docker-rhel-push-plugin?arch=x86_64&epoch=2
     affected_versions: vers:rpm/<1.12.5-14.el7
     fixed_versions: vers:rpm/1.12.5-14.el7
@@ -45,11 +50,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/docker-lvm-plugin?arch=x86_64&epoch=2
-    affected_versions: vers:rpm/<1.12.5-14.el7
-    fixed_versions: vers:rpm/1.12.5-14.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/container-selinux?arch=x86_64&epoch=2
     affected_versions: vers:rpm/<1.12.5-14.el7
     fixed_versions: vers:rpm/1.12.5-14.el7
     fixed_in_commits: []

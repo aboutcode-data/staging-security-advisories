@@ -19,6 +19,31 @@ summary: |
 
   Red Hat would like to thank Hanno Böck for reporting CVE-2017-9798 and KAWAHARA Masashi for reporting CVE-2017-12171.
 impacted_packages:
+  - purl: pkg:rpm/redhat/httpd-devel?arch=i686
+    affected_versions: vers:rpm/<2.2.15-60.el6_9.6
+    fixed_versions: vers:rpm/2.2.15-60.el6_9.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/mod_ssl?arch=i686&epoch=1
+    affected_versions: vers:rpm/<2.2.15-60.el6_9.6
+    fixed_versions: vers:rpm/2.2.15-60.el6_9.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/httpd-debuginfo?arch=s390
+    affected_versions: vers:rpm/<2.2.15-60.el6_9.6
+    fixed_versions: vers:rpm/2.2.15-60.el6_9.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/httpd-tools?arch=ppc64
+    affected_versions: vers:rpm/<2.2.15-60.el6_9.6
+    fixed_versions: vers:rpm/2.2.15-60.el6_9.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/httpd-devel?arch=ppc64
+    affected_versions: vers:rpm/<2.2.15-60.el6_9.6
+    fixed_versions: vers:rpm/2.2.15-60.el6_9.6
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/httpd-tools?arch=x86_64
     affected_versions: vers:rpm/<2.2.15-60.el6_9.6
     fixed_versions: vers:rpm/2.2.15-60.el6_9.6
@@ -55,16 +80,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/httpd?arch=i686
-    affected_versions: vers:rpm/<2.2.15-60.el6_9.6
-    fixed_versions: vers:rpm/2.2.15-60.el6_9.6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/httpd-devel?arch=i686
-    affected_versions: vers:rpm/<2.2.15-60.el6_9.6
-    fixed_versions: vers:rpm/2.2.15-60.el6_9.6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/mod_ssl?arch=i686&epoch=1
     affected_versions: vers:rpm/<2.2.15-60.el6_9.6
     fixed_versions: vers:rpm/2.2.15-60.el6_9.6
     fixed_in_commits: []
@@ -109,21 +124,6 @@ impacted_packages:
     fixed_versions: vers:rpm/2.2.15-60.el6_9.6
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/httpd-debuginfo?arch=s390
-    affected_versions: vers:rpm/<2.2.15-60.el6_9.6
-    fixed_versions: vers:rpm/2.2.15-60.el6_9.6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/httpd-tools?arch=ppc64
-    affected_versions: vers:rpm/<2.2.15-60.el6_9.6
-    fixed_versions: vers:rpm/2.2.15-60.el6_9.6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/httpd-devel?arch=ppc64
-    affected_versions: vers:rpm/<2.2.15-60.el6_9.6
-    fixed_versions: vers:rpm/2.2.15-60.el6_9.6
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/httpd-debuginfo?arch=ppc64
     affected_versions: vers:rpm/<2.2.15-60.el6_9.6
     fixed_versions: vers:rpm/2.2.15-60.el6_9.6
@@ -149,13 +149,6 @@ impacted_packages:
     fixed_versions: vers:rpm/2.2.15-60.el6_9.6
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/hannob/optionsbleed
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/hannob/optionsbleed
-        commit: e297ce13cfb0f338b2cabfb81a70349fd6925f82
-    introduced_in_commits: []
 severities:
   - score: Moderate
     scoring_system: rhas
@@ -179,9 +172,3 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1493056
     reference_type: bug
     reference_id: 1493056
-  - url: https://github.com/hannob/optionsbleed/blob/e297ce13cfb0f338b2cabfb81a70349fd6925f82/optionsbleed
-    reference_type: exploit
-    reference_id: CVE-2017-9798;OPTIONSBLEED
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/webapps/42745.py
-    reference_type: exploit
-    reference_id: CVE-2017-9798;OPTIONSBLEED

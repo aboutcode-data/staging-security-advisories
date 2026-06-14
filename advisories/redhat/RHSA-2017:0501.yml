@@ -32,32 +32,17 @@ summary: |
 
   * When one of the drives became unresponsive, all other drives intermittently hung, because the megaraid_sas driver incorrectly sent a reset request to the PowerEdge RAID Controller (PERC). This update fixes megaraid_sas, and thus the hang of one drive no longer leads to intermittent loss of access to all drives on the system. (BZ#1398174)
 impacted_packages:
-  - purl: pkg:rpm/redhat/kernel?arch=ppc64le
+  - purl: pkg:rpm/redhat/kernel-debug-debuginfo?arch=x86_64
     affected_versions: vers:rpm/<3.10.0-327.49.2.el7
     fixed_versions: vers:rpm/3.10.0-327.49.2.el7
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-devel?arch=ppc64le
+  - purl: pkg:rpm/redhat/kernel-debug?arch=s390x
     affected_versions: vers:rpm/<3.10.0-327.49.2.el7
     fixed_versions: vers:rpm/3.10.0-327.49.2.el7
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python-perf?arch=ppc64le
-    affected_versions: vers:rpm/<3.10.0-327.49.2.el7
-    fixed_versions: vers:rpm/3.10.0-327.49.2.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-bootwrapper?arch=ppc64le
-    affected_versions: vers:rpm/<3.10.0-327.49.2.el7
-    fixed_versions: vers:rpm/3.10.0-327.49.2.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-kdump?arch=s390x
-    affected_versions: vers:rpm/<3.10.0-327.49.2.el7
-    fixed_versions: vers:rpm/3.10.0-327.49.2.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/perf?arch=s390x
+  - purl: pkg:rpm/redhat/kernel-kdump-debuginfo?arch=s390x
     affected_versions: vers:rpm/<3.10.0-327.49.2.el7
     fixed_versions: vers:rpm/3.10.0-327.49.2.el7
     fixed_in_commits: []
@@ -78,11 +63,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-tools-debuginfo?arch=x86_64
-    affected_versions: vers:rpm/<3.10.0-327.49.2.el7
-    fixed_versions: vers:rpm/3.10.0-327.49.2.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debug-debuginfo?arch=x86_64
     affected_versions: vers:rpm/<3.10.0-327.49.2.el7
     fixed_versions: vers:rpm/3.10.0-327.49.2.el7
     fixed_in_commits: []
@@ -307,6 +287,36 @@ impacted_packages:
     fixed_versions: vers:rpm/3.10.0-327.49.2.el7
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel?arch=ppc64le
+    affected_versions: vers:rpm/<3.10.0-327.49.2.el7
+    fixed_versions: vers:rpm/3.10.0-327.49.2.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-devel?arch=ppc64le
+    affected_versions: vers:rpm/<3.10.0-327.49.2.el7
+    fixed_versions: vers:rpm/3.10.0-327.49.2.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python-perf?arch=ppc64le
+    affected_versions: vers:rpm/<3.10.0-327.49.2.el7
+    fixed_versions: vers:rpm/3.10.0-327.49.2.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-bootwrapper?arch=ppc64le
+    affected_versions: vers:rpm/<3.10.0-327.49.2.el7
+    fixed_versions: vers:rpm/3.10.0-327.49.2.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-kdump?arch=s390x
+    affected_versions: vers:rpm/<3.10.0-327.49.2.el7
+    fixed_versions: vers:rpm/3.10.0-327.49.2.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/perf?arch=s390x
+    affected_versions: vers:rpm/<3.10.0-327.49.2.el7
+    fixed_versions: vers:rpm/3.10.0-327.49.2.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debug-devel?arch=s390x
     affected_versions: vers:rpm/<3.10.0-327.49.2.el7
     fixed_versions: vers:rpm/3.10.0-327.49.2.el7
@@ -328,16 +338,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-headers?arch=s390x
-    affected_versions: vers:rpm/<3.10.0-327.49.2.el7
-    fixed_versions: vers:rpm/3.10.0-327.49.2.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debug?arch=s390x
-    affected_versions: vers:rpm/<3.10.0-327.49.2.el7
-    fixed_versions: vers:rpm/3.10.0-327.49.2.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-kdump-debuginfo?arch=s390x
     affected_versions: vers:rpm/<3.10.0-327.49.2.el7
     fixed_versions: vers:rpm/3.10.0-327.49.2.el7
     fixed_in_commits: []

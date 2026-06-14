@@ -24,7 +24,7 @@ summary: |
 
   This update ensures that the hpet timer software counters, including hpet_default_delta and hpet_t1_cmp, are initialized before an interrupt request is registered, and the kdump kernel now boots without the mentioned error message. (BZ#1404180)
 impacted_packages:
-  - purl: pkg:rpm/redhat/perf-debuginfo?arch=s390x
+  - purl: pkg:rpm/redhat/kernel-debuginfo-common-s390x?arch=s390x
     affected_versions: vers:rpm/<3.10.0-229.48.1.el7
     fixed_versions: vers:rpm/3.10.0-229.48.1.el7
     fixed_in_commits: []
@@ -239,7 +239,7 @@ impacted_packages:
     fixed_versions: vers:rpm/3.10.0-229.48.1.el7
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debuginfo-common-s390x?arch=s390x
+  - purl: pkg:rpm/redhat/perf-debuginfo?arch=s390x
     affected_versions: vers:rpm/<3.10.0-229.48.1.el7
     fixed_versions: vers:rpm/3.10.0-229.48.1.el7
     fixed_in_commits: []
@@ -390,12 +390,12 @@ references:
   - url: https://access.redhat.com/security/updates/classification/#important
     reference_type:
     reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1382268
-    reference_type:
-    reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2017/rhsa-2017_0270.json
     reference_type:
     reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1382268
+    reference_type: bug
+    reference_id: 1382268
   - url: https://access.redhat.com/errata/RHSA-2017:0270
     reference_type:
     reference_id: RHSA-2017:0270

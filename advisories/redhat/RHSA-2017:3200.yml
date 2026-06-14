@@ -32,12 +32,12 @@ summary: |
 
   * When running a script that raised the tx ring count to its maximum value supported by the Solarflare Network Interface Controller (NIC) driver, the EF10 family NICs allowed the settings exceeding the hardware's capability. Consequently, the Solarflare hardware became unusable with Red Hat Entepripse Linux 6. This update fixes the sfc driver, so that the tx ring can have maximum 2048 entries for all EF10 NICs. As a result, the Solarflare hardware no longer becomes unusable with Red Hat Entepripse Linux 6 due to this bug. (BZ#1498019)
 impacted_packages:
-  - purl: pkg:rpm/redhat/kernel-bootwrapper?arch=ppc64
+  - purl: pkg:rpm/redhat/python-perf-debuginfo?arch=s390x
     affected_versions: vers:rpm/<2.6.32-696.16.1.el6
     fixed_versions: vers:rpm/2.6.32-696.16.1.el6
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debug-devel?arch=ppc64
+  - purl: pkg:rpm/redhat/kernel?arch=s390x
     affected_versions: vers:rpm/<2.6.32-696.16.1.el6
     fixed_versions: vers:rpm/2.6.32-696.16.1.el6
     fixed_in_commits: []
@@ -192,11 +192,6 @@ impacted_packages:
     fixed_versions: vers:rpm/2.6.32-696.16.1.el6
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python-perf-debuginfo?arch=s390x
-    affected_versions: vers:rpm/<2.6.32-696.16.1.el6
-    fixed_versions: vers:rpm/2.6.32-696.16.1.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-kdump-debuginfo?arch=s390x
     affected_versions: vers:rpm/<2.6.32-696.16.1.el6
     fixed_versions: vers:rpm/2.6.32-696.16.1.el6
@@ -228,11 +223,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-kdump?arch=s390x
-    affected_versions: vers:rpm/<2.6.32-696.16.1.el6
-    fixed_versions: vers:rpm/2.6.32-696.16.1.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel?arch=s390x
     affected_versions: vers:rpm/<2.6.32-696.16.1.el6
     fixed_versions: vers:rpm/2.6.32-696.16.1.el6
     fixed_in_commits: []
@@ -283,6 +273,16 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debug-debuginfo?arch=ppc64
+    affected_versions: vers:rpm/<2.6.32-696.16.1.el6
+    fixed_versions: vers:rpm/2.6.32-696.16.1.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-bootwrapper?arch=ppc64
+    affected_versions: vers:rpm/<2.6.32-696.16.1.el6
+    fixed_versions: vers:rpm/2.6.32-696.16.1.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-debug-devel?arch=ppc64
     affected_versions: vers:rpm/<2.6.32-696.16.1.el6
     fixed_versions: vers:rpm/2.6.32-696.16.1.el6
     fixed_in_commits: []

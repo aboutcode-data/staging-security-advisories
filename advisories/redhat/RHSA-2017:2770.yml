@@ -34,7 +34,32 @@ summary: |
 
   * A system having more than 128 CPUs could previously experience a crash during shutdown after the Intelligent Platform Management Interface (IPMI) service was stopped. The provided patch fixes a race condition in the IPMI smi_timeout() function, allowing the system to shut down as expected. (BZ#1479760)
 impacted_packages:
-  - purl: pkg:rpm/redhat/kernel-tools-libs?arch=ppc64
+  - purl: pkg:rpm/redhat/kernel?arch=src
+    affected_versions: vers:rpm/<3.10.0-514.32.2.el7
+    fixed_versions: vers:rpm/3.10.0-514.32.2.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-debuginfo?arch=ppc64
+    affected_versions: vers:rpm/<3.10.0-514.32.2.el7
+    fixed_versions: vers:rpm/3.10.0-514.32.2.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-bootwrapper?arch=ppc64
+    affected_versions: vers:rpm/<3.10.0-514.32.2.el7
+    fixed_versions: vers:rpm/3.10.0-514.32.2.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-headers?arch=ppc64
+    affected_versions: vers:rpm/<3.10.0-514.32.2.el7
+    fixed_versions: vers:rpm/3.10.0-514.32.2.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-debug?arch=ppc64
+    affected_versions: vers:rpm/<3.10.0-514.32.2.el7
+    fixed_versions: vers:rpm/3.10.0-514.32.2.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-debuginfo?arch=s390x
     affected_versions: vers:rpm/<3.10.0-514.32.2.el7
     fixed_versions: vers:rpm/3.10.0-514.32.2.el7
     fixed_in_commits: []
@@ -125,11 +150,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-doc?arch=noarch
-    affected_versions: vers:rpm/<3.10.0-514.32.2.el7
-    fixed_versions: vers:rpm/3.10.0-514.32.2.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel?arch=src
     affected_versions: vers:rpm/<3.10.0-514.32.2.el7
     fixed_versions: vers:rpm/3.10.0-514.32.2.el7
     fixed_in_commits: []
@@ -249,21 +269,6 @@ impacted_packages:
     fixed_versions: vers:rpm/3.10.0-514.32.2.el7
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debuginfo?arch=ppc64
-    affected_versions: vers:rpm/<3.10.0-514.32.2.el7
-    fixed_versions: vers:rpm/3.10.0-514.32.2.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-bootwrapper?arch=ppc64
-    affected_versions: vers:rpm/<3.10.0-514.32.2.el7
-    fixed_versions: vers:rpm/3.10.0-514.32.2.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-headers?arch=ppc64
-    affected_versions: vers:rpm/<3.10.0-514.32.2.el7
-    fixed_versions: vers:rpm/3.10.0-514.32.2.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/python-perf?arch=ppc64
     affected_versions: vers:rpm/<3.10.0-514.32.2.el7
     fixed_versions: vers:rpm/3.10.0-514.32.2.el7
@@ -289,7 +294,7 @@ impacted_packages:
     fixed_versions: vers:rpm/3.10.0-514.32.2.el7
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debug?arch=ppc64
+  - purl: pkg:rpm/redhat/kernel-tools-libs?arch=ppc64
     affected_versions: vers:rpm/<3.10.0-514.32.2.el7
     fixed_versions: vers:rpm/3.10.0-514.32.2.el7
     fixed_in_commits: []
@@ -359,11 +364,6 @@ impacted_packages:
     fixed_versions: vers:rpm/3.10.0-514.32.2.el7
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debuginfo?arch=s390x
-    affected_versions: vers:rpm/<3.10.0-514.32.2.el7
-    fixed_versions: vers:rpm/3.10.0-514.32.2.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debug-debuginfo?arch=s390x
     affected_versions: vers:rpm/<3.10.0-514.32.2.el7
     fixed_versions: vers:rpm/3.10.0-514.32.2.el7
@@ -373,13 +373,6 @@ impacted_packages:
     affected_versions: vers:rpm/<3.10.0-514.32.2.el7
     fixed_versions: vers:rpm/3.10.0-514.32.2.el7
     fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:github/hardenedlinux/offensive_poc
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/hardenedlinux/offensive_poc
-        commit: 4a71e00b07be66606a7cc7c9b1f2213e89188ab7
     introduced_in_commits: []
 severities:
   - score: Important
@@ -401,9 +394,3 @@ references:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2017/rhsa-2017_2770.json
     reference_type:
     reference_id:
-  - url: https://github.com/hardenedlinux/offensive_poc/blob/4a71e00b07be66606a7cc7c9b1f2213e89188ab7/CVE-2017-7533/exploit.c
-    reference_type: exploit
-    reference_id: CVE-2017-7533
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux_x86-64/local/44302.c
-    reference_type: exploit
-    reference_id: CVE-2017-7533

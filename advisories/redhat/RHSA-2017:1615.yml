@@ -44,31 +44,6 @@ summary: |
 
   * When creating or destroying a VM with Virtual Function I/O (VFIO) devices with "Hugepages" feature enabled, errors in Direct Memory Access (DMA) page table entry (PTE) mappings occurred, and QEMU memory usage behaved unpredictably. This update fixes range computation when making room for large pages in Input/Output Memory Management Unit (IOMMU). As a result, errors in DMA PTE mappings no longer occur, and QEMU has a predictable memory usage in the described situation. (BZ#1450856)
 impacted_packages:
-  - purl: pkg:rpm/redhat/python-perf?arch=x86_64
-    affected_versions: vers:rpm/<3.10.0-514.26.1.el7
-    fixed_versions: vers:rpm/3.10.0-514.26.1.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debuginfo-common-x86_64?arch=x86_64
-    affected_versions: vers:rpm/<3.10.0-514.26.1.el7
-    fixed_versions: vers:rpm/3.10.0-514.26.1.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python-perf-debuginfo?arch=x86_64
-    affected_versions: vers:rpm/<3.10.0-514.26.1.el7
-    fixed_versions: vers:rpm/3.10.0-514.26.1.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/perf-debuginfo?arch=x86_64
-    affected_versions: vers:rpm/<3.10.0-514.26.1.el7
-    fixed_versions: vers:rpm/3.10.0-514.26.1.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debug?arch=x86_64
-    affected_versions: vers:rpm/<3.10.0-514.26.1.el7
-    fixed_versions: vers:rpm/3.10.0-514.26.1.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-tools?arch=x86_64
     affected_versions: vers:rpm/<3.10.0-514.26.1.el7
     fixed_versions: vers:rpm/3.10.0-514.26.1.el7
@@ -119,7 +94,27 @@ impacted_packages:
     fixed_versions: vers:rpm/3.10.0-514.26.1.el7
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/perf?arch=s390x
+  - purl: pkg:rpm/redhat/python-perf?arch=x86_64
+    affected_versions: vers:rpm/<3.10.0-514.26.1.el7
+    fixed_versions: vers:rpm/3.10.0-514.26.1.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-debuginfo-common-x86_64?arch=x86_64
+    affected_versions: vers:rpm/<3.10.0-514.26.1.el7
+    fixed_versions: vers:rpm/3.10.0-514.26.1.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python-perf-debuginfo?arch=x86_64
+    affected_versions: vers:rpm/<3.10.0-514.26.1.el7
+    fixed_versions: vers:rpm/3.10.0-514.26.1.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/perf-debuginfo?arch=x86_64
+    affected_versions: vers:rpm/<3.10.0-514.26.1.el7
+    fixed_versions: vers:rpm/3.10.0-514.26.1.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-debug?arch=x86_64
     affected_versions: vers:rpm/<3.10.0-514.26.1.el7
     fixed_versions: vers:rpm/3.10.0-514.26.1.el7
     fixed_in_commits: []
@@ -370,6 +365,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/python-perf-debuginfo?arch=s390x
+    affected_versions: vers:rpm/<3.10.0-514.26.1.el7
+    fixed_versions: vers:rpm/3.10.0-514.26.1.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/perf?arch=s390x
     affected_versions: vers:rpm/<3.10.0-514.26.1.el7
     fixed_versions: vers:rpm/3.10.0-514.26.1.el7
     fixed_in_commits: []

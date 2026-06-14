@@ -37,6 +37,11 @@ summary: |
 
   * A buffer overflow vulnerability was found in the JSON extension of ruby. An attacker with the ability to pass a specially crafted JSON input to the extension could use this flaw to expose the interpreter's heap memory. (CVE-2017-14064)
 impacted_packages:
+  - purl: pkg:rpm/redhat/rh-ruby24-ruby-doc?arch=noarch
+    affected_versions: vers:rpm/<2.4.2-86.el6
+    fixed_versions: vers:rpm/2.4.2-86.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/rh-ruby24-rubygem-openssl?arch=x86_64
     affected_versions: vers:rpm/<2.0.5-86.el6
     fixed_versions: vers:rpm/2.0.5-86.el6
@@ -182,11 +187,6 @@ impacted_packages:
     fixed_versions: vers:rpm/3.2.3-86.el6
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/rh-ruby24-ruby-doc?arch=noarch
-    affected_versions: vers:rpm/<2.4.2-86.el6
-    fixed_versions: vers:rpm/2.4.2-86.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/rh-ruby24-rubygem-xmlrpc?arch=noarch
     affected_versions: vers:rpm/<0.2.1-86.el6
     fixed_versions: vers:rpm/0.2.1-86.el6
@@ -265,9 +265,6 @@ severities:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2017/rhsa-2017_3485.json
 weaknesses: []
 references:
-  - url: https://access.redhat.com/errata/RHSA-2017:3485
-    reference_type:
-    reference_id:
   - url: https://access.redhat.com/security/updates/classification/#moderate
     reference_type:
     reference_id:
@@ -301,6 +298,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1506785
     reference_type: bug
     reference_id: 1506785
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/local/42611.txt
-    reference_type: exploit
-    reference_id: CVE-2017-0901
+  - url: https://access.redhat.com/errata/RHSA-2017:3485
+    reference_type:
+    reference_id: RHSA-2017:3485

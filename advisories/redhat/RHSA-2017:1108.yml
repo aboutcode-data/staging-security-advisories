@@ -37,6 +37,11 @@ summary: |
 
   * When a method is called using the Java Debug Wire Protocol (JDWP) "invokeMethod" command in a target Java virtual machine, JDWP creates global references for every Object that is implied in the method invocation, as well as for the returned argument of the reference type. Previously, the global references created for such arguments were not collected (deallocated) by the garbage collector after "invokeMethod" finished. This consequently caused memory leaks, and because references to such objects were never released, the debugged application could be terminated with an Out of Memory error. This bug has been fixed, and the described problem no longer occurs. (BZ#1442162)
 impacted_packages:
+  - purl: pkg:rpm/redhat/java-1.8.0-openjdk-headless-debug?arch=i686&epoch=1
+    affected_versions: vers:rpm/<1.8.0.131-2.b11.el7_3
+    fixed_versions: vers:rpm/1.8.0.131-2.b11.el7_3
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/java-1.8.0-openjdk-debuginfo?arch=x86_64&epoch=1
     affected_versions: vers:rpm/<1.8.0.131-2.b11.el7_3
     fixed_versions: vers:rpm/1.8.0.131-2.b11.el7_3
@@ -118,11 +123,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/java-1.8.0-openjdk-devel?arch=i686&epoch=1
-    affected_versions: vers:rpm/<1.8.0.131-2.b11.el7_3
-    fixed_versions: vers:rpm/1.8.0.131-2.b11.el7_3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-1.8.0-openjdk-headless-debug?arch=i686&epoch=1
     affected_versions: vers:rpm/<1.8.0.131-2.b11.el7_3
     fixed_versions: vers:rpm/1.8.0.131-2.b11.el7_3
     fixed_in_commits: []
@@ -400,9 +400,6 @@ severities:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2017/rhsa-2017_1108.json
 weaknesses: []
 references:
-  - url: https://access.redhat.com/errata/RHSA-2017:1108
-    reference_type:
-    reference_id:
   - url: https://access.redhat.com/security/updates/classification/#moderate
     reference_type:
     reference_id:
@@ -433,3 +430,6 @@ references:
   - url: https://rhn.redhat.com/errata/RHSA-2016-2079.html
     reference_type:
     reference_id: RHSA-2016-2079.html
+  - url: https://access.redhat.com/errata/RHSA-2017:1108
+    reference_type: advisory
+    reference_id: RHSA-2017:1108

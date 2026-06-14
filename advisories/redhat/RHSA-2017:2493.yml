@@ -31,6 +31,36 @@ summary: |
 
   Red Hat would like to thank the OpenSSL project for reporting CVE-2016-6304 and Shi Lei (Gear Team of Qihoo 360 Inc.) for reporting CVE-2016-8610. Upstream acknowledges Shi Lei (Gear Team of Qihoo 360 Inc.) as the original reporter of CVE-2016-6304.
 impacted_packages:
+  - purl: pkg:rpm/redhat/jbcs-httpd24-openssl-devel?arch=x86_64&epoch=1
+    affected_versions: vers:rpm/<1.0.2h-13.jbcs.el6
+    fixed_versions: vers:rpm/1.0.2h-13.jbcs.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/jbcs-httpd24-openssl?arch=x86_64&epoch=1
+    affected_versions: vers:rpm/<1.0.2h-13.jbcs.el7
+    fixed_versions: vers:rpm/1.0.2h-13.jbcs.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/jbcs-httpd24-openssl-libs?arch=x86_64&epoch=1
+    affected_versions: vers:rpm/<1.0.2h-13.jbcs.el7
+    fixed_versions: vers:rpm/1.0.2h-13.jbcs.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/tomcat6-servlet-2.5-api?arch=noarch
+    affected_versions: vers:rpm/<6.0.41-17_patch_04.ep6.el7
+    fixed_versions: vers:rpm/6.0.41-17_patch_04.ep6.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/tomcat6-lib?arch=noarch
+    affected_versions: vers:rpm/<6.0.41-17_patch_04.ep6.el7
+    fixed_versions: vers:rpm/6.0.41-17_patch_04.ep6.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/tomcat6-javadoc?arch=noarch
+    affected_versions: vers:rpm/<6.0.41-17_patch_04.ep6.el7
+    fixed_versions: vers:rpm/6.0.41-17_patch_04.ep6.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/jbcs-httpd24-openssl?arch=x86_64&epoch=1
     affected_versions: vers:rpm/<1.0.2h-13.jbcs.el6
     fixed_versions: vers:rpm/1.0.2h-13.jbcs.el6
@@ -54,21 +84,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/jbcs-httpd24-openssl-static?arch=x86_64&epoch=1
     affected_versions: vers:rpm/<1.0.2h-13.jbcs.el6
     fixed_versions: vers:rpm/1.0.2h-13.jbcs.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/jbcs-httpd24-openssl-devel?arch=x86_64&epoch=1
-    affected_versions: vers:rpm/<1.0.2h-13.jbcs.el6
-    fixed_versions: vers:rpm/1.0.2h-13.jbcs.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/jbcs-httpd24-openssl?arch=x86_64&epoch=1
-    affected_versions: vers:rpm/<1.0.2h-13.jbcs.el7
-    fixed_versions: vers:rpm/1.0.2h-13.jbcs.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/jbcs-httpd24-openssl-libs?arch=x86_64&epoch=1
-    affected_versions: vers:rpm/<1.0.2h-13.jbcs.el7
-    fixed_versions: vers:rpm/1.0.2h-13.jbcs.el7
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/jbcs-httpd24-openssl-debuginfo?arch=x86_64&epoch=1
@@ -326,17 +341,7 @@ impacted_packages:
     fixed_versions: vers:rpm/6.0.41-17_patch_04.ep6.el7
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/tomcat6-servlet-2.5-api?arch=noarch
-    affected_versions: vers:rpm/<6.0.41-17_patch_04.ep6.el7
-    fixed_versions: vers:rpm/6.0.41-17_patch_04.ep6.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/tomcat6-docs-webapp?arch=noarch
-    affected_versions: vers:rpm/<6.0.41-17_patch_04.ep6.el7
-    fixed_versions: vers:rpm/6.0.41-17_patch_04.ep6.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/tomcat6-lib?arch=noarch
     affected_versions: vers:rpm/<6.0.41-17_patch_04.ep6.el7
     fixed_versions: vers:rpm/6.0.41-17_patch_04.ep6.el7
     fixed_in_commits: []
@@ -361,11 +366,6 @@ impacted_packages:
     fixed_versions: vers:rpm/6.0.41-17_patch_04.ep6.el7
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/tomcat6-javadoc?arch=noarch
-    affected_versions: vers:rpm/<6.0.41-17_patch_04.ep6.el7
-    fixed_versions: vers:rpm/6.0.41-17_patch_04.ep6.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/tomcat6-admin-webapps?arch=noarch
     affected_versions: vers:rpm/<6.0.41-17_patch_04.ep6.el7
     fixed_versions: vers:rpm/6.0.41-17_patch_04.ep6.el7
@@ -380,9 +380,6 @@ severities:
 weaknesses: []
 references:
   - url: https://access.redhat.com/articles/3155411
-    reference_type:
-    reference_id:
-  - url: https://access.redhat.com/errata/RHSA-2017:2493
     reference_type:
     reference_id:
   - url: https://access.redhat.com/security/updates/classification/#important
@@ -403,3 +400,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1459158
     reference_type: bug
     reference_id: 1459158
+  - url: https://access.redhat.com/errata/RHSA-2017:2493
+    reference_type:
+    reference_id: RHSA-2017:2493

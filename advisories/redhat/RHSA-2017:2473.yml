@@ -20,6 +20,16 @@ summary: |
 
   * Previously, direct I/O read operations going past EOF returned an invalid error number, instead of reading 0 bytes and returning success, if these operations were in same XFS block with EOF. Consequently, creating multiple VMs from a Red Hat Enterprise Linux 7.4 template caused all the VMs to become unresponsive in the 'Image Locked' state. This update fixes the direct I/O feature of the file system, and VMs created from a Red Hat Enterprise Linux 7.4 template now work as expected. (BZ#1475669)
 impacted_packages:
+  - purl: pkg:rpm/redhat/kernel-tools-debuginfo?arch=x86_64
+    affected_versions: vers:rpm/<3.10.0-693.1.1.el7
+    fixed_versions: vers:rpm/3.10.0-693.1.1.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel?arch=x86_64
+    affected_versions: vers:rpm/<3.10.0-693.1.1.el7
+    fixed_versions: vers:rpm/3.10.0-693.1.1.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debuginfo?arch=x86_64
     affected_versions: vers:rpm/<3.10.0-693.1.1.el7
     fixed_versions: vers:rpm/3.10.0-693.1.1.el7
@@ -56,16 +66,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debug?arch=x86_64
-    affected_versions: vers:rpm/<3.10.0-693.1.1.el7
-    fixed_versions: vers:rpm/3.10.0-693.1.1.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-tools-debuginfo?arch=x86_64
-    affected_versions: vers:rpm/<3.10.0-693.1.1.el7
-    fixed_versions: vers:rpm/3.10.0-693.1.1.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel?arch=x86_64
     affected_versions: vers:rpm/<3.10.0-693.1.1.el7
     fixed_versions: vers:rpm/3.10.0-693.1.1.el7
     fixed_in_commits: []

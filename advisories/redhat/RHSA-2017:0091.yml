@@ -28,6 +28,11 @@ summary: |
 
   * Unlike the standard Linux kernel, the real-time kernel does not disable interrupts inside the Interrupt Service Routines driver. Because of this difference, a New API (NAPI) function for turning interrupt requests (IRQ) off was actually being called with IRQs enabled. Consequently, the NAPI poll list was being corrupted, causing improper networking card operation and potential kernel hangs. With this update, the NAPI function has been corrected to force modifications of the poll list to be protected allowing proper operation of the networking card drivers. (BZ#1402837)
 impacted_packages:
+  - purl: pkg:rpm/redhat/kernel-rt-doc?arch=noarch
+    affected_versions: vers:rpm/<3.10.0-514.6.1.rt56.429.el7
+    fixed_versions: vers:rpm/3.10.0-514.6.1.rt56.429.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-rt-trace-kvm-debuginfo?arch=x86_64
     affected_versions: vers:rpm/<3.10.0-514.6.1.rt56.429.el7
     fixed_versions: vers:rpm/3.10.0-514.6.1.rt56.429.el7
@@ -108,11 +113,6 @@ impacted_packages:
     fixed_versions: vers:rpm/3.10.0-514.6.1.rt56.429.el7
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-rt-doc?arch=noarch
-    affected_versions: vers:rpm/<3.10.0-514.6.1.rt56.429.el7
-    fixed_versions: vers:rpm/3.10.0-514.6.1.rt56.429.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-rt?arch=src
     affected_versions: vers:rpm/<3.10.0-514.6.1.rt56.429.el7
     fixed_versions: vers:rpm/3.10.0-514.6.1.rt56.429.el7
@@ -135,15 +135,15 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1367091
     reference_type:
     reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1382268
-    reference_type:
-    reference_id:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1397930
     reference_type:
     reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2017/rhsa-2017_0091.json
     reference_type:
     reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1382268
+    reference_type: bug
+    reference_id: 1382268
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1400930
     reference_type: bug
     reference_id: 1400930

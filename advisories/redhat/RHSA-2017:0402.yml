@@ -20,6 +20,11 @@ summary: |
 
   * Previously, the Broadcom bnx2x driver in the MRG kernel-rt used an incorrect PTP Hardware Clock (PHC) timer divisor value, which broke Precision Time Protocol (PTP) timestamping due to an unstable clock. This update corrects the divisor value, and the PTP timestamping is now accurate, with monotonically increasing timestamp values. (BZ#1411139)
 impacted_packages:
+  - purl: pkg:rpm/redhat/kernel-rt-doc?arch=noarch&epoch=1
+    affected_versions: vers:rpm/<3.10.0-514.rt56.215.el6rt
+    fixed_versions: vers:rpm/3.10.0-514.rt56.215.el6rt
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-rt-vanilla?arch=x86_64&epoch=1
     affected_versions: vers:rpm/<3.10.0-514.rt56.215.el6rt
     fixed_versions: vers:rpm/3.10.0-514.rt56.215.el6rt
@@ -91,11 +96,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-rt-firmware?arch=noarch&epoch=1
-    affected_versions: vers:rpm/<3.10.0-514.rt56.215.el6rt
-    fixed_versions: vers:rpm/3.10.0-514.rt56.215.el6rt
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-rt-doc?arch=noarch&epoch=1
     affected_versions: vers:rpm/<3.10.0-514.rt56.215.el6rt
     fixed_versions: vers:rpm/3.10.0-514.rt56.215.el6rt
     fixed_in_commits: []

@@ -22,12 +22,17 @@ summary: |
 
   * Previously, the mpt3sas driver incorrectly checked the Transport Layer Retries (TLR) state even on Redundant Array Of Independent Discs (RAID) devices. Consequently, a kernel panic occurred when mpt3sas attempted to read from the RAID devices. With this update, mpt3sas has been fixed to check the TLR state only for non-RAID devices, and the kernel no longer panics under the described circumstances. (BZ#1427453)
 impacted_packages:
-  - purl: pkg:rpm/redhat/kernel-debug-devel?arch=s390x
+  - purl: pkg:rpm/redhat/python-perf-debuginfo?arch=x86_64
     affected_versions: vers:rpm/<3.10.0-327.53.1.el7
     fixed_versions: vers:rpm/3.10.0-327.53.1.el7
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python-perf-debuginfo?arch=x86_64
+  - purl: pkg:rpm/redhat/kernel-headers?arch=x86_64
+    affected_versions: vers:rpm/<3.10.0-327.53.1.el7
+    fixed_versions: vers:rpm/3.10.0-327.53.1.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/perf?arch=ppc64
     affected_versions: vers:rpm/<3.10.0-327.53.1.el7
     fixed_versions: vers:rpm/3.10.0-327.53.1.el7
     fixed_in_commits: []
@@ -83,11 +88,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debug-debuginfo?arch=x86_64
-    affected_versions: vers:rpm/<3.10.0-327.53.1.el7
-    fixed_versions: vers:rpm/3.10.0-327.53.1.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-headers?arch=x86_64
     affected_versions: vers:rpm/<3.10.0-327.53.1.el7
     fixed_versions: vers:rpm/3.10.0-327.53.1.el7
     fixed_in_commits: []
@@ -183,11 +183,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel?arch=ppc64
-    affected_versions: vers:rpm/<3.10.0-327.53.1.el7
-    fixed_versions: vers:rpm/3.10.0-327.53.1.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/perf?arch=ppc64
     affected_versions: vers:rpm/<3.10.0-327.53.1.el7
     fixed_versions: vers:rpm/3.10.0-327.53.1.el7
     fixed_in_commits: []
@@ -333,6 +328,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-kdump?arch=s390x
+    affected_versions: vers:rpm/<3.10.0-327.53.1.el7
+    fixed_versions: vers:rpm/3.10.0-327.53.1.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-debug-devel?arch=s390x
     affected_versions: vers:rpm/<3.10.0-327.53.1.el7
     fixed_versions: vers:rpm/3.10.0-327.53.1.el7
     fixed_in_commits: []

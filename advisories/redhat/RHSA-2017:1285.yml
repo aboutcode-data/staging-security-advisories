@@ -16,6 +16,11 @@ summary: |
 
   * collectd contains an infinite loop due to how the parse_packet() and parse_part_sign_sha256() functions interact. If an instance of collectd is configured with "SecurityLevel None" and with empty "AuthFile" options an attacker can send crafted UDP packets that trigger the infinite loop, causing a denial of service. (CVE-2017-7401)
 impacted_packages:
+  - purl: pkg:rpm/redhat/collectd-iptables?arch=x86_64
+    affected_versions: vers:rpm/<5.7.1-4.el7
+    fixed_versions: vers:rpm/5.7.1-4.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/collectd-dns?arch=x86_64
     affected_versions: vers:rpm/<5.7.1-4.el7
     fixed_versions: vers:rpm/5.7.1-4.el7
@@ -172,11 +177,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/collectd-sensors?arch=x86_64
-    affected_versions: vers:rpm/<5.7.1-4.el7
-    fixed_versions: vers:rpm/5.7.1-4.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/collectd-iptables?arch=x86_64
     affected_versions: vers:rpm/<5.7.1-4.el7
     fixed_versions: vers:rpm/5.7.1-4.el7
     fixed_in_commits: []

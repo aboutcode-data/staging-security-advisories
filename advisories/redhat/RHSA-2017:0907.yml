@@ -20,6 +20,91 @@ summary: |
 
   * The "findmnt --target <path>" command prints all file systems where the mount point directory is <path>. Previously, when used in the chroot environment, "findmnt --target <path>" incorrectly displayed all mount points. The command has been fixed so that it now checks the mount point path and returns information only for the relevant mount point. (BZ#1414481)
 impacted_packages:
+  - purl: pkg:rpm/redhat/libuuid-devel?arch=x86_64
+    affected_versions: vers:rpm/<2.23.2-33.el7_3.2
+    fixed_versions: vers:rpm/2.23.2-33.el7_3.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libuuid?arch=x86_64
+    affected_versions: vers:rpm/<2.23.2-33.el7_3.2
+    fixed_versions: vers:rpm/2.23.2-33.el7_3.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libmount-devel?arch=x86_64
+    affected_versions: vers:rpm/<2.23.2-33.el7_3.2
+    fixed_versions: vers:rpm/2.23.2-33.el7_3.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libblkid-devel?arch=i686
+    affected_versions: vers:rpm/<2.23.2-33.el7_3.2
+    fixed_versions: vers:rpm/2.23.2-33.el7_3.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libmount-devel?arch=i686
+    affected_versions: vers:rpm/<2.23.2-33.el7_3.2
+    fixed_versions: vers:rpm/2.23.2-33.el7_3.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/util-linux?arch=src
+    affected_versions: vers:rpm/<2.23.2-33.el7_3.2
+    fixed_versions: vers:rpm/2.23.2-33.el7_3.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libblkid-devel?arch=ppc
+    affected_versions: vers:rpm/<2.23.2-33.el7_3.2
+    fixed_versions: vers:rpm/2.23.2-33.el7_3.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libmount?arch=ppc64
+    affected_versions: vers:rpm/<2.23.2-33.el7_3.2
+    fixed_versions: vers:rpm/2.23.2-33.el7_3.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/uuidd?arch=ppc64
+    affected_versions: vers:rpm/<2.23.2-33.el7_3.2
+    fixed_versions: vers:rpm/2.23.2-33.el7_3.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libblkid?arch=ppc64
+    affected_versions: vers:rpm/<2.23.2-33.el7_3.2
+    fixed_versions: vers:rpm/2.23.2-33.el7_3.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/util-linux-debuginfo?arch=ppc64
+    affected_versions: vers:rpm/<2.23.2-33.el7_3.2
+    fixed_versions: vers:rpm/2.23.2-33.el7_3.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libuuid-devel?arch=ppc64
+    affected_versions: vers:rpm/<2.23.2-33.el7_3.2
+    fixed_versions: vers:rpm/2.23.2-33.el7_3.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libuuid?arch=ppc64
+    affected_versions: vers:rpm/<2.23.2-33.el7_3.2
+    fixed_versions: vers:rpm/2.23.2-33.el7_3.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libmount-devel?arch=ppc64
+    affected_versions: vers:rpm/<2.23.2-33.el7_3.2
+    fixed_versions: vers:rpm/2.23.2-33.el7_3.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libblkid-devel?arch=ppc64le
+    affected_versions: vers:rpm/<2.23.2-33.el7_3.2
+    fixed_versions: vers:rpm/2.23.2-33.el7_3.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libmount?arch=ppc64le
+    affected_versions: vers:rpm/<2.23.2-33.el7_3.2
+    fixed_versions: vers:rpm/2.23.2-33.el7_3.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libuuid-devel?arch=aarch64
+    affected_versions: vers:rpm/<2.23.2-33.el7_3.2
+    fixed_versions: vers:rpm/2.23.2-33.el7_3.2
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/libblkid-devel?arch=x86_64
     affected_versions: vers:rpm/<2.23.2-33.el7_3.2
     fixed_versions: vers:rpm/2.23.2-33.el7_3.2
@@ -50,26 +135,6 @@ impacted_packages:
     fixed_versions: vers:rpm/2.23.2-33.el7_3.2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libuuid-devel?arch=x86_64
-    affected_versions: vers:rpm/<2.23.2-33.el7_3.2
-    fixed_versions: vers:rpm/2.23.2-33.el7_3.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libuuid?arch=x86_64
-    affected_versions: vers:rpm/<2.23.2-33.el7_3.2
-    fixed_versions: vers:rpm/2.23.2-33.el7_3.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libmount-devel?arch=x86_64
-    affected_versions: vers:rpm/<2.23.2-33.el7_3.2
-    fixed_versions: vers:rpm/2.23.2-33.el7_3.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libblkid-devel?arch=i686
-    affected_versions: vers:rpm/<2.23.2-33.el7_3.2
-    fixed_versions: vers:rpm/2.23.2-33.el7_3.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/libmount?arch=i686
     affected_versions: vers:rpm/<2.23.2-33.el7_3.2
     fixed_versions: vers:rpm/2.23.2-33.el7_3.2
@@ -96,21 +161,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/libuuid?arch=i686
-    affected_versions: vers:rpm/<2.23.2-33.el7_3.2
-    fixed_versions: vers:rpm/2.23.2-33.el7_3.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libmount-devel?arch=i686
-    affected_versions: vers:rpm/<2.23.2-33.el7_3.2
-    fixed_versions: vers:rpm/2.23.2-33.el7_3.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/util-linux?arch=src
-    affected_versions: vers:rpm/<2.23.2-33.el7_3.2
-    fixed_versions: vers:rpm/2.23.2-33.el7_3.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libblkid-devel?arch=ppc
     affected_versions: vers:rpm/<2.23.2-33.el7_3.2
     fixed_versions: vers:rpm/2.23.2-33.el7_3.2
     fixed_in_commits: []
@@ -155,52 +205,7 @@ impacted_packages:
     fixed_versions: vers:rpm/2.23.2-33.el7_3.2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libmount?arch=ppc64
-    affected_versions: vers:rpm/<2.23.2-33.el7_3.2
-    fixed_versions: vers:rpm/2.23.2-33.el7_3.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/uuidd?arch=ppc64
-    affected_versions: vers:rpm/<2.23.2-33.el7_3.2
-    fixed_versions: vers:rpm/2.23.2-33.el7_3.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libblkid?arch=ppc64
-    affected_versions: vers:rpm/<2.23.2-33.el7_3.2
-    fixed_versions: vers:rpm/2.23.2-33.el7_3.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/util-linux-debuginfo?arch=ppc64
-    affected_versions: vers:rpm/<2.23.2-33.el7_3.2
-    fixed_versions: vers:rpm/2.23.2-33.el7_3.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/util-linux?arch=ppc64
-    affected_versions: vers:rpm/<2.23.2-33.el7_3.2
-    fixed_versions: vers:rpm/2.23.2-33.el7_3.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libuuid-devel?arch=ppc64
-    affected_versions: vers:rpm/<2.23.2-33.el7_3.2
-    fixed_versions: vers:rpm/2.23.2-33.el7_3.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libuuid?arch=ppc64
-    affected_versions: vers:rpm/<2.23.2-33.el7_3.2
-    fixed_versions: vers:rpm/2.23.2-33.el7_3.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libmount-devel?arch=ppc64
-    affected_versions: vers:rpm/<2.23.2-33.el7_3.2
-    fixed_versions: vers:rpm/2.23.2-33.el7_3.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libblkid-devel?arch=ppc64le
-    affected_versions: vers:rpm/<2.23.2-33.el7_3.2
-    fixed_versions: vers:rpm/2.23.2-33.el7_3.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libmount?arch=ppc64le
     affected_versions: vers:rpm/<2.23.2-33.el7_3.2
     fixed_versions: vers:rpm/2.23.2-33.el7_3.2
     fixed_in_commits: []
@@ -355,11 +360,6 @@ impacted_packages:
     fixed_versions: vers:rpm/2.23.2-33.el7_3.2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libuuid-devel?arch=aarch64
-    affected_versions: vers:rpm/<2.23.2-33.el7_3.2
-    fixed_versions: vers:rpm/2.23.2-33.el7_3.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/libuuid?arch=aarch64
     affected_versions: vers:rpm/<2.23.2-33.el7_3.2
     fixed_versions: vers:rpm/2.23.2-33.el7_3.2
@@ -378,9 +378,6 @@ severities:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2017/rhsa-2017_0907.json
 weaknesses: []
 references:
-  - url: https://access.redhat.com/errata/RHSA-2017:0907
-    reference_type:
-    reference_id:
   - url: https://access.redhat.com/security/updates/classification/#moderate
     reference_type:
     reference_id:
@@ -393,3 +390,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1418710
     reference_type: bug
     reference_id: 1418710
+  - url: https://access.redhat.com/errata/RHSA-2017:0907
+    reference_type: advisory
+    reference_id: RHSA-2017:0907

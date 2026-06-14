@@ -20,6 +20,11 @@ summary: |
 
   * When upgrading to kernel with the fix for stack guard flaw, a crash could occur in Java Virtual Machine (JVM) environments, which attempted to implement their own stack guard page. With this update, the underlying source code has been fixed to consider the PROT_NONE mapping as a part of the stack, and the crash in JVM no longer occurs under the described circumstances. (BZ#1472671)
 impacted_packages:
+  - purl: pkg:rpm/redhat/kernel-xen?arch=x86_64
+    affected_versions: vers:rpm/<2.6.18-348.34.1.el5
+    fixed_versions: vers:rpm/2.6.18-348.34.1.el5
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-devel?arch=x86_64
     affected_versions: vers:rpm/<2.6.18-348.34.1.el5
     fixed_versions: vers:rpm/2.6.18-348.34.1.el5
@@ -51,11 +56,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debug-devel?arch=x86_64
-    affected_versions: vers:rpm/<2.6.18-348.34.1.el5
-    fixed_versions: vers:rpm/2.6.18-348.34.1.el5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-xen?arch=x86_64
     affected_versions: vers:rpm/<2.6.18-348.34.1.el5
     fixed_versions: vers:rpm/2.6.18-348.34.1.el5
     fixed_in_commits: []

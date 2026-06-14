@@ -21,14 +21,7 @@ summary: |
   * A vulnerability was discovered in Apache Thrift client libraries that allows remote, authenticated attackers to cause an infinite recursion via vectors involving the skip function, resulting in a denial of service (DoS) condition. (CVE-2015-3254)
 
   * A vulnerability was discovered in JSch that allows a malicious sftp server to force a client-side relative path traversal in jsch's implementation for recursive sftp-get. An attacker could leverage this to write files outside the client's download basedir with effective permissions of the jsch sftp client process. (CVE-2016-5725)
-impacted_packages:
-  - purl: pkg:github/tintinweb/pub
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/tintinweb/pub
-        commit: 6be7b9626c061d097f567d26dff16c59e34624b5
-    introduced_in_commits: []
+impacted_packages: []
 severities:
   - score: Moderate
     scoring_system: rhas
@@ -38,9 +31,6 @@ severities:
 weaknesses: []
 references:
   - url: https://access.redhat.com/documentation/en/red-hat-jboss-fuse/
-    reference_type:
-    reference_id:
-  - url: https://access.redhat.com/errata/RHSA-2017:3115
     reference_type:
     reference_id:
   - url: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?downloadType=securityPatches&product=jboss.amq.broker&version=6.3.0
@@ -64,9 +54,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1462783
     reference_type: bug
     reference_id: 1462783
-  - url: https://github.com/tintinweb/pub/tree/6be7b9626c061d097f567d26dff16c59e34624b5/pocs/cve-2016-5725
-    reference_type: exploit
-    reference_id: CVE-2016-5725
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/windows/dos/40411.txt
-    reference_type: exploit
-    reference_id: CVE-2016-5725
+  - url: https://access.redhat.com/errata/RHSA-2017:3115
+    reference_type:
+    reference_id: RHSA-2017:3115

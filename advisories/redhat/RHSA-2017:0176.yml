@@ -30,6 +30,26 @@ summary: |
 
   This update mitigates the CVE-2016-2183 issue by adding 3DES cipher suites to the list of legacy algorithms (defined using the jdk.tls.legacyAlgorithms security property) so they are only used if connecting TLS/SSL client and server do not share any other non-legacy cipher suite.
 impacted_packages:
+  - purl: pkg:rpm/redhat/java-1.7.0-oracle?arch=x86_64&epoch=1
+    affected_versions: vers:rpm/<1.7.0.131-1jpp.1.el5_11
+    fixed_versions: vers:rpm/1.7.0.131-1jpp.1.el5_11
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-1.7.0-oracle-javafx?arch=x86_64&epoch=1
+    affected_versions: vers:rpm/<1.7.0.131-1jpp.1.el5_11
+    fixed_versions: vers:rpm/1.7.0.131-1jpp.1.el5_11
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-1.7.0-oracle-jdbc?arch=i686&epoch=1
+    affected_versions: vers:rpm/<1.7.0.131-1jpp.1.el6_8
+    fixed_versions: vers:rpm/1.7.0.131-1jpp.1.el6_8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-1.7.0-oracle?arch=i686&epoch=1
+    affected_versions: vers:rpm/<1.7.0.131-1jpp.1.el6_8
+    fixed_versions: vers:rpm/1.7.0.131-1jpp.1.el6_8
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/java-1.7.0-oracle-javafx?arch=x86_64&epoch=1
     affected_versions: vers:rpm/<1.7.0.131-1jpp.1.el7_3
     fixed_versions: vers:rpm/1.7.0.131-1jpp.1.el7_3
@@ -96,16 +116,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/java-1.7.0-oracle-src?arch=x86_64&epoch=1
-    affected_versions: vers:rpm/<1.7.0.131-1jpp.1.el5_11
-    fixed_versions: vers:rpm/1.7.0.131-1jpp.1.el5_11
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-1.7.0-oracle?arch=x86_64&epoch=1
-    affected_versions: vers:rpm/<1.7.0.131-1jpp.1.el5_11
-    fixed_versions: vers:rpm/1.7.0.131-1jpp.1.el5_11
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-1.7.0-oracle-javafx?arch=x86_64&epoch=1
     affected_versions: vers:rpm/<1.7.0.131-1jpp.1.el5_11
     fixed_versions: vers:rpm/1.7.0.131-1jpp.1.el5_11
     fixed_in_commits: []
@@ -128,11 +138,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/java-1.7.0-oracle?arch=i686&epoch=1
     affected_versions: vers:rpm/<1.7.0.131-1jpp.1.el7_3
     fixed_versions: vers:rpm/1.7.0.131-1jpp.1.el7_3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-1.7.0-oracle-jdbc?arch=i686&epoch=1
-    affected_versions: vers:rpm/<1.7.0.131-1jpp.1.el6_8
-    fixed_versions: vers:rpm/1.7.0.131-1jpp.1.el6_8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/java-1.7.0-oracle-src?arch=i686&epoch=1
@@ -146,11 +151,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/java-1.7.0-oracle-devel?arch=i686&epoch=1
-    affected_versions: vers:rpm/<1.7.0.131-1jpp.1.el6_8
-    fixed_versions: vers:rpm/1.7.0.131-1jpp.1.el6_8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-1.7.0-oracle?arch=i686&epoch=1
     affected_versions: vers:rpm/<1.7.0.131-1jpp.1.el6_8
     fixed_versions: vers:rpm/1.7.0.131-1jpp.1.el6_8
     fixed_in_commits: []
@@ -199,9 +199,6 @@ severities:
 weaknesses: []
 references:
   - url: https://access.redhat.com/security/updates/classification/#critical
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1369383
     reference_type:
     reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2017/rhsa-2017_0176.json
@@ -255,3 +252,6 @@ references:
   - url: https://access.redhat.com/errata/RHSA-2017:0176
     reference_type:
     reference_id: RHSA-2017:0176
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1369383
+    reference_type: other
+    reference_id: show_bug.cgi?id=1369383

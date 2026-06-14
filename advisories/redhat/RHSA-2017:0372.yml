@@ -26,6 +26,26 @@ summary: |
 
   * On the Qualcomm Datacenter Technologies server platform with Qualcomm Datacenter Technologies Centriq 2400 CPU (QDF2400v1) memory accesses sometimes allocated Translation Lookaside Buffer (TLB) entries using an incorrect Address Space ID (ASID). This could consequently result in memory corruption and crashes under certain conditions. The underlying source code has been modified to handle the TTBRx_EL1[ASID] and TTBRx_EL1[BADDR] fields separately using a reserved ASID, and the described problem no longer occurs. (BZ#1421765)
 impacted_packages:
+  - purl: pkg:rpm/redhat/kernel-debug?arch=aarch64
+    affected_versions: vers:rpm/<4.5.0-15.2.1.el7
+    fixed_versions: vers:rpm/4.5.0-15.2.1.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-tools-libs?arch=aarch64
+    affected_versions: vers:rpm/<4.5.0-15.2.1.el7
+    fixed_versions: vers:rpm/4.5.0-15.2.1.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-headers?arch=aarch64
+    affected_versions: vers:rpm/<4.5.0-15.2.1.el7
+    fixed_versions: vers:rpm/4.5.0-15.2.1.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-aarch64?arch=src
+    affected_versions: vers:rpm/<4.5.0-15.2.1.el7
+    fixed_versions: vers:rpm/4.5.0-15.2.1.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-tools-debuginfo?arch=aarch64
     affected_versions: vers:rpm/<4.5.0-15.2.1.el7
     fixed_versions: vers:rpm/4.5.0-15.2.1.el7
@@ -91,26 +111,6 @@ impacted_packages:
     fixed_versions: vers:rpm/4.5.0-15.2.1.el7
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debug?arch=aarch64
-    affected_versions: vers:rpm/<4.5.0-15.2.1.el7
-    fixed_versions: vers:rpm/4.5.0-15.2.1.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-tools-libs?arch=aarch64
-    affected_versions: vers:rpm/<4.5.0-15.2.1.el7
-    fixed_versions: vers:rpm/4.5.0-15.2.1.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-headers?arch=aarch64
-    affected_versions: vers:rpm/<4.5.0-15.2.1.el7
-    fixed_versions: vers:rpm/4.5.0-15.2.1.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-aarch64?arch=src
-    affected_versions: vers:rpm/<4.5.0-15.2.1.el7
-    fixed_versions: vers:rpm/4.5.0-15.2.1.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: Important
     scoring_system: rhas
@@ -119,18 +119,18 @@ severities:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2017/rhsa-2017_0372.json
 weaknesses: []
 references:
-  - url: https://access.redhat.com/errata/RHSA-2017:0372
-    reference_type:
-    reference_id:
   - url: https://access.redhat.com/security/updates/classification/#important
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1375944
-    reference_type:
-    reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1384344
     reference_type:
     reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2017/rhsa-2017_0372.json
     reference_type:
     reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1375944
+    reference_type: bug
+    reference_id: 1375944
+  - url: https://access.redhat.com/errata/RHSA-2017:0372
+    reference_type: advisory
+    reference_id: RHSA-2017:0372
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1384344
+    reference_type: other
+    reference_id: show_bug.cgi?id=1384344

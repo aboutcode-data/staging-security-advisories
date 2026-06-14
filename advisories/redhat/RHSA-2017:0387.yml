@@ -29,27 +29,7 @@ summary: |
 
   * Previously, the asynchronous page fault woke code references spinlocks, which were actually sleeping locks in the RT kernel. Because of this, when the code was executed from the exception context, a bug warning appeared on the console. With this update, the regular wait queue and spinlock code in this area has been modified to use simple-wait-queue and raw-spinlocks. This code change enables the asynchronous page fault code to run in a non-preemptable state without bug warnings. (BZ#1418035)
 impacted_packages:
-  - purl: pkg:rpm/redhat/kernel-rt-trace-kvm?arch=x86_64
-    affected_versions: vers:rpm/<3.10.0-514.10.2.rt56.435.el7
-    fixed_versions: vers:rpm/3.10.0-514.10.2.rt56.435.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-rt-debug-kvm?arch=x86_64
-    affected_versions: vers:rpm/<3.10.0-514.10.2.rt56.435.el7
-    fixed_versions: vers:rpm/3.10.0-514.10.2.rt56.435.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-rt-trace-kvm-debuginfo?arch=x86_64
-    affected_versions: vers:rpm/<3.10.0-514.10.2.rt56.435.el7
-    fixed_versions: vers:rpm/3.10.0-514.10.2.rt56.435.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-rt-devel?arch=x86_64
-    affected_versions: vers:rpm/<3.10.0-514.10.2.rt56.435.el7
-    fixed_versions: vers:rpm/3.10.0-514.10.2.rt56.435.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-rt?arch=src
+  - purl: pkg:rpm/redhat/kernel-rt-trace-devel?arch=x86_64
     affected_versions: vers:rpm/<3.10.0-514.10.2.rt56.435.el7
     fixed_versions: vers:rpm/3.10.0-514.10.2.rt56.435.el7
     fixed_in_commits: []
@@ -65,11 +45,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-rt-debug-devel?arch=x86_64
-    affected_versions: vers:rpm/<3.10.0-514.10.2.rt56.435.el7
-    fixed_versions: vers:rpm/3.10.0-514.10.2.rt56.435.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-rt-trace-devel?arch=x86_64
     affected_versions: vers:rpm/<3.10.0-514.10.2.rt56.435.el7
     fixed_versions: vers:rpm/3.10.0-514.10.2.rt56.435.el7
     fixed_in_commits: []
@@ -119,19 +94,30 @@ impacted_packages:
     fixed_versions: vers:rpm/3.10.0-514.10.2.rt56.435.el7
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/rapid7/metasploit-framework
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/rapid7/metasploit-framework
-        commit: 88ab836e15dc5da85050b99910861cd10778c882
+  - purl: pkg:rpm/redhat/kernel-rt-trace-kvm?arch=x86_64
+    affected_versions: vers:rpm/<3.10.0-514.10.2.rt56.435.el7
+    fixed_versions: vers:rpm/3.10.0-514.10.2.rt56.435.el7
+    fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/bcoles/kernel-exploits
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/bcoles/kernel-exploits
-        commit: 4a20cca563620340e7abc2bd1e7dca15d5d82e67
+  - purl: pkg:rpm/redhat/kernel-rt-debug-kvm?arch=x86_64
+    affected_versions: vers:rpm/<3.10.0-514.10.2.rt56.435.el7
+    fixed_versions: vers:rpm/3.10.0-514.10.2.rt56.435.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-rt-trace-kvm-debuginfo?arch=x86_64
+    affected_versions: vers:rpm/<3.10.0-514.10.2.rt56.435.el7
+    fixed_versions: vers:rpm/3.10.0-514.10.2.rt56.435.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-rt-devel?arch=x86_64
+    affected_versions: vers:rpm/<3.10.0-514.10.2.rt56.435.el7
+    fixed_versions: vers:rpm/3.10.0-514.10.2.rt56.435.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-rt?arch=src
+    affected_versions: vers:rpm/<3.10.0-514.10.2.rt56.435.el7
+    fixed_versions: vers:rpm/3.10.0-514.10.2.rt56.435.el7
+    fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: Important
@@ -162,24 +148,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1415172
     reference_type: bug
     reference_id: 1415172
-  - url: http://seclists.org/oss-sec/2016/q4/607
-    reference_type: exploit
-    reference_id: CVE-2016-8655
-  - url: https://github.com/bcoles/kernel-exploits/blob/4a20cca563620340e7abc2bd1e7dca15d5d82e67/CVE-2016-8655/chocobo_root.c
-    reference_type: exploit
-    reference_id: CVE-2016-8655
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/local/44696.rb
-    reference_type: exploit
-    reference_id: CVE-2016-8655
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux_x86-64/local/40871.c
-    reference_type: exploit
-    reference_id: CVE-2016-8655
-  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/windows_x86-64/local/47170.c
-    reference_type: exploit
-    reference_id: CVE-2016-8655
-  - url: https://raw.githubusercontent.com/rapid7/metasploit-framework/88ab836e15dc5da85050b99910861cd10778c882/modules/exploits/linux/local/af_packet_chocobo_root_priv_esc.rb
-    reference_type: exploit
-    reference_id: CVE-2016-8655
   - url: https://access.redhat.com/errata/RHSA-2017:0387
     reference_type:
     reference_id: RHSA-2017:0387

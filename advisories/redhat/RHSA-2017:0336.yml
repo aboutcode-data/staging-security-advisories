@@ -29,19 +29,14 @@ summary: |
 
   * This update fixes multiple vulnerabilities in the IBM Java Runtime Environment and the IBM Java Software Development Kit. Further information about these flaws can be found on the IBM Java Security alerts page, listed in the References section. (CVE-2016-2183, CVE-2016-5546, CVE-2016-5547, CVE-2016-5548, CVE-2016-5549, CVE-2016-5552, CVE-2017-3231, CVE-2017-3241, CVE-2017-3252, CVE-2017-3253, CVE-2017-3259, CVE-2017-3261, CVE-2017-3272, CVE-2017-3289)
 impacted_packages:
-  - purl: pkg:rpm/redhat/java-1.7.1-ibm-demo?arch=i686&epoch=1
+  - purl: pkg:rpm/redhat/java-1.7.1-ibm-demo?arch=x86_64&epoch=1
     affected_versions: vers:rpm/<1.7.1.4.1-1jpp.1.el6_8
     fixed_versions: vers:rpm/1.7.1.4.1-1jpp.1.el6_8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-1.7.1-ibm-plugin?arch=i686&epoch=1
+  - purl: pkg:rpm/redhat/java-1.7.1-ibm-plugin?arch=x86_64&epoch=1
     affected_versions: vers:rpm/<1.7.1.4.1-1jpp.1.el6_8
     fixed_versions: vers:rpm/1.7.1.4.1-1jpp.1.el6_8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-1.7.1-ibm-devel?arch=i686&epoch=1
-    affected_versions: vers:rpm/<1.7.1.4.1-1jpp.2.el7
-    fixed_versions: vers:rpm/1.7.1.4.1-1jpp.2.el7
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/java-1.7.1-ibm-jdbc?arch=x86_64&epoch=1
@@ -60,16 +55,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/java-1.7.1-ibm?arch=x86_64&epoch=1
-    affected_versions: vers:rpm/<1.7.1.4.1-1jpp.1.el6_8
-    fixed_versions: vers:rpm/1.7.1.4.1-1jpp.1.el6_8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-1.7.1-ibm-demo?arch=x86_64&epoch=1
-    affected_versions: vers:rpm/<1.7.1.4.1-1jpp.1.el6_8
-    fixed_versions: vers:rpm/1.7.1.4.1-1jpp.1.el6_8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-1.7.1-ibm-plugin?arch=x86_64&epoch=1
     affected_versions: vers:rpm/<1.7.1.4.1-1jpp.1.el6_8
     fixed_versions: vers:rpm/1.7.1.4.1-1jpp.1.el6_8
     fixed_in_commits: []
@@ -122,6 +107,21 @@ impacted_packages:
   - purl: pkg:rpm/redhat/java-1.7.1-ibm?arch=i686&epoch=1
     affected_versions: vers:rpm/<1.7.1.4.1-1jpp.1.el6_8
     fixed_versions: vers:rpm/1.7.1.4.1-1jpp.1.el6_8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-1.7.1-ibm-demo?arch=i686&epoch=1
+    affected_versions: vers:rpm/<1.7.1.4.1-1jpp.1.el6_8
+    fixed_versions: vers:rpm/1.7.1.4.1-1jpp.1.el6_8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-1.7.1-ibm-plugin?arch=i686&epoch=1
+    affected_versions: vers:rpm/<1.7.1.4.1-1jpp.1.el6_8
+    fixed_versions: vers:rpm/1.7.1.4.1-1jpp.1.el6_8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-1.7.1-ibm-devel?arch=i686&epoch=1
+    affected_versions: vers:rpm/<1.7.1.4.1-1jpp.2.el7
+    fixed_versions: vers:rpm/1.7.1.4.1-1jpp.2.el7
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/java-1.7.1-ibm?arch=i686&epoch=1
@@ -290,9 +290,6 @@ references:
   - url: https://access.redhat.com/security/updates/classification/#critical
     reference_type:
     reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1369383
-    reference_type:
-    reference_id:
   - url: https://developer.ibm.com/javasdk/support/security-vulnerabilities/
     reference_type:
     reference_id:
@@ -341,3 +338,6 @@ references:
   - url: https://access.redhat.com/errata/RHSA-2017:0336
     reference_type:
     reference_id: RHSA-2017:0336
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1369383
+    reference_type: other
+    reference_id: show_bug.cgi?id=1369383

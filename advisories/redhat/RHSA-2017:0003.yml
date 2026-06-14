@@ -14,19 +14,19 @@ summary: |
 
   * A flaw was found in the way systemd handled empty notification messages. A local attacker could use this flaw to make systemd freeze its execution, preventing further management of system services, system shutdown, or zombie process collection via systemd. (CVE-2016-7796)
 impacted_packages:
-  - purl: pkg:rpm/redhat/libgudev1?arch=ppc
+  - purl: pkg:rpm/redhat/systemd-debuginfo?arch=x86_64
     affected_versions: vers:rpm/<208-20.el7_1.9
     fixed_versions: vers:rpm/208-20.el7_1.9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/systemd-libs?arch=ppc
+  - purl: pkg:rpm/redhat/systemd-devel?arch=ppc64
     affected_versions: vers:rpm/<208-20.el7_1.9
     fixed_versions: vers:rpm/208-20.el7_1.9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/systemd-devel?arch=ppc
-    affected_versions: vers:rpm/<208-20.el7_1.9
-    fixed_versions: vers:rpm/208-20.el7_1.9
+  - purl: pkg:rpm/redhat/systemd-sysv?arch=ppc64le
+    affected_versions: vers:rpm/<208-20.ael7b_1.9
+    fixed_versions: vers:rpm/208-20.ael7b_1.9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/systemd-libs?arch=x86_64
@@ -35,11 +35,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/systemd?arch=x86_64
-    affected_versions: vers:rpm/<208-20.el7_1.9
-    fixed_versions: vers:rpm/208-20.el7_1.9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/systemd-debuginfo?arch=x86_64
     affected_versions: vers:rpm/<208-20.el7_1.9
     fixed_versions: vers:rpm/208-20.el7_1.9
     fixed_in_commits: []
@@ -194,11 +189,6 @@ impacted_packages:
     fixed_versions: vers:rpm/208-20.el7_1.9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/systemd-devel?arch=ppc64
-    affected_versions: vers:rpm/<208-20.el7_1.9
-    fixed_versions: vers:rpm/208-20.el7_1.9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/libgudev1-devel?arch=s390
     affected_versions: vers:rpm/<208-20.el7_1.9
     fixed_versions: vers:rpm/208-20.el7_1.9
@@ -234,6 +224,21 @@ impacted_packages:
     fixed_versions: vers:rpm/208-20.el7_1.9
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libgudev1?arch=ppc
+    affected_versions: vers:rpm/<208-20.el7_1.9
+    fixed_versions: vers:rpm/208-20.el7_1.9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/systemd-libs?arch=ppc
+    affected_versions: vers:rpm/<208-20.el7_1.9
+    fixed_versions: vers:rpm/208-20.el7_1.9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/systemd-devel?arch=ppc
+    affected_versions: vers:rpm/<208-20.el7_1.9
+    fixed_versions: vers:rpm/208-20.el7_1.9
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/systemd-journal-gateway?arch=ppc64le
     affected_versions: vers:rpm/<208-20.ael7b_1.9
     fixed_versions: vers:rpm/208-20.ael7b_1.9
@@ -255,11 +260,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/libgudev1?arch=ppc64le
-    affected_versions: vers:rpm/<208-20.ael7b_1.9
-    fixed_versions: vers:rpm/208-20.ael7b_1.9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/systemd-sysv?arch=ppc64le
     affected_versions: vers:rpm/<208-20.ael7b_1.9
     fixed_versions: vers:rpm/208-20.ael7b_1.9
     fixed_in_commits: []

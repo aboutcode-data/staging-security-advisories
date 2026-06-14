@@ -21,7 +21,12 @@ summary: |
   * Previously, the 'stack:TID' annotation was applied to correctly mark the thread stack in a /proc/<pid>/maps file and it required processing the entire thread list to find the task of a stack Virtual Memory Area (VMA). Consequently, rendering and accessing /proc/<pid>/maps took a long time
   on systems with a large number of threads running. This update removes the annotation to make the /proc/<pid>/maps and /proc/<pid>/numa_maps files usable for higher thread counts. As a result, the system performance while rendering and accessing /proc/<pid>/maps has improved significantly. (BZ#1481722)
 impacted_packages:
-  - purl: pkg:rpm/redhat/perf-debuginfo?arch=ppc64le
+  - purl: pkg:rpm/redhat/kernel-debuginfo?arch=ppc64le
+    affected_versions: vers:rpm/<3.10.0-327.61.3.el7
+    fixed_versions: vers:rpm/3.10.0-327.61.3.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python-perf?arch=ppc64le
     affected_versions: vers:rpm/<3.10.0-327.61.3.el7
     fixed_versions: vers:rpm/3.10.0-327.61.3.el7
     fixed_in_commits: []
@@ -206,11 +211,6 @@ impacted_packages:
     fixed_versions: vers:rpm/3.10.0-327.61.3.el7
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debuginfo?arch=ppc64le
-    affected_versions: vers:rpm/<3.10.0-327.61.3.el7
-    fixed_versions: vers:rpm/3.10.0-327.61.3.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debuginfo-common-ppc64le?arch=ppc64le
     affected_versions: vers:rpm/<3.10.0-327.61.3.el7
     fixed_versions: vers:rpm/3.10.0-327.61.3.el7
@@ -241,17 +241,17 @@ impacted_packages:
     fixed_versions: vers:rpm/3.10.0-327.61.3.el7
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/perf-debuginfo?arch=ppc64le
+    affected_versions: vers:rpm/<3.10.0-327.61.3.el7
+    fixed_versions: vers:rpm/3.10.0-327.61.3.el7
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-devel?arch=ppc64le
     affected_versions: vers:rpm/<3.10.0-327.61.3.el7
     fixed_versions: vers:rpm/3.10.0-327.61.3.el7
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-tools?arch=ppc64le
-    affected_versions: vers:rpm/<3.10.0-327.61.3.el7
-    fixed_versions: vers:rpm/3.10.0-327.61.3.el7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python-perf?arch=ppc64le
     affected_versions: vers:rpm/<3.10.0-327.61.3.el7
     fixed_versions: vers:rpm/3.10.0-327.61.3.el7
     fixed_in_commits: []

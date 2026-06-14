@@ -25,12 +25,57 @@ summary: |
 
   * When multiple simultaneous processes attempted to read from the /proc/stat file, spinlock overhead was generated on Non-Uniform Memory Access (NUMA) systems. Consequently, a large amount of CPU was consumed. With this update, the underlying source code has been fixed to avoid taking spinlock when the interrupt line does not exist. As a result, the spinlock overhead is now generated less often, and multiple simultaneous processes can now read /proc/stat without consuming a large amount of CPU. (BZ#1428106)
 impacted_packages:
-  - purl: pkg:rpm/redhat/perf?arch=s390x
+  - purl: pkg:rpm/redhat/kernel-debug?arch=x86_64
     affected_versions: vers:rpm/<2.6.32-696.1.1.el6
     fixed_versions: vers:rpm/2.6.32-696.1.1.el6
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debug?arch=x86_64
+  - purl: pkg:rpm/redhat/perf?arch=x86_64
+    affected_versions: vers:rpm/<2.6.32-696.1.1.el6
+    fixed_versions: vers:rpm/2.6.32-696.1.1.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-debuginfo-common-x86_64?arch=x86_64
+    affected_versions: vers:rpm/<2.6.32-696.1.1.el6
+    fixed_versions: vers:rpm/2.6.32-696.1.1.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-doc?arch=noarch
+    affected_versions: vers:rpm/<2.6.32-696.1.1.el6
+    fixed_versions: vers:rpm/2.6.32-696.1.1.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-abi-whitelists?arch=noarch
+    affected_versions: vers:rpm/<2.6.32-696.1.1.el6
+    fixed_versions: vers:rpm/2.6.32-696.1.1.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python-perf?arch=s390x
+    affected_versions: vers:rpm/<2.6.32-696.1.1.el6
+    fixed_versions: vers:rpm/2.6.32-696.1.1.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python-perf-debuginfo?arch=ppc64
+    affected_versions: vers:rpm/<2.6.32-696.1.1.el6
+    fixed_versions: vers:rpm/2.6.32-696.1.1.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python-perf?arch=ppc64
+    affected_versions: vers:rpm/<2.6.32-696.1.1.el6
+    fixed_versions: vers:rpm/2.6.32-696.1.1.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-debug?arch=ppc64
+    affected_versions: vers:rpm/<2.6.32-696.1.1.el6
+    fixed_versions: vers:rpm/2.6.32-696.1.1.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-debug-devel?arch=ppc64
+    affected_versions: vers:rpm/<2.6.32-696.1.1.el6
+    fixed_versions: vers:rpm/2.6.32-696.1.1.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel?arch=ppc64
     affected_versions: vers:rpm/<2.6.32-696.1.1.el6
     fixed_versions: vers:rpm/2.6.32-696.1.1.el6
     fixed_in_commits: []
@@ -41,11 +86,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-devel?arch=x86_64
-    affected_versions: vers:rpm/<2.6.32-696.1.1.el6
-    fixed_versions: vers:rpm/2.6.32-696.1.1.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/perf?arch=x86_64
     affected_versions: vers:rpm/<2.6.32-696.1.1.el6
     fixed_versions: vers:rpm/2.6.32-696.1.1.el6
     fixed_in_commits: []
@@ -61,11 +101,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debug-devel?arch=x86_64
-    affected_versions: vers:rpm/<2.6.32-696.1.1.el6
-    fixed_versions: vers:rpm/2.6.32-696.1.1.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debuginfo-common-x86_64?arch=x86_64
     affected_versions: vers:rpm/<2.6.32-696.1.1.el6
     fixed_versions: vers:rpm/2.6.32-696.1.1.el6
     fixed_in_commits: []
@@ -150,16 +185,6 @@ impacted_packages:
     fixed_versions: vers:rpm/2.6.32-696.1.1.el6
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-doc?arch=noarch
-    affected_versions: vers:rpm/<2.6.32-696.1.1.el6
-    fixed_versions: vers:rpm/2.6.32-696.1.1.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-abi-whitelists?arch=noarch
-    affected_versions: vers:rpm/<2.6.32-696.1.1.el6
-    fixed_versions: vers:rpm/2.6.32-696.1.1.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-firmware?arch=noarch
     affected_versions: vers:rpm/<2.6.32-696.1.1.el6
     fixed_versions: vers:rpm/2.6.32-696.1.1.el6
@@ -200,11 +225,6 @@ impacted_packages:
     fixed_versions: vers:rpm/2.6.32-696.1.1.el6
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python-perf?arch=s390x
-    affected_versions: vers:rpm/<2.6.32-696.1.1.el6
-    fixed_versions: vers:rpm/2.6.32-696.1.1.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debug?arch=s390x
     affected_versions: vers:rpm/<2.6.32-696.1.1.el6
     fixed_versions: vers:rpm/2.6.32-696.1.1.el6
@@ -216,6 +236,26 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-devel?arch=s390x
+    affected_versions: vers:rpm/<2.6.32-696.1.1.el6
+    fixed_versions: vers:rpm/2.6.32-696.1.1.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/perf?arch=s390x
+    affected_versions: vers:rpm/<2.6.32-696.1.1.el6
+    fixed_versions: vers:rpm/2.6.32-696.1.1.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-kdump?arch=s390x
+    affected_versions: vers:rpm/<2.6.32-696.1.1.el6
+    fixed_versions: vers:rpm/2.6.32-696.1.1.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-debug-devel?arch=s390x
+    affected_versions: vers:rpm/<2.6.32-696.1.1.el6
+    fixed_versions: vers:rpm/2.6.32-696.1.1.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel?arch=s390x
     affected_versions: vers:rpm/<2.6.32-696.1.1.el6
     fixed_versions: vers:rpm/2.6.32-696.1.1.el6
     fixed_in_commits: []
@@ -245,21 +285,6 @@ impacted_packages:
     fixed_versions: vers:rpm/2.6.32-696.1.1.el6
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python-perf-debuginfo?arch=ppc64
-    affected_versions: vers:rpm/<2.6.32-696.1.1.el6
-    fixed_versions: vers:rpm/2.6.32-696.1.1.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python-perf?arch=ppc64
-    affected_versions: vers:rpm/<2.6.32-696.1.1.el6
-    fixed_versions: vers:rpm/2.6.32-696.1.1.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debug?arch=ppc64
-    affected_versions: vers:rpm/<2.6.32-696.1.1.el6
-    fixed_versions: vers:rpm/2.6.32-696.1.1.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-devel?arch=ppc64
     affected_versions: vers:rpm/<2.6.32-696.1.1.el6
     fixed_versions: vers:rpm/2.6.32-696.1.1.el6
@@ -270,37 +295,12 @@ impacted_packages:
     fixed_versions: vers:rpm/2.6.32-696.1.1.el6
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debug-devel?arch=ppc64
-    affected_versions: vers:rpm/<2.6.32-696.1.1.el6
-    fixed_versions: vers:rpm/2.6.32-696.1.1.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel?arch=ppc64
-    affected_versions: vers:rpm/<2.6.32-696.1.1.el6
-    fixed_versions: vers:rpm/2.6.32-696.1.1.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-bootwrapper?arch=ppc64
     affected_versions: vers:rpm/<2.6.32-696.1.1.el6
     fixed_versions: vers:rpm/2.6.32-696.1.1.el6
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-headers?arch=ppc64
-    affected_versions: vers:rpm/<2.6.32-696.1.1.el6
-    fixed_versions: vers:rpm/2.6.32-696.1.1.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-kdump?arch=s390x
-    affected_versions: vers:rpm/<2.6.32-696.1.1.el6
-    fixed_versions: vers:rpm/2.6.32-696.1.1.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debug-devel?arch=s390x
-    affected_versions: vers:rpm/<2.6.32-696.1.1.el6
-    fixed_versions: vers:rpm/2.6.32-696.1.1.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel?arch=s390x
     affected_versions: vers:rpm/<2.6.32-696.1.1.el6
     fixed_versions: vers:rpm/2.6.32-696.1.1.el6
     fixed_in_commits: []

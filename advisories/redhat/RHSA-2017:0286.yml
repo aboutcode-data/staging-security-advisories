@@ -17,6 +17,36 @@ summary: |
 
   * A denial of service flaw was found in the way the TLS/SSL protocol defined processing of ALERT packets during a connection handshake. A remote attacker could use this flaw to make a TLS/SSL server consume an excessive amount of CPU and fail to accept connections form other clients. (CVE-2016-8610)
 impacted_packages:
+  - purl: pkg:rpm/redhat/openssl?arch=x86_64&epoch=1
+    affected_versions: vers:rpm/<1.0.1e-60.el7_3.1
+    fixed_versions: vers:rpm/1.0.1e-60.el7_3.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/openssl?arch=i686
+    affected_versions: vers:rpm/<1.0.1e-48.el6_8.4
+    fixed_versions: vers:rpm/1.0.1e-48.el6_8.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/openssl?arch=s390x
+    affected_versions: vers:rpm/<1.0.1e-48.el6_8.4
+    fixed_versions: vers:rpm/1.0.1e-48.el6_8.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/openssl-devel?arch=s390x
+    affected_versions: vers:rpm/<1.0.1e-48.el6_8.4
+    fixed_versions: vers:rpm/1.0.1e-48.el6_8.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/openssl?arch=s390x&epoch=1
+    affected_versions: vers:rpm/<1.0.1e-60.el7_3.1
+    fixed_versions: vers:rpm/1.0.1e-60.el7_3.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/openssl-debuginfo?arch=ppc64&epoch=1
+    affected_versions: vers:rpm/<1.0.1e-60.el7_3.1
+    fixed_versions: vers:rpm/1.0.1e-60.el7_3.1
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/openssl?arch=x86_64
     affected_versions: vers:rpm/<1.0.1e-48.el6_8.4
     fixed_versions: vers:rpm/1.0.1e-48.el6_8.4
@@ -42,11 +72,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.0.1e-48.el6_8.4
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/openssl?arch=x86_64&epoch=1
-    affected_versions: vers:rpm/<1.0.1e-60.el7_3.1
-    fixed_versions: vers:rpm/1.0.1e-60.el7_3.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/openssl-devel?arch=x86_64&epoch=1
     affected_versions: vers:rpm/<1.0.1e-60.el7_3.1
     fixed_versions: vers:rpm/1.0.1e-60.el7_3.1
@@ -70,11 +95,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/openssl-static?arch=x86_64&epoch=1
     affected_versions: vers:rpm/<1.0.1e-60.el7_3.1
     fixed_versions: vers:rpm/1.0.1e-60.el7_3.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/openssl?arch=i686
-    affected_versions: vers:rpm/<1.0.1e-48.el6_8.4
-    fixed_versions: vers:rpm/1.0.1e-48.el6_8.4
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/openssl-debuginfo?arch=i686
@@ -142,21 +162,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.0.1e-48.el6_8.4
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/openssl?arch=s390x
-    affected_versions: vers:rpm/<1.0.1e-48.el6_8.4
-    fixed_versions: vers:rpm/1.0.1e-48.el6_8.4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/openssl-devel?arch=s390x
-    affected_versions: vers:rpm/<1.0.1e-48.el6_8.4
-    fixed_versions: vers:rpm/1.0.1e-48.el6_8.4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/openssl?arch=s390x&epoch=1
-    affected_versions: vers:rpm/<1.0.1e-60.el7_3.1
-    fixed_versions: vers:rpm/1.0.1e-60.el7_3.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/openssl-devel?arch=s390x&epoch=1
     affected_versions: vers:rpm/<1.0.1e-60.el7_3.1
     fixed_versions: vers:rpm/1.0.1e-60.el7_3.1
@@ -218,11 +223,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/openssl-libs?arch=ppc64&epoch=1
-    affected_versions: vers:rpm/<1.0.1e-60.el7_3.1
-    fixed_versions: vers:rpm/1.0.1e-60.el7_3.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/openssl-debuginfo?arch=ppc64&epoch=1
     affected_versions: vers:rpm/<1.0.1e-60.el7_3.1
     fixed_versions: vers:rpm/1.0.1e-60.el7_3.1
     fixed_in_commits: []
@@ -381,15 +381,15 @@ references:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2017/rhsa-2017_0286.json
     reference_type:
     reference_id:
-  - url: https://www.openssl.org/news/secadv/20170126.txt
-    reference_type:
-    reference_id:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1384743
     reference_type: bug
     reference_id: 1384743
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1416852
     reference_type: bug
     reference_id: 1416852
+  - url: https://www.openssl.org/news/secadv/20170126.txt
+    reference_type: advisory
+    reference_id: OpenSSL Advisory
   - url: https://access.redhat.com/errata/RHSA-2017:0286
     reference_type:
     reference_id: RHSA-2017:0286
