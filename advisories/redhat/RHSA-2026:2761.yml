@@ -28,16 +28,6 @@ summary: |
 
   For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.
 impacted_packages:
-  - purl: pkg:rpm/redhat/kernel-debuginfo-common-aarch64?arch=aarch64
-    affected_versions: vers:rpm/<6.12.0-55.60.1.el10_0
-    fixed_versions: vers:rpm/6.12.0-55.60.1.el10_0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-rt-64k-debug-debuginfo?arch=aarch64
-    affected_versions: vers:rpm/<6.12.0-55.60.1.el10_0
-    fixed_versions: vers:rpm/6.12.0-55.60.1.el10_0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-64k-debug-devel?arch=aarch64
     affected_versions: vers:rpm/<6.12.0-55.60.1.el10_0
     fixed_versions: vers:rpm/6.12.0-55.60.1.el10_0
@@ -118,7 +108,12 @@ impacted_packages:
     fixed_versions: vers:rpm/6.12.0-55.60.1.el10_0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debuginfo?arch=x86_64
+  - purl: pkg:rpm/redhat/kernel-debuginfo-common-aarch64?arch=aarch64
+    affected_versions: vers:rpm/<6.12.0-55.60.1.el10_0
+    fixed_versions: vers:rpm/6.12.0-55.60.1.el10_0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-rt-64k-debug-debuginfo?arch=aarch64
     affected_versions: vers:rpm/<6.12.0-55.60.1.el10_0
     fixed_versions: vers:rpm/6.12.0-55.60.1.el10_0
     fixed_in_commits: []
@@ -598,6 +593,11 @@ impacted_packages:
     fixed_versions: vers:rpm/6.12.0-55.60.1.el10_0
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-debuginfo?arch=x86_64
+    affected_versions: vers:rpm/<6.12.0-55.60.1.el10_0
+    fixed_versions: vers:rpm/6.12.0-55.60.1.el10_0
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debuginfo-common-x86_64?arch=x86_64
     affected_versions: vers:rpm/<6.12.0-55.60.1.el10_0
     fixed_versions: vers:rpm/6.12.0-55.60.1.el10_0
@@ -1007,6 +1007,9 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=2419919
     reference_type: bug
     reference_id: 2419919
+  - url: https://gitlab.com/exploit-database/exploitdb/-/blob/main/exploits/linux/local/52550.c
+    reference_type: exploit
+    reference_id: CVE-2025-40271
   - url: https://access.redhat.com/errata/RHSA-2026:2761
     reference_type:
     reference_id: RHSA-2026:2761
