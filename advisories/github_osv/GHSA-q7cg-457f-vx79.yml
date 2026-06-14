@@ -1,0 +1,54 @@
+advisory_id: GHSA-q7cg-457f-vx79
+datasource_id: github_osv/GHSA-q7cg-457f-vx79
+datasource_url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-q7cg-457f-vx79/GHSA-q7cg-457f-vx79.json
+aliases:
+  - CVE-2026-48038
+summary: "joi has an uncaught RangeError on deeply nested input through recursive `link()` schemas\n\
+  ### Impact\nDenial of service via untrapped exception in services validating user-supplied\
+  \ JSON / object input with recursive link schemas. \n\nThe blast radius depends on how the\
+  \ application invokes joi:\n- Highest impact: `validate()` called without `try/catch` in a\
+  \ request handler would cause an unhandled exception, potentially crashing the process.\n\
+  - Lower impact: `validateAsync()` or `validate()` inside a `try/catch`, the validation fails,\
+  \ but the error type is `RangeError` rather than a structured `ValidationError`, complicating\
+  \ error handling.\n\n### Patches\nUpgrade to version >= 18.2.1.\n\n### Workarounds\nTry/catch\
+  \ the validation to avoid uncaught exceptions.\n\n### Resources\n- Pull request: hapijs/joi#3113"
+impacted_packages:
+  - purl: pkg:github/hapijs/joi
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/hapijs/joi
+        commit: 2392713d3e9dd91ba752ac0c96e0eaf3d24b9a11
+    introduced_in_commits: []
+  - purl: pkg:npm/joi
+    affected_versions: vers:npm/<18.2.1
+    fixed_versions: vers:npm/18.2.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+severities:
+  - score: '5.3'
+    scoring_system: cvssv3.1
+    scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
+    published_at: None
+    url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-q7cg-457f-vx79/GHSA-q7cg-457f-vx79.json
+  - score: MODERATE
+    scoring_system: generic_textual
+    scoring_elements:
+    published_at: None
+    url:
+weaknesses:
+  - CWE-400
+  - CWE-248
+references:
+  - url: https://github.com/hapijs/joi
+    reference_type:
+    reference_id:
+  - url: https://github.com/hapijs/joi/commit/2392713d3e9dd91ba752ac0c96e0eaf3d24b9a11
+    reference_type:
+    reference_id:
+  - url: https://github.com/hapijs/joi/pull/3113
+    reference_type:
+    reference_id:
+  - url: https://github.com/hapijs/joi/security/advisories/GHSA-q7cg-457f-vx79
+    reference_type:
+    reference_id:

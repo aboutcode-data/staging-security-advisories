@@ -31,6 +31,13 @@ summary: "OpenEXR Out-Of-Memory via Unbounded File Header Values\n### Summary\nT
   \ by stalling the application or exhaust memory by stalling the application in a loop which\
   \ contains a memory leakage."
 impacted_packages:
+  - purl: pkg:github/academysoftwarefoundation/openexr
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/academysoftwarefoundation/openexr
+        commit: 2df7802a6421bf39ed73a607392f01b3c6da4e4a
+    introduced_in_commits: []
   - purl: pkg:pypi/openexr
     affected_versions: vers:pypi/3.3.2
     fixed_versions: vers:pypi/3.3.3
@@ -51,6 +58,9 @@ weaknesses:
   - CWE-770
 references:
   - url: https://github.com/AcademySoftwareFoundation/openexr
+    reference_type:
+    reference_id:
+  - url: https://github.com/AcademySoftwareFoundation/openexr/commit/2df7802a6421bf39ed73a607392f01b3c6da4e4a
     reference_type:
     reference_id:
   - url: https://github.com/ShielderSec/poc/tree/main/CVE-2025-48074

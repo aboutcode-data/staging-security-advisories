@@ -7,9 +7,29 @@ summary: |
   Infinite Loop in Apache Tomcat
   The payload length in a WebSocket frame was not correctly validated in Apache Tomcat 10.0.0-M1 to 10.0.0-M6, 9.0.0.M1 to 9.0.36, 8.5.0 to 8.5.56 and 7.0.27 to 7.0.104. Invalid payload lengths could trigger an infinite loop. Multiple requests with invalid payload lengths could lead to a denial of service.
 impacted_packages:
+  - purl: pkg:github/apache/tomcat
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/tomcat
+        commit: 12d715676038efbf9c728af10163f8277fc019d5
+      - vcs_url: https://github.com/apache/tomcat
+        commit: 40fa74c74822711ab878079d0a69f7357926723d
+      - vcs_url: https://github.com/apache/tomcat
+        commit: f9f75c14678b68633f79030ddf4ff827f014cc84
+      - vcs_url: https://github.com/apache/tomcat
+        commit: 4c04982870d6e730c38e21e58fb653b7cf723784
+      - vcs_url: https://github.com/apache/tomcat
+        commit: 1c1c77b0efb667cea80b532440b44cea1dc427c3
+    introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat/tomcat
     affected_versions: vers:maven/>=10.0.0-M1|<10.0.0-M7
     fixed_versions: vers:maven/10.0.0-M7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat/tomcat-websocket
+    affected_versions: vers:maven/>=7.0.27|<7.0.105
+    fixed_versions: vers:maven/7.0.105
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat/tomcat
@@ -27,20 +47,40 @@ impacted_packages:
     fixed_versions: vers:maven/7.0.105
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/apache/tomcat
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/apache/tomcat
-        commit: 12d715676038efbf9c728af10163f8277fc019d5
-      - vcs_url: https://github.com/apache/tomcat
-        commit: 40fa74c74822711ab878079d0a69f7357926723d
-      - vcs_url: https://github.com/apache/tomcat
-        commit: f9f75c14678b68633f79030ddf4ff827f014cc84
-      - vcs_url: https://github.com/apache/tomcat
-        commit: 4c04982870d6e730c38e21e58fb653b7cf723784
-      - vcs_url: https://github.com/apache/tomcat
-        commit: 1c1c77b0efb667cea80b532440b44cea1dc427c3
+  - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-websocket
+    affected_versions: vers:maven/>=7.0.27|<7.0.105
+    fixed_versions: vers:maven/7.0.105
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-websocket
+    affected_versions: vers:maven/>=8.5.0|<8.5.57
+    fixed_versions: vers:maven/8.5.57
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-websocket
+    affected_versions: vers:maven/>=9.0.0.M1|<9.0.37
+    fixed_versions: vers:maven/9.0.37
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-websocket
+    affected_versions: vers:maven/>=10.0.0-M1|<10.0.0-M7
+    fixed_versions: vers:maven/10.0.0-M7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat/tomcat-websocket
+    affected_versions: vers:maven/>=10.0.0-M1|<10.0.0-M7
+    fixed_versions: vers:maven/10.0.0-M7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat/tomcat-websocket
+    affected_versions: vers:maven/>=9.0.0.M1|<9.0.37
+    fixed_versions: vers:maven/9.0.37
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat/tomcat-websocket
+    affected_versions: vers:maven/>=8.5.0|<8.5.57
+    fixed_versions: vers:maven/8.5.57
+    fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '7.5'
