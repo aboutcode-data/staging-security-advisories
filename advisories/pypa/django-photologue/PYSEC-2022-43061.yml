@@ -3,6 +3,7 @@ datasource_id: pypa/django-photologue/PYSEC-2022-43061
 datasource_url: https://github.com/pypa/advisory-database/blob/main/vulns/django-photologue/PYSEC-2022-43061.yaml
 aliases:
   - CVE-2022-4526
+  - GHSA-287q-jfcp-9vhv
   - PYSEC-2022-43061
 summary: A vulnerability was found in django-photologue up to 3.15.1 and classified as problematic.
   Affected by this issue is some unknown functionality of the file photologue/templates/photologue/photo_detail.html
@@ -12,16 +13,16 @@ summary: A vulnerability was found in django-photologue up to 3.15.1 and classif
   It is recommended to apply a patch to fix this issue. VDB-215906 is the identifier assigned
   to this vulnerability.
 impacted_packages:
-  - purl: pkg:pypi/django-photologue
-    affected_versions: vers:pypi/2.3|2.4|2.5|2.6|2.6.1|2.7|2.8|2.8.1|2.8.2|2.8.3|3.0|3.0.1|3.0.2|3.1|3.1.1|3.2|3.3|3.3.1|3.3.2|3.4|3.4.1|3.5|3.5.1|3.6|3.7|3.8|3.8.1|3.9|3.10|3.11|3.12|3.13|3.14|3.15|3.15.1
-    fixed_versions: vers:pypi/3.16
+  - purl: pkg:github/richardbarran/django-photologue
+    affected_versions:
+    fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/richardbarran/django-photologue
         commit: 960cb060ce5e2964e6d716ff787c72fc18a371e7
     introduced_in_commits: []
-  - purl: pkg:github/richardbarran/django-photologue
-    affected_versions:
-    fixed_versions:
+  - purl: pkg:pypi/django-photologue
+    affected_versions: vers:pypi/2.3|2.4|2.5|2.6|2.6.1|2.7|2.8|2.8.1|2.8.2|2.8.3|3.0|3.0.1|3.0.2|3.1|3.1.1|3.2|3.3|3.3.1|3.3.2|3.4|3.4.1|3.5|3.5.1|3.6|3.7|3.8|3.8.1|3.9|3.10|3.11|3.12|3.13|3.14|3.15|3.15.1
+    fixed_versions: vers:pypi/3.16
     fixed_in_commits:
       - vcs_url: https://github.com/richardbarran/django-photologue
         commit: 960cb060ce5e2964e6d716ff787c72fc18a371e7
@@ -43,3 +44,6 @@ references:
   - url: https://vuldb.com/?id.215906
     reference_type:
     reference_id:
+  - url: https://github.com/advisories/GHSA-287q-jfcp-9vhv
+    reference_type:
+    reference_id: GHSA-287q-jfcp-9vhv

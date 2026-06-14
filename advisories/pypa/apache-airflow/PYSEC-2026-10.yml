@@ -3,6 +3,7 @@ datasource_id: pypa/apache-airflow/PYSEC-2026-10
 datasource_url: https://github.com/pypa/advisory-database/blob/main/vulns/apache-airflow/PYSEC-2026-10.yaml
 aliases:
   - CVE-2025-68675
+  - GHSA-7c2f-r6gc-h92h
   - PYSEC-2026-10
 summary: |
   In Apache Airflow versions before 3.1.6, and 2.11.1 the proxies and proxy fields within a Connection may include proxy URLs containing embedded authentication information. These fields were not treated as sensitive by default and therefore were not automatically masked in log output. As a result, when such connections are rendered or printed to logs, proxy credentials embedded in these fields could be exposed.
@@ -31,3 +32,6 @@ references:
   - url: http://www.openwall.com/lists/oss-security/2026/01/15/6
     reference_type:
     reference_id:
+  - url: https://github.com/advisories/GHSA-7c2f-r6gc-h92h
+    reference_type:
+    reference_id: GHSA-7c2f-r6gc-h92h

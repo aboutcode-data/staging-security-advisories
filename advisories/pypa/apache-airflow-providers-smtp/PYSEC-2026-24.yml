@@ -3,6 +3,7 @@ datasource_id: pypa/apache-airflow-providers-smtp/PYSEC-2026-24
 datasource_url: https://github.com/pypa/advisory-database/blob/main/vulns/apache-airflow-providers-smtp/PYSEC-2026-24.yaml
 aliases:
   - CVE-2026-41016
+  - GHSA-x8mh-94wc-33gv
   - PYSEC-2026-24
 summary: Apache Airflow's SMTP provider `SmtpHook` called Python's `smtplib.SMTP.starttls()`
   without an SSL context, so no certificate validation was performed on the TLS upgrade. A man-in-the-middle
@@ -30,3 +31,6 @@ references:
   - url: https://lists.apache.org/thread/gb202qy5r31bgdd3d51d7s5o1jh40kc4
     reference_type:
     reference_id:
+  - url: https://github.com/advisories/GHSA-x8mh-94wc-33gv
+    reference_type:
+    reference_id: GHSA-x8mh-94wc-33gv

@@ -3,6 +3,7 @@ datasource_id: pypa/apache-airflow/PYSEC-2023-265
 datasource_url: https://github.com/pypa/advisory-database/blob/main/vulns/apache-airflow/PYSEC-2023-265.yaml
 aliases:
   - CVE-2023-48291
+  - GHSA-8f57-wcmg-4jmh
   - PYSEC-2023-265
 summary: |
   Apache Airflow, in versions prior to 2.8.0, contains a security vulnerability that allows an authenticated user with limited access to some DAGs, to craft a request that could give the user write access to various DAG resources for DAGs that the user had no access to, thus, enabling the user to clear DAGs they shouldn't.
@@ -33,3 +34,6 @@ references:
   - url: http://www.openwall.com/lists/oss-security/2023/12/21/1
     reference_type:
     reference_id:
+  - url: https://github.com/advisories/GHSA-8f57-wcmg-4jmh
+    reference_type:
+    reference_id: GHSA-8f57-wcmg-4jmh

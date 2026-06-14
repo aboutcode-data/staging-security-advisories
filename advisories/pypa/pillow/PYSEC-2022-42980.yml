@@ -3,19 +3,20 @@ datasource_id: pypa/pillow/PYSEC-2022-42980
 datasource_url: https://github.com/pypa/advisory-database/blob/main/vulns/pillow/PYSEC-2022-42980.yaml
 aliases:
   - CVE-2022-45199
+  - GHSA-q4mp-jvh2-76fj
   - PYSEC-2022-42980
 summary: Pillow before 9.3.0 allows denial of service via SAMPLESPERPIXEL.
 impacted_packages:
-  - purl: pkg:pypi/pillow
-    affected_versions: vers:pypi/9.2.0
-    fixed_versions: vers:pypi/9.3.0
+  - purl: pkg:github/python-pillow/pillow
+    affected_versions:
+    fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/python-pillow/pillow
         commit: 2444cddab2f83f28687c7c20871574acbb6dbcf3
     introduced_in_commits: []
-  - purl: pkg:github/python-pillow/pillow
-    affected_versions:
-    fixed_versions:
+  - purl: pkg:pypi/pillow
+    affected_versions: vers:pypi/9.2.0
+    fixed_versions: vers:pypi/9.3.0
     fixed_in_commits:
       - vcs_url: https://github.com/python-pillow/pillow
         commit: 2444cddab2f83f28687c7c20871574acbb6dbcf3
@@ -35,3 +36,6 @@ references:
   - url: https://github.com/python-pillow/Pillow/releases/tag/9.3.0
     reference_type:
     reference_id:
+  - url: https://github.com/advisories/GHSA-q4mp-jvh2-76fj
+    reference_type:
+    reference_id: GHSA-q4mp-jvh2-76fj

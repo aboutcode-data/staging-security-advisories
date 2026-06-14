@@ -3,19 +3,20 @@ datasource_id: pypa/scipy/PYSEC-2019-156
 datasource_url: https://github.com/pypa/advisory-database/blob/main/vulns/scipy/PYSEC-2019-156.yaml
 aliases:
   - CVE-2013-4251
+  - GHSA-xp76-357g-9wqq
   - PYSEC-2019-156
 summary: The scipy.weave component in SciPy before 0.12.1 creates insecure temporary directories.
 impacted_packages:
-  - purl: pkg:pypi/scipy
-    affected_versions: vers:pypi/0.4.4|0.5.2|0.6.0|0.7.0|0.7.2|0.8.0|0.9.0|0.10.0|0.10.1|0.11.0|0.12.0
-    fixed_versions: vers:pypi/0.12.1
+  - purl: pkg:github/scipy/scipy
+    affected_versions:
+    fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/scipy/scipy
         commit: bd296e0336420b840fcd2faabb97084fd252a973
     introduced_in_commits: []
-  - purl: pkg:github/scipy/scipy
-    affected_versions:
-    fixed_versions:
+  - purl: pkg:pypi/scipy
+    affected_versions: vers:pypi/0.4.4|0.5.2|0.6.0|0.7.0|0.7.2|0.8.0|0.9.0|0.10.0|0.10.1|0.11.0|0.12.0
+    fixed_versions: vers:pypi/0.12.1
     fixed_in_commits:
       - vcs_url: https://github.com/scipy/scipy
         commit: bd296e0336420b840fcd2faabb97084fd252a973
@@ -53,3 +54,6 @@ references:
   - url: https://security-tracker.debian.org/tracker/CVE-2013-4251
     reference_type:
     reference_id: CVE-2013-4251
+  - url: https://github.com/advisories/GHSA-xp76-357g-9wqq
+    reference_type:
+    reference_id: GHSA-xp76-357g-9wqq

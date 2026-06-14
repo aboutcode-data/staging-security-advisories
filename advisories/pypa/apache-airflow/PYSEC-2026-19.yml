@@ -3,6 +3,7 @@ datasource_id: pypa/apache-airflow/PYSEC-2026-19
 datasource_url: https://github.com/pypa/advisory-database/blob/main/vulns/apache-airflow/PYSEC-2026-19.yaml
 aliases:
   - CVE-2026-32690
+  - GHSA-w9r4-94fj-xp69
   - PYSEC-2026-19
 summary: |
   Secrets in Variables saved as JSON dictionaries were not properly redacted - in case thee variables were retrieved by the user the secrets stored as nested fields were not masked.
@@ -31,3 +32,6 @@ references:
   - url: http://www.openwall.com/lists/oss-security/2026/04/17/6
     reference_type:
     reference_id:
+  - url: https://github.com/advisories/GHSA-w9r4-94fj-xp69
+    reference_type:
+    reference_id: GHSA-w9r4-94fj-xp69

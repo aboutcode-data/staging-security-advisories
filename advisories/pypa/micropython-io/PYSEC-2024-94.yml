@@ -3,6 +3,7 @@ datasource_id: pypa/micropython-io/PYSEC-2024-94
 datasource_url: https://github.com/pypa/advisory-database/blob/main/vulns/micropython-io/PYSEC-2024-94.yaml
 aliases:
   - CVE-2024-8947
+  - GHSA-pwwp-3q7j-9mx8
   - PYSEC-2024-94
 summary: A vulnerability was found in MicroPython 1.22.2. It has been declared as critical.
   Affected by this vulnerability is an unknown functionality of the file py/objarray.c. The
@@ -13,15 +14,15 @@ summary: A vulnerability was found in MicroPython 1.22.2. It has been declared a
   a bytes object is resized and copied into itself, it may reference memory that has already
   been freed.
 impacted_packages:
-  - purl: pkg:pypi/micropython-io
-    affected_versions: vers:pypi/0.0.1|0.0.2|0.0.3|0.1
+  - purl: pkg:github/micropython/micropython
+    affected_versions:
     fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/micropython/micropython
         commit: 4bed614e707c0644c06e117f848fa12605c711cd
     introduced_in_commits: []
-  - purl: pkg:github/micropython/micropython
-    affected_versions:
+  - purl: pkg:pypi/micropython-io
+    affected_versions: vers:pypi/0.0.1|0.0.2|0.0.3|0.1
     fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/micropython/micropython
@@ -56,3 +57,6 @@ references:
   - url: https://vuldb.com/?submit.409316
     reference_type:
     reference_id:
+  - url: https://github.com/advisories/GHSA-pwwp-3q7j-9mx8
+    reference_type:
+    reference_id: GHSA-pwwp-3q7j-9mx8

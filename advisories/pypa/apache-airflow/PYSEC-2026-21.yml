@@ -3,6 +3,7 @@ datasource_id: pypa/apache-airflow/PYSEC-2026-21
 datasource_url: https://github.com/pypa/advisory-database/blob/main/vulns/apache-airflow/PYSEC-2026-21.yaml
 aliases:
   - CVE-2026-34538
+  - GHSA-r7vr-m4jw-r794
   - PYSEC-2026-21
 summary: |
   Apache Airflow versions 3.0.0 through 3.1.8 DagRun wait endpoint returns XCom result values even to users who only have DAG Run read permissions, such as the Viewer role.This behavior conflicts with the FAB RBAC model, which treats XCom as a separate protected resource, and with the security model documentation that defines the Viewer role as read-only.
@@ -33,3 +34,6 @@ references:
   - url: http://www.openwall.com/lists/oss-security/2026/04/09/9
     reference_type:
     reference_id:
+  - url: https://github.com/advisories/GHSA-r7vr-m4jw-r794
+    reference_type:
+    reference_id: GHSA-r7vr-m4jw-r794

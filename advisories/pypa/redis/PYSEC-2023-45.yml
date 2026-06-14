@@ -3,6 +3,7 @@ datasource_id: pypa/redis/PYSEC-2023-45
 datasource_url: https://github.com/pypa/advisory-database/blob/main/vulns/redis/PYSEC-2023-45.yaml
 aliases:
   - CVE-2023-28858
+  - GHSA-24wv-mv5m-xv4h
   - PYSEC-2023-45
 summary: redis-py before 4.5.3, as used in ChatGPT and other products, leaves a connection open
   after canceling an async Redis command at an inopportune time (in the case of a pipeline operation),
@@ -36,3 +37,6 @@ references:
   - url: https://openai.com/blog/march-20-chatgpt-outage
     reference_type:
     reference_id:
+  - url: https://github.com/advisories/GHSA-24wv-mv5m-xv4h
+    reference_type:
+    reference_id: GHSA-24wv-mv5m-xv4h

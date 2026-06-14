@@ -3,6 +3,7 @@ datasource_id: pypa/apache-airflow/PYSEC-2026-9
 datasource_url: https://github.com/pypa/advisory-database/blob/main/vulns/apache-airflow/PYSEC-2026-9.yaml
 aliases:
   - CVE-2025-68438
+  - GHSA-3qmm-r55x-hpxx
   - PYSEC-2026-9
 summary: |
   In Apache Airflow versions before 3.1.6, when rendered template fields in a Dag exceed [core] max_templated_field_length, sensitive values could be exposed in cleartext in the Rendered Templates UI. This occurred because serialization of those fields used a secrets masker instance that did not include user-registered mask_secret() patterns, so secrets were not reliably masked before truncation and display.
@@ -28,3 +29,6 @@ references:
   - url: http://www.openwall.com/lists/oss-security/2026/01/15/5
     reference_type:
     reference_id:
+  - url: https://github.com/advisories/GHSA-3qmm-r55x-hpxx
+    reference_type:
+    reference_id: GHSA-3qmm-r55x-hpxx
