@@ -49,29 +49,9 @@ summary: "Red Hat Satellite 6.2 now available for Red Hat Enterprise Linux 6 and
   \nChanges to the Subscription Management component:\n\n* With this release, the virt-who agent\
   \ can now be installed on the same machine where the main Satellite Server is hosted. (BZ#1209467)"
 impacted_packages:
-  - purl: pkg:rpm/redhat/tfm-rubygem-dynflow?arch=src
-    affected_versions: vers:rpm/<0.8.11-1.el6sat
-    fixed_versions: vers:rpm/0.8.11-1.el6sat
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/tfm-rubygem-qpid_messaging?arch=src
-    affected_versions: vers:rpm/<0.30.0-7.el6sat
-    fixed_versions: vers:rpm/0.30.0-7.el6sat
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/rubygem-rubyipmi?arch=src
-    affected_versions: vers:rpm/<0.10.0-1.el6_6sat
-    fixed_versions: vers:rpm/0.10.0-1.el6_6sat
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/rubygem-sinatra?arch=src&epoch=1
-    affected_versions: vers:rpm/<1.3.6-27.el6sat
-    fixed_versions: vers:rpm/1.3.6-27.el6sat
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/rubygem-tilt?arch=src
-    affected_versions: vers:rpm/<1.3.3-18.el6sat
-    fixed_versions: vers:rpm/1.3.3-18.el6sat
+  - purl: pkg:rpm/redhat/rubygem-kafo?arch=noarch
+    affected_versions: vers:rpm/<0.7.6-1.el7sat
+    fixed_versions: vers:rpm/0.7.6-1.el7sat
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/python-nectar?arch=src
@@ -527,6 +507,31 @@ impacted_packages:
   - purl: pkg:rpm/redhat/python-celery?arch=src
     affected_versions: vers:rpm/<3.1.11-1.el6sat
     fixed_versions: vers:rpm/3.1.11-1.el6sat
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/tfm-rubygem-dynflow?arch=src
+    affected_versions: vers:rpm/<0.8.11-1.el6sat
+    fixed_versions: vers:rpm/0.8.11-1.el6sat
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/tfm-rubygem-qpid_messaging?arch=src
+    affected_versions: vers:rpm/<0.30.0-7.el6sat
+    fixed_versions: vers:rpm/0.30.0-7.el6sat
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/rubygem-rubyipmi?arch=src
+    affected_versions: vers:rpm/<0.10.0-1.el6_6sat
+    fixed_versions: vers:rpm/0.10.0-1.el6_6sat
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/rubygem-sinatra?arch=src&epoch=1
+    affected_versions: vers:rpm/<1.3.6-27.el6sat
+    fixed_versions: vers:rpm/1.3.6-27.el6sat
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/rubygem-tilt?arch=src
+    affected_versions: vers:rpm/<1.3.3-18.el6sat
+    fixed_versions: vers:rpm/1.3.3-18.el6sat
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/python-nectar?arch=src
@@ -1217,11 +1222,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/tfm-rubygem-hammer_cli_katello?arch=noarch
     affected_versions: vers:rpm/<0.0.22.23-1.el7sat
     fixed_versions: vers:rpm/0.0.22.23-1.el7sat
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/rubygem-kafo?arch=noarch
-    affected_versions: vers:rpm/<0.7.6-1.el7sat
-    fixed_versions: vers:rpm/0.7.6-1.el7sat
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/tfm-rubygem-foreman_theme_satellite?arch=noarch
@@ -2025,9 +2025,6 @@ references:
   - url: https://access.redhat.com/documentation/en/red-hat-satellite/6.2/single/release-notes
     reference_type:
     reference_id:
-  - url: https://access.redhat.com/errata/RHBA-2016:1501
-    reference_type:
-    reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2016/rhba-2016_1501.json
     reference_type:
     reference_id:
@@ -2721,3 +2718,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1326948
     reference_type: bug
     reference_id: 1326948
+  - url: https://access.redhat.com/errata/RHBA-2016:1501
+    reference_type:
+    reference_id: RHBA-2016:1501

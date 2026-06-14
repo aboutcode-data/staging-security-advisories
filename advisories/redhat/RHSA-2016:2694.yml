@@ -18,22 +18,7 @@ summary: |
 
   * Previously, the udev device manager automatically enabled all memory banks on IBM z System installations. As a consequence, hot plug memory was enabled automatically, which was incorrect. With this update, system architecture checks have been added to the udev rules to address the problem. As a result, hot plug memory is no longer automatically enabled. (BZ#1375603)
 impacted_packages:
-  - purl: pkg:rpm/redhat/systemd-debuginfo?arch=i686
-    affected_versions: vers:rpm/<219-19.el7_2.18
-    fixed_versions: vers:rpm/219-19.el7_2.18
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/systemd-devel?arch=i686
-    affected_versions: vers:rpm/<219-19.el7_2.18
-    fixed_versions: vers:rpm/219-19.el7_2.18
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/systemd-resolved?arch=i686
-    affected_versions: vers:rpm/<219-19.el7_2.18
-    fixed_versions: vers:rpm/219-19.el7_2.18
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libgudev1-devel?arch=i686
+  - purl: pkg:rpm/redhat/systemd?arch=src
     affected_versions: vers:rpm/<219-19.el7_2.18
     fixed_versions: vers:rpm/219-19.el7_2.18
     fixed_in_commits: []
@@ -93,17 +78,32 @@ impacted_packages:
     fixed_versions: vers:rpm/219-19.el7_2.18
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/systemd-debuginfo?arch=i686
+    affected_versions: vers:rpm/<219-19.el7_2.18
+    fixed_versions: vers:rpm/219-19.el7_2.18
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/systemd-devel?arch=i686
+    affected_versions: vers:rpm/<219-19.el7_2.18
+    fixed_versions: vers:rpm/219-19.el7_2.18
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/systemd-resolved?arch=i686
+    affected_versions: vers:rpm/<219-19.el7_2.18
+    fixed_versions: vers:rpm/219-19.el7_2.18
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libgudev1-devel?arch=i686
+    affected_versions: vers:rpm/<219-19.el7_2.18
+    fixed_versions: vers:rpm/219-19.el7_2.18
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/systemd-libs?arch=i686
     affected_versions: vers:rpm/<219-19.el7_2.18
     fixed_versions: vers:rpm/219-19.el7_2.18
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/libgudev1?arch=i686
-    affected_versions: vers:rpm/<219-19.el7_2.18
-    fixed_versions: vers:rpm/219-19.el7_2.18
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/systemd?arch=src
     affected_versions: vers:rpm/<219-19.el7_2.18
     fixed_versions: vers:rpm/219-19.el7_2.18
     fixed_in_commits: []
