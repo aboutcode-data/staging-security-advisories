@@ -24,6 +24,31 @@ summary: |
 
   * Previously, the calls provided by SSSD to send data to the Privilege Attribute Certificate (PAC) responder did not use a mutex or any other means to serialize access to the PAC responder from a single process. When multithreaded applications overran the PAC responder with multiple parallel requests, some threads did not receive a proper reply. Consequently, such threads only resumed work after waiting 5 minutes for a response. This update configures mutex to serialize access to the PAC responder socket for multithreaded applications. As a result, all threads now get a proper and timely reply. (BZ#1506682)
 impacted_packages:
+  - purl: pkg:rpm/redhat/libipa_hbac?arch=i686
+    affected_versions: vers:rpm/<1.15.2-50.el7_4.8
+    fixed_versions: vers:rpm/1.15.2-50.el7_4.8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsss_simpleifp?arch=ppc64
+    affected_versions: vers:rpm/<1.15.2-50.el7_4.8
+    fixed_versions: vers:rpm/1.15.2-50.el7_4.8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/sssd-proxy?arch=ppc64le
+    affected_versions: vers:rpm/<1.15.2-50.el7_4.8
+    fixed_versions: vers:rpm/1.15.2-50.el7_4.8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libsss_simpleifp-devel?arch=s390x
+    affected_versions: vers:rpm/<1.15.2-50.el7_4.8
+    fixed_versions: vers:rpm/1.15.2-50.el7_4.8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/sssd-proxy?arch=aarch64
+    affected_versions: vers:rpm/<1.15.2-50.el7_4.8
+    fixed_versions: vers:rpm/1.15.2-50.el7_4.8
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/libsss_nss_idmap?arch=x86_64
     affected_versions: vers:rpm/<1.15.2-50.el7_4.8
     fixed_versions: vers:rpm/1.15.2-50.el7_4.8
@@ -200,11 +225,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/sssd-debuginfo?arch=i686
-    affected_versions: vers:rpm/<1.15.2-50.el7_4.8
-    fixed_versions: vers:rpm/1.15.2-50.el7_4.8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libipa_hbac?arch=i686
     affected_versions: vers:rpm/<1.15.2-50.el7_4.8
     fixed_versions: vers:rpm/1.15.2-50.el7_4.8
     fixed_in_commits: []
@@ -434,11 +454,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.15.2-50.el7_4.8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsss_simpleifp?arch=ppc64
-    affected_versions: vers:rpm/<1.15.2-50.el7_4.8
-    fixed_versions: vers:rpm/1.15.2-50.el7_4.8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/libsss_idmap?arch=ppc64
     affected_versions: vers:rpm/<1.15.2-50.el7_4.8
     fixed_versions: vers:rpm/1.15.2-50.el7_4.8
@@ -615,11 +630,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/sssd-client?arch=ppc64le
-    affected_versions: vers:rpm/<1.15.2-50.el7_4.8
-    fixed_versions: vers:rpm/1.15.2-50.el7_4.8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/sssd-proxy?arch=ppc64le
     affected_versions: vers:rpm/<1.15.2-50.el7_4.8
     fixed_versions: vers:rpm/1.15.2-50.el7_4.8
     fixed_in_commits: []
@@ -889,11 +899,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.15.2-50.el7_4.8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libsss_simpleifp-devel?arch=s390x
-    affected_versions: vers:rpm/<1.15.2-50.el7_4.8
-    fixed_versions: vers:rpm/1.15.2-50.el7_4.8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/libsss_idmap-devel?arch=s390x
     affected_versions: vers:rpm/<1.15.2-50.el7_4.8
     fixed_versions: vers:rpm/1.15.2-50.el7_4.8
@@ -1059,11 +1064,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.15.2-50.el7_4.8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/sssd-proxy?arch=aarch64
-    affected_versions: vers:rpm/<1.15.2-50.el7_4.8
-    fixed_versions: vers:rpm/1.15.2-50.el7_4.8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/libsss_certmap?arch=aarch64
     affected_versions: vers:rpm/<1.15.2-50.el7_4.8
     fixed_versions: vers:rpm/1.15.2-50.el7_4.8
@@ -1093,12 +1093,12 @@ references:
   - url: https://access.redhat.com/security/updates/classification/#moderate
     reference_type:
     reference_id:
+  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1498173
+    reference_type:
+    reference_id:
   - url: https://security.access.redhat.com/data/csaf/v2/advisories/2017/rhsa-2017_3379.json
     reference_type:
     reference_id:
-  - url: https://bugzilla.redhat.com/show_bug.cgi?id=1498173
-    reference_type: bug
-    reference_id: 1498173
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1506142
     reference_type: bug
     reference_id: 1506142

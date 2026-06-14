@@ -30,27 +30,12 @@ summary: |
 
   * This update fixes multiple vulnerabilities in the IBM Java Runtime Environment and the IBM Java Software Development Kit. Further information about these flaws can be found on the IBM Java Security Vulnerabilities page listed in the References section. (CVE-2016-10165, CVE-2017-10281, CVE-2017-10285, CVE-2017-10295, CVE-2017-10309, CVE-2017-10345, CVE-2017-10346, CVE-2017-10347, CVE-2017-10348, CVE-2017-10349, CVE-2017-10350, CVE-2017-10355, CVE-2017-10356, CVE-2017-10357, CVE-2017-10388)
 impacted_packages:
+  - purl: pkg:rpm/redhat/java-1.8.0-ibm-devel?arch=s390x&epoch=1
+    affected_versions: vers:rpm/<1.8.0.5.5-1jpp.1.el6_9
+    fixed_versions: vers:rpm/1.8.0.5.5-1jpp.1.el6_9
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/java-1.8.0-ibm-devel?arch=ppc64&epoch=1
-    affected_versions: vers:rpm/<1.8.0.5.5-1jpp.1.el6_9
-    fixed_versions: vers:rpm/1.8.0.5.5-1jpp.1.el6_9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-1.8.0-ibm-jdbc?arch=ppc64&epoch=1
-    affected_versions: vers:rpm/<1.8.0.5.5-1jpp.1.el6_9
-    fixed_versions: vers:rpm/1.8.0.5.5-1jpp.1.el6_9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-1.8.0-ibm?arch=ppc64&epoch=1
-    affected_versions: vers:rpm/<1.8.0.5.5-1jpp.1.el6_9
-    fixed_versions: vers:rpm/1.8.0.5.5-1jpp.1.el6_9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-1.8.0-ibm-demo?arch=ppc64&epoch=1
-    affected_versions: vers:rpm/<1.8.0.5.5-1jpp.1.el6_9
-    fixed_versions: vers:rpm/1.8.0.5.5-1jpp.1.el6_9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-1.8.0-ibm-src?arch=ppc64&epoch=1
     affected_versions: vers:rpm/<1.8.0.5.5-1jpp.1.el6_9
     fixed_versions: vers:rpm/1.8.0.5.5-1jpp.1.el6_9
     fixed_in_commits: []
@@ -115,11 +100,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.8.0.5.5-1jpp.1.el6_9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-1.8.0-ibm-devel?arch=s390x&epoch=1
-    affected_versions: vers:rpm/<1.8.0.5.5-1jpp.1.el6_9
-    fixed_versions: vers:rpm/1.8.0.5.5-1jpp.1.el6_9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/java-1.8.0-ibm-jdbc?arch=s390x&epoch=1
     affected_versions: vers:rpm/<1.8.0.5.5-1jpp.1.el6_9
     fixed_versions: vers:rpm/1.8.0.5.5-1jpp.1.el6_9
@@ -140,6 +120,26 @@ impacted_packages:
     fixed_versions: vers:rpm/1.8.0.5.5-1jpp.1.el6_9
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-1.8.0-ibm-jdbc?arch=ppc64&epoch=1
+    affected_versions: vers:rpm/<1.8.0.5.5-1jpp.1.el6_9
+    fixed_versions: vers:rpm/1.8.0.5.5-1jpp.1.el6_9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-1.8.0-ibm?arch=ppc64&epoch=1
+    affected_versions: vers:rpm/<1.8.0.5.5-1jpp.1.el6_9
+    fixed_versions: vers:rpm/1.8.0.5.5-1jpp.1.el6_9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-1.8.0-ibm-demo?arch=ppc64&epoch=1
+    affected_versions: vers:rpm/<1.8.0.5.5-1jpp.1.el6_9
+    fixed_versions: vers:rpm/1.8.0.5.5-1jpp.1.el6_9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-1.8.0-ibm-src?arch=ppc64&epoch=1
+    affected_versions: vers:rpm/<1.8.0.5.5-1jpp.1.el6_9
+    fixed_versions: vers:rpm/1.8.0.5.5-1jpp.1.el6_9
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: Critical
     scoring_system: rhas
@@ -148,9 +148,6 @@ severities:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2017/rhsa-2017_3267.json
 weaknesses: []
 references:
-  - url: https://access.redhat.com/errata/RHSA-2017:3267
-    reference_type:
-    reference_id:
   - url: https://access.redhat.com/security/updates/classification/#critical
     reference_type:
     reference_id:
@@ -205,3 +202,6 @@ references:
   - url: https://bugzilla.redhat.com/show_bug.cgi?id=1503319
     reference_type: bug
     reference_id: 1503319
+  - url: https://access.redhat.com/errata/RHSA-2017:3267
+    reference_type: advisory
+    reference_id: RHSA-2017:3267

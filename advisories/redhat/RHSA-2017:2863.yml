@@ -22,7 +22,12 @@ summary: |
 
   * Previously, VMs with memory larger than 64GB running on Hyper-V with Windows Server hosts reported potential memory size of 4TB and more, but could not use more than 64GB. This was happening because the Memory Type Range Register (MTRR) for memory above 64GB was omitted. With this update, the /proc/mtrr file has been fixed to show correct base/size if they are more than 44 bit wide. As a result, the whole size of memory is now available as expected under the described circumstances. (BZ#1482855)
 impacted_packages:
-  - purl: pkg:rpm/redhat/perf?arch=s390x
+  - purl: pkg:rpm/redhat/kernel-abi-whitelists?arch=noarch
+    affected_versions: vers:rpm/<2.6.32-696.13.2.el6
+    fixed_versions: vers:rpm/2.6.32-696.13.2.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-debug-devel?arch=ppc64
     affected_versions: vers:rpm/<2.6.32-696.13.2.el6
     fixed_versions: vers:rpm/2.6.32-696.13.2.el6
     fixed_in_commits: []
@@ -147,11 +152,6 @@ impacted_packages:
     fixed_versions: vers:rpm/2.6.32-696.13.2.el6
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-abi-whitelists?arch=noarch
-    affected_versions: vers:rpm/<2.6.32-696.13.2.el6
-    fixed_versions: vers:rpm/2.6.32-696.13.2.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-doc?arch=noarch
     affected_versions: vers:rpm/<2.6.32-696.13.2.el6
     fixed_versions: vers:rpm/2.6.32-696.13.2.el6
@@ -217,6 +217,11 @@ impacted_packages:
     fixed_versions: vers:rpm/2.6.32-696.13.2.el6
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/perf?arch=s390x
+    affected_versions: vers:rpm/<2.6.32-696.13.2.el6
+    fixed_versions: vers:rpm/2.6.32-696.13.2.el6
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-kdump-devel?arch=s390x
     affected_versions: vers:rpm/<2.6.32-696.13.2.el6
     fixed_versions: vers:rpm/2.6.32-696.13.2.el6
@@ -273,11 +278,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-bootwrapper?arch=ppc64
-    affected_versions: vers:rpm/<2.6.32-696.13.2.el6
-    fixed_versions: vers:rpm/2.6.32-696.13.2.el6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debug-devel?arch=ppc64
     affected_versions: vers:rpm/<2.6.32-696.13.2.el6
     fixed_versions: vers:rpm/2.6.32-696.13.2.el6
     fixed_in_commits: []
