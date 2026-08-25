@@ -62,11 +62,6 @@ summary: |
 
   This requires no authentication and no user interaction beyond visiting a web page. This represents a cross-origin information disclosure vulnerability and can aid further attacks such as reconnaissance or targeted exploitation.
 impacted_packages:
-  - purl: pkg:pypi/glances
-    affected_versions: vers:pypi/<4.5.4
-    fixed_versions: vers:pypi/4.5.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/nicolargo/glances
     affected_versions:
     fixed_versions:
@@ -74,21 +69,26 @@ impacted_packages:
       - vcs_url: https://github.com/nicolargo/glances
         commit: fdfb977b1d91b5e410bc06c4e19f8bedb0005ce9
     introduced_in_commits: []
+  - purl: pkg:pypi/glances
+    affected_versions: vers:pypi/<4.5.4
+    fixed_versions: vers:pypi/4.5.4
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-gfc2-9qmw-w7vh/GHSA-gfc2-9qmw-w7vh.json
   - score: '7.1'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-gfc2-9qmw-w7vh/GHSA-gfc2-9qmw-w7vh.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

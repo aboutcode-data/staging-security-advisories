@@ -181,11 +181,6 @@ summary: |
   ### Impact
   Any application that uses `useGraphQLModules` from `@envelop/graphql-modules` along with services that inject the context using @ExecutionContext() from a singleton provider are at risk. The more traffic an application has, the higher the chance for parallel requests, the higher the risk.
 impacted_packages:
-  - purl: pkg:npm/%40envelop/graphql-modules
-    affected_versions: vers:npm/<9.1.0
-    fixed_versions: vers:npm/9.1.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/graphql-hive/envelop
     affected_versions:
     fixed_versions:
@@ -193,16 +188,21 @@ impacted_packages:
       - vcs_url: https://github.com/graphql-hive/envelop
         commit: ab49fa259a51d976c437e084114e070b99720ba9
     introduced_in_commits: []
+  - purl: pkg:npm/%40envelop/graphql-modules
+    affected_versions: vers:npm/<9.1.0
+    fixed_versions: vers:npm/9.1.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-h3hw-29fv-2x75/GHSA-h3hw-29fv-2x75.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-362

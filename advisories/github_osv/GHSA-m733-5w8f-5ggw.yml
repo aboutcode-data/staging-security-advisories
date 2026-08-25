@@ -44,11 +44,6 @@ summary: |
   ### Suggested Fix
   Use `lstatSync` to detect symlinks and reject those pointing outside the package root in `store/cafs/src/addFilesFromDir.ts`.
 impacted_packages:
-  - purl: pkg:npm/pnpm
-    affected_versions: vers:npm/<10.28.2
-    fixed_versions: vers:npm/10.28.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/pnpm/pnpm
     affected_versions:
     fixed_versions:
@@ -56,21 +51,26 @@ impacted_packages:
       - vcs_url: https://github.com/pnpm/pnpm
         commit: b277b45bc35ae77ca72d7634d144bbd58a48b70f
     introduced_in_commits: []
+  - purl: pkg:npm/pnpm
+    affected_versions: vers:npm/<10.28.2
+    fixed_versions: vers:npm/10.28.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-m733-5w8f-5ggw/GHSA-m733-5w8f-5ggw.json
   - score: '6.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-m733-5w8f-5ggw/GHSA-m733-5w8f-5ggw.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

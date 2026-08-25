@@ -70,11 +70,6 @@ summary: |
 
   *Code analysis, CVSS scoring, and documentation assisted by Claude AI (Opus 4.5). Vulnerability verification and PoC testing performed by the reporter.*
 impacted_packages:
-  - purl: pkg:npm/opencode-ai
-    affected_versions: vers:npm/<1.0.216
-    fixed_versions: vers:npm/1.0.216
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/anomalyco/opencode
     affected_versions:
     fixed_versions:
@@ -82,16 +77,21 @@ impacted_packages:
       - vcs_url: https://github.com/anomalyco/opencode
         commit: 7d2d87fa2c44e32314015980bb4e59a9386e858c
     introduced_in_commits: []
+  - purl: pkg:npm/opencode-ai
+    affected_versions: vers:npm/<1.0.216
+    fixed_versions: vers:npm/1.0.216
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-vxw4-wv6m-9hhh/GHSA-vxw4-wv6m-9hhh.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-749

@@ -8,8 +8,8 @@ summary: |
   Vulnerability in Spring Spring Security. Applications that explicitly configure One-Time Token login with JdbcOneTimeTokenService are vulnerable to a Time-of-check Time-of-use (TOCTOU) race condition. This issue affects Spring Security: from 6.4.0 through 6.4.15, from 6.5.0 through 6.5.9, from 7.0.0 through 7.0.4.
 impacted_packages:
   - purl: pkg:maven/org.springframework.security/spring-security-core
-    affected_versions: vers:maven/>=6.5.0|<6.5.10
-    fixed_versions: vers:maven/6.5.10
+    affected_versions: vers:maven/>=6.4.0|<=6.4.13
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.springframework.security/spring-security-core
@@ -18,8 +18,8 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.springframework.security/spring-security-core
-    affected_versions: vers:maven/>=6.4.0|<=6.4.13
-    fixed_versions:
+    affected_versions: vers:maven/>=6.5.0|<6.5.10
+    fixed_versions: vers:maven/6.5.10
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/spring-projects/spring-security
@@ -35,12 +35,12 @@ severities:
   - score: '4.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-x2wq-9x2f-fhj7/GHSA-x2wq-9x2f-fhj7.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-367

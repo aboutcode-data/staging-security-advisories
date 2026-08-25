@@ -76,11 +76,6 @@ summary: "alextselegidis/easyappointments is Vulnerable to CSRF Protection Bypas
   \ create administrative accounts, change administrator emails/passwords (leading to password\
   \ reset abuse), and fully compromise application instances and data."
 impacted_packages:
-  - purl: pkg:composer/alextselegidis/easyappointments
-    affected_versions: vers:composer/<=1.5.2
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/alextselegidis/easyappointments
     affected_versions:
     fixed_versions:
@@ -88,16 +83,21 @@ impacted_packages:
       - vcs_url: https://github.com/alextselegidis/easyappointments
         commit: 41c9b93a5a2c185a914f204412324d8980943fd5
     introduced_in_commits: []
+  - purl: pkg:composer/alextselegidis/easyappointments
+    affected_versions: vers:composer/<=1.5.2
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.4'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-54v4-4685-vwrj/GHSA-54v4-4685-vwrj.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-352

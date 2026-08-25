@@ -20,6 +20,15 @@ summary: |
   ### For more information
   If there are any questions or comments about this advisory, email Ghost at [security@ghost.org](mailto:security@ghost.org).
 impacted_packages:
+  - purl: pkg:github/tryghost/ghost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/tryghost/ghost
+        commit: 15d49131ff4aac3aca8642501c793f01f2bfcbb9
+      - vcs_url: https://github.com/tryghost/ghost
+        commit: 93add549ccf079d8e28bdb724fbb71a76942ff51
+    introduced_in_commits: []
   - purl: pkg:npm/ghost
     affected_versions: vers:npm/<=6.10.3
     fixed_versions: vers:npm/6.11.0
@@ -30,25 +39,16 @@ impacted_packages:
     fixed_versions: vers:npm/5.130.6
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/tryghost/ghost
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/tryghost/ghost
-        commit: 15d49131ff4aac3aca8642501c793f01f2bfcbb9
-      - vcs_url: https://github.com/tryghost/ghost
-        commit: 93add549ccf079d8e28bdb724fbb71a76942ff51
-    introduced_in_commits: []
 severities:
   - score: '5.1'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:N/VI:N/VA:N/SC:L/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-vmc4-9828-r48r/GHSA-vmc4-9828-r48r.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-918

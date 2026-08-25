@@ -30,11 +30,6 @@ summary: "Pepr Has Overly Permissive RBAC ClusterRole in Admin Mode\nSeverity: L
   \ Any additional permissions must be added based on the specific Kubernetes resources and\
   \ CRUD operations performed by the module"
 impacted_packages:
-  - purl: pkg:npm/pepr
-    affected_versions: vers:npm/<1.0.5
-    fixed_versions: vers:npm/1.0.5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/defenseunicorns/pepr
     affected_versions:
     fixed_versions:
@@ -42,21 +37,26 @@ impacted_packages:
       - vcs_url: https://github.com/defenseunicorns/pepr
         commit: d4675a662b8602fcde7e4bf603432f2f133b1fd1
     introduced_in_commits: []
+  - purl: pkg:npm/pepr
+    affected_versions: vers:npm/<1.0.5
+    fixed_versions: vers:npm/1.0.5
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '0.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-w54x-r83c-x79q/GHSA-w54x-r83c-x79q.json
   - score: '1.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:U
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-w54x-r83c-x79q/GHSA-w54x-r83c-x79q.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-272

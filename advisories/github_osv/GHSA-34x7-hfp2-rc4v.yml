@@ -182,11 +182,6 @@ summary: |
   3. **Corrupt databases** and application state
   4. **Steal credentials** from config files, `.env`, secrets
 impacted_packages:
-  - purl: pkg:npm/tar
-    affected_versions: vers:npm/<7.5.7
-    fixed_versions: vers:npm/7.5.7
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/isaacs/node-tar
     affected_versions:
     fixed_versions:
@@ -194,16 +189,21 @@ impacted_packages:
       - vcs_url: https://github.com/isaacs/node-tar
         commit: f4a7aa9bc3d717c987fdf1480ff7a64e87ffdb46
     introduced_in_commits: []
+  - purl: pkg:npm/tar
+    affected_versions: vers:npm/<7.5.7
+    fixed_versions: vers:npm/7.5.7
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.2'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-34x7-hfp2-rc4v/GHSA-34x7-hfp2-rc4v.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

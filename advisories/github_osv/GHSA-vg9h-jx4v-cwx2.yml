@@ -151,11 +151,6 @@ summary: |
   ### Impact
   If the service is exposed beyond localhost (bound to 0.0.0.0 or reverse-proxied), an attacker can access the Werkzeug debugger. This can disclose sensitive information and may allow remote code execution if a debugger PIN is obtained. At minimum, stack traces and environment details are exposed on errors.
 impacted_packages:
-  - purl: pkg:pypi/dfir-unfurl
-    affected_versions: vers:pypi/<=20250810
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/obsidianforensics/unfurl
     affected_versions:
     fixed_versions:
@@ -163,16 +158,21 @@ impacted_packages:
       - vcs_url: https://github.com/obsidianforensics/unfurl
         commit: 4c0a07ab1e9af3a1ddf0e7f47153ec9ba77946dd
     introduced_in_commits: []
+  - purl: pkg:pypi/dfir-unfurl
+    affected_versions: vers:pypi/<=20250810
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-vg9h-jx4v-cwx2/GHSA-vg9h-jx4v-cwx2.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-489

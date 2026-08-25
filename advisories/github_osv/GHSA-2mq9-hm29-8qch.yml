@@ -64,11 +64,6 @@ summary: "Label Studio is vulnerable to full account takeover by chaining Stored
   \ session/token is accessible via browser.\n- The organization’s application and data.\n-\
   \ Potentially other end-users if cross-user token exfiltration occurs."
 impacted_packages:
-  - purl: pkg:pypi/label-studio
-    affected_versions: vers:pypi/<=1.22.0
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/humansignal/label-studio
     affected_versions:
     fixed_versions:
@@ -76,16 +71,21 @@ impacted_packages:
       - vcs_url: https://github.com/humansignal/label-studio
         commit: ea2462bf042bbf370b79445d02a205fbe547b505
     introduced_in_commits: []
+  - purl: pkg:pypi/label-studio
+    affected_versions: vers:pypi/<=1.22.0
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.6'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-2mq9-hm29-8qch/GHSA-2mq9-hm29-8qch.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-285

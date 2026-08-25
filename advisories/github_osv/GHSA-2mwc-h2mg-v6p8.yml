@@ -58,11 +58,6 @@ summary: |
 
   Implement server-side sanitization (e.g., HTMLPurifier or Laravel Purifier) to strip or encode <script> tags regardless of how the request is manipulated.
 impacted_packages:
-  - purl: pkg:composer/bagisto/bagisto
-    affected_versions: vers:composer/<2.3.10
-    fixed_versions: vers:composer/2.3.10
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/bagisto/bagisto
     affected_versions:
     fixed_versions:
@@ -70,16 +65,21 @@ impacted_packages:
       - vcs_url: https://github.com/bagisto/bagisto
         commit: f533b1cd9c80896792da60976179c95573d78b79
     introduced_in_commits: []
+  - purl: pkg:composer/bagisto/bagisto
+    affected_versions: vers:composer/<2.3.10
+    fixed_versions: vers:composer/2.3.10
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.2'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:N/VI:N/VA:N/SC:H/SI:H/SA:N/E:P
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-2mwc-h2mg-v6p8/GHSA-2mwc-h2mg-v6p8.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

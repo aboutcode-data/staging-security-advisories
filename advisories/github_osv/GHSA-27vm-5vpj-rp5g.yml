@@ -11,6 +11,17 @@ summary: |
 
   Users are recommended to upgrade to version 4.20.0, which fixes the issue. If users are on the 4.14.x LTS releases stream, they are suggested to upgrade to 4.14.6. If users are on the 4.18.x LTS releases stream, they are suggested to upgrade to 4.18.2.
 impacted_packages:
+  - purl: pkg:github/apache/camel
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/camel
+        commit: 6ec12cbebfc1b6360cdaac1c1f8c681864911695
+      - vcs_url: https://github.com/apache/camel
+        commit: 7b5b8c0283c0ab8d703d868ded7614018762a553
+      - vcs_url: https://github.com/apache/camel
+        commit: a9ebee94af976ac2afd7906d2e76673067d8be86
+    introduced_in_commits: []
   - purl: pkg:maven/org.apache.camel/camel-platform-http-main
     affected_versions: vers:maven/>=4.14.1|<4.14.6
     fixed_versions: vers:maven/4.14.6
@@ -26,27 +37,16 @@ impacted_packages:
     fixed_versions: vers:maven/4.20.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/apache/camel
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/apache/camel
-        commit: 6ec12cbebfc1b6360cdaac1c1f8c681864911695
-      - vcs_url: https://github.com/apache/camel
-        commit: 7b5b8c0283c0ab8d703d868ded7614018762a553
-      - vcs_url: https://github.com/apache/camel
-        commit: a9ebee94af976ac2afd7906d2e76673067d8be86
-    introduced_in_commits: []
 severities:
   - score: '8.2'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-27vm-5vpj-rp5g/GHSA-27vm-5vpj-rp5g.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-288

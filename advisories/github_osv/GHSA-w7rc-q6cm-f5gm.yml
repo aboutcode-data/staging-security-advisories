@@ -9,11 +9,6 @@ summary: |
 
   Users are recommended to upgrade to version 3.2.1, which fixes this issue.
 impacted_packages:
-  - purl: pkg:pypi/apache-airflow
-    affected_versions: vers:pypi/<3.2.1rc1
-    fixed_versions: vers:pypi/3.2.1rc1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/apache/airflow
     affected_versions:
     fixed_versions:
@@ -21,16 +16,21 @@ impacted_packages:
       - vcs_url: https://github.com/apache/airflow
         commit: cf3452d76e2ef5a8bae247f9fc90c759ff9df02f
     introduced_in_commits: []
+  - purl: pkg:pypi/apache-airflow
+    affected_versions: vers:pypi/<3.2.1rc1
+    fixed_versions: vers:pypi/3.2.1rc1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-w7rc-q6cm-f5gm/GHSA-w7rc-q6cm-f5gm.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-1220

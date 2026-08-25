@@ -29,11 +29,6 @@ summary: "CAI find_file Agent Tool has Command Injection Vulnerability Through A
   \ completely bypassing any human-in-the-loop safety mechanisms.\n\nA patch is available: [e22a122](https://github.com/aliasrobotics/cai/blob/559de8fcbc2b44f3b0360f35ffdc2bb975e7d7e4/src/cai/tools/reconnaissance/filesystem.py#L60),\
   \ but was not published to the PyPI at the time of advisory publication."
 impacted_packages:
-  - purl: pkg:pypi/cai-framework
-    affected_versions: vers:pypi/<=0.5.10
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/aliasrobotics/cai
     affected_versions:
     fixed_versions:
@@ -43,16 +38,21 @@ impacted_packages:
       - vcs_url: https://github.com/aliasrobotics/cai
         commit: 559de8fcbc2b44f3b0360f35ffdc2bb975e7d7e4
     introduced_in_commits: []
+  - purl: pkg:pypi/cai-framework
+    affected_versions: vers:pypi/<=0.5.10
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.6'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-jfpc-wj3m-qw2m/GHSA-jfpc-wj3m-qw2m.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-78

@@ -37,11 +37,6 @@ summary: "orval MCP client is vulnerable to a code injection attack.\n### Impact
   \ in version 7.18.0 or higher\n\n### Workarounds\nDo check your generated OpenAPI yaml/json\
   \ before running through Orval CLI and correct it if it has injection."
 impacted_packages:
-  - purl: pkg:npm/%40orval/mcp
-    affected_versions: vers:npm/<7.18.0
-    fixed_versions: vers:npm/7.18.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/orval-labs/orval
     affected_versions:
     fixed_versions:
@@ -49,16 +44,21 @@ impacted_packages:
       - vcs_url: https://github.com/orval-labs/orval
         commit: 80b5fe73b94f120a3a5561952d6d4b0f8d7e928d
     introduced_in_commits: []
+  - purl: pkg:npm/%40orval/mcp
+    affected_versions: vers:npm/<7.18.0
+    fixed_versions: vers:npm/7.18.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-mwr6-3gp8-9jmj/GHSA-mwr6-3gp8-9jmj.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-77

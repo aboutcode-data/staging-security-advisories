@@ -30,11 +30,6 @@ summary: |
   ### Recommended Fix
   Perform a dummy bcrypt check when user is not found to ensure consistent response times.
 impacted_packages:
-  - purl: pkg:npm/%40vendure/core
-    affected_versions: vers:npm/<3.5.3
-    fixed_versions: vers:npm/3.5.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/vendurehq/vendure
     affected_versions:
     fixed_versions:
@@ -42,16 +37,21 @@ impacted_packages:
       - vcs_url: https://github.com/vendurehq/vendure
         commit: 7f0c5556ecddb44a5d5208677a45fdd5923b0cc9
     introduced_in_commits: []
+  - purl: pkg:npm/%40vendure/core
+    affected_versions: vers:npm/<3.5.3
+    fixed_versions: vers:npm/3.5.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '2.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:U
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-6f65-4fv2-wwch/GHSA-6f65-4fv2-wwch.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-202

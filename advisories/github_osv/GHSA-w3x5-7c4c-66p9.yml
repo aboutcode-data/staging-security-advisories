@@ -71,11 +71,6 @@ summary: "Signal K Server has Unauthenticated State Pollution leading to Remote 
   \ RCE is demonstrated by creating a file named `rce_proof.txt` containing the text \"RCE_SUCCESS\"\
   \ on the server filesystem using the exploit chain."
 impacted_packages:
-  - purl: pkg:npm/signalk-server
-    affected_versions: vers:npm/<2.19.0
-    fixed_versions: vers:npm/2.19.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/signalk/signalk-server
     affected_versions:
     fixed_versions:
@@ -83,16 +78,21 @@ impacted_packages:
       - vcs_url: https://github.com/signalk/signalk-server
         commit: 5c211eaf33f0ccadbaed6720264780d92afbd7f8
     introduced_in_commits: []
+  - purl: pkg:npm/signalk-server
+    affected_versions: vers:npm/<2.19.0
+    fixed_versions: vers:npm/2.19.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.6'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-w3x5-7c4c-66p9/GHSA-w3x5-7c4c-66p9.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-78

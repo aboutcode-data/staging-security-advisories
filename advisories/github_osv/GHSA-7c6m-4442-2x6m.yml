@@ -118,6 +118,11 @@ summary: |
   The `AddressRange` import is already present at line 5 of this file. This fix is consistent with the existing cell coordinate validation in `Coordinate::coordinateFromString()` and the column validation at line 161.
 impacted_packages:
   - purl: pkg:composer/phpoffice/phpspreadsheet
+    affected_versions: vers:composer/<=2.1.15
+    fixed_versions: vers:composer/2.1.16
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/phpoffice/phpspreadsheet
     affected_versions: vers:composer/<=5.6.0
     fixed_versions: vers:composer/5.7.0
     fixed_in_commits: []
@@ -133,11 +138,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/phpoffice/phpspreadsheet
-    affected_versions: vers:composer/<=2.1.15
-    fixed_versions: vers:composer/2.1.16
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/phpoffice/phpspreadsheet
     affected_versions: vers:composer/<=1.30.3
     fixed_versions: vers:composer/1.30.4
     fixed_in_commits: []
@@ -146,12 +146,12 @@ severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-7c6m-4442-2x6m/GHSA-7c6m-4442-2x6m.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-400

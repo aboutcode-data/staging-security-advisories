@@ -75,11 +75,6 @@ summary: |
 
   The `X-Injected: true` header appears as a separate response header, confirming that CRLF sequences in user input are not sanitized by the encoder.
 impacted_packages:
-  - purl: pkg:hex/ewe
-    affected_versions: vers:hex/<3.0.6
-    fixed_versions: vers:hex/3.0.6
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/vshakitskiy/ewe
     affected_versions:
     fixed_versions:
@@ -87,16 +82,21 @@ impacted_packages:
       - vcs_url: https://github.com/vshakitskiy/ewe
         commit: ce4ff214d32626a10fda9398dc94a2d720e17446
     introduced_in_commits: []
+  - purl: pkg:hex/ewe
+    affected_versions: vers:hex/<3.0.6
+    fixed_versions: vers:hex/3.0.6
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-x2w3-23jr-hrpf/GHSA-x2w3-23jr-hrpf.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-113

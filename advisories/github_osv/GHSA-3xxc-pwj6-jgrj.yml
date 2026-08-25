@@ -112,11 +112,6 @@ summary: "rfc3161-client Has Improper Certificate Validation\n### Summary\n\nAn 
   \ exposed to impersonation. An attacker can forge the identity of the TSA as long as they\
   \ hold *any* valid timestamp from a CA trusted by the Verifier."
 impacted_packages:
-  - purl: pkg:pypi/rfc3161-client
-    affected_versions: vers:pypi/<=1.0.5
-    fixed_versions: vers:pypi/1.0.6
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/trailofbits/rfc3161-client
     affected_versions:
     fixed_versions:
@@ -124,16 +119,21 @@ impacted_packages:
       - vcs_url: https://github.com/trailofbits/rfc3161-client
         commit: 4f7d372297b4fba7b0119e9f954e4495ec0592c0
     introduced_in_commits: []
+  - purl: pkg:pypi/rfc3161-client
+    affected_versions: vers:pypi/<=1.0.5
+    fixed_versions: vers:pypi/1.0.6
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.2'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-3xxc-pwj6-jgrj/GHSA-3xxc-pwj6-jgrj.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-295

@@ -16,11 +16,6 @@ summary: |
   - XlabAI Team of Tencent Xuanwu Lab
   - Atuin Automated Vulnerability Discovery Engine
 impacted_packages:
-  - purl: pkg:npm/sm-crypto
-    affected_versions: vers:npm/<0.3.14
-    fixed_versions: vers:npm/0.3.14
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/juneandgreen/sm-crypto
     affected_versions:
     fixed_versions:
@@ -28,16 +23,21 @@ impacted_packages:
       - vcs_url: https://github.com/juneandgreen/sm-crypto
         commit: b1c824e58fdf1eaa73692c124a095819a8c45707
     introduced_in_commits: []
+  - purl: pkg:npm/sm-crypto
+    affected_versions: vers:npm/<0.3.14
+    fixed_versions: vers:npm/0.3.14
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-pgx9-497m-6c4v/GHSA-pgx9-497m-6c4v.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-345

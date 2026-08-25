@@ -7,11 +7,6 @@ summary: |
   FoundationAgents MetaGPT vulnerable to os command injection via the Terminal.run_command
   A vulnerability has been found in FoundationAgents MetaGPT up to 0.8.1. This issue affects the function Terminal.run_command in the library metagpt/tools/libs/terminal.py. The manipulation leads to os command injection. Remote exploitation of the attack is possible. The exploit has been disclosed to the public and may be used. The identifier of the patch is d04ffc8dc67903e8b327f78ec121df5e190ffc7b. Applying a patch is the recommended action to fix this issue.
 impacted_packages:
-  - purl: pkg:pypi/metagpt
-    affected_versions: vers:pypi/<=0.8.1
-    fixed_versions: vers:pypi/0.8.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/paipeline/metagpt
     affected_versions:
     fixed_versions:
@@ -19,21 +14,26 @@ impacted_packages:
       - vcs_url: https://github.com/paipeline/metagpt
         commit: d04ffc8dc67903e8b327f78ec121df5e190ffc7b
     introduced_in_commits: []
+  - purl: pkg:pypi/metagpt
+    affected_versions: vers:pypi/<=0.8.1
+    fixed_versions: vers:pypi/0.8.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-wp29-qmvj-frvp/GHSA-wp29-qmvj-frvp.json
   - score: '5.5'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-wp29-qmvj-frvp/GHSA-wp29-qmvj-frvp.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-77

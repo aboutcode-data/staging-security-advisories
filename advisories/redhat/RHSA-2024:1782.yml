@@ -24,14 +24,174 @@ summary: |
 
   For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.
 impacted_packages:
-  - purl: pkg:rpm/redhat/bind?arch=aarch64&epoch=32
+  - purl: pkg:rpm/redhat/bind-chroot?arch=aarch64&epoch=32
     affected_versions: vers:rpm/<9.11.36-11.el8_9.1
     fixed_versions: vers:rpm/9.11.36-11.el8_9.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bind-chroot?arch=aarch64&epoch=32
+  - purl: pkg:rpm/redhat/bind-libs?arch=aarch64&epoch=32
     affected_versions: vers:rpm/<9.11.36-11.el8_9.1
     fixed_versions: vers:rpm/9.11.36-11.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bind-pkcs11?arch=aarch64&epoch=32
+    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
+    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bind-pkcs11-libs?arch=aarch64&epoch=32
+    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
+    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bind-sdb?arch=aarch64&epoch=32
+    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
+    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bind-sdb-chroot?arch=aarch64&epoch=32
+    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
+    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bind-pkcs11-utils-debuginfo?arch=aarch64&epoch=32
+    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
+    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bind-export-devel?arch=aarch64&epoch=32
+    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
+    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bind-export-libs?arch=aarch64&epoch=32
+    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
+    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/dhcp-client?arch=aarch64&epoch=12
+    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
+    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/dhcp-libs?arch=aarch64&epoch=12
+    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
+    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/dhcp-server?arch=aarch64&epoch=12
+    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
+    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/dhcp-server-debuginfo?arch=aarch64&epoch=12
+    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
+    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bind-libs-lite?arch=ppc64le&epoch=32
+    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
+    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bind-pkcs11-debuginfo?arch=ppc64le&epoch=32
+    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
+    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bind-export-devel?arch=ppc64le&epoch=32
+    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
+    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/dhcp-relay?arch=ppc64le&epoch=12
+    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
+    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/dhcp-debugsource?arch=ppc64le&epoch=12
+    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
+    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/dhcp-client-debuginfo?arch=ppc64le&epoch=12
+    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
+    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/dhcp-relay-debuginfo?arch=ppc64le&epoch=12
+    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
+    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bind-devel?arch=x86_64&epoch=32
+    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
+    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bind-sdb-chroot?arch=x86_64&epoch=32
+    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
+    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/dhcp-libs?arch=x86_64&epoch=12
+    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
+    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/dhcp-relay?arch=x86_64&epoch=12
+    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
+    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/dhcp-server?arch=x86_64&epoch=12
+    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
+    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/dhcp-client-debuginfo?arch=x86_64&epoch=12
+    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
+    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/dhcp-debuginfo?arch=x86_64&epoch=12
+    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
+    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/dhcp-relay-debuginfo?arch=x86_64&epoch=12
+    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
+    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bind-devel?arch=i686&epoch=32
+    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
+    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bind-libs-lite?arch=i686&epoch=32
+    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
+    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bind-sdb-debuginfo?arch=i686&epoch=32
+    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
+    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bind-utils-debuginfo?arch=i686&epoch=32
+    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
+    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bind-export-devel?arch=i686&epoch=32
+    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
+    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/dhcp-debugsource?arch=i686&epoch=12
+    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
+    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/bind-devel?arch=aarch64&epoch=32
@@ -39,7 +199,142 @@ impacted_packages:
     fixed_versions: vers:rpm/9.11.36-11.el8_9.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bind-libs?arch=aarch64&epoch=32
+  - purl: pkg:rpm/redhat/dhcp-server?arch=ppc64le&epoch=12
+    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
+    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/dhcp-client?arch=x86_64&epoch=12
+    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
+    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/dhcp-client-debuginfo?arch=i686&epoch=12
+    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
+    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bind-lite-devel?arch=s390x&epoch=32
+    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
+    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/dhcp-relay?arch=s390x&epoch=12
+    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
+    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/dhcp-relay?arch=aarch64&epoch=12
+    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
+    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/dhcp-debugsource?arch=aarch64&epoch=12
+    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
+    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bind-pkcs11-utils?arch=ppc64le&epoch=32
+    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
+    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bind-pkcs11-libs?arch=x86_64&epoch=32
+    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
+    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bind-sdb?arch=x86_64&epoch=32
+    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
+    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bind-libs-debuginfo?arch=x86_64&epoch=32
+    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
+    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bind-utils-debuginfo?arch=x86_64&epoch=32
+    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
+    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/dhcp-libs?arch=i686&epoch=12
+    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
+    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/dhcp-relay-debuginfo?arch=i686&epoch=12
+    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
+    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bind?arch=s390x&epoch=32
+    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
+    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bind-utils?arch=s390x&epoch=32
+    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
+    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bind-debuginfo?arch=s390x&epoch=32
+    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
+    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bind-libs-debuginfo?arch=s390x&epoch=32
+    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
+    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bind-pkcs11-libs-debuginfo?arch=s390x&epoch=32
+    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
+    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bind-pkcs11-utils-debuginfo?arch=s390x&epoch=32
+    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
+    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bind-utils-debuginfo?arch=s390x&epoch=32
+    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
+    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bind-export-devel?arch=s390x&epoch=32
+    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
+    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/dhcp-libs-debuginfo?arch=s390x&epoch=12
+    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
+    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/dhcp-relay-debuginfo?arch=s390x&epoch=12
+    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
+    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bind-license?arch=noarch&epoch=32
+    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
+    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python3-bind?arch=noarch&epoch=32
+    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
+    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bind-sdb-chroot?arch=s390x&epoch=32
+    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
+    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bind?arch=aarch64&epoch=32
     affected_versions: vers:rpm/<9.11.36-11.el8_9.1
     fixed_versions: vers:rpm/9.11.36-11.el8_9.1
     fixed_in_commits: []
@@ -54,32 +349,12 @@ impacted_packages:
     fixed_versions: vers:rpm/9.11.36-11.el8_9.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bind-pkcs11?arch=aarch64&epoch=32
-    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
-    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/bind-pkcs11-devel?arch=aarch64&epoch=32
     affected_versions: vers:rpm/<9.11.36-11.el8_9.1
     fixed_versions: vers:rpm/9.11.36-11.el8_9.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bind-pkcs11-libs?arch=aarch64&epoch=32
-    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
-    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/bind-pkcs11-utils?arch=aarch64&epoch=32
-    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
-    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bind-sdb?arch=aarch64&epoch=32
-    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
-    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bind-sdb-chroot?arch=aarch64&epoch=32
     affected_versions: vers:rpm/<9.11.36-11.el8_9.1
     fixed_versions: vers:rpm/9.11.36-11.el8_9.1
     fixed_in_commits: []
@@ -124,11 +399,6 @@ impacted_packages:
     fixed_versions: vers:rpm/9.11.36-11.el8_9.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bind-pkcs11-utils-debuginfo?arch=aarch64&epoch=32
-    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
-    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/bind-sdb-debuginfo?arch=aarch64&epoch=32
     affected_versions: vers:rpm/<9.11.36-11.el8_9.1
     fixed_versions: vers:rpm/9.11.36-11.el8_9.1
@@ -137,41 +407,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/bind-utils-debuginfo?arch=aarch64&epoch=32
     affected_versions: vers:rpm/<9.11.36-11.el8_9.1
     fixed_versions: vers:rpm/9.11.36-11.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bind-export-devel?arch=aarch64&epoch=32
-    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
-    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bind-export-libs?arch=aarch64&epoch=32
-    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
-    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/dhcp-client?arch=aarch64&epoch=12
-    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
-    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/dhcp-libs?arch=aarch64&epoch=12
-    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
-    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/dhcp-relay?arch=aarch64&epoch=12
-    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
-    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/dhcp-server?arch=aarch64&epoch=12
-    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
-    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/dhcp-debugsource?arch=aarch64&epoch=12
-    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
-    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/dhcp-client-debuginfo?arch=aarch64&epoch=12
@@ -190,11 +425,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/dhcp-relay-debuginfo?arch=aarch64&epoch=12
-    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
-    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/dhcp-server-debuginfo?arch=aarch64&epoch=12
     affected_versions: vers:rpm/<4.3.6-49.el8_9.1
     fixed_versions: vers:rpm/4.3.6-49.el8_9.1
     fixed_in_commits: []
@@ -219,11 +449,6 @@ impacted_packages:
     fixed_versions: vers:rpm/9.11.36-11.el8_9.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bind-libs-lite?arch=ppc64le&epoch=32
-    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
-    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/bind-lite-devel?arch=ppc64le&epoch=32
     affected_versions: vers:rpm/<9.11.36-11.el8_9.1
     fixed_versions: vers:rpm/9.11.36-11.el8_9.1
@@ -240,11 +465,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/bind-pkcs11-libs?arch=ppc64le&epoch=32
-    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
-    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bind-pkcs11-utils?arch=ppc64le&epoch=32
     affected_versions: vers:rpm/<9.11.36-11.el8_9.1
     fixed_versions: vers:rpm/9.11.36-11.el8_9.1
     fixed_in_commits: []
@@ -289,11 +509,6 @@ impacted_packages:
     fixed_versions: vers:rpm/9.11.36-11.el8_9.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bind-pkcs11-debuginfo?arch=ppc64le&epoch=32
-    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
-    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/bind-pkcs11-libs-debuginfo?arch=ppc64le&epoch=32
     affected_versions: vers:rpm/<9.11.36-11.el8_9.1
     fixed_versions: vers:rpm/9.11.36-11.el8_9.1
@@ -314,11 +529,6 @@ impacted_packages:
     fixed_versions: vers:rpm/9.11.36-11.el8_9.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bind-export-devel?arch=ppc64le&epoch=32
-    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
-    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/bind-export-libs?arch=ppc64le&epoch=32
     affected_versions: vers:rpm/<9.11.36-11.el8_9.1
     fixed_versions: vers:rpm/9.11.36-11.el8_9.1
@@ -334,37 +544,12 @@ impacted_packages:
     fixed_versions: vers:rpm/4.3.6-49.el8_9.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/dhcp-relay?arch=ppc64le&epoch=12
-    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
-    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/dhcp-server?arch=ppc64le&epoch=12
-    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
-    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/dhcp-debugsource?arch=ppc64le&epoch=12
-    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
-    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/dhcp-client-debuginfo?arch=ppc64le&epoch=12
-    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
-    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/dhcp-debuginfo?arch=ppc64le&epoch=12
     affected_versions: vers:rpm/<4.3.6-49.el8_9.1
     fixed_versions: vers:rpm/4.3.6-49.el8_9.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/dhcp-libs-debuginfo?arch=ppc64le&epoch=12
-    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
-    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/dhcp-relay-debuginfo?arch=ppc64le&epoch=12
     affected_versions: vers:rpm/<4.3.6-49.el8_9.1
     fixed_versions: vers:rpm/4.3.6-49.el8_9.1
     fixed_in_commits: []
@@ -380,11 +565,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/bind-chroot?arch=x86_64&epoch=32
-    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
-    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bind-devel?arch=x86_64&epoch=32
     affected_versions: vers:rpm/<9.11.36-11.el8_9.1
     fixed_versions: vers:rpm/9.11.36-11.el8_9.1
     fixed_in_commits: []
@@ -414,22 +594,7 @@ impacted_packages:
     fixed_versions: vers:rpm/9.11.36-11.el8_9.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bind-pkcs11-libs?arch=x86_64&epoch=32
-    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
-    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/bind-pkcs11-utils?arch=x86_64&epoch=32
-    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
-    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bind-sdb?arch=x86_64&epoch=32
-    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
-    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bind-sdb-chroot?arch=x86_64&epoch=32
     affected_versions: vers:rpm/<9.11.36-11.el8_9.1
     fixed_versions: vers:rpm/9.11.36-11.el8_9.1
     fixed_in_commits: []
@@ -450,11 +615,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/bind-export-libs-debuginfo?arch=x86_64&epoch=32
-    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
-    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bind-libs-debuginfo?arch=x86_64&epoch=32
     affected_versions: vers:rpm/<9.11.36-11.el8_9.1
     fixed_versions: vers:rpm/9.11.36-11.el8_9.1
     fixed_in_commits: []
@@ -484,11 +644,6 @@ impacted_packages:
     fixed_versions: vers:rpm/9.11.36-11.el8_9.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bind-utils-debuginfo?arch=x86_64&epoch=32
-    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
-    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/bind-export-devel?arch=x86_64&epoch=32
     affected_versions: vers:rpm/<9.11.36-11.el8_9.1
     fixed_versions: vers:rpm/9.11.36-11.el8_9.1
@@ -499,37 +654,7 @@ impacted_packages:
     fixed_versions: vers:rpm/9.11.36-11.el8_9.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/dhcp-client?arch=x86_64&epoch=12
-    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
-    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/dhcp-libs?arch=x86_64&epoch=12
-    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
-    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/dhcp-relay?arch=x86_64&epoch=12
-    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
-    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/dhcp-server?arch=x86_64&epoch=12
-    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
-    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/dhcp-debugsource?arch=x86_64&epoch=12
-    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
-    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/dhcp-client-debuginfo?arch=x86_64&epoch=12
-    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
-    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/dhcp-debuginfo?arch=x86_64&epoch=12
     affected_versions: vers:rpm/<4.3.6-49.el8_9.1
     fixed_versions: vers:rpm/4.3.6-49.el8_9.1
     fixed_in_commits: []
@@ -539,27 +664,12 @@ impacted_packages:
     fixed_versions: vers:rpm/4.3.6-49.el8_9.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/dhcp-relay-debuginfo?arch=x86_64&epoch=12
-    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
-    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/dhcp-server-debuginfo?arch=x86_64&epoch=12
     affected_versions: vers:rpm/<4.3.6-49.el8_9.1
     fixed_versions: vers:rpm/4.3.6-49.el8_9.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bind-devel?arch=i686&epoch=32
-    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
-    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/bind-libs?arch=i686&epoch=32
-    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
-    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bind-libs-lite?arch=i686&epoch=32
     affected_versions: vers:rpm/<9.11.36-11.el8_9.1
     fixed_versions: vers:rpm/9.11.36-11.el8_9.1
     fixed_in_commits: []
@@ -619,39 +729,9 @@ impacted_packages:
     fixed_versions: vers:rpm/9.11.36-11.el8_9.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bind-sdb-debuginfo?arch=i686&epoch=32
-    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
-    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bind-utils-debuginfo?arch=i686&epoch=32
-    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
-    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bind-export-devel?arch=i686&epoch=32
-    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
-    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/bind-export-libs?arch=i686&epoch=32
     affected_versions: vers:rpm/<9.11.36-11.el8_9.1
     fixed_versions: vers:rpm/9.11.36-11.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/dhcp-libs?arch=i686&epoch=12
-    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
-    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/dhcp-debugsource?arch=i686&epoch=12
-    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
-    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/dhcp-client-debuginfo?arch=i686&epoch=12
-    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
-    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/dhcp-debuginfo?arch=i686&epoch=12
@@ -664,19 +744,9 @@ impacted_packages:
     fixed_versions: vers:rpm/4.3.6-49.el8_9.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/dhcp-relay-debuginfo?arch=i686&epoch=12
-    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
-    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/dhcp-server-debuginfo?arch=i686&epoch=12
     affected_versions: vers:rpm/<4.3.6-49.el8_9.1
     fixed_versions: vers:rpm/4.3.6-49.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bind?arch=s390x&epoch=32
-    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
-    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/bind-chroot?arch=s390x&epoch=32
@@ -695,11 +765,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/bind-libs-lite?arch=s390x&epoch=32
-    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
-    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bind-lite-devel?arch=s390x&epoch=32
     affected_versions: vers:rpm/<9.11.36-11.el8_9.1
     fixed_versions: vers:rpm/9.11.36-11.el8_9.1
     fixed_in_commits: []
@@ -729,32 +794,12 @@ impacted_packages:
     fixed_versions: vers:rpm/9.11.36-11.el8_9.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bind-sdb-chroot?arch=s390x&epoch=32
-    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
-    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bind-utils?arch=s390x&epoch=32
-    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
-    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/bind-debugsource?arch=s390x&epoch=32
     affected_versions: vers:rpm/<9.11.36-11.el8_9.1
     fixed_versions: vers:rpm/9.11.36-11.el8_9.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bind-debuginfo?arch=s390x&epoch=32
-    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
-    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/bind-export-libs-debuginfo?arch=s390x&epoch=32
-    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
-    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bind-libs-debuginfo?arch=s390x&epoch=32
     affected_versions: vers:rpm/<9.11.36-11.el8_9.1
     fixed_versions: vers:rpm/9.11.36-11.el8_9.1
     fixed_in_commits: []
@@ -769,27 +814,7 @@ impacted_packages:
     fixed_versions: vers:rpm/9.11.36-11.el8_9.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bind-pkcs11-libs-debuginfo?arch=s390x&epoch=32
-    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
-    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bind-pkcs11-utils-debuginfo?arch=s390x&epoch=32
-    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
-    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/bind-sdb-debuginfo?arch=s390x&epoch=32
-    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
-    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bind-utils-debuginfo?arch=s390x&epoch=32
-    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
-    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bind-export-devel?arch=s390x&epoch=32
     affected_versions: vers:rpm/<9.11.36-11.el8_9.1
     fixed_versions: vers:rpm/9.11.36-11.el8_9.1
     fixed_in_commits: []
@@ -805,11 +830,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/dhcp-libs?arch=s390x&epoch=12
-    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
-    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/dhcp-relay?arch=s390x&epoch=12
     affected_versions: vers:rpm/<4.3.6-49.el8_9.1
     fixed_versions: vers:rpm/4.3.6-49.el8_9.1
     fixed_in_commits: []
@@ -834,29 +854,9 @@ impacted_packages:
     fixed_versions: vers:rpm/4.3.6-49.el8_9.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/dhcp-libs-debuginfo?arch=s390x&epoch=12
-    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
-    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/dhcp-relay-debuginfo?arch=s390x&epoch=12
-    affected_versions: vers:rpm/<4.3.6-49.el8_9.1
-    fixed_versions: vers:rpm/4.3.6-49.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/dhcp-server-debuginfo?arch=s390x&epoch=12
     affected_versions: vers:rpm/<4.3.6-49.el8_9.1
     fixed_versions: vers:rpm/4.3.6-49.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bind-license?arch=noarch&epoch=32
-    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
-    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python3-bind?arch=noarch&epoch=32
-    affected_versions: vers:rpm/<9.11.36-11.el8_9.1
-    fixed_versions: vers:rpm/9.11.36-11.el8_9.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/dhcp-common?arch=noarch&epoch=12
@@ -878,7 +878,7 @@ severities:
   - score: Important
     scoring_system: rhas
     scoring_elements:
-    published_at: None
+    published_at:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2024_1782.json
 weaknesses: []
 references:

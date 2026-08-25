@@ -41,6 +41,13 @@ summary: |
 
   ```
 impacted_packages:
+  - purl: pkg:github/orval-labs/orval
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/orval-labs/orval
+        commit: 02211fc413524be340ba9ace866a2ef68845ca7c
+    introduced_in_commits: []
   - purl: pkg:npm/%40orval/core
     affected_versions: vers:npm/>=7.19.0|<7.21.0
     fixed_versions: vers:npm/7.21.0
@@ -51,23 +58,16 @@ impacted_packages:
     fixed_versions: vers:npm/8.2.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/orval-labs/orval
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/orval-labs/orval
-        commit: 02211fc413524be340ba9ace866a2ef68845ca7c
-    introduced_in_commits: []
 severities:
   - score: '9.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-gch2-phqh-fg9q/GHSA-gch2-phqh-fg9q.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

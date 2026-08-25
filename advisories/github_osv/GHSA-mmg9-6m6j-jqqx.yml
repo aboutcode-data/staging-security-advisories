@@ -92,11 +92,6 @@ summary: |
 
   This computes the exact output size: the original string length plus, for each occurrence, the difference between the replacement and pattern lengths. The `split()` result is reused to avoid computing it twice.
 impacted_packages:
-  - purl: pkg:npm/liquidjs
-    affected_versions: vers:npm/<=10.25.2
-    fixed_versions: vers:npm/10.25.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/harttle/liquidjs
     affected_versions:
     fixed_versions:
@@ -104,16 +99,21 @@ impacted_packages:
       - vcs_url: https://github.com/harttle/liquidjs
         commit: abc058be0f33d6372cd2216f4945183167abeb25
     introduced_in_commits: []
+  - purl: pkg:npm/liquidjs
+    affected_versions: vers:npm/<=10.25.2
+    fixed_versions: vers:npm/10.25.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '3.7'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-mmg9-6m6j-jqqx/GHSA-mmg9-6m6j-jqqx.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-400

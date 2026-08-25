@@ -37,6 +37,13 @@ summary: |
   - [CWE-59: Improper Link Resolution Before File Access](https://cwe.mitre.org/data/definitions/59.html)
   - [OWASP Path Traversal](https://owasp.org/www-community/attacks/Path_Traversal)
 impacted_packages:
+  - purl: pkg:github/backstage/backstage
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/backstage/backstage
+        commit: c641c147ab371a9a8a2f5f67fdb7cb9c97ef345d
+    introduced_in_commits: []
   - purl: pkg:npm/%40backstage/backend-defaults
     affected_versions: vers:npm/<0.12.2
     fixed_versions: vers:npm/0.12.2
@@ -77,23 +84,16 @@ impacted_packages:
     fixed_versions: vers:npm/0.12.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/backstage/backstage
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/backstage/backstage
-        commit: c641c147ab371a9a8a2f5f67fdb7cb9c97ef345d
-    introduced_in_commits: []
 severities:
   - score: '7.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:N/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-rq6q-wr2q-7pgp/GHSA-rq6q-wr2q-7pgp.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

@@ -132,11 +132,6 @@ summary: |
 
   3. **Strengthen the blocklist.** The current list is missing `COPY` (PostgreSQL file I/O and RCE), `CREATE`, `ALTER`, `DROP`, `GRANT`, `SET`, and `EXECUTE`. Consider switching to a parser-based allowlist that only permits `SELECT` and `WITH ... SELECT` at the AST level rather than relying on keyword blocklisting.
 impacted_packages:
-  - purl: pkg:npm/%40nocobase/plugin-collection-sql
-    affected_versions: vers:npm/<2.0.39
-    fixed_versions: vers:npm/2.0.39
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/nocobase/nocobase
     affected_versions:
     fixed_versions:
@@ -144,16 +139,21 @@ impacted_packages:
       - vcs_url: https://github.com/nocobase/nocobase
         commit: 851aee543efa894142e0f7be03eb55d9cec06a91
     introduced_in_commits: []
+  - purl: pkg:npm/%40nocobase/plugin-collection-sql
+    affected_versions: vers:npm/<2.0.39
+    fixed_versions: vers:npm/2.0.39
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.2'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-wrwh-c28m-9jjh/GHSA-wrwh-c28m-9jjh.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-284

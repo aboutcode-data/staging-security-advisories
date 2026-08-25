@@ -20,6 +20,15 @@ summary: |
   ### For more information
   If there are any questions or comments about this advisory, email Ghost at [security@ghost.org](mailto:security@ghost.org).
 impacted_packages:
+  - purl: pkg:github/tryghost/ghost
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/tryghost/ghost
+        commit: b59f707f670e6f175b669977724ccf16c718430b
+      - vcs_url: https://github.com/tryghost/ghost
+        commit: fc7bc2fb0888513498154ec5cb4b21eccb88de07
+    introduced_in_commits: []
   - purl: pkg:npm/ghost
     affected_versions: vers:npm/<=6.10.3
     fixed_versions: vers:npm/6.11.0
@@ -30,25 +39,16 @@ impacted_packages:
     fixed_versions: vers:npm/5.130.6
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/tryghost/ghost
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/tryghost/ghost
-        commit: b59f707f670e6f175b669977724ccf16c718430b
-      - vcs_url: https://github.com/tryghost/ghost
-        commit: fc7bc2fb0888513498154ec5cb4b21eccb88de07
-    introduced_in_commits: []
 severities:
   - score: '8.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-5fp7-g646-ccf4/GHSA-5fp7-g646-ccf4.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-287

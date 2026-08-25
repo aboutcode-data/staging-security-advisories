@@ -38,13 +38,6 @@ summary: |
   ### Impact
   Successful exploitation allows low-privileged or standard users to view, create, modify that should be restricted to specific administrative or operational roles. Depending on the sensitivity of these configurations (e.g., routing of alerts, reports, or data streams), an attacker could redirect critical outputs, suppress notifications, insert misleading channels, or gain insight into internal workflows. In regulated environments, this may result in compliance violations, operational disruption, or facilitation of further attacks through reconnaissance.
 impacted_packages:
-  - purl: pkg:github/pimcore/web2print-tools
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/pimcore/web2print-tools
-        commit: 7714452a04b9f9b077752784af4b8d0b05e464a1
-    introduced_in_commits: []
   - purl: pkg:composer/pimcore/web2print-tools-bundle
     affected_versions: vers:composer/<=6.1.0
     fixed_versions: vers:composer/6.1.1
@@ -55,16 +48,23 @@ impacted_packages:
     fixed_versions: vers:composer/5.2.2
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:github/pimcore/web2print-tools
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/pimcore/web2print-tools
+        commit: 7714452a04b9f9b077752784af4b8d0b05e464a1
+    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-4wg4-p27p-5q2r/GHSA-4wg4-p27p-5q2r.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-284

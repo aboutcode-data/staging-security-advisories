@@ -20,6 +20,13 @@ summary: |
   ### Impact
   Pimcore backend users can access sensitive environment variables, potentially exposing critical information.
 impacted_packages:
+  - purl: pkg:github/pimcore/pimcore
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/pimcore/pimcore
+        commit: 002ec7d5f84973819236796e5b314703b58e8601
+    introduced_in_commits: []
   - purl: pkg:composer/pimcore/pimcore
     affected_versions: vers:composer/<=12.3.0
     fixed_versions: vers:composer/12.3.1
@@ -30,23 +37,16 @@ impacted_packages:
     fixed_versions: vers:composer/11.5.14
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/pimcore/pimcore
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/pimcore/pimcore
-        commit: 002ec7d5f84973819236796e5b314703b58e8601
-    introduced_in_commits: []
 severities:
   - score: '8.6'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-q433-j342-rp9h/GHSA-q433-j342-rp9h.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-532

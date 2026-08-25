@@ -58,11 +58,6 @@ summary: "Fickling has a bypass via runpy.run_path() and runpy.run_module()\n# F
   \ security control (fickling) is specifically designed to prevent this\n- The bypass requires\
   \ no special conditions beyond crafting the pickle with `runpy`"
 impacted_packages:
-  - purl: pkg:pypi/fickling
-    affected_versions: vers:pypi/<=0.1.6
-    fixed_versions: vers:pypi/0.1.7
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/trailofbits/fickling
     affected_versions:
     fixed_versions:
@@ -72,16 +67,21 @@ impacted_packages:
       - vcs_url: https://github.com/trailofbits/fickling
         commit: 9a2b3f89bd0598b528d62c10a64c1986fcb09f66
     introduced_in_commits: []
+  - purl: pkg:pypi/fickling
+    affected_versions: vers:pypi/<=0.1.6
+    fixed_versions: vers:pypi/0.1.7
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.9'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-wfq2-52f7-7qvj/GHSA-wfq2-52f7-7qvj.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-184

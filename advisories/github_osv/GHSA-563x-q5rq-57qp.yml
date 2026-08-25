@@ -12,34 +12,9 @@ summary: |
 
   Users are recommended to upgrade to version 11.0.20, 10.1.52 or 9.0.116, which fix the issue.
 impacted_packages:
-  - purl: pkg:maven/org.apache.tomcat/tomcat-coyote
-    affected_versions: vers:maven/>=7.0.0|<9.0.116
-    fixed_versions: vers:maven/9.0.116
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.tomcat/tomcat-coyote
-    affected_versions: vers:maven/>=10.1.0-M1|<10.1.52
-    fixed_versions: vers:maven/10.1.52
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.tomcat/tomcat-coyote
-    affected_versions: vers:maven/<=11.0.18
-    fixed_versions: vers:maven/11.0.20
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
-    affected_versions: vers:maven/>=7.0.0|<9.0.116
-    fixed_versions: vers:maven/9.0.116
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
     affected_versions: vers:maven/>=10.1.0-M1|<10.1.52
     fixed_versions: vers:maven/10.1.52
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
-    affected_versions: vers:maven/<=11.0.18
-    fixed_versions: vers:maven/11.0.20
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/apache/tomcat
@@ -59,16 +34,41 @@ impacted_packages:
       - vcs_url: https://github.com/apache/tomcat
         commit: 1e71441a15972f56e661b0b549fb9e5d838b83bb
     introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat/tomcat-coyote
+    affected_versions: vers:maven/>=7.0.0|<9.0.116
+    fixed_versions: vers:maven/9.0.116
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat/tomcat-coyote
+    affected_versions: vers:maven/>=10.1.0-M1|<10.1.52
+    fixed_versions: vers:maven/10.1.52
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat/tomcat-coyote
+    affected_versions: vers:maven/<=11.0.18
+    fixed_versions: vers:maven/11.0.20
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
+    affected_versions: vers:maven/>=7.0.0|<9.0.116
+    fixed_versions: vers:maven/9.0.116
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
+    affected_versions: vers:maven/<=11.0.18
+    fixed_versions: vers:maven/11.0.20
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-563x-q5rq-57qp/GHSA-563x-q5rq-57qp.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-444

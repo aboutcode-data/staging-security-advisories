@@ -91,11 +91,6 @@ summary: |
   * Build artifacts are not reused across independent runs without validation
 impacted_packages:
   - purl: pkg:composer/phpunit/phpunit
-    affected_versions: vers:composer/>=11.0.0|<11.5.50
-    fixed_versions: vers:composer/11.5.50
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/phpunit/phpunit
     affected_versions: vers:composer/<8.5.52
     fixed_versions: vers:composer/8.5.52
     fixed_in_commits: []
@@ -108,6 +103,11 @@ impacted_packages:
   - purl: pkg:composer/phpunit/phpunit
     affected_versions: vers:composer/>=10.0.0|<10.5.62
     fixed_versions: vers:composer/10.5.62
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/phpunit/phpunit
+    affected_versions: vers:composer/>=11.0.0|<11.5.50
+    fixed_versions: vers:composer/11.5.50
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/phpunit/phpunit
@@ -128,12 +128,12 @@ severities:
   - score: '7.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-vvj3-c3rp-c85p/GHSA-vvj3-c3rp-c85p.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-502

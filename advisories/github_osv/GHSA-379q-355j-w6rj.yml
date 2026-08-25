@@ -135,11 +135,6 @@ summary: |
   - There is no warning that git dependencies are treated differently
   - The `onlyBuiltDependencies` configuration does not affect git dependencies
 impacted_packages:
-  - purl: pkg:npm/pnpm
-    affected_versions: vers:npm/>=10.0.0|<10.26.0
-    fixed_versions: vers:npm/10.26.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/pnpm/pnpm
     affected_versions:
     fixed_versions:
@@ -147,16 +142,21 @@ impacted_packages:
       - vcs_url: https://github.com/pnpm/pnpm
         commit: 73cc63504d9bc360c43e4b2feb9080677f03c5b5
     introduced_in_commits: []
+  - purl: pkg:npm/pnpm
+    affected_versions: vers:npm/>=10.0.0|<10.26.0
+    fixed_versions: vers:npm/10.26.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-379q-355j-w6rj/GHSA-379q-355j-w6rj.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-693

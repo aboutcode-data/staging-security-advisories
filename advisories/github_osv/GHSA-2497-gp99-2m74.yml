@@ -22,13 +22,6 @@ summary: "Pterodactyl endlessly reprocesses/reuploads activity log data due to S
   \ where wings will keep uploading the same activity data to the panel repeatedly (growing\
   \ each time to include new activity) until the panels’ database server runs out of disk space."
 impacted_packages:
-  - purl: pkg:github/pterodactyl/wings
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/pterodactyl/wings
-        commit: 9ffbcdcdb1163da823cf9959b9602df9f7dcb54a
-    introduced_in_commits: []
   - purl: pkg:github/pterodactyl/panel
     affected_versions:
     fixed_versions:
@@ -36,21 +29,28 @@ impacted_packages:
       - vcs_url: https://github.com/pterodactyl/panel
         commit: 09caa0d4995bd924b53b9a9e9b4883ac27bd5607
     introduced_in_commits: []
+  - purl: pkg:github/pterodactyl/wings
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/pterodactyl/wings
+        commit: 9ffbcdcdb1163da823cf9959b9602df9f7dcb54a
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-2497-gp99-2m74/GHSA-2497-gp99-2m74.json
   - score: '8.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-2497-gp99-2m74/GHSA-2497-gp99-2m74.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-400

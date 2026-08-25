@@ -31,11 +31,6 @@ summary: "GuardDog Zip Bomb Vulnerability in safe_extract() Allows DoS\n## Summa
   5. **Consider using a safe ZIP library** (similar to tarsafe)\n\n## Credit\n\nReported by:\
   \ Charbel (dwbruijn)"
 impacted_packages:
-  - purl: pkg:pypi/guarddog
-    affected_versions: vers:pypi/<2.7.1
-    fixed_versions: vers:pypi/2.7.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/datadog/guarddog
     affected_versions:
     fixed_versions:
@@ -43,16 +38,21 @@ impacted_packages:
       - vcs_url: https://github.com/datadog/guarddog
         commit: c3fb07b4838945f42497e78b7a02bcfb1e63969b
     introduced_in_commits: []
+  - purl: pkg:pypi/guarddog
+    affected_versions: vers:pypi/<2.7.1
+    fixed_versions: vers:pypi/2.7.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.1'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-ffj4-jq7m-9g6v/GHSA-ffj4-jq7m-9g6v.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-409

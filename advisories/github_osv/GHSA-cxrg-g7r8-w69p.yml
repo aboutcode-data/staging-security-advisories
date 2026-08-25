@@ -86,11 +86,6 @@ summary: |
   *   **Affected Components:** Applications using `@fastify/middie` to apply security controls (auth, rate limiting, IP filtering) to specific route prefixes.
   *   **Severity:** High. Attackers can trivially bypass critical security middleware to access protected administrative or sensitive endpoints.
 impacted_packages:
-  - purl: pkg:npm/%40fastify/middie
-    affected_versions: vers:npm/<=9.0.3
-    fixed_versions: vers:npm/9.1.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/fastify/middie
     affected_versions:
     fixed_versions:
@@ -98,16 +93,21 @@ impacted_packages:
       - vcs_url: https://github.com/fastify/middie
         commit: d44cd56eb724490babf7b452fdbbdd37ea2effba
     introduced_in_commits: []
+  - purl: pkg:npm/%40fastify/middie
+    affected_versions: vers:npm/<=9.0.3
+    fixed_versions: vers:npm/9.1.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-cxrg-g7r8-w69p/GHSA-cxrg-g7r8-w69p.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-177

@@ -16,16 +16,6 @@ impacted_packages:
     fixed_versions: vers:maven/4.14.6
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/org.apache.camel/camel-mina
-    affected_versions: vers:maven/>=4.15.0|<4.18.2
-    fixed_versions: vers:maven/4.18.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.camel/camel-mina
-    affected_versions: vers:maven/>=4.19.0|<4.20.0
-    fixed_versions: vers:maven/4.20.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/apache/camel
     affected_versions:
     fixed_versions:
@@ -37,16 +27,26 @@ impacted_packages:
       - vcs_url: https://github.com/apache/camel
         commit: c35b0a3720f8c80025b06112d5d9c2932426d7f0
     introduced_in_commits: []
+  - purl: pkg:maven/org.apache.camel/camel-mina
+    affected_versions: vers:maven/>=4.15.0|<4.18.2
+    fixed_versions: vers:maven/4.18.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.camel/camel-mina
+    affected_versions: vers:maven/>=4.19.0|<4.20.0
+    fixed_versions: vers:maven/4.20.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-vpr3-2659-rw55/GHSA-vpr3-2659-rw55.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-502

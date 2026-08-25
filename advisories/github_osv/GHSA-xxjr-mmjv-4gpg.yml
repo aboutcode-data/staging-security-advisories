@@ -10,6 +10,13 @@ summary: "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit`
   \ but does not allow overwriting their original behavior.  \n\n### Patches\n\nThis issue is\
   \ patched on 4.17.23."
 impacted_packages:
+  - purl: pkg:github/lodash/lodash
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/lodash/lodash
+        commit: edadd452146f7e4bad4ea684e955708931d84d81
+    introduced_in_commits: []
   - purl: pkg:npm/lodash
     affected_versions: vers:npm/<=4.17.22
     fixed_versions: vers:npm/4.17.23
@@ -30,28 +37,21 @@ impacted_packages:
     fixed_versions: vers:npm/4.17.23
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/lodash/lodash
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/lodash/lodash
-        commit: edadd452146f7e4bad4ea684e955708931d84d81
-    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-xxjr-mmjv-4gpg/GHSA-xxjr-mmjv-4gpg.json
   - score: '6.9'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:L/SC:H/SI:H/SA:H/E:P
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-xxjr-mmjv-4gpg/GHSA-xxjr-mmjv-4gpg.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-1321

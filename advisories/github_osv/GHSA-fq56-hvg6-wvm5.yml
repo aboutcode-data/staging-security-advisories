@@ -84,11 +84,6 @@ summary: "Signal K Server vulnerable to JWT Token Theft via WebSocket Enumeratio
   \ the original requester can retrieve their token\n4. Consider delivering tokens through a\
   \ separate secure channel rather than the polling endpoint"
 impacted_packages:
-  - purl: pkg:npm/signalk-server
-    affected_versions: vers:npm/<2.19.0
-    fixed_versions: vers:npm/2.19.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/signalk/signalk-server
     affected_versions:
     fixed_versions:
@@ -96,16 +91,21 @@ impacted_packages:
       - vcs_url: https://github.com/signalk/signalk-server
         commit: 221aff6cd89c56308084d1781b3abbf938605bd3
     introduced_in_commits: []
+  - purl: pkg:npm/signalk-server
+    affected_versions: vers:npm/<2.19.0
+    fixed_versions: vers:npm/2.19.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-fq56-hvg6-wvm5/GHSA-fq56-hvg6-wvm5.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-288

@@ -11,6 +11,11 @@ summary: |
 
   Users are recommended to upgrade to version 11.0.20, 10.1.53 or 9.0.116, which fix the issue.
 impacted_packages:
+  - purl: pkg:maven/org.apache.tomcat/tomcat
+    affected_versions: vers:maven/>=10.1.50|<10.1.53
+    fixed_versions: vers:maven/10.1.53
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat/tomcat-coyote
     affected_versions: vers:maven/>=9.0.113|<9.0.116
     fixed_versions: vers:maven/9.0.116
@@ -32,14 +37,20 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat/tomcat
-    affected_versions: vers:maven/>=10.1.50|<10.1.53
-    fixed_versions: vers:maven/10.1.53
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.tomcat/tomcat
     affected_versions: vers:maven/<=11.0.18
     fixed_versions: vers:maven/11.0.20
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/apache/tomcat
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/tomcat
+        commit: 4d0615a5c718c260d6d4e0b944a050f09a490c02
+      - vcs_url: https://github.com/apache/tomcat
+        commit: 021d1f833e38b683a44688f7b28f1f27e8e37c36
+      - vcs_url: https://github.com/apache/tomcat
+        commit: 95f7778248cac46d03e6af04de9c72a598be3a53
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
     affected_versions: vers:maven/>=9.0.113|<9.0.116
@@ -56,32 +67,21 @@ impacted_packages:
     fixed_versions: vers:maven/11.0.20
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/apache/tomcat
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/apache/tomcat
-        commit: 4d0615a5c718c260d6d4e0b944a050f09a490c02
-      - vcs_url: https://github.com/apache/tomcat
-        commit: 021d1f833e38b683a44688f7b28f1f27e8e37c36
-      - vcs_url: https://github.com/apache/tomcat
-        commit: 95f7778248cac46d03e6af04de9c72a598be3a53
-    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-8mc5-53m5-3qj2/GHSA-8mc5-53m5-3qj2.json
   - score: '6.9'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-8mc5-53m5-3qj2/GHSA-8mc5-53m5-3qj2.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-20

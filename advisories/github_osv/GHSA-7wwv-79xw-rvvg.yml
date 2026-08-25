@@ -52,6 +52,18 @@ summary: |
   24.9.0 - 24.9.6
   ≥24.9.7
 impacted_packages:
+  - purl: pkg:maven/com.vaadin/vaadin
+    affected_versions: vers:maven/>=24.0.0|<24.8.14
+    fixed_versions: vers:maven/24.8.14
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/vaadin/flow-components
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/vaadin/flow-components
+        commit: 71046aa3dd08be0907bd03140c33131b94f6e99c
+    introduced_in_commits: []
   - purl: pkg:maven/com.vaadin/vaadin-server
     affected_versions: vers:maven/>=7.0.0|<7.7.50
     fixed_versions: vers:maven/7.7.50
@@ -68,11 +80,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/com.vaadin/vaadin
-    affected_versions: vers:maven/>=24.0.0|<24.8.14
-    fixed_versions: vers:maven/24.8.14
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/com.vaadin/vaadin
     affected_versions: vers:maven/>=24.9.0|<24.9.7
     fixed_versions: vers:maven/24.9.7
     fixed_in_commits: []
@@ -92,23 +99,16 @@ impacted_packages:
     fixed_versions: vers:maven/24.9.7
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/vaadin/flow-components
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/vaadin/flow-components
-        commit: 71046aa3dd08be0907bd03140c33131b94f6e99c
-    introduced_in_commits: []
 severities:
   - score: '4.8'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-7wwv-79xw-rvvg/GHSA-7wwv-79xw-rvvg.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

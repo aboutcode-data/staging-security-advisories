@@ -28,11 +28,6 @@ summary: |
 
   Upgrade to `hermes` >= 0.9.1.
 impacted_packages:
-  - purl: pkg:pypi/hermes
-    affected_versions: vers:pypi/<=0.9.0
-    fixed_versions: vers:pypi/0.9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/softwarepub/hermes
     affected_versions:
     fixed_versions:
@@ -42,16 +37,21 @@ impacted_packages:
       - vcs_url: https://github.com/softwarepub/hermes
         commit: 7f64f102e916c76dc44404b77ab2a80f5a4e59b1
     introduced_in_commits: []
+  - purl: pkg:pypi/hermes
+    affected_versions: vers:pypi/<=0.9.0
+    fixed_versions: vers:pypi/0.9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.9'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:N/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-jm5j-jfrm-hm23/GHSA-jm5j-jfrm-hm23.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-532

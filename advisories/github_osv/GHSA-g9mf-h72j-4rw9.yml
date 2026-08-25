@@ -25,6 +25,13 @@ summary: |
   * https://github.com/advisories/GHSA-gm62-xv2j-4w53
   * https://curl.se/docs/CVE-2022-32206.html
 impacted_packages:
+  - purl: pkg:github/nodejs/undici
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/nodejs/undici
+        commit: b04e3cbb569c1596f86c108e9b52c79d8475dcb3
+    introduced_in_commits: []
   - purl: pkg:npm/undici
     affected_versions: vers:npm/>=7.0.0|<7.18.2
     fixed_versions: vers:npm/7.18.2
@@ -35,23 +42,16 @@ impacted_packages:
     fixed_versions: vers:npm/6.23.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/nodejs/undici
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/nodejs/undici
-        commit: b04e3cbb569c1596f86c108e9b52c79d8475dcb3
-    introduced_in_commits: []
 severities:
   - score: '5.9'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-g9mf-h72j-4rw9/GHSA-g9mf-h72j-4rw9.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-770

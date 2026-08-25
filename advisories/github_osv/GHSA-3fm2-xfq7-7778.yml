@@ -77,11 +77,6 @@ summary: |
   ### Impact
   The attacker now possesses a valid administrator JWT and can take full control of the application.
 impacted_packages:
-  - purl: pkg:npm/%40haxtheweb/haxcms-nodejs
-    affected_versions: vers:npm/>=11.0.6|<25.0.0
-    fixed_versions: vers:npm/25.0.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/haxtheweb/haxcms-nodejs
     affected_versions:
     fixed_versions:
@@ -89,16 +84,21 @@ impacted_packages:
       - vcs_url: https://github.com/haxtheweb/haxcms-nodejs
         commit: 317a8ae29f88be389f7cfeffaef416957122d97e
     introduced_in_commits: []
+  - purl: pkg:npm/%40haxtheweb/haxcms-nodejs
+    affected_versions: vers:npm/>=11.0.6|<25.0.0
+    fixed_versions: vers:npm/25.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-3fm2-xfq7-7778/GHSA-3fm2-xfq7-7778.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

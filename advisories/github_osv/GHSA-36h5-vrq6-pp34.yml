@@ -33,11 +33,6 @@ summary: |
 
   - [NIST SP 800-132: Password-Based Key Derivation](https://csrc.nist.gov/publications/detail/sp/800-132/final)
 impacted_packages:
-  - purl: pkg:maven/net.gleske/jervis
-    affected_versions: vers:maven/<2.2
-    fixed_versions: vers:maven/2.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/samrocketman/jervis
     affected_versions:
     fixed_versions:
@@ -47,21 +42,26 @@ impacted_packages:
       - vcs_url: https://github.com/samrocketman/jervis
         commit: c3981ff71de7b0f767dfe7b37a2372cb2a51974a
     introduced_in_commits: []
+  - purl: pkg:maven/net.gleske/jervis
+    affected_versions: vers:maven/<2.2
+    fixed_versions: vers:maven/2.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-36h5-vrq6-pp34/GHSA-36h5-vrq6-pp34.json
   - score: '8.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-36h5-vrq6-pp34/GHSA-36h5-vrq6-pp34.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-326

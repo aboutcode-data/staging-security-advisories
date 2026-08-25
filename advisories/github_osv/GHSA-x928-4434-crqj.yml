@@ -6,27 +6,12 @@ summary: |
   ImageMagick has a memory leak in PNG encoder when writing a MNG image
   When the PNG encoder fails to write an MNG image it can leak memory.
 impacted_packages:
-  - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
-    affected_versions: vers:nuget/<14.12.0
-    fixed_versions: vers:nuget/14.12.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-HDRI-AnyCPU
-    affected_versions: vers:nuget/<14.12.0
-    fixed_versions: vers:nuget/14.12.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-HDRI-x64
-    affected_versions: vers:nuget/<14.12.0
-    fixed_versions: vers:nuget/14.12.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-HDRI-x86
     affected_versions: vers:nuget/<14.12.0
     fixed_versions: vers:nuget/14.12.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-x64
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-x64
     affected_versions: vers:nuget/<14.12.0
     fixed_versions: vers:nuget/14.12.0
     fixed_in_commits: []
@@ -41,17 +26,27 @@ impacted_packages:
     fixed_versions: vers:nuget/14.12.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q8-x64
-    affected_versions: vers:nuget/<14.12.0
-    fixed_versions: vers:nuget/14.12.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q8-x86
     affected_versions: vers:nuget/<14.12.0
     fixed_versions: vers:nuget/14.12.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q8-OpenMP-arm64
+  - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-AnyCPU
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-x64
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q8-x64
     affected_versions: vers:nuget/<14.12.0
     fixed_versions: vers:nuget/14.12.0
     fixed_in_commits: []
@@ -86,6 +81,11 @@ impacted_packages:
     fixed_versions: vers:nuget/14.12.0
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q8-OpenMP-arm64
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q8-OpenMP-x64
     affected_versions: vers:nuget/<14.12.0
     fixed_versions: vers:nuget/14.12.0
@@ -100,12 +100,12 @@ severities:
   - score: '3.7'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-x928-4434-crqj/GHSA-x928-4434-crqj.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-401

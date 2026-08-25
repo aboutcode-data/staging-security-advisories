@@ -7,11 +7,6 @@ summary: |
   Keycloak: Replay of action tokens via improper handling of single-use entries
   A flaw was found in Keycloak. The SingleUseObjectProvider, a global key-value store, lacks proper type and namespace isolation. This vulnerability allows an attacker to delete arbitrary single-use entries, which can enable the replay of consumed action tokens, such as password reset links. This could lead to unauthorized access or account compromise.
 impacted_packages:
-  - purl: pkg:maven/org.keycloak/keycloak-services
-    affected_versions: vers:maven/<26.5.7
-    fixed_versions: vers:maven/26.5.7
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/keycloak/keycloak
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/keycloak/keycloak
         commit: 9046f201125a6fd6be9c116b99d348509d99d4a5
     introduced_in_commits: []
+  - purl: pkg:maven/org.keycloak/keycloak-services
+    affected_versions: vers:maven/<26.5.7
+    fixed_versions: vers:maven/26.5.7
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-rx66-hj7g-28h7/GHSA-rx66-hj7g-28h7.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-653

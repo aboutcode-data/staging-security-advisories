@@ -19,11 +19,6 @@ summary: |
 
   Affected systems should upgrade to patched versions immediately.
 impacted_packages:
-  - purl: pkg:npm/devalue
-    affected_versions: vers:npm/>=5.1.0|<5.6.2
-    fixed_versions: vers:npm/5.6.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/sveltejs/devalue
     affected_versions:
     fixed_versions:
@@ -31,16 +26,21 @@ impacted_packages:
       - vcs_url: https://github.com/sveltejs/devalue
         commit: 11755849fa0634ae294a15ec0aef2f43efcad7c4
     introduced_in_commits: []
+  - purl: pkg:npm/devalue
+    affected_versions: vers:npm/>=5.1.0|<5.6.2
+    fixed_versions: vers:npm/5.6.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-g2pg-6438-jwpf/GHSA-g2pg-6438-jwpf.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-405

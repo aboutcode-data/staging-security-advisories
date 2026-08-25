@@ -9,6 +9,15 @@ summary: |
 
   Due to missing recursion depth accounting inside the internal Any-handling logic, an attacker can supply deeply nested Any structures that bypass the intended recursion limit, eventually exhausting Python’s recursion stack and causing a RecursionError.
 impacted_packages:
+  - purl: pkg:github/protocolbuffers/protobuf
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/protocolbuffers/protobuf
+        commit: 5ebddcb1bcbe51d1fe323baa145e85f4f23128cf
+      - vcs_url: https://github.com/protocolbuffers/protobuf
+        commit: d2b001626d137c62dfee6c88c87324102531868b
+    introduced_in_commits: []
   - purl: pkg:pypi/protobuf
     affected_versions: vers:pypi/<=6.33.4
     fixed_versions: vers:pypi/6.33.5
@@ -19,25 +28,16 @@ impacted_packages:
     fixed_versions: vers:pypi/5.29.6
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/protocolbuffers/protobuf
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/protocolbuffers/protobuf
-        commit: 5ebddcb1bcbe51d1fe323baa145e85f4f23128cf
-      - vcs_url: https://github.com/protocolbuffers/protobuf
-        commit: d2b001626d137c62dfee6c88c87324102531868b
-    introduced_in_commits: []
 severities:
   - score: '8.2'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-7gcm-g887-7qv7/GHSA-7gcm-g887-7qv7.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-674

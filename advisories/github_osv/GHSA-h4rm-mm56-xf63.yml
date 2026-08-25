@@ -57,11 +57,6 @@ summary: "Fickling vulnerable to detection bypass due to \"builtins\" blindness\
   \ those imports are, say emit import nodes for dangerous functions like ```__import__``` while\
   \ not emitting for stuff like ```dict()```"
 impacted_packages:
-  - purl: pkg:pypi/fickling
-    affected_versions: vers:pypi/<=0.1.6
-    fixed_versions: vers:pypi/0.1.7
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/trailofbits/fickling
     affected_versions:
     fixed_versions:
@@ -71,16 +66,21 @@ impacted_packages:
       - vcs_url: https://github.com/trailofbits/fickling
         commit: 9f309ab834797f280cb5143a2f6f987579fa7cdf
     introduced_in_commits: []
+  - purl: pkg:pypi/fickling
+    affected_versions: vers:pypi/<=0.1.6
+    fixed_versions: vers:pypi/0.1.7
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.9'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-h4rm-mm56-xf63/GHSA-h4rm-mm56-xf63.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-502

@@ -140,11 +140,6 @@ summary: |
 
   Preferably also require a short-lived `globalToken` (`verifyToken($_REQUEST['globalToken'])`) as `include_config.php:140-143` prescribes, and update `view/configurations_body.php` to include that token in the AJAX payload. Audit all other `objects/*.json.php` state-mutating endpoints for the same omission — the pattern is structural and likely present on more endpoints.
 impacted_packages:
-  - purl: pkg:composer/wwbn/avideo
-    affected_versions: vers:composer/<=29.0.0
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/wwbn/avideo
     affected_versions:
     fixed_versions:
@@ -152,16 +147,21 @@ impacted_packages:
       - vcs_url: https://github.com/wwbn/avideo
         commit: f9492f5e6123dff0292d5bb3164fde7665dc36b4
     introduced_in_commits: []
+  - purl: pkg:composer/wwbn/avideo
+    affected_versions: vers:composer/<=29.0.0
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-vvfw-4m39-fjqf/GHSA-vvfw-4m39-fjqf.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-352

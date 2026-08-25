@@ -21,11 +21,6 @@ summary: |
   - Avoiding short or prefix-based whitelist entries.
   - Enforcing IP filtering at the network layer (for example, via reverse proxies or firewalls).
 impacted_packages:
-  - purl: pkg:npm/n8n
-    affected_versions: vers:npm/>=1.36.0|<2.2.0
-    fixed_versions: vers:npm/2.2.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/n8n-io/n8n
     affected_versions:
     fixed_versions:
@@ -33,16 +28,21 @@ impacted_packages:
       - vcs_url: https://github.com/n8n-io/n8n
         commit: 11f8597d4ad69ea3b58941573997fdbc4de1fec5
     introduced_in_commits: []
+  - purl: pkg:npm/n8n
+    affected_versions: vers:npm/>=1.36.0|<2.2.0
+    fixed_versions: vers:npm/2.2.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-w96v-gf22-crwp/GHSA-w96v-gf22-crwp.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-183

@@ -260,11 +260,6 @@ summary: |
   IP validation blocks internal and cloud targets
   Combined, they eliminate the SSRF attack surface while preserving legitimate use cases (public IP APIs)
 impacted_packages:
-  - purl: pkg:pypi/glances
-    affected_versions: vers:pypi/<4.5.4
-    fixed_versions: vers:pypi/4.5.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/nicolargo/glances
     affected_versions:
     fixed_versions:
@@ -272,21 +267,26 @@ impacted_packages:
       - vcs_url: https://github.com/nicolargo/glances
         commit: d6808be66728956477cc4b544bab1acd71ac65fb
     introduced_in_commits: []
+  - purl: pkg:pypi/glances
+    affected_versions: vers:pypi/<4.5.4
+    fixed_versions: vers:pypi/4.5.4
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-g5pq-48mj-jvw8/GHSA-g5pq-48mj-jvw8.json
   - score: '7.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:P
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-g5pq-48mj-jvw8/GHSA-g5pq-48mj-jvw8.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-918

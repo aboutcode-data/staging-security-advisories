@@ -46,11 +46,6 @@ summary: "MobSF has Stored XSS via Manifest Analysis - Dialer Code Host Field\n#
   \ \n\n\n<img width=\"1440\" height=\"780\" alt=\"Screenshot 2026-01-15 at 12 24 57 AM\" src=\"\
   https://github.com/user-attachments/assets/8673b76a-954a-45e7-833a-a64e0a972f2e\" />"
 impacted_packages:
-  - purl: pkg:pypi/mobsf
-    affected_versions: vers:pypi/<4.4.5
-    fixed_versions: vers:pypi/4.4.5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/mobsf/mobile-security-framework-mobsf
     affected_versions:
     fixed_versions:
@@ -58,16 +53,21 @@ impacted_packages:
       - vcs_url: https://github.com/mobsf/mobile-security-framework-mobsf
         commit: 2b08dd050e7685ee2a14fdbb454affab94129eae
     introduced_in_commits: []
+  - purl: pkg:pypi/mobsf
+    affected_versions: vers:pypi/<4.4.5
+    fixed_versions: vers:pypi/4.4.5
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-8hf7-h89p-3pqj/GHSA-8hf7-h89p-3pqj.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

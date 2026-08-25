@@ -44,11 +44,6 @@ summary: |
   - **Information Disclosure:** Attackers can discover what products other customers have purchased.
   - **Potential Fraud:** Attackers could potentially exploit this for social engineering or targeted attacks.
 impacted_packages:
-  - purl: pkg:composer/bagisto/bagisto
-    affected_versions: vers:composer/<2.3.10
-    fixed_versions: vers:composer/2.3.10
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/bagisto/bagisto
     affected_versions:
     fixed_versions:
@@ -56,16 +51,21 @@ impacted_packages:
       - vcs_url: https://github.com/bagisto/bagisto
         commit: b2b1cf62577245d03a68532478cffbe321df74d3
     introduced_in_commits: []
+  - purl: pkg:composer/bagisto/bagisto
+    affected_versions: vers:composer/<2.3.10
+    fixed_versions: vers:composer/2.3.10
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-x5rw-qvvp-5cgm/GHSA-x5rw-qvvp-5cgm.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-639

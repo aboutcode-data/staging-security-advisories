@@ -28,62 +28,47 @@ summary: |
 
   All OpenShift Container Platform 4.15 users are advised to upgrade to these updated packages and images when they are available in the appropriate release channel. To check for available updates, use the OpenShift CLI (oc) or web console. Instructions for upgrading a cluster are available at https://docs.openshift.com/container-platform/4.15/updating/updating_a_cluster/updating-cluster-cli.html
 impacted_packages:
-  - purl: pkg:rpm/redhat/podman?arch=src&epoch=3
-    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
-    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/haproxy?arch=src
-    affected_versions: vers:rpm/<2.6.13-4.rhaos4.15.el8
-    fixed_versions: vers:rpm/2.6.13-4.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman?arch=src&epoch=3
-    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
-    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman?arch=x86_64&epoch=3
     affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
     fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-gvproxy?arch=x86_64&epoch=3
+  - purl: pkg:rpm/redhat/haproxy-debugsource?arch=aarch64
+    affected_versions: vers:rpm/<2.6.13-4.rhaos4.15.el8
+    fixed_versions: vers:rpm/2.6.13-4.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-gvproxy?arch=aarch64&epoch=3
+    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
+    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-remote?arch=aarch64&epoch=3
+    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
+    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-gvproxy?arch=ppc64le&epoch=3
     affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
     fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-plugins?arch=x86_64&epoch=3
+  - purl: pkg:rpm/redhat/podman-debuginfo?arch=ppc64le&epoch=3
     affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
     fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-remote?arch=x86_64&epoch=3
+  - purl: pkg:rpm/redhat/podman?arch=ppc64le&epoch=3
     affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
     fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-tests?arch=x86_64&epoch=3
+  - purl: pkg:rpm/redhat/podman-remote?arch=aarch64&epoch=3
     affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
     fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-debugsource?arch=x86_64&epoch=3
-    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
-    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-debuginfo?arch=x86_64&epoch=3
-    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
-    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-gvproxy-debuginfo?arch=x86_64&epoch=3
-    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
-    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-plugins-debuginfo?arch=x86_64&epoch=3
+  - purl: pkg:rpm/redhat/podman-gvproxy-debuginfo?arch=s390x&epoch=3
     affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
     fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
     fixed_in_commits: []
@@ -91,11 +76,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/podman-remote-debuginfo?arch=x86_64&epoch=3
     affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
     fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/haproxy26?arch=x86_64
-    affected_versions: vers:rpm/<2.6.13-4.rhaos4.15.el8
-    fixed_versions: vers:rpm/2.6.13-4.rhaos4.15.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/haproxy-debugsource?arch=x86_64
@@ -108,16 +88,6 @@ impacted_packages:
     fixed_versions: vers:rpm/2.6.13-4.rhaos4.15.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman?arch=x86_64&epoch=3
-    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
-    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-catatonit?arch=x86_64&epoch=3
-    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
-    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-gvproxy?arch=x86_64&epoch=3
     affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
     fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
@@ -128,17 +98,7 @@ impacted_packages:
     fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-remote?arch=x86_64&epoch=3
-    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
-    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-tests?arch=x86_64&epoch=3
-    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
-    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-debugsource?arch=x86_64&epoch=3
     affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
     fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
     fixed_in_commits: []
@@ -158,11 +118,6 @@ impacted_packages:
     fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-plugins-debuginfo?arch=x86_64&epoch=3
-    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
-    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-remote-debuginfo?arch=x86_64&epoch=3
     affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
     fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
@@ -173,22 +128,202 @@ impacted_packages:
     fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-tests?arch=aarch64&epoch=3
+    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
+    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-gvproxy-debuginfo?arch=aarch64&epoch=3
+    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
+    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/haproxy26?arch=aarch64
+    affected_versions: vers:rpm/<2.6.13-4.rhaos4.15.el8
+    fixed_versions: vers:rpm/2.6.13-4.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/haproxy26-debuginfo?arch=aarch64
+    affected_versions: vers:rpm/<2.6.13-4.rhaos4.15.el8
+    fixed_versions: vers:rpm/2.6.13-4.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-debuginfo?arch=aarch64&epoch=3
+    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
+    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/haproxy26?arch=ppc64le
+    affected_versions: vers:rpm/<2.6.13-4.rhaos4.15.el8
+    fixed_versions: vers:rpm/2.6.13-4.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/haproxy26-debuginfo?arch=ppc64le
+    affected_versions: vers:rpm/<2.6.13-4.rhaos4.15.el8
+    fixed_versions: vers:rpm/2.6.13-4.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman?arch=ppc64le&epoch=3
+    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
+    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-debugsource?arch=ppc64le&epoch=3
+    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
+    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-gvproxy-debuginfo?arch=ppc64le&epoch=3
+    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
+    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman?arch=s390x&epoch=3
+    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
+    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-plugins-debuginfo?arch=s390x&epoch=3
+    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
+    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman?arch=s390x&epoch=3
+    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
+    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-gvproxy?arch=s390x&epoch=3
+    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
+    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-plugins?arch=s390x&epoch=3
+    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
+    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-remote?arch=s390x&epoch=3
+    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
+    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-gvproxy-debuginfo?arch=s390x&epoch=3
+    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
+    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-plugins-debuginfo?arch=s390x&epoch=3
+    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
+    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-remote-debuginfo?arch=s390x&epoch=3
+    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
+    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-docker?arch=noarch&epoch=3
+    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
+    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-tests?arch=s390x&epoch=3
+    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
+    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/haproxy?arch=src
+    affected_versions: vers:rpm/<2.6.13-4.rhaos4.15.el8
+    fixed_versions: vers:rpm/2.6.13-4.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-plugins-debuginfo?arch=x86_64&epoch=3
+    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
+    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman?arch=src&epoch=3
+    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
+    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman?arch=src&epoch=3
+    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
+    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-gvproxy?arch=x86_64&epoch=3
+    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
+    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-plugins?arch=x86_64&epoch=3
+    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
+    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-remote?arch=x86_64&epoch=3
+    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
+    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-tests?arch=x86_64&epoch=3
+    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
+    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-debugsource?arch=x86_64&epoch=3
+    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
+    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-debuginfo?arch=x86_64&epoch=3
+    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
+    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-gvproxy-debuginfo?arch=x86_64&epoch=3
+    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
+    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-plugins-debuginfo?arch=x86_64&epoch=3
+    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
+    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/haproxy26?arch=x86_64
+    affected_versions: vers:rpm/<2.6.13-4.rhaos4.15.el8
+    fixed_versions: vers:rpm/2.6.13-4.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman?arch=x86_64&epoch=3
+    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
+    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-catatonit?arch=x86_64&epoch=3
+    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
+    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-remote?arch=x86_64&epoch=3
+    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
+    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-debugsource?arch=x86_64&epoch=3
+    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
+    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-gvproxy?arch=aarch64&epoch=3
     affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
     fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-plugins?arch=aarch64&epoch=3
-    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
-    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-remote?arch=aarch64&epoch=3
-    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
-    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-tests?arch=aarch64&epoch=3
     affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
     fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
     fixed_in_commits: []
@@ -203,11 +338,6 @@ impacted_packages:
     fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-gvproxy-debuginfo?arch=aarch64&epoch=3
-    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
-    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-plugins-debuginfo?arch=aarch64&epoch=3
     affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
     fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
@@ -216,21 +346,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/podman-remote-debuginfo?arch=aarch64&epoch=3
     affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
     fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/haproxy26?arch=aarch64
-    affected_versions: vers:rpm/<2.6.13-4.rhaos4.15.el8
-    fixed_versions: vers:rpm/2.6.13-4.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/haproxy-debugsource?arch=aarch64
-    affected_versions: vers:rpm/<2.6.13-4.rhaos4.15.el8
-    fixed_versions: vers:rpm/2.6.13-4.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/haproxy26-debuginfo?arch=aarch64
-    affected_versions: vers:rpm/<2.6.13-4.rhaos4.15.el8
-    fixed_versions: vers:rpm/2.6.13-4.rhaos4.15.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman?arch=aarch64&epoch=3
@@ -243,17 +358,7 @@ impacted_packages:
     fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-gvproxy?arch=aarch64&epoch=3
-    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
-    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-plugins?arch=aarch64&epoch=3
-    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
-    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-remote?arch=aarch64&epoch=3
     affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
     fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
     fixed_in_commits: []
@@ -273,11 +378,6 @@ impacted_packages:
     fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-debuginfo?arch=aarch64&epoch=3
-    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
-    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-gvproxy-debuginfo?arch=aarch64&epoch=3
     affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
     fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
@@ -291,16 +391,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/podman-remote-debuginfo?arch=aarch64&epoch=3
     affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
     fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman?arch=ppc64le&epoch=3
-    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
-    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-gvproxy?arch=ppc64le&epoch=3
-    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
-    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-plugins?arch=ppc64le&epoch=3
@@ -323,11 +413,6 @@ impacted_packages:
     fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-debuginfo?arch=ppc64le&epoch=3
-    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
-    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-gvproxy-debuginfo?arch=ppc64le&epoch=3
     affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
     fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
@@ -343,24 +428,9 @@ impacted_packages:
     fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/haproxy26?arch=ppc64le
-    affected_versions: vers:rpm/<2.6.13-4.rhaos4.15.el8
-    fixed_versions: vers:rpm/2.6.13-4.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/haproxy-debugsource?arch=ppc64le
     affected_versions: vers:rpm/<2.6.13-4.rhaos4.15.el8
     fixed_versions: vers:rpm/2.6.13-4.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/haproxy26-debuginfo?arch=ppc64le
-    affected_versions: vers:rpm/<2.6.13-4.rhaos4.15.el8
-    fixed_versions: vers:rpm/2.6.13-4.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman?arch=ppc64le&epoch=3
-    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
-    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-catatonit?arch=ppc64le&epoch=3
@@ -388,22 +458,12 @@ impacted_packages:
     fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-debugsource?arch=ppc64le&epoch=3
-    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
-    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-catatonit-debuginfo?arch=ppc64le&epoch=3
     affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
     fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-debuginfo?arch=ppc64le&epoch=3
-    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
-    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-gvproxy-debuginfo?arch=ppc64le&epoch=3
     affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
     fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
     fixed_in_commits: []
@@ -416,11 +476,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/podman-remote-debuginfo?arch=ppc64le&epoch=3
     affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
     fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman?arch=s390x&epoch=3
-    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
-    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-gvproxy?arch=s390x&epoch=3
@@ -449,16 +504,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-debuginfo?arch=s390x&epoch=3
-    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
-    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-gvproxy-debuginfo?arch=s390x&epoch=3
-    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
-    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-plugins-debuginfo?arch=s390x&epoch=3
     affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
     fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
     fixed_in_commits: []
@@ -483,32 +528,7 @@ impacted_packages:
     fixed_versions: vers:rpm/2.6.13-4.rhaos4.15.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman?arch=s390x&epoch=3
-    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
-    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-catatonit?arch=s390x&epoch=3
-    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
-    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-gvproxy?arch=s390x&epoch=3
-    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
-    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-plugins?arch=s390x&epoch=3
-    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
-    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-remote?arch=s390x&epoch=3
-    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
-    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-tests?arch=s390x&epoch=3
     affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
     fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
     fixed_in_commits: []
@@ -528,36 +548,16 @@ impacted_packages:
     fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-gvproxy-debuginfo?arch=s390x&epoch=3
-    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
-    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-plugins-debuginfo?arch=s390x&epoch=3
-    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
-    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-remote-debuginfo?arch=s390x&epoch=3
-    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
-    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-docker?arch=noarch&epoch=3
     affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el9
     fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-docker?arch=noarch&epoch=3
-    affected_versions: vers:rpm/<4.4.1-26.2.rhaos4.15.el8
-    fixed_versions: vers:rpm/4.4.1-26.2.rhaos4.15.el8
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: Moderate
     scoring_system: rhas
     scoring_elements:
-    published_at: None
+    published_at:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2024_4853.json
 weaknesses: []
 references:

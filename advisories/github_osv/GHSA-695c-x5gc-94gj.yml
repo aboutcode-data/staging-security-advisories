@@ -11,16 +11,6 @@ summary: |
 
   This issue affects org.apache.camel:camel-coap from 4.14.0 through 4.14.5 and from 4.18.0 before 4.18.1. It is fixed in 4.14.6, 4.18.1, and 4.19.0.
 impacted_packages:
-  - purl: pkg:maven/org.apache.camel/camel-coap
-    affected_versions: vers:maven/<=4.14.5
-    fixed_versions: vers:maven/4.14.6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.camel/camel-coap
-    affected_versions: vers:maven/>=4.18.0|<4.18.1
-    fixed_versions: vers:maven/4.18.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/apache/camel
     affected_versions:
     fixed_versions:
@@ -32,16 +22,26 @@ impacted_packages:
       - vcs_url: https://github.com/apache/camel
         commit: e074c01a719cccf3b1c2efbd2ff31e60fd6220ce
     introduced_in_commits: []
+  - purl: pkg:maven/org.apache.camel/camel-coap
+    affected_versions: vers:maven/<=4.14.5
+    fixed_versions: vers:maven/4.14.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.camel/camel-coap
+    affected_versions: vers:maven/>=4.18.0|<4.18.1
+    fixed_versions: vers:maven/4.18.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '10.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-695c-x5gc-94gj/GHSA-695c-x5gc-94gj.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-915

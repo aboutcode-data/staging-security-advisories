@@ -45,11 +45,6 @@ summary: "Mesop: Unbounded Thread Creation in WebSocket Handler Leads to Denial 
   \ per-connection rate limiting\nImplement a message queue with backpressure\nConsider migrating\
   \ to an async event loop model instead of spawning OS threads"
 impacted_packages:
-  - purl: pkg:pypi/mesop
-    affected_versions: vers:pypi/>=1.2.3|<1.2.5
-    fixed_versions: vers:pypi/1.2.5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/mesop-dev/mesop
     affected_versions:
     fixed_versions:
@@ -57,16 +52,21 @@ impacted_packages:
       - vcs_url: https://github.com/mesop-dev/mesop
         commit: 760a2079b5c609038c826d24dfbcf9b0be98d987
     introduced_in_commits: []
+  - purl: pkg:pypi/mesop
+    affected_versions: vers:pypi/>=1.2.3|<1.2.5
+    fixed_versions: vers:pypi/1.2.5
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-3jr7-6hqp-x679/GHSA-3jr7-6hqp-x679.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-400

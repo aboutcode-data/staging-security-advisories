@@ -36,11 +36,6 @@ summary: "Tendenci Affected by Authenticated Remote Code Execution via Pickle De
   - GitHub Advisory: https://github.com/advisories/GHSA-jqmc-fxxp-r589\n- Original Issue: https://github.com/tendenci/tendenci/issues/867\n\
   - CWE-502: https://cwe.mitre.org/data/definitions/502.html\n- Python Pickle Security: https://docs.python.org/3/library/pickle.html#restricting-globals"
 impacted_packages:
-  - purl: pkg:pypi/tendenci
-    affected_versions: vers:pypi/<15.3.12
-    fixed_versions: vers:pypi/15.3.12
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/tendenci/tendenci
     affected_versions:
     fixed_versions:
@@ -52,16 +47,21 @@ impacted_packages:
       - vcs_url: https://github.com/tendenci/tendenci
         commit: 23d9fd85ab7654e9c83cfc86cb4175c0bd7a77f1
     introduced_in_commits: []
+  - purl: pkg:pypi/tendenci
+    affected_versions: vers:pypi/<15.3.12
+    fixed_versions: vers:pypi/15.3.12
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-339m-4qw5-j2g3/GHSA-339m-4qw5-j2g3.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

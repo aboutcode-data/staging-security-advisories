@@ -7,11 +7,6 @@ summary: |
   Sentencepiece has a a heap overflow issue
   Invalid memory access in Sentencepiece versions less than 0.2.1 when using a vulnerable model file, which is not created in the normal training procedure.
 impacted_packages:
-  - purl: pkg:pypi/sentencepiece
-    affected_versions: vers:pypi/<0.2.1
-    fixed_versions: vers:pypi/0.2.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/google/sentencepiece
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/google/sentencepiece
         commit: d856b67fdb3492e035489abf9b3aaf486144b2c0
     introduced_in_commits: []
+  - purl: pkg:pypi/sentencepiece
+    affected_versions: vers:pypi/<0.2.1
+    fixed_versions: vers:pypi/0.2.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.5'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-38vq-g6vr-w8wf/GHSA-38vq-g6vr-w8wf.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-119

@@ -15,11 +15,6 @@ summary: |
   ### Impact
   A malicious user is able to deny resources to other users on the system, and may be able to excessively consume the limited allocations for a node, or fill up backup space faster than is allowed by the system.
 impacted_packages:
-  - purl: pkg:composer/pterodactyl/panel
-    affected_versions: vers:composer/<1.12.0
-    fixed_versions: vers:composer/1.12.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/pterodactyl/panel
     affected_versions:
     fixed_versions:
@@ -27,21 +22,26 @@ impacted_packages:
       - vcs_url: https://github.com/pterodactyl/panel
         commit: 09caa0d4995bd924b53b9a9e9b4883ac27bd5607
     introduced_in_commits: []
+  - purl: pkg:composer/pterodactyl/panel
+    affected_versions: vers:composer/<1.12.0
+    fixed_versions: vers:composer/1.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-jw2v-cq5x-q68g/GHSA-jw2v-cq5x-q68g.json
   - score: '6.0'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-jw2v-cq5x-q68g/GHSA-jw2v-cq5x-q68g.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-362

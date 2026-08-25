@@ -24,56 +24,6 @@ summary: |
   Avoid passing paths containing `=` (and similar MSYS2-sensitive characters) to Symfony Process when operating under Git Bash/MSYS2.
   Where applicable, configure MSYS2 to disable or restrict argument conversion (e.g. via `MSYS2_ARG_CONV_EXCL`), understanding this may affect other tooling behavior.
 impacted_packages:
-  - purl: pkg:composer/symfony/process
-    affected_versions: vers:composer/<5.4.51
-    fixed_versions: vers:composer/5.4.51
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/process
-    affected_versions: vers:composer/>=6.4.0|<6.4.33
-    fixed_versions: vers:composer/6.4.33
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/process
-    affected_versions: vers:composer/>=7.3.0|<7.3.11
-    fixed_versions: vers:composer/7.3.11
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/process
-    affected_versions: vers:composer/>=7.4.0|<7.4.5
-    fixed_versions: vers:composer/7.4.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/process
-    affected_versions: vers:composer/>=8.0.0|<8.0.5
-    fixed_versions: vers:composer/8.0.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/symfony
-    affected_versions: vers:composer/<5.4.51
-    fixed_versions: vers:composer/5.4.51
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/symfony
-    affected_versions: vers:composer/>=6.4.0|<6.4.33
-    fixed_versions: vers:composer/6.4.33
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/symfony
-    affected_versions: vers:composer/>=7.3.0|<7.3.11
-    fixed_versions: vers:composer/7.3.11
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/symfony
-    affected_versions: vers:composer/>=7.4.0|<7.4.5
-    fixed_versions: vers:composer/7.4.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/symfony
-    affected_versions: vers:composer/>=8.0.0|<8.0.5
-    fixed_versions: vers:composer/8.0.5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/symfony/symfony
     affected_versions:
     fixed_versions:
@@ -83,16 +33,66 @@ impacted_packages:
       - vcs_url: https://github.com/symfony/symfony
         commit: ec154f6f95f8c60f831998ec4d246a857e9d179b
     introduced_in_commits: []
+  - purl: pkg:composer/symfony/process
+    affected_versions: vers:composer/<5.4.51
+    fixed_versions: vers:composer/5.4.51
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/process
+    affected_versions: vers:composer/>=6.4.0|<6.4.33
+    fixed_versions: vers:composer/6.4.33
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/process
+    affected_versions: vers:composer/>=7.3.0|<7.3.11
+    fixed_versions: vers:composer/7.3.11
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/process
+    affected_versions: vers:composer/>=7.4.0|<7.4.5
+    fixed_versions: vers:composer/7.4.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/process
+    affected_versions: vers:composer/>=8.0.0|<8.0.5
+    fixed_versions: vers:composer/8.0.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/<5.4.51
+    fixed_versions: vers:composer/5.4.51
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=6.4.0|<6.4.33
+    fixed_versions: vers:composer/6.4.33
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=7.3.0|<7.3.11
+    fixed_versions: vers:composer/7.3.11
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=7.4.0|<7.4.5
+    fixed_versions: vers:composer/7.4.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=8.0.0|<8.0.5
+    fixed_versions: vers:composer/8.0.5
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:N/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-r39x-jcww-82v6/GHSA-r39x-jcww-82v6.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-88

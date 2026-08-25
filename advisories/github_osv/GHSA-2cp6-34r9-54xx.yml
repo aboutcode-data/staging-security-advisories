@@ -47,11 +47,6 @@ summary: |
   - Extending objects from user input or external APIs
   - Merging options from untrusted sources
 impacted_packages:
-  - purl: pkg:npm/makerjs
-    affected_versions: vers:npm/<=0.19.1
-    fixed_versions: vers:npm/0.19.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/microsoft/maker.js
     affected_versions:
     fixed_versions:
@@ -61,16 +56,21 @@ impacted_packages:
       - vcs_url: https://github.com/microsoft/maker.js
         commit: 85e0f12bd868974b891601a141974f929dec36b8
     introduced_in_commits: []
+  - purl: pkg:npm/makerjs
+    affected_versions: vers:npm/<=0.19.1
+    fixed_versions: vers:npm/0.19.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-2cp6-34r9-54xx/GHSA-2cp6-34r9-54xx.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-1321

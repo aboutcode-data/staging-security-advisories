@@ -7,11 +7,6 @@ summary: |
   Roundcube Webmail: Incorrect password comparison in the password plugin
   An issue was discovered in Roundcube Webmail before 1.5.14 and 1.6.14. Incorrect password comparison in the password plugin could lead to type confusion that allows a password change without knowing the old password.
 impacted_packages:
-  - purl: pkg:composer/roundcube/roundcubemail
-    affected_versions: vers:composer/>=1.7.0-beta|<1.7.0-rc5
-    fixed_versions: vers:composer/1.7.0-rc5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/roundcube/roundcubemail
     affected_versions:
     fixed_versions:
@@ -23,16 +18,21 @@ impacted_packages:
       - vcs_url: https://github.com/roundcube/roundcubemail
         commit: 6a275676a8043083c05c961914d830b79e2490d4
     introduced_in_commits: []
+  - purl: pkg:composer/roundcube/roundcubemail
+    affected_versions: vers:composer/>=1.7.0-beta|<1.7.0-rc5
+    fixed_versions: vers:composer/1.7.0-rc5
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.2'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-46pv-mj2g-93gh/GHSA-46pv-mj2g-93gh.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-843

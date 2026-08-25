@@ -120,11 +120,6 @@ summary: |
 
   Additionally, consider migrating the `notify_url` references in `PayPalYPT.php` (lines 85, 193, 308) from `ipn.php` to `ipnV2.php` or `webhook.php`, and eventually deprecating the v1 IPN handler entirely.
 impacted_packages:
-  - purl: pkg:composer/wwbn/avideo
-    affected_versions: vers:composer/<=26.0.0
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/wwbn/avideo
     affected_versions:
     fixed_versions:
@@ -132,16 +127,21 @@ impacted_packages:
       - vcs_url: https://github.com/wwbn/avideo
         commit: 8f53e9d9c6aaa07d51ace30691981edbbfb5ca1c
     introduced_in_commits: []
+  - purl: pkg:composer/wwbn/avideo
+    affected_versions: vers:composer/<=26.0.0
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-mmw7-wq3c-wf9p/GHSA-mmw7-wq3c-wf9p.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-345

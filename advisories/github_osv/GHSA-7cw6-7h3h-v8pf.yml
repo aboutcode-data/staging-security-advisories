@@ -14,17 +14,17 @@ summary: |
   ### Workarounds
   Install the security plugin
 impacted_packages:
+  - purl: pkg:composer/shopware/shopware
+    affected_versions: vers:composer/>=6.7.0+0|<6.7.6+1
+    fixed_versions: vers:composer/6.7.6+1
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:github/shopware/shopware
     affected_versions:
     fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/shopware/shopware
         commit: 3966b05590e29432b8485ba47b4fcd14dd0b8475
-    introduced_in_commits: []
-  - purl: pkg:composer/shopware/shopware
-    affected_versions: vers:composer/>=6.7.0+0|<6.7.6+1
-    fixed_versions: vers:composer/6.7.6+1
-    fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/shopware/core
     affected_versions: vers:composer/>=6.7.0+0|<6.7.6+1
@@ -35,12 +35,12 @@ severities:
   - score: '7.2'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-7cw6-7h3h-v8pf/GHSA-7cw6-7h3h-v8pf.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94
