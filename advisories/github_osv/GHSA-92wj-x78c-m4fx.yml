@@ -8,13 +8,13 @@ summary: |
   Apache Karaf provides a features deployer, which allows users to "hot deploy" a features XML by dropping the file directly in the deploy folder. The features XML is parsed by XMLInputFactory class. Apache Karaf XMLInputFactory class doesn't contain any mitigation codes against XXE. This is a potential security risk as an user can inject external XML entities in Apache Karaf version prior to 4.1.7 or 4.2.2. It has been fixed in Apache Karaf 4.1.7 and 4.2.2 releases.
 impacted_packages:
   - purl: pkg:maven/org.apache.karaf.specs/org.apache.karaf.specs.java.xml
-    affected_versions: vers:maven/>=4.2.0|<4.2.2
-    fixed_versions: vers:maven/4.2.2
+    affected_versions: vers:maven/<4.1.7
+    fixed_versions: vers:maven/4.1.7
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.karaf.specs/org.apache.karaf.specs.java.xml
-    affected_versions: vers:maven/<4.1.7
-    fixed_versions: vers:maven/4.1.7
+    affected_versions: vers:maven/>=4.2.0|<4.2.2
+    fixed_versions: vers:maven/4.2.2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/apache/karaf
@@ -26,14 +26,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '9.8'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/01/GHSA-92wj-x78c-m4fx/GHSA-92wj-x78c-m4fx.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-611

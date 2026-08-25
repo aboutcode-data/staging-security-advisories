@@ -7,6 +7,17 @@ summary: |
   Ansible Path Traversal vulnerability
   Ansible fetch module before versions 2.5.15, 2.6.14, 2.7.8 has a path traversal vulnerability which allows copying and overwriting files outside of the specified destination in the local ansible controller host, by not restricting an absolute path.
 impacted_packages:
+  - purl: pkg:github/ansible/ansible
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/ansible/ansible
+        commit: 4be3215d2f9f84ca283895879f0c6ce1ed7dd333
+      - vcs_url: https://github.com/ansible/ansible
+        commit: 396a2f74717477d80600450e2b7e45349d7b5110
+      - vcs_url: https://github.com/ansible/ansible
+        commit: f3edc091523fbe301926b7a0db25fbbd96940d93
+    introduced_in_commits: []
   - purl: pkg:pypi/ansible
     affected_versions: vers:pypi/<2.5.15
     fixed_versions: vers:pypi/2.5.15
@@ -22,32 +33,21 @@ impacted_packages:
     fixed_versions: vers:pypi/2.7.8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/ansible/ansible
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/ansible/ansible
-        commit: 4be3215d2f9f84ca283895879f0c6ce1ed7dd333
-      - vcs_url: https://github.com/ansible/ansible
-        commit: 396a2f74717477d80600450e2b7e45349d7b5110
-      - vcs_url: https://github.com/ansible/ansible
-        commit: f3edc091523fbe301926b7a0db25fbbd96940d93
-    introduced_in_commits: []
 severities:
   - score: '4.2'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/04/GHSA-74vq-h4q8-x6jv/GHSA-74vq-h4q8-x6jv.json
   - score: '2.4'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:L/AC:L/AT:N/PR:H/UI:P/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/04/GHSA-74vq-h4q8-x6jv/GHSA-74vq-h4q8-x6jv.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

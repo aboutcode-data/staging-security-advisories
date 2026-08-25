@@ -20,11 +20,6 @@ summary: |
   If you already have a `redirect` callback, make sure that you match the incoming `url` origin against the `baseUrl`.
 impacted_packages:
   - purl: pkg:npm/next-auth
-    affected_versions: vers:npm/<3.29.2
-    fixed_versions: vers:npm/3.29.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:npm/next-auth
     affected_versions: vers:npm/>=4.0.0|<4.3.2
     fixed_versions: vers:npm/4.3.2
     fixed_in_commits: []
@@ -36,16 +31,21 @@ impacted_packages:
       - vcs_url: https://github.com/nextauthjs/next-auth
         commit: 6e15bdcb2d93c1ad5ee3889f702607637e79db50
     introduced_in_commits: []
+  - purl: pkg:npm/next-auth
+    affected_versions: vers:npm/<3.29.2
+    fixed_versions: vers:npm/3.29.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/04/GHSA-f9wg-5f46-cjmw/GHSA-f9wg-5f46-cjmw.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-601

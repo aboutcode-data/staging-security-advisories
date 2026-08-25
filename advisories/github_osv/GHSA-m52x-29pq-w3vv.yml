@@ -8,11 +8,6 @@ summary: "Pannellum Cross-Site Scripting due to data not being sanitized for URI
   \ fails to sanitize URLs for data URIs, which may allow attackers to execute arbitrary code\
   \ in a victim's browser. \n\n\n## Recommendation\n\nUpgrade to version 2.5.6 or later."
 impacted_packages:
-  - purl: pkg:npm/pannellum
-    affected_versions: vers:npm/>=2.5.0|<2.5.5
-    fixed_versions: vers:npm/2.5.5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/mpetroff/pannellum
     affected_versions:
     fixed_versions:
@@ -20,16 +15,21 @@ impacted_packages:
       - vcs_url: https://github.com/mpetroff/pannellum
         commit: cc2f3d99953de59db908e0c6efd1c2c17f7c6914
     introduced_in_commits: []
+  - purl: pkg:npm/pannellum
+    affected_versions: vers:npm/>=2.5.0|<2.5.5
+    fixed_versions: vers:npm/2.5.5
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:U/C:H/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/11/GHSA-m52x-29pq-w3vv/GHSA-m52x-29pq-w3vv.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

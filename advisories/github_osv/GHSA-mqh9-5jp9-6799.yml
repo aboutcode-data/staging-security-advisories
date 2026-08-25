@@ -7,11 +7,6 @@ summary: |
   YetiForce CRM vulnerable to stored Cross-site Scripting via LayoutEditor module
   YetiForce CRM versions 6.4.0 and prior are vulnerable to cross-site scripting via the `LayoutEditor` module. A patch is available at commit eebc12601495ada38495076bec12841b2477516b.
 impacted_packages:
-  - purl: pkg:composer/yetiforce/yetiforce-crm
-    affected_versions: vers:composer/<=6.4.0
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/yetiforcecompany/yetiforcecrm
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/yetiforcecompany/yetiforcecrm
         commit: eebc12601495ada38495076bec12841b2477516b
     introduced_in_commits: []
+  - purl: pkg:composer/yetiforce/yetiforce-crm
+    affected_versions: vers:composer/<=6.4.0
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/09/GHSA-mqh9-5jp9-6799/GHSA-mqh9-5jp9-6799.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

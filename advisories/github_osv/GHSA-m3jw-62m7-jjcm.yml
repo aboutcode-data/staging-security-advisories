@@ -7,11 +7,6 @@ summary: |
   typed-ast Out-of-bounds Read
   typed_ast 1.3.0 and 1.3.1 has a handle_keywordonly_args out-of-bounds read. An attacker with the ability to cause a Python interpreter to parse Python source (but not necessarily execute it) may be able to crash the interpreter process. This could be a concern, for example, in a web-based service that parses (but does not execute) Python code. (This issue also affected certain Python 3.8.0-alpha prereleases.)
 impacted_packages:
-  - purl: pkg:pypi/typed-ast
-    affected_versions: vers:pypi/>=1.3.0|<1.3.2
-    fixed_versions: vers:pypi/1.3.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/python/cpython
     affected_versions:
     fixed_versions:
@@ -20,6 +15,11 @@ impacted_packages:
         commit: dcfcd146f8e6fc5c2fc16a4c192a0c5f5ca8c53c
       - vcs_url: https://github.com/python/cpython
         commit: a4d78362397fc3bced6ea80fbc7b5f4827aec55e
+    introduced_in_commits: []
+  - purl: pkg:pypi/typed-ast
+    affected_versions: vers:pypi/>=1.3.0|<1.3.2
+    fixed_versions: vers:pypi/1.3.2
+    fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/python/typed_ast
     affected_versions:
@@ -34,12 +34,12 @@ severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/12/GHSA-m3jw-62m7-jjcm/GHSA-m3jw-62m7-jjcm.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-125

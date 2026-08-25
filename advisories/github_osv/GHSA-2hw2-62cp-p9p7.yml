@@ -8,25 +8,25 @@ summary: |
   An issue is present in Apache ZooKeeper 1.0.0 to 3.4.13 and 3.5.0-alpha to 3.5.4-beta. ZooKeeper?s getACL() command doesn?t check any permission when retrieves the ACLs of the requested node and returns all information contained in the ACL Id field as plaintext string. DigestAuthenticationProvider overloads the Id field with the hash value that is used for user authentication. As a consequence, if Digest Authentication is in use, the unsalted hash value will be disclosed by getACL() request for unauthenticated or unprivileged users.
 impacted_packages:
   - purl: pkg:maven/org.apache.zookeeper/zookeeper
-    affected_versions: vers:maven/>=1.0.0|<3.4.14
-    fixed_versions: vers:maven/3.4.14
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.zookeeper/zookeeper
     affected_versions: vers:maven/>=3.5.0|<3.5.5
     fixed_versions: vers:maven/3.5.5
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:maven/org.apache.zookeeper/zookeeper
+    affected_versions: vers:maven/>=1.0.0|<3.4.14
+    fixed_versions: vers:maven/3.4.14
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.9'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/05/GHSA-2hw2-62cp-p9p7/GHSA-2hw2-62cp-p9p7.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-862

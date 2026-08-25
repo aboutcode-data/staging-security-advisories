@@ -8,23 +8,23 @@ summary: |
   FasterXML jackson-databind 2.x before 2.9.8 might allow attackers to have unspecified impact by leveraging failure to block the jboss-common-core class from polymorphic deserialization.
 impacted_packages:
   - purl: pkg:maven/com.fasterxml.jackson.core/jackson-databind
-    affected_versions: vers:maven/>=2.9.0|<2.9.8
-    fixed_versions: vers:maven/2.9.8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/com.fasterxml.jackson.core/jackson-databind
     affected_versions: vers:maven/<=2.8.11.2
     fixed_versions: vers:maven/2.8.11.3
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/com.fasterxml.jackson.core/jackson-databind
-    affected_versions: vers:maven/<=2.7.9.4
-    fixed_versions: vers:maven/2.7.9.5
+    affected_versions: vers:maven/>=2.0.0|<2.6.7.3
+    fixed_versions: vers:maven/2.6.7.3
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/com.fasterxml.jackson.core/jackson-databind
-    affected_versions: vers:maven/>=2.0.0|<2.6.7.3
-    fixed_versions: vers:maven/2.6.7.3
+    affected_versions: vers:maven/>=2.9.0|<2.9.8
+    fixed_versions: vers:maven/2.9.8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/com.fasterxml.jackson.core/jackson-databind
+    affected_versions: vers:maven/<=2.7.9.4
+    fixed_versions: vers:maven/2.7.9.5
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/fasterxml/jackson-databind
@@ -38,14 +38,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '9.8'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/01/GHSA-c8hm-7hpq-7jhg/GHSA-c8hm-7hpq-7jhg.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-502

@@ -7,6 +7,13 @@ summary: |
   Liferay Portal and Liferay DXP allows arbitrary injection via the site name
   Cross-site scripting (XSS) vulnerability in the Layout module's Open Graph integration before 2.0.4 in Liferay Portal 7.3.0 through 7.4.0, and Liferay DXP 7.3 before service pack 3 allows remote attackers to inject arbitrary web script or HTML via the site name.
 impacted_packages:
+  - purl: pkg:github/liferay/liferay-portal
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/liferay/liferay-portal
+        commit: fd7fc6e186b36944b045e0fdf368e588889c3f02
+    introduced_in_commits: []
   - purl: pkg:maven/com.liferay/com.liferay.layout.seo.web
     affected_versions: vers:maven/<2.0.4
     fixed_versions: vers:maven/2.0.4
@@ -17,23 +24,16 @@ impacted_packages:
     fixed_versions: vers:maven/7.3.10.fp3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/liferay/liferay-portal
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/liferay/liferay-portal
-        commit: fd7fc6e186b36944b045e0fdf368e588889c3f02
-    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/04/GHSA-3vww-jrmm-9vff/GHSA-3vww-jrmm-9vff.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

@@ -7,11 +7,6 @@ summary: |
   Keycloak vulnerable to privilege escalation on Token Exchange feature
   A privilege escalation flaw was found in the token exchange feature of keycloak. Missing authorization allows a client application holding a valid access token to exchange tokens for any target client by passing the client_id of the target. This could allow a client to gain unauthorized access to additional services.
 impacted_packages:
-  - purl: pkg:maven/org.keycloak/keycloak-services
-    affected_versions: vers:maven/<18.0.0
-    fixed_versions: vers:maven/18.0.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/keycloak/keycloak
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/keycloak/keycloak
         commit: 76d83f46fad94ebcbedaa49e6daad458e2894e52
     introduced_in_commits: []
+  - purl: pkg:maven/org.keycloak/keycloak-services
+    affected_versions: vers:maven/<18.0.0
+    fixed_versions: vers:maven/18.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/04/GHSA-75p6-52g3-rqc8/GHSA-75p6-52g3-rqc8.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-639

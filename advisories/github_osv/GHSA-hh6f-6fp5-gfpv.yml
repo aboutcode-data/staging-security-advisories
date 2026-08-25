@@ -12,13 +12,13 @@ summary: |
   Pipeline: Deprecated Groovy Libraries Plugin 566.vd0a_a_3334a_555 and 2.21.3 aborts library retrieval if the library would be retrieved from the same repository and revision as the current build, and the revision being built is untrusted.
 impacted_packages:
   - purl: pkg:maven/org.jenkins-ci.plugins.workflow/workflow-cps-global-lib
-    affected_versions: vers:maven/<2.21.3
-    fixed_versions: vers:maven/2.21.3
+    affected_versions: vers:maven/<=564.ve62a
+    fixed_versions: vers:maven/566.vd0a
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.jenkins-ci.plugins.workflow/workflow-cps-global-lib
-    affected_versions: vers:maven/<=564.ve62a
-    fixed_versions: vers:maven/566.vd0a
+    affected_versions: vers:maven/<2.21.3
+    fixed_versions: vers:maven/2.21.3
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/jenkinsci/workflow-cps-global-lib-plugin
@@ -34,12 +34,12 @@ severities:
   - score: '7.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/04/GHSA-hh6f-6fp5-gfpv/GHSA-hh6f-6fp5-gfpv.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-863

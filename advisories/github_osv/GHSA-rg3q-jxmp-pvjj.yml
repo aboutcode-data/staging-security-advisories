@@ -7,14 +7,14 @@ summary: |
   Materialize-css vulnerable to Improper Neutralization of Input During Web Page Generation
   In Materialize through 1.0.0, XSS is possible via the Toast feature.
 impacted_packages:
-  - purl: pkg:npm/materialize-css
-    affected_versions: vers:npm/<=1.0.0
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:npm/%40materializecss/materialize
     affected_versions: vers:npm/<1.1.0-alpha
     fixed_versions: vers:npm/1.1.0-alpha
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/materialize-css
+    affected_versions: vers:npm/<=1.0.0
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/samschurter/materialize
@@ -26,14 +26,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '6.1'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/04/GHSA-rg3q-jxmp-pvjj/GHSA-rg3q-jxmp-pvjj.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

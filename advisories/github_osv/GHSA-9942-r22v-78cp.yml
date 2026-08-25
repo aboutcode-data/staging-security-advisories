@@ -38,23 +38,8 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/tensorflow
-    affected_versions: vers:pypi/>=2.8.0|<2.8.1
-    fixed_versions: vers:pypi/2.8.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow
     affected_versions: vers:pypi/>=2.9.0|<2.9.1
     fixed_versions: vers:pypi/2.9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow-cpu
-    affected_versions: vers:pypi/<2.7.2
-    fixed_versions: vers:pypi/2.7.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow-cpu
-    affected_versions: vers:pypi/>=2.8.0|<2.8.1
-    fixed_versions: vers:pypi/2.8.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/tensorflow-cpu
@@ -70,11 +55,6 @@ impacted_packages:
   - purl: pkg:pypi/tensorflow-gpu
     affected_versions: vers:pypi/>=2.8.0|<2.8.1
     fixed_versions: vers:pypi/2.8.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow-gpu
-    affected_versions: vers:pypi/>=2.9.0|<2.9.1
-    fixed_versions: vers:pypi/2.9.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/tensorflow/tensorflow
@@ -84,16 +64,36 @@ impacted_packages:
       - vcs_url: https://github.com/tensorflow/tensorflow
         commit: bd90b3efab4ec958b228cd7cfe9125be1c0cf255
     introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow
+    affected_versions: vers:pypi/>=2.8.0|<2.8.1
+    fixed_versions: vers:pypi/2.8.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow-cpu
+    affected_versions: vers:pypi/<2.7.2
+    fixed_versions: vers:pypi/2.7.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow-cpu
+    affected_versions: vers:pypi/>=2.8.0|<2.8.1
+    fixed_versions: vers:pypi/2.8.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow-gpu
+    affected_versions: vers:pypi/>=2.9.0|<2.9.1
+    fixed_versions: vers:pypi/2.9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.9'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/09/GHSA-9942-r22v-78cp/GHSA-9942-r22v-78cp.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-617

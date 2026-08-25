@@ -7,6 +7,15 @@ summary: |
   Prototype Pollution in async
   A vulnerability exists in Async through 3.2.1 for 3.x and through 2.6.3 for 2.x (fixed in 3.2.2 and 2.6.4), which could let a malicious user obtain privileges via the `mapValues()` method.
 impacted_packages:
+  - purl: pkg:github/caolan/async
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/caolan/async
+        commit: e1ecdbf79264f9ab488c7799f4c76996d5dca66d
+      - vcs_url: https://github.com/caolan/async
+        commit: 8f7f90342a6571ba1c197d747ebed30c368096d2
+    introduced_in_commits: []
   - purl: pkg:npm/async
     affected_versions: vers:npm/>=3.0.0|<3.2.2
     fixed_versions: vers:npm/3.2.2
@@ -17,25 +26,16 @@ impacted_packages:
     fixed_versions: vers:npm/2.6.4
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/caolan/async
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/caolan/async
-        commit: e1ecdbf79264f9ab488c7799f4c76996d5dca66d
-      - vcs_url: https://github.com/caolan/async
-        commit: 8f7f90342a6571ba1c197d747ebed30c368096d2
-    introduced_in_commits: []
 severities:
   - score: '7.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/04/GHSA-fwr7-v2mv-hh25/GHSA-fwr7-v2mv-hh25.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-1321

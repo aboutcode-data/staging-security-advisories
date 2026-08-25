@@ -20,6 +20,13 @@ summary: |
   * https://cwe.mitre.org/data/definitions/502.html
   * https://www.cvedetails.com/cve/CVE-2017-18342/
 impacted_packages:
+  - purl: pkg:github/awslabs/autogluon
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/awslabs/autogluon
+        commit: 23a37e74e58d03055c84a1b89c5af6c3db296b5e
+    introduced_in_commits: []
   - purl: pkg:pypi/autogluon.multimodal
     affected_versions: vers:pypi/>=0.4.0|<0.4.3
     fixed_versions: vers:pypi/0.4.3
@@ -30,18 +37,11 @@ impacted_packages:
     fixed_versions: vers:pypi/0.5.2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/awslabs/autogluon
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/awslabs/autogluon
-        commit: 23a37e74e58d03055c84a1b89c5af6c3db296b5e
-    introduced_in_commits: []
 severities:
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-502

@@ -7,19 +7,19 @@ summary: |
   Symfony Service IDs Allow Injection
   In Symfony before 2.7.51, 2.8.x before 2.8.50, 3.x before 3.4.26, 4.x before 4.1.12, and 4.2.x before 4.2.7, when service ids allow user input, this could allow for SQL Injection and remote code execution. This is related to symfony/dependency-injection.
 impacted_packages:
-  - purl: pkg:composer/symfony/dependency-injection
+  - purl: pkg:composer/symfony/symfony
     affected_versions: vers:composer/>=2.7.0|<2.7.51
     fixed_versions: vers:composer/2.7.51
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/symfony/dependency-injection
-    affected_versions: vers:composer/>=2.8.0|<2.8.50
-    fixed_versions: vers:composer/2.8.50
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=4.0.0|<4.1.12
+    fixed_versions: vers:composer/4.1.12
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/symfony/dependency-injection
-    affected_versions: vers:composer/>=3.0.0|<3.4.26
-    fixed_versions: vers:composer/3.4.26
+  - purl: pkg:composer/symfony/proxy-manager-bridge
+    affected_versions: vers:composer/>=2.7.0|<2.7.51
+    fixed_versions: vers:composer/2.7.51
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/dependency-injection
@@ -33,18 +33,8 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/proxy-manager-bridge
-    affected_versions: vers:composer/>=2.7.0|<2.7.51
-    fixed_versions: vers:composer/2.7.51
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/proxy-manager-bridge
     affected_versions: vers:composer/>=2.8.0|<2.8.50
     fixed_versions: vers:composer/2.8.50
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/proxy-manager-bridge
-    affected_versions: vers:composer/>=3.0.0|<3.4.26
-    fixed_versions: vers:composer/3.4.26
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/proxy-manager-bridge
@@ -52,34 +42,14 @@ impacted_packages:
     fixed_versions: vers:composer/4.1.12
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/symfony/proxy-manager-bridge
-    affected_versions: vers:composer/>=4.2.0|<4.2.7
-    fixed_versions: vers:composer/4.2.7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/symfony
-    affected_versions: vers:composer/>=2.7.0|<2.7.51
-    fixed_versions: vers:composer/2.7.51
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:composer/symfony/symfony
     affected_versions: vers:composer/>=2.8.0|<2.8.50
     fixed_versions: vers:composer/2.8.50
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/symfony/symfony
+  - purl: pkg:composer/symfony/proxy-manager-bridge
     affected_versions: vers:composer/>=3.0.0|<3.4.26
     fixed_versions: vers:composer/3.4.26
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/symfony
-    affected_versions: vers:composer/>=4.0.0|<4.1.12
-    fixed_versions: vers:composer/4.1.12
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/symfony
-    affected_versions: vers:composer/>=4.2.0|<4.2.7
-    fixed_versions: vers:composer/4.2.7
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/symfony/symfony
@@ -93,16 +63,46 @@ impacted_packages:
       - vcs_url: https://github.com/symfony/symfony
         commit: d2fb5893923292a1da7985f0b56960b5bb10737b
     introduced_in_commits: []
+  - purl: pkg:composer/symfony/dependency-injection
+    affected_versions: vers:composer/>=2.7.0|<2.7.51
+    fixed_versions: vers:composer/2.7.51
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/dependency-injection
+    affected_versions: vers:composer/>=2.8.0|<2.8.50
+    fixed_versions: vers:composer/2.8.50
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/dependency-injection
+    affected_versions: vers:composer/>=3.0.0|<3.4.26
+    fixed_versions: vers:composer/3.4.26
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/proxy-manager-bridge
+    affected_versions: vers:composer/>=4.2.0|<4.2.7
+    fixed_versions: vers:composer/4.2.7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=3.0.0|<3.4.26
+    fixed_versions: vers:composer/3.4.26
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=4.2.0|<4.2.7
+    fixed_versions: vers:composer/4.2.7
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.8'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/11/GHSA-pgwj-prpq-jpc2/GHSA-pgwj-prpq-jpc2.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-89

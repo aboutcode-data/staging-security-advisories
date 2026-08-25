@@ -11,11 +11,6 @@ summary: |
 
   Upgrade to version 4.12.0 or later
 impacted_packages:
-  - purl: pkg:npm/sequelize
-    affected_versions: vers:npm/<4.12.0
-    fixed_versions: vers:npm/4.12.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/sequelize/sequelize
     affected_versions:
     fixed_versions:
@@ -23,11 +18,16 @@ impacted_packages:
       - vcs_url: https://github.com/sequelize/sequelize
         commit: ccb99daedb69e8750a241436415ccac8abef358d
     introduced_in_commits: []
+  - purl: pkg:npm/sequelize
+    affected_versions: vers:npm/<4.12.0
+    fixed_versions: vers:npm/4.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-89

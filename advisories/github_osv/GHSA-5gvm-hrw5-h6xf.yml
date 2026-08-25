@@ -7,29 +7,29 @@ summary: |
   Improper Authentication in org.apache.hive:hive, org.apache.hive:hive-exec, and org.apache.hive:hive-service
   The LDAP implementation in HiveServer2 in Apache Hive before 1.0.1 and 1.1.x before 1.1.1, as used in IBM InfoSphere BigInsights 3.0, 3.0.0.1, and 3.0.0.2 and other products, mishandles simple unauthenticated and anonymous bind configurations, which allows remote attackers to bypass authentication via a crafted LDAP request.
 impacted_packages:
-  - purl: pkg:maven/org.apache.hive/hive
-    affected_versions: vers:maven/1.0.0
-    fixed_versions: vers:maven/1.0.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.hive/hive
-    affected_versions: vers:maven/1.1.0
-    fixed_versions: vers:maven/1.1.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:maven/org.apache.hive/hive-exec
     affected_versions: vers:maven/1.0.0
     fixed_versions: vers:maven/1.0.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.hive/hive-exec
-    affected_versions: vers:maven/1.1.0
-    fixed_versions: vers:maven/1.1.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.hive/hive-service
     affected_versions: vers:maven/1.0.0
     fixed_versions: vers:maven/1.0.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.hive/hive
+    affected_versions: vers:maven/1.1.0
+    fixed_versions: vers:maven/1.1.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.hive/hive
+    affected_versions: vers:maven/1.0.0
+    fixed_versions: vers:maven/1.0.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.hive/hive-exec
+    affected_versions: vers:maven/1.1.0
+    fixed_versions: vers:maven/1.1.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.hive/hive-service
@@ -39,14 +39,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '7.3'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/03/GHSA-5gvm-hrw5-h6xf/GHSA-5gvm-hrw5-h6xf.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-287

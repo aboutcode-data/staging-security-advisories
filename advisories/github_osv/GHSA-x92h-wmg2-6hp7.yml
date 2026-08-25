@@ -8,43 +8,43 @@ summary: |
   In Symfony before 2.7.51, 2.8.x before 2.8.50, 3.x before 3.4.26, 4.x before 4.1.12, and 4.2.x before 4.2.7, HTTP Methods provided as verbs or using the override header may be treated as trusted input, but they are not validated, possibly causing SQL injection or XSS. This is related to symfony/http-foundation.
 impacted_packages:
   - purl: pkg:composer/symfony/http-foundation
-    affected_versions: vers:composer/>=2.7.0|<2.7.51
-    fixed_versions: vers:composer/2.7.51
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/http-foundation
-    affected_versions: vers:composer/>=2.8.0|<2.8.50
-    fixed_versions: vers:composer/2.8.50
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/http-foundation
-    affected_versions: vers:composer/>=3.0.0|<3.4.26
-    fixed_versions: vers:composer/3.4.26
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/http-foundation
-    affected_versions: vers:composer/>=4.0.0|<4.1.12
-    fixed_versions: vers:composer/4.1.12
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/http-foundation
     affected_versions: vers:composer/>=4.2.0|<4.2.7
     fixed_versions: vers:composer/4.2.7
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=2.8.0|<2.8.50
+    fixed_versions: vers:composer/2.8.50
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/http-foundation
+    affected_versions: vers:composer/>=3.0.0|<3.4.26
+    fixed_versions: vers:composer/3.4.26
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/symfony
     affected_versions: vers:composer/>=2.7.0|<2.7.51
     fixed_versions: vers:composer/2.7.51
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=3.0.0|<3.4.26
+    fixed_versions: vers:composer/3.4.26
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/http-foundation
+    affected_versions: vers:composer/>=2.7.0|<2.7.51
+    fixed_versions: vers:composer/2.7.51
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/http-foundation
     affected_versions: vers:composer/>=2.8.0|<2.8.50
     fixed_versions: vers:composer/2.8.50
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/symfony/symfony
-    affected_versions: vers:composer/>=3.0.0|<3.4.26
-    fixed_versions: vers:composer/3.4.26
+  - purl: pkg:composer/symfony/http-foundation
+    affected_versions: vers:composer/>=4.0.0|<4.1.12
+    fixed_versions: vers:composer/4.1.12
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/symfony
@@ -66,14 +66,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '9.8'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/12/GHSA-x92h-wmg2-6hp7/GHSA-x92h-wmg2-6hp7.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

@@ -7,11 +7,6 @@ summary: |
   An attacker can execute malicious javascript in Live Helper Chat
   Cross-site Scripting (XSS) in GitHub repository livehelperchat/livehelperchat prior to 3.99v. Attacker can execute malicious javascript on application.
 impacted_packages:
-  - purl: pkg:composer/remdex/livehelperchat
-    affected_versions: vers:composer/<3.99.0
-    fixed_versions: vers:composer/3.99.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/livehelperchat/livehelperchat
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/livehelperchat/livehelperchat
         commit: edef7a8387be718d0de2dfd1e722789afb0461bc
     introduced_in_commits: []
+  - purl: pkg:composer/remdex/livehelperchat
+    affected_versions: vers:composer/<3.99.0
+    fixed_versions: vers:composer/3.99.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/04/GHSA-9hgc-wpc5-v8p9/GHSA-9hgc-wpc5-v8p9.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

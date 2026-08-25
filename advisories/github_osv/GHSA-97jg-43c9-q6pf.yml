@@ -8,11 +8,6 @@ summary: |
   A guest user without the right to view pages of the wiki can still list documents related to users of the wiki. The problem has been patched in XWiki versions 12.10.11, 13.4.4, and 13.9-rc-1. There is no known workaround for this problem.
 impacted_packages:
   - purl: pkg:maven/org.xwiki.platform/xwiki-platform-web-templates
-    affected_versions: vers:maven/<12.10.11
-    fixed_versions: vers:maven/12.10.11
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.xwiki.platform/xwiki-platform-web-templates
     affected_versions: vers:maven/>=13.0.0|<13.4.4
     fixed_versions: vers:maven/13.4.4
     fixed_in_commits: []
@@ -22,16 +17,21 @@ impacted_packages:
     fixed_versions: vers:maven/13.9
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:maven/org.xwiki.platform/xwiki-platform-web-templates
+    affected_versions: vers:maven/<12.10.11
+    fixed_versions: vers:maven/12.10.11
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/04/GHSA-97jg-43c9-q6pf/GHSA-97jg-43c9-q6pf.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-359

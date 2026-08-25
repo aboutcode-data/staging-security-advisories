@@ -7,11 +7,6 @@ summary: |
   Improper Input Validation in httpx
   Encode OSS httpx <=1.0.0.beta0 is affected by improper input validation in `httpx.URL`, `httpx.Client` and some functions using `httpx.URL.copy_with`.
 impacted_packages:
-  - purl: pkg:pypi/httpx
-    affected_versions: vers:pypi/<0.23.0
-    fixed_versions: vers:pypi/0.23.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/encode/httpx
     affected_versions:
     fixed_versions:
@@ -19,21 +14,26 @@ impacted_packages:
       - vcs_url: https://github.com/encode/httpx
         commit: e9b0c85dd4f4e4469c57c4b38e5101fd12081b5c
     introduced_in_commits: []
+  - purl: pkg:pypi/httpx
+    affected_versions: vers:pypi/<0.23.0
+    fixed_versions: vers:pypi/0.23.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/04/GHSA-h8pj-cxx2-jfg2/GHSA-h8pj-cxx2-jfg2.json
   - score: '9.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/04/GHSA-h8pj-cxx2-jfg2/GHSA-h8pj-cxx2-jfg2.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-20

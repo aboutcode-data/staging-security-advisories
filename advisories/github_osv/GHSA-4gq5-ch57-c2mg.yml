@@ -7,6 +7,13 @@ summary: |
   Arbitrary Code Execution in jackson-databind
   FasterXML jackson-databind 2.x before 2.9.7, 2.8.11.3, and 2.7.9.5 might allow remote attackers to execute arbitrary code by leveraging failure to block the blaze-ds-opt and blaze-ds-core classes from polymorphic deserialization.
 impacted_packages:
+  - purl: pkg:github/fasterxml/jackson-databind
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/fasterxml/jackson-databind
+        commit: 87d29af25e82a249ea15858e2d4ecbf64091db44
+    introduced_in_commits: []
   - purl: pkg:maven/com.fasterxml.jackson.core/jackson-databind
     affected_versions: vers:maven/>=2.9.0|<2.9.7
     fixed_versions: vers:maven/2.9.7
@@ -22,23 +29,16 @@ impacted_packages:
     fixed_versions: vers:maven/2.7.9.5
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/fasterxml/jackson-databind
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/fasterxml/jackson-databind
-        commit: 87d29af25e82a249ea15858e2d4ecbf64091db44
-    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/01/GHSA-4gq5-ch57-c2mg/GHSA-4gq5-ch57-c2mg.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-502

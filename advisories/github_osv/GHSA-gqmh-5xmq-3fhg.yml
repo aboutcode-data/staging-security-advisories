@@ -8,16 +8,6 @@ summary: |
   TYPO3 before 4.1.14, 4.2.x before 4.2.13, 4.3.x before 4.3.4 and 4.4.x before 4.4.1 is open to a session fixation attack which allows remote attackers to hijack a victim's session.
 impacted_packages:
   - purl: pkg:composer/typo3/cms-install
-    affected_versions: vers:composer/<4.1.14
-    fixed_versions: vers:composer/4.1.14
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/typo3/cms-install
-    affected_versions: vers:composer/>=4.2.0|<4.2.13
-    fixed_versions: vers:composer/4.2.13
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/typo3/cms-install
     affected_versions: vers:composer/>=4.3.0|<4.3.4
     fixed_versions: vers:composer/4.3.4
     fixed_in_commits: []
@@ -40,16 +30,26 @@ impacted_packages:
       - vcs_url: https://github.com/typo3/typo3
         commit: 1d649976e1f1bda684cdc7120e9f74a543059181
     introduced_in_commits: []
+  - purl: pkg:composer/typo3/cms-install
+    affected_versions: vers:composer/<4.1.14
+    fixed_versions: vers:composer/4.1.14
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/typo3/cms-install
+    affected_versions: vers:composer/>=4.2.0|<4.2.13
+    fixed_versions: vers:composer/4.2.13
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/04/GHSA-gqmh-5xmq-3fhg/GHSA-gqmh-5xmq-3fhg.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-384

@@ -7,11 +7,6 @@ summary: |
   elFinder Unrestricted File Upload vulnerability
   A File Upload vulnerability exists in Studio-42 elFinder 2.0.4 to 2.1.59 via `connector.minimal.php`, which allows a remote malicious user to upload arbitrary files and execute PHP code.
 impacted_packages:
-  - purl: pkg:composer/studio-42/elfinder
-    affected_versions: vers:composer/>=2.0.4|<2.1.60
-    fixed_versions: vers:composer/2.1.60
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/studio-42/elfinder
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/studio-42/elfinder
         commit: c08bcbfa722d758d01975799b7036951eb5d33cb
     introduced_in_commits: []
+  - purl: pkg:composer/studio-42/elfinder
+    affected_versions: vers:composer/>=2.0.4|<2.1.60
+    fixed_versions: vers:composer/2.1.60
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/04/GHSA-x4jx-hjwf-gc99/GHSA-x4jx-hjwf-gc99.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-434

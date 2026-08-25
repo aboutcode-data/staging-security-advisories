@@ -7,6 +7,11 @@ summary: |
   Symfony Unsafe Cache Serialization Could Enable RCE
   An issue was discovered in Symfony 3.4.0 through 3.4.34, 4.2.0 through 4.2.11, and 4.3.0 through 4.3.7. Serializing certain cache adapter interfaces could result in remote code injection. This is related to symfony/cache.
 impacted_packages:
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=4.3.0|<4.3.8
+    fixed_versions: vers:composer/4.3.8
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:composer/symfony/cache
     affected_versions: vers:composer/>=3.1.0|<3.4.35
     fixed_versions: vers:composer/3.4.35
@@ -30,23 +35,18 @@ impacted_packages:
   - purl: pkg:composer/symfony/symfony
     affected_versions: vers:composer/>=4.0.0|<4.2.12
     fixed_versions: vers:composer/4.2.12
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/symfony
-    affected_versions: vers:composer/>=4.3.0|<4.3.8
-    fixed_versions: vers:composer/4.3.8
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/12/GHSA-79gr-58r3-pwm3/GHSA-79gr-58r3-pwm3.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

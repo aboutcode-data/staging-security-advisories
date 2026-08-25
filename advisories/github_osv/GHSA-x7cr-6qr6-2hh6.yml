@@ -14,6 +14,11 @@ summary: |
   To the best of our knowledge, this was not actively exploited. The vulnerability has been patched on Packagist.org and Private Packagist within a day of the vulnerability report.
 impacted_packages:
   - purl: pkg:composer/composer/composer
+    affected_versions: vers:composer/>=2.3.0|<2.3.5
+    fixed_versions: vers:composer/2.3.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/composer/composer
     affected_versions: vers:composer/<1.10.26
     fixed_versions: vers:composer/1.10.26
     fixed_in_commits: []
@@ -21,11 +26,6 @@ impacted_packages:
   - purl: pkg:composer/composer/composer
     affected_versions: vers:composer/>=2.0.0|<2.2.12
     fixed_versions: vers:composer/2.2.12
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/composer/composer
-    affected_versions: vers:composer/>=2.3.0|<2.3.5
-    fixed_versions: vers:composer/2.3.5
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/composer/composer
@@ -39,12 +39,12 @@ severities:
   - score: '8.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/04/GHSA-x7cr-6qr6-2hh6/GHSA-x7cr-6qr6-2hh6.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

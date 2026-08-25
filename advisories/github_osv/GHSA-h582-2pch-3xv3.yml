@@ -12,16 +12,6 @@ impacted_packages:
     fixed_versions: vers:pypi/1.4.21
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:pypi/django
-    affected_versions: vers:pypi/>=1.5|<1.7.9
-    fixed_versions: vers:pypi/1.7.9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/django
-    affected_versions: vers:pypi/>=1.8|<1.8.3
-    fixed_versions: vers:pypi/1.8.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/django/django
     affected_versions:
     fixed_versions:
@@ -33,21 +23,31 @@ impacted_packages:
       - vcs_url: https://github.com/django/django
         commit: 2e47f3e401c29bc2ba5ab794d483cb0820855fb9
     introduced_in_commits: []
+  - purl: pkg:pypi/django
+    affected_versions: vers:pypi/>=1.5|<1.7.9
+    fixed_versions: vers:pypi/1.7.9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/django
+    affected_versions: vers:pypi/>=1.8|<1.8.3
+    fixed_versions: vers:pypi/1.8.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/07/GHSA-h582-2pch-3xv3/GHSA-h582-2pch-3xv3.json
   - score: '8.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/07/GHSA-h582-2pch-3xv3/GHSA-h582-2pch-3xv3.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-770

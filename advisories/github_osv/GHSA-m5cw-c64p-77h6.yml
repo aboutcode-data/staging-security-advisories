@@ -9,11 +9,6 @@ summary: |
 
   These vulnerabilities allow attackers to connect to an attacker-specified URL.
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins/subversion
-    affected_versions: vers:maven/<2.15.4
-    fixed_versions: vers:maven/2.15.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/subversion-plugin
     affected_versions:
     fixed_versions:
@@ -21,16 +16,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/subversion-plugin
         commit: 882a7d359f6ac73c53d787bff4d62eba837001ea
     introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/subversion
+    affected_versions: vers:maven/<2.15.4
+    fixed_versions: vers:maven/2.15.4
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/04/GHSA-m5cw-c64p-77h6/GHSA-m5cw-c64p-77h6.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-352

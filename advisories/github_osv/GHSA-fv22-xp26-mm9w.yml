@@ -12,25 +12,25 @@ summary: "Denial of Service due to parser crash\n## Withdrawn\n\nThis advisory h
   \ is only relevant for users making use of the DTD parsing functionality."
 impacted_packages:
   - purl: pkg:maven/com.fasterxml.woodstox/woodstox-core
-    affected_versions: vers:maven/>=6.0.0|<6.4.0
-    fixed_versions: vers:maven/6.4.0
+    affected_versions: vers:maven/<5.4.0
+    fixed_versions: vers:maven/5.4.0
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/com.fasterxml.woodstox/woodstox-core
-    affected_versions: vers:maven/<5.4.0
-    fixed_versions: vers:maven/5.4.0
+    affected_versions: vers:maven/>=6.0.0|<6.4.0
+    fixed_versions: vers:maven/6.4.0
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/09/GHSA-fv22-xp26-mm9w/GHSA-fv22-xp26-mm9w.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-787

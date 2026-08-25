@@ -7,12 +7,17 @@ summary: |
   bootstrap Cross-site Scripting vulnerability
   In Bootstrap before 3.4.0, XSS is possible in the affix configuration target property.
 impacted_packages:
-  - purl: pkg:npm/bootstrap
+  - purl: pkg:npm/bootstrap-sass
     affected_versions: vers:npm/<3.4.0
     fixed_versions: vers:npm/3.4.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:npm/bootstrap-sass
+  - purl: pkg:gem/bootstrap
+    affected_versions: vers:gem/<3.4.0
+    fixed_versions: vers:gem/3.4.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/bootstrap
     affected_versions: vers:npm/<3.4.0
     fixed_versions: vers:npm/3.4.0
     fixed_in_commits: []
@@ -37,11 +42,6 @@ impacted_packages:
     fixed_versions: vers:nuget/3.4.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:gem/bootstrap
-    affected_versions: vers:gem/<3.4.0
-    fixed_versions: vers:gem/3.4.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/twbs/bootstrap
     affected_versions:
     fixed_versions:
@@ -51,14 +51,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '6.1'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/01/GHSA-ph58-4vrj-w6hr/GHSA-ph58-4vrj-w6hr.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

@@ -7,11 +7,6 @@ summary: |
   Stored cross-site scripting in Snipe-IT
   Snipe-IT prior to version 5.4.3 is vulnerable to stored cross-site scripting because the input to the `checked_out_to` parameter is not escaped. The vulnerability is capable of stealing a user's cookie.
 impacted_packages:
-  - purl: pkg:composer/snipe/snipe-it
-    affected_versions: vers:composer/<5.4.3
-    fixed_versions: vers:composer/5.4.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/snipe/snipe-it
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/snipe/snipe-it
         commit: f623d05d0c3487ae24c4f13907e4709484e5bf41
     introduced_in_commits: []
+  - purl: pkg:composer/snipe/snipe-it
+    affected_versions: vers:composer/<5.4.3
+    fixed_versions: vers:composer/5.4.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/04/GHSA-hpx4-xjp7-m4vr/GHSA-hpx4-xjp7-m4vr.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

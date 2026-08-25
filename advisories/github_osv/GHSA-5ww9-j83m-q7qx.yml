@@ -7,6 +7,17 @@ summary: |
   Information exposure in FasterXML jackson-databind
   A Polymorphic Typing issue was discovered in FasterXML jackson-databind 2.x before 2.9.9. When Default Typing is enabled (either globally or for a specific property) for an externally exposed JSON endpoint, the service has the mysql-connector-java jar (8.0.14 or earlier) in the classpath, and an attacker can host a crafted MySQL server reachable by the victim, an attacker can send a crafted JSON message that allows them to read arbitrary local files on the server. This occurs because of missing com.mysql.cj.jdbc.admin.MiniAdmin validation.
 impacted_packages:
+  - purl: pkg:github/fasterxml/jackson-databind
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/fasterxml/jackson-databind
+        commit: dda513bd7251b4f32b7b60b1c13740e3b5a43024
+      - vcs_url: https://github.com/fasterxml/jackson-databind
+        commit: d30f036208ab1c60bd5ce429cb4f7f1a3e5682e8
+      - vcs_url: https://github.com/fasterxml/jackson-databind
+        commit: efc3c0d02f4743dbaa6d1b9c466772a2f13d966b
+    introduced_in_commits: []
   - purl: pkg:maven/com.fasterxml.jackson.core/jackson-databind
     affected_versions: vers:maven/>=2.9.0|<2.9.9
     fixed_versions: vers:maven/2.9.9
@@ -27,27 +38,16 @@ impacted_packages:
     fixed_versions: vers:maven/2.6.7.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/fasterxml/jackson-databind
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/fasterxml/jackson-databind
-        commit: dda513bd7251b4f32b7b60b1c13740e3b5a43024
-      - vcs_url: https://github.com/fasterxml/jackson-databind
-        commit: d30f036208ab1c60bd5ce429cb4f7f1a3e5682e8
-      - vcs_url: https://github.com/fasterxml/jackson-databind
-        commit: efc3c0d02f4743dbaa6d1b9c466772a2f13d966b
-    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/05/GHSA-5ww9-j83m-q7qx/GHSA-5ww9-j83m-q7qx.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-502

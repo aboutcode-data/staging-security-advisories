@@ -7,6 +7,13 @@ summary: |
   Liferay Portal and Liferay DXP Vulnerable to XSS in the Frontend Taglib Module
   A Cross-site scripting (XSS) vulnerability in the Frontend Taglib module before 9.1.7 from Liferay Portal (7.3.2 through 7.4.3.16), and Liferay DXP 7.3 before update 6, and 7.4 before update 17 allows remote attackers to inject arbitrary web script or HTML.
 impacted_packages:
+  - purl: pkg:github/liferay/liferay-portal
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/liferay/liferay-portal
+        commit: a0d25a757f002c39d02b93938bc11feb3b0de6f6
+    introduced_in_commits: []
   - purl: pkg:maven/com.liferay/com.liferay.frontend.taglib.clay
     affected_versions: vers:maven/<9.1.7
     fixed_versions: vers:maven/9.1.7
@@ -22,23 +29,16 @@ impacted_packages:
     fixed_versions: vers:maven/7.4.13.u17
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/liferay/liferay-portal
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/liferay/liferay-portal
-        commit: a0d25a757f002c39d02b93938bc11feb3b0de6f6
-    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/10/GHSA-g6r2-6x46-jpp6/GHSA-g6r2-6x46-jpp6.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

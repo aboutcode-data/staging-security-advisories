@@ -50,6 +50,11 @@ summary: |
   An Issue for this can be found at https://github.com/dotnet/aspnetcore/issues/43953
   MSRC details for this can be found at https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-38013
 impacted_packages:
+  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.win-x86
+    affected_versions: vers:nuget/>=3.1.0|<3.1.29
+    fixed_versions: vers:nuget/3.1.29
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-arm
     affected_versions: vers:nuget/>=3.1.0|<3.1.29
     fixed_versions: vers:nuget/3.1.29
@@ -86,11 +91,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.win-x64
-    affected_versions: vers:nuget/>=3.1.0|<3.1.29
-    fixed_versions: vers:nuget/3.1.29
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.win-x86
     affected_versions: vers:nuget/>=3.1.0|<3.1.29
     fixed_versions: vers:nuget/3.1.29
     fixed_in_commits: []
@@ -145,14 +145,14 @@ impacted_packages:
     fixed_versions: vers:nuget/6.0.9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.win-arm
-    affected_versions: vers:nuget/>=3.1.0|<3.1.29
-    fixed_versions: vers:nuget/3.1.29
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.osx-arm64
     affected_versions: vers:nuget/>=5.0.0|<6.0.9
     fixed_versions: vers:nuget/6.0.9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.win-arm
+    affected_versions: vers:nuget/>=3.1.0|<3.1.29
+    fixed_versions: vers:nuget/3.1.29
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.win-arm
@@ -164,12 +164,12 @@ severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/09/GHSA-r8m2-4x37-6592/GHSA-r8m2-4x37-6592.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-400

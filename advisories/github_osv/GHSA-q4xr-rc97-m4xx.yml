@@ -7,11 +7,6 @@ summary: |
   OS Command Injection in celery
   This affects the package celery before 5.2.2. It by default trusts the messages and metadata stored in backends (result stores). When reading task metadata from the backend, the data is deserialized. Given that an attacker can gain access to, or somehow manipulate the metadata within a celery backend, they could trigger a stored command injection vulnerability and potentially gain further access to the system.
 impacted_packages:
-  - purl: pkg:pypi/celery
-    affected_versions: vers:pypi/<5.2.2
-    fixed_versions: vers:pypi/5.2.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/celery/celery
     affected_versions:
     fixed_versions:
@@ -19,21 +14,26 @@ impacted_packages:
       - vcs_url: https://github.com/celery/celery
         commit: 1f7ad7e6df1e02039b6ab9eec617d283598cad6b
     introduced_in_commits: []
+  - purl: pkg:pypi/celery
+    affected_versions: vers:pypi/<5.2.2
+    fixed_versions: vers:pypi/5.2.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/01/GHSA-q4xr-rc97-m4xx/GHSA-q4xr-rc97-m4xx.json
   - score: '7.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/01/GHSA-q4xr-rc97-m4xx/GHSA-q4xr-rc97-m4xx.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-77

@@ -7,11 +7,6 @@ summary: |
   Prototype Pollution in deepmerge-ts
   deepmerge-ts is used to merge 2 or more objects respecting type information. deepmerge-ts is vulnerable to Prototype Pollution via file deepmerge.ts, function defaultMergeRecords(). A fix was released in version 4.0.2. Currently, there is no known workaround.
 impacted_packages:
-  - purl: pkg:npm/deepmerge-ts
-    affected_versions: vers:npm/<4.0.2
-    fixed_versions: vers:npm/4.0.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/rebeccastevens/deepmerge-ts
     affected_versions:
     fixed_versions:
@@ -21,16 +16,21 @@ impacted_packages:
       - vcs_url: https://github.com/rebeccastevens/deepmerge-ts
         commit: d637db7e4fb2bfb113cb4bc1c85a125936d7081b
     introduced_in_commits: []
+  - purl: pkg:npm/deepmerge-ts
+    affected_versions: vers:npm/<4.0.2
+    fixed_versions: vers:npm/4.0.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/04/GHSA-r9w3-g83q-m6hq/GHSA-r9w3-g83q-m6hq.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-1321

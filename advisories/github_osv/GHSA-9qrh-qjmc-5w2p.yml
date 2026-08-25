@@ -7,11 +7,6 @@ summary: |
   Denial-of-Service when binding invalid parameters in sqlite3
   Affected versions of sqlite3 will experience a fatal error when supplying a specific object in the parameter array. This error causes the application to crash and could not be caught. Users of `sqlite3` v5.0.0, v5.0.1 and v5.0.2 are affected by this. This issue is fixed in v5.0.3. All users are recommended to upgrade to v5.0.3 or later. Ensure there is sufficient sanitization in the parent application to protect against invalid values being supplied to binding parameters as a workaround.
 impacted_packages:
-  - purl: pkg:npm/sqlite3
-    affected_versions: vers:npm/>=5.0.0|<5.0.3
-    fixed_versions: vers:npm/5.0.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/tryghost/node-sqlite3
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/tryghost/node-sqlite3
         commit: 593c9d498be2510d286349134537e3bf89401c4a
     introduced_in_commits: []
+  - purl: pkg:npm/sqlite3
+    affected_versions: vers:npm/>=5.0.0|<5.0.3
+    fixed_versions: vers:npm/5.0.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/04/GHSA-9qrh-qjmc-5w2p/GHSA-9qrh-qjmc-5w2p.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-248

@@ -9,11 +9,6 @@ summary: |
 
   Exploitation of these vulnerabilities requires that parameters are listed on another page, like the \"Build With Parameters\" and \"Parameters\" pages provided by Jenkins (core), and that those pages are not hardened to prevent exploitation. Jenkins (core) has prevented exploitation of vulnerabilities of this kind on the \"Build With Parameters\" and \"Parameters\" pages since 2.44 and LTS 2.32.2 as part of the [SECURITY-353 / CVE-2017-2601](https://www.jenkins.io/security/advisory/2017-02-01/#persisted-cross-site-scripting-vulnerability-in-parameter-names-and-descriptions) fix.
 impacted_packages:
-  - purl: pkg:maven/com.sonyericsson.hudson.plugins.gerrit/gerrit-trigger
-    affected_versions: vers:maven/<2.35.3
-    fixed_versions: vers:maven/2.35.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/gerrit-trigger-plugin
     affected_versions:
     fixed_versions:
@@ -21,16 +16,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/gerrit-trigger-plugin
         commit: 8b1d59645725e6f01057c1cf87170e321f99f6be
     introduced_in_commits: []
+  - purl: pkg:maven/com.sonyericsson.hudson.plugins.gerrit/gerrit-trigger
+    affected_versions: vers:maven/<2.35.3
+    fixed_versions: vers:maven/2.35.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/04/GHSA-455j-8hg5-8576/GHSA-455j-8hg5-8576.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

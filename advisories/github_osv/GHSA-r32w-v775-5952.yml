@@ -7,6 +7,15 @@ summary: |
   Liferay Portal and Liferay DXP Vulnerable to XSS via the Document Library Module
   A Cross-site scripting (XSS) vulnerability in Document Library module before 6.0.98 from Liferay Portal (7.4.3.30 through 7.4.3.36), and Liferay DXP 7.4 update 30 through update 36 allows remote attackers to inject arbitrary web script or HTML via the `redirect` parameter.
 impacted_packages:
+  - purl: pkg:github/liferay/liferay-portal
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/liferay/liferay-portal
+        commit: 2e4d17dfe42bb3b12c96527943087cf7e4a7d57e
+      - vcs_url: https://github.com/liferay/liferay-portal
+        commit: 62797d3ada6545b12fbfb86dbb229ac9d491d2c2
+    introduced_in_commits: []
   - purl: pkg:maven/com.liferay/com.liferay.document.library.web
     affected_versions: vers:maven/<6.0.98
     fixed_versions: vers:maven/6.0.98
@@ -17,25 +26,16 @@ impacted_packages:
     fixed_versions: vers:maven/7.4.13.u37
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/liferay/liferay-portal
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/liferay/liferay-portal
-        commit: 2e4d17dfe42bb3b12c96527943087cf7e4a7d57e
-      - vcs_url: https://github.com/liferay/liferay-portal
-        commit: 62797d3ada6545b12fbfb86dbb229ac9d491d2c2
-    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/10/GHSA-r32w-v775-5952/GHSA-r32w-v775-5952.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

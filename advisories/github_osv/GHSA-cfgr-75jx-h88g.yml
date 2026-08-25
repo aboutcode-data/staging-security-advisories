@@ -7,11 +7,6 @@ summary: |
   thlorenz browserify-shim vulnerable to prototype pollution
   Prototype pollution vulnerability in function resolveShims in resolve-shims.js in thlorenz browserify-shim 3.8.15 via the shimPath variable in resolve-shims.js.
 impacted_packages:
-  - purl: pkg:npm/browserify-shim
-    affected_versions: vers:npm/<=3.8.15
-    fixed_versions: vers:npm/3.8.16
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/thlorenz/browserify-shim
     affected_versions:
     fixed_versions:
@@ -21,16 +16,21 @@ impacted_packages:
       - vcs_url: https://github.com/thlorenz/browserify-shim
         commit: 97855e622b6dcd117c77e6583701962ff45e7338
     introduced_in_commits: []
+  - purl: pkg:npm/browserify-shim
+    affected_versions: vers:npm/<=3.8.15
+    fixed_versions: vers:npm/3.8.16
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/10/GHSA-cfgr-75jx-h88g/GHSA-cfgr-75jx-h88g.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-1321

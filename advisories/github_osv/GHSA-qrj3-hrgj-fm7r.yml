@@ -7,11 +7,6 @@ summary: |
   rdiffweb's unlimited length email field can lead to DoS
   rdiffweb prior to 2.4.8 does not validate email length, allowing users to insert an email longer than 255 characters. If a user signs up with an email with a length of 1 million or more characters and logs in, withdraws, or changes their email, the server may cause denial of service due to overload. Version 2.4.8 sets length limits for username, email, and root directory.
 impacted_packages:
-  - purl: pkg:pypi/rdiffweb
-    affected_versions: vers:pypi/<2.4.8
-    fixed_versions: vers:pypi/2.4.8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/ikus060/rdiffweb
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/ikus060/rdiffweb
         commit: 667657c6fe2b336c90be37f37fb92f65df4feee3
     introduced_in_commits: []
+  - purl: pkg:pypi/rdiffweb
+    affected_versions: vers:pypi/<2.4.8
+    fixed_versions: vers:pypi/2.4.8
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/09/GHSA-qrj3-hrgj-fm7r/GHSA-qrj3-hrgj-fm7r.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-130

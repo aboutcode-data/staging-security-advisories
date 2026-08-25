@@ -21,11 +21,6 @@ summary: |
   ### References
   None.
 impacted_packages:
-  - purl: pkg:maven/com.zaxxer/nuprocess
-    affected_versions: vers:maven/>=1.2.0|<2.0.5
-    fixed_versions: vers:maven/2.0.5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/brettwooldridge/nuprocess
     affected_versions:
     fixed_versions:
@@ -33,16 +28,21 @@ impacted_packages:
       - vcs_url: https://github.com/brettwooldridge/nuprocess
         commit: 29bc09de561bf00ff9bf77123756363a9709f868
     introduced_in_commits: []
+  - purl: pkg:maven/com.zaxxer/nuprocess
+    affected_versions: vers:maven/>=1.2.0|<2.0.5
+    fixed_versions: vers:maven/2.0.5
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/09/GHSA-cxgf-v2p8-7ph7/GHSA-cxgf-v2p8-7ph7.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-77

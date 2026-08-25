@@ -7,6 +7,13 @@ summary: |
   Liferay Portal and Liferay DXP allows arbitrary injection via form field
   Multiple cross-site scripting (XSS) vulnerabilities in Dynamic Data Mapping Form Field Type before 6.0.11 from Liferay Portal 7.3.5 through 7.4.0, and Liferay DXP 7.3 before service pack 3 allow remote attackers to inject arbitrary web script or HTML via a form field's help text to (1) Forms module's form builder, or (2) App Builder module's object form view's form builder.
 impacted_packages:
+  - purl: pkg:github/liferay/liferay-portal
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/liferay/liferay-portal
+        commit: 7c9348cc59271647cfd192c007d383d80ae9a667
+    introduced_in_commits: []
   - purl: pkg:maven/com.liferay/com.liferay.dynamic.data.mapping.form.field.type
     affected_versions: vers:maven/<6.0.11
     fixed_versions: vers:maven/6.0.11
@@ -17,23 +24,16 @@ impacted_packages:
     fixed_versions: vers:maven/7.3.10.fp3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/liferay/liferay-portal
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/liferay/liferay-portal
-        commit: 7c9348cc59271647cfd192c007d383d80ae9a667
-    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/04/GHSA-658f-xhv4-p978/GHSA-658f-xhv4-p978.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

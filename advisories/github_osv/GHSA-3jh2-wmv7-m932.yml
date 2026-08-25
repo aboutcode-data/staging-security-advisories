@@ -7,11 +7,6 @@ summary: |
   LibreNMS stored Cross-site Scripting via Schedule Maintenance `Title` parameter
   LibreNMS versions 22.8.0 and prior allow attackers to execute arbitrary JavaScript code via the Schedule Maintenance `Title` parameter. A patch is available and anticipated to be part of version 22.9.0.
 impacted_packages:
-  - purl: pkg:composer/librenms/librenms
-    affected_versions: vers:composer/<=22.8.0
-    fixed_versions: vers:composer/22.9.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/librenms/librenms
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/librenms/librenms
         commit: 08050020861230ff96a6507b309cc172a9e70af8
     introduced_in_commits: []
+  - purl: pkg:composer/librenms/librenms
+    affected_versions: vers:composer/<=22.8.0
+    fixed_versions: vers:composer/22.9.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/09/GHSA-3jh2-wmv7-m932/GHSA-3jh2-wmv7-m932.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

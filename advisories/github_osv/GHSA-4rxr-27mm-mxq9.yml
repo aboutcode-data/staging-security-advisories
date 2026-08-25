@@ -29,11 +29,6 @@ summary: "Upstash Adapter missing token verification\n### Impact\nApplications t
   Upstash Redis Adapter: https://next-auth.js.org/adapters/upstash-redis\n\n### For more information\n\
   If you have any concerns, we request responsible disclosure, outlined here: https://next-auth.js.org/security#reporting-a-vulnerability"
 impacted_packages:
-  - purl: pkg:npm/%40next-auth/upstash-redis-adapter
-    affected_versions: vers:npm/<3.0.2
-    fixed_versions: vers:npm/3.0.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/nextauthjs/next-auth
     affected_versions:
     fixed_versions:
@@ -41,16 +36,21 @@ impacted_packages:
       - vcs_url: https://github.com/nextauthjs/next-auth
         commit: d16e04848ee703cf797724194d4ad2907fe125a9
     introduced_in_commits: []
+  - purl: pkg:npm/%40next-auth/upstash-redis-adapter
+    affected_versions: vers:npm/<3.0.2
+    fixed_versions: vers:npm/3.0.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/09/GHSA-4rxr-27mm-mxq9/GHSA-4rxr-27mm-mxq9.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-287

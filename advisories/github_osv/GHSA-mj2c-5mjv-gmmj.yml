@@ -7,11 +7,6 @@ summary: |
   SQL Injection in Pimcore
   Pimcore prior to version 10.3.5 is vulnerable to SQL injection in ElementController.php. This vulnerability causes loss of data confidentiality.
 impacted_packages:
-  - purl: pkg:composer/pimcore/pimcore
-    affected_versions: vers:composer/<10.3.5
-    fixed_versions: vers:composer/10.3.5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/pimcore/pimcore
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/pimcore/pimcore
         commit: adae3be64427466bf0df15ceaea2ac30da93752c
     introduced_in_commits: []
+  - purl: pkg:composer/pimcore/pimcore
+    affected_versions: vers:composer/<10.3.5
+    fixed_versions: vers:composer/10.3.5
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/04/GHSA-mj2c-5mjv-gmmj/GHSA-mj2c-5mjv-gmmj.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-89

@@ -132,6 +132,36 @@ summary: |
 
   * backport timerlat user-space support (JIRA:RHEL-20361)
 impacted_packages:
+  - purl: pkg:rpm/redhat/perf-debuginfo?arch=aarch64
+    affected_versions: vers:rpm/<4.18.0-477.51.1.el8_8
+    fixed_versions: vers:rpm/4.18.0-477.51.1.el8_8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bpftool?arch=ppc64le
+    affected_versions: vers:rpm/<4.18.0-477.51.1.el8_8
+    fixed_versions: vers:rpm/4.18.0-477.51.1.el8_8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-modules-extra?arch=x86_64
+    affected_versions: vers:rpm/<4.18.0-477.51.1.el8_8
+    fixed_versions: vers:rpm/4.18.0-477.51.1.el8_8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-debug-devel?arch=s390x
+    affected_versions: vers:rpm/<4.18.0-477.51.1.el8_8
+    fixed_versions: vers:rpm/4.18.0-477.51.1.el8_8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-modules-extra?arch=s390x
+    affected_versions: vers:rpm/<4.18.0-477.51.1.el8_8
+    fixed_versions: vers:rpm/4.18.0-477.51.1.el8_8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel?arch=src
+    affected_versions: vers:rpm/<4.18.0-477.51.1.el8_8
+    fixed_versions: vers:rpm/4.18.0-477.51.1.el8_8
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/bpftool?arch=aarch64
     affected_versions: vers:rpm/<4.18.0-477.51.1.el8_8
     fixed_versions: vers:rpm/4.18.0-477.51.1.el8_8
@@ -232,22 +262,12 @@ impacted_packages:
     fixed_versions: vers:rpm/4.18.0-477.51.1.el8_8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/perf-debuginfo?arch=aarch64
-    affected_versions: vers:rpm/<4.18.0-477.51.1.el8_8
-    fixed_versions: vers:rpm/4.18.0-477.51.1.el8_8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/python3-perf-debuginfo?arch=aarch64
     affected_versions: vers:rpm/<4.18.0-477.51.1.el8_8
     fixed_versions: vers:rpm/4.18.0-477.51.1.el8_8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-tools-libs-devel?arch=aarch64
-    affected_versions: vers:rpm/<4.18.0-477.51.1.el8_8
-    fixed_versions: vers:rpm/4.18.0-477.51.1.el8_8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bpftool?arch=ppc64le
     affected_versions: vers:rpm/<4.18.0-477.51.1.el8_8
     fixed_versions: vers:rpm/4.18.0-477.51.1.el8_8
     fixed_in_commits: []
@@ -402,12 +422,12 @@ impacted_packages:
     fixed_versions: vers:rpm/4.18.0-477.51.1.el8_8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-modules?arch=x86_64
+  - purl: pkg:rpm/redhat/kernel-devel?arch=x86_64
     affected_versions: vers:rpm/<4.18.0-477.51.1.el8_8
     fixed_versions: vers:rpm/4.18.0-477.51.1.el8_8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-modules-extra?arch=x86_64
+  - purl: pkg:rpm/redhat/kernel-modules?arch=x86_64
     affected_versions: vers:rpm/<4.18.0-477.51.1.el8_8
     fixed_versions: vers:rpm/4.18.0-477.51.1.el8_8
     fixed_in_commits: []
@@ -497,11 +517,6 @@ impacted_packages:
     fixed_versions: vers:rpm/4.18.0-477.51.1.el8_8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debug-devel?arch=s390x
-    affected_versions: vers:rpm/<4.18.0-477.51.1.el8_8
-    fixed_versions: vers:rpm/4.18.0-477.51.1.el8_8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debug-modules?arch=s390x
     affected_versions: vers:rpm/<4.18.0-477.51.1.el8_8
     fixed_versions: vers:rpm/4.18.0-477.51.1.el8_8
@@ -518,11 +533,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-modules?arch=s390x
-    affected_versions: vers:rpm/<4.18.0-477.51.1.el8_8
-    fixed_versions: vers:rpm/4.18.0-477.51.1.el8_8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-modules-extra?arch=s390x
     affected_versions: vers:rpm/<4.18.0-477.51.1.el8_8
     fixed_versions: vers:rpm/4.18.0-477.51.1.el8_8
     fixed_in_commits: []
@@ -607,11 +617,6 @@ impacted_packages:
     fixed_versions: vers:rpm/4.18.0-477.51.1.el8_8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel?arch=src
-    affected_versions: vers:rpm/<4.18.0-477.51.1.el8_8
-    fixed_versions: vers:rpm/4.18.0-477.51.1.el8_8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-abi-stablelists?arch=noarch
     affected_versions: vers:rpm/<4.18.0-477.51.1.el8_8
     fixed_versions: vers:rpm/4.18.0-477.51.1.el8_8
@@ -622,16 +627,11 @@ impacted_packages:
     fixed_versions: vers:rpm/4.18.0-477.51.1.el8_8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-devel?arch=x86_64
-    affected_versions: vers:rpm/<4.18.0-477.51.1.el8_8
-    fixed_versions: vers:rpm/4.18.0-477.51.1.el8_8
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: Important
     scoring_system: rhas
     scoring_elements:
-    published_at: None
+    published_at:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2024_1404.json
 weaknesses: []
 references:

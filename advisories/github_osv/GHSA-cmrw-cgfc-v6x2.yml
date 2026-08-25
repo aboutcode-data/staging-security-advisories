@@ -8,6 +8,13 @@ summary: |
   A Cross-site scripting (XSS) vulnerability in the Role module's edit role assignees page in Liferay Roles Admin Web
   before 5.0.48 from Liferay Portal (7.4.0 through 7.4.3.36), and Liferay DXP 7.4 before update 37 allows remote attackers to inject arbitrary web script or HTML.
 impacted_packages:
+  - purl: pkg:github/liferay/liferay-portal
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/liferay/liferay-portal
+        commit: ba9a07ee8d1aa04a9da352e9b6a776313b8ce5e9
+    introduced_in_commits: []
   - purl: pkg:maven/com.liferay/com.liferay.roles.admin.web
     affected_versions: vers:maven/<5.0.48
     fixed_versions: vers:maven/5.0.48
@@ -18,23 +25,16 @@ impacted_packages:
     fixed_versions: vers:maven/7.4.13.u37
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/liferay/liferay-portal
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/liferay/liferay-portal
-        commit: ba9a07ee8d1aa04a9da352e9b6a776313b8ce5e9
-    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/10/GHSA-cmrw-cgfc-v6x2/GHSA-cmrw-cgfc-v6x2.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

@@ -28,11 +28,6 @@ summary: |
   * Discuss it on [our community forum](community.nodebb.org/)
   * Email us at [support@nodebb.org](mailto:support@nodebb.org)
 impacted_packages:
-  - purl: pkg:npm/nodebb
-    affected_versions: vers:npm/<=1.17.1
-    fixed_versions: vers:npm/1.17.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/nodebb/nodebb
     affected_versions:
     fixed_versions:
@@ -40,16 +35,21 @@ impacted_packages:
       - vcs_url: https://github.com/nodebb/nodebb
         commit: a2400f6baff44cb2996487bcd0cc6e2acc74b3d4
     introduced_in_commits: []
+  - purl: pkg:npm/nodebb
+    affected_versions: vers:npm/<=1.17.1
+    fixed_versions: vers:npm/1.17.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/09/GHSA-xmgg-fx9p-prq6/GHSA-xmgg-fx9p-prq6.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-352

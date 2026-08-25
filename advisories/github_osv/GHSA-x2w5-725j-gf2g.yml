@@ -16,11 +16,6 @@ summary: "Prototype Pollution in convict\n### Impact\n\n* An attacker can inject
   * 1ea0ab19c5208f66509e1c43b0d0f21c1fd29b75\n\n### For more information\n\nIf you have any\
   \ questions or comments about this advisory: \nadd your question as a comment in #384"
 impacted_packages:
-  - purl: pkg:npm/convict
-    affected_versions: vers:npm/<6.2.3
-    fixed_versions: vers:npm/6.2.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/mozilla/node-convict
     affected_versions:
     fixed_versions:
@@ -30,16 +25,21 @@ impacted_packages:
       - vcs_url: https://github.com/mozilla/node-convict
         commit: 5eb1314f85346760a3c31cb14510f2f0af11d0d3
     introduced_in_commits: []
+  - purl: pkg:npm/convict
+    affected_versions: vers:npm/<6.2.3
+    fixed_versions: vers:npm/6.2.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/04/GHSA-x2w5-725j-gf2g/GHSA-x2w5-725j-gf2g.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-1321
