@@ -11,11 +11,6 @@ summary: |
 
   Health Advisor by CloudBees Plugin 3.0.1 requires POST requests and Overall/Administer permission for the affected form validation methods.
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins/cloudbees-jenkins-advisor
-    affected_versions: vers:maven/<3.0.1
-    fixed_versions: vers:maven/3.0.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/cloudbees-jenkins-advisor-plugin
     affected_versions:
     fixed_versions:
@@ -23,16 +18,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/cloudbees-jenkins-advisor-plugin
         commit: f53fe8a41a1566fdd7d2996779f6c5684ef3e2df
     introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/cloudbees-jenkins-advisor
+    affected_versions: vers:maven/<3.0.1
+    fixed_versions: vers:maven/3.0.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-h72v-652w-xv64/GHSA-h72v-652w-xv64.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-862

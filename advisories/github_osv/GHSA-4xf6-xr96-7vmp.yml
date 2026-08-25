@@ -7,16 +7,6 @@ summary: |
   Djblets Cross-site scripting Vulnerability
   A cross-site scripting (XSS) vulnerability in `gravatars/templatetags/gravatars.py` in Djblets before 0.7.30 and 0.8.x before 0.8.3 for Django allows remote attackers to inject arbitrary web script or HTML via a user display name.
 impacted_packages:
-  - purl: pkg:pypi/djblets
-    affected_versions: vers:pypi/<0.7.30
-    fixed_versions: vers:pypi/0.7.30
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/djblets
-    affected_versions: vers:pypi/>=0.8|<0.8.3
-    fixed_versions: vers:pypi/0.8.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/djblets/djblets
     affected_versions:
     fixed_versions:
@@ -28,21 +18,31 @@ impacted_packages:
       - vcs_url: https://github.com/djblets/djblets
         commit: 77ac64642ad530bf69e390c51fc6fdcb8914c8e7
     introduced_in_commits: []
+  - purl: pkg:pypi/djblets
+    affected_versions: vers:pypi/<0.7.30
+    fixed_versions: vers:pypi/0.7.30
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/djblets
+    affected_versions: vers:pypi/>=0.8|<0.8.3
+    fixed_versions: vers:pypi/0.8.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-4xf6-xr96-7vmp/GHSA-4xf6-xr96-7vmp.json
   - score: '5.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-4xf6-xr96-7vmp/GHSA-4xf6-xr96-7vmp.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

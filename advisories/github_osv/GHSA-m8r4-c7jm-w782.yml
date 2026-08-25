@@ -17,11 +17,6 @@ summary: |
   RUN curl -fsSL ${PLUGIN_CLI_URL} -o /usr/lib/jenkins-plugin-manager.jar
   Jenkinsfile Runner [1.0-beta-22](https://github.com/jenkinsci/jenkinsfile-runner/releases/tag/1.0-beta-22) Docker images also include Plugin Installation Manager Tool 2.2.0.
 impacted_packages:
-  - purl: pkg:maven/io.jenkins.plugin-management/plugin-management-parent-pom
-    affected_versions: vers:maven/<2.2.0
-    fixed_versions: vers:maven/2.2.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/plugin-installation-manager-tool
     affected_versions:
     fixed_versions:
@@ -29,16 +24,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/plugin-installation-manager-tool
         commit: dfc745c3a97a3fea74a3fe2e92d8a4440cbbf867
     introduced_in_commits: []
+  - purl: pkg:maven/io.jenkins.plugin-management/plugin-management-parent-pom
+    affected_versions: vers:maven/<2.2.0
+    fixed_versions: vers:maven/2.2.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-m8r4-c7jm-w782/GHSA-m8r4-c7jm-w782.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-494

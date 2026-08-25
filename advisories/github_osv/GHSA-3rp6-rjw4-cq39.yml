@@ -8,35 +8,35 @@ summary: |
   ASP.NET Core 1.0, 1.1, and 2.0 allow an attacker to bypass Cross-origin Resource Sharing (CORS) configurations and retrieve normally restricted content from a web application, aka "ASP.NET Core Information Disclosure Vulnerability".
 impacted_packages:
   - purl: pkg:nuget/Microsoft.AspNetCore.Mvc.Core
+    affected_versions: vers:nuget/>=1.1.0|<1.1.6
+    fixed_versions: vers:nuget/1.1.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Microsoft.AspNetCore.Mvc.Cors
     affected_versions: vers:nuget/>=1.0.0|<1.0.6
     fixed_versions: vers:nuget/1.0.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Microsoft.AspNetCore.Mvc.Cors
+    affected_versions: vers:nuget/>=1.1.0|<1.1.6
+    fixed_versions: vers:nuget/1.1.6
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:nuget/Microsoft.AspNetCore.Mvc.Core
-    affected_versions: vers:nuget/>=1.1.0|<1.1.6
-    fixed_versions: vers:nuget/1.1.6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.Mvc.Cors
     affected_versions: vers:nuget/>=1.0.0|<1.0.6
     fixed_versions: vers:nuget/1.0.6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.Mvc.Cors
-    affected_versions: vers:nuget/>=1.1.0|<1.1.6
-    fixed_versions: vers:nuget/1.1.6
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '7.5'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-3rp6-rjw4-cq39/GHSA-3rp6-rjw4-cq39.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses: []
 references:

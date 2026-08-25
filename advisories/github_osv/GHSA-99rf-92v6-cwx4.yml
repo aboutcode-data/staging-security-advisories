@@ -8,13 +8,13 @@ summary: |
   The replay-countermeasure functionality in the HTTP Digest Access Authentication implementation in Apache Tomcat 5.5.x before 5.5.36, 6.x before 6.0.36, and 7.x before 7.0.30 tracks cnonce (aka client nonce) values instead of nonce (aka server nonce) and nc (aka nonce-count) values, which makes it easier for remote attackers to bypass intended access restrictions by sniffing the network for valid requests, a different vulnerability than CVE-2011-1184.
 impacted_packages:
   - purl: pkg:maven/org.apache.tomcat/tomcat
-    affected_versions: vers:maven/>=5.5.0|<5.5.36
-    fixed_versions: vers:maven/5.5.36
+    affected_versions: vers:maven/>=6.0.0|<6.0.36
+    fixed_versions: vers:maven/6.0.36
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat/tomcat
-    affected_versions: vers:maven/>=6.0.0|<6.0.36
-    fixed_versions: vers:maven/6.0.36
+    affected_versions: vers:maven/>=5.5.0|<5.5.36
+    fixed_versions: vers:maven/5.5.36
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat/tomcat
@@ -26,7 +26,7 @@ severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-284

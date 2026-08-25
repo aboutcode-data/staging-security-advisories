@@ -7,6 +7,13 @@ summary: |
   Improper Authorization in Jenkins Core
   An improper authorization vulnerability exists in Jenkins 2.158 and earlier, LTS 2.150.1 and earlier in core/src/main/java/hudson/security/TokenBasedRememberMeServices2.java that allows attackers with Overall/RunScripts permission to craft Remember Me cookies that would never expire, allowing e.g. to persist access to temporarily compromised user accounts.
 impacted_packages:
+  - purl: pkg:github/jenkinsci/jenkins
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/jenkinsci/jenkins
+        commit: 7b4649657f90e98a5564cf5f0892deaa5fee0454
+    introduced_in_commits: []
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
     affected_versions: vers:maven/<2.150.2
     fixed_versions: vers:maven/2.150.2
@@ -17,23 +24,16 @@ impacted_packages:
     fixed_versions: vers:maven/2.159
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/jenkinsci/jenkins
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/jenkinsci/jenkins
-        commit: 7b4649657f90e98a5564cf5f0892deaa5fee0454
-    introduced_in_commits: []
 severities:
   - score: '7.2'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-6rh5-23hx-j452/GHSA-6rh5-23hx-j452.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-285

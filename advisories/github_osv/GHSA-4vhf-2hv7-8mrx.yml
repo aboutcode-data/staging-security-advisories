@@ -7,12 +7,12 @@ summary: |
   Improper Restriction of XML External Entity Reference in Apache ActiveMQ
   XML external entity (XXE) vulnerability in Apache ActiveMQ 5.x before 5.10.1 allows remote consumers to have unspecified impact via vectors involving an XPath based selector when dequeuing XML messages.
 impacted_packages:
-  - purl: pkg:maven/org.apache.activemq/activemq-client
+  - purl: pkg:maven/org.apache.activemq/activemq-broker
     affected_versions: vers:maven/>=5.0.0|<5.10.1
     fixed_versions: vers:maven/5.10.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/org.apache.activemq/activemq-broker
+  - purl: pkg:maven/org.apache.activemq/activemq-client
     affected_versions: vers:maven/>=5.0.0|<5.10.1
     fixed_versions: vers:maven/5.10.1
     fixed_in_commits: []
@@ -26,14 +26,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '9.8'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-4vhf-2hv7-8mrx/GHSA-4vhf-2hv7-8mrx.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-611

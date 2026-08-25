@@ -7,6 +7,15 @@ summary: |
   phpMyAdmin vulnerable to static code injection
   `setup/lib/ConfigGenerator.class.php` in phpMyAdmin 3.x before 3.3.10.2 and 3.4.x before 3.4.3.1 does not properly restrict the presence of comment closing delimiters, which allows remote attackers to conduct static code injection attacks by leveraging the ability to modify the SESSION superglobal array.
 impacted_packages:
+  - purl: pkg:github/phpmyadmin/phpmyadmin
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/phpmyadmin/phpmyadmin
+        commit: 0fbedaf5fd7a771d0885c6b7385d934fc90d0d7f
+      - vcs_url: https://github.com/phpmyadmin/phpmyadmin
+        commit: 2e01647949df937040e73a94ce0bac0daecbdcf4
+    introduced_in_commits: []
   - purl: pkg:composer/phpmyadmin/phpmyadmin
     affected_versions: vers:composer/>=3.0.0|<3.3.10+2
     fixed_versions: vers:composer/3.3.10+2
@@ -17,20 +26,11 @@ impacted_packages:
     fixed_versions: vers:composer/3.4.3+1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/phpmyadmin/phpmyadmin
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/phpmyadmin/phpmyadmin
-        commit: 0fbedaf5fd7a771d0885c6b7385d934fc90d0d7f
-      - vcs_url: https://github.com/phpmyadmin/phpmyadmin
-        commit: 2e01647949df937040e73a94ce0bac0daecbdcf4
-    introduced_in_commits: []
 severities:
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

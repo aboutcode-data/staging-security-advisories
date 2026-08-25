@@ -11,6 +11,13 @@ summary: |
   ### Patches
   The vulnerability has been fixed by improving the URL validation and adding additional checks of the resource the URL points to before downloading it.
 impacted_packages:
+  - purl: pkg:github/parse-community/parse-server
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/parse-community/parse-server
+        commit: af4a0417a9f3c1e99b3793806b4b18e04d9fa999
+    introduced_in_commits: []
   - purl: pkg:npm/parse-server
     affected_versions: vers:npm/<4.10.10
     fixed_versions: vers:npm/4.10.10
@@ -21,23 +28,16 @@ impacted_packages:
     fixed_versions: vers:npm/5.2.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/parse-community/parse-server
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/parse-community/parse-server
-        commit: af4a0417a9f3c1e99b3793806b4b18e04d9fa999
-    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-qf8x-vqjv-92gr/GHSA-qf8x-vqjv-92gr.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-295

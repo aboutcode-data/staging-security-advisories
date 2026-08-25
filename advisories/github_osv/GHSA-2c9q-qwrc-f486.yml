@@ -7,11 +7,6 @@ summary: |
   XML External Entity Reference in org.picketlink:picketlink-common
   The org.picketlink.common.util.DocumentUtil.getDocumentBuilderFactory method in PicketLink, as used in Red Hat JBoss Enterprise Application Platform (JBEAP) 5.2.0 and 6.2.4, expands entity references, which allows remote attackers to read arbitrary code and possibly have other unspecified impact via unspecified vectors, related to an XML External Entity (XXE) issue.
 impacted_packages:
-  - purl: pkg:maven/org.picketlink/picketlink-common
-    affected_versions: vers:maven/<2.7.0.Final
-    fixed_versions: vers:maven/2.7.0.Final
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/picketlink/picketlink
     affected_versions:
     fixed_versions:
@@ -19,11 +14,16 @@ impacted_packages:
       - vcs_url: https://github.com/picketlink/picketlink
         commit: 8c78668e4f08cf3c4ed14d8a36d402dcf02cb057
     introduced_in_commits: []
+  - purl: pkg:maven/org.picketlink/picketlink-common
+    affected_versions: vers:maven/<2.7.0.Final
+    fixed_versions: vers:maven/2.7.0.Final
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-611

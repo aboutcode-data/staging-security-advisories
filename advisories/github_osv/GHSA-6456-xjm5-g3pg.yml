@@ -7,6 +7,11 @@ summary: |
   Cross-site scripting vulnerability exists in Jenkins and Stapler Plugin
   A cross-site scripting vulnerability exists in Jenkins 2.132 and earlier, 2.121.1 and earlier in the Stapler web framework's org/kohsuke/stapler/Stapler.java that allows attackers with the ability to control the existence of some URLs in Jenkins to define JavaScript that would be executed in another user's browser when that other user views HTTP 404 error pages while Stapler debug mode is enabled.
 impacted_packages:
+  - purl: pkg:maven/org.kohsuke.stapler/stapler-parent
+    affected_versions: vers:maven/<1.250.1
+    fixed_versions: vers:maven/1.250.1
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
     affected_versions: vers:maven/<2.121.2
     fixed_versions: vers:maven/2.121.2
@@ -15,11 +20,6 @@ impacted_packages:
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
     affected_versions: vers:maven/>=2.122|<2.132
     fixed_versions: vers:maven/2.132
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.kohsuke.stapler/stapler-parent
-    affected_versions: vers:maven/<1.250.1
-    fixed_versions: vers:maven/1.250.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/jenkinsci/stapler
@@ -31,14 +31,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '5.4'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-6456-xjm5-g3pg/GHSA-6456-xjm5-g3pg.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

@@ -11,11 +11,6 @@ summary: |
 
   This form validation method now requires POST requests and Overall/Administer permissions.
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins/gitlab-plugin
-    affected_versions: vers:maven/<=1.5.11
-    fixed_versions: vers:maven/1.5.12
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/gitlab-plugin
     affected_versions:
     fixed_versions:
@@ -23,16 +18,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/gitlab-plugin
         commit: f028c65539a8892f2d1f738cacc1ea5830adf5d3
     introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/gitlab-plugin
+    affected_versions: vers:maven/<=1.5.11
+    fixed_versions: vers:maven/1.5.12
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-923w-9p3x-hmgw/GHSA-923w-9p3x-hmgw.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-862

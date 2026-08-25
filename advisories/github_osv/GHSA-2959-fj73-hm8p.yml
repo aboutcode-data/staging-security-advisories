@@ -11,11 +11,6 @@ summary: |
 
   An enumeration of configuration file IDs in Jenkins Config File Provider Plugin 3.7.1 requires the appropriate permissions.
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins/config-file-provider
-    affected_versions: vers:maven/<=3.7.0
-    fixed_versions: vers:maven/3.7.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/config-file-provider-plugin
     affected_versions:
     fixed_versions:
@@ -23,16 +18,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/config-file-provider-plugin
         commit: b7f3c5150ad557e86414122c69be20075aee27fa
     introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/config-file-provider
+    affected_versions: vers:maven/<=3.7.0
+    fixed_versions: vers:maven/3.7.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-2959-fj73-hm8p/GHSA-2959-fj73-hm8p.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-862

@@ -7,11 +7,6 @@ summary: |
   OpenStack Identity Keystone Exposure of Sensitive Information
   The catalog url replacement in OpenStack Identity (Keystone) before 2013.2.3 and 2014.1 before 2014.1.2.1 allows remote authenticated users to read sensitive configuration options via a crafted endpoint, as demonstrated by "$(admin_token)" in the publicurl endpoint field.
 impacted_packages:
-  - purl: pkg:pypi/keystone
-    affected_versions: vers:pypi/<8.0.0a0
-    fixed_versions: vers:pypi/8.0.0a0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/openstack/keystone
     affected_versions:
     fixed_versions:
@@ -21,11 +16,16 @@ impacted_packages:
       - vcs_url: https://github.com/openstack/keystone
         commit: 2989ff257e4fde6a168e25b926805e700406aa80
     introduced_in_commits: []
+  - purl: pkg:pypi/keystone
+    affected_versions: vers:pypi/<8.0.0a0
+    fixed_versions: vers:pypi/8.0.0a0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

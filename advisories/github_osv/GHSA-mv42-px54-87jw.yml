@@ -8,8 +8,8 @@ summary: |
   The session-persistence implementation in Apache Tomcat 6.x before 6.0.45, 7.x before 7.0.68, 8.x before 8.0.31, and 9.x before 9.0.0.M2 mishandles session attributes, which allows remote authenticated users to bypass intended SecurityManager restrictions and execute arbitrary code in a privileged context via a web application that places a crafted object in a session.
 impacted_packages:
   - purl: pkg:maven/org.apache.tomcat/tomcat
-    affected_versions: vers:maven/>=6.0.0|<6.0.46
-    fixed_versions: vers:maven/6.0.46
+    affected_versions: vers:maven/>=7.0.0|<7.0.70
+    fixed_versions: vers:maven/7.0.70
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat/tomcat
@@ -23,18 +23,9 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat/tomcat
-    affected_versions: vers:maven/>=7.0.0|<7.0.70
-    fixed_versions: vers:maven/7.0.70
+    affected_versions: vers:maven/>=6.0.0|<6.0.46
+    fixed_versions: vers:maven/6.0.46
     fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:github/apache/tomcat80
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/apache/tomcat80
-        commit: 2e5cc28052e84ba45196949ba602484221bbf33c
-      - vcs_url: https://github.com/apache/tomcat80
-        commit: 5430f30c79383e4d2d87785468905fcb00bace58
     introduced_in_commits: []
   - purl: pkg:github/apache/tomcat
     affected_versions:
@@ -53,16 +44,25 @@ impacted_packages:
       - vcs_url: https://github.com/apache/tomcat
         commit: 79e8ad03404c131009811855f9a30d8d01c0c736
     introduced_in_commits: []
+  - purl: pkg:github/apache/tomcat80
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/tomcat80
+        commit: 2e5cc28052e84ba45196949ba602484221bbf33c
+      - vcs_url: https://github.com/apache/tomcat80
+        commit: 5430f30c79383e4d2d87785468905fcb00bace58
+    introduced_in_commits: []
 severities:
   - score: '8.8'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-mv42-px54-87jw/GHSA-mv42-px54-87jw.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-284

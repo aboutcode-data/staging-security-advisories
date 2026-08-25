@@ -7,36 +7,36 @@ summary: |
   Drupal File upload access bypass and denial of service
   The File module in Drupal 7.x before 7.43 and 8.x before 8.0.4 allows remote authenticated users to bypass access restrictions and read, delete, or substitute a link to a file uploaded to an unprocessed form by leveraging permission to create content or comment and upload files.
 impacted_packages:
-  - purl: pkg:composer/drupal/core
-    affected_versions: vers:composer/>=7.0.0|<7.43.0
-    fixed_versions: vers:composer/7.43.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:composer/drupal/drupal
     affected_versions: vers:composer/>=7.0.0|<7.43.0
     fixed_versions: vers:composer/7.43.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/drupal/core
+  - purl: pkg:composer/drupal/drupal
     affected_versions: vers:composer/>=8.0.0|<8.0.4
     fixed_versions: vers:composer/8.0.4
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/drupal/drupal
+  - purl: pkg:composer/drupal/core
+    affected_versions: vers:composer/>=7.0.0|<7.43.0
+    fixed_versions: vers:composer/7.43.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/drupal/core
     affected_versions: vers:composer/>=8.0.0|<8.0.4
     fixed_versions: vers:composer/8.0.4
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '8.1'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-w2pj-c8x5-jvg2/GHSA-w2pj-c8x5-jvg2.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-284

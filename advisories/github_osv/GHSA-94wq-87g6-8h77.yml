@@ -8,12 +8,12 @@ summary: |
   Adobe Commerce versions 2.4.2-p2 (and earlier), 2.4.3 (and earlier) and 2.3.7p1 (and earlier) are affected by a cross-site request forgery (CSRF) vulnerability via a Wishlist Share Link. Successful exploitation could lead to unauthorized addition to a customer's cart by an unauthenticated attacker. Access to the admin console is not required for successful exploitation.
 impacted_packages:
   - purl: pkg:composer/magento/community-edition
-    affected_versions: vers:composer/2.4.3
+    affected_versions: vers:composer/>=2.4.2-p1|<=2.4.2-p2
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/magento/community-edition
-    affected_versions: vers:composer/>=2.4.2-p1|<=2.4.2-p2
+    affected_versions: vers:composer/2.4.3
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
@@ -36,17 +36,17 @@ severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-94wq-87g6-8h77/GHSA-94wq-87g6-8h77.json
   - score: '4.9'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:U
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-94wq-87g6-8h77/GHSA-94wq-87g6-8h77.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-352

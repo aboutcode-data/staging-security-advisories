@@ -8,6 +8,11 @@ summary: |
   lib/ajax/getnavbranch.php in Moodle through 2.6.11, 2.7.x before 2.7.13, 2.8.x before 2.8.11, 2.9.x before 2.9.5, and 3.0.x before 3.0.3, when the forcelogin feature is enabled, allows remote attackers to obtain sensitive category-detail information from the navigation branch by leveraging the guest role for an Ajax request.
 impacted_packages:
   - purl: pkg:composer/moodle/moodle
+    affected_versions: vers:composer/>=3.0.0|<3.0.3
+    fixed_versions: vers:composer/3.0.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/moodle/moodle
     affected_versions: vers:composer/<2.7.13
     fixed_versions: vers:composer/2.7.13
     fixed_in_commits: []
@@ -20,11 +25,6 @@ impacted_packages:
   - purl: pkg:composer/moodle/moodle
     affected_versions: vers:composer/>=2.9.0|<2.9.5
     fixed_versions: vers:composer/2.9.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/>=3.0.0|<3.0.3
-    fixed_versions: vers:composer/3.0.3
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/moodle/moodle
@@ -44,14 +44,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '4.3'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-m882-j7gq-v9p7/GHSA-m882-j7gq-v9p7.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

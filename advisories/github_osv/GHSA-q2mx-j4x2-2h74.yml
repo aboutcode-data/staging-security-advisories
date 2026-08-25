@@ -27,25 +27,25 @@ summary: "URL Redirection to Untrusted Site ('Open Redirect') in next-auth\n### 
   \ after, and a patch was produced within a few days."
 impacted_packages:
   - purl: pkg:npm/next-auth
-    affected_versions: vers:npm/<3.29.3
-    fixed_versions: vers:npm/3.29.3
+    affected_versions: vers:npm/>=4.0.0|<4.3.3
+    fixed_versions: vers:npm/4.3.3
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:npm/next-auth
-    affected_versions: vers:npm/>=4.0.0|<4.3.3
-    fixed_versions: vers:npm/4.3.3
+    affected_versions: vers:npm/<3.29.3
+    fixed_versions: vers:npm/3.29.3
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-q2mx-j4x2-2h74/GHSA-q2mx-j4x2-2h74.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-601

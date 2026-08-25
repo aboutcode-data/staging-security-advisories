@@ -7,6 +7,15 @@ summary: |
   Denial of service in Spring Framework
   In spring framework versions prior to 5.3.20+ , 5.2.22+ and old unsupported versions, applications that handle file uploads are vulnerable to DoS attack if they rely on data binding to set a MultipartFile or javax.servlet.Part to a field in a model object.
 impacted_packages:
+  - purl: pkg:github/spring-projects/spring-framework
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/spring-projects/spring-framework
+        commit: 83186b689f11f5e6efe7ccc08fdeb92f66fcd583
+      - vcs_url: https://github.com/spring-projects/spring-framework
+        commit: 50177b1ad3485bd44239b1756f6c14607476fcf2
+    introduced_in_commits: []
   - purl: pkg:maven/org.springframework/spring-beans
     affected_versions: vers:maven/<=5.2.21.RELEASE
     fixed_versions: vers:maven/5.2.22.RELEASE
@@ -17,25 +26,16 @@ impacted_packages:
     fixed_versions: vers:maven/5.3.20
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/spring-projects/spring-framework
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/spring-projects/spring-framework
-        commit: 83186b689f11f5e6efe7ccc08fdeb92f66fcd583
-      - vcs_url: https://github.com/spring-projects/spring-framework
-        commit: 50177b1ad3485bd44239b1756f6c14607476fcf2
-    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-hh26-6xwr-ggv7/GHSA-hh26-6xwr-ggv7.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-770

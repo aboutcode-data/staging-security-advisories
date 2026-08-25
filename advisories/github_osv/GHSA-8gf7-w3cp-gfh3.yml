@@ -7,11 +7,6 @@ summary: |
   Improper Restriction of XML External Entity Reference in Stanford CoreNLP
   corenlp is vulnerable to Improper Restriction of XML External Entity Reference
 impacted_packages:
-  - purl: pkg:maven/edu.stanford.nlp/stanford-corenlp
-    affected_versions: vers:maven/<=4.3.0
-    fixed_versions: vers:maven/4.3.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/stanfordnlp/corenlp
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/stanfordnlp/corenlp
         commit: 5d83f1e8482ca304db8be726cad89554c88f136a
     introduced_in_commits: []
+  - purl: pkg:maven/edu.stanford.nlp/stanford-corenlp
+    affected_versions: vers:maven/<=4.3.0
+    fixed_versions: vers:maven/4.3.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-8gf7-w3cp-gfh3/GHSA-8gf7-w3cp-gfh3.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-611

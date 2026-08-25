@@ -7,6 +7,13 @@ summary: |
   Diavante vue-storefront-api and storefront-api disclose stack trace
   In Divante vue-storefront-api through 1.11.1 and storefront-api through 1.0-rc.1, as used in VueStorefront PWA, unexpected HTTP requests lead to an exception that discloses the error stack trace, with absolute file paths and Node.js module names.
 impacted_packages:
+  - purl: pkg:github/vuestorefront/vue-storefront-api
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/vuestorefront/vue-storefront-api
+        commit: 965247f41f872e84e4662d04d8e2108eaf6119da
+    introduced_in_commits: []
   - purl: pkg:npm/storefront-api
     affected_versions: vers:npm/<1.0.0-rc3
     fixed_versions: vers:npm/1.0.0-rc3
@@ -16,13 +23,6 @@ impacted_packages:
     affected_versions: vers:npm/<1.12.0
     fixed_versions: vers:npm/1.12.0
     fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:github/vuestorefront/vue-storefront-api
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/vuestorefront/vue-storefront-api
-        commit: 965247f41f872e84e4662d04d8e2108eaf6119da
     introduced_in_commits: []
   - purl: pkg:github/vuestorefront/storefront-api
     affected_versions:
@@ -35,12 +35,12 @@ severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-9wxj-37p8-49ff/GHSA-9wxj-37p8-49ff.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

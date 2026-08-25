@@ -15,11 +15,6 @@ summary: |
 
   Groovy source files in public plugins intended to be executed in sandboxed pipelines have been identified and added to an allowlist. The new extension point `org.jenkinsci.plugins.workflow.cps.GroovySourceFileAllowlist` allows plugins to add specific Groovy source files to that allowlist if necessary, but creation of plugin-specific Pipeline DSLs is strongly discouraged.
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins.workflow/workflow-cps
-    affected_versions: vers:maven/<=2689.v434009a
-    fixed_versions: vers:maven/2692.v76b
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/workflow-cps-plugin
     affected_versions:
     fixed_versions:
@@ -29,16 +24,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/workflow-cps-plugin
         commit: 76a7681702f42d65f77bbaa5463f146876ea62db
     introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins.workflow/workflow-cps
+    affected_versions: vers:maven/<=2689.v434009a
+    fixed_versions: vers:maven/2692.v76b
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-2xvx-rw9p-xgfc/GHSA-2xvx-rw9p-xgfc.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-552

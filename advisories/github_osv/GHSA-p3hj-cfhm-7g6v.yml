@@ -7,6 +7,19 @@ summary: |
   Moodle allows attackers to remove wiki pages
   mod/wiki/admin.php in Moodle through 2.4.11, 2.5.x before 2.5.9, 2.6.x before 2.6.6, and 2.7.x before 2.7.3 allows remote authenticated users to remove wiki pages by leveraging delete access within a different subwiki.
 impacted_packages:
+  - purl: pkg:github/moodle/moodle
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/moodle/moodle
+        commit: a481e32f02cdabd2b76aaa06d1d513ffe480e71b
+      - vcs_url: https://github.com/moodle/moodle
+        commit: a866ad40beb1c1d7faca2da9c3cbad2dcf6fa32b
+      - vcs_url: https://github.com/moodle/moodle
+        commit: e2a8ac6b1103167d6786cb1801703c2c0f8467ca
+      - vcs_url: https://github.com/moodle/moodle
+        commit: dc003ed98e47174a2a4c349f187265a383a386c0
+    introduced_in_commits: []
   - purl: pkg:composer/moodle/moodle
     affected_versions: vers:composer/<2.5.9
     fixed_versions: vers:composer/2.5.9
@@ -22,24 +35,11 @@ impacted_packages:
     fixed_versions: vers:composer/2.7.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/moodle/moodle
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/moodle/moodle
-        commit: a481e32f02cdabd2b76aaa06d1d513ffe480e71b
-      - vcs_url: https://github.com/moodle/moodle
-        commit: a866ad40beb1c1d7faca2da9c3cbad2dcf6fa32b
-      - vcs_url: https://github.com/moodle/moodle
-        commit: e2a8ac6b1103167d6786cb1801703c2c0f8467ca
-      - vcs_url: https://github.com/moodle/moodle
-        commit: dc003ed98e47174a2a4c349f187265a383a386c0
-    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses: []
 references:

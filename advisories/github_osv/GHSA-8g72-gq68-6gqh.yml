@@ -8,6 +8,11 @@ summary: |
   When you visit a page where you need to login, Plone 2.5-5.1rc1 sends you to the login form with a 'came_from' parameter set to the previous url. After you login, you get redirected to the page you tried to view before. An attacker might try to abuse this by letting you click on a specially crafted link. You would login, and get redirected to the site of the attacker, letting you think that you are still on the original Plone site. Or some javascript of the attacker could be executed. Most of these types of attacks are already blocked by Plone, using the `isURLInPortal` check to make sure we only redirect to a page on the same Plone site. But a few more ways of tricking Plone into accepting a malicious link were discovered, and fixed with this hotfix.
 impacted_packages:
   - purl: pkg:pypi/products.cmfplone
+    affected_versions: vers:pypi/>=5.1a1|<5.1.0
+    fixed_versions: vers:pypi/5.1.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/products.cmfplone
     affected_versions: vers:pypi/<4.3.17
     fixed_versions: vers:pypi/4.3.17
     fixed_in_commits: []
@@ -15,11 +20,6 @@ impacted_packages:
   - purl: pkg:pypi/products.cmfplone
     affected_versions: vers:pypi/>=5.0.0|<5.0.10
     fixed_versions: vers:pypi/5.0.10
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/products.cmfplone
-    affected_versions: vers:pypi/>=5.1a1|<5.1.0
-    fixed_versions: vers:pypi/5.1.0
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/plone
@@ -47,19 +47,19 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '6.1'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-8g72-gq68-6gqh/GHSA-8g72-gq68-6gqh.json
   - score: '5.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-8g72-gq68-6gqh/GHSA-8g72-gq68-6gqh.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-601

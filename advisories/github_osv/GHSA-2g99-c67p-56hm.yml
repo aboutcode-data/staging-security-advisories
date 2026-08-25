@@ -7,6 +7,15 @@ summary: |
   XML Signature/Encryption Not Validated in Apache CXF
   Apache CXF 2.4.x before 2.4.8, 2.5.x before 2.5.4, and 2.6.x before 2.6.1, when a Supporting Token specifies a child WS-SecurityPolicy 1.1 or 1.2 policy, does not properly ensure that an XML element is signed or encrypted, which has unspecified impact and attack vectors.
 impacted_packages:
+  - purl: pkg:github/apache/cxf
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/cxf
+        commit: 4500bf901cb2a7312291b6663045f28a95d2a0c4
+      - vcs_url: https://github.com/apache/cxf
+        commit: 440528d928be1e2030e7227b958c9c072847d9b2
+    introduced_in_commits: []
   - purl: pkg:maven/org.apache.cxf/cxf
     affected_versions: vers:maven/>=2.4.0|<2.4.8
     fixed_versions: vers:maven/2.4.8
@@ -22,20 +31,11 @@ impacted_packages:
     fixed_versions: vers:maven/2.6.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/apache/cxf
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/apache/cxf
-        commit: 4500bf901cb2a7312291b6663045f28a95d2a0c4
-      - vcs_url: https://github.com/apache/cxf
-        commit: 440528d928be1e2030e7227b958c9c072847d9b2
-    introduced_in_commits: []
 severities:
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses: []
 references:

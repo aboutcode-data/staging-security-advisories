@@ -7,6 +7,13 @@ summary: |
   Improper Neutralization of Input During Web Page Generation in Jenkins
   Jenkins 2.196 and earlier, LTS 2.176.3 and earlier did not restrict or filter values set as Jenkins URL in the global configuration, resulting in a stored XSS vulnerability exploitable by attackers with Overall/Administer permission.
 impacted_packages:
+  - purl: pkg:github/jenkinsci/jenkins
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/jenkinsci/jenkins
+        commit: e2c596c049e5e09e7254ff000802709c2e01af2a
+    introduced_in_commits: []
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
     affected_versions: vers:maven/<=2.176.3
     fixed_versions: vers:maven/2.176.4
@@ -17,23 +24,16 @@ impacted_packages:
     fixed_versions: vers:maven/2.197
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/jenkinsci/jenkins
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/jenkinsci/jenkins
-        commit: e2c596c049e5e09e7254ff000802709c2e01af2a
-    introduced_in_commits: []
 severities:
   - score: '4.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-hw55-f8wc-82m6/GHSA-hw55-f8wc-82m6.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

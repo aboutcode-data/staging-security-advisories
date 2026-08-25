@@ -7,6 +7,13 @@ summary: |
   Sup Code Injection vulnerability
   Sup before 0.13.2.1 and 0.14.x before 0.14.1.1 allows remote attackers to execute arbitrary commands via shell metacharacters in the filename of an email attachment.
 impacted_packages:
+  - purl: pkg:github/sup-heliotrope/sup
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/sup-heliotrope/sup
+        commit: 8b46cdbfc14e07ca07d403aa28b0e7bc1c544785
+    introduced_in_commits: []
   - purl: pkg:gem/sup
     affected_versions: vers:gem/<0.13.2.1
     fixed_versions: vers:gem/0.13.2.1
@@ -17,18 +24,11 @@ impacted_packages:
     fixed_versions: vers:gem/0.14.1.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/sup-heliotrope/sup
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/sup-heliotrope/sup
-        commit: 8b46cdbfc14e07ca07d403aa28b0e7bc1c544785
-    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

@@ -7,11 +7,6 @@ summary: |
   Lemur uses static IV per key
   Lemur 0.1.4 does not use sufficient entropy in its IV when encrypting AES in CBC mode.
 impacted_packages:
-  - purl: pkg:pypi/lemur
-    affected_versions: vers:pypi/<0.1.5
-    fixed_versions: vers:pypi/0.1.5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/netflix/lemur
     affected_versions:
     fixed_versions:
@@ -19,21 +14,26 @@ impacted_packages:
       - vcs_url: https://github.com/netflix/lemur
         commit: 394e18f76e5eb534d95160945ebc231ec3b4c794
     introduced_in_commits: []
+  - purl: pkg:pypi/lemur
+    affected_versions: vers:pypi/<0.1.5
+    fixed_versions: vers:pypi/0.1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-chg9-3c3p-ch23/GHSA-chg9-3c3p-ch23.json
   - score: '8.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-chg9-3c3p-ch23/GHSA-chg9-3c3p-ch23.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-331

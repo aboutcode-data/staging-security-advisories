@@ -6,6 +6,16 @@ aliases:
 summary: A denial of service vulnerability exists when ASP.NET Core improperly handles web requests,
   aka `ASP.NET Core Denial of Service Vulnerability`.
 impacted_packages:
+  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-x64
+    affected_versions: vers:nuget/>=3.1.0|<3.1.7
+    fixed_versions: vers:nuget/3.1.7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.osx-x64
+    affected_versions: vers:nuget/>=3.1.0|<3.1.7
+    fixed_versions: vers:nuget/3.1.7
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-arm
     affected_versions: vers:nuget/>=3.1.0|<3.1.7
     fixed_versions: vers:nuget/3.1.7
@@ -22,16 +32,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-musl-x64
-    affected_versions: vers:nuget/>=3.1.0|<3.1.7
-    fixed_versions: vers:nuget/3.1.7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-x64
-    affected_versions: vers:nuget/>=3.1.0|<3.1.7
-    fixed_versions: vers:nuget/3.1.7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.osx-x64
     affected_versions: vers:nuget/>=3.1.0|<3.1.7
     fixed_versions: vers:nuget/3.1.7
     fixed_in_commits: []
@@ -70,12 +70,12 @@ severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-f8qx-mjcq-wfgx/GHSA-f8qx-mjcq-wfgx.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-20

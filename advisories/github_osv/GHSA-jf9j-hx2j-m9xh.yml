@@ -11,11 +11,6 @@ summary: |
 
   Database Plugin 1.7 removes the database console.
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins/database
-    affected_versions: vers:maven/<=1.6
-    fixed_versions: vers:maven/1.7
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/database-plugin
     affected_versions:
     fixed_versions:
@@ -23,16 +18,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/database-plugin
         commit: a68258cf17ba8d5264010cc760770a62a3cc6c2d
     introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/database
+    affected_versions: vers:maven/<=1.6
+    fixed_versions: vers:maven/1.7
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-jf9j-hx2j-m9xh/GHSA-jf9j-hx2j-m9xh.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-352

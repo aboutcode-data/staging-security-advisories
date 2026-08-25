@@ -8,13 +8,13 @@ summary: |
   The Transformation implementation in phpMyAdmin 4.0.x before 4.0.10.16, 4.4.x before 4.4.15.7, and 4.6.x before 4.6.3 does not use the no-referrer Content Security Policy (CSP) protection mechanism, which makes it easier for remote attackers to conduct CSRF attacks by reading an authentication token in a Referer header, related to libraries/Header.php.
 impacted_packages:
   - purl: pkg:composer/phpmyadmin/phpmyadmin
-    affected_versions: vers:composer/>=4.4.15+0|<4.4.15+7
-    fixed_versions: vers:composer/4.4.15+7
+    affected_versions: vers:composer/>=4.6.0|<4.6.3
+    fixed_versions: vers:composer/4.6.3
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/phpmyadmin/phpmyadmin
-    affected_versions: vers:composer/>=4.6.0|<4.6.3
-    fixed_versions: vers:composer/4.6.3
+    affected_versions: vers:composer/>=4.4.15+0|<4.4.15+7
+    fixed_versions: vers:composer/4.4.15+7
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/phpmyadmin/phpmyadmin
@@ -33,14 +33,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '7.5'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-2p7v-jm8m-g3qq/GHSA-2p7v-jm8m-g3qq.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

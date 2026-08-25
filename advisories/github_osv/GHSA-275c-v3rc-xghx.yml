@@ -8,11 +8,6 @@ summary: |
   A cross-site Scripting (XSS) vulnerability in Kirby Panel before 2.3.3, 2.4.x before 2.4.2, and 2.5.x before 2.5.7 exists when displaying a specially prepared SVG document that has been uploaded as a content file.
 impacted_packages:
   - purl: pkg:composer/getkirby/cms
-    affected_versions: vers:composer/<2.3.3
-    fixed_versions: vers:composer/2.3.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/getkirby/cms
     affected_versions: vers:composer/>=2.4.0|<2.4.2
     fixed_versions: vers:composer/2.4.2
     fixed_in_commits: []
@@ -22,16 +17,21 @@ impacted_packages:
     fixed_versions: vers:composer/2.5.7
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:composer/getkirby/cms
+    affected_versions: vers:composer/<2.3.3
+    fixed_versions: vers:composer/2.3.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.4'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-275c-v3rc-xghx/GHSA-275c-v3rc-xghx.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

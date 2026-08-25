@@ -7,11 +7,6 @@ summary: |
   PHPMailer susceptible to arbitrary code execution
   html2text.php in Chuggnutt HTML to Text Converter, as used in PHPMailer before 5.2.10, RoundCube Webmail (roundcubemail) 0.2-1.alpha and 0.2-3.beta, Mahara, and AtMail Open 1.03, allows remote attackers to execute arbitrary code via crafted input that is processed by the preg_replace function with the eval switch.
 impacted_packages:
-  - purl: pkg:composer/phpmailer/phpmailer
-    affected_versions: vers:composer/<5.2.10
-    fixed_versions: vers:composer/5.2.10
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/phpmailer/phpmailer
     affected_versions:
     fixed_versions:
@@ -19,11 +14,16 @@ impacted_packages:
       - vcs_url: https://github.com/phpmailer/phpmailer
         commit: 8beacc646acb67c995aea10ac5585970efc7355a
     introduced_in_commits: []
+  - purl: pkg:composer/phpmailer/phpmailer
+    affected_versions: vers:composer/<5.2.10
+    fixed_versions: vers:composer/5.2.10
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

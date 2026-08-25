@@ -8,13 +8,13 @@ summary: |
   shared/util/StateUtils.java in Apache MyFaces 1.1.x before 1.1.8, 1.2.x before 1.2.9, and 2.0.x before 2.0.1 uses an encrypted View State without a Message Authentication Code (MAC), which makes it easier for remote attackers to perform successful modifications of the View State via a padding oracle attack.
 impacted_packages:
   - purl: pkg:maven/org.apache.myfaces.shared/myfaces-shared-core
-    affected_versions: vers:maven/>=1.1.0|<1.1.8
-    fixed_versions: vers:maven/1.1.8
+    affected_versions: vers:maven/>=1.2.0|<1.2.9
+    fixed_versions: vers:maven/1.2.9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.myfaces.shared/myfaces-shared-core
-    affected_versions: vers:maven/>=1.2.0|<1.2.9
-    fixed_versions: vers:maven/1.2.9
+    affected_versions: vers:maven/>=1.1.0|<1.1.8
+    fixed_versions: vers:maven/1.1.8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.myfaces.shared/myfaces-shared-core
@@ -41,7 +41,7 @@ severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-287

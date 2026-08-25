@@ -7,11 +7,6 @@ summary: |
   Jenkins Groovy Plugin sandbox bypass vulnerability
   A sandbox bypass vulnerability exists in Jenkins Groovy Plugin 2.0 and earlier in `src/main/java/hudson/plugins/groovy/StringScriptSource.java` that allows attackers with Overall/Read permission to provide a Groovy script to an HTTP endpoint that can result in arbitrary code execution on the Jenkins master JVM. In version 2.1, the affected HTTP endpoint applies a safe Groovy compiler configuration preventing the use of unsafe AST transforming annotations.
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins/groovy
-    affected_versions: vers:maven/<=2.0
-    fixed_versions: vers:maven/2.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/groovy-plugin
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/groovy-plugin
         commit: 212e048a319ae32dad4cfec5e73a885a9f4781f0
     introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/groovy
+    affected_versions: vers:maven/<=2.0
+    fixed_versions: vers:maven/2.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-xfwj-2f34-32f5/GHSA-xfwj-2f34-32f5.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-862

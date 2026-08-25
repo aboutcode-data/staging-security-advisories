@@ -8,6 +8,11 @@ summary: |
   An issue was discovered in SaltStack Salt before 3002.5. The salt-api's ssh client is vulnerable to a shell injection by including ProxyCommand in an argument, or via ssh_options provided in an API request.
 impacted_packages:
   - purl: pkg:pypi/salt
+    affected_versions: vers:pypi/>=2018.2.0|<=2018.3.5
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/salt
     affected_versions: vers:pypi/<2015.8.13
     fixed_versions: vers:pypi/2015.8.13
     fixed_in_commits: []
@@ -25,11 +30,6 @@ impacted_packages:
   - purl: pkg:pypi/salt
     affected_versions: vers:pypi/>=2017.5.0|<2017.7.8
     fixed_versions: vers:pypi/2017.7.8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/salt
-    affected_versions: vers:pypi/>=2018.2.0|<=2018.3.5
-    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/salt
@@ -63,12 +63,12 @@ severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-8rp6-x3r7-5qw3/GHSA-8rp6-x3r7-5qw3.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-74

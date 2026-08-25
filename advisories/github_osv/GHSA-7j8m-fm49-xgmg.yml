@@ -7,11 +7,6 @@ summary: |
   MantisBT Incorrect Authorization for bug_revision_view_page.php check
   An issue was discovered in MantisBT before 2.24.4. An incorrect access check in bug_revision_view_page.php allows an unprivileged attacker to view the Summary field of private issues, as well as bugnotes revisions, gaining access to potentially confidential information via the bugnote_id parameter.
 impacted_packages:
-  - purl: pkg:composer/mantisbt/mantisbt
-    affected_versions: vers:composer/<=2.24.3
-    fixed_versions: vers:composer/2.24.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/mantisbt/mantisbt
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/mantisbt/mantisbt
         commit: e9fd168c519a46c2cd0f3cb835e9ce5dba77fc4d
     introduced_in_commits: []
+  - purl: pkg:composer/mantisbt/mantisbt
+    affected_versions: vers:composer/<=2.24.3
+    fixed_versions: vers:composer/2.24.4
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-7j8m-fm49-xgmg/GHSA-7j8m-fm49-xgmg.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-863

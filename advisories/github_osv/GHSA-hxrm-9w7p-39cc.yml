@@ -7,12 +7,27 @@ summary: |
   Cookie parsing failure
   A security feature bypass vulnerability exists in the way Microsoft ASP.NET Core parses encoded cookie names.The ASP.NET Core cookie parser decodes entire cookie strings which could allow a malicious attacker to set a second cookie with the name being percent encoded.The security update addresses the vulnerability by fixing the way the ASP.NET Core cookie parser handles encoded names., aka 'Microsoft ASP.NET Core Security Feature Bypass Vulnerability'.
 impacted_packages:
-  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-arm
-    affected_versions: vers:nuget/>=3.1.0|<3.1.8
+  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.win-arm64
+    affected_versions: vers:nuget/>=3.1.5|<3.1.8
     fixed_versions: vers:nuget/3.1.8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-arm64
+    affected_versions: vers:nuget/>=3.1.0|<3.1.8
+    fixed_versions: vers:nuget/3.1.8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Microsoft.AspNetCore.Http
+    affected_versions: vers:nuget/<2.1.22
+    fixed_versions: vers:nuget/2.1.22
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Microsoft.AspNetCore.App
+    affected_versions: vers:nuget/<=2.1.21
+    fixed_versions: vers:nuget/2.1.22
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-arm
     affected_versions: vers:nuget/>=3.1.0|<3.1.8
     fixed_versions: vers:nuget/3.1.8
     fixed_in_commits: []
@@ -47,19 +62,9 @@ impacted_packages:
     fixed_versions: vers:nuget/3.1.8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.win-arm64
-    affected_versions: vers:nuget/>=3.1.5|<3.1.8
+  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.win-arm
+    affected_versions: vers:nuget/>=3.1.0|<3.1.8
     fixed_versions: vers:nuget/3.1.8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.Http
-    affected_versions: vers:nuget/<2.1.22
-    fixed_versions: vers:nuget/2.1.22
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.App
-    affected_versions: vers:nuget/<=2.1.21
-    fixed_versions: vers:nuget/2.1.22
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:nuget/Microsoft.Owin
@@ -67,21 +72,16 @@ impacted_packages:
     fixed_versions: vers:nuget/4.1.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.win-arm
-    affected_versions: vers:nuget/>=3.1.0|<3.1.8
-    fixed_versions: vers:nuget/3.1.8
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-hxrm-9w7p-39cc/GHSA-hxrm-9w7p-39cc.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses: []
 references:

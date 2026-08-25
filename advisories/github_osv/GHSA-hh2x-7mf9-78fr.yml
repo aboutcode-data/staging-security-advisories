@@ -7,6 +7,13 @@ summary: |
   Sup Code Injection vulnerability
   `lib/sup/message_chunks.rb` in Sup before 0.13.2.1 and 0.14.x before 0.14.1.1 allows remote attackers to execute arbitrary commands via shell metacharacters in the content_type of an email attachment.
 impacted_packages:
+  - purl: pkg:github/sup-heliotrope/sup
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/sup-heliotrope/sup
+        commit: ca0302e0c716682d2de22e9136400c704cc93e42
+    introduced_in_commits: []
   - purl: pkg:gem/sup
     affected_versions: vers:gem/<0.13.2.1
     fixed_versions: vers:gem/0.13.2.1
@@ -17,18 +24,11 @@ impacted_packages:
     fixed_versions: vers:gem/0.14.1.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/sup-heliotrope/sup
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/sup-heliotrope/sup
-        commit: ca0302e0c716682d2de22e9136400c704cc93e42
-    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

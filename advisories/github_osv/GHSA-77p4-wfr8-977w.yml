@@ -7,6 +7,16 @@ summary: |
   TYPO3 Directory Traversal on ZIP extraction
   An issue was discovered in TYPO3 before 8.7.30, 9.x before 9.5.12, and 10.x before 10.2.2. It has been discovered that the extraction of manually uploaded ZIP archives in Extension Manager is vulnerable to directory traversal. Admin privileges are required in order to exploit this vulnerability. (In v9 LTS and later, System Maintainer privileges are also required.)
 impacted_packages:
+  - purl: pkg:composer/typo3/cms
+    affected_versions: vers:composer/>=8.0.0|<8.7.30
+    fixed_versions: vers:composer/8.7.30
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/typo3/cms
+    affected_versions: vers:composer/>=9.0.0|<9.5.12
+    fixed_versions: vers:composer/9.5.12
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:composer/typo3/cms-core
     affected_versions: vers:composer/>=10.0.0|<10.2.2
     fixed_versions: vers:composer/10.2.2
@@ -25,28 +35,18 @@ impacted_packages:
   - purl: pkg:composer/typo3/cms
     affected_versions: vers:composer/>=10.0.0|<10.2.2
     fixed_versions: vers:composer/10.2.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/typo3/cms
-    affected_versions: vers:composer/>=8.0.0|<8.7.30
-    fixed_versions: vers:composer/8.7.30
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/typo3/cms
-    affected_versions: vers:composer/>=9.0.0|<9.5.12
-    fixed_versions: vers:composer/9.5.12
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '6.8'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:H/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-77p4-wfr8-977w/GHSA-77p4-wfr8-977w.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

@@ -8,13 +8,8 @@ summary: |
   An issue was discovered in Moodle 3.x. A Teacher creating a Calculated question can intentionally cause remote code execution on the server, aka eval injection.
 impacted_packages:
   - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/>=3.1.0|<3.1.12
-    fixed_versions: vers:composer/3.1.12
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/>=3.2.0|<3.2.9
-    fixed_versions: vers:composer/3.2.9
+    affected_versions: vers:composer/>=3.4.0|<3.4.3
+    fixed_versions: vers:composer/3.4.3
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/moodle/moodle
@@ -23,20 +18,25 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/>=3.4.0|<3.4.3
-    fixed_versions: vers:composer/3.4.3
+    affected_versions: vers:composer/>=3.2.0|<3.2.9
+    fixed_versions: vers:composer/3.2.9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/moodle/moodle
+    affected_versions: vers:composer/>=3.1.0|<3.1.12
+    fixed_versions: vers:composer/3.1.12
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '8.8'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-xh2j-q4mc-v522/GHSA-xh2j-q4mc-v522.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

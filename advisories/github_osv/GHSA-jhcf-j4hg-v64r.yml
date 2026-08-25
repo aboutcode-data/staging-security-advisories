@@ -7,11 +7,6 @@ summary: |
   Pimcore Access Control Issues
   Pimcore before 6.2.2 lacks an Access Denied outcome for a certain scenario of an incorrect recipient ID of a notification.
 impacted_packages:
-  - purl: pkg:composer/pimcore/pimcore
-    affected_versions: vers:composer/<6.2.2
-    fixed_versions: vers:composer/6.2.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/pimcore/pimcore
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/pimcore/pimcore
         commit: 0a5d80b2593b2ebe35d19756b730ba33aa049106
     introduced_in_commits: []
+  - purl: pkg:composer/pimcore/pimcore
+    affected_versions: vers:composer/<6.2.2
+    fixed_versions: vers:composer/6.2.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-jhcf-j4hg-v64r/GHSA-jhcf-j4hg-v64r.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-838

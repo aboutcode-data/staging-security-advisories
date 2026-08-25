@@ -7,11 +7,6 @@ summary: |
   Jenkins Pipeline Aggregator View Plugin stored XSS vulnerability
   Jenkins Pipeline Aggregator View Plugin 1.8 and earlier does not escape information shown on its view, resulting in a stored XSS vulnerability exploitable by attackers able to affects view content such as job display name or pipeline stage names.
 impacted_packages:
-  - purl: pkg:maven/com.paul8620.jenkins.plugins/pipeline-aggregator-view
-    affected_versions: vers:maven/<1.9
-    fixed_versions: vers:maven/1.9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/pipeline-aggregator-view-plugin
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/pipeline-aggregator-view-plugin
         commit: acb0eeeae60ec0ac2dc5c8b5639d77589aa95af3
     introduced_in_commits: []
+  - purl: pkg:maven/com.paul8620.jenkins.plugins/pipeline-aggregator-view
+    affected_versions: vers:maven/<1.9
+    fixed_versions: vers:maven/1.9
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-jf8x-943c-r4h6/GHSA-jf8x-943c-r4h6.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

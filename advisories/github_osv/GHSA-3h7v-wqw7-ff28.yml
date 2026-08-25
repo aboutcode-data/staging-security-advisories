@@ -7,11 +7,6 @@ summary: |
   Cross site scripting in publify
   In publify, versions v8.0 to v9.2.4 are vulnerable to stored XSS as a result of an unrestricted file upload. This issue allows a user with “publisher” role to inject malicious JavaScript via the uploaded html file.
 impacted_packages:
-  - purl: pkg:gem/publify_core
-    affected_versions: vers:gem/>=8.0|<9.2.5
-    fixed_versions: vers:gem/9.2.5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/publify/publify
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/publify/publify
         commit: d99c0870d3dbbfde7febdc6cad33199b84770101
     introduced_in_commits: []
+  - purl: pkg:gem/publify_core
+    affected_versions: vers:gem/>=8.0|<9.2.5
+    fixed_versions: vers:gem/9.2.5
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-3h7v-wqw7-ff28/GHSA-3h7v-wqw7-ff28.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

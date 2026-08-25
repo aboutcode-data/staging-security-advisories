@@ -7,11 +7,6 @@ summary: |
   phpMyAdmin Remote Code Execution
   phpMyAdmin 3.5.x before 3.5.8 and 4.x before 4.0.0-rc3, when a SaveDir directory is configured, allows remote authenticated users to execute arbitrary code by using a double extension in the filename of an export file, leading to interpretation of this file as an executable file by the Apache HTTP Server, as demonstrated by a .php.sql filename.
 impacted_packages:
-  - purl: pkg:composer/phpmyadmin/phpmyadmin
-    affected_versions: vers:composer/>=3.5.0|<3.5.8+1
-    fixed_versions: vers:composer/3.5.8+1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/phpmyadmin/phpmyadmin
     affected_versions:
     fixed_versions:
@@ -21,16 +16,21 @@ impacted_packages:
       - vcs_url: https://github.com/phpmyadmin/phpmyadmin
         commit: d3fafdfba0807068196655e9b6d16c5d1d3ccf8a
     introduced_in_commits: []
+  - purl: pkg:composer/phpmyadmin/phpmyadmin
+    affected_versions: vers:composer/>=3.5.0|<3.5.8+1
+    fixed_versions: vers:composer/3.5.8+1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-gg36-9346-9qx9/GHSA-gg36-9346-9qx9.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

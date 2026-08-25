@@ -7,11 +7,6 @@ summary: |
   Improper Neutralization of Input During Web Page Generation in Spring Framework
   The JavaScriptUtils.javaScriptEscape method in web/util/JavaScriptUtils.java in Spring MVC in Spring Framework before 3.2.2 does not properly escape certain characters, which allows remote attackers to conduct cross-site scripting (XSS) attacks via a (1) line separator or (2) paragraph separator Unicode character or (3) left or (4) right angle bracket.
 impacted_packages:
-  - purl: pkg:maven/org.springframework/spring-web
-    affected_versions: vers:maven/<=3.2.1.RELEASE
-    fixed_versions: vers:maven/3.2.2.RELEASE
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/spring-projects/spring-framework
     affected_versions:
     fixed_versions:
@@ -23,16 +18,21 @@ impacted_packages:
       - vcs_url: https://github.com/spring-projects/spring-framework
         commit: f5c9fe69a444607af667911bd4c5074b5b073e7b
     introduced_in_commits: []
+  - purl: pkg:maven/org.springframework/spring-web
+    affected_versions: vers:maven/<=3.2.1.RELEASE
+    fixed_versions: vers:maven/3.2.2.RELEASE
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-xjrf-8x4f-43h4/GHSA-xjrf-8x4f-43h4.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

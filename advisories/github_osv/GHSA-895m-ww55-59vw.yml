@@ -8,25 +8,25 @@ summary: |
   The YARN NodeManager in Apache Hadoop 2.6.x before 2.6.5 and 2.7.x before 2.7.3 can leak the password for credential store provider used by the NodeManager to YARN Applications.
 impacted_packages:
   - purl: pkg:maven/org.apache.hadoop/hadoop-yarn-server-nodemanager
-    affected_versions: vers:maven/<=2.6.4
-    fixed_versions: vers:maven/2.6.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.hadoop/hadoop-yarn-server-nodemanager
     affected_versions: vers:maven/<=2.7.2
     fixed_versions: vers:maven/2.7.3
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:maven/org.apache.hadoop/hadoop-yarn-server-nodemanager
+    affected_versions: vers:maven/<=2.6.4
+    fixed_versions: vers:maven/2.6.5
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.8'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-895m-ww55-59vw/GHSA-895m-ww55-59vw.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

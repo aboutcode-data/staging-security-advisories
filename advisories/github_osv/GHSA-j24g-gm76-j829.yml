@@ -7,11 +7,6 @@ summary: |
   Weblate user account enumeration via reset password form
   The password reset form in Weblate before 2.10.1 provides different error messages depending on whether the email address is associated with an account, which allows remote attackers to enumerate user accounts via a series of requests.
 impacted_packages:
-  - purl: pkg:pypi/weblate
-    affected_versions: vers:pypi/<2.10.1
-    fixed_versions: vers:pypi/2.10.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/weblateorg/weblate
     affected_versions:
     fixed_versions:
@@ -19,21 +14,26 @@ impacted_packages:
       - vcs_url: https://github.com/weblateorg/weblate
         commit: abe0d2a29a1d8e896bfe829c8461bf8b391f1079
     introduced_in_commits: []
+  - purl: pkg:pypi/weblate
+    affected_versions: vers:pypi/<2.10.1
+    fixed_versions: vers:pypi/2.10.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-j24g-gm76-j829/GHSA-j24g-gm76-j829.json
   - score: '6.9'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-j24g-gm76-j829/GHSA-j24g-gm76-j829.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

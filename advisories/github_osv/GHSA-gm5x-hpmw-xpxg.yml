@@ -7,6 +7,15 @@ summary: |
   Silverstripe CMS information disclosure
   In SilverStripe through 4.5.0, a specific URL path configured by default through the silverstripe/framework module can be used to disclose the fact that a domain is hosting a Silverstripe application. There is no disclosure of the specific version. The functionality on this URL path is limited to execution in a CLI context, and is not known to present a vulnerability through web-based access. As a side-effect, this preconfigured path also blocks the creation of other resources on this path (e.g. a page).
 impacted_packages:
+  - purl: pkg:github/silverstripe/silverstripe-framework
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/silverstripe/silverstripe-framework
+        commit: 91d30db88f68b9b87980ef9a59e208a81980b72c
+      - vcs_url: https://github.com/silverstripe/silverstripe-framework
+        commit: cce2b1630937895aa28c2914837651e7cd56d74b
+    introduced_in_commits: []
   - purl: pkg:composer/silverstripe/cms
     affected_versions: vers:composer/<=4.5.0
     fixed_versions:
@@ -22,25 +31,16 @@ impacted_packages:
     fixed_versions: vers:composer/4.5.4
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/silverstripe/silverstripe-framework
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/silverstripe/silverstripe-framework
-        commit: 91d30db88f68b9b87980ef9a59e208a81980b72c
-      - vcs_url: https://github.com/silverstripe/silverstripe-framework
-        commit: cce2b1630937895aa28c2914837651e7cd56d74b
-    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-gm5x-hpmw-xpxg/GHSA-gm5x-hpmw-xpxg.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

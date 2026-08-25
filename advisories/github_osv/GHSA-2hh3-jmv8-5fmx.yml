@@ -8,6 +8,11 @@ summary: |
   In Moodle 2.x and 3.x, text injection can occur in email headers, potentially leading to outbound spam.
 impacted_packages:
   - purl: pkg:composer/moodle/moodle
+    affected_versions: vers:composer/>=2.8.0|<=2.8.12
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/moodle/moodle
     affected_versions: vers:composer/>=3.1.0|<3.1.1
     fixed_versions: vers:composer/3.1.1
     fixed_in_commits: []
@@ -20,11 +25,6 @@ impacted_packages:
   - purl: pkg:composer/moodle/moodle
     affected_versions: vers:composer/<=2.9.6
     fixed_versions: vers:composer/2.9.7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/>=2.8.0|<=2.8.12
-    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/moodle/moodle
@@ -41,14 +41,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '5.4'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-2hh3-jmv8-5fmx/GHSA-2hh3-jmv8-5fmx.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-74

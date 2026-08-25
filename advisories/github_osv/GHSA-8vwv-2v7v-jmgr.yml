@@ -7,11 +7,6 @@ summary: |
   Horizon-Orchestration Cross-site scripting (XSS) vulnerability through resource name
   Cross-site scripting (XSS) vulnerability in the Orchestration/Stack section in the Horizon Orchestration dashboard in OpenStack Dashboard (Horizon) before 2013.2.4, 2014.1 before 2014.1.2, and Juno before Juno-2, when used with Heat, allows remote Orchestration template owners or catalogs to inject arbitrary web script or HTML via a crafted template.
 impacted_packages:
-  - purl: pkg:pypi/horizon
-    affected_versions: vers:pypi/<8.0.0a0
-    fixed_versions: vers:pypi/8.0.0a0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/openstack/horizon
     affected_versions:
     fixed_versions:
@@ -21,11 +16,16 @@ impacted_packages:
       - vcs_url: https://github.com/openstack/horizon
         commit: c844bd692894353c60b320005b804970605e910f
     introduced_in_commits: []
+  - purl: pkg:pypi/horizon
+    affected_versions: vers:pypi/<8.0.0a0
+    fixed_versions: vers:pypi/8.0.0a0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

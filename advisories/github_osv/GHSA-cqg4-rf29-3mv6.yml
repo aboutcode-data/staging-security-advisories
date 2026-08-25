@@ -7,11 +7,6 @@ summary: |
   Trytond allows modification of privileges of arbitrary users
   `model/modelstorage.py` in the Tryton application framework (trytond) before 2.4.0 for Python does not properly restrict access to the Many2Many field in the relation model, which allows remote authenticated users to modify the privileges of arbitrary users via a (1) create, (2) write, (3) delete, or (4) copy rpc call.
 impacted_packages:
-  - purl: pkg:pypi/trytond
-    affected_versions: vers:pypi/<2.4.0
-    fixed_versions: vers:pypi/2.4.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/tryton/trytond
     affected_versions:
     fixed_versions:
@@ -19,21 +14,26 @@ impacted_packages:
       - vcs_url: https://github.com/tryton/trytond
         commit: d059ebb792401ded3129cd9402d7392dc34b81e3
     introduced_in_commits: []
+  - purl: pkg:pypi/trytond
+    affected_versions: vers:pypi/<2.4.0
+    fixed_versions: vers:pypi/2.4.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-cqg4-rf29-3mv6/GHSA-cqg4-rf29-3mv6.json
   - score: '7.1'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-cqg4-rf29-3mv6/GHSA-cqg4-rf29-3mv6.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-287

@@ -7,6 +7,13 @@ summary: |
   Directory Traversal in Apache Tomcat
   Apache Tomcat 4.1.0 through 4.1.39, 5.5.0 through 5.5.27, 6.0.0 through 6.0.18, and possibly earlier versions normalizes the target pathname before filtering the query string when using the RequestDispatcher method, which allows remote attackers to bypass intended access restrictions and conduct directory traversal attacks via .. (dot dot) sequences and the WEB-INF directory in a Request.
 impacted_packages:
+  - purl: pkg:github/apache/tomcat
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/tomcat
+        commit: 6b61911f94d6d8d49ee933c5f1882a7e7c336d2c
+    introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat/tomcat
     affected_versions: vers:maven/>=4.1.0|<4.1.40
     fixed_versions: vers:maven/4.1.40
@@ -22,23 +29,16 @@ impacted_packages:
     fixed_versions: vers:maven/6.0.20
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/apache/tomcat
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/apache/tomcat
-        commit: 6b61911f94d6d8d49ee933c5f1882a7e7c336d2c
-    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-9737-qmgc-hfr9/GHSA-9737-qmgc-hfr9.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

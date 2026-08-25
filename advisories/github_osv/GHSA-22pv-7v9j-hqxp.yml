@@ -7,6 +7,21 @@ summary: |
   Symfony Host Header Injection vulnerability in the HttpFoundation component
   Symfony 2.0.X before 2.0.24, 2.1.X before 2.1.12, 2.2.X before 2.2.5, and 2.3.X before 2.3.3 have an issue in the HttpFoundation component. The Host header can be manipulated by an attacker when the framework is generating an absolute URL. A remote attacker could exploit this vulnerability to inject malicious content into the Web application page and conduct various attacks.
 impacted_packages:
+  - purl: pkg:composer/symfony/http-foundation
+    affected_versions: vers:composer/>=2.2.0|<2.2.5
+    fixed_versions: vers:composer/2.2.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=2.2.0|<2.2.5
+    fixed_versions: vers:composer/2.2.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/http-foundation
+    affected_versions: vers:composer/>=2.0.0|<2.0.24
+    fixed_versions: vers:composer/2.0.24
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:composer/symfony/symfony
     affected_versions: vers:composer/>=2.0.0|<2.0.24
     fixed_versions: vers:composer/2.0.24
@@ -15,11 +30,6 @@ impacted_packages:
   - purl: pkg:composer/symfony/symfony
     affected_versions: vers:composer/>=2.1.0|<2.1.12
     fixed_versions: vers:composer/2.1.12
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/symfony
-    affected_versions: vers:composer/>=2.2.0|<2.2.5
-    fixed_versions: vers:composer/2.2.5
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/symfony
@@ -28,18 +38,8 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/http-foundation
-    affected_versions: vers:composer/>=2.0.0|<2.0.24
-    fixed_versions: vers:composer/2.0.24
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/http-foundation
     affected_versions: vers:composer/>=2.1.0|<2.1.12
     fixed_versions: vers:composer/2.1.12
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/http-foundation
-    affected_versions: vers:composer/>=2.2.0|<2.2.5
-    fixed_versions: vers:composer/2.2.5
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/http-foundation
@@ -51,12 +51,12 @@ severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-22pv-7v9j-hqxp/GHSA-22pv-7v9j-hqxp.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

@@ -8,11 +8,6 @@ summary: |
   mod/lti/ajax.php in Moodle through 2.5.9, 2.6.x before 2.6.7, 2.7.x before 2.7.4, and 2.8.x before 2.8.2 does not consider the moodle/course:manageactivities and mod/lti:addinstance capabilities before proceeding with registered-tool list searches, which allows remote authenticated users to obtain sensitive information via requests to the LTI Ajax service.
 impacted_packages:
   - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/<2.6.7
-    fixed_versions: vers:composer/2.6.7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/moodle/moodle
     affected_versions: vers:composer/>=2.7.0|<2.7.4
     fixed_versions: vers:composer/2.7.4
     fixed_in_commits: []
@@ -20,6 +15,11 @@ impacted_packages:
   - purl: pkg:composer/moodle/moodle
     affected_versions: vers:composer/>=2.8.0|<2.8.2
     fixed_versions: vers:composer/2.8.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/moodle/moodle
+    affected_versions: vers:composer/<2.6.7
+    fixed_versions: vers:composer/2.6.7
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/moodle/moodle
@@ -39,7 +39,7 @@ severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

@@ -7,6 +7,15 @@ summary: |
   Jenkins allows attackers to configure restricted projects
   Jenkins before 1.502 allows remote authenticated users to configure an otherwise restricted project via vectors related to post-build actions.
 impacted_packages:
+  - purl: pkg:github/jenkinsci/jenkins
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/jenkinsci/jenkins
+        commit: 36342d71e29e0620f803a7470ce96c61761648d8
+      - vcs_url: https://github.com/jenkinsci/jenkins
+        commit: 757bc8a53956e6fbab267214e6e0896f03c3c262
+    introduced_in_commits: []
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
     affected_versions: vers:maven/>=1.481|<1.502
     fixed_versions: vers:maven/1.502
@@ -17,20 +26,11 @@ impacted_packages:
     fixed_versions: vers:maven/1.480.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/jenkinsci/jenkins
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/jenkinsci/jenkins
-        commit: 36342d71e29e0620f803a7470ce96c61761648d8
-      - vcs_url: https://github.com/jenkinsci/jenkins
-        commit: 757bc8a53956e6fbab267214e6e0896f03c3c262
-    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses: []
 references:

@@ -7,26 +7,6 @@ summary: |
   Zend Framework Allows SQL Injection
   Zend Framework before 2.2.10 and 2.3.x before 2.3.5 has Potential SQL injection in PostgreSQL Zend\Db adapter.
 impacted_packages:
-  - purl: pkg:composer/zendframework/zendframework
-    affected_versions: vers:composer/<2.2.10
-    fixed_versions: vers:composer/2.2.10
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/zendframework/zendframework
-    affected_versions: vers:composer/>=2.3.0|<2.3.5
-    fixed_versions: vers:composer/2.3.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/zendframework/zend-db
-    affected_versions: vers:composer/<2.2.10
-    fixed_versions: vers:composer/2.2.10
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/zendframework/zend-db
-    affected_versions: vers:composer/>=2.3.0|<2.3.5
-    fixed_versions: vers:composer/2.3.5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/zendframework/zendframework
     affected_versions:
     fixed_versions:
@@ -34,16 +14,36 @@ impacted_packages:
       - vcs_url: https://github.com/zendframework/zendframework
         commit: 569f18228f5fc84534af6ff2f367ca1a7143ec65
     introduced_in_commits: []
+  - purl: pkg:composer/zendframework/zendframework
+    affected_versions: vers:composer/<2.2.10
+    fixed_versions: vers:composer/2.2.10
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/zendframework/zendframework
+    affected_versions: vers:composer/>=2.3.0|<2.3.5
+    fixed_versions: vers:composer/2.3.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/zendframework/zend-db
+    affected_versions: vers:composer/<2.2.10
+    fixed_versions: vers:composer/2.2.10
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/zendframework/zend-db
+    affected_versions: vers:composer/>=2.3.0|<2.3.5
+    fixed_versions: vers:composer/2.3.5
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-v59p-p692-v382/GHSA-v59p-p692-v382.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-89

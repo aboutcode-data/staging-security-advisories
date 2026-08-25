@@ -10,6 +10,11 @@ summary: |
   As a consequence, arrays or traversable objects stored in fields using the `@Valid` constraint are not traversed by the validator as soon as the validator configuration is loaded from the cache.
 impacted_packages:
   - purl: pkg:composer/symfony/validator
+    affected_versions: vers:composer/>=2.3.0|<2.3.3
+    fixed_versions: vers:composer/2.3.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/validator
     affected_versions: vers:composer/>=2.0.0|<2.0.24
     fixed_versions: vers:composer/2.0.24
     fixed_in_commits: []
@@ -22,11 +27,6 @@ impacted_packages:
   - purl: pkg:composer/symfony/validator
     affected_versions: vers:composer/>=2.2.0|<2.2.5
     fixed_versions: vers:composer/2.2.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/validator
-    affected_versions: vers:composer/>=2.3.0|<2.3.3
-    fixed_versions: vers:composer/2.3.3
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/symfony
@@ -53,12 +53,12 @@ severities:
   - score: '8.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-q8j7-fjh7-25v5/GHSA-q8j7-fjh7-25v5.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-20

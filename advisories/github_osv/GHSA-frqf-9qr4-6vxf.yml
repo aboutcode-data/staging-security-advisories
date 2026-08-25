@@ -7,26 +7,26 @@ summary: |
   Drupal Saving user accounts can sometimes grant the user all roles
   The User module in Drupal 7.x before 7.44 allows remote authenticated users to gain privileges via vectors involving contributed or custom code that triggers a rebuild of the user profile form.
 impacted_packages:
-  - purl: pkg:composer/drupal/core
+  - purl: pkg:composer/drupal/drupal
     affected_versions: vers:composer/>=7.0.0|<7.44.0
     fixed_versions: vers:composer/7.44.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/drupal/drupal
+  - purl: pkg:composer/drupal/core
     affected_versions: vers:composer/>=7.0.0|<7.44.0
     fixed_versions: vers:composer/7.44.0
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '8.8'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-frqf-9qr4-6vxf/GHSA-frqf-9qr4-6vxf.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-269

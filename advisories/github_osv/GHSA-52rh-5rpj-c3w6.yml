@@ -7,11 +7,6 @@ summary: |
   node-irc is a socket wrapper for the IRC protocol that extends Node.js' EventEmitter. The vulnerability allows an attacker to manipulate a Matrix user into executing IRC commands by having them reply to a maliciously crafted message. Incorrect handling of a CR character allowed for making part of the message be sent to the IRC server verbatim rather than as a message to the channel.
   The vulnerability has been patched in node-irc version 1.2.1.
 impacted_packages:
-  - purl: pkg:npm/matrix-org-irc
-    affected_versions: vers:npm/<=1.2.0
-    fixed_versions: vers:npm/1.2.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/matrix-org/node-irc
     affected_versions:
     fixed_versions:
@@ -21,16 +16,21 @@ impacted_packages:
       - vcs_url: https://github.com/matrix-org/node-irc
         commit: e3eb9c15f8240e9c92365f5ffc3944469229771b
     introduced_in_commits: []
+  - purl: pkg:npm/matrix-org-irc
+    affected_versions: vers:npm/<=1.2.0
+    fixed_versions: vers:npm/1.2.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-52rh-5rpj-c3w6/GHSA-52rh-5rpj-c3w6.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-74

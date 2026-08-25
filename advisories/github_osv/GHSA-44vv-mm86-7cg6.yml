@@ -8,6 +8,11 @@ summary: |
   The setup script for phpMyAdmin before 4.0.10.19, 4.4.x before 4.4.15.10, and 4.6.x before 4.6.6 allows remote attackers to conduct server-side request forgery (SSRF) attacks via unspecified vectors.
 impacted_packages:
   - purl: pkg:composer/phpmyadmin/phpmyadmin
+    affected_versions: vers:composer/<4.0.10+19
+    fixed_versions: vers:composer/4.0.10+19
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/phpmyadmin/phpmyadmin
     affected_versions: vers:composer/>=4.6.0|<4.6.6
     fixed_versions: vers:composer/4.6.6
     fixed_in_commits: []
@@ -17,21 +22,16 @@ impacted_packages:
     fixed_versions: vers:composer/4.4.15+10
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/phpmyadmin/phpmyadmin
-    affected_versions: vers:composer/<4.0.10+19
-    fixed_versions: vers:composer/4.0.10+19
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: '8.6'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-44vv-mm86-7cg6/GHSA-44vv-mm86-7cg6.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-918

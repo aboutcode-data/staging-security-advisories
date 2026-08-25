@@ -7,6 +7,13 @@ summary: |
   Improper Authentication in Apache Tomcat
   The HTTP Digest Access Authentication implementation in Apache Tomcat 5.5.x before 5.5.34, 6.x before 6.0.33, and 7.x before 7.0.12 does not check realm values, which might allow remote attackers to bypass intended access restrictions by leveraging the availability of a protection space with weaker authentication or authorization requirements, a different vulnerability than CVE-2011-1184.
 impacted_packages:
+  - purl: pkg:github/apache/tomcat55
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/tomcat55
+        commit: 644dfdf96cf82fcd2a2046d93f2b5495f7e94584
+    introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat/tomcat
     affected_versions: vers:maven/>=5.5.0|<5.5.34
     fixed_versions: vers:maven/5.5.34
@@ -29,18 +36,11 @@ impacted_packages:
       - vcs_url: https://github.com/apache/tomcat
         commit: 639e20992a66d7a42fb59c974db91c8a0f730a1e
     introduced_in_commits: []
-  - purl: pkg:github/apache/tomcat55
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/apache/tomcat55
-        commit: 644dfdf96cf82fcd2a2046d93f2b5495f7e94584
-    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-287

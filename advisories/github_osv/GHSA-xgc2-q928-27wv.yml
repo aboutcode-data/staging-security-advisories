@@ -8,16 +8,6 @@ summary: |
   The escapeStrForLike method in TYPO3 4.2.x before 4.2.16, 4.3.x before 4.3.9, and 4.4.x before 4.4.5 does not properly escape input when the MySQL database is set to sql_mode NO_BACKSLASH_ESCAPES, which allows remote attackers to obtain sensitive information via wildcard characters in a LIKE query.
 impacted_packages:
   - purl: pkg:composer/typo3/cms-core
-    affected_versions: vers:composer/>=4.2.0|<4.2.16
-    fixed_versions: vers:composer/4.2.16
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/typo3/cms-core
-    affected_versions: vers:composer/>=4.3.0|<4.3.9
-    fixed_versions: vers:composer/4.3.9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/typo3/cms-core
     affected_versions: vers:composer/>=4.4.0|<4.4.5
     fixed_versions: vers:composer/4.4.5
     fixed_in_commits: []
@@ -33,11 +23,21 @@ impacted_packages:
       - vcs_url: https://github.com/typo3/typo3
         commit: e8c32474a5571336681243465f42090cf056054f
     introduced_in_commits: []
+  - purl: pkg:composer/typo3/cms-core
+    affected_versions: vers:composer/>=4.2.0|<4.2.16
+    fixed_versions: vers:composer/4.2.16
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/typo3/cms-core
+    affected_versions: vers:composer/>=4.3.0|<4.3.9
+    fixed_versions: vers:composer/4.3.9
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

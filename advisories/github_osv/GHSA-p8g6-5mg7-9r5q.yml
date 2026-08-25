@@ -7,26 +7,26 @@ summary: |
   Drupal REST API can bypass comment approval
   In Drupal 8 prior to 8.3.7; When using the REST API, users without the correct permission can post comments via REST that are approved even if the user does not have permission to post approved comments. This issue only affects sites that have the RESTful Web Services (rest) module enabled, the comment entity REST resource enabled, and where an attacker can access a user account on the site with permissions to post comments, or where anonymous users can post comments.
 impacted_packages:
-  - purl: pkg:composer/drupal/core
+  - purl: pkg:composer/drupal/drupal
     affected_versions: vers:composer/>=8.0.0|<8.3.7
     fixed_versions: vers:composer/8.3.7
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/drupal/drupal
+  - purl: pkg:composer/drupal/core
     affected_versions: vers:composer/>=8.0.0|<8.3.7
     fixed_versions: vers:composer/8.3.7
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '7.4'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-p8g6-5mg7-9r5q/GHSA-p8g6-5mg7-9r5q.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-269

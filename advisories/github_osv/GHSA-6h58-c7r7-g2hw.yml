@@ -7,11 +7,6 @@ summary: |
   UberFire Framework Improperly Restricts Paths
   The UberFire Framework 0.3.x does not properly restrict paths, which allows remote attackers to (1) execute arbitrary code by uploading crafted content to FileUploadServlet or (2) read arbitrary files via vectors involving FileDownloadServlet.
 impacted_packages:
-  - purl: pkg:maven/org.uberfire/uberfire-parent
-    affected_versions: vers:maven/>=0.3.0.Beta5|<=0.3.1.Final
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/uberfire/uberfire
     affected_versions:
     fixed_versions:
@@ -19,11 +14,16 @@ impacted_packages:
       - vcs_url: https://github.com/uberfire/uberfire
         commit: 21ec50eb15
     introduced_in_commits: []
+  - purl: pkg:maven/org.uberfire/uberfire-parent
+    affected_versions: vers:maven/>=0.3.0.Beta5|<=0.3.1.Final
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

@@ -7,11 +7,6 @@ summary: |
   httplib2 incorrectly checks SSL certificate
   httplib2 prior to version 0.10.1, after an initial connection is made, does not verify that the server hostname matches a domain name in the subject's Common Name (CN) or subjectAltName field of the X.509 certificate, which allows man-in-the-middle attackers to spoof SSL servers via an arbitrary valid certificate.
 impacted_packages:
-  - purl: pkg:pypi/httplib2
-    affected_versions: vers:pypi/<0.10.1
-    fixed_versions: vers:pypi/0.10.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/httplib2/httplib2
     affected_versions:
     fixed_versions:
@@ -19,21 +14,26 @@ impacted_packages:
       - vcs_url: https://github.com/httplib2/httplib2
         commit: 40cbdcc8586f2292fa0e76a3e8c012f0cc9ed919
     introduced_in_commits: []
+  - purl: pkg:pypi/httplib2
+    affected_versions: vers:pypi/<0.10.1
+    fixed_versions: vers:pypi/0.10.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-q48q-77qv-cf9p/GHSA-q48q-77qv-cf9p.json
   - score: '6.6'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:U
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-q48q-77qv-cf9p/GHSA-q48q-77qv-cf9p.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-20

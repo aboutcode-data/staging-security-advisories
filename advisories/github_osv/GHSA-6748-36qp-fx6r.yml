@@ -7,11 +7,6 @@ summary: |
   PyOpenSSL Mishandles NUL Byte In Certificate Subject Alternative Name
   The X509Extension in pyOpenSSL before 0.13.1 does not properly handle a `\0` character in a domain name in the Subject Alternative Name field of an X.509 certificate, which allows man-in-the-middle attackers to spoof arbitrary SSL servers via a crafted certificate issued by a legitimate Certification Authority.
 impacted_packages:
-  - purl: pkg:pypi/pyopenssl
-    affected_versions: vers:pypi/<0.13.1
-    fixed_versions: vers:pypi/0.13.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/pyca/pyopenssl
     affected_versions:
     fixed_versions:
@@ -19,21 +14,26 @@ impacted_packages:
       - vcs_url: https://github.com/pyca/pyopenssl
         commit: 6bbf44a00b35fb28df1f66aa194b2fe95eab1ab2
     introduced_in_commits: []
+  - purl: pkg:pypi/pyopenssl
+    affected_versions: vers:pypi/<0.13.1
+    fixed_versions: vers:pypi/0.13.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-6748-36qp-fx6r/GHSA-6748-36qp-fx6r.json
   - score: '8.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-6748-36qp-fx6r/GHSA-6748-36qp-fx6r.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-20

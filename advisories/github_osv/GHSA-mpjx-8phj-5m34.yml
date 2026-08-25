@@ -7,6 +7,19 @@ summary: |
   Moodle Allows Unauthenticated Dropbox Access
   The Dropbox Repository File Picker in Moodle 2.1.x before 2.1.9, 2.2.x before 2.2.6, and 2.3.x before 2.3.3 allows remote authenticated users to access the Dropbox of a different user by leveraging an unattended workstation after a logout.
 impacted_packages:
+  - purl: pkg:github/moodle/moodle
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/moodle/moodle
+        commit: a3433213a1a2346c145e004ab1dc08b58279f910
+      - vcs_url: https://github.com/moodle/moodle
+        commit: c62a20c42b96f0195c4de075e5c58a4e7d381428
+      - vcs_url: https://github.com/moodle/moodle
+        commit: cd029574b699c74e55fa287f0b4db45d2dcf9fde
+      - vcs_url: https://github.com/moodle/moodle
+        commit: 8eb614d4bb4a80ed51520bca528530914082136f
+    introduced_in_commits: []
   - purl: pkg:composer/moodle/moodle
     affected_versions: vers:composer/<=2.3.2
     fixed_versions: vers:composer/2.3.3
@@ -22,24 +35,11 @@ impacted_packages:
     fixed_versions: vers:composer/2.1.9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/moodle/moodle
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/moodle/moodle
-        commit: a3433213a1a2346c145e004ab1dc08b58279f910
-      - vcs_url: https://github.com/moodle/moodle
-        commit: c62a20c42b96f0195c4de075e5c58a4e7d381428
-      - vcs_url: https://github.com/moodle/moodle
-        commit: cd029574b699c74e55fa287f0b4db45d2dcf9fde
-      - vcs_url: https://github.com/moodle/moodle
-        commit: 8eb614d4bb4a80ed51520bca528530914082136f
-    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-287

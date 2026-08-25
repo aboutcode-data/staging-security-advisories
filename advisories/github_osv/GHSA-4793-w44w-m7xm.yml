@@ -8,6 +8,11 @@ summary: |
   Multiple cross-site scripting (XSS) vulnerabilities in Zope, as used in Plone 3.3.x through 3.3.6, 4.0.x through 4.0.9, 4.1.x through 4.1.6, 4.2.x through 4.2.7, and 4.3 through 4.3.2, allow remote attackers to inject arbitrary web script or HTML via unspecified input in the (1) browser_id_manager or (2) OFS.Image method.
 impacted_packages:
   - purl: pkg:pypi/plone
+    affected_versions: vers:pypi/>=4.1|<4.1.6
+    fixed_versions: vers:pypi/4.1.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/plone
     affected_versions: vers:pypi/>=3.3|<3.3.6
     fixed_versions: vers:pypi/3.3.6
     fixed_in_commits: []
@@ -15,11 +20,6 @@ impacted_packages:
   - purl: pkg:pypi/plone
     affected_versions: vers:pypi/>=4.0|<4.0.9
     fixed_versions: vers:pypi/4.0.9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/plone
-    affected_versions: vers:pypi/>=4.1|<4.1.6
-    fixed_versions: vers:pypi/4.1.6
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/plone
@@ -31,17 +31,17 @@ severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-4793-w44w-m7xm/GHSA-4793-w44w-m7xm.json
   - score: '5.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-4793-w44w-m7xm/GHSA-4793-w44w-m7xm.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

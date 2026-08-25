@@ -8,25 +8,25 @@ summary: |
   An information disclosure vulnerability exists in .NET Framework and .NET Core which allows bypassing Cross-origin Resource Sharing (CORS) configurations, aka ".NET Framework Information Disclosure Vulnerability." This affects Microsoft .NET Framework 2.0, Microsoft .NET Framework 3.0, Microsoft .NET Framework 4.6.2/4.7/4.7.1/4.7.2, Microsoft .NET Framework 4.5.2, Microsoft .NET Framework 4.6, Microsoft .NET Framework 4.6/4.6.1/4.6.2/4.7/4.7.1/4.7.2, Microsoft .NET Framework 4.7/4.7.1/4.7.2, .NET Core 2.1, Microsoft .NET Framework 4.7.1/4.7.2, Microsoft .NET Framework 3.5, Microsoft .NET Framework 3.5.1, Microsoft .NET Framework 4.6/4.6.1/4.6.2, .NET Core 2.2, Microsoft .NET Framework 4.7.2.
 impacted_packages:
   - purl: pkg:nuget/Microsoft.NETCore.App
-    affected_versions: vers:nuget/>=2.1.0|<2.1.7
-    fixed_versions: vers:nuget/2.1.7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.NETCore.App
     affected_versions: vers:nuget/2.2.0
     fixed_versions: vers:nuget/2.2.1
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:nuget/Microsoft.NETCore.App
+    affected_versions: vers:nuget/>=2.1.0|<2.1.7
+    fixed_versions: vers:nuget/2.1.7
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-2xjx-v99w-gqf3/GHSA-2xjx-v99w-gqf3.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

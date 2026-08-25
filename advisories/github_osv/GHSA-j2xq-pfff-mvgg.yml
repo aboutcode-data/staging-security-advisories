@@ -8,25 +8,25 @@ summary: |
   In Apache PDFBox 1.8.0 to 1.8.14 and 2.0.0RC1 to 2.0.10, a carefully crafted (or fuzzed) file can trigger an infinite loop which leads to an out of memory exception in Apache PDFBox's AFMParser.
 impacted_packages:
   - purl: pkg:maven/org.apache.pdfbox/pdfbox
-    affected_versions: vers:maven/<=1.8.14
-    fixed_versions: vers:maven/1.8.15
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.pdfbox/pdfbox
     affected_versions: vers:maven/<=2.0.10
     fixed_versions: vers:maven/2.0.11
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:maven/org.apache.pdfbox/pdfbox
+    affected_versions: vers:maven/<=1.8.14
+    fixed_versions: vers:maven/1.8.15
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.5'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-j2xq-pfff-mvgg/GHSA-j2xq-pfff-mvgg.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-835

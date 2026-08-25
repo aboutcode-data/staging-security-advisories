@@ -8,13 +8,13 @@ summary: |
   Asset Pipeline Grails Plugin Asset-pipeline plugin version Prior to 2.14.1.1, 2.15.1 and 3.0.6 contains a Incorrect Access Control vulnerability in Applications deployed in Jetty that can result in Download .class files and any arbitrary file. This attack appear to be exploitable via Specially crafted GET request containing directory traversal from assets-pipeline context. This vulnerability appears to have been fixed in 2.14.1.1 (for Grails 2.x), 2.15.1 (for Grails 3 and Java 7) and 3.0.6 (for Grails 3 and Java 8).
 impacted_packages:
   - purl: pkg:maven/org.grails.plugins/asset-pipeline
-    affected_versions: vers:maven/<2.14.1
-    fixed_versions: vers:maven/2.14.1
+    affected_versions: vers:maven/>=3.0.0|<3.0.6
+    fixed_versions: vers:maven/3.0.6
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.grails.plugins/asset-pipeline
-    affected_versions: vers:maven/>=3.0.0|<3.0.6
-    fixed_versions: vers:maven/3.0.6
+    affected_versions: vers:maven/<2.14.1
+    fixed_versions: vers:maven/2.14.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.grails.plugins/asset-pipeline
@@ -24,14 +24,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '7.5'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-w73q-mc9g-j56x/GHSA-w73q-mc9g-j56x.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

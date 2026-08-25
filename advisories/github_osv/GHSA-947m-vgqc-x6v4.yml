@@ -8,6 +8,11 @@ summary: |
   SQL injection vulnerability in the Backend History module in TYPO3 4.5.x before 4.5.21, 4.6.x before 4.6.14, and 4.7.x before 4.7.6  Due to missing encoding of user input, the history module is susceptible to SQL Injection and Cross-Site Scripting. A valid backend login is required to exploit this vulnerability.
 impacted_packages:
   - purl: pkg:composer/typo3/cms
+    affected_versions: vers:composer/<=4.7.5
+    fixed_versions: vers:composer/4.7.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/typo3/cms
     affected_versions: vers:composer/<=4.5.20
     fixed_versions: vers:composer/4.5.21
     fixed_in_commits: []
@@ -17,16 +22,11 @@ impacted_packages:
     fixed_versions: vers:composer/4.6.14
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/typo3/cms
-    affected_versions: vers:composer/<=4.7.5
-    fixed_versions: vers:composer/4.7.6
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-89

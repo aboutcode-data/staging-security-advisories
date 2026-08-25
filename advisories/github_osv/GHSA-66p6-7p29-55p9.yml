@@ -8,6 +8,11 @@ summary: |
   An issue was discovered in HttpKernel in Symfony 2.7.0 through 2.7.48, 2.8.0 through 2.8.43, 3.3.0 through 3.3.17, 3.4.0 through 3.4.13, 4.0.0 through 4.0.13, and 4.1.0 through 4.1.2. When using HttpCache, the values of the X-Forwarded-Host headers are implicitly set as trusted while this should be forbidden, leading to potential host header injection.
 impacted_packages:
   - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/<=4.0.13
+    fixed_versions: vers:composer/4.0.14
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/symfony
     affected_versions: vers:composer/<=2.7.48
     fixed_versions: vers:composer/2.7.49
     fixed_in_commits: []
@@ -18,18 +23,13 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/symfony
-    affected_versions: vers:composer/<=3.3.17
-    fixed_versions: vers:composer/3.3.18
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/symfony
     affected_versions: vers:composer/<=3.4.13
     fixed_versions: vers:composer/3.4.14
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/symfony
-    affected_versions: vers:composer/<=4.0.13
-    fixed_versions: vers:composer/4.0.14
+    affected_versions: vers:composer/<=3.3.17
+    fixed_versions: vers:composer/3.3.18
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/symfony
@@ -56,14 +56,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '7.2'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-66p6-7p29-55p9/GHSA-66p6-7p29-55p9.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-20

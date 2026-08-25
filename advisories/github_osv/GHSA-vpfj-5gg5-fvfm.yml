@@ -11,11 +11,6 @@ summary: |
 
   Cobertura Plugin 1.16 disables external entity resolution for its XML parser.
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins/cobertura
-    affected_versions: vers:maven/<=1.15
-    fixed_versions: vers:maven/1.16
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/cobertura-plugin
     affected_versions:
     fixed_versions:
@@ -23,16 +18,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/cobertura-plugin
         commit: fdee535fe4782181d822b875c96df8306f245d48
     introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/cobertura
+    affected_versions: vers:maven/<=1.15
+    fixed_versions: vers:maven/1.16
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-vpfj-5gg5-fvfm/GHSA-vpfj-5gg5-fvfm.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-611

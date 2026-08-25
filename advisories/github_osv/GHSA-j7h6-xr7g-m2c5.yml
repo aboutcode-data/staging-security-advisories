@@ -7,6 +7,15 @@ summary: |
   Code injection in Apache Struts
   Apache Struts 2.0.0 through 2.3.15.1 enables Dynamic Method Invocation by default, which has unknown impact and attack vectors.
 impacted_packages:
+  - purl: pkg:github/apache/struts
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/struts
+        commit: 58947c3f85ae641c1a476316a2888e53605948d1
+      - vcs_url: https://github.com/apache/struts
+        commit: c643336945dda84cbcdc8a39530baa24fede28c4
+    introduced_in_commits: []
   - purl: pkg:maven/org.apache.struts/struts2-core
     affected_versions: vers:maven/>=2.0.0|<2.3.15.2
     fixed_versions: vers:maven/2.3.15.2
@@ -17,20 +26,11 @@ impacted_packages:
     fixed_versions: vers:maven/2.3.15.2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/apache/struts
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/apache/struts
-        commit: 58947c3f85ae641c1a476316a2888e53605948d1
-      - vcs_url: https://github.com/apache/struts
-        commit: c643336945dda84cbcdc8a39530baa24fede28c4
-    introduced_in_commits: []
 severities:
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

@@ -11,6 +11,13 @@ summary: |
 
   In case of problems, this change can be reverted by setting the [Java system property](https://www.jenkins.io/doc/book/managing/system-properties/) `jenkins.model.Nodes.enforceNameRestrictions` to `false`.
 impacted_packages:
+  - purl: pkg:github/jenkinsci/jenkins
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/jenkinsci/jenkins
+        commit: b19b34db4b24b163d4edc53ccb84f41a3589cb08
+    introduced_in_commits: []
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
     affected_versions: vers:maven/<2.263.2
     fixed_versions: vers:maven/2.263.2
@@ -21,23 +28,16 @@ impacted_packages:
     fixed_versions: vers:maven/2.275
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/jenkinsci/jenkins
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/jenkinsci/jenkins
-        commit: b19b34db4b24b163d4edc53ccb84f41a3589cb08
-    introduced_in_commits: []
 severities:
   - score: '8.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-pxgq-gqr9-5gwx/GHSA-pxgq-gqr9-5gwx.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

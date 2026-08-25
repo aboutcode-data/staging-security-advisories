@@ -7,11 +7,6 @@ summary: |
   Missing permission check in Jenkins Docker Plugin
   A missing permission check in Jenkins Docker Plugin 1.1.6 and earlier in DockerAPI.DescriptorImpl#doTestConnection allowed users with Overall/Read access to connect to an attacker-specified URL using attacker-specified credentials IDs obtained through another method, capturing credentials stored in Jenkins.
 impacted_packages:
-  - purl: pkg:maven/io.jenkins.docker/docker-plugin
-    affected_versions: vers:maven/<=1.1.6
-    fixed_versions: vers:maven/1.1.7
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/docker-plugin
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/docker-plugin
         commit: 6ad27199f6fad230be72fd45da78ddac85c075db
     introduced_in_commits: []
+  - purl: pkg:maven/io.jenkins.docker/docker-plugin
+    affected_versions: vers:maven/<=1.1.6
+    fixed_versions: vers:maven/1.1.7
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-76w6-m7vv-7hhw/GHSA-76w6-m7vv-7hhw.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-862

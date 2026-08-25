@@ -8,13 +8,13 @@ summary: |
   In Jenkins before versions 2.44 and 2.32.2, node monitor data could be viewed by low privilege users via the remote API. These included system configuration and runtime information of these nodes (SECURITY-343).
 impacted_packages:
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
-    affected_versions: vers:maven/<=2.32.1
-    fixed_versions: vers:maven/2.32.2
+    affected_versions: vers:maven/<=2.43
+    fixed_versions: vers:maven/2.44
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
-    affected_versions: vers:maven/<=2.43
-    fixed_versions: vers:maven/2.44
+    affected_versions: vers:maven/<=2.32.1
+    fixed_versions: vers:maven/2.32.2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/jenkinsci/jenkins
@@ -26,14 +26,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '4.3'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-wj5c-j656-h5fw/GHSA-wj5c-j656-h5fw.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

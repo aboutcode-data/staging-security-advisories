@@ -11,11 +11,6 @@ summary: |
 
   This allows attackers able to configure pipelines to check out some SCM repositories stored on the Jenkins controller’s file system using local paths as SCM URLs, obtaining limited information about other projects' SCM contents.
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins/repo
-    affected_versions: vers:maven/<1.14.1
-    fixed_versions: vers:maven/1.14.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:maven/org.jenkins-ci.plugins/mercurial
     affected_versions: vers:maven/<2.16.1
     fixed_versions: vers:maven/2.16.1
@@ -26,12 +21,24 @@ impacted_packages:
     fixed_versions: vers:maven/4.11.2
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:github/jenkinsci/mercurial-plugin
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/jenkinsci/mercurial-plugin
+        commit: 55904fbb8c9d3e0b36fc26330374904cb68e8758
+    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/repo-plugin
     affected_versions:
     fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/jenkinsci/repo-plugin
         commit: 8c9cbb88baffc64d1b63183235eb86c773108235
+    introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/repo
+    affected_versions: vers:maven/<1.14.1
+    fixed_versions: vers:maven/1.14.1
+    fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/jenkinsci/git-plugin
     affected_versions:
@@ -40,23 +47,16 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/git-plugin
         commit: b295606e0b865c298fde27bea14f9b7535a976e6
     introduced_in_commits: []
-  - purl: pkg:github/jenkinsci/mercurial-plugin
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/jenkinsci/mercurial-plugin
-        commit: 55904fbb8c9d3e0b36fc26330374904cb68e8758
-    introduced_in_commits: []
 severities:
   - score: '3.7'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-8vfc-fcr2-47pj/GHSA-8vfc-fcr2-47pj.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

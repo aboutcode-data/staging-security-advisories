@@ -8,8 +8,8 @@ summary: |
   Wikimedia MediaWiki 1.23.0 through 1.32.1 has an information leak. Privileged API responses that include whether a recent change has been patrolled may be cached publicly. Fixed in 1.32.2, 1.31.2, 1.30.2 and 1.27.6.
 impacted_packages:
   - purl: pkg:composer/mediawiki/core
-    affected_versions: vers:composer/>=1.27.0|<1.27.6
-    fixed_versions: vers:composer/1.27.6
+    affected_versions: vers:composer/>=1.32.0|<1.32.2
+    fixed_versions: vers:composer/1.32.2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/mediawiki/core
@@ -23,20 +23,20 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/mediawiki/core
-    affected_versions: vers:composer/>=1.32.0|<1.32.2
-    fixed_versions: vers:composer/1.32.2
+    affected_versions: vers:composer/>=1.27.0|<1.27.6
+    fixed_versions: vers:composer/1.27.6
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '7.5'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-2qrr-c2gh-pr35/GHSA-2qrr-c2gh-pr35.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

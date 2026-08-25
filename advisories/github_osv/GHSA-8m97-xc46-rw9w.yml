@@ -8,8 +8,8 @@ summary: |
   libraries/common.inc.php in phpMyAdmin 4.0.x before 4.0.10.13, 4.4.x before 4.4.15.3, and 4.5.x before 4.5.4 does not use a constant-time algorithm for comparing CSRF tokens, which makes it easier for remote attackers to bypass intended access restrictions by measuring time differences.
 impacted_packages:
   - purl: pkg:composer/phpmyadmin/phpmyadmin
-    affected_versions: vers:composer/>=4.4.0|<4.4.15+3
-    fixed_versions: vers:composer/4.4.15+3
+    affected_versions: vers:composer/>=4.0.0|<4.0.10+13
+    fixed_versions: vers:composer/4.0.10+13
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/phpmyadmin/phpmyadmin
@@ -18,8 +18,8 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/phpmyadmin/phpmyadmin
-    affected_versions: vers:composer/>=4.0.0|<4.0.10+13
-    fixed_versions: vers:composer/4.0.10+13
+    affected_versions: vers:composer/>=4.4.0|<4.4.15+3
+    fixed_versions: vers:composer/4.4.15+3
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/phpmyadmin/phpmyadmin
@@ -31,14 +31,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '7.5'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-8m97-xc46-rw9w/GHSA-8m97-xc46-rw9w.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-203

@@ -7,11 +7,6 @@ summary: |
   ForkCMS Directory Traversal vulnerability
   Directory traversal vulnerability in `frontend/core/engine/javascript.php` in Fork CMS 3.2.4 and possibly other versions before 3.2.5 allows remote attackers to read arbitrary files via a `..` (dot dot) in the module parameter to `frontend/js.php`.
 impacted_packages:
-  - purl: pkg:composer/forkcms/forkcms
-    affected_versions: vers:composer/<=3.2.4
-    fixed_versions: vers:composer/3.2.5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/forkcms/forkcms
     affected_versions:
     fixed_versions:
@@ -19,11 +14,16 @@ impacted_packages:
       - vcs_url: https://github.com/forkcms/forkcms
         commit: a9986b86c53de0582248b39605660fbba0c21a29
     introduced_in_commits: []
+  - purl: pkg:composer/forkcms/forkcms
+    affected_versions: vers:composer/<=3.2.4
+    fixed_versions: vers:composer/3.2.5
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

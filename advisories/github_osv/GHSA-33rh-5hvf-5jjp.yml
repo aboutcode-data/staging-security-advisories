@@ -7,11 +7,6 @@ summary: |
   ZF-Commons ZfcUser Vulnerable to XSS in Login Redirect
   Cross-site scripting (XSS) vulnerability in `user/login.phtml` in ZF-Commons ZfcUser before 1.2.2 allows remote attackers to inject arbitrary web script or HTML via the redirect parameter.
 impacted_packages:
-  - purl: pkg:composer/zf-commons/zfc-user
-    affected_versions: vers:composer/<1.2.2
-    fixed_versions: vers:composer/1.2.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/zf-commons/zfcuser
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/zf-commons/zfcuser
         commit: baf0e460
     introduced_in_commits: []
+  - purl: pkg:composer/zf-commons/zfc-user
+    affected_versions: vers:composer/<1.2.2
+    fixed_versions: vers:composer/1.2.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-33rh-5hvf-5jjp/GHSA-33rh-5hvf-5jjp.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

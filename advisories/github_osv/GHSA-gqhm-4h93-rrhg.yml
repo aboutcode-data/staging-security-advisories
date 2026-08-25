@@ -17,6 +17,13 @@ impacted_packages:
     fixed_versions: vers:maven/1.48
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:github/jenkinsci/script-security-plugin
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/jenkinsci/script-security-plugin
+        commit: 16c862ae9d4038a3edbd8bdfb0fd1401a509d56b
+    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/workflow-cps-plugin
     affected_versions:
     fixed_versions:
@@ -26,23 +33,16 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/workflow-cps-plugin
         commit: 0eb89aaf24065dbbdf6db84516ac1a52cd435e6d
     introduced_in_commits: []
-  - purl: pkg:github/jenkinsci/script-security-plugin
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/jenkinsci/script-security-plugin
-        commit: 16c862ae9d4038a3edbd8bdfb0fd1401a509d56b
-    introduced_in_commits: []
 severities:
   - score: '8.8'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-gqhm-4h93-rrhg/GHSA-gqhm-4h93-rrhg.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-269

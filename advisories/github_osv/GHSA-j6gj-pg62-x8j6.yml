@@ -8,11 +8,6 @@ summary: |
   Directory traversal vulnerability in minion id validation in SaltStack Salt before 2016.3.8, 2016.11.x before 2016.11.8, and 2017.7.x before 2017.7.2 allows remote minions with incorrect credentials to authenticate to a master via a crafted minion ID.  NOTE: this vulnerability exists because of an incomplete fix for CVE-2017-12791.
 impacted_packages:
   - purl: pkg:pypi/salt
-    affected_versions: vers:pypi/<2016.3.8
-    fixed_versions: vers:pypi/2016.3.8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/salt
     affected_versions: vers:pypi/>=2016.11.0|<2016.11.8
     fixed_versions: vers:pypi/2016.11.8
     fixed_in_commits: []
@@ -20,6 +15,11 @@ impacted_packages:
   - purl: pkg:pypi/salt
     affected_versions: vers:pypi/>=2017.7.0|<2017.7.2
     fixed_versions: vers:pypi/2017.7.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/salt
+    affected_versions: vers:pypi/<2016.3.8
+    fixed_versions: vers:pypi/2016.3.8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/saltstack/salt
@@ -31,14 +31,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '9.8'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-j6gj-pg62-x8j6/GHSA-j6gj-pg62-x8j6.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

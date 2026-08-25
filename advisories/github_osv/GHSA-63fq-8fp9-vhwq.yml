@@ -7,11 +7,6 @@ summary: |
   OpenStack Compute (Nova) Denial of service via a large number of calls to the addFixedIp function
   OpenStack Compute (Nova) Grizzly, Folsom (2012.2), and Essex (2012.1) does not properly implement a quota for fixed IPs, which allows remote authenticated users to cause a denial of service (resource exhaustion and failure to spawn new instances) via a large number of calls to the addFixedIp function.
 impacted_packages:
-  - purl: pkg:pypi/nova
-    affected_versions: vers:pypi/<12.0.0a0
-    fixed_versions: vers:pypi/12.0.0a0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/openstack/nova
     affected_versions:
     fixed_versions:
@@ -23,21 +18,26 @@ impacted_packages:
       - vcs_url: https://github.com/openstack/nova
         commit: efaacdaee116388234558e2682b647d41fe5b149
     introduced_in_commits: []
+  - purl: pkg:pypi/nova
+    affected_versions: vers:pypi/<12.0.0a0
+    fixed_versions: vers:pypi/12.0.0a0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-63fq-8fp9-vhwq/GHSA-63fq-8fp9-vhwq.json
   - score: '7.1'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-63fq-8fp9-vhwq/GHSA-63fq-8fp9-vhwq.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-770

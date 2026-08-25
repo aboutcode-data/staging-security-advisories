@@ -7,11 +7,6 @@ summary: |
   Incorrect Authorization in Dolibarr
   core/get_menudiv.php in Dolibarr before 11.0.4 allows remote authenticated attackers to bypass intended access restrictions via a non-alphanumeric menu parameter.
 impacted_packages:
-  - purl: pkg:composer/dolibarr/dolibarr
-    affected_versions: vers:composer/<12.0.0
-    fixed_versions: vers:composer/12.0.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/dolibarr/dolibarr
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/dolibarr/dolibarr
         commit: c1b530f58f6f01081ddbeaa2092ef308c3ec2727
     introduced_in_commits: []
+  - purl: pkg:composer/dolibarr/dolibarr
+    affected_versions: vers:composer/<12.0.0
+    fixed_versions: vers:composer/12.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-rg8m-84jf-9367/GHSA-rg8m-84jf-9367.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-863

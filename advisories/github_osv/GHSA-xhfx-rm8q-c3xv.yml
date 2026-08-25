@@ -7,11 +7,6 @@ summary: |
   Moodle Vulnerable to Reflected Cross-site Scripting
   It was found in Moodle before version 4.0.0-beta that some search inputs were vulnerable to reflected Cross-site Scripting (XSS) due to insufficient escaping of search queries.
 impacted_packages:
-  - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/>=3.10.0|<4.0.0-beta
-    fixed_versions: vers:composer/4.0.0-beta
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/moodle/moodle
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/moodle/moodle
         commit: dc9de7b0d487b73c23c221dc0b8b6e01654921f3
     introduced_in_commits: []
+  - purl: pkg:composer/moodle/moodle
+    affected_versions: vers:composer/>=3.10.0|<4.0.0-beta
+    fixed_versions: vers:composer/4.0.0-beta
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-xhfx-rm8q-c3xv/GHSA-xhfx-rm8q-c3xv.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

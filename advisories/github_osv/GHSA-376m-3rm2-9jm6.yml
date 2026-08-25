@@ -8,13 +8,13 @@ summary: |
   A vulnerability in ipsilon 2.0 before 2.0.2, 1.2 before 1.2.1, 1.1 before 1.1.2, and 1.0 before 1.0.3 was found that allows attacker to log out active sessions of other users.  This issue is related to how it tracks sessions, and allows an unauthenticated attacker to view and terminate active sessions from other users. It is also called a "SAML2 multi-session vulnerability."
 impacted_packages:
   - purl: pkg:pypi/ipsilon
-    affected_versions: vers:pypi/>=2.0.0|<2.0.2
-    fixed_versions: vers:pypi/2.0.2
+    affected_versions: vers:pypi/>=1.1.0|<1.1.2
+    fixed_versions: vers:pypi/1.1.2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/ipsilon
-    affected_versions: vers:pypi/>=1.1.0|<1.1.2
-    fixed_versions: vers:pypi/1.1.2
+    affected_versions: vers:pypi/>=2.0.0|<2.0.2
+    fixed_versions: vers:pypi/2.0.2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/ipsilon
@@ -42,14 +42,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '9.1'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-376m-3rm2-9jm6/GHSA-376m-3rm2-9jm6.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-384

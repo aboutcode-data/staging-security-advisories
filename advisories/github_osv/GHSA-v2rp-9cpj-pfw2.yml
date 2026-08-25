@@ -8,25 +8,25 @@ summary: |
   Salt before 2015.5.10 and 2015.8.x before 2015.8.8, when PAM external authentication is enabled, allows attackers to bypass the configured authentication service by passing an alternate service with a command sent to LocalClient.
 impacted_packages:
   - purl: pkg:pypi/salt
-    affected_versions: vers:pypi/<2015.5.10
-    fixed_versions: vers:pypi/2015.5.10
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/salt
     affected_versions: vers:pypi/>=2015.8|<2015.8.8
     fixed_versions: vers:pypi/2015.8.8
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:pypi/salt
+    affected_versions: vers:pypi/<2015.5.10
+    fixed_versions: vers:pypi/2015.5.10
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.6'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-v2rp-9cpj-pfw2/GHSA-v2rp-9cpj-pfw2.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-287

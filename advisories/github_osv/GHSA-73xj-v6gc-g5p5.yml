@@ -7,11 +7,6 @@ summary: |
   Subrion CMS RCE Vulnerability
   `/panel/uploads` in Subrion CMS 4.2.1 allows remote attackers to execute arbitrary PHP code via a .pht or .phar file, because the .htaccess file omits these.
 impacted_packages:
-  - purl: pkg:composer/intelliants/subrion
-    affected_versions: vers:composer/<=4.2.1
-    fixed_versions: vers:composer/4.2.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/intelliants/subrion
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/intelliants/subrion
         commit: 74359bcfaea424edda6d782a8ac25397c55972ab
     introduced_in_commits: []
+  - purl: pkg:composer/intelliants/subrion
+    affected_versions: vers:composer/<=4.2.1
+    fixed_versions: vers:composer/4.2.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.2'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-73xj-v6gc-g5p5/GHSA-73xj-v6gc-g5p5.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-434

@@ -8,12 +8,12 @@ summary: |
   Jakarta Tomcat 5.0.19 (Coyote/1.1) and Tomcat 4.1.24 (Coyote/1.0) allows remote attackers to poison the web cache, bypass web application firewall protection, and conduct XSS attacks via an HTTP request with both a "Transfer-Encoding: chunked" header and a Content-Length header, which causes Tomcat to incorrectly handle and forward the body of the request in a way that causes the receiving server to process it as a separate HTTP request, aka "HTTP Request Smuggling."
 impacted_packages:
   - purl: pkg:maven/org.apache.tomcat/tomcat
-    affected_versions: vers:maven/>=5.0.0|<=5.0.19
+    affected_versions: vers:maven/>=4.0.0|<=4.1.24
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat/tomcat
-    affected_versions: vers:maven/>=4.0.0|<=4.1.24
+    affected_versions: vers:maven/>=5.0.0|<=5.0.19
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
@@ -21,7 +21,7 @@ severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses: []
 references:

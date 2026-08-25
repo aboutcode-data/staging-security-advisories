@@ -8,6 +8,11 @@ summary: |
   In Cloud Foundry Foundation cf-release versions prior to v285; cf-deployment versions prior to v1.7; UAA 4.5.x versions prior to 4.5.5, 4.8.x versions prior to 4.8.3, and 4.7.x versions prior to 4.7.4; and UAA-release 45.7.x versions prior to 45.7, 52.7.x versions prior to 52.7, and 53.3.x versions prior to 53.3, the SessionID is logged in audit event logs. An attacker can use the SessionID to impersonate a logged-in user.
 impacted_packages:
   - purl: pkg:maven/org.cloudfoundry.identity/cloudfoundry-identity-server
+    affected_versions: vers:maven/>=4.8.0|<4.8.3
+    fixed_versions: vers:maven/4.8.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.cloudfoundry.identity/cloudfoundry-identity-server
     affected_versions: vers:maven/<4.5.5
     fixed_versions: vers:maven/4.5.5
     fixed_in_commits: []
@@ -15,11 +20,6 @@ impacted_packages:
   - purl: pkg:maven/org.cloudfoundry.identity/cloudfoundry-identity-server
     affected_versions: vers:maven/>=4.6.0|<4.7.4
     fixed_versions: vers:maven/4.7.4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.cloudfoundry.identity/cloudfoundry-identity-server
-    affected_versions: vers:maven/>=4.8.0|<4.8.3
-    fixed_versions: vers:maven/4.8.3
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/cloudfoundry/uaa
@@ -35,14 +35,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '8.8'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-xg5v-696h-c3vr/GHSA-xg5v-696h-c3vr.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

@@ -7,6 +7,13 @@ summary: |
   Zend Access Restriction Bypass
   The (1) Zend_Ldap class in Zend before 1.12.9 and (2) Zend\Ldap component in Zend 2.x before 2.2.8 and 2.3.x before 2.3.3 allows remote attackers to bypass authentication via a password starting with a null byte, which triggers an unauthenticated bind.
 impacted_packages:
+  - purl: pkg:github/zendframework/zendframework
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/zendframework/zendframework
+        commit: a4222a6c1dc809f0f32fdafcd1ac4d583a075f2f
+    introduced_in_commits: []
   - purl: pkg:composer/zendframework/zendframework
     affected_versions: vers:composer/>=2.0.0|<2.0.99
     fixed_versions: vers:composer/2.0.99
@@ -32,18 +39,11 @@ impacted_packages:
     fixed_versions: vers:composer/1.12.9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/zendframework/zendframework
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/zendframework/zendframework
-        commit: a4222a6c1dc809f0f32fdafcd1ac4d583a075f2f
-    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-287

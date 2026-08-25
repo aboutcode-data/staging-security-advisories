@@ -8,13 +8,13 @@ summary: |
   The HTTP/2 header parser in Apache Tomcat 9.0.0.M1 to 9.0.0.M11 and 8.5.0 to 8.5.6 entered an infinite loop if a header was received that was larger than the available buffer. This made a denial of service attack possible.
 impacted_packages:
   - purl: pkg:maven/org.apache.tomcat/tomcat
-    affected_versions: vers:maven/<=9.0.0.M11
-    fixed_versions: vers:maven/9.0.0.M12
+    affected_versions: vers:maven/>=8.5.0|<8.5.8
+    fixed_versions: vers:maven/8.5.8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat/tomcat
-    affected_versions: vers:maven/>=8.5.0|<8.5.8
-    fixed_versions: vers:maven/8.5.8
+    affected_versions: vers:maven/<=9.0.0.M11
+    fixed_versions: vers:maven/9.0.0.M12
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/apache/tomcat
@@ -28,14 +28,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '7.5'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-698c-2x4j-g9gq/GHSA-698c-2x4j-g9gq.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-835
