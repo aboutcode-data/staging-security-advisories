@@ -50,36 +50,6 @@ summary: |
 
   MSRC details for this can be found at https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-29337
 impacted_packages:
-  - purl: pkg:nuget/NuGet.PackageManagement
-    affected_versions: vers:nuget/>=6.0.0|<6.0.5
-    fixed_versions: vers:nuget/6.0.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/NuGet.PackageManagement
-    affected_versions: vers:nuget/>=6.2.0|<6.2.4
-    fixed_versions: vers:nuget/6.2.4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/NuGet.PackageManagement
-    affected_versions: vers:nuget/>=6.3.0|<6.3.3
-    fixed_versions: vers:nuget/6.3.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/NuGet.PackageManagement
-    affected_versions: vers:nuget/>=6.4.0|<6.4.2
-    fixed_versions: vers:nuget/6.4.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/NuGet.CommandLine
-    affected_versions: vers:nuget/>=6.0.0|<6.0.5
-    fixed_versions: vers:nuget/6.0.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/NuGet.CommandLine
-    affected_versions: vers:nuget/>=6.2.0|<6.2.4
-    fixed_versions: vers:nuget/6.2.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:nuget/NuGet.CommandLine
     affected_versions: vers:nuget/>=6.3.0|<6.3.3
     fixed_versions: vers:nuget/6.3.3
@@ -93,6 +63,43 @@ impacted_packages:
   - purl: pkg:nuget/NuGet.PackageManagement
     affected_versions: vers:nuget/>=4.6.0|<5.11.5
     fixed_versions: vers:nuget/5.11.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/NuGet.PackageManagement
+    affected_versions: vers:nuget/>=6.0.0|<6.0.5
+    fixed_versions: vers:nuget/6.0.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/nuget/nuget.client
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/nuget/nuget.client
+        commit: 7fe6b814c901490292f02d8ea12749505fbb959a
+    introduced_in_commits: []
+  - purl: pkg:nuget/NuGet.PackageManagement
+    affected_versions: vers:nuget/>=6.2.0|<6.2.4
+    fixed_versions: vers:nuget/6.2.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/NuGet.PackageManagement
+    affected_versions: vers:nuget/>=6.3.0|<6.3.3
+    fixed_versions: vers:nuget/6.3.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/NuGet.PackageManagement
+    affected_versions: vers:nuget/>=6.4.0|<6.4.2
+    fixed_versions: vers:nuget/6.4.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/NuGet.CommandLine
+    affected_versions: vers:nuget/>=6.0.0|<6.0.5
+    fixed_versions: vers:nuget/6.0.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/NuGet.CommandLine
+    affected_versions: vers:nuget/>=6.2.0|<6.2.4
+    fixed_versions: vers:nuget/6.2.4
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:nuget/NuGet.CommandLine
@@ -240,23 +247,16 @@ impacted_packages:
     fixed_versions: vers:nuget/5.11.5
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/nuget/nuget.client
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/nuget/nuget.client
-        commit: 7fe6b814c901490292f02d8ea12749505fbb959a
-    introduced_in_commits: []
 severities:
   - score: '7.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-6qmf-mmc7-6c2p/GHSA-6qmf-mmc7-6c2p.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-367

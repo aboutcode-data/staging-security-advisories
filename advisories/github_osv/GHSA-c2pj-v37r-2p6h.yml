@@ -49,6 +49,13 @@ summary: |
 
   The error from `mime.ParseMediaType` should return directly.
 impacted_packages:
+  - purl: pkg:github/golang/go
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/golang/go
+        commit: a031f4ef83edc132d5f49382bfef491161de2476
+    introduced_in_commits: []
   - purl: pkg:github/corazawaf/coraza
     affected_versions:
     fixed_versions:
@@ -62,23 +69,16 @@ impacted_packages:
       - vcs_url: https://github.com/corazawaf/coraza
         commit: a5239ba3ce839e14d9b4f9486e1b4a403dcade8c
     introduced_in_commits: []
-  - purl: pkg:github/golang/go
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/golang/go
-        commit: a031f4ef83edc132d5f49382bfef491161de2476
-    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-c2pj-v37r-2p6h/GHSA-c2pj-v37r-2p6h.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-400

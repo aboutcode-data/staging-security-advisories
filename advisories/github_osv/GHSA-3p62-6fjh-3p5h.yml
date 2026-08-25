@@ -9,11 +9,6 @@ summary: |
 
   AssertionConsumerServiceURL allows XSS when sending a crafted SAML XML request.
 impacted_packages:
-  - purl: pkg:maven/org.keycloak/keycloak-services
-    affected_versions: vers:maven/<21.1.2
-    fixed_versions: vers:maven/21.1.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/keycloak/keycloak
     affected_versions:
     fixed_versions:
@@ -21,16 +16,21 @@ impacted_packages:
       - vcs_url: https://github.com/keycloak/keycloak
         commit: a1cfe6e24e5b34792699a00b8b4a8016a5929e3a
     introduced_in_commits: []
+  - purl: pkg:maven/org.keycloak/keycloak-services
+    affected_versions: vers:maven/<21.1.2
+    fixed_versions: vers:maven/21.1.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '10.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-3p62-6fjh-3p5h/GHSA-3p62-6fjh-3p5h.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-81

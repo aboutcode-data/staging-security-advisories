@@ -16,11 +16,6 @@ summary: |
   ### Workarounds
   If you cannot update for some reason, you must stop using it or prohibit writing to untrusted users.
 impacted_packages:
-  - purl: pkg:composer/studio-42/elfinder
-    affected_versions: vers:composer/<2.1.62
-    fixed_versions: vers:composer/2.1.62
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/studio-42/elfinder
     affected_versions:
     fixed_versions:
@@ -28,16 +23,21 @@ impacted_packages:
       - vcs_url: https://github.com/studio-42/elfinder
         commit: bb9aaa7b096a1b83f2f85657c43f12131ece2891
     introduced_in_commits: []
+  - purl: pkg:composer/studio-42/elfinder
+    affected_versions: vers:composer/<2.1.62
+    fixed_versions: vers:composer/2.1.62
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-wm5g-p99q-66g4/GHSA-wm5g-p99q-66g4.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

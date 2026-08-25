@@ -35,14 +35,14 @@ summary: |
 
   For deployments using TLS client certificates (for mutual TLS), private key material for TLS is leaked from the client application to the server. If the server is untrusted (run by a third party), or if the client application also disables TLS verification (and so the true identity of the server is unverifiable) then authentication credentials are leaked.
 impacted_packages:
-  - purl: pkg:npm/nats
-    affected_versions: vers:npm/<=2.0.0-206
-    fixed_versions: vers:npm/2.0.0-209
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:npm/nats.ws
     affected_versions: vers:npm/<=1.0.0-110
     fixed_versions: vers:npm/1.0.0-111
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/nats
+    affected_versions: vers:npm/<=2.0.0-206
+    fixed_versions: vers:npm/2.0.0-209
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/nats-io/nats.ws
@@ -56,12 +56,12 @@ severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/10/GHSA-82rf-q3pr-4f6p/GHSA-82rf-q3pr-4f6p.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-522

@@ -16,11 +16,6 @@ summary: |
   ### Workarounds
   Handle `InventoryTransactionPacket` in `DataPacketReceiveEvent`, and verify that the item count dropped isn't more than the available item count. However, it's complicated to do this, so it's not recommended.
 impacted_packages:
-  - purl: pkg:composer/pocketmine/pocketmine-mp
-    affected_versions: vers:composer/<4.18.1
-    fixed_versions: vers:composer/4.18.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/pmmp/pocketmine-mp
     affected_versions:
     fixed_versions:
@@ -28,16 +23,21 @@ impacted_packages:
       - vcs_url: https://github.com/pmmp/pocketmine-mp
         commit: 58974765a68f63a9968a7ff3a06f584ff2ee08d2
     introduced_in_commits: []
+  - purl: pkg:composer/pocketmine/pocketmine-mp
+    affected_versions: vers:composer/<4.18.1
+    fixed_versions: vers:composer/4.18.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-h87r-f4vc-mchv/GHSA-h87r-f4vc-mchv.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses: []
 references:

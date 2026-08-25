@@ -10,13 +10,20 @@ summary: |
   Users should upgrade to 3.14.9, 3.18.8, 3.20.6 or 3.21.0 and for users on Camel 4.x update to 4.0.0-RC1
 impacted_packages:
   - purl: pkg:maven/org.apache.camel/camel-jira
-    affected_versions: vers:maven/>=3.0.0-M3|<3.14.9
-    fixed_versions: vers:maven/3.14.9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.camel/camel-jira
     affected_versions: vers:maven/>=3.15.0|<3.18.8
     fixed_versions: vers:maven/3.18.8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/apache/camel
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/camel
+        commit: b61d5b6be4f98b673dc977ad1bc6f004642644ab
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.camel/camel-jira
+    affected_versions: vers:maven/>=3.0.0-M3|<3.14.9
+    fixed_versions: vers:maven/3.14.9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.camel/camel-jira
@@ -29,23 +36,16 @@ impacted_packages:
     fixed_versions: vers:maven/4.0.0-RC1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/apache/camel
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/apache/camel
-        commit: b61d5b6be4f98b673dc977ad1bc6f004642644ab
-    introduced_in_commits: []
 severities:
   - score: '3.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-6g2w-257v-3c9f/GHSA-6g2w-257v-3c9f.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

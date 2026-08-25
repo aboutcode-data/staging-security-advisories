@@ -28,6 +28,15 @@ summary: |
   - https://github.com/parse-community/parse-server/security/advisories/GHSA-462x-c3jw-7vr6
   - https://github.com/advisories/GHSA-prm5-8g2m-24gg
 impacted_packages:
+  - purl: pkg:github/parse-community/parse-server
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/parse-community/parse-server
+        commit: 3dd99dd80e27e5e1d99b42844180546d90c7aa90
+      - vcs_url: https://github.com/parse-community/parse-server
+        commit: 5fad2928fb8ee17304abcdcf259932f827d8c81f
+    introduced_in_commits: []
   - purl: pkg:npm/parse-server
     affected_versions: vers:npm/<5.5.2
     fixed_versions: vers:npm/5.5.2
@@ -38,25 +47,16 @@ impacted_packages:
     fixed_versions: vers:npm/6.2.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/parse-community/parse-server
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/parse-community/parse-server
-        commit: 3dd99dd80e27e5e1d99b42844180546d90c7aa90
-      - vcs_url: https://github.com/parse-community/parse-server
-        commit: 5fad2928fb8ee17304abcdcf259932f827d8c81f
-    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-462x-c3jw-7vr6/GHSA-462x-c3jw-7vr6.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-1321

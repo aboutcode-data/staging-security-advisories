@@ -10,11 +10,6 @@ summary: "Flask-AppBuilder vulnerable to possible disclosure of sensitive inform
   \ the entire user row including the pbkdf2:sha256 hashed password.\n \n### Patches\nFixed\
   \ on 4.3.2"
 impacted_packages:
-  - purl: pkg:pypi/flask-appbuilder
-    affected_versions: vers:pypi/<4.3.2
-    fixed_versions: vers:pypi/4.3.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/dpgaspar/flask-appbuilder
     affected_versions:
     fixed_versions:
@@ -22,21 +17,26 @@ impacted_packages:
       - vcs_url: https://github.com/dpgaspar/flask-appbuilder
         commit: ae25ad4c87a9051ebe4a4e8f02aee73232642626
     introduced_in_commits: []
+  - purl: pkg:pypi/flask-appbuilder
+    affected_versions: vers:pypi/<4.3.2
+    fixed_versions: vers:pypi/4.3.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '2.7'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-jhpr-j7cq-3jp3/GHSA-jhpr-j7cq-3jp3.json
   - score: '5.1'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-jhpr-j7cq-3jp3/GHSA-jhpr-j7cq-3jp3.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-209

@@ -23,11 +23,6 @@ summary: "tgstation-server cached user logins in legacy server\nPlease note this
   \ end up erroring due to trying to impersonate using a closed user token handle.\n\nThis has\
   \ been fixed in 1812a9c6793c8516c138a105ccfb2108164f0eff and versions 3.2.5.0+"
 impacted_packages:
-  - purl: pkg:nuget/TGServiceInterface
-    affected_versions: vers:nuget/<=3.2.4
-    fixed_versions: vers:nuget/3.2.5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/tgstation/tgstation-server
     affected_versions:
     fixed_versions:
@@ -35,16 +30,21 @@ impacted_packages:
       - vcs_url: https://github.com/tgstation/tgstation-server
         commit: 1812a9c6793c8516c138a105ccfb2108164f0eff
     introduced_in_commits: []
+  - purl: pkg:nuget/TGServiceInterface
+    affected_versions: vers:nuget/<=3.2.4
+    fixed_versions: vers:nuget/3.2.5
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-42r6-p4px-qvv6/GHSA-42r6-p4px-qvv6.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses: []
 references:

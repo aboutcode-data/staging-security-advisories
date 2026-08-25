@@ -23,11 +23,6 @@ summary: "Snowflake NodeJS Driver vulnerable to Command Injection\n### Issue\nSn
   \ please report the issue to HackerOne. For more information, please see our [Vulnerability\
   \ Disclosure Policy](https://hackerone.com/snowflake?type=team)."
 impacted_packages:
-  - purl: pkg:npm/snowflake-sdk
-    affected_versions: vers:npm/<1.6.21
-    fixed_versions: vers:npm/1.6.21
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/snowflakedb/snowflake-connector-nodejs
     affected_versions:
     fixed_versions:
@@ -35,16 +30,21 @@ impacted_packages:
       - vcs_url: https://github.com/snowflakedb/snowflake-connector-nodejs
         commit: 0c9622ae12cd7d627df404b73a783b4a5f60728a
     introduced_in_commits: []
+  - purl: pkg:npm/snowflake-sdk
+    affected_versions: vers:npm/<1.6.21
+    fixed_versions: vers:npm/1.6.21
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-h53w-7qw7-vh5c/GHSA-h53w-7qw7-vh5c.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-77

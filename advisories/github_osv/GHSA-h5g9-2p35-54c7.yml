@@ -7,6 +7,11 @@ summary: |
   nilsteampassnet/teampass vulnerable to cross-site scripting
   Cross-site Scripting (XSS) - Stored in GitHub repository nilsteampassnet/teampass prior to 3.0.9. This  enables an attacker to inject malicious code into a shared folder, which can then be executed by other users who have access to the folder.
 impacted_packages:
+  - purl: pkg:composer/nilsteampassnet/teampass
+    affected_versions: vers:composer/<3.0.9
+    fixed_versions: vers:composer/3.0.9
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:github/nilsteampassnet/teampass
     affected_versions:
     fixed_versions:
@@ -14,21 +19,16 @@ impacted_packages:
       - vcs_url: https://github.com/nilsteampassnet/teampass
         commit: 6ba8cf1f4b89d62a08d122d533ccf4cb4e26a4ee
     introduced_in_commits: []
-  - purl: pkg:composer/nilsteampassnet/teampass
-    affected_versions: vers:composer/<3.0.9
-    fixed_versions: vers:composer/3.0.9
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/05/GHSA-h5g9-2p35-54c7/GHSA-h5g9-2p35-54c7.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

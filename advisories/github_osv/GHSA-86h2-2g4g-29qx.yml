@@ -36,6 +36,13 @@ summary: "avo possible unsafe reflection / partial DoS vulnerability\n### Summar
   \ field and only allow strings from that list. With this white-list approach, an attacker\
   \ cannot supply unintended classes."
 impacted_packages:
+  - purl: pkg:github/avo-hq/avo
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/avo-hq/avo
+        commit: ec117882ddb1b519481bdd046dc3cfa4474e6e17
+    introduced_in_commits: []
   - purl: pkg:gem/avo
     affected_versions: vers:gem/<=2.33.2
     fixed_versions: vers:gem/2.33.3
@@ -46,23 +53,16 @@ impacted_packages:
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/avo-hq/avo
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/avo-hq/avo
-        commit: ec117882ddb1b519481bdd046dc3cfa4474e6e17
-    introduced_in_commits: []
 severities:
   - score: '8.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-86h2-2g4g-29qx/GHSA-86h2-2g4g-29qx.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-470

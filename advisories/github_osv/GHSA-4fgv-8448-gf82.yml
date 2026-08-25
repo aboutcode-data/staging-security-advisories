@@ -7,13 +7,6 @@ summary: |
   Zinc Cross-site Scripting vulnerability
   In Zinc, versions v0.1.9 through v0.3.1 are vulnerable to Stored Cross-Site Scripting when using the delete user functionality. When an authenticated user deletes a user having a XSS payload in the user id field, the javascript payload will be executed and allow an attacker to access the user’s credentials.
 impacted_packages:
-  - purl: pkg:github/zinclabs/zinc
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/zinclabs/zinc
-        commit: 3376c248bade163430f9347742428f0a82cd322d
-    introduced_in_commits: []
   - purl: pkg:github/zincsearch/zincsearch
     affected_versions:
     fixed_versions:
@@ -21,16 +14,23 @@ impacted_packages:
       - vcs_url: https://github.com/zincsearch/zincsearch
         commit: 3376c248bade163430f9347742428f0a82cd322d
     introduced_in_commits: []
+  - purl: pkg:github/zinclabs/zinc
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/zinclabs/zinc
+        commit: 3376c248bade163430f9347742428f0a82cd322d
+    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-4fgv-8448-gf82/GHSA-4fgv-8448-gf82.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

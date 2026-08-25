@@ -7,11 +7,6 @@ summary: |
   Command injection in PaddlePaddle
   PaddlePaddle before 2.5.0 has a command injection in fs.py. This resulted in the ability to execute arbitrary commands on the operating system.
 impacted_packages:
-  - purl: pkg:pypi/paddlepaddle
-    affected_versions: vers:pypi/<2.5.0
-    fixed_versions: vers:pypi/2.5.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/paddlepaddle/paddle
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/paddlepaddle/paddle
         commit: 2bfe358043096fdba9e2a4cf0f5740102b37fd8f
     introduced_in_commits: []
+  - purl: pkg:pypi/paddlepaddle
+    affected_versions: vers:pypi/<2.5.0
+    fixed_versions: vers:pypi/2.5.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.6'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-9q9v-qgwx-84mr/GHSA-9q9v-qgwx-84mr.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-78

@@ -13,11 +13,6 @@ summary: |
 
   Sidebar Link Plugin 2.2.2 ensures that only files located within the expected `userContent/` directory can be accessed.
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins/sidebar-link
-    affected_versions: vers:maven/<2.2.2
-    fixed_versions: vers:maven/2.2.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/sidebar-link-plugin
     affected_versions:
     fixed_versions:
@@ -25,16 +20,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/sidebar-link-plugin
         commit: 1bfd878ee107cdf349bc6a6bf3e9e6e25ef95ad5
     introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/sidebar-link
+    affected_versions: vers:maven/<2.2.2
+    fixed_versions: vers:maven/2.2.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/05/GHSA-pp8m-prr7-wr8w/GHSA-pp8m-prr7-wr8w.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

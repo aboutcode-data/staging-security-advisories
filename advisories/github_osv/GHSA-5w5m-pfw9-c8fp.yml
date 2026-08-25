@@ -23,11 +23,6 @@ summary: "Snowflake Python Connector vulnerable to Command Injection\n### Issue\
   \ or websites, please report the issue to HackerOne. For more information, please see our\
   \ [Vulnerability Disclosure Policy](https://hackerone.com/snowflake?type=team)."
 impacted_packages:
-  - purl: pkg:pypi/snowflake-connector-python
-    affected_versions: vers:pypi/<3.0.2
-    fixed_versions: vers:pypi/3.0.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/snowflakedb/snowflake-connector-python
     affected_versions:
     fixed_versions:
@@ -35,21 +30,26 @@ impacted_packages:
       - vcs_url: https://github.com/snowflakedb/snowflake-connector-python
         commit: 1cdbd3b1403c5ef520d7f4d9614fe35165e101ac
     introduced_in_commits: []
+  - purl: pkg:pypi/snowflake-connector-python
+    affected_versions: vers:pypi/<3.0.2
+    fixed_versions: vers:pypi/3.0.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-5w5m-pfw9-c8fp/GHSA-5w5m-pfw9-c8fp.json
   - score: '8.5'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-5w5m-pfw9-c8fp/GHSA-5w5m-pfw9-c8fp.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-77

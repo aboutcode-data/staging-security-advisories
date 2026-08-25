@@ -7,11 +7,6 @@ summary: |
   RedCloth Regular Expression Denial of Service issue
   A Regular Expression Denial of Service (ReDoS) issue was discovered in the `sanitize_html` function of RedCloth gem. This vulnerability allows attackers to cause a Denial of Service (DoS) via supplying a crafted payload.
 impacted_packages:
-  - purl: pkg:gem/RedCloth
-    affected_versions: vers:gem/<4.3.3
-    fixed_versions: vers:gem/4.3.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jgarber/redcloth
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/jgarber/redcloth
         commit: 8b1327688fef8e6617792054ef299d7bc74c0a1e
     introduced_in_commits: []
+  - purl: pkg:gem/RedCloth
+    affected_versions: vers:gem/<4.3.3
+    fixed_versions: vers:gem/4.3.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-qcm3-vfq5-wfr2/GHSA-qcm3-vfq5-wfr2.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-1333

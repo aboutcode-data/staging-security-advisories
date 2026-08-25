@@ -27,11 +27,6 @@ summary: |
 
   Thanks to @arkark (Takeshi Kaneko) of GMO Cybersecurity by Ierae, Inc. for disclosing this vulnerability.
 impacted_packages:
-  - purl: pkg:npm/vm2
-    affected_versions: vers:npm/<3.9.18
-    fixed_versions: vers:npm/3.9.18
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/patriksimek/vm2
     affected_versions:
     fixed_versions:
@@ -39,16 +34,21 @@ impacted_packages:
       - vcs_url: https://github.com/patriksimek/vm2
         commit: 5206ba25afd86ef547a2c9d48d46ca7a9e6ec238
     introduced_in_commits: []
+  - purl: pkg:npm/vm2
+    affected_versions: vers:npm/<3.9.18
+    fixed_versions: vers:npm/3.9.18
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/05/GHSA-p5gc-c584-jj6v/GHSA-p5gc-c584-jj6v.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-74

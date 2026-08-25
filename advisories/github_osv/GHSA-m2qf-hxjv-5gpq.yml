@@ -15,15 +15,6 @@ summary: |
 
   This happens because vulnerable versions of Flask only set the `Vary: Cookie` header when the session is accessed or modified, not when it is refreshed (re-sent to update the expiration) without being accessed or modified.
 impacted_packages:
-  - purl: pkg:github/pallets/flask
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/pallets/flask
-        commit: 70f906c51ce49c485f1d355703e9cc3386b1cc2b
-      - vcs_url: https://github.com/pallets/flask
-        commit: afd63b16170b7c047f5758eb910c416511e9c965
-    introduced_in_commits: []
   - purl: pkg:pypi/flask
     affected_versions: vers:pypi/>=2.3.0|<2.3.2
     fixed_versions: vers:pypi/2.3.2
@@ -34,21 +25,30 @@ impacted_packages:
     fixed_versions: vers:pypi/2.2.5
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:github/pallets/flask
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/pallets/flask
+        commit: 70f906c51ce49c485f1d355703e9cc3386b1cc2b
+      - vcs_url: https://github.com/pallets/flask
+        commit: afd63b16170b7c047f5758eb910c416511e9c965
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/05/GHSA-m2qf-hxjv-5gpq/GHSA-m2qf-hxjv-5gpq.json
   - score: '8.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/05/GHSA-m2qf-hxjv-5gpq/GHSA-m2qf-hxjv-5gpq.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-539

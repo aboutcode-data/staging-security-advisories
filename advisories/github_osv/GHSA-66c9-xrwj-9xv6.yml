@@ -8,6 +8,21 @@ summary: |
   Adobe Commerce versions 2.4.6 (and earlier), 2.4.5-p2 (and earlier) and 2.4.4-p3 (and earlier) are affected by an Improper Input Validation vulnerability that could result in a Security feature bypass. An admin privileged attacker could leverage this vulnerability to impact the availability of a user's minor feature. Exploitation of this issue does not require user interaction.
 impacted_packages:
   - purl: pkg:composer/magento/community-edition
+    affected_versions: vers:composer/2.4.4
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/magento/community-edition
+    affected_versions: vers:composer/>=2.4.5-p1|<2.4.5-p3
+    fixed_versions: vers:composer/2.4.5-p3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/magento/project-community-edition
+    affected_versions: vers:composer/<=2.0.2
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/magento/community-edition
     affected_versions: vers:composer/2.4.6
     fixed_versions:
     fixed_in_commits: []
@@ -18,40 +33,25 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/magento/community-edition
-    affected_versions: vers:composer/2.4.4
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/magento/community-edition
-    affected_versions: vers:composer/>=2.4.5-p1|<2.4.5-p3
-    fixed_versions: vers:composer/2.4.5-p3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/magento/community-edition
     affected_versions: vers:composer/>=2.4.4-p1|<2.4.4-p4
     fixed_versions: vers:composer/2.4.4-p4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/magento/project-community-edition
-    affected_versions: vers:composer/<=2.0.2
-    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '2.7'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-66c9-xrwj-9xv6/GHSA-66c9-xrwj-9xv6.json
   - score: '1.2'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:U
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-66c9-xrwj-9xv6/GHSA-66c9-xrwj-9xv6.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-20

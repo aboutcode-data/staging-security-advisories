@@ -116,11 +116,6 @@ summary: "Hi,\n\nactually we have sent the bug report to [security@getgrav.org](
   \ `GravExtension.filterFilter()` and to achieve remote code execution via Twig's default filters\
   \ `map()` and `reduce()`. This is a bypass of CVE-2022-2073."
 impacted_packages:
-  - purl: pkg:composer/getgrav/grav
-    affected_versions: vers:composer/<1.7.42
-    fixed_versions: vers:composer/1.7.42
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/getgrav/grav
     affected_versions:
     fixed_versions:
@@ -134,16 +129,21 @@ impacted_packages:
       - vcs_url: https://github.com/getgrav/grav
         commit: 71bbed12f950de8335006d7f91112263d8504f1b
     introduced_in_commits: []
+  - purl: pkg:composer/getgrav/grav
+    affected_versions: vers:composer/<1.7.42
+    fixed_versions: vers:composer/1.7.42
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.2'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-whr7-m3f8-mpm8/GHSA-whr7-m3f8-mpm8.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-1336

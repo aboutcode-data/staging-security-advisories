@@ -21,16 +21,6 @@ summary: |
 
   Avoid providing user supplied URLs with arbitrary schemes to the `redirect_to` method.
 impacted_packages:
-  - purl: pkg:gem/actionpack
-    affected_versions: vers:gem/<6.1.7.4
-    fixed_versions: vers:gem/6.1.7.4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:gem/actionpack
-    affected_versions: vers:gem/>=7.0.0|<7.0.5.1
-    fixed_versions: vers:gem/7.0.5.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/rails/rails
     affected_versions:
     fixed_versions:
@@ -42,16 +32,26 @@ impacted_packages:
       - vcs_url: https://github.com/rails/rails
         commit: 1c3f93d1e90a3475f9ae2377ead25ccf11f71441
     introduced_in_commits: []
+  - purl: pkg:gem/actionpack
+    affected_versions: vers:gem/<6.1.7.4
+    fixed_versions: vers:gem/6.1.7.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:gem/actionpack
+    affected_versions: vers:gem/>=7.0.0|<7.0.5.1
+    fixed_versions: vers:gem/7.0.5.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-4g8v-vg43-wpgf/GHSA-4g8v-vg43-wpgf.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-116

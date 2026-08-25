@@ -20,6 +20,11 @@ summary: |
   ### References
   https://huntr.dev/bounties/564cb512-2bcc-4458-8c20-88110ab45801/
 impacted_packages:
+  - purl: pkg:composer/pimcore/pimcore
+    affected_versions: vers:composer/<10.5.21
+    fixed_versions: vers:composer/10.5.21
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:github/pimcore/pimcore
     affected_versions:
     fixed_versions:
@@ -27,21 +32,16 @@ impacted_packages:
       - vcs_url: https://github.com/pimcore/pimcore
         commit: 07a2c95be524c7e20105cef58c5767d4ebb06091
     introduced_in_commits: []
-  - purl: pkg:composer/pimcore/pimcore
-    affected_versions: vers:composer/<10.5.21
-    fixed_versions: vers:composer/10.5.21
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: '6.8'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:C/C:N/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/05/GHSA-mhpj-7m7h-8p6x/GHSA-mhpj-7m7h-8p6x.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

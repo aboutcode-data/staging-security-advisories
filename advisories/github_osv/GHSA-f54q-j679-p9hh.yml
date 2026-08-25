@@ -26,11 +26,6 @@ summary: |
   ### PoC
   `https://localhost:3923/?k304=y%0D%0A%0D%0A%3Cimg+src%3Dcopyparty+onerror%3Dalert(1)%3E`
 impacted_packages:
-  - purl: pkg:pypi/copyparty
-    affected_versions: vers:pypi/<=1.8.6
-    fixed_versions: vers:pypi/1.8.7
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/9001/copyparty
     affected_versions:
     fixed_versions:
@@ -38,21 +33,26 @@ impacted_packages:
       - vcs_url: https://github.com/9001/copyparty
         commit: 007d948cb982daa05bc6619cd20ee55b7e834c38
     introduced_in_commits: []
+  - purl: pkg:pypi/copyparty
+    affected_versions: vers:pypi/<=1.8.6
+    fixed_versions: vers:pypi/1.8.7
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-f54q-j679-p9hh/GHSA-f54q-j679-p9hh.json
   - score: '4.8'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-f54q-j679-p9hh/GHSA-f54q-j679-p9hh.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

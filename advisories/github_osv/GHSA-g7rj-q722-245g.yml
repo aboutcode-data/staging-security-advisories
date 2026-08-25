@@ -7,11 +7,6 @@ summary: |
   jsreport vulnerable to code injection
   jsreport prior to 3.11.3 had a version of vm2 vulnerable to CVE-2023-29017 hard coded in the package.json of the jsreport-core component. An attacker can use this vulnerability to obtain the authority of the jsreport playground server, or construct a malicious webpage/html file and send it to the user to attack the installed jsreport client.
 impacted_packages:
-  - purl: pkg:npm/jsreport
-    affected_versions: vers:npm/<3.11.3
-    fixed_versions: vers:npm/3.11.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jsreport/jsreport
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/jsreport/jsreport
         commit: afaff3804b34b38e959f5ae65f9e672088de13d7
     introduced_in_commits: []
+  - purl: pkg:npm/jsreport
+    affected_versions: vers:npm/<3.11.3
+    fixed_versions: vers:npm/3.11.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '10.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/05/GHSA-g7rj-q722-245g/GHSA-g7rj-q722-245g.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

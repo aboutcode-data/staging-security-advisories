@@ -14,11 +14,6 @@ summary: |
   ### Workarounds
   Site maintainers can cherry pick ec58700f6dff8e5b4af1544f6205ec362b593092 into their codebase to patch the exploit.
 impacted_packages:
-  - purl: pkg:npm/nodebb
-    affected_versions: vers:npm/>=2.5.0|<2.8.7
-    fixed_versions: vers:npm/2.8.7
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/nodebb/nodebb
     affected_versions:
     fixed_versions:
@@ -26,16 +21,21 @@ impacted_packages:
       - vcs_url: https://github.com/nodebb/nodebb
         commit: ec58700f6dff8e5b4af1544f6205ec362b593092
     introduced_in_commits: []
+  - purl: pkg:npm/nodebb
+    affected_versions: vers:npm/>=2.5.0|<2.8.7
+    fixed_versions: vers:npm/2.8.7
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '10.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-vh2g-6c4x-5hmp/GHSA-vh2g-6c4x-5hmp.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

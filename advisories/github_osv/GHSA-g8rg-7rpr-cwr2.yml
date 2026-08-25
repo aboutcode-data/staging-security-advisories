@@ -11,13 +11,13 @@ summary: "Information Disclosure in TYPO3 extension sf_event_mgt\nA missing acce
   \ in Broken Access Control.\n\nExternal reference: [https://typo3.org/security/advisory/typo3-ext-sa-2020-017](https://typo3.org/security/advisory/typo3-ext-sa-2020-017)"
 impacted_packages:
   - purl: pkg:composer/derhansen/sf_event_mgt
-    affected_versions: vers:composer/<4.3.1
-    fixed_versions: vers:composer/4.3.1
+    affected_versions: vers:composer/>=5.0.0|<5.1.1
+    fixed_versions: vers:composer/5.1.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/derhansen/sf_event_mgt
-    affected_versions: vers:composer/>=5.0.0|<5.1.1
-    fixed_versions: vers:composer/5.1.1
+    affected_versions: vers:composer/<4.3.1
+    fixed_versions: vers:composer/4.3.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/derhansen/sf_event_mgt
@@ -31,12 +31,12 @@ severities:
   - score: '4.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/09/GHSA-g8rg-7rpr-cwr2/GHSA-g8rg-7rpr-cwr2.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-863

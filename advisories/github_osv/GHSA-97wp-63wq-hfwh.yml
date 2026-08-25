@@ -15,11 +15,6 @@ summary: |
 
   Ansible Plugin 205.v4cb_c48657c21 masks extra variables displayed on the configuration form, and stores them encrypted once job configurations are saved again.
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins/ansible
-    affected_versions: vers:maven/<205.v4cb
-    fixed_versions: vers:maven/205.v4cb
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/ansible-plugin
     affected_versions:
     fixed_versions:
@@ -27,16 +22,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/ansible-plugin
         commit: 4cbc48657c21a65a917b3b3049918480198c0cfb
     introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/ansible
+    affected_versions: vers:maven/<205.v4cb
+    fixed_versions: vers:maven/205.v4cb
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/05/GHSA-97wp-63wq-hfwh/GHSA-97wp-63wq-hfwh.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-312

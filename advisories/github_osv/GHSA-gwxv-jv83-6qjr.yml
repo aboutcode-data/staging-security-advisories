@@ -69,11 +69,6 @@ summary: |
   ### References
   For instance, [Rocker's general purpose HTML escaping](https://github.com/fizzed/rocker/blob/d749fbf68179b31a64d541f5e18e0e25bc5c2d1b/rocker-runtime/src/main/java/com/fizzed/rocker/runtime/DefaultHtmlStringify.java#L64)
 impacted_packages:
-  - purl: pkg:maven/io.jstach/jstachio
-    affected_versions: vers:maven/<1.0.1
-    fixed_versions: vers:maven/1.0.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jstachio/jstachio
     affected_versions:
     fixed_versions:
@@ -81,16 +76,21 @@ impacted_packages:
       - vcs_url: https://github.com/jstachio/jstachio
         commit: 7b2f78377d1284df14c580be762a25af5f8dcd66
     introduced_in_commits: []
+  - purl: pkg:maven/io.jstach/jstachio
+    affected_versions: vers:maven/<1.0.1
+    fixed_versions: vers:maven/1.0.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-gwxv-jv83-6qjr/GHSA-gwxv-jv83-6qjr.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

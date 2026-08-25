@@ -7,11 +7,6 @@ summary: |
   ipandlanguageredirect extension vulnerable to SQL Injection
   The ipandlanguageredirect extension before 5.1.2 for TYPO3 allows SQL Injection.
 impacted_packages:
-  - purl: pkg:composer/in2code/ipandlanguageredirect
-    affected_versions: vers:composer/<5.1.2
-    fixed_versions: vers:composer/5.1.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/einpraegsam/ipandlanguageredirect
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/einpraegsam/ipandlanguageredirect
         commit: d80eb99e739a09984ad0ea94b12380236346ae42
     introduced_in_commits: []
+  - purl: pkg:composer/in2code/ipandlanguageredirect
+    affected_versions: vers:composer/<5.1.2
+    fixed_versions: vers:composer/5.1.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.2'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-4xf2-7qfv-mgfx/GHSA-4xf2-7qfv-mgfx.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-89

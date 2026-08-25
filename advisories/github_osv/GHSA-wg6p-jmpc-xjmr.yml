@@ -19,11 +19,6 @@ summary: |
 
   Note that the [Backstage Threat Model](https://backstage.io/docs/overview/threat-model) states that scaffolder templates are considered to be a sensitive area that with the recommendation that you control access and perform manual reviews of changes to the scaffolder templates. The exploit is of a nature where it is easily discoverable in manual review.
 impacted_packages:
-  - purl: pkg:npm/%40backstage/plugin-scaffolder-backend
-    affected_versions: vers:npm/<1.15.0
-    fixed_versions: vers:npm/1.15.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/backstage/backstage
     affected_versions:
     fixed_versions:
@@ -31,16 +26,21 @@ impacted_packages:
       - vcs_url: https://github.com/backstage/backstage
         commit: fb7375507d56faedcb7bb3665480070593c8949a
     introduced_in_commits: []
+  - purl: pkg:npm/%40backstage/plugin-scaffolder-backend
+    affected_versions: vers:npm/<1.15.0
+    fixed_versions: vers:npm/1.15.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-wg6p-jmpc-xjmr/GHSA-wg6p-jmpc-xjmr.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

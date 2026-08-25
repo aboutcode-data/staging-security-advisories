@@ -9,11 +9,6 @@ summary: |
 
   Upgrade to Apache Felix Healthcheck Webconsole Plugin 2.1.0 or higher.
 impacted_packages:
-  - purl: pkg:maven/org.apache.felix/org.apache.felix.healthcheck.webconsoleplugin
-    affected_versions: vers:maven/<2.1.0
-    fixed_versions: vers:maven/2.1.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/apache/felix-dev
     affected_versions:
     fixed_versions:
@@ -21,16 +16,21 @@ impacted_packages:
       - vcs_url: https://github.com/apache/felix-dev
         commit: c4e67520e0a4499389342491869919a6c42ed62c
     introduced_in_commits: []
+  - purl: pkg:maven/org.apache.felix/org.apache.felix.healthcheck.webconsoleplugin
+    affected_versions: vers:maven/<2.1.0
+    fixed_versions: vers:maven/2.1.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-4pvw-g9fx-594r/GHSA-4pvw-g9fx-594r.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

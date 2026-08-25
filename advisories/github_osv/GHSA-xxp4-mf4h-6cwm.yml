@@ -8,13 +8,13 @@ summary: |
   An issue in the logic used to check 0.0.0.0 against the cURL blocked hosts lists resulted in an SSRF risk. This flaw affects Moodle versions 4.2, 4.1 to 4.1.3, 4.0 to 4.0.8, 3.11 to 3.11.14, 3.9 to 3.9.21 and earlier unsupported versions.
 impacted_packages:
   - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/4.2.0
-    fixed_versions: vers:composer/4.2.1
+    affected_versions: vers:composer/>=4.1.0|<4.1.4
+    fixed_versions: vers:composer/4.1.4
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/>=4.1.0|<4.1.4
-    fixed_versions: vers:composer/4.1.4
+    affected_versions: vers:composer/4.2.0
+    fixed_versions: vers:composer/4.2.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/moodle/moodle
@@ -36,12 +36,12 @@ severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-xxp4-mf4h-6cwm/GHSA-xxp4-mf4h-6cwm.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-918

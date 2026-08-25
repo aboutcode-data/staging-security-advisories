@@ -16,11 +16,6 @@ summary: |
   ### Workarounds
   There is no known workaround to remediate this vulnerability without upgrading.
 impacted_packages:
-  - purl: pkg:pypi/ethyca-fides
-    affected_versions: vers:pypi/>=2.11.0|<2.16.0
-    fixed_versions: vers:pypi/2.16.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/ethyca/fides
     affected_versions:
     fixed_versions:
@@ -28,16 +23,21 @@ impacted_packages:
       - vcs_url: https://github.com/ethyca/fides
         commit: 8beaace082b325e693dc7682029a3cb7e6c2b69d
     introduced_in_commits: []
+  - purl: pkg:pypi/ethyca-fides
+    affected_versions: vers:pypi/>=2.11.0|<2.16.0
+    fixed_versions: vers:pypi/2.16.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '2.7'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-3rw2-wfc8-wmj5/GHSA-3rw2-wfc8-wmj5.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-400

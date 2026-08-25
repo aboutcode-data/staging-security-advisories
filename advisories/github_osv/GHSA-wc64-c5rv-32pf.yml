@@ -21,11 +21,6 @@ summary: |
   [2] https://spec.editorconfig.org/
   [3] https://github.blog/2022-04-12-git-security-vulnerability-announced/
 impacted_packages:
-  - purl: pkg:pypi/in-toto
-    affected_versions: vers:pypi/<=1.4.0
-    fixed_versions: vers:pypi/2.0.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/in-toto/in-toto
     affected_versions:
     fixed_versions:
@@ -33,16 +28,21 @@ impacted_packages:
       - vcs_url: https://github.com/in-toto/in-toto
         commit: 3a21d84f40811b7d191fa7bd17265c1f99599afd
     introduced_in_commits: []
+  - purl: pkg:pypi/in-toto
+    affected_versions: vers:pypi/<=1.4.0
+    fixed_versions: vers:pypi/2.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/05/GHSA-wc64-c5rv-32pf/GHSA-wc64-c5rv-32pf.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-15

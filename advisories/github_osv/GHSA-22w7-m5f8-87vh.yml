@@ -7,26 +7,26 @@ summary: |
   Liferay Portal and Liferay DXP Vulnerable to Open Redirect via the Layout Module
   Open redirect vulnerability in the Layout module's SEO configuration in Liferay Portal 7.4.3.70 through 7.4.3.76, and Liferay DXP 7.4 update 70 through 76 allows remote attackers to redirect users to arbitrary external URLs via the `_com_liferay_layout_admin_web_portlet_GroupPagesPortlet_backURL` parameter.
 impacted_packages:
-  - purl: pkg:maven/com.liferay.portal/release.portal.bom
-    affected_versions: vers:maven/>=7.4.3.70-ga70|<7.4.3.77-ga77
-    fixed_versions: vers:maven/7.4.3.77-ga77
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:maven/com.liferay.portal/release.dxp.bom
     affected_versions: vers:maven/>=7.4.13.u70|<=7.4.13.u76
     fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/com.liferay.portal/release.portal.bom
+    affected_versions: vers:maven/>=7.4.3.70-ga70|<7.4.3.77-ga77
+    fixed_versions: vers:maven/7.4.3.77-ga77
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-22w7-m5f8-87vh/GHSA-22w7-m5f8-87vh.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-601

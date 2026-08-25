@@ -7,11 +7,6 @@ summary: |
   TeamPass vulnerable to stored Cross-site Scripting
   Cross-site Scripting (XSS) - Stored in GitHub repository nilsteampassnet/teampass prior to 3.0.9.
 impacted_packages:
-  - purl: pkg:composer/nilsteampassnet/teampass
-    affected_versions: vers:composer/<3.0.9
-    fixed_versions: vers:composer/3.0.9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/nilsteampassnet/teampass
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/nilsteampassnet/teampass
         commit: 61b9b7d4e33bbaad2cd61a7ee988f9c22298bf1a
     introduced_in_commits: []
+  - purl: pkg:composer/nilsteampassnet/teampass
+    affected_versions: vers:composer/<3.0.9
+    fixed_versions: vers:composer/3.0.9
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-8vm8-38pc-8xhh/GHSA-8vm8-38pc-8xhh.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79
