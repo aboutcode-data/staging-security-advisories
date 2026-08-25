@@ -34,6 +34,11 @@ summary: |
   This vulnerability was detected using **[XBOW](https://xbow.com/)**, a system that autonomously finds and exploits potential security vulnerabilities. The finding has been thoroughly reviewed and validated by a security researcher before submission. While XBOW is intended to work autonomously, during its development human experts ensure the accuracy and relevance of its reports.
 impacted_packages:
   - purl: pkg:maven/org.geoserver.web/gs-web-app
+    affected_versions: vers:maven/<2.25.6
+    fixed_versions: vers:maven/2.25.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.geoserver.web/gs-web-app
     affected_versions: vers:maven/>=2.26.0|<2.26.2
     fixed_versions: vers:maven/2.26.2
     fixed_in_commits: []
@@ -41,11 +46,6 @@ impacted_packages:
   - purl: pkg:maven/org.geoserver/gs-wms
     affected_versions: vers:maven/>=2.26.0|<2.26.2
     fixed_versions: vers:maven/2.26.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.geoserver.web/gs-web-app
-    affected_versions: vers:maven/<2.25.6
-    fixed_versions: vers:maven/2.25.6
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.geoserver/gs-wms
@@ -57,12 +57,12 @@ severities:
   - score: '8.2'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/11/GHSA-fjf5-xgmq-5525/GHSA-fjf5-xgmq-5525.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-611

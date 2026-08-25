@@ -14,13 +14,13 @@ summary: |
   Jenkins 2.500, LTS 2.492.2 considers redirects to URLs starting with backslash (`\`) characters to be unsafe, rejecting such redirects.
 impacted_packages:
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
-    affected_versions: vers:maven/<2.492.2
-    fixed_versions: vers:maven/2.492.2
+    affected_versions: vers:maven/>=2.493|<2.500
+    fixed_versions: vers:maven/2.500
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
-    affected_versions: vers:maven/>=2.493|<2.500
-    fixed_versions: vers:maven/2.500
+    affected_versions: vers:maven/<2.492.2
+    fixed_versions: vers:maven/2.492.2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/jenkinsci/jenkins
@@ -34,12 +34,12 @@ severities:
   - score: '4.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/03/GHSA-8hmv-92wm-39ch/GHSA-8hmv-92wm-39ch.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-601

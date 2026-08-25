@@ -21,11 +21,6 @@ summary: |
   ### Impact
   This impacts wikis where a group has the `editinterface` but not the `editsitejs` user right.
 impacted_packages:
-  - purl: pkg:composer/starcitizentools/citizen-skin
-    affected_versions: vers:composer/>=2.4.2|<3.3.1
-    fixed_versions: vers:composer/3.3.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/starcitizentools/mediawiki-skins-citizen
     affected_versions:
     fixed_versions:
@@ -37,16 +32,21 @@ impacted_packages:
       - vcs_url: https://github.com/starcitizentools/mediawiki-skins-citizen
         commit: 93c36ac778397e0e7c46cf7adb1e5d848265f1bd
     introduced_in_commits: []
+  - purl: pkg:composer/starcitizentools/citizen-skin
+    affected_versions: vers:composer/>=2.4.2|<3.3.1
+    fixed_versions: vers:composer/3.3.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/06/GHSA-4c2h-67qq-vm87/GHSA-4c2h-67qq-vm87.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

@@ -7,14 +7,14 @@ summary: |
   LlamaIndex vulnerable to data loss through hash collisions in its DocugamiReader class
   A vulnerability in the DocugamiReader class of the run-llama/llama_index repository, up to but excluding version 0.12.41, involves the use of MD5 hashing to generate IDs for document chunks. This approach leads to hash collisions when structurally distinct chunks contain identical text, resulting in one chunk overwriting another. This can cause loss of semantically or legally important document content, breakage of parent-child chunk hierarchies, and inaccurate or hallucinated responses in AI outputs. The issue is resolved in version 0.3.1.
 impacted_packages:
-  - purl: pkg:pypi/llama-index
-    affected_versions: vers:pypi/<0.12.41
-    fixed_versions: vers:pypi/0.12.41
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:pypi/llama-index-readers-docugami
     affected_versions: vers:pypi/<0.3.1
     fixed_versions: vers:pypi/0.3.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/llama-index
+    affected_versions: vers:pypi/<0.12.41
+    fixed_versions: vers:pypi/0.12.41
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/run-llama/llama_index
@@ -26,14 +26,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '6.5'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/07/GHSA-5hq9-5r78-2gjh/GHSA-5hq9-5r78-2gjh.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-440

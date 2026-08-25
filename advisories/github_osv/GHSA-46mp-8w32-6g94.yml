@@ -70,13 +70,6 @@ summary: "### Summary\nKyverno ignores subjectRegExp and IssuerRegExp while veri
   \ problem such as it allows to bypass part of the verification mechanism and Kyverno users\
   \ should be aware of it."
 impacted_packages:
-  - purl: pkg:github/mohdcode/kyverno
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/mohdcode/kyverno
-        commit: 373f942ea9fa8b63140d0eb0e101b9a5f71033f3
-    introduced_in_commits: []
   - purl: pkg:github/kyverno/kyverno
     affected_versions:
     fixed_versions:
@@ -84,16 +77,23 @@ impacted_packages:
       - vcs_url: https://github.com/kyverno/kyverno
         commit: 8777672fb17bdf252bd2e7d8de3441e240404a60
     introduced_in_commits: []
+  - purl: pkg:github/mohdcode/kyverno
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/mohdcode/kyverno
+        commit: 373f942ea9fa8b63140d0eb0e101b9a5f71033f3
+    introduced_in_commits: []
 severities:
   - score: '5.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:N/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/03/GHSA-46mp-8w32-6g94/GHSA-46mp-8w32-6g94.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-285

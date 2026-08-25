@@ -8,13 +8,13 @@ summary: |
   File Upload vulnerability in nestjs nest prior to v.11.0.16 allows a remote attacker to execute arbitrary code via the Content-Type header.
 impacted_packages:
   - purl: pkg:npm/%40nestjs/common
-    affected_versions: vers:npm/>=11.0.0-next.1|<11.0.16
-    fixed_versions: vers:npm/11.0.16
+    affected_versions: vers:npm/<10.4.16
+    fixed_versions: vers:npm/10.4.16
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:npm/%40nestjs/common
-    affected_versions: vers:npm/<10.4.16
-    fixed_versions: vers:npm/10.4.16
+    affected_versions: vers:npm/>=11.0.0-next.1|<11.0.16
+    fixed_versions: vers:npm/11.0.16
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/nestjs/nest
@@ -28,12 +28,12 @@ severities:
   - score: '5.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/03/GHSA-cj7v-w2c7-cp7c/GHSA-cj7v-w2c7-cp7c.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

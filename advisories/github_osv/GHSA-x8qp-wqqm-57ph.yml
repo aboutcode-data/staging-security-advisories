@@ -46,6 +46,16 @@ summary: |
 
   This creates a DOM-based Cross-Site Scripting (XSS) vulnerability despite enabling a security option (escapeParameterHtml) .
 impacted_packages:
+  - purl: pkg:npm/%40intlify/core-base
+    affected_versions: vers:npm/>=11.0.0|<11.1.10
+    fixed_versions: vers:npm/11.1.10
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/%40intlify/vue-i18n-core
+    affected_versions: vers:npm/>=11.0.0|<11.1.10
+    fixed_versions: vers:npm/11.1.10
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:npm/vue-i18n
     affected_versions: vers:npm/>=9.0.0|<9.14.5
     fixed_versions: vers:npm/9.14.5
@@ -84,11 +94,6 @@ impacted_packages:
   - purl: pkg:npm/%40intlify/core-base
     affected_versions: vers:npm/>=10.0.0|<10.0.8
     fixed_versions: vers:npm/10.0.8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:npm/%40intlify/core-base
-    affected_versions: vers:npm/>=11.0.0|<11.1.10
-    fixed_versions: vers:npm/11.1.10
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:npm/%40intlify/vue-i18n-core
@@ -99,11 +104,6 @@ impacted_packages:
   - purl: pkg:npm/%40intlify/vue-i18n-core
     affected_versions: vers:npm/>=10.0.0|<10.0.8
     fixed_versions: vers:npm/10.0.8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:npm/%40intlify/vue-i18n-core
-    affected_versions: vers:npm/>=11.0.0|<11.1.10
-    fixed_versions: vers:npm/11.1.10
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:npm/petite-vue-i18n
@@ -129,12 +129,12 @@ severities:
   - score: '5.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/07/GHSA-x8qp-wqqm-57ph/GHSA-x8qp-wqqm-57ph.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

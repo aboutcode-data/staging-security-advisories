@@ -28,6 +28,11 @@ summary: "XWiki allows privilege escalation through link refactoring\n### Impact
   * Email us at [Security Mailing List](mailto:security@xwiki.org)"
 impacted_packages:
   - purl: pkg:maven/org.xwiki.platform/xwiki-platform-refactoring-default
+    affected_versions: vers:maven/>=8.2|<16.4.7
+    fixed_versions: vers:maven/16.4.7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.xwiki.platform/xwiki-platform-refactoring-default
     affected_versions: vers:maven/>=17.0.0-rc-1|<17.1.0-rc-1
     fixed_versions: vers:maven/17.1.0-rc-1
     fixed_in_commits: []
@@ -35,11 +40,6 @@ impacted_packages:
   - purl: pkg:maven/org.xwiki.platform/xwiki-platform-refactoring-default
     affected_versions: vers:maven/>=16.5.0-rc-1|<16.10.4
     fixed_versions: vers:maven/16.10.4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.xwiki.platform/xwiki-platform-refactoring-default
-    affected_versions: vers:maven/>=8.2|<16.4.7
-    fixed_versions: vers:maven/16.4.7
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.xwiki.platform/xwiki-platform-refactoring-default
@@ -58,12 +58,12 @@ severities:
   - score: '8.5'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/06/GHSA-jm43-hrq7-r7w6/GHSA-jm43-hrq7-r7w6.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-266

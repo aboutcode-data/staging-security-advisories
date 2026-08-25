@@ -50,11 +50,6 @@ summary: "ImageMagick has XMP profile write that triggers hang due to unbounded 
   \nGithub : P2GONE\n\ne-mail : [charly20@naver.com]\n\n### Commits\nFixed in: https://github.com/ImageMagick/ImageMagick/commit/229fa96a988a21d78318bbca61245a6ed1ee33a0\
   \ and https://github.com/ImageMagick/ImageMagick/commit/38631605e6ab744548a561797472cf8648bcfe26"
 impacted_packages:
-  - purl: pkg:nuget/Magick.NET-Q8-AnyCPU
-    affected_versions: vers:nuget/<14.7.0
-    fixed_versions: vers:nuget/14.7.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
     affected_versions: vers:nuget/<14.7.0
     fixed_versions: vers:nuget/14.7.0
@@ -70,21 +65,6 @@ impacted_packages:
     fixed_versions: vers:nuget/14.7.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q8-x86
-    affected_versions: vers:nuget/<14.7.0
-    fixed_versions: vers:nuget/14.7.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-x64
-    affected_versions: vers:nuget/<14.7.0
-    fixed_versions: vers:nuget/14.7.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-x86
-    affected_versions: vers:nuget/<14.7.0
-    fixed_versions: vers:nuget/14.7.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-OpenMP-x86
     affected_versions: vers:nuget/<14.7.0
     fixed_versions: vers:nuget/14.7.0
@@ -96,6 +76,26 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-HDRI-x86
+    affected_versions: vers:nuget/<14.7.0
+    fixed_versions: vers:nuget/14.7.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q8-AnyCPU
+    affected_versions: vers:nuget/<14.7.0
+    fixed_versions: vers:nuget/14.7.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q8-x86
+    affected_versions: vers:nuget/<14.7.0
+    fixed_versions: vers:nuget/14.7.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-x64
+    affected_versions: vers:nuget/<14.7.0
+    fixed_versions: vers:nuget/14.7.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-x86
     affected_versions: vers:nuget/<14.7.0
     fixed_versions: vers:nuget/14.7.0
     fixed_in_commits: []
@@ -158,12 +158,12 @@ severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/07/GHSA-vmhh-8rxq-fp9g/GHSA-vmhh-8rxq-fp9g.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-835

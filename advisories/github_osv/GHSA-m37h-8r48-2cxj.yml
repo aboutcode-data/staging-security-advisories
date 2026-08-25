@@ -7,13 +7,13 @@ summary: |
   H2O Vulnerable to Execution of Arbitrary Files
   In h2oai/h2o-3 version 3.46.0, an endpoint exposing a custom EncryptionTool allows an attacker to encrypt any files on the target server with a key of their choosing. The chosen key can also be overwritten, resulting in ransomware-like behavior. This vulnerability makes it possible for an attacker to encrypt arbitrary files with keys of their choice, making it exceedingly difficult for the target to recover the keys needed for decryption.
 impacted_packages:
-  - purl: pkg:pypi/h2o
-    affected_versions: vers:pypi/>=3.32.1.2|<=3.46.0
+  - purl: pkg:maven/ai.h2o/h2o-core
+    affected_versions: vers:maven/>=3.32.1.2|<=3.46.0
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/ai.h2o/h2o-core
-    affected_versions: vers:maven/>=3.32.1.2|<=3.46.0
+  - purl: pkg:pypi/h2o
+    affected_versions: vers:pypi/>=3.32.1.2|<=3.46.0
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
@@ -26,14 +26,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '6.5'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/03/GHSA-m37h-8r48-2cxj/GHSA-m37h-8r48-2cxj.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-749

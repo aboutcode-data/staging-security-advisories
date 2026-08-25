@@ -8,21 +8,14 @@ summary: |
   Connect2id Nimbus JOSE + JWT before 10.0.2 allows a remote attacker to cause a denial of service via a deeply nested JSON object supplied in a JWT claim set, because of uncontrolled recursion. NOTE: this is independent of the Gson 2.11.0 issue because the Connect2id product could have checked the JSON object nesting depth, regardless of what limits (if any) were imposed by Gson.
 impacted_packages:
   - purl: pkg:maven/com.nimbusds/nimbus-jose-jwt
-    affected_versions: vers:maven/>=9.38-rc1|<10.0.2
-    fixed_versions: vers:maven/10.0.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/com.nimbusds/nimbus-jose-jwt
     affected_versions: vers:maven/<9.37.4
     fixed_versions: vers:maven/9.37.4
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:bitbucket/connect2id/nimbus-jose-jwt
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://bitbucket.org/connect2id/nimbus-jose-jwt
-        commit: f7fb882cc08f027c9ceb874acec3b51c6222861c
+  - purl: pkg:maven/com.nimbusds/nimbus-jose-jwt
+    affected_versions: vers:maven/>=9.38-rc1|<10.0.2
+    fixed_versions: vers:maven/10.0.2
+    fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/google/gson
     affected_versions:
@@ -31,16 +24,23 @@ impacted_packages:
       - vcs_url: https://github.com/google/gson
         commit: 1039427ff0100293dd3cf967a53a55282c0fef6b
     introduced_in_commits: []
+  - purl: pkg:bitbucket/connect2id/nimbus-jose-jwt
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://bitbucket.org/connect2id/nimbus-jose-jwt
+        commit: f7fb882cc08f027c9ceb874acec3b51c6222861c
+    introduced_in_commits: []
 severities:
   - score: '5.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/07/GHSA-xwmg-2g98-w7v9/GHSA-xwmg-2g98-w7v9.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-674

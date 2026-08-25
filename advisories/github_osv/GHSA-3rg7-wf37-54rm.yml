@@ -19,11 +19,6 @@ summary: |
 
   We would like to thank Andrew Atkinson for discovering the issue, Chris Smith for reporting it and Nicolas Grekas for providing the fix.
 impacted_packages:
-  - purl: pkg:composer/symfony/symfony
-    affected_versions: vers:composer/>=2.0.0|<5.4.50
-    fixed_versions: vers:composer/5.4.50
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:composer/symfony/http-foundation
     affected_versions: vers:composer/<5.4.50
     fixed_versions: vers:composer/5.4.50
@@ -37,6 +32,11 @@ impacted_packages:
   - purl: pkg:composer/symfony/http-foundation
     affected_versions: vers:composer/>=7.0.0|<7.3.7
     fixed_versions: vers:composer/7.3.7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=2.0.0|<5.4.50
+    fixed_versions: vers:composer/5.4.50
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/symfony
@@ -60,12 +60,12 @@ severities:
   - score: '7.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/11/GHSA-3rg7-wf37-54rm/GHSA-3rg7-wf37-54rm.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-647

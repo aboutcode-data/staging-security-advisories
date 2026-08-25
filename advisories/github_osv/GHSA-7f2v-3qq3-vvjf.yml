@@ -66,6 +66,11 @@ summary: "Vega Cross-Site Scripting (XSS) via expressions abusing toString calls
   \ on behalf of the victim. This exploit compromises confidentiality and integrity of impacted\
   \ applications."
 impacted_packages:
+  - purl: pkg:npm/vega-expression
+    affected_versions: vers:npm/<5.2.1
+    fixed_versions: vers:npm/5.2.1
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:npm/vega
     affected_versions: vers:npm/<6.2.0
     fixed_versions: vers:npm/6.2.0
@@ -86,11 +91,6 @@ impacted_packages:
     fixed_versions: vers:npm/1.2.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:npm/vega-expression
-    affected_versions: vers:npm/<5.2.1
-    fixed_versions: vers:npm/5.2.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/vega/editor
     affected_versions:
     fixed_versions:
@@ -102,12 +102,12 @@ severities:
   - score: '8.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/11/GHSA-7f2v-3qq3-vvjf/GHSA-7f2v-3qq3-vvjf.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79
