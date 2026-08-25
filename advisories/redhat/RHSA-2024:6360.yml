@@ -16,7 +16,27 @@ summary: |
 
   For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.
 impacted_packages:
-  - purl: pkg:rpm/redhat/libtiff?arch=x86_64
+  - purl: pkg:rpm/redhat/libtiff-debuginfo?arch=aarch64
+    affected_versions: vers:rpm/<4.4.0-8.el9_2.1
+    fixed_versions: vers:rpm/4.4.0-8.el9_2.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libtiff-tools-debuginfo?arch=ppc64le
+    affected_versions: vers:rpm/<4.4.0-8.el9_2.1
+    fixed_versions: vers:rpm/4.4.0-8.el9_2.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libtiff?arch=ppc64le
+    affected_versions: vers:rpm/<4.4.0-8.el9_2.1
+    fixed_versions: vers:rpm/4.4.0-8.el9_2.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libtiff?arch=s390x
+    affected_versions: vers:rpm/<4.4.0-8.el9_2.1
+    fixed_versions: vers:rpm/4.4.0-8.el9_2.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libtiff-devel?arch=s390x
     affected_versions: vers:rpm/<4.4.0-8.el9_2.1
     fixed_versions: vers:rpm/4.4.0-8.el9_2.1
     fixed_in_commits: []
@@ -27,11 +47,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/libtiff-debugsource?arch=aarch64
-    affected_versions: vers:rpm/<4.4.0-8.el9_2.1
-    fixed_versions: vers:rpm/4.4.0-8.el9_2.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libtiff-debuginfo?arch=aarch64
     affected_versions: vers:rpm/<4.4.0-8.el9_2.1
     fixed_versions: vers:rpm/4.4.0-8.el9_2.1
     fixed_in_commits: []
@@ -66,16 +81,6 @@ impacted_packages:
     fixed_versions: vers:rpm/4.4.0-8.el9_2.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libtiff-tools-debuginfo?arch=ppc64le
-    affected_versions: vers:rpm/<4.4.0-8.el9_2.1
-    fixed_versions: vers:rpm/4.4.0-8.el9_2.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libtiff?arch=ppc64le
-    affected_versions: vers:rpm/<4.4.0-8.el9_2.1
-    fixed_versions: vers:rpm/4.4.0-8.el9_2.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/libtiff-devel?arch=ppc64le
     affected_versions: vers:rpm/<4.4.0-8.el9_2.1
     fixed_versions: vers:rpm/4.4.0-8.el9_2.1
@@ -101,6 +106,11 @@ impacted_packages:
     fixed_versions: vers:rpm/4.4.0-8.el9_2.1
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/libtiff?arch=x86_64
+    affected_versions: vers:rpm/<4.4.0-8.el9_2.1
+    fixed_versions: vers:rpm/4.4.0-8.el9_2.1
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/libtiff-devel?arch=x86_64
     affected_versions: vers:rpm/<4.4.0-8.el9_2.1
     fixed_versions: vers:rpm/4.4.0-8.el9_2.1
@@ -122,16 +132,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/libtiff-tools-debuginfo?arch=s390x
-    affected_versions: vers:rpm/<4.4.0-8.el9_2.1
-    fixed_versions: vers:rpm/4.4.0-8.el9_2.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libtiff?arch=s390x
-    affected_versions: vers:rpm/<4.4.0-8.el9_2.1
-    fixed_versions: vers:rpm/4.4.0-8.el9_2.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/libtiff-devel?arch=s390x
     affected_versions: vers:rpm/<4.4.0-8.el9_2.1
     fixed_versions: vers:rpm/4.4.0-8.el9_2.1
     fixed_in_commits: []
@@ -170,7 +170,7 @@ severities:
   - score: Moderate
     scoring_system: rhas
     scoring_elements:
-    published_at: None
+    published_at:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2024_6360.json
 weaknesses: []
 references:

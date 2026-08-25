@@ -16,6 +16,11 @@ summary: |
 
   For more details about the security issue(s), including the impact, a CVSS score, acknowledgements, and other related information, refer to the CVE page(s) listed in the References section.
 impacted_packages:
+  - purl: pkg:rpm/redhat/eap8-jboss-xnio-base?arch=noarch
+    affected_versions: vers:rpm/<3.8.16-1.Final_redhat_00001.1.el8eap
+    fixed_versions: vers:rpm/3.8.16-1.Final_redhat_00001.1.el8eap
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/eap8-hibernate?arch=src
     affected_versions: vers:rpm/<6.2.26-1.Final_redhat_00001.1.el8eap
     fixed_versions: vers:rpm/6.2.26-1.Final_redhat_00001.1.el8eap
@@ -94,11 +99,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/eap8-jboss-remoting?arch=noarch
     affected_versions: vers:rpm/<5.0.29-1.Final_redhat_00001.1.el8eap
     fixed_versions: vers:rpm/5.0.29-1.Final_redhat_00001.1.el8eap
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/eap8-jboss-xnio-base?arch=noarch
-    affected_versions: vers:rpm/<3.8.16-1.Final_redhat_00001.1.el8eap
-    fixed_versions: vers:rpm/3.8.16-1.Final_redhat_00001.1.el8eap
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/eap8-jose4j?arch=noarch
@@ -190,7 +190,7 @@ severities:
   - score: Moderate
     scoring_system: rhas
     scoring_elements:
-    published_at: None
+    published_at:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2024_4390.json
 weaknesses: []
 references:
