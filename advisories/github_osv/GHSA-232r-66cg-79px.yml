@@ -8,6 +8,11 @@ summary: |
   transport.py in the SSH server implementation of Paramiko before 1.17.6, 1.18.x before 1.18.5, 2.0.x before 2.0.8, 2.1.x before 2.1.5, 2.2.x before 2.2.3, 2.3.x before 2.3.2, and 2.4.x before 2.4.1 does not properly check whether authentication is completed before processing other requests, as demonstrated by channel-open. A customized SSH client can simply skip the authentication step.
 impacted_packages:
   - purl: pkg:pypi/paramiko
+    affected_versions: vers:pypi/>=2.3.0|<2.3.2
+    fixed_versions: vers:pypi/2.3.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/paramiko
     affected_versions: vers:pypi/>=2.0.0|<2.0.8
     fixed_versions: vers:pypi/2.0.8
     fixed_in_commits: []
@@ -20,11 +25,6 @@ impacted_packages:
   - purl: pkg:pypi/paramiko
     affected_versions: vers:pypi/>=2.2.0|<2.2.3
     fixed_versions: vers:pypi/2.2.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/paramiko
-    affected_versions: vers:pypi/>=2.3.0|<2.3.2
-    fixed_versions: vers:pypi/2.3.2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/paramiko
@@ -57,17 +57,17 @@ severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2018/07/GHSA-232r-66cg-79px/GHSA-232r-66cg-79px.json
   - score: '9.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2018/07/GHSA-232r-66cg-79px/GHSA-232r-66cg-79px.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-287

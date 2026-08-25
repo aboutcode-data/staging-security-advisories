@@ -23,6 +23,11 @@ summary: "Spree Auth Devise vulnerability allows for authentication bypass throu
   https://github.com/solidusio/solidus_auth_devise/security/advisories/GHSA-xm34-v85h-9pg2"
 impacted_packages:
   - purl: pkg:gem/spree_auth_devise
+    affected_versions: vers:gem/<4.0.1
+    fixed_versions: vers:gem/4.0.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:gem/spree_auth_devise
     affected_versions: vers:gem/>=4.3.0|<4.4.1
     fixed_versions: vers:gem/4.4.1
     fixed_in_commits: []
@@ -37,11 +42,6 @@ impacted_packages:
     fixed_versions: vers:gem/4.1.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:gem/spree_auth_devise
-    affected_versions: vers:gem/<4.0.1
-    fixed_versions: vers:gem/4.0.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/spree/spree_auth_devise
     affected_versions:
     fixed_versions:
@@ -53,12 +53,12 @@ severities:
   - score: '9.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/11/GHSA-26xx-m4q2-xhq8/GHSA-26xx-m4q2-xhq8.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-352

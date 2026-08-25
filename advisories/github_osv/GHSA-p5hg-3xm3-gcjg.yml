@@ -8,13 +8,13 @@ summary: |
   Spring Framework, versions 5.0 prior to 5.0.5 and versions 4.3 prior to 4.3.16 and older unsupported versions, allow applications to expose STOMP over WebSocket endpoints with a simple, in-memory STOMP broker through the spring-messaging module. A malicious user (or attacker) can craft a message to the broker that can lead to a remote code execution attack.
 impacted_packages:
   - purl: pkg:maven/org.springframework/spring-messaging
-    affected_versions: vers:maven/>=5.0.0.RELEASE|<5.0.5.RELEASE
-    fixed_versions: vers:maven/5.0.5.RELEASE
+    affected_versions: vers:maven/<4.3.16.RELEASE
+    fixed_versions: vers:maven/4.3.16.RELEASE
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.springframework/spring-messaging
-    affected_versions: vers:maven/<4.3.16.RELEASE
-    fixed_versions: vers:maven/4.3.16.RELEASE
+    affected_versions: vers:maven/>=5.0.0.RELEASE|<5.0.5.RELEASE
+    fixed_versions: vers:maven/5.0.5.RELEASE
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/spring-projects/spring-framework
@@ -28,14 +28,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '9.8'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2018/10/GHSA-p5hg-3xm3-gcjg/GHSA-p5hg-3xm3-gcjg.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-358

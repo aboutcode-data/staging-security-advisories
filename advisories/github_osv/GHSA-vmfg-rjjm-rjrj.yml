@@ -7,12 +7,12 @@ summary: |
   QOS.ch Logback vulnerable to Deserialization of Untrusted Data
   QOS.ch Logback before 1.2.0 has a serialization vulnerability affecting the SocketServer and ServerSocketReceiver components. The RemoteStreamAppenderClient class in logback-classic and the SocketNode classes in logback-classic and logback-access allow data to be deserialized over a Java Socket, via an ObjectInputStream, without validating the data beforehand. When data is received from the Socket, to be logged, it is deserialized into Java objects.An attacker can exploit this vulnerability by sending malicious, serialized Java objects over the connection to the Socket, which may result in execution of arbitrary code when those objects are deserialized. Note that although logback-core is implicated by the Logback project here, the Sonatype Security Research team discovered that the vulnerability is actually present in the logback-classic and logback-access components. Versions prior to 1.2.0 are vulnerable, as stated in the advisory.
 impacted_packages:
-  - purl: pkg:maven/ch.qos.logback/logback-classic
+  - purl: pkg:maven/ch.qos.logback/logback-core
     affected_versions: vers:maven/<1.2.0
     fixed_versions: vers:maven/1.2.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/ch.qos.logback/logback-core
+  - purl: pkg:maven/ch.qos.logback/logback-classic
     affected_versions: vers:maven/<1.2.0
     fixed_versions: vers:maven/1.2.0
     fixed_in_commits: []
@@ -26,14 +26,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '9.8'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/06/GHSA-vmfg-rjjm-rjrj/GHSA-vmfg-rjjm-rjrj.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-502

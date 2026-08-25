@@ -21,6 +21,11 @@ summary: |
   ### Attribution
   This vulnerability has been reported by members of the Aivul Team from Qihoo 360.
 impacted_packages:
+  - purl: pkg:pypi/tensorflow
+    affected_versions: vers:pypi/>=2.5.0|<2.5.2
+    fixed_versions: vers:pypi/2.5.2
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:github/tensorflow/tensorflow
     affected_versions:
     fixed_versions:
@@ -31,11 +36,6 @@ impacted_packages:
   - purl: pkg:pypi/tensorflow
     affected_versions: vers:pypi/>=2.6.0|<2.6.1
     fixed_versions: vers:pypi/2.6.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow
-    affected_versions: vers:pypi/>=2.5.0|<2.5.2
-    fixed_versions: vers:pypi/2.5.2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/tensorflow
@@ -77,12 +77,12 @@ severities:
   - score: '9.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/11/GHSA-57wx-m983-2f88/GHSA-57wx-m983-2f88.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-824

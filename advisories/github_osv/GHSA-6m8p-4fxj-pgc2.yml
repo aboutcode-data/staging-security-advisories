@@ -7,11 +7,6 @@ summary: |
   OS Command Injection in mversion
   The issue occurs because tagName user input is formatted inside the exec function is executed without any checks.
 impacted_packages:
-  - purl: pkg:npm/mversion
-    affected_versions: vers:npm/<=1.13.0
-    fixed_versions: vers:npm/2.0.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/mikaelbr/mversion
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/mikaelbr/mversion
         commit: b7a8b32600e60759a7ad3921ec4a2750bf173482
     introduced_in_commits: []
+  - purl: pkg:npm/mversion
+    affected_versions: vers:npm/<=1.13.0
+    fixed_versions: vers:npm/2.0.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/05/GHSA-6m8p-4fxj-pgc2/GHSA-6m8p-4fxj-pgc2.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-78

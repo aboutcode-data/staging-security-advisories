@@ -7,22 +7,15 @@ summary: |
   Spring Security and Spring Framework may not recognize certain paths that should be protected
   Both Spring Security 3.2.x, 4.0.x, 4.1.0 and the Spring Framework 3.2.x, 4.0.x, 4.1.x, 4.2.x (as well as other unsupported versions) rely on URL pattern mappings for authorization and for mapping requests to controllers respectively. Differences in the strictness of the pattern matching mechanisms, for example with regards to space trimming in path segments, can lead Spring Security to not recognize certain paths as not protected that are in fact mapped to Spring MVC controllers that should be protected. The problem is compounded by the fact that the Spring Framework provides richer features with regards to pattern matching as well as by the fact that pattern matching in each Spring Security and the Spring Framework can easily be customized creating additional differences.
 impacted_packages:
-  - purl: pkg:maven/org.springframework/spring-core
-    affected_versions: vers:maven/<4.3.1
-    fixed_versions: vers:maven/4.3.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:maven/org.springframework.security/spring-security-core
     affected_versions: vers:maven/<4.1.1
     fixed_versions: vers:maven/4.1.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/spring-projects/spring-framework
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/spring-projects/spring-framework
-        commit: a30ab30e4e9ae021fdda04e9abfc228476b846b5
+  - purl: pkg:maven/org.springframework/spring-core
+    affected_versions: vers:maven/<4.3.1
+    fixed_versions: vers:maven/4.3.1
+    fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/spring-projects/spring-security
     affected_versions:
@@ -31,16 +24,23 @@ impacted_packages:
       - vcs_url: https://github.com/spring-projects/spring-security
         commit: e4c13e3c0ee7f06f59d3b43ca6734215ad7d8974
     introduced_in_commits: []
+  - purl: pkg:github/spring-projects/spring-framework
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/spring-projects/spring-framework
+        commit: a30ab30e4e9ae021fdda04e9abfc228476b846b5
+    introduced_in_commits: []
 severities:
   - score: '7.5'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2018/10/GHSA-8crv-49fr-2h6j/GHSA-8crv-49fr-2h6j.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses: []
 references:

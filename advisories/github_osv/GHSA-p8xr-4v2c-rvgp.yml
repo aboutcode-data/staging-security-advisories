@@ -8,13 +8,13 @@ summary: |
   Apache HBase 0.98 before 0.98.12.1, 1.0 before 1.0.1.1, and 1.1 before 1.1.0.1, as used in IBM InfoSphere BigInsights 3.0, 3.0.0.1, and 3.0.0.2 and other products, uses incorrect ACLs for ZooKeeper coordination state, which allows remote attackers to cause a denial of service (daemon outage), obtain sensitive information, or modify data via unspecified client traffic.
 impacted_packages:
   - purl: pkg:maven/org.apache.hbase/hbase
-    affected_versions: vers:maven/<=0.98.12.0
-    fixed_versions: vers:maven/0.98.12.1
+    affected_versions: vers:maven/<=1.0.1.0
+    fixed_versions: vers:maven/1.0.1.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.hbase/hbase
-    affected_versions: vers:maven/<=1.0.1.0
-    fixed_versions: vers:maven/1.0.1.1
+    affected_versions: vers:maven/<=0.98.12.0
+    fixed_versions: vers:maven/0.98.12.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.hbase/hbase
@@ -24,14 +24,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '7.3'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2018/10/GHSA-p8xr-4v2c-rvgp/GHSA-p8xr-4v2c-rvgp.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-284

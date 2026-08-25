@@ -13,11 +13,6 @@ summary: "npm Token Leak in npm\nAffected versions of the `npm` package include 
   \ Tokens](https://www.npmjs.com/settings/tokens)\n3. Enable [Two-Factor Authentication](https://docs.npmjs.com/getting-started/using-two-factor-authentication)"
 impacted_packages:
   - purl: pkg:npm/npm
-    affected_versions: vers:npm/<=2.15.0
-    fixed_versions: vers:npm/2.15.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:npm/npm
     affected_versions: vers:npm/<=3.8.2
     fixed_versions: vers:npm/3.8.3
     fixed_in_commits: []
@@ -31,11 +26,16 @@ impacted_packages:
       - vcs_url: https://github.com/npm/npm
         commit: fea8cc92cee02c720b58f95f14d315507ccad401
     introduced_in_commits: []
+  - purl: pkg:npm/npm
+    affected_versions: vers:npm/<=2.15.0
+    fixed_versions: vers:npm/2.15.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

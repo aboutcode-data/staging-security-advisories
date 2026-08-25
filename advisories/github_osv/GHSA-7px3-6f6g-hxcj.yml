@@ -8,13 +8,13 @@ summary: |
   This vulnerability in Apache Solr 6.0.0 to 6.6.4 and 7.0.0 to 7.3.1 relates to an XML external entity expansion (XXE) in Solr config files (currency.xml, enumsConfig.xml referred from schema.xml, TIKA parsecontext config file). In addition, Xinclude functionality provided in these config files is also affected in a similar way. The vulnerability can be used as XXE using file/ftp/http protocols in order to read arbitrary local files from the Solr server or the internal network. The manipulated files can be uploaded as configsets using Solr's API, allowing to exploit that vulnerability.
 impacted_packages:
   - purl: pkg:maven/org.apache.solr/solr-core
-    affected_versions: vers:maven/>=7.0.0|<7.4.0
-    fixed_versions: vers:maven/7.4.0
+    affected_versions: vers:maven/>=6.0.0|<6.6.5
+    fixed_versions: vers:maven/6.6.5
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.solr/solr-core
-    affected_versions: vers:maven/>=6.0.0|<6.6.5
-    fixed_versions: vers:maven/6.6.5
+    affected_versions: vers:maven/>=7.0.0|<7.4.0
+    fixed_versions: vers:maven/7.4.0
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/apache/lucene-solr
@@ -32,14 +32,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '5.5'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2018/10/GHSA-7px3-6f6g-hxcj/GHSA-7px3-6f6g-hxcj.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-611

@@ -9,6 +9,11 @@ summary: |
   Multiple directory traversal vulnerabilities in server.rb in Sprockets before 2.0.5, 2.1.x before 2.1.4, 2.2.x before 2.2.3, 2.3.x before 2.3.3, 2.4.x before 2.4.6, 2.5.x before 2.5.1, 2.6.x and 2.7.x before 2.7.1, 2.8.x before 2.8.3, 2.9.x before 2.9.4, 2.10.x before 2.10.2, 2.11.x before 2.11.3, 2.12.x before 2.12.3, and 3.x before 3.0.0.beta.3, as distributed with Ruby on Rails 3.x and 4.x, allow remote attackers to determine the existence of files outside the application root via a ../ (dot dot slash) sequence with (1) double slashes or (2) URL encoding.
 impacted_packages:
   - purl: pkg:gem/sprockets
+    affected_versions: vers:gem/>=2.9.0|<2.9.4
+    fixed_versions: vers:gem/2.9.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:gem/sprockets
     affected_versions: vers:gem/>=2.6.0|<2.7.1
     fixed_versions: vers:gem/2.7.1
     fixed_in_commits: []
@@ -44,11 +49,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:gem/sprockets
-    affected_versions: vers:gem/>=2.9.0|<2.9.4
-    fixed_versions: vers:gem/2.9.4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:gem/sprockets
     affected_versions: vers:gem/>=2.10.0|<2.10.2
     fixed_versions: vers:gem/2.10.2
     fixed_in_commits: []
@@ -67,7 +67,7 @@ severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses: []
 references:

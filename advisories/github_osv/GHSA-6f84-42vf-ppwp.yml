@@ -23,6 +23,11 @@ summary: "Division by 0 in `QuantizedMul`\n### Impact\nAn attacker can trigger a
   \ regarding the security model and how to contact us with issues and questions.\n\n### Attribution\n\
   This vulnerability has been reported by Ying Wang and Yakun Zhang of Baidu X-Team."
 impacted_packages:
+  - purl: pkg:pypi/tensorflow-cpu
+    affected_versions: vers:pypi/>=2.4.0|<2.4.2
+    fixed_versions: vers:pypi/2.4.2
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:pypi/tensorflow
     affected_versions: vers:pypi/<2.1.4
     fixed_versions: vers:pypi/2.1.4
@@ -56,11 +61,6 @@ impacted_packages:
   - purl: pkg:pypi/tensorflow-cpu
     affected_versions: vers:pypi/>=2.3.0|<2.3.3
     fixed_versions: vers:pypi/2.3.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow-cpu
-    affected_versions: vers:pypi/>=2.4.0|<2.4.2
-    fixed_versions: vers:pypi/2.4.2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/tensorflow-gpu
@@ -94,17 +94,17 @@ severities:
   - score: '2.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/05/GHSA-6f84-42vf-ppwp/GHSA-6f84-42vf-ppwp.json
   - score: '2.0'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/05/GHSA-6f84-42vf-ppwp/GHSA-6f84-42vf-ppwp.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-369

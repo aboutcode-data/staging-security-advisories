@@ -7,13 +7,6 @@ summary: |
   GPGME Go wrapper contains Use After Free
   The proglottis Go wrapper before 0.1.1 for the GPGME library has a use-after-free, as demonstrated by use for container image pulls by Docker or CRI-O. This leads to a crash or potential code execution during GPG signature verification.
 impacted_packages:
-  - purl: pkg:github/containers/image
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/containers/image
-        commit: 4c7a23f82ef09127b0ff28366d1cf31316dd6cc1
-    introduced_in_commits: []
   - purl: pkg:github/proglottis/gpgme
     affected_versions:
     fixed_versions:
@@ -21,16 +14,23 @@ impacted_packages:
       - vcs_url: https://github.com/proglottis/gpgme
         commit: 92153bcb59bd2f511e502262c46c7bd660e21733
     introduced_in_commits: []
+  - purl: pkg:github/containers/image
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/containers/image
+        commit: 4c7a23f82ef09127b0ff28366d1cf31316dd6cc1
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/05/GHSA-m6wg-2mwg-4rfq/GHSA-m6wg-2mwg-4rfq.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-416

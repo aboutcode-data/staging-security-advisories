@@ -26,6 +26,51 @@ summary: "Crashes due to overflow and `CHECK`-fail in ops with large tensor shap
   \ issue](https://github.com/tensorflow/tensorflow/issues/46890), [GitHub issue](https://github.com/tensorflow/tensorflow/issues/51618)\
   \ and [GitHub issue](https://github.com/tensorflow/tensorflow/issues/51908)."
 impacted_packages:
+  - purl: pkg:pypi/tensorflow
+    affected_versions: vers:pypi/>=2.6.0|<2.6.1
+    fixed_versions: vers:pypi/2.6.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow
+    affected_versions: vers:pypi/>=2.5.0|<2.5.2
+    fixed_versions: vers:pypi/2.5.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow-cpu
+    affected_versions: vers:pypi/>=2.6.0|<2.6.1
+    fixed_versions: vers:pypi/2.6.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow
+    affected_versions: vers:pypi/<2.4.4
+    fixed_versions: vers:pypi/2.4.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow-cpu
+    affected_versions: vers:pypi/>=2.5.0|<2.5.2
+    fixed_versions: vers:pypi/2.5.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow-cpu
+    affected_versions: vers:pypi/<2.4.4
+    fixed_versions: vers:pypi/2.4.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow-gpu
+    affected_versions: vers:pypi/>=2.6.0|<2.6.1
+    fixed_versions: vers:pypi/2.6.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow-gpu
+    affected_versions: vers:pypi/>=2.5.0|<2.5.2
+    fixed_versions: vers:pypi/2.5.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow-gpu
+    affected_versions: vers:pypi/<2.4.4
+    fixed_versions: vers:pypi/2.4.4
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:github/tensorflow/tensorflow
     affected_versions:
     fixed_versions:
@@ -37,66 +82,21 @@ impacted_packages:
       - vcs_url: https://github.com/tensorflow/tensorflow
         commit: 7c1692bd417eb4f9b33ead749a41166d6080af85
     introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow
-    affected_versions: vers:pypi/>=2.6.0|<2.6.1
-    fixed_versions: vers:pypi/2.6.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow
-    affected_versions: vers:pypi/>=2.5.0|<2.5.2
-    fixed_versions: vers:pypi/2.5.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow
-    affected_versions: vers:pypi/<2.4.4
-    fixed_versions: vers:pypi/2.4.4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow-cpu
-    affected_versions: vers:pypi/>=2.6.0|<2.6.1
-    fixed_versions: vers:pypi/2.6.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow-cpu
-    affected_versions: vers:pypi/>=2.5.0|<2.5.2
-    fixed_versions: vers:pypi/2.5.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow-cpu
-    affected_versions: vers:pypi/<2.4.4
-    fixed_versions: vers:pypi/2.4.4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow-gpu
-    affected_versions: vers:pypi/>=2.6.0|<2.6.1
-    fixed_versions: vers:pypi/2.6.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow-gpu
-    affected_versions: vers:pypi/>=2.5.0|<2.5.2
-    fixed_versions: vers:pypi/2.5.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow-gpu
-    affected_versions: vers:pypi/<2.4.4
-    fixed_versions: vers:pypi/2.4.4
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: '5.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/11/GHSA-prcg-wp5q-rv7p/GHSA-prcg-wp5q-rv7p.json
   - score: '6.8'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/11/GHSA-prcg-wp5q-rv7p/GHSA-prcg-wp5q-rv7p.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-190

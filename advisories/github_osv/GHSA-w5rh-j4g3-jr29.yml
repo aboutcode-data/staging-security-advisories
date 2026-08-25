@@ -12,21 +12,14 @@ summary: |
   S3 publisher Plugin 0.11.7 and 0.11.5.1 performs permission checks when providing a list of configured profiles.
 impacted_packages:
   - purl: pkg:maven/org.jenkins-ci.plugins/s3
-    affected_versions: vers:maven/0.11.6
-    fixed_versions: vers:maven/0.11.7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.jenkins-ci.plugins/s3
     affected_versions: vers:maven/<0.11.5.1
     fixed_versions: vers:maven/0.11.5.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/jenkinsci/s3-plugin
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/jenkinsci/s3-plugin
-        commit: 2e85e45c0e4e7a9231b0317392928e2d19e77368
+  - purl: pkg:maven/org.jenkins-ci.plugins/s3
+    affected_versions: vers:maven/0.11.6
+    fixed_versions: vers:maven/0.11.7
+    fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/cveproject/cvelist
     affected_versions:
@@ -35,16 +28,23 @@ impacted_packages:
       - vcs_url: https://github.com/cveproject/cvelist
         commit: 2d78eb36f4d084db7fb35f1535d8d84fdcb7d859
     introduced_in_commits: []
+  - purl: pkg:github/jenkinsci/s3-plugin
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/jenkinsci/s3-plugin
+        commit: 2e85e45c0e4e7a9231b0317392928e2d19e77368
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/06/GHSA-w5rh-j4g3-jr29/GHSA-w5rh-j4g3-jr29.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-862

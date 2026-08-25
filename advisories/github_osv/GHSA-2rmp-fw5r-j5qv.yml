@@ -7,13 +7,6 @@ summary: |
   Improper Authentication in InfluxDB
   InfluxDB before 1.7.6 has an authentication bypass vulnerability in the authenticate function in `services/httpd/handler.go` because a JWT token may have an empty SharedSecret (aka shared secret).
 impacted_packages:
-  - purl: pkg:github/influxdata/influxdb
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/influxdata/influxdb
-        commit: 761b557315ff9c1642cf3b0e5797cd3d983a24c0
-    introduced_in_commits: []
   - purl: pkg:github/ticarpi/jwt_tool
     affected_versions:
     fixed_versions:
@@ -21,16 +14,23 @@ impacted_packages:
       - vcs_url: https://github.com/ticarpi/jwt_tool
         commit: a6ca3e0524a204b5add070bc6874cb4e7e5a9864
     introduced_in_commits: []
+  - purl: pkg:github/influxdata/influxdb
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/influxdata/influxdb
+        commit: 761b557315ff9c1642cf3b0e5797cd3d983a24c0
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/05/GHSA-2rmp-fw5r-j5qv/GHSA-2rmp-fw5r-j5qv.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-287

@@ -7,6 +7,11 @@ summary: |
   Resource Exhaustion in Spring Security
   Spring Security versions 5.5.x prior to 5.5.1, 5.4.x prior to 5.4.7, 5.3.x prior to 5.3.10 and 5.2.x prior to 5.2.11 are susceptible to a Denial-of-Service (DoS) attack via the initiation of the Authorization Request in an OAuth 2.0 Client Web and WebFlux application. A malicious user or attacker can send multiple requests initiating the Authorization Request for the Authorization Code Grant, which has the potential of exhausting system resources using a single session or multiple sessions.
 impacted_packages:
+  - purl: pkg:maven/org.springframework.security/spring-security-oauth2-client
+    affected_versions: vers:maven/<=5.3.9
+    fixed_versions: vers:maven/5.3.10
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:maven/org.springframework.security/spring-security-core
     affected_versions: vers:maven/>=5.5.0|<5.5.1
     fixed_versions: vers:maven/5.5.1
@@ -35,11 +40,6 @@ impacted_packages:
   - purl: pkg:maven/org.springframework.security/spring-security-oauth2-client
     affected_versions: vers:maven/>=5.4.0|<5.4.7
     fixed_versions: vers:maven/5.4.7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.springframework.security/spring-security-oauth2-client
-    affected_versions: vers:maven/<=5.3.9
-    fixed_versions: vers:maven/5.3.10
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.springframework.security/spring-security-oauth2-client
@@ -51,12 +51,12 @@ severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/07/GHSA-w9jg-gvgr-354m/GHSA-w9jg-gvgr-354m.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-400

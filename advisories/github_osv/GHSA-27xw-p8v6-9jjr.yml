@@ -7,12 +7,12 @@ summary: |
   Spring Security vulnerable to Authorization Bypass
   Spring Security versions 5.1.x prior to 5.1.2 contain an authorization bypass vulnerability during JWT issuer validation. In order to be impacted, the same private key for an honest issuer and a malicious user must be used when signing JWTs. In that case, a malicious user could fashion signed JWTs with the malicious issuer URL that may be granted for the honest issuer.
 impacted_packages:
-  - purl: pkg:maven/org.springframework.security/spring-security-core
+  - purl: pkg:maven/org.springframework.security/spring-security-oauth2-jose
     affected_versions: vers:maven/>=5.1.0|<5.1.2
     fixed_versions: vers:maven/5.1.2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/org.springframework.security/spring-security-oauth2-jose
+  - purl: pkg:maven/org.springframework.security/spring-security-core
     affected_versions: vers:maven/>=5.1.0|<5.1.2
     fixed_versions: vers:maven/5.1.2
     fixed_in_commits: []
@@ -26,14 +26,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '7.4'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2018/12/GHSA-27xw-p8v6-9jjr/GHSA-27xw-p8v6-9jjr.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-345

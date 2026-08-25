@@ -8,13 +8,13 @@ summary: |
   Apache Struts contains a Remote Code Execution when using results with no namespace and it's upper actions have no or wildcard namespace. The same flaw exists when using a url tag with no value, action set,  and it's upper actions have no or wildcard namespace.
 impacted_packages:
   - purl: pkg:maven/org.apache.struts/struts2-core
-    affected_versions: vers:maven/<=2.3.34
-    fixed_versions: vers:maven/2.3.35
+    affected_versions: vers:maven/<=2.5.16
+    fixed_versions: vers:maven/2.5.17
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.struts/struts2-core
-    affected_versions: vers:maven/<=2.5.16
-    fixed_versions: vers:maven/2.5.17
+    affected_versions: vers:maven/<=2.3.34
+    fixed_versions: vers:maven/2.3.35
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/apache/struts
@@ -26,14 +26,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '8.1'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H/E:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2018/10/GHSA-cr6j-3jp9-rw65/GHSA-cr6j-3jp9-rw65.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-20

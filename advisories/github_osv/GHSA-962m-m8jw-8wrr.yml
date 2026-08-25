@@ -11,13 +11,13 @@ summary: |
   Zope is an open-source web application server. In Zope versions prior to 4.6 and 5.2, users can access untrusted modules indirectly through Python modules that are available for direct use. By default, only users with the Manager role can add or edit Zope Page Templates through the web, but sites that allow untrusted users to add/edit Zope Page Templates through the web are at risk from this vulnerability. The problem has been fixed in Zope 5.2 and 4.6. As a workaround, a site administrator can restrict adding/editing Zope Page Templates through the web using the standard Zope user/role permission mechanisms. Untrusted users should not be assigned the Zope Manager role and adding/editing Zope Page Templates through the web should be restricted to trusted users only.
 impacted_packages:
   - purl: pkg:pypi/zope
-    affected_versions: vers:pypi/<4.6
-    fixed_versions: vers:pypi/4.6
+    affected_versions: vers:pypi/>=5.0|<5.2
+    fixed_versions: vers:pypi/5.2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/zope
-    affected_versions: vers:pypi/>=5.0|<5.2
-    fixed_versions: vers:pypi/5.2
+    affected_versions: vers:pypi/<4.6
+    fixed_versions: vers:pypi/4.6
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/zopefoundation/zope
@@ -31,12 +31,12 @@ severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/06/GHSA-962m-m8jw-8wrr/GHSA-962m-m8jw-8wrr.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

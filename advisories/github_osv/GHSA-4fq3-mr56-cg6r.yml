@@ -8,13 +8,13 @@ summary: |
   Spring Data Commons, versions prior to 1.13 to 1.13.10, 2.0 to 2.0.5, and older unsupported versions, contain a property binder vulnerability caused by improper neutralization of special elements. An unauthenticated remote malicious user (or attacker) can supply specially crafted request parameters against Spring Data REST backed HTTP resources or using Spring Data's projection-based request payload binding that can lead to a remote code execution attack.
 impacted_packages:
   - purl: pkg:maven/org.springframework.data/spring-data-commons
-    affected_versions: vers:maven/>=1.13.0|<1.13.11
-    fixed_versions: vers:maven/1.13.11
+    affected_versions: vers:maven/>=2.0.0|<2.0.6
+    fixed_versions: vers:maven/2.0.6
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.springframework.data/spring-data-commons
-    affected_versions: vers:maven/>=2.0.0|<2.0.6
-    fixed_versions: vers:maven/2.0.6
+    affected_versions: vers:maven/>=1.13.0|<1.13.11
+    fixed_versions: vers:maven/1.13.11
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/spring-projects/spring-data-commons
@@ -28,14 +28,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '9.8'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2018/10/GHSA-4fq3-mr56-cg6r/GHSA-4fq3-mr56-cg6r.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

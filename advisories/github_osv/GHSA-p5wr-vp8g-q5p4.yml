@@ -8,6 +8,11 @@ summary: |
   Plone 4.x through 4.3.11 and 5.x through 5.0.6 allow remote attackers to bypass a sandbox protection mechanism and obtain sensitive information by leveraging the Python string format method.
 impacted_packages:
   - purl: pkg:pypi/plone
+    affected_versions: vers:pypi/>=5.0rc1|<5.0.7
+    fixed_versions: vers:pypi/5.0.7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/plone
     affected_versions: vers:pypi/>=4.0|<4.3.12
     fixed_versions: vers:pypi/4.3.12
     fixed_in_commits: []
@@ -15,11 +20,6 @@ impacted_packages:
   - purl: pkg:pypi/plone
     affected_versions: vers:pypi/<=5.1a2
     fixed_versions: vers:pypi/5.1b1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/plone
-    affected_versions: vers:pypi/>=5.0rc1|<5.0.7
-    fixed_versions: vers:pypi/5.0.7
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/plone/products.cmfplone
@@ -31,19 +31,19 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '4.3'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2018/07/GHSA-p5wr-vp8g-q5p4/GHSA-p5wr-vp8g-q5p4.json
   - score: '5.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2018/07/GHSA-p5wr-vp8g-q5p4/GHSA-p5wr-vp8g-q5p4.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-134

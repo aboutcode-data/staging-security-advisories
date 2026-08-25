@@ -8,13 +8,13 @@ summary: |
   OrientDB Server Community Edition before 2.0.15 and 2.1.x before 2.1.1 improperly relies on the `java.util.Random` class for generation of random Session ID values in the `server/network/protocol/http/OHttpSessionManager.java`, which makes it easier for remote attackers to predict a value by determining the internal state of the PRNG in this class.
 impacted_packages:
   - purl: pkg:maven/com.orientechnologies/orientdb-server
-    affected_versions: vers:maven/<2.0.15
-    fixed_versions: vers:maven/2.0.15
+    affected_versions: vers:maven/2.1.0
+    fixed_versions: vers:maven/2.1.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/com.orientechnologies/orientdb-server
-    affected_versions: vers:maven/2.1.0
-    fixed_versions: vers:maven/2.1.1
+    affected_versions: vers:maven/<2.0.15
+    fixed_versions: vers:maven/2.0.15
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/orientechnologies/orientdb
@@ -26,14 +26,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '5.9'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2018/10/GHSA-v6wr-fch2-vm5w/GHSA-v6wr-fch2-vm5w.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-330

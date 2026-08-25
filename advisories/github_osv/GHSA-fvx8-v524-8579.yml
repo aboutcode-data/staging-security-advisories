@@ -9,11 +9,6 @@ summary: |
 
   In version 2.4.0 this is no longer the default behaviour but can be re-enabled with the `result_extended` flag in which case care should be taken to ensure any sensitive variables are scrubbed - see [here](https://github.com/celery/django-celery-results/issues/154#issuecomment-734706270) for an example.
 impacted_packages:
-  - purl: pkg:pypi/django-celery-results
-    affected_versions: vers:pypi/<2.4.0
-    fixed_versions: vers:pypi/2.4.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/celery/django-celery-results
     affected_versions:
     fixed_versions:
@@ -21,21 +16,26 @@ impacted_packages:
       - vcs_url: https://github.com/celery/django-celery-results
         commit: ad508fe3433499e5fc94645412d911e174863f28
     introduced_in_commits: []
+  - purl: pkg:pypi/django-celery-results
+    affected_versions: vers:pypi/<2.4.0
+    fixed_versions: vers:pypi/2.4.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/06/GHSA-fvx8-v524-8579/GHSA-fvx8-v524-8579.json
   - score: '8.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/06/GHSA-fvx8-v524-8579/GHSA-fvx8-v524-8579.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-312

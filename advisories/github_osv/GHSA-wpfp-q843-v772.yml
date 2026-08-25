@@ -8,13 +8,13 @@ summary: |
   A flaw was found in Moodle in versions 3.11 to 3.11.3, 3.10 to 3.10.7, 3.9 to 3.9.10 and earlier unsupported versions. A URL parameter in the filetype site administrator tool required extra sanitizing to prevent a reflected XSS risk.
 impacted_packages:
   - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/>=3.11.0|<3.11.4
-    fixed_versions: vers:composer/3.11.4
+    affected_versions: vers:composer/>=3.10.0|<3.10.8
+    fixed_versions: vers:composer/3.10.8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/>=3.10.0|<3.10.8
-    fixed_versions: vers:composer/3.10.8
+    affected_versions: vers:composer/>=3.11.0|<3.11.4
+    fixed_versions: vers:composer/3.11.4
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/moodle/moodle
@@ -26,12 +26,12 @@ severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/11/GHSA-wpfp-q843-v772/GHSA-wpfp-q843-v772.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

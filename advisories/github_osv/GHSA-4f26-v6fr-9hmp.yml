@@ -8,25 +8,25 @@ summary: |
   Centreon Web 19.04.4 allows Remote Code Execution by an administrator who can modify Macro Expression location settings.
 impacted_packages:
   - purl: pkg:composer/centreon/centreon
-    affected_versions: vers:composer/<18.10.8
-    fixed_versions: vers:composer/18.10.8
+    affected_versions: vers:composer/>=19.0.0|<19.4.5
+    fixed_versions: vers:composer/19.4.5
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/centreon/centreon
-    affected_versions: vers:composer/>=19.0.0|<19.4.5
-    fixed_versions: vers:composer/19.4.5
+    affected_versions: vers:composer/<18.10.8
+    fixed_versions: vers:composer/18.10.8
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '7.2'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/07/GHSA-4f26-v6fr-9hmp/GHSA-4f26-v6fr-9hmp.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-20

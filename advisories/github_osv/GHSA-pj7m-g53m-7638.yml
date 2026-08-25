@@ -7,6 +7,26 @@ summary: |
   Bootstrap Cross-site Scripting vulnerability
   In Bootstrap 4.x before 4.1.2, XSS is possible in the data-target property of scrollspy. This is similar to CVE-2018-14042.
 impacted_packages:
+  - purl: pkg:nuget/bootstrap.sass
+    affected_versions: vers:nuget/>=4.0.0|<4.1.2
+    fixed_versions: vers:nuget/4.1.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:gem/bootstrap
+    affected_versions: vers:gem/>=4.0.0|<4.1.2
+    fixed_versions: vers:gem/4.1.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/twbs/bootstrap
+    affected_versions: vers:composer/>=4.0.0|<4.1.2
+    fixed_versions: vers:composer/4.1.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/bootstrap
+    affected_versions: vers:nuget/>=4.0.0|<4.1.2
+    fixed_versions: vers:nuget/4.1.2
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:npm/bootstrap
     affected_versions: vers:npm/>=4.0.0|<4.1.2
     fixed_versions: vers:npm/4.1.2
@@ -32,26 +52,6 @@ impacted_packages:
     fixed_versions: vers:composer/9.5.4
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:gem/bootstrap
-    affected_versions: vers:gem/>=4.0.0|<4.1.2
-    fixed_versions: vers:gem/4.1.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/twbs/bootstrap
-    affected_versions: vers:composer/>=4.0.0|<4.1.2
-    fixed_versions: vers:composer/4.1.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/bootstrap
-    affected_versions: vers:nuget/>=4.0.0|<4.1.2
-    fixed_versions: vers:nuget/4.1.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/bootstrap.sass
-    affected_versions: vers:nuget/>=4.0.0|<4.1.2
-    fixed_versions: vers:nuget/4.1.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:maven/org.webjars/bootstrap
     affected_versions: vers:maven/>=4.0.0|<4.1.2
     fixed_versions: vers:maven/4.1.2
@@ -59,14 +59,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '6.1'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2018/09/GHSA-pj7m-g53m-7638/GHSA-pj7m-g53m-7638.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

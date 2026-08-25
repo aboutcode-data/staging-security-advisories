@@ -8,25 +8,25 @@ summary: |
   It was found that under some situations and configurations of Apache Storm 1.x before 1.0.4 and 1.1.x before 1.1.1, it is theoretically possible for the owner of a topology to trick the supervisor to launch a worker as a different, non-root, user. In the worst case this could lead to secure credentials of the other user being compromised.
 impacted_packages:
   - purl: pkg:maven/org.apache.storm/storm-core
-    affected_versions: vers:maven/1.1.0
-    fixed_versions: vers:maven/1.1.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.storm/storm-core
     affected_versions: vers:maven/>=1.0.0|<1.0.4
     fixed_versions: vers:maven/1.0.4
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:maven/org.apache.storm/storm-core
+    affected_versions: vers:maven/1.1.0
+    fixed_versions: vers:maven/1.1.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.8'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2018/10/GHSA-x825-rjww-2245/GHSA-x825-rjww-2245.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses: []
 references:

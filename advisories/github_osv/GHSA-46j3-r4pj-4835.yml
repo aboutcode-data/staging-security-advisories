@@ -8,6 +8,11 @@ summary: |
   The host name verification when using TLS with the WebSocket client was missing. It is now enabled by default. Versions Affected: Apache Tomcat 9.0.0.M1 to 9.0.9, 8.5.0 to 8.5.31, 8.0.0.RC1 to 8.0.52, and 7.0.35 to 7.0.88.
 impacted_packages:
   - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
+    affected_versions: vers:maven/>=8.0.0|<8.0.53
+    fixed_versions: vers:maven/8.0.53
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
     affected_versions: vers:maven/<=9.0.9
     fixed_versions: vers:maven/9.0.10
     fixed_in_commits: []
@@ -15,11 +20,6 @@ impacted_packages:
   - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
     affected_versions: vers:maven/>=8.5.0|<8.5.32
     fixed_versions: vers:maven/8.5.32
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
-    affected_versions: vers:maven/>=8.0.0|<8.0.53
-    fixed_versions: vers:maven/8.0.53
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
@@ -38,14 +38,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '7.5'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2018/10/GHSA-46j3-r4pj-4835/GHSA-46j3-r4pj-4835.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-295

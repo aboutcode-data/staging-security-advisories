@@ -8,6 +8,11 @@ summary: |
   The l10nmgr (aka Localization Manager) extension before 7.4.0, 8.x before 8.7.0, and 9.x before 9.2.0 for TYPO3 allows Information Disclosure (translatable fields).
 impacted_packages:
   - purl: pkg:composer/localizationteam/l10nmgr
+    affected_versions: vers:composer/>=9.0.0|<9.2.0
+    fixed_versions: vers:composer/9.2.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/localizationteam/l10nmgr
     affected_versions: vers:composer/<7.4.0
     fixed_versions: vers:composer/7.4.0
     fixed_in_commits: []
@@ -17,21 +22,16 @@ impacted_packages:
     fixed_versions: vers:composer/8.7.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/localizationteam/l10nmgr
-    affected_versions: vers:composer/>=9.0.0|<9.2.0
-    fixed_versions: vers:composer/9.2.0
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/07/GHSA-cv9j-78f7-w6v9/GHSA-cv9j-78f7-w6v9.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-863
