@@ -21,6 +21,11 @@ summary: |
 
   Symfony would like to thank Claude Mythos Preview (via Project Glasswing) for reporting the issue and providing the fix.
 impacted_packages:
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=6.1.0|<6.4.40
+    fixed_versions: vers:composer/6.4.40
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:composer/symfony/html-sanitizer
     affected_versions: vers:composer/>=6.1.0|<6.4.40
     fixed_versions: vers:composer/6.4.40
@@ -34,11 +39,6 @@ impacted_packages:
   - purl: pkg:composer/symfony/html-sanitizer
     affected_versions: vers:composer/>=8.0.0|<8.0.12
     fixed_versions: vers:composer/8.0.12
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/symfony
-    affected_versions: vers:composer/>=6.1.0|<6.4.40
-    fixed_versions: vers:composer/6.4.40
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/symfony
@@ -55,7 +55,7 @@ severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-436

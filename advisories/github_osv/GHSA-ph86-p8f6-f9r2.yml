@@ -21,6 +21,11 @@ summary: |
 
   Symfony would like to thank Claude Mythos Preview (via Project Glasswing) for reporting the issue and providing the fix.
 impacted_packages:
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=7.0.0-BETA1|<7.4.12
+    fixed_versions: vers:composer/7.4.12
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:composer/symfony/security-http
     affected_versions: vers:composer/<5.4.52
     fixed_versions: vers:composer/5.4.52
@@ -49,11 +54,6 @@ impacted_packages:
   - purl: pkg:composer/symfony/symfony
     affected_versions: vers:composer/>=6.0.0-BETA1|<6.4.40
     fixed_versions: vers:composer/6.4.40
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/symfony
-    affected_versions: vers:composer/>=7.0.0-BETA1|<7.4.12
-    fixed_versions: vers:composer/7.4.12
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/symfony
@@ -72,12 +72,12 @@ severities:
   - score: '8.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-ph86-p8f6-f9r2/GHSA-ph86-p8f6-f9r2.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-290

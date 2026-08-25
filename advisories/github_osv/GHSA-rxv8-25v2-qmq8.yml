@@ -10,14 +10,14 @@ summary: |
   > [!NOTE]
   > This does not impact your React Router application if you are using [Declarative Mode](https://reactrouter.com/start/modes#declarative) (`<BrowserRouter>`) or [Data Mode](https://reactrouter.com/start/modes#data) (`createBrowserRouter`/`<RouterProvider>`).
 impacted_packages:
-  - purl: pkg:npm/react-router
-    affected_versions: vers:npm/>=7.0.0|<7.14.0
-    fixed_versions: vers:npm/7.14.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:npm/turbo-stream
     affected_versions: vers:npm/<3.0.0
     fixed_versions: vers:npm/3.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/react-router
+    affected_versions: vers:npm/>=7.0.0|<7.14.0
+    fixed_versions: vers:npm/7.14.0
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/remix-run/react-router
@@ -31,12 +31,12 @@ severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-rxv8-25v2-qmq8/GHSA-rxv8-25v2-qmq8.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-770

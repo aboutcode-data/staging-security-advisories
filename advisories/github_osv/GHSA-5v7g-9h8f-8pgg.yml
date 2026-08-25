@@ -18,25 +18,25 @@ summary: |
   Add a `beforeSave` trigger on the `_Session` class to validate and reject or strip any user-supplied values for `sessionToken`, `expiresAt`, and `createdWith`.
 impacted_packages:
   - purl: pkg:npm/parse-server
-    affected_versions: vers:npm/>=9.0.0|<9.6.0-alpha.17
-    fixed_versions: vers:npm/9.6.0-alpha.17
+    affected_versions: vers:npm/<8.6.42
+    fixed_versions: vers:npm/8.6.42
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:npm/parse-server
-    affected_versions: vers:npm/<8.6.42
-    fixed_versions: vers:npm/8.6.42
+    affected_versions: vers:npm/>=9.0.0|<9.6.0-alpha.17
+    fixed_versions: vers:npm/9.6.0-alpha.17
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-5v7g-9h8f-8pgg/GHSA-5v7g-9h8f-8pgg.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-915

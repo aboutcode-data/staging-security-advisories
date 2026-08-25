@@ -28,25 +28,25 @@ summary: |
   Avoid decoding untrusted protobuf binary data with affected versions. If immediate upgrade is not possible, reject excessively nested messages at an outer protocol boundary where feasible, or isolate protobuf decoding in a process that can be safely restarted.
 impacted_packages:
   - purl: pkg:npm/protobufjs
-    affected_versions: vers:npm/<=7.5.5
-    fixed_versions: vers:npm/7.5.6
+    affected_versions: vers:npm/<=8.0.1
+    fixed_versions: vers:npm/8.0.2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:npm/protobufjs
-    affected_versions: vers:npm/<=8.0.1
-    fixed_versions: vers:npm/8.0.2
+    affected_versions: vers:npm/<=7.5.5
+    fixed_versions: vers:npm/7.5.6
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-685m-2w69-288q/GHSA-685m-2w69-288q.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-674

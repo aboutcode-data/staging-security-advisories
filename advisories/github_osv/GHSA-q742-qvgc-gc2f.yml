@@ -24,9 +24,14 @@ summary: |
   ### Acknowledgements
   Tiny thanks [Tadi Kadango](https://github.com/mtrill47) ([website](https://tadiwakadango.com/))  and [Ivan Babenko](https://github.com/he1d3n) for their help identifying this vulnerability.
 impacted_packages:
-  - purl: pkg:nuget/TinyMCE
-    affected_versions: vers:nuget/<5.11.1
-    fixed_versions: vers:nuget/5.11.1
+  - purl: pkg:npm/tinymce
+    affected_versions: vers:npm/>=8.0.0|<8.5.1
+    fixed_versions: vers:npm/8.5.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/tinymce/tinymce
+    affected_versions: vers:composer/>=6.0.0|<7.9.3
+    fixed_versions: vers:composer/7.9.3
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:nuget/TinyMCE
@@ -44,24 +49,9 @@ impacted_packages:
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:npm/tinymce
-    affected_versions: vers:npm/>=6.0.0|<7.9.3
-    fixed_versions: vers:npm/7.9.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:npm/tinymce
-    affected_versions: vers:npm/>=8.0.0|<8.5.1
-    fixed_versions: vers:npm/8.5.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:composer/tinymce/tinymce
     affected_versions: vers:composer/<5.11.1
     fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/tinymce/tinymce
-    affected_versions: vers:composer/>=6.0.0|<7.9.3
-    fixed_versions: vers:composer/7.9.3
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/tinymce/tinymce
@@ -69,16 +59,26 @@ impacted_packages:
     fixed_versions: vers:composer/8.5.1
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:nuget/TinyMCE
+    affected_versions: vers:nuget/<5.11.1
+    fixed_versions: vers:nuget/5.11.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/tinymce
+    affected_versions: vers:npm/>=6.0.0|<7.9.3
+    fixed_versions: vers:npm/7.9.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.7'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-q742-qvgc-gc2f/GHSA-q742-qvgc-gc2f.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

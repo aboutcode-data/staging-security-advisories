@@ -12,7 +12,7 @@ summary: |
   READ of size 1 at 0x502000003c6c thread T0
   ```
 impacted_packages:
-  - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-arm64
     affected_versions: vers:nuget/<14.10.3
     fixed_versions: vers:nuget/14.10.3
     fixed_in_commits: []
@@ -22,17 +22,22 @@ impacted_packages:
     fixed_versions: vers:nuget/14.10.3
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-x86
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-OpenMP-x64
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q8-OpenMP-arm64
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-HDRI-x64
-    affected_versions: vers:nuget/<14.10.3
-    fixed_versions: vers:nuget/14.10.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-HDRI-x86
-    affected_versions: vers:nuget/<14.10.3
-    fixed_versions: vers:nuget/14.10.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-OpenMP-x86
     affected_versions: vers:nuget/<14.10.3
     fixed_versions: vers:nuget/14.10.3
     fixed_in_commits: []
@@ -42,17 +47,7 @@ impacted_packages:
     fixed_versions: vers:nuget/14.10.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-x86
-    affected_versions: vers:nuget/<14.10.3
-    fixed_versions: vers:nuget/14.10.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q8-AnyCPU
-    affected_versions: vers:nuget/<14.10.3
-    fixed_versions: vers:nuget/14.10.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q8-x64
     affected_versions: vers:nuget/<14.10.3
     fixed_versions: vers:nuget/14.10.3
     fixed_in_commits: []
@@ -62,17 +57,7 @@ impacted_packages:
     fixed_versions: vers:nuget/14.10.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q8-OpenMP-x64
-    affected_versions: vers:nuget/<14.10.3
-    fixed_versions: vers:nuget/14.10.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-HDRI-OpenMP-arm64
-    affected_versions: vers:nuget/<14.10.3
-    fixed_versions: vers:nuget/14.10.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-HDRI-arm64
     affected_versions: vers:nuget/<14.10.3
     fixed_versions: vers:nuget/14.10.3
     fixed_in_commits: []
@@ -92,12 +77,7 @@ impacted_packages:
     fixed_versions: vers:nuget/14.10.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-HDRI-OpenMP-x64
-    affected_versions: vers:nuget/<14.10.3
-    fixed_versions: vers:nuget/14.10.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q8-OpenMP-arm64
+  - purl: pkg:nuget/Magick.NET-Q8-OpenMP-x64
     affected_versions: vers:nuget/<14.10.3
     fixed_versions: vers:nuget/14.10.3
     fixed_in_commits: []
@@ -107,16 +87,36 @@ impacted_packages:
     fixed_versions: vers:nuget/14.10.3
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-x86
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-OpenMP-x86
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q8-x64
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-wrhr-rf8j-r842/GHSA-wrhr-rf8j-r842.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-122

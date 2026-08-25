@@ -45,13 +45,13 @@ summary: |
   Users who require the full interactive UI on a networked host must explicitly opt in by setting `allowWrite` and/or `allowExec` to `true`.
 impacted_packages:
   - purl: pkg:npm/vitest
-    affected_versions: vers:npm/>=4.0.0|<4.1.0
-    fixed_versions: vers:npm/4.1.0
+    affected_versions: vers:npm/<3.2.6
+    fixed_versions: vers:npm/3.2.6
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:npm/vitest
-    affected_versions: vers:npm/<3.2.6
-    fixed_versions: vers:npm/3.2.6
+    affected_versions: vers:npm/>=4.0.0|<4.1.0
+    fixed_versions: vers:npm/4.1.0
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/vitest-dev/vitest
@@ -65,12 +65,12 @@ severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-5xrq-8626-4rwp/GHSA-5xrq-8626-4rwp.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-862

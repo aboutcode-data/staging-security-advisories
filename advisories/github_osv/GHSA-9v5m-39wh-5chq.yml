@@ -154,22 +154,22 @@ summary: |
 
   Before processing a supplied `orderId`, `/store-api/handle-payment` should enforce the same object-level authorization model used by the order access routes. For authenticated customers, the server should verify that the order belongs to the current customer. For guest orders, it should require and validate the same guest-order authentication conditions used in the official order retrieval flow. In addition, the internal payment processor should not resolve a transaction solely by `orderId`; transaction lookup should be constrained to orders that are authorized for the current sales channel context and caller.
 impacted_packages:
-  - purl: pkg:composer/shopware/platform
+  - purl: pkg:composer/shopware/core
     affected_versions: vers:composer/>=6.7.0+0|<6.7.10+1
     fixed_versions: vers:composer/6.7.10+1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/shopware/platform
+  - purl: pkg:composer/shopware/core
     affected_versions: vers:composer/<6.6.10+18
     fixed_versions: vers:composer/6.6.10+18
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/shopware/core
+  - purl: pkg:composer/shopware/platform
     affected_versions: vers:composer/>=6.7.0+0|<6.7.10+1
     fixed_versions: vers:composer/6.7.10+1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/shopware/core
+  - purl: pkg:composer/shopware/platform
     affected_versions: vers:composer/<6.6.10+18
     fixed_versions: vers:composer/6.6.10+18
     fixed_in_commits: []
@@ -178,12 +178,12 @@ severities:
   - score: '4.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-9v5m-39wh-5chq/GHSA-9v5m-39wh-5chq.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-290

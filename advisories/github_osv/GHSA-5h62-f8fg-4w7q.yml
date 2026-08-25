@@ -10,12 +10,12 @@ summary: |
   ### Original Description
   phpMyFAQ before 4.1.2 contains a missing authorization vulnerability in the DELETE /admin/api/content/tags/{tagId} endpoint that allows any authenticated user to delete tags. Any logged-in user, including regular frontend users, can delete arbitrary tags by sending a DELETE request with a valid session cookie, resulting in permanent data loss and disruption of FAQ organization.
 impacted_packages:
-  - purl: pkg:composer/phpmyfaq/phpmyfaq
+  - purl: pkg:composer/thorsten/phpmyfaq
     affected_versions: vers:composer/<4.1.2
     fixed_versions: vers:composer/4.1.2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/thorsten/phpmyfaq
+  - purl: pkg:composer/phpmyfaq/phpmyfaq
     affected_versions: vers:composer/<4.1.2
     fixed_versions: vers:composer/4.1.2
     fixed_in_commits: []
@@ -24,12 +24,12 @@ severities:
   - score: '5.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-5h62-f8fg-4w7q/GHSA-5h62-f8fg-4w7q.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-862

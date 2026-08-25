@@ -28,14 +28,79 @@ summary: |
 
   All OpenShift Container Platform 4.14 users are advised to upgrade to these updated packages and images when they are available in the appropriate release channel. To check for available updates, use the OpenShift CLI (oc) or web console. Instructions for upgrading a cluster are available at https://docs.openshift.com/container-platform/4.14/updating/updating_a_cluster/updating-cluster-cli.html
 impacted_packages:
-  - purl: pkg:rpm/redhat/cri-o?arch=src
+  - purl: pkg:rpm/redhat/openshift?arch=src
+    affected_versions: vers:rpm/<4.14.0-202401121302.p0.ge36e183.assembly.stream.el8
+    fixed_versions: vers:rpm/4.14.0-202401121302.p0.ge36e183.assembly.stream.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ovn23.09-debugsource?arch=x86_64
+    affected_versions: vers:rpm/<23.09.0-100.el9fdp
+    fixed_versions: vers:rpm/23.09.0-100.el9fdp
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ovn23.09-debuginfo?arch=x86_64
+    affected_versions: vers:rpm/<23.09.0-100.el9fdp
+    fixed_versions: vers:rpm/23.09.0-100.el9fdp
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ovn23.09-host-debuginfo?arch=x86_64
+    affected_versions: vers:rpm/<23.09.0-100.el9fdp
+    fixed_versions: vers:rpm/23.09.0-100.el9fdp
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/cri-o?arch=aarch64
     affected_versions: vers:rpm/<1.27.3-2.rhaos4.14.git03502b6.el8
     fixed_versions: vers:rpm/1.27.3-2.rhaos4.14.git03502b6.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/openshift?arch=src
-    affected_versions: vers:rpm/<4.14.0-202401121302.p0.ge36e183.assembly.stream.el8
-    fixed_versions: vers:rpm/4.14.0-202401121302.p0.ge36e183.assembly.stream.el8
+  - purl: pkg:rpm/redhat/ovn23.09-central?arch=aarch64
+    affected_versions: vers:rpm/<23.09.0-100.el9fdp
+    fixed_versions: vers:rpm/23.09.0-100.el9fdp
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ovn23.09-host?arch=aarch64
+    affected_versions: vers:rpm/<23.09.0-100.el9fdp
+    fixed_versions: vers:rpm/23.09.0-100.el9fdp
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ovn23.09-vtep?arch=aarch64
+    affected_versions: vers:rpm/<23.09.0-100.el9fdp
+    fixed_versions: vers:rpm/23.09.0-100.el9fdp
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ovn23.09-vtep?arch=x86_64
+    affected_versions: vers:rpm/<23.09.0-100.el9fdp
+    fixed_versions: vers:rpm/23.09.0-100.el9fdp
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/cri-o-debugsource?arch=aarch64
+    affected_versions: vers:rpm/<1.27.3-2.rhaos4.14.git03502b6.el9
+    fixed_versions: vers:rpm/1.27.3-2.rhaos4.14.git03502b6.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/cri-o-debuginfo?arch=aarch64
+    affected_versions: vers:rpm/<1.27.3-2.rhaos4.14.git03502b6.el9
+    fixed_versions: vers:rpm/1.27.3-2.rhaos4.14.git03502b6.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/openshift-clients?arch=ppc64le
+    affected_versions: vers:rpm/<4.14.0-202401111553.p0.g286cfa5.assembly.stream.el8
+    fixed_versions: vers:rpm/4.14.0-202401111553.p0.g286cfa5.assembly.stream.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/openshift-hyperkube?arch=s390x
+    affected_versions: vers:rpm/<4.14.0-202401121302.p0.ge36e183.assembly.stream.el9
+    fixed_versions: vers:rpm/4.14.0-202401121302.p0.ge36e183.assembly.stream.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ovn23.09-central-debuginfo?arch=s390x
+    affected_versions: vers:rpm/<23.09.0-100.el9fdp
+    fixed_versions: vers:rpm/23.09.0-100.el9fdp
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/cri-o?arch=src
+    affected_versions: vers:rpm/<1.27.3-2.rhaos4.14.git03502b6.el8
+    fixed_versions: vers:rpm/1.27.3-2.rhaos4.14.git03502b6.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/openshift-clients?arch=src
@@ -78,16 +143,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.27.3-2.rhaos4.14.git03502b6.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/openshift-hyperkube?arch=x86_64
-    affected_versions: vers:rpm/<4.14.0-202401121302.p0.ge36e183.assembly.stream.el8
-    fixed_versions: vers:rpm/4.14.0-202401121302.p0.ge36e183.assembly.stream.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/openshift-clients?arch=x86_64
-    affected_versions: vers:rpm/<4.14.0-202401111553.p0.g286cfa5.assembly.stream.el8
-    fixed_versions: vers:rpm/4.14.0-202401111553.p0.g286cfa5.assembly.stream.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/openshift-clients-redistributable?arch=x86_64
     affected_versions: vers:rpm/<4.14.0-202401111553.p0.g286cfa5.assembly.stream.el8
     fixed_versions: vers:rpm/4.14.0-202401111553.p0.g286cfa5.assembly.stream.el8
@@ -108,11 +163,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.27.3-2.rhaos4.14.git03502b6.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/openshift-hyperkube?arch=x86_64
-    affected_versions: vers:rpm/<4.14.0-202401121302.p0.ge36e183.assembly.stream.el9
-    fixed_versions: vers:rpm/4.14.0-202401121302.p0.ge36e183.assembly.stream.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/openshift-clients?arch=x86_64
     affected_versions: vers:rpm/<4.14.0-202401111553.p0.g286cfa5.assembly.stream.el9
     fixed_versions: vers:rpm/4.14.0-202401111553.p0.g286cfa5.assembly.stream.el9
@@ -123,62 +173,12 @@ impacted_packages:
     fixed_versions: vers:rpm/4.14.0-202401111553.p0.g286cfa5.assembly.stream.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ovn23.09?arch=x86_64
-    affected_versions: vers:rpm/<23.09.0-100.el9fdp
-    fixed_versions: vers:rpm/23.09.0-100.el9fdp
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/ovn23.09-central?arch=x86_64
     affected_versions: vers:rpm/<23.09.0-100.el9fdp
     fixed_versions: vers:rpm/23.09.0-100.el9fdp
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ovn23.09-host?arch=x86_64
-    affected_versions: vers:rpm/<23.09.0-100.el9fdp
-    fixed_versions: vers:rpm/23.09.0-100.el9fdp
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ovn23.09-vtep?arch=x86_64
-    affected_versions: vers:rpm/<23.09.0-100.el9fdp
-    fixed_versions: vers:rpm/23.09.0-100.el9fdp
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ovn23.09-debugsource?arch=x86_64
-    affected_versions: vers:rpm/<23.09.0-100.el9fdp
-    fixed_versions: vers:rpm/23.09.0-100.el9fdp
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ovn23.09-central-debuginfo?arch=x86_64
-    affected_versions: vers:rpm/<23.09.0-100.el9fdp
-    fixed_versions: vers:rpm/23.09.0-100.el9fdp
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ovn23.09-debuginfo?arch=x86_64
-    affected_versions: vers:rpm/<23.09.0-100.el9fdp
-    fixed_versions: vers:rpm/23.09.0-100.el9fdp
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ovn23.09-host-debuginfo?arch=x86_64
-    affected_versions: vers:rpm/<23.09.0-100.el9fdp
-    fixed_versions: vers:rpm/23.09.0-100.el9fdp
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ovn23.09-vtep-debuginfo?arch=x86_64
-    affected_versions: vers:rpm/<23.09.0-100.el9fdp
-    fixed_versions: vers:rpm/23.09.0-100.el9fdp
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-o?arch=aarch64
-    affected_versions: vers:rpm/<1.27.3-2.rhaos4.14.git03502b6.el8
-    fixed_versions: vers:rpm/1.27.3-2.rhaos4.14.git03502b6.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/cri-o-debugsource?arch=aarch64
-    affected_versions: vers:rpm/<1.27.3-2.rhaos4.14.git03502b6.el8
-    fixed_versions: vers:rpm/1.27.3-2.rhaos4.14.git03502b6.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-o-debuginfo?arch=aarch64
     affected_versions: vers:rpm/<1.27.3-2.rhaos4.14.git03502b6.el8
     fixed_versions: vers:rpm/1.27.3-2.rhaos4.14.git03502b6.el8
     fixed_in_commits: []
@@ -198,42 +198,12 @@ impacted_packages:
     fixed_versions: vers:rpm/1.27.3-2.rhaos4.14.git03502b6.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-o-debugsource?arch=aarch64
-    affected_versions: vers:rpm/<1.27.3-2.rhaos4.14.git03502b6.el9
-    fixed_versions: vers:rpm/1.27.3-2.rhaos4.14.git03502b6.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-o-debuginfo?arch=aarch64
-    affected_versions: vers:rpm/<1.27.3-2.rhaos4.14.git03502b6.el9
-    fixed_versions: vers:rpm/1.27.3-2.rhaos4.14.git03502b6.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/openshift-hyperkube?arch=aarch64
     affected_versions: vers:rpm/<4.14.0-202401121302.p0.ge36e183.assembly.stream.el9
     fixed_versions: vers:rpm/4.14.0-202401121302.p0.ge36e183.assembly.stream.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/openshift-clients?arch=aarch64
-    affected_versions: vers:rpm/<4.14.0-202401111553.p0.g286cfa5.assembly.stream.el9
-    fixed_versions: vers:rpm/4.14.0-202401111553.p0.g286cfa5.assembly.stream.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/ovn23.09?arch=aarch64
-    affected_versions: vers:rpm/<23.09.0-100.el9fdp
-    fixed_versions: vers:rpm/23.09.0-100.el9fdp
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ovn23.09-central?arch=aarch64
-    affected_versions: vers:rpm/<23.09.0-100.el9fdp
-    fixed_versions: vers:rpm/23.09.0-100.el9fdp
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ovn23.09-host?arch=aarch64
-    affected_versions: vers:rpm/<23.09.0-100.el9fdp
-    fixed_versions: vers:rpm/23.09.0-100.el9fdp
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ovn23.09-vtep?arch=aarch64
     affected_versions: vers:rpm/<23.09.0-100.el9fdp
     fixed_versions: vers:rpm/23.09.0-100.el9fdp
     fixed_in_commits: []
@@ -263,11 +233,6 @@ impacted_packages:
     fixed_versions: vers:rpm/23.09.0-100.el9fdp
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-o?arch=ppc64le
-    affected_versions: vers:rpm/<1.27.3-2.rhaos4.14.git03502b6.el8
-    fixed_versions: vers:rpm/1.27.3-2.rhaos4.14.git03502b6.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/cri-o-debugsource?arch=ppc64le
     affected_versions: vers:rpm/<1.27.3-2.rhaos4.14.git03502b6.el8
     fixed_versions: vers:rpm/1.27.3-2.rhaos4.14.git03502b6.el8
@@ -281,11 +246,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/openshift-hyperkube?arch=ppc64le
     affected_versions: vers:rpm/<4.14.0-202401121302.p0.ge36e183.assembly.stream.el8
     fixed_versions: vers:rpm/4.14.0-202401121302.p0.ge36e183.assembly.stream.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/openshift-clients?arch=ppc64le
-    affected_versions: vers:rpm/<4.14.0-202401111553.p0.g286cfa5.assembly.stream.el8
-    fixed_versions: vers:rpm/4.14.0-202401111553.p0.g286cfa5.assembly.stream.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/cri-o?arch=ppc64le
@@ -388,19 +348,9 @@ impacted_packages:
     fixed_versions: vers:rpm/1.27.3-2.rhaos4.14.git03502b6.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-o-debugsource?arch=s390x
-    affected_versions: vers:rpm/<1.27.3-2.rhaos4.14.git03502b6.el9
-    fixed_versions: vers:rpm/1.27.3-2.rhaos4.14.git03502b6.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/cri-o-debuginfo?arch=s390x
     affected_versions: vers:rpm/<1.27.3-2.rhaos4.14.git03502b6.el9
     fixed_versions: vers:rpm/1.27.3-2.rhaos4.14.git03502b6.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/openshift-hyperkube?arch=s390x
-    affected_versions: vers:rpm/<4.14.0-202401121302.p0.ge36e183.assembly.stream.el9
-    fixed_versions: vers:rpm/4.14.0-202401121302.p0.ge36e183.assembly.stream.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/openshift-clients?arch=s390x
@@ -423,17 +373,7 @@ impacted_packages:
     fixed_versions: vers:rpm/23.09.0-100.el9fdp
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ovn23.09-vtep?arch=s390x
-    affected_versions: vers:rpm/<23.09.0-100.el9fdp
-    fixed_versions: vers:rpm/23.09.0-100.el9fdp
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/ovn23.09-debugsource?arch=s390x
-    affected_versions: vers:rpm/<23.09.0-100.el9fdp
-    fixed_versions: vers:rpm/23.09.0-100.el9fdp
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ovn23.09-central-debuginfo?arch=s390x
     affected_versions: vers:rpm/<23.09.0-100.el9fdp
     fixed_versions: vers:rpm/23.09.0-100.el9fdp
     fixed_in_commits: []
@@ -453,11 +393,71 @@ impacted_packages:
     fixed_versions: vers:rpm/23.09.0-100.el9fdp
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/openshift-hyperkube?arch=x86_64
+    affected_versions: vers:rpm/<4.14.0-202401121302.p0.ge36e183.assembly.stream.el9
+    fixed_versions: vers:rpm/4.14.0-202401121302.p0.ge36e183.assembly.stream.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ovn23.09?arch=x86_64
+    affected_versions: vers:rpm/<23.09.0-100.el9fdp
+    fixed_versions: vers:rpm/23.09.0-100.el9fdp
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ovn23.09-host?arch=x86_64
+    affected_versions: vers:rpm/<23.09.0-100.el9fdp
+    fixed_versions: vers:rpm/23.09.0-100.el9fdp
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/cri-o-debuginfo?arch=aarch64
+    affected_versions: vers:rpm/<1.27.3-2.rhaos4.14.git03502b6.el8
+    fixed_versions: vers:rpm/1.27.3-2.rhaos4.14.git03502b6.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/cri-o?arch=ppc64le
+    affected_versions: vers:rpm/<1.27.3-2.rhaos4.14.git03502b6.el8
+    fixed_versions: vers:rpm/1.27.3-2.rhaos4.14.git03502b6.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ovn23.09-vtep?arch=s390x
+    affected_versions: vers:rpm/<23.09.0-100.el9fdp
+    fixed_versions: vers:rpm/23.09.0-100.el9fdp
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ovn23.09-central-debuginfo?arch=x86_64
+    affected_versions: vers:rpm/<23.09.0-100.el9fdp
+    fixed_versions: vers:rpm/23.09.0-100.el9fdp
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/openshift-hyperkube?arch=x86_64
+    affected_versions: vers:rpm/<4.14.0-202401121302.p0.ge36e183.assembly.stream.el8
+    fixed_versions: vers:rpm/4.14.0-202401121302.p0.ge36e183.assembly.stream.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/openshift-clients?arch=x86_64
+    affected_versions: vers:rpm/<4.14.0-202401111553.p0.g286cfa5.assembly.stream.el8
+    fixed_versions: vers:rpm/4.14.0-202401111553.p0.g286cfa5.assembly.stream.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ovn23.09-vtep-debuginfo?arch=x86_64
+    affected_versions: vers:rpm/<23.09.0-100.el9fdp
+    fixed_versions: vers:rpm/23.09.0-100.el9fdp
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/openshift-clients?arch=aarch64
+    affected_versions: vers:rpm/<4.14.0-202401111553.p0.g286cfa5.assembly.stream.el9
+    fixed_versions: vers:rpm/4.14.0-202401111553.p0.g286cfa5.assembly.stream.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/cri-o-debugsource?arch=s390x
+    affected_versions: vers:rpm/<1.27.3-2.rhaos4.14.git03502b6.el9
+    fixed_versions: vers:rpm/1.27.3-2.rhaos4.14.git03502b6.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: Moderate
     scoring_system: rhas
     scoring_elements:
-    published_at: None
+    published_at:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2024_0293.json
 weaknesses: []
 references:

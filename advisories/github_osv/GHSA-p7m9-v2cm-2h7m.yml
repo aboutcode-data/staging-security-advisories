@@ -11,11 +11,6 @@ summary: "HAPI FHIR HTTP authentication leak in redirects\n### Impact\nWhen sett
   \ information or data that could allow others to impersonate the  client's request.\n\n###\
   \ Patches\nThis issue has been patched in release 6.8.3 \n\n### Workarounds\nNone."
 impacted_packages:
-  - purl: pkg:maven/ca.uhn.hapi.fhir/org.hl7.fhir.utilities
-    affected_versions: vers:maven/<6.9.0
-    fixed_versions: vers:maven/6.9.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:maven/ca.uhn.hapi.fhir/org.hl7.fhir.convertors
     affected_versions: vers:maven/<6.9.0
     fixed_versions: vers:maven/6.9.0
@@ -71,16 +66,21 @@ impacted_packages:
     fixed_versions: vers:maven/6.9.0
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:maven/ca.uhn.hapi.fhir/org.hl7.fhir.utilities
+    affected_versions: vers:maven/<6.9.0
+    fixed_versions: vers:maven/6.9.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-p7m9-v2cm-2h7m/GHSA-p7m9-v2cm-2h7m.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200
