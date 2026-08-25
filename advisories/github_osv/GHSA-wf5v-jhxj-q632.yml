@@ -7,6 +7,13 @@ summary: |
   Denial of service in Apache Tomcat
   java/org/apache/coyote/ajp/AbstractAjpProcessor.java in Apache Tomcat 8.x before 8.0.4 allows remote attackers to cause a denial of service (thread consumption) by using a "Content-Length: 0" AJP request to trigger a hang in request processing.
 impacted_packages:
+  - purl: pkg:github/apache/tomcat80
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/tomcat80
+        commit: 77590c897f0e542fe363d70efdf3b82209510aee
+    introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat/tomcat-coyote
     affected_versions: vers:maven/>=8.0.0-RC1|<8.0.4
     fixed_versions: vers:maven/8.0.4
@@ -24,18 +31,11 @@ impacted_packages:
       - vcs_url: https://github.com/apache/tomcat
         commit: 8884dae60ace77a87ed9385442ce429e98c3a479
     introduced_in_commits: []
-  - purl: pkg:github/apache/tomcat80
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/apache/tomcat80
-        commit: 77590c897f0e542fe363d70efdf3b82209510aee
-    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-20

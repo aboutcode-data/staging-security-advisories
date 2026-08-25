@@ -9,11 +9,6 @@ summary: |
 
   This form validation method requires appropriate permission in Fortify on Demand Plugin 6.0.1.
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins/fortify-on-demand-uploader
-    affected_versions: vers:maven/<=5.0.1
-    fixed_versions: vers:maven/6.0.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/fortify-on-demand-uploader-plugin
     affected_versions:
     fixed_versions:
@@ -23,16 +18,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/fortify-on-demand-uploader-plugin
         commit: 006c2336d578010be707ac029fe6b8cb3497bbc9
     introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/fortify-on-demand-uploader
+    affected_versions: vers:maven/<=5.0.1
+    fixed_versions: vers:maven/6.0.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-fhmf-xf2q-4m8p/GHSA-fhmf-xf2q-4m8p.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-285

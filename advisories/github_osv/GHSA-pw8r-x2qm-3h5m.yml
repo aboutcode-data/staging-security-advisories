@@ -7,16 +7,6 @@ summary: |
   Arbitrary code execution in Apache Struts 2
   Apache Struts 2 before 2.3.14.3 allows remote attackers to execute arbitrary OGNL code via a request with a crafted value that contains both "${}" and "%{}" sequences, which causes the OGNL code to be evaluated twice.
 impacted_packages:
-  - purl: pkg:maven/org.apache.struts/struts2-core
-    affected_versions: vers:maven/>=2.0.0|<2.3.14.3
-    fixed_versions: vers:maven/2.3.14.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.struts.xwork/xwork-core
-    affected_versions: vers:maven/>=2.0.0|<2.3.14.3
-    fixed_versions: vers:maven/2.3.14.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/apache/struts
     affected_versions:
     fixed_versions:
@@ -36,11 +26,21 @@ impacted_packages:
       - vcs_url: https://github.com/apache/struts
         commit: 041206d2a693d02c0cb2e72765275e55ba14049f
     introduced_in_commits: []
+  - purl: pkg:maven/org.apache.struts/struts2-core
+    affected_versions: vers:maven/>=2.0.0|<2.3.14.3
+    fixed_versions: vers:maven/2.3.14.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.struts.xwork/xwork-core
+    affected_versions: vers:maven/>=2.0.0|<2.3.14.3
+    fixed_versions: vers:maven/2.3.14.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

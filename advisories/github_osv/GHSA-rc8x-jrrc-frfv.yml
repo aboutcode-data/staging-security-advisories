@@ -7,27 +7,27 @@ summary: |
   Laravel does not properly constrain the host portion of a password-reset URL
   Laravel 5.4.x before 5.4.22 does not properly constrain the host portion of a password-reset URL, which makes it easier for remote attackers to conduct phishing attacks by specifying an attacker-controlled host.
 impacted_packages:
+  - purl: pkg:composer/illuminate/auth
+    affected_versions: vers:composer/>=5.3.0|<=5.3.31
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:composer/laravel/laravel
     affected_versions: vers:composer/>=5.4.0|<5.4.22
     fixed_versions: vers:composer/5.4.22
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/illuminate/auth
+  - purl: pkg:composer/laravel/framework
     affected_versions: vers:composer/>=5.3.0|<=5.3.31
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/illuminate/auth
+  - purl: pkg:composer/laravel/framework
     affected_versions: vers:composer/>=5.4.0|<5.4.22
     fixed_versions: vers:composer/5.4.22
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/laravel/framework
-    affected_versions: vers:composer/>=5.3.0|<=5.3.31
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/laravel/framework
+  - purl: pkg:composer/illuminate/auth
     affected_versions: vers:composer/>=5.4.0|<5.4.22
     fixed_versions: vers:composer/5.4.22
     fixed_in_commits: []
@@ -41,14 +41,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '6.1'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-rc8x-jrrc-frfv/GHSA-rc8x-jrrc-frfv.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-20

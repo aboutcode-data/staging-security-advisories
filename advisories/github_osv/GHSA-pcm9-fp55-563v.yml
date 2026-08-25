@@ -7,11 +7,6 @@ summary: |
   OWASP HTML Sanitizer allows redirecting to an arbitrary URL when JavaScript is disabled
   OWASP HTML Sanitizer (aka owasp-java-html-sanitizer) before 88, when JavaScript is disabled, allows user-assisted remote attackers to obtain potentially sensitive information via a crafted FORM element within a NOSCRIPT element.
 impacted_packages:
-  - purl: pkg:maven/com.googlecode.owasp-java-html-sanitizer/owasp-java-html-sanitizer
-    affected_versions: vers:maven/<88
-    fixed_versions: vers:maven/88
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/owasp/java-html-sanitizer
     affected_versions:
     fixed_versions:
@@ -21,11 +16,16 @@ impacted_packages:
       - vcs_url: https://github.com/owasp/java-html-sanitizer
         commit: 2027d3df73f62eb30b7f08269f346989f03144bd
     introduced_in_commits: []
+  - purl: pkg:maven/com.googlecode.owasp-java-html-sanitizer/owasp-java-html-sanitizer
+    affected_versions: vers:maven/<88
+    fixed_versions: vers:maven/88
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

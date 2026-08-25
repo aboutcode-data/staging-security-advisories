@@ -7,11 +7,6 @@ summary: |
   Improper Input Validation in Apache Santuario XML Security
   Apache Santuario XML Security for Java before 1.5.6, when applying Transforms, allows remote attackers to cause a denial of service (memory consumption) via crafted Document Type Definitions (DTDs), related to signatures.
 impacted_packages:
-  - purl: pkg:maven/org.apache.santuario/xmlsec
-    affected_versions: vers:maven/<1.5.6
-    fixed_versions: vers:maven/1.5.6
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/apache/santuario-java
     affected_versions:
     fixed_versions:
@@ -19,11 +14,16 @@ impacted_packages:
       - vcs_url: https://github.com/apache/santuario-java
         commit: a09b9042f7759d094f2d49f40fc7bcf145164b25
     introduced_in_commits: []
+  - purl: pkg:maven/org.apache.santuario/xmlsec
+    affected_versions: vers:maven/<1.5.6
+    fixed_versions: vers:maven/1.5.6
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-20

@@ -7,6 +7,21 @@ summary: |
   Moodle cross-site scripting (XSS) vulnerability
   Cross-site scripting (XSS) vulnerability in the external_format_text function in lib/externallib.php in Moodle through 2.5.9, 2.6.x before 2.6.11, 2.7.x before 2.7.8, and 2.8.x before 2.8.6 allows remote authenticated users to inject arbitrary web script or HTML into an external application via a crafted string that is visible to web services.
 impacted_packages:
+  - purl: pkg:composer/moodle/moodle
+    affected_versions: vers:composer/<2.6.11
+    fixed_versions: vers:composer/2.6.11
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/moodle/moodle
+    affected_versions: vers:composer/>=2.7.0|<2.7.8
+    fixed_versions: vers:composer/2.7.8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/moodle/moodle
+    affected_versions: vers:composer/>=2.8.0|<2.8.6
+    fixed_versions: vers:composer/2.8.6
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:github/moodle/moodle
     affected_versions:
     fixed_versions:
@@ -24,26 +39,11 @@ impacted_packages:
       - vcs_url: https://github.com/moodle/moodle
         commit: b4da1e0ae4f63ef0bb14b8bf5c0b86cd00f2af4b
     introduced_in_commits: []
-  - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/<2.6.11
-    fixed_versions: vers:composer/2.6.11
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/>=2.7.0|<2.7.8
-    fixed_versions: vers:composer/2.7.8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/>=2.8.0|<2.8.6
-    fixed_versions: vers:composer/2.8.6
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

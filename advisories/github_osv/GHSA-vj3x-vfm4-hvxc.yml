@@ -7,11 +7,6 @@ summary: |
   phpBB Cross-Site Request Forgery (CSRF)
   In phpBB before 3.1.7-PL1, includes/acp/acp_bbcodes.php has improper verification of a CSRF token on the BBCode page in the Administration Control Panel. An actual CSRF attack is possible if an attacker also manages to retrieve the session id of a reauthenticated administrator prior to targeting them.
 impacted_packages:
-  - purl: pkg:composer/phpbb/phpbb
-    affected_versions: vers:composer/<3.1.7-PL1
-    fixed_versions: vers:composer/3.1.7-PL1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/phpbb/phpbb
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/phpbb/phpbb
         commit: 18abef716ecf42a35416444f3f84f5459d573789
     introduced_in_commits: []
+  - purl: pkg:composer/phpbb/phpbb
+    affected_versions: vers:composer/<3.1.7-PL1
+    fixed_versions: vers:composer/3.1.7-PL1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-vj3x-vfm4-hvxc/GHSA-vj3x-vfm4-hvxc.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-352

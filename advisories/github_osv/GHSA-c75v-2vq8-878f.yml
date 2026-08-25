@@ -8,8 +8,8 @@ summary: |
   A vulnerability was found in Angular up to 11.0.4/11.1.0-next.2. It has been classified as problematic. Affected is the handling of comments. The manipulation leads to cross site scripting. It is possible to launch the attack remotely but it might require an authentication first. Upgrading to version 10.2.5, 11.0.5 or 11.1.0-next.3 is advised to to address this issue.
 impacted_packages:
   - purl: pkg:npm/%40angular/core
-    affected_versions: vers:npm/<10.2.5
-    fixed_versions: vers:npm/10.2.5
+    affected_versions: vers:npm/<=11.1.0-next.2
+    fixed_versions: vers:npm/11.1.0-next.3
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:npm/%40angular/core
@@ -18,8 +18,8 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:npm/%40angular/core
-    affected_versions: vers:npm/<=11.1.0-next.2
-    fixed_versions: vers:npm/11.1.0-next.3
+    affected_versions: vers:npm/<10.2.5
+    fixed_versions: vers:npm/10.2.5
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/angular/angular
@@ -37,12 +37,12 @@ severities:
   - score: '5.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-c75v-2vq8-878f/GHSA-c75v-2vq8-878f.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

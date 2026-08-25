@@ -8,13 +8,13 @@ summary: |
   The image parser in OpenStack Cinder prior to 7.0.2, and 8.0.0 and above, prior to 9.0.0; Glance prior to 14.00; and Nova prior to 12.0.4 does not properly limit qemu-img calls, which might allow attackers to cause a denial of service (memory and disk consumption) via a crafted disk image. This issue is patched in Cinder 7.0.2 and 9.0.0; Glance 14.0.0; and Nova 12.0.4
 impacted_packages:
   - purl: pkg:pypi/cinder
-    affected_versions: vers:pypi/<7.0.2
-    fixed_versions: vers:pypi/7.0.2
+    affected_versions: vers:pypi/>=8.0.0|<9.0.0
+    fixed_versions: vers:pypi/9.0.0
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/cinder
-    affected_versions: vers:pypi/>=8.0.0|<9.0.0
-    fixed_versions: vers:pypi/9.0.0
+    affected_versions: vers:pypi/<7.0.2
+    fixed_versions: vers:pypi/7.0.2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/glance
@@ -34,13 +34,6 @@ impacted_packages:
       - vcs_url: https://github.com/openstack/glance
         commit: 69a9b659fd48aa3c1f84fc7bc9ae236b6803d31f
     introduced_in_commits: []
-  - purl: pkg:github/openstack/cinder
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/openstack/cinder
-        commit: 455b318ced717fb38dfe40014817d78fbc47dea5
-    introduced_in_commits: []
   - purl: pkg:github/openstack/nova
     affected_versions:
     fixed_versions:
@@ -48,16 +41,23 @@ impacted_packages:
       - vcs_url: https://github.com/openstack/nova
         commit: 6bc37dcceca823998068167b49aec6def3112397
     introduced_in_commits: []
+  - purl: pkg:github/openstack/cinder
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openstack/cinder
+        commit: 455b318ced717fb38dfe40014817d78fbc47dea5
+    introduced_in_commits: []
 severities:
   - score: '7.5'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-g2j5-7vgx-6xrx/GHSA-g2j5-7vgx-6xrx.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-400

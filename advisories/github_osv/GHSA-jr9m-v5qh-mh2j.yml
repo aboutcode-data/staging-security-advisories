@@ -8,6 +8,11 @@ summary: |
   An issue was discovered in OpenStack Neutron 11.x before 11.0.7, 12.x before 12.0.6, and 13.x before 13.0.3. By creating two security groups with separate/overlapping port ranges, an authenticated user may prevent Neutron from being able to configure networks on any compute nodes where those security groups are present, because of an Open vSwitch (OVS) firewall KeyError. All Neutron deployments utilizing neutron-openvswitch-agent are affected.
 impacted_packages:
   - purl: pkg:pypi/neutron
+    affected_versions: vers:pypi/>=13.0.0|<13.0.3
+    fixed_versions: vers:pypi/13.0.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/neutron
     affected_versions: vers:pypi/>=11.0.0|<11.0.7
     fixed_versions: vers:pypi/11.0.7
     fixed_in_commits: []
@@ -17,26 +22,21 @@ impacted_packages:
     fixed_versions: vers:pypi/12.0.6
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:pypi/neutron
-    affected_versions: vers:pypi/>=13.0.0|<13.0.3
-    fixed_versions: vers:pypi/13.0.3
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: '6.5'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-jr9m-v5qh-mh2j/GHSA-jr9m-v5qh-mh2j.json
   - score: '7.1'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-jr9m-v5qh-mh2j/GHSA-jr9m-v5qh-mh2j.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses: []
 references:

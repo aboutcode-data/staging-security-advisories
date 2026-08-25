@@ -7,11 +7,6 @@ summary: |
   meinheld vulnerable to HTTP Request Smuggling
   meinheld prior to 1.0.2 is vulnerable to HTTP Request Smuggling. HTTP pipelining issues and request smuggling attacks might be possible due to incorrect Content-Length and Transfer encoding header parsing.
 impacted_packages:
-  - purl: pkg:pypi/meinheld
-    affected_versions: vers:pypi/<1.0.2
-    fixed_versions: vers:pypi/1.0.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/mopemope/meinheld
     affected_versions:
     fixed_versions:
@@ -23,21 +18,26 @@ impacted_packages:
       - vcs_url: https://github.com/mopemope/meinheld
         commit: 0cfa70b2cd3800f1e4beeaef5421b156d90f0e09
     introduced_in_commits: []
+  - purl: pkg:pypi/meinheld
+    affected_versions: vers:pypi/<1.0.2
+    fixed_versions: vers:pypi/1.0.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-63h2-9cc8-fc7m/GHSA-63h2-9cc8-fc7m.json
   - score: '5.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-63h2-9cc8-fc7m/GHSA-63h2-9cc8-fc7m.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-444

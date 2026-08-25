@@ -8,13 +8,13 @@ summary: |
   moodle before versions 3.5.2, 3.4.5, 3.3.8, 3.1.14 is vulnerable to an XML import of ddwtos could lead to intentional remote code execution. When importing legacy 'drag and drop into text' (ddwtos) type quiz questions, it was possible to inject and execute PHP code from within the imported questions, either intentionally or by importing questions from an untrusted source.
 impacted_packages:
   - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/>=3.5.0|<3.5.2
-    fixed_versions: vers:composer/3.5.2
+    affected_versions: vers:composer/>=3.4.0|<3.4.5
+    fixed_versions: vers:composer/3.4.5
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/>=3.4.0|<3.4.5
-    fixed_versions: vers:composer/3.4.5
+    affected_versions: vers:composer/>=3.5.0|<3.5.2
+    fixed_versions: vers:composer/3.5.2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/moodle/moodle
@@ -44,14 +44,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '8.8'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-c3pr-h96w-2jjg/GHSA-c3pr-h96w-2jjg.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

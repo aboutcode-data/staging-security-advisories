@@ -8,16 +8,6 @@ summary: |
   The Security component in Symfony 2.0.x before 2.0.25, 2.1.x before 2.1.13, 2.2.x before 2.2.9, and 2.3.x before 2.3.6 allows remote attackers to cause a denial of service (CPU consumption) via a long password that triggers an expensive hash computation, as demonstrated by a PBKDF2 computation, a similar issue to CVE-2013-5750.
 impacted_packages:
   - purl: pkg:composer/symfony/symfony
-    affected_versions: vers:composer/>=2.0.0|<2.0.25
-    fixed_versions: vers:composer/2.0.25
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/symfony
-    affected_versions: vers:composer/>=2.1.0|<2.1.13
-    fixed_versions: vers:composer/2.1.13
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/symfony
     affected_versions: vers:composer/>=2.2.0|<2.2.9
     fixed_versions: vers:composer/2.2.9
     fixed_in_commits: []
@@ -35,6 +25,16 @@ impacted_packages:
   - purl: pkg:composer/symfony/security
     affected_versions: vers:composer/>=2.0.0|<2.0.25
     fixed_versions: vers:composer/2.0.25
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=2.0.0|<2.0.25
+    fixed_versions: vers:composer/2.0.25
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=2.1.0|<2.1.13
+    fixed_versions: vers:composer/2.1.13
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/security
@@ -56,7 +56,7 @@ severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-789

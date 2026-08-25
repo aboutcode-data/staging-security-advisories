@@ -7,11 +7,6 @@ summary: |
   Improper Privilege Management in Azure ms-rest-nodeauth
   Azure ms-rest-nodeauth Library Elevation of Privilege Vulnerability
 impacted_packages:
-  - purl: pkg:npm/%40azure/ms-rest-nodeauth
-    affected_versions: vers:npm/<=3.0.7
-    fixed_versions: vers:npm/3.0.8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/azure/ms-rest-nodeauth
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/azure/ms-rest-nodeauth
         commit: 1b8dcfb6d7e1c8a0a00044286021a841961cf636
     introduced_in_commits: []
+  - purl: pkg:npm/%40azure/ms-rest-nodeauth
+    affected_versions: vers:npm/<=3.0.7
+    fixed_versions: vers:npm/3.0.8
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-qpfw-4m9x-rxx8/GHSA-qpfw-4m9x-rxx8.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-269

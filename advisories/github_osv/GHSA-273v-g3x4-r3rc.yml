@@ -7,26 +7,26 @@ summary: |
   Improper Certificate Validation in vt-ldap
   DefaultHostnameVerifier in Ldaptive (formerly vt-ldap) does not properly verify that the server hostname matches a domain name in the subject's Common Name (CN) field of the X.509 certificate, which allows man-in-the-middle attackers to spoof SSL servers via an arbitrary valid certificate.
 impacted_packages:
-  - purl: pkg:maven/edu.internet2.middleware/shibboleth-identityprovider
-    affected_versions: vers:maven/<2.4.2
-    fixed_versions: vers:maven/2.4.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:maven/edu.vt.middleware/vt-ldap
     affected_versions: vers:maven/<3.3.8
     fixed_versions: vers:maven/3.3.8
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:maven/edu.internet2.middleware/shibboleth-identityprovider
+    affected_versions: vers:maven/<2.4.2
+    fixed_versions: vers:maven/2.4.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.9'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-273v-g3x4-r3rc/GHSA-273v-g3x4-r3rc.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-295

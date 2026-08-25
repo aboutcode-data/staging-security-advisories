@@ -7,11 +7,6 @@ summary: |
   Beaker Sensitive Information Disclosure vulnerability
   Beaker before 1.6.4, when using PyCrypto to encrypt sessions, uses AES in ECB cipher mode, which might allow remote attackers to obtain portions of sensitive session data via unspecified vectors.
 impacted_packages:
-  - purl: pkg:pypi/beaker
-    affected_versions: vers:pypi/<1.6.4
-    fixed_versions: vers:pypi/1.6.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/bbangert/beaker
     affected_versions:
     fixed_versions:
@@ -19,21 +14,26 @@ impacted_packages:
       - vcs_url: https://github.com/bbangert/beaker
         commit: 91becae76101cf87ce8cbfabe3af2622fc328fe5
     introduced_in_commits: []
+  - purl: pkg:pypi/beaker
+    affected_versions: vers:pypi/<1.6.4
+    fixed_versions: vers:pypi/1.6.4
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-39vm-p9mr-4r27/GHSA-39vm-p9mr-4r27.json
   - score: '6.9'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-39vm-p9mr-4r27/GHSA-39vm-p9mr-4r27.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-326

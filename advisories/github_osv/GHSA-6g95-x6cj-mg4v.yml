@@ -7,6 +7,15 @@ summary: |
   Django database denial-of-service with ModelMultipleChoiceField
   ModelMultipleChoiceField in Django 1.6.x before 1.6.10 and 1.7.x before 1.7.3, when show_hidden_initial is set to True, allows remote attackers to cause a denial of service by submitting duplicate values, which triggers a large number of SQL queries.
 impacted_packages:
+  - purl: pkg:github/django/django
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/django/django
+        commit: d7a06ee7e571b6dad07c0f5b519b1db02e2a476c
+      - vcs_url: https://github.com/django/django
+        commit: bcfb47780ce7caecb409a9e9c1c314266e41d392
+    introduced_in_commits: []
   - purl: pkg:pypi/django
     affected_versions: vers:pypi/>=1.6|<1.6.10
     fixed_versions: vers:pypi/1.6.10
@@ -17,25 +26,16 @@ impacted_packages:
     fixed_versions: vers:pypi/1.7.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/django/django
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/django/django
-        commit: d7a06ee7e571b6dad07c0f5b519b1db02e2a476c
-      - vcs_url: https://github.com/django/django
-        commit: bcfb47780ce7caecb409a9e9c1c314266e41d392
-    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-6g95-x6cj-mg4v/GHSA-6g95-x6cj-mg4v.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-770

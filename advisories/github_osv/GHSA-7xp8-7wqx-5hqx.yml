@@ -9,6 +9,13 @@ summary: |
 
   Jenkins 2.219, LTS 2.204.2 now adds the `X-Frame-Options: deny` HTTP header to REST API responses, which prevents these types of clickjacking attacks.
 impacted_packages:
+  - purl: pkg:github/jenkinsci/jenkins
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/jenkinsci/jenkins
+        commit: 639ade55caa05324c60d15b2fa8df27ee0111b76
+    introduced_in_commits: []
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
     affected_versions: vers:maven/<=2.204.1
     fixed_versions: vers:maven/2.204.2
@@ -19,23 +26,16 @@ impacted_packages:
     fixed_versions: vers:maven/2.219
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/jenkinsci/jenkins
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/jenkinsci/jenkins
-        commit: 639ade55caa05324c60d15b2fa8df27ee0111b76
-    introduced_in_commits: []
 severities:
   - score: '3.1'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-7xp8-7wqx-5hqx/GHSA-7xp8-7wqx-5hqx.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-1021

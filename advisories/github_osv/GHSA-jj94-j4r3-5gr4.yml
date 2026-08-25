@@ -7,11 +7,6 @@ summary: |
   Subrion Cross-Site Scripting (XSS) vulnerability
   Cross-Site Scripting (XSS) vulnerability in Subrion 4.2.1 via the title when adding a page.
 impacted_packages:
-  - purl: pkg:composer/intelliants/subrion
-    affected_versions: vers:composer/4.2.1
-    fixed_versions: vers:composer/4.2.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/intelliants/subrion
     affected_versions:
     fixed_versions:
@@ -21,16 +16,21 @@ impacted_packages:
       - vcs_url: https://github.com/intelliants/subrion
         commit: 06950c2f9c4aa69e323cbdd141beabb6a9273ca4
     introduced_in_commits: []
+  - purl: pkg:composer/intelliants/subrion
+    affected_versions: vers:composer/4.2.1
+    fixed_versions: vers:composer/4.2.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-jj94-j4r3-5gr4/GHSA-jj94-j4r3-5gr4.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

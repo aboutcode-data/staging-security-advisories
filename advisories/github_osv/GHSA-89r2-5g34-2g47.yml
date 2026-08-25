@@ -7,19 +7,14 @@ summary: |
   Symfony Open Redirect
   An open redirect was discovered in Symfony 2.7.x before 2.7.50, 2.8.x before 2.8.49, 3.x before 3.4.20, 4.0.x before 4.0.15, 4.1.x before 4.1.9 and 4.2.x before 4.2.1. By using backslashes in the `_failure_path` input field of login forms, an attacker can work around the redirection target restrictions and effectively redirect the user to any domain after login.
 impacted_packages:
-  - purl: pkg:composer/symfony/security-http
+  - purl: pkg:composer/symfony/security
+    affected_versions: vers:composer/>=4.1.0|<4.1.9
+    fixed_versions: vers:composer/4.1.9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/symfony
     affected_versions: vers:composer/>=2.7.38|<2.7.50
     fixed_versions: vers:composer/2.7.50
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/security-http
-    affected_versions: vers:composer/>=2.8.0|<2.8.49
-    fixed_versions: vers:composer/2.8.49
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/security-http
-    affected_versions: vers:composer/>=3.0.0|<3.4.20
-    fixed_versions: vers:composer/3.4.20
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/security-http
@@ -32,9 +27,19 @@ impacted_packages:
     fixed_versions: vers:composer/4.1.9
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=2.8.0|<2.8.49
+    fixed_versions: vers:composer/2.8.49
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/security
+    affected_versions: vers:composer/>=4.0.0|<4.0.15
+    fixed_versions: vers:composer/4.0.15
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:composer/symfony/security-http
-    affected_versions: vers:composer/>=4.2.0|<4.2.1
-    fixed_versions: vers:composer/4.2.1
+    affected_versions: vers:composer/>=3.0.0|<3.4.20
+    fixed_versions: vers:composer/3.4.20
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/security
@@ -43,6 +48,26 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/security
+    affected_versions: vers:composer/>=2.8.0|<2.8.49
+    fixed_versions: vers:composer/2.8.49
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=4.1.0|<4.1.9
+    fixed_versions: vers:composer/4.1.9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/security-http
+    affected_versions: vers:composer/>=4.2.0|<4.2.1
+    fixed_versions: vers:composer/4.2.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/security-http
+    affected_versions: vers:composer/>=2.7.38|<2.7.50
+    fixed_versions: vers:composer/2.7.50
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/security-http
     affected_versions: vers:composer/>=2.8.0|<2.8.49
     fixed_versions: vers:composer/2.8.49
     fixed_in_commits: []
@@ -53,28 +78,8 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/security
-    affected_versions: vers:composer/>=4.0.0|<4.0.15
-    fixed_versions: vers:composer/4.0.15
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/security
-    affected_versions: vers:composer/>=4.1.0|<4.1.9
-    fixed_versions: vers:composer/4.1.9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/security
     affected_versions: vers:composer/>=4.2.0|<4.2.1
     fixed_versions: vers:composer/4.2.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/symfony
-    affected_versions: vers:composer/>=2.7.38|<2.7.50
-    fixed_versions: vers:composer/2.7.50
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/symfony
-    affected_versions: vers:composer/>=2.8.0|<2.8.49
-    fixed_versions: vers:composer/2.8.49
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/symfony
@@ -85,11 +90,6 @@ impacted_packages:
   - purl: pkg:composer/symfony/symfony
     affected_versions: vers:composer/>=4.0.0|<4.0.15
     fixed_versions: vers:composer/4.0.15
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/symfony
-    affected_versions: vers:composer/>=4.1.0|<4.1.9
-    fixed_versions: vers:composer/4.1.9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/symfony/symfony
@@ -101,14 +101,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '6.1'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-89r2-5g34-2g47/GHSA-89r2-5g34-2g47.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-601

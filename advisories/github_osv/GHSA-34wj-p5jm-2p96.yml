@@ -7,11 +7,6 @@ summary: |
   Improper Restriction of XML External Entity Reference in python-docx
   python-docx before 0.8.6 allows context-dependent attackers to conduct XML External Entity (XXE) attacks via a crafted document.
 impacted_packages:
-  - purl: pkg:pypi/python-docx
-    affected_versions: vers:pypi/<=0.8.5
-    fixed_versions: vers:pypi/0.8.6
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/python-openxml/python-docx
     affected_versions:
     fixed_versions:
@@ -19,21 +14,26 @@ impacted_packages:
       - vcs_url: https://github.com/python-openxml/python-docx
         commit: 61b40b161b64173ab8e362aec1fd197948431beb
     introduced_in_commits: []
+  - purl: pkg:pypi/python-docx
+    affected_versions: vers:pypi/<=0.8.5
+    fixed_versions: vers:pypi/0.8.6
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-34wj-p5jm-2p96/GHSA-34wj-p5jm-2p96.json
   - score: '8.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-34wj-p5jm-2p96/GHSA-34wj-p5jm-2p96.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-611

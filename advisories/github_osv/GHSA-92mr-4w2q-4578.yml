@@ -8,13 +8,13 @@ summary: |
   The re-key admin monitor was introduced in Jenkins 1.498 and re-encrypted all secrets in JENKINS_HOME with a new key. It also created a backup directory with all old secrets, and the key used to encrypt them. These backups were world-readable and not removed afterwards. Jenkins now deletes the backup directory, if present. Upgrading from before 1.498 will no longer create a backup directory. Administrators relying on file access permissions in their manually created backups are advised to check them for the directory $JENKINS_HOME/jenkins.security.RekeySecretAdminMonitor/backups, and delete it if present.
 impacted_packages:
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
-    affected_versions: vers:maven/<=2.32.1
-    fixed_versions: vers:maven/2.32.2
+    affected_versions: vers:maven/<=2.43
+    fixed_versions: vers:maven/2.44
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
-    affected_versions: vers:maven/<=2.43
-    fixed_versions: vers:maven/2.44
+    affected_versions: vers:maven/<=2.32.1
+    fixed_versions: vers:maven/2.32.2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/jenkinsci/jenkins
@@ -28,14 +28,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '9.8'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-92mr-4w2q-4578/GHSA-92mr-4w2q-4578.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

@@ -7,11 +7,6 @@ summary: |
   MunkiReport Cross-Site Scripting (XSS) Filter Bypass On Comment
   A Cross-Site Scripting (XSS) vulnerability in the comment module before 4.0 for MunkiReport allows remote attackers to inject arbitrary web script or HTML by posting a new comment.
 impacted_packages:
-  - purl: pkg:composer/munkireport/comment
-    affected_versions: vers:composer/<4.0.0
-    fixed_versions: vers:composer/4.0.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/munkireport/comment
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/munkireport/comment
         commit: ee4c1cd28fdcb42eb24c0cfea24ddf02478f9869
     introduced_in_commits: []
+  - purl: pkg:composer/munkireport/comment
+    affected_versions: vers:composer/<4.0.0
+    fixed_versions: vers:composer/4.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-vc4f-2g7f-pmqr/GHSA-vc4f-2g7f-pmqr.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79
