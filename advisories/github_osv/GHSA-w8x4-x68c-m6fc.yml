@@ -29,11 +29,6 @@ summary: |
   - Fix: https://github.com/eKoopmans/html2pdf.js/pull/877, [v0.14.0](https://github.com/eKoopmans/html2pdf.js/releases/tag/v0.14.0)
   - CVE-2026-22787: https://nvd.nist.gov/vuln/detail/CVE-2026-22787
 impacted_packages:
-  - purl: pkg:npm/html2pdf.js
-    affected_versions: vers:npm/<0.14.0
-    fixed_versions: vers:npm/0.14.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/ekoopmans/html2pdf.js
     affected_versions:
     fixed_versions:
@@ -41,16 +36,21 @@ impacted_packages:
       - vcs_url: https://github.com/ekoopmans/html2pdf.js
         commit: 988826e336035b39a8608182d7b73c0e3cd78c7b
     introduced_in_commits: []
+  - purl: pkg:npm/html2pdf.js
+    affected_versions: vers:npm/<0.14.0
+    fixed_versions: vers:npm/0.14.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-w8x4-x68c-m6fc/GHSA-w8x4-x68c-m6fc.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

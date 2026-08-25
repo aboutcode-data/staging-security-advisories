@@ -7,16 +7,6 @@ summary: |
   bn.js affected by an infinite loop
   This affects versions of the package bn.js before 4.12.3 and 5.2.3. Calling maskn(0) on any BN instance corrupts the internal state, causing toString(), divmod(), and other methods to enter an infinite loop, hanging the process indefinitely.
 impacted_packages:
-  - purl: pkg:npm/bn.js
-    affected_versions: vers:npm/>=5.0.0|<5.2.3
-    fixed_versions: vers:npm/5.2.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:npm/bn.js
-    affected_versions: vers:npm/<4.12.3
-    fixed_versions: vers:npm/4.12.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/indutny/bn.js
     affected_versions:
     fixed_versions:
@@ -24,21 +14,31 @@ impacted_packages:
       - vcs_url: https://github.com/indutny/bn.js
         commit: 33df26b5771e824f303a79ec6407409376baa64b
     introduced_in_commits: []
+  - purl: pkg:npm/bn.js
+    affected_versions: vers:npm/<4.12.3
+    fixed_versions: vers:npm/4.12.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/bn.js
+    affected_versions: vers:npm/>=5.0.0|<5.2.3
+    fixed_versions: vers:npm/5.2.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-378v-28hj-76wf/GHSA-378v-28hj-76wf.json
   - score: '5.5'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-378v-28hj-76wf/GHSA-378v-28hj-76wf.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-835

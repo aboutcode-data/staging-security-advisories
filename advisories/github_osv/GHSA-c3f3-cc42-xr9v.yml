@@ -12,11 +12,6 @@ summary: |
 
   Users are recommended to upgrade to version 4.18.0, which fixes the issue.
 impacted_packages:
-  - purl: pkg:maven/org.apache.camel/camel-keycloak
-    affected_versions: vers:maven/>=4.15.0|<4.18.0
-    fixed_versions: vers:maven/4.18.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/apache/camel
     affected_versions:
     fixed_versions:
@@ -24,16 +19,21 @@ impacted_packages:
       - vcs_url: https://github.com/apache/camel
         commit: c1ed776e3a4fa23d15acf4b9a48fdf758d4316ff
     introduced_in_commits: []
+  - purl: pkg:maven/org.apache.camel/camel-keycloak
+    affected_versions: vers:maven/>=4.15.0|<4.18.0
+    fixed_versions: vers:maven/4.18.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-c3f3-cc42-xr9v/GHSA-c3f3-cc42-xr9v.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-346

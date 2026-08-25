@@ -9,11 +9,6 @@ summary: "LibreNMS affected by reflected xss via email field\n### Summary\nrefle
   \ \n3. notice the alert \n### PoC\n- video attached with the report\nhttps://github.com/user-attachments/assets/c1b443f5-85c6-4545-b04f-def06d82b42e\n\
   \n\n### Impact\ncan lead to ATO"
 impacted_packages:
-  - purl: pkg:composer/librenms/librenms
-    affected_versions: vers:composer/<26.2.0
-    fixed_versions: vers:composer/26.2.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/librenms/librenms
     affected_versions:
     fixed_versions:
@@ -21,16 +16,21 @@ impacted_packages:
       - vcs_url: https://github.com/librenms/librenms
         commit: 8e626b38ef92e240532cdac2ac7e38706a71208b
     introduced_in_commits: []
+  - purl: pkg:composer/librenms/librenms
+    affected_versions: vers:composer/<26.2.0
+    fixed_versions: vers:composer/26.2.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-gqx7-99jw-6fpr/GHSA-gqx7-99jw-6fpr.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

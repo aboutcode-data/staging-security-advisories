@@ -18,11 +18,6 @@ summary: "Flask-Reuploaded vulnerable to Remote Code Execution via Server-Side T
   \ write-up was created by the reporter of the vulnerability, Jaron Cabral (https://www.linkedin.com/in/jaron-cabral-751994357/),\
   \ but is not yet available as of time of this publication."
 impacted_packages:
-  - purl: pkg:pypi/flask-reuploaded
-    affected_versions: vers:pypi/<1.5.0
-    fixed_versions: vers:pypi/1.5.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jugmac00/flask-reuploaded
     affected_versions:
     fixed_versions:
@@ -30,16 +25,21 @@ impacted_packages:
       - vcs_url: https://github.com/jugmac00/flask-reuploaded
         commit: d64c6b2f71cb73734fc38baa0e3e156926361288
     introduced_in_commits: []
+  - purl: pkg:pypi/flask-reuploaded
+    affected_versions: vers:pypi/<1.5.0
+    fixed_versions: vers:pypi/1.5.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-65mp-fq8v-56jr/GHSA-65mp-fq8v-56jr.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

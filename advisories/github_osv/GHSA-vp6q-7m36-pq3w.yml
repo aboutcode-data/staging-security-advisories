@@ -75,11 +75,6 @@ summary: |
   Under those conditions, the attacker can execute JavaScript in the administrator’s browser
   and act with that user’s privileges within Bugsink.
 impacted_packages:
-  - purl: pkg:pypi/bugsink
-    affected_versions: vers:pypi/<=2.0.12
-    fixed_versions: vers:pypi/2.0.13
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/bugsink/bugsink
     affected_versions:
     fixed_versions:
@@ -87,16 +82,21 @@ impacted_packages:
       - vcs_url: https://github.com/bugsink/bugsink
         commit: e784d6aeb0d5f29b40c2779d2544c2b9ef097ee9
     introduced_in_commits: []
+  - purl: pkg:pypi/bugsink
+    affected_versions: vers:pypi/<=2.0.12
+    fixed_versions: vers:pypi/2.0.13
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-vp6q-7m36-pq3w/GHSA-vp6q-7m36-pq3w.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

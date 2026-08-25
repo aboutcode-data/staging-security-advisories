@@ -77,11 +77,6 @@ summary: |
 
   @4n93L for their original report.
 impacted_packages:
-  - purl: pkg:pypi/graphiti-core
-    affected_versions: vers:pypi/<=0.28.1
-    fixed_versions: vers:pypi/0.28.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/getzep/graphiti
     affected_versions:
     fixed_versions:
@@ -89,16 +84,21 @@ impacted_packages:
       - vcs_url: https://github.com/getzep/graphiti
         commit: 7d65d5e77e89a199a62d737634eaa26dbb04d037
     introduced_in_commits: []
+  - purl: pkg:pypi/graphiti-core
+    affected_versions: vers:pypi/<=0.28.1
+    fixed_versions: vers:pypi/0.28.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-gg5m-55jj-8m5g/GHSA-gg5m-55jj-8m5g.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-943

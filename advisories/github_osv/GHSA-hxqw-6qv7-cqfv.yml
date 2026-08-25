@@ -35,6 +35,13 @@ summary: |
 
   OpenSource WorkShop thanks **Sho Odagiri** (小田切 祥) of **GMO Cybersecurity by Ierae, Inc.** for reporting this vulnerability.
 impacted_packages:
+  - purl: pkg:github/opensource-workshop/connect-cms
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/opensource-workshop/connect-cms
+        commit: c0bcd07fc1e9375941aa1295d044328ecd44ed85
+    introduced_in_commits: []
   - purl: pkg:composer/opensource-workshop/connect-cms
     affected_versions: vers:composer/<1.41.1
     fixed_versions: vers:composer/1.41.1
@@ -45,23 +52,16 @@ impacted_packages:
     fixed_versions: vers:composer/2.41.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/opensource-workshop/connect-cms
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/opensource-workshop/connect-cms
-        commit: c0bcd07fc1e9375941aa1295d044328ecd44ed85
-    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-hxqw-6qv7-cqfv/GHSA-hxqw-6qv7-cqfv.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

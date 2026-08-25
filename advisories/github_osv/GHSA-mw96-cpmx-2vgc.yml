@@ -61,16 +61,6 @@ summary: "Rollup 4 has Arbitrary File Write via Path Traversal\n### Summary\nThe
   \ running builds on untrusted repositories are at risk of system compromise."
 impacted_packages:
   - purl: pkg:npm/rollup
-    affected_versions: vers:npm/<2.80.0
-    fixed_versions: vers:npm/2.80.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:npm/rollup
-    affected_versions: vers:npm/>=3.0.0|<3.30.0
-    fixed_versions: vers:npm/3.30.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:npm/rollup
     affected_versions: vers:npm/>=4.0.0|<4.59.0
     fixed_versions: vers:npm/4.59.0
     fixed_in_commits: []
@@ -86,16 +76,26 @@ impacted_packages:
       - vcs_url: https://github.com/rollup/rollup
         commit: c60770d7aaf750e512c1b2774989ea4596e660b2
     introduced_in_commits: []
+  - purl: pkg:npm/rollup
+    affected_versions: vers:npm/<2.80.0
+    fixed_versions: vers:npm/2.80.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/rollup
+    affected_versions: vers:npm/>=3.0.0|<3.30.0
+    fixed_versions: vers:npm/3.30.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:P
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-mw96-cpmx-2vgc/GHSA-mw96-cpmx-2vgc.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

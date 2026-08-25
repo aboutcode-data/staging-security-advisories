@@ -110,11 +110,6 @@ summary: |
 
   Allows bypassing `image.domains` / `image.remotePatterns` restrictions to make server-side requests to unauthorized hosts. This includes the risk of server-side request forgery (SSRF) against internal network services and cloud metadata endpoints.
 impacted_packages:
-  - purl: pkg:npm/%40astrojs/node
-    affected_versions: vers:npm/>=9.0.0|<9.5.4
-    fixed_versions: vers:npm/9.5.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/withastro/astro
     affected_versions:
     fixed_versions:
@@ -122,16 +117,21 @@ impacted_packages:
       - vcs_url: https://github.com/withastro/astro
         commit: e01e98b063e90d274c42130ec2a60cc0966622c9
     introduced_in_commits: []
+  - purl: pkg:npm/%40astrojs/node
+    affected_versions: vers:npm/>=9.0.0|<9.5.4
+    fixed_versions: vers:npm/9.5.4
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-cj9f-h6r6-4cx2/GHSA-cj9f-h6r6-4cx2.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-918

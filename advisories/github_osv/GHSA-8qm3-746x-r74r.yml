@@ -6,11 +6,6 @@ summary: |
   devalue `uneval`ed code can create objects with polluted prototypes when `eval`ed
   Under certain circumstances, `uneval`ing untrusted data can produce output code that will create objects with polluted prototypes when later `eval`ed, meaning the output data can be a different shape from the input data.
 impacted_packages:
-  - purl: pkg:npm/devalue
-    affected_versions: vers:npm/<=5.6.2
-    fixed_versions: vers:npm/5.6.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/sveltejs/devalue
     affected_versions:
     fixed_versions:
@@ -18,16 +13,21 @@ impacted_packages:
       - vcs_url: https://github.com/sveltejs/devalue
         commit: 0f04d4d678eac39ad5d7a07d1956275d7874e81c
     introduced_in_commits: []
+  - purl: pkg:npm/devalue
+    affected_versions: vers:npm/<=5.6.2
+    fixed_versions: vers:npm/5.6.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '2.1'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:H/AT:P/PR:H/UI:N/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-8qm3-746x-r74r/GHSA-8qm3-746x-r74r.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-1321

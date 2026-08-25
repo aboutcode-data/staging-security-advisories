@@ -8,11 +8,6 @@ summary: |
   A flaw was found in Keycloak. A significant Broken Access Control vulnerability exists in the UserManagedPermissionService (UMA Protection API). When updating or deleting a UMA policy associated with multiple resources, the authorization check only verifies the caller's ownership against the first resource in the policy's list. This allows a user (Owner A) who owns one resource (RA) to update a shared policy and modify authorization rules for other resources (e.g., RB) in that same policy, even if those other resources are owned by a different user (Owner B). This constitutes a horizontal privilege escalation.
 impacted_packages:
   - purl: pkg:maven/org.keycloak/keycloak-services
-    affected_versions: vers:maven/<26.2.13
-    fixed_versions: vers:maven/26.2.13
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.keycloak/keycloak-services
     affected_versions: vers:maven/>=26.5.0|<26.5.3
     fixed_versions: vers:maven/26.5.3
     fixed_in_commits: []
@@ -22,16 +17,21 @@ impacted_packages:
     fixed_versions: vers:maven/26.4.9
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:maven/org.keycloak/keycloak-services
+    affected_versions: vers:maven/<26.2.13
+    fixed_versions: vers:maven/26.2.13
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-fm6w-rrp3-2x4w/GHSA-fm6w-rrp3-2x4w.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-266

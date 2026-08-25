@@ -37,6 +37,13 @@ summary: |
 
   Requires admin authentication. An attacker with admin panel access can extract the full database including password hashes of other admin users.
 impacted_packages:
+  - purl: pkg:github/pimcore/pimcore
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/pimcore/pimcore
+        commit: 1c3925fbec4895abeb21e5c244a83679c4e4a6f4
+    introduced_in_commits: []
   - purl: pkg:composer/pimcore/pimcore
     affected_versions: vers:composer/<=11.5.14+1
     fixed_versions:
@@ -47,23 +54,16 @@ impacted_packages:
     fixed_versions: vers:composer/12.3.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/pimcore/pimcore
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/pimcore/pimcore
-        commit: 1c3925fbec4895abeb21e5c244a83679c4e4a6f4
-    introduced_in_commits: []
 severities:
   - score: '6.9'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-vxg3-v4p6-f3fp/GHSA-vxg3-v4p6-f3fp.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-89

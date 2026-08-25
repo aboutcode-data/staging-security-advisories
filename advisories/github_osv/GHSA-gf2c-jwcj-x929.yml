@@ -7,11 +7,6 @@ summary: |
   vlt Mishandles Path Sanitization for tar
   vlt before 1.0.0-rc.10 mishandles path sanitization for tar, leading to path traversal during extraction.
 impacted_packages:
-  - purl: pkg:npm/%40vltpkg/tar
-    affected_versions: vers:npm/<1.0.0-rc.10
-    fixed_versions: vers:npm/1.0.0-rc.10
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/vltpkg/vltpkg
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/vltpkg/vltpkg
         commit: ff8d4099a1929772cea2adf131285e90ede6b0dd
     introduced_in_commits: []
+  - purl: pkg:npm/%40vltpkg/tar
+    affected_versions: vers:npm/<1.0.0-rc.10
+    fixed_versions: vers:npm/1.0.0-rc.10
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.9'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:C/C:N/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-gf2c-jwcj-x929/GHSA-gf2c-jwcj-x929.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-23

@@ -16,13 +16,13 @@ summary: "Rack has a Directory Traversal via Rack:Directory\n## Summary\n\n`Rack
   \ directories with the same prefix as one which is exposed via `Rack::Directory`."
 impacted_packages:
   - purl: pkg:gem/rack
-    affected_versions: vers:gem/>=3.0.0.beta1|<3.1.20
-    fixed_versions: vers:gem/3.1.20
+    affected_versions: vers:gem/<2.2.22
+    fixed_versions: vers:gem/2.2.22
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:gem/rack
-    affected_versions: vers:gem/<2.2.22
-    fixed_versions: vers:gem/2.2.22
+    affected_versions: vers:gem/>=3.0.0.beta1|<3.1.20
+    fixed_versions: vers:gem/3.1.20
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:gem/rack
@@ -41,12 +41,12 @@ severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-mxw3-3hh2-x2mh/GHSA-mxw3-3hh2-x2mh.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

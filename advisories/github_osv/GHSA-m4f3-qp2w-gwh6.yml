@@ -7,6 +7,13 @@ summary: |
   OpenStack Nova calls qemu-img without format restrictions for resize
   An issue was discovered in OpenStack Nova before 30.2.2, 31 before 31.2.1, and 32 before 32.1.1. By writing a malicious QCOW header to a root or ephemeral disk and then triggering a resize, a user may convince Nova's Flat image backend to call qemu-img without a format restriction, resulting in an unsafe image resize operation that could destroy data on the host system. Only compute nodes using the Flat image backend (usually configured with use_cow_images=False) are affected.
 impacted_packages:
+  - purl: pkg:github/openstack/nova
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openstack/nova
+        commit: 3eba22ff09c81a61750fbb4882e5f1f01a20fdf5
+    introduced_in_commits: []
   - purl: pkg:pypi/nova
     affected_versions: vers:pypi/>=32.0.0.0rc1|<=32.1.0
     fixed_versions:
@@ -22,23 +29,16 @@ impacted_packages:
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/openstack/nova
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/openstack/nova
-        commit: 3eba22ff09c81a61750fbb4882e5f1f01a20fdf5
-    introduced_in_commits: []
 severities:
   - score: '8.2'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:N/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-m4f3-qp2w-gwh6/GHSA-m4f3-qp2w-gwh6.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-669

@@ -74,11 +74,6 @@ summary: |
 
   In multi-user deployments (OpenID mode), any authenticated user can steal other users' complete financial data (transactions, accounts, balances, payees), modify or destroy their budgets, and tamper with encryption keys. This is a personal finance app, so the data is highly sensitive.
 impacted_packages:
-  - purl: pkg:npm/%40actual-app/sync-server
-    affected_versions: vers:npm/<=26.2.0
-    fixed_versions: vers:npm/26.2.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/actualbudget/actual
     affected_versions:
     fixed_versions:
@@ -86,16 +81,21 @@ impacted_packages:
       - vcs_url: https://github.com/actualbudget/actual
         commit: 9966c024cb75f57943193cac8e42f401efed9d08
     introduced_in_commits: []
+  - purl: pkg:npm/%40actual-app/sync-server
+    affected_versions: vers:npm/<=26.2.0
+    fixed_versions: vers:npm/26.2.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:P
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-qmjj-p7m9-wjrv/GHSA-qmjj-p7m9-wjrv.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-862

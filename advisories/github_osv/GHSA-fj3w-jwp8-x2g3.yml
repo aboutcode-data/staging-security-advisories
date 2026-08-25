@@ -12,6 +12,13 @@ summary: "fast-xml-parser has stack overflow in XMLBuilder with preserveOrder\n#
   \ with `preserveOrder:false` or check the input data before passing to builder.\n\n### References\n\
   [_Are there any links users can visit to find out more?_](https://github.com/NaturalIntelligence/fast-xml-parser/pull/791)"
 impacted_packages:
+  - purl: pkg:github/naturalintelligence/fast-xml-parser
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/naturalintelligence/fast-xml-parser
+        commit: c13a961910f14986295dd28484eee830fa1a0e8a
+    introduced_in_commits: []
   - purl: pkg:npm/fast-xml-parser
     affected_versions: vers:npm/>=5.0.0|<5.3.8
     fixed_versions: vers:npm/5.3.8
@@ -22,23 +29,16 @@ impacted_packages:
     fixed_versions: vers:npm/4.5.4
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/naturalintelligence/fast-xml-parser
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/naturalintelligence/fast-xml-parser
-        commit: c13a961910f14986295dd28484eee830fa1a0e8a
-    introduced_in_commits: []
 severities:
   - score: '2.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:U
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-fj3w-jwp8-x2g3/GHSA-fj3w-jwp8-x2g3.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-120

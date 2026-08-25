@@ -19,11 +19,6 @@ summary: |
   ### Impact
   Remote Code Execution (RCE). Any application passing user-controlled input to `si.wifiNetworks()` is vulnerable to arbitrary command execution with the privileges of the Node.js process.
 impacted_packages:
-  - purl: pkg:npm/systeminformation
-    affected_versions: vers:npm/<5.30.8
-    fixed_versions: vers:npm/5.30.8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/sebhildebrandt/systeminformation
     affected_versions:
     fixed_versions:
@@ -31,16 +26,21 @@ impacted_packages:
       - vcs_url: https://github.com/sebhildebrandt/systeminformation
         commit: 22242aa56188f2bffcbd7d265a11e1ebb808b460
     introduced_in_commits: []
+  - purl: pkg:npm/systeminformation
+    affected_versions: vers:npm/<5.30.8
+    fixed_versions: vers:npm/5.30.8
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-9c88-49p5-5ggf/GHSA-9c88-49p5-5ggf.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-78

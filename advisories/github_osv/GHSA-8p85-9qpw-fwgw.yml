@@ -43,11 +43,6 @@ summary: |
   - **Cristian Vargas** (Fluid Attacks Research Team) — discovery and report.
   - **Oscar Uribe** (Fluid Attacks) — coordination and disclosure.
 impacted_packages:
-  - purl: pkg:npm/%40fastify/middie
-    affected_versions: vers:npm/<9.2.0
-    fixed_versions: vers:npm/9.2.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/fastify/middie
     affected_versions:
     fixed_versions:
@@ -55,16 +50,21 @@ impacted_packages:
       - vcs_url: https://github.com/fastify/middie
         commit: 140e0dd0359d890fec7e6ea1dcc5134d6bd554d4
     introduced_in_commits: []
+  - purl: pkg:npm/%40fastify/middie
+    affected_versions: vers:npm/<9.2.0
+    fixed_versions: vers:npm/9.2.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.2'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-8p85-9qpw-fwgw/GHSA-8p85-9qpw-fwgw.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-20

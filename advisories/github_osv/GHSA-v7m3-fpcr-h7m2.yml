@@ -62,11 +62,6 @@ summary: |
   * PHP `unserialize()` documentation: https://www.php.net/manual/en/function.unserialize.php
   * OWASP PHP Object Injection: https://owasp.org/www-community/vulnerabilities/PHP_Object_Injection
 impacted_packages:
-  - purl: pkg:composer/zumba/json-serializer
-    affected_versions: vers:composer/<3.2.3
-    fixed_versions: vers:composer/3.2.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/zumba/json-serializer
     affected_versions:
     fixed_versions:
@@ -74,16 +69,21 @@ impacted_packages:
       - vcs_url: https://github.com/zumba/json-serializer
         commit: bf26227879adefce75eb9651040d8982be97b881
     introduced_in_commits: []
+  - purl: pkg:composer/zumba/json-serializer
+    affected_versions: vers:composer/<3.2.3
+    fixed_versions: vers:composer/3.2.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-v7m3-fpcr-h7m2/GHSA-v7m3-fpcr-h7m2.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-502

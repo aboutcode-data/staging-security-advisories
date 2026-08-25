@@ -23,11 +23,6 @@ summary: |
   - Who is impacted: SvelteKit apps with `experimental.remoteFunctions` enabled, and that expose a reachable Remote Form endpoint.
   - Attack: an unauthenticated attacker can repeatedly open connections, send only the 8-byte header/prefix (with large data_length), and stall the body to hold large allocations, exhausting memory.
 impacted_packages:
-  - purl: pkg:npm/%40sveltejs/kit
-    affected_versions: vers:npm/<=2.49.4
-    fixed_versions: vers:npm/2.49.5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/sveltejs/kit
     affected_versions:
     fixed_versions:
@@ -35,16 +30,21 @@ impacted_packages:
       - vcs_url: https://github.com/sveltejs/kit
         commit: 8ed8155215b9a74012fecffb942ad9a793b274e5
     introduced_in_commits: []
+  - purl: pkg:npm/%40sveltejs/kit
+    affected_versions: vers:npm/<=2.49.4
+    fixed_versions: vers:npm/2.49.5
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.2'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-j2f3-wq62-6q46/GHSA-j2f3-wq62-6q46.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-789

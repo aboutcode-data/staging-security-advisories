@@ -18,11 +18,6 @@ summary: "Ghost has a SQL injection in Content API\n### Impact\n\nA SQL injectio
   \ \n\n### For more information\nIf you have any questions or comments about this advisory,\
   \ email us at [security@ghost.org](mailto:security@ghost.org)."
 impacted_packages:
-  - purl: pkg:npm/ghost
-    affected_versions: vers:npm/>=3.24.0|<6.19.1
-    fixed_versions: vers:npm/6.19.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/tryghost/ghost
     affected_versions:
     fixed_versions:
@@ -30,16 +25,21 @@ impacted_packages:
       - vcs_url: https://github.com/tryghost/ghost
         commit: 30868d632b2252b638bc8a4c8ebf73964592ed91
     introduced_in_commits: []
+  - purl: pkg:npm/ghost
+    affected_versions: vers:npm/>=3.24.0|<6.19.1
+    fixed_versions: vers:npm/6.19.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-w52v-v783-gw97/GHSA-w52v-v783-gw97.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-89

@@ -12,6 +12,23 @@ summary: "Image Magick has a Memory Leak in coders/ashlar.c\nMemory leak exists 
   \ 17,232 bytes in 4 blocks\n==78968==   total heap usage: 4,781 allocs, 4,777 frees, 785,472\
   \ bytes allocated\n```"
 impacted_packages:
+  - purl: pkg:nuget/Magick.NET-Q8-AnyCPU
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-x86
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/imagemagick/imagemagick
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/imagemagick/imagemagick
+        commit: a253d1b124ebdcc2832daac6f9a35c362635b40e
+    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
     affected_versions: vers:nuget/<14.10.3
     fixed_versions: vers:nuget/14.10.3
@@ -33,16 +50,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-OpenMP-x86
-    affected_versions: vers:nuget/<14.10.3
-    fixed_versions: vers:nuget/14.10.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-x86
-    affected_versions: vers:nuget/<14.10.3
-    fixed_versions: vers:nuget/14.10.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q8-AnyCPU
     affected_versions: vers:nuget/<14.10.3
     fixed_versions: vers:nuget/14.10.3
     fixed_in_commits: []
@@ -102,23 +109,16 @@ impacted_packages:
     fixed_versions: vers:nuget/14.10.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/imagemagick/imagemagick
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/imagemagick/imagemagick
-        commit: a253d1b124ebdcc2832daac6f9a35c362635b40e
-    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-xgm3-v4r9-wfgm/GHSA-xgm3-v4r9-wfgm.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-401

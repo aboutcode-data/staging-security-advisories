@@ -37,6 +37,13 @@ summary: "Craft CMS vulnerable to Server-Side Request Forgery (SSRF) via GraphQL
   \ to mitigate the issue.\n\nUsers running Craft 3.5.0+ should update to the latest Craft 4.16.17\
   \ or 5.8.21 releases."
 impacted_packages:
+  - purl: pkg:github/craftcms/cms
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/craftcms/cms
+        commit: 013db636fdb38f3ce5657fd196b6d952f98ebc52
+    introduced_in_commits: []
   - purl: pkg:composer/craftcms/cms
     affected_versions: vers:composer/<=5.8.20
     fixed_versions: vers:composer/5.8.21
@@ -47,23 +54,16 @@ impacted_packages:
     fixed_versions: vers:composer/4.16.17
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/craftcms/cms
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/craftcms/cms
-        commit: 013db636fdb38f3ce5657fd196b6d952f98ebc52
-    introduced_in_commits: []
 severities:
   - score: '5.0'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:P
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-x27p-wfqw-hfcc/GHSA-x27p-wfqw-hfcc.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-918

@@ -93,11 +93,6 @@ summary: "# Command Injection via Unsanitized `locate` Output in `versions()` â€
   \ URL:** https://github.com/sebhildebrandt/systeminformation/security/advisories/new\n- **Security\
   \ Contact:** security@systeminformation.io"
 impacted_packages:
-  - purl: pkg:npm/systeminformation
-    affected_versions: vers:npm/<=5.30.7
-    fixed_versions: vers:npm/5.31.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/sebhildebrandt/systeminformation
     affected_versions:
     fixed_versions:
@@ -105,16 +100,21 @@ impacted_packages:
       - vcs_url: https://github.com/sebhildebrandt/systeminformation
         commit: b67d3715eec881038ccbaace2f2711419ac3e107
     introduced_in_commits: []
+  - purl: pkg:npm/systeminformation
+    affected_versions: vers:npm/<=5.30.7
+    fixed_versions: vers:npm/5.31.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-5vv4-hvf7-2h46/GHSA-5vv4-hvf7-2h46.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-78

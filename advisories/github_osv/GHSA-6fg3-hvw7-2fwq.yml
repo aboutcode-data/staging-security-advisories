@@ -7,11 +7,6 @@ summary: |
   Microsoft Playwright MCP Server vulnerable to DNS Rebinding Attack; Allows Attackers Access to All Server Tools
   Microsoft Playwright MCP Server versions prior to 0.0.40 fails to validate the Origin header on incoming connections. This allows an attacker to perform a DNS rebinding attack via a victim’s web browser and send unauthorized requests to a locally running MCP server, resulting in unintended invocation of MCP tool endpoints.
 impacted_packages:
-  - purl: pkg:npm/%40playwright/mcp
-    affected_versions: vers:npm/<0.0.40
-    fixed_versions: vers:npm/0.0.40
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/microsoft/playwright
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/microsoft/playwright
         commit: 1313fbd
     introduced_in_commits: []
+  - purl: pkg:npm/%40playwright/mcp
+    affected_versions: vers:npm/<0.0.40
+    fixed_versions: vers:npm/0.0.40
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.2'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:L/VI:L/VA:H/SC:L/SI:L/SA:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-6fg3-hvw7-2fwq/GHSA-6fg3-hvw7-2fwq.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-749

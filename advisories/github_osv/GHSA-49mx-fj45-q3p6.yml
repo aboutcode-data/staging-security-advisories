@@ -33,11 +33,6 @@ summary: "n8n's Unsafe Buffer Allocation Allows In-Process Memory Disclosure in 
   \ guide, and environment configuration details\n- [n8n Documentation — Blocking nodes](https://docs.n8n.io/hosting/securing/blocking-nodes/)\
   \ — how to globally disable specific nodes"
 impacted_packages:
-  - purl: pkg:npm/n8n
-    affected_versions: vers:npm/>=1.65.0|<1.114.3
-    fixed_versions: vers:npm/1.114.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/n8n-io/n8n
     affected_versions:
     fixed_versions:
@@ -45,16 +40,21 @@ impacted_packages:
       - vcs_url: https://github.com/n8n-io/n8n
         commit: 2c4c2953199733c791f739a40879ae31ca129aba
     introduced_in_commits: []
+  - purl: pkg:npm/n8n
+    affected_versions: vers:npm/>=1.65.0|<1.114.3
+    fixed_versions: vers:npm/1.114.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.7'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-49mx-fj45-q3p6/GHSA-49mx-fj45-q3p6.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

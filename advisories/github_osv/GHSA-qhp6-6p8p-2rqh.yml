@@ -27,15 +27,6 @@ summary: |
 
   We would like to thank Claudia Bartolini (TIM S.p.A), Marco Ventura (TIM S.p.A), and Massimiliano Brolli (TIM S.p.A) for reporting this issue.
 impacted_packages:
-  - purl: pkg:github/wildfly/wildfly-core
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/wildfly/wildfly-core
-        commit: 11e873031c522a0b36afb59880ce4dd59efd0bc0
-      - vcs_url: https://github.com/wildfly/wildfly-core
-        commit: a6f9d7534aa44de741337756f8377ad3a81f7695
-    introduced_in_commits: []
   - purl: pkg:maven/org.wildfly.core/wildfly-elytron-integration
     affected_versions: vers:maven/>=32.0.0.Beta1|<32.0.0.Beta3
     fixed_versions: vers:maven/32.0.0.Beta3
@@ -46,16 +37,25 @@ impacted_packages:
     fixed_versions: vers:maven/31.0.3.Final
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:github/wildfly/wildfly-core
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/wildfly/wildfly-core
+        commit: 11e873031c522a0b36afb59880ce4dd59efd0bc0
+      - vcs_url: https://github.com/wildfly/wildfly-core
+        commit: a6f9d7534aa44de741337756f8377ad3a81f7695
+    introduced_in_commits: []
 severities:
   - score: '8.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-qhp6-6p8p-2rqh/GHSA-qhp6-6p8p-2rqh.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-307

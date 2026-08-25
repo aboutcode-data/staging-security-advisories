@@ -36,11 +36,6 @@ summary: |
   ### Impact
   Prototype Pollution -> RCE
 impacted_packages:
-  - purl: pkg:npm/%40nyariv/sandboxjs
-    affected_versions: vers:npm/<=0.8.26
-    fixed_versions: vers:npm/0.8.27
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/nyariv/sandboxjs
     affected_versions:
     fixed_versions:
@@ -50,16 +45,21 @@ impacted_packages:
       - vcs_url: https://github.com/nyariv/sandboxjs
         commit: 75c8009db32e6829b0ad92ca13bf458178442bd3
     introduced_in_commits: []
+  - purl: pkg:npm/%40nyariv/sandboxjs
+    affected_versions: vers:npm/<=0.8.26
+    fixed_versions: vers:npm/0.8.27
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '10.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-9p4w-fq8m-2hp7/GHSA-9p4w-fq8m-2hp7.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-1321

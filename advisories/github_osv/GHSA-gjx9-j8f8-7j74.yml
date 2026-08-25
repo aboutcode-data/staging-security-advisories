@@ -85,6 +85,15 @@ summary: |
   - [Java Deserialization Security](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html)
   - [CVE Standards and Procedures](https://cve.mitre.org/)
 impacted_packages:
+  - purl: pkg:github/hubspot/jinjava
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/hubspot/jinjava
+        commit: c7328dce6030ac718f88974196035edafef24441
+      - vcs_url: https://github.com/hubspot/jinjava
+        commit: 3d02e504d8bbb13bf3fe019e9ca7b51dfce7a998
+    introduced_in_commits: []
   - purl: pkg:maven/com.hubspot.jinjava/jinjava
     affected_versions: vers:maven/>=2.8.0|<2.8.3
     fixed_versions: vers:maven/2.8.3
@@ -95,25 +104,16 @@ impacted_packages:
     fixed_versions: vers:maven/2.7.6
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/hubspot/jinjava
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/hubspot/jinjava
-        commit: c7328dce6030ac718f88974196035edafef24441
-      - vcs_url: https://github.com/hubspot/jinjava
-        commit: 3d02e504d8bbb13bf3fe019e9ca7b51dfce7a998
-    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-gjx9-j8f8-7j74/GHSA-gjx9-j8f8-7j74.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-1336

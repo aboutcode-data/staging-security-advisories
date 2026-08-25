@@ -56,11 +56,6 @@ summary: |
   2. Data modification or deletion
   3. Compliance and security policy violations
 impacted_packages:
-  - purl: pkg:composer/pterodactyl/panel
-    affected_versions: vers:composer/<1.12.1
-    fixed_versions: vers:composer/1.12.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/pterodactyl/panel
     affected_versions:
     fixed_versions:
@@ -68,16 +63,21 @@ impacted_packages:
       - vcs_url: https://github.com/pterodactyl/panel
         commit: 0e74f3aadec89405751ec602c77fc1d030a417c0
     introduced_in_commits: []
+  - purl: pkg:composer/pterodactyl/panel
+    affected_versions: vers:composer/<1.12.1
+    fixed_versions: vers:composer/1.12.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-hr7j-63v7-vj7g/GHSA-hr7j-63v7-vj7g.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-613

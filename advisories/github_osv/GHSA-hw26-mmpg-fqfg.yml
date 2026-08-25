@@ -35,11 +35,6 @@ summary: |
   ### Impact
   External CSS loading enables data exfiltration via attribute selectors (e.g., reading CSRF tokens), UI redressing, and phishing. In older browsers (IE), this allows for full XSS via `expression()`.
 impacted_packages:
-  - purl: pkg:pypi/lxml-html-clean
-    affected_versions: vers:pypi/<=0.4.3
-    fixed_versions: vers:pypi/0.4.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/fedora-python/lxml_html_clean
     affected_versions:
     fixed_versions:
@@ -47,16 +42,21 @@ impacted_packages:
       - vcs_url: https://github.com/fedora-python/lxml_html_clean
         commit: 2ef732667ddbc74ea59847bcf24b75809aaeed3b
     introduced_in_commits: []
+  - purl: pkg:pypi/lxml-html-clean
+    affected_versions: vers:pypi/<=0.4.3
+    fixed_versions: vers:pypi/0.4.4
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-hw26-mmpg-fqfg/GHSA-hw26-mmpg-fqfg.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-116

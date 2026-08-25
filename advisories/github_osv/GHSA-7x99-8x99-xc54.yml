@@ -7,11 +7,6 @@ summary: |
   Salesforce Uni2TS has a Code Injection vulnerability
   Improper Control of Generation of Code ('Code Injection') vulnerability in Salesforce Uni2TS on MacOS, Windows, Linux allows Leverage Executable Code in Non-Executable Files.This issue affects Uni2TS: through 1.2.0.
 impacted_packages:
-  - purl: pkg:pypi/uni2ts
-    affected_versions: vers:pypi/<=1.2.0
-    fixed_versions: vers:pypi/2.0.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/salesforceairesearch/uni2ts
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/salesforceairesearch/uni2ts
         commit: 7f2d51dd729de018f0f22504f39a8475c6fed1c4
     introduced_in_commits: []
+  - purl: pkg:pypi/uni2ts
+    affected_versions: vers:pypi/<=1.2.0
+    fixed_versions: vers:pypi/2.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-7x99-8x99-xc54/GHSA-7x99-8x99-xc54.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

@@ -30,11 +30,6 @@ summary: |
     - Avoid processing MSG files from untrusted sources
     - Implement additional filename validation before processing
 impacted_packages:
-  - purl: pkg:pypi/unstructured
-    affected_versions: vers:pypi/<=0.18.17
-    fixed_versions: vers:pypi/0.18.18
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/unstructured-io/unstructured
     affected_versions:
     fixed_versions:
@@ -42,16 +37,21 @@ impacted_packages:
       - vcs_url: https://github.com/unstructured-io/unstructured
         commit: b01d35b2373fd087d2e15162b9c021663c97155d
     introduced_in_commits: []
+  - purl: pkg:pypi/unstructured
+    affected_versions: vers:pypi/<=0.18.17
+    fixed_versions: vers:pypi/0.18.18
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-gm8q-m8mv-jj5m/GHSA-gm8q-m8mv-jj5m.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

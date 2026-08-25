@@ -25,16 +25,6 @@ summary: |
   ### References
   If there are any questions or comments about this advisory, contact AWS Security via the [vulnerability reporting page](https://aws.amazon.com/security/vulnerability-reporting) or directly via email to [aws-security@amazon.com](mailto:aws-security@amazon.com). Please do not create a public GitHub issue.
 impacted_packages:
-  - purl: pkg:pypi/sagemaker
-    affected_versions: vers:pypi/<2.256.0
-    fixed_versions: vers:pypi/2.256.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/sagemaker
-    affected_versions: vers:pypi/>=3.0|<3.1.1
-    fixed_versions: vers:pypi/3.1.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/aws/sagemaker-python-sdk
     affected_versions:
     fixed_versions:
@@ -44,21 +34,31 @@ impacted_packages:
       - vcs_url: https://github.com/aws/sagemaker-python-sdk
         commit: 5e7a3efa7bec0a161194ffa0cef346dda93bf2c6
     introduced_in_commits: []
+  - purl: pkg:pypi/sagemaker
+    affected_versions: vers:pypi/>=3.0|<3.1.1
+    fixed_versions: vers:pypi/3.1.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/sagemaker
+    affected_versions: vers:pypi/<2.256.0
+    fixed_versions: vers:pypi/2.256.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.9'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-62rc-f4v9-h543/GHSA-62rc-f4v9-h543.json
   - score: '8.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-62rc-f4v9-h543/GHSA-62rc-f4v9-h543.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-599

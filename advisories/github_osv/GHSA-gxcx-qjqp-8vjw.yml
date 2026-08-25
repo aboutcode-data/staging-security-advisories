@@ -12,12 +12,12 @@ summary: "ImageMagick has memory leak in msl encoder\nMemory leak exists in `cod
   \ in loss record 21 of 21\n==78983==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)\n\
   ```"
 impacted_packages:
-  - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
+  - purl: pkg:nuget/Magick.NET-Q16-x64
     affected_versions: vers:nuget/<14.10.3
     fixed_versions: vers:nuget/14.10.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-HDRI-AnyCPU
+  - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
     affected_versions: vers:nuget/<14.10.3
     fixed_versions: vers:nuget/14.10.3
     fixed_in_commits: []
@@ -37,17 +37,7 @@ impacted_packages:
     fixed_versions: vers:nuget/14.10.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-x64
-    affected_versions: vers:nuget/<14.10.3
-    fixed_versions: vers:nuget/14.10.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-x86
-    affected_versions: vers:nuget/<14.10.3
-    fixed_versions: vers:nuget/14.10.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q8-AnyCPU
     affected_versions: vers:nuget/<14.10.3
     fixed_versions: vers:nuget/14.10.3
     fixed_in_commits: []
@@ -58,6 +48,16 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q8-x86.NET-Q8-x64
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-AnyCPU
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q8-AnyCPU
     affected_versions: vers:nuget/<14.10.3
     fixed_versions: vers:nuget/14.10.3
     fixed_in_commits: []
@@ -118,12 +118,12 @@ severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-gxcx-qjqp-8vjw/GHSA-gxcx-qjqp-8vjw.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-401

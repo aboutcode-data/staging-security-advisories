@@ -62,6 +62,13 @@ summary: "Craft CMS: save_images_Asset graphql mutation can be abused to exfiltr
   \ accessed to fetch metadata.  \n\nUltimate result is:\n\nAttacker or malicious insider gets\
   \ access to infrastructure craft is running on, not just craft itself."
 impacted_packages:
+  - purl: pkg:github/craftcms/cms
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/craftcms/cms
+        commit: e838a221df2ab15cd54248f22fc8355d47df29ff
+    introduced_in_commits: []
   - purl: pkg:composer/craftcms/craft
     affected_versions: vers:composer/<=5.8.21
     fixed_versions: vers:composer/5.8.22
@@ -72,23 +79,16 @@ impacted_packages:
     fixed_versions: vers:composer/4.16.18
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/craftcms/cms
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/craftcms/cms
-        commit: e838a221df2ab15cd54248f22fc8355d47df29ff
-    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-96pq-hxpw-rgh8/GHSA-96pq-hxpw-rgh8.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-918

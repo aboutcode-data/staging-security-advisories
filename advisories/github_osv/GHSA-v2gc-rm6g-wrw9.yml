@@ -188,6 +188,13 @@ summary: |
   - [GCP Metadata Server Documentation](https://cloud.google.com/compute/docs/metadata/querying-metadata)
   - [PayloadsAllTheThings - SSRF Cloud Instances](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Request%20Forgery/SSRF-Cloud-Instances.md)
 impacted_packages:
+  - purl: pkg:github/craftcms/cms
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/craftcms/cms
+        commit: 2825388b4f32fb1c9bd709027a1a1fd192d709a3
+    introduced_in_commits: []
   - purl: pkg:composer/craftcms/cms
     affected_versions: vers:composer/<=5.8.22
     fixed_versions: vers:composer/5.8.23
@@ -198,23 +205,16 @@ impacted_packages:
     fixed_versions: vers:composer/4.16.19
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/craftcms/cms
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/craftcms/cms
-        commit: 2825388b4f32fb1c9bd709027a1a1fd192d709a3
-    introduced_in_commits: []
 severities:
   - score: '5.5'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N/E:P
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-v2gc-rm6g-wrw9/GHSA-v2gc-rm6g-wrw9.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-918

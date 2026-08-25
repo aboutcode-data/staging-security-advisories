@@ -11,6 +11,13 @@ summary: |
 
   Users are recommended to upgrade to version 1.12.1 or 1.11.5, which fix the issue.
 impacted_packages:
+  - purl: pkg:github/apache/avro
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/avro
+        commit: 84bc7322ca1c04ab4a8e4e708acf1e271541aac4
+    introduced_in_commits: []
   - purl: pkg:maven/org.apache.avro/avro-compiler
     affected_versions: vers:maven/1.12.0
     fixed_versions: vers:maven/1.12.1
@@ -21,23 +28,16 @@ impacted_packages:
     fixed_versions: vers:maven/1.11.5
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/apache/avro
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/apache/avro
-        commit: 84bc7322ca1c04ab4a8e4e708acf1e271541aac4
-    introduced_in_commits: []
 severities:
   - score: '6.9'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-rp46-r563-jrc7/GHSA-rp46-r563-jrc7.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

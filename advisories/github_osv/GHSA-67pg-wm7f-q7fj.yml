@@ -16,6 +16,11 @@ summary: "jsPDF Affected by Client-Side/Server-Side Denial of Service via Malici
   \ passing it to the addImage method or one of the other affected methods.\n### References\n\
   https://github.com/ZeroXJacks/CVEs/blob/main/2026/CVE-2026-25535.md"
 impacted_packages:
+  - purl: pkg:npm/jspdf
+    affected_versions: vers:npm/<4.2.0
+    fixed_versions: vers:npm/4.2.0
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:github/parallax/jspdf
     affected_versions:
     fixed_versions:
@@ -23,21 +28,16 @@ impacted_packages:
       - vcs_url: https://github.com/parallax/jspdf
         commit: 2e5e156e284d92c7d134bce97e6418756941d5e6
     introduced_in_commits: []
-  - purl: pkg:npm/jspdf
-    affected_versions: vers:npm/<4.2.0
-    fixed_versions: vers:npm/4.2.0
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: '8.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-67pg-wm7f-q7fj/GHSA-67pg-wm7f-q7fj.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-770

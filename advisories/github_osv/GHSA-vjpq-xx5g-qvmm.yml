@@ -99,11 +99,6 @@ summary: |
 
   The fix ensures all SDKs now produce identical cryptographic signatures, restoring proper mutual authentication across implementations.
 impacted_packages:
-  - purl: pkg:npm/%40bsv/sdk
-    affected_versions: vers:npm/<2.0.0
-    fixed_versions: vers:npm/2.0.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/bsv-blockchain/ts-sdk
     affected_versions:
     fixed_versions:
@@ -111,16 +106,21 @@ impacted_packages:
       - vcs_url: https://github.com/bsv-blockchain/ts-sdk
         commit: d8cf6930028372079d977138ae9eaa03ae2f50bb
     introduced_in_commits: []
+  - purl: pkg:npm/%40bsv/sdk
+    affected_versions: vers:npm/<2.0.0
+    fixed_versions: vers:npm/2.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-vjpq-xx5g-qvmm/GHSA-vjpq-xx5g-qvmm.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-573

@@ -7,11 +7,6 @@ summary: |
   Apache NiFi: Missing Authorization of Restricted Permissions for Component Updates
   Apache NiFi 1.1.0 through 2.7.2 are missing authorization when updating configuration properties on extension components that have specific Required Permissions based on the Restricted annotation. The Restricted annotation indicates additional privileges required to add the annotated component to the flow configuration, but framework authorization did not check restricted status when updating a component previously added. The missing authorization requires a more privileged user to add a restricted component to the flow configuration, but permits a less privileged user to make property configuration changes. Apache NiFi installations that do not implement different levels of authorization for Restricted components are not subject to this vulnerability because the framework enforces write permissions as the security boundary. Upgrading to Apache NiFi 2.8.0 is the recommended mitigation.
 impacted_packages:
-  - purl: pkg:maven/org.apache.nifi/nifi-web-api
-    affected_versions: vers:maven/>=1.1.0|<2.8.0
-    fixed_versions: vers:maven/2.8.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/apache/nifi
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/apache/nifi
         commit: 119f8881fbc3cbd0d522b0c549b841da3de01f64
     introduced_in_commits: []
+  - purl: pkg:maven/org.apache.nifi/nifi-web-api
+    affected_versions: vers:maven/>=1.1.0|<2.8.0
+    fixed_versions: vers:maven/2.8.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:A/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/S:P/AU:Y/R:I/V:C/RE:M/U:Amber
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-c5w7-m8wf-xc77/GHSA-c5w7-m8wf-xc77.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-862

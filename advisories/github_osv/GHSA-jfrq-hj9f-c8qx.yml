@@ -7,11 +7,6 @@ summary: |
   CleverTap Web SDK is vulnerable to DOM-based Cross-Site Scripting (XSS) via window.postMessage
   CleverTap Web SDK version 1.15.2 and earlier is vulnerable to DOM-based Cross-Site Scripting (XSS) via window.postMessage in the Visual Builder module. The origin validation in src/modules/visualBuilder/pageBuilder.js (lines 56-60) uses the includes() method to verify the originUrl contains "dashboard.clevertap.com", which can be bypassed by an attacker using a crafted subdomain.
 impacted_packages:
-  - purl: pkg:npm/clevertap-web-sdk
-    affected_versions: vers:npm/<1.15.3
-    fixed_versions: vers:npm/1.15.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/clevertap/clevertap-web-sdk
     affected_versions:
     fixed_versions:
@@ -23,16 +18,21 @@ impacted_packages:
       - vcs_url: https://github.com/clevertap/clevertap-web-sdk
         commit: cf1b65d
     introduced_in_commits: []
+  - purl: pkg:npm/clevertap-web-sdk
+    affected_versions: vers:npm/<1.15.3
+    fixed_versions: vers:npm/1.15.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-jfrq-hj9f-c8qx/GHSA-jfrq-hj9f-c8qx.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

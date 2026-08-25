@@ -10,11 +10,6 @@ summary: |
 
   This vulnerability requires that an attacker already be in possession of a valid username and password combination, and intercept a valid 2FA token (for example, during a screen share). The token must then be provided in addition to the username and password during the limited token validity window. The validity window is ~60 seconds as the Panel allows at most one additional window to the current one, each window being 30 seconds.
 impacted_packages:
-  - purl: pkg:composer/pterodactyl/panel
-    affected_versions: vers:composer/<1.12.0
-    fixed_versions: vers:composer/1.12.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/pterodactyl/panel
     affected_versions:
     fixed_versions:
@@ -22,16 +17,21 @@ impacted_packages:
       - vcs_url: https://github.com/pterodactyl/panel
         commit: 032bf076d92bb2f929fa69c1bac1b89f26b8badf
     introduced_in_commits: []
+  - purl: pkg:composer/pterodactyl/panel
+    affected_versions: vers:composer/<1.12.0
+    fixed_versions: vers:composer/1.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-rgmp-4873-r683/GHSA-rgmp-4873-r683.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-287

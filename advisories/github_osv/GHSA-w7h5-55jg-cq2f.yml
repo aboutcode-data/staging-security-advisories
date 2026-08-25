@@ -14,11 +14,6 @@ summary: "Improper Control of Generation of Code ('Code Injection') in @tygo-van
   \ of Generation of Code](https://cwe.mitre.org/data/definitions/94.html)  \n- GitHub Security\
   \ Advisories documentation: [https://docs.github.com/en/code-security/security-advisories](https://docs.github.com/en/code-security/security-advisories)"
 impacted_packages:
-  - purl: pkg:npm/%40tygo-van-den-hurk/slyde
-    affected_versions: vers:npm/<0.0.5
-    fixed_versions: vers:npm/0.0.5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/tygo-van-den-hurk/slyde
     affected_versions:
     fixed_versions:
@@ -26,16 +21,21 @@ impacted_packages:
       - vcs_url: https://github.com/tygo-van-den-hurk/slyde
         commit: e4c215b061e44fd2ead805de34d72642a710af60
     introduced_in_commits: []
+  - purl: pkg:npm/%40tygo-van-den-hurk/slyde
+    affected_versions: vers:npm/<0.0.5
+    fixed_versions: vers:npm/0.0.5
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.6'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:P/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-w7h5-55jg-cq2f/GHSA-w7h5-55jg-cq2f.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-829

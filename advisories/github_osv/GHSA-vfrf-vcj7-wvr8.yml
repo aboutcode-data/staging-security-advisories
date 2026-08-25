@@ -61,11 +61,6 @@ summary: "Signal K Server Vulnerable to Access Request Spoofing\nThe SignalK acc
   \ only known device IP addresses to create requests. This prevents external attackers from\
   \ creating spoofed requests."
 impacted_packages:
-  - purl: pkg:npm/signalk-server
-    affected_versions: vers:npm/<2.19.0
-    fixed_versions: vers:npm/2.19.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/signalk/signalk-server
     affected_versions:
     fixed_versions:
@@ -73,16 +68,21 @@ impacted_packages:
       - vcs_url: https://github.com/signalk/signalk-server
         commit: 221aff6cd89c56308084d1781b3abbf938605bd3
     introduced_in_commits: []
+  - purl: pkg:npm/signalk-server
+    affected_versions: vers:npm/<2.19.0
+    fixed_versions: vers:npm/2.19.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-vfrf-vcj7-wvr8/GHSA-vfrf-vcj7-wvr8.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-290

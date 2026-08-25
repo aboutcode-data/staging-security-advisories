@@ -17,11 +17,6 @@ summary: |
   ### References
   Pillow 12.1.1 will add release notes at https://pillow.readthedocs.io/en/stable/releasenotes/index.html
 impacted_packages:
-  - purl: pkg:pypi/pillow
-    affected_versions: vers:pypi/>=10.3.0|<12.1.1
-    fixed_versions: vers:pypi/12.1.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/python-pillow/pillow
     affected_versions:
     fixed_versions:
@@ -31,16 +26,21 @@ impacted_packages:
       - vcs_url: https://github.com/python-pillow/pillow
         commit: 54ba4db542ad3c7b918812a4e2d69c27735a3199
     introduced_in_commits: []
+  - purl: pkg:pypi/pillow
+    affected_versions: vers:pypi/>=10.3.0|<12.1.1
+    fixed_versions: vers:pypi/12.1.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.6'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-cfh3-3jmp-rvhc/GHSA-cfh3-3jmp-rvhc.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-787

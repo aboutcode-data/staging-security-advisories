@@ -45,11 +45,6 @@ summary: "joserfc's PBES2 p2c Unbounded Iteration Count enables Denial of Servic
   \ enable PBES2 algorithms if password-based encryption is specifically required and should\
   \ enforce a strict  algorithms allowlist in their JWT/JWE policies."
 impacted_packages:
-  - purl: pkg:pypi/joserfc
-    affected_versions: vers:pypi/<1.6.3
-    fixed_versions: vers:pypi/1.6.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/authlib/joserfc
     affected_versions:
     fixed_versions:
@@ -59,16 +54,21 @@ impacted_packages:
       - vcs_url: https://github.com/authlib/joserfc
         commit: 696a9611ab982c45ee2190ed79ca8e1d8e09398f
     introduced_in_commits: []
+  - purl: pkg:pypi/joserfc
+    affected_versions: vers:pypi/<1.6.3
+    fixed_versions: vers:pypi/1.6.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-w5r5-m38g-f9f9/GHSA-w5r5-m38g-f9f9.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-770

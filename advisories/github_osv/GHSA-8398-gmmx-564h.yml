@@ -25,11 +25,6 @@ summary: "n8n has a Python sandbox escape\n## Impact\n\nA vulnerability in the P
   \ setup guide, and environment configuration details\n- [n8n Documentation — Blocking nodes](https://docs.n8n.io/hosting/securing/blocking-nodes/) —\
   \ how to globally disable specific nodes"
 impacted_packages:
-  - purl: pkg:npm/n8n
-    affected_versions: vers:npm/<2.4.8
-    fixed_versions: vers:npm/2.4.8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/n8n-io/n8n
     affected_versions:
     fixed_versions:
@@ -37,21 +32,26 @@ impacted_packages:
       - vcs_url: https://github.com/n8n-io/n8n
         commit: 8607d372f78c388bb3691d9d5b52af7259ec7b1f
     introduced_in_commits: []
+  - purl: pkg:npm/n8n
+    affected_versions: vers:npm/<2.4.8
+    fixed_versions: vers:npm/2.4.8
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.9'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-8398-gmmx-564h/GHSA-8398-gmmx-564h.json
   - score: '9.4'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-8398-gmmx-564h/GHSA-8398-gmmx-564h.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-693

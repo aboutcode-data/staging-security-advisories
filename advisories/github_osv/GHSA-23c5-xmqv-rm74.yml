@@ -200,6 +200,16 @@ summary: |
   **Mitigation available:** passing `{ noext: true }` to `minimatch()` disables extglob processing entirely and reduces the same input to 0ms. Applications that do not need extglob syntax should set this option when handling untrusted patterns.
 impacted_packages:
   - purl: pkg:npm/minimatch
+    affected_versions: vers:npm/>=4.0.0|<4.2.5
+    fixed_versions: vers:npm/4.2.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/minimatch
+    affected_versions: vers:npm/<3.1.4
+    fixed_versions: vers:npm/3.1.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/minimatch
     affected_versions: vers:npm/>=10.0.0|<10.2.3
     fixed_versions: vers:npm/10.2.3
     fixed_in_commits: []
@@ -229,16 +239,6 @@ impacted_packages:
     fixed_versions: vers:npm/5.1.8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:npm/minimatch
-    affected_versions: vers:npm/>=4.0.0|<4.2.5
-    fixed_versions: vers:npm/4.2.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:npm/minimatch
-    affected_versions: vers:npm/<3.1.4
-    fixed_versions: vers:npm/3.1.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/isaacs/minimatch
     affected_versions:
     fixed_versions:
@@ -250,12 +250,12 @@ severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-23c5-xmqv-rm74/GHSA-23c5-xmqv-rm74.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-1333

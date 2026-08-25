@@ -14,27 +14,7 @@ summary: |
       #0 0xf76760b4 in ReadPSDChannelRLE coders/psd.c:1141
   ```
 impacted_packages:
-  - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
-    affected_versions: vers:nuget/<14.10.3
-    fixed_versions: vers:nuget/14.10.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-HDRI-AnyCPU
-    affected_versions: vers:nuget/<14.10.3
-    fixed_versions: vers:nuget/14.10.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-HDRI-x64
-    affected_versions: vers:nuget/<14.10.3
-    fixed_versions: vers:nuget/14.10.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-HDRI-x86
-    affected_versions: vers:nuget/<14.10.3
-    fixed_versions: vers:nuget/14.10.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-OpenMP-x86
+  - purl: pkg:nuget/Magick.NET-Q8-x86
     affected_versions: vers:nuget/<14.10.3
     fixed_versions: vers:nuget/14.10.3
     fixed_in_commits: []
@@ -44,7 +24,7 @@ impacted_packages:
     fixed_versions: vers:nuget/14.10.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-x86
+  - purl: pkg:nuget/Magick.NET-Q16-OpenMP-x86
     affected_versions: vers:nuget/<14.10.3
     fixed_versions: vers:nuget/14.10.3
     fixed_in_commits: []
@@ -59,7 +39,34 @@ impacted_packages:
     fixed_versions: vers:nuget/14.10.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q8-x86
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-AnyCPU
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/imagemagick/imagemagick
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/imagemagick/imagemagick
+        commit: 5b91ab69af614024255fd93dcc9a62b41fbc435c
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-x64
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-x86
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-x86
     affected_versions: vers:nuget/<14.10.3
     fixed_versions: vers:nuget/14.10.3
     fixed_in_commits: []
@@ -109,23 +116,16 @@ impacted_packages:
     fixed_versions: vers:nuget/14.10.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/imagemagick/imagemagick
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/imagemagick/imagemagick
-        commit: 5b91ab69af614024255fd93dcc9a62b41fbc435c
-    introduced_in_commits: []
 severities:
   - score: '3.7'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-273h-m46v-96q4/GHSA-273h-m46v-96q4.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-190

@@ -89,11 +89,6 @@ summary: |
   ## Impact
   High-confidence runtime protection bypass for applications that trust `always_check_safety()` as global guard.
 impacted_packages:
-  - purl: pkg:pypi/fickling
-    affected_versions: vers:pypi/<=0.1.8
-    fixed_versions: vers:pypi/0.1.9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/trailofbits/fickling
     affected_versions:
     fixed_versions:
@@ -101,16 +96,21 @@ impacted_packages:
       - vcs_url: https://github.com/trailofbits/fickling
         commit: 8c24c6edabceab156cfd41f4d70b650e1cdad1f7
     introduced_in_commits: []
+  - purl: pkg:pypi/fickling
+    affected_versions: vers:pypi/<=0.1.8
+    fixed_versions: vers:pypi/0.1.9
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.9'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-wccx-j62j-r448/GHSA-wccx-j62j-r448.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-693

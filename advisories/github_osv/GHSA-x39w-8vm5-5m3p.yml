@@ -26,6 +26,13 @@ summary: "Sandbox escape via infinite recursion and error objects\n**Note:** The
   )();\n`);\n\n```\n### Impact\nSandbox escape and potential other escalations on FrontMCP/AgentFront/other\
   \ Frontegg products."
 impacted_packages:
+  - purl: pkg:github/agentfront/enclave
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/agentfront/enclave
+        commit: 2fcf5da81e7e2578ede6f94cae4f379165426dca
+    introduced_in_commits: []
   - purl: pkg:npm/enclave-vm
     affected_versions: vers:npm/<=2.7.0
     fixed_versions:
@@ -36,23 +43,16 @@ impacted_packages:
     fixed_versions: vers:npm/2.10.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/agentfront/enclave
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/agentfront/enclave
-        commit: 2fcf5da81e7e2578ede6f94cae4f379165426dca
-    introduced_in_commits: []
 severities:
   - score: '6.4'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:H/SI:H/SA:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-x39w-8vm5-5m3p/GHSA-x39w-8vm5-5m3p.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-835

@@ -34,11 +34,6 @@ summary: "LibreNMS: SQL Injection in ajax_table.php spreads through a covert dat
   Host: localhost\nid=address-search&search_type=ipv6&address=snow/1nd'\" \n```\n### Impact\n\
   This vulnerability allows an attacker to execute arbitrary SQL queries against the database."
 impacted_packages:
-  - purl: pkg:composer/librenms/librenms
-    affected_versions: vers:composer/<26.2.0
-    fixed_versions: vers:composer/26.2.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/librenms/librenms
     affected_versions:
     fixed_versions:
@@ -46,11 +41,16 @@ impacted_packages:
       - vcs_url: https://github.com/librenms/librenms
         commit: 15429580baba03ed1dd377bada1bde4b7a1175a1
     introduced_in_commits: []
+  - purl: pkg:composer/librenms/librenms
+    affected_versions: vers:composer/<26.2.0
+    fixed_versions: vers:composer/26.2.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-89

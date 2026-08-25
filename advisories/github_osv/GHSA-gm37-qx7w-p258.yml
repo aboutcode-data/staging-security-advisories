@@ -19,10 +19,42 @@ summary: "ImageMagick: Possible memory leak in ASHLAR encoder\nA memory leak in 
   \ rerun with: -s\n==880062== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)\n\
   ```"
 impacted_packages:
+  - purl: pkg:nuget/Magick.NET-Q8-OpenMP-x64
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-OpenMP-x86
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-HDRI-x86
     affected_versions: vers:nuget/<14.10.3
     fixed_versions: vers:nuget/14.10.3
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-OpenMP-x64
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q8-x86
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-x86
+    affected_versions: vers:nuget/<14.10.3
+    fixed_versions: vers:nuget/14.10.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/imagemagick/imagemagick
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/imagemagick/imagemagick
+        commit: 30ce0e8efbd72fd6b50ed3a10ae22f57c8901137
     introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
     affected_versions: vers:nuget/<14.10.3
@@ -39,17 +71,7 @@ impacted_packages:
     fixed_versions: vers:nuget/14.10.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-OpenMP-x86
-    affected_versions: vers:nuget/<14.10.3
-    fixed_versions: vers:nuget/14.10.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-x64
-    affected_versions: vers:nuget/<14.10.3
-    fixed_versions: vers:nuget/14.10.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-x86
     affected_versions: vers:nuget/<14.10.3
     fixed_versions: vers:nuget/14.10.3
     fixed_in_commits: []
@@ -64,17 +86,7 @@ impacted_packages:
     fixed_versions: vers:nuget/14.10.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q8-x86
-    affected_versions: vers:nuget/<14.10.3
-    fixed_versions: vers:nuget/14.10.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-HDRI-OpenMP-arm64
-    affected_versions: vers:nuget/<14.10.3
-    fixed_versions: vers:nuget/14.10.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-HDRI-OpenMP-x64
     affected_versions: vers:nuget/<14.10.3
     fixed_versions: vers:nuget/14.10.3
     fixed_in_commits: []
@@ -104,33 +116,21 @@ impacted_packages:
     fixed_versions: vers:nuget/14.10.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q8-OpenMP-x64
-    affected_versions: vers:nuget/<14.10.3
-    fixed_versions: vers:nuget/14.10.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q8-arm64
     affected_versions: vers:nuget/<14.10.3
     fixed_versions: vers:nuget/14.10.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/imagemagick/imagemagick
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/imagemagick/imagemagick
-        commit: 30ce0e8efbd72fd6b50ed3a10ae22f57c8901137
-    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-gm37-qx7w-p258/GHSA-gm37-qx7w-p258.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-401

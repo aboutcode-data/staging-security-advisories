@@ -53,11 +53,6 @@ summary: |
   doc.addMetadata(input)
   ```
 impacted_packages:
-  - purl: pkg:npm/jspdf
-    affected_versions: vers:npm/<=4.0.0
-    fixed_versions: vers:npm/4.1.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/parallax/jspdf
     affected_versions:
     fixed_versions:
@@ -65,16 +60,21 @@ impacted_packages:
       - vcs_url: https://github.com/parallax/jspdf
         commit: efe54bf50f3f5e5416b2495e3c24624fc80b6cff
     introduced_in_commits: []
+  - purl: pkg:npm/jspdf
+    affected_versions: vers:npm/<=4.0.0
+    fixed_versions: vers:npm/4.1.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.9'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:L/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-vm32-vv63-w422/GHSA-vm32-vv63-w422.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-20

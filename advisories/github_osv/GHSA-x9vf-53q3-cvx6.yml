@@ -7,11 +7,6 @@ summary: |
   CASL Ability is Vulnerable to Prototype Pollution
   CASL Ability, versions 2.4.0 through 6.7.4, contains a prototype pollution vulnerability.
 impacted_packages:
-  - purl: pkg:npm/%40casl/ability
-    affected_versions: vers:npm/<=6.7.4
-    fixed_versions: vers:npm/6.7.5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/stalniy/casl
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/stalniy/casl
         commit: 39da920ec1dfadf3655e28bd0389e960ac6871f4
     introduced_in_commits: []
+  - purl: pkg:npm/%40casl/ability
+    affected_versions: vers:npm/<=6.7.4
+    fixed_versions: vers:npm/6.7.5
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-x9vf-53q3-cvx6/GHSA-x9vf-53q3-cvx6.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-1321

@@ -75,11 +75,6 @@ summary: |
   ### Fixes
   * See [#6475](https://github.com/pmd/pmd/issues/6475): \[core] Fix stored XSS in VBHTMLRenderer and YAHTMLRenderer
 impacted_packages:
-  - purl: pkg:maven/net.sourceforge.pmd/pmd-core
-    affected_versions: vers:maven/<=7.21.0
-    fixed_versions: vers:maven/7.22.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/pmd/pmd
     affected_versions:
     fixed_versions:
@@ -87,16 +82,21 @@ impacted_packages:
       - vcs_url: https://github.com/pmd/pmd
         commit: c140c0e1de5853a08efb84c9f91dfeb015882442
     introduced_in_commits: []
+  - purl: pkg:maven/net.sourceforge.pmd/pmd-core
+    affected_versions: vers:maven/<=7.21.0
+    fixed_versions: vers:maven/7.22.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-8rr6-2qw5-pc7r/GHSA-8rr6-2qw5-pc7r.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

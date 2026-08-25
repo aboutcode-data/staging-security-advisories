@@ -7,6 +7,15 @@ summary: |
   Moodle Inserts Sensitive Information Into Sent Data
   A flaw was found in moodle. During anonymous assignment submissions, user identifiers were inadvertently exposed in URLs. This data exposure allows unauthorized viewers to see internal user IDs, compromising the intended anonymity and potentially leading to information disclosure.
 impacted_packages:
+  - purl: pkg:github/moodle/moodle
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/moodle/moodle
+        commit: ac30e7e19357f696979b7ffd760a7131b6ad88f6
+      - vcs_url: https://github.com/moodle/moodle
+        commit: c6cb8d971257c04a12a2c5d8510a89cb906f46f0
+    introduced_in_commits: []
   - purl: pkg:composer/moodle/moodle
     affected_versions: vers:composer/<4.1.22
     fixed_versions: vers:composer/4.1.22
@@ -32,25 +41,16 @@ impacted_packages:
     fixed_versions: vers:composer/5.1.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/moodle/moodle
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/moodle/moodle
-        commit: ac30e7e19357f696979b7ffd760a7131b6ad88f6
-      - vcs_url: https://github.com/moodle/moodle
-        commit: c6cb8d971257c04a12a2c5d8510a89cb906f46f0
-    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-8jrv-wx83-w3xj/GHSA-8jrv-wx83-w3xj.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-201

@@ -11,11 +11,6 @@ summary: |
 
   `send_from_directory` uses `safe_join` to safely serve files at user-specified paths under a directory. If the application is running on Windows, and the requested path ends with a special device name, the file will be opened successfully, but reading will hang indefinitely.
 impacted_packages:
-  - purl: pkg:pypi/werkzeug
-    affected_versions: vers:pypi/<3.1.6
-    fixed_versions: vers:pypi/3.1.6
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/pallets/werkzeug
     affected_versions:
     fixed_versions:
@@ -23,16 +18,21 @@ impacted_packages:
       - vcs_url: https://github.com/pallets/werkzeug
         commit: f407712fdc60a09c2b3f4fe7db557703e5d9338d
     introduced_in_commits: []
+  - purl: pkg:pypi/werkzeug
+    affected_versions: vers:pypi/<3.1.6
+    fixed_versions: vers:pypi/3.1.6
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-29vq-49wr-vm6x/GHSA-29vq-49wr-vm6x.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-67

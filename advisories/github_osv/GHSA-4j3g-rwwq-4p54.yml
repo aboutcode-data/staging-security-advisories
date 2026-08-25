@@ -12,25 +12,25 @@ summary: |
   Neo4j recommends upgrading to versions 2026.01.3 (or 5.26.21) where the issue is fixed, and reviewing query log files permissions to ensure restricted access. If a project's configuration had db.logs.query.obfuscate_literals enabled, and users wish for the obfuscation to cover the error messages as well, theyneed to enable the new configuration setting db.logs.query.obfuscate_errors once they have upgraded Neo4j.
 impacted_packages:
   - purl: pkg:maven/org.neo4j/neo4j
-    affected_versions: vers:maven/<5.26.21
-    fixed_versions: vers:maven/5.26.21
+    affected_versions: vers:maven/>=2025.01.0|<2026.01.3
+    fixed_versions: vers:maven/2026.01.3
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.neo4j/neo4j
-    affected_versions: vers:maven/>=2025.01.0|<2026.01.3
-    fixed_versions: vers:maven/2026.01.3
+    affected_versions: vers:maven/<5.26.21
+    fixed_versions: vers:maven/5.26.21
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '4.8'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-4j3g-rwwq-4p54/GHSA-4j3g-rwwq-4p54.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-532

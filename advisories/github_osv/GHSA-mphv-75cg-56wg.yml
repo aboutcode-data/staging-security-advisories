@@ -52,11 +52,6 @@ summary: |
   - Original SSRF fix (CVE-2026-26019): enforced origin comparison and added initial URL validation
   - https://github.com/langchain-ai/langchainjs/security/advisories/GHSA-gf3v-fwqg-4vh7
 impacted_packages:
-  - purl: pkg:npm/%40langchain/community
-    affected_versions: vers:npm/<=1.1.17
-    fixed_versions: vers:npm/1.1.18
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/langchain-ai/langchainjs
     affected_versions:
     fixed_versions:
@@ -66,16 +61,21 @@ impacted_packages:
       - vcs_url: https://github.com/langchain-ai/langchainjs
         commit: 2812d2b2b9fd9343c4850e2ab906b8cf440975ee
     introduced_in_commits: []
+  - purl: pkg:npm/%40langchain/community
+    affected_versions: vers:npm/<=1.1.17
+    fixed_versions: vers:npm/1.1.18
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-mphv-75cg-56wg/GHSA-mphv-75cg-56wg.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-918

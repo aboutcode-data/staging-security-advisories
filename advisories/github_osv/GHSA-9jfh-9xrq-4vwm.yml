@@ -70,11 +70,6 @@ summary: |
 
   Argument injection: a single untrusted argument expands into multiple pathname matches from the trusted filesystem. This can change command behavior, target unintended files, or leak filenames. Any application calling `Shescape#escape()` with Bash/BusyBox/Dash shells and interpolating the result into a shell command string is affected.
 impacted_packages:
-  - purl: pkg:npm/shescape
-    affected_versions: vers:npm/<2.1.10
-    fixed_versions: vers:npm/2.1.10
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/ericcornelissen/shescape
     affected_versions:
     fixed_versions:
@@ -82,16 +77,21 @@ impacted_packages:
       - vcs_url: https://github.com/ericcornelissen/shescape
         commit: 6add105c6f6b508662bb5ae3b3bdd4c9bcebf37a
     introduced_in_commits: []
+  - purl: pkg:npm/shescape
+    affected_versions: vers:npm/<2.1.10
+    fixed_versions: vers:npm/2.1.10
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.9'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-9jfh-9xrq-4vwm/GHSA-9jfh-9xrq-4vwm.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

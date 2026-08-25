@@ -7,6 +7,13 @@ summary: |
   Moodle has an authorization logic flaw
   A flaw was found in Moodle. An authorization logic flaw, specifically due to incomplete role checks during the badge awarding process, allowed badges to be granted without proper verification. This could enable unauthorized users to obtain badges they are not entitled to, potentially leading to privilege escalation or unauthorized access to certain features.
 impacted_packages:
+  - purl: pkg:github/moodle/moodle
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/moodle/moodle
+        commit: 0d48779e61bcacbabbcb82858a037b567351fce0
+    introduced_in_commits: []
   - purl: pkg:composer/moodle/moodle
     affected_versions: vers:composer/<4.1.22
     fixed_versions: vers:composer/4.1.22
@@ -32,23 +39,16 @@ impacted_packages:
     fixed_versions: vers:composer/5.1.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/moodle/moodle
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/moodle/moodle
-        commit: 0d48779e61bcacbabbcb82858a037b567351fce0
-    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-hcm6-q6pc-xfhm/GHSA-hcm6-q6pc-xfhm.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-863

@@ -62,11 +62,6 @@ summary: "Fabric.js Affected by Stored XSS via SVG Export\nfabric.js applies `es
   \ | Yes |\n| `src/gradient/Gradient.ts` | User-supplied `id` prefix interpolated unescaped\
   \ | `toSVG()` | Yes (partial - uid suffix appended) |"
 impacted_packages:
-  - purl: pkg:npm/fabric
-    affected_versions: vers:npm/<7.2.0
-    fixed_versions: vers:npm/7.2.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/fabricjs/fabric.js
     affected_versions:
     fixed_versions:
@@ -74,16 +69,21 @@ impacted_packages:
       - vcs_url: https://github.com/fabricjs/fabric.js
         commit: 7e1a122defd8feefe4eb7eaf0c180d7b0aeb6fee
     introduced_in_commits: []
+  - purl: pkg:npm/fabric
+    affected_versions: vers:npm/<7.2.0
+    fixed_versions: vers:npm/7.2.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.6'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-hfvx-25r5-qc3w/GHSA-hfvx-25r5-qc3w.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-116
