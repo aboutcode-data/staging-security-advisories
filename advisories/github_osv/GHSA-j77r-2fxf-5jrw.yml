@@ -13,13 +13,6 @@ summary: |
 
   Automated tooling (e.g. conftest) could be employed as a workaround, as part of a user's CI/CD pipeline to ensure that their `kustomization.yaml` files conform with specific policies, blocking access to sensitive path locations.
 impacted_packages:
-  - purl: pkg:github/fluxcd/pkg
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/fluxcd/pkg
-        commit: 0ec014baf417fd3879d366a45503a548b9267d2a
-    introduced_in_commits: []
   - purl: pkg:github/fluxcd/kustomize-controller
     affected_versions:
     fixed_versions:
@@ -27,16 +20,23 @@ impacted_packages:
       - vcs_url: https://github.com/fluxcd/kustomize-controller
         commit: f4528fb25d611da94e491346bea056d5c5c3611f
     introduced_in_commits: []
+  - purl: pkg:github/fluxcd/pkg
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/fluxcd/pkg
+        commit: 0ec014baf417fd3879d366a45503a548b9267d2a
+    introduced_in_commits: []
 severities:
   - score: '9.9'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-j77r-2fxf-5jrw/GHSA-j77r-2fxf-5jrw.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

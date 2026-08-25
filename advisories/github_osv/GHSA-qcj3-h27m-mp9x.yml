@@ -8,13 +8,13 @@ summary: |
   In a default Red Hat Openstack Platform Director installation, openstack-octavia before versions openstack-octavia 2.0.2-5 and openstack-octavia-3.0.1-0.20181009115732 creates log files that are readable by all users. Sensitive information such as private keys can appear in these log files allowing for information exposure.
 impacted_packages:
   - purl: pkg:pypi/octavia
-    affected_versions: vers:pypi/<2.1.0
-    fixed_versions: vers:pypi/2.1.0
+    affected_versions: vers:pypi/>=3.0.0.0b1|<3.1.0
+    fixed_versions: vers:pypi/3.1.0
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/octavia
-    affected_versions: vers:pypi/>=3.0.0.0b1|<3.1.0
-    fixed_versions: vers:pypi/3.1.0
+    affected_versions: vers:pypi/<2.1.0
+    fixed_versions: vers:pypi/2.1.0
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/openstack/octavia
@@ -26,19 +26,19 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '7.5'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-qcj3-h27m-mp9x/GHSA-qcj3-h27m-mp9x.json
   - score: '8.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-qcj3-h27m-mp9x/GHSA-qcj3-h27m-mp9x.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-532

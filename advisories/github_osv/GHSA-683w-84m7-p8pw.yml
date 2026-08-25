@@ -7,6 +7,15 @@ summary: |
   Plone User account enumeration via crafted URL
   membership_tool.py in Plone before 4.2.3 and 4.3 before beta 1 allows remote attackers to enumerate user account names via a crafted URL.
 impacted_packages:
+  - purl: pkg:github/plone/products.cmfplone
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/plone/products.cmfplone
+        commit: a9479a5b38646fe0b0a9066ee46de9c18de32bfa
+      - vcs_url: https://github.com/plone/products.cmfplone
+        commit: c3a98f4e6cf26501485de9c8354c49afdea21df8
+    introduced_in_commits: []
   - purl: pkg:pypi/plone
     affected_versions: vers:pypi/<4.2.3
     fixed_versions: vers:pypi/4.2.3
@@ -17,30 +26,21 @@ impacted_packages:
     fixed_versions: vers:pypi/4.3b1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/plone/products.cmfplone
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/plone/products.cmfplone
-        commit: a9479a5b38646fe0b0a9066ee46de9c18de32bfa
-      - vcs_url: https://github.com/plone/products.cmfplone
-        commit: c3a98f4e6cf26501485de9c8354c49afdea21df8
-    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-683w-84m7-p8pw/GHSA-683w-84m7-p8pw.json
   - score: '6.9'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-683w-84m7-p8pw/GHSA-683w-84m7-p8pw.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

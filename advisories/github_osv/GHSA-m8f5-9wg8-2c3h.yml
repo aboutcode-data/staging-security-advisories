@@ -7,26 +7,6 @@ summary: |
   Moodle multiple cross-site scripting (XSS) vulnerabilities
   Multiple cross-site scripting (XSS) vulnerabilities in the advanced-grading implementation in Moodle through 2.3.11, 2.4.x before 2.4.11, 2.5.x before 2.5.7, 2.6.x before 2.6.4, and 2.7.x before 2.7.1 allow remote authenticated users to inject arbitrary web script or HTML via a crafted (1) qualification or (2) rating field in a rubric.
 impacted_packages:
-  - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/<2.4.11
-    fixed_versions: vers:composer/2.4.11
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/>=2.5.0|<2.5.7
-    fixed_versions: vers:composer/2.5.7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/>=2.6.0|<2.6.4
-    fixed_versions: vers:composer/2.6.4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/>=2.7.0|<2.7.1
-    fixed_versions: vers:composer/2.7.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/moodle/moodle
     affected_versions:
     fixed_versions:
@@ -66,11 +46,31 @@ impacted_packages:
       - vcs_url: https://github.com/moodle/moodle
         commit: 68299e6154ae41b7e586904fd1b860cad7f65654
     introduced_in_commits: []
+  - purl: pkg:composer/moodle/moodle
+    affected_versions: vers:composer/<2.4.11
+    fixed_versions: vers:composer/2.4.11
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/moodle/moodle
+    affected_versions: vers:composer/>=2.5.0|<2.5.7
+    fixed_versions: vers:composer/2.5.7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/moodle/moodle
+    affected_versions: vers:composer/>=2.6.0|<2.6.4
+    fixed_versions: vers:composer/2.6.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/moodle/moodle
+    affected_versions: vers:composer/>=2.7.0|<2.7.1
+    fixed_versions: vers:composer/2.7.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

@@ -7,11 +7,6 @@ summary: |
   Nokogiri Implements libxml2 version vulnerable to use-after-free
   There's a flaw in libxml2 in versions before 2.9.11. An attacker who is able to submit a crafted file to be processed by an application linked with libxml2 could trigger a use-after-free. The greatest impact from this flaw is to confidentiality, integrity, and availability.
 impacted_packages:
-  - purl: pkg:gem/nokogiri
-    affected_versions: vers:gem/<1.11.4
-    fixed_versions: vers:gem/1.11.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/sparklemotion/nokogiri
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/sparklemotion/nokogiri
         commit: 2edbbef95f1dc12c1ddc5ebda71b9159026245fe
     introduced_in_commits: []
+  - purl: pkg:gem/nokogiri
+    affected_versions: vers:gem/<1.11.4
+    fixed_versions: vers:gem/1.11.4
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-v4f8-2847-rwm7/GHSA-v4f8-2847-rwm7.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-416

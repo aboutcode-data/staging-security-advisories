@@ -27,13 +27,6 @@ impacted_packages:
     fixed_versions: vers:maven/7.0.79
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/apache/tomcat80
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/apache/tomcat80
-        commit: f52c242d92d4563dd1226dcc993ec37370ba9ce3
-    introduced_in_commits: []
   - purl: pkg:github/apache/tomcat
     affected_versions:
     fixed_versions:
@@ -45,16 +38,23 @@ impacted_packages:
       - vcs_url: https://github.com/apache/tomcat
         commit: 52382ebfbce20a98b01cd9d37184a12703987a5a
     introduced_in_commits: []
+  - purl: pkg:github/apache/tomcat80
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/tomcat80
+        commit: f52c242d92d4563dd1226dcc993ec37370ba9ce3
+    introduced_in_commits: []
 severities:
   - score: '4.3'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-73rx-3f9r-x949/GHSA-73rx-3f9r-x949.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-345

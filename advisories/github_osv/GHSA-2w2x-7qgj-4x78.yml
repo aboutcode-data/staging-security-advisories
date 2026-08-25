@@ -7,16 +7,6 @@ summary: |
   Magento stored cross-site scripting vulnerability
   Magento versions 2.3.4 and earlier, 2.2.11 and earlier (see note), 1.14.4.4 and earlier, and 1.9.4.4 and earlier have a stored cross-site scripting vulnerability. Successful exploitation could lead to sensitive information disclosure.
 impacted_packages:
-  - purl: pkg:composer/magento/core
-    affected_versions: vers:composer/<1.9.4+5
-    fixed_versions: vers:composer/1.9.4+5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/magento/community-edition
-    affected_versions: vers:composer/<=2.2.11
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:composer/magento/community-edition
     affected_versions: vers:composer/>=2.3.0|<2.3.4-p2
     fixed_versions: vers:composer/2.3.4-p2
@@ -24,6 +14,16 @@ impacted_packages:
     introduced_in_commits: []
   - purl: pkg:composer/magento/project-community-edition
     affected_versions: vers:composer/<=2.0.2
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/magento/core
+    affected_versions: vers:composer/<1.9.4+5
+    fixed_versions: vers:composer/1.9.4+5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/magento/community-edition
+    affected_versions: vers:composer/<=2.2.11
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
@@ -38,12 +38,12 @@ severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-2w2x-7qgj-4x78/GHSA-2w2x-7qgj-4x78.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

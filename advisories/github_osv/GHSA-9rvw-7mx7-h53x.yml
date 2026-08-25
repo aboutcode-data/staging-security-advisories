@@ -9,11 +9,6 @@ summary: |
 
   Database Plugin 1.7 requires POST requests for the affected form validation method.
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins/database
-    affected_versions: vers:maven/<=1.6
-    fixed_versions: vers:maven/1.7
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/database-plugin
     affected_versions:
     fixed_versions:
@@ -21,16 +16,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/database-plugin
         commit: 7a438d96897af0034cb2e06db0819ca4595c24cb
     introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/database
+    affected_versions: vers:maven/<=1.6
+    fixed_versions: vers:maven/1.7
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-9rvw-7mx7-h53x/GHSA-9rvw-7mx7-h53x.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-352

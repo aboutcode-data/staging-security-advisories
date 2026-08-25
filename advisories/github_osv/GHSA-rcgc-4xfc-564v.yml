@@ -7,9 +7,9 @@ summary: |
   TYPO3 Insecure Deserialization in Query Generator & Query View
   An issue was discovered in TYPO3 before 8.7.30, 9.x before 9.5.12, and 10.x before 10.2.2. It has been discovered that the classes QueryGenerator and QueryView are vulnerable to insecure deserialization. One exploitable scenario requires having the system extension ext:lowlevel (Backend Module: DB Check) installed, with a valid backend user who has administrator privileges. The other exploitable scenario requires having the system extension ext:sys_action installed, with a valid backend user who has limited privileges.
 impacted_packages:
-  - purl: pkg:composer/typo3/cms-core
-    affected_versions: vers:composer/>=10.0.0|<10.2.1
-    fixed_versions: vers:composer/10.2.1
+  - purl: pkg:composer/typo3/cms
+    affected_versions: vers:composer/>=9.0.0|<9.5.12
+    fixed_versions: vers:composer/9.5.12
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/typo3/cms-core
@@ -27,26 +27,26 @@ impacted_packages:
     fixed_versions: vers:composer/10.2.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/typo3/cms
-    affected_versions: vers:composer/>=8.0.0|<8.7.30
-    fixed_versions: vers:composer/8.7.30
+  - purl: pkg:composer/typo3/cms-core
+    affected_versions: vers:composer/>=10.0.0|<10.2.1
+    fixed_versions: vers:composer/10.2.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/typo3/cms
-    affected_versions: vers:composer/>=9.0.0|<9.5.12
-    fixed_versions: vers:composer/9.5.12
+    affected_versions: vers:composer/>=8.0.0|<8.7.30
+    fixed_versions: vers:composer/8.7.30
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '8.8'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-rcgc-4xfc-564v/GHSA-rcgc-4xfc-564v.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-502

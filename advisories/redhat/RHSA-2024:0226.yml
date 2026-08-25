@@ -35,6 +35,21 @@ summary: |
 
   * In the previous release in October 2023 (8u392), the RPMs were changed to use Provides for java, jre, java-headless, jre-headless, java-devel and java-sdk which included the full RPM version. This prevented the Provides being used to resolve a dependency on Java 1.8.0 (for example, "Requires: java-headless 1:1.8.0"). This change has now been reverted to the old "1:1.8.0" value. (RHEL-19635)
 impacted_packages:
+  - purl: pkg:rpm/redhat/java-1.8.0-openjdk-devel?arch=ppc64le&epoch=1
+    affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
+    fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-1.8.0-openjdk-accessibility-fastdebug?arch=x86_64&epoch=1
+    affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
+    fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-1.8.0-openjdk-demo-debuginfo?arch=x86_64&epoch=1
+    affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
+    fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/java-1.8.0-openjdk-accessibility-fastdebug?arch=aarch64&epoch=1
     affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
     fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
@@ -76,11 +91,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/java-1.8.0-openjdk-headless-slowdebug?arch=aarch64&epoch=1
-    affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
-    fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-1.8.0-openjdk-slowdebug?arch=aarch64&epoch=1
     affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
     fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
     fixed_in_commits: []
@@ -145,11 +155,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-1.8.0-openjdk-headless-fastdebug-debuginfo?arch=aarch64&epoch=1
-    affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
-    fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/java-1.8.0-openjdk-headless-slowdebug-debuginfo?arch=aarch64&epoch=1
     affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
     fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
@@ -200,22 +205,12 @@ impacted_packages:
     fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-1.8.0-openjdk-demo-fastdebug?arch=ppc64le&epoch=1
-    affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
-    fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/java-1.8.0-openjdk-demo-slowdebug?arch=ppc64le&epoch=1
     affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
     fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/java-1.8.0-openjdk-devel-fastdebug?arch=ppc64le&epoch=1
-    affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
-    fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-1.8.0-openjdk-devel-slowdebug?arch=ppc64le&epoch=1
     affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
     fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
     fixed_in_commits: []
@@ -231,11 +226,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/java-1.8.0-openjdk-headless-slowdebug?arch=ppc64le&epoch=1
-    affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
-    fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-1.8.0-openjdk-slowdebug?arch=ppc64le&epoch=1
     affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
     fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
     fixed_in_commits: []
@@ -330,22 +320,12 @@ impacted_packages:
     fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-1.8.0-openjdk-devel?arch=ppc64le&epoch=1
-    affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
-    fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/java-1.8.0-openjdk-headless?arch=ppc64le&epoch=1
     affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
     fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/java-1.8.0-openjdk-src?arch=ppc64le&epoch=1
-    affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
-    fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-1.8.0-openjdk-accessibility-fastdebug?arch=x86_64&epoch=1
     affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
     fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
     fixed_in_commits: []
@@ -385,37 +365,12 @@ impacted_packages:
     fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-1.8.0-openjdk-headless-slowdebug?arch=x86_64&epoch=1
-    affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
-    fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-1.8.0-openjdk-slowdebug?arch=x86_64&epoch=1
-    affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
-    fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/java-1.8.0-openjdk-src-fastdebug?arch=x86_64&epoch=1
     affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
     fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-1.8.0-openjdk-src-slowdebug?arch=x86_64&epoch=1
-    affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
-    fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-1.8.0-openjdk-debugsource?arch=x86_64&epoch=1
-    affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
-    fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/java-1.8.0-openjdk-debuginfo?arch=x86_64&epoch=1
-    affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
-    fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-1.8.0-openjdk-demo-debuginfo?arch=x86_64&epoch=1
     affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
     fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
     fixed_in_commits: []
@@ -480,22 +435,7 @@ impacted_packages:
     fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-1.8.0-openjdk-demo?arch=x86_64&epoch=1
-    affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
-    fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/java-1.8.0-openjdk-devel?arch=x86_64&epoch=1
-    affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
-    fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-1.8.0-openjdk-headless?arch=x86_64&epoch=1
-    affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
-    fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-1.8.0-openjdk-src?arch=x86_64&epoch=1
     affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
     fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
     fixed_in_commits: []
@@ -516,11 +456,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/java-1.8.0-openjdk-demo?arch=s390x&epoch=1
-    affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
-    fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/java-1.8.0-openjdk-devel?arch=s390x&epoch=1
     affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
     fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
     fixed_in_commits: []
@@ -555,6 +490,71 @@ impacted_packages:
     fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-1.8.0-openjdk-demo?arch=x86_64&epoch=1
+    affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
+    fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-1.8.0-openjdk-slowdebug?arch=aarch64&epoch=1
+    affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
+    fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-1.8.0-openjdk-headless-fastdebug-debuginfo?arch=aarch64&epoch=1
+    affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
+    fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-1.8.0-openjdk-demo-fastdebug?arch=ppc64le&epoch=1
+    affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
+    fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-1.8.0-openjdk-devel-slowdebug?arch=ppc64le&epoch=1
+    affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
+    fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-1.8.0-openjdk-slowdebug?arch=ppc64le&epoch=1
+    affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
+    fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-1.8.0-openjdk-headless-slowdebug?arch=x86_64&epoch=1
+    affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
+    fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-1.8.0-openjdk-slowdebug?arch=x86_64&epoch=1
+    affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
+    fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-1.8.0-openjdk-src-slowdebug?arch=x86_64&epoch=1
+    affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
+    fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-1.8.0-openjdk-debugsource?arch=x86_64&epoch=1
+    affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
+    fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-1.8.0-openjdk-headless?arch=x86_64&epoch=1
+    affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
+    fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-1.8.0-openjdk-src?arch=x86_64&epoch=1
+    affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
+    fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/java-1.8.0-openjdk-devel?arch=s390x&epoch=1
+    affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
+    fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/java-1.8.0-openjdk-headless-debuginfo?arch=s390x&epoch=1
     affected_versions: vers:rpm/<1.8.0.402.b06-1.el8_6
     fixed_versions: vers:rpm/1.8.0.402.b06-1.el8_6
@@ -574,7 +574,7 @@ severities:
   - score: Important
     scoring_system: rhas
     scoring_elements:
-    published_at: None
+    published_at:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2024_0226.json
 weaknesses: []
 references:

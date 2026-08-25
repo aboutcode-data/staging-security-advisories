@@ -7,19 +7,9 @@ summary: |
   phpCAS client library and Moodle Cross-site Scripting vulnerability
   Cross-site scripting (XSS) vulnerability in the phpCAS client library before 1.1.0, as used in Moodle 1.8.x before 1.8.12 and 1.9.x before 1.9.8, allows remote attackers to inject arbitrary web script or HTML via a crafted URL, which is not properly handled in an error message.
 impacted_packages:
-  - purl: pkg:composer/apereo/phpcas
-    affected_versions: vers:composer/<1.1.0
-    fixed_versions: vers:composer/1.1.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:composer/moodle/moodle
     affected_versions: vers:composer/>=1.8.0|<1.8.12
     fixed_versions: vers:composer/1.8.12
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/>=1.9.0|<1.9.8
-    fixed_versions: vers:composer/1.9.8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/apereo/phpcas
@@ -29,11 +19,21 @@ impacted_packages:
       - vcs_url: https://github.com/apereo/phpcas
         commit: 021633112198b37555b35340cde884d1016d9e47
     introduced_in_commits: []
+  - purl: pkg:composer/apereo/phpcas
+    affected_versions: vers:composer/<1.1.0
+    fixed_versions: vers:composer/1.1.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/moodle/moodle
+    affected_versions: vers:composer/>=1.9.0|<1.9.8
+    fixed_versions: vers:composer/1.9.8
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

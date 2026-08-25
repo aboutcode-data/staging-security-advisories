@@ -7,21 +7,6 @@ summary: |
   Apache Tomcat Denial of Service vulnerability
   Apache Tomcat before 6.0.39, 7.x before 7.0.50, and 8.x before 8.0.0-RC10 processes chunked transfer coding without properly handling (1) a large total amount of chunked data or (2) whitespace characters in an HTTP header value within a trailer field, which allows remote attackers to cause a denial of service by streaming data.  NOTE: this vulnerability exists because of an incomplete fix for CVE-2012-3544.
 impacted_packages:
-  - purl: pkg:maven/org.apache.tomcat/tomcat
-    affected_versions: vers:maven/<6.0.39
-    fixed_versions: vers:maven/6.0.39
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.tomcat/tomcat
-    affected_versions: vers:maven/>=7.0.0|<7.0.50
-    fixed_versions: vers:maven/7.0.50
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.tomcat/tomcat
-    affected_versions: vers:maven/>=8.0.0-RC1|<8.0.0-RC10
-    fixed_versions: vers:maven/8.0.0-RC10
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/apache/tomcat
     affected_versions:
     fixed_versions:
@@ -39,11 +24,26 @@ impacted_packages:
       - vcs_url: https://github.com/apache/tomcat
         commit: 72613a0e2f88af789c2acc7093c82ff02b95b6d1
     introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat/tomcat
+    affected_versions: vers:maven/<6.0.39
+    fixed_versions: vers:maven/6.0.39
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat/tomcat
+    affected_versions: vers:maven/>=7.0.0|<7.0.50
+    fixed_versions: vers:maven/7.0.50
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat/tomcat
+    affected_versions: vers:maven/>=8.0.0-RC1|<8.0.0-RC10
+    fixed_versions: vers:maven/8.0.0-RC10
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-400

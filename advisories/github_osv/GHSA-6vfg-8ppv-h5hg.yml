@@ -8,18 +8,13 @@ summary: |
   MediaWiki through 1.32.1 has Incorrect Access Control (issue 1 of 3). A spammer can use Special:ChangeEmail to send out spam with no rate limiting or ability to block them. Fixed in 1.32.2, 1.31.2, 1.30.2 and 1.27.6.
 impacted_packages:
   - purl: pkg:composer/mediawiki/core
-    affected_versions: vers:composer/<1.27.6
-    fixed_versions: vers:composer/1.27.6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/mediawiki/core
-    affected_versions: vers:composer/>=1.30.0|<1.30.2
-    fixed_versions: vers:composer/1.30.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/mediawiki/core
     affected_versions: vers:composer/>=1.31.0|<1.31.2
     fixed_versions: vers:composer/1.31.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/mediawiki/core
+    affected_versions: vers:composer/<1.27.6
+    fixed_versions: vers:composer/1.27.6
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/mediawiki/core
@@ -27,16 +22,21 @@ impacted_packages:
     fixed_versions: vers:composer/1.32.2
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:composer/mediawiki/core
+    affected_versions: vers:composer/>=1.30.0|<1.30.2
+    fixed_versions: vers:composer/1.30.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.3'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-6vfg-8ppv-h5hg/GHSA-6vfg-8ppv-h5hg.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-284

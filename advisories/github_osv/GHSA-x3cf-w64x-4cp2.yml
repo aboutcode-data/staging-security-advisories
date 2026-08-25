@@ -8,6 +8,21 @@ summary: |
   An issue was discovered in Symfony 2.7.x before 2.7.50, 2.8.x before 2.8.49, 3.x before 3.4.20, 4.0.x before 4.0.15, 4.1.x before 4.1.9, and 4.2.x before 4.2.1. When using the scalar type hint `string` in a setter method (e.g. `setName(string $name)`) of a class that's the `data_class` of a form, and when a file upload is submitted to the corresponding field instead of a normal text input, then `UploadedFile::__toString()` is called which will then return and disclose the path of the uploaded file. If combined with a local file inclusion issue in certain circumstances this could escalate it to a Remote Code Execution.
 impacted_packages:
   - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=4.0.0|<4.0.15
+    fixed_versions: vers:composer/4.0.15
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/form
+    affected_versions: vers:composer/>=3.0.0|<3.4.20
+    fixed_versions: vers:composer/3.4.20
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/form
+    affected_versions: vers:composer/>=2.8.0|<2.8.49
+    fixed_versions: vers:composer/2.8.49
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/symfony
     affected_versions: vers:composer/>=2.7.0|<2.7.50
     fixed_versions: vers:composer/2.7.50
     fixed_in_commits: []
@@ -22,17 +37,12 @@ impacted_packages:
     fixed_versions: vers:composer/3.4.20
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/symfony/symfony
+  - purl: pkg:composer/symfony/form
     affected_versions: vers:composer/>=4.0.0|<4.0.15
     fixed_versions: vers:composer/4.0.15
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/symfony/symfony
-    affected_versions: vers:composer/>=4.1.0|<4.1.9
-    fixed_versions: vers:composer/4.1.9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/symfony
+  - purl: pkg:composer/symfony/form
     affected_versions: vers:composer/>=4.2.0|<4.2.1
     fixed_versions: vers:composer/4.2.1
     fixed_in_commits: []
@@ -43,26 +53,16 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/form
-    affected_versions: vers:composer/>=2.8.0|<2.8.49
-    fixed_versions: vers:composer/2.8.49
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/form
-    affected_versions: vers:composer/>=3.0.0|<3.4.20
-    fixed_versions: vers:composer/3.4.20
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/form
-    affected_versions: vers:composer/>=4.0.0|<4.0.15
-    fixed_versions: vers:composer/4.0.15
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/form
     affected_versions: vers:composer/>=4.1.0|<4.1.9
     fixed_versions: vers:composer/4.1.9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/symfony/form
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=4.1.0|<4.1.9
+    fixed_versions: vers:composer/4.1.9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/symfony
     affected_versions: vers:composer/>=4.2.0|<4.2.1
     fixed_versions: vers:composer/4.2.1
     fixed_in_commits: []
@@ -76,14 +76,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '5.3'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-x3cf-w64x-4cp2/GHSA-x3cf-w64x-4cp2.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-434

@@ -8,13 +8,13 @@ summary: |
   The JAX-RS module in Apache CXF prior to 3.0.12 and 3.1.x prior to 3.1.9 provides a number of Atom JAX-RS MessageBodyReaders. These readers use Apache Abdera Parser which expands XML entities by default which represents a major XXE risk.
 impacted_packages:
   - purl: pkg:maven/org.apache.cxf/cxf-core
-    affected_versions: vers:maven/<=3.0.11
-    fixed_versions: vers:maven/3.0.12
+    affected_versions: vers:maven/<=3.1.8
+    fixed_versions: vers:maven/3.1.9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.cxf/cxf-core
-    affected_versions: vers:maven/<=3.1.8
-    fixed_versions: vers:maven/3.1.9
+    affected_versions: vers:maven/<=3.0.11
+    fixed_versions: vers:maven/3.0.12
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/apache/cxf
@@ -28,14 +28,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '7.5'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-x7xf-253v-x3w8/GHSA-x7xf-253v-x3w8.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-611

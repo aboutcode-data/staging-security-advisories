@@ -7,6 +7,13 @@ summary: |
   Denial of Service in Apache POI
   The UnhandledDataStructure function in hwpf/model/UnhandledDataStructure.java in Apache POI 3.8 and earlier allows remote attackers to cause a denial of service (OutOfMemoryError exception and possibly JVM destabilization) via a crafted length value in a Channel Definition Format (CDF) or Compound File Binary Format (CFBF) document.
 impacted_packages:
+  - purl: pkg:github/apache/poi
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/poi
+        commit: 25bc679244188d63de690354db0e3f301291e252
+    introduced_in_commits: []
   - purl: pkg:maven/org.apache.poi/poi
     affected_versions: vers:maven/<3.10-beta1
     fixed_versions: vers:maven/3.10-beta1
@@ -17,18 +24,11 @@ impacted_packages:
     fixed_versions: vers:maven/3.10-beta1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/apache/poi
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/apache/poi
-        commit: 25bc679244188d63de690354db0e3f301291e252
-    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-400

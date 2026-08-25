@@ -8,13 +8,13 @@ summary: |
   In Jenkins before versions 2.44 and 2.32.2, low privilege users were able to act on administrative monitors due to them not being consistently protected by permission checks (SECURITY-371).
 impacted_packages:
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
-    affected_versions: vers:maven/<=2.32.1
-    fixed_versions: vers:maven/2.32.2
+    affected_versions: vers:maven/<=2.43
+    fixed_versions: vers:maven/2.44
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
-    affected_versions: vers:maven/<=2.43
-    fixed_versions: vers:maven/2.44
+    affected_versions: vers:maven/<=2.32.1
+    fixed_versions: vers:maven/2.32.2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/jenkinsci/jenkins
@@ -26,14 +26,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '4.3'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-m93h-5qmx-pphg/GHSA-m93h-5qmx-pphg.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-287

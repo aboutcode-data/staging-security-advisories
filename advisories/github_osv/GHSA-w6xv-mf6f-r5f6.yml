@@ -7,11 +7,6 @@ summary: |
   Scalyr Agent Missing SSL Certificate Validation
   The Scalyr Agent before 2.1.10 has Missing SSL Certificate Validation because, in some circumstances, the openssl binary is called without the -verify_hostname option.
 impacted_packages:
-  - purl: pkg:pypi/scalyr-agent-2
-    affected_versions: vers:pypi/<2.1.10
-    fixed_versions: vers:pypi/2.1.10
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/scalyr/scalyr-agent-2
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/scalyr/scalyr-agent-2
         commit: 96d5f5bec734c7a0e7c64654cdb7aacc81fdc867
     introduced_in_commits: []
+  - purl: pkg:pypi/scalyr-agent-2
+    affected_versions: vers:pypi/<2.1.10
+    fixed_versions: vers:pypi/2.1.10
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-w6xv-mf6f-r5f6/GHSA-w6xv-mf6f-r5f6.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-295

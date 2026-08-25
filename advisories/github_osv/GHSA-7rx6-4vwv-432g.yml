@@ -12,13 +12,13 @@ summary: |
   Jenkins CloudBees CD Plugin requires Item/Build permission to schedule builds via its HTTP endpoint.
 impacted_packages:
   - purl: pkg:maven/org.jenkins-ci.plugins/electricflow
-    affected_versions: vers:maven/<1.1.18.1
-    fixed_versions: vers:maven/1.1.18.1
+    affected_versions: vers:maven/>=1.1.19|<1.1.22
+    fixed_versions: vers:maven/1.1.22
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.jenkins-ci.plugins/electricflow
-    affected_versions: vers:maven/>=1.1.19|<1.1.22
-    fixed_versions: vers:maven/1.1.22
+    affected_versions: vers:maven/<1.1.18.1
+    fixed_versions: vers:maven/1.1.18.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/jenkinsci/electricflow-plugin
@@ -32,12 +32,12 @@ severities:
   - score: '4.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-7rx6-4vwv-432g/GHSA-7rx6-4vwv-432g.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-862

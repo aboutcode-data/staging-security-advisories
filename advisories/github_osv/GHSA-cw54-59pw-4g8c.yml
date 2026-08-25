@@ -9,11 +9,6 @@ summary: "Apache Tomcat Improper Access Control vulnerability\nRemote code execu
   \ JMX ports. \nThe issue exists because this listener wasn't updated for consistency with\
   \ the CVE-2016-3427 Oracle patch that affected credential types."
 impacted_packages:
-  - purl: pkg:maven/org.apache.tomcat/tomcat-catalina
-    affected_versions: vers:maven/<6.0.48
-    fixed_versions: vers:maven/6.0.48
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat/tomcat-catalina-jmx-remote
     affected_versions: vers:maven/<6.0.48
     fixed_versions: vers:maven/6.0.48
@@ -45,6 +40,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat/tomcat-catalina
+    affected_versions: vers:maven/<6.0.48
+    fixed_versions: vers:maven/6.0.48
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat/tomcat-catalina
     affected_versions: vers:maven/>=8.0.0|<8.0.39
     fixed_versions: vers:maven/8.0.39
     fixed_in_commits: []
@@ -58,6 +58,13 @@ impacted_packages:
     affected_versions: vers:maven/>=9.0.0.M1|<9.0.0.M12
     fixed_versions: vers:maven/9.0.0.M12
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/apache/tomcat80
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/tomcat80
+        commit: 0f76016a4ec45635e450ada9c84ff7ee0c5f3799
     introduced_in_commits: []
   - purl: pkg:github/apache/tomcat
     affected_versions:
@@ -70,23 +77,16 @@ impacted_packages:
       - vcs_url: https://github.com/apache/tomcat
         commit: 7e3a037055cca4a17e90b49399fb1bab4dd7c821
     introduced_in_commits: []
-  - purl: pkg:github/apache/tomcat80
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/apache/tomcat80
-        commit: 0f76016a4ec45635e450ada9c84ff7ee0c5f3799
-    introduced_in_commits: []
 severities:
   - score: '9.8'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-cw54-59pw-4g8c/GHSA-cw54-59pw-4g8c.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-284

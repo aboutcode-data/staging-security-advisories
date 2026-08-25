@@ -9,11 +9,6 @@ summary: |
 
   The permission check was partially fixed in XebiaLabs XL Deploy Plugin 7.5.9: A permission check was added, but for the wrong permission, still allowing some non-admin users to access the form validation method.
 impacted_packages:
-  - purl: pkg:maven/com.xebialabs.deployit.ci/deployit-plugin
-    affected_versions: vers:maven/<=10.0.1
-    fixed_versions: vers:maven/10.0.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/xldeploy-plugin
     affected_versions:
     fixed_versions:
@@ -21,16 +16,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/xldeploy-plugin
         commit: 79ae204d2ee6cd94badf4c24a150cee13a3bde44
     introduced_in_commits: []
+  - purl: pkg:maven/com.xebialabs.deployit.ci/deployit-plugin
+    affected_versions: vers:maven/<=10.0.1
+    fixed_versions: vers:maven/10.0.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-jm4g-8rvq-v87j/GHSA-jm4g-8rvq-v87j.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-863

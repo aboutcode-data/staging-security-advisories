@@ -7,16 +7,6 @@ summary: |
   Moodle allows attacks to obtain sensitive information
   lib/phpunit/bootstrap.php in Moodle 2.6.x before 2.6.6 and 2.7.x before 2.7.3 allows remote attackers to obtain sensitive information via a direct request, which reveals the full path in an error message.
 impacted_packages:
-  - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/>=2.6.0|<2.6.6
-    fixed_versions: vers:composer/2.6.6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/>=2.7.0|<2.7.3
-    fixed_versions: vers:composer/2.7.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/moodle/moodle
     affected_versions:
     fixed_versions:
@@ -28,11 +18,21 @@ impacted_packages:
       - vcs_url: https://github.com/moodle/moodle
         commit: 84baa6b1417328ef7e4085d0112acc57167d15e4
     introduced_in_commits: []
+  - purl: pkg:composer/moodle/moodle
+    affected_versions: vers:composer/>=2.6.0|<2.6.6
+    fixed_versions: vers:composer/2.6.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/moodle/moodle
+    affected_versions: vers:composer/>=2.7.0|<2.7.3
+    fixed_versions: vers:composer/2.7.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

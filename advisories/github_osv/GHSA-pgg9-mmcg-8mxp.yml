@@ -7,11 +7,6 @@ summary: |
   MantisBT Incorrect Authorization in bug_actiongroup_page.php
   An issue was discovered in MantisBT before 2.24.4. Due to insufficient access-level checks, any logged-in user allowed to perform Group Actions can get access to the Summary fields of private Issues via bug_arr[]= in a crafted bug_actiongroup_page.php URL. (The target Issues can have Private view status, or belong to a private Project.)
 impacted_packages:
-  - purl: pkg:composer/mantisbt/mantisbt
-    affected_versions: vers:composer/<2.24.4
-    fixed_versions: vers:composer/2.24.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/mantisbt/mantisbt
     affected_versions:
     fixed_versions:
@@ -19,11 +14,16 @@ impacted_packages:
       - vcs_url: https://github.com/mantisbt/mantisbt
         commit: 9322c8c9f57fb72f3b8b033889a6a09c441d5be0
     introduced_in_commits: []
+  - purl: pkg:composer/mantisbt/mantisbt
+    affected_versions: vers:composer/<2.24.4
+    fixed_versions: vers:composer/2.24.4
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-863

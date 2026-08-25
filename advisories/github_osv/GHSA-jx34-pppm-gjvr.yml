@@ -8,11 +8,6 @@ summary: |
   Directory Traversal vulnerability in salt-api in SaltStack Salt 2016.11.x before 2016.11.10, 2017.7.x before 2017.7.8 and 2018.3.x before 2018.3.3 allows remote attackers to determine which files exist on the server.
 impacted_packages:
   - purl: pkg:pypi/salt
-    affected_versions: vers:pypi/>=2017.7.0|<2017.7.8
-    fixed_versions: vers:pypi/2017.7.8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/salt
     affected_versions: vers:pypi/>=2018.3.0|<2018.3.3
     fixed_versions: vers:pypi/2018.3.3
     fixed_in_commits: []
@@ -20,6 +15,11 @@ impacted_packages:
   - purl: pkg:pypi/salt
     affected_versions: vers:pypi/>=2016.11.0|<2016.11.10
     fixed_versions: vers:pypi/2016.11.10
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/salt
+    affected_versions: vers:pypi/>=2017.7.0|<2017.7.8
+    fixed_versions: vers:pypi/2017.7.8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/saltstack/salt
@@ -31,14 +31,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '5.3'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-jx34-pppm-gjvr/GHSA-jx34-pppm-gjvr.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

@@ -7,6 +7,21 @@ summary: |
   Symfony DoS
   An issue was discovered in the HttpFoundation component in Symfony 2.7.x before 2.7.48, 2.8.x before 2.8.41, 3.3.x before 3.3.17, 3.4.x before 3.4.11, and 4.0.x before 4.0.11. The PDOSessionHandler class allows storing sessions on a PDO connection. Under some configurations and with a well-crafted payload, it was possible to do a denial of service on a Symfony application without too much resources.
 impacted_packages:
+  - purl: pkg:composer/symfony/http-foundation
+    affected_versions: vers:composer/>=3.3.0|<3.3.17
+    fixed_versions: vers:composer/3.3.17
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=3.4.0|<3.4.11
+    fixed_versions: vers:composer/3.4.11
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/http-foundation
+    affected_versions: vers:composer/>=2.8.0|<2.8.41
+    fixed_versions: vers:composer/2.8.41
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:composer/symfony/symfony
     affected_versions: vers:composer/>=2.7.0|<2.7.48
     fixed_versions: vers:composer/2.7.48
@@ -20,11 +35,6 @@ impacted_packages:
   - purl: pkg:composer/symfony/symfony
     affected_versions: vers:composer/>=3.3.0|<3.3.17
     fixed_versions: vers:composer/3.3.17
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/symfony
-    affected_versions: vers:composer/>=3.4.0|<3.4.11
-    fixed_versions: vers:composer/3.4.11
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/symfony
@@ -35,16 +45,6 @@ impacted_packages:
   - purl: pkg:composer/symfony/http-foundation
     affected_versions: vers:composer/>=2.7.0|<2.7.48
     fixed_versions: vers:composer/2.7.48
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/http-foundation
-    affected_versions: vers:composer/>=2.8.0|<2.8.41
-    fixed_versions: vers:composer/2.8.41
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/http-foundation
-    affected_versions: vers:composer/>=3.3.0|<3.3.17
-    fixed_versions: vers:composer/3.3.17
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/http-foundation
@@ -59,14 +59,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '5.9'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-r2rq-3h56-fqm4/GHSA-r2rq-3h56-fqm4.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-613

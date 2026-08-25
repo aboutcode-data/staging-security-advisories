@@ -12,6 +12,27 @@ impacted_packages:
     fixed_versions: vers:pypi/7.0.0a0
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:github/openstack/neutron
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openstack/neutron
+        commit: 7255e056092f034daaeb4246a812900645d46911
+    introduced_in_commits: []
+  - purl: pkg:github/openstack/python-keystoneclient
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openstack/python-keystoneclient
+        commit: 20e166fd8a943ee3f91ba362a47e9c14c7cc5f4c
+    introduced_in_commits: []
+  - purl: pkg:github/openstack/keystone
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openstack/keystone
+        commit: 5bd4c2984d329625a2a8442b316fa235dbb88a3d
+    introduced_in_commits: []
   - purl: pkg:pypi/keystone
     affected_versions: vers:pypi/<8.0.0a0
     fixed_versions: vers:pypi/8.0.0a0
@@ -27,27 +48,6 @@ impacted_packages:
     fixed_versions: vers:pypi/7.0.0a0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/openstack/neutron
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/openstack/neutron
-        commit: 7255e056092f034daaeb4246a812900645d46911
-    introduced_in_commits: []
-  - purl: pkg:github/openstack/keystone
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/openstack/keystone
-        commit: 5bd4c2984d329625a2a8442b316fa235dbb88a3d
-    introduced_in_commits: []
-  - purl: pkg:github/openstack/python-keystoneclient
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/openstack/python-keystoneclient
-        commit: 20e166fd8a943ee3f91ba362a47e9c14c7cc5f4c
-    introduced_in_commits: []
   - purl: pkg:github/openstack/cinder
     affected_versions:
     fixed_versions:
@@ -59,12 +59,12 @@ severities:
   - score: '5.9'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-qh2x-hpf9-cf2g/GHSA-qh2x-hpf9-cf2g.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-295

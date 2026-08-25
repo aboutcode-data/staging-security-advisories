@@ -8,11 +8,6 @@ summary: |
   An issue was discovered in the Security component in Symfony 2.7.x before 2.7.48, 2.8.x before 2.8.41, 3.3.x before 3.3.17, 3.4.x before 3.4.11, and 4.0.x before 4.0.11. A session fixation vulnerability within the "Guard" login feature may allow an attacker to impersonate a victim towards the web application if the session id value was previously known to the attacker.
 impacted_packages:
   - purl: pkg:composer/symfony/symfony
-    affected_versions: vers:composer/>=2.7.0|<2.7.48
-    fixed_versions: vers:composer/2.7.48
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/symfony
     affected_versions: vers:composer/>=2.8.0|<2.8.41
     fixed_versions: vers:composer/2.8.41
     fixed_in_commits: []
@@ -20,6 +15,16 @@ impacted_packages:
   - purl: pkg:composer/symfony/symfony
     affected_versions: vers:composer/>=3.0.0|<3.3.17
     fixed_versions: vers:composer/3.3.17
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/security-http
+    affected_versions: vers:composer/>=2.8.0|<2.8.41
+    fixed_versions: vers:composer/2.8.41
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=2.7.0|<2.7.48
+    fixed_versions: vers:composer/2.7.48
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/symfony
@@ -38,23 +43,8 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/security-http
-    affected_versions: vers:composer/>=2.8.0|<2.8.41
-    fixed_versions: vers:composer/2.8.41
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/security-http
-    affected_versions: vers:composer/>=3.0.0|<3.3.17
-    fixed_versions: vers:composer/3.3.17
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/security-http
     affected_versions: vers:composer/>=3.4.0|<3.4.11
     fixed_versions: vers:composer/3.4.11
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/security-http
-    affected_versions: vers:composer/>=4.0.0|<4.0.11
-    fixed_versions: vers:composer/4.0.11
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/security
@@ -63,11 +53,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/security
-    affected_versions: vers:composer/>=2.8.0|<2.8.41
-    fixed_versions: vers:composer/2.8.41
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/security
     affected_versions: vers:composer/>=3.0.0|<3.3.17
     fixed_versions: vers:composer/3.3.17
     fixed_in_commits: []
@@ -80,6 +65,21 @@ impacted_packages:
   - purl: pkg:composer/symfony/security
     affected_versions: vers:composer/>=4.0.0|<4.0.11
     fixed_versions: vers:composer/4.0.11
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/security-http
+    affected_versions: vers:composer/>=3.0.0|<3.3.17
+    fixed_versions: vers:composer/3.3.17
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/security-http
+    affected_versions: vers:composer/>=4.0.0|<4.0.11
+    fixed_versions: vers:composer/4.0.11
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/security
+    affected_versions: vers:composer/>=2.8.0|<2.8.41
+    fixed_versions: vers:composer/2.8.41
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/symfony/symfony
@@ -95,14 +95,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '8.1'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-g4rg-rw65-8hfg/GHSA-g4rg-rw65-8hfg.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-384

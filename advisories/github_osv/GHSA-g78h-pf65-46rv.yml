@@ -7,22 +7,22 @@ summary: |
   Enhanced Image plugin for CKEditor is vulnerable to Cross-site scripting (XSS)
   The Enhanced Image (aka [image2](https://github.com/ckeditor/ckeditor4/tree/master/plugins/image2)) plugin for CKEditor in versions 4.5.10 through 4.9.1; fixed in 4.9.2, and as used in Drupal 8 before 8.4.7 and 8.5.x before 8.5.2 and other products, is vulnerable to cross-site scripting because it allows remote attackers to inject arbitrary web script through a crafted IMG element.
 impacted_packages:
-  - purl: pkg:composer/drupal/core
-    affected_versions: vers:composer/>=8.5.0|<8.5.2
-    fixed_versions: vers:composer/8.5.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:npm/ckeditor-dev
     affected_versions: vers:npm/>=4.5.10|<4.9.2
     fixed_versions: vers:npm/4.9.2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/drupal/core
+  - purl: pkg:composer/drupal/drupal
     affected_versions: vers:composer/>=8.0.0|<8.4.7
     fixed_versions: vers:composer/8.4.7
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/drupal/drupal
+  - purl: pkg:composer/drupal/core
+    affected_versions: vers:composer/>=8.5.0|<8.5.2
+    fixed_versions: vers:composer/8.5.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/drupal/core
     affected_versions: vers:composer/>=8.0.0|<8.4.7
     fixed_versions: vers:composer/8.4.7
     fixed_in_commits: []
@@ -34,14 +34,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '6.1'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-g78h-pf65-46rv/GHSA-g78h-pf65-46rv.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

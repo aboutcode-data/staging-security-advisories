@@ -7,6 +7,11 @@ summary: |
   Drupal access control bypass vulnerability
   Drupal 8 before 8.2.8 and 8.3 before 8.3.1 allows critical access bypass by authenticated users if the RESTful Web Services (rest) module is enabled and the site allows PATCH requests.
 impacted_packages:
+  - purl: pkg:composer/drupal/drupal
+    affected_versions: vers:composer/>=8.0.0|<8.2.8
+    fixed_versions: vers:composer/8.2.8
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:composer/drupal/core
     affected_versions: vers:composer/>=8.0.0|<8.2.8
     fixed_versions: vers:composer/8.2.8
@@ -15,11 +20,6 @@ impacted_packages:
   - purl: pkg:composer/drupal/core
     affected_versions: vers:composer/>=8.3.0|<8.3.1
     fixed_versions: vers:composer/8.3.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/drupal/drupal
-    affected_versions: vers:composer/>=8.0.0|<8.2.8
-    fixed_versions: vers:composer/8.2.8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/drupal/drupal
@@ -29,14 +29,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '7.5'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-6hpj-9xj7-2jxx/GHSA-6hpj-9xj7-2jxx.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-284

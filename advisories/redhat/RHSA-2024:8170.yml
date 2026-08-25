@@ -16,7 +16,12 @@ summary: "An update for fence-agents is now available for Red Hat Enterprise Lin
   For more details about the security issue(s), including the impact, a CVSS score, acknowledgments,\
   \ and other related information, refer to the CVE page(s) listed in the References section."
 impacted_packages:
-  - purl: pkg:rpm/redhat/fence-agents-aliyun?arch=x86_64
+  - purl: pkg:rpm/redhat/fence-agents-ilo2?arch=noarch
+    affected_versions: vers:rpm/<4.2.1-65.el8_4.20
+    fixed_versions: vers:rpm/4.2.1-65.el8_4.20
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/fence-agents-azure-arm?arch=noarch
     affected_versions: vers:rpm/<4.2.1-65.el8_4.20
     fixed_versions: vers:rpm/4.2.1-65.el8_4.20
     fixed_in_commits: []
@@ -26,17 +31,22 @@ impacted_packages:
     fixed_versions: vers:rpm/4.2.1-65.el8_4.20
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/fence-agents-aliyun-debuginfo?arch=x86_64
+  - purl: pkg:rpm/redhat/fence-agents-aws?arch=noarch
     affected_versions: vers:rpm/<4.2.1-65.el8_4.20
     fixed_versions: vers:rpm/4.2.1-65.el8_4.20
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/fence-agents-debuginfo?arch=x86_64
+  - purl: pkg:rpm/redhat/fence-agents-lpar?arch=noarch
     affected_versions: vers:rpm/<4.2.1-65.el8_4.20
     fixed_versions: vers:rpm/4.2.1-65.el8_4.20
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/fence-agents-kdump-debuginfo?arch=x86_64
+  - purl: pkg:rpm/redhat/fence-agents-mpath?arch=noarch
+    affected_versions: vers:rpm/<4.2.1-65.el8_4.20
+    fixed_versions: vers:rpm/4.2.1-65.el8_4.20
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/fence-agents-aliyun?arch=x86_64
     affected_versions: vers:rpm/<4.2.1-65.el8_4.20
     fixed_versions: vers:rpm/4.2.1-65.el8_4.20
     fixed_in_commits: []
@@ -66,16 +76,6 @@ impacted_packages:
     fixed_versions: vers:rpm/4.2.1-65.el8_4.20
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/fence-agents-aws?arch=noarch
-    affected_versions: vers:rpm/<4.2.1-65.el8_4.20
-    fixed_versions: vers:rpm/4.2.1-65.el8_4.20
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/fence-agents-azure-arm?arch=noarch
-    affected_versions: vers:rpm/<4.2.1-65.el8_4.20
-    fixed_versions: vers:rpm/4.2.1-65.el8_4.20
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/fence-agents-gce?arch=noarch
     affected_versions: vers:rpm/<4.2.1-65.el8_4.20
     fixed_versions: vers:rpm/4.2.1-65.el8_4.20
@@ -92,26 +92,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/fence-agents-apc-snmp?arch=noarch
-    affected_versions: vers:rpm/<4.2.1-65.el8_4.20
-    fixed_versions: vers:rpm/4.2.1-65.el8_4.20
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/fence-agents-bladecenter?arch=noarch
-    affected_versions: vers:rpm/<4.2.1-65.el8_4.20
-    fixed_versions: vers:rpm/4.2.1-65.el8_4.20
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/fence-agents-brocade?arch=noarch
-    affected_versions: vers:rpm/<4.2.1-65.el8_4.20
-    fixed_versions: vers:rpm/4.2.1-65.el8_4.20
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/fence-agents-cisco-mds?arch=noarch
-    affected_versions: vers:rpm/<4.2.1-65.el8_4.20
-    fixed_versions: vers:rpm/4.2.1-65.el8_4.20
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/fence-agents-cisco-ucs?arch=noarch
     affected_versions: vers:rpm/<4.2.1-65.el8_4.20
     fixed_versions: vers:rpm/4.2.1-65.el8_4.20
     fixed_in_commits: []
@@ -137,11 +117,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/fence-agents-emerson?arch=noarch
-    affected_versions: vers:rpm/<4.2.1-65.el8_4.20
-    fixed_versions: vers:rpm/4.2.1-65.el8_4.20
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/fence-agents-eps?arch=noarch
     affected_versions: vers:rpm/<4.2.1-65.el8_4.20
     fixed_versions: vers:rpm/4.2.1-65.el8_4.20
     fixed_in_commits: []
@@ -191,32 +166,12 @@ impacted_packages:
     fixed_versions: vers:rpm/4.2.1-65.el8_4.20
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/fence-agents-ilo2?arch=noarch
-    affected_versions: vers:rpm/<4.2.1-65.el8_4.20
-    fixed_versions: vers:rpm/4.2.1-65.el8_4.20
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/fence-agents-intelmodular?arch=noarch
     affected_versions: vers:rpm/<4.2.1-65.el8_4.20
     fixed_versions: vers:rpm/4.2.1-65.el8_4.20
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/fence-agents-ipdu?arch=noarch
-    affected_versions: vers:rpm/<4.2.1-65.el8_4.20
-    fixed_versions: vers:rpm/4.2.1-65.el8_4.20
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/fence-agents-ipmilan?arch=noarch
-    affected_versions: vers:rpm/<4.2.1-65.el8_4.20
-    fixed_versions: vers:rpm/4.2.1-65.el8_4.20
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/fence-agents-lpar?arch=noarch
-    affected_versions: vers:rpm/<4.2.1-65.el8_4.20
-    fixed_versions: vers:rpm/4.2.1-65.el8_4.20
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/fence-agents-mpath?arch=noarch
     affected_versions: vers:rpm/<4.2.1-65.el8_4.20
     fixed_versions: vers:rpm/4.2.1-65.el8_4.20
     fixed_in_commits: []
@@ -236,47 +191,7 @@ impacted_packages:
     fixed_versions: vers:rpm/4.2.1-65.el8_4.20
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/fence-agents-sbd?arch=noarch
-    affected_versions: vers:rpm/<4.2.1-65.el8_4.20
-    fixed_versions: vers:rpm/4.2.1-65.el8_4.20
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/fence-agents-scsi?arch=noarch
-    affected_versions: vers:rpm/<4.2.1-65.el8_4.20
-    fixed_versions: vers:rpm/4.2.1-65.el8_4.20
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/fence-agents-virsh?arch=noarch
-    affected_versions: vers:rpm/<4.2.1-65.el8_4.20
-    fixed_versions: vers:rpm/4.2.1-65.el8_4.20
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/fence-agents-vmware-rest?arch=noarch
-    affected_versions: vers:rpm/<4.2.1-65.el8_4.20
-    fixed_versions: vers:rpm/4.2.1-65.el8_4.20
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/fence-agents-vmware-soap?arch=noarch
-    affected_versions: vers:rpm/<4.2.1-65.el8_4.20
-    fixed_versions: vers:rpm/4.2.1-65.el8_4.20
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/fence-agents-wti?arch=noarch
-    affected_versions: vers:rpm/<4.2.1-65.el8_4.20
-    fixed_versions: vers:rpm/4.2.1-65.el8_4.20
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/fence-agents?arch=src
-    affected_versions: vers:rpm/<4.2.1-65.el8_4.20
-    fixed_versions: vers:rpm/4.2.1-65.el8_4.20
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/fence-agents-all?arch=ppc64le
-    affected_versions: vers:rpm/<4.2.1-65.el8_4.20
-    fixed_versions: vers:rpm/4.2.1-65.el8_4.20
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/fence-agents-kdump?arch=ppc64le
     affected_versions: vers:rpm/<4.2.1-65.el8_4.20
     fixed_versions: vers:rpm/4.2.1-65.el8_4.20
     fixed_in_commits: []
@@ -306,6 +221,91 @@ impacted_packages:
     fixed_versions: vers:rpm/4.2.1-65.el8_4.20
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/fence-agents-aliyun-debuginfo?arch=x86_64
+    affected_versions: vers:rpm/<4.2.1-65.el8_4.20
+    fixed_versions: vers:rpm/4.2.1-65.el8_4.20
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/fence-agents-debuginfo?arch=x86_64
+    affected_versions: vers:rpm/<4.2.1-65.el8_4.20
+    fixed_versions: vers:rpm/4.2.1-65.el8_4.20
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/fence-agents-kdump-debuginfo?arch=x86_64
+    affected_versions: vers:rpm/<4.2.1-65.el8_4.20
+    fixed_versions: vers:rpm/4.2.1-65.el8_4.20
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/fence-agents-bladecenter?arch=noarch
+    affected_versions: vers:rpm/<4.2.1-65.el8_4.20
+    fixed_versions: vers:rpm/4.2.1-65.el8_4.20
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/fence-agents-brocade?arch=noarch
+    affected_versions: vers:rpm/<4.2.1-65.el8_4.20
+    fixed_versions: vers:rpm/4.2.1-65.el8_4.20
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/fence-agents-cisco-mds?arch=noarch
+    affected_versions: vers:rpm/<4.2.1-65.el8_4.20
+    fixed_versions: vers:rpm/4.2.1-65.el8_4.20
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/fence-agents-cisco-ucs?arch=noarch
+    affected_versions: vers:rpm/<4.2.1-65.el8_4.20
+    fixed_versions: vers:rpm/4.2.1-65.el8_4.20
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/fence-agents-eps?arch=noarch
+    affected_versions: vers:rpm/<4.2.1-65.el8_4.20
+    fixed_versions: vers:rpm/4.2.1-65.el8_4.20
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/fence-agents-ipdu?arch=noarch
+    affected_versions: vers:rpm/<4.2.1-65.el8_4.20
+    fixed_versions: vers:rpm/4.2.1-65.el8_4.20
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/fence-agents-sbd?arch=noarch
+    affected_versions: vers:rpm/<4.2.1-65.el8_4.20
+    fixed_versions: vers:rpm/4.2.1-65.el8_4.20
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/fence-agents-scsi?arch=noarch
+    affected_versions: vers:rpm/<4.2.1-65.el8_4.20
+    fixed_versions: vers:rpm/4.2.1-65.el8_4.20
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/fence-agents-virsh?arch=noarch
+    affected_versions: vers:rpm/<4.2.1-65.el8_4.20
+    fixed_versions: vers:rpm/4.2.1-65.el8_4.20
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/fence-agents-vmware-soap?arch=noarch
+    affected_versions: vers:rpm/<4.2.1-65.el8_4.20
+    fixed_versions: vers:rpm/4.2.1-65.el8_4.20
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/fence-agents-wti?arch=noarch
+    affected_versions: vers:rpm/<4.2.1-65.el8_4.20
+    fixed_versions: vers:rpm/4.2.1-65.el8_4.20
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/fence-agents?arch=src
+    affected_versions: vers:rpm/<4.2.1-65.el8_4.20
+    fixed_versions: vers:rpm/4.2.1-65.el8_4.20
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/fence-agents-all?arch=ppc64le
+    affected_versions: vers:rpm/<4.2.1-65.el8_4.20
+    fixed_versions: vers:rpm/4.2.1-65.el8_4.20
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/fence-agents-kdump?arch=ppc64le
+    affected_versions: vers:rpm/<4.2.1-65.el8_4.20
+    fixed_versions: vers:rpm/4.2.1-65.el8_4.20
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/fence-agents-kubevirt-debuginfo?arch=ppc64le
     affected_versions: vers:rpm/<4.2.1-65.el8_4.20
     fixed_versions: vers:rpm/4.2.1-65.el8_4.20
@@ -315,7 +315,7 @@ severities:
   - score: Important
     scoring_system: rhas
     scoring_elements:
-    published_at: None
+    published_at:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2024_8170.json
 weaknesses: []
 references:

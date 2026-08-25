@@ -7,11 +7,6 @@ summary: |
   Directory Traversal in Studio 42 elFinder
   Studio 42 elFinder before 2.1.37 has a directory traversal vulnerability in `elFinder.class.php` with the `zipdl()` function that can allow a remote attacker to download files accessible by the web server process and delete files owned by the account running the web server process. NOTE: this issue exists because of an incomplete fix for CVE-2018-9109.
 impacted_packages:
-  - purl: pkg:composer/studio-42/elfinder
-    affected_versions: vers:composer/<=2.1.36
-    fixed_versions: vers:composer/2.1.37
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/studio-42/elfinder
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/studio-42/elfinder
         commit: e6351557b86cc10a7651253d2d2aff7f6b918f8e
     introduced_in_commits: []
+  - purl: pkg:composer/studio-42/elfinder
+    affected_versions: vers:composer/<=2.1.36
+    fixed_versions: vers:composer/2.1.37
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-44p8-c3wv-f28r/GHSA-44p8-c3wv-f28r.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

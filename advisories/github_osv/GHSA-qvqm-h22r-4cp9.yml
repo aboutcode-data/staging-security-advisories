@@ -7,6 +7,13 @@ summary: |
   Laravel Framework RCE Vulnerability
   In Laravel Framework through 5.5.40 and 5.6.x through 5.6.29, remote code execution might occur as a result of an unserialize call on a potentially untrusted X-XSRF-TOKEN value. This involves the decrypt method in `Illuminate/Encryption/Encrypter.php` and PendingBroadcast in `gadgetchains/Laravel/RCE/3/chain.php` in phpggc. The attacker must know the application key, which normally would never occur, but could happen if the attacker previously had privileged access or successfully accomplished a previous attack.
 impacted_packages:
+  - purl: pkg:github/laravel/framework
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/laravel/framework
+        commit: d84cf988ed5d4661a4bf1fdcb08f5073835083a0
+    introduced_in_commits: []
   - purl: pkg:composer/laravel/framework
     affected_versions: vers:composer/<=5.5.40
     fixed_versions:
@@ -17,23 +24,16 @@ impacted_packages:
     fixed_versions: vers:composer/5.6.30
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/laravel/framework
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/laravel/framework
-        commit: d84cf988ed5d4661a4bf1fdcb08f5073835083a0
-    introduced_in_commits: []
 severities:
   - score: '8.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-qvqm-h22r-4cp9/GHSA-qvqm-h22r-4cp9.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-502

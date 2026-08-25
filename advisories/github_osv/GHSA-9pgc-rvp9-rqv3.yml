@@ -8,6 +8,11 @@ summary: |
   An information disclosure vulnerability exists in Magento 2.1 prior to 2.1.18, Magento 2.2 prior to 2.2.9, Magento 2.3 prior to 2.3.2. An authenticated user with privileges to create email templates could leak sensitive data via a malicious email template.
 impacted_packages:
   - purl: pkg:composer/magento/community-edition
+    affected_versions: vers:composer/>=2.3.0|<2.3.2
+    fixed_versions: vers:composer/2.3.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/magento/community-edition
     affected_versions: vers:composer/>=2.1.0|<2.1.18
     fixed_versions: vers:composer/2.1.18
     fixed_in_commits: []
@@ -17,21 +22,16 @@ impacted_packages:
     fixed_versions: vers:composer/2.2.9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/magento/community-edition
-    affected_versions: vers:composer/>=2.3.0|<2.3.2
-    fixed_versions: vers:composer/2.3.2
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: '6.5'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-9pgc-rvp9-rqv3/GHSA-9pgc-rvp9-rqv3.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

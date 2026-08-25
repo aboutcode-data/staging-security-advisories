@@ -7,16 +7,6 @@ summary: |
   Moodle is vulnerable to Sensitive Information Disclosure
   The core_grade component in Moodle through 2.2.10, 2.3.x before 2.3.7, and 2.4.x before 2.4.4 does not properly consider the existence of hidden grades, which allows remote authenticated users to obtain sensitive information by leveraging the student role and reading the Gradebook Overview report.
 impacted_packages:
-  - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/<2.3.7
-    fixed_versions: vers:composer/2.3.7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/>=2.4.0|<2.4.4
-    fixed_versions: vers:composer/2.4.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/moodle/moodle
     affected_versions:
     fixed_versions:
@@ -28,11 +18,21 @@ impacted_packages:
       - vcs_url: https://github.com/moodle/moodle
         commit: 5df9bc3998095299c6862973866252649a5e0866
     introduced_in_commits: []
+  - purl: pkg:composer/moodle/moodle
+    affected_versions: vers:composer/<2.3.7
+    fixed_versions: vers:composer/2.3.7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/moodle/moodle
+    affected_versions: vers:composer/>=2.4.0|<2.4.4
+    fixed_versions: vers:composer/2.4.4
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

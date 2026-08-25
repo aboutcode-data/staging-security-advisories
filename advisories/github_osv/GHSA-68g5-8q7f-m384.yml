@@ -8,13 +8,13 @@ summary: |
   The HTTP/2 implementation in Apache Tomcat 9.0.0.M1 to 9.0.0.M21 and 8.5.0 to 8.5.15 bypassed a number of security checks that prevented directory traversal attacks. It was therefore possible to bypass security constraints using a specially crafted URL.
 impacted_packages:
   - purl: pkg:maven/org.apache.tomcat/tomcat
-    affected_versions: vers:maven/<=9.0.0.M21
-    fixed_versions: vers:maven/9.0.0.M22
+    affected_versions: vers:maven/<=8.5.15
+    fixed_versions: vers:maven/8.5.16
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat/tomcat
-    affected_versions: vers:maven/<=8.5.15
-    fixed_versions: vers:maven/8.5.16
+    affected_versions: vers:maven/<=9.0.0.M21
+    fixed_versions: vers:maven/9.0.0.M22
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/apache/tomcat
@@ -28,14 +28,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '7.5'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-68g5-8q7f-m384/GHSA-68g5-8q7f-m384.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

@@ -7,6 +7,13 @@ summary: |
   Incomplete exclude pattern in Apache Struts
   The default exclude patterns (excludeParams) in Apache Struts 2.3.20 allow remote attackers to "compromise internal state of an application" via unspecified vectors. In Struts 2.3.20.1 a better set of exlude patterns was defined.
 impacted_packages:
+  - purl: pkg:github/apache/struts
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/struts
+        commit: d832747d647df343ed07a58b1b5e540a05a4d51b
+    introduced_in_commits: []
   - purl: pkg:maven/org.apache.struts/struts2-core
     affected_versions: vers:maven/>=2.0.0|<2.3.20.1
     fixed_versions: vers:maven/2.3.20.1
@@ -17,18 +24,11 @@ impacted_packages:
     fixed_versions: vers:maven/2.3.20.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/apache/struts
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/apache/struts
-        commit: d832747d647df343ed07a58b1b5e540a05a4d51b
-    introduced_in_commits: []
 severities:
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses: []
 references:

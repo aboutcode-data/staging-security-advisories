@@ -8,6 +8,11 @@ summary: |
   A server-side request forgery (SSRF) vulnerability exists in Magento 2.1 prior to 2.1.18, Magento 2.2 prior to 2.2.9, Magento 2.3 prior to 2.3.2. This can be exploited by an authenticated user with admin privileges to manipulate shipment methods to execute arbitrary code.
 impacted_packages:
   - purl: pkg:composer/magento/community-edition
+    affected_versions: vers:composer/>=2.3.0|<2.3.2
+    fixed_versions: vers:composer/2.3.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/magento/community-edition
     affected_versions: vers:composer/>=2.1.0|<2.1.18
     fixed_versions: vers:composer/2.1.18
     fixed_in_commits: []
@@ -17,21 +22,16 @@ impacted_packages:
     fixed_versions: vers:composer/2.2.9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/magento/community-edition
-    affected_versions: vers:composer/>=2.3.0|<2.3.2
-    fixed_versions: vers:composer/2.3.2
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: '7.2'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-hppc-rpfp-r8qw/GHSA-hppc-rpfp-r8qw.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-918

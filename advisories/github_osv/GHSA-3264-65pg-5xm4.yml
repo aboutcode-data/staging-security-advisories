@@ -7,11 +7,6 @@ summary: |
   Dolibarr ERP and CRM HTML Injection
   There is HTML Injection in the Note field in Dolibarr ERP/CRM 10.0.2 via `user/note.php`.
 impacted_packages:
-  - purl: pkg:composer/dolibarr/dolibarr
-    affected_versions: vers:composer/<11.0.1
-    fixed_versions: vers:composer/11.0.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/dolibarr/dolibarr
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/dolibarr/dolibarr
         commit: c7736dde41826ac6eca3e838e57eab2f0304e256
     introduced_in_commits: []
+  - purl: pkg:composer/dolibarr/dolibarr
+    affected_versions: vers:composer/<11.0.1
+    fixed_versions: vers:composer/11.0.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-3264-65pg-5xm4/GHSA-3264-65pg-5xm4.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

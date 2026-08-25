@@ -7,6 +7,13 @@ summary: |
   Moodle vulnerable to RCE
   A flaw was found in Moodle versions 3.8 before 3.8.3, 3.7 before 3.7.6, 3.6 before 3.6.10, 3.5 before 3.5.12 and earlier unsupported versions. It was possible to create a SCORM package in such a way that when added to a course, it could be interacted with via web services in order to achieve remote code execution.
 impacted_packages:
+  - purl: pkg:github/moodle/moodle
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/moodle/moodle
+        commit: 2cd534a7df3867813e3aad42db615865149a58c6
+    introduced_in_commits: []
   - purl: pkg:composer/moodle/moodle
     affected_versions: vers:composer/<=3.8.2
     fixed_versions: vers:composer/3.8.3
@@ -27,23 +34,16 @@ impacted_packages:
     fixed_versions: vers:composer/3.5.12
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/moodle/moodle
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/moodle/moodle
-        commit: 2cd534a7df3867813e3aad42db615865149a58c6
-    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-vr6v-g96p-cjc3/GHSA-vr6v-g96p-cjc3.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-20

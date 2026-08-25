@@ -8,21 +8,6 @@ summary: |
   The attemptAuthentication function in `Component/Security/Http/Firewall/UsernamePasswordFormAuthenticationListener.php` in Symfony before 2.3.41, 2.7.x before 2.7.13, 2.8.x before 2.8.6, and 3.0.x before 3.0.6 does not limit the length of a username stored in a session, which allows remote attackers to cause a denial of service (session storage consumption) via a series of authentication attempts with long, non-existent usernames.
 impacted_packages:
   - purl: pkg:composer/symfony/security-http
-    affected_versions: vers:composer/>=2.3.0|<2.3.41
-    fixed_versions: vers:composer/2.3.41
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/symfony
-    affected_versions: vers:composer/>=3.0.0|<3.0.6
-    fixed_versions: vers:composer/3.0.6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/security-http
-    affected_versions: vers:composer/>=2.4.0|<2.7.13
-    fixed_versions: vers:composer/2.7.13
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/security-http
     affected_versions: vers:composer/>=2.8.0|<2.8.6
     fixed_versions: vers:composer/2.8.6
     fixed_in_commits: []
@@ -30,11 +15,6 @@ impacted_packages:
   - purl: pkg:composer/symfony/security-http
     affected_versions: vers:composer/>=3.0.0|<3.0.6
     fixed_versions: vers:composer/3.0.6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/security
-    affected_versions: vers:composer/>=2.3.0|<2.3.41
-    fixed_versions: vers:composer/2.3.41
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/security
@@ -47,6 +27,31 @@ impacted_packages:
     fixed_versions: vers:composer/2.8.6
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=2.4.0|<2.7.13
+    fixed_versions: vers:composer/2.7.13
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=2.8.0|<2.8.6
+    fixed_versions: vers:composer/2.8.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=3.0.0|<3.0.6
+    fixed_versions: vers:composer/3.0.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/security-http
+    affected_versions: vers:composer/>=2.4.0|<2.7.13
+    fixed_versions: vers:composer/2.7.13
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/security
+    affected_versions: vers:composer/>=2.3.0|<2.3.41
+    fixed_versions: vers:composer/2.3.41
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:composer/symfony/security
     affected_versions: vers:composer/>=3.0.0|<3.0.6
     fixed_versions: vers:composer/3.0.6
@@ -57,26 +62,21 @@ impacted_packages:
     fixed_versions: vers:composer/2.3.41
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/symfony/symfony
-    affected_versions: vers:composer/>=2.4.0|<2.7.13
-    fixed_versions: vers:composer/2.7.13
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/symfony
-    affected_versions: vers:composer/>=2.8.0|<2.8.6
-    fixed_versions: vers:composer/2.8.6
+  - purl: pkg:composer/symfony/security-http
+    affected_versions: vers:composer/>=2.3.0|<2.3.41
+    fixed_versions: vers:composer/2.3.41
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '7.5'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-whgv-8cg3-7hcm/GHSA-whgv-8cg3-7hcm.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses: []
 references:

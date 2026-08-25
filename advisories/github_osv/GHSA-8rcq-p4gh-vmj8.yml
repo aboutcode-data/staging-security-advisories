@@ -8,6 +8,11 @@ summary: |
   The administration web console in Apache ActiveMQ 5.x before 5.11.4, 5.12.x before 5.12.3, and 5.13.x before 5.13.2 allows remote authenticated users to conduct cross-site scripting (XSS) attacks and consequently obtain sensitive information from a Java memory dump via vectors related to creating a queue.
 impacted_packages:
   - purl: pkg:maven/org.apache.activemq/activemq-client
+    affected_versions: vers:maven/<=5.13.1
+    fixed_versions: vers:maven/5.13.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.activemq/activemq-client
     affected_versions: vers:maven/<=5.11.3
     fixed_versions: vers:maven/5.11.4
     fixed_in_commits: []
@@ -15,11 +20,6 @@ impacted_packages:
   - purl: pkg:maven/org.apache.activemq/activemq-client
     affected_versions: vers:maven/<=5.12.2
     fixed_versions: vers:maven/5.12.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.activemq/activemq-client
-    affected_versions: vers:maven/<=5.13.1
-    fixed_versions: vers:maven/5.13.2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/apache/activemq
@@ -35,14 +35,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '5.4'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-8rcq-p4gh-vmj8/GHSA-8rcq-p4gh-vmj8.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

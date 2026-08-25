@@ -25,10 +25,12 @@ impacted_packages:
     fixed_versions: vers:maven/1.75
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/org.jenkins-ci.plugins/script-security
-    affected_versions: vers:maven/<1.66.5
-    fixed_versions: vers:maven/1.66.5
-    fixed_in_commits: []
+  - purl: pkg:github/jenkinsci/script-security-plugin
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/jenkinsci/script-security-plugin
+        commit: 79d1e9207c5c359ca779b92f0a290e18c5e2387b
     introduced_in_commits: []
   - purl: pkg:github/cveproject/cvelist
     affected_versions:
@@ -37,23 +39,21 @@ impacted_packages:
       - vcs_url: https://github.com/cveproject/cvelist
         commit: 16860a328d970faa6e4350b0fa446f64a52e52ca
     introduced_in_commits: []
-  - purl: pkg:github/jenkinsci/script-security-plugin
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/jenkinsci/script-security-plugin
-        commit: 79d1e9207c5c359ca779b92f0a290e18c5e2387b
+  - purl: pkg:maven/org.jenkins-ci.plugins/script-security
+    affected_versions: vers:maven/<1.66.5
+    fixed_versions: vers:maven/1.66.5
+    fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '9.9'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-ccr8-4xr7-cgj3/GHSA-ccr8-4xr7-cgj3.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-693

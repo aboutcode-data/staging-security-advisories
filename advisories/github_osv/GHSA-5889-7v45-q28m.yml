@@ -15,6 +15,16 @@ summary: "Incomplete validation in signal ops leads to crashes in TensorFlow\n##
   \ questions.\n\n### Attribution\nThis vulnerability has been reported externally via a [GitHub\
   \ issue](https://github.com/tensorflow/tensorflow/issues/55263)."
 impacted_packages:
+  - purl: pkg:pypi/tensorflow-cpu
+    affected_versions: vers:pypi/>=2.8.0|<2.8.1
+    fixed_versions: vers:pypi/2.8.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow-cpu
+    affected_versions: vers:pypi/<2.6.4
+    fixed_versions: vers:pypi/2.6.4
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:pypi/tensorflow
     affected_versions: vers:pypi/<2.6.4
     fixed_versions: vers:pypi/2.6.4
@@ -31,18 +41,8 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/tensorflow-cpu
-    affected_versions: vers:pypi/<2.6.4
-    fixed_versions: vers:pypi/2.6.4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow-cpu
     affected_versions: vers:pypi/>=2.7.0|<2.7.2
     fixed_versions: vers:pypi/2.7.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow-cpu
-    affected_versions: vers:pypi/>=2.8.0|<2.8.1
-    fixed_versions: vers:pypi/2.8.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/tensorflow-gpu
@@ -71,12 +71,12 @@ severities:
   - score: '5.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-5889-7v45-q28m/GHSA-5889-7v45-q28m.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-617

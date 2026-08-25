@@ -7,6 +7,13 @@ summary: |
   Arbitrary code execution in Apache Struts
   Apache Struts 2 before 2.3.14.2 allows remote attackers to execute arbitrary OGNL code via a crafted request that is not properly handled when using the includeParams attribute in the (1) URL or (2) A tag.
 impacted_packages:
+  - purl: pkg:github/apache/struts
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/struts
+        commit: 7e6f641ebb142663cbd1653dc49bed725edf7f56
+    introduced_in_commits: []
   - purl: pkg:maven/org.apache.struts/struts2-core
     affected_versions: vers:maven/>=2.0.0|<2.3.14.2
     fixed_versions: vers:maven/2.3.14.2
@@ -17,18 +24,11 @@ impacted_packages:
     fixed_versions: vers:maven/2.3.14.2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/apache/struts
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/apache/struts
-        commit: 7e6f641ebb142663cbd1653dc49bed725edf7f56
-    introduced_in_commits: []
 severities:
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

@@ -7,11 +7,6 @@ summary: |
   Improper Input Validation in Apache Santuario XML Security
   Apache Santuario XML Security for Java 2.0.x before 2.0.3 allows remote attackers to bypass the streaming XML signature protection mechanism via a crafted XML document.
 impacted_packages:
-  - purl: pkg:maven/org.apache.santuario/xmlsec
-    affected_versions: vers:maven/>=2.0.0|<2.0.3
-    fixed_versions: vers:maven/2.0.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/apache/santuario-java
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/apache/santuario-java
         commit: 55857fd4cdfdb1af4069170ecdac448c078f544e
     introduced_in_commits: []
+  - purl: pkg:maven/org.apache.santuario/xmlsec
+    affected_versions: vers:maven/>=2.0.0|<2.0.3
+    fixed_versions: vers:maven/2.0.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-w7cq-j9p9-hm3m/GHSA-w7cq-j9p9-hm3m.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-20

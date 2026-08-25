@@ -7,6 +7,15 @@ summary: |
   Puppet arbitrary files overwrite via a symlink attack
   Puppet 0.24.x before 0.24.9 and 0.25.x before 0.25.2 allows local users to overwrite arbitrary files via a symlink attack on the (1) /tmp/daemonout, (2) /tmp/puppetdoc.txt, (3) /tmp/puppetdoc.tex, or (4) /tmp/puppetdoc.aux temporary file.
 impacted_packages:
+  - purl: pkg:github/puppetlabs/puppet
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/puppetlabs/puppet
+        commit: 0aae57f91dc69b22fb674f8de3a13c22edd07128
+      - vcs_url: https://github.com/puppetlabs/puppet
+        commit: 6111ba80f2c6f6d1541af971f565119e6e03d77d
+    introduced_in_commits: []
   - purl: pkg:gem/puppet
     affected_versions: vers:gem/>=0.24.0|<0.24.9
     fixed_versions: vers:gem/0.24.9
@@ -17,20 +26,11 @@ impacted_packages:
     fixed_versions: vers:gem/0.25.2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/puppetlabs/puppet
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/puppetlabs/puppet
-        commit: 0aae57f91dc69b22fb674f8de3a13c22edd07128
-      - vcs_url: https://github.com/puppetlabs/puppet
-        commit: 6111ba80f2c6f6d1541af971f565119e6e03d77d
-    introduced_in_commits: []
 severities:
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-59

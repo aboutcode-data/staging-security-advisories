@@ -8,13 +8,13 @@ summary: |
   A race condition during Jenkins 2.94 and earlier; 2.89.1 and earlier startup could result in the wrong order of execution of commands during initialization. There is a very short window of time after startup during which Jenkins may no longer show the 'Please wait while Jenkins is getting ready to work' message but Cross-Site Request Forgery (CSRF) protection may not yet be effective.
 impacted_packages:
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
-    affected_versions: vers:maven/<=2.89.1
-    fixed_versions: vers:maven/2.89.2
+    affected_versions: vers:maven/<=2.94
+    fixed_versions: vers:maven/2.95
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
-    affected_versions: vers:maven/<=2.94
-    fixed_versions: vers:maven/2.95
+    affected_versions: vers:maven/<=2.89.1
+    fixed_versions: vers:maven/2.89.2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/jenkinsci/jenkins
@@ -26,14 +26,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '8.1'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-99hj-ppg3-2xwc/GHSA-99hj-ppg3-2xwc.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-352

@@ -7,11 +7,6 @@ summary: |
   MediaWiki allows a denial of service
   MediaWiki before 1.36.2 allows a denial of service (resource consumption because of lengthy query processing time). Visiting Special:Contributions can sometimes result in a long running SQL query because PoolCounter protection is mishandled.
 impacted_packages:
-  - purl: pkg:composer/mediawiki/core
-    affected_versions: vers:composer/<1.36.2
-    fixed_versions: vers:composer/1.36.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/wikimedia/mediawiki
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/wikimedia/mediawiki
         commit: 781caf83dba90c18349f930bbaaa0e89f003f874
     introduced_in_commits: []
+  - purl: pkg:composer/mediawiki/core
+    affected_versions: vers:composer/<1.36.2
+    fixed_versions: vers:composer/1.36.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-c8wv-qwwc-6j73/GHSA-c8wv-qwwc-6j73.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-770

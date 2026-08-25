@@ -8,13 +8,13 @@ summary: |
   A flaw was found in moodle versions 3.5 to 3.5.2, 3.4 to 3.4.5, 3.3 to 3.3.8, 3.1 to 3.1.14 and earlier. The login form is not protected by a token to prevent login cross-site request forgery. Fixed versions include 3.6, 3.5.3, 3.4.6, 3.3.9 and 3.1.15.
 impacted_packages:
   - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/>=3.1.0|<3.1.15
-    fixed_versions: vers:composer/3.1.15
+    affected_versions: vers:composer/>=3.5.0|<3.5.3
+    fixed_versions: vers:composer/3.5.3
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/>=3.3.0|<3.3.9
-    fixed_versions: vers:composer/3.3.9
+    affected_versions: vers:composer/>=3.1.0|<3.1.15
+    fixed_versions: vers:composer/3.1.15
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/moodle/moodle
@@ -23,20 +23,20 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/>=3.5.0|<3.5.3
-    fixed_versions: vers:composer/3.5.3
+    affected_versions: vers:composer/>=3.3.0|<3.3.9
+    fixed_versions: vers:composer/3.3.9
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '8.8'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-xj5f-qv37-r9jc/GHSA-xj5f-qv37-r9jc.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-352

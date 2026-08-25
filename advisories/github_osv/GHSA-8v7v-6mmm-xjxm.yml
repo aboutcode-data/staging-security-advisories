@@ -7,11 +7,6 @@ summary: |
   Dolibarr SQL injection vulnerability in accountancy/customer/card.php
   A SQL injection vulnerability in accountancy/customer/card.php in Dolibarr 11.0.4 and below allows remote authenticated users to execute arbitrary SQL commands via the id parameter.
 impacted_packages:
-  - purl: pkg:composer/dolibarr/dolibarr
-    affected_versions: vers:composer/<11.0.5
-    fixed_versions: vers:composer/11.0.5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/dolibarr/dolibarr
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/dolibarr/dolibarr
         commit: 40e16672e3aa4e9208ea7a4829f30507dcdfc4ba
     introduced_in_commits: []
+  - purl: pkg:composer/dolibarr/dolibarr
+    affected_versions: vers:composer/<11.0.5
+    fixed_versions: vers:composer/11.0.5
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-8v7v-6mmm-xjxm/GHSA-8v7v-6mmm-xjxm.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-89

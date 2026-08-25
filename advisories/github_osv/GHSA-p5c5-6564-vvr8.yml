@@ -7,6 +7,13 @@ summary: |
   Improper Authentication in Apache CXF
   Apache CXF before 2.5.9, 2.6.x before 2.6.6, and 2.7.x before 2.7.3, when the plaintext UsernameToken WS-SecurityPolicy is enabled, allows remote attackers to bypass authentication via a security header of a SOAP request containing a UsernameToken element that lacks a password child element.
 impacted_packages:
+  - purl: pkg:github/apache/cxf
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/cxf
+        commit: e4c6b3b0899ef2ba87c2610efc323b71c13dd421
+    introduced_in_commits: []
   - purl: pkg:maven/org.apache.cxf/cxf-rt-frontend-jaxrs
     affected_versions: vers:maven/<2.5.9
     fixed_versions: vers:maven/2.5.9
@@ -22,18 +29,11 @@ impacted_packages:
     fixed_versions: vers:maven/2.7.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/apache/cxf
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/apache/cxf
-        commit: e4c6b3b0899ef2ba87c2610efc323b71c13dd421
-    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-287

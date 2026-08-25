@@ -8,13 +8,13 @@ summary: |
   Multiple cross-site scripting (XSS) vulnerabilities in TYPO3 CMS 4.1.x before 4.1.14, 4.2.x before 4.2.13, 4.3.x before 4.3.4, and 4.4.x before 4.4.1 allow remote authenticated backend users to inject arbitrary web script or HTML via unspecified parameters to the extension manager, or unspecified parameters to unknown backend forms.
 impacted_packages:
   - purl: pkg:composer/typo3/cms-backend
-    affected_versions: vers:composer/>=4.1.0|<4.1.14
-    fixed_versions: vers:composer/4.1.14
+    affected_versions: vers:composer/>=4.2.0|<4.2.13
+    fixed_versions: vers:composer/4.2.13
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/typo3/cms-backend
-    affected_versions: vers:composer/>=4.2.0|<4.2.13
-    fixed_versions: vers:composer/4.2.13
+    affected_versions: vers:composer/>=4.1.0|<4.1.14
+    fixed_versions: vers:composer/4.1.14
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/typo3/cms-backend
@@ -29,14 +29,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '5.4'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-jr79-65xr-q7cx/GHSA-jr79-65xr-q7cx.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

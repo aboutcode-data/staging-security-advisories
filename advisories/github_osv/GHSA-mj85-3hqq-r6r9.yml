@@ -8,8 +8,8 @@ summary: |
   Cross-site scripting (XSS) vulnerability in the advanced-search feature in mod_data in Moodle through 2.6.11, 2.7.x before 2.7.13, 2.8.x before 2.8.11, 2.9.x before 2.9.5, and 3.0.x before 3.0.3 allows remote attackers to inject arbitrary web script or HTML via a crafted field in a URL, as demonstrated by a search form field.
 impacted_packages:
   - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/>=2.7.0|<2.7.13
-    fixed_versions: vers:composer/2.7.13
+    affected_versions: vers:composer/>=3.0.0|<3.0.3
+    fixed_versions: vers:composer/3.0.3
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/moodle/moodle
@@ -23,8 +23,8 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/>=3.0.0|<3.0.3
-    fixed_versions: vers:composer/3.0.3
+    affected_versions: vers:composer/>=2.7.0|<2.7.13
+    fixed_versions: vers:composer/2.7.13
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/moodle/moodle
@@ -44,14 +44,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '6.1'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-mj85-3hqq-r6r9/GHSA-mj85-3hqq-r6r9.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

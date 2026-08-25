@@ -7,35 +7,17 @@ summary: |
   Integer Overflow or Wraparound in Apache Tomcat
   Integer overflow in the parseChunkHeader function in java/org/apache/coyote/http11/filters/ChunkedInputFilter.java in Apache Tomcat before 6.0.40, 7.x before 7.0.53, and 8.x before 8.0.4 allows remote attackers to cause a denial of service (resource consumption) via a malformed chunk size in chunked transfer coding of a request during the streaming of data.
 impacted_packages:
-  - purl: pkg:maven/org.apache.tomcat/tomcat
-    affected_versions: vers:maven/<6.0.40
-    fixed_versions: vers:maven/6.0.40
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat/tomcat-coyote
     affected_versions: vers:maven/<6.0.40
     fixed_versions: vers:maven/6.0.40
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/org.apache.tomcat/tomcat
-    affected_versions: vers:maven/>=7.0.0|<7.0.53
-    fixed_versions: vers:maven/7.0.53
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.tomcat/tomcat
-    affected_versions: vers:maven/>=8.0.0|<8.0.4
-    fixed_versions: vers:maven/8.0.4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.tomcat/tomcat-coyote
-    affected_versions: vers:maven/>=7.0.0|<7.0.53
-    fixed_versions: vers:maven/7.0.53
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.tomcat/tomcat-coyote
-    affected_versions: vers:maven/>=8.0.0|<8.0.4
-    fixed_versions: vers:maven/8.0.4
-    fixed_in_commits: []
+  - purl: pkg:github/apache/tomcat80
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/tomcat80
+        commit: d49a03728ac7e3c800b1b0ce0eeccd8a5a21bb91
     introduced_in_commits: []
   - purl: pkg:github/apache/tomcat
     affected_versions:
@@ -46,18 +28,36 @@ impacted_packages:
       - vcs_url: https://github.com/apache/tomcat
         commit: b6974571c122f6a1e7ec74a90fa212976fa7b0ed
     introduced_in_commits: []
-  - purl: pkg:github/apache/tomcat80
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/apache/tomcat80
-        commit: d49a03728ac7e3c800b1b0ce0eeccd8a5a21bb91
+  - purl: pkg:maven/org.apache.tomcat/tomcat
+    affected_versions: vers:maven/<6.0.40
+    fixed_versions: vers:maven/6.0.40
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat/tomcat
+    affected_versions: vers:maven/>=7.0.0|<7.0.53
+    fixed_versions: vers:maven/7.0.53
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat/tomcat
+    affected_versions: vers:maven/>=8.0.0|<8.0.4
+    fixed_versions: vers:maven/8.0.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat/tomcat-coyote
+    affected_versions: vers:maven/>=7.0.0|<7.0.53
+    fixed_versions: vers:maven/7.0.53
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat/tomcat-coyote
+    affected_versions: vers:maven/>=8.0.0|<8.0.4
+    fixed_versions: vers:maven/8.0.4
+    fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-190

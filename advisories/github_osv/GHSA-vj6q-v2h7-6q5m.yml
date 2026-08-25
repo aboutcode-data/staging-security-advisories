@@ -12,11 +12,6 @@ impacted_packages:
     fixed_versions: vers:maven/1.551
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
-    affected_versions: vers:maven/<1.532.2
-    fixed_versions: vers:maven/1.532.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/jenkins
     affected_versions:
     fixed_versions:
@@ -24,11 +19,16 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/jenkins
         commit: 5d57c855f3147bfc5e7fda9252317b428a700014
     introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
+    affected_versions: vers:maven/<1.532.2
+    fixed_versions: vers:maven/1.532.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

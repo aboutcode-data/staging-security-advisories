@@ -8,13 +8,13 @@ summary: |
   Jetty before 4.2.27, 5.1 before 5.1.12, 6.0 before 6.0.2, and 6.1 before 6.1.0pre3 generates predictable session identifiers using java.util.random, which makes it easier for remote attackers to guess a session identifier through brute force attacks, bypass authentication requirements, and possibly conduct cross-site request forgery attacks.
 impacted_packages:
   - purl: pkg:maven/org.eclipse.jetty/jetty-server
-    affected_versions: vers:maven/<4.2.27
-    fixed_versions: vers:maven/4.2.27
+    affected_versions: vers:maven/>=5.1.0|<5.1.12
+    fixed_versions: vers:maven/5.1.12
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.eclipse.jetty/jetty-server
-    affected_versions: vers:maven/>=5.1.0|<5.1.12
-    fixed_versions: vers:maven/5.1.12
+    affected_versions: vers:maven/<4.2.27
+    fixed_versions: vers:maven/4.2.27
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.eclipse.jetty/jetty-server
@@ -40,7 +40,7 @@ severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-330

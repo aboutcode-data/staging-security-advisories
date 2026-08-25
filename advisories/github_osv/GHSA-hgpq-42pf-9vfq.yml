@@ -7,11 +7,6 @@ summary: |
   Cross Site Request Forgery in Jenkins Blue Ocean Plugin
   A cross-site request forgery (CSRF) vulnerability in Jenkins Blue Ocean Plugin 1.25.3 and earlier allows attackers to connect to an attacker-specified HTTP server. Blue Ocean Plugin 1.25.4 requires POST requests and the appropriate permissions for the affected HTTP endpoints.
 impacted_packages:
-  - purl: pkg:maven/io.jenkins.blueocean/blueocean-parent
-    affected_versions: vers:maven/<1.25.4
-    fixed_versions: vers:maven/1.25.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/blueocean-plugin
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/blueocean-plugin
         commit: 9f44b895d018c514d5dccc1f2190a2a029e58259
     introduced_in_commits: []
+  - purl: pkg:maven/io.jenkins.blueocean/blueocean-parent
+    affected_versions: vers:maven/<1.25.4
+    fixed_versions: vers:maven/1.25.4
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-hgpq-42pf-9vfq/GHSA-hgpq-42pf-9vfq.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-352

@@ -8,13 +8,13 @@ summary: |
   Apache Tomcat 6.0.0 through 6.0.14, 5.5.0 through 5.5.25, and 4.1.0 through 4.1.36 does not properly handle (1) double quote (") characters or (2) %5C (encoded backslash) sequences in a cookie value, which might cause sensitive information such as session IDs to be leaked to remote attackers and enable session hijacking attacks.  NOTE: this issue exists because of an incomplete fix for CVE-2007-3385.
 impacted_packages:
   - purl: pkg:maven/org.apache.tomcat/tomcat
-    affected_versions: vers:maven/>=6.0.0|<6.0.15
-    fixed_versions: vers:maven/6.0.15
+    affected_versions: vers:maven/<5.5.25
+    fixed_versions: vers:maven/5.5.26
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat/tomcat
-    affected_versions: vers:maven/<5.5.25
-    fixed_versions: vers:maven/5.5.26
+    affected_versions: vers:maven/>=6.0.0|<6.0.15
+    fixed_versions: vers:maven/6.0.15
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat/tomcat
@@ -26,7 +26,7 @@ severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

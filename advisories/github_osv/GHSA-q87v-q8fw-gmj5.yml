@@ -17,12 +17,7 @@ impacted_packages:
     fixed_versions: vers:composer/2.8.25
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/symfony/security-core
-    affected_versions: vers:composer/>=3.2.10|<3.2.12
-    fixed_versions: vers:composer/3.2.12
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/security-core
+  - purl: pkg:composer/symfony/security
     affected_versions: vers:composer/>=3.3.3|<3.3.5
     fixed_versions: vers:composer/3.3.5
     fixed_in_commits: []
@@ -32,7 +27,7 @@ impacted_packages:
     fixed_versions: vers:composer/2.7.32
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/symfony/security
+  - purl: pkg:composer/symfony/symfony
     affected_versions: vers:composer/>=2.8.23|<2.8.25
     fixed_versions: vers:composer/2.8.25
     fixed_in_commits: []
@@ -42,9 +37,9 @@ impacted_packages:
     fixed_versions: vers:composer/3.2.12
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/symfony/security
-    affected_versions: vers:composer/>=3.3.3|<3.3.5
-    fixed_versions: vers:composer/3.3.5
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=3.2.10|<3.2.12
+    fixed_versions: vers:composer/3.2.12
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/symfony
@@ -53,18 +48,23 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=3.3.3|<3.3.5
+    fixed_versions: vers:composer/3.3.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/security-core
+    affected_versions: vers:composer/>=3.3.3|<3.3.5
+    fixed_versions: vers:composer/3.3.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/security
     affected_versions: vers:composer/>=2.8.23|<2.8.25
     fixed_versions: vers:composer/2.8.25
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/symfony/symfony
+  - purl: pkg:composer/symfony/security-core
     affected_versions: vers:composer/>=3.2.10|<3.2.12
     fixed_versions: vers:composer/3.2.12
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/symfony
-    affected_versions: vers:composer/>=3.3.3|<3.3.5
-    fixed_versions: vers:composer/3.3.5
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/symfony/symfony
@@ -76,14 +76,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '9.8'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-q87v-q8fw-gmj5/GHSA-q87v-q8fw-gmj5.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-284

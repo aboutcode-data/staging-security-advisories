@@ -7,6 +7,13 @@ summary: |
   Apache Rave information disclosure vulnerability
   The users/get program in the User RPC API in Apache Rave 0.11 through 0.20 allows remote authenticated users to obtain sensitive information about all user accounts via the offset parameter, as demonstrated by discovering password hashes in the password field of a response.
 impacted_packages:
+  - purl: pkg:github/apache/rave
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/rave
+        commit: 546edbaacfcb7b3fcc81aafe37a5c58e401b66c6
+    introduced_in_commits: []
   - purl: pkg:maven/org.apache.rave/rave-core
     affected_versions: vers:maven/>=0.11|<0.20.1
     fixed_versions: vers:maven/0.20.1
@@ -22,18 +29,11 @@ impacted_packages:
     fixed_versions: vers:maven/0.20.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/apache/rave
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/apache/rave
-        commit: 546edbaacfcb7b3fcc81aafe37a5c58e401b66c6
-    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

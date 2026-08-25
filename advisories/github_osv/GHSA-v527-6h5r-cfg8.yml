@@ -8,8 +8,8 @@ summary: |
   A security bypass exists in Magento 2.1 prior to 2.1.18, Magento 2.2 prior to 2.2.9, Magento 2.3 prior to 2.3.2 that could be abused to execute arbitrary PHP code. An authenticated user can bypass security protections that prevent arbitrary PHP script upload via form data injection.
 impacted_packages:
   - purl: pkg:composer/magento/community-edition
-    affected_versions: vers:composer/>=2.1.0|<2.1.18
-    fixed_versions: vers:composer/2.1.18
+    affected_versions: vers:composer/>=2.3.0|<2.3.2
+    fixed_versions: vers:composer/2.3.2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/magento/community-edition
@@ -18,20 +18,20 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/magento/community-edition
-    affected_versions: vers:composer/>=2.3.0|<2.3.2
-    fixed_versions: vers:composer/2.3.2
+    affected_versions: vers:composer/>=2.1.0|<2.1.18
+    fixed_versions: vers:composer/2.1.18
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '8.8'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-v527-6h5r-cfg8/GHSA-v527-6h5r-cfg8.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

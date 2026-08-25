@@ -7,11 +7,6 @@ summary: |
   SOAPpy vulnerable to XXE attacks
   SOAPpy 0.12.5 does not properly detect recursion during entity expansion, which allows remote attackers to cause a denial of service (memory and CPU consumption) via a crafted SOAP request containing a large number of nested entity references.
 impacted_packages:
-  - purl: pkg:pypi/soappy
-    affected_versions: vers:pypi/<=0.12.5
-    fixed_versions: vers:pypi/0.12.6
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/kiorky/soappy
     affected_versions:
     fixed_versions:
@@ -21,11 +16,16 @@ impacted_packages:
       - vcs_url: https://github.com/kiorky/soappy
         commit: 64125a24aad228761f38312d44bde4bec7354276
     introduced_in_commits: []
+  - purl: pkg:pypi/soappy
+    affected_versions: vers:pypi/<=0.12.5
+    fixed_versions: vers:pypi/0.12.6
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-119

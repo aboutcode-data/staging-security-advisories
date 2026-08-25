@@ -7,6 +7,11 @@ summary: |
   Magento is affected by an os command injection via the Data collection endpoint
   Magento Commerce versions 2.4.2 (and earlier), 2.4.2-p1 (and earlier) and 2.3.7 (and earlier) are affected by an Improper Neutralization of Special Elements Used In A Command via the Data collection endpoint. An attacker with admin privileges can upload a specially crafted file to achieve remote code execution.
 impacted_packages:
+  - purl: pkg:composer/magento/community-edition
+    affected_versions: vers:composer/>=2.4.2-p1|<2.4.2-p2
+    fixed_versions: vers:composer/2.4.2-p2
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:composer/magento/project-community-edition
     affected_versions: vers:composer/<=2.0.2
     fixed_versions:
@@ -23,11 +28,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/magento/community-edition
-    affected_versions: vers:composer/>=2.4.2-p1|<2.4.2-p2
-    fixed_versions: vers:composer/2.4.2-p2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/magento/community-edition
     affected_versions: vers:composer/2.4.2
     fixed_versions:
     fixed_in_commits: []
@@ -36,12 +36,12 @@ severities:
   - score: '7.2'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-qmq6-jpvg-j547/GHSA-qmq6-jpvg-j547.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-77

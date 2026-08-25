@@ -8,6 +8,11 @@ summary: |
   An issue was discovered in the iptables firewall module in OpenStack Neutron before 10.0.8, 11.x before 11.0.7, 12.x before 12.0.6, and 13.x before 13.0.3. By setting a destination port in a security group rule along with a protocol that doesn't support that option (for example, VRRP), an authenticated user may block further application of security group rules for instances from any project/tenant on the compute hosts to which it's applied. (Only deployments using the iptables security group driver are affected.)
 impacted_packages:
   - purl: pkg:pypi/neutron
+    affected_versions: vers:pypi/>=13.0.0|<13.0.3
+    fixed_versions: vers:pypi/13.0.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/neutron
     affected_versions: vers:pypi/<10.0.8
     fixed_versions: vers:pypi/10.0.8
     fixed_in_commits: []
@@ -22,26 +27,21 @@ impacted_packages:
     fixed_versions: vers:pypi/12.0.6
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:pypi/neutron
-    affected_versions: vers:pypi/>=13.0.0|<13.0.3
-    fixed_versions: vers:pypi/13.0.3
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: '6.5'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-9773-3fqg-8w25/GHSA-9773-3fqg-8w25.json
   - score: '7.1'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-9773-3fqg-8w25/GHSA-9773-3fqg-8w25.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-755

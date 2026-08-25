@@ -8,13 +8,13 @@ summary: |
   TYPO3 6.2.0 to 6.2.38 ELTS and 7.0.0 to 7.1.0 included a vulnerable external component, which could allow an unauthenticated, remote attacker to conduct a cross-site scripting (XSS) attack on a targeted system.
 impacted_packages:
   - purl: pkg:composer/typo3/cms
-    affected_versions: vers:composer/<=7.1.0
-    fixed_versions: vers:composer/7.2.0
+    affected_versions: vers:composer/<=6.2.38
+    fixed_versions: vers:composer/6.2.39
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/typo3/cms
-    affected_versions: vers:composer/<=6.2.38
-    fixed_versions: vers:composer/6.2.39
+    affected_versions: vers:composer/<=7.1.0
+    fixed_versions: vers:composer/7.2.0
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/typo3/typo3
@@ -30,12 +30,12 @@ severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-qvhv-pwww-53jj/GHSA-qvhv-pwww-53jj.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

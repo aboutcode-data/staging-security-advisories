@@ -8,6 +8,11 @@ summary: |
   In the CSV export feature of SilverStripe before 3.5.6, 3.6.x before 3.6.3, and 4.x before 4.0.1, it's possible for the output to contain macros and scripts, which may be executed if imported without sanitization into common software (including Microsoft Excel). For example, the CSV data may contain untrusted user input from the "First Name" field of a user's /myprofile page.
 impacted_packages:
   - purl: pkg:composer/silverstripe/framework
+    affected_versions: vers:composer/>=4.0.0|<4.0.1
+    fixed_versions: vers:composer/4.0.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/silverstripe/framework
     affected_versions: vers:composer/<3.5.6
     fixed_versions: vers:composer/3.5.6
     fixed_in_commits: []
@@ -17,21 +22,16 @@ impacted_packages:
     fixed_versions: vers:composer/3.6.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/silverstripe/framework
-    affected_versions: vers:composer/>=4.0.0|<4.0.1
-    fixed_versions: vers:composer/4.0.1
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: '5.5'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-2jvj-mhf2-g99w/GHSA-2jvj-mhf2-g99w.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-74

@@ -7,22 +7,12 @@ summary: |
   Drupal Open Redirect
   Drupal 6.x before 6.38, 7.x before 7.43, and 8.x before 8.0.4 might allow remote attackers to conduct open redirect attacks by leveraging (1) custom code or (2) a form shown on a 404 error page, related to path manipulation.
 impacted_packages:
-  - purl: pkg:composer/drupal/drupal
+  - purl: pkg:composer/drupal/core
     affected_versions: vers:composer/>=6.0.0|<6.38.0
     fixed_versions: vers:composer/6.38.0
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/drupal/drupal
-    affected_versions: vers:composer/>=7.0.0|<7.43.0
-    fixed_versions: vers:composer/7.43.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/drupal/core
-    affected_versions: vers:composer/>=7.0.0|<7.43.0
-    fixed_versions: vers:composer/7.43.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/drupal/core
     affected_versions: vers:composer/>=6.0.0|<6.38.0
     fixed_versions: vers:composer/6.38.0
     fixed_in_commits: []
@@ -30,6 +20,16 @@ impacted_packages:
   - purl: pkg:composer/drupal/drupal
     affected_versions: vers:composer/>=8.0.0|<8.0.4
     fixed_versions: vers:composer/8.0.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/drupal/drupal
+    affected_versions: vers:composer/>=7.0.0|<7.43.0
+    fixed_versions: vers:composer/7.43.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/drupal/core
+    affected_versions: vers:composer/>=7.0.0|<7.43.0
+    fixed_versions: vers:composer/7.43.0
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/drupal/core
@@ -39,14 +39,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '7.4'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:N/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-836p-6p4j-35cg/GHSA-836p-6p4j-35cg.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses: []
 references:

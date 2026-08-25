@@ -8,6 +8,11 @@ summary: |
   Apache Struts 2.3.19 to 2.3.20.2, 2.3.21 to 2.3.24.1, and 2.3.25 to 2.3.28, when Dynamic Method Invocation is enabled, allow remote attackers to execute arbitrary code via vectors related to an `!` (exclamation mark) operator to the REST Plugin.
 impacted_packages:
   - purl: pkg:maven/org.apache.struts/struts2-core
+    affected_versions: vers:maven/>=2.3.25|<2.3.28.1
+    fixed_versions: vers:maven/2.3.28.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.struts/struts2-core
     affected_versions: vers:maven/>=2.3.19|<2.3.20.3
     fixed_versions: vers:maven/2.3.20.3
     fixed_in_commits: []
@@ -15,11 +20,6 @@ impacted_packages:
   - purl: pkg:maven/org.apache.struts/struts2-core
     affected_versions: vers:maven/>=2.3.21|<2.3.24.3
     fixed_versions: vers:maven/2.3.24.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.struts/struts2-core
-    affected_versions: vers:maven/>=2.3.25|<2.3.28.1
-    fixed_versions: vers:maven/2.3.28.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/apache/struts
@@ -38,14 +38,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '9.8'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-mmj6-cjj4-hpr5/GHSA-mmj6-cjj4-hpr5.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-20

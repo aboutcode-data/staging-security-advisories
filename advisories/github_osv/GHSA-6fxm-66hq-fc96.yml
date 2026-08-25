@@ -7,11 +7,6 @@ summary: |
   Uncontrolled Resource Consumption in Apache Commons Compress
   Algorithmic complexity vulnerability in the sorting algorithms in bzip2 compressing stream (BZip2CompressorOutputStream) in Apache Commons Compress before 1.4.1 allows remote attackers to cause a denial of service (CPU consumption) via a file with many repeating inputs.
 impacted_packages:
-  - purl: pkg:maven/org.apache.commons/commons-compress
-    affected_versions: vers:maven/<1.4.1
-    fixed_versions: vers:maven/1.4.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/apache/commons-compress
     affected_versions:
     fixed_versions:
@@ -41,11 +36,16 @@ impacted_packages:
       - vcs_url: https://github.com/apache/commons-compress
         commit: 2ab2fcb356753927afaa731b9d2dcc47d3083408
     introduced_in_commits: []
+  - purl: pkg:maven/org.apache.commons/commons-compress
+    affected_versions: vers:maven/<1.4.1
+    fixed_versions: vers:maven/1.4.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-400

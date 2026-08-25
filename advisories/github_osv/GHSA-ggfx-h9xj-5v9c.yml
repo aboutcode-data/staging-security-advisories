@@ -7,11 +7,6 @@ summary: |
   Insecure PRNG use in random_password_generator
   The random_password_generator (aka RandomPasswordGenerator) gem through 1.0.0 for Ruby uses Kernel#rand to generate passwords, which, due to its cyclic nature, can facilitate password prediction.
 impacted_packages:
-  - purl: pkg:gem/random_password_generator
-    affected_versions: vers:gem/<=1.0.0
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/bvsatyaram/random_password_generator
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/bvsatyaram/random_password_generator
         commit: 2855e8d7d8803dbb580ddd6cf13846394eb4530e
     introduced_in_commits: []
+  - purl: pkg:gem/random_password_generator
+    affected_versions: vers:gem/<=1.0.0
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-ggfx-h9xj-5v9c/GHSA-ggfx-h9xj-5v9c.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-335

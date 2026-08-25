@@ -7,11 +7,6 @@ summary: |
   Pimcore RCE via PHAR upload
   In Pimcore before 5.7.1, an attacker with limited privileges can trigger execution of a .phar file via a `phar://` URL in a filename parameter, because PHAR uploads are not blocked and are reachable within the `phar://../../../../../../../../var/www/html/web/var/assets/` directory, a different vulnerability than CVE-2019-10867 and CVE-2019-16318.
 impacted_packages:
-  - purl: pkg:composer/pimcore/pimcore
-    affected_versions: vers:composer/<5.7.1
-    fixed_versions: vers:composer/5.7.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/pimcore/pimcore
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/pimcore/pimcore
         commit: 6ee5d8536d0802e377594cbe39083e822710aab9
     introduced_in_commits: []
+  - purl: pkg:composer/pimcore/pimcore
+    affected_versions: vers:composer/<5.7.1
+    fixed_versions: vers:composer/5.7.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-352x-hc2f-fwff/GHSA-352x-hc2f-fwff.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-502

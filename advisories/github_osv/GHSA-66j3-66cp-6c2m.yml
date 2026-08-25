@@ -8,11 +8,6 @@ summary: |
   The fileDenyPattern functionality in the PHP file inclusion protection API in TYPO3 4.2.x before 4.2.16, 4.3.x before 4.3.9, and 4.4.x before 4.4.5 does not properly filter file types, which allows remote attackers to bypass intended access restrictions and access arbitrary PHP files, as demonstrated using path traversal sequences with %00 null bytes and CVE-2010-3714 to read the TYPO3 encryption key from localconf.php.
 impacted_packages:
   - purl: pkg:composer/typo3/cms
-    affected_versions: vers:composer/>=4.4.0|<4.4.5
-    fixed_versions: vers:composer/4.4.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/typo3/cms
     affected_versions: vers:composer/>=4.2.0|<4.2.16
     fixed_versions: vers:composer/4.2.16
     fixed_in_commits: []
@@ -22,16 +17,21 @@ impacted_packages:
     fixed_versions: vers:composer/4.3.9
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:composer/typo3/cms
+    affected_versions: vers:composer/>=4.4.0|<4.4.5
+    fixed_versions: vers:composer/4.4.5
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.6'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:U
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-66j3-66cp-6c2m/GHSA-66j3-66cp-6c2m.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

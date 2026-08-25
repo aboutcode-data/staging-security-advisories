@@ -7,11 +7,6 @@ summary: |
   Gem in a Box vulnerable to Cross-site Scripting
   geminabox (aka Gem in a Box) before 0.13.6 is vulnerable to Cross-site Scripting (XSS), as demonstrated by uploading a gem file that has a crafted gem.homepage value in its .gemspec file.
 impacted_packages:
-  - purl: pkg:gem/geminabox
-    affected_versions: vers:gem/<0.13.6
-    fixed_versions: vers:gem/0.13.6
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/geminabox/geminabox
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/geminabox/geminabox
         commit: 99aaae196c4fc6ae0df28e186ca1e493ae658e02
     introduced_in_commits: []
+  - purl: pkg:gem/geminabox
+    affected_versions: vers:gem/<0.13.6
+    fixed_versions: vers:gem/0.13.6
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-98hq-3qvg-pg78/GHSA-98hq-3qvg-pg78.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

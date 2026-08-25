@@ -8,16 +8,16 @@ summary: |
   An issue was discovered in TYPO3 before 8.7.30, 9.x before 9.5.12, and 10.x before 10.2.2. Because escaping of user-submitted content is mishandled, the class QueryGenerator is vulnerable to SQL injection. Exploitation requires having the system extension ext:lowlevel installed, and a valid backend user who has administrator privileges.
 impacted_packages:
   - purl: pkg:composer/typo3/cms
-    affected_versions: vers:composer/>=8.0.0|<8.7.30
-    fixed_versions: vers:composer/8.7.30
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/typo3/cms
     affected_versions: vers:composer/>=9.0.0|<9.5.12
     fixed_versions: vers:composer/9.5.12
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/typo3/cms
+    affected_versions: vers:composer/>=10.0.0|<10.2.2
+    fixed_versions: vers:composer/10.2.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/typo3/cms-core
     affected_versions: vers:composer/>=10.0.0|<10.2.2
     fixed_versions: vers:composer/10.2.2
     fixed_in_commits: []
@@ -32,21 +32,21 @@ impacted_packages:
     fixed_versions: vers:composer/9.5.12
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/typo3/cms-core
-    affected_versions: vers:composer/>=10.0.0|<10.2.2
-    fixed_versions: vers:composer/10.2.2
+  - purl: pkg:composer/typo3/cms
+    affected_versions: vers:composer/>=8.0.0|<8.7.30
+    fixed_versions: vers:composer/8.7.30
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '5.5'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-59pj-7mjh-4465/GHSA-59pj-7mjh-4465.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses: []
 references:
