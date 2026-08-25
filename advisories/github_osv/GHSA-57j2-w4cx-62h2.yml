@@ -7,16 +7,6 @@ summary: |
   Deeply nested json in jackson-databind
   jackson-databind is a data-binding package for the Jackson Data Processor. jackson-databind allows a Java stack overflow exception and denial of service via a large depth of nested objects.
 impacted_packages:
-  - purl: pkg:maven/com.fasterxml.jackson.core/jackson-databind
-    affected_versions: vers:maven/<=2.13.2.0
-    fixed_versions: vers:maven/2.13.2.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/com.fasterxml.jackson.core/jackson-databind
-    affected_versions: vers:maven/<=2.12.6.0
-    fixed_versions: vers:maven/2.12.6.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/fasterxml/jackson-databind
     affected_versions:
     fixed_versions:
@@ -32,16 +22,26 @@ impacted_packages:
       - vcs_url: https://github.com/fasterxml/jackson-databind
         commit: b3587924ee5d8695942f364d0d404d48d0ea6126
     introduced_in_commits: []
+  - purl: pkg:maven/com.fasterxml.jackson.core/jackson-databind
+    affected_versions: vers:maven/<=2.13.2.0
+    fixed_versions: vers:maven/2.13.2.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/com.fasterxml.jackson.core/jackson-databind
+    affected_versions: vers:maven/<=2.12.6.0
+    fixed_versions: vers:maven/2.12.6.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-57j2-w4cx-62h2/GHSA-57j2-w4cx-62h2.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-787

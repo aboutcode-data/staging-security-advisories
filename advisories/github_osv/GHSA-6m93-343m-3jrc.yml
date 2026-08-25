@@ -7,11 +7,6 @@ summary: |
   Cross-site Scripting in HTML2PDF
   An issue was discovered in Spipu HTML2PDF before 5.2.4. Attackers can trigger deserialization of arbitrary data via the injection of a malicious <link> tag in the converted HTML document.
 impacted_packages:
-  - purl: pkg:composer/spipu/html2pdf
-    affected_versions: vers:composer/<5.2.4
-    fixed_versions: vers:composer/5.2.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/spipu/html2pdf
     affected_versions:
     fixed_versions:
@@ -21,16 +16,21 @@ impacted_packages:
       - vcs_url: https://github.com/spipu/html2pdf
         commit: 2e6bab9a2afe9cfd4d3c3038da64d8ad74e41d7f
     introduced_in_commits: []
+  - purl: pkg:composer/spipu/html2pdf
+    affected_versions: vers:composer/<5.2.4
+    fixed_versions: vers:composer/5.2.4
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/01/GHSA-6m93-343m-3jrc/GHSA-6m93-343m-3jrc.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-918

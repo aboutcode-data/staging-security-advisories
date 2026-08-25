@@ -16,48 +16,8 @@ summary: "Null pointer dereference in TensorFlow\n### Impact\nWhen [building an 
   \ questions."
 impacted_packages:
   - purl: pkg:pypi/tensorflow
-    affected_versions: vers:pypi/<2.5.3
-    fixed_versions: vers:pypi/2.5.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow
     affected_versions: vers:pypi/>=2.6.0|<2.6.3
     fixed_versions: vers:pypi/2.6.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow
-    affected_versions: vers:pypi/2.7.0
-    fixed_versions: vers:pypi/2.7.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow-cpu
-    affected_versions: vers:pypi/<2.5.3
-    fixed_versions: vers:pypi/2.5.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow-cpu
-    affected_versions: vers:pypi/>=2.6.0|<2.6.3
-    fixed_versions: vers:pypi/2.6.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow-cpu
-    affected_versions: vers:pypi/2.7.0
-    fixed_versions: vers:pypi/2.7.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow-gpu
-    affected_versions: vers:pypi/<2.5.3
-    fixed_versions: vers:pypi/2.5.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow-gpu
-    affected_versions: vers:pypi/>=2.6.0|<2.6.3
-    fixed_versions: vers:pypi/2.6.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow-gpu
-    affected_versions: vers:pypi/2.7.0
-    fixed_versions: vers:pypi/2.7.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/tensorflow/tensorflow
@@ -69,21 +29,61 @@ impacted_packages:
       - vcs_url: https://github.com/tensorflow/tensorflow
         commit: 274df9b02330b790aa8de1cee164b70f72b9b244
     introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow
+    affected_versions: vers:pypi/<2.5.3
+    fixed_versions: vers:pypi/2.5.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow
+    affected_versions: vers:pypi/2.7.0
+    fixed_versions: vers:pypi/2.7.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow-cpu
+    affected_versions: vers:pypi/<2.5.3
+    fixed_versions: vers:pypi/2.5.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow-cpu
+    affected_versions: vers:pypi/>=2.6.0|<2.6.3
+    fixed_versions: vers:pypi/2.6.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow-cpu
+    affected_versions: vers:pypi/2.7.0
+    fixed_versions: vers:pypi/2.7.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow-gpu
+    affected_versions: vers:pypi/<2.5.3
+    fixed_versions: vers:pypi/2.5.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow-gpu
+    affected_versions: vers:pypi/>=2.6.0|<2.6.3
+    fixed_versions: vers:pypi/2.6.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow-gpu
+    affected_versions: vers:pypi/2.7.0
+    fixed_versions: vers:pypi/2.7.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-fpcp-9h7m-ffpx/GHSA-fpcp-9h7m-ffpx.json
   - score: '6.0'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-fpcp-9h7m-ffpx/GHSA-fpcp-9h7m-ffpx.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-476

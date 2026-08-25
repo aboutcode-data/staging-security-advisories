@@ -46,13 +46,6 @@ summary: |
 
   Upgrade the NATS server if using NATS Accounts.
 impacted_packages:
-  - purl: pkg:github/nats-io/nats-server
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/nats-io/nats-server
-        commit: 1e08b67f08e18cd844dce833a265aaa72500a12f
-    introduced_in_commits: []
   - purl: pkg:github/nats-io/jwt
     affected_versions:
     fixed_versions:
@@ -60,16 +53,23 @@ impacted_packages:
       - vcs_url: https://github.com/nats-io/jwt
         commit: e11ce317263cef69619fc1ca743b195d02aa1d8a
     introduced_in_commits: []
+  - purl: pkg:github/nats-io/nats-server
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/nats-io/nats-server
+        commit: 1e08b67f08e18cd844dce833a265aaa72500a12f
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-4w5x-x539-ppf5/GHSA-4w5x-x539-ppf5.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-798

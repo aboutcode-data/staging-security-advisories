@@ -82,6 +82,26 @@ summary: |
   An Issue for this can be found at https://github.com/dotnet/aspnetcore/issues/41609
   MSRC details for this can be found at https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-29145
 impacted_packages:
+  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-musl-x64
+    affected_versions: vers:nuget/>=5.0.0|<5.0.17
+    fixed_versions: vers:nuget/5.0.17
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.win-arm64
+    affected_versions: vers:nuget/>=6.0.0|<6.0.5
+    fixed_versions: vers:nuget/6.0.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-musl-arm64
+    affected_versions: vers:nuget/>=5.0.0|<5.0.17
+    fixed_versions: vers:nuget/5.0.17
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-musl-arm64
+    affected_versions: vers:nuget/>=6.0.0|<6.0.5
+    fixed_versions: vers:nuget/6.0.5
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.win-x64
     affected_versions: vers:nuget/>=3.0.0|<3.1.25
     fixed_versions: vers:nuget/3.1.25
@@ -148,11 +168,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-musl-x64
-    affected_versions: vers:nuget/>=5.0.0|<5.0.17
-    fixed_versions: vers:nuget/5.0.17
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-musl-x64
     affected_versions: vers:nuget/>=6.0.0|<6.0.5
     fixed_versions: vers:nuget/6.0.5
     fixed_in_commits: []
@@ -197,24 +212,9 @@ impacted_packages:
     fixed_versions: vers:nuget/5.0.17
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.win-arm64
-    affected_versions: vers:nuget/>=6.0.0|<6.0.5
-    fixed_versions: vers:nuget/6.0.5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-musl-arm64
     affected_versions: vers:nuget/>=3.0.0|<3.1.25
     fixed_versions: vers:nuget/3.1.25
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-musl-arm64
-    affected_versions: vers:nuget/>=5.0.0|<5.0.17
-    fixed_versions: vers:nuget/5.0.17
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-musl-arm64
-    affected_versions: vers:nuget/>=6.0.0|<6.0.5
-    fixed_versions: vers:nuget/6.0.5
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-musl-arm
@@ -251,12 +251,12 @@ severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-fcg8-mg9g-6hc4/GHSA-fcg8-mg9g-6hc4.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-400

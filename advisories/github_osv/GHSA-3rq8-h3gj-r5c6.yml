@@ -87,7 +87,12 @@ summary: |
   - An Issue for this can be found at https://github.com/dotnet/aspnetcore/issues/41608
   - MSRC details for this can be found at https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-29117
 impacted_packages:
-  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.win-x86
+  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-musl-x64
+    affected_versions: vers:nuget/<=3.1.24
+    fixed_versions: vers:nuget/3.1.25
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-musl-x64
     affected_versions: vers:nuget/<=5.0.16
     fixed_versions: vers:nuget/5.0.17
     fixed_in_commits: []
@@ -95,6 +100,26 @@ impacted_packages:
   - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.win-x64
     affected_versions: vers:nuget/<=3.1.24
     fixed_versions: vers:nuget/3.1.25
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.osx-x64
+    affected_versions: vers:nuget/<=6.0.4
+    fixed_versions: vers:nuget/6.0.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-arm64
+    affected_versions: vers:nuget/<=5.0.16
+    fixed_versions: vers:nuget/5.0.17
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-arm64
+    affected_versions: vers:nuget/<=6.0.4
+    fixed_versions: vers:nuget/6.0.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-musl-arm64
+    affected_versions: vers:nuget/<=5.0.16
+    fixed_versions: vers:nuget/5.0.17
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.win-x64
@@ -128,6 +153,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.win-x86
+    affected_versions: vers:nuget/<=5.0.16
+    fixed_versions: vers:nuget/5.0.17
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.win-x86
     affected_versions: vers:nuget/<=6.0.4
     fixed_versions: vers:nuget/6.0.5
     fixed_in_commits: []
@@ -142,49 +172,14 @@ impacted_packages:
     fixed_versions: vers:nuget/5.0.17
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.osx-x64
-    affected_versions: vers:nuget/<=6.0.4
-    fixed_versions: vers:nuget/6.0.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-musl-x64
-    affected_versions: vers:nuget/<=3.1.24
-    fixed_versions: vers:nuget/3.1.25
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-musl-x64
-    affected_versions: vers:nuget/<=5.0.16
-    fixed_versions: vers:nuget/5.0.17
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-musl-x64
-    affected_versions: vers:nuget/<=6.0.4
-    fixed_versions: vers:nuget/6.0.5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-arm64
     affected_versions: vers:nuget/<=3.1.24
     fixed_versions: vers:nuget/3.1.25
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-arm64
-    affected_versions: vers:nuget/<=5.0.16
-    fixed_versions: vers:nuget/5.0.17
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-arm64
-    affected_versions: vers:nuget/<=6.0.4
-    fixed_versions: vers:nuget/6.0.5
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-arm
     affected_versions: vers:nuget/<=3.1.24
     fixed_versions: vers:nuget/3.1.25
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-arm
-    affected_versions: vers:nuget/<=5.0.16
-    fixed_versions: vers:nuget/5.0.17
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-arm
@@ -210,11 +205,6 @@ impacted_packages:
   - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-musl-arm64
     affected_versions: vers:nuget/<=3.1.24
     fixed_versions: vers:nuget/3.1.25
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-musl-arm64
-    affected_versions: vers:nuget/<=5.0.16
-    fixed_versions: vers:nuget/5.0.17
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-musl-arm64
@@ -248,13 +238,23 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.win-arm
-    affected_versions: vers:nuget/<=3.1.24
-    fixed_versions: vers:nuget/3.1.25
+    affected_versions: vers:nuget/<=5.0.16
+    fixed_versions: vers:nuget/5.0.17
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-musl-x64
+    affected_versions: vers:nuget/<=6.0.4
+    fixed_versions: vers:nuget/6.0.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-arm
+    affected_versions: vers:nuget/<=5.0.16
+    fixed_versions: vers:nuget/5.0.17
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.win-arm
-    affected_versions: vers:nuget/<=5.0.16
-    fixed_versions: vers:nuget/5.0.17
+    affected_versions: vers:nuget/<=3.1.24
+    fixed_versions: vers:nuget/3.1.25
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.win-arm
@@ -271,12 +271,12 @@ severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-3rq8-h3gj-r5c6/GHSA-3rq8-h3gj-r5c6.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-400

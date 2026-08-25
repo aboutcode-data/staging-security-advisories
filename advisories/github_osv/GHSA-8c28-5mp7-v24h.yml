@@ -16,6 +16,15 @@ summary: |
   ### References
   * [TYPO3-CORE-SA-2022-012](https://typo3.org/security/advisory/typo3-core-sa-2022-012)
 impacted_packages:
+  - purl: pkg:github/typo3/typo3
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/typo3/typo3
+        commit: 73b46b6a627093112cfca4b895a198ca5e1970b7
+      - vcs_url: https://github.com/typo3/typo3
+        commit: 1e5f44417f031c9c5a9f9d09a6a841cf89aa7b7a
+    introduced_in_commits: []
   - purl: pkg:composer/typo3/cms-core
     affected_versions: vers:composer/>=9.0.0|<9.5.38
     fixed_versions: vers:composer/9.5.38
@@ -41,25 +50,16 @@ impacted_packages:
     fixed_versions: vers:composer/11.5.20
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/typo3/typo3
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/typo3/typo3
-        commit: 73b46b6a627093112cfca4b895a198ca5e1970b7
-      - vcs_url: https://github.com/typo3/typo3
-        commit: 1e5f44417f031c9c5a9f9d09a6a841cf89aa7b7a
-    introduced_in_commits: []
 severities:
   - score: '5.9'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/12/GHSA-8c28-5mp7-v24h/GHSA-8c28-5mp7-v24h.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-405

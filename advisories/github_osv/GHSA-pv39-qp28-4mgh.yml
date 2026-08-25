@@ -7,6 +7,15 @@ summary: |
   Improper Restriction of XML External Entity Reference in soa-model
   Soa-model is a toolkit and Java API for WSDL, WADL and XML Schema. An XML External Entity (XXE) vulnerability exists in versions of soa-model prior to 1.6.4 in the WSDLParser function. This issue has been fixed in version 1.6.4.
 impacted_packages:
+  - purl: pkg:github/membrane/soa-model
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/membrane/soa-model
+        commit: 19de16902468e7963cc4dc6b544574bc1ea3f251
+      - vcs_url: https://github.com/membrane/soa-model
+        commit: 3aa295f155f621d5ea661cb9a0604013fc8fd8ff
+    introduced_in_commits: []
   - purl: pkg:maven/com.predic8/soa-model-parent
     affected_versions: vers:maven/<1.6.4
     fixed_versions: vers:maven/1.6.4
@@ -17,25 +26,16 @@ impacted_packages:
     fixed_versions: vers:maven/1.6.4
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/membrane/soa-model
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/membrane/soa-model
-        commit: 19de16902468e7963cc4dc6b544574bc1ea3f251
-      - vcs_url: https://github.com/membrane/soa-model
-        commit: 3aa295f155f621d5ea661cb9a0604013fc8fd8ff
-    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-pv39-qp28-4mgh/GHSA-pv39-qp28-4mgh.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-611

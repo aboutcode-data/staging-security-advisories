@@ -8,11 +8,6 @@ summary: |
   Adobe Commerce versions 2.4.3-p2 (and earlier), 2.3.7-p3 (and earlier) and 2.4.4 (and earlier) are affected by an Improper Access Control vulnerability that could result in a Security feature bypass. An attacker could leverage this vulnerability to leak minor information of another user's account details. Exploitation of this issue does not require user interaction.
 impacted_packages:
   - purl: pkg:composer/magento/community-edition
-    affected_versions: vers:composer/2.4.4
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/magento/community-edition
     affected_versions: vers:composer/>=2.4.3-p1|<2.4.3-p3
     fixed_versions: vers:composer/2.4.3-p3
     fixed_in_commits: []
@@ -33,6 +28,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/magento/community-edition
+    affected_versions: vers:composer/2.4.4
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/magento/community-edition
     affected_versions: vers:composer/2.4.3
     fixed_versions:
     fixed_in_commits: []
@@ -41,12 +41,12 @@ severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-gm4m-9rm8-7rxj/GHSA-gm4m-9rm8-7rxj.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-863

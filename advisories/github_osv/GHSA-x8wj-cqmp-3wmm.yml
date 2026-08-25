@@ -7,11 +7,6 @@ summary: |
   Cross-site Scripting in Zenario CMS
   Zenario CMS 9.0.54156 is vulnerable to Cross Site Scripting (XSS) via upload file to *.SVG. An attacker can send malicious files to victims and steals victim's cookie leads to account takeover. The person viewing the image of a contact can be victim of XSS.
 impacted_packages:
-  - purl: pkg:composer/tribalsystems/zenario
-    affected_versions: vers:composer/<=9.0.54156
-    fixed_versions: vers:composer/9.0.55143
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/tribalsystems/zenario
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/tribalsystems/zenario
         commit: 4566d8a9ac6755f098b3373252fdb17754a77007
     introduced_in_commits: []
+  - purl: pkg:composer/tribalsystems/zenario
+    affected_versions: vers:composer/<=9.0.54156
+    fixed_versions: vers:composer/9.0.55143
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-x8wj-cqmp-3wmm/GHSA-x8wj-cqmp-3wmm.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

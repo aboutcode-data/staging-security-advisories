@@ -29,6 +29,11 @@ summary: |
   https://www.redteam-pentesting.de/
 impacted_packages:
   - purl: pkg:maven/org.cometd.java/cometd-java-oort
+    affected_versions: vers:maven/>=7.0.0|<7.0.6
+    fixed_versions: vers:maven/7.0.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.cometd.java/cometd-java-oort
     affected_versions: vers:maven/<5.0.11
     fixed_versions: vers:maven/5.0.11
     fixed_in_commits: []
@@ -36,11 +41,6 @@ impacted_packages:
   - purl: pkg:maven/org.cometd.java/cometd-java-oort
     affected_versions: vers:maven/>=6.0.0|<6.0.6
     fixed_versions: vers:maven/6.0.6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.cometd.java/cometd-java-oort
-    affected_versions: vers:maven/>=7.0.0|<7.0.6
-    fixed_versions: vers:maven/7.0.6
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/cometd/cometd
@@ -54,12 +54,12 @@ severities:
   - score: '8.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-rjmq-6v55-4rjv/GHSA-rjmq-6v55-4rjv.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-863

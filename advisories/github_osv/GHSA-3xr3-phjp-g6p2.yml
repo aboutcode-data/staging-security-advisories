@@ -7,6 +7,13 @@ summary: |
   Drupal core access bypass vulnerability
   Under some circumstances, the Drupal core JSON:API module does not properly restrict access to certain content, which may result in unintended access bypass. Sites that do not have the JSON:API module enabled are not affected.
 impacted_packages:
+  - purl: pkg:github/drupal/core
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/drupal/core
+        commit: 7a9bef4b4750d79ab42498e459012cabe4c4bd8b
+    introduced_in_commits: []
   - purl: pkg:composer/drupal/core
     affected_versions: vers:composer/>=8.0.0|<8.9.19
     fixed_versions: vers:composer/8.9.19
@@ -22,23 +29,16 @@ impacted_packages:
     fixed_versions: vers:composer/9.2.6
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/drupal/core
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/drupal/core
-        commit: 7a9bef4b4750d79ab42498e459012cabe4c4bd8b
-    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-3xr3-phjp-g6p2/GHSA-3xr3-phjp-g6p2.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-284

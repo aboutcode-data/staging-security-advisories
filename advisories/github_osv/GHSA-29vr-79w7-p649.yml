@@ -11,11 +11,6 @@ summary: |
   ## Original Description
   An Access Control vunerabiity exists in Gerapy v 0.9.7 via the spider parameter in project_configure function.
 impacted_packages:
-  - purl: pkg:pypi/gerapy
-    affected_versions: vers:pypi/<0.9.8
-    fixed_versions: vers:pypi/0.9.8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/gerapy/gerapy
     affected_versions:
     fixed_versions:
@@ -23,16 +18,21 @@ impacted_packages:
       - vcs_url: https://github.com/gerapy/gerapy
         commit: 49bcb19be5e0320e7e1535f34fe00f16a3cf3b28
     introduced_in_commits: []
+  - purl: pkg:pypi/gerapy
+    affected_versions: vers:pypi/<0.9.8
+    fixed_versions: vers:pypi/0.9.8
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-29vr-79w7-p649/GHSA-29vr-79w7-p649.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-863

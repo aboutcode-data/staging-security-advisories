@@ -7,11 +7,6 @@ summary: |
   Path traversal in Pillow
   Pillow before 9.0.1 allows attackers to delete files because spaces in temporary pathnames are mishandled.
 impacted_packages:
-  - purl: pkg:pypi/pillow
-    affected_versions: vers:pypi/<9.0.1
-    fixed_versions: vers:pypi/9.0.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/python-pillow/pillow
     affected_versions:
     fixed_versions:
@@ -25,21 +20,26 @@ impacted_packages:
       - vcs_url: https://github.com/python-pillow/pillow
         commit: 427221ef5f19157001bf8b1ad7cfe0b905ca8c26
     introduced_in_commits: []
+  - purl: pkg:pypi/pillow
+    affected_versions: vers:pypi/<9.0.1
+    fixed_versions: vers:pypi/9.0.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-9j59-75qj-795w/GHSA-9j59-75qj-795w.json
   - score: '8.8'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-9j59-75qj-795w/GHSA-9j59-75qj-795w.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

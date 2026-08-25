@@ -7,11 +7,6 @@ summary: |
   Server-side request forgery (SSRF) in Apache Batik
   Apache Batik is vulnerable to server-side request forgery, caused by improper input validation by the "xlink:href" attributes. By using a specially-crafted argument, an attacker could exploit this vulnerability to cause the underlying server to make arbitrary GET requests.
 impacted_packages:
-  - purl: pkg:maven/org.apache.xmlgraphics/batik
-    affected_versions: vers:maven/<1.13
-    fixed_versions: vers:maven/1.13
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/apache/xmlgraphics-batik
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/apache/xmlgraphics-batik
         commit: bc6078ca949039e2076cd08b4cb169c84c1179b1
     introduced_in_commits: []
+  - purl: pkg:maven/org.apache.xmlgraphics/batik
+    affected_versions: vers:maven/<1.13
+    fixed_versions: vers:maven/1.13
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-cmx4-p4v5-hmr5/GHSA-cmx4-p4v5-hmr5.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-918

@@ -7,11 +7,6 @@ summary: |
   Cross site scripting in francoisjacquet/rosariosis
   A Cross Site Scripting (XSS) vulnerabilty exits in RosarioSIS before 7.6.1 via the xss_clean function in classes/Security.php, which allows remote malicious users to inject arbitrary JaveScript of HTML.An example of affected components are all Markdown input fields.
 impacted_packages:
-  - purl: pkg:composer/francoisjacquet/rosariosis
-    affected_versions: vers:composer/<7.6.1
-    fixed_versions: vers:composer/7.6.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:gitlab/francoisjacquet/rosariosis
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://gitlab.com/francoisjacquet/rosariosis
         commit: 0f5d1f1d193bc6b711d1644f172579d498ec1636
     introduced_in_commits: []
+  - purl: pkg:composer/francoisjacquet/rosariosis
+    affected_versions: vers:composer/<7.6.1
+    fixed_versions: vers:composer/7.6.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-44cg-qcpr-fwjh/GHSA-44cg-qcpr-fwjh.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

@@ -7,11 +7,6 @@ summary: |
   Path Traversal in Eclipse Vert
   In Eclipse Vert.x 3.4.x up to 3.9.4, 4.0.0-milestone1, 4.0.0-milestone2, 4.0.0-milestone3, 4.0.0-milestone4, 4.0.0-milestone5, 4.0.0.Beta1, 4.0.0.Beta2, and 4.0.0.Beta3, StaticHandler doesn't correctly processes back slashes on Windows Operating systems, allowing, escape the webroot folder to the current working directory.
 impacted_packages:
-  - purl: pkg:maven/io.vertx/vertx-web
-    affected_versions: vers:maven/>=3.0.0|<3.9.4
-    fixed_versions: vers:maven/3.9.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/vert-x3/vertx-web
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/vert-x3/vertx-web
         commit: b12f7c4c6576a8adc3f683b2899de4b0e7d099e4
     introduced_in_commits: []
+  - purl: pkg:maven/io.vertx/vertx-web
+    affected_versions: vers:maven/>=3.0.0|<3.9.4
+    fixed_versions: vers:maven/3.9.4
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-vjw7-6gfq-6wf5/GHSA-vjw7-6gfq-6wf5.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-23

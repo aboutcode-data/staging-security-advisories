@@ -32,6 +32,13 @@ summary: "Missing server signature validation in OctoberCMS\n### Impact\n\nThis 
   \ on this exploit:\n• Nikita Khaetsky\n\n### For more information\n\nIf you have any questions\
   \ or comments about this advisory:\n* Email us at [hello@octobercms.com](mailto:hello@octobercms.com)"
 impacted_packages:
+  - purl: pkg:github/octobercms/october
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/octobercms/october
+        commit: e3b455ad587282f0fbcb7763c6d9c3d000ca1e6a
+    introduced_in_commits: []
   - purl: pkg:composer/october/system
     affected_versions: vers:composer/>=1.1.0|<1.1.11
     fixed_versions: vers:composer/1.1.11
@@ -42,23 +49,16 @@ impacted_packages:
     fixed_versions: vers:composer/1.0.475
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/octobercms/october
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/octobercms/october
-        commit: e3b455ad587282f0fbcb7763c6d9c3d000ca1e6a
-    introduced_in_commits: []
 severities:
   - score: '4.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-53m6-44rc-h2q5/GHSA-53m6-44rc-h2q5.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-347

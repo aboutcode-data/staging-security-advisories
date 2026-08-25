@@ -7,11 +7,6 @@ summary: |
   File Upload Restriction Bypass leading to Cross-site Scripting in ShowDoc
   ShowDoc prior to 2.10.4 is vulnerable to a file upload restriction bypass leading to stored cross-site scripting.
 impacted_packages:
-  - purl: pkg:composer/showdoc/showdoc
-    affected_versions: vers:composer/<2.10.4
-    fixed_versions: vers:composer/2.10.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/star7th/showdoc
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/star7th/showdoc
         commit: 237ac6d43bf3728bf3587c486a23b4a48ea7acb3
     introduced_in_commits: []
+  - purl: pkg:composer/showdoc/showdoc
+    affected_versions: vers:composer/<2.10.4
+    fixed_versions: vers:composer/2.10.4
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-j6jg-w79c-7p8v/GHSA-j6jg-w79c-7p8v.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-434

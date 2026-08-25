@@ -9,11 +9,6 @@ summary: |
 
   TrustCor's root certificates are being removed pursuant to an investigation prompted by media reporting that TrustCor's ownership also operated a business that produced spyware. Conclusions of Mozilla's investigation can be found [here](https://groups.google.com/a/mozilla.org/g/dev-security-policy/c/oxX69KFvsm4/m/yLohoVqtCgAJ).
 impacted_packages:
-  - purl: pkg:pypi/certifi
-    affected_versions: vers:pypi/>=2017.11.5|<2022.12.7
-    fixed_versions: vers:pypi/2022.12.7
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/certifi/python-certifi
     affected_versions:
     fixed_versions:
@@ -21,21 +16,26 @@ impacted_packages:
       - vcs_url: https://github.com/certifi/python-certifi
         commit: 9e9e840925d7b8e76c76fdac1fab7e6e88c1c3b8
     introduced_in_commits: []
+  - purl: pkg:pypi/certifi
+    affected_versions: vers:pypi/>=2017.11.5|<2022.12.7
+    fixed_versions: vers:pypi/2022.12.7
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:N/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/12/GHSA-43fp-rhv2-5gv8/GHSA-43fp-rhv2-5gv8.json
   - score: '5.9'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/12/GHSA-43fp-rhv2-5gv8/GHSA-43fp-rhv2-5gv8.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-345

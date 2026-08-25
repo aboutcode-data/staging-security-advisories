@@ -25,13 +25,13 @@ summary: "Remote Code Execution in Spring Framework\nSpring Framework prior to v
   \ a `WebFluxRegistrations` bean (Spring WebFlux)."
 impacted_packages:
   - purl: pkg:maven/org.springframework/spring-beans
-    affected_versions: vers:maven/<5.2.20.RELEASE
-    fixed_versions: vers:maven/5.2.20.RELEASE
+    affected_versions: vers:maven/>=5.3.0|<5.3.18
+    fixed_versions: vers:maven/5.3.18
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.springframework/spring-beans
-    affected_versions: vers:maven/>=5.3.0|<5.3.18
-    fixed_versions: vers:maven/5.3.18
+    affected_versions: vers:maven/<5.2.20.RELEASE
+    fixed_versions: vers:maven/5.2.20.RELEASE
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.springframework/spring-webmvc
@@ -85,12 +85,12 @@ severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-36p3-wjmg-h94x/GHSA-36p3-wjmg-h94x.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

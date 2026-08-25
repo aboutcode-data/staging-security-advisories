@@ -12,21 +12,14 @@ summary: |
   Credentials Binding Plugin 1.27.1 and 1.24.1 performs permission checks when validating secret file credentials IDs.
 impacted_packages:
   - purl: pkg:maven/org.jenkins-ci.plugins/credentials-binding
-    affected_versions: vers:maven/>=1.25|<1.27.1
-    fixed_versions: vers:maven/1.27.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.jenkins-ci.plugins/credentials-binding
     affected_versions: vers:maven/<1.24.1
     fixed_versions: vers:maven/1.24.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/jenkinsci/credentials-binding-plugin
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/jenkinsci/credentials-binding-plugin
-        commit: 2dd5eda721e52d9a5bf6748405adf965ba517d8a
+  - purl: pkg:maven/org.jenkins-ci.plugins/credentials-binding
+    affected_versions: vers:maven/>=1.25|<1.27.1
+    fixed_versions: vers:maven/1.27.1
+    fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/cveproject/cvelist
     affected_versions:
@@ -35,16 +28,23 @@ impacted_packages:
       - vcs_url: https://github.com/cveproject/cvelist
         commit: 2d78eb36f4d084db7fb35f1535d8d84fdcb7d859
     introduced_in_commits: []
+  - purl: pkg:github/jenkinsci/credentials-binding-plugin
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/jenkinsci/credentials-binding-plugin
+        commit: 2dd5eda721e52d9a5bf6748405adf965ba517d8a
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/01/GHSA-gqm2-2gcx-p88w/GHSA-gqm2-2gcx-p88w.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-732

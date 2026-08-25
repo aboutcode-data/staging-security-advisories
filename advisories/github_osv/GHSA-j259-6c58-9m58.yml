@@ -29,11 +29,6 @@ summary: |
   - Add `allowExtendedProperties: false` DataSource setting
   - When passing directly to the connector functions, manually sanitize the user input for the `contains` LoopBack filter beforehand.
 impacted_packages:
-  - purl: pkg:npm/loopback-connector-postgresql
-    affected_versions: vers:npm/<5.5.1
-    fixed_versions: vers:npm/5.5.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/loopbackio/loopback-connector-postgresql
     affected_versions:
     fixed_versions:
@@ -41,16 +36,21 @@ impacted_packages:
       - vcs_url: https://github.com/loopbackio/loopback-connector-postgresql
         commit: d57406c6737692a3a106b58a35406290cddb23e5
     introduced_in_commits: []
+  - purl: pkg:npm/loopback-connector-postgresql
+    affected_versions: vers:npm/<5.5.1
+    fixed_versions: vers:npm/5.5.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-j259-6c58-9m58/GHSA-j259-6c58-9m58.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-20

@@ -7,11 +7,6 @@ summary: |
   Cockpit before 2.2.0 vulnerable to Insufficient Session Expiration
   Cockpit before version 2.2.0 is vulnerable to Insufficient Session Expiration. The application does not validate requests after password changes, allowing a user to change their account details even after an admin changes their password.
 impacted_packages:
-  - purl: pkg:composer/aheinze/cockpit
-    affected_versions: vers:composer/<2.2.0
-    fixed_versions: vers:composer/2.2.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/cockpit-hq/cockpit
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/cockpit-hq/cockpit
         commit: dd8d0314912fa6517ebd2cc9939d9fafbe68731b
     introduced_in_commits: []
+  - purl: pkg:composer/aheinze/cockpit
+    affected_versions: vers:composer/<2.2.0
+    fixed_versions: vers:composer/2.2.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-vm6p-35rw-3fxc/GHSA-vm6p-35rw-3fxc.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-613

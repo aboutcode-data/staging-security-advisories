@@ -7,11 +7,6 @@ summary: |
   Exposure of Sensitive Information to an Unauthorized Actor in LemMinX
   A flaw was found in LemMinX in versions prior to 0.19.0. Insecure redirect could allow unauthorized access to sensitive information locally if LemMinX is run under a privileged user.
 impacted_packages:
-  - purl: pkg:maven/org.eclipse.lemminx/lemminx-parent
-    affected_versions: vers:maven/<0.19.0
-    fixed_versions: vers:maven/0.19.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/eclipse/lemminx
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/eclipse/lemminx
         commit: 076b88052c2a63f60a98ef4b45e3e38c217b70ae
     introduced_in_commits: []
+  - purl: pkg:maven/org.eclipse.lemminx/lemminx-parent
+    affected_versions: vers:maven/<0.19.0
+    fixed_versions: vers:maven/0.19.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-hrxv-694f-22g3/GHSA-hrxv-694f-22g3.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

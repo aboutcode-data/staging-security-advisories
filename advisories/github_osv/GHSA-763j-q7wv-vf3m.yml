@@ -35,16 +35,6 @@ summary: |
   If you have any questions or comments about this advisory:
   * Email us at security@dspace.org
 impacted_packages:
-  - purl: pkg:maven/org.dspace/dspace-jspui
-    affected_versions: vers:maven/>=6.0|<6.4
-    fixed_versions: vers:maven/6.4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.dspace/dspace-jspui
-    affected_versions: vers:maven/>=4.0|<5.11
-    fixed_versions: vers:maven/5.11
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/dspace/dspace
     affected_versions:
     fixed_versions:
@@ -54,16 +44,26 @@ impacted_packages:
       - vcs_url: https://github.com/dspace/dspace
         commit: f7758457b7ec3489d525e39aa753cc70809d9ad9
     introduced_in_commits: []
+  - purl: pkg:maven/org.dspace/dspace-jspui
+    affected_versions: vers:maven/>=4.0|<5.11
+    fixed_versions: vers:maven/5.11
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.dspace/dspace-jspui
+    affected_versions: vers:maven/>=6.0|<6.4
+    fixed_versions: vers:maven/6.4
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-763j-q7wv-vf3m/GHSA-763j-q7wv-vf3m.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-601

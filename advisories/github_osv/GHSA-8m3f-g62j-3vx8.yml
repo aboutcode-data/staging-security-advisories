@@ -7,11 +7,6 @@ summary: |
   binwalk vulnerable to UNIX Symbolic Link (Symlink) Following
   A vulnerability, which was classified as problematic, was found in ReFirm Labs binwalk up to 2.3.2. Affected is an unknown function of the file src/binwalk/modules/extractor.py of the component Archive Extraction Handler. The manipulation leads to symlink following. It is possible to launch the attack remotely. Upgrading to version 2.3.3 can address this issue. The name of the patch is fa0c0bd59b8588814756942fe4cb5452e76c1dcd. It is recommended to upgrade the affected component. The identifier of this vulnerability is VDB-216876.
 impacted_packages:
-  - purl: pkg:pypi/binwalk
-    affected_versions: vers:pypi/<2.3.3
-    fixed_versions: vers:pypi/2.3.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/refirmlabs/binwalk
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/refirmlabs/binwalk
         commit: fa0c0bd59b8588814756942fe4cb5452e76c1dcd
     introduced_in_commits: []
+  - purl: pkg:pypi/binwalk
+    affected_versions: vers:pypi/<2.3.3
+    fixed_versions: vers:pypi/2.3.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/12/GHSA-8m3f-g62j-3vx8/GHSA-8m3f-g62j-3vx8.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-59

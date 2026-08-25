@@ -7,11 +7,6 @@ summary: |
   SQL Injection in Fork CMS
   Fork CMS contains a SQL injection vulnerability in versions prior to version 5.11.1. When deleting submissions which belong to a formular (made with module `FormBuilder`), the parameter `id[]` is vulnerable to SQL injection.
 impacted_packages:
-  - purl: pkg:composer/forkcms/forkcms
-    affected_versions: vers:composer/<5.11.1
-    fixed_versions: vers:composer/5.11.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/forkcms/forkcms
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/forkcms/forkcms
         commit: 7a12046a67ae5d8cf04face3ee75e55f03a1a608
     introduced_in_commits: []
+  - purl: pkg:composer/forkcms/forkcms
+    affected_versions: vers:composer/<5.11.1
+    fixed_versions: vers:composer/5.11.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-q863-cchm-c6c6/GHSA-q863-cchm-c6c6.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-89

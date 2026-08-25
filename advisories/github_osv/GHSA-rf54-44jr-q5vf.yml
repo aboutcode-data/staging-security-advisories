@@ -7,11 +7,6 @@ summary: |
   Improper Input Validation in url-js
   The package url-js before 2.1.0 is vulnerable to Improper Input Validation due to improper parsing, which makes it is possible for the hostname to be spoofed. http://\\\\\\\\localhost and http://localhost are the same URL. However, the hostname is not parsed as localhost, and the backslash is reflected as it is.
 impacted_packages:
-  - purl: pkg:npm/url-js
-    affected_versions: vers:npm/<2.1.0
-    fixed_versions: vers:npm/2.1.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/duzun/url.js
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/duzun/url.js
         commit: 9dc9fcc99baa4cbda24403d81a589e9b0f4121d0
     introduced_in_commits: []
+  - purl: pkg:npm/url-js
+    affected_versions: vers:npm/<2.1.0
+    fixed_versions: vers:npm/2.1.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-rf54-44jr-q5vf/GHSA-rf54-44jr-q5vf.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-20

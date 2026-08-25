@@ -38,6 +38,15 @@ summary: "Prototype Pollution in JSON5 via Parse Method\nThe `parse` method of t
   \ ['isAdmin', 'isMod'])) {\n  doSomethingDangerous(props); // \"Doing dangerous thing as admin.\"\
   \n} else {\n  throw new Error('Forbidden...');\n}\n ```"
 impacted_packages:
+  - purl: pkg:github/json5/json5
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/json5/json5
+        commit: 7774c1097993bc3ce9f0ac4b722a32bf7d6871c8
+      - vcs_url: https://github.com/json5/json5
+        commit: 62a65408408d40aeea14c7869ed327acead12972
+    introduced_in_commits: []
   - purl: pkg:npm/json5
     affected_versions: vers:npm/>=2.0.0|<2.2.2
     fixed_versions: vers:npm/2.2.2
@@ -48,25 +57,16 @@ impacted_packages:
     fixed_versions: vers:npm/1.0.2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/json5/json5
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/json5/json5
-        commit: 7774c1097993bc3ce9f0ac4b722a32bf7d6871c8
-      - vcs_url: https://github.com/json5/json5
-        commit: 62a65408408d40aeea14c7869ed327acead12972
-    introduced_in_commits: []
 severities:
   - score: '7.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:L/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/12/GHSA-9c47-m6qq-7p4h/GHSA-9c47-m6qq-7p4h.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-1321

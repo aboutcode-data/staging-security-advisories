@@ -12,6 +12,11 @@ summary: |
   An enumeration of credentials IDs in Bitbucket Branch Source Plugin 746.v350d2781c184, 725.vd9f8be0fa250, 2.9.11.2, and 2.9.7.2 requires the appropriate permissions.
 impacted_packages:
   - purl: pkg:maven/org.jenkins-ci.plugins/cloudbees-bitbucket-branch-source
+    affected_versions: vers:maven/<2.9.7.2
+    fixed_versions: vers:maven/2.9.7.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/cloudbees-bitbucket-branch-source
     affected_versions: vers:maven/>=726.v7e6f53de133c|<746.v350d2781c184
     fixed_versions: vers:maven/746.v350d2781c184
     fixed_in_commits: []
@@ -24,11 +29,6 @@ impacted_packages:
   - purl: pkg:maven/org.jenkins-ci.plugins/cloudbees-bitbucket-branch-source
     affected_versions: vers:maven/>=2.9.8|<2.9.11.2
     fixed_versions: vers:maven/2.9.11.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.jenkins-ci.plugins/cloudbees-bitbucket-branch-source
-    affected_versions: vers:maven/<2.9.7.2
-    fixed_versions: vers:maven/2.9.7.2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/cveproject/cvelist
@@ -49,12 +49,12 @@ severities:
   - score: '4.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/01/GHSA-w2mh-6xj5-f77f/GHSA-w2mh-6xj5-f77f.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-732

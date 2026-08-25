@@ -7,11 +7,6 @@ summary: |
   Cross-site Scripting in pimcore
   pimcore is vulnerable to Stored XSS at Name field in the setting tab of the Global Targeting Rules.
 impacted_packages:
-  - purl: pkg:composer/pimcore/pimcore
-    affected_versions: vers:composer/<10.2.9
-    fixed_versions: vers:composer/10.2.9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/pimcore/pimcore
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/pimcore/pimcore
         commit: 665976327ad3c2c87efa2a5a64d696032c0a8109
     introduced_in_commits: []
+  - purl: pkg:composer/pimcore/pimcore
+    affected_versions: vers:composer/<10.2.9
+    fixed_versions: vers:composer/10.2.9
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/01/GHSA-455w-gv5p-wgg3/GHSA-455w-gv5p-wgg3.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

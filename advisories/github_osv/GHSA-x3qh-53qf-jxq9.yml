@@ -11,11 +11,6 @@ summary: |
 
   Administrators unable to update are advised to use SSH checkout instead.
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins/gitea
-    affected_versions: vers:maven/<1.4.5
-    fixed_versions: vers:maven/1.4.5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/gitea-plugin
     affected_versions:
     fixed_versions:
@@ -23,16 +18,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/gitea-plugin
         commit: b3b2bd869b91f9f1312bbbbf6128cad2cd86bd8c
     introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/gitea
+    affected_versions: vers:maven/<1.4.5
+    fixed_versions: vers:maven/1.4.5
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/12/GHSA-x3qh-53qf-jxq9/GHSA-x3qh-53qf-jxq9.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-319

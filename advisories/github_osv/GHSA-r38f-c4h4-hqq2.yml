@@ -41,6 +41,13 @@ summary: |
 
   If you are, ensure that the code that executes that method does not connect to a database that is controlled by an unauthenticated or malicious user. If your application only connects to its own database with a fixed schema with no DDL permissions, then you will not be affected by this vulnerability as it requires a maliciously crafted schema.
 impacted_packages:
+  - purl: pkg:github/pgjdbc/pgjdbc
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/pgjdbc/pgjdbc
+        commit: 739e599d52ad80f8dcd6efedc6157859b1a9d637
+    introduced_in_commits: []
   - purl: pkg:maven/org.postgresql/postgresql
     affected_versions: vers:maven/<42.2.26
     fixed_versions: vers:maven/42.2.26
@@ -56,23 +63,16 @@ impacted_packages:
     fixed_versions: vers:maven/42.3.7
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/pgjdbc/pgjdbc
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/pgjdbc/pgjdbc
-        commit: 739e599d52ad80f8dcd6efedc6157859b1a9d637
-    introduced_in_commits: []
 severities:
   - score: '7.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-r38f-c4h4-hqq2/GHSA-r38f-c4h4-hqq2.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-89

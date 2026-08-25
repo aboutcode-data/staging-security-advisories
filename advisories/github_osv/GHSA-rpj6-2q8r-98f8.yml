@@ -11,11 +11,6 @@ summary: |
 
   Audit Trail Plugin 3.7 processes request URL paths the same way as the Stapler web framework.
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins/audit-trail
-    affected_versions: vers:maven/<3.7
-    fixed_versions: vers:maven/3.7
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/audit-trail-plugin
     affected_versions:
     fixed_versions:
@@ -23,16 +18,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/audit-trail-plugin
         commit: 329c6090c1c444a16e95757e537b0cbb2347a9f4
     introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/audit-trail
+    affected_versions: vers:maven/<3.7
+    fixed_versions: vers:maven/3.7
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-rpj6-2q8r-98f8/GHSA-rpj6-2q8r-98f8.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-435

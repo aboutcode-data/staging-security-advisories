@@ -7,6 +7,13 @@ summary: |
   Cross-site Scripting in keycloak
   A flaw was found in Keycloak before version 12.0.0, where it is possible to add unsafe schemes for the redirect_uri parameter. This flaw allows an attacker to perform a Cross-site scripting attack.
 impacted_packages:
+  - purl: pkg:github/keycloak/keycloak
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/keycloak/keycloak
+        commit: 01be601dbdd77822827de173e34180d9322db85c
+    introduced_in_commits: []
   - purl: pkg:maven/org.keycloak/keycloak-server-spi-private
     affected_versions: vers:maven/<12.0.0
     fixed_versions: vers:maven/12.0.0
@@ -17,23 +24,16 @@ impacted_packages:
     fixed_versions: vers:maven/12.0.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/keycloak/keycloak
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/keycloak/keycloak
-        commit: 01be601dbdd77822827de173e34180d9322db85c
-    introduced_in_commits: []
 severities:
   - score: '4.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-484q-784p-8m5h/GHSA-484q-784p-8m5h.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

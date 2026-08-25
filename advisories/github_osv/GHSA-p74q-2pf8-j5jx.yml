@@ -7,6 +7,11 @@ summary: |
   exceedone/exment and exceedone/laravel-admin SQL Injection vulnerability
   SQL injection vulnerability in the Exment ((PHP8) exceedone/exment v5.0.2 and earlier and exceedone/laravel-admin v3.0.0 and earlier, (PHP7) exceedone/exment v4.4.2 and earlier and exceedone/laravel-admin v2.2.2 and earlier) allows remote authenticated attackers to execute arbitrary SQL commands.
 impacted_packages:
+  - purl: pkg:composer/exceedone/laravel-admin
+    affected_versions: vers:composer/<2.2.3
+    fixed_versions: vers:composer/2.2.3
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:composer/exceedone/exment
     affected_versions: vers:composer/>=5.0.0|<5.0.3
     fixed_versions: vers:composer/5.0.3
@@ -18,11 +23,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/exceedone/laravel-admin
-    affected_versions: vers:composer/<2.2.3
-    fixed_versions: vers:composer/2.2.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/exceedone/laravel-admin
     affected_versions: vers:composer/3.0.0
     fixed_versions: vers:composer/3.0.1
     fixed_in_commits: []
@@ -31,12 +31,12 @@ severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-p74q-2pf8-j5jx/GHSA-p74q-2pf8-j5jx.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-89

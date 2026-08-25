@@ -7,13 +7,6 @@ summary: |
   Collision of hash values in github.com/bnb-chain/tss-lib
   IO FinNet tss-lib before 2.0.0 allows a collision of hash values.
 impacted_packages:
-  - purl: pkg:github/iofinnet/threshlib
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/iofinnet/threshlib
-        commit: 369ec50be1437588a9733443bcb2f15b794601d4
-    introduced_in_commits: []
   - purl: pkg:github/bnb-chain/tss-lib
     affected_versions:
     fixed_versions:
@@ -21,16 +14,23 @@ impacted_packages:
       - vcs_url: https://github.com/bnb-chain/tss-lib
         commit: bb6fb30bd3ebd35c755109836aa1a5ee6126c8a0
     introduced_in_commits: []
+  - purl: pkg:github/iofinnet/threshlib
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/iofinnet/threshlib
+        commit: 369ec50be1437588a9733443bcb2f15b794601d4
+    introduced_in_commits: []
 severities:
   - score: '9.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/12/GHSA-cvcx-g7wh-x8rf/GHSA-cvcx-g7wh-x8rf.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-327

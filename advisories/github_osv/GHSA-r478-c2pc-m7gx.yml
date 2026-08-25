@@ -7,11 +7,6 @@ summary: |
   dnslib has DNS reply verification issue
   The dnslib package through 0.9.16 for Python does not verify that the ID value in a DNS reply matches an ID value in a query.
 impacted_packages:
-  - purl: pkg:pypi/dnslib
-    affected_versions: vers:pypi/<0.9.17
-    fixed_versions: vers:pypi/0.9.17
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/paulc/dnslib
     affected_versions:
     fixed_versions:
@@ -19,21 +14,26 @@ impacted_packages:
       - vcs_url: https://github.com/paulc/dnslib
         commit: 76e8677699ed098387d502c57980f58da642aeba
     introduced_in_commits: []
+  - purl: pkg:pypi/dnslib
+    affected_versions: vers:pypi/<0.9.17
+    fixed_versions: vers:pypi/0.9.17
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/01/GHSA-r478-c2pc-m7gx/GHSA-r478-c2pc-m7gx.json
   - score: '8.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/01/GHSA-r478-c2pc-m7gx/GHSA-r478-c2pc-m7gx.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-345

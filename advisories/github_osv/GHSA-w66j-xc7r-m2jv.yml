@@ -8,25 +8,25 @@ summary: The camel-ldap component allows LDAP Injection when using the filter op
   or upgrade to 3.14.6 or 3.18.4.
 impacted_packages:
   - purl: pkg:maven/org.apache.camel/camel-ldap
-    affected_versions: vers:maven/<3.14.6
-    fixed_versions: vers:maven/3.14.6
+    affected_versions: vers:maven/>=3.15.0|<3.18.4
+    fixed_versions: vers:maven/3.18.4
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.camel/camel-ldap
-    affected_versions: vers:maven/>=3.15.0|<3.18.4
-    fixed_versions: vers:maven/3.18.4
+    affected_versions: vers:maven/<3.14.6
+    fixed_versions: vers:maven/3.14.6
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/12/GHSA-w66j-xc7r-m2jv/GHSA-w66j-xc7r-m2jv.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-90

@@ -7,11 +7,6 @@ summary: |
   pyRdfa3 Cross-site Scripting vulnerability
   A vulnerability was found in RDFlib pyrdfa3 and classified as problematic. This issue affects the function `_get_option` of the file `pyRdfa/__init__.py`. The manipulation leads to cross site scripting. The attack may be initiated remotely. The name of the patch is ffd1d62dd50d5f4190013b39cedcdfbd81f3ce3e. It is recommended to apply a patch to fix this issue. The identifier VDB-215249 was assigned to this vulnerability.
 impacted_packages:
-  - purl: pkg:pypi/pyrdfa3
-    affected_versions: vers:pypi/<=3.5.3
-    fixed_versions: vers:pypi/3.6.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/rdflib/pyrdfa3
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/rdflib/pyrdfa3
         commit: ffd1d62dd50d5f4190013b39cedcdfbd81f3ce3e
     introduced_in_commits: []
+  - purl: pkg:pypi/pyrdfa3
+    affected_versions: vers:pypi/<=3.5.3
+    fixed_versions: vers:pypi/3.6.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/12/GHSA-894q-wpg5-mf2h/GHSA-894q-wpg5-mf2h.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-707

@@ -9,6 +9,13 @@ summary: |
 
   This allows attackers able to submit crafted XML files to Jenkins to be parsed as configuration, e.g. through the `POST config.xml` API, to cause a denial of service (DoS).
 impacted_packages:
+  - purl: pkg:github/jenkinsci/jenkins
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/jenkinsci/jenkins
+        commit: 8276aef4cc3dd81810fe6bdf6fa48141632c4636
+    introduced_in_commits: []
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
     affected_versions: vers:maven/>=2.320|<2.334
     fixed_versions: vers:maven/2.334
@@ -19,23 +26,16 @@ impacted_packages:
     fixed_versions: vers:maven/2.319.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/jenkinsci/jenkins
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/jenkinsci/jenkins
-        commit: 8276aef4cc3dd81810fe6bdf6fa48141632c4636
-    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-34wx-x2w9-vqm3/GHSA-34wx-x2w9-vqm3.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-502

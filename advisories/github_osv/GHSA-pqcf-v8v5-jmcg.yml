@@ -7,11 +7,6 @@ summary: |
   Zip slip in Microweber
   A directory traversal issue in the Utils/Unzip module in Microweber through 1.1.20 allows an authenticated attacker to gain remote code execution via the backup restore feature. To exploit the vulnerability, an attacker must have the credentials of an administrative user, upload a maliciously constructed ZIP file with file paths including relative paths (i.e., ../../), move this file into the backup directory, and execute a restore on this file.
 impacted_packages:
-  - purl: pkg:composer/microweber/microweber
-    affected_versions: vers:composer/<1.2.3
-    fixed_versions: vers:composer/1.2.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/microweber/microweber
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/microweber/microweber
         commit: 777ee9c3e7519eb3672c79ac41066175b2001b50
     introduced_in_commits: []
+  - purl: pkg:composer/microweber/microweber
+    affected_versions: vers:composer/<1.2.3
+    fixed_versions: vers:composer/1.2.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.2'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-pqcf-v8v5-jmcg/GHSA-pqcf-v8v5-jmcg.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

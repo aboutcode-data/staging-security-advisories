@@ -7,6 +7,13 @@ summary: |
   Deserialization of Untrusted Data in Apache Hadoop YARN
   ZKConfigurationStore which is optionally used by CapacityScheduler of Apache Hadoop YARN deserializes data obtained from ZooKeeper without validation. An attacker having access to ZooKeeper can run arbitrary commands as YARN user by exploiting this. Users should upgrade to Apache Hadoop 2.10.2, 3.2.4, 3.3.4 or later (containing YARN-11126) if ZKConfigurationStore is used.
 impacted_packages:
+  - purl: pkg:github/apache/hadoop
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/hadoop
+        commit: 5e2f4339fadc88f20543915fc9b0aaeaf4f9e7bf
+    introduced_in_commits: []
   - purl: pkg:maven/org.apache.hadoop/hadoop-yarn-server
     affected_versions: vers:maven/<2.10.2
     fixed_versions: vers:maven/2.10.2
@@ -22,23 +29,16 @@ impacted_packages:
     fixed_versions: vers:maven/3.3.4
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/apache/hadoop
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/apache/hadoop
-        commit: 5e2f4339fadc88f20543915fc9b0aaeaf4f9e7bf
-    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-rr2m-gffv-mgrj/GHSA-rr2m-gffv-mgrj.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-502

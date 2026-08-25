@@ -7,11 +7,6 @@ summary: |
   Open Redirect in archivy
   archivy prior to version 1.7.1 is vulnerable to open redirect.
 impacted_packages:
-  - purl: pkg:pypi/archivy
-    affected_versions: vers:pypi/<1.7.1
-    fixed_versions: vers:pypi/1.7.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/archivy/archivy
     affected_versions:
     fixed_versions:
@@ -19,21 +14,26 @@ impacted_packages:
       - vcs_url: https://github.com/archivy/archivy
         commit: 2d8cb29853190d42572b36deb61127e68d6be574
     introduced_in_commits: []
+  - purl: pkg:pypi/archivy
+    affected_versions: vers:pypi/<1.7.1
+    fixed_versions: vers:pypi/1.7.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-28mg-98xm-q493/GHSA-28mg-98xm-q493.json
   - score: '5.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-28mg-98xm-q493/GHSA-28mg-98xm-q493.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-601

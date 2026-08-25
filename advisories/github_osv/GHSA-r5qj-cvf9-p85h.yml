@@ -7,11 +7,6 @@ summary: |
   Code Injection in PyTorch Lightning
   PyTorch Lightning version 1.5.10 and prior is vulnerable to code injection. An attacker could execute commands on the target OS running the operating system by setting the `PL_TRAINER_GPUS` when using the `Trainer` module. A [patch](https://github.com/pytorchlightning/pytorch-lightning/commit/8b7a12c52e52a06408e9231647839ddb4665e8ae) is included in the `1.6.0` release.
 impacted_packages:
-  - purl: pkg:pypi/pytorch-lightning
-    affected_versions: vers:pypi/<1.6.0
-    fixed_versions: vers:pypi/1.6.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/pytorchlightning/pytorch-lightning
     affected_versions:
     fixed_versions:
@@ -19,21 +14,26 @@ impacted_packages:
       - vcs_url: https://github.com/pytorchlightning/pytorch-lightning
         commit: 8b7a12c52e52a06408e9231647839ddb4665e8ae
     introduced_in_commits: []
+  - purl: pkg:pypi/pytorch-lightning
+    affected_versions: vers:pypi/<1.6.0
+    fixed_versions: vers:pypi/1.6.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-r5qj-cvf9-p85h/GHSA-r5qj-cvf9-p85h.json
   - score: '9.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-r5qj-cvf9-p85h/GHSA-r5qj-cvf9-p85h.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

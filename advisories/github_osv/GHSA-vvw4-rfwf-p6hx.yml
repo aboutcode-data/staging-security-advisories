@@ -7,6 +7,17 @@ summary: |
   Exposure of Sensitive Information to an Unauthorized Actor in Apache Tomcat
   While investigating bug 64830 it was discovered that Apache Tomcat 10.0.0-M1 to 10.0.0-M9, 9.0.0-M1 to 9.0.39 and 8.5.0 to 8.5.59 could re-use an HTTP request header value from the previous stream received on an HTTP/2 connection for the request associated with the subsequent stream. While this would most likely lead to an error and the closure of the HTTP/2 connection, it is possible that information could leak between requests.
 impacted_packages:
+  - purl: pkg:github/apache/tomcat
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/tomcat
+        commit: 21e3408671aac7e0d7e264e720cac8b1b189eb29
+      - vcs_url: https://github.com/apache/tomcat
+        commit: 8d2fe6894d6e258a6d615d7f786acca80e6020cb
+      - vcs_url: https://github.com/apache/tomcat
+        commit: d56293f816d6dc9e2b47107f208fa9e95db58c65
+    introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat/tomcat-coyote
     affected_versions: vers:maven/>=10.0.0-M1|<10.0.0-M10
     fixed_versions: vers:maven/10.0.0-M10
@@ -22,27 +33,16 @@ impacted_packages:
     fixed_versions: vers:maven/8.5.60
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/apache/tomcat
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/apache/tomcat
-        commit: 21e3408671aac7e0d7e264e720cac8b1b189eb29
-      - vcs_url: https://github.com/apache/tomcat
-        commit: 8d2fe6894d6e258a6d615d7f786acca80e6020cb
-      - vcs_url: https://github.com/apache/tomcat
-        commit: d56293f816d6dc9e2b47107f208fa9e95db58c65
-    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-vvw4-rfwf-p6hx/GHSA-vvw4-rfwf-p6hx.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

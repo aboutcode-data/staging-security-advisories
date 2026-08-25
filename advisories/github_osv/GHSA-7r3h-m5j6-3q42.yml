@@ -24,11 +24,6 @@ summary: |
   If you have any questions or comments about this advisory:
   * Open an issue in [`actions/toolkit`](https://github.com/actions/toolkit/issues)
 impacted_packages:
-  - purl: pkg:npm/%40actions/core
-    affected_versions: vers:npm/<=1.9.0
-    fixed_versions: vers:npm/1.9.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/actions/toolkit
     affected_versions:
     fixed_versions:
@@ -36,16 +31,21 @@ impacted_packages:
       - vcs_url: https://github.com/actions/toolkit
         commit: 4beda9cbc00ba6eefe387a937c21087ccb8ee9df
     introduced_in_commits: []
+  - purl: pkg:npm/%40actions/core
+    affected_versions: vers:npm/<=1.9.0
+    fixed_versions: vers:npm/1.9.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-7r3h-m5j6-3q42/GHSA-7r3h-m5j6-3q42.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-77

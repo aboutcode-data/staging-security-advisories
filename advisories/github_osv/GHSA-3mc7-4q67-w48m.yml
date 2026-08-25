@@ -7,10 +7,12 @@ summary: |
   Uncontrolled Resource Consumption in snakeyaml
   The package org.yaml:snakeyaml from 0 and before 1.31 are vulnerable to Denial of Service (DoS) due missing to nested depth limitation for collections.
 impacted_packages:
-  - purl: pkg:maven/org.yaml/snakeyaml
-    affected_versions: vers:maven/<1.31
-    fixed_versions: vers:maven/1.31
-    fixed_in_commits: []
+  - purl: pkg:github/snakeyaml/snakeyaml
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/snakeyaml/snakeyaml
+        commit: fc300780da21f4bb92c148bc90257201220cf174
     introduced_in_commits: []
   - purl: pkg:bitbucket/snakeyaml/snakeyaml
     affected_versions:
@@ -19,23 +21,21 @@ impacted_packages:
       - vcs_url: https://bitbucket.org/snakeyaml/snakeyaml
         commit: fc300780da21f4bb92c148bc90257201220cf174
     introduced_in_commits: []
-  - purl: pkg:github/snakeyaml/snakeyaml
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/snakeyaml/snakeyaml
-        commit: fc300780da21f4bb92c148bc90257201220cf174
+  - purl: pkg:maven/org.yaml/snakeyaml
+    affected_versions: vers:maven/<1.31
+    fixed_versions: vers:maven/1.31
+    fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-3mc7-4q67-w48m/GHSA-3mc7-4q67-w48m.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-776

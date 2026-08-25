@@ -7,11 +7,6 @@ summary: |
   CSRF vulnerability in Jenkins batch task Plugin
   Cross-site request forgery (CSRF) vulnerabilities in Jenkins batch task Plugin 1.19 and earlier allows attackers with Overall/Read access to retrieve logs, build or delete a batch task.
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins/batch-task
-    affected_versions: vers:maven/<=1.19
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/batch-task-plugin
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/batch-task-plugin
         commit: 0e461e230b40d8eeae6e2dfbf00ba7b461ddb0a9
     introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/batch-task
+    affected_versions: vers:maven/<=1.19
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/01/GHSA-mh8g-8jwp-q6xw/GHSA-mh8g-8jwp-q6xw.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-352

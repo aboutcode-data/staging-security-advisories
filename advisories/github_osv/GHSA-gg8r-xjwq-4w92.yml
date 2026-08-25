@@ -29,6 +29,20 @@ summary: |
   * Email us at [infosec@tiny.cloud](mailto:infosec@tiny.cloud)
   * Open an issue in the [TinyMCE repo](https://github.com/tinymce/tinymce/issues)
 impacted_packages:
+  - purl: pkg:composer/tinymce/tinymce
+    affected_versions: vers:composer/>=6.0.0|<6.3.1
+    fixed_versions: vers:composer/6.3.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/tinymce/tinymce
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/tinymce/tinymce
+        commit: 8bb2d2646d4e1a718fce61a775fa22e9d317b32d
+      - vcs_url: https://github.com/tinymce/tinymce
+        commit: 6923d85eba6de3e08ebc9c5a387b5abdaa21150e
+    introduced_in_commits: []
   - purl: pkg:nuget/TinyMCE
     affected_versions: vers:nuget/>=6.0.0|<6.3.1
     fixed_versions: vers:nuget/6.3.1
@@ -44,11 +58,6 @@ impacted_packages:
     fixed_versions: vers:npm/6.3.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/tinymce/tinymce
-    affected_versions: vers:composer/>=6.0.0|<6.3.1
-    fixed_versions: vers:composer/6.3.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:npm/tinymce
     affected_versions: vers:npm/<5.10.7
     fixed_versions: vers:npm/5.10.7
@@ -59,25 +68,16 @@ impacted_packages:
     fixed_versions: vers:composer/5.10.7
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/tinymce/tinymce
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/tinymce/tinymce
-        commit: 8bb2d2646d4e1a718fce61a775fa22e9d317b32d
-      - vcs_url: https://github.com/tinymce/tinymce
-        commit: 6923d85eba6de3e08ebc9c5a387b5abdaa21150e
-    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/12/GHSA-gg8r-xjwq-4w92/GHSA-gg8r-xjwq-4w92.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

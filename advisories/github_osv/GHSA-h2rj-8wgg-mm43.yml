@@ -7,11 +7,6 @@ summary: |
   Craft CMS Cross-site Scripting Vulnerability
   Craft CMS before 3.6.13 has an XSS vulnerability.
 impacted_packages:
-  - purl: pkg:composer/craftcms/cms
-    affected_versions: vers:composer/<3.6.13
-    fixed_versions: vers:composer/3.6.13
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/craftcms/cms
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/craftcms/cms
         commit: f9378aa154b5f9b64bed3d59cce0c4a8184bf5e6
     introduced_in_commits: []
+  - purl: pkg:composer/craftcms/cms
+    affected_versions: vers:composer/<3.6.13
+    fixed_versions: vers:composer/3.6.13
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-h2rj-8wgg-mm43/GHSA-h2rj-8wgg-mm43.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

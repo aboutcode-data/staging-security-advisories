@@ -7,11 +7,6 @@ summary: |
   Uncontrolled Resource Consumption in node-opcua
   The package node-opcua before 2.74.0 are vulnerable to Denial of Service (DoS) due to a missing limitation on the number of received chunks - per single session or in total for all concurrent sessions. An attacker can exploit this vulnerability by sending an unlimited number of huge chunks (e.g. 2GB each) without sending the Final closing chunk.
 impacted_packages:
-  - purl: pkg:npm/node-opcua
-    affected_versions: vers:npm/<2.74.0
-    fixed_versions: vers:npm/2.74.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/node-opcua/node-opcua
     affected_versions:
     fixed_versions:
@@ -21,16 +16,21 @@ impacted_packages:
       - vcs_url: https://github.com/node-opcua/node-opcua
         commit: 33ca3bab4ab781392a2f8d8f5a14de9a0aa0e410
     introduced_in_commits: []
+  - purl: pkg:npm/node-opcua
+    affected_versions: vers:npm/<2.74.0
+    fixed_versions: vers:npm/2.74.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-4hr4-pjjh-2q2w/GHSA-4hr4-pjjh-2q2w.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-400

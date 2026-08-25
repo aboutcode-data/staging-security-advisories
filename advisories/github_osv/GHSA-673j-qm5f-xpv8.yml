@@ -26,11 +26,6 @@ summary: "pgjdbc Arbitrary File Write Vulnerability\n### Overview\nThe connectio
   \ fixed in 42.3.3\n\n### Workarounds\nsanitize the inputs to the driver\n\nReported by Allan\
   \ Lou v3ged0ge@gmail.com"
 impacted_packages:
-  - purl: pkg:maven/org.postgresql/postgresql
-    affected_versions: vers:maven/>=42.1.0|<42.3.3
-    fixed_versions: vers:maven/42.3.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/pgjdbc/pgjdbc
     affected_versions:
     fixed_versions:
@@ -38,11 +33,16 @@ impacted_packages:
       - vcs_url: https://github.com/pgjdbc/pgjdbc
         commit: f6d47034a4ce292e1a659fa00963f6f713117064
     introduced_in_commits: []
+  - purl: pkg:maven/org.postgresql/postgresql
+    affected_versions: vers:maven/>=42.1.0|<42.3.3
+    fixed_versions: vers:maven/42.3.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses: []
 references:

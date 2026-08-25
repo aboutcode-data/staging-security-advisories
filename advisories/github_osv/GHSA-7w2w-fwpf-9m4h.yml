@@ -11,11 +11,6 @@ summary: |
 
   Pipeline: Deprecated Groovy Libraries Plugin 561.va_ce0de3c2d69 uses distinct checkout directories per SCM for Pipeline libraries.
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins.workflow/workflow-cps-global-lib
-    affected_versions: vers:maven/<=552.vd9cc05b8a2e1
-    fixed_versions: vers:maven/561.va_ce0de3c2d69
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/workflow-cps-global-lib-plugin
     affected_versions:
     fixed_versions:
@@ -23,16 +18,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/workflow-cps-global-lib-plugin
         commit: ace0de3c2d691662021ea10306eeb407da6b6365
     introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins.workflow/workflow-cps-global-lib
+    affected_versions: vers:maven/<=552.vd9cc05b8a2e1
+    fixed_versions: vers:maven/561.va_ce0de3c2d69
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-7w2w-fwpf-9m4h/GHSA-7w2w-fwpf-9m4h.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-693

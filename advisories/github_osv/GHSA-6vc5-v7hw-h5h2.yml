@@ -7,11 +7,6 @@ summary: |
   Cross-site Scripting in RosarioSIS
   RosarioSIS through 6.8-beta allows modules/Custom/NotifyParents.php XSS because of the href attributes for AddStudents.php and User.php.
 impacted_packages:
-  - purl: pkg:composer/francoisjacquet/rosariosis
-    affected_versions: vers:composer/<6.8.0
-    fixed_versions: vers:composer/6.8.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:gitlab/francoisjacquet/rosariosis
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://gitlab.com/francoisjacquet/rosariosis
         commit: c4a694860b50c4aa5c67d6568f7d0613fef1a30d
     introduced_in_commits: []
+  - purl: pkg:composer/francoisjacquet/rosariosis
+    affected_versions: vers:composer/<6.8.0
+    fixed_versions: vers:composer/6.8.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-6vc5-v7hw-h5h2/GHSA-6vc5-v7hw-h5h2.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

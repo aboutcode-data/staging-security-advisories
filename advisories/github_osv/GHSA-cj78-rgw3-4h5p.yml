@@ -7,6 +7,11 @@ summary: |
   Improper Restriction of XML External Entity Reference in trytond and proteus
   An XXE issue was discovered in Tryton Application Platform (Server) 5.x through 5.0.45, 6.x through 6.0.15, and 6.1.x and 6.2.x through 6.2.5, and Tryton Application Platform (Command Line Client (proteus)) 5.x through 5.0.11, 6.x through 6.0.4, and 6.1.x and 6.2.x through 6.2.1. An authenticated user can make the server parse a crafted XML SEPA file to access arbitrary files on the system.
 impacted_packages:
+  - purl: pkg:pypi/proteus
+    affected_versions: vers:pypi/>=5.0.0|<5.0.12
+    fixed_versions: vers:pypi/5.0.12
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:pypi/trytond
     affected_versions: vers:pypi/>=5.0.0|<5.0.46
     fixed_versions: vers:pypi/5.0.46
@@ -23,11 +28,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/proteus
-    affected_versions: vers:pypi/>=5.0.0|<5.0.12
-    fixed_versions: vers:pypi/5.0.12
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/proteus
     affected_versions: vers:pypi/>=6.0.0|<6.0.5
     fixed_versions: vers:pypi/6.0.5
     fixed_in_commits: []
@@ -41,12 +41,12 @@ severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-cj78-rgw3-4h5p/GHSA-cj78-rgw3-4h5p.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-611

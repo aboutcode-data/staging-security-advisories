@@ -18,6 +18,15 @@ summary: "Akeneo PIM Community Edition vulnerable to remote php code execution\n
   \ issue in [example link to repo](http://example.com)\n* Email us at [example email address](mailto:example@example.com)\n\
   -->"
 impacted_packages:
+  - purl: pkg:github/akeneo/pim-community-dev
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/akeneo/pim-community-dev
+        commit: b4d79bb073c8b68ea26ab227c97cc78d86c4cba1
+      - vcs_url: https://github.com/akeneo/pim-community-dev
+        commit: 891a2f70a9a200f199de06fe64d376d03787a81a
+    introduced_in_commits: []
   - purl: pkg:composer/akeneo/pim-community-dev
     affected_versions: vers:composer/>=6.0.0|<6.0.53
     fixed_versions: vers:composer/6.0.53
@@ -28,25 +37,16 @@ impacted_packages:
     fixed_versions: vers:composer/5.0.119
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/akeneo/pim-community-dev
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/akeneo/pim-community-dev
-        commit: b4d79bb073c8b68ea26ab227c97cc78d86c4cba1
-      - vcs_url: https://github.com/akeneo/pim-community-dev
-        commit: 891a2f70a9a200f199de06fe64d376d03787a81a
-    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/12/GHSA-w9wc-4xcq-8gr6/GHSA-w9wc-4xcq-8gr6.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

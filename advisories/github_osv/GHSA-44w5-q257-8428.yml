@@ -7,11 +7,6 @@ summary: |
   Exposure of password hashes in notrinos/notrinos-erp
   The AP officers account is authorized to Backup and Restore the Database, Due to this he/she can download the backup and see the password hash of the System Administrator account, The weak hash (MD5) of the password can be easily cracked and get the admin password.
 impacted_packages:
-  - purl: pkg:composer/notrinos/notrinos-erp
-    affected_versions: vers:composer/<0.7.0
-    fixed_versions: vers:composer/0.7.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/notrinos/notrinoserp
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/notrinos/notrinoserp
         commit: 1b9903f4deea3289872793e60d730c63ecbf7b45
     introduced_in_commits: []
+  - purl: pkg:composer/notrinos/notrinos-erp
+    affected_versions: vers:composer/<0.7.0
+    fixed_versions: vers:composer/0.7.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-44w5-q257-8428/GHSA-44w5-q257-8428.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-359

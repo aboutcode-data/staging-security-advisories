@@ -7,6 +7,13 @@ summary: |
   SaltStack Salt Improper Authentication via Man in the Middle Attack
   An issue was discovered in SaltStack Salt in versions before 3002.8, 3003.4, 3004.1. A minion authentication denial of service can cause a MiTM attacker to force a minion process to stop by impersonating a master.
 impacted_packages:
+  - purl: pkg:github/saltstack/salt
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/saltstack/salt
+        commit: 8f9405cf8e6f7d7776d5000841c886dec6d96250
+    introduced_in_commits: []
   - purl: pkg:pypi/salt
     affected_versions: vers:pypi/<3002.8
     fixed_versions: vers:pypi/3002.8
@@ -22,23 +29,16 @@ impacted_packages:
     fixed_versions: vers:pypi/3004.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/saltstack/salt
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/saltstack/salt
-        commit: 8f9405cf8e6f7d7776d5000841c886dec6d96250
-    introduced_in_commits: []
 severities:
   - score: '3.7'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-cvcc-5x92-gmhc/GHSA-cvcc-5x92-gmhc.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-287

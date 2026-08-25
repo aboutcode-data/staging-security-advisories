@@ -7,11 +7,6 @@ summary: |
   @acrontum/filesystem-template vulnerable to Command Injection due to fetchRepo API missing sanitization
   The package @acrontum/filesystem-template before 0.0.2 is vulnerable to Arbitrary Command Injection due to the fetchRepo API missing sanitization of the href field of external input.
 impacted_packages:
-  - purl: pkg:npm/%40acrontum/filesystem-template
-    affected_versions: vers:npm/<0.0.2
-    fixed_versions: vers:npm/0.0.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/acrontum/filesystem-template
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/acrontum/filesystem-template
         commit: baeb727b60991ad82d9e63ac660883793abc0acc
     introduced_in_commits: []
+  - purl: pkg:npm/%40acrontum/filesystem-template
+    affected_versions: vers:npm/<0.0.2
+    fixed_versions: vers:npm/0.0.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-m2fc-9h5m-29cm/GHSA-m2fc-9h5m-29cm.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-77

@@ -7,11 +7,6 @@ summary: |
   Permissions bypass in SmallRye
   A flaw was found in SmallRye's API through version 1.6.1. The API can allow other code running within the application server to potentially obtain the ClassLoader, bypassing any permissions checks that should have been applied. The largest threat from this vulnerability is a threat to data confidentiality. This is fixed in SmallRye 1.6.2
 impacted_packages:
-  - purl: pkg:maven/io.smallrye.config/smallrye-config
-    affected_versions: vers:maven/<1.6.2
-    fixed_versions: vers:maven/1.6.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/smallrye/smallrye-config
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/smallrye/smallrye-config
         commit: fb0def6f61c09a2a80c9145e4ec6521225cd0b99
     introduced_in_commits: []
+  - purl: pkg:maven/io.smallrye.config/smallrye-config
+    affected_versions: vers:maven/<1.6.2
+    fixed_versions: vers:maven/1.6.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:H/PR:H/UI:R/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-54fx-gm74-q676/GHSA-54fx-gm74-q676.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-863

@@ -9,11 +9,6 @@ summary: |
 
   Release notes for versions 3.3.62 and 3.3.69 both link to patches for this particular issue. The [JPCERT/CC](https://jvn.jp/en/jp/JVN56968681/index.html) advisory lists versions 3.3.68 and prior as vulnerable, and the most recent patch for this issue is tagged with version 3.3.69.
 impacted_packages:
-  - purl: pkg:npm/nadesiko3
-    affected_versions: vers:npm/<=3.3.68
-    fixed_versions: vers:npm/3.3.69
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/kujirahand/nadesiko3
     affected_versions:
     fixed_versions:
@@ -25,16 +20,21 @@ impacted_packages:
       - vcs_url: https://github.com/kujirahand/nadesiko3
         commit: 56ccfb2f9cceaec83e6a9d3024c3ba8c54ebe1a4
     introduced_in_commits: []
+  - purl: pkg:npm/nadesiko3
+    affected_versions: vers:npm/<=3.3.68
+    fixed_versions: vers:npm/3.3.69
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/12/GHSA-m8r5-7wf4-63mw/GHSA-m8r5-7wf4-63mw.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-78

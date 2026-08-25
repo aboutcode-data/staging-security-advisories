@@ -8,16 +8,6 @@ summary: |
   The `{% debug %}` template tag in Django 2.2 before 2.2.27, 3.2 before 3.2.12, and 4.0 before 4.0.2 does not properly encode the current context. This may lead to XSS.
 impacted_packages:
   - purl: pkg:pypi/django
-    affected_versions: vers:pypi/>=2.2|<2.2.27
-    fixed_versions: vers:pypi/2.2.27
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/django
-    affected_versions: vers:pypi/>=3.2|<3.2.12
-    fixed_versions: vers:pypi/3.2.12
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/django
     affected_versions: vers:pypi/>=4.0|<4.0.2
     fixed_versions: vers:pypi/4.0.2
     fixed_in_commits: []
@@ -33,21 +23,31 @@ impacted_packages:
       - vcs_url: https://github.com/django/django
         commit: 1a1e8278c46418bde24c86a65443b0674bae65e2
     introduced_in_commits: []
+  - purl: pkg:pypi/django
+    affected_versions: vers:pypi/>=2.2|<2.2.27
+    fixed_versions: vers:pypi/2.2.27
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/django
+    affected_versions: vers:pypi/>=3.2|<3.2.12
+    fixed_versions: vers:pypi/3.2.12
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-95rw-fx8r-36v6/GHSA-95rw-fx8r-36v6.json
   - score: '5.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-95rw-fx8r-36v6/GHSA-95rw-fx8r-36v6.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

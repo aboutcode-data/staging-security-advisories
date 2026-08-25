@@ -7,6 +7,17 @@ summary: |
   Infinite Loop in Django
   An issue was discovered in MultiPartParser in Django 2.2 before 2.2.27, 3.2 before 3.2.12, and 4.0 before 4.0.2. Passing certain inputs to multipart forms could result in an infinite loop when parsing files.
 impacted_packages:
+  - purl: pkg:github/django/django
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/django/django
+        commit: c477b761804984c932704554ad35f78a2e230c6a
+      - vcs_url: https://github.com/django/django
+        commit: f9c7d48fdd6f198a6494a9202f90242f176e4fc9
+      - vcs_url: https://github.com/django/django
+        commit: d16133568ef9c9b42cb7a08bdf9ff3feec2e5468
+    introduced_in_commits: []
   - purl: pkg:pypi/django
     affected_versions: vers:pypi/>=2.2|<2.2.27
     fixed_versions: vers:pypi/2.2.27
@@ -22,32 +33,21 @@ impacted_packages:
     fixed_versions: vers:pypi/4.0.2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/django/django
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/django/django
-        commit: c477b761804984c932704554ad35f78a2e230c6a
-      - vcs_url: https://github.com/django/django
-        commit: f9c7d48fdd6f198a6494a9202f90242f176e4fc9
-      - vcs_url: https://github.com/django/django
-        commit: d16133568ef9c9b42cb7a08bdf9ff3feec2e5468
-    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-6cw3-g6wv-c2xv/GHSA-6cw3-g6wv-c2xv.json
   - score: '8.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-6cw3-g6wv-c2xv/GHSA-6cw3-g6wv-c2xv.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-835

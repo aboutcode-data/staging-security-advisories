@@ -24,11 +24,6 @@ summary: |
   * Visit Wagtail's [support channels](https://docs.wagtail.io/en/stable/support.html)
   * Email us at security@wagtail.io (if you wish to send encrypted email, the public key ID is `0x6ba1e1a86e0f8ce8`)
 impacted_packages:
-  - purl: pkg:pypi/wagtail
-    affected_versions: vers:pypi/>=2.13|<2.15.2
-    fixed_versions: vers:pypi/2.15.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/wagtail/wagtail
     affected_versions:
     fixed_versions:
@@ -36,21 +31,26 @@ impacted_packages:
       - vcs_url: https://github.com/wagtail/wagtail
         commit: 5fe901e5d86ed02dbbb63039a897582951266afd
     introduced_in_commits: []
+  - purl: pkg:pypi/wagtail
+    affected_versions: vers:pypi/>=2.13|<2.15.2
+    fixed_versions: vers:pypi/2.15.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '3.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/01/GHSA-xqxm-2rpm-3889/GHSA-xqxm-2rpm-3889.json
   - score: '5.1'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/01/GHSA-xqxm-2rpm-3889/GHSA-xqxm-2rpm-3889.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

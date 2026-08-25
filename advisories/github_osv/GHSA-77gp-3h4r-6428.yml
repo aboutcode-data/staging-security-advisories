@@ -17,6 +17,11 @@ summary: "Out of bounds read and write in Tensorflow\n### Impact\nThere is a typ
   \ for more information regarding the security model and how to contact us with issues and\
   \ questions."
 impacted_packages:
+  - purl: pkg:pypi/tensorflow-gpu
+    affected_versions: vers:pypi/2.7.0
+    fixed_versions: vers:pypi/2.7.1
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:pypi/tensorflow
     affected_versions: vers:pypi/<2.5.3
     fixed_versions: vers:pypi/2.5.3
@@ -55,11 +60,6 @@ impacted_packages:
   - purl: pkg:pypi/tensorflow-gpu
     affected_versions: vers:pypi/>=2.6.0|<2.6.3
     fixed_versions: vers:pypi/2.6.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow-gpu
-    affected_versions: vers:pypi/2.7.0
-    fixed_versions: vers:pypi/2.7.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/tensorflow/tensorflow
@@ -75,17 +75,17 @@ severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-77gp-3h4r-6428/GHSA-77gp-3h4r-6428.json
   - score: '8.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-77gp-3h4r-6428/GHSA-77gp-3h4r-6428.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-787

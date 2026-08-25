@@ -33,11 +33,6 @@ summary: "phpCAS vulnerable to Service Hostname Discovery Exploitation\n### Impa
   \ it to the developers, and helping harden the patch.\n\nHenry Pan and Joachim Fritschi helped\
   \ with the patch and release effort as phpCAS developers."
 impacted_packages:
-  - purl: pkg:composer/apereo/phpcas
-    affected_versions: vers:composer/<1.6.0
-    fixed_versions: vers:composer/1.6.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/apereo/phpcas
     affected_versions:
     fixed_versions:
@@ -45,16 +40,21 @@ impacted_packages:
       - vcs_url: https://github.com/apereo/phpcas
         commit: b759361d904a2cb2a3bcee9411fc348cfde5d163
     introduced_in_commits: []
+  - purl: pkg:composer/apereo/phpcas
+    affected_versions: vers:composer/<1.6.0
+    fixed_versions: vers:composer/1.6.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/11/GHSA-8q72-6qq8-xv64/GHSA-8q72-6qq8-xv64.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-1287

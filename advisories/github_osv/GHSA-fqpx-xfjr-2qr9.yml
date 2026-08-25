@@ -9,11 +9,6 @@ summary: |
 
   Additionally, these form validation methods do not require POST requests, resulting in a cross-site request forgery (CSRF) vulnerability.
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins/extended-choice-parameter
-    affected_versions: vers:maven/<=346.vd87693c5a
-    fixed_versions: vers:maven/356.va_90a_94ca_62ec
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/extended-choice-parameter-plugin
     affected_versions:
     fixed_versions:
@@ -21,16 +16,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/extended-choice-parameter-plugin
         commit: eff9472b64f68749e5272aa59b68e561fb4ab4cd
     introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/extended-choice-parameter
+    affected_versions: vers:maven/<=346.vd87693c5a
+    fixed_versions: vers:maven/356.va_90a_94ca_62ec
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-fqpx-xfjr-2qr9/GHSA-fqpx-xfjr-2qr9.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-352

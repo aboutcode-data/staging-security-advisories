@@ -8,16 +8,6 @@ summary: |
   Apache Hadoop's `FileUtil.unTar(File, File)` API does not escape the input file name before being passed to the shell. An attacker can inject arbitrary commands. This is only used in Hadoop 3.3 InMemoryAliasMap.completeBootstrapTransfer, which is only ever run by a local user. It has been used in Hadoop 2.x for yarn localization, which does enable remote code execution. It is used in Apache Spark, from the SQL command ADD ARCHIVE. As the ADD ARCHIVE command adds new binaries to the classpath, being able to execute shell scripts does not confer new permissions to the caller. SPARK-38305. "Check existence of file before untarring/zipping", which is included in 3.3.0, 3.1.4, 3.2.2, prevents shell commands being executed, regardless of which version of the hadoop libraries are in use. Users should upgrade to Apache Hadoop 2.10.2, 3.2.4, 3.3.3 or upper (including HADOOP-18136).
 impacted_packages:
   - purl: pkg:maven/org.apache.hadoop/hadoop-common
-    affected_versions: vers:maven/>=2.0.0|<2.10.2
-    fixed_versions: vers:maven/2.10.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.hadoop/hadoop-common
-    affected_versions: vers:maven/>=3.0.0-alpha|<3.2.4
-    fixed_versions: vers:maven/3.2.4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.hadoop/hadoop-common
     affected_versions: vers:maven/>=3.3.0|<3.3.3
     fixed_versions: vers:maven/3.3.3
     fixed_in_commits: []
@@ -29,16 +19,26 @@ impacted_packages:
       - vcs_url: https://github.com/apache/hadoop
         commit: cae749b076f35f0be13a926ee8cfbb7ce4402746
     introduced_in_commits: []
+  - purl: pkg:maven/org.apache.hadoop/hadoop-common
+    affected_versions: vers:maven/>=2.0.0|<2.10.2
+    fixed_versions: vers:maven/2.10.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.hadoop/hadoop-common
+    affected_versions: vers:maven/>=3.0.0-alpha|<3.2.4
+    fixed_versions: vers:maven/3.2.4
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-8wm5-8h9c-47pc/GHSA-8wm5-8h9c-47pc.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-78

@@ -7,11 +7,6 @@ summary: |
   dustjs-linkedin vulnerable to Prototype Pollution
   A vulnerability was found in LinkedIn dustjs prior to version 3.0.0 and classified as problematic. Affected by this issue is some unknown functionality. The manipulation leads to improperly controlled modification of object prototype attributes ('prototype pollution'). The attack may be launched remotely. The exploit has been disclosed to the public and may be used. Upgrading to version 3.0.0 can address this issue. The name of the patch is ddb6523832465d38c9d80189e9de60519ac307c3. It is recommended to upgrade the affected component. The identifier of this vulnerability is VDB-216464.
 impacted_packages:
-  - purl: pkg:npm/dustjs-linkedin
-    affected_versions: vers:npm/<3.0.0
-    fixed_versions: vers:npm/3.0.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/linkedin/dustjs
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/linkedin/dustjs
         commit: ddb6523832465d38c9d80189e9de60519ac307c3
     introduced_in_commits: []
+  - purl: pkg:npm/dustjs-linkedin
+    affected_versions: vers:npm/<3.0.0
+    fixed_versions: vers:npm/3.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/12/GHSA-c6rp-wrp9-qr4q/GHSA-c6rp-wrp9-qr4q.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-1321

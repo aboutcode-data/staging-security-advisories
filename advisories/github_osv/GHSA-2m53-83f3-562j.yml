@@ -12,6 +12,15 @@ summary: "Prototype pollution in min-dash\n### Impact\n\nThe `set` method is vul
   \n### Credits\n\nCredits to Cristian-Alexandru STAICU who found the vulnerability and to Idan\
   \ Digmi from the Snyk Security Team who reported the vulnerability to us, responsibly."
 impacted_packages:
+  - purl: pkg:github/bpmn-io/min-dash
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/bpmn-io/min-dash
+        commit: c4d579c0eb2ed0739592111c3906b198921d3f52
+      - vcs_url: https://github.com/bpmn-io/min-dash
+        commit: 2c6689e2aa29f4b66a4874a2f3003431e9db48d1
+    introduced_in_commits: []
   - purl: pkg:npm/min-dash
     affected_versions: vers:npm/<3.8.1
     fixed_versions: vers:npm/3.8.1
@@ -22,25 +31,16 @@ impacted_packages:
     fixed_versions: vers:maven/3.8.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/bpmn-io/min-dash
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/bpmn-io/min-dash
-        commit: c4d579c0eb2ed0739592111c3906b198921d3f52
-      - vcs_url: https://github.com/bpmn-io/min-dash
-        commit: 2c6689e2aa29f4b66a4874a2f3003431e9db48d1
-    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-2m53-83f3-562j/GHSA-2m53-83f3-562j.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-1321

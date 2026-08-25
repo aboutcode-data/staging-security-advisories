@@ -7,11 +7,6 @@ summary: |
   py7zr directory traversal vulnerability
   A directory traversal vulnerability in the SevenZipFile.extractall() function of the python library py7zr v0.20.0 and earlier allows attackers to write arbitrary files via extracting a crafted 7z file.
 impacted_packages:
-  - purl: pkg:pypi/py7zr
-    affected_versions: vers:pypi/<=0.20.0
-    fixed_versions: vers:pypi/0.20.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/miurahr/py7zr
     affected_versions:
     fixed_versions:
@@ -19,21 +14,26 @@ impacted_packages:
       - vcs_url: https://github.com/miurahr/py7zr
         commit: 1bb43f17515c7f69673a1c88ab9cc72a7bbef406
     introduced_in_commits: []
+  - purl: pkg:pypi/py7zr
+    affected_versions: vers:pypi/<=0.20.0
+    fixed_versions: vers:pypi/0.20.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/12/GHSA-m8xw-9x5x-6vh3/GHSA-m8xw-9x5x-6vh3.json
   - score: '9.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/12/GHSA-m8xw-9x5x-6vh3/GHSA-m8xw-9x5x-6vh3.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

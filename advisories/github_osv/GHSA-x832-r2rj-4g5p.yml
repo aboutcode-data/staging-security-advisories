@@ -7,6 +7,17 @@ summary: |
   SSRF in Kitodo.Presentation
   An issue was discovered in the Kitodo.Presentation (aka dlf) extension before 2.3.2, 3.x before 3.2.3, and 3.3.x before 3.3.4 for TYPO3. A missing access check in an eID script allows an unauthenticated user to submit arbitrary URLs to this component. This results in SSRF, allowing attackers to view the content of any file or webpage the webserver has access to.
 impacted_packages:
+  - purl: pkg:github/kitodo/kitodo-presentation
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/kitodo/kitodo-presentation
+        commit: 4a20621afc30778ba3b045be5110353cf4fd4fd4
+      - vcs_url: https://github.com/kitodo/kitodo-presentation
+        commit: 9700478b46445f562c3e2051d61565d779f59275
+      - vcs_url: https://github.com/kitodo/kitodo-presentation
+        commit: 059be3f82b08c60cbb798986cd3ff22dbf60a5e4
+    introduced_in_commits: []
   - purl: pkg:composer/kitodo/presentation
     affected_versions: vers:composer/<2.3.2
     fixed_versions: vers:composer/2.3.2
@@ -22,27 +33,16 @@ impacted_packages:
     fixed_versions: vers:composer/3.3.4
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/kitodo/kitodo-presentation
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/kitodo/kitodo-presentation
-        commit: 4a20621afc30778ba3b045be5110353cf4fd4fd4
-      - vcs_url: https://github.com/kitodo/kitodo-presentation
-        commit: 9700478b46445f562c3e2051d61565d779f59275
-      - vcs_url: https://github.com/kitodo/kitodo-presentation
-        commit: 059be3f82b08c60cbb798986cd3ff22dbf60a5e4
-    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-x832-r2rj-4g5p/GHSA-x832-r2rj-4g5p.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-918

@@ -7,11 +7,6 @@ summary: |
   Improper Restriction of XML External Entity Reference in Liquibase
   The XMLChangeLogSAXParser() function in Liquibase prior to version 4.8.0 contains an issue that may lead to to Improper Restriction of XML External Entity Reference.
 impacted_packages:
-  - purl: pkg:maven/org.liquibase/liquibase-core
-    affected_versions: vers:maven/<4.8.0
-    fixed_versions: vers:maven/4.8.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/liquibase/liquibase
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/liquibase/liquibase
         commit: 33d9d925082097fb1a3d2fc8e44423d964cd9381
     introduced_in_commits: []
+  - purl: pkg:maven/org.liquibase/liquibase-core
+    affected_versions: vers:maven/<4.8.0
+    fixed_versions: vers:maven/4.8.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-jvfv-hrrc-6q72/GHSA-jvfv-hrrc-6q72.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-611

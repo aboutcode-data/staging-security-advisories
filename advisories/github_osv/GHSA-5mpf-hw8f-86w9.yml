@@ -9,11 +9,6 @@ summary: |
 
   Existing `build.xml` files are not automatically updated to remove captured environment variables. They need to be manually cleaned up. To help with this, the plugin will report environment variables stored in `build.xml` as unloadable data in the Old Data Monitor, that allows discarding this data. Build records are only loaded from disk when needed however, so some builds stored in Jenkins may not immediately appear there.
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins/parameterized-trigger
-    affected_versions: vers:maven/<2.43.1
-    fixed_versions: vers:maven/2.43.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/parameterized-trigger-plugin
     affected_versions:
     fixed_versions:
@@ -23,16 +18,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/parameterized-trigger-plugin
         commit: b5ec2b48df3c4f7b4999c4edf137b34fbea694fd
     introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/parameterized-trigger
+    affected_versions: vers:maven/<2.43.1
+    fixed_versions: vers:maven/2.43.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '3.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-5mpf-hw8f-86w9/GHSA-5mpf-hw8f-86w9.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-532

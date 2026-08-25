@@ -7,11 +7,6 @@ summary: |
   Oils JS vulnerable to Open Redirect
   A vulnerability was found in oils-js. This vulnerability affects unknown code of the file core/Web.js. The manipulation leads to open redirect and the attack can be initiated remotely. The name of the patch is fad8fbae824a7d367dacb90d56cb02c5cb999d42. It is recommended to apply a patch to fix this issue.
 impacted_packages:
-  - purl: pkg:npm/oils
-    affected_versions: vers:npm/<8.0.0
-    fixed_versions: vers:npm/8.0.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/mannyvergel/oils-js
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/mannyvergel/oils-js
         commit: fad8fbae824a7d367dacb90d56cb02c5cb999d42
     introduced_in_commits: []
+  - purl: pkg:npm/oils
+    affected_versions: vers:npm/<8.0.0
+    fixed_versions: vers:npm/8.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/12/GHSA-v279-v2xm-whq9/GHSA-v279-v2xm-whq9.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-601

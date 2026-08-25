@@ -14,6 +14,13 @@ summary: |
   ### Workarounds
   Catch and discard any exceptions from Yauaa.
 impacted_packages:
+  - purl: pkg:github/nielsbasjes/yauaa
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/nielsbasjes/yauaa
+        commit: 3017a866e2cff0d308f264b66fde4fa79e3beb9e
+    introduced_in_commits: []
   - purl: pkg:maven/nl.basjes.parse.useragent/yauaa
     affected_versions: vers:maven/>=7.0.0|<7.9.0
     fixed_versions: vers:maven/7.9.0
@@ -74,23 +81,16 @@ impacted_packages:
     fixed_versions: vers:maven/7.9.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/nielsbasjes/yauaa
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/nielsbasjes/yauaa
-        commit: 3017a866e2cff0d308f264b66fde4fa79e3beb9e
-    introduced_in_commits: []
 severities:
   - score: '8.6'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/12/GHSA-c4pm-63cg-9j7h/GHSA-c4pm-63cg-9j7h.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-755

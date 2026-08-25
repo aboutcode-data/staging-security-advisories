@@ -144,6 +144,15 @@ summary: "CSRF forgery protection bypass in solidus_frontend\n### Impact\nCSRF v
   \ or a [discussion](https://github.com/solidusio/solidus/discussions) in Solidus.\n* Email\
   \ us at [security@solidus.io](mailto:security@soliidus.io)\n* Contact the core team on [Slack](http://slack.solidus.io/)"
 impacted_packages:
+  - purl: pkg:github/solidusio/solidus
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/solidusio/solidus
+        commit: a1b9bf7f24f9b8684fc4d943eacb02b1926c77c6
+      - vcs_url: https://github.com/solidusio/solidus
+        commit: 4d17cacf066d9492fc04eb3a0b16084b47376d81
+    introduced_in_commits: []
   - purl: pkg:gem/solidus_frontend
     affected_versions: vers:gem/<2.11.14
     fixed_versions: vers:gem/2.11.14
@@ -159,25 +168,16 @@ impacted_packages:
     fixed_versions: vers:gem/3.1.5
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/solidusio/solidus
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/solidusio/solidus
-        commit: a1b9bf7f24f9b8684fc4d943eacb02b1926c77c6
-      - vcs_url: https://github.com/solidusio/solidus
-        commit: 4d17cacf066d9492fc04eb3a0b16084b47376d81
-    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/01/GHSA-h3fg-h5v3-vf8m/GHSA-h3fg-h5v3-vf8m.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-352

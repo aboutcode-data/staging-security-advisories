@@ -7,6 +7,17 @@ summary: |
   Magento Improper Access Control vulnerability
   Adobe Commerce versions 2.4.3-p2 (and earlier), 2.3.7-p3 (and earlier) and 2.4.4 (and earlier) are affected by an Improper Access Control vulnerability that could result in Privilege escalation. An attacker with a low privilege account could leverage this vulnerability to perform an account takeover for a victim. Exploitation of this issue does not require user interaction.
 impacted_packages:
+  - purl: pkg:github/magento/magento2
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/magento/magento2
+        commit: 5f07eba878296a37bd5c3a2baecad48948547594
+      - vcs_url: https://github.com/magento/magento2
+        commit: 5548bc64b5bc904346c0af9193a7fbb5274b4efa
+      - vcs_url: https://github.com/magento/magento2
+        commit: 246d524b7586af2245092008e0d92b8d6fdd8523
+    introduced_in_commits: []
   - purl: pkg:composer/magento/community-edition
     affected_versions: vers:composer/>=2.3.0|<2.3.7-p4
     fixed_versions: vers:composer/2.3.7-p4
@@ -22,27 +33,16 @@ impacted_packages:
     fixed_versions: vers:composer/2.4.3-p3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/magento/magento2
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/magento/magento2
-        commit: 5f07eba878296a37bd5c3a2baecad48948547594
-      - vcs_url: https://github.com/magento/magento2
-        commit: 5548bc64b5bc904346c0af9193a7fbb5274b4efa
-      - vcs_url: https://github.com/magento/magento2
-        commit: 246d524b7586af2245092008e0d92b8d6fdd8523
-    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-x95x-f4g9-mm85/GHSA-x95x-f4g9-mm85.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-284
