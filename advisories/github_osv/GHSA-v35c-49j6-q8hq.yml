@@ -34,13 +34,13 @@ summary: |
   The issue was identified by Shumpei Asahara & Yuji Ito from NTT DATA Corporation and responsibly reported to Pivotal.
 impacted_packages:
   - purl: pkg:maven/org.springframework.security/spring-security-core
-    affected_versions: vers:maven/<3.2.10.RELEASE
-    fixed_versions: vers:maven/3.2.10.RELEASE
+    affected_versions: vers:maven/>=4.0.0.RELEASE|<4.1.4.RELEASE
+    fixed_versions: vers:maven/4.1.4.RELEASE
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.springframework.security/spring-security-core
-    affected_versions: vers:maven/>=4.0.0.RELEASE|<4.1.4.RELEASE
-    fixed_versions: vers:maven/4.1.4.RELEASE
+    affected_versions: vers:maven/<3.2.10.RELEASE
+    fixed_versions: vers:maven/3.2.10.RELEASE
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.springframework.security/spring-security-core
@@ -50,14 +50,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '7.5'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/09/GHSA-v35c-49j6-q8hq/GHSA-v35c-49j6-q8hq.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses: []
 references:

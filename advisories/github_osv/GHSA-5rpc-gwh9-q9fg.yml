@@ -7,26 +7,26 @@ summary: |
   Improper Restriction of Operations within the Bounds of a Memory Buffer in OpenCV
   In modules/imgcodecs/src/grfmt_pxm.cpp, the length of buffer AutoBuffer _src is small than expected, which will cause copy buffer overflow later. If the image is from remote, may lead to remote code execution or denial of service. This affects OpenCV 3.3 (corresponding to OpenCV-Python 3.3.0.9) and earlier.
 impacted_packages:
-  - purl: pkg:pypi/opencv-python
+  - purl: pkg:pypi/opencv-contrib-python
     affected_versions: vers:pypi/<=3.3.0.9
     fixed_versions: vers:pypi/3.3.1.11
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:pypi/opencv-contrib-python
+  - purl: pkg:pypi/opencv-python
     affected_versions: vers:pypi/<=3.3.0.9
     fixed_versions: vers:pypi/3.3.1.11
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '8.8'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/10/GHSA-5rpc-gwh9-q9fg/GHSA-5rpc-gwh9-q9fg.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-787

@@ -8,13 +8,13 @@ summary: |
   Kylin has some restful apis which will concatenate SQLs with the user input string, a user is likely to be able to run malicious database queries.
 impacted_packages:
   - purl: pkg:maven/org.apache.kylin/kylin-server-base
-    affected_versions: vers:maven/<2.6.5
-    fixed_versions: vers:maven/2.6.5
+    affected_versions: vers:maven/3.0.0
+    fixed_versions: vers:maven/3.0.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.kylin/kylin-server-base
-    affected_versions: vers:maven/3.0.0
-    fixed_versions: vers:maven/3.0.1
+    affected_versions: vers:maven/<2.6.5
+    fixed_versions: vers:maven/2.6.5
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/apache/kylin
@@ -28,12 +28,12 @@ severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/07/GHSA-7hmh-8gwv-mfvq/GHSA-7hmh-8gwv-mfvq.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-89

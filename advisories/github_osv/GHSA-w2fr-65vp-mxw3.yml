@@ -8,23 +8,8 @@ summary: |
   In Symfony before 2.8.50, 3.x before 3.4.26, 4.x before 4.1.12, and 4.2.x before 4.2.7, it is possible to cache objects that may contain bad user input. On serialization or unserialization, this could result in the deletion of files that the current user has access to. This is related to symfony/cache and symfony/phpunit-bridge.
 impacted_packages:
   - purl: pkg:composer/symfony/cache
-    affected_versions: vers:composer/>=3.1.0|<3.4.26
-    fixed_versions: vers:composer/3.4.26
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/cache
-    affected_versions: vers:composer/>=4.0.0|<4.1.12
-    fixed_versions: vers:composer/4.1.12
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/cache
     affected_versions: vers:composer/>=4.2.0|<4.2.7
     fixed_versions: vers:composer/4.2.7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/phpunit-bridge
-    affected_versions: vers:composer/>=2.8.0|<2.8.50
-    fixed_versions: vers:composer/2.8.50
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/phpunit-bridge
@@ -32,19 +17,14 @@ impacted_packages:
     fixed_versions: vers:composer/3.4.26
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/symfony/phpunit-bridge
-    affected_versions: vers:composer/>=4.0.0|<4.1.12
-    fixed_versions: vers:composer/4.1.12
+  - purl: pkg:composer/typo3/cms
+    affected_versions: vers:composer/>=9.0.0|<9.5.8
+    fixed_versions: vers:composer/9.5.8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/phpunit-bridge
     affected_versions: vers:composer/>=4.2.0|<4.2.7
     fixed_versions: vers:composer/4.2.7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/symfony
-    affected_versions: vers:composer/>=2.8.0|<2.8.50
-    fixed_versions: vers:composer/2.8.50
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/symfony
@@ -67,9 +47,29 @@ impacted_packages:
     fixed_versions: vers:composer/9.5.8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/typo3/cms
-    affected_versions: vers:composer/>=9.0.0|<9.5.8
-    fixed_versions: vers:composer/9.5.8
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=2.8.0|<2.8.50
+    fixed_versions: vers:composer/2.8.50
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/phpunit-bridge
+    affected_versions: vers:composer/>=4.0.0|<4.1.12
+    fixed_versions: vers:composer/4.1.12
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/cache
+    affected_versions: vers:composer/>=3.1.0|<3.4.26
+    fixed_versions: vers:composer/3.4.26
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/cache
+    affected_versions: vers:composer/>=4.0.0|<4.1.12
+    fixed_versions: vers:composer/4.1.12
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/phpunit-bridge
+    affected_versions: vers:composer/>=2.8.0|<2.8.50
+    fixed_versions: vers:composer/2.8.50
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/symfony/symfony
@@ -81,14 +81,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '7.1'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/02/GHSA-w2fr-65vp-mxw3/GHSA-w2fr-65vp-mxw3.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-502

@@ -13,14 +13,14 @@ summary: |
 
   ldapauth is not actively maintained, having not seen a publish since 2014. As a result, there is no patch available. Consider updating to use [ldapauth-fork](https://www.npmjs.com/package/ldapauth-fork) 2.3.3 or greater.
 impacted_packages:
-  - purl: pkg:npm/ldapauth-fork
-    affected_versions: vers:npm/<2.3.3
-    fixed_versions: vers:npm/2.3.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:npm/ldapauth
     affected_versions: vers:npm/<2.2.4
     fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/ldapauth-fork
+    affected_versions: vers:npm/<2.3.3
+    fixed_versions: vers:npm/2.3.3
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/vesse/node-ldapauth-fork
@@ -34,12 +34,12 @@ severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/08/GHSA-82mg-x548-gq3j/GHSA-82mg-x548-gq3j.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-90

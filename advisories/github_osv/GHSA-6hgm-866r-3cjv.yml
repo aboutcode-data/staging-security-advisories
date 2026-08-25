@@ -7,11 +7,6 @@ summary: |
   Insecure Deserialization in Apache Commons Collection
   Serialized-object interfaces in Java applications using the Apache Commons Collections (ACC) library may allow remote attackers to execute arbitrary commands via a crafted serialized Java object.
 impacted_packages:
-  - purl: pkg:maven/net.sourceforge.collections/collections-generic
-    affected_versions: vers:maven/<=4.0.1
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:maven/org.apache.servicemix.bundles/org.apache.servicemix.bundles.collections-generic
     affected_versions: vers:maven/<=4.01
     fixed_versions:
@@ -32,11 +27,16 @@ impacted_packages:
     fixed_versions: vers:maven/3.2.2
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:maven/net.sourceforge.collections/collections-generic
+    affected_versions: vers:maven/<=4.0.1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-502

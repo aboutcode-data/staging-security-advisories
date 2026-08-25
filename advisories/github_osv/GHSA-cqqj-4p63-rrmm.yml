@@ -7,6 +7,11 @@ summary: |
   HTTP Request Smuggling in Netty
   HttpObjectDecoder.java in Netty before 4.1.44 allows an HTTP header that lacks a colon, which might be interpreted as a separate header with an incorrect syntax, or might be interpreted as an "invalid fold."
 impacted_packages:
+  - purl: pkg:maven/io.netty/netty
+    affected_versions: vers:maven/<4.0.0
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:maven/io.netty/netty-codec-http
     affected_versions: vers:maven/<4.1.44
     fixed_versions: vers:maven/4.1.44
@@ -17,21 +22,16 @@ impacted_packages:
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/io.netty/netty
-    affected_versions: vers:maven/<4.0.0
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: '9.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/02/GHSA-cqqj-4p63-rrmm/GHSA-cqqj-4p63-rrmm.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-444

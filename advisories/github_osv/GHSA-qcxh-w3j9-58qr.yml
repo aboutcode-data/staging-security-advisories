@@ -7,9 +7,9 @@ summary: |
   Apache Tomcat Denial of Service vulnerability
   The HTTP/2 implementation in Apache Tomcat 9.0.0.M1 to 9.0.14 and 8.5.0 to 8.5.37 accepted streams with excessive numbers of SETTINGS frames and also permitted clients to keep streams open without reading/writing request/response data. By keeping streams open for requests that utilised the Servlet API's blocking I/O, clients were able to cause server-side threads to block eventually leading to thread exhaustion and a DoS.
 impacted_packages:
-  - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
-    affected_versions: vers:maven/>=9.0.0|<9.0.16
-    fixed_versions: vers:maven/9.0.16
+  - purl: pkg:maven/org.apache.tomcat/tomcat-coyote
+    affected_versions: vers:maven/>=8.0.0|<8.5.38
+    fixed_versions: vers:maven/8.5.38
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
@@ -17,26 +17,26 @@ impacted_packages:
     fixed_versions: vers:maven/8.5.38
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/org.apache.tomcat/tomcat-coyote
+  - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
     affected_versions: vers:maven/>=9.0.0|<9.0.16
     fixed_versions: vers:maven/9.0.16
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat/tomcat-coyote
-    affected_versions: vers:maven/>=8.0.0|<8.5.38
-    fixed_versions: vers:maven/8.5.38
+    affected_versions: vers:maven/>=9.0.0|<9.0.16
+    fixed_versions: vers:maven/9.0.16
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '7.5'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/06/GHSA-qcxh-w3j9-58qr/GHSA-qcxh-w3j9-58qr.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-400

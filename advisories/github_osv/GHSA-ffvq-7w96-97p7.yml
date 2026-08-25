@@ -8,11 +8,6 @@ summary: |
   Spring Framework, version 5.1, versions 5.0.x prior to 5.0.10, versions 4.3.x prior to 4.3.20, and older unsupported versions on the 4.2.x branch provide support for range requests when serving static resources through the ResourceHttpRequestHandler, or starting in 5.0 when an annotated controller returns an org.springframework.core.io.Resource. A malicious user (or attacker) can add a range header with a high number of ranges, or with wide ranges that overlap, or both, for a denial of service attack. This vulnerability affects applications that depend on either spring-webmvc or spring-webflux. Such applications must also have a registration for serving static resources (e.g. JS, CSS, images, and others), or have an annotated controller that returns an org.springframework.core.io.Resource. Spring Boot applications that depend on spring-boot-starter-web or spring-boot-starter-webflux are ready to serve static resources out of the box and are therefore vulnerable.
 impacted_packages:
   - purl: pkg:maven/org.springframework/spring-core
-    affected_versions: vers:maven/>=5.1.0.RELEASE|<5.1.1.RELEASE
-    fixed_versions: vers:maven/5.1.1.RELEASE
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.springframework/spring-core
     affected_versions: vers:maven/>=5.0.0.RELEASE|<5.0.10.RELEASE
     fixed_versions: vers:maven/5.0.10.RELEASE
     fixed_in_commits: []
@@ -22,16 +17,21 @@ impacted_packages:
     fixed_versions: vers:maven/4.3.20.RELEASE
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:maven/org.springframework/spring-core
+    affected_versions: vers:maven/>=5.1.0.RELEASE|<5.1.1.RELEASE
+    fixed_versions: vers:maven/5.1.1.RELEASE
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/06/GHSA-ffvq-7w96-97p7/GHSA-ffvq-7w96-97p7.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses: []
 references:

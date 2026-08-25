@@ -7,26 +7,26 @@ summary: |
   Deserialization of Untrusted Data in Log4j
   In Apache Log4j 2.x before 2.8.2, when using the TCP socket server or UDP socket server to receive serialized log events from another application, a specially crafted binary payload can be sent that, when deserialized, can execute arbitrary code.
 impacted_packages:
-  - purl: pkg:maven/org.apache.logging.log4j/log4j
+  - purl: pkg:maven/org.apache.logging.log4j/log4j-core
     affected_versions: vers:maven/>=2.0|<2.8.2
     fixed_versions: vers:maven/2.8.2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/org.apache.logging.log4j/log4j-core
+  - purl: pkg:maven/org.apache.logging.log4j/log4j
     affected_versions: vers:maven/>=2.0|<2.8.2
     fixed_versions: vers:maven/2.8.2
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '9.8'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/01/GHSA-fxph-q3j8-mv87/GHSA-fxph-q3j8-mv87.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-502

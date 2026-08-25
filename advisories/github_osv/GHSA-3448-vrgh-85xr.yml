@@ -7,17 +7,17 @@ summary: |
   NULL Pointer Dereference in OpenCV.
   An issue was discovered in OpenCV before 4.1.1 (OpenCV-Python before 4.1.1.26). There is a NULL pointer dereference in the function cv::XMLParser::parse at modules/core/src/persistence.cpp.
 impacted_packages:
+  - purl: pkg:pypi/opencv-contrib-python
+    affected_versions: vers:pypi/<=4.1.0.25
+    fixed_versions: vers:pypi/4.1.1.26
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:pypi/opencv-python
     affected_versions: vers:pypi/<=4.1.0.25
     fixed_versions: vers:pypi/4.1.1.26
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/opencv-python-headless
-    affected_versions: vers:pypi/<=4.1.0.25
-    fixed_versions: vers:pypi/4.1.1.26
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/opencv-contrib-python
     affected_versions: vers:pypi/<=4.1.0.25
     fixed_versions: vers:pypi/4.1.1.26
     fixed_in_commits: []
@@ -29,14 +29,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '7.5'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/10/GHSA-3448-vrgh-85xr/GHSA-3448-vrgh-85xr.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-476

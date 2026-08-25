@@ -9,11 +9,6 @@ summary: |
 
   Note: This advisory applies to `dom4j:dom4j` version 1.x legacy artifacts.  To resolve this a change to the latest version of `org.dom4j:dom4j` is recommended.
 impacted_packages:
-  - purl: pkg:maven/dom4j/dom4j
-    affected_versions: vers:maven/<=1.6.1
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:maven/org.dom4j/dom4j
     affected_versions: vers:maven/<2.0.3
     fixed_versions: vers:maven/2.0.3
@@ -22,6 +17,11 @@ impacted_packages:
   - purl: pkg:maven/org.dom4j/dom4j
     affected_versions: vers:maven/>=2.1.0|<2.1.3
     fixed_versions: vers:maven/2.1.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/dom4j/dom4j
+    affected_versions: vers:maven/<=1.6.1
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/dom4j/dom4j
@@ -37,12 +37,12 @@ severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/06/GHSA-hwj3-m3p6-hj38/GHSA-hwj3-m3p6-hj38.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-611

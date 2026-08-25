@@ -22,6 +22,11 @@ summary: |
 
   Update to the newest version of Connect or disable methodOverride. It is not possible to avoid the vulnerability if you have enabled this middleware in the top of your stack.
 impacted_packages:
+  - purl: pkg:npm/connect
+    affected_versions: vers:npm/<=2.8.0
+    fixed_versions: vers:npm/2.8.1
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:github/senchalabs/connect
     affected_versions:
     fixed_versions:
@@ -31,16 +36,11 @@ impacted_packages:
       - vcs_url: https://github.com/senchalabs/connect
         commit: 126187c4e12162e231b87350740045e5bb06e93a
     introduced_in_commits: []
-  - purl: pkg:npm/connect
-    affected_versions: vers:npm/<=2.8.0
-    fixed_versions: vers:npm/2.8.1
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

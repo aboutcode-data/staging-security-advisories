@@ -12,24 +12,24 @@ impacted_packages:
     fixed_versions: vers:maven/3.10.3.Final
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/io.netty/netty-parent
-    affected_versions: vers:maven/>=4.0.0|<4.0.28.Final
-    fixed_versions: vers:maven/4.0.28.Final
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:maven/org.jboss.netty/netty
     affected_versions: vers:maven/<3.9.8.Final
     fixed_versions: vers:maven/3.9.8.Final
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/io.netty/netty
-    affected_versions: vers:maven/>=3.10.0|<3.10.3.Final
-    fixed_versions: vers:maven/3.10.3.Final
+    affected_versions: vers:maven/<3.9.8.Final
+    fixed_versions: vers:maven/3.9.8.Final
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/io.netty/netty-parent
+    affected_versions: vers:maven/>=4.0.0|<4.0.28.Final
+    fixed_versions: vers:maven/4.0.28.Final
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/io.netty/netty
-    affected_versions: vers:maven/<3.9.8.Final
-    fixed_versions: vers:maven/3.9.8.Final
+    affected_versions: vers:maven/>=3.10.0|<3.10.3.Final
+    fixed_versions: vers:maven/3.10.3.Final
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/netty/netty
@@ -43,14 +43,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '7.5'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/06/GHSA-xfv3-rrfm-f2rv/GHSA-xfv3-rrfm-f2rv.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-20
