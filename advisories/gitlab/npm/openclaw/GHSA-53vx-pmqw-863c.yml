@@ -7,6 +7,11 @@ summary: |
   OpenClaw: Browser SSRF policy default allowed private-network navigation
   Browser SSRF policy default allowed private-network navigation.
 impacted_packages:
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<0.0.0
+    fixed_versions: vers:npm/2026.4.14
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:github/openclaw/openclaw
     affected_versions:
     fixed_versions:
@@ -20,16 +25,11 @@ impacted_packages:
       - vcs_url: https://github.com/openclaw/openclaw
         commit: 1dabfef28db523e7de81edeb3dd689e9171236a2
     introduced_in_commits: []
-  - purl: pkg:npm/openclaw
-    affected_versions: vers:npm/<0.0.0
-    fixed_versions: vers:npm/2026.4.14
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
-  - score: None
+  - score:
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/openclaw/GHSA-53vx-pmqw-863c.yml
 weaknesses:
   - CWE-918
