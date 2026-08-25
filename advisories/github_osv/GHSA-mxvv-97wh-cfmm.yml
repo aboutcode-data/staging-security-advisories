@@ -169,6 +169,16 @@ summary: "ImageMagick (WriteBMPImage): 32-bit integer overflow when writing BMP 
   \ here:\n    #0 0x408e30ab in __interceptor_posix_memalign\n    #1 0xd03305 in AcquireVirtualMemory\
   \ MagickCore/memory.c:747\n    #2 0xecd597 in WriteBMPImage coders/bmp.c:2092\n```"
 impacted_packages:
+  - purl: pkg:nuget/Magick.NET-Q16-x86
+    affected_versions: vers:nuget/<14.8.1
+    fixed_versions: vers:nuget/14.8.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q8-x86
+    affected_versions: vers:nuget/<14.8.1
+    fixed_versions: vers:nuget/14.8.1
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
     affected_versions: vers:nuget/<14.8.1
     fixed_versions: vers:nuget/14.8.1
@@ -184,17 +194,7 @@ impacted_packages:
     fixed_versions: vers:nuget/14.8.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-x86
-    affected_versions: vers:nuget/<14.8.1
-    fixed_versions: vers:nuget/14.8.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q8-AnyCPU
-    affected_versions: vers:nuget/<14.8.1
-    fixed_versions: vers:nuget/14.8.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q8-x86
     affected_versions: vers:nuget/<14.8.1
     fixed_versions: vers:nuget/14.8.1
     fixed_in_commits: []
@@ -210,12 +210,12 @@ severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/08/GHSA-mxvv-97wh-cfmm/GHSA-mxvv-97wh-cfmm.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-190

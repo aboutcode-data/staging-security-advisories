@@ -15,11 +15,6 @@ summary: |
   We're not aware of any workaround, except denying access to the affected REST resources in a proxy in front of XWiki.
 impacted_packages:
   - purl: pkg:maven/org.xwiki.platform/xwiki-platform-rest-server
-    affected_versions: vers:maven/<16.10.11
-    fixed_versions: vers:maven/16.10.11
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.xwiki.platform/xwiki-platform-rest-server
     affected_versions: vers:maven/>=17.0.0-rc-1|<17.4.4
     fixed_versions: vers:maven/17.4.4
     fixed_in_commits: []
@@ -27,6 +22,11 @@ impacted_packages:
   - purl: pkg:maven/org.xwiki.platform/xwiki-platform-rest-server
     affected_versions: vers:maven/>=17.5.0-rc-1|<17.7.0-rc-1
     fixed_versions: vers:maven/17.7.0-rc-1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.xwiki.platform/xwiki-platform-rest-server
+    affected_versions: vers:maven/<16.10.11
+    fixed_versions: vers:maven/16.10.11
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/xwiki/xwiki-platform
@@ -40,12 +40,12 @@ severities:
   - score: '8.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/12/GHSA-cc84-q3v3-mhgf/GHSA-cc84-q3v3-mhgf.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-770

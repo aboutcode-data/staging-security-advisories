@@ -21,11 +21,6 @@ summary: "ImageMagick's failure to limit the depth of SVG file reads caused a Do
   \ a crash due to a stack overflow.\n\n### Impact\n\nThis is a DoS vulnerability and all applications\
   \ using Magick to parse SVG files are affected."
 impacted_packages:
-  - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
-    affected_versions: vers:nuget/<14.10.1
-    fixed_versions: vers:nuget/14.10.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-HDRI-AnyCPU
     affected_versions: vers:nuget/<14.10.1
     fixed_versions: vers:nuget/14.10.1
@@ -47,16 +42,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q8-x86
-    affected_versions: vers:nuget/<14.10.1
-    fixed_versions: vers:nuget/14.10.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-x64
-    affected_versions: vers:nuget/<14.10.1
-    fixed_versions: vers:nuget/14.10.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-HDRI-x64
     affected_versions: vers:nuget/<14.10.1
     fixed_versions: vers:nuget/14.10.1
     fixed_in_commits: []
@@ -106,6 +91,21 @@ impacted_packages:
     fixed_versions: vers:nuget/14.10.1
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-x64
+    affected_versions: vers:nuget/<14.10.1
+    fixed_versions: vers:nuget/14.10.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
+    affected_versions: vers:nuget/<14.10.1
+    fixed_versions: vers:nuget/14.10.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-x64
+    affected_versions: vers:nuget/<14.10.1
+    fixed_versions: vers:nuget/14.10.1
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:github/imagemagick/imagemagick
     affected_versions:
     fixed_versions:
@@ -117,12 +117,12 @@ severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/12/GHSA-p27m-hp98-6637/GHSA-p27m-hp98-6637.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-674

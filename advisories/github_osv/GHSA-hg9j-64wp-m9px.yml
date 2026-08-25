@@ -51,12 +51,12 @@ summary: "Flarum Vulnerable to Session Hijacking via Authoritative Subdomain Coo
   \  \n- Session tokens persist post-authentication.  \n\n---\n\n## **References**  \n- [RFC\
   \ 6265: HTTP Cookie Handling](https://tools.ietf.org/html/rfc6265)  \n- [Public Suffix List](https://publicsuffix.org/)"
 impacted_packages:
-  - purl: pkg:composer/flarum/core
+  - purl: pkg:composer/flarum/framework
     affected_versions: vers:composer/<1.8.10
     fixed_versions: vers:composer/1.8.10
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/flarum/framework
+  - purl: pkg:composer/flarum/core
     affected_versions: vers:composer/<1.8.10
     fixed_versions: vers:composer/1.8.10
     fixed_in_commits: []
@@ -72,12 +72,12 @@ severities:
   - score: '6.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/03/GHSA-hg9j-64wp-m9px/GHSA-hg9j-64wp-m9px.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-74

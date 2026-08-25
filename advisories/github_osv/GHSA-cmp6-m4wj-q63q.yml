@@ -36,11 +36,6 @@ summary: |
 
   This CVE is a different attack than [CVE‐2025‐12183](https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-12183), affecting different implementations with different impact. This new vulnerability was discovered by [CodeIntelligence](https://www.code-intelligence.com/) during research that followed up on CVE‐2025‐12183. Users are recommended to upgrade to 1.10.1 to fix both vulnerabilities.
 impacted_packages:
-  - purl: pkg:maven/at.yawk.lz4/lz4-java
-    affected_versions: vers:maven/<=1.10.0
-    fixed_versions: vers:maven/1.10.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:maven/org.lz4/lz4-java
     affected_versions: vers:maven/<=1.8.1
     fixed_versions:
@@ -56,6 +51,11 @@ impacted_packages:
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:maven/at.yawk.lz4/lz4-java
+    affected_versions: vers:maven/<=1.10.0
+    fixed_versions: vers:maven/1.10.1
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:github/yawkat/lz4-java
     affected_versions:
     fixed_versions:
@@ -67,12 +67,12 @@ severities:
   - score: '8.2'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/12/GHSA-cmp6-m4wj-q63q/GHSA-cmp6-m4wj-q63q.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-201

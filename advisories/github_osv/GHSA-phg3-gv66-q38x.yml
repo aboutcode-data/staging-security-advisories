@@ -8,16 +8,6 @@ summary: |
   A flaw was found in Quarkus REST that allows request parameters to leak between concurrent requests if endpoints use field injection without a CDI scope. This vulnerability allows attackers to manipulate request data, impersonate users, or access sensitive information.
 impacted_packages:
   - purl: pkg:maven/io.quarkus/quarkus-rest
-    affected_versions: vers:maven/<3.8.6.1
-    fixed_versions: vers:maven/3.8.6.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/io.quarkus/quarkus-rest-deployment
-    affected_versions: vers:maven/<3.8.6.1
-    fixed_versions: vers:maven/3.8.6.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/io.quarkus/quarkus-rest
     affected_versions: vers:maven/>=3.16.0.CR1|<3.18.2
     fixed_versions: vers:maven/3.18.2
     fixed_in_commits: []
@@ -35,6 +25,16 @@ impacted_packages:
   - purl: pkg:maven/io.quarkus/quarkus-rest-deployment
     affected_versions: vers:maven/>=3.9.0.CR1|<3.15.3.1
     fixed_versions: vers:maven/3.15.3.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/io.quarkus/quarkus-rest
+    affected_versions: vers:maven/<3.8.6.1
+    fixed_versions: vers:maven/3.8.6.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/io.quarkus/quarkus-rest-deployment
+    affected_versions: vers:maven/<3.8.6.1
+    fixed_versions: vers:maven/3.8.6.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/quarkusio/quarkus
@@ -52,12 +52,12 @@ severities:
   - score: '8.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/02/GHSA-phg3-gv66-q38x/GHSA-phg3-gv66-q38x.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-488

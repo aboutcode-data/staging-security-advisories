@@ -14,6 +14,11 @@ summary: |
   ### Workarounds
   The [patch](https://github.com/xwiki/xwiki-platform/commit/cb578b1b2910d06e9dd7581077072d1cfbd280f2) can be manually applied to the templates that are present in the WAR. A restart of XWiki is needed for the changes to be applied.
 impacted_packages:
+  - purl: pkg:maven/org.xwiki.platform/xwiki-platform-web-templates
+    affected_versions: vers:maven/>=17.0.0-rc-1|<17.4.2
+    fixed_versions: vers:maven/17.4.2
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:maven/org.xwiki.platform/xwiki-platform-flamingo-skin-resources
     affected_versions: vers:maven/>=6.2-milestone-1|<16.10.10
     fixed_versions: vers:maven/16.10.10
@@ -27,11 +32,6 @@ impacted_packages:
   - purl: pkg:maven/org.xwiki.platform/xwiki-platform-web-templates
     affected_versions: vers:maven/>=6.2-milestone-1|<16.10.10
     fixed_versions: vers:maven/16.10.10
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.xwiki.platform/xwiki-platform-web-templates
-    affected_versions: vers:maven/>=17.0.0-rc-1|<17.4.2
-    fixed_versions: vers:maven/17.4.2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/xwiki/xwiki-platform
@@ -45,12 +45,12 @@ severities:
   - score: '6.5'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:H/SI:H/SA:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/12/GHSA-7vpr-jm38-wr7w/GHSA-7vpr-jm38-wr7w.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-80

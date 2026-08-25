@@ -19,6 +19,11 @@ summary: "Denial of Service Vulnerability in React Server Components\n## Impact\
   \ for more information and upgrade instructions."
 impacted_packages:
   - purl: pkg:npm/react-server-dom-parcel
+    affected_versions: vers:npm/>=19.0.2|<19.0.3
+    fixed_versions: vers:npm/19.0.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/react-server-dom-parcel
     affected_versions: vers:npm/>=19.1.3|<19.1.4
     fixed_versions: vers:npm/19.1.4
     fixed_in_commits: []
@@ -56,23 +61,18 @@ impacted_packages:
   - purl: pkg:npm/react-server-dom-webpack
     affected_versions: vers:npm/>=19.2.2|<19.2.3
     fixed_versions: vers:npm/19.2.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:npm/react-server-dom-parcel
-    affected_versions: vers:npm/>=19.0.2|<19.0.3
-    fixed_versions: vers:npm/19.0.3
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/12/GHSA-7gmr-mq3h-m5h9/GHSA-7gmr-mq3h-m5h9.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-400

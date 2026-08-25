@@ -12,16 +12,6 @@ summary: |
   Users are recommended to upgrade to versions 3.0.31, 3.11.18, 4.0.16, 4.1.8, 5.0.3, which fixes the issue.
 impacted_packages:
   - purl: pkg:maven/org.apache.cassandra/cassandra-all
-    affected_versions: vers:maven/>=5.0-alpha1|<5.0.3
-    fixed_versions: vers:maven/5.0.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.cassandra/cassandra-all
-    affected_versions: vers:maven/>=4.1-alpha1|<4.1.8
-    fixed_versions: vers:maven/4.1.8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.cassandra/cassandra-all
     affected_versions: vers:maven/>=4.0-alpha1|<4.0.16
     fixed_versions: vers:maven/4.0.16
     fixed_in_commits: []
@@ -34,6 +24,16 @@ impacted_packages:
   - purl: pkg:maven/org.apache.cassandra/cassandra-all
     affected_versions: vers:maven/<3.0.31
     fixed_versions: vers:maven/3.0.31
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.cassandra/cassandra-all
+    affected_versions: vers:maven/>=4.1-alpha1|<4.1.8
+    fixed_versions: vers:maven/4.1.8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.cassandra/cassandra-all
+    affected_versions: vers:maven/>=5.0-alpha1|<5.0.3
+    fixed_versions: vers:maven/5.0.3
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/apache/cassandra
@@ -49,12 +49,12 @@ severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/02/GHSA-wmcc-9vch-jmx4/GHSA-wmcc-9vch-jmx4.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-267

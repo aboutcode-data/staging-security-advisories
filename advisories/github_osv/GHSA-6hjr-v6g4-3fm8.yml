@@ -19,6 +19,11 @@ summary: |
   ### Impact
   This vulnerability can lead to Arbitrary Memory Disclosure due to an out of bounds read on 32-bit systems.
 impacted_packages:
+  - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
+    affected_versions: vers:nuget/<14.10.0
+    fixed_versions: vers:nuget/14.10.0
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-HDRI-AnyCPU
     affected_versions: vers:nuget/<14.10.0
     fixed_versions: vers:nuget/14.10.0
@@ -44,11 +49,6 @@ impacted_packages:
     fixed_versions: vers:nuget/14.10.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
-    affected_versions: vers:nuget/<14.10.0
-    fixed_versions: vers:nuget/14.10.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/dlemstra/magick.net
     affected_versions:
     fixed_versions:
@@ -60,12 +60,12 @@ severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/12/GHSA-6hjr-v6g4-3fm8/GHSA-6hjr-v6g4-3fm8.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-125

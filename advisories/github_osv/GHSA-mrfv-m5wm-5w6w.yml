@@ -9,6 +9,11 @@ summary: |
 
   This advisoory lists packages in the GitHub Advisory Database's [supported ecosystems](https://github.com/github/advisory-database?tab=readme-ov-file#supported-ecosystems) that are affected by this vulnerability due to a vulnerable dependency.
 impacted_packages:
+  - purl: pkg:pypi/pynacl
+    affected_versions: vers:pypi/<1.6.2
+    fixed_versions: vers:pypi/1.6.2
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:composer/paragonie/sodium_compat
     affected_versions: vers:composer/>=2.0.0|<2.5.0
     fixed_versions: vers:composer/2.5.0
@@ -17,11 +22,6 @@ impacted_packages:
   - purl: pkg:composer/paragonie/sodium_compat
     affected_versions: vers:composer/<1.24.0
     fixed_versions: vers:composer/1.24.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/pynacl
-    affected_versions: vers:pypi/<1.6.2
-    fixed_versions: vers:pypi/1.6.2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/hdwallet
@@ -38,13 +38,6 @@ impacted_packages:
       - vcs_url: https://github.com/pyca/pynacl
         commit: 96314884d88d1089ff5f336dba61d7abbcddbbf7
     introduced_in_commits: []
-  - purl: pkg:github/jedisct1/libsodium
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/jedisct1/libsodium
-        commit: ad3004ec8731730e93fcfbbc824e67eadc1c1bae
-    introduced_in_commits: []
   - purl: pkg:github/paragonie/sodium_compat
     affected_versions:
     fixed_versions:
@@ -54,16 +47,23 @@ impacted_packages:
       - vcs_url: https://github.com/paragonie/sodium_compat
         commit: 2cb48f26130919f92f30650bdcc30e6f4ebe45ac
     introduced_in_commits: []
+  - purl: pkg:github/jedisct1/libsodium
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/jedisct1/libsodium
+        commit: ad3004ec8731730e93fcfbbc824e67eadc1c1bae
+    introduced_in_commits: []
 severities:
   - score: '4.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/12/GHSA-mrfv-m5wm-5w6w/GHSA-mrfv-m5wm-5w6w.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-184

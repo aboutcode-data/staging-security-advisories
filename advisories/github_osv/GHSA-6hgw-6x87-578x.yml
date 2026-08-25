@@ -86,37 +86,12 @@ summary: |
   - UBSan build: Reproduces with `halt_on_error=1`; aborts at `MagickCore/splay-tree.c:372`.
   - Non-sanitized Homebrew build (macOS arm64, clang 20.1.8): No crash; repro completes silently.
 impacted_packages:
-  - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
-    affected_versions: vers:nuget/<14.8.0
-    fixed_versions: vers:nuget/14.8.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-HDRI-AnyCPU
     affected_versions: vers:nuget/<14.8.0
     fixed_versions: vers:nuget/14.8.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-HDRI-x64
-    affected_versions: vers:nuget/<14.8.0
-    fixed_versions: vers:nuget/14.8.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-HDRI-x86
-    affected_versions: vers:nuget/<14.8.0
-    fixed_versions: vers:nuget/14.8.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-x64
-    affected_versions: vers:nuget/<14.8.0
-    fixed_versions: vers:nuget/14.8.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-x86
-    affected_versions: vers:nuget/<14.8.0
-    fixed_versions: vers:nuget/14.8.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q8-AnyCPU
     affected_versions: vers:nuget/<14.8.0
     fixed_versions: vers:nuget/14.8.0
     fixed_in_commits: []
@@ -136,22 +111,12 @@ impacted_packages:
     fixed_versions: vers:nuget/14.8.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-HDRI-OpenMP-x64
-    affected_versions: vers:nuget/<14.8.0
-    fixed_versions: vers:nuget/14.8.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-HDRI-arm64
     affected_versions: vers:nuget/<14.8.0
     fixed_versions: vers:nuget/14.8.0
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-OpenMP-arm64
-    affected_versions: vers:nuget/<14.8.0
-    fixed_versions: vers:nuget/14.8.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-OpenMP-x64
     affected_versions: vers:nuget/<14.8.0
     fixed_versions: vers:nuget/14.8.0
     fixed_in_commits: []
@@ -176,16 +141,51 @@ impacted_packages:
     fixed_versions: vers:nuget/14.8.0
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-x64
+    affected_versions: vers:nuget/<14.8.0
+    fixed_versions: vers:nuget/14.8.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-x86
+    affected_versions: vers:nuget/<14.8.0
+    fixed_versions: vers:nuget/14.8.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-OpenMP-x64
+    affected_versions: vers:nuget/<14.8.0
+    fixed_versions: vers:nuget/14.8.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-OpenMP-x64
+    affected_versions: vers:nuget/<14.8.0
+    fixed_versions: vers:nuget/14.8.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
+    affected_versions: vers:nuget/<14.8.0
+    fixed_versions: vers:nuget/14.8.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q8-AnyCPU
+    affected_versions: vers:nuget/<14.8.0
+    fixed_versions: vers:nuget/14.8.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-x64
+    affected_versions: vers:nuget/<14.8.0
+    fixed_versions: vers:nuget/14.8.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/08/GHSA-6hgw-6x87-578x/GHSA-6hgw-6x87-578x.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-758

@@ -33,14 +33,14 @@ summary: "Langflow Vulnerable to Privilege Escalation via CLI Superuser Creation
   \ run` inside the container, which may lead to resource exhaustion (CPU, memory) and service\
   \ degradation.\n- Full user management — superuser can delete other users, reset their passwords"
 impacted_packages:
-  - purl: pkg:pypi/langflow
-    affected_versions: vers:pypi/<=1.5.0
-    fixed_versions: vers:pypi/1.5.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:pypi/langflow-base
     affected_versions: vers:pypi/<=0.5.0
     fixed_versions: vers:pypi/0.5.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/langflow
+    affected_versions: vers:pypi/<=1.5.0
+    fixed_versions: vers:pypi/1.5.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/langflow-ai/langflow
@@ -54,12 +54,12 @@ severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/08/GHSA-4gv9-mp8m-592r/GHSA-4gv9-mp8m-592r.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-269

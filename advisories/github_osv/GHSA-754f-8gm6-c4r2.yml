@@ -13,13 +13,13 @@ summary: |
   This issue may lead to authentication bypass.
 impacted_packages:
   - purl: pkg:gem/ruby-saml
-    affected_versions: vers:gem/>=1.13.0|<1.18.0
-    fixed_versions: vers:gem/1.18.0
+    affected_versions: vers:gem/<1.12.4
+    fixed_versions: vers:gem/1.12.4
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:gem/ruby-saml
-    affected_versions: vers:gem/<1.12.4
-    fixed_versions: vers:gem/1.12.4
+    affected_versions: vers:gem/>=1.13.0|<1.18.0
+    fixed_versions: vers:gem/1.18.0
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/saml-toolkits/ruby-saml
@@ -35,17 +35,17 @@ severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/03/GHSA-754f-8gm6-c4r2/GHSA-754f-8gm6-c4r2.json
   - score: '9.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/03/GHSA-754f-8gm6-c4r2/GHSA-754f-8gm6-c4r2.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-347

@@ -16,6 +16,11 @@ summary: |
   This is a Regex Denial-of-Service attack and causes memory exhaustion. The regex should be improved and empty values should not be allowed.
 impacted_packages:
   - purl: pkg:npm/koa
+    affected_versions: vers:npm/<0.21.2
+    fixed_versions: vers:npm/0.21.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/koa
     affected_versions: vers:npm/>=2.0.0|<2.15.4
     fixed_versions: vers:npm/2.15.4
     fixed_in_commits: []
@@ -28,11 +33,6 @@ impacted_packages:
   - purl: pkg:npm/koa
     affected_versions: vers:npm/>=1.0.0|<1.7.1
     fixed_versions: vers:npm/1.7.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:npm/koa
-    affected_versions: vers:npm/<0.21.2
-    fixed_versions: vers:npm/0.21.2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/koajs/koa
@@ -50,12 +50,12 @@ severities:
   - score: '9.2'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/02/GHSA-593f-38f6-jp5m/GHSA-593f-38f6-jp5m.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-1333
