@@ -21,6 +21,13 @@ summary: |
   ### References
   https://github.com/zopefoundation/RestrictedPython/security/advisories/GHSA-xjw2-6jm9-rf67 describes the corresponding problem for `RestrictedPython`.
 impacted_packages:
+  - purl: pkg:github/zopefoundation/accesscontrol
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/zopefoundation/accesscontrol
+        commit: 6bc32692e0d4b8d5cf64eae3d19de987c7375bc9
+    introduced_in_commits: []
   - purl: pkg:pypi/accesscontrol
     affected_versions: vers:pypi/<4.4
     fixed_versions: vers:pypi/4.4
@@ -46,23 +53,16 @@ impacted_packages:
     fixed_versions: vers:pypi/5.8.4
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/zopefoundation/accesscontrol
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/zopefoundation/accesscontrol
-        commit: 6bc32692e0d4b8d5cf64eae3d19de987c7375bc9
-    introduced_in_commits: []
 severities:
   - score: '6.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/09/GHSA-8xv7-89vj-q48c/GHSA-8xv7-89vj-q48c.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

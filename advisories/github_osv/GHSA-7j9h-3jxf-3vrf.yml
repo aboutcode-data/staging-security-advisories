@@ -12,11 +12,6 @@ summary: "Denial of service vulnerability on Password reset page\n### Impact\nPr
   \ and/or configure rate limits on their email server when possible.\n\n### References\n[Disclosed\
   \ by Ahmed Rabeaa Mosaa](https://huntr.dev/bounties/3b712cb6-3fa3-4f71-8562-7a7016c6262e)"
 impacted_packages:
-  - purl: pkg:pypi/kiwitcms
-    affected_versions: vers:pypi/<12.0
-    fixed_versions: vers:pypi/12.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/kiwitcms/kiwi
     affected_versions:
     fixed_versions:
@@ -24,16 +19,21 @@ impacted_packages:
       - vcs_url: https://github.com/kiwitcms/kiwi
         commit: 761305d04f5910ba14cc04d1255a8f1afdbb87f3
     introduced_in_commits: []
+  - purl: pkg:pypi/kiwitcms
+    affected_versions: vers:pypi/<12.0
+    fixed_versions: vers:pypi/12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/02/GHSA-7j9h-3jxf-3vrf/GHSA-7j9h-3jxf-3vrf.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-770

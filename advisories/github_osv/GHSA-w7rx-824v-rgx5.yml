@@ -7,11 +7,6 @@ summary: |
   WSO2 API Manager allows attackers to change the API rating
   Multiple WSO2 products have been identified as vulnerable due to lack of server-side input validation in the Forum feature, API rating could be manipulated.
 impacted_packages:
-  - purl: pkg:maven/org.wso2.carbon.apimgt/forum
-    affected_versions: vers:maven/<=9.0.78
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/wso2/carbon-apimgt
     affected_versions:
     fixed_versions:
@@ -21,16 +16,21 @@ impacted_packages:
       - vcs_url: https://github.com/wso2/carbon-apimgt
         commit: 2e9591b72bc286dfcd22b57768e984d867c902ba
     introduced_in_commits: []
+  - purl: pkg:maven/org.wso2.carbon.apimgt/forum
+    affected_versions: vers:maven/<=9.0.78
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/12/GHSA-w7rx-824v-rgx5/GHSA-w7rx-824v-rgx5.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-20

@@ -7,6 +7,13 @@ summary: |
   hutool Buffer Overflow vulnerability
   hutool v5.8.21 was discovered to contain a buffer overflow via the component `jsonArray`.
 impacted_packages:
+  - purl: pkg:github/dromara/hutool
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/dromara/hutool
+        commit: 9ba8f9ca5dd32441f2e0f150cb22fa178bb771d3
+    introduced_in_commits: []
   - purl: pkg:maven/cn.hutool/hutool-core
     affected_versions: vers:maven/<=5.8.21
     fixed_versions:
@@ -17,23 +24,16 @@ impacted_packages:
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/dromara/hutool
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/dromara/hutool
-        commit: 9ba8f9ca5dd32441f2e0f150cb22fa178bb771d3
-    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/09/GHSA-rxgf-r843-g53h/GHSA-rxgf-r843-g53h.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-120

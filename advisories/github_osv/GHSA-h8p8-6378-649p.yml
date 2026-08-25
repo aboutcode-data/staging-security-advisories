@@ -7,11 +7,6 @@ summary: |
   XML external entity reference vulnerability on agents in Jenkins Semantic Versioning Plugin
   Jenkins Semantic Versioning Plugin 1.14 and earlier does not configure its XML parser to prevent XML external entity (XXE) attacks.
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins/semantic-versioning-plugin
-    affected_versions: vers:maven/<1.15
-    fixed_versions: vers:maven/1.15
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/semantic-versioning-plugin
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/semantic-versioning-plugin
         commit: 8df2fabd7d7396ae29c374914d1357744d3e454f
     introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/semantic-versioning-plugin
+    affected_versions: vers:maven/<1.15
+    fixed_versions: vers:maven/1.15
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/01/GHSA-h8p8-6378-649p/GHSA-h8p8-6378-649p.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-611

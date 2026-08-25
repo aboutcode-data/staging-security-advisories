@@ -60,11 +60,6 @@ summary: |
   * [OGC Filter SQL Injection Vulnerabilities](https://github.com/geoserver/geoserver/security/advisories/GHSA-7g5f-wrx8-5ccf) (GeoServer)
 impacted_packages:
   - purl: pkg:maven/org.geotools/gt-jdbc
-    affected_versions: vers:maven/<24.7
-    fixed_versions: vers:maven/24.7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.geotools/gt-jdbc
     affected_versions: vers:maven/>=28.0|<28.2
     fixed_versions: vers:maven/28.2
     fixed_in_commits: []
@@ -84,6 +79,11 @@ impacted_packages:
     fixed_versions: vers:maven/25.7
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:maven/org.geotools/gt-jdbc
+    affected_versions: vers:maven/<24.7
+    fixed_versions: vers:maven/24.7
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:github/geotools/geotools
     affected_versions:
     fixed_versions:
@@ -95,12 +95,12 @@ severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/02/GHSA-99c3-qc2q-p94m/GHSA-99c3-qc2q-p94m.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-89

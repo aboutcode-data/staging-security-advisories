@@ -7,11 +7,6 @@ summary: |
   Composer allows cache poisoning from other projects built on the same host
   Composer before 2016-02-10 allows cache poisoning from other projects built on the same host. This results in attacker-controlled code entering a server-side build process. The issue occurs because of the way that dist packages are cached. The cache key is derived from the package name, the dist type, and certain other data from the package repository (which may simply be a commit hash, and thus can be found by an attacker). Versions through 1.0.0-alpha11 are affected, and 1.0.0 is unaffected.
 impacted_packages:
-  - purl: pkg:composer/composer/composer
-    affected_versions: vers:composer/<=1.0.0-alpha11
-    fixed_versions: vers:composer/1.0.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/friendsofphp/security-advisories
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/friendsofphp/security-advisories
         commit: e26be423c5bcfdb38478d2f92d1f928c15afb561
     introduced_in_commits: []
+  - purl: pkg:composer/composer/composer
+    affected_versions: vers:composer/<=1.0.0-alpha11
+    fixed_versions: vers:composer/1.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/09/GHSA-725m-w832-q973/GHSA-725m-w832-q973.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-345

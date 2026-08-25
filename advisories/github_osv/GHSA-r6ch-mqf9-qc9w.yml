@@ -23,11 +23,6 @@ summary: |
 
   Carter Snook reported this vulnerability.
 impacted_packages:
-  - purl: pkg:npm/undici
-    affected_versions: vers:npm/<5.19.1
-    fixed_versions: vers:npm/5.19.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/nodejs/undici
     affected_versions:
     fixed_versions:
@@ -35,16 +30,21 @@ impacted_packages:
       - vcs_url: https://github.com/nodejs/undici
         commit: f2324e549943f0b0937b09fb1c0c16cc7c93abdf
     introduced_in_commits: []
+  - purl: pkg:npm/undici
+    affected_versions: vers:npm/<5.19.1
+    fixed_versions: vers:npm/5.19.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/02/GHSA-r6ch-mqf9-qc9w/GHSA-r6ch-mqf9-qc9w.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-1333

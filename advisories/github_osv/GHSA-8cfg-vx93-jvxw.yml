@@ -7,6 +7,13 @@ summary: |
   Kubernetes client-go vulnerable to Sensitive Information Leak via Log File
   In Kubernetes, if the logging level is set to at least 9, authorization and bearer tokens will be written to log files. This can occur both in API server logs and client tool output like kubectl. This affects <= v1.19.5, <= v1.18.13, <= v1.17.15, < v1.20.0-alpha2.
 impacted_packages:
+  - purl: pkg:github/kubernetes/kubernetes
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/kubernetes/kubernetes
+        commit: e99df0e5a75eb6e86123b56d53e9b7ca0fd00419
+    introduced_in_commits: []
   - purl: pkg:github/kubernetes/client-go
     affected_versions:
     fixed_versions:
@@ -20,23 +27,16 @@ impacted_packages:
       - vcs_url: https://github.com/kubernetes/client-go
         commit: 19875a3d5a2e0d4f51c976a9e0662de3c2c011e3
     introduced_in_commits: []
-  - purl: pkg:github/kubernetes/kubernetes
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/kubernetes/kubernetes
-        commit: e99df0e5a75eb6e86123b56d53e9b7ca0fd00419
-    introduced_in_commits: []
 severities:
   - score: '4.7'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/02/GHSA-8cfg-vx93-jvxw/GHSA-8cfg-vx93-jvxw.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-532

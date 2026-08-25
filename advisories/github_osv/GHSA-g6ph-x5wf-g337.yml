@@ -7,11 +7,6 @@ summary: |
   plexus-codehaus vulnerable to directory traversal
   A flaw was found in plexus-codehaus. A directory traversal attack (also known as path traversal) aims to access files and directories stored outside the intended folder. By manipulating files with dot-dot-slash (`../`) sequences and their variations or by using absolute file paths, it may be possible to access arbitrary files and directories stored on the file system, including application source code, configuration, and other critical system files.
 impacted_packages:
-  - purl: pkg:maven/org.codehaus.plexus/plexus-utils
-    affected_versions: vers:maven/<3.0.24
-    fixed_versions: vers:maven/3.0.24
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/codehaus-plexus/plexus-utils
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/codehaus-plexus/plexus-utils
         commit: 33a2853df8185b4519b1b8bfae284f03392618ef
     introduced_in_commits: []
+  - purl: pkg:maven/org.codehaus.plexus/plexus-utils
+    affected_versions: vers:maven/<3.0.24
+    fixed_versions: vers:maven/3.0.24
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/09/GHSA-g6ph-x5wf-g337/GHSA-g6ph-x5wf-g337.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

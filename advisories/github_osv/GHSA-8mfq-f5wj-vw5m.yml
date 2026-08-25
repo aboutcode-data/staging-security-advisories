@@ -44,11 +44,6 @@ summary: "Nautobot vulnerable to remote code execution via Jinja2 template rende
   _Are there any links users can visit to find out more?_\n\nPlease see the Nautobot 1.5.7 release\
   \ notes. \n\nhttps://docs.nautobot.com/projects/core/en/stable/release-notes/version-1.5/#v157-2023-01-04"
 impacted_packages:
-  - purl: pkg:pypi/nautobot
-    affected_versions: vers:pypi/<1.5.7
-    fixed_versions: vers:pypi/1.5.7
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/nautobot/nautobot
     affected_versions:
     fixed_versions:
@@ -56,21 +51,26 @@ impacted_packages:
       - vcs_url: https://github.com/nautobot/nautobot
         commit: d47f157e83b0c353bb2b697f911882c71cf90ca0
     introduced_in_commits: []
+  - purl: pkg:pypi/nautobot
+    affected_versions: vers:pypi/<1.5.7
+    fixed_versions: vers:pypi/1.5.7
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/02/GHSA-8mfq-f5wj-vw5m/GHSA-8mfq-f5wj-vw5m.json
   - score: '7.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/02/GHSA-8mfq-f5wj-vw5m/GHSA-8mfq-f5wj-vw5m.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

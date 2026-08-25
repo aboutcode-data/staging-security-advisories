@@ -7,11 +7,6 @@ summary: |
   Header injection in TurboGears
   A vulnerability classified as critical has been found in OnShift TurboGears 1.0.11.10. This affects an unknown part of the file turbogears/controllers.py of the component HTTP Header Handler. The manipulation leads to http response splitting. It is possible to initiate the attack remotely. Upgrading to version 1.0.11.11 is able to address this issue. The name of the patch is f68bbaba47f4474e1da553aa51564a73e1d92a84. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-220059.
 impacted_packages:
-  - purl: pkg:pypi/turbogears
-    affected_versions: vers:pypi/<1.0.11.11
-    fixed_versions: vers:pypi/1.0.11.11
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/onshift/turbogears
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/onshift/turbogears
         commit: f68bbaba47f4474e1da553aa51564a73e1d92a84
     introduced_in_commits: []
+  - purl: pkg:pypi/turbogears
+    affected_versions: vers:pypi/<1.0.11.11
+    fixed_versions: vers:pypi/1.0.11.11
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/02/GHSA-8q38-w56m-qq2c/GHSA-8q38-w56m-qq2c.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-436

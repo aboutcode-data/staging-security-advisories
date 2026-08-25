@@ -9,11 +9,6 @@ summary: |
 
   If such behavior is expected, for instance, when middleware is used exclusively for prototypes and not for production applications, it should be heavily emphasized in the documentation along with an indication of the risks associated with such behavior, as many users may not be aware of it.
 impacted_packages:
-  - purl: pkg:npm/%40koa/cors
-    affected_versions: vers:npm/<5.0.0
-    fixed_versions: vers:npm/5.0.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/koajs/cors
     affected_versions:
     fixed_versions:
@@ -21,16 +16,21 @@ impacted_packages:
       - vcs_url: https://github.com/koajs/cors
         commit: f31dac99f5355c41e7d4dd3c4a80c5f154941a11
     introduced_in_commits: []
+  - purl: pkg:npm/%40koa/cors
+    affected_versions: vers:npm/<5.0.0
+    fixed_versions: vers:npm/5.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.6'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/12/GHSA-qxrj-hx23-xp82/GHSA-qxrj-hx23-xp82.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-346

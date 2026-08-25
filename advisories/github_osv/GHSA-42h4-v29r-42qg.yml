@@ -52,11 +52,6 @@ summary: |
   - https://github.com/yt-dlp/yt-dlp-nightly-builds/releases/tag/2023.09.24.003044
   - https://github.com/yt-dlp/yt-dlp/commit/de015e930747165dbb8fcd360f8775fd973b7d6e
 impacted_packages:
-  - purl: pkg:pypi/yt-dlp
-    affected_versions: vers:pypi/>=2021.4.11|<2023.9.24
-    fixed_versions: vers:pypi/2023.9.24
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/yt-dlp/yt-dlp
     affected_versions:
     fixed_versions:
@@ -64,16 +59,21 @@ impacted_packages:
       - vcs_url: https://github.com/yt-dlp/yt-dlp
         commit: de015e930747165dbb8fcd360f8775fd973b7d6e
     introduced_in_commits: []
+  - purl: pkg:pypi/yt-dlp
+    affected_versions: vers:pypi/>=2021.4.11|<2023.9.24
+    fixed_versions: vers:pypi/2023.9.24
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/09/GHSA-42h4-v29r-42qg/GHSA-42h4-v29r-42qg.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-78

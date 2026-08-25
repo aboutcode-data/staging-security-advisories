@@ -11,6 +11,13 @@ summary: |
 
   In order to exploit this vulnerability, the attacker needs to invest resources in preparing the attack and brute-force the encryption.
 impacted_packages:
+  - purl: pkg:github/pubnub/javascript
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/pubnub/javascript
+        commit: fb6cd0417cbb4ba87ea2d5d86a9c94774447e119
+    introduced_in_commits: []
   - purl: pkg:nuget/Pubnub
     affected_versions: vers:nuget/<6.19.0
     fixed_versions: vers:nuget/6.19.0
@@ -53,23 +60,16 @@ impacted_packages:
       - vcs_url: https://github.com/pubnub/go
         commit: 428517fef5b901db7275d9f5a75eda89a4c28e08
     introduced_in_commits: []
-  - purl: pkg:github/pubnub/javascript
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/pubnub/javascript
-        commit: fb6cd0417cbb4ba87ea2d5d86a9c94774447e119
-    introduced_in_commits: []
 severities:
   - score: '5.9'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/12/GHSA-5844-q3fc-56rh/GHSA-5844-q3fc-56rh.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-331

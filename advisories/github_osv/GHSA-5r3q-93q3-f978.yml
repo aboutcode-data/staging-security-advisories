@@ -7,11 +7,6 @@ summary: |
   MLflow Path Traversal Vulnerability
   Path Traversal: '\..\filename' in GitHub repository mlflow/mlflow prior to 2.9.2.
 impacted_packages:
-  - purl: pkg:pypi/mlflow
-    affected_versions: vers:pypi/<2.9.2
-    fixed_versions: vers:pypi/2.9.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/mlflow/mlflow
     affected_versions:
     fixed_versions:
@@ -19,21 +14,26 @@ impacted_packages:
       - vcs_url: https://github.com/mlflow/mlflow
         commit: 1da75dfcecd4d169e34809ade55748384e8af6c1
     introduced_in_commits: []
+  - purl: pkg:pypi/mlflow
+    affected_versions: vers:pypi/<2.9.2
+    fixed_versions: vers:pypi/2.9.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/12/GHSA-5r3q-93q3-f978/GHSA-5r3q-93q3-f978.json
   - score: '8.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/12/GHSA-5r3q-93q3-f978/GHSA-5r3q-93q3-f978.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-29

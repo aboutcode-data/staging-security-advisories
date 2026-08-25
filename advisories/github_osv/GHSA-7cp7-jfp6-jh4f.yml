@@ -12,6 +12,13 @@ summary: "Shopware's log module vulnerable to Improper Output Neutralization\n##
   \ module ACL rights\n- [Disable logging](https://developer.shopware.com/docs/guides/hosting/performance/performance-tweaks#logging)\n\
   \n### References\nhttps://docs.shopware.com/en/shopware-6-en/security-updates/security-update-01-2023?category=security-updates"
 impacted_packages:
+  - purl: pkg:github/shopware/platform
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/shopware/platform
+        commit: 407a83063d7141c1a626441799c3ebef79498c07
+    introduced_in_commits: []
   - purl: pkg:composer/shopware/platform
     affected_versions: vers:composer/<=6.4.18+0
     fixed_versions: vers:composer/6.4.18+1
@@ -22,23 +29,16 @@ impacted_packages:
     fixed_versions: vers:composer/6.4.18+1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/shopware/platform
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/shopware/platform
-        commit: 407a83063d7141c1a626441799c3ebef79498c07
-    introduced_in_commits: []
 severities:
   - score: '2.7'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/01/GHSA-7cp7-jfp6-jh4f/GHSA-7cp7-jfp6-jh4f.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-117

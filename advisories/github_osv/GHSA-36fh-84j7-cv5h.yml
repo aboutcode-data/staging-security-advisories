@@ -7,11 +7,6 @@ summary: |
   JSZip contains Path Traversal via loadAsync
   loadAsync in JSZip before 3.8.0 allows Directory Traversal via a crafted ZIP archive.
 impacted_packages:
-  - purl: pkg:npm/jszip
-    affected_versions: vers:npm/<3.8.0
-    fixed_versions: vers:npm/3.8.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/stuk/jszip
     affected_versions:
     fixed_versions:
@@ -19,21 +14,26 @@ impacted_packages:
       - vcs_url: https://github.com/stuk/jszip
         commit: 2edab366119c9ee948357c02f1206c28566cdf15
     introduced_in_commits: []
+  - purl: pkg:npm/jszip
+    affected_versions: vers:npm/<3.8.0
+    fixed_versions: vers:npm/3.8.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/01/GHSA-36fh-84j7-cv5h/GHSA-36fh-84j7-cv5h.json
   - score: '6.9'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/01/GHSA-36fh-84j7-cv5h/GHSA-36fh-84j7-cv5h.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

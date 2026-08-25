@@ -23,6 +23,13 @@ summary: "org.neo4j.procedure:apoc Path Traversal Vulnerability\n### Impact\nA P
   * Email us at [security@neo4j.com](mailto:security@neo4j.com)\n\n### Credits\nWe want to publicly\
   \ recognise the contribution Adam Reziouk - Airbus."
 impacted_packages:
+  - purl: pkg:github/neo4j-contrib/neo4j-apoc-procedures
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/neo4j-contrib/neo4j-apoc-procedures
+        commit: 01e63ed2d187cd2a8aa1d78bf831ef0fdd69b522
+    introduced_in_commits: []
   - purl: pkg:maven/org.neo4j.procedure/apoc
     affected_versions: vers:maven/<4.3.0.12
     fixed_versions: vers:maven/4.3.0.12
@@ -33,23 +40,16 @@ impacted_packages:
     fixed_versions: vers:maven/4.4.0.12
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/neo4j-contrib/neo4j-apoc-procedures
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/neo4j-contrib/neo4j-apoc-procedures
-        commit: 01e63ed2d187cd2a8aa1d78bf831ef0fdd69b522
-    introduced_in_commits: []
 severities:
   - score: '7.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:N/I:H/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/01/GHSA-5v8v-gwmw-qw97/GHSA-5v8v-gwmw-qw97.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

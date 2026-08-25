@@ -21,11 +21,6 @@ summary: |
 
   https://github.com/resque/resque/pull/1865
 impacted_packages:
-  - purl: pkg:gem/resque
-    affected_versions: vers:gem/<2.6.0
-    fixed_versions: vers:gem/2.6.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/resque/resque
     affected_versions:
     fixed_versions:
@@ -33,16 +28,21 @@ impacted_packages:
       - vcs_url: https://github.com/resque/resque
         commit: 7623b8dfbdd0a07eb04b19fb25b16a8d6f087f9a
     introduced_in_commits: []
+  - purl: pkg:gem/resque
+    affected_versions: vers:gem/<2.6.0
+    fixed_versions: vers:gem/2.6.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/12/GHSA-r9mq-m72x-257g/GHSA-r9mq-m72x-257g.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

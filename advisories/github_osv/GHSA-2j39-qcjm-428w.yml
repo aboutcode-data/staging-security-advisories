@@ -8,6 +8,15 @@ summary: |
   An attacker can manipulate file upload params to enable paths traversal and under some circumstances this can lead to uploading a malicious file which can be used to perform Remote Code Execution.
   Users are recommended to upgrade to versions Struts 2.5.33 or Struts 6.3.0.2 or greater to fix this issue.
 impacted_packages:
+  - purl: pkg:github/apache/struts
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/struts
+        commit: 162e29fee9136f4bfd9b2376da2cbf590f9ea163
+      - vcs_url: https://github.com/apache/struts
+        commit: d8c69691ef1d15e76a5f4fcf33039316da2340b6
+    introduced_in_commits: []
   - purl: pkg:maven/org.apache.struts/struts2-core
     affected_versions: vers:maven/>=2.0.0|<2.5.33
     fixed_versions: vers:maven/2.5.33
@@ -18,25 +27,16 @@ impacted_packages:
     fixed_versions: vers:maven/6.3.0.2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/apache/struts
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/apache/struts
-        commit: 162e29fee9136f4bfd9b2376da2cbf590f9ea163
-      - vcs_url: https://github.com/apache/struts
-        commit: d8c69691ef1d15e76a5f4fcf33039316da2340b6
-    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/12/GHSA-2j39-qcjm-428w/GHSA-2j39-qcjm-428w.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-552

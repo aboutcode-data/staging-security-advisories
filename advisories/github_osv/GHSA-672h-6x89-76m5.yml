@@ -13,11 +13,6 @@ summary: |
 
   Additionally, with Werkzeug >=2.1.0 the autocorrect_location_header configuration was changed to False - which means that location headers in redirects are relative by default. Thus, this issue may impact applications that were previously not impacted, if they are using Werkzeug >=2.1.0 as the WSGI layer.
 impacted_packages:
-  - purl: pkg:pypi/flask-security-too
-    affected_versions: vers:pypi/<5.3.3
-    fixed_versions: vers:pypi/5.3.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/flask-middleware/flask-security
     affected_versions:
     fixed_versions:
@@ -25,21 +20,26 @@ impacted_packages:
       - vcs_url: https://github.com/flask-middleware/flask-security
         commit: 8b5abc4d4db9926a3d76b34b8b03255effb5e712
     introduced_in_commits: []
+  - purl: pkg:pypi/flask-security-too
+    affected_versions: vers:pypi/<5.3.3
+    fixed_versions: vers:pypi/5.3.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/12/GHSA-672h-6x89-76m5/GHSA-672h-6x89-76m5.json
   - score: '5.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/12/GHSA-672h-6x89-76m5/GHSA-672h-6x89-76m5.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-601

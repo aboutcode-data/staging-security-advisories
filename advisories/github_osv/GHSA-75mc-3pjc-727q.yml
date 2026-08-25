@@ -19,16 +19,6 @@ summary: "Unauthenticated db-file-storage views\n### Impact\n\n In Nautobot 1.x 
   \ (2.0.x) or https://github.com/nautobot/nautobot/pull/4964/files (1.6.x)\n\n### References\n\
   \n- https://github.com/victor-o-silva/db_file_storage/blob/master/db_file_storage/views.py"
 impacted_packages:
-  - purl: pkg:pypi/nautobot
-    affected_versions: vers:pypi/>=1.1.0|<1.6.7
-    fixed_versions: vers:pypi/1.6.7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/nautobot
-    affected_versions: vers:pypi/>=2.0.0|<2.0.6
-    fixed_versions: vers:pypi/2.0.6
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/nautobot/nautobot
     affected_versions:
     fixed_versions:
@@ -40,16 +30,26 @@ impacted_packages:
       - vcs_url: https://github.com/nautobot/nautobot
         commit: 5e2ba9e8ac0840b1c44eb1a8ea3c0bd2c68e4f80
     introduced_in_commits: []
+  - purl: pkg:pypi/nautobot
+    affected_versions: vers:pypi/>=1.1.0|<1.6.7
+    fixed_versions: vers:pypi/1.6.7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/nautobot
+    affected_versions: vers:pypi/>=2.0.0|<2.0.6
+    fixed_versions: vers:pypi/2.0.6
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '3.7'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/12/GHSA-75mc-3pjc-727q/GHSA-75mc-3pjc-727q.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

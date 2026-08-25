@@ -7,11 +7,6 @@ summary: |
   DBRisinajumi d2files SQL Injection vulnerability
   A vulnerability has been found in DBRisinajumi d2files and classified as critical. Affected by this vulnerability is the function `actionUpload/actionDownloadFile` of the file `controllers/D2filesController.php`. The manipulation leads to sql injection. Upgrading to version 1.0.0 can address this issue. The name of the patch is b5767f2ec9d0f3cbfda7f13c84740e2179c90574. It is recommended to upgrade the affected component. The identifier VDB-217561 was assigned to this vulnerability.
 impacted_packages:
-  - purl: pkg:composer/dbrisinajumi/d2files
-    affected_versions: vers:composer/<1.0.0
-    fixed_versions: vers:composer/1.0.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/dbrisinajumi/d2files
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/dbrisinajumi/d2files
         commit: b5767f2ec9d0f3cbfda7f13c84740e2179c90574
     introduced_in_commits: []
+  - purl: pkg:composer/dbrisinajumi/d2files
+    affected_versions: vers:composer/<1.0.0
+    fixed_versions: vers:composer/1.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/01/GHSA-68hv-8926-j34c/GHSA-68hv-8926-j34c.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-89

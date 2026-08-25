@@ -20,6 +20,13 @@ summary: "XML External Entity (XXE) vulnerability in apoc.import.graphml\n### Im
   * Email us at [security@neo4j.com](mailto:security@neo4j.com)\n\n### Credits\nWe want to publicly\
   \ recognise the contribution of Christopher Schneider – State Farm."
 impacted_packages:
+  - purl: pkg:github/neo4j-contrib/neo4j-apoc-procedures
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/neo4j-contrib/neo4j-apoc-procedures
+        commit: c3e2a29020497acf9417879f38e8af4e8c6d5783
+    introduced_in_commits: []
   - purl: pkg:maven/org.neo4j.procedure/apoc
     affected_versions: vers:maven/>=5.0.0|<5.5.0
     fixed_versions: vers:maven/5.5.0
@@ -30,23 +37,16 @@ impacted_packages:
     fixed_versions: vers:maven/4.4.0.14
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/neo4j-contrib/neo4j-apoc-procedures
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/neo4j-contrib/neo4j-apoc-procedures
-        commit: c3e2a29020497acf9417879f38e8af4e8c6d5783
-    introduced_in_commits: []
 severities:
   - score: '5.9'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/02/GHSA-9vx8-f5c4-862x/GHSA-9vx8-f5c4-862x.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-611

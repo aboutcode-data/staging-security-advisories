@@ -14,11 +14,6 @@ impacted_packages:
     fixed_versions: vers:composer/6.4.18+1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/shopware/core
-    affected_versions: vers:composer/<=6.4.18+0
-    fixed_versions: vers:composer/6.4.18+1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/shopware/platform
     affected_versions:
     fixed_versions:
@@ -26,16 +21,21 @@ impacted_packages:
       - vcs_url: https://github.com/shopware/platform
         commit: cd7a89cbcd3a0428c6d1ef27b3aa15467a722ff6
     introduced_in_commits: []
+  - purl: pkg:composer/shopware/core
+    affected_versions: vers:composer/<=6.4.18+0
+    fixed_versions: vers:composer/6.4.18+1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '3.7'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/01/GHSA-59qg-93jg-236f/GHSA-59qg-93jg-236f.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-613

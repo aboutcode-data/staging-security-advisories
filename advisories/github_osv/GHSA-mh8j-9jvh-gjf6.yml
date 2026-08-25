@@ -58,11 +58,6 @@ summary: |
           return target
       }
 impacted_packages:
-  - purl: pkg:npm/mockjs
-    affected_versions: vers:npm/<=1.1.0
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/nuysoft/mock
     affected_versions:
     fixed_versions:
@@ -70,16 +65,21 @@ impacted_packages:
       - vcs_url: https://github.com/nuysoft/mock
         commit: 00ce04b92eb464e664a4438430903f2de96efb47
     introduced_in_commits: []
+  - purl: pkg:npm/mockjs
+    affected_versions: vers:npm/<=1.1.0
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.2'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/12/GHSA-mh8j-9jvh-gjf6/GHSA-mh8j-9jvh-gjf6.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-1321

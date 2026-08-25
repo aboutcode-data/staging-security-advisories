@@ -7,11 +7,6 @@ summary: |
   hutool-core was discovered to contain a stack overflow via NumberUtil.toBigDecimal method
   The NumberUtil.toBigDecimal method in hutool-core was discovered to contain a stack overflow.
 impacted_packages:
-  - purl: pkg:maven/cn.hutool/hutool-core
-    affected_versions: vers:maven/<=5.8.24
-    fixed_versions: vers:maven/5.8.25
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/dromara/hutool
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/dromara/hutool
         commit: c45b3fccdab453bb1c6007b52b18bd2fbdb68e99
     introduced_in_commits: []
+  - purl: pkg:maven/cn.hutool/hutool-core
+    affected_versions: vers:maven/<=5.8.24
+    fixed_versions: vers:maven/5.8.25
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/12/GHSA-m5hf-m3r2-xq53/GHSA-m5hf-m3r2-xq53.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-787

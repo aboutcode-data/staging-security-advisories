@@ -21,13 +21,6 @@ summary: |
   Fix in golang/go crypto/tls: https://github.com/golang/go/commit/2350afd2e8ab054390e284c95d5b089c142db017
   Fix in quic-go https://github.com/quic-go/quic-go/pull/4012
 impacted_packages:
-  - purl: pkg:github/golang/go
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/golang/go
-        commit: 2350afd2e8ab054390e284c95d5b089c142db017
-    introduced_in_commits: []
   - purl: pkg:github/libp2p/go-libp2p
     affected_versions:
     fixed_versions:
@@ -39,16 +32,23 @@ impacted_packages:
       - vcs_url: https://github.com/libp2p/go-libp2p
         commit: 445be526aea4ee0b1fa5388aa65d32b2816d3a00
     introduced_in_commits: []
+  - purl: pkg:github/golang/go
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/golang/go
+        commit: 2350afd2e8ab054390e284c95d5b089c142db017
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/08/GHSA-876p-8259-xjgg/GHSA-876p-8259-xjgg.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-770

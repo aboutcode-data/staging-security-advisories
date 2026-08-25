@@ -9,11 +9,6 @@ summary: |
 
   **Note:** It was not proven that this vulnerability can crash the process.
 impacted_packages:
-  - purl: pkg:npm/graphql
-    affected_versions: vers:npm/>=16.3.0|<16.8.1
-    fixed_versions: vers:npm/16.8.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/graphql/graphql-js
     affected_versions:
     fixed_versions:
@@ -21,16 +16,21 @@ impacted_packages:
       - vcs_url: https://github.com/graphql/graphql-js
         commit: 8f4c64eb6a7112a929ffeef00caa67529b3f2fcf
     introduced_in_commits: []
+  - purl: pkg:npm/graphql
+    affected_versions: vers:npm/>=16.3.0|<16.8.1
+    fixed_versions: vers:npm/16.8.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/09/GHSA-9pv7-vfvm-6vr7/GHSA-9pv7-vfvm-6vr7.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-400

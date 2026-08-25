@@ -7,11 +7,6 @@ summary: |
   NYUCCL psiTurk IS vulnerable to Improper Neutralization of Special Elements
   A vulnerability has been found in NYUCCL psiTurk up to 3.2.0 and classified as critical. This vulnerability affects unknown code of the file psiturk/experiment.py. The manipulation of the argument mode leads to improper neutralization of special elements used in a template engine. The exploit has been disclosed to the public and may be used. Upgrading to version 3.2.1 is able to address this issue. The name of the patch is 47787e15cecd66f2aa87687bf852ae0194a4335f. It is recommended to upgrade the affected component. The identifier of this vulnerability is VDB-219676.
 impacted_packages:
-  - purl: pkg:pypi/psiturk
-    affected_versions: vers:pypi/<3.2.1
-    fixed_versions: vers:pypi/3.2.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/nyuccl/psiturk
     affected_versions:
     fixed_versions:
@@ -19,21 +14,26 @@ impacted_packages:
       - vcs_url: https://github.com/nyuccl/psiturk
         commit: 47787e15cecd66f2aa87687bf852ae0194a4335f
     introduced_in_commits: []
+  - purl: pkg:pypi/psiturk
+    affected_versions: vers:pypi/<3.2.1
+    fixed_versions: vers:pypi/3.2.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/01/GHSA-9mq4-9556-6qxq/GHSA-9mq4-9556-6qxq.json
   - score: '8.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/01/GHSA-9mq4-9556-6qxq/GHSA-9mq4-9556-6qxq.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

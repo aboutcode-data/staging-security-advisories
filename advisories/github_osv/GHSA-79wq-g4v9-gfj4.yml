@@ -7,17 +7,17 @@ summary: |
   Publify Core does not strip metadata from images
   Insecure Storage of Sensitive Information in GitHub repository publify/publify prior to 9.2.10.
 impacted_packages:
-  - purl: pkg:gem/publify_core
-    affected_versions: vers:gem/<9.2.10
-    fixed_versions: vers:gem/9.2.10
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/publify/publify_core
     affected_versions:
     fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/publify/publify_core
         commit: 33f897c12b6efdcdfd8cf9df924deba0f878b71e
+    introduced_in_commits: []
+  - purl: pkg:gem/publify_core
+    affected_versions: vers:gem/<9.2.10
+    fixed_versions: vers:gem/9.2.10
+    fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/publify/publify
     affected_versions:
@@ -30,12 +30,12 @@ severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/01/GHSA-79wq-g4v9-gfj4/GHSA-79wq-g4v9-gfj4.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-922

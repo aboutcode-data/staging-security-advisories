@@ -7,11 +7,6 @@ summary: |
   MainWP Dashboard SQL Command Injection vulnerability
   Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in MainWP MainWP Dashboard – WordPress Manager for Multiple Websites Maintenance.This issue affects MainWP Dashboard – WordPress Manager for Multiple Websites Maintenance: from n/a through 4.4.3.3.
 impacted_packages:
-  - purl: pkg:composer/mainwp/mainwp
-    affected_versions: vers:composer/<=4.4.3+3
-    fixed_versions: vers:composer/4.4.3+4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/mainwp/mainwp
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/mainwp/mainwp
         commit: 8df951c0e8b2c2646cc57fc66b00767551cac400
     introduced_in_commits: []
+  - purl: pkg:composer/mainwp/mainwp
+    affected_versions: vers:composer/<=4.4.3+3
+    fixed_versions: vers:composer/4.4.3+4
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.6'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/12/GHSA-87fg-9x5w-j3rm/GHSA-87fg-9x5w-j3rm.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-89

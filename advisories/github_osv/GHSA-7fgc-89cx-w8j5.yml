@@ -15,6 +15,13 @@ summary: |
 
   This vulnerability has been patched in CKAN 2.10.3 and 2.9.10
 impacted_packages:
+  - purl: pkg:github/ckan/ckan
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/ckan/ckan
+        commit: bd02018b65c5b81d7ede195d00d0fcbac3aa33be
+    introduced_in_commits: []
   - purl: pkg:pypi/ckan
     affected_versions: vers:pypi/>=2.0|<2.9.10
     fixed_versions: vers:pypi/2.9.10
@@ -25,23 +32,16 @@ impacted_packages:
     fixed_versions: vers:pypi/2.10.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/ckan/ckan
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/ckan/ckan
-        commit: bd02018b65c5b81d7ede195d00d0fcbac3aa33be
-    introduced_in_commits: []
 severities:
   - score: '4.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/12/GHSA-7fgc-89cx-w8j5/GHSA-7fgc-89cx-w8j5.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-130

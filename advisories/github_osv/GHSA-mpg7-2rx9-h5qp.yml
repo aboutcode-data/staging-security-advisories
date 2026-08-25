@@ -7,11 +7,6 @@ summary: |
   Contao Cross-site Scripting vulnerabililty
   Contao 3.x before 3.5.32 allows Cross-site Scripting (XSS) via the unsubscribe module in the frontend newsletter extension.
 impacted_packages:
-  - purl: pkg:composer/contao/core
-    affected_versions: vers:composer/>=3.0.0|<3.5.32
-    fixed_versions: vers:composer/3.5.32
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/contao/core
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/contao/core
         commit: 3123d6527ae6c46087b0ad8061eb8651cb645b8d
     introduced_in_commits: []
+  - purl: pkg:composer/contao/core
+    affected_versions: vers:composer/>=3.0.0|<3.5.32
+    fixed_versions: vers:composer/3.5.32
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/09/GHSA-mpg7-2rx9-h5qp/GHSA-mpg7-2rx9-h5qp.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

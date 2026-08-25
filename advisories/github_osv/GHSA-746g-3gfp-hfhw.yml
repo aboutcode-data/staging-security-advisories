@@ -7,11 +7,6 @@ summary: |
   Devise Gem for Ruby Unauthorized Access Using "Remember Me" Cookie
   Devise version before 3.5.4 uses cookies to implement a "Remember me" functionality. However, it generates the same cookie for all devices. If an attacker manages to steal a remember me cookie and the user does not change the password frequently, the cookie can be used to gain access to the application indefinitely.
 impacted_packages:
-  - purl: pkg:gem/devise
-    affected_versions: vers:gem/<3.5.4
-    fixed_versions: vers:gem/3.5.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/heartcombo/devise
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/heartcombo/devise
         commit: c92996646aba2d25b2c3e235fe0c4f1a84b70d24
     introduced_in_commits: []
+  - purl: pkg:gem/devise
+    affected_versions: vers:gem/<3.5.4
+    fixed_versions: vers:gem/3.5.4
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/01/GHSA-746g-3gfp-hfhw/GHSA-746g-3gfp-hfhw.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-312

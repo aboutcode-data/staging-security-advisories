@@ -7,11 +7,6 @@ summary: |
   Directory Traversal in onnx
   Versions of the package onnx before 1.13.0 are vulnerable to Directory Traversal as the external_data field of the tensor proto can have a path to the file which is outside the model current directory or user-provided directory, for example "../../../etc/passwd"
 impacted_packages:
-  - purl: pkg:pypi/onnx
-    affected_versions: vers:pypi/<1.13.0
-    fixed_versions: vers:pypi/1.13.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/onnx/onnx
     affected_versions:
     fixed_versions:
@@ -21,21 +16,26 @@ impacted_packages:
       - vcs_url: https://github.com/onnx/onnx
         commit: 96516aecd4c110b0ac57eba08ac236ebf7205728
     introduced_in_commits: []
+  - purl: pkg:pypi/onnx
+    affected_versions: vers:pypi/<1.13.0
+    fixed_versions: vers:pypi/1.13.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/01/GHSA-ffxj-547x-5j7c/GHSA-ffxj-547x-5j7c.json
   - score: '8.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/01/GHSA-ffxj-547x-5j7c/GHSA-ffxj-547x-5j7c.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

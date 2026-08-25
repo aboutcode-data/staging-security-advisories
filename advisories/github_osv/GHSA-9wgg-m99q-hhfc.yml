@@ -37,11 +37,6 @@ summary: |
 
   [^1]: If you are using a provider that does not provide an OAuth 2.0 refresh token (or have configured your account's scope so that this is not present), it is possible to trigger the line of code that caused this issue, but there is no way to use it for account access because interactive authentication is still required.
 impacted_packages:
-  - purl: pkg:pypi/emailproxy
-    affected_versions: vers:pypi/<=2023.11.18
-    fixed_versions: vers:pypi/2023.12.19
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/simonrob/email-oauth2-proxy
     affected_versions:
     fixed_versions:
@@ -51,16 +46,21 @@ impacted_packages:
       - vcs_url: https://github.com/simonrob/email-oauth2-proxy
         commit: eaaa1a2e7a132bf0958dd2f99a749ad98e3212aa
     introduced_in_commits: []
+  - purl: pkg:pypi/emailproxy
+    affected_versions: vers:pypi/<=2023.11.18
+    fixed_versions: vers:pypi/2023.12.19
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/12/GHSA-9wgg-m99q-hhfc/GHSA-9wgg-m99q-hhfc.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-620

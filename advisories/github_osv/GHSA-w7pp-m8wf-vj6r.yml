@@ -22,11 +22,6 @@ summary: |
 
   This issue has been present since `update_into` was originally introduced in cryptography 1.8.
 impacted_packages:
-  - purl: pkg:pypi/cryptography
-    affected_versions: vers:pypi/>=1.8|<39.0.1
-    fixed_versions: vers:pypi/39.0.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/pyca/cryptography
     affected_versions:
     fixed_versions:
@@ -34,21 +29,26 @@ impacted_packages:
       - vcs_url: https://github.com/pyca/cryptography
         commit: d6951dca25de45abd52da51b608055371fbcde4e
     introduced_in_commits: []
+  - purl: pkg:pypi/cryptography
+    affected_versions: vers:pypi/>=1.8|<39.0.1
+    fixed_versions: vers:pypi/39.0.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/02/GHSA-w7pp-m8wf-vj6r/GHSA-w7pp-m8wf-vj6r.json
   - score: '6.9'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/02/GHSA-w7pp-m8wf-vj6r/GHSA-w7pp-m8wf-vj6r.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-754

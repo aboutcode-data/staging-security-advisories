@@ -7,11 +7,6 @@ summary: |
   Allocation of Resources Without Limits in Keycloak
   An unconstrained memory consumption vulnerability was discovered in Keycloak. It can be triggered in environments which have millions of offline tokens (> 500,000 users with each having at least 2 saved sessions). If an attacker creates two or more user sessions and then open the "consents" tab of the admin User Interface, the UI attempts to load a huge number of offline client sessions leading to excessive memory and CPU consumption which could potentially crash the entire system.
 impacted_packages:
-  - purl: pkg:maven/org.keycloak/keycloak-model-jpa
-    affected_versions: vers:maven/<21.0.0
-    fixed_versions: vers:maven/21.0.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/keycloak/keycloak
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/keycloak/keycloak
         commit: 556146f961f7c8ddf64de15e2117a58d045f72b5
     introduced_in_commits: []
+  - purl: pkg:maven/org.keycloak/keycloak-model-jpa
+    affected_versions: vers:maven/<21.0.0
+    fixed_versions: vers:maven/21.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.7'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/12/GHSA-54f3-c6hg-865h/GHSA-54f3-c6hg-865h.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-770

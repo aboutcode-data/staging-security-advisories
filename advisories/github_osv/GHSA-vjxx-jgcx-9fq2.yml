@@ -7,11 +7,6 @@ summary: |
   Pixelfed allows user enumeration via reset password functionality
   Exposure of Sensitive Information to an Unauthorized Actor in GitHub repository pixelfed/pixelfed 0.11.4 and prior.
 impacted_packages:
-  - purl: pkg:composer/pixelfed/pixelfed
-    affected_versions: vers:composer/<=0.11.4
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/pixelfed/pixelfed
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/pixelfed/pixelfed
         commit: 5b5f5bc38ca9ba39d0b7dacc3813fb899f71ba57
     introduced_in_commits: []
+  - purl: pkg:composer/pixelfed/pixelfed
+    affected_versions: vers:composer/<=0.11.4
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/02/GHSA-vjxx-jgcx-9fq2/GHSA-vjxx-jgcx-9fq2.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

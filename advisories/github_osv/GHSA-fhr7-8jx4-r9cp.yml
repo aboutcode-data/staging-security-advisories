@@ -7,6 +7,15 @@ summary: |
   Infinispan REST Server's bulk read endpoints do not properly evaluate user permissions
   A flaw was found in Infinispan's REST. Bulk read endpoints do not properly evaluate user permissions for the operation. This issue could allow an authenticated user to access information outside of their intended permissions.
 impacted_packages:
+  - purl: pkg:github/infinispan/infinispan
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/infinispan/infinispan
+        commit: b34488dcab8bdd4258972568b8405ee7111276ec
+      - vcs_url: https://github.com/infinispan/infinispan
+        commit: 70a50352d9195753a588d0fba8c2063b99f96263
+    introduced_in_commits: []
   - purl: pkg:maven/org.infinispan/infinispan-server-rest
     affected_versions: vers:maven/>=15.0.0.Dev01|<15.0.0.Dev04
     fixed_versions: vers:maven/15.0.0.Dev04
@@ -17,30 +26,21 @@ impacted_packages:
     fixed_versions: vers:maven/14.0.18.Final
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/infinispan/infinispan
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/infinispan/infinispan
-        commit: b34488dcab8bdd4258972568b8405ee7111276ec
-      - vcs_url: https://github.com/infinispan/infinispan
-        commit: 70a50352d9195753a588d0fba8c2063b99f96263
-    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/12/GHSA-fhr7-8jx4-r9cp/GHSA-fhr7-8jx4-r9cp.json
   - score: '7.1'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/12/GHSA-fhr7-8jx4-r9cp/GHSA-fhr7-8jx4-r9cp.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-304

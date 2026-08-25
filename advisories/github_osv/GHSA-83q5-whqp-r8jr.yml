@@ -17,6 +17,17 @@ summary: |
   3.1 Pulsar WebSocket Proxy users are unaffected.
   Any users running the Pulsar WebSocket Proxy for 2.8, 2.9, and earlier should upgrade to one of the above patched versions.
 impacted_packages:
+  - purl: pkg:github/apache/pulsar
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/pulsar
+        commit: 894192fb6542e504be43034a3c33e90f9c6e528a
+      - vcs_url: https://github.com/apache/pulsar
+        commit: eac263e8f2a93d3b9f707b97c7bbcbc2a826569f
+      - vcs_url: https://github.com/apache/pulsar
+        commit: 11ee36d0351644a006d2a8639bdcc714fb602358
+    introduced_in_commits: []
   - purl: pkg:maven/org.apache.pulsar/pulsar-websocket
     affected_versions: vers:maven/<2.10.5
     fixed_versions: vers:maven/2.10.5
@@ -32,27 +43,16 @@ impacted_packages:
     fixed_versions: vers:maven/3.0.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/apache/pulsar
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/apache/pulsar
-        commit: 894192fb6542e504be43034a3c33e90f9c6e528a
-      - vcs_url: https://github.com/apache/pulsar
-        commit: eac263e8f2a93d3b9f707b97c7bbcbc2a826569f
-      - vcs_url: https://github.com/apache/pulsar
-        commit: 11ee36d0351644a006d2a8639bdcc714fb602358
-    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/12/GHSA-83q5-whqp-r8jr/GHSA-83q5-whqp-r8jr.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-287

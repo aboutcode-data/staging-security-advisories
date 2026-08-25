@@ -16,11 +16,6 @@ summary: "yii2-authclient vulnerable to possible timing attack on string compari
   _Is there a way for users to fix or remediate the vulnerability without upgrading?_\n\nnot\
   \ as far as I see.\n\n### References\n_Are there any links users can visit to find out more?_"
 impacted_packages:
-  - purl: pkg:composer/yiisoft/yii2-authclient
-    affected_versions: vers:composer/<=2.2.14
-    fixed_versions: vers:composer/2.2.15
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/yiisoft/yii2-authclient
     affected_versions:
     fixed_versions:
@@ -30,16 +25,21 @@ impacted_packages:
       - vcs_url: https://github.com/yiisoft/yii2-authclient
         commit: 0d1c3880f4d79e20aa1d77c012650b54e69695ff
     introduced_in_commits: []
+  - purl: pkg:composer/yiisoft/yii2-authclient
+    affected_versions: vers:composer/<=2.2.14
+    fixed_versions: vers:composer/2.2.15
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '0.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:N/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/12/GHSA-w8vh-p74j-x9xp/GHSA-w8vh-p74j-x9xp.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-203

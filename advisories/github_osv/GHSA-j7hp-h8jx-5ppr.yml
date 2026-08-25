@@ -7,6 +7,20 @@ summary: |
   libwebp: OOB write in BuildHuffmanTable
   Heap buffer overflow in libwebp allow a remote attacker to perform an out of bounds memory write via a crafted HTML page.
 impacted_packages:
+  - purl: pkg:github/webmproject/libwebp
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/webmproject/libwebp
+        commit: 902bc9190331343b2017211debcec8d2ab87e17a
+    introduced_in_commits: []
+  - purl: pkg:github/qnighy/libwebp-sys2-rs
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/qnighy/libwebp-sys2-rs
+        commit: 4560c473a76ec8bd8c650f19ddf9d7a44f719f8b
+    introduced_in_commits: []
   - purl: pkg:nuget/magick.net-q16-anycpu
     affected_versions: vers:nuget/<13.3.0
     fixed_versions: vers:nuget/13.3.0
@@ -72,20 +86,6 @@ impacted_packages:
     fixed_versions: vers:nuget/13.3.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/webmproject/libwebp
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/webmproject/libwebp
-        commit: 902bc9190331343b2017211debcec8d2ab87e17a
-    introduced_in_commits: []
-  - purl: pkg:github/qnighy/libwebp-sys2-rs
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/qnighy/libwebp-sys2-rs
-        commit: 4560c473a76ec8bd8c650f19ddf9d7a44f719f8b
-    introduced_in_commits: []
   - purl: pkg:github/jaredforth/webp
     affected_versions:
     fixed_versions:
@@ -97,12 +97,12 @@ severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/09/GHSA-j7hp-h8jx-5ppr/GHSA-j7hp-h8jx-5ppr.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-787

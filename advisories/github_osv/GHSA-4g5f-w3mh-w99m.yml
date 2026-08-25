@@ -13,11 +13,6 @@ summary: |
 
   Nexus Platform Plugin 3.18.1-01 requires POST requests and Overall/Administer permission for the affected form validation methods.
 impacted_packages:
-  - purl: pkg:maven/org.sonatype.nexus.ci/nexus-jenkins-plugin
-    affected_versions: vers:maven/<3.18.1-01
-    fixed_versions: vers:maven/3.18.1-01
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/nexus-platform-plugin
     affected_versions:
     fixed_versions:
@@ -25,16 +20,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/nexus-platform-plugin
         commit: 1d5e1e9e457af5e8ce8c9a403933d6cb73542dbd
     introduced_in_commits: []
+  - purl: pkg:maven/org.sonatype.nexus.ci/nexus-jenkins-plugin
+    affected_versions: vers:maven/<3.18.1-01
+    fixed_versions: vers:maven/3.18.1-01
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.2'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/12/GHSA-4g5f-w3mh-w99m/GHSA-4g5f-w3mh-w99m.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-862

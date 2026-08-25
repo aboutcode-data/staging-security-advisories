@@ -8,6 +8,13 @@ summary: |
   ### Impact
   Custom Layout enabled admin users to execute arbitrary commands via block methods.
 impacted_packages:
+  - purl: pkg:github/openmage/magento-lts
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openmage/magento-lts
+        commit: 289bd4b4f53622138e3e5c2d2cef7502d780086f
+    introduced_in_commits: []
   - purl: pkg:composer/openmage/magento-lts
     affected_versions: vers:composer/<19.4.22
     fixed_versions: vers:composer/19.4.22
@@ -18,23 +25,16 @@ impacted_packages:
     fixed_versions: vers:composer/20.0.19
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/openmage/magento-lts
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/openmage/magento-lts
-        commit: 289bd4b4f53622138e3e5c2d2cef7502d780086f
-    introduced_in_commits: []
 severities:
   - score: '7.2'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/01/GHSA-c9q3-r4rv-mjm7/GHSA-c9q3-r4rv-mjm7.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-77

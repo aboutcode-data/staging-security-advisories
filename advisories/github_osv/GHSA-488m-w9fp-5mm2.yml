@@ -7,6 +7,11 @@ summary: |
   Infinispan circular object references causes out of memory errors
   A flaw was found in Infinispan, which does not detect circular object references when unmarshalling. An authenticated attacker with sufficient permissions could insert a maliciously constructed object into the cache and use it to cause out of memory errors and achieve a denial of service.
 impacted_packages:
+  - purl: pkg:maven/org.infinispan.protostream/protostream
+    affected_versions: vers:maven/<4.6.2.Final
+    fixed_versions: vers:maven/4.6.2.Final
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:github/infinispan/protostream
     affected_versions:
     fixed_versions:
@@ -18,26 +23,21 @@ impacted_packages:
       - vcs_url: https://github.com/infinispan/protostream
         commit: 50320b5987dc87bc04b616b87e8cf93472ee19c1
     introduced_in_commits: []
-  - purl: pkg:maven/org.infinispan.protostream/protostream
-    affected_versions: vers:maven/<4.6.2.Final
-    fixed_versions: vers:maven/4.6.2.Final
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/12/GHSA-488m-w9fp-5mm2/GHSA-488m-w9fp-5mm2.json
   - score: '7.1'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/12/GHSA-488m-w9fp-5mm2/GHSA-488m-w9fp-5mm2.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-1047

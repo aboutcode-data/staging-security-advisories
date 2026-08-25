@@ -23,11 +23,6 @@ summary: "Remote Code Execution in Custom Integration Upload\n### Impact\nThe Fi
   \ in `fides.toml` and the `FIDES__SECURITY__ALLOW_CUSTOM_CONNECTOR_FUNCTIONS` are both either\
   \ unset or explicit set to `False`."
 impacted_packages:
-  - purl: pkg:pypi/ethyca-fides
-    affected_versions: vers:pypi/>=2.11.0|<2.19.0
-    fixed_versions: vers:pypi/2.19.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/ethyca/fides
     affected_versions:
     fixed_versions:
@@ -35,16 +30,21 @@ impacted_packages:
       - vcs_url: https://github.com/ethyca/fides
         commit: 5989b5fa744c8d8c340963b895a054883549358a
     introduced_in_commits: []
+  - purl: pkg:pypi/ethyca-fides
+    affected_versions: vers:pypi/>=2.11.0|<2.19.0
+    fixed_versions: vers:pypi/2.19.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/09/GHSA-p6p2-qq95-vq5h/GHSA-p6p2-qq95-vq5h.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-693

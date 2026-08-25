@@ -7,11 +7,6 @@ summary: |
   XML External Entity Reference in Apache NiFi
   The ExtractCCDAAttributes Processor in Apache NiFi 1.2.0 through 1.19.1 does not restrict XML External Entity references. Flow configurations that include the ExtractCCDAAttributes Processor are vulnerable to malicious XML documents that contain Document Type Declarations with XML External Entity references. The resolution disables Document Type Declarations and disallows XML External Entity resolution in the ExtractCCDAAttributes Processor.
 impacted_packages:
-  - purl: pkg:maven/org.apache.nifi/nifi-ccda-processors
-    affected_versions: vers:maven/>=1.2.0|<1.20.0
-    fixed_versions: vers:maven/1.20.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/apache/nifi
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/apache/nifi
         commit: e966336e8966cf0cbbd12a2c4f2d73a7ceb75cd8
     introduced_in_commits: []
+  - purl: pkg:maven/org.apache.nifi/nifi-ccda-processors
+    affected_versions: vers:maven/>=1.2.0|<1.20.0
+    fixed_versions: vers:maven/1.20.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/02/GHSA-hxjp-q6c3-38fx/GHSA-hxjp-q6c3-38fx.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-611

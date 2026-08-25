@@ -7,6 +7,15 @@ summary: |
   Electron affected by libvpx's heap buffer overflow in vp8 encoding
   Heap buffer overflow in vp8 encoding in libvpx in Google Chrome prior to 117.0.5938.132 and libvpx 1.13.1 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page.
 impacted_packages:
+  - purl: pkg:github/webmproject/libvpx
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/webmproject/libvpx
+        commit: af6dedd715f4307669366944cca6e0417b290282
+      - vcs_url: https://github.com/webmproject/libvpx
+        commit: 3fbd1dca6a4d2dad332a2110d646e4ffef36d590
+    introduced_in_commits: []
   - purl: pkg:npm/electron
     affected_versions: vers:npm/<22.3.25
     fixed_versions: vers:npm/22.3.25
@@ -32,25 +41,16 @@ impacted_packages:
     fixed_versions: vers:npm/27.0.0-beta.8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/webmproject/libvpx
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/webmproject/libvpx
-        commit: af6dedd715f4307669366944cca6e0417b290282
-      - vcs_url: https://github.com/webmproject/libvpx
-        commit: 3fbd1dca6a4d2dad332a2110d646e4ffef36d590
-    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/09/GHSA-qqvq-6xgj-jw8g/GHSA-qqvq-6xgj-jw8g.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-787

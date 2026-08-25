@@ -7,11 +7,6 @@ summary: |
   phpMyFAQ Improper Authentication vulnerability
   Improper Authentication in GitHub repository thorsten/phpmyfaq prior to 3.1.10.
 impacted_packages:
-  - purl: pkg:composer/thorsten/phpmyfaq
-    affected_versions: vers:composer/<3.1.10
-    fixed_versions: vers:composer/3.1.10
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/thorsten/phpmyfaq
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/thorsten/phpmyfaq
         commit: fe6e9f02ef1b26a03134b9becda12687ee5f3214
     introduced_in_commits: []
+  - purl: pkg:composer/thorsten/phpmyfaq
+    affected_versions: vers:composer/<3.1.10
+    fixed_versions: vers:composer/3.1.10
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/01/GHSA-g92r-9rxw-cmgx/GHSA-g92r-9rxw-cmgx.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-287

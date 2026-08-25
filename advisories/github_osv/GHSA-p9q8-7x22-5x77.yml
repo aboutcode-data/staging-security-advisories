@@ -7,11 +7,6 @@ summary: |
   Cecil Cross-site Scripting vulnerability
   Cross-site Scripting (XSS) - Reflected in GitHub repository cecilapp/cecil prior to 7.47.1.
 impacted_packages:
-  - purl: pkg:composer/cecil/cecil
-    affected_versions: vers:composer/<7.47.1
-    fixed_versions: vers:composer/7.47.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/cecilapp/cecil
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/cecilapp/cecil
         commit: 00dc79f10ce723034b7140d79f4ac731d1d902eb
     introduced_in_commits: []
+  - purl: pkg:composer/cecil/cecil
+    affected_versions: vers:composer/<7.47.1
+    fixed_versions: vers:composer/7.47.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/09/GHSA-p9q8-7x22-5x77/GHSA-p9q8-7x22-5x77.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

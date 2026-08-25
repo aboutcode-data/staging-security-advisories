@@ -51,6 +51,13 @@ summary: "Strapi Improper Rate Limiting vulnerability\n### 1. Summary\nThere is 
   - [OWASP: Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html)\n\
   - [OWASP: Denial of Service Cheat Sheet (Rate limiting)](https://cheatsheetseries.owasp.org/cheatsheets/Denial_of_Service_Cheat_Sheet.html#rate-limiting)"
 impacted_packages:
+  - purl: pkg:github/strapi/strapi
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/strapi/strapi
+        commit: 32d68f1f5677ed9a9a505b718c182c0a3f885426
+    introduced_in_commits: []
   - purl: pkg:npm/%40strapi/admin
     affected_versions: vers:npm/<4.12.1
     fixed_versions: vers:npm/4.12.1
@@ -61,23 +68,16 @@ impacted_packages:
     fixed_versions: vers:npm/4.12.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/strapi/strapi
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/strapi/strapi
-        commit: 32d68f1f5677ed9a9a505b718c182c0a3f885426
-    introduced_in_commits: []
 severities:
   - score: '7.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/09/GHSA-24q2-59hm-rh9r/GHSA-24q2-59hm-rh9r.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-770

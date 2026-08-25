@@ -19,11 +19,6 @@ summary: "RSSHub SSRF vulnerability\n## Summary\n\nRSSHub is vulnerable to Serve
   \ not normally be accessible and amplifying the impact of the attack.\n\n## Reference\n\n\
   Fixing PR: https://github.com/DIYgod/RSSHub/pull/11588"
 impacted_packages:
-  - purl: pkg:npm/rsshub
-    affected_versions: vers:npm/<1.0.0-master.a66cbcf
-    fixed_versions: vers:npm/1.0.0-master.a66cbcf
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/diygod/rsshub
     affected_versions:
     fixed_versions:
@@ -31,16 +26,21 @@ impacted_packages:
       - vcs_url: https://github.com/diygod/rsshub
         commit: a66cbcf6eebc700bf97ab097f404f16ab415506a
     introduced_in_commits: []
+  - purl: pkg:npm/rsshub
+    affected_versions: vers:npm/<1.0.0-master.a66cbcf
+    fixed_versions: vers:npm/1.0.0-master.a66cbcf
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/01/GHSA-64wp-jh9p-5cg2/GHSA-64wp-jh9p-5cg2.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-918

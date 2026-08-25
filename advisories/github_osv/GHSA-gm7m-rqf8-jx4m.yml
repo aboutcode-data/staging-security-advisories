@@ -7,11 +7,6 @@ summary: |
   Improper Restriction of Rendered UI Layers or Frames in cockpit-hq/cockpit
   Improper Restriction of Rendered UI Layers or Frames in GitHub repository cockpit-hq/cockpit prior to 2.3.9.
 impacted_packages:
-  - purl: pkg:composer/cockpit-hq/cockpit
-    affected_versions: vers:composer/<2.3.9
-    fixed_versions: vers:composer/2.3.9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/cockpit-hq/cockpit
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/cockpit-hq/cockpit
         commit: 8450bdf7e1dc23e9d88adf30a2aa9101c0c41720
     introduced_in_commits: []
+  - purl: pkg:composer/cockpit-hq/cockpit
+    affected_versions: vers:composer/<2.3.9
+    fixed_versions: vers:composer/2.3.9
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/02/GHSA-gm7m-rqf8-jx4m/GHSA-gm7m-rqf8-jx4m.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-1021

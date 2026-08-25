@@ -30,11 +30,6 @@ summary: "OpenRefine vulnerable to arbitrary file read in project import with my
   \n\n### Impact\n\nAn arbitrary file read vulnerability allows any unauthenticated user to\
   \ read the file on the server._"
 impacted_packages:
-  - purl: pkg:maven/org.openrefine/database
-    affected_versions: vers:maven/<=3.7.4
-    fixed_versions: vers:maven/3.7.5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/openrefine/openrefine
     affected_versions:
     fixed_versions:
@@ -42,16 +37,21 @@ impacted_packages:
       - vcs_url: https://github.com/openrefine/openrefine
         commit: 2de1439f5be63d9d0e89bbacbd24fa28c8c3e29d
     introduced_in_commits: []
+  - purl: pkg:maven/org.openrefine/database
+    affected_versions: vers:maven/<=3.7.4
+    fixed_versions: vers:maven/3.7.5
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/09/GHSA-qqh2-wvmv-h72m/GHSA-qqh2-wvmv-h72m.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-89

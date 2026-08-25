@@ -54,11 +54,6 @@ summary: |
   ### Impact
   An attacker can exploit the vulnerability to call arbitrary URLs with arbitrary protocols if they provide an SVG file to the Dompdf. In PHP versions before 8.0.0, it leads to arbitrary unserialize, which will lead, at the very least, to arbitrary file deletion and might lead to remote code execution, depending on available classes.
 impacted_packages:
-  - purl: pkg:composer/dompdf/dompdf
-    affected_versions: vers:composer/2.0.2
-    fixed_versions: vers:composer/2.0.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/dompdf/dompdf
     affected_versions:
     fixed_versions:
@@ -66,16 +61,21 @@ impacted_packages:
       - vcs_url: https://github.com/dompdf/dompdf
         commit: 95009ea98230f9b084b040c34e3869ef3dccc9aa
     introduced_in_commits: []
+  - purl: pkg:composer/dompdf/dompdf
+    affected_versions: vers:composer/2.0.2
+    fixed_versions: vers:composer/2.0.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '10.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/02/GHSA-56gj-mvh6-rp75/GHSA-56gj-mvh6-rp75.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-436

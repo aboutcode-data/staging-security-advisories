@@ -7,11 +7,6 @@ summary: |
   CSRF vulnerability in Jenkins Keycloak Authentication Plugin
   A cross-site request forgery (CSRF) vulnerability in Jenkins Keycloak Authentication Plugin 2.3.0 and earlier allows attackers to trick users into logging in to the attacker's account.
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins/keycloak
-    affected_versions: vers:maven/<=2.3.0
-    fixed_versions: vers:maven/2.3.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/keycloak-plugin
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/keycloak-plugin
         commit: e48da7b12473510092de6f74db29298171a30b7e
     introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/keycloak
+    affected_versions: vers:maven/<=2.3.0
+    fixed_versions: vers:maven/2.3.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/01/GHSA-9wrr-4r9v-26xc/GHSA-9wrr-4r9v-26xc.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-352
