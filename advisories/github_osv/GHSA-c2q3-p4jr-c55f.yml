@@ -78,17 +78,17 @@ summary: "Grav Vulnerable to XSS via Taxonomy Field Values in Admin Panel\n### S
   \ — `on_events` regex tightened.\n- [`tests/unit/Grav/Common/Security/DetectXssTest.php`](https://github.com/getgrav/grav/blob/2.0/tests/unit/Grav/Common/Security/DetectXssTest.php)\
   \ — includes the GHSA-c2q3 PoC payload."
 impacted_packages:
-  - purl: pkg:composer/getgrav/grav
-    affected_versions: vers:composer/<2.0.0-beta.2
-    fixed_versions: vers:composer/2.0.0-beta.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/getgrav/grav
     affected_versions:
     fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/getgrav/grav
         commit: 5a12f9be8314682c8713e569e330f11805d0a663
+    introduced_in_commits: []
+  - purl: pkg:composer/getgrav/grav
+    affected_versions: vers:composer/<2.0.0-beta.2
+    fixed_versions: vers:composer/2.0.0-beta.2
+    fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/getgrav/grav-plugin-form
     affected_versions:
@@ -101,12 +101,12 @@ severities:
   - score: '5.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-c2q3-p4jr-c55f/GHSA-c2q3-p4jr-c55f.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

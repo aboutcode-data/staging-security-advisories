@@ -184,13 +184,13 @@ summary: |
      `TRESTLE_HREF_REGEX` defined at `const.py:253` but never enforced anywhere — proves path validation was INTENDED but never implemented.
 impacted_packages:
   - purl: pkg:pypi/compliance-trestle
-    affected_versions: vers:pypi/<3.12.2
-    fixed_versions: vers:pypi/3.12.2
+    affected_versions: vers:pypi/<=4.0.2
+    fixed_versions: vers:pypi/4.0.3
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/compliance-trestle
-    affected_versions: vers:pypi/<=4.0.2
-    fixed_versions: vers:pypi/4.0.3
+    affected_versions: vers:pypi/<3.12.2
+    fixed_versions: vers:pypi/3.12.2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/oscal-compass/compliance-trestle
@@ -206,12 +206,12 @@ severities:
   - score: '5.5'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:P
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-mj4x-vf5c-5xg8/GHSA-mj4x-vf5c-5xg8.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

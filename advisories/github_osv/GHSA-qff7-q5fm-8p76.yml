@@ -84,11 +84,6 @@ summary: |
       ->add(new Middleware\Permissions(StationPermissions::Media, true));
   ```
 impacted_packages:
-  - purl: pkg:composer/azuracast/azuracast
-    affected_versions: vers:composer/<=0.23.5
-    fixed_versions: vers:composer/0.23.6
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/azuracast/azuracast
     affected_versions:
     fixed_versions:
@@ -96,16 +91,21 @@ impacted_packages:
       - vcs_url: https://github.com/azuracast/azuracast
         commit: ba92dc3f0ea15a9c0ba0f4557d99a9a26004108f
     introduced_in_commits: []
+  - purl: pkg:composer/azuracast/azuracast
+    affected_versions: vers:composer/<=0.23.5
+    fixed_versions: vers:composer/0.23.6
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-qff7-q5fm-8p76/GHSA-qff7-q5fm-8p76.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-862

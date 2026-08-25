@@ -53,6 +53,15 @@ summary: "compliance-trestle Vulnerable to Remote Code Execution via Recursive S
   \ system title or description) will result in a compromised runner environment. The user/operator\
   \ must process the attacker-controlled SSP or LUT, satisfying the user interaction metric."
 impacted_packages:
+  - purl: pkg:github/oscal-compass/compliance-trestle
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/oscal-compass/compliance-trestle
+        commit: 247fcce289f60103f3d8e28d8ec51a6986b94fb6
+      - vcs_url: https://github.com/oscal-compass/compliance-trestle
+        commit: 7d107b3ac53caca7bde97a6278b23cd739d94525
+    introduced_in_commits: []
   - purl: pkg:pypi/compliance-trestle
     affected_versions: vers:pypi/<=3.12.1
     fixed_versions: vers:pypi/3.12.2
@@ -63,25 +72,16 @@ impacted_packages:
     fixed_versions: vers:pypi/4.0.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/oscal-compass/compliance-trestle
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/oscal-compass/compliance-trestle
-        commit: 247fcce289f60103f3d8e28d8ec51a6986b94fb6
-      - vcs_url: https://github.com/oscal-compass/compliance-trestle
-        commit: 7d107b3ac53caca7bde97a6278b23cd739d94525
-    introduced_in_commits: []
 severities:
   - score: '7.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-gg2g-p7xc-qqmm/GHSA-gg2g-p7xc-qqmm.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

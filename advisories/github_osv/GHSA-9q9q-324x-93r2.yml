@@ -68,11 +68,6 @@ summary: |
 
   Unauthenticated pre-route DoS via BEAM memory exhaustion. One request from one connection crashes the server. Affects every Bandit-fronted application that reads request bodies anywhere — i.e. essentially every Phoenix app, since the default endpoint mounts `Plug.Parsers` ahead of routing and auth. Configured `length:` caps on `Plug.Parsers` and `Plug.Conn.read_body/2` are silently ineffective on the chunked path.
 impacted_packages:
-  - purl: pkg:hex/bandit
-    affected_versions: vers:hex/>=1.4.0|<1.11.1
-    fixed_versions: vers:hex/1.11.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/mtrudel/bandit
     affected_versions:
     fixed_versions:
@@ -80,21 +75,26 @@ impacted_packages:
       - vcs_url: https://github.com/mtrudel/bandit
         commit: ae3520dfdbfab115c638f8c7f6f6b805db34e1ab
     introduced_in_commits: []
+  - purl: pkg:hex/bandit
+    affected_versions: vers:hex/>=1.4.0|<1.11.1
+    fixed_versions: vers:hex/1.11.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-9q9q-324x-93r2/GHSA-9q9q-324x-93r2.json
   - score: '8.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-9q9q-324x-93r2/GHSA-9q9q-324x-93r2.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-770

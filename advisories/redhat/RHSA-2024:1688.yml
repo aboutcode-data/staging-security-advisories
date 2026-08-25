@@ -36,6 +36,36 @@ summary: |
 
   * nodejs: setuid() does not drop all privileges due to io_uring (CVE-2024-22017)
 impacted_packages:
+  - purl: pkg:rpm/redhat/nodejs-packaging-bundler?arch=noarch&rpmmod=nodejs:20:9030020240229115828:rhel9
+    affected_versions: vers:rpm/<2021.06-4.module+el9.3.0+19518+63aad52d
+    fixed_versions: vers:rpm/2021.06-4.module+el9.3.0+19518+63aad52d
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/nodejs-debugsource?arch=ppc64le&epoch=1&rpmmod=nodejs:20:9030020240229115828:rhel9
+    affected_versions: vers:rpm/<20.11.1-1.module+el9.3.0+21385+bac43d5a
+    fixed_versions: vers:rpm/20.11.1-1.module+el9.3.0+21385+bac43d5a
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/nodejs-devel?arch=ppc64le&epoch=1&rpmmod=nodejs:20:9030020240229115828:rhel9
+    affected_versions: vers:rpm/<20.11.1-1.module+el9.3.0+21385+bac43d5a
+    fixed_versions: vers:rpm/20.11.1-1.module+el9.3.0+21385+bac43d5a
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/nodejs-full-i18n?arch=ppc64le&epoch=1&rpmmod=nodejs:20:9030020240229115828:rhel9
+    affected_versions: vers:rpm/<20.11.1-1.module+el9.3.0+21385+bac43d5a
+    fixed_versions: vers:rpm/20.11.1-1.module+el9.3.0+21385+bac43d5a
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/npm?arch=ppc64le&epoch=1&rpmmod=nodejs:20:9030020240229115828:rhel9
+    affected_versions: vers:rpm/<10.2.4-1.20.11.1.1.module+el9.3.0+21385+bac43d5a
+    fixed_versions: vers:rpm/10.2.4-1.20.11.1.1.module+el9.3.0+21385+bac43d5a
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/nodejs?arch=s390x&epoch=1&rpmmod=nodejs:20:9030020240229115828:rhel9
+    affected_versions: vers:rpm/<20.11.1-1.module+el9.3.0+21385+bac43d5a
+    fixed_versions: vers:rpm/20.11.1-1.module+el9.3.0+21385+bac43d5a
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/nodejs?arch=src&epoch=1&rpmmod=nodejs:20:9030020240229115828:rhel9
     affected_versions: vers:rpm/<20.11.1-1.module+el9.3.0+21385+bac43d5a
     fixed_versions: vers:rpm/20.11.1-1.module+el9.3.0+21385+bac43d5a
@@ -62,11 +92,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/nodejs-packaging?arch=noarch&rpmmod=nodejs:20:9030020240229115828:rhel9
-    affected_versions: vers:rpm/<2021.06-4.module+el9.3.0+19518+63aad52d
-    fixed_versions: vers:rpm/2021.06-4.module+el9.3.0+19518+63aad52d
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/nodejs-packaging-bundler?arch=noarch&rpmmod=nodejs:20:9030020240229115828:rhel9
     affected_versions: vers:rpm/<2021.06-4.module+el9.3.0+19518+63aad52d
     fixed_versions: vers:rpm/2021.06-4.module+el9.3.0+19518+63aad52d
     fixed_in_commits: []
@@ -107,31 +132,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/nodejs-debuginfo?arch=ppc64le&epoch=1&rpmmod=nodejs:20:9030020240229115828:rhel9
-    affected_versions: vers:rpm/<20.11.1-1.module+el9.3.0+21385+bac43d5a
-    fixed_versions: vers:rpm/20.11.1-1.module+el9.3.0+21385+bac43d5a
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/nodejs-debugsource?arch=ppc64le&epoch=1&rpmmod=nodejs:20:9030020240229115828:rhel9
-    affected_versions: vers:rpm/<20.11.1-1.module+el9.3.0+21385+bac43d5a
-    fixed_versions: vers:rpm/20.11.1-1.module+el9.3.0+21385+bac43d5a
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/nodejs-devel?arch=ppc64le&epoch=1&rpmmod=nodejs:20:9030020240229115828:rhel9
-    affected_versions: vers:rpm/<20.11.1-1.module+el9.3.0+21385+bac43d5a
-    fixed_versions: vers:rpm/20.11.1-1.module+el9.3.0+21385+bac43d5a
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/nodejs-full-i18n?arch=ppc64le&epoch=1&rpmmod=nodejs:20:9030020240229115828:rhel9
-    affected_versions: vers:rpm/<20.11.1-1.module+el9.3.0+21385+bac43d5a
-    fixed_versions: vers:rpm/20.11.1-1.module+el9.3.0+21385+bac43d5a
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/npm?arch=ppc64le&epoch=1&rpmmod=nodejs:20:9030020240229115828:rhel9
-    affected_versions: vers:rpm/<10.2.4-1.20.11.1.1.module+el9.3.0+21385+bac43d5a
-    fixed_versions: vers:rpm/10.2.4-1.20.11.1.1.module+el9.3.0+21385+bac43d5a
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/nodejs?arch=s390x&epoch=1&rpmmod=nodejs:20:9030020240229115828:rhel9
     affected_versions: vers:rpm/<20.11.1-1.module+el9.3.0+21385+bac43d5a
     fixed_versions: vers:rpm/20.11.1-1.module+el9.3.0+21385+bac43d5a
     fixed_in_commits: []
@@ -195,7 +195,7 @@ severities:
   - score: Important
     scoring_system: rhas
     scoring_elements:
-    published_at: None
+    published_at:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2024_1688.json
 weaknesses: []
 references:

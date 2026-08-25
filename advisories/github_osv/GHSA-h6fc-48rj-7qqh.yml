@@ -24,38 +24,8 @@ summary: |
   - Upgrade to Apache Tomcat 9.0.118 or later
 impacted_packages:
   - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
-    affected_versions: vers:maven/<9.0.118
-    fixed_versions: vers:maven/9.0.118
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
     affected_versions: vers:maven/>=10.1.0-M1|<10.1.55
     fixed_versions: vers:maven/10.1.55
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
-    affected_versions: vers:maven/>=11.0.0-M1|<11.0.22
-    fixed_versions: vers:maven/11.0.22
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.tomcat/tomcat
-    affected_versions: vers:maven/<9.0.118
-    fixed_versions: vers:maven/9.0.118
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.tomcat/tomcat
-    affected_versions: vers:maven/>=10.1.0-M1|<10.1.55
-    fixed_versions: vers:maven/10.1.55
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.tomcat/tomcat
-    affected_versions: vers:maven/>=11.0.0-M1|<11.0.22
-    fixed_versions: vers:maven/11.0.22
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.tomcat/tomcat-catalina
-    affected_versions: vers:maven/<9.0.118
-    fixed_versions: vers:maven/9.0.118
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat/tomcat-catalina
@@ -79,16 +49,46 @@ impacted_packages:
       - vcs_url: https://github.com/apache/tomcat
         commit: a99c355e8199adbfd67c9a1fffbd85b810b196cd
     introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat/tomcat-catalina
+    affected_versions: vers:maven/<9.0.118
+    fixed_versions: vers:maven/9.0.118
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
+    affected_versions: vers:maven/<9.0.118
+    fixed_versions: vers:maven/9.0.118
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
+    affected_versions: vers:maven/>=11.0.0-M1|<11.0.22
+    fixed_versions: vers:maven/11.0.22
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat/tomcat
+    affected_versions: vers:maven/<9.0.118
+    fixed_versions: vers:maven/9.0.118
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat/tomcat
+    affected_versions: vers:maven/>=10.1.0-M1|<10.1.55
+    fixed_versions: vers:maven/10.1.55
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat/tomcat
+    affected_versions: vers:maven/>=11.0.0-M1|<11.0.22
+    fixed_versions: vers:maven/11.0.22
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-h6fc-48rj-7qqh/GHSA-h6fc-48rj-7qqh.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-287

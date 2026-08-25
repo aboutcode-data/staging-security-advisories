@@ -7,17 +7,22 @@ summary: |
   ImageMagick: Heap Buffer Over-Read in distributed pixel cache server
   An attacker who can connect to a magick -distribute-cache service can cause a heap buffer over-read in the server process.
 impacted_packages:
-  - purl: pkg:nuget/Magick.NET-Q16-HDRI-AnyCPU
-    affected_versions: vers:nuget/<14.12.0
-    fixed_versions: vers:nuget/14.12.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-HDRI-x64
     affected_versions: vers:nuget/<14.12.0
     fixed_versions: vers:nuget/14.12.0
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-HDRI-x86
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-AnyCPU
     affected_versions: vers:nuget/<14.12.0
     fixed_versions: vers:nuget/14.12.0
     fixed_in_commits: []
@@ -87,21 +92,16 @@ impacted_packages:
     fixed_versions: vers:nuget/14.12.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
-    affected_versions: vers:nuget/<14.12.0
-    fixed_versions: vers:nuget/14.12.0
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: '5.7'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-6gxq-f64p-5w6f/GHSA-6gxq-f64p-5w6f.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-287

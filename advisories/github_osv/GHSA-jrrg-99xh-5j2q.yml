@@ -36,11 +36,6 @@ summary: |
 
   The `unserialize()` call creates a dangerous secondary primitive if an attacker can place a serialized object file at a reachable path, although this report does not claim a complete object-injection or RCE chain.
 impacted_packages:
-  - purl: pkg:composer/simplesamlphp/simplesamlphp-module-casserver
-    affected_versions: vers:composer/<=7.0.2
-    fixed_versions: vers:composer/7.0.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/simplesamlphp/simplesamlphp-module-casserver
     affected_versions:
     fixed_versions:
@@ -48,16 +43,21 @@ impacted_packages:
       - vcs_url: https://github.com/simplesamlphp/simplesamlphp-module-casserver
         commit: b84f3e4ed57c4d97e0dc73df102e7eff831a681f
     introduced_in_commits: []
+  - purl: pkg:composer/simplesamlphp/simplesamlphp-module-casserver
+    affected_versions: vers:composer/<=7.0.2
+    fixed_versions: vers:composer/7.0.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.6'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-jrrg-99xh-5j2q/GHSA-jrrg-99xh-5j2q.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

@@ -207,13 +207,13 @@ summary: |
   Write malicious `.py` file to a location on `sys.path` for code execution on next import.
 impacted_packages:
   - purl: pkg:pypi/compliance-trestle
-    affected_versions: vers:pypi/<=4.0.2
-    fixed_versions: vers:pypi/4.0.3
+    affected_versions: vers:pypi/<3.12.2
+    fixed_versions: vers:pypi/3.12.2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/compliance-trestle
-    affected_versions: vers:pypi/<3.12.2
-    fixed_versions: vers:pypi/3.12.2
+    affected_versions: vers:pypi/<=4.0.2
+    fixed_versions: vers:pypi/4.0.3
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/oscal-compass/compliance-trestle
@@ -229,12 +229,12 @@ severities:
   - score: '7.1'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-g3vg-vx23-3858/GHSA-g3vg-vx23-3858.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-73

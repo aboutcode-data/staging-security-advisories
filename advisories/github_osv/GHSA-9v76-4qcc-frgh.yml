@@ -89,12 +89,22 @@ summary: "Microsoft Security Advisory CVE-2026-42899 – ASP.NET Core Denial of 
   \n[CVE-2026-42899]( https://www.cve.org/CVERecord?id=CVE-2026-42899)\n\n### Acknowledgements\n\
   hamayanhamayan Muhammad Abdul Rehman \n\n### Revisions\n\nV1.0 (May 12, 2026): Advisory published."
 impacted_packages:
-  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.win-arm64
+  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-musl-arm64
     affected_versions: vers:nuget/<=8.0.26
     fixed_versions: vers:nuget/8.0.27
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.win-x64
+  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-arm64
+    affected_versions: vers:nuget/<=9.0.15
+    fixed_versions: vers:nuget/9.0.16
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-musl-arm64
+    affected_versions: vers:nuget/<=10.0.7
+    fixed_versions: vers:nuget/10.0.8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.win-arm64
     affected_versions: vers:nuget/<=8.0.26
     fixed_versions: vers:nuget/8.0.27
     fixed_in_commits: []
@@ -104,22 +114,27 @@ impacted_packages:
     fixed_versions: vers:nuget/8.0.27
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-arm
-    affected_versions: vers:nuget/<=8.0.26
-    fixed_versions: vers:nuget/8.0.27
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-arm64
-    affected_versions: vers:nuget/<=8.0.26
-    fixed_versions: vers:nuget/8.0.27
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-musl-arm
     affected_versions: vers:nuget/<=8.0.26
     fixed_versions: vers:nuget/8.0.27
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-musl-arm64
+  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-arm
+    affected_versions: vers:nuget/<=10.0.7
+    fixed_versions: vers:nuget/10.0.8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-arm
+    affected_versions: vers:nuget/<=8.0.26
+    fixed_versions: vers:nuget/8.0.27
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.win-x64
+    affected_versions: vers:nuget/<=8.0.26
+    fixed_versions: vers:nuget/8.0.27
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-arm64
     affected_versions: vers:nuget/<=8.0.26
     fixed_versions: vers:nuget/8.0.27
     fixed_in_commits: []
@@ -174,16 +189,6 @@ impacted_packages:
     fixed_versions: vers:nuget/9.0.16
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-arm
-    affected_versions: vers:nuget/<=10.0.7
-    fixed_versions: vers:nuget/10.0.8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-arm64
-    affected_versions: vers:nuget/<=9.0.15
-    fixed_versions: vers:nuget/9.0.16
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-arm64
     affected_versions: vers:nuget/<=10.0.7
     fixed_versions: vers:nuget/10.0.8
@@ -202,11 +207,6 @@ impacted_packages:
   - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-musl-arm64
     affected_versions: vers:nuget/<=9.0.15
     fixed_versions: vers:nuget/9.0.16
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-musl-arm64
-    affected_versions: vers:nuget/<=10.0.7
-    fixed_versions: vers:nuget/10.0.8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-musl-x64
@@ -273,12 +273,12 @@ severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-9v76-4qcc-frgh/GHSA-9v76-4qcc-frgh.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-835

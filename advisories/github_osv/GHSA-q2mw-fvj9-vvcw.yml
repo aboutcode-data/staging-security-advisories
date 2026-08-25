@@ -31,6 +31,17 @@ summary: |
   * Do not connect to untrusted IMAP servers.
   * When connecting to untrusted servers, a _much_ smaller `max_response_size` (for example: 8KiB) will limit the impact.  Although this is too small for fetching unpaginated message bodies, it should be enough for most other operations.
 impacted_packages:
+  - purl: pkg:github/ruby/net-imap
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/ruby/net-imap
+        commit: 88d95231fc8afef11c1f074453f7d75b68c9dfda
+      - vcs_url: https://github.com/ruby/net-imap
+        commit: 6091f7d6b1f3514cafbfe39c76f2b5d73de3ca96
+      - vcs_url: https://github.com/ruby/net-imap
+        commit: de685f91a4a4cc75eb80da898c2bf8af08d34819
+    introduced_in_commits: []
   - purl: pkg:gem/net-imap
     affected_versions: vers:gem/<=0.6.3
     fixed_versions: vers:gem/0.6.4
@@ -46,27 +57,16 @@ impacted_packages:
     fixed_versions: vers:gem/0.4.24
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/ruby/net-imap
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/ruby/net-imap
-        commit: 88d95231fc8afef11c1f074453f7d75b68c9dfda
-      - vcs_url: https://github.com/ruby/net-imap
-        commit: 6091f7d6b1f3514cafbfe39c76f2b5d73de3ca96
-      - vcs_url: https://github.com/ruby/net-imap
-        commit: de685f91a4a4cc75eb80da898c2bf8af08d34819
-    introduced_in_commits: []
 severities:
   - score: '2.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-q2mw-fvj9-vvcw/GHSA-q2mw-fvj9-vvcw.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-407

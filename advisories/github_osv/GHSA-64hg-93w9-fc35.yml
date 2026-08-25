@@ -27,6 +27,16 @@ summary: |
 
   Symfony would like to thank Himanshu Anand for reporting the issue, and Alexandre Daubois and Nicolas Grekas for providing the fixes.
 impacted_packages:
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=7.0.0|<7.4.12
+    fixed_versions: vers:composer/7.4.12
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=8.0.0|<8.0.12
+    fixed_versions: vers:composer/8.0.12
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:composer/symfony/lox24-notifier
     affected_versions: vers:composer/>=7.1.0|<7.4.12
     fixed_versions: vers:composer/7.4.12
@@ -40,16 +50,6 @@ impacted_packages:
   - purl: pkg:composer/symfony/symfony
     affected_versions: vers:composer/>=6.4.0|<6.4.40
     fixed_versions: vers:composer/6.4.40
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/symfony
-    affected_versions: vers:composer/>=7.0.0|<7.4.12
-    fixed_versions: vers:composer/7.4.12
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/symfony
-    affected_versions: vers:composer/>=8.0.0|<8.0.12
-    fixed_versions: vers:composer/8.0.12
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/mailjet-mailer
@@ -78,12 +78,12 @@ severities:
   - score: '6.6'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:U
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-64hg-93w9-fc35/GHSA-64hg-93w9-fc35.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-287

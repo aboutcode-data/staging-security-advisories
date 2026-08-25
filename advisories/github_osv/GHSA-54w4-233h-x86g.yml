@@ -8,8 +8,8 @@ summary: |
   An issue was discovered in idrac in OpenStack Ironic before 35.0.1. During import, a user invoking molds can request authorization to be sent to a remote endpoint. The credential forwarded is a time-limited Keystone token (which provides access to all OpenStack services Ironic is authorized for); or basic credentials configured for molds storage. The fixed versions are 26.1.6, 29.0.5, 32.0.1, and 35.0.1.
 impacted_packages:
   - purl: pkg:pypi/ironic-python-agent
-    affected_versions: vers:pypi/>=30.0.0|<32.0.1
-    fixed_versions: vers:pypi/32.0.1
+    affected_versions: vers:pypi/>=33.0.0|<35.0.1
+    fixed_versions: vers:pypi/35.0.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/ironic-python-agent
@@ -18,25 +18,25 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/ironic-python-agent
-    affected_versions: vers:pypi/<26.1.6
-    fixed_versions: vers:pypi/26.1.6
+    affected_versions: vers:pypi/>=30.0.0|<32.0.1
+    fixed_versions: vers:pypi/32.0.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/ironic-python-agent
-    affected_versions: vers:pypi/>=33.0.0|<35.0.1
-    fixed_versions: vers:pypi/35.0.1
+    affected_versions: vers:pypi/<26.1.6
+    fixed_versions: vers:pypi/26.1.6
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '7.7'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-54w4-233h-x86g/GHSA-54w4-233h-x86g.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-669

@@ -111,11 +111,6 @@ summary: |
   - Fix for the identity bypass vulnerability: [PR #7972](https://github.com/ethyca/fides/pull/7972), commit [`e7a6527`](https://github.com/ethyca/fides/commit/e7a6527b0f9fdc9887b86a89bb5453e7421882dd)
   - Fix for the related denial-of-service issue: [PR #7971](https://github.com/ethyca/fides/pull/7971), commit [`0e320b2`](https://github.com/ethyca/fides/commit/0e320b20934eb5af3a3d5127dba2691605d7ff37)
 impacted_packages:
-  - purl: pkg:pypi/ethyca-fides
-    affected_versions: vers:pypi/>=2.75.0|<2.83.2
-    fixed_versions: vers:pypi/2.83.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/ethyca/fides
     affected_versions:
     fixed_versions:
@@ -125,16 +120,21 @@ impacted_packages:
       - vcs_url: https://github.com/ethyca/fides
         commit: 0e320b20934eb5af3a3d5127dba2691605d7ff37
     introduced_in_commits: []
+  - purl: pkg:pypi/ethyca-fides
+    affected_versions: vers:pypi/>=2.75.0|<2.83.2
+    fixed_versions: vers:pypi/2.83.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:L/VA:N/SC:N/SI:H/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-qx5f-ghc2-7g5c/GHSA-qx5f-ghc2-7g5c.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-841

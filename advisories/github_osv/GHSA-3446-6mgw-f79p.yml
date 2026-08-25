@@ -130,11 +130,6 @@ summary: |
   - [`tests/unit/Grav/Common/Security/SvgXxeSecurityTest.php`](https://github.com/getgrav/grav/blob/2.0/tests/unit/Grav/Common/Security/SvgXxeSecurityTest.php) — XXE neutralization + billion-laughs + plain-SVG regression.
   - dom-sanitizer: [`src/DOMSanitizer.php`](https://github.com/rhukster/dom-sanitizer/blob/main/src/DOMSanitizer.php) + two new XXE tests in its own suite.
 impacted_packages:
-  - purl: pkg:composer/getgrav/grav
-    affected_versions: vers:composer/<2.0.0-beta.2
-    fixed_versions: vers:composer/2.0.0-beta.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/getgrav/grav
     affected_versions:
     fixed_versions:
@@ -142,16 +137,21 @@ impacted_packages:
       - vcs_url: https://github.com/getgrav/grav
         commit: 5a12f9be8314682c8713e569e330f11805d0a663
     introduced_in_commits: []
+  - purl: pkg:composer/getgrav/grav
+    affected_versions: vers:composer/<2.0.0-beta.2
+    fixed_versions: vers:composer/2.0.0-beta.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-3446-6mgw-f79p/GHSA-3446-6mgw-f79p.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-611

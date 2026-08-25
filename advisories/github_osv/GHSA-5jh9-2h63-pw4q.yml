@@ -73,6 +73,16 @@ summary: |
 
   This vulnerability does not seem to work on servers running on modern versions of MacOS.
 impacted_packages:
+  - purl: pkg:maven/cc.tweaked/cc-tweaked-1.19.3-core
+    affected_versions: vers:maven/<1.119.0
+    fixed_versions: vers:maven/1.119.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/cc.tweaked/cc-tweaked-1.20-core
+    affected_versions: vers:maven/<1.119.0
+    fixed_versions: vers:maven/1.119.0
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:maven/cc.tweaked/cc-tweaked-1.21-core
     affected_versions: vers:maven/<1.119.0
     fixed_versions: vers:maven/1.119.0
@@ -98,17 +108,7 @@ impacted_packages:
     fixed_versions: vers:maven/1.119.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/cc.tweaked/cc-tweaked-1.19.3-core
-    affected_versions: vers:maven/<1.119.0
-    fixed_versions: vers:maven/1.119.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:maven/cc.tweaked/cc-tweaked-1.19.4-core
-    affected_versions: vers:maven/<1.119.0
-    fixed_versions: vers:maven/1.119.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/cc.tweaked/cc-tweaked-1.20-core
     affected_versions: vers:maven/<1.119.0
     fixed_versions: vers:maven/1.119.0
     fixed_in_commits: []
@@ -117,12 +117,12 @@ severities:
   - score: '7.1'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:N/SC:H/SI:H/SA:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-5jh9-2h63-pw4q/GHSA-5jh9-2h63-pw4q.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-918

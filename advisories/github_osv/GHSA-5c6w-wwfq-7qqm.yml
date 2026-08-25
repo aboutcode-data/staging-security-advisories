@@ -253,26 +253,26 @@ summary: |
 
   This report does not claim arbitrary TCP access or remote code execution. The demonstrated behavior is HTTP(S) SSRF through the spider URL-fetching feature.
 impacted_packages:
-  - purl: pkg:pypi/praisonaiagents
-    affected_versions: vers:pypi/<=1.6.39
-    fixed_versions: vers:pypi/1.6.40
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:pypi/praisonai
     affected_versions: vers:pypi/<=4.6.39
     fixed_versions: vers:pypi/4.6.40
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/praisonaiagents
+    affected_versions: vers:pypi/<=1.6.39
+    fixed_versions: vers:pypi/1.6.40
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '5.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-5c6w-wwfq-7qqm/GHSA-5c6w-wwfq-7qqm.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-918
