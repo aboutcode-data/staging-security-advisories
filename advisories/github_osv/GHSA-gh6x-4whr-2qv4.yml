@@ -27,21 +27,6 @@ summary: "Null pointer dereference and heap OOB read in operations restoring ten
   \ questions.\n\n### Attribution\nThis vulnerability has been reported by members of the Aivul\
   \ Team from Qihoo 360."
 impacted_packages:
-  - purl: pkg:pypi/tensorflow
-    affected_versions: vers:pypi/<2.3.4
-    fixed_versions: vers:pypi/2.3.4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow
-    affected_versions: vers:pypi/>=2.4.0|<2.4.3
-    fixed_versions: vers:pypi/2.4.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow
-    affected_versions: vers:pypi/2.5.0
-    fixed_versions: vers:pypi/2.5.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:pypi/tensorflow-cpu
     affected_versions: vers:pypi/<2.3.4
     fixed_versions: vers:pypi/2.3.4
@@ -68,6 +53,21 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/tensorflow-gpu
+    affected_versions: vers:pypi/2.5.0
+    fixed_versions: vers:pypi/2.5.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow
+    affected_versions: vers:pypi/<2.3.4
+    fixed_versions: vers:pypi/2.3.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow
+    affected_versions: vers:pypi/>=2.4.0|<2.4.3
+    fixed_versions: vers:pypi/2.4.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow
     affected_versions: vers:pypi/2.5.0
     fixed_versions: vers:pypi/2.5.1
     fixed_in_commits: []
@@ -83,17 +83,17 @@ severities:
   - score: '8.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/08/GHSA-gh6x-4whr-2qv4/GHSA-gh6x-4whr-2qv4.json
   - score: '8.6'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/08/GHSA-gh6x-4whr-2qv4/GHSA-gh6x-4whr-2qv4.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-476

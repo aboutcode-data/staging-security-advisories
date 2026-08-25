@@ -8,25 +8,25 @@ summary: |
   A flaw was discovered in Puppet Agent where the agent may silently ignore Augeas settings or may be vulnerable to a Denial of Service condition prior to the first 'pluginsync'.
 impacted_packages:
   - purl: pkg:gem/puppet
-    affected_versions: vers:gem/>=7.0.0|<7.12.1
-    fixed_versions: vers:gem/7.12.1
+    affected_versions: vers:gem/<6.25.1
+    fixed_versions: vers:gem/6.25.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:gem/puppet
-    affected_versions: vers:gem/<6.25.1
-    fixed_versions: vers:gem/6.25.1
+    affected_versions: vers:gem/>=7.0.0|<7.12.1
+    fixed_versions: vers:gem/7.12.1
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/12/GHSA-q4g7-jrxv-67r9/GHSA-q4g7-jrxv-67r9.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses: []
 references:

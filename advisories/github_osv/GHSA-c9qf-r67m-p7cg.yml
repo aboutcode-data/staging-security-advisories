@@ -19,11 +19,6 @@ summary: "Null pointer dereference in `CompressElement`\n### Impact\nIt is possi
   \ internally and fixed before the report was handled."
 impacted_packages:
   - purl: pkg:pypi/tensorflow
-    affected_versions: vers:pypi/2.5.0
-    fixed_versions: vers:pypi/2.5.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow
     affected_versions: vers:pypi/<2.3.4
     fixed_versions: vers:pypi/2.3.4
     fixed_in_commits: []
@@ -31,6 +26,11 @@ impacted_packages:
   - purl: pkg:pypi/tensorflow
     affected_versions: vers:pypi/>=2.4.0|<2.4.3
     fixed_versions: vers:pypi/2.4.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow
+    affected_versions: vers:pypi/2.5.0
+    fixed_versions: vers:pypi/2.5.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/tensorflow-cpu
@@ -74,17 +74,17 @@ severities:
   - score: '7.7'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/08/GHSA-c9qf-r67m-p7cg/GHSA-c9qf-r67m-p7cg.json
   - score: '7.0'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/08/GHSA-c9qf-r67m-p7cg/GHSA-c9qf-r67m-p7cg.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-476

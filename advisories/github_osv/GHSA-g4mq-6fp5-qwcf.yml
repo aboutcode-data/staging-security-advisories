@@ -7,17 +7,6 @@ summary: |
   Ansible vulnerable to Exposure of Resource to Wrong Sphere and Insecure Temporary File
   A race condition flaw was found in Ansible Engine 2.7.17 and prior, 2.8.9 and prior, 2.9.6 and prior when running a playbook with an unprivileged become user. When Ansible needs to run a module with become user, the temporary directory is created in /var/tmp. This directory is created with "umask 77 && mkdir -p <dir>"; this operation does not fail if the directory already exists and is owned by another user. An attacker could take advantage to gain control of the become user as the target directory can be retrieved by iterating '/proc/<pid>/cmdline'.
 impacted_packages:
-  - purl: pkg:github/ansible/ansible
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/ansible/ansible
-        commit: ecf99d5e1ff732a7777010facd6c98bb0994605e
-      - vcs_url: https://github.com/ansible/ansible
-        commit: 8251d9f4c2bc82632ab992277fcd30ccbf87aa47
-      - vcs_url: https://github.com/ansible/ansible
-        commit: 80b9a0a25c5f75e84aefc8f2b293fb1933b154f2
-    introduced_in_commits: []
   - purl: pkg:pypi/ansible
     affected_versions: vers:pypi/<2.7.17
     fixed_versions: vers:pypi/2.7.17
@@ -33,21 +22,32 @@ impacted_packages:
     fixed_versions: vers:pypi/2.9.7
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:github/ansible/ansible
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/ansible/ansible
+        commit: ecf99d5e1ff732a7777010facd6c98bb0994605e
+      - vcs_url: https://github.com/ansible/ansible
+        commit: 8251d9f4c2bc82632ab992277fcd30ccbf87aa47
+      - vcs_url: https://github.com/ansible/ansible
+        commit: 80b9a0a25c5f75e84aefc8f2b293fb1933b154f2
+    introduced_in_commits: []
 severities:
   - score: '5.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:L/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/04/GHSA-g4mq-6fp5-qwcf/GHSA-g4mq-6fp5-qwcf.json
   - score: '1.0'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:P/VC:L/VI:L/VA:L/SC:L/SI:L/SA:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/04/GHSA-g4mq-6fp5-qwcf/GHSA-g4mq-6fp5-qwcf.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-377

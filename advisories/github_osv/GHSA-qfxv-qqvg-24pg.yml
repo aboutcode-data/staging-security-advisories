@@ -7,6 +7,11 @@ summary: |
   OS Command Injection in im-metadata
   im-metadata through 3.0.1 allows remote attackers to execute arbitrary commands via the "exec" argument. It is possible to inject arbitrary commands as part of the metadata options which is given to the "exec" function.
 impacted_packages:
+  - purl: pkg:npm/im-metadata
+    affected_versions: vers:npm/<=3.0.1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:github/turistforeningen/node-im-metadata
     affected_versions:
     fixed_versions:
@@ -14,21 +19,16 @@ impacted_packages:
       - vcs_url: https://github.com/turistforeningen/node-im-metadata
         commit: ea15dddbe0f65694bfde36b78dd488e90f246639
     introduced_in_commits: []
-  - purl: pkg:npm/im-metadata
-    affected_versions: vers:npm/<=3.0.1
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/04/GHSA-qfxv-qqvg-24pg/GHSA-qfxv-qqvg-24pg.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-78

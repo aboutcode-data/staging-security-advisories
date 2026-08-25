@@ -24,13 +24,13 @@ summary: |
   To report security issues to Rundeck please use the form at [https://rundeck.com/security](https://rundeck.com/security)
 impacted_packages:
   - purl: pkg:maven/org.rundeck/rundeck-core
-    affected_versions: vers:maven/<3.3.14
-    fixed_versions: vers:maven/3.3.14
+    affected_versions: vers:maven/>=3.4.0|<3.4.3
+    fixed_versions: vers:maven/3.4.3
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.rundeck/rundeck-core
-    affected_versions: vers:maven/>=3.4.0|<3.4.3
-    fixed_versions: vers:maven/3.4.3
+    affected_versions: vers:maven/<3.3.14
+    fixed_versions: vers:maven/3.3.14
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/rundeck/rundeck
@@ -44,12 +44,12 @@ severities:
   - score: '7.2'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/09/GHSA-3jmw-c69h-426c/GHSA-3jmw-c69h-426c.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-352

@@ -49,17 +49,32 @@ summary: "Response Splitting from unsanitized headers\n### Impact\n\nhttp4s is v
   \ an issue in [GitHub](http://github.com/http4s/http4s)\n* Contact us via the [http4s security\
   \ policy](https://github.com/http4s/http4s/security/policy)"
 impacted_packages:
+  - purl: pkg:maven/org.http4s/http4s-client_2.12
+    affected_versions: vers:maven/<=0.21.28
+    fixed_versions: vers:maven/0.21.29
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.http4s/http4s-client_2.12
+    affected_versions: vers:maven/<=0.22.4
+    fixed_versions: vers:maven/0.22.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.http4s/http4s-client_2.13
+    affected_versions: vers:maven/<=0.21.28
+    fixed_versions: vers:maven/0.21.29
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:maven/org.http4s/http4s-client_3
-    affected_versions: vers:maven/<=0.21.28
-    fixed_versions: vers:maven/0.21.29
+    affected_versions: vers:maven/<=0.22.4
+    fixed_versions: vers:maven/0.22.5
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/org.http4s/http4s-client_2.12
-    affected_versions: vers:maven/<=0.21.28
-    fixed_versions: vers:maven/0.21.29
+  - purl: pkg:maven/org.http4s/http4s-client_3
+    affected_versions: vers:maven/<=0.23.3
+    fixed_versions: vers:maven/0.23.4
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/org.http4s/http4s-client_2.12
+  - purl: pkg:maven/org.http4s/http4s-server_2.13
     affected_versions: vers:maven/<=0.22.4
     fixed_versions: vers:maven/0.22.5
     fixed_in_commits: []
@@ -70,26 +85,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.http4s/http4s-client_2.13
-    affected_versions: vers:maven/<=0.21.28
-    fixed_versions: vers:maven/0.21.29
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.http4s/http4s-client_2.13
     affected_versions: vers:maven/<=0.22.4
     fixed_versions: vers:maven/0.22.5
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.http4s/http4s-client_2.13
-    affected_versions: vers:maven/<=0.23.3
-    fixed_versions: vers:maven/0.23.4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.http4s/http4s-client_3
-    affected_versions: vers:maven/<=0.22.4
-    fixed_versions: vers:maven/0.22.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.http4s/http4s-client_3
     affected_versions: vers:maven/<=0.23.3
     fixed_versions: vers:maven/0.23.4
     fixed_in_commits: []
@@ -125,11 +125,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.http4s/http4s-server_2.13
-    affected_versions: vers:maven/<=0.22.4
-    fixed_versions: vers:maven/0.22.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.http4s/http4s-server_2.13
     affected_versions: vers:maven/<=0.23.3
     fixed_versions: vers:maven/0.23.4
     fixed_in_commits: []
@@ -149,6 +144,11 @@ impacted_packages:
     fixed_versions: vers:maven/0.23.4
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:maven/org.http4s/http4s-client_3
+    affected_versions: vers:maven/<=0.21.28
+    fixed_versions: vers:maven/0.21.29
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:github/http4s/http4s
     affected_versions:
     fixed_versions:
@@ -160,12 +160,12 @@ severities:
   - score: '8.7'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/09/GHSA-5vcm-3xc3-w7x3/GHSA-5vcm-3xc3-w7x3.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-918

@@ -59,14 +59,14 @@ summary: "Default CORS config allows any origin with credentials\n### Impact\n\n
   \ Open an issue in [GitHub](http://github.com/http4s/http4s)\n* Contact us via the [http4s\
   \ security policy](https://github.com/http4s/http4s/security/policy)"
 impacted_packages:
-  - purl: pkg:maven/org.http4s/http4s-server_2.10
+  - purl: pkg:maven/org.http4s/http4s-server_2.13.0-M5
     affected_versions: vers:maven/<0.21.27
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/org.http4s/http4s-server_2.13.0-M5
+  - purl: pkg:maven/org.http4s/http4s-server_2.13
     affected_versions: vers:maven/<0.21.27
-    fixed_versions:
+    fixed_versions: vers:maven/0.21.27
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.http4s/http4s-server_3
@@ -77,6 +77,11 @@ impacted_packages:
   - purl: pkg:maven/org.http4s/http4s-server_3
     affected_versions: vers:maven/>=0.23.0|<0.23.2
     fixed_versions: vers:maven/0.23.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.http4s/http4s-server_2.10
+    affected_versions: vers:maven/<0.21.27
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.http4s/http4s-server_2.11
@@ -100,11 +105,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.http4s/http4s-server_2.13
-    affected_versions: vers:maven/<0.21.27
-    fixed_versions: vers:maven/0.21.27
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.http4s/http4s-server_2.13
     affected_versions: vers:maven/>=0.22.0|<0.22.3
     fixed_versions: vers:maven/0.22.3
     fixed_in_commits: []
@@ -118,12 +118,12 @@ severities:
   - score: '9.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/09/GHSA-52cf-226f-rhr6/GHSA-52cf-226f-rhr6.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-346

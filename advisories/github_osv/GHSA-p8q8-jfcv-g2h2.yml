@@ -7,6 +7,11 @@ summary: |
   Directory Traversal in Archive_Tar
   In Archive_Tar before 1.4.14, symlinks can refer to targets outside of the extracted archive, a different vulnerability than CVE-2020-36193.
 impacted_packages:
+  - purl: pkg:composer/pear/archive_tar
+    affected_versions: vers:composer/<1.4.14
+    fixed_versions: vers:composer/1.4.14
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:github/pear/archive_tar
     affected_versions:
     fixed_versions:
@@ -16,21 +21,16 @@ impacted_packages:
       - vcs_url: https://github.com/pear/archive_tar
         commit: b5832439b1f37331fb4f87e67fe4f
     introduced_in_commits: []
-  - purl: pkg:composer/pear/archive_tar
-    affected_versions: vers:composer/<1.4.14
-    fixed_versions: vers:composer/1.4.14
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: '7.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/08/GHSA-p8q8-jfcv-g2h2/GHSA-p8q8-jfcv-g2h2.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-59

@@ -19,14 +19,14 @@ summary: |
   https://github.com/netty/netty/blob/netty-4.1.67.Final/codec/src/main/java/io/netty/handler/codec/compression/SnappyFrameDecoder.java#L171
   https://github.com/netty/netty/blob/netty-4.1.67.Final/codec/src/main/java/io/netty/handler/codec/compression/SnappyFrameDecoder.java#L185
 impacted_packages:
-  - purl: pkg:maven/io.netty/netty-codec
-    affected_versions: vers:maven/>=4.0.0|<4.1.68.Final
-    fixed_versions: vers:maven/4.1.68.Final
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:maven/org.jboss.netty/netty
     affected_versions: vers:maven/<4.0.0
     fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/io.netty/netty-codec
+    affected_versions: vers:maven/>=4.0.0|<4.1.68.Final
+    fixed_versions: vers:maven/4.1.68.Final
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/io.netty/netty
@@ -45,12 +45,12 @@ severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/09/GHSA-9vjp-v76f-g363/GHSA-9vjp-v76f-g363.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-400

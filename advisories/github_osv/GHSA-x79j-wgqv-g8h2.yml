@@ -17,6 +17,11 @@ summary: |
   ### References
   * [TYPO3-CORE-SA-2021-004](https://typo3.org/security/advisory/typo3-core-sa-2021-004)
 impacted_packages:
+  - purl: pkg:composer/typo3/cms
+    affected_versions: vers:composer/>=11.0.0|<11.1.1
+    fixed_versions: vers:composer/11.1.1
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:composer/typo3/cms-form
     affected_versions: vers:composer/<=10.4.13
     fixed_versions: vers:composer/10.4.14
@@ -42,21 +47,16 @@ impacted_packages:
     fixed_versions: vers:composer/10.4.14
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/typo3/cms
-    affected_versions: vers:composer/>=11.0.0|<11.1.1
-    fixed_versions: vers:composer/11.1.1
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N/E:F/RL:O/RC:C
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/03/GHSA-x79j-wgqv-g8h2/GHSA-x79j-wgqv-g8h2.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

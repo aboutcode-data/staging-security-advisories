@@ -7,6 +7,11 @@ summary: |
   Improper Restriction of XML External Entity Reference in Plone
   Plone before 5.2.3 allows XXE attacks via a feature that is protected by an unapplied permission of plone.schemaeditor.ManageSchemata (therefore, only available to the Manager role).
 impacted_packages:
+  - purl: pkg:pypi/plone.supermodel
+    affected_versions: vers:pypi/<1.6.3
+    fixed_versions: vers:pypi/1.6.3
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:pypi/plone
     affected_versions: vers:pypi/<5.2.3
     fixed_versions: vers:pypi/5.2.3
@@ -27,26 +32,21 @@ impacted_packages:
     fixed_versions: vers:pypi/2.6.8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:pypi/plone.supermodel
-    affected_versions: vers:pypi/<1.6.3
-    fixed_versions: vers:pypi/1.6.3
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/04/GHSA-2c8c-84w2-j38j/GHSA-2c8c-84w2-j38j.json
   - score: '8.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/04/GHSA-2c8c-84w2-j38j/GHSA-2c8c-84w2-j38j.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-611

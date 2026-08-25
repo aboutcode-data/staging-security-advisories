@@ -7,16 +7,6 @@ summary: |
   Out-of-bounds Read in OpenCV
   An issue was discovered in OpenCV before 3.4.7 and 4.x before 4.1.1 (OpenCV-Python before 3.4.7.28 and 4.x before 4.1.1.26). There is an out of bounds read in the function cv::predictOrdered<cv::HaarEvaluator> in modules/objdetect/src/cascadedetect.hpp, which leads to denial of service.
 impacted_packages:
-  - purl: pkg:pypi/opencv-python
-    affected_versions: vers:pypi/<=3.4.6.27
-    fixed_versions: vers:pypi/3.4.7.28
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/opencv-python
-    affected_versions: vers:pypi/<=4.1.0.25
-    fixed_versions: vers:pypi/4.1.1.26
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:pypi/opencv-python-headless
     affected_versions: vers:pypi/<=3.4.6.27
     fixed_versions: vers:pypi/3.4.7.28
@@ -27,12 +17,7 @@ impacted_packages:
     fixed_versions: vers:pypi/4.1.1.26
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:pypi/opencv-contrib-python
-    affected_versions: vers:pypi/<=3.4.6.27
-    fixed_versions: vers:pypi/3.4.7.28
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/opencv-contrib-python
+  - purl: pkg:pypi/opencv-contrib-python-headless
     affected_versions: vers:pypi/<=4.1.0.25
     fixed_versions: vers:pypi/4.1.1.26
     fixed_in_commits: []
@@ -42,21 +27,36 @@ impacted_packages:
     fixed_versions: vers:pypi/3.4.7.28
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:pypi/opencv-contrib-python-headless
+  - purl: pkg:pypi/opencv-python
+    affected_versions: vers:pypi/<=3.4.6.27
+    fixed_versions: vers:pypi/3.4.7.28
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/opencv-python
+    affected_versions: vers:pypi/<=4.1.0.25
+    fixed_versions: vers:pypi/4.1.1.26
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/opencv-contrib-python
+    affected_versions: vers:pypi/<=3.4.6.27
+    fixed_versions: vers:pypi/3.4.7.28
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/opencv-contrib-python
     affected_versions: vers:pypi/<=4.1.0.25
     fixed_versions: vers:pypi/4.1.1.26
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '8.2'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/10/GHSA-fm39-cw8h-3p63/GHSA-fm39-cw8h-3p63.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-125
