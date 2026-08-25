@@ -7,11 +7,6 @@ summary: |
   Missing Access Check
   Extbase request handling fails to implement a proper access check for requested controller/ action combinations, which makes it possible for an attacker to execute arbitrary Extbase actions by crafting a special request. To successfully exploit this vulnerability, an attacker must have access to at least one Extbase plugin or module action in a TYPO3 installation. The missing access check inevitably leads to information disclosure or remote code execution, depending on the action that an attacker is able to execute.
 impacted_packages:
-  - purl: pkg:composer/typo3/cms
-    affected_versions: vers:composer/>=4.3.0-alpha|<6.2.24|>=7.0.0-alpha|<7.6.8|>=8.0.0-alpha|<8.1.1
-    fixed_versions: vers:composer/6.2.24|7.6.8|8.1.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/typo3/typo3.cms
     affected_versions:
     fixed_versions:
@@ -22,6 +17,11 @@ impacted_packages:
         commit: 21ed4054212babb7ec75d80a24f95c6ba25bd2fb
       - vcs_url: https://github.com/typo3/typo3.cms
         commit: 404f09d491c96b294ded5e2741277dfbeba92807
+    introduced_in_commits: []
+  - purl: pkg:composer/typo3/cms
+    affected_versions: vers:composer/>=4.3.0-alpha|<6.2.24|>=7.0.0-alpha|<7.6.8|>=8.0.0-alpha|<8.1.1
+    fixed_versions: vers:composer/6.2.24|7.6.8|8.1.1
+    fixed_in_commits: []
     introduced_in_commits: []
 severities: []
 weaknesses: []
