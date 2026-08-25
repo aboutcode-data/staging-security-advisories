@@ -7,17 +7,17 @@ summary: |
   Denial of Service in node-static
   All versions of node-static are vulnerable to a Denial of Service. The package fails to catch an exception when user input includes null bytes. This allows attackers to access `http://host/%00` and crash the server.
 impacted_packages:
-  - purl: pkg:npm/node-static
-    affected_versions: vers:npm/<=0.7.11
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/cloudhead/node-static
     affected_versions:
     fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/cloudhead/node-static
         commit: 643a528ec7bbd05a59c4030655d94810570afb3f
+    introduced_in_commits: []
+  - purl: pkg:npm/node-static
+    affected_versions: vers:npm/<=0.7.11
+    fixed_versions:
+    fixed_in_commits: []
     introduced_in_commits: []
 severities: []
 weaknesses:
