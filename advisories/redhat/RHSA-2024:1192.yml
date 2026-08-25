@@ -23,9 +23,24 @@ summary: |
 
   For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.
 impacted_packages:
-  - purl: pkg:rpm/redhat/eap8-wildfly?arch=noarch
+  - purl: pkg:rpm/redhat/eap8-apache-sshd?arch=src
+    affected_versions: vers:rpm/<2.12.0-1.redhat_00001.1.el8eap
+    fixed_versions: vers:rpm/2.12.0-1.redhat_00001.1.el8eap
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/eap8-log4j?arch=src
+    affected_versions: vers:rpm/<2.19.0-2.redhat_00001.1.el8eap
+    fixed_versions: vers:rpm/2.19.0-2.redhat_00001.1.el8eap
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/eap8-wildfly?arch=src
     affected_versions: vers:rpm/<8.0.1-3.GA_redhat_00002.1.el8eap
     fixed_versions: vers:rpm/8.0.1-3.GA_redhat_00002.1.el8eap
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/eap8-lucene-queryparser?arch=noarch
+    affected_versions: vers:rpm/<8.11.2-2.redhat_00001.1.el8eap
+    fixed_versions: vers:rpm/8.11.2-2.redhat_00001.1.el8eap
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/eap8-wildfly-java-jdk11?arch=noarch
@@ -43,11 +58,6 @@ impacted_packages:
     fixed_versions: vers:rpm/8.0.1-3.GA_redhat_00002.1.el8eap
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/eap8-apache-sshd?arch=src
-    affected_versions: vers:rpm/<2.12.0-1.redhat_00001.1.el8eap
-    fixed_versions: vers:rpm/2.12.0-1.redhat_00001.1.el8eap
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/eap8-eclipse-jgit?arch=src
     affected_versions: vers:rpm/<6.6.1.202309021850-1.r_redhat_00001.1.el8eap
     fixed_versions: vers:rpm/6.6.1.202309021850-1.r_redhat_00001.1.el8eap
@@ -61,16 +71,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/eap8-lucene-solr?arch=src
     affected_versions: vers:rpm/<8.11.2-2.redhat_00001.1.el8eap
     fixed_versions: vers:rpm/8.11.2-2.redhat_00001.1.el8eap
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/eap8-log4j?arch=src
-    affected_versions: vers:rpm/<2.19.0-2.redhat_00001.1.el8eap
-    fixed_versions: vers:rpm/2.19.0-2.redhat_00001.1.el8eap
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/eap8-wildfly?arch=src
-    affected_versions: vers:rpm/<8.0.1-3.GA_redhat_00002.1.el8eap
-    fixed_versions: vers:rpm/8.0.1-3.GA_redhat_00002.1.el8eap
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/eap8-apache-sshd?arch=noarch
@@ -113,11 +113,6 @@ impacted_packages:
     fixed_versions: vers:rpm/8.11.2-2.redhat_00001.1.el8eap
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/eap8-lucene-queryparser?arch=noarch
-    affected_versions: vers:rpm/<8.11.2-2.redhat_00001.1.el8eap
-    fixed_versions: vers:rpm/8.11.2-2.redhat_00001.1.el8eap
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/eap8-lucene-solr?arch=noarch
     affected_versions: vers:rpm/<8.11.2-2.redhat_00001.1.el8eap
     fixed_versions: vers:rpm/8.11.2-2.redhat_00001.1.el8eap
@@ -128,11 +123,16 @@ impacted_packages:
     fixed_versions: vers:rpm/2.19.0-2.redhat_00001.1.el8eap
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/eap8-wildfly?arch=noarch
+    affected_versions: vers:rpm/<8.0.1-3.GA_redhat_00002.1.el8eap
+    fixed_versions: vers:rpm/8.0.1-3.GA_redhat_00002.1.el8eap
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: Moderate
     scoring_system: rhas
     scoring_elements:
-    published_at: None
+    published_at:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2024_1192.json
 weaknesses: []
 references:
