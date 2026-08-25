@@ -11,11 +11,6 @@ summary: |
   ### Explanation of the vulnerability
   Few endpoints in Umbraco Management API was not protected by a specific section. These just required you to be authenticated. Due to the fact that a member is also just authenticated, it was possible to get info from these endpoints using a member token.
 impacted_packages:
-  - purl: pkg:nuget/Umbraco.Cms
-    affected_versions: vers:nuget/>=14.0.0|<14.1.2
-    fixed_versions: vers:nuget/14.1.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/umbraco/umbraco-cms
     affected_versions:
     fixed_versions:
@@ -23,21 +18,26 @@ impacted_packages:
       - vcs_url: https://github.com/umbraco/umbraco-cms
         commit: 72bef8861d94a39d5cc9530a04c4797b91fcbecf
     introduced_in_commits: []
+  - purl: pkg:nuget/Umbraco.Cms
+    affected_versions: vers:nuget/>=14.0.0|<14.1.2
+    fixed_versions: vers:nuget/14.1.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/08/GHSA-hrww-x3fq-xcvh/GHSA-hrww-x3fq-xcvh.json
   - score: '6.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/08/GHSA-hrww-x3fq-xcvh/GHSA-hrww-x3fq-xcvh.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-284

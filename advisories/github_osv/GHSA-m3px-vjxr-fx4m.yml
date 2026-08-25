@@ -9,13 +9,13 @@ summary: "Filament Excel Vulnerable to Path Traversal Attack on Export Download 
   \ Version v2.3.3\n\n### Credits\nThanks to Kevin Pohl for reporting this."
 impacted_packages:
   - purl: pkg:composer/pxlrbt/filament-excel
-    affected_versions: vers:composer/>=2.0.0-alpha|<2.3.3
-    fixed_versions: vers:composer/2.3.3
+    affected_versions: vers:composer/<1.1.14
+    fixed_versions: vers:composer/1.1.14
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/pxlrbt/filament-excel
-    affected_versions: vers:composer/<1.1.14
-    fixed_versions: vers:composer/1.1.14
+    affected_versions: vers:composer/>=2.0.0-alpha|<2.3.3
+    fixed_versions: vers:composer/2.3.3
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/pxlrbt/filament-excel
@@ -31,17 +31,17 @@ severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/08/GHSA-m3px-vjxr-fx4m/GHSA-m3px-vjxr-fx4m.json
   - score: '8.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/08/GHSA-m3px-vjxr-fx4m/GHSA-m3px-vjxr-fx4m.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

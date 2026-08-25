@@ -21,6 +21,11 @@ summary: "XXE in PHPSpreadsheet encoding is returned\n### Summary\nBypassing the
   \ you can use php-wrappers into xxe, some php:// wrapper payload allows fetch local files.\n\
   \n### Impact\nRead local files\n![lfi](https://github.com/PHPOffice/PhpSpreadsheet/assets/95242087/1839cddb-6bb0-486d-8884-9ac485776931)"
 impacted_packages:
+  - purl: pkg:composer/phpoffice/phpexcel
+    affected_versions: vers:composer/<=1.8.2
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:composer/phpoffice/phpspreadsheet
     affected_versions: vers:composer/<1.29.1
     fixed_versions: vers:composer/1.29.1
@@ -36,11 +41,6 @@ impacted_packages:
     fixed_versions: vers:composer/2.1.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/phpoffice/phpexcel
-    affected_versions: vers:composer/<=1.8.2
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/phpoffice/phpspreadsheet
     affected_versions:
     fixed_versions:
@@ -52,17 +52,17 @@ severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/08/GHSA-ghg6-32f9-2jp7/GHSA-ghg6-32f9-2jp7.json
   - score: '8.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/08/GHSA-ghg6-32f9-2jp7/GHSA-ghg6-32f9-2jp7.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-611

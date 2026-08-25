@@ -9,13 +9,6 @@ summary: |
 
   An attacker can leverage this flaw to gradually erode available memory to the point where the host crashes for lack of resources. Upon restart the attacker would have to begin again, but nevertheless there is the potential to deny service.
 impacted_packages:
-  - purl: pkg:github/golang-fips/openssl
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/golang-fips/openssl
-        commit: 85d31d0d257ce842c8a1e63c4d230ae850348136
-    introduced_in_commits: []
   - purl: pkg:github/microsoft/go-crypto-openssl
     affected_versions:
     fixed_versions:
@@ -23,16 +16,23 @@ impacted_packages:
       - vcs_url: https://github.com/microsoft/go-crypto-openssl
         commit: 104fe7f6912788d2ad44602f77a0a0a62f1f259f
     introduced_in_commits: []
+  - purl: pkg:github/golang-fips/openssl
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/golang-fips/openssl
+        commit: 85d31d0d257ce842c8a1e63c4d230ae850348136
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/03/GHSA-78hx-gp6g-7mj6/GHSA-78hx-gp6g-7mj6.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-400

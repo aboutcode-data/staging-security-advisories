@@ -19,6 +19,11 @@ summary: |
   Users operating versions prior to those listed above should upgrade to the aforementioned patched versions or newer versions. Additionally, it's imperative to recognize that the Apache Pulsar Proxy is not intended for direct exposure to the internet. The architectural design of Pulsar Proxy assumes that it will operate within a secured network environment, safeguarded by appropriate perimeter defenses.
 impacted_packages:
   - purl: pkg:maven/org.apache.pulsar/pulsar-proxy
+    affected_versions: vers:maven/>=3.1.0|<3.1.1
+    fixed_versions: vers:maven/3.1.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.pulsar/pulsar-proxy
     affected_versions: vers:maven/<=2.10.5
     fixed_versions: vers:maven/2.10.6
     fixed_in_commits: []
@@ -33,21 +38,16 @@ impacted_packages:
     fixed_versions: vers:maven/3.0.2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/org.apache.pulsar/pulsar-proxy
-    affected_versions: vers:maven/>=3.1.0|<3.1.1
-    fixed_versions: vers:maven/3.1.1
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: '8.2'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/03/GHSA-c35h-w8hj-mm55/GHSA-c35h-w8hj-mm55.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-306

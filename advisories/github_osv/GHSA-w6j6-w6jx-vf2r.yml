@@ -7,16 +7,6 @@ summary: |
   Concrete CMS Stored XSS in getAttributeSetName
   Concrete CMS versions 9 through 9.3.2 and below 8.5.18 are vulnerable to Stored XSS in getAttributeSetName().  A rogue administrator could inject malicious code.
 impacted_packages:
-  - purl: pkg:composer/concrete5/concrete5
-    affected_versions: vers:composer/<8.5.18
-    fixed_versions: vers:composer/8.5.18
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/concrete5/concrete5
-    affected_versions: vers:composer/>=9.0.0|<9.3.3
-    fixed_versions: vers:composer/9.3.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/concretecms/concretecms
     affected_versions:
     fixed_versions:
@@ -28,21 +18,31 @@ impacted_packages:
       - vcs_url: https://github.com/concretecms/concretecms
         commit: 3a5974e94892c43388c3529e57a140bf2967c734
     introduced_in_commits: []
+  - purl: pkg:composer/concrete5/concrete5
+    affected_versions: vers:composer/<8.5.18
+    fixed_versions: vers:composer/8.5.18
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/concrete5/concrete5
+    affected_versions: vers:composer/>=9.0.0|<9.3.3
+    fixed_versions: vers:composer/9.3.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '2.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/08/GHSA-w6j6-w6jx-vf2r/GHSA-w6j6-w6jx-vf2r.json
   - score: '4.6'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:A/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/08/GHSA-w6j6-w6jx-vf2r/GHSA-w6j6-w6jx-vf2r.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-20

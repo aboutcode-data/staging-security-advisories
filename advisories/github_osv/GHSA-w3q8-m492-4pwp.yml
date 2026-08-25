@@ -52,32 +52,12 @@ summary: |
   ### Credits
   This issue was discovered in City of Helsinki's security audit against Decidim 0.27 done during September 2023. The security audit was implemented by [Deloitte Finland](https://www2.deloitte.com/fi/fi.html).
 impacted_packages:
-  - purl: pkg:gem/decidim-system
-    affected_versions: vers:gem/>=0.27.0|<0.27.5
-    fixed_versions: vers:gem/0.27.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:gem/decidim-admin
+  - purl: pkg:gem/decidim
     affected_versions: vers:gem/>=0.0.1.alpha3|<0.26.9
     fixed_versions: vers:gem/0.26.9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:gem/decidim-system
-    affected_versions: vers:gem/>=0.0.1.alpha3|<0.26.9
-    fixed_versions: vers:gem/0.26.9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:gem/decidim
-    affected_versions: vers:gem/>=0.27.0|<0.27.5
-    fixed_versions: vers:gem/0.27.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:gem/decidim-admin
-    affected_versions: vers:gem/>=0.27.0|<0.27.5
-    fixed_versions: vers:gem/0.27.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:gem/decidim
     affected_versions: vers:gem/>=0.0.1.alpha3|<0.26.9
     fixed_versions: vers:gem/0.26.9
     fixed_in_commits: []
@@ -86,6 +66,35 @@ impacted_packages:
     affected_versions: vers:gem/>=0.4.rc3|<2.0.9
     fixed_versions: vers:gem/2.0.9
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:gem/decidim-admin
+    affected_versions: vers:gem/>=0.27.0|<0.27.5
+    fixed_versions: vers:gem/0.27.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:gem/decidim-system
+    affected_versions: vers:gem/>=0.27.0|<0.27.5
+    fixed_versions: vers:gem/0.27.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:gem/decidim-admin
+    affected_versions: vers:gem/>=0.0.1.alpha3|<0.26.9
+    fixed_versions: vers:gem/0.26.9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:gem/decidim
+    affected_versions: vers:gem/>=0.27.0|<0.27.5
+    fixed_versions: vers:gem/0.27.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/scambra/devise_invitable
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/scambra/devise_invitable
+        commit: 41f58970ff76fb64382a9b9ea1bd530f7c3adab2
+      - vcs_url: https://github.com/scambra/devise_invitable
+        commit: 94d859c7de0829bf63f679ae5dd3cab2b866a098
     introduced_in_commits: []
   - purl: pkg:github/decidim/decidim
     affected_versions:
@@ -98,25 +107,16 @@ impacted_packages:
       - vcs_url: https://github.com/decidim/decidim
         commit: d2d390578050772d1bdb6d731395f1afc39dcbfc
     introduced_in_commits: []
-  - purl: pkg:github/scambra/devise_invitable
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/scambra/devise_invitable
-        commit: 41f58970ff76fb64382a9b9ea1bd530f7c3adab2
-      - vcs_url: https://github.com/scambra/devise_invitable
-        commit: 94d859c7de0829bf63f679ae5dd3cab2b866a098
-    introduced_in_commits: []
 severities:
   - score: '5.7'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/02/GHSA-w3q8-m492-4pwp/GHSA-w3q8-m492-4pwp.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-672

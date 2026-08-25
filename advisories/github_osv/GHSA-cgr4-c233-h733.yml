@@ -15,11 +15,6 @@ summary: "UnoPim Stored XSS : Cookie hijacking through Create User function\n###
   \n### Impact\nThe stored XSS can lead to session hijacking and privilege escalation, effectively\
   \ bypassing any CSRF protections in place."
 impacted_packages:
-  - purl: pkg:composer/unopim/unopim
-    affected_versions: vers:composer/<0.1.5
-    fixed_versions: vers:composer/0.1.5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/unopim/unopim
     affected_versions:
     fixed_versions:
@@ -27,21 +22,26 @@ impacted_packages:
       - vcs_url: https://github.com/unopim/unopim
         commit: 9a0da7a0892c60f58df2351b5a9498dcb4cb8b7a
     introduced_in_commits: []
+  - purl: pkg:composer/unopim/unopim
+    affected_versions: vers:composer/<0.1.5
+    fixed_versions: vers:composer/0.1.5
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/11/GHSA-cgr4-c233-h733/GHSA-cgr4-c233-h733.json
   - score: '6.9'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/11/GHSA-cgr4-c233-h733/GHSA-cgr4-c233-h733.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-616

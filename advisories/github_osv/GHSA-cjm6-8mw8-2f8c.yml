@@ -7,11 +7,6 @@ summary: |
   Magento Improper Authorization vulnerability
   Magento versions 2.4.7-p1, 2.4.6-p6, 2.4.5-p8, 2.4.4-p9 and earlier are affected by an Improper Authorization vulnerability that could result in a Security feature bypass. A low-privileged attacker could leverage this vulnerability to bypass security measures and modify minor information. Exploitation of this issue does not require user interaction.
 impacted_packages:
-  - purl: pkg:composer/magento/community-edition
-    affected_versions: vers:composer/>=2.4.4-p1|<2.4.4-p10
-    fixed_versions: vers:composer/2.4.4-p10
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:composer/magento/project-community-edition
     affected_versions: vers:composer/<=2.0.2
     fixed_versions:
@@ -30,6 +25,11 @@ impacted_packages:
   - purl: pkg:composer/magento/community-edition
     affected_versions: vers:composer/>=2.4.5-p1|<2.4.5-p9
     fixed_versions: vers:composer/2.4.5-p9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/magento/community-edition
+    affected_versions: vers:composer/>=2.4.4-p1|<2.4.4-p10
+    fixed_versions: vers:composer/2.4.4-p10
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/magento/community-edition
@@ -56,12 +56,12 @@ severities:
   - score: '4.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/08/GHSA-cjm6-8mw8-2f8c/GHSA-cjm6-8mw8-2f8c.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-285

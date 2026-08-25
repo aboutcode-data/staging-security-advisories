@@ -23,6 +23,13 @@ summary: "WiX based installers are vulnerable to binary hijack when run as SYSTE
   \ is an Elevation of Privilege Vulnerability where a low privileged user can hijack binaries\
   \ in an unprotected path C:\\Windows\\Temp to elevate to the SYSTEM user privileges."
 impacted_packages:
+  - purl: pkg:github/wixtoolset/wix3
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/wixtoolset/wix3
+        commit: 6d372e5169f1a334a395cdf496443bc0732098e9
+    introduced_in_commits: []
   - purl: pkg:nuget/wix
     affected_versions: vers:nuget/<3.14.1
     fixed_versions: vers:nuget/3.14.1
@@ -45,23 +52,16 @@ impacted_packages:
       - vcs_url: https://github.com/wixtoolset/wix
         commit: 75a8c75d4e02ea219008dc5af7d03869291d61f7
     introduced_in_commits: []
-  - purl: pkg:github/wixtoolset/wix3
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/wixtoolset/wix3
-        commit: 6d372e5169f1a334a395cdf496443bc0732098e9
-    introduced_in_commits: []
 severities:
   - score: '7.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/03/GHSA-rf39-3f98-xr7r/GHSA-rf39-3f98-xr7r.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-732

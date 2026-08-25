@@ -9,6 +9,17 @@ summary: |
 
   Users are recommended to upgrade to version 3.9.2, 3.8.4 which fixes the issue.
 impacted_packages:
+  - purl: pkg:github/apache/zookeeper
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/zookeeper
+        commit: 65b91d2d9a56157285c2a86b106e67c26520b01d
+      - vcs_url: https://github.com/apache/zookeeper
+        commit: 29c7b9462681f47c2ac12e609341cf9f52abac5c
+      - vcs_url: https://github.com/apache/zookeeper
+        commit: daf7cfd04005cff1a4f7cab5ab13d41db88d0cd8
+    introduced_in_commits: []
   - purl: pkg:maven/org.apache.zookeeper/zookeeper
     affected_versions: vers:maven/<=3.8.3
     fixed_versions: vers:maven/3.8.4
@@ -24,27 +35,16 @@ impacted_packages:
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/apache/zookeeper
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/apache/zookeeper
-        commit: 65b91d2d9a56157285c2a86b106e67c26520b01d
-      - vcs_url: https://github.com/apache/zookeeper
-        commit: 29c7b9462681f47c2ac12e609341cf9f52abac5c
-      - vcs_url: https://github.com/apache/zookeeper
-        commit: daf7cfd04005cff1a4f7cab5ab13d41db88d0cd8
-    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/03/GHSA-r978-9m6m-6gm6/GHSA-r978-9m6m-6gm6.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

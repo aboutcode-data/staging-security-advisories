@@ -21,13 +21,13 @@ summary: "Composer code execution and possible privilege escalation via compromi
   composer install --no-scripts --no-plugins\n```"
 impacted_packages:
   - purl: pkg:composer/composer/composer
-    affected_versions: vers:composer/>=2.0.0-alpha1|<2.2.23
-    fixed_versions: vers:composer/2.2.23
+    affected_versions: vers:composer/>=2.3.0-rc1|<2.7.0
+    fixed_versions: vers:composer/2.7.0
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/composer/composer
-    affected_versions: vers:composer/>=2.3.0-rc1|<2.7.0
-    fixed_versions: vers:composer/2.7.0
+    affected_versions: vers:composer/>=2.0.0-alpha1|<2.2.23
+    fixed_versions: vers:composer/2.2.23
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/composer/composer
@@ -43,12 +43,12 @@ severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/02/GHSA-7c6p-848j-wh5h/GHSA-7c6p-848j-wh5h.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-829

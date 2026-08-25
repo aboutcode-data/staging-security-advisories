@@ -8,6 +8,11 @@ summary: |
   A vulnerability was found in Moodle. Users with access to delete audiences from reports could delete audiences from other reports that they do not have permission to delete from.
 impacted_packages:
   - purl: pkg:composer/moodle/moodle
+    affected_versions: vers:composer/>=4.4.0|<4.4.4
+    fixed_versions: vers:composer/4.4.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/moodle/moodle
     affected_versions: vers:composer/<4.1.14
     fixed_versions: vers:composer/4.1.14
     fixed_in_commits: []
@@ -22,21 +27,16 @@ impacted_packages:
     fixed_versions: vers:composer/4.3.8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/>=4.4.0|<4.4.4
-    fixed_versions: vers:composer/4.4.4
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/11/GHSA-fjq9-452g-jg3q/GHSA-fjq9-452g-jg3q.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-862

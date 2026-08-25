@@ -18,16 +18,6 @@ summary: |
   To retain compatibility with older versions of Remoting in combination with the plugins listed above, `ClassLoaderProxy#fetchJar` is retained and otherwise unused, just deprecated. Its implementation in Jenkins 2.471, LTS 2.452.4, LTS 2.462.1 was changed so that it is now limited to retrieving jar files referenced in the core classloader or any plugin classloader.
 impacted_packages:
   - purl: pkg:maven/org.jenkins-ci.main/remoting
-    affected_versions: vers:maven/<3206.3208
-    fixed_versions: vers:maven/3206.3208
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.jenkins-ci.main/remoting
-    affected_versions: vers:maven/>=3248|<3248.3250
-    fixed_versions: vers:maven/3248.3250
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.jenkins-ci.main/remoting
     affected_versions: vers:maven/>=3256|<3256.3258
     fixed_versions: vers:maven/3256.3258
     fixed_in_commits: []
@@ -35,6 +25,27 @@ impacted_packages:
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
     affected_versions: vers:maven/<2.452.4
     fixed_versions: vers:maven/2.452.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/jenkinsci/remoting
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/jenkinsci/remoting
+        commit: 3277a8e88c9b807b9a989bd7e9176d2ec9834e47
+      - vcs_url: https://github.com/jenkinsci/remoting
+        commit: 858f3c9af69d4d216b26551ea51dde6e67479bb3
+      - vcs_url: https://github.com/jenkinsci/remoting
+        commit: 409508a675ffc4ed9681e30bb46c8d9cb375b78c
+    introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.main/remoting
+    affected_versions: vers:maven/<3206.3208
+    fixed_versions: vers:maven/3206.3208
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.main/remoting
+    affected_versions: vers:maven/>=3248|<3248.3250
+    fixed_versions: vers:maven/3248.3250
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
@@ -58,32 +69,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/jenkins
         commit: cec49ce5d58048f66ac3fa88409a0d38dec09bf0
     introduced_in_commits: []
-  - purl: pkg:github/jenkinsci/remoting
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/jenkinsci/remoting
-        commit: 3277a8e88c9b807b9a989bd7e9176d2ec9834e47
-      - vcs_url: https://github.com/jenkinsci/remoting
-        commit: 858f3c9af69d4d216b26551ea51dde6e67479bb3
-      - vcs_url: https://github.com/jenkinsci/remoting
-        commit: 409508a675ffc4ed9681e30bb46c8d9cb375b78c
-    introduced_in_commits: []
 severities:
   - score: '9.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/08/GHSA-h856-ffvv-xvr4/GHSA-h856-ffvv-xvr4.json
   - score: '7.1'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:N/SC:H/SI:H/SA:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/08/GHSA-h856-ffvv-xvr4/GHSA-h856-ffvv-xvr4.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-754

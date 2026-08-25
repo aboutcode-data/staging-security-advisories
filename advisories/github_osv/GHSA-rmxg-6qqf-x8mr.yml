@@ -14,11 +14,6 @@ summary: |
   ### Impact
   Port scan internal hosts, and request information from internal hosts.
 impacted_packages:
-  - purl: pkg:pypi/geonode
-    affected_versions: vers:pypi/>=3.2.0|<4.2.0
-    fixed_versions: vers:pypi/4.2.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/geonode/geonode
     affected_versions:
     fixed_versions:
@@ -26,16 +21,21 @@ impacted_packages:
       - vcs_url: https://github.com/geonode/geonode
         commit: a9eebae80cb362009660a1fd49e105e7cdb499b9
     introduced_in_commits: []
+  - purl: pkg:pypi/geonode
+    affected_versions: vers:pypi/>=3.2.0|<4.2.0
+    fixed_versions: vers:pypi/4.2.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/11/GHSA-rmxg-6qqf-x8mr/GHSA-rmxg-6qqf-x8mr.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-918

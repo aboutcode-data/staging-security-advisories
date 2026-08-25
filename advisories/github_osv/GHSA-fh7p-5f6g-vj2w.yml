@@ -79,11 +79,6 @@ summary: |
   https://osgeo-org.atlassian.net/browse/GEOS-11148
   https://github.com/geoserver/geoserver/pull/7161
 impacted_packages:
-  - purl: pkg:maven/org.geoserver/gs-restconfig
-    affected_versions: vers:maven/<2.23.3
-    fixed_versions: vers:maven/2.23.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/geoserver/geoserver
     affected_versions:
     fixed_versions:
@@ -91,16 +86,21 @@ impacted_packages:
       - vcs_url: https://github.com/geoserver/geoserver
         commit: 7db985738ff2422019ccac974cf547bae5770cad
     introduced_in_commits: []
+  - purl: pkg:maven/org.geoserver/gs-restconfig
+    affected_versions: vers:maven/<2.23.3
+    fixed_versions: vers:maven/2.23.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/03/GHSA-fh7p-5f6g-vj2w/GHSA-fh7p-5f6g-vj2w.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

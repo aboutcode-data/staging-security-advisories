@@ -7,11 +7,6 @@ summary: |
   Moodle IDOR when accessing list of course badges
   A vulnerability was found in Moodle. Additional checks are required to ensure users can only fetch the list of course badges for courses that they are intended to have access to.
 impacted_packages:
-  - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/>=4.4.0-beta|<4.4.3
-    fixed_versions: vers:composer/4.4.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/moodle/moodle
     affected_versions:
     fixed_versions:
@@ -19,21 +14,26 @@ impacted_packages:
       - vcs_url: https://github.com/moodle/moodle
         commit: 07ad4b8ebc715056056e01f2175820bfce6b290f
     introduced_in_commits: []
+  - purl: pkg:composer/moodle/moodle
+    affected_versions: vers:composer/>=4.4.0-beta|<4.4.3
+    fixed_versions: vers:composer/4.4.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/11/GHSA-r4xr-m393-778m/GHSA-r4xr-m393-778m.json
   - score: '5.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/11/GHSA-r4xr-m393-778m/GHSA-r4xr-m393-778m.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-639

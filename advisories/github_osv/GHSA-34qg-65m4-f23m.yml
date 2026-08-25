@@ -31,11 +31,6 @@ summary: |
   Please consider using passwordless unix socket authentication. Current versions of MySQL, MariaDB and Percona allow completely removing/omitting database passwords for database connections going through a unix socket, this works even for use cases where the database user has a different name than the system account running the database client:
   https://dev.mysql.com/doc/refman/5.7/en/socket-pluggable-authentication.html
 impacted_packages:
-  - purl: pkg:composer/froxlor/froxlor
-    affected_versions: vers:composer/<=2.2.0-rc3
-    fixed_versions: vers:composer/2.2.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/froxlor/froxlor
     affected_versions:
     fixed_versions:
@@ -43,21 +38,26 @@ impacted_packages:
       - vcs_url: https://github.com/froxlor/froxlor
         commit: 5d2ce4ecfb0e9c397ef5c73b107fb9a0e122e910
     introduced_in_commits: []
+  - purl: pkg:composer/froxlor/froxlor
+    affected_versions: vers:composer/<=2.2.0-rc3
+    fixed_versions: vers:composer/2.2.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/08/GHSA-34qg-65m4-f23m/GHSA-34qg-65m4-f23m.json
   - score: '8.4'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/08/GHSA-34qg-65m4-f23m/GHSA-34qg-65m4-f23m.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-732

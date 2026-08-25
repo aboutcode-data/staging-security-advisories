@@ -10,25 +10,25 @@ summary: |
   This issue affects Apache Superset: before 3.0.4, from 3.1.0 before 3.1.1.Users are recommended to upgrade to version 3.1.1, which fixes the issue.
 impacted_packages:
   - purl: pkg:pypi/apache-superset
-    affected_versions: vers:pypi/<=3.0.3
-    fixed_versions: vers:pypi/3.0.4
+    affected_versions: vers:pypi/>=3.1.0|<3.1.1
+    fixed_versions: vers:pypi/3.1.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/apache-superset
-    affected_versions: vers:pypi/>=3.1.0|<3.1.1
-    fixed_versions: vers:pypi/3.1.1
+    affected_versions: vers:pypi/<=3.0.3
+    fixed_versions: vers:pypi/3.0.4
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/02/GHSA-3v9r-885j-762g/GHSA-3v9r-885j-762g.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-863

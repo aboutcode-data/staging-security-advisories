@@ -13,11 +13,6 @@ summary: "aiosmtpd vulnerable to SMTP smuggling\n### Summary\naiosmtpd is vulner
   \ official website https://smtpsmuggling.com/)  \n\n### Impact\nWith the right SMTP server\
   \ constellation, an attacker can send spoofed e-mails to inbound/receiving aiosmtpd instances."
 impacted_packages:
-  - purl: pkg:pypi/aiosmtpd
-    affected_versions: vers:pypi/<1.4.5
-    fixed_versions: vers:pypi/1.4.5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/aio-libs/aiosmtpd
     affected_versions:
     fixed_versions:
@@ -25,16 +20,21 @@ impacted_packages:
       - vcs_url: https://github.com/aio-libs/aiosmtpd
         commit: 24b6c79c8921cf1800e27ca144f4f37023982bbb
     introduced_in_commits: []
+  - purl: pkg:pypi/aiosmtpd
+    affected_versions: vers:pypi/<1.4.5
+    fixed_versions: vers:pypi/1.4.5
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/03/GHSA-pr2m-px7j-xg65/GHSA-pr2m-px7j-xg65.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-345

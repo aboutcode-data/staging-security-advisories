@@ -8,13 +8,13 @@ summary: |
   An issue was discovered in Django 5.0 before 5.0.8 and 4.2 before 4.2.15. The floatformat template filter is subject to significant memory consumption when given a string representation of a number in scientific notation with a large exponent.
 impacted_packages:
   - purl: pkg:pypi/django
-    affected_versions: vers:pypi/>=5.0|<5.0.8
-    fixed_versions: vers:pypi/5.0.8
+    affected_versions: vers:pypi/>=4.2|<4.2.15
+    fixed_versions: vers:pypi/4.2.15
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/django
-    affected_versions: vers:pypi/>=4.2|<4.2.15
-    fixed_versions: vers:pypi/4.2.15
+    affected_versions: vers:pypi/>=5.0|<5.0.8
+    fixed_versions: vers:pypi/5.0.8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/django/django
@@ -30,17 +30,17 @@ severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/08/GHSA-jh75-99hh-qvx9/GHSA-jh75-99hh-qvx9.json
   - score: '6.9'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/08/GHSA-jh75-99hh-qvx9/GHSA-jh75-99hh-qvx9.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-400
