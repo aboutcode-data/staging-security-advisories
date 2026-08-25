@@ -26,16 +26,6 @@ summary: |
 
   An attacker is thus able to simply ignore session validators such as RemoteAddr or HttpUserAgent, since the "signature" that these validators check against is not being stored in the session.
 impacted_packages:
-  - purl: pkg:composer/zendframework/zendframework
-    affected_versions: vers:composer/>=2.0.0|<2.2.9
-    fixed_versions: vers:composer/2.2.9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/zendframework/zendframework
-    affected_versions: vers:composer/>=2.3.0|<2.3.4
-    fixed_versions: vers:composer/2.3.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/zendframework/zendframework
     affected_versions:
     fixed_versions:
@@ -53,16 +43,26 @@ impacted_packages:
       - vcs_url: https://github.com/zendframework/zendframework
         commit: f22a83c611732fbc0328f0f887bccc075be1fd56
     introduced_in_commits: []
+  - purl: pkg:composer/zendframework/zendframework
+    affected_versions: vers:composer/>=2.0.0|<2.2.9
+    fixed_versions: vers:composer/2.2.9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/zendframework/zendframework
+    affected_versions: vers:composer/>=2.3.0|<2.3.4
+    fixed_versions: vers:composer/2.3.4
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-62f6-h68r-3jpw/GHSA-62f6-h68r-3jpw.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-384

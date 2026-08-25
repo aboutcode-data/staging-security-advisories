@@ -31,13 +31,13 @@ summary: |
   The above accepts local domain with any string specified by double quotes as the local part. While this is valid per RFC 3696, due to the fact that sender email addresses are provided to the sendmail binary via the command line, they create the vulnerability described above.
 impacted_packages:
   - purl: pkg:composer/zendframework/zend-mail
-    affected_versions: vers:composer/>=2.0.0|<2.4.11
-    fixed_versions: vers:composer/2.4.11
+    affected_versions: vers:composer/>=2.5.0|<2.7.2
+    fixed_versions: vers:composer/2.7.2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/zendframework/zend-mail
-    affected_versions: vers:composer/>=2.5.0|<2.7.2
-    fixed_versions: vers:composer/2.7.2
+    affected_versions: vers:composer/>=2.0.0|<2.4.11
+    fixed_versions: vers:composer/2.4.11
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/zendframework/zend-mail
@@ -55,12 +55,12 @@ severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-cxf7-m5g2-v594/GHSA-cxf7-m5g2-v594.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-74

@@ -7,6 +7,11 @@ summary: |
   Bouncy Castle crafted signature and public key can be used to trigger an infinite loop
   An issue was discovered in Bouncy Castle Java Cryptography APIs starting in 1.73 and before 1.78. An Ed25519 verification code infinite loop can occur via a crafted signature and public key.
 impacted_packages:
+  - purl: pkg:nuget/BouncyCastle
+    affected_versions: vers:nuget/<2.3.1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:maven/org.bouncycastle/bcprov-jdk18on
     affected_versions: vers:maven/>=1.73|<1.78
     fixed_versions: vers:maven/1.78
@@ -37,11 +42,6 @@ impacted_packages:
     fixed_versions: vers:maven/1.78
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/BouncyCastle
-    affected_versions: vers:nuget/<2.3.1
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:nuget/BouncyCastle.Cryptography
     affected_versions: vers:nuget/<2.3.1
     fixed_versions: vers:nuget/2.3.1
@@ -62,17 +62,17 @@ severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-m44j-cfrm-g8qc/GHSA-m44j-cfrm-g8qc.json
   - score: '6.9'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-m44j-cfrm-g8qc/GHSA-m44j-cfrm-g8qc.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-835

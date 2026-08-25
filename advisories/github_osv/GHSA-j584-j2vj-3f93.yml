@@ -23,6 +23,16 @@ summary: |
   * https://github.com/xwiki/xwiki-platform/commit/f89c8f47fad6e5cc7e68c69a7e0acde07f5eed5a
 impacted_packages:
   - purl: pkg:maven/org.xwiki.platform/xwiki-platform-oldcore
+    affected_versions: vers:maven/>=15.6-rc-1|<15.10.6
+    fixed_versions: vers:maven/15.10.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.xwiki.platform/xwiki-platform-oldcore
+    affected_versions: vers:maven/>=16.0.0-rc-1|<16.0.0
+    fixed_versions: vers:maven/16.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.xwiki.platform/xwiki-platform-oldcore
     affected_versions: vers:maven/<13.5
     fixed_versions: vers:maven/14.10.21
     fixed_in_commits: []
@@ -35,16 +45,6 @@ impacted_packages:
   - purl: pkg:maven/org.xwiki.platform/xwiki-platform-oldcore
     affected_versions: vers:maven/>=15.0-rc-1|<15.5.5
     fixed_versions: vers:maven/15.5.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.xwiki.platform/xwiki-platform-oldcore
-    affected_versions: vers:maven/>=15.6-rc-1|<15.10.6
-    fixed_versions: vers:maven/15.10.6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.xwiki.platform/xwiki-platform-oldcore
-    affected_versions: vers:maven/>=16.0.0-rc-1|<16.0.0
-    fixed_versions: vers:maven/16.0.0
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/xwiki/xwiki-platform
@@ -66,12 +66,12 @@ severities:
   - score: '9.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-j584-j2vj-3f93/GHSA-j584-j2vj-3f93.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-266

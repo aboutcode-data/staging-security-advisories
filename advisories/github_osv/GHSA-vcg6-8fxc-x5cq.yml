@@ -8,6 +8,13 @@ summary: |
 
   Review our security guidelines for the Common Web Platform and the File Security guide for SilverStripe 4 to find out how to add or remove extensions.
 impacted_packages:
+  - purl: pkg:github/silverstripe/silverstripe-framework
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/silverstripe/silverstripe-framework
+        commit: 0408048653fafc52e02b4dbc6288e14e634ac613
+    introduced_in_commits: []
   - purl: pkg:composer/silverstripe/framework
     affected_versions: vers:composer/>=3.6.5-rc1|<3.6.6
     fixed_versions: vers:composer/3.6.6
@@ -23,23 +30,16 @@ impacted_packages:
     fixed_versions: vers:composer/4.1.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/silverstripe/silverstripe-framework
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/silverstripe/silverstripe-framework
-        commit: 0408048653fafc52e02b4dbc6288e14e634ac613
-    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-vcg6-8fxc-x5cq/GHSA-vcg6-8fxc-x5cq.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-434

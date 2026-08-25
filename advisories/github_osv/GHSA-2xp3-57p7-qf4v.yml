@@ -36,11 +36,6 @@ summary: "xml-crypto vulnerable to XML signature verification bypass due imprope
   \n### Impact\n\nAn untrusted certificate can be used to pass a malicious XML payload through\
   \ an improperly configured installation of `xml-crypto`."
 impacted_packages:
-  - purl: pkg:npm/xml-crypto
-    affected_versions: vers:npm/>=4.0.0|<6.0.0
-    fixed_versions: vers:npm/6.0.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/node-saml/xml-crypto
     affected_versions:
     fixed_versions:
@@ -50,16 +45,21 @@ impacted_packages:
       - vcs_url: https://github.com/node-saml/xml-crypto
         commit: c2b83f984049edb68ad1d7c6ad0739ec92af11ca
     introduced_in_commits: []
+  - purl: pkg:npm/xml-crypto
+    affected_versions: vers:npm/>=4.0.0|<6.0.0
+    fixed_versions: vers:npm/6.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '10.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-2xp3-57p7-qf4v/GHSA-2xp3-57p7-qf4v.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-347

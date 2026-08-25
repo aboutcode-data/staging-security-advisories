@@ -25,11 +25,6 @@ summary: |
   * Visit Wagtail's [support channels](https://docs.wagtail.io/en/stable/support.html)
   * Email us at [security@wagtail.org](mailto:security@wagtail.org) (view our [security policy](https://github.com/wagtail/wagtail/security/policy) for more information).
 impacted_packages:
-  - purl: pkg:pypi/wagtail
-    affected_versions: vers:pypi/>=6.0.0|<6.0.3
-    fixed_versions: vers:pypi/6.0.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/wagtail/wagtail
     affected_versions:
     fixed_versions:
@@ -39,16 +34,21 @@ impacted_packages:
       - vcs_url: https://github.com/wagtail/wagtail
         commit: ab2a5d82b4ee3c909d2456704388ccf90e367c9b
     introduced_in_commits: []
+  - purl: pkg:pypi/wagtail
+    affected_versions: vers:pypi/>=6.0.0|<6.0.3
+    fixed_versions: vers:pypi/6.0.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '2.7'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-w2v8-php4-p8hc/GHSA-w2v8-php4-p8hc.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-280

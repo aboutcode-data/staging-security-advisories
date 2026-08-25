@@ -23,11 +23,6 @@ summary: |
 
   * https://www.ruby-lang.org/en/news/2024/05/16/dos-rexml-cve-2024-35176/
 impacted_packages:
-  - purl: pkg:gem/rexml
-    affected_versions: vers:gem/<3.2.7
-    fixed_versions: vers:gem/3.2.7
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/ruby/rexml
     affected_versions:
     fixed_versions:
@@ -35,16 +30,21 @@ impacted_packages:
       - vcs_url: https://github.com/ruby/rexml
         commit: 4325835f92f3f142ebd91a3fdba4e1f1ab7f1cfb
     introduced_in_commits: []
+  - purl: pkg:gem/rexml
+    affected_versions: vers:gem/<3.2.7
+    fixed_versions: vers:gem/3.2.7
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-vg3r-rm7w-2xgh/GHSA-vg3r-rm7w-2xgh.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-400

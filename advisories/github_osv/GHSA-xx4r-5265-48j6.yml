@@ -8,6 +8,15 @@ summary: |
 
   The issue exists in 3.5 and 3.6 but is less vulnerable, as SearchForm sanitises these variables prior to passing to mysql.
 impacted_packages:
+  - purl: pkg:github/silverstripe/silverstripe-framework
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/silverstripe/silverstripe-framework
+        commit: a8465900bdc77199176c953890ce7587045b1ea4
+      - vcs_url: https://github.com/silverstripe/silverstripe-framework
+        commit: 099a5a3c2d99ed39bdd8815e1e2790bb9351770b
+    introduced_in_commits: []
   - purl: pkg:composer/silverstripe/framework
     affected_versions: vers:composer/>=3.5.0-rc1|<3.5.6
     fixed_versions: vers:composer/3.5.6
@@ -23,25 +32,16 @@ impacted_packages:
     fixed_versions: vers:composer/4.0.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/silverstripe/silverstripe-framework
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/silverstripe/silverstripe-framework
-        commit: a8465900bdc77199176c953890ce7587045b1ea4
-      - vcs_url: https://github.com/silverstripe/silverstripe-framework
-        commit: 099a5a3c2d99ed39bdd8815e1e2790bb9351770b
-    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-xx4r-5265-48j6/GHSA-xx4r-5265-48j6.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-89

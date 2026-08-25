@@ -6,11 +6,6 @@ summary: |
   codeigniter/framework SQL injection in ODBC database driver
   CodeIgniter 3.1.0 addressed a critical security issue within the ODBC database driver. This update includes crucial fixes to mitigate a SQL injection vulnerability, preventing potential exploitation by attackers. It is noteworthy that these fixes render the query builder and escape() functions incompatible with the ODBC driver. However, the update introduces actual query binding as a more secure alternative.
 impacted_packages:
-  - purl: pkg:composer/codeigniter/framework
-    affected_versions: vers:composer/<3.1.0
-    fixed_versions: vers:composer/3.1.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/simplysites/codeigniter
     affected_versions:
     fixed_versions:
@@ -18,16 +13,21 @@ impacted_packages:
       - vcs_url: https://github.com/simplysites/codeigniter
         commit: 3d10ffa77854044570a1809a884776fd4bbd8b70
     introduced_in_commits: []
+  - purl: pkg:composer/codeigniter/framework
+    affected_versions: vers:composer/<3.1.0
+    fixed_versions: vers:composer/3.1.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '10.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-27qr-636m-wxg2/GHSA-27qr-636m-wxg2.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses: []
 references:

@@ -7,11 +7,6 @@ summary: |
   ag-grid packages vulnerable to Prototype Pollution
   ag-grid-enterprise v31.3.2 was discovered to contain a prototype pollution via the component _ModuleSupport.jsonApply. This vulnerability allows attackers to execute arbitrary code or cause a Denial of Service (DoS) via injecting arbitrary properties.
 impacted_packages:
-  - purl: pkg:npm/ag-grid-community
-    affected_versions: vers:npm/<31.3.4
-    fixed_versions: vers:npm/31.3.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:npm/%40ag-grid-enterprise/charts
     affected_versions: vers:npm/32.0.0
     fixed_versions: vers:npm/32.0.1
@@ -28,6 +23,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:npm/%40ag-grid-enterprise/charts
+    affected_versions: vers:npm/<31.3.4
+    fixed_versions: vers:npm/31.3.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/ag-grid-community
     affected_versions: vers:npm/<31.3.4
     fixed_versions: vers:npm/31.3.4
     fixed_in_commits: []
@@ -50,17 +50,17 @@ severities:
   - score: '6.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/07/GHSA-328p-362g-r48j/GHSA-328p-362g-r48j.json
   - score: '5.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/07/GHSA-328p-362g-r48j/GHSA-328p-362g-r48j.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-1321

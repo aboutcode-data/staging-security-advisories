@@ -33,22 +33,27 @@ summary: "Querydsl vulnerable to HQL injection through orderBy\n### Summary\nThe
   \ HQL injection, so anyone using source code similar to one provided in details is exposed\
   \ to potentional information leakage and denial of service."
 impacted_packages:
-  - purl: pkg:maven/io.github.openfeign.querydsl/querydsl-jpa
-    affected_versions: vers:maven/>=6.0.0.M1|<6.10.1
-    fixed_versions: vers:maven/6.10.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:maven/io.github.openfeign.querydsl/querydsl-apt
-    affected_versions: vers:maven/>=6.0.0.M1|<6.10.1
-    fixed_versions: vers:maven/6.10.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/io.github.openfeign.querydsl/querydsl-jpa
     affected_versions: vers:maven/<5.6.1
     fixed_versions: vers:maven/5.6.1
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:maven/com.querydsl/querydsl-apt
+    affected_versions: vers:maven/<=5.1.0
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/io.github.openfeign.querydsl/querydsl-jpa
+    affected_versions: vers:maven/>=6.0.0.M1|<6.10.1
+    fixed_versions: vers:maven/6.10.1
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:maven/io.github.openfeign.querydsl/querydsl-apt
+    affected_versions: vers:maven/>=6.0.0.M1|<6.10.1
+    fixed_versions: vers:maven/6.10.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/io.github.openfeign.querydsl/querydsl-jpa
     affected_versions: vers:maven/<5.6.1
     fixed_versions: vers:maven/5.6.1
     fixed_in_commits: []
@@ -58,26 +63,21 @@ impacted_packages:
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/com.querydsl/querydsl-apt
-    affected_versions: vers:maven/<=5.1.0
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: '8.2'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/11/GHSA-6q3q-6v5j-h6vg/GHSA-6q3q-6v5j-h6vg.json
   - score: '8.8'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:L/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/11/GHSA-6q3q-6v5j-h6vg/GHSA-6q3q-6v5j-h6vg.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-89

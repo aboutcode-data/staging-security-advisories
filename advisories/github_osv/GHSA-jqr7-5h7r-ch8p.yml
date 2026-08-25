@@ -6,11 +6,6 @@ summary: |
   Shopware Non-Persistent XSS in the Frontend
   A non-persistent Cross-Site Scripting (XSS) vulnerability has been identified in the Shopware eCommerce platform within the frontend. This vulnerability may allow an attacker to inject and execute malicious scripts in the context of a victim's web browser.
 impacted_packages:
-  - purl: pkg:composer/shopware/shopware
-    affected_versions: vers:composer/>=5.2.0|<5.3.7
-    fixed_versions: vers:composer/5.3.7
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/shopware5/shopware
     affected_versions:
     fixed_versions:
@@ -18,16 +13,21 @@ impacted_packages:
       - vcs_url: https://github.com/shopware5/shopware
         commit: 54461aa651566dc2701b873fe6bd94589604751b
     introduced_in_commits: []
+  - purl: pkg:composer/shopware/shopware
+    affected_versions: vers:composer/>=5.2.0|<5.3.7
+    fixed_versions: vers:composer/5.3.7
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-jqr7-5h7r-ch8p/GHSA-jqr7-5h7r-ch8p.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

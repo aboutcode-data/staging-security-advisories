@@ -8,13 +8,13 @@ summary: |
   A SSRF vulnerability in WADL service description in versions of Apache CXF before 4.0.5, 3.6.4 and 3.5.9 allows an attacker to perform SSRF style attacks on REST webservices. The attack only applies if a custom stylesheet parameter is configured.
 impacted_packages:
   - purl: pkg:maven/org.apache.cxf/cxf-rt-rs-service-description
-    affected_versions: vers:maven/>=3.6.0|<3.6.4
-    fixed_versions: vers:maven/3.6.4
+    affected_versions: vers:maven/>=4.0.0|<4.0.5
+    fixed_versions: vers:maven/4.0.5
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.cxf/cxf-rt-rs-service-description
-    affected_versions: vers:maven/>=4.0.0|<4.0.5
-    fixed_versions: vers:maven/4.0.5
+    affected_versions: vers:maven/>=3.6.0|<3.6.4
+    fixed_versions: vers:maven/3.6.4
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.cxf/cxf-rt-rs-service-description
@@ -37,17 +37,17 @@ severities:
   - score: '5.9'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/07/GHSA-5m3j-pxh7-455p/GHSA-5m3j-pxh7-455p.json
   - score: '8.2'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/07/GHSA-5m3j-pxh7-455p/GHSA-5m3j-pxh7-455p.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-918

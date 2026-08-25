@@ -7,11 +7,6 @@ summary: |
   pgAdmin is affected by a multi-factor authentication bypass vulnerability
   pgAdmin <= 8.5 is affected by a multi-factor authentication bypass vulnerability. This vulnerability allows an attacker with knowledge of a legitimate account’s username and password may authenticate to the application and perform sensitive actions within the application, such as managing files and executing SQL queries, regardless of the account’s MFA enrollment status.
 impacted_packages:
-  - purl: pkg:pypi/pgadmin4
-    affected_versions: vers:pypi/<=8.5
-    fixed_versions: vers:pypi/8.6
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/pgadmin-org/pgadmin4
     affected_versions:
     fixed_versions:
@@ -19,21 +14,26 @@ impacted_packages:
       - vcs_url: https://github.com/pgadmin-org/pgadmin4
         commit: f4761f55f7cf6d56d6c5129f921393b0b47fd976
     introduced_in_commits: []
+  - purl: pkg:pypi/pgadmin4
+    affected_versions: vers:pypi/<=8.5
+    fixed_versions: vers:pypi/8.6
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-2mvc-557g-5638/GHSA-2mvc-557g-5638.json
   - score: '5.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:L/SI:L/SA:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-2mvc-557g-5638/GHSA-2mvc-557g-5638.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-89

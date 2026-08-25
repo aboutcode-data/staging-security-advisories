@@ -11,16 +11,6 @@ summary: |
 
   However, several other inputs were persisted at the backend of Eclipse Ditto, leading to a "Stored XSS" vulnerability. Those mean that authenticated and authorized users at Eclipse Ditto can persist Things in Ditto which can - when being displayed by other users also being authorized to see those Things in the Eclipse Ditto UI - cause scripts to be executed in the browser of other users.
 impacted_packages:
-  - purl: pkg:maven/org.eclipse.ditto/ditto
-    affected_versions: vers:maven/>=3.0.0|<3.4.5
-    fixed_versions: vers:maven/3.4.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.eclipse.ditto/ditto
-    affected_versions: vers:maven/>=3.5.0|<3.5.6
-    fixed_versions: vers:maven/3.5.6
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/eclipse-ditto/ditto
     affected_versions:
     fixed_versions:
@@ -34,16 +24,26 @@ impacted_packages:
       - vcs_url: https://github.com/eclipse-ditto/ditto
         commit: 8fe1b3b9e0e2c333856dc166c8c3c7d2027c856d
     introduced_in_commits: []
+  - purl: pkg:maven/org.eclipse.ditto/ditto
+    affected_versions: vers:maven/>=3.0.0|<3.4.5
+    fixed_versions: vers:maven/3.4.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.eclipse.ditto/ditto
+    affected_versions: vers:maven/>=3.5.0|<3.5.6
+    fixed_versions: vers:maven/3.5.6
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-hjfc-6jxr-j2rx/GHSA-hjfc-6jxr-j2rx.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79
