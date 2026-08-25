@@ -8,6 +8,11 @@ summary: |
       the execution of arbitrary code and Denial of Service.
 impacted_packages:
   - purl: pkg:ebuild/dev-libs/libpcre
+    affected_versions:
+    fixed_versions: vers:ebuild/>=7.6-r1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-libs/libpcre
     affected_versions: vers:ebuild/<7.6-r1
     fixed_versions:
     fixed_in_commits: []
@@ -17,9 +22,9 @@ impacted_packages:
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:ebuild/dev-libs/libpcre
+  - purl: pkg:ebuild/dev-libs/glib
     affected_versions:
-    fixed_versions: vers:ebuild/>=7.6-r1
+    fixed_versions: vers:ebuild/<2.14.0
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:ebuild/dev-libs/glib
@@ -27,16 +32,11 @@ impacted_packages:
     fixed_versions: vers:ebuild/>=2.14.6
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:ebuild/dev-libs/glib
-    affected_versions:
-    fixed_versions: vers:ebuild/<2.14.0
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: high
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses: []
 references:
