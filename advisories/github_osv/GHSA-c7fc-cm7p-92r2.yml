@@ -8,6 +8,11 @@ summary: |
   A vulnerability was found in openstack-ironic-inspector all versions excluding 5.0.2, 6.0.3, 7.2.4, 8.0.3 and 8.2.1. A SQL-injection vulnerability was found in openstack-ironic-inspector's node_cache.find_node(). This function makes a SQL query using unfiltered data from a server reporting inspection results (by a POST to the /v1/continue endpoint). Because the API is unauthenticated, the flaw could be exploited by an attacker with access to the network on which ironic-inspector is listening. Because of how ironic-inspector uses the query results, it is unlikely that data could be obtained. However, the attacker could pass malicious data and create a denial of service.
 impacted_packages:
   - purl: pkg:pypi/ironic-inspector
+    affected_versions: vers:pypi/>=8.1.0|<8.2.1
+    fixed_versions: vers:pypi/8.2.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/ironic-inspector
     affected_versions: vers:pypi/<5.0.2
     fixed_versions: vers:pypi/5.0.2
     fixed_in_commits: []
@@ -27,11 +32,6 @@ impacted_packages:
     fixed_versions: vers:pypi/8.0.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:pypi/ironic-inspector
-    affected_versions: vers:pypi/>=8.1.0|<8.2.1
-    fixed_versions: vers:pypi/8.2.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/openstack/ironic-inspector
     affected_versions:
     fixed_versions:
@@ -47,19 +47,19 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '8.3'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-c7fc-cm7p-92r2/GHSA-c7fc-cm7p-92r2.json
   - score: '7.2'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:H/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-c7fc-cm7p-92r2/GHSA-c7fc-cm7p-92r2.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-89

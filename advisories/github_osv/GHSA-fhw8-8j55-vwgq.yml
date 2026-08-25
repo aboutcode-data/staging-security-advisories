@@ -9,16 +9,6 @@ summary: |
 
   Until version 2.1.0, the code affected by this vulnerability appeared in `org.apache.sshd:sshd-core`. Version 2.1.0 contains a [commit](https://github.com/apache/mina-sshd/commit/10de190e7d3f9189deb76b8d08c72334a1fe2df0) where the code was moved to the package `org.apache.sshd:sshd-common`, which did not exist until version 2.1.0.
 impacted_packages:
-  - purl: pkg:maven/org.apache.sshd/sshd-common
-    affected_versions: vers:maven/<2.9.2
-    fixed_versions: vers:maven/2.9.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.sshd/sshd-core
-    affected_versions: vers:maven/<2.1.0
-    fixed_versions: vers:maven/2.9.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/apache/mina-sshd
     affected_versions:
     fixed_versions:
@@ -30,16 +20,26 @@ impacted_packages:
       - vcs_url: https://github.com/apache/mina-sshd
         commit: 10de190e7d3f9189deb76b8d08c72334a1fe2df0
     introduced_in_commits: []
+  - purl: pkg:maven/org.apache.sshd/sshd-common
+    affected_versions: vers:maven/<2.9.2
+    fixed_versions: vers:maven/2.9.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.sshd/sshd-core
+    affected_versions: vers:maven/<2.1.0
+    fixed_versions: vers:maven/2.9.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/11/GHSA-fhw8-8j55-vwgq/GHSA-fhw8-8j55-vwgq.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-502

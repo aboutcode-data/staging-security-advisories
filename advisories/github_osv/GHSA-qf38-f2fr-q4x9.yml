@@ -8,21 +8,14 @@ summary: |
   A arbitrary file read vulnerability exists in Jenkins 2.132 and earlier, 2.121.1 and earlier in the Stapler web framework's org/kohsuke/stapler/Stapler.java that allows attackers to send crafted HTTP requests returning the contents of any file on the Jenkins master file system that the Jenkins master has access to.
 impacted_packages:
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
-    affected_versions: vers:maven/<2.121.2
-    fixed_versions: vers:maven/2.121.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
     affected_versions: vers:maven/>=2.122|<2.132
     fixed_versions: vers:maven/2.132
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/jenkinsci/stapler
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/jenkinsci/stapler
-        commit: 8e9679b08c36a2f0cf2a81855d5e04e2ed2ac2b3
+  - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
+    affected_versions: vers:maven/<2.121.2
+    fixed_versions: vers:maven/2.121.2
+    fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/jenkinsci/jenkins
     affected_versions:
@@ -31,16 +24,23 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/jenkins
         commit: 29ca81dd59c255ad633f1bd86cf1be40a5f02c64
     introduced_in_commits: []
+  - purl: pkg:github/jenkinsci/stapler
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/jenkinsci/stapler
+        commit: 8e9679b08c36a2f0cf2a81855d5e04e2ed2ac2b3
+    introduced_in_commits: []
 severities:
   - score: '7.5'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-qf38-f2fr-q4x9/GHSA-qf38-f2fr-q4x9.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-20

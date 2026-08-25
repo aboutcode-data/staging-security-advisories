@@ -7,26 +7,26 @@ summary: |
   Drupal PECL YAML parser unsafe object handling
   Drupal core 8 before versions 8.3.4 allows remote attackers to execute arbitrary code due to the PECL YAML parser not handling PHP objects safely during certain operations.
 impacted_packages:
-  - purl: pkg:composer/drupal/core
+  - purl: pkg:composer/drupal/drupal
     affected_versions: vers:composer/>=8.0.0|<8.3.4
     fixed_versions: vers:composer/8.3.4
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/drupal/drupal
+  - purl: pkg:composer/drupal/core
     affected_versions: vers:composer/>=8.0.0|<8.3.4
     fixed_versions: vers:composer/8.3.4
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '9.8'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-9c24-g32g-35rj/GHSA-9c24-g32g-35rj.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

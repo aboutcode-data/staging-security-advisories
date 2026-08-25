@@ -24,16 +24,6 @@ summary: |
   - For questions or comments about this vulnerability visit our [community forum](http://community.parseplatform.org/) or [community chat](http://chat.parseplatform.org/)
   - Report other vulnerabilities at [report.parseplatform.org](https://report.parseplatform.org/)
 impacted_packages:
-  - purl: pkg:npm/parse-server
-    affected_versions: vers:npm/<4.10.13
-    fixed_versions: vers:npm/4.10.13
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:npm/parse-server
-    affected_versions: vers:npm/>=5.0.0|<5.2.4
-    fixed_versions: vers:npm/5.2.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/parse-community/parse-server
     affected_versions:
     fixed_versions:
@@ -45,16 +35,26 @@ impacted_packages:
       - vcs_url: https://github.com/parse-community/parse-server
         commit: 9fd4516cde5c742f9f29dd05468b4a43a85639a6
     introduced_in_commits: []
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/<4.10.13
+    fixed_versions: vers:npm/4.10.13
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/parse-server
+    affected_versions: vers:npm/>=5.0.0|<5.2.4
+    fixed_versions: vers:npm/5.2.4
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.2'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/07/GHSA-crrq-vr9j-fxxh/GHSA-crrq-vr9j-fxxh.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

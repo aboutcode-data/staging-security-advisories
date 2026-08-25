@@ -20,11 +20,6 @@ summary: "Rails::Html::Sanitizer vulnerable to Cross-site Scripting\nVersions of
   \ A workaround for this issue can be applied by removing either `select` or `style` from the\
   \ overridden allowed tags."
 impacted_packages:
-  - purl: pkg:gem/rails-html-sanitizer
-    affected_versions: vers:gem/<1.4.3
-    fixed_versions: vers:gem/1.4.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/rails/rails-html-sanitizer
     affected_versions:
     fixed_versions:
@@ -32,16 +27,21 @@ impacted_packages:
       - vcs_url: https://github.com/rails/rails-html-sanitizer
         commit: 45a5c10fed3d9aa141594c80afa06d748fa0967d
     introduced_in_commits: []
+  - purl: pkg:gem/rails-html-sanitizer
+    affected_versions: vers:gem/<1.4.3
+    fixed_versions: vers:gem/1.4.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/06/GHSA-pg8v-g4xq-hww9/GHSA-pg8v-g4xq-hww9.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

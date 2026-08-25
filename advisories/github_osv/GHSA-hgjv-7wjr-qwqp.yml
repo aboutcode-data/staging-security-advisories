@@ -7,14 +7,14 @@ summary: |
   Liferay Portal and Liferay DXP Cross-site scripting (XSS) vulnerability in the Frontend JS module
   Cross-site scripting (XSS) vulnerability in the Frontend JS module before version 4.0.18, in Liferay Portal 7.3.4 and earlier, and Liferay DXP 7.0 before fix pack 96, 7.1 before fix pack 20 and 7.2 before fix pack 9, allows remote attackers to inject arbitrary web script or HTML via the title of a modal window.
 impacted_packages:
-  - purl: pkg:maven/com.liferay.portal/release.dxp.bom
-    affected_versions: vers:maven/>=7.0.0|<7.0.10.fp96
-    fixed_versions: vers:maven/7.0.10.fp96
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:maven/com.liferay/com.liferay.frontend.js.aui.web
     affected_versions: vers:maven/<4.0.18
     fixed_versions: vers:maven/4.0.18
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/com.liferay.portal/release.dxp.bom
+    affected_versions: vers:maven/>=7.0.0|<7.0.10.fp96
+    fixed_versions: vers:maven/7.0.10.fp96
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/com.liferay.portal/release.dxp.bom
@@ -38,12 +38,12 @@ severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-hgjv-7wjr-qwqp/GHSA-hgjv-7wjr-qwqp.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

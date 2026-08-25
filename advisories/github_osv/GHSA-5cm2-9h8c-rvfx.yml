@@ -33,6 +33,16 @@ summary: "TZInfo relative path traversal vulnerability allows loading of arbitra
   -_]+(?:\\/[A-Za-z0-9+\\-_]+)*\\z`.\n\n### For more information\n\nIf you have any questions\
   \ or comments about this advisory:\n  - Open an issue in [the tzinfo repository](https://github.com/tzinfo/tzinfo)."
 impacted_packages:
+  - purl: pkg:gem/tzinfo
+    affected_versions: vers:gem/>=1.0.0|<1.2.10
+    fixed_versions: vers:gem/1.2.10
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:gem/tzinfo
+    affected_versions: vers:gem/<0.3.61
+    fixed_versions: vers:gem/0.3.61
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:github/tzinfo/tzinfo
     affected_versions:
     fixed_versions:
@@ -42,26 +52,16 @@ impacted_packages:
       - vcs_url: https://github.com/tzinfo/tzinfo
         commit: 9eddbb5c0e682736f61d0dd803b6031a5db9eadf
     introduced_in_commits: []
-  - purl: pkg:gem/tzinfo
-    affected_versions: vers:gem/<0.3.61
-    fixed_versions: vers:gem/0.3.61
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:gem/tzinfo
-    affected_versions: vers:gem/>=1.0.0|<1.2.10
-    fixed_versions: vers:gem/1.2.10
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/07/GHSA-5cm2-9h8c-rvfx/GHSA-5cm2-9h8c-rvfx.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-23

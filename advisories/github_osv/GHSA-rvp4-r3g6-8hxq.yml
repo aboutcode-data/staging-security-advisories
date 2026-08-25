@@ -37,11 +37,6 @@ summary: |
    - https://nifi.apache.org/security.html#CVE-2022-26850
    - https://twitter.com/JLLeitschuh/status/1511736635645435904?s=20&t=I3w3zF6Y2DUvWYsEFqERjg
 impacted_packages:
-  - purl: pkg:maven/org.apache.nifi/nifi-single-user-utils
-    affected_versions: vers:maven/<=1.15.3
-    fixed_versions: vers:maven/1.16
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/apache/nifi
     affected_versions:
     fixed_versions:
@@ -51,16 +46,21 @@ impacted_packages:
       - vcs_url: https://github.com/apache/nifi
         commit: 859d5fe
     introduced_in_commits: []
+  - purl: pkg:maven/org.apache.nifi/nifi-single-user-utils
+    affected_versions: vers:maven/<=1.15.3
+    fixed_versions: vers:maven/1.16
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/06/GHSA-rvp4-r3g6-8hxq/GHSA-rvp4-r3g6-8hxq.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-522

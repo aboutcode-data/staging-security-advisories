@@ -11,11 +11,6 @@ summary: |
 
   Job Configuration History Plugin 1156.v536a_97b_8d649 requires POST requests for the affected HTTP endpoints.
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins/jobConfigHistory
-    affected_versions: vers:maven/<=1155.v28a
-    fixed_versions: vers:maven/1156.v536a_97b_8d649
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/job-config-history-plugin
     affected_versions:
     fixed_versions:
@@ -23,16 +18,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/job-config-history-plugin
         commit: 536a97b8d649b3114f5db24ea32a7c63188a35c6
     introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/jobConfigHistory
+    affected_versions: vers:maven/<=1155.v28a
+    fixed_versions: vers:maven/1156.v536a_97b_8d649
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/07/GHSA-j896-j72w-cr32/GHSA-j896-j72w-cr32.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-352

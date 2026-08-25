@@ -7,12 +7,12 @@ summary: |
   Pippo RCE Vulnerability
   Pippo through 1.11.0 allows remote code execution via a command to java.lang.ProcessBuilder because the XstreamEngine component does not use XStream's available protection mechanisms to restrict unmarshalling.
 impacted_packages:
-  - purl: pkg:maven/ro.pippo/pippo-core
+  - purl: pkg:maven/ro.pippo/pippo-session
     affected_versions: vers:maven/<=1.11.0
     fixed_versions: vers:maven/1.12.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/ro.pippo/pippo-session
+  - purl: pkg:maven/ro.pippo/pippo-core
     affected_versions: vers:maven/<=1.11.0
     fixed_versions: vers:maven/1.12.0
     fixed_in_commits: []
@@ -26,14 +26,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '9.8'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-h892-x453-86wc/GHSA-h892-x453-86wc.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-502

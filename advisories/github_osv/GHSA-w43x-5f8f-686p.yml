@@ -9,11 +9,6 @@ summary: |
 
   Matrix Project Plugin 1.17 escapes the axis names shown in these tooltips.
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins/matrix-project
-    affected_versions: vers:maven/<=1.16
-    fixed_versions: vers:maven/1.17
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/matrix-project-plugin
     affected_versions:
     fixed_versions:
@@ -21,16 +16,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/matrix-project-plugin
         commit: b5f22a43147360896442c4a7719446a864898cb4
     introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/matrix-project
+    affected_versions: vers:maven/<=1.16
+    fixed_versions: vers:maven/1.17
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-w43x-5f8f-686p/GHSA-w43x-5f8f-686p.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

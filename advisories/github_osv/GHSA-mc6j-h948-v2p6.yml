@@ -7,14 +7,14 @@ summary: |
   RubyGems Improper Verification of Cryptographic Signature vulnerability
   RubyGems version Ruby 2.2 series: 2.2.9 and earlier, Ruby 2.3 series: 2.3.6 and earlier, Ruby 2.4 series: 2.4.3 and earlier, and Ruby 2.5 series: 2.5.0 and earlier, prior to trunk revision 62422 contain an Improper Verification of Cryptographic Signature vulnerability in package.rb. This can result in a mis-signed gem being installed, as the tarball would contain multiple gem signatures. This vulnerability has been fixed in 2.7.6.
 impacted_packages:
-  - purl: pkg:gem/rubygems-update
-    affected_versions: vers:gem/>=2.2.0|<2.7.6
-    fixed_versions: vers:gem/2.7.6
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:maven/org.jruby/jruby-stdlib
     affected_versions: vers:maven/<9.1.16.0
     fixed_versions: vers:maven/9.1.16.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:gem/rubygems-update
+    affected_versions: vers:gem/>=2.2.0|<2.7.6
+    fixed_versions: vers:gem/2.7.6
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/jruby/jruby
@@ -33,14 +33,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '9.8'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-mc6j-h948-v2p6/GHSA-mc6j-h948-v2p6.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-347

@@ -8,13 +8,13 @@ summary: |
   The error-message functionality in Moodle 1.9.x before 1.9.13, 2.0.x before 2.0.4, and 2.1.x before 2.1.1 does not ensure that a continuation link refers to an http or https URL for the local Moodle instance, which might allow attackers to trick users into visiting arbitrary web sites via error message links that lead offsite.
 impacted_packages:
   - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/<1.9.13
-    fixed_versions: vers:composer/1.9.13
+    affected_versions: vers:composer/>=2.0.0|<2.0.4
+    fixed_versions: vers:composer/2.0.4
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/>=2.0.0|<2.0.4
-    fixed_versions: vers:composer/2.0.4
+    affected_versions: vers:composer/<1.9.13
+    fixed_versions: vers:composer/1.9.13
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/moodle/moodle
@@ -37,7 +37,7 @@ severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-601

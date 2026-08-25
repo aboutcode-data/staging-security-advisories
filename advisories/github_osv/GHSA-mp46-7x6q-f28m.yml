@@ -7,11 +7,6 @@ summary: |
   Woocommerce Cross-site Scripting via Additional tax classes field when taxes are enabled
   When taxes are enabled, the "Additional tax classes" field was not properly sanitised or escaped before being output back in the admin dashboard, allowing high privilege users such as admin to use XSS payloads even when the unfiltered_html is disabled
 impacted_packages:
-  - purl: pkg:composer/woocommerce/woocommerce
-    affected_versions: vers:composer/<5.2.0
-    fixed_versions: vers:composer/5.2.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/woocommerce/woocommerce
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/woocommerce/woocommerce
         commit: 6ede8c5f59aec3ca70aa27d1ffd5a6574473f2ce
     introduced_in_commits: []
+  - purl: pkg:composer/woocommerce/woocommerce
+    affected_versions: vers:composer/<5.2.0
+    fixed_versions: vers:composer/5.2.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-mp46-7x6q-f28m/GHSA-mp46-7x6q-f28m.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

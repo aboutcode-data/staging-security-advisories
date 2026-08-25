@@ -7,26 +7,26 @@ summary: |
   Drupal Denial of service via transliterate mechanism
   The transliterate mechanism in Drupal 8.x before 8.2.3 allows remote attackers to cause a denial of service via a crafted URL.
 impacted_packages:
-  - purl: pkg:composer/drupal/core
+  - purl: pkg:composer/drupal/drupal
     affected_versions: vers:composer/>=8.0.0|<8.2.3
     fixed_versions: vers:composer/8.2.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/drupal/drupal
+  - purl: pkg:composer/drupal/core
     affected_versions: vers:composer/>=8.0.0|<8.2.3
     fixed_versions: vers:composer/8.2.3
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '6.5'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-jpj8-49hr-wcwv/GHSA-jpj8-49hr-wcwv.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-20

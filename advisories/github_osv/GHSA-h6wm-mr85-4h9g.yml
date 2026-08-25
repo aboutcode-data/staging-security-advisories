@@ -7,11 +7,6 @@ summary: |
   Cross site scripting in facturascripts
   A Cross-site Scripting (XSS) vulnerability exists in the fsNick parameter in facturascripts prior to version 2022.06
 impacted_packages:
-  - purl: pkg:composer/facturascripts/facturascripts
-    affected_versions: vers:composer/<2022.6.0
-    fixed_versions: vers:composer/2022.6.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/neorazorx/facturascripts
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/neorazorx/facturascripts
         commit: 73a6595ca85984d65f656c6356fabb23d1936c54
     introduced_in_commits: []
+  - purl: pkg:composer/facturascripts/facturascripts
+    affected_versions: vers:composer/<2022.6.0
+    fixed_versions: vers:composer/2022.6.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/06/GHSA-h6wm-mr85-4h9g/GHSA-h6wm-mr85-4h9g.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

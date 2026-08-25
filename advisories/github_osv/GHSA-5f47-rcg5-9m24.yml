@@ -7,11 +7,6 @@ summary: |
   Directory traversal in convert-svg-core
   The package convert-svg-core before 0.6.4 is vulnerable to Directory Traversal due to improper sanitization of SVG tags. Exploiting this vulnerability is possible by using a specially crafted SVG file.
 impacted_packages:
-  - purl: pkg:npm/convert-svg-core
-    affected_versions: vers:npm/<0.6.4
-    fixed_versions: vers:npm/0.6.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/neocotic/convert-svg
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/neocotic/convert-svg
         commit: 2bbc498c5029238637206661dbac9e44d37d17c5
     introduced_in_commits: []
+  - purl: pkg:npm/convert-svg-core
+    affected_versions: vers:npm/<0.6.4
+    fixed_versions: vers:npm/0.6.4
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/06/GHSA-5f47-rcg5-9m24/GHSA-5f47-rcg5-9m24.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

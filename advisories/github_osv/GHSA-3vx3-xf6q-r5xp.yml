@@ -7,14 +7,14 @@ summary: |
   Exposure of Resource to Wrong Sphere in Apache Tomcat
   While investigating bug 60718, it was noticed that some calls to application listeners in Apache Tomcat 9.0.0.M1 to 9.0.0.M17, 8.5.0 to 8.5.11, 8.0.0.RC1 to 8.0.41, and 7.0.0 to 7.0.75 did not use the appropriate facade object. When running an untrusted application under a SecurityManager, it was therefore possible for that untrusted application to retain a reference to the request or response object and thereby access and/or modify information associated with another web application.
 impacted_packages:
-  - purl: pkg:maven/org.apache.tomcat/tomcat-catalina
+  - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
     affected_versions: vers:maven/<=7.0.75
     fixed_versions: vers:maven/7.0.76
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
-    affected_versions: vers:maven/<=9.0.0.M17
-    fixed_versions: vers:maven/9.0.0.M18
+  - purl: pkg:maven/org.apache.tomcat/tomcat-catalina
+    affected_versions: vers:maven/<=8.0.41
+    fixed_versions: vers:maven/8.0.42
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat/tomcat-catalina
@@ -28,8 +28,13 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat/tomcat-catalina
-    affected_versions: vers:maven/<=8.0.41
-    fixed_versions: vers:maven/8.0.42
+    affected_versions: vers:maven/<=7.0.75
+    fixed_versions: vers:maven/7.0.76
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
+    affected_versions: vers:maven/<=9.0.0.M17
+    fixed_versions: vers:maven/9.0.0.M18
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
@@ -40,11 +45,6 @@ impacted_packages:
   - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
     affected_versions: vers:maven/<=8.0.41
     fixed_versions: vers:maven/8.0.42
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
-    affected_versions: vers:maven/<=7.0.75
-    fixed_versions: vers:maven/7.0.76
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/apache/tomcat
@@ -67,14 +67,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '9.1'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-3vx3-xf6q-r5xp/GHSA-3vx3-xf6q-r5xp.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-668

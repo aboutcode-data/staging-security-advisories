@@ -8,13 +8,13 @@ summary: |
   Cross-site scripting (XSS) vulnerability in OpenStack Dashboard (Horizon) 8.0.1 and earlier and 9.0.0 through 9.0.1 allows remote authenticated users to inject arbitrary web script or HTML by injecting an AngularJS template in a dashboard form.
 impacted_packages:
   - purl: pkg:pypi/horizon
-    affected_versions: vers:pypi/<=8.0.1
-    fixed_versions: vers:pypi/8.0.2
+    affected_versions: vers:pypi/<=9.0.1
+    fixed_versions: vers:pypi/9.1.0
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/horizon
-    affected_versions: vers:pypi/<=9.0.1
-    fixed_versions: vers:pypi/9.1.0
+    affected_versions: vers:pypi/<=8.0.1
+    fixed_versions: vers:pypi/8.0.2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/openstack/horizon
@@ -32,12 +32,12 @@ severities:
   - score: '5.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-grm6-x6mr-q3cv/GHSA-grm6-x6mr-q3cv.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

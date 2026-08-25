@@ -13,6 +13,13 @@ summary: "Arches vulnerable to execution of arbitrary SQL\n### Impact\nWith a ca
   \ General References \nhttps://www.w3schools.com/sql/sql_injection.asp\nhttps://en.wikipedia.org/wiki/SQL_injection\n\
   \n### For more information\nPost any questions to the [Arches project forum](https://community.archesproject.org/)."
 impacted_packages:
+  - purl: pkg:github/archesproject/arches
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/archesproject/arches
+        commit: 7ed53e23a616edf3301d95814d9d64de5e3072a9
+    introduced_in_commits: []
   - purl: pkg:pypi/arches
     affected_versions: vers:pypi/<=6.1.1
     fixed_versions: vers:pypi/6.1.2
@@ -28,23 +35,16 @@ impacted_packages:
     fixed_versions: vers:pypi/7.2.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/archesproject/arches
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/archesproject/arches
-        commit: 7ed53e23a616edf3301d95814d9d64de5e3072a9
-    introduced_in_commits: []
 severities:
   - score: '8.6'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/11/GHSA-gmpq-xrxj-xh8m/GHSA-gmpq-xrxj-xh8m.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-89

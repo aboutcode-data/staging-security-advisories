@@ -9,11 +9,6 @@ summary: "OS Command Injection in git-promise\nAll versions of package git-promi
   \ file was updated with a warning regarding this issue. \n### Credits\n @lirantal for discovering\
   \ this vulnerability."
 impacted_packages:
-  - purl: pkg:npm/git-promise
-    affected_versions: vers:npm/<=1.0.0
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/lirantal/git-promise
     affected_versions:
     fixed_versions:
@@ -21,16 +16,21 @@ impacted_packages:
       - vcs_url: https://github.com/lirantal/git-promise
         commit: 030e4f993f3b65419d60f7f60e81e0a742b72e77
     introduced_in_commits: []
+  - purl: pkg:npm/git-promise
+    affected_versions: vers:npm/<=1.0.0
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.2'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/06/GHSA-chj3-f7xw-367m/GHSA-chj3-f7xw-367m.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-77

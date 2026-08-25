@@ -13,11 +13,6 @@ summary: |
 
   Administrators concerned about SHA-1 collision attacks on the whole-script approval feature are able to revoke all previous (SHA-1) script approvals on the In-Process Script Approval page.
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins/script-security
-    affected_versions: vers:maven/<=1189.vb
-    fixed_versions: vers:maven/1190.v65867a_a_47126
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/script-security-plugin
     affected_versions:
     fixed_versions:
@@ -25,16 +20,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/script-security-plugin
         commit: 65867aa471265a16198b92fb439782ba3554da66
     introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/script-security
+    affected_versions: vers:maven/<=1189.vb
+    fixed_versions: vers:maven/1190.v65867a_a_47126
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/11/GHSA-fv42-mx39-6fpw/GHSA-fv42-mx39-6fpw.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-326

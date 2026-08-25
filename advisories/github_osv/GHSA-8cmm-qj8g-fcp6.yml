@@ -7,16 +7,6 @@ summary: |
   Cross-Site Request Forgery in Spring Framework
   The Jaxb2RootElementHttpMessageConverter in Spring MVC in Spring Framework before 3.2.8 and 4.0.0 before 4.0.2 does not disable external entity resolution, which allows remote attackers to read arbitrary files, cause a denial of service, and conduct CSRF attacks via crafted XML, aka an XML External Entity (XXE) issue.  NOTE: this vulnerability exists because of an incomplete fix for CVE-2013-4152, CVE-2013-7315, and CVE-2013-6429.
 impacted_packages:
-  - purl: pkg:maven/org.springframework/spring-webmvc
-    affected_versions: vers:maven/<3.2.8
-    fixed_versions: vers:maven/3.2.8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.springframework/spring-webmvc
-    affected_versions: vers:maven/>=4.0.0|<4.0.2
-    fixed_versions: vers:maven/4.0.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/spring-projects/spring-framework
     affected_versions:
     fixed_versions:
@@ -30,11 +20,21 @@ impacted_packages:
       - vcs_url: https://github.com/spring-projects/spring-framework
         commit: fb0683c066e74e9667d6cd8c5fa01f674c68c3be
     introduced_in_commits: []
+  - purl: pkg:maven/org.springframework/spring-webmvc
+    affected_versions: vers:maven/<3.2.8
+    fixed_versions: vers:maven/3.2.8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.springframework/spring-webmvc
+    affected_versions: vers:maven/>=4.0.0|<4.0.2
+    fixed_versions: vers:maven/4.0.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-352

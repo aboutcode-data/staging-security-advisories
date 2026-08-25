@@ -7,11 +7,6 @@ summary: |
   Command Injection in Nuitka
   Nuitka 0.8.4 and prior is vulnerable to command injection. A patch is available and anticipated to be part of the `0.9` release.
 impacted_packages:
-  - purl: pkg:pypi/nuitka
-    affected_versions: vers:pypi/<=0.8.4
-    fixed_versions: vers:pypi/0.9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/nuitka/nuitka
     affected_versions:
     fixed_versions:
@@ -21,21 +16,26 @@ impacted_packages:
       - vcs_url: https://github.com/nuitka/nuitka
         commit: 1765ffce2a9ab859853210337390de242cd80712
     introduced_in_commits: []
+  - purl: pkg:pypi/nuitka
+    affected_versions: vers:pypi/<=0.8.4
+    fixed_versions: vers:pypi/0.9
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/06/GHSA-4v3r-hqr9-69jf/GHSA-4v3r-hqr9-69jf.json
   - score: '8.5'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/06/GHSA-4v3r-hqr9-69jf/GHSA-4v3r-hqr9-69jf.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-77

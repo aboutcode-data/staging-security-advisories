@@ -7,6 +7,15 @@ summary: |
   Apache Tomcat Path Traversal Vulnerability
   Absolute path traversal vulnerability in Apache Tomcat 4.0.0 through 4.0.6, 4.1.0, 5.0.0, 5.5.0 through 5.5.25, and 6.0.0 through 6.0.14, under certain configurations, allows remote authenticated users to read arbitrary files via a WebDAV write request that specifies an entity with a SYSTEM tag.
 impacted_packages:
+  - purl: pkg:github/apache/tomcat
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/tomcat
+        commit: 901292cf9d7d8225f8a3b96c7583e2bd8b41772d
+      - vcs_url: https://github.com/apache/tomcat
+        commit: 1e7b31e24801777f4de45d565f6a20a5377dd22c
+    introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat/tomcat
     affected_versions: vers:maven/>=4.0.0|<=4.0.6
     fixed_versions:
@@ -32,20 +41,11 @@ impacted_packages:
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/apache/tomcat
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/apache/tomcat
-        commit: 901292cf9d7d8225f8a3b96c7583e2bd8b41772d
-      - vcs_url: https://github.com/apache/tomcat
-        commit: 1e7b31e24801777f4de45d565f6a20a5377dd22c
-    introduced_in_commits: []
 severities:
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

@@ -11,11 +11,6 @@ summary: |
 
   External Monitor Job Type Plugin 192.ve979ca_8b_3ccd requires POST requests for the affected HTTP endpoint.
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins/external-monitor-job
-    affected_versions: vers:maven/<=191.v363d0d1efdf8
-    fixed_versions: vers:maven/192.ve979ca_8b_3ccd
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/external-monitor-job-plugin
     affected_versions:
     fixed_versions:
@@ -23,16 +18,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/external-monitor-job-plugin
         commit: e979ca8b3ccd8cf2b098533e1529d104b6bfd7da
     introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/external-monitor-job
+    affected_versions: vers:maven/<=191.v363d0d1efdf8
+    fixed_versions: vers:maven/192.ve979ca_8b_3ccd
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/07/GHSA-6x63-hrxg-2hjx/GHSA-6x63-hrxg-2hjx.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-352

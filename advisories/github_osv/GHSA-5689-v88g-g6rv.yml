@@ -12,11 +12,6 @@ summary: |
   - All versions of the nodejs 18.x, 16.x, and 14.x releases lines.
   - llhttp v6.0.7 and llhttp v2.1.5 contains the fixes that were updated inside Node.js
 impacted_packages:
-  - purl: pkg:npm/llhttp
-    affected_versions: vers:npm/<6.0.7
-    fixed_versions: vers:npm/6.0.7
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/nodejs/llhttp
     affected_versions:
     fixed_versions:
@@ -24,16 +19,21 @@ impacted_packages:
       - vcs_url: https://github.com/nodejs/llhttp
         commit: 18a4afc7ffb4e49dc9e2daebc50588199a6d1dbb
     introduced_in_commits: []
+  - purl: pkg:npm/llhttp
+    affected_versions: vers:npm/<6.0.7
+    fixed_versions: vers:npm/6.0.7
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/07/GHSA-5689-v88g-g6rv/GHSA-5689-v88g-g6rv.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-444

@@ -25,16 +25,6 @@ summary: |
 
   [Fastify security policy](https://github.com/fastify/fastify/security/policy)
 impacted_packages:
-  - purl: pkg:npm/fastify
-    affected_versions: vers:npm/>=4.0.0|<4.10.2
-    fixed_versions: vers:npm/4.10.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:npm/fastify
-    affected_versions: vers:npm/>=3.0.0|<3.29.4
-    fixed_versions: vers:npm/3.29.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/fastify/fastify
     affected_versions:
     fixed_versions:
@@ -42,16 +32,26 @@ impacted_packages:
       - vcs_url: https://github.com/fastify/fastify
         commit: 62dde76f1f7aca76e38625fe8d983761f26e6fc9
     introduced_in_commits: []
+  - purl: pkg:npm/fastify
+    affected_versions: vers:npm/>=3.0.0|<3.29.4
+    fixed_versions: vers:npm/3.29.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/fastify
+    affected_versions: vers:npm/>=4.0.0|<4.10.2
+    fixed_versions: vers:npm/4.10.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.2'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/11/GHSA-3fjj-p79j-c9hh/GHSA-3fjj-p79j-c9hh.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-352

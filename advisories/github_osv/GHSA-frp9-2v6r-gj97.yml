@@ -7,6 +7,13 @@ summary: |
   muhammara and hummus vulnerable to null pointer dereference on bad response object
   The package muhammara before 2.6.0 and the package hummus before 1.0.111 are vulnerable to Denial of Service (DoS) when PDFStreamForResponse() is used with invalid data.
 impacted_packages:
+  - purl: pkg:github/galkahana/hummusjs
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/galkahana/hummusjs
+        commit: a9bf2520ab5abb69f9328906e406fbebfb36159a
+    introduced_in_commits: []
   - purl: pkg:npm/hummus
     affected_versions: vers:npm/<=1.0.110
     fixed_versions: vers:npm/1.0.111
@@ -24,23 +31,16 @@ impacted_packages:
       - vcs_url: https://github.com/julianhille/muhammarajs
         commit: 0a6427eec82ef2978995e453de2dc0d6224dd46c
     introduced_in_commits: []
-  - purl: pkg:github/galkahana/hummusjs
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/galkahana/hummusjs
-        commit: a9bf2520ab5abb69f9328906e406fbebfb36159a
-    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/11/GHSA-frp9-2v6r-gj97/GHSA-frp9-2v6r-gj97.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-690

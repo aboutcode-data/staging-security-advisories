@@ -7,11 +7,6 @@ summary: |
   Pillow subject to DoS via SAMPLESPERPIXEL tag
   Pillow starting with 9.2.0 and prior to 9.3.0 allows denial of service via SAMPLESPERPIXEL. A large value in the SAMPLESPERPIXEL tag could lead to a memory and runtime DOS in TiffImagePlugin.py when setting up the context for image decoding. This issue has been patched in version 9.3.0.
 impacted_packages:
-  - purl: pkg:pypi/pillow
-    affected_versions: vers:pypi/>=9.2.0|<9.3.0
-    fixed_versions: vers:pypi/9.3.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/python-pillow/pillow
     affected_versions:
     fixed_versions:
@@ -19,21 +14,26 @@ impacted_packages:
       - vcs_url: https://github.com/python-pillow/pillow
         commit: 2444cddab2f83f28687c7c20871574acbb6dbcf3
     introduced_in_commits: []
+  - purl: pkg:pypi/pillow
+    affected_versions: vers:pypi/>=9.2.0|<9.3.0
+    fixed_versions: vers:pypi/9.3.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/11/GHSA-q4mp-jvh2-76fj/GHSA-q4mp-jvh2-76fj.json
   - score: '8.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/11/GHSA-q4mp-jvh2-76fj/GHSA-q4mp-jvh2-76fj.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-400

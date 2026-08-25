@@ -15,11 +15,6 @@ summary: |
 
   Administrators can set the [Java system property](https://www.jenkins.io/doc/book/managing/system-properties/) `org.jenkinsci.plugins.pipeline.utility.steps.conf.ReadPropertiesStepExecution.CUSTOM_PREFIX_INTERPOLATOR_LOOKUPS` to customize which prefix interpolators are enabled.
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins/pipeline-utility-steps
-    affected_versions: vers:maven/<=2.13.1
-    fixed_versions: vers:maven/2.13.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/pipeline-utility-steps-plugin
     affected_versions:
     fixed_versions:
@@ -27,16 +22,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/pipeline-utility-steps-plugin
         commit: 01be8ac0045027128fc1e9cf3a8b0709d08291ea
     introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/pipeline-utility-steps
+    affected_versions: vers:maven/<=2.13.1
+    fixed_versions: vers:maven/2.13.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/11/GHSA-3g9q-cmgv-g4p6/GHSA-3g9q-cmgv-g4p6.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

@@ -53,6 +53,15 @@ summary: |
   ### Attribution
   This vulnerability has been reported by Thibaut Goetghebuer-Planchon, Arm Ltd.
 impacted_packages:
+  - purl: pkg:github/tensorflow/tensorflow
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/tensorflow/tensorflow
+        commit: 72c0bdcb25305b0b36842d746cc61d72658d2941
+      - vcs_url: https://github.com/tensorflow/tensorflow
+        commit: 091e63f0ea33def7ecad661a5ac01dcafbafa90b
+    introduced_in_commits: []
   - purl: pkg:pypi/tensorflow
     affected_versions: vers:pypi/<2.8.4
     fixed_versions: vers:pypi/2.8.4
@@ -68,25 +77,16 @@ impacted_packages:
     fixed_versions: vers:pypi/2.10.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/tensorflow/tensorflow
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/tensorflow/tensorflow
-        commit: 72c0bdcb25305b0b36842d746cc61d72658d2941
-      - vcs_url: https://github.com/tensorflow/tensorflow
-        commit: 091e63f0ea33def7ecad661a5ac01dcafbafa90b
-    introduced_in_commits: []
 severities:
   - score: '7.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/11/GHSA-h6q3-vv32-2cq5/GHSA-h6q3-vv32-2cq5.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-120

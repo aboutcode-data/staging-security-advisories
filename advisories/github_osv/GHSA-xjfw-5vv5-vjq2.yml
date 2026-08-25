@@ -28,6 +28,13 @@ summary: |
             <input type="text" id="$descriptorId" name="$descriptorId"#if($request.get($descriptorId))value="$escapetool.xml($request.get($descriptorId))"#end/>
   ```
 impacted_packages:
+  - purl: pkg:github/xwiki/xwiki-platform
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/xwiki/xwiki-platform
+        commit: 21906acb5ee2304552f56f9bbdbf8e7d368f7f3a
+    introduced_in_commits: []
   - purl: pkg:maven/org.xwiki.platform/xwiki-platform-filter-ui
     affected_versions: vers:maven/>=5.4.4|<12.10.11
     fixed_versions: vers:maven/12.10.11
@@ -43,23 +50,16 @@ impacted_packages:
     fixed_versions: vers:maven/13.10.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/xwiki/xwiki-platform
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/xwiki/xwiki-platform
-        commit: 21906acb5ee2304552f56f9bbdbf8e7d368f7f3a
-    introduced_in_commits: []
 severities:
   - score: '7.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/06/GHSA-xjfw-5vv5-vjq2/GHSA-xjfw-5vv5-vjq2.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-116

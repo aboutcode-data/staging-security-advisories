@@ -7,11 +7,6 @@ summary: |
   node-red-dashboard vulnerable to Cross-site Scripting
   node-red-dashboard contains a cross-site scripting vulnerability. This issue affects some unknown processing of the file `components/ui-component/ui-component-ctrl.js` of the component ui_text Format Handler. The attack may be initiated remotely. The issue is patched in version 3.2.0.
 impacted_packages:
-  - purl: pkg:npm/node-red-dashboard
-    affected_versions: vers:npm/<3.2.0
-    fixed_versions: vers:npm/3.2.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/node-red/node-red-dashboard
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/node-red/node-red-dashboard
         commit: 9305d1a82f19b235dfad24a7d1dd4ed244db7743
     introduced_in_commits: []
+  - purl: pkg:npm/node-red-dashboard
+    affected_versions: vers:npm/<3.2.0
+    fixed_versions: vers:npm/3.2.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/11/GHSA-vrv9-3x3w-ffxw/GHSA-vrv9-3x3w-ffxw.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

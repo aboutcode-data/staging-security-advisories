@@ -12,6 +12,13 @@ summary: |
   As of the publication of this advisory, the Jenkins security team is not aware of any plugins published via the Jenkins project update center that allow doing this.
   Jenkins 2.275, LTS 2.263.2 escapes display names and IDs of item types shown on the New Item page.
 impacted_packages:
+  - purl: pkg:github/jenkinsci/jenkins
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/jenkinsci/jenkins
+        commit: 8c451b08886561a914ef0c30cbb9d40ea33a9bbe
+    introduced_in_commits: []
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
     affected_versions: vers:maven/<=2.263.1
     fixed_versions: vers:maven/2.263.2
@@ -22,23 +29,16 @@ impacted_packages:
     fixed_versions: vers:maven/2.275
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/jenkinsci/jenkins
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/jenkinsci/jenkins
-        commit: 8c451b08886561a914ef0c30cbb9d40ea33a9bbe
-    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-mj7q-cmf3-mg7h/GHSA-mj7q-cmf3-mg7h.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

@@ -22,51 +22,6 @@ summary: "Missing validation causes denial of service via `UnsortedSegmentJoin`\
   \ questions.\n\n### Attribution\nThis vulnerability has been reported by Neophytos Christou\
   \ from Secure Systems Lab at Brown University."
 impacted_packages:
-  - purl: pkg:pypi/tensorflow
-    affected_versions: vers:pypi/<2.6.4
-    fixed_versions: vers:pypi/2.6.4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow
-    affected_versions: vers:pypi/>=2.7.0|<2.7.2
-    fixed_versions: vers:pypi/2.7.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow
-    affected_versions: vers:pypi/>=2.8.0|<2.8.1
-    fixed_versions: vers:pypi/2.8.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow-cpu
-    affected_versions: vers:pypi/<2.6.4
-    fixed_versions: vers:pypi/2.6.4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow-cpu
-    affected_versions: vers:pypi/>=2.7.0|<2.7.2
-    fixed_versions: vers:pypi/2.7.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow-cpu
-    affected_versions: vers:pypi/>=2.8.0|<2.8.1
-    fixed_versions: vers:pypi/2.8.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow-gpu
-    affected_versions: vers:pypi/<2.6.4
-    fixed_versions: vers:pypi/2.6.4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow-gpu
-    affected_versions: vers:pypi/>=2.7.0|<2.7.2
-    fixed_versions: vers:pypi/2.7.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tensorflow-gpu
-    affected_versions: vers:pypi/>=2.8.0|<2.8.1
-    fixed_versions: vers:pypi/2.8.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/tensorflow/tensorflow
     affected_versions:
     fixed_versions:
@@ -76,16 +31,61 @@ impacted_packages:
       - vcs_url: https://github.com/tensorflow/tensorflow
         commit: 13d38a07ce9143e044aa737cfd7bb759d0e9b400
     introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow
+    affected_versions: vers:pypi/<2.6.4
+    fixed_versions: vers:pypi/2.6.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow
+    affected_versions: vers:pypi/>=2.7.0|<2.7.2
+    fixed_versions: vers:pypi/2.7.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow
+    affected_versions: vers:pypi/>=2.8.0|<2.8.1
+    fixed_versions: vers:pypi/2.8.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow-cpu
+    affected_versions: vers:pypi/<2.6.4
+    fixed_versions: vers:pypi/2.6.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow-cpu
+    affected_versions: vers:pypi/>=2.7.0|<2.7.2
+    fixed_versions: vers:pypi/2.7.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow-cpu
+    affected_versions: vers:pypi/>=2.8.0|<2.8.1
+    fixed_versions: vers:pypi/2.8.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow-gpu
+    affected_versions: vers:pypi/<2.6.4
+    fixed_versions: vers:pypi/2.6.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow-gpu
+    affected_versions: vers:pypi/>=2.7.0|<2.7.2
+    fixed_versions: vers:pypi/2.7.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tensorflow-gpu
+    affected_versions: vers:pypi/>=2.8.0|<2.8.1
+    fixed_versions: vers:pypi/2.8.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-hrg5-737c-2p56/GHSA-hrg5-737c-2p56.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-20

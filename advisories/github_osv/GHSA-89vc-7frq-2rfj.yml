@@ -7,6 +7,13 @@ summary: |
   Jenkins has Local File Inclusion Vulnerability
   Directory traversal vulnerability in Jenkins before 1.638 and LTS before 1.625.2 allows remote attackers to list directory contents and read arbitrary files in the Jenkins servlet resources via directory traversal sequences in a request to jnlpJars/.
 impacted_packages:
+  - purl: pkg:github/jenkinsci/jenkins
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/jenkinsci/jenkins
+        commit: 5431e397216b4ab80e58bdabcb06a0066bce6592
+    introduced_in_commits: []
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
     affected_versions: vers:maven/>=1.626|<1.638
     fixed_versions: vers:maven/1.638
@@ -17,23 +24,16 @@ impacted_packages:
     fixed_versions: vers:maven/1.625.2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/jenkinsci/jenkins
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/jenkinsci/jenkins
-        commit: 5431e397216b4ab80e58bdabcb06a0066bce6592
-    introduced_in_commits: []
 severities:
   - score: '6.9'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-89vc-7frq-2rfj/GHSA-89vc-7frq-2rfj.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

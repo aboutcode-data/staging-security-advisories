@@ -8,11 +8,6 @@ summary: |
   An issue was discovered in Cloud Foundry Foundation cf-release versions prior to v257; UAA release 2.x versions prior to v2.7.4.14, 3.6.x versions prior to v3.6.8, 3.9.x versions prior to v3.9.10, and other versions prior to v3.15.0; and UAA bosh release (uaa-release) 13.x versions prior to v13.12, 24.x versions prior to v24.7, and other versions prior to v30. A vulnerability has been identified with the groups endpoint in UAA allowing users to elevate their privileges.
 impacted_packages:
   - purl: pkg:maven/org.cloudfoundry.identity/cloudfoundry-identity-server
-    affected_versions: vers:maven/>=2.0.0|<2.7.4.14
-    fixed_versions: vers:maven/2.7.4.14
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.cloudfoundry.identity/cloudfoundry-identity-server
     affected_versions: vers:maven/>=3.0.0|<3.6.8
     fixed_versions: vers:maven/3.6.8
     fixed_in_commits: []
@@ -25,6 +20,11 @@ impacted_packages:
   - purl: pkg:maven/org.cloudfoundry.identity/cloudfoundry-identity-server
     affected_versions: vers:maven/>=3.10.0|<3.15.0
     fixed_versions: vers:maven/3.15.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.cloudfoundry.identity/cloudfoundry-identity-server
+    affected_versions: vers:maven/>=2.0.0|<2.7.4.14
+    fixed_versions: vers:maven/2.7.4.14
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/cloudfoundry/uaa
@@ -50,14 +50,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '8.8'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-pgjc-gc7g-p2c6/GHSA-pgjc-gc7g-p2c6.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-269

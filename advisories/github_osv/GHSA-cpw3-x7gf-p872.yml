@@ -8,13 +8,13 @@ summary: |
   An exposure of sensitive information vulnerability exists in Jenkins 2.115 and older, LTS 2.107.1 and older, in CLICommand.java and ViewOptionHandler.java that allows unauthorized attackers to confirm the existence of agents or views with an attacker-specified name by sending a CLI command to Jenkins.
 impacted_packages:
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
-    affected_versions: vers:maven/<=2.107.1
-    fixed_versions: vers:maven/2.107.2
+    affected_versions: vers:maven/<=2.115
+    fixed_versions: vers:maven/2.116
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
-    affected_versions: vers:maven/<=2.115
-    fixed_versions: vers:maven/2.116
+    affected_versions: vers:maven/<=2.107.1
+    fixed_versions: vers:maven/2.107.2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/jenkinsci/jenkins
@@ -26,14 +26,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '5.3'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-cpw3-x7gf-p872/GHSA-cpw3-x7gf-p872.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

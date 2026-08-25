@@ -7,11 +7,6 @@ summary: |
   ClusterLabs crmsh vulnerable to shell code injection
   An issue was discovered in ClusterLabs crmsh through 4.2.1. Local attackers able to call `crm history` (when `crm` is run) were able to execute commands via shell code injection to the crm history commandline, potentially allowing escalation of privileges.
 impacted_packages:
-  - purl: pkg:pypi/crmsh
-    affected_versions: vers:pypi/<=4.2.1
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/clusterlabs/crmsh
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/clusterlabs/crmsh
         commit: a403aa15f3ea575adfe5e43bf2a31c9f9094fcda
     introduced_in_commits: []
+  - purl: pkg:pypi/crmsh
+    affected_versions: vers:pypi/<=4.2.1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-99xx-83jm-h24m/GHSA-99xx-83jm-h24m.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-78

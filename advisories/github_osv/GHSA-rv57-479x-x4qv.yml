@@ -8,6 +8,11 @@ summary: |
   phpMyAdmin 4.0.x before 4.0.10.16, 4.4.x before 4.4.15.7, and 4.6.x before 4.6.3 does not properly choose delimiters to prevent use of the preg_replace e (aka eval) modifier, which might allow remote attackers to execute arbitrary PHP code via a crafted string, as demonstrated by the table search-and-replace implementation.
 impacted_packages:
   - purl: pkg:composer/phpmyadmin/phpmyadmin
+    affected_versions: vers:composer/>=4.0.10+0|<4.0.10+16
+    fixed_versions: vers:composer/4.0.10+16
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/phpmyadmin/phpmyadmin
     affected_versions: vers:composer/>=4.4.15+0|<4.4.15+7
     fixed_versions: vers:composer/4.4.15+7
     fixed_in_commits: []
@@ -15,11 +20,6 @@ impacted_packages:
   - purl: pkg:composer/phpmyadmin/phpmyadmin
     affected_versions: vers:composer/>=4.6.0|<4.6.3
     fixed_versions: vers:composer/4.6.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/phpmyadmin/phpmyadmin
-    affected_versions: vers:composer/>=4.0.10+0|<4.0.10+16
-    fixed_versions: vers:composer/4.0.10+16
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/phpmyadmin/phpmyadmin
@@ -33,14 +33,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '9.8'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-rv57-479x-x4qv/GHSA-rv57-479x-x4qv.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

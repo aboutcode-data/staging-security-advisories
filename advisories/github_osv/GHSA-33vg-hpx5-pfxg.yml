@@ -7,11 +7,6 @@ summary: |
   omniauth-facebook Improper Authentication vulnerability
   RubyGem omniauth-facebook has an access token security vulnerability.
 impacted_packages:
-  - purl: pkg:gem/omniauth-facebook
-    affected_versions: vers:gem/<1.5.1
-    fixed_versions: vers:gem/1.5.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/simi/omniauth-facebook
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/simi/omniauth-facebook
         commit: 115c0a768cd6f4b9bfae8900f8e3fc4fbeec3ad8
     introduced_in_commits: []
+  - purl: pkg:gem/omniauth-facebook
+    affected_versions: vers:gem/<1.5.1
+    fixed_versions: vers:gem/1.5.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-33vg-hpx5-pfxg/GHSA-33vg-hpx5-pfxg.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-287

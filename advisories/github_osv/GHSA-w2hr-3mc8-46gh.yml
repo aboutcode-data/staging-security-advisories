@@ -7,6 +7,13 @@ summary: |
   SaltStack Salt eauth tokens can be used once after expiration
   In SaltStack Salt before 3002.5, eauth tokens can be used once after expiration. (They might be used to run command against the salt master or minions.)
 impacted_packages:
+  - purl: pkg:github/saltstack/salt
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/saltstack/salt
+        commit: 8f9405cf8e6f7d7776d5000841c886dec6d96250
+    introduced_in_commits: []
   - purl: pkg:pypi/salt
     affected_versions: vers:pypi/<2015.8.13
     fixed_versions: vers:pypi/2015.8.13
@@ -52,23 +59,16 @@ impacted_packages:
     fixed_versions: vers:pypi/2019.2.8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/saltstack/salt
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/saltstack/salt
-        commit: 8f9405cf8e6f7d7776d5000841c886dec6d96250
-    introduced_in_commits: []
 severities:
   - score: '9.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-w2hr-3mc8-46gh/GHSA-w2hr-3mc8-46gh.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-613

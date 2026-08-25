@@ -7,16 +7,6 @@ summary: |
   Symfony Authentication Bypass
   Symfony before 2.8.6 and 3.x before 3.0.6 allows remote attackers to bypass authentication by logging in with an empty password and valid username, which triggers an unauthenticated bind.
 impacted_packages:
-  - purl: pkg:composer/symfony/security-core
-    affected_versions: vers:composer/>=2.8.0|<2.8.6
-    fixed_versions: vers:composer/2.8.6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/security-core
-    affected_versions: vers:composer/>=3.0.0|<3.0.6
-    fixed_versions: vers:composer/3.0.6
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:composer/symfony/security
     affected_versions: vers:composer/>=2.8.0|<2.8.6
     fixed_versions: vers:composer/2.8.6
@@ -28,25 +18,35 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=3.0.0|<3.0.6
+    fixed_versions: vers:composer/3.0.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/security-core
     affected_versions: vers:composer/>=2.8.0|<2.8.6
     fixed_versions: vers:composer/2.8.6
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/symfony/symfony
+  - purl: pkg:composer/symfony/security-core
     affected_versions: vers:composer/>=3.0.0|<3.0.6
     fixed_versions: vers:composer/3.0.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=2.8.0|<2.8.6
+    fixed_versions: vers:composer/2.8.6
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '9.8'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-wvj5-r78r-hhfq/GHSA-wvj5-r78r-hhfq.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-287

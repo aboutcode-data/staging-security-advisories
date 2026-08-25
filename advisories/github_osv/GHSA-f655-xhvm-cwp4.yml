@@ -9,11 +9,6 @@ summary: |
 
   GitLab Plugin 1.5.35 does not show user-provided fields in the build cause of webhook-triggered builds.
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins/gitlab-plugin
-    affected_versions: vers:maven/<=1.5.34
-    fixed_versions: vers:maven/1.5.35
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/gitlab-plugin
     affected_versions:
     fixed_versions:
@@ -21,16 +16,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/gitlab-plugin
         commit: 24e9a99d8151b5345109ef12cddc1ab323baa4ee
     introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/gitlab-plugin
+    affected_versions: vers:maven/<=1.5.34
+    fixed_versions: vers:maven/1.5.35
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/07/GHSA-f655-xhvm-cwp4/GHSA-f655-xhvm-cwp4.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

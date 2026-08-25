@@ -7,6 +7,20 @@ summary: |
   Apache Tomcat does not properly handle an invalid Transfer-Encoding header
   Apache Tomcat 5.5.0 through 5.5.29, 6.0.0 through 6.0.27, and 7.0.0 beta does not properly handle an invalid Transfer-Encoding header, which allows remote attackers to cause a denial of service (application outage) or obtain sensitive information via a crafted header that interferes with "recycling of a buffer."
 impacted_packages:
+  - purl: pkg:github/apache/tomcat
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/tomcat
+        commit: 40e5880dfc51517334acda5f12beacdec52ca283
+    introduced_in_commits: []
+  - purl: pkg:github/apache/tomcat55
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/tomcat55
+        commit: 4faaca9353e5e3f963c7a674b3ac6a0bd1c3757e
+    introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat/tomcat
     affected_versions: vers:maven/>=7.0.0|<7.0.2
     fixed_versions: vers:maven/7.0.2
@@ -22,25 +36,11 @@ impacted_packages:
     fixed_versions: vers:maven/6.0.28
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/apache/tomcat
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/apache/tomcat
-        commit: 40e5880dfc51517334acda5f12beacdec52ca283
-    introduced_in_commits: []
-  - purl: pkg:github/apache/tomcat55
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/apache/tomcat55
-        commit: 4faaca9353e5e3f963c7a674b3ac6a0bd1c3757e
-    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-119

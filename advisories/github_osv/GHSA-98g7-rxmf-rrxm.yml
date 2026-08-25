@@ -7,6 +7,13 @@ summary: |
   fabric8 kubernetes-client vulnerable
   fabric8 Kubernetes client had an arbitrary code execution flaw in versions 5.0.0-beta-1 and higher. Attackers could potentially insert malicious YAMLs due to misconfigured YAML parsing.
 impacted_packages:
+  - purl: pkg:github/fabric8io/kubernetes-client
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/fabric8io/kubernetes-client
+        commit: 445103004d1ed3153d5abb272473451d05891e39
+    introduced_in_commits: []
   - purl: pkg:maven/io.fabric8/kubernetes-client
     affected_versions: vers:maven/>=5.0.0-beta-1|<5.0.3
     fixed_versions: vers:maven/5.0.3
@@ -42,23 +49,16 @@ impacted_packages:
     fixed_versions: vers:maven/5.11.2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/fabric8io/kubernetes-client
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/fabric8io/kubernetes-client
-        commit: 445103004d1ed3153d5abb272473451d05891e39
-    introduced_in_commits: []
 severities:
   - score: '6.7'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/07/GHSA-98g7-rxmf-rrxm/GHSA-98g7-rxmf-rrxm.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

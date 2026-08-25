@@ -8,13 +8,13 @@ summary: |
   Jenkins before 2.107 and Jenkins LTS before 2.89.4 did not properly prevent specifying relative paths that escape a base directory for URLs accessing plugin resource files. This allowed users with Overall/Read permission to download files from the Jenkins master they should not have access to. On Windows, any file accessible to the Jenkins master process could be downloaded. On other operating systems, any file within the Jenkins home directory accessible to the Jenkins master process could be downloaded.
 impacted_packages:
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
-    affected_versions: vers:maven/<2.89.4
-    fixed_versions: vers:maven/2.89.4
+    affected_versions: vers:maven/>=2.90|<2.107
+    fixed_versions: vers:maven/2.107
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
-    affected_versions: vers:maven/>=2.90|<2.107
-    fixed_versions: vers:maven/2.107
+    affected_versions: vers:maven/<2.89.4
+    fixed_versions: vers:maven/2.89.4
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/jenkinsci/jenkins
@@ -28,14 +28,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '6.5'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-5p59-v5wm-77v4/GHSA-5p59-v5wm-77v4.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

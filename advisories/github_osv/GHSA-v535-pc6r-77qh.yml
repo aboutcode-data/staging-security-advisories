@@ -15,11 +15,6 @@ summary: |
 
   Administrators can set the [Java system](https://www.jenkins.io/doc/book/managing/system-properties/) property `org.jenkinsci.plugins.registry.notification.webhook.JSONWebHook.DO_NOT_REQUIRE_API_TOKEN` to `true` to disable this fix.
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins/dockerhub-notification
-    affected_versions: vers:maven/<=2.6.2
-    fixed_versions: vers:maven/2.6.2.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/dockerhub-notification-plugin
     affected_versions:
     fixed_versions:
@@ -27,16 +22,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/dockerhub-notification-plugin
         commit: 1163d4f297af23266c032fc66bd603b97f9ecd4b
     introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/dockerhub-notification
+    affected_versions: vers:maven/<=2.6.2
+    fixed_versions: vers:maven/2.6.2.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/11/GHSA-v535-pc6r-77qh/GHSA-v535-pc6r-77qh.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-862

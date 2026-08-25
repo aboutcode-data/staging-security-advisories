@@ -17,11 +17,6 @@ summary: |
 
   In case of problems, the [Java system property](https://www.jenkins.io/doc/book/managing/system-properties/) `com.michelin.cio.hudson.plugins.rolestrategy.RoleMap.checkParentPermissions` can be set to false, completely disabling this fix.
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins/role-strategy
-    affected_versions: vers:maven/<=3.1
-    fixed_versions: vers:maven/3.1.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/role-strategy-plugin
     affected_versions:
     fixed_versions:
@@ -29,16 +24,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/role-strategy-plugin
         commit: 2490ed51c30f6df9db809a7dcf637ac8ac08233a
     introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/role-strategy
+    affected_versions: vers:maven/<=3.1
+    fixed_versions: vers:maven/3.1.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-rm4m-39fj-288c/GHSA-rm4m-39fj-288c.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-863

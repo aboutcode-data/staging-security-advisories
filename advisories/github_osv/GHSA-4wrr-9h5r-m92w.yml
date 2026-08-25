@@ -7,16 +7,6 @@ summary: |
   Apache Struts Remote Java Code Execution
   The `ExceptionDelegator` component in Apache Struts before 2.2.3.1 interprets parameter values as OGNL expressions during certain exception handling for mismatched data types of properties, which allows remote attackers to execute arbitrary Java code via a crafted parameter.
 impacted_packages:
-  - purl: pkg:maven/org.apache.struts/struts2-core
-    affected_versions: vers:maven/<2.2.3.1
-    fixed_versions: vers:maven/2.2.3.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.struts.xwork/xwork-core
-    affected_versions: vers:maven/<2.2.3.1
-    fixed_versions: vers:maven/2.2.3.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/apache/struts
     affected_versions:
     fixed_versions:
@@ -28,16 +18,26 @@ impacted_packages:
       - vcs_url: https://github.com/apache/struts
         commit: 25e50069d60434a30395e3a98357ffba2bed427e
     introduced_in_commits: []
+  - purl: pkg:maven/org.apache.struts/struts2-core
+    affected_versions: vers:maven/<2.2.3.1
+    fixed_versions: vers:maven/2.2.3.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.struts.xwork/xwork-core
+    affected_versions: vers:maven/<2.2.3.1
+    fixed_versions: vers:maven/2.2.3.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-4wrr-9h5r-m92w/GHSA-4wrr-9h5r-m92w.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

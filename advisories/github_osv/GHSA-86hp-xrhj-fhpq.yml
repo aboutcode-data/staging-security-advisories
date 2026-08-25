@@ -7,26 +7,6 @@ summary: |
   TYPO3 Vulnerable to Insecure Deserialization
   TYPO3 8.x through 8.7.26 and 9.x through 9.5.7 allows Deserialization of Untrusted Data.
 impacted_packages:
-  - purl: pkg:composer/typo3/cms-core
-    affected_versions: vers:composer/>=8.0.0|<8.7.27
-    fixed_versions: vers:composer/8.7.27
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/typo3/cms-core
-    affected_versions: vers:composer/>=9.0.0|<9.5.8
-    fixed_versions: vers:composer/9.5.8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/typo3/cms
-    affected_versions: vers:composer/>=8.0.0|<8.7.27
-    fixed_versions: vers:composer/8.7.27
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/typo3/cms
-    affected_versions: vers:composer/>=9.0.0|<9.5.8
-    fixed_versions: vers:composer/9.5.8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/typo3/typo3
     affected_versions:
     fixed_versions:
@@ -34,16 +14,36 @@ impacted_packages:
       - vcs_url: https://github.com/typo3/typo3
         commit: 647aa7afa582983cddc547fa106d31e2b1ef34fe
     introduced_in_commits: []
+  - purl: pkg:composer/typo3/cms-core
+    affected_versions: vers:composer/>=9.0.0|<9.5.8
+    fixed_versions: vers:composer/9.5.8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/typo3/cms-core
+    affected_versions: vers:composer/>=8.0.0|<8.7.27
+    fixed_versions: vers:composer/8.7.27
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/typo3/cms
+    affected_versions: vers:composer/>=8.0.0|<8.7.27
+    fixed_versions: vers:composer/8.7.27
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/typo3/cms
+    affected_versions: vers:composer/>=9.0.0|<9.5.8
+    fixed_versions: vers:composer/9.5.8
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-86hp-xrhj-fhpq/GHSA-86hp-xrhj-fhpq.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-502

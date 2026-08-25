@@ -11,11 +11,6 @@ summary: |
 
   JUnit Plugin 1160.vf1f01a_a_ea_b_7f no longer converts URLs to clickable links.
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins/junit
-    affected_versions: vers:maven/<=1159.v0b
-    fixed_versions: vers:maven/1160.vf1f01a_a_ea_b_7f
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/junit-plugin
     affected_versions:
     fixed_versions:
@@ -23,16 +18,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/junit-plugin
         commit: f1f01aaeab7fa35017112f6163b89283390f5da8
     introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/junit
+    affected_versions: vers:maven/<=1159.v0b
+    fixed_versions: vers:maven/1160.vf1f01a_a_ea_b_7f
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/11/GHSA-298r-5c48-7q2r/GHSA-298r-5c48-7q2r.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

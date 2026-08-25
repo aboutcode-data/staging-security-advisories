@@ -8,13 +8,13 @@ summary: |
   When using the Linux bridge ml2 driver, non-privileged tenants are able to create and attach ports without specifying an IP address, bypassing IP address validation. A potential denial of service could occur if an IP address, conflicting with existing guests or routers, is then assigned from outside of the allowed allocation pool. Versions of openstack-neutron before 13.0.0.0b2, 12.0.3 and 11.0.5 are vulnerable.
 impacted_packages:
   - purl: pkg:pypi/neutron
-    affected_versions: vers:pypi/13.0.0.0b1
-    fixed_versions: vers:pypi/13.0.0.0b2
+    affected_versions: vers:pypi/<11.0.6
+    fixed_versions: vers:pypi/11.0.6
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/neutron
-    affected_versions: vers:pypi/<11.0.6
-    fixed_versions: vers:pypi/11.0.6
+    affected_versions: vers:pypi/13.0.0.0b1
+    fixed_versions: vers:pypi/13.0.0.0b2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/neutron
@@ -31,19 +31,19 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '6.5'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-x634-34m9-96mp/GHSA-x634-34m9-96mp.json
   - score: '7.1'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-x634-34m9-96mp/GHSA-x634-34m9-96mp.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-20

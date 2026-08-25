@@ -12,6 +12,13 @@ summary: |
   * https://www.blackhat.com/docs/eu-14/materials/eu-14-Hafif-Reflected-File-Download-A-New-Web-Attack-Vector.pdf
   * https://github.com/advisories/GHSA-8x94-hmjh-97hq
 impacted_packages:
+  - purl: pkg:github/sinatra/sinatra
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/sinatra/sinatra
+        commit: ea8fc9495a350f7551b39e3025bfcd06f49f363b
+    introduced_in_commits: []
   - purl: pkg:gem/sinatra
     affected_versions: vers:gem/>=3.0|<3.0.4
     fixed_versions: vers:gem/3.0.4
@@ -22,23 +29,16 @@ impacted_packages:
     fixed_versions: vers:gem/2.2.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/sinatra/sinatra
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/sinatra/sinatra
-        commit: ea8fc9495a350f7551b39e3025bfcd06f49f363b
-    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/11/GHSA-2x8x-jmrp-phxw/GHSA-2x8x-jmrp-phxw.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-494

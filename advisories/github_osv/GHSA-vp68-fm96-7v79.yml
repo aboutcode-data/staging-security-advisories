@@ -9,11 +9,6 @@ summary: |
 
   This allows attackers with Item/Read permission but without Item/Workspace or Item/Configure permission to check whether attacker-specified file patterns match workspace contents. A sequence of requests can be used to effectively list workspace contents.
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins/android-signing
-    affected_versions: vers:maven/<=2.2.5
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/android-signing-plugin
     affected_versions:
     fixed_versions:
@@ -21,16 +16,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/android-signing-plugin
         commit: 33162c65c9f52ca5fa85609bdb652a5d1feda95b
     introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/android-signing
+    affected_versions: vers:maven/<=2.2.5
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/07/GHSA-vp68-fm96-7v79/GHSA-vp68-fm96-7v79.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-862

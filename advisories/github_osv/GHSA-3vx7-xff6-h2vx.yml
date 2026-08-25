@@ -7,6 +7,13 @@ summary: |
   OpenStack Nova instance migration process does not stop when instance is deleted
   OpenStack Compute (nova) 2015.1 through 2015.1.1, 2014.2.3, and earlier does not stop the migration process when the instance is deleted, which allows remote authenticated users to cause a denial of service (disk, network, and other resource consumption) by resizing and then deleting an instance.
 impacted_packages:
+  - purl: pkg:github/openstack/ossa
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openstack/ossa
+        commit: 482576204dec96f580817b119e3166d71c757731
+    introduced_in_commits: []
   - purl: pkg:pypi/nova
     affected_versions: vers:pypi/<12.0.0.0b3
     fixed_versions: vers:pypi/112.0.0.0b3
@@ -23,18 +30,11 @@ impacted_packages:
       - vcs_url: https://github.com/openstack/nova
         commit: 7ab75d5b0b75fc3426323bef19bf436a258b9707
     introduced_in_commits: []
-  - purl: pkg:github/openstack/ossa
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/openstack/ossa
-        commit: 482576204dec96f580817b119e3166d71c757731
-    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses: []
 references:

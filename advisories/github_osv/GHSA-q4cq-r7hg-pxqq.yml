@@ -8,13 +8,13 @@ summary: |
   A improper authentication vulnerability exists in Jenkins 2.137 and earlier, 2.121.2 and earlier in SecurityRealm.java, TokenBasedRememberMeServices2.java that allows attackers with a valid cookie to remain logged in even if that feature is disabled.
 impacted_packages:
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
-    affected_versions: vers:maven/<2.121.3
-    fixed_versions: vers:maven/2.121.3
+    affected_versions: vers:maven/>=2.122|<2.138
+    fixed_versions: vers:maven/2.138
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
-    affected_versions: vers:maven/>=2.122|<2.138
-    fixed_versions: vers:maven/2.138
+    affected_versions: vers:maven/<2.121.3
+    fixed_versions: vers:maven/2.121.3
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/jenkinsci/jenkins
@@ -28,14 +28,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '5.4'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-q4cq-r7hg-pxqq/GHSA-q4cq-r7hg-pxqq.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-287

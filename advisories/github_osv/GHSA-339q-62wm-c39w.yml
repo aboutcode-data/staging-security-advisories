@@ -7,11 +7,6 @@ summary: |
   Undertow vulnerable to Denial of Service (DoS) attacks
   Undertow client side invocation timeout raised when calling over HTTP2, this vulnerability can allow attacker to carry out denial of service (DoS) attacks in versions less than 2.2.15 Final.
 impacted_packages:
-  - purl: pkg:maven/io.undertow/undertow-core
-    affected_versions: vers:maven/<2.2.15
-    fixed_versions: vers:maven/2.2.15
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/undertow-io/undertow
     affected_versions:
     fixed_versions:
@@ -21,16 +16,21 @@ impacted_packages:
       - vcs_url: https://github.com/undertow-io/undertow
         commit: db0f5be43f8e2a4b88fbedd2eb6d5a95a29ceaa8
     introduced_in_commits: []
+  - purl: pkg:maven/io.undertow/undertow-core
+    affected_versions: vers:maven/<2.2.15
+    fixed_versions: vers:maven/2.2.15
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/07/GHSA-339q-62wm-c39w/GHSA-339q-62wm-c39w.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-400

@@ -9,11 +9,6 @@ summary: |
 
   Queue cleanup Plugin 1.4 correctly escapes the query parameter.
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins/queue-cleanup
-    affected_versions: vers:maven/<1.4
-    fixed_versions: vers:maven/1.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/queue-cleanup-plugin
     affected_versions:
     fixed_versions:
@@ -23,16 +18,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/queue-cleanup-plugin
         commit: e7dae99aa3a414004e953303c7c687d65348de11
     introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/queue-cleanup
+    affected_versions: vers:maven/<1.4
+    fixed_versions: vers:maven/1.4
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-m7pr-m4cx-6m22/GHSA-m7pr-m4cx-6m22.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

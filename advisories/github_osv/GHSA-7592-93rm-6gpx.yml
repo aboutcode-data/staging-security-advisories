@@ -8,13 +8,13 @@ summary: |
   A improper neutralization of control sequences vulnerability exists in Jenkins 2.120 and older, LTS 2.107.2 and older in HudsonPrivateSecurityRealm.java that allows users to sign up using user names containing control characters that can then appear to have the same name as other users, and cannot be deleted via the UI.
 impacted_packages:
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
-    affected_versions: vers:maven/<=2.107.2
-    fixed_versions: vers:maven/2.107.3
+    affected_versions: vers:maven/<=2.120
+    fixed_versions: vers:maven/2.121
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
-    affected_versions: vers:maven/<=2.120
-    fixed_versions: vers:maven/2.121
+    affected_versions: vers:maven/<=2.107.2
+    fixed_versions: vers:maven/2.107.3
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/jenkinsci/jenkins
@@ -26,14 +26,14 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '4.3'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-7592-93rm-6gpx/GHSA-7592-93rm-6gpx.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-74

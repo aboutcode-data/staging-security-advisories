@@ -7,11 +7,6 @@ summary: |
   Authorization Bypass in parse-path
   Authorization Bypass Through User-Controlled Key in GitHub repository ionicabizau/parse-path prior to 5.0.0.
 impacted_packages:
-  - purl: pkg:npm/parse-path
-    affected_versions: vers:npm/<5.0.0
-    fixed_versions: vers:npm/5.0.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/ionicabizau/parse-path
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/ionicabizau/parse-path
         commit: f9ad8856a3c8ae18e1cf4caef5edbabbc42840e8
     introduced_in_commits: []
+  - purl: pkg:npm/parse-path
+    affected_versions: vers:npm/<5.0.0
+    fixed_versions: vers:npm/5.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/06/GHSA-3j8f-xvm3-ffx4/GHSA-3j8f-xvm3-ffx4.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-639

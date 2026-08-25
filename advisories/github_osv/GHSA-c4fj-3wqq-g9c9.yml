@@ -7,11 +7,6 @@ summary: |
   Centreon Command Injection
   The `escape_command` function in `include/Administration/corePerformance/getStats.php` in Centreon (formerly Merethis Centreon) 2.5.4 and earlier (offending file deleted in Centreon 19.10.0) uses an incorrect regular expression, which allows remote authenticated users to execute arbitrary commands via shell metacharacters in the `ns_id` parameter.
 impacted_packages:
-  - purl: pkg:composer/centreon/centreon
-    affected_versions: vers:composer/<2.8.28
-    fixed_versions: vers:composer/2.8.28
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/centreon/centreon-archived
     affected_versions:
     fixed_versions:
@@ -21,16 +16,21 @@ impacted_packages:
       - vcs_url: https://github.com/centreon/centreon-archived
         commit: 387dffdd051dbc7a234e1138a9d06f3089bb55bb
     introduced_in_commits: []
+  - purl: pkg:composer/centreon/centreon
+    affected_versions: vers:composer/<2.8.28
+    fixed_versions: vers:composer/2.8.28
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-c4fj-3wqq-g9c9/GHSA-c4fj-3wqq-g9c9.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-77

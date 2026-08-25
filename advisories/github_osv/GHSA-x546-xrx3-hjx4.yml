@@ -9,11 +9,6 @@ summary: |
 
   ##NOTE: This plugin is marked as DEPRECATED
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins/dynatrace-dashboard
-    affected_versions: vers:maven/<2.1.4
-    fixed_versions: vers:maven/2.1.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/dynatrace-plugin
     affected_versions:
     fixed_versions:
@@ -21,16 +16,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/dynatrace-plugin
         commit: 373adaa1161d59ccd4e5e3469a9b6aeec17968ae
     introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/dynatrace-dashboard
+    affected_versions: vers:maven/<2.1.4
+    fixed_versions: vers:maven/2.1.4
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-x546-xrx3-hjx4/GHSA-x546-xrx3-hjx4.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-352

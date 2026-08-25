@@ -23,6 +23,13 @@ summary: |
   ### Details
   The issue is rooted in the code that removes legacy comments (stuff inside parenthesis) from strings during rfc2822 parsing. `moment("(".repeat(500000))` will take a few minutes to process, which is unacceptable.
 impacted_packages:
+  - purl: pkg:github/moment/moment
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/moment/moment
+        commit: 9a3b5894f3d5d602948ac8a02e4ee528a49ca3a3
+    introduced_in_commits: []
   - purl: pkg:npm/moment
     affected_versions: vers:npm/>=2.18.0|<2.29.4
     fixed_versions: vers:npm/2.29.4
@@ -33,23 +40,16 @@ impacted_packages:
     fixed_versions: vers:nuget/2.29.4
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/moment/moment
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/moment/moment
-        commit: 9a3b5894f3d5d602948ac8a02e4ee528a49ca3a3
-    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/07/GHSA-wc69-rhjr-hc9g/GHSA-wc69-rhjr-hc9g.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-1333

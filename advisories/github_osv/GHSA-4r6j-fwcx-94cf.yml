@@ -7,11 +7,6 @@ summary: |
   snowflake-connector-python is vulnerable to Regular Expression Denial of Service (ReDoS)
   An exponential ReDoS (Regular Expression Denial of Service) can be triggered in the snowflake-connector-python PyPI package, when an attacker is able to supply arbitrary input to the get_file_transfer_type method.
 impacted_packages:
-  - purl: pkg:pypi/snowflake-connector-python
-    affected_versions: vers:pypi/<2.8.2
-    fixed_versions: vers:pypi/2.8.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/snowflakedb/snowflake-connector-python
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/snowflakedb/snowflake-connector-python
         commit: b9d2fc789fae4db865dde3d2a1bd72c8a9eab091
     introduced_in_commits: []
+  - purl: pkg:pypi/snowflake-connector-python
+    affected_versions: vers:pypi/<2.8.2
+    fixed_versions: vers:pypi/2.8.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.9'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/11/GHSA-4r6j-fwcx-94cf/GHSA-4r6j-fwcx-94cf.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-1333

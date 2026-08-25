@@ -7,11 +7,6 @@ summary: |
   Jenkins HTTP Request Plugin stores HTTP Request passwords unencrypted
   HTTP Request Plugin 1.15 and earlier stores HTTP Request passwords unencrypted in its global configuration file `jenkins.plugins.http_request.HttpRequest.xml` on the Jenkins controller as part of its configuration when using (deprecated) Basic/Digest Authentication. These passwords can be viewed by users with access to the Jenkins controller file system.
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins/http_request
-    affected_versions: vers:maven/<1.16
-    fixed_versions: vers:maven/1.16
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/http-request-plugin
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/http-request-plugin
         commit: a2cf3454a8752759b092c23cadc156dfd2943c42
     introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/http_request
+    affected_versions: vers:maven/<1.16
+    fixed_versions: vers:maven/1.16
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '3.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/07/GHSA-2qh6-hhvv-m2ww/GHSA-2qh6-hhvv-m2ww.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-256

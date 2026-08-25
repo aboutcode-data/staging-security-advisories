@@ -7,11 +7,6 @@ summary: |
   Deserialization of Untrusted Data in librenms/librenms
   Deserialization of Untrusted Data in GitHub repository librenms/librenms prior to 22.10.0.
 impacted_packages:
-  - purl: pkg:composer/librenms/librenms
-    affected_versions: vers:composer/<22.10.0
-    fixed_versions: vers:composer/22.10.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/librenms/librenms
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/librenms/librenms
         commit: ae3925b09ad3c5d0f7a9d5a26ae2f2f778834948
     introduced_in_commits: []
+  - purl: pkg:composer/librenms/librenms
+    affected_versions: vers:composer/<22.10.0
+    fixed_versions: vers:composer/22.10.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/11/GHSA-cv9g-h8mm-xx5h/GHSA-cv9g-h8mm-xx5h.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-502

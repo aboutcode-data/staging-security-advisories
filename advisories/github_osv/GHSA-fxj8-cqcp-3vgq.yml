@@ -7,6 +7,13 @@ summary: |
   Jenkins cross-site scripting (XSS) vulnerability
   Cross-site scripting (XSS) vulnerability in Jenkins before 1.551 and LTS before 1.532.2 allows remote attackers to inject arbitrary web script or HTML via the iconSize cookie.
 impacted_packages:
+  - purl: pkg:github/jenkinsci/jenkins
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/jenkinsci/jenkins
+        commit: a0b00508eeb74d7033dc4100eb382df4e8fa72e7
+    introduced_in_commits: []
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
     affected_versions: vers:maven/>=1.533|<1.551
     fixed_versions: vers:maven/1.551
@@ -17,18 +24,11 @@ impacted_packages:
     fixed_versions: vers:maven/1.532.2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/jenkinsci/jenkins
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/jenkinsci/jenkins
-        commit: a0b00508eeb74d7033dc4100eb382df4e8fa72e7
-    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

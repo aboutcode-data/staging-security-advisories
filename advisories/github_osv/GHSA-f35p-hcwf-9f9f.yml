@@ -8,13 +8,13 @@ summary: |
   TYPO3 4.0.x before 4.0.9, 4.1.x before 4.1.7, and 4.2.x before 4.2.1, uses an insufficiently restrictive default fileDenyPattern for Apache, which allows remote attackers to bypass security restrictions and upload configuration files such as .htaccess, or conduct file upload attacks using multiple extensions.
 impacted_packages:
   - purl: pkg:composer/typo3/cms-core
-    affected_versions: vers:composer/>=4.0.0|<4.0.9
-    fixed_versions: vers:composer/4.0.9
+    affected_versions: vers:composer/>=4.1.0|<4.1.7
+    fixed_versions: vers:composer/4.1.7
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/typo3/cms-core
-    affected_versions: vers:composer/>=4.1.0|<4.1.7
-    fixed_versions: vers:composer/4.1.7
+    affected_versions: vers:composer/>=4.0.0|<4.0.9
+    fixed_versions: vers:composer/4.0.9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/typo3/cms-core
@@ -26,7 +26,7 @@ severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-434

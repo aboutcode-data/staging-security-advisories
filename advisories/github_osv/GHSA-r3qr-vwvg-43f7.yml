@@ -21,11 +21,6 @@ summary: |
   Open an issue in [our issue tracker](https://github.com/opencast/opencast/issues)
   Email us at [security@opencast.org](mailto:security@opencast.org)
 impacted_packages:
-  - purl: pkg:maven/org.opencastproject/opencast-common
-    affected_versions: vers:maven/<12.5
-    fixed_versions: vers:maven/12.5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/opencast/opencast
     affected_versions:
     fixed_versions:
@@ -33,16 +28,21 @@ impacted_packages:
       - vcs_url: https://github.com/opencast/opencast
         commit: d2ce2321590f86b066a67e8c231cf68219aea017
     introduced_in_commits: []
+  - purl: pkg:maven/org.opencastproject/opencast-common
+    affected_versions: vers:maven/<12.5
+    fixed_versions: vers:maven/12.5
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/11/GHSA-r3qr-vwvg-43f7/GHSA-r3qr-vwvg-43f7.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-601

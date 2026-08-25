@@ -8,6 +8,31 @@ summary: |
   The `safe_eval` function in trytond in Tryton before 2.4.15, 2.6.x before 2.6.14, 2.8.x before 2.8.11, 3.0.x before 3.0.7, and 3.2.x before 3.2.3 allows remote authenticated users to execute arbitrary commands via shell metacharacters in (1) the `collection.domain` in the webdav module or (2) the formula field in the `price_list` module.
 impacted_packages:
   - purl: pkg:pypi/tryton
+    affected_versions: vers:pypi/>=3.2.0|<3.2.3
+    fixed_versions: vers:pypi/3.2.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/trytond
+    affected_versions: vers:pypi/>=3.0.0|<3.0.7
+    fixed_versions: vers:pypi/3.0.7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/trytond
+    affected_versions: vers:pypi/>=2.4.0|<2.4.15
+    fixed_versions: vers:pypi/2.4.15
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/trytond
+    affected_versions: vers:pypi/>=3.2.0|<3.2.3
+    fixed_versions: vers:pypi/3.2.3
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tryton
+    affected_versions: vers:pypi/>=2.8.0|<2.8.11
+    fixed_versions: vers:pypi/2.8.11
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/tryton
     affected_versions: vers:pypi/<2.4.15
     fixed_versions: vers:pypi/2.4.15
     fixed_in_commits: []
@@ -17,21 +42,6 @@ impacted_packages:
     fixed_versions: vers:pypi/2.6.14
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:pypi/tryton
-    affected_versions: vers:pypi/>=2.8.0|<2.8.11
-    fixed_versions: vers:pypi/2.8.11
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/tryton
-    affected_versions: vers:pypi/>=3.2.0|<3.2.3
-    fixed_versions: vers:pypi/3.2.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/trytond
-    affected_versions: vers:pypi/>=2.4.0|<2.4.15
-    fixed_versions: vers:pypi/2.4.15
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:pypi/trytond
     affected_versions: vers:pypi/>=2.6.0|<2.6.14
     fixed_versions: vers:pypi/2.6.14
@@ -40,16 +50,6 @@ impacted_packages:
   - purl: pkg:pypi/trytond
     affected_versions: vers:pypi/>=2.8.0|<2.8.11
     fixed_versions: vers:pypi/2.8.11
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/trytond
-    affected_versions: vers:pypi/>=3.2.0|<3.2.3
-    fixed_versions: vers:pypi/3.2.3
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/trytond
-    affected_versions: vers:pypi/>=3.0.0|<3.0.7
-    fixed_versions: vers:pypi/3.0.7
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/tryton/trytond
@@ -63,19 +63,19 @@ impacted_packages:
     introduced_in_commits: []
 severities:
   - score: '8.8'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-m9jj-5qvj-5fhx/GHSA-m9jj-5qvj-5fhx.json
   - score: '8.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-m9jj-5qvj-5fhx/GHSA-m9jj-5qvj-5fhx.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-77

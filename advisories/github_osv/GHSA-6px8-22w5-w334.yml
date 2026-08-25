@@ -7,19 +7,29 @@ summary: |
   Denial of service in ASP.NET Core
   A denial of service vulnerability exists when ASP.NET Core improperly handles web requests, aka "ASP.NET Core Denial of Service Vulnerability." This affects ASP.NET Core 2.1. This CVE ID is unique from CVE-2019-0548.
 impacted_packages:
-  - purl: pkg:nuget/Microsoft.AspNetCore.WebSockets
+  - purl: pkg:nuget/Microsoft.NETCore.App
     affected_versions: vers:nuget/2.2.0
     fixed_versions: vers:nuget/2.2.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.WebSockets
+  - purl: pkg:nuget/Microsoft.AspNetCore.App
+    affected_versions: vers:nuget/2.2.0
+    fixed_versions: vers:nuget/2.2.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Microsoft.AspNetCore.App
     affected_versions: vers:nuget/>=2.1.0|<2.1.7
     fixed_versions: vers:nuget/2.1.7
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.Server.Kestrel.Core
+  - purl: pkg:nuget/Microsoft.NETCore.App
     affected_versions: vers:nuget/>=2.1.0|<2.1.7
     fixed_versions: vers:nuget/2.1.7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Microsoft.AspNetCore.All
+    affected_versions: vers:nuget/2.2.0
+    fixed_versions: vers:nuget/2.2.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:nuget/System.Net.WebSockets.WebSocketProtocol
@@ -27,46 +37,36 @@ impacted_packages:
     fixed_versions: vers:nuget/4.5.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.NETCore.App
-    affected_versions: vers:nuget/2.2.0
-    fixed_versions: vers:nuget/2.2.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.NETCore.App
+  - purl: pkg:nuget/Microsoft.AspNetCore.All
     affected_versions: vers:nuget/>=2.1.0|<2.1.7
     fixed_versions: vers:nuget/2.1.7
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.App
+  - purl: pkg:nuget/Microsoft.AspNetCore.WebSockets
     affected_versions: vers:nuget/2.2.0
     fixed_versions: vers:nuget/2.2.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.App
+  - purl: pkg:nuget/Microsoft.AspNetCore.Server.Kestrel.Core
     affected_versions: vers:nuget/>=2.1.0|<2.1.7
     fixed_versions: vers:nuget/2.1.7
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.All
-    affected_versions: vers:nuget/2.2.0
-    fixed_versions: vers:nuget/2.2.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.All
+  - purl: pkg:nuget/Microsoft.AspNetCore.WebSockets
     affected_versions: vers:nuget/>=2.1.0|<2.1.7
     fixed_versions: vers:nuget/2.1.7
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '7.5'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-6px8-22w5-w334/GHSA-6px8-22w5-w334.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses: []
 references:

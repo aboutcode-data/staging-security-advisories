@@ -7,11 +7,6 @@ summary: |
   Skytap Cloud CI Plugin stored credentials in plain text
   Jenkins Skytap Cloud CI Plugin 2.06 and earlier stored credentials unencrypted in job config.xml files on the Jenkins master where they could be viewed by users with Extended Read permission, or access to the master file system.
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins/skytap
-    affected_versions: vers:maven/<=2.06
-    fixed_versions: vers:maven/2.07
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/skytap-cloud-plugin
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/skytap-cloud-plugin
         commit: 167986a84d1d15b525eaf0232b1c1a7c47aef670
     introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/skytap
+    affected_versions: vers:maven/<=2.06
+    fixed_versions: vers:maven/2.07
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-vp26-4hj6-jrvx/GHSA-vp26-4hj6-jrvx.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-522

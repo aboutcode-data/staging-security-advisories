@@ -8,11 +8,6 @@ summary: |
   Cross-site Scripting (XSS) - Reflected in GitHub repository beancount/fava prior to 1.22.2.
   The `query_string` parameter of Fava is vulnerable to reflected cross-site scripting, for which a attacker can modify any information that the user is able to modify. This issue is fixed in version 1.22.2.
 impacted_packages:
-  - purl: pkg:pypi/fava
-    affected_versions: vers:pypi/<1.22.2
-    fixed_versions: vers:pypi/1.22.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/beancount/fava
     affected_versions:
     fixed_versions:
@@ -20,21 +15,26 @@ impacted_packages:
       - vcs_url: https://github.com/beancount/fava
         commit: dccfb6a2f4567f35ce2e9a78e24f92ebf946bc9b
     introduced_in_commits: []
+  - purl: pkg:pypi/fava
+    affected_versions: vers:pypi/<1.22.2
+    fixed_versions: vers:pypi/1.22.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/07/GHSA-q8hg-3vqv-f8v3/GHSA-q8hg-3vqv-f8v3.json
   - score: '5.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/07/GHSA-q8hg-3vqv-f8v3/GHSA-q8hg-3vqv-f8v3.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

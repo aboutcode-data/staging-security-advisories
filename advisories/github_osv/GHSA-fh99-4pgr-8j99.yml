@@ -20,6 +20,13 @@ summary: |
   ### References
   * [TYPO3-CORE-SA-2022-002](https://typo3.org/security/advisory/typo3-core-sa-2022-002)
 impacted_packages:
+  - purl: pkg:github/typo3/typo3
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/typo3/typo3
+        commit: c93ea692e7dfef03b7c50fe5437487545bee4d6a
+    introduced_in_commits: []
   - purl: pkg:composer/typo3/cms-core
     affected_versions: vers:composer/>=7.0.0|<7.6.57
     fixed_versions: vers:composer/7.6.57
@@ -55,23 +62,16 @@ impacted_packages:
     fixed_versions: vers:composer/11.5.11
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/typo3/typo3
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/typo3/typo3
-        commit: c93ea692e7dfef03b7c50fe5437487545bee4d6a
-    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/06/GHSA-fh99-4pgr-8j99/GHSA-fh99-4pgr-8j99.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-209

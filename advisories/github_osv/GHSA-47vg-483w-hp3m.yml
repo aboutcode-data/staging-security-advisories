@@ -7,11 +7,6 @@ summary: |
   Improper user session handling in filegator
   FileGator prior to version 7.8.0 is vulnerable to session fixation.
 impacted_packages:
-  - purl: pkg:composer/filegator/filegator
-    affected_versions: vers:composer/<7.8.0
-    fixed_versions: vers:composer/7.8.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/filegator/filegator
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/filegator/filegator
         commit: fcd3995f64f5dfc6a4c2c059cc22a2fef1e81225
     introduced_in_commits: []
+  - purl: pkg:composer/filegator/filegator
+    affected_versions: vers:composer/<7.8.0
+    fixed_versions: vers:composer/7.8.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.3'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-47vg-483w-hp3m/GHSA-47vg-483w-hp3m.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-384

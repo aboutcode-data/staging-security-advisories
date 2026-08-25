@@ -7,6 +7,13 @@ summary: |
   Pimcore Vulnerable to PHP Object Injection Attacks
   The `getObjectByToken` function in `Newsletter.php` in the `Pimcore_Tool_Newsletter` module in pimcore 1.4.9 through 2.0.0 does not properly handle an object obtained by unserializing Lucene search data, which allows remote attackers to conduct PHP object injection attacks and execute arbitrary code via vectors involving a `Zend_Pdf_ElementFactory_Proxy` object and a pathname with a trailing `\0` character.
 impacted_packages:
+  - purl: pkg:github/pimcore/pimcore
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/pimcore/pimcore
+        commit: 3cb2683e669b5644f180d362cfa9614c09bef280
+    introduced_in_commits: []
   - purl: pkg:composer/pimcore/pimcore
     affected_versions: vers:composer/>=1.4.9|<2.2.0
     fixed_versions: vers:composer/2.2.0
@@ -21,23 +28,16 @@ impacted_packages:
       - vcs_url: https://github.com/pedrib/poc
         commit: caa03645e256a8b50f1101c983d39586ebc467ee
     introduced_in_commits: []
-  - purl: pkg:github/pimcore/pimcore
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/pimcore/pimcore
-        commit: 3cb2683e669b5644f180d362cfa9614c09bef280
-    introduced_in_commits: []
 severities:
   - score: '8.9'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-g7pj-3v97-3vxp/GHSA-g7pj-3v97-3vxp.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

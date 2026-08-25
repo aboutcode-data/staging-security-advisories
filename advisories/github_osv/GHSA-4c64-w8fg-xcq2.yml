@@ -7,26 +7,26 @@ summary: |
   Yii Cross-site Scripting Framework vulnerability
   An XSS vulnerability exists in framework/views/errorHandler/exception.php in Yii Framework 2.0.12 affecting the exception screen when debug mode is enabled, because $exception->errorInfo is mishandled.
 impacted_packages:
-  - purl: pkg:composer/yiisoft/yii2-dev
+  - purl: pkg:composer/yiisoft/yii2
     affected_versions: vers:composer/2.0.12
     fixed_versions: vers:composer/2.0.13
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/yiisoft/yii2
+  - purl: pkg:composer/yiisoft/yii2-dev
     affected_versions: vers:composer/2.0.12
     fixed_versions: vers:composer/2.0.13
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '6.1'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-4c64-w8fg-xcq2/GHSA-4c64-w8fg-xcq2.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

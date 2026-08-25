@@ -7,21 +7,6 @@ summary: |
   Moodle does not consider "don't send" attributes during hub registration
   Moodle through 2.1.10, 2.2.x before 2.2.10, 2.3.x before 2.3.7, and 2.4.x before 2.4.4 does not consider "don't send" attributes during hub registration, which allows remote hubs to obtain sensitive site information by reading form data.
 impacted_packages:
-  - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/<2.2.10
-    fixed_versions: vers:composer/2.2.10
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/>=2.3.0|<2.3.7
-    fixed_versions: vers:composer/2.3.7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/>=2.4.0|<2.4.4
-    fixed_versions: vers:composer/2.4.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/moodle/moodle
     affected_versions:
     fixed_versions:
@@ -47,11 +32,26 @@ impacted_packages:
       - vcs_url: https://github.com/moodle/moodle
         commit: 669dee58048b18d9034a7b2367b97a50b498b0e0
     introduced_in_commits: []
+  - purl: pkg:composer/moodle/moodle
+    affected_versions: vers:composer/<2.2.10
+    fixed_versions: vers:composer/2.2.10
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/moodle/moodle
+    affected_versions: vers:composer/>=2.3.0|<2.3.7
+    fixed_versions: vers:composer/2.3.7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/moodle/moodle
+    affected_versions: vers:composer/>=2.4.0|<2.4.4
+    fixed_versions: vers:composer/2.4.4
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-284

@@ -9,11 +9,6 @@ summary: |
 
   This vulnerability allows attackers to build a project with attacker-specified parameters. Build With Parameters Plugin 1.5.1 requires POST requests for the affected HTTP endpoint.
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins/build-with-parameters
-    affected_versions: vers:maven/<=1.5
-    fixed_versions: vers:maven/1.5.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/build-with-parameters-plugin
     affected_versions:
     fixed_versions:
@@ -21,16 +16,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/build-with-parameters-plugin
         commit: 82711e83bf822c5688017304939d5d1c3482ec3e
     introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/build-with-parameters
+    affected_versions: vers:maven/<=1.5
+    fixed_versions: vers:maven/1.5.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-w24g-24qg-v4w2/GHSA-w24g-24qg-v4w2.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-352

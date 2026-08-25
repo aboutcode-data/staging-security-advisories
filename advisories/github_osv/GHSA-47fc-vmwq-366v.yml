@@ -7,6 +7,11 @@ summary: |
   PyTorch vulnerable to arbitrary code execution
   In PyTorch before trunk/89695, torch.jit.annotations.parse_type_line can cause arbitrary code execution because eval is used unsafely. The fix for this issue is available in version 1.13.1. There is a release checker in [issue #89855](https://github.com/pytorch/pytorch/issues/89855).
 impacted_packages:
+  - purl: pkg:pypi/torch
+    affected_versions: vers:pypi/<=1.13.0
+    fixed_versions: vers:pypi/1.13.1
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:github/pytorch/pytorch
     affected_versions:
     fixed_versions:
@@ -14,26 +19,21 @@ impacted_packages:
       - vcs_url: https://github.com/pytorch/pytorch
         commit: 767f6aa49fe20a2766b9843d01e3b7f7793df6a3
     introduced_in_commits: []
-  - purl: pkg:pypi/torch
-    affected_versions: vers:pypi/<=1.13.0
-    fixed_versions: vers:pypi/1.13.1
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/11/GHSA-47fc-vmwq-366v/GHSA-47fc-vmwq-366v.json
   - score: '9.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/11/GHSA-47fc-vmwq-366v/GHSA-47fc-vmwq-366v.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-77

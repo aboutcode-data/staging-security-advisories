@@ -7,11 +7,6 @@ summary: |
   Cross site scripting in francoisjacquet/rosariosis
   A Cross-site Scripting (XSS) vulnerability exists in in GitHub repository francoisjacquet/rosariosis prior to 9.1. HTML entities are not properly decoded from the URL.
 impacted_packages:
-  - purl: pkg:composer/francoisjacquet/rosariosis
-    affected_versions: vers:composer/<9.1.0
-    fixed_versions: vers:composer/9.1.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/francoisjacquet/rosariosis
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/francoisjacquet/rosariosis
         commit: 6e213b17e6ac3a3961e1eabcdaba1c892844398a
     introduced_in_commits: []
+  - purl: pkg:composer/francoisjacquet/rosariosis
+    affected_versions: vers:composer/<9.1.0
+    fixed_versions: vers:composer/9.1.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/06/GHSA-4hpr-hh77-6q9p/GHSA-4hpr-hh77-6q9p.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

@@ -12,16 +12,6 @@ summary: |
   An enumeration of credentials IDs in Kubernetes Plugin 1.27.4, 1.26.5, 1.25.4.1, and 1.21.6 requires the appropriate permissions.
 impacted_packages:
   - purl: pkg:maven/org.csanchez.jenkins.plugins/kubernetes
-    affected_versions: vers:maven/>=1.27.0|<1.27.4
-    fixed_versions: vers:maven/1.27.4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.csanchez.jenkins.plugins/kubernetes
-    affected_versions: vers:maven/>=1.26.0|<1.26.5
-    fixed_versions: vers:maven/1.26.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.csanchez.jenkins.plugins/kubernetes
     affected_versions: vers:maven/>=1.22.0|<1.25.4.1
     fixed_versions: vers:maven/1.25.4.1
     fixed_in_commits: []
@@ -38,6 +28,16 @@ impacted_packages:
       - vcs_url: https://github.com/cveproject/cvelist
         commit: 381fe967666a5ce01625a7a050427aa4757e3ca6
     introduced_in_commits: []
+  - purl: pkg:maven/org.csanchez.jenkins.plugins/kubernetes
+    affected_versions: vers:maven/>=1.27.0|<1.27.4
+    fixed_versions: vers:maven/1.27.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.csanchez.jenkins.plugins/kubernetes
+    affected_versions: vers:maven/>=1.26.0|<1.26.5
+    fixed_versions: vers:maven/1.26.5
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/kubernetes-plugin
     affected_versions:
     fixed_versions:
@@ -49,12 +49,12 @@ severities:
   - score: '4.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-g2r3-4g8q-h5rj/GHSA-g2r3-4g8q-h5rj.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-862

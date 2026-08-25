@@ -8,6 +8,11 @@ summary: |
   A reflected cross-site scripting vulnerability exists in the admin panel of Magento Open Source prior to 1.9.4.2, and Magento Commerce prior to 1.14.4.2, Magento 2.1 prior to 2.1.18, Magento 2.2 prior to 2.2.9, Magento 2.3 prior to 2.3.2 when the feature that adds a secret key to the Admin URL is disabled.
 impacted_packages:
   - purl: pkg:composer/magento/community-edition
+    affected_versions: vers:composer/>=2.3.0|<2.3.2
+    fixed_versions: vers:composer/2.3.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/magento/community-edition
     affected_versions: vers:composer/>=2.1.0|<2.1.18
     fixed_versions: vers:composer/2.1.18
     fixed_in_commits: []
@@ -17,21 +22,16 @@ impacted_packages:
     fixed_versions: vers:composer/2.2.9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/magento/community-edition
-    affected_versions: vers:composer/>=2.3.0|<2.3.2
-    fixed_versions: vers:composer/2.3.2
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: '4.8'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-rj8f-g5gm-jw5c/GHSA-rj8f-g5gm-jw5c.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

@@ -11,11 +11,6 @@ summary: |
 
   Compuware Xpediter Code Coverage Plugin 1.0.8 requires the appropriate permissions to enumerate hosts and ports of Compuware configurations and credentials IDs.
 impacted_packages:
-  - purl: pkg:maven/com.compuware.jenkins/compuware-xpediter-code-coverage
-    affected_versions: vers:maven/<=1.0.7
-    fixed_versions: vers:maven/1.0.8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/compuware-xpediter-code-coverage-plugin
     affected_versions:
     fixed_versions:
@@ -23,16 +18,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/compuware-xpediter-code-coverage-plugin
         commit: 2bb312d91f8dc20e7e1e2098584dbea65a9bffb6
     introduced_in_commits: []
+  - purl: pkg:maven/com.compuware.jenkins/compuware-xpediter-code-coverage
+    affected_versions: vers:maven/<=1.0.7
+    fixed_versions: vers:maven/1.0.8
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/07/GHSA-hxf7-9rv9-88v6/GHSA-hxf7-9rv9-88v6.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-862

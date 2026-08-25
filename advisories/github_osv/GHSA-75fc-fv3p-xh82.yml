@@ -11,11 +11,6 @@ summary: |
 
   BMC Compuware Source Code Download for Endevor, PDS, and ISPW Plugin 2.0.13 requires the appropriate permissions to enumerate hosts and ports of Compuware configurations and credentials IDs.
 impacted_packages:
-  - purl: pkg:maven/com.compuware.jenkins/compuware-scm-downloader
-    affected_versions: vers:maven/<=2.0.12
-    fixed_versions: vers:maven/2.0.13
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/compuware-scm-downloader-plugin
     affected_versions:
     fixed_versions:
@@ -23,16 +18,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/compuware-scm-downloader-plugin
         commit: bf00665b13641351a9f67027bbe34609cc4f65e2
     introduced_in_commits: []
+  - purl: pkg:maven/com.compuware.jenkins/compuware-scm-downloader
+    affected_versions: vers:maven/<=2.0.12
+    fixed_versions: vers:maven/2.0.13
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/07/GHSA-75fc-fv3p-xh82/GHSA-75fc-fv3p-xh82.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-862

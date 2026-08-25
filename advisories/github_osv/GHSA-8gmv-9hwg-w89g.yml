@@ -33,12 +33,15 @@ impacted_packages:
     fixed_versions: vers:composer/7.6.57
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/typo3/typo3
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/typo3/typo3
-        commit: 7447a3d1283017d2ee08737a7972c720001a93e9
+  - purl: pkg:composer/typo3/cms-core
+    affected_versions: vers:composer/>=11.0.0|<11.5.11
+    fixed_versions: vers:composer/11.5.11
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/typo3/cms
+    affected_versions: vers:composer/>=10.0.0|<10.4.29
+    fixed_versions: vers:composer/10.4.29
+    fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/typo3/cms-core
     affected_versions: vers:composer/>=8.0.0|<8.7.47
@@ -55,31 +58,28 @@ impacted_packages:
     fixed_versions: vers:composer/10.4.29
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/typo3/cms-core
-    affected_versions: vers:composer/>=11.0.0|<11.5.11
-    fixed_versions: vers:composer/11.5.11
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/typo3/cms
-    affected_versions: vers:composer/>=10.0.0|<10.4.29
-    fixed_versions: vers:composer/10.4.29
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:composer/typo3/cms
     affected_versions: vers:composer/>=11.0.0|<11.5.11
     fixed_versions: vers:composer/11.5.11
     fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/typo3/typo3
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/typo3/typo3
+        commit: 7447a3d1283017d2ee08737a7972c720001a93e9
     introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/06/GHSA-8gmv-9hwg-w89g/GHSA-8gmv-9hwg-w89g.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-319

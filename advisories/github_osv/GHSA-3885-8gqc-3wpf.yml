@@ -40,6 +40,16 @@ summary: "Potential leak of NuGet.org API key\n### Description \n\nMicrosoft is 
   \ \nMSRC details for this can be found at https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2022-30184"
 impacted_packages:
   - purl: pkg:nuget/NuGet.CommandLine
+    affected_versions: vers:nuget/>=5.10.0|<5.11.2
+    fixed_versions: vers:nuget/5.11.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/NuGet.Commands
+    affected_versions: vers:nuget/>=3.5.0|<4.9.5
+    fixed_versions: vers:nuget/4.9.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/NuGet.CommandLine
     affected_versions: vers:nuget/>=3.5.0|<4.9.5
     fixed_versions: vers:nuget/4.9.5
     fixed_in_commits: []
@@ -65,11 +75,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:nuget/NuGet.CommandLine
-    affected_versions: vers:nuget/>=5.10.0|<5.11.2
-    fixed_versions: vers:nuget/5.11.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/NuGet.CommandLine
     affected_versions: vers:nuget/>=6.0.0|<6.0.2
     fixed_versions: vers:nuget/6.0.2
     fixed_in_commits: []
@@ -82,16 +87,6 @@ impacted_packages:
   - purl: pkg:nuget/NuGet.CommandLine.XPlat
     affected_versions: vers:nuget/>=5.0.0|<5.2.1
     fixed_versions: vers:nuget/5.2.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/NuGet.CommandLine.XPlat
-    affected_versions: vers:nuget/>=5.3.0|<5.7.2
-    fixed_versions: vers:nuget/5.7.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/NuGet.Commands
-    affected_versions: vers:nuget/>=3.5.0|<4.9.5
-    fixed_versions: vers:nuget/4.9.5
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:nuget/NuGet.CommandLine.XPlat
@@ -122,6 +117,11 @@ impacted_packages:
   - purl: pkg:nuget/NuGet.Commands
     affected_versions: vers:nuget/>=6.1.0|<6.2.1
     fixed_versions: vers:nuget/6.2.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/NuGet.CommandLine.XPlat
+    affected_versions: vers:nuget/>=5.3.0|<5.7.2
+    fixed_versions: vers:nuget/5.7.2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:nuget/NuGet.CommandLine.XPlat
@@ -148,12 +148,12 @@ severities:
   - score: '5.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/06/GHSA-3885-8gqc-3wpf/GHSA-3885-8gqc-3wpf.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

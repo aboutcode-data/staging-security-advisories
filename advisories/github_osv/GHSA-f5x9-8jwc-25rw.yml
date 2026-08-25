@@ -23,11 +23,6 @@ summary: |
   * Open an issue in https://github.com/Pylons/waitress/issues (if not sensitive or security related)
   * email the Pylons Security mailing list: [pylons-project-security@googlegroups.com](mailto:pylons-project-security@googlegroups.com) (if security related)
 impacted_packages:
-  - purl: pkg:pypi/waitress
-    affected_versions: vers:pypi/>=2.1.0|<2.1.2
-    fixed_versions: vers:pypi/2.1.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/pylons/waitress
     affected_versions:
     fixed_versions:
@@ -35,21 +30,26 @@ impacted_packages:
       - vcs_url: https://github.com/pylons/waitress
         commit: 4f6789b035610e0552738cdc4b35ca809a592d48
     introduced_in_commits: []
+  - purl: pkg:pypi/waitress
+    affected_versions: vers:pypi/>=2.1.0|<2.1.2
+    fixed_versions: vers:pypi/2.1.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/06/GHSA-f5x9-8jwc-25rw/GHSA-f5x9-8jwc-25rw.json
   - score: '7.1'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/06/GHSA-f5x9-8jwc-25rw/GHSA-f5x9-8jwc-25rw.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-362

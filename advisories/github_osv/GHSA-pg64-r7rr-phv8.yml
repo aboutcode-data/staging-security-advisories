@@ -7,6 +7,13 @@ summary: |
   OpenStack Nova Server Resource Faults Leak External Exception Details
   An issue was discovered in OpenStack Nova before 17.0.12, 18.x before 18.2.2, and 19.x before 19.0.2. If an API request from an authenticated user ends in a fault condition due to an external exception, details of the underlying environment may be leaked in the response, and could include sensitive configuration or other data.
 impacted_packages:
+  - purl: pkg:github/openstack/nova
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openstack/nova
+        commit: 298b337a16c0d10916b4431c436d19b3d6f5360e
+    introduced_in_commits: []
   - purl: pkg:pypi/nova
     affected_versions: vers:pypi/<17.0.12
     fixed_versions: vers:pypi/17.0.12
@@ -22,28 +29,21 @@ impacted_packages:
     fixed_versions: vers:pypi/19.0.2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/openstack/nova
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/openstack/nova
-        commit: 298b337a16c0d10916b4431c436d19b3d6f5360e
-    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-pg64-r7rr-phv8/GHSA-pg64-r7rr-phv8.json
   - score: '7.1'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-pg64-r7rr-phv8/GHSA-pg64-r7rr-phv8.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

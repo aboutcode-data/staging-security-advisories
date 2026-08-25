@@ -7,6 +7,13 @@ summary: |
   Liferay Portal and Liferay DXP Vulnerable to XSS via the Portal Search Module
   A Cross-site scripting (XSS) vulnerability in the Portal Search module before 6.0.12 from Liferay Portal (7.1.0 through 7.4.2), and Liferay DXP 7.1 before fix pack 27, 7.2 before fix pack 15, and 7.3 before service pack 3 allows remote attackers to inject arbitrary web script or HTML via the `tag` parameter.
 impacted_packages:
+  - purl: pkg:github/liferay/liferay-portal
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/liferay/liferay-portal
+        commit: b42f1e70a69a31a3f2f7004a5b1923ec1e1e5445
+    introduced_in_commits: []
   - purl: pkg:maven/com.liferay/com.liferay.portal.search.web
     affected_versions: vers:maven/<6.0.12
     fixed_versions: vers:maven/6.0.12
@@ -22,23 +29,16 @@ impacted_packages:
     fixed_versions: vers:maven/7.2.10.fp15
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/liferay/liferay-portal
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/liferay/liferay-portal
-        commit: b42f1e70a69a31a3f2f7004a5b1923ec1e1e5445
-    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/11/GHSA-mr77-4pm4-x9vm/GHSA-mr77-4pm4-x9vm.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

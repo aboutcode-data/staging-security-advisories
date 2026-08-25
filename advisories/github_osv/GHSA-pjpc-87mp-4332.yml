@@ -11,11 +11,6 @@ summary: "Cross-site Scripting vulnerability in Mautic's tracking pixel function
   * Internally tracked under MST-38\n\n### For more information\nIf you have any questions or\
   \ comments about this advisory:\n* Email us at [security@mautic.org](mailto:security@mautic.org)"
 impacted_packages:
-  - purl: pkg:composer/mautic/core
-    affected_versions: vers:composer/<4.3.0
-    fixed_versions: vers:composer/4.3.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/mautic/mautic
     affected_versions:
     fixed_versions:
@@ -23,16 +18,21 @@ impacted_packages:
       - vcs_url: https://github.com/mautic/mautic
         commit: 462eb596027fd949efbf9ac5cb2b376805e9d246
     introduced_in_commits: []
+  - purl: pkg:composer/mautic/core
+    affected_versions: vers:composer/<4.3.0
+    fixed_versions: vers:composer/4.3.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.6'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-pjpc-87mp-4332/GHSA-pjpc-87mp-4332.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

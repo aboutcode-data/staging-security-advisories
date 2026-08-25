@@ -9,11 +9,6 @@ summary: |
 
   Exploitation of this vulnerability requires that parameters are listed on another page, like the \"Build With Parameters\" and \"Parameters\" pages provided by Jenkins (core), and that those pages are not hardened to prevent exploitation. Jenkins (core) has prevented exploitation of vulnerabilities of this kind on the \"Build With Parameters\" and \"Parameters\" pages since 2.44 and LTS 2.32.2 as part of the [SECURITY-353 / CVE-2017-2601](https://www.jenkins.io/security/advisory/2017-02-01/#persisted-cross-site-scripting-vulnerability-in-parameter-names-and-descriptions) fix. Additionally, several plugins have previously been updated to list parameters in a way that prevents exploitation by default, see [SECURITY-2617 in the 2022-04-12 security advisory for a list](https://www.jenkins.io/security/advisory/2022-04-12/#SECURITY-2617).
 impacted_packages:
-  - purl: pkg:maven/io.jenkins.plugins/cavisson-ns-nd-integration
-    affected_versions: vers:maven/<4.8.0.129
-    fixed_versions: vers:maven/4.8.0.129
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/cavisson-ns-nd-integration-plugin
     affected_versions:
     fixed_versions:
@@ -23,16 +18,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/cavisson-ns-nd-integration-plugin
         commit: 6321f09aa9518eeeaeaa2f81182e1eae079dbdf2
     introduced_in_commits: []
+  - purl: pkg:maven/io.jenkins.plugins/cavisson-ns-nd-integration
+    affected_versions: vers:maven/<4.8.0.129
+    fixed_versions: vers:maven/4.8.0.129
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/06/GHSA-pv38-mqpp-v72h/GHSA-pv38-mqpp-v72h.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

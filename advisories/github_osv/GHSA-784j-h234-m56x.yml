@@ -7,10 +7,12 @@ summary: |
   Protection Mechanism Failure in Jenkins Script Security Plugin
   A sandbox bypass vulnerability exists in Script Security Plugin 1.49 and earlier in src/main/java/org/jenkinsci/plugins/scriptsecurity/sandbox/groovy/GroovySandbox.java that allows attackers with the ability to provide sandboxed scripts to execute arbitrary code on the Jenkins master JVM.
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins/script-security
-    affected_versions: vers:maven/<=1.49
-    fixed_versions: vers:maven/1.50
-    fixed_in_commits: []
+  - purl: pkg:github/jenkinsci/script-security-plugin
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/jenkinsci/script-security-plugin
+        commit: 2c5122e50742dd16492f9424992deb21cc07837c
     introduced_in_commits: []
   - purl: pkg:github/rapid7/metasploit-framework
     affected_versions:
@@ -19,23 +21,21 @@ impacted_packages:
       - vcs_url: https://github.com/rapid7/metasploit-framework
         commit: 24143f812c7bede6d0ab66a6830761f621140ebd
     introduced_in_commits: []
-  - purl: pkg:github/jenkinsci/script-security-plugin
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/jenkinsci/script-security-plugin
-        commit: 2c5122e50742dd16492f9424992deb21cc07837c
+  - purl: pkg:maven/org.jenkins-ci.plugins/script-security
+    affected_versions: vers:maven/<=1.49
+    fixed_versions: vers:maven/1.50
+    fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-784j-h234-m56x/GHSA-784j-h234-m56x.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-693

@@ -8,16 +8,6 @@ summary: |
   Apache Tomcat before 6.0.39, 7.x before 7.0.47, and 8.x before 8.0.0-RC3, when an HTTP connector or AJP connector is used, does not properly handle certain inconsistent HTTP request headers, which allows remote attackers to trigger incorrect identification of a request's length and conduct request-smuggling attacks via (1) multiple Content-Length headers or (2) a Content-Length header and a "Transfer-Encoding: chunked" header.  NOTE: this vulnerability exists because of an incomplete fix for CVE-2005-2090.
 impacted_packages:
   - purl: pkg:maven/org.apache.tomcat/tomcat
-    affected_versions: vers:maven/<6.0.39
-    fixed_versions: vers:maven/6.0.39
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.tomcat/tomcat
-    affected_versions: vers:maven/>=7.0.0|<7.0.47
-    fixed_versions: vers:maven/7.0.47
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.tomcat/tomcat
     affected_versions: vers:maven/>=8.0.0-RC1|<8.0.0-RC3
     fixed_versions: vers:maven/8.0.0-RC3
     fixed_in_commits: []
@@ -35,6 +25,16 @@ impacted_packages:
       - vcs_url: https://github.com/apache/tomcat
         commit: d0b3e252eb168fafbfb4c3efc16d4192fc8fad6c
     introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat/tomcat
+    affected_versions: vers:maven/<6.0.39
+    fixed_versions: vers:maven/6.0.39
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.tomcat/tomcat
+    affected_versions: vers:maven/>=7.0.0|<7.0.47
+    fixed_versions: vers:maven/7.0.47
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:github/apache/tomcat80
     affected_versions:
     fixed_versions:
@@ -46,7 +46,7 @@ severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-20
