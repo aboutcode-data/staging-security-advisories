@@ -26,16 +26,6 @@ summary: |
   The mitigation is to restrict (by default) the actions authorized on Jolokia, or disable Jolokia.
   A more restrictive Jolokia configuration has been defined in default ActiveMQ distribution. We encourage users to upgrade to ActiveMQ distributions version including updated Jolokia configuration: 5.16.6, 5.17.4, 5.18.0, 6.0.0.
 impacted_packages:
-  - purl: pkg:maven/org.apache.activemq/apache-activemq
-    affected_versions: vers:maven/<5.16.6
-    fixed_versions: vers:maven/5.16.6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.activemq/apache-activemq
-    affected_versions: vers:maven/>=5.17.0|<5.17.4
-    fixed_versions: vers:maven/5.17.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/apache/activemq
     affected_versions:
     fixed_versions:
@@ -49,16 +39,26 @@ impacted_packages:
       - vcs_url: https://github.com/apache/activemq
         commit: d8ce1d9ff
     introduced_in_commits: []
+  - purl: pkg:maven/org.apache.activemq/apache-activemq
+    affected_versions: vers:maven/<5.16.6
+    fixed_versions: vers:maven/5.16.6
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.activemq/apache-activemq
+    affected_versions: vers:maven/>=5.17.0|<5.17.4
+    fixed_versions: vers:maven/5.17.4
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-53v4-42fg-g287/GHSA-53v4-42fg-g287.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-287

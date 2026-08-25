@@ -7,6 +7,15 @@ summary: |
   OroCRMCallBundle has incorrect call view page visibility
   Back-office users can access information from any call event, bypassing ACL security restrictions due to insufficient security checks.
 impacted_packages:
+  - purl: pkg:github/oroinc/orocrmcallbundle
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/oroinc/orocrmcallbundle
+        commit: 9a41dff459bb4aff864175ca883d553ac0954950
+      - vcs_url: https://github.com/oroinc/orocrmcallbundle
+        commit: 456b1dda7762abf4ff59eafffaa70ab7f09d1c85
+    introduced_in_commits: []
   - purl: pkg:composer/oro/crm-call-bundle
     affected_versions: vers:composer/>=4.2.0|<=4.2.5
     fixed_versions:
@@ -22,25 +31,16 @@ impacted_packages:
     fixed_versions: vers:composer/5.1.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/oroinc/orocrmcallbundle
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/oroinc/orocrmcallbundle
-        commit: 9a41dff459bb4aff864175ca883d553ac0954950
-      - vcs_url: https://github.com/oroinc/orocrmcallbundle
-        commit: 456b1dda7762abf4ff59eafffaa70ab7f09d1c85
-    introduced_in_commits: []
 severities:
   - score: '5.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-897w-jv7j-6r7g/GHSA-897w-jv7j-6r7g.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-284

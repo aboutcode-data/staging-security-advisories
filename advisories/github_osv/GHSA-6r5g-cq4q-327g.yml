@@ -39,11 +39,6 @@ summary: "Statamic's Antlers sanitizer cannot effectively sanitize malicious SVG
   \    break;\n}\n```\n\n### Reference\n- https://github.com/gogs/gogs/security/advisories/GHSA-ff28-f46g-r9g8\n\
   - https://huntr.dev/bounties/34a12146-3a5d-4efc-a0f8-7a3ae04b198d/\n- https://blog.nintechnet.com/wordpress-elementor-plugin-fixed-svg-xss-protection-bypass-vulnerability/"
 impacted_packages:
-  - purl: pkg:composer/statamic/cms
-    affected_versions: vers:composer/<4.10.0
-    fixed_versions: vers:composer/4.10.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/statamic/cms
     affected_versions:
     fixed_versions:
@@ -53,16 +48,21 @@ impacted_packages:
       - vcs_url: https://github.com/statamic/cms
         commit: f806b6b007ddcf066082eef175653c5beaa96d60
     introduced_in_commits: []
+  - purl: pkg:composer/statamic/cms
+    affected_versions: vers:composer/<4.10.0
+    fixed_versions: vers:composer/4.10.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:L/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-6r5g-cq4q-327g/GHSA-6r5g-cq4q-327g.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

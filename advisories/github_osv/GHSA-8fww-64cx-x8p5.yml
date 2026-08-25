@@ -7,6 +7,15 @@ summary: |
   redis-py Race Condition due to incomplete fix
   redis-py through 4.5.3 and 4.4.3 leaves a connection open after canceling an async Redis command at an inopportune time (in the case of a non-pipeline operation), and can send response data to the client of an unrelated request. NOTE: this issue exists because of an incomplete fix for CVE-2023-28858.
 impacted_packages:
+  - purl: pkg:github/redis/redis-py
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/redis/redis-py
+        commit: 66a4d6b2a493dd3a20cc299ab5fef3c14baad965
+      - vcs_url: https://github.com/redis/redis-py
+        commit: b3c89acd0ffe8303649ad8207bc911b1d6a033eb
+    introduced_in_commits: []
   - purl: pkg:pypi/redis
     affected_versions: vers:pypi/>=4.5.0|<4.5.4
     fixed_versions: vers:pypi/4.5.4
@@ -17,30 +26,21 @@ impacted_packages:
     fixed_versions: vers:pypi/4.4.4
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/redis/redis-py
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/redis/redis-py
-        commit: 66a4d6b2a493dd3a20cc299ab5fef3c14baad965
-      - vcs_url: https://github.com/redis/redis-py
-        commit: b3c89acd0ffe8303649ad8207bc911b1d6a033eb
-    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-8fww-64cx-x8p5/GHSA-8fww-64cx-x8p5.json
   - score: '7.1'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-8fww-64cx-x8p5/GHSA-8fww-64cx-x8p5.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-459

@@ -7,6 +7,13 @@ summary: |
   Moodle Code Injection vulnerability
   In a shared hosting environment that has been misconfigured to allow access to other users' content, a Moodle user who also has direct access to the web server outside of the Moodle webroot could utilise a local file include to achieve remote code execution.
 impacted_packages:
+  - purl: pkg:github/moodle/moodle
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/moodle/moodle
+        commit: 77766f9c8af8fc8d861d7ac09ce4e1f6e72faca7
+    introduced_in_commits: []
   - purl: pkg:composer/moodle/moodle
     affected_versions: vers:composer/>=4.3.0-beta|<4.3.0-rc2
     fixed_versions: vers:composer/4.3.0-rc2
@@ -37,23 +44,16 @@ impacted_packages:
     fixed_versions: vers:composer/3.9.24
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/moodle/moodle
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/moodle/moodle
-        commit: 77766f9c8af8fc8d861d7ac09ce4e1f6e72faca7
-    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-5cvx-cwpx-9rjh/GHSA-5cvx-cwpx-9rjh.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

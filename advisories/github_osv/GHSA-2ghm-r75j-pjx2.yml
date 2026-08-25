@@ -7,11 +7,6 @@ summary: |
   Cross-site Scripting in DOMSanitizer
   DOMSanitizer (aka dom-sanitizer) before 1.0.7 allows XSS via an SVG document because of mishandling of comments and greedy regular expressions.
 impacted_packages:
-  - purl: pkg:composer/rhukster/dom-sanitizer
-    affected_versions: vers:composer/<1.0.7
-    fixed_versions: vers:composer/1.0.7
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/rhukster/dom-sanitizer
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/rhukster/dom-sanitizer
         commit: c2a98f27ad742668b254282ccc5581871d0fb601
     introduced_in_commits: []
+  - purl: pkg:composer/rhukster/dom-sanitizer
+    affected_versions: vers:composer/<1.0.7
+    fixed_versions: vers:composer/1.0.7
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-2ghm-r75j-pjx2/GHSA-2ghm-r75j-pjx2.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

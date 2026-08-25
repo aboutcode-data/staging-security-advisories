@@ -13,11 +13,6 @@ summary: |
 
   A use-after-free issue was discovered in Py_FindObjects() function in SciPy versions prior to 1.8.0.
 impacted_packages:
-  - purl: pkg:pypi/scipy
-    affected_versions: vers:pypi/<1.8.0
-    fixed_versions: vers:pypi/1.8.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/scipy/scipy
     affected_versions:
     fixed_versions:
@@ -25,16 +20,21 @@ impacted_packages:
       - vcs_url: https://github.com/scipy/scipy
         commit: e32fc2329d3dd23298725153c5b2cc7fcd0f14f1
     introduced_in_commits: []
+  - purl: pkg:pypi/scipy
+    affected_versions: vers:pypi/<1.8.0
+    fixed_versions: vers:pypi/1.8.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-jrfm-2h82-xg28/GHSA-jrfm-2h82-xg28.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-416

@@ -7,6 +7,13 @@ summary: |
   Moodle may allow teachers to access the names of users they could not otherwise access
   Insufficient filtering of grade report history made it possible for teachers to access the names of users they could not otherwise access.
 impacted_packages:
+  - purl: pkg:github/moodle/moodle
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/moodle/moodle
+        commit: a931a7f8cec3657827268837b27962a13817ca2b
+    introduced_in_commits: []
   - purl: pkg:composer/moodle/moodle
     affected_versions: vers:composer/>=4.1.0|<4.1.2
     fixed_versions: vers:composer/4.1.2
@@ -27,23 +34,16 @@ impacted_packages:
     fixed_versions: vers:composer/3.9.20
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/moodle/moodle
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/moodle/moodle
-        commit: a931a7f8cec3657827268837b27962a13817ca2b
-    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-prjm-2fj2-787f/GHSA-prjm-2fj2-787f.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

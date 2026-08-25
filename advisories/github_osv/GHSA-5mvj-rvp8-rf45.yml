@@ -35,6 +35,13 @@ summary: |
 
   Thanks to Shankar Acharya (@5hank4r) for responsibly reporting the identified issue.
 impacted_packages:
+  - purl: pkg:github/getkirby/kirby
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/getkirby/kirby
+        commit: 7a0a2014c69fdb925ea02f30e7793bb50115e931
+    introduced_in_commits: []
   - purl: pkg:composer/getkirby/cms
     affected_versions: vers:composer/<3.5.8+3
     fixed_versions: vers:composer/3.5.8+3
@@ -60,23 +67,16 @@ impacted_packages:
     fixed_versions: vers:composer/3.9.6
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/getkirby/kirby
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/getkirby/kirby
-        commit: 7a0a2014c69fdb925ea02f30e7793bb50115e931
-    introduced_in_commits: []
 severities:
   - score: '7.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-5mvj-rvp8-rf45/GHSA-5mvj-rvp8-rf45.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-613

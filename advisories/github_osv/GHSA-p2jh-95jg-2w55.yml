@@ -19,11 +19,6 @@ summary: |
   ### References
   * [TYPO3-CORE-SA-2023-005](https://typo3.org/security/advisory/typo3-core-sa-2023-005)
 impacted_packages:
-  - purl: pkg:composer/typo3/cms-install
-    affected_versions: vers:composer/>=12.2.0|<12.4.8
-    fixed_versions: vers:composer/12.4.8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/typo3/typo3
     affected_versions:
     fixed_versions:
@@ -31,16 +26,21 @@ impacted_packages:
       - vcs_url: https://github.com/typo3/typo3
         commit: 1a735dac01ec7b337ed0d80c738caa8967dea423
     introduced_in_commits: []
+  - purl: pkg:composer/typo3/cms-install
+    affected_versions: vers:composer/>=12.2.0|<12.4.8
+    fixed_versions: vers:composer/12.4.8
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '3.7'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-p2jh-95jg-2w55/GHSA-p2jh-95jg-2w55.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

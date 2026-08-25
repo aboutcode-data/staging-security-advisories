@@ -101,13 +101,6 @@ summary: |
 
   although the vulnerability is exploitable only in the authenticated users, configuration with ALLOW_ADMIN_CHANGES=true, there is still a potential security threat (Remote Code Execution)
 impacted_packages:
-  - purl: pkg:github/craftcms/cms
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/craftcms/cms
-        commit: 0bd33861abdc60c93209cff03eeee54504d3d3b5
-    introduced_in_commits: []
   - purl: pkg:composer/craftcms/cms
     affected_versions: vers:composer/<=4.4.14
     fixed_versions: vers:composer/4.4.15
@@ -118,16 +111,23 @@ impacted_packages:
     fixed_versions: vers:composer/3.8.15
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:github/craftcms/cms
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/craftcms/cms
+        commit: 0bd33861abdc60c93209cff03eeee54504d3d3b5
+    introduced_in_commits: []
 severities:
   - score: '7.2'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/08/GHSA-44wr-rmwq-3phw/GHSA-44wr-rmwq-3phw.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-74

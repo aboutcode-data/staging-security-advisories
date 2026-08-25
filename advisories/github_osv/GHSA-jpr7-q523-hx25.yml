@@ -10,11 +10,6 @@ summary: |
   ### Original Description
   In Math/BinaryField.php in phpseclib 3 before 3.0.34, excessively large degrees in binary fields can lead to a denial of service.
 impacted_packages:
-  - purl: pkg:composer/phpseclib/phpseclib
-    affected_versions: vers:composer/>=3.0.0|<3.0.34
-    fixed_versions: vers:composer/3.0.34
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/phpseclib/phpseclib
     affected_versions:
     fixed_versions:
@@ -22,16 +17,21 @@ impacted_packages:
       - vcs_url: https://github.com/phpseclib/phpseclib
         commit: 964d78101a70305df33f442f5490f0adb3b7e77f
     introduced_in_commits: []
+  - purl: pkg:composer/phpseclib/phpseclib
+    affected_versions: vers:composer/>=3.0.0|<3.0.34
+    fixed_versions: vers:composer/3.0.34
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-jpr7-q523-hx25/GHSA-jpr7-q523-hx25.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-834

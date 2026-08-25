@@ -94,11 +94,6 @@ summary: |
   ### Impact
   The impact consists on leaking Django secret keys by default, with also greater risk being possible due to the vulnerability exposing the file located at /label_studio/core/settings/label_studio.py which contains the secret key for Django as well as possibly containing other secrets the user might put there. (If the administrator decides not to use environment variables for some variables)
 impacted_packages:
-  - purl: pkg:pypi/label-studio
-    affected_versions: vers:pypi/<=1.7.1
-    fixed_versions: vers:pypi/1.7.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/humansignal/label-studio
     affected_versions:
     fixed_versions:
@@ -113,16 +108,21 @@ impacted_packages:
       - vcs_url: https://github.com/heartexlabs/label-studio
         commit: 53944e6bcede75ca5c102d655013f2e5238e85e6
     introduced_in_commits: []
+  - purl: pkg:pypi/label-studio
+    affected_versions: vers:pypi/<=1.7.1
+    fixed_versions: vers:pypi/1.7.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-cpmr-mw4j-99r7/GHSA-cpmr-mw4j-99r7.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses: []
 references:

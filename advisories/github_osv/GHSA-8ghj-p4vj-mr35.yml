@@ -7,11 +7,6 @@ summary: |
   Pillow Denial of Service vulnerability
   An issue was discovered in Pillow before 10.0.0. It is a Denial of Service that uncontrollably allocates memory to process a given task, potentially causing a service to crash by having it run out of memory. This occurs for truetype in ImageFont when textlength in an ImageDraw instance operates on a long text argument.
 impacted_packages:
-  - purl: pkg:pypi/pillow
-    affected_versions: vers:pypi/<10.0.0
-    fixed_versions: vers:pypi/10.0.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/python-pillow/pillow
     affected_versions:
     fixed_versions:
@@ -19,21 +14,26 @@ impacted_packages:
       - vcs_url: https://github.com/python-pillow/pillow
         commit: 1fe1bb49c452b0318cad12ea9d97c3bef188e9a7
     introduced_in_commits: []
+  - purl: pkg:pypi/pillow
+    affected_versions: vers:pypi/<10.0.0
+    fixed_versions: vers:pypi/10.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-8ghj-p4vj-mr35/GHSA-8ghj-p4vj-mr35.json
   - score: '8.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-8ghj-p4vj-mr35/GHSA-8ghj-p4vj-mr35.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-400

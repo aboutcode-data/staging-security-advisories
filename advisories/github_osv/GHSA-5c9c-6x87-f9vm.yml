@@ -7,11 +7,6 @@ summary: |
   zstd vulnerable to buffer overrun
   A vulnerability was found in zstd v1.4.10, where an attacker can supply an empty string as an argument to the command line tool to cause buffer overrun.
 impacted_packages:
-  - purl: pkg:pypi/zstd
-    affected_versions: vers:pypi/<1.5.4.0
-    fixed_versions: vers:pypi/1.5.4.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/sergey-dryabzhinsky/python-zstd
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/sergey-dryabzhinsky/python-zstd
         commit: c8a619aebdbd6b838fbfef6e19325a70f631a4c6
     introduced_in_commits: []
+  - purl: pkg:pypi/zstd
+    affected_versions: vers:pypi/<1.5.4.0
+    fixed_versions: vers:pypi/1.5.4.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-5c9c-6x87-f9vm/GHSA-5c9c-6x87-f9vm.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-400

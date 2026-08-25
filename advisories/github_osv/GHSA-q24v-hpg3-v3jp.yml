@@ -9,16 +9,6 @@ summary: |
 
   Specifically, an application is vulnerable if Reactor Netty HTTP Server built-in integration with Micrometer is enabled.
 impacted_packages:
-  - purl: pkg:maven/io.projectreactor.netty/reactor-netty-core
-    affected_versions: vers:maven/>=1.1.0|<1.1.13
-    fixed_versions: vers:maven/1.1.13
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/io.projectreactor.netty/reactor-netty-core
-    affected_versions: vers:maven/>=1.0.0|<1.0.39
-    fixed_versions: vers:maven/1.0.39
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/reactor/reactor-netty
     affected_versions:
     fixed_versions:
@@ -30,16 +20,26 @@ impacted_packages:
       - vcs_url: https://github.com/reactor/reactor-netty
         commit: 37dc8a2ef6514cd7834e75e7f3faf0b9ea044c88
     introduced_in_commits: []
+  - purl: pkg:maven/io.projectreactor.netty/reactor-netty-core
+    affected_versions: vers:maven/>=1.1.0|<1.1.13
+    fixed_versions: vers:maven/1.1.13
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/io.projectreactor.netty/reactor-netty-core
+    affected_versions: vers:maven/>=1.0.0|<1.0.39
+    fixed_versions: vers:maven/1.0.39
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-q24v-hpg3-v3jp/GHSA-q24v-hpg3-v3jp.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses: []
 references:

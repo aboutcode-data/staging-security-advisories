@@ -7,6 +7,13 @@ summary: |
   Moodle vulnerable to Cross-site Scripting
   Content output by the database auto-linking filter required additional sanitizing to prevent an XSS risk.
 impacted_packages:
+  - purl: pkg:github/moodle/moodle
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/moodle/moodle
+        commit: 1899e0397350c4c2bb3e73773981f66f16f8f2fc
+    introduced_in_commits: []
   - purl: pkg:composer/moodle/moodle
     affected_versions: vers:composer/>=4.1.0|<4.1.2
     fixed_versions: vers:composer/4.1.2
@@ -27,23 +34,16 @@ impacted_packages:
     fixed_versions: vers:composer/3.9.20
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/moodle/moodle
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/moodle/moodle
-        commit: 1899e0397350c4c2bb3e73773981f66f16f8f2fc
-    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-77jm-f3vj-xvx2/GHSA-77jm-f3vj-xvx2.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

@@ -70,11 +70,6 @@ summary: "AsyncSSH Rogue Extension Negotiation\n### Summary\n\nAn issue in Async
   \            mitm_socket.close()\n  ```\n</details>\n\n### Impact\n\nAlgorithm downgrade during\
   \ user authentication."
 impacted_packages:
-  - purl: pkg:pypi/asyncssh
-    affected_versions: vers:pypi/<2.14.1
-    fixed_versions: vers:pypi/2.14.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/ronf/asyncssh
     affected_versions:
     fixed_versions:
@@ -82,16 +77,21 @@ impacted_packages:
       - vcs_url: https://github.com/ronf/asyncssh
         commit: 83e43f5ea3470a8617fc388c72b062c7136efd7e
     introduced_in_commits: []
+  - purl: pkg:pypi/asyncssh
+    affected_versions: vers:pypi/<2.14.1
+    fixed_versions: vers:pypi/2.14.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-cfc2-wr2v-gxm5/GHSA-cfc2-wr2v-gxm5.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-354

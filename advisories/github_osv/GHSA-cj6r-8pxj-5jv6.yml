@@ -13,6 +13,13 @@ summary: |
 
   As a workaround, do not grant Item/Workspace permission to users who lack Item/Configure permission, if you’re concerned about this issue but unable to immediately update Jenkins.
 impacted_packages:
+  - purl: pkg:github/jenkinsci/jenkins
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/jenkinsci/jenkins
+        commit: 80452662b31ac6c9f4418cffae1af6af4daf479a
+    introduced_in_commits: []
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
     affected_versions: vers:maven/>=2.376|<2.387.1
     fixed_versions: vers:maven/2.387.1
@@ -28,23 +35,16 @@ impacted_packages:
     fixed_versions: vers:maven/2.394
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/jenkinsci/jenkins
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/jenkinsci/jenkins
-        commit: 80452662b31ac6c9f4418cffae1af6af4daf479a
-    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-cj6r-8pxj-5jv6/GHSA-cj6r-8pxj-5jv6.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses: []
 references:

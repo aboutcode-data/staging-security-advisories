@@ -12,11 +12,6 @@ impacted_packages:
     fixed_versions: vers:maven/2.0.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/org.apache.streampark/streampark-common_2.11
-    affected_versions: vers:maven/<2.0.0
-    fixed_versions: vers:maven/2.0.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/apache/incubator-streampark
     affected_versions:
     fixed_versions:
@@ -24,16 +19,21 @@ impacted_packages:
       - vcs_url: https://github.com/apache/incubator-streampark
         commit: 0c87c6d8cf39ef2c31c1dea1a7df23d76f5e1236
     introduced_in_commits: []
+  - purl: pkg:maven/org.apache.streampark/streampark-common_2.11
+    affected_versions: vers:maven/<2.0.0
+    fixed_versions: vers:maven/2.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-6874-289g-f7h7/GHSA-6874-289g-f7h7.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

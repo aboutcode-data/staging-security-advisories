@@ -7,11 +7,6 @@ summary: |
   dot-lens vulnerable to Prototype Pollution
   All versions of the package dot-lens are vulnerable to Prototype Pollution via the `set()` function in `index.js` file.
 impacted_packages:
-  - purl: pkg:npm/dot-lens
-    affected_versions: vers:npm/<=1.2.3
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jb55/dot-lens
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/jb55/dot-lens
         commit: 465ef2088e4065b7be1c4372eedd2215c3820bc4
     introduced_in_commits: []
+  - purl: pkg:npm/dot-lens
+    affected_versions: vers:npm/<=1.2.3
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-rmhg-2cvv-q7vx/GHSA-rmhg-2cvv-q7vx.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-1321

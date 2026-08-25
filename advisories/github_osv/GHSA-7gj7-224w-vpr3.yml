@@ -9,6 +9,13 @@ summary: |
 
   Spring Boot Admin 3.1.2 and 2.7.16 contain mitigations for the issue. This bypass is achived via a library called Thymeleaf which has added counter measures for this sort of bypass in version `3.1.2.RELEASE` which has explicity forbidden static access to `org.springframework.util` in expressions. Thymeleaf itself should not be considered vulnerable.
 impacted_packages:
+  - purl: pkg:github/codecentric/spring-boot-admin
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/codecentric/spring-boot-admin
+        commit: f1f6ac6f613e1c0afc121c8989f28b4155a6797a
+    introduced_in_commits: []
   - purl: pkg:maven/de.codecentric/spring-boot-admin-server
     affected_versions: vers:maven/>=3.0.0|<3.1.2
     fixed_versions: vers:maven/3.1.2
@@ -19,23 +26,16 @@ impacted_packages:
     fixed_versions: vers:maven/2.7.16
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/codecentric/spring-boot-admin
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/codecentric/spring-boot-admin
-        commit: f1f6ac6f613e1c0afc121c8989f28b4155a6797a
-    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-7gj7-224w-vpr3/GHSA-7gj7-224w-vpr3.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-77

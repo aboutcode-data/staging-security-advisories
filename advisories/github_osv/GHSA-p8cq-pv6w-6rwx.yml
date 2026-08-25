@@ -7,11 +7,6 @@ summary: |
   Cockpit Uses Platform-Dependent Third Party Components
   Use of Platform-Dependent Third Party Components in GitHub repository cockpit-hq/cockpit 2.3.9 and prior. A patch is available and anticipated to be part of version 2.4.0.
 impacted_packages:
-  - purl: pkg:composer/cockpit-hq/cockpit
-    affected_versions: vers:composer/<=2.3.9
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/cockpit-hq/cockpit
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/cockpit-hq/cockpit
         commit: 690016208850f2d788ebc3c67884d4c692587eb8
     introduced_in_commits: []
+  - purl: pkg:composer/cockpit-hq/cockpit
+    affected_versions: vers:composer/<=2.3.9
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-p8cq-pv6w-6rwx/GHSA-p8cq-pv6w-6rwx.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-1103

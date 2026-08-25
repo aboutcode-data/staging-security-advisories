@@ -7,6 +7,13 @@ summary: |
   Moodle may allow students to bypass sequential navigation during a quiz attempt
   In Moodle, insufficient limitations in some quiz web services made it possible for students to bypass sequential navigation during a quiz attempt.
 impacted_packages:
+  - purl: pkg:github/moodle/moodle
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/moodle/moodle
+        commit: 025e0297b65e6a8bd61efad0fdf36168c613f918
+    introduced_in_commits: []
   - purl: pkg:composer/moodle/moodle
     affected_versions: vers:composer/>=4.0.0|<4.0.3
     fixed_versions: vers:composer/4.0.3
@@ -22,23 +29,16 @@ impacted_packages:
     fixed_versions: vers:composer/3.9.16
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/moodle/moodle
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/moodle/moodle
-        commit: 025e0297b65e6a8bd61efad0fdf36168c613f918
-    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-948f-j464-rfj2/GHSA-948f-j464-rfj2.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-285

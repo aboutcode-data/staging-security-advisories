@@ -24,11 +24,6 @@ summary: |
   7. You should see window with form which requires providing new credentials – fill it and submit request.
   8. Just after submiting request user will get notified that “You are already authenticated as different user ‘[user + payload]’ in this session. Please sign out first.”  And malicious payload will be executed instantly.
 impacted_packages:
-  - purl: pkg:maven/org.keycloak/keycloak-services
-    affected_versions: vers:maven/<=21.0.0
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/keycloak/keycloak
     affected_versions:
     fixed_versions:
@@ -36,16 +31,21 @@ impacted_packages:
       - vcs_url: https://github.com/keycloak/keycloak
         commit: 48835576daa158443f69917ac309e1a7c951bc87
     introduced_in_commits: []
+  - purl: pkg:maven/org.keycloak/keycloak-services
+    affected_versions: vers:maven/<=21.0.0
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-w354-2f3c-qvg9/GHSA-w354-2f3c-qvg9.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

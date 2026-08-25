@@ -11,6 +11,15 @@ summary: |
 
   To prevent these attacks, users are recommended to upgrade to version 5.1.1 or above for using RocketMQ 5.x or 4.9.6 or above for using RocketMQ 4.x .
 impacted_packages:
+  - purl: pkg:github/apache/rocketmq
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/rocketmq
+        commit: 9d411cf04a695e7a3f41036e8377b0aa544d754d
+      - vcs_url: https://github.com/apache/rocketmq
+        commit: c3ada731405c5990c36bf58d50b3e61965300703
+    introduced_in_commits: []
   - purl: pkg:maven/org.apache.rocketmq/rocketmq-broker
     affected_versions: vers:maven/>=5.0.0|<5.1.1
     fixed_versions: vers:maven/5.1.1
@@ -31,25 +40,16 @@ impacted_packages:
     fixed_versions: vers:maven/5.1.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/apache/rocketmq
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/apache/rocketmq
-        commit: 9d411cf04a695e7a3f41036e8377b0aa544d754d
-      - vcs_url: https://github.com/apache/rocketmq
-        commit: c3ada731405c5990c36bf58d50b3e61965300703
-    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-x3cq-8f32-5f63/GHSA-x3cq-8f32-5f63.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

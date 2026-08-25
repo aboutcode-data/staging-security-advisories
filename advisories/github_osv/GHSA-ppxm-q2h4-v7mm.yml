@@ -7,11 +7,6 @@ summary: |
   Teampass SQL Injection vulnerability
   SQL Injection in GitHub repository nilsteampassnet/teampass prior to 3.0.0.22.
 impacted_packages:
-  - purl: pkg:composer/nilsteampassnet/teampass
-    affected_versions: vers:composer/<3.0.0+22
-    fixed_versions: vers:composer/3.0.0+22
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/nilsteampassnet/teampass
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/nilsteampassnet/teampass
         commit: 4780252fdb600ef2ec2758f17a37d738570cbe66
     introduced_in_commits: []
+  - purl: pkg:composer/nilsteampassnet/teampass
+    affected_versions: vers:composer/<3.0.0+22
+    fixed_versions: vers:composer/3.0.0+22
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-ppxm-q2h4-v7mm/GHSA-ppxm-q2h4-v7mm.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-89

@@ -38,11 +38,6 @@ summary: "AIOHTTP has problems in HTTP parser (the python one, not llhttp)\n# Su
   \ (i.e. `AIOHTTP_NO_EXTENSIONS=1`) and send the requests given in the previous section. (e.g.\
   \ by `printf`ing into `nc`)\n\n# Impact\nEach of these bugs can be used for request smuggling."
 impacted_packages:
-  - purl: pkg:pypi/aiohttp
-    affected_versions: vers:pypi/<3.8.6
-    fixed_versions: vers:pypi/3.8.6
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/aio-libs/aiohttp
     affected_versions:
     fixed_versions:
@@ -50,21 +45,26 @@ impacted_packages:
       - vcs_url: https://github.com/aio-libs/aiohttp
         commit: d5c12ba890557a575c313bb3017910d7616fce3d
     introduced_in_commits: []
+  - purl: pkg:pypi/aiohttp
+    affected_versions: vers:pypi/<3.8.6
+    fixed_versions: vers:pypi/3.8.6
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-gfw2-4jvh-wgfg/GHSA-gfw2-4jvh-wgfg.json
   - score: '6.9'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-gfw2-4jvh-wgfg/GHSA-gfw2-4jvh-wgfg.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-444

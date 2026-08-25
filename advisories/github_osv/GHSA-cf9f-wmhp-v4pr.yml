@@ -37,6 +37,15 @@ summary: |
   - https://docs.djangoproject.com/en/3.2/ref/utils/#django.utils.html.format_html
   - https://docs.djangoproject.com/en/3.2/ref/utils/#django.utils.safestring.mark_safe
 impacted_packages:
+  - purl: pkg:github/nautobot/nautobot
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/nautobot/nautobot
+        commit: 362850f5a94689a4c75e3188bf6de826c3b012b2
+      - vcs_url: https://github.com/nautobot/nautobot
+        commit: 54abe23331b6c3d0d82bf1b028c679b1d200920d
+    introduced_in_commits: []
   - purl: pkg:pypi/nautobot
     affected_versions: vers:pypi/<1.6.6
     fixed_versions: vers:pypi/1.6.6
@@ -47,25 +56,16 @@ impacted_packages:
     fixed_versions: vers:pypi/2.0.5
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/nautobot/nautobot
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/nautobot/nautobot
-        commit: 362850f5a94689a4c75e3188bf6de826c3b012b2
-      - vcs_url: https://github.com/nautobot/nautobot
-        commit: 54abe23331b6c3d0d82bf1b028c679b1d200920d
-    introduced_in_commits: []
 severities:
   - score: '7.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:L/I:H/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-cf9f-wmhp-v4pr/GHSA-cf9f-wmhp-v4pr.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

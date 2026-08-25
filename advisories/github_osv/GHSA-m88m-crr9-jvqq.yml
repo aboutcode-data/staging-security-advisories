@@ -21,11 +21,6 @@ summary: |
 
   A similar [issue](https://github.com/OpenRefine/OpenRefine/issues/1840) existed in the Create Project feature ([CVE-2018-19859](https://nvd.nist.gov/vuln/detail/CVE-2018-19859)), which was fixed by PR [#1901](https://github.com/OpenRefine/OpenRefine/pull/1901).
 impacted_packages:
-  - purl: pkg:maven/org.openrefine/main
-    affected_versions: vers:maven/<3.7.4
-    fixed_versions: vers:maven/3.7.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/openrefine/openrefine
     affected_versions:
     fixed_versions:
@@ -33,16 +28,21 @@ impacted_packages:
       - vcs_url: https://github.com/openrefine/openrefine
         commit: e9c1e65d58b47aec8cd676bd5c07d97b002f205e
     introduced_in_commits: []
+  - purl: pkg:maven/org.openrefine/main
+    affected_versions: vers:maven/<3.7.4
+    fixed_versions: vers:maven/3.7.4
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-m88m-crr9-jvqq/GHSA-m88m-crr9-jvqq.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

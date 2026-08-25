@@ -7,18 +7,6 @@ summary: |
   Apache HTTP Server via mod_proxy_uwsgi HTTP response smuggling
   HTTP Response Smuggling vulnerability in Apache HTTP Server via mod_proxy_uwsgi. This issue affects Apache HTTP Server from 2.4.30 through 2.4.55 and the uWSGI PyPI package prior to version 2.0.22. Special characters in the origin response header can truncate/split the response forwarded to the client.
 impacted_packages:
-  - purl: pkg:pypi/uwsgi
-    affected_versions: vers:pypi/<2.0.22
-    fixed_versions: vers:pypi/2.0.22
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:github/apache/httpd
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/apache/httpd
-        commit: d753ea76b5972a85349b68c31b59d04c60014f2d
-    introduced_in_commits: []
   - purl: pkg:github/unbit/uwsgi
     affected_versions:
     fixed_versions:
@@ -28,16 +16,28 @@ impacted_packages:
       - vcs_url: https://github.com/unbit/uwsgi
         commit: 58ee1df31fa9e9af106aaeabb82374c36b433822
     introduced_in_commits: []
+  - purl: pkg:github/apache/httpd
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/httpd
+        commit: d753ea76b5972a85349b68c31b59d04c60014f2d
+    introduced_in_commits: []
+  - purl: pkg:pypi/uwsgi
+    affected_versions: vers:pypi/<2.0.22
+    fixed_versions: vers:pypi/2.0.22
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-vcph-37mh-fqrh/GHSA-vcph-37mh-fqrh.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-444

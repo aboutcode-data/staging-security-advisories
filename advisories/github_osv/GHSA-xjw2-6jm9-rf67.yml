@@ -17,13 +17,6 @@ summary: "Sandbox escape via various forms of \"format\".\n### Impact\nPython's 
   * Email us at [security@plone.org](mailto:security@plone.org)\n\n### Credits\n\nThanks for\
   \ analysing and reporting the go to:\n\n* Abhishek Govindarasu\n* Ankush Menat\n* Ward Theunisse"
 impacted_packages:
-  - purl: pkg:github/zopefoundation/restrictedpython
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/zopefoundation/restrictedpython
-        commit: 4134aedcff17c977da7717693ed89ce56d54c120
-    introduced_in_commits: []
   - purl: pkg:pypi/restrictedpython
     affected_versions: vers:pypi/<=5.3
     fixed_versions: vers:pypi/5.4
@@ -34,16 +27,23 @@ impacted_packages:
     fixed_versions: vers:pypi/6.2
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:github/zopefoundation/restrictedpython
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/zopefoundation/restrictedpython
+        commit: 4134aedcff17c977da7717693ed89ce56d54c120
+    introduced_in_commits: []
 severities:
   - score: '8.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/08/GHSA-xjw2-6jm9-rf67/GHSA-xjw2-6jm9-rf67.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-74

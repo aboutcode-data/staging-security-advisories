@@ -13,6 +13,17 @@ summary: |
 
   Until version 2.1.0, some of the code affected by this vulnerability appeared in org.apache.sshd:sshd-core. Version 2.1.0 contains a [commit](https://github.com/apache/mina-sshd/commit/10de190e7d3f9189deb76b8d08c72334a1fe2df0) where the code was moved to the package org.apache.sshd:sshd-common, which did not exist until version 2.1.0.
 impacted_packages:
+  - purl: pkg:github/apache/mina-sshd
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/mina-sshd
+        commit: c20739b43aab0f7bf2ccad982a6cb37b9d5a8a0b
+      - vcs_url: https://github.com/apache/mina-sshd
+        commit: a61e93035f06bff8fc622ad94870fb773d48b9f0
+      - vcs_url: https://github.com/apache/mina-sshd
+        commit: 10de190e7d3f9189deb76b8d08c72334a1fe2df0
+    introduced_in_commits: []
   - purl: pkg:maven/org.apache.sshd/sshd-common
     affected_versions: vers:maven/>=2.1.0|<2.9.3
     fixed_versions: vers:maven/2.9.3
@@ -28,27 +39,16 @@ impacted_packages:
     fixed_versions: vers:maven/2.1.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/apache/mina-sshd
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/apache/mina-sshd
-        commit: c20739b43aab0f7bf2ccad982a6cb37b9d5a8a0b
-      - vcs_url: https://github.com/apache/mina-sshd
-        commit: a61e93035f06bff8fc622ad94870fb773d48b9f0
-      - vcs_url: https://github.com/apache/mina-sshd
-        commit: 10de190e7d3f9189deb76b8d08c72334a1fe2df0
-    introduced_in_commits: []
 severities:
   - score: '5.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-mjmq-gwgm-5qhm/GHSA-mjmq-gwgm-5qhm.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

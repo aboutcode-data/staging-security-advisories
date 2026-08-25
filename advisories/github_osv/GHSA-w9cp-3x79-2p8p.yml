@@ -7,11 +7,6 @@ summary: |
   transmute-core unsafe YAML deserialization vulnerability
   Unsafe YAML deserialization in yaml.Loader in transmute-core before 1.13.5 allows attackers to execute arbitrary Python code.
 impacted_packages:
-  - purl: pkg:pypi/transmute-core
-    affected_versions: vers:pypi/<1.13.5
-    fixed_versions: vers:pypi/1.13.5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/toumorokoshi/transmute-core
     affected_versions:
     fixed_versions:
@@ -19,21 +14,26 @@ impacted_packages:
       - vcs_url: https://github.com/toumorokoshi/transmute-core
         commit: 29bf82eb8ed9926d31eec90aec482ecc0dcb23f0
     introduced_in_commits: []
+  - purl: pkg:pypi/transmute-core
+    affected_versions: vers:pypi/<1.13.5
+    fixed_versions: vers:pypi/1.13.5
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-w9cp-3x79-2p8p/GHSA-w9cp-3x79-2p8p.json
   - score: '9.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-w9cp-3x79-2p8p/GHSA-w9cp-3x79-2p8p.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-502

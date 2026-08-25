@@ -159,12 +159,17 @@ summary: |
 
   _Last Updated 2023-07-11_
 impacted_packages:
-  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-arm
+  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-arm64
     affected_versions: vers:nuget/<6.0.20
     fixed_versions: vers:nuget/6.0.20
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-arm64
+  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.win-x86
+    affected_versions: vers:nuget/<6.0.20
+    fixed_versions: vers:nuget/6.0.20
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-arm
     affected_versions: vers:nuget/<6.0.20
     fixed_versions: vers:nuget/6.0.20
     fixed_in_commits: []
@@ -195,11 +200,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.win-x64
-    affected_versions: vers:nuget/<6.0.20
-    fixed_versions: vers:nuget/6.0.20
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Microsoft.AspNetCore.App.Runtime.win-x86
     affected_versions: vers:nuget/<6.0.20
     fixed_versions: vers:nuget/6.0.20
     fixed_in_commits: []
@@ -293,12 +293,12 @@ severities:
   - score: '8.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-25c8-p796-jg6r/GHSA-25c8-p796-jg6r.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-362

@@ -20,17 +20,12 @@ summary: "snyk Code Injection vulnerability\nThe package snyk before 1.1064.0 is
   \ <=v20221115.132308, Fixed: All subsequent versions \n- Language Server - Affected: <=v20221109.114426,\
   \ Fixed: All subsequent versions"
 impacted_packages:
-  - purl: pkg:npm/snyk
-    affected_versions: vers:npm/<1.1064.0
-    fixed_versions: vers:npm/1.1064.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:github/snyk/snyk-eclipse-plugin
+  - purl: pkg:github/snyk/snyk-intellij-plugin
     affected_versions:
     fixed_versions:
     fixed_in_commits:
-      - vcs_url: https://github.com/snyk/snyk-eclipse-plugin
-        commit: b5a8bce25a359ced75f83a729fc6b2393fc9a495
+      - vcs_url: https://github.com/snyk/snyk-intellij-plugin
+        commit: 56682f4ba6081ce1d95cb980cbfacd3809a826f4
     introduced_in_commits: []
   - purl: pkg:github/snyk/snyk-ls
     affected_versions:
@@ -39,19 +34,17 @@ impacted_packages:
       - vcs_url: https://github.com/snyk/snyk-ls
         commit: b3229f0142f782871aa72d1a7dcf417546d568ed
     introduced_in_commits: []
+  - purl: pkg:npm/snyk
+    affected_versions: vers:npm/<1.1064.0
+    fixed_versions: vers:npm/1.1064.0
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:github/snyk/vscode-extension
     affected_versions:
     fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/snyk/vscode-extension
         commit: 0db3b4240be0db6a0a5c6d02c0d4231a2c4ba708
-    introduced_in_commits: []
-  - purl: pkg:github/snyk/snyk-intellij-plugin
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/snyk/snyk-intellij-plugin
-        commit: 56682f4ba6081ce1d95cb980cbfacd3809a826f4
     introduced_in_commits: []
   - purl: pkg:github/snyk/snyk-visual-studio-plugin
     affected_versions:
@@ -60,16 +53,23 @@ impacted_packages:
       - vcs_url: https://github.com/snyk/snyk-visual-studio-plugin
         commit: 0b53dbbd4a3153c3ef9aaf797af3b5caad0f731a
     introduced_in_commits: []
+  - purl: pkg:github/snyk/snyk-eclipse-plugin
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/snyk/snyk-eclipse-plugin
+        commit: b5a8bce25a359ced75f83a729fc6b2393fc9a495
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-4vrv-93c7-m92j/GHSA-4vrv-93c7-m92j.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

@@ -7,6 +7,15 @@ summary: |
   OroCalendarBundle has incorrect system calendar events visibility
   OroPlatform is a package that assist system and user calendar management. Back-office users can access information from any system calendar event, bypassing ACL security restrictions due to insufficient security checks.
 impacted_packages:
+  - purl: pkg:github/oroinc/orocalendarbundle
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/oroinc/orocalendarbundle
+        commit: 5f4734aa02088191c1c1d90ac0909f48610fe531
+      - vcs_url: https://github.com/oroinc/orocalendarbundle
+        commit: 460a8ffb63b10c76f2fa26d53512164851c4909b
+    introduced_in_commits: []
   - purl: pkg:composer/oro/calendar-bundle
     affected_versions: vers:composer/>=4.2.0|<=4.2.6
     fixed_versions:
@@ -22,25 +31,16 @@ impacted_packages:
     fixed_versions: vers:composer/5.1.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/oroinc/orocalendarbundle
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/oroinc/orocalendarbundle
-        commit: 5f4734aa02088191c1c1d90ac0909f48610fe531
-      - vcs_url: https://github.com/oroinc/orocalendarbundle
-        commit: 460a8ffb63b10c76f2fa26d53512164851c4909b
-    introduced_in_commits: []
 severities:
   - score: '5.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-x2xm-p6vq-482g/GHSA-x2xm-p6vq-482g.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-284

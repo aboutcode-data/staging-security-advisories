@@ -79,11 +79,6 @@ summary: "Arbitrary File Creation in AbstractUnArchiver\n### Summary\n\nUsing Ab
   \ one that contains a symlink and another archive that contains a regular file with the same\
   \ entry name as the symlink."
 impacted_packages:
-  - purl: pkg:maven/org.codehaus.plexus/plexus-archiver
-    affected_versions: vers:maven/<4.8.0
-    fixed_versions: vers:maven/4.8.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/codehaus-plexus/plexus-archiver
     affected_versions:
     fixed_versions:
@@ -91,16 +86,21 @@ impacted_packages:
       - vcs_url: https://github.com/codehaus-plexus/plexus-archiver
         commit: 54759839fbdf85caf8442076f001d5fd64e0dcb2
     introduced_in_commits: []
+  - purl: pkg:maven/org.codehaus.plexus/plexus-archiver
+    affected_versions: vers:maven/<4.8.0
+    fixed_versions: vers:maven/4.8.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-wh3p-fphp-9h2m/GHSA-wh3p-fphp-9h2m.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

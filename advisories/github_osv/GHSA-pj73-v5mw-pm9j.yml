@@ -24,6 +24,13 @@ summary: |
 
   Avoid calling bytesplice on a SafeBuffer (html_safe) string with untrusted user input.
 impacted_packages:
+  - purl: pkg:github/rails/rails
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/rails/rails
+        commit: 3cf23c3f891e2e81c977ea4ab83b62bc2a444b70
+    introduced_in_commits: []
   - purl: pkg:gem/activesupport
     affected_versions: vers:gem/>=7.0.0|<7.0.4.3
     fixed_versions: vers:gem/7.0.4.3
@@ -34,23 +41,16 @@ impacted_packages:
     fixed_versions: vers:gem/6.1.7.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/rails/rails
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/rails/rails
-        commit: 3cf23c3f891e2e81c977ea4ab83b62bc2a444b70
-    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-pj73-v5mw-pm9j/GHSA-pj73-v5mw-pm9j.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

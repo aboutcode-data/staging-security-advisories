@@ -84,11 +84,6 @@ summary: |
   ### Impact
   An attacker can exploit this vulnerability to access highly sensitive internal server and steal sensitive information. An example is on Cloud Environments that utilise internal APIs for managing machine and privileges. For an example, if `directus` is hosted on AWS EC2 instance and has an IAM role assigned to the EC2 instance then an attacker can exploit this vulnerability to steal the AWS access keys to impersonate the EC2 instance using the AWS API.
 impacted_packages:
-  - purl: pkg:npm/directus
-    affected_versions: vers:npm/<9.23.0
-    fixed_versions: vers:npm/9.23.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/directus/directus
     affected_versions:
     fixed_versions:
@@ -96,16 +91,21 @@ impacted_packages:
       - vcs_url: https://github.com/directus/directus
         commit: ff53d3e69a602d05342e15d9bb616884833ddbff
     introduced_in_commits: []
+  - purl: pkg:npm/directus
+    affected_versions: vers:npm/<9.23.0
+    fixed_versions: vers:npm/9.23.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-j3rg-3rgm-537h/GHSA-j3rg-3rgm-537h.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-918

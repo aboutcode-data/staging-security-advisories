@@ -7,11 +7,6 @@ summary: |
   thorsten/phpmyfaq vulnerable privilege escalation from improper privilege management
   thorsten/phpmyfaq prior to 3.1.12 is vulnerable to privilege escalation from improper privilege management. Any user with the ability to add a new user can create a user with super admin rights. This has been fixed in 3.1.12.
 impacted_packages:
-  - purl: pkg:composer/thorsten/phpmyfaq
-    affected_versions: vers:composer/<3.1.12
-    fixed_versions: vers:composer/3.1.12
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/thorsten/phpmyfaq
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/thorsten/phpmyfaq
         commit: ae6c1d8c3eab05d6e2227c7a9998707f4f891514
     introduced_in_commits: []
+  - purl: pkg:composer/thorsten/phpmyfaq
+    affected_versions: vers:composer/<3.1.12
+    fixed_versions: vers:composer/3.1.12
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-xww4-w6ff-5q3g/GHSA-xww4-w6ff-5q3g.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-269

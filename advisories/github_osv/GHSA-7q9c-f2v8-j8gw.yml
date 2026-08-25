@@ -7,11 +7,6 @@ summary: |
   phpMyFAQ Stored Cross-site Scripting vulnerability
   Cross-site Scripting (XSS) - Stored in GitHub repository thorsten/phpmyfaq prior to 3.1.12.
 impacted_packages:
-  - purl: pkg:composer/thorsten/phpmyfaq
-    affected_versions: vers:composer/<3.1.12
-    fixed_versions: vers:composer/3.1.12
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/thorsten/phpmyfaq
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/thorsten/phpmyfaq
         commit: 56295b54062a284020fccce12a5044f9fa7d2770
     introduced_in_commits: []
+  - purl: pkg:composer/thorsten/phpmyfaq
+    affected_versions: vers:composer/<3.1.12
+    fixed_versions: vers:composer/3.1.12
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-7q9c-f2v8-j8gw/GHSA-7q9c-f2v8-j8gw.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

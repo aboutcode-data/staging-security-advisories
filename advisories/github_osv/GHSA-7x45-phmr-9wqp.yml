@@ -43,11 +43,6 @@ summary: "Arbitrary file write in mindsdb when Extracting Tarballs retrieved fro
   \ for the retrieved archive, but hard-coding the hashes may be cumbersome and difficult to\
   \ manage."
 impacted_packages:
-  - purl: pkg:pypi/mindsdb
-    affected_versions: vers:pypi/<22.11.4.3
-    fixed_versions: vers:pypi/22.11.4.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/mindsdb/mindsdb
     affected_versions:
     fixed_versions:
@@ -55,21 +50,26 @@ impacted_packages:
       - vcs_url: https://github.com/mindsdb/mindsdb
         commit: 69c76e727b8067f32b06ab83bb835a8c416c4f21
     introduced_in_commits: []
+  - purl: pkg:pypi/mindsdb
+    affected_versions: vers:pypi/<22.11.4.3
+    fixed_versions: vers:pypi/22.11.4.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-7x45-phmr-9wqp/GHSA-7x45-phmr-9wqp.json
   - score: '6.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:N/SC:H/SI:L/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-7x45-phmr-9wqp/GHSA-7x45-phmr-9wqp.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

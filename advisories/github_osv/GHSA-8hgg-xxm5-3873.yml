@@ -7,11 +7,6 @@ summary: |
   DOMPurify Open Redirect vulnerability
   DOMPurify before 1.0.11 allows reverse tabnabbing in demos/hooks-target-blank-demo.html because links lack a 'rel="noopener noreferrer"' attribute.
 impacted_packages:
-  - purl: pkg:npm/dompurify
-    affected_versions: vers:npm/<1.0.11
-    fixed_versions: vers:npm/1.0.11
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/cure53/dompurify
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/cure53/dompurify
         commit: 7601c33a57e029cce51d910eda5179a3f1b51c83
     introduced_in_commits: []
+  - purl: pkg:npm/dompurify
+    affected_versions: vers:npm/<1.0.11
+    fixed_versions: vers:npm/1.0.11
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-8hgg-xxm5-3873/GHSA-8hgg-xxm5-3873.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-601

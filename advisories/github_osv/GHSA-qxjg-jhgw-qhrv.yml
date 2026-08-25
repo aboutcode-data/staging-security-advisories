@@ -44,11 +44,6 @@ impacted_packages:
     fixed_versions: vers:maven/14.4.7
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/org.xwiki.platform/xwiki-platform-panels-ui
-    affected_versions: vers:maven/>=14.5|<14.10-rc-1
-    fixed_versions: vers:maven/14.10-rc-1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/xwiki/xwiki-platform
     affected_versions:
     fixed_versions:
@@ -56,16 +51,21 @@ impacted_packages:
       - vcs_url: https://github.com/xwiki/xwiki-platform
         commit: 6de5442f3c91c3634a66c7b458d5b142e1c2a2dc
     introduced_in_commits: []
+  - purl: pkg:maven/org.xwiki.platform/xwiki-platform-panels-ui
+    affected_versions: vers:maven/>=14.5|<14.10-rc-1
+    fixed_versions: vers:maven/14.10-rc-1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.9'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-qxjg-jhgw-qhrv/GHSA-qxjg-jhgw-qhrv.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-74

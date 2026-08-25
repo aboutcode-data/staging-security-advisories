@@ -41,11 +41,6 @@ summary: "grav Server-side Template Injection (SSTI) mitigation bypass\n### Summ
   +            return true;\n         }\n \n         if (in_array($name, $commandExecutionFunctions))\
   \ {\n                                                                         \n```"
 impacted_packages:
-  - purl: pkg:composer/getgrav/grav
-    affected_versions: vers:composer/<=1.7.42+1
-    fixed_versions: vers:composer/1.7.42+2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/getgrav/grav
     affected_versions:
     fixed_versions:
@@ -55,16 +50,21 @@ impacted_packages:
       - vcs_url: https://github.com/getgrav/grav
         commit: 71bbed12f950de8335006d7f91112263d8504f1b
     introduced_in_commits: []
+  - purl: pkg:composer/getgrav/grav
+    affected_versions: vers:composer/<=1.7.42+1
+    fixed_versions: vers:composer/1.7.42+2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.2'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-9436-3gmp-4f53/GHSA-9436-3gmp-4f53.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-393

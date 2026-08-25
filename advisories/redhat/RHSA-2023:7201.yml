@@ -32,9 +32,469 @@ summary: |
 
   All OpenShift Container Platform 4.15 users are advised to upgrade to these updated packages and images when they are available in the appropriate release channel. To check for available updates, use the OpenShift CLI (oc) or web console. Instructions for upgrading a cluster are available at https://docs.openshift.com/container-platform/4.15/updating/updating_a_cluster/updating-cluster-cli.html
 impacted_packages:
+  - purl: pkg:rpm/redhat/cri-tools-debuginfo?arch=s390x
+    affected_versions: vers:rpm/<1.28.0-3.el9
+    fixed_versions: vers:rpm/1.28.0-3.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ostree-devel?arch=ppc64le
+    affected_versions: vers:rpm/<2023.8-3.el9
+    fixed_versions: vers:rpm/2023.8-3.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ignition?arch=s390x
+    affected_versions: vers:rpm/<2.16.2-2.rhaos4.15.el9
+    fixed_versions: vers:rpm/2.16.2-2.rhaos4.15.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/cri-tools?arch=x86_64
+    affected_versions: vers:rpm/<1.28.0-3.el9
+    fixed_versions: vers:rpm/1.28.0-3.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-gvproxy?arch=aarch64&epoch=3
+    affected_versions: vers:rpm/<4.4.1-21.rhaos4.15.el9
+    fixed_versions: vers:rpm/4.4.1-21.rhaos4.15.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/runc-debuginfo?arch=aarch64&epoch=4
+    affected_versions: vers:rpm/<1.1.12-1.rhaos4.15.el8
+    fixed_versions: vers:rpm/1.1.12-1.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ostree-debuginfo?arch=ppc64le
+    affected_versions: vers:rpm/<2023.8-3.el9
+    fixed_versions: vers:rpm/2023.8-3.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-debug-modules?arch=ppc64le
+    affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-debugsource?arch=ppc64le&epoch=3
+    affected_versions: vers:rpm/<4.4.1-21.rhaos4.15.el9
+    fixed_versions: vers:rpm/4.4.1-21.rhaos4.15.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ostree-libs?arch=s390x
+    affected_versions: vers:rpm/<2023.8-3.el9
+    fixed_versions: vers:rpm/2023.8-3.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/container-selinux?arch=noarch&epoch=3
+    affected_versions: vers:rpm/<2.228.1-1.rhaos4.15.el8
+    fixed_versions: vers:rpm/2.228.1-1.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python3-futurist?arch=noarch
+    affected_versions: vers:rpm/<2.4.1-0.20230720141142.159d752.el9
+    fixed_versions: vers:rpm/2.4.1-0.20230720141142.159d752.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python3-ironic-prometheus-exporter?arch=noarch
+    affected_versions: vers:rpm/<4.3.0-0.20231002134531.b3e0de8.el9
+    fixed_versions: vers:rpm/4.3.0-0.20231002134531.b3e0de8.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python3-oslo-rootwrap-tests?arch=noarch
+    affected_versions: vers:rpm/<7.1.0-0.20231026125723.0660a66.el9
+    fixed_versions: vers:rpm/7.1.0-0.20231026125723.0660a66.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python3-oslo-service?arch=noarch
+    affected_versions: vers:rpm/<3.2.0-0.20231026132024.e94d47a.el9
+    fixed_versions: vers:rpm/3.2.0-0.20231026132024.e94d47a.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python3-oslo-service-tests?arch=noarch
+    affected_versions: vers:rpm/<3.2.0-0.20231026132024.e94d47a.el9
+    fixed_versions: vers:rpm/3.2.0-0.20231026132024.e94d47a.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python3-osprofiler?arch=noarch
+    affected_versions: vers:rpm/<4.1.0-0.20231026130241.3c5fead.el9
+    fixed_versions: vers:rpm/4.1.0-0.20231026130241.3c5fead.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python3-requestsexceptions?arch=noarch
+    affected_versions: vers:rpm/<1.4.0-0.20230720134705.d7ac0ff.el9
+    fixed_versions: vers:rpm/1.4.0-0.20230720134705.d7ac0ff.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/openstack-ironic-conductor?arch=noarch&epoch=1
+    affected_versions: vers:rpm/<23.1.1-0.20231213124529.d388f38.el9
+    fixed_versions: vers:rpm/23.1.1-0.20231213124529.d388f38.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/afterburn?arch=s390x
+    affected_versions: vers:rpm/<5.4.3-2.rhaos4.15.el9
+    fixed_versions: vers:rpm/5.4.3-2.rhaos4.15.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/crun-debuginfo?arch=x86_64
+    affected_versions: vers:rpm/<1.14-1.rhaos4.15.el9
+    fixed_versions: vers:rpm/1.14-1.rhaos4.15.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/cri-o-debuginfo?arch=x86_64
+    affected_versions: vers:rpm/<1.28.3-14.rhaos4.15.git33aabd8.el9
+    fixed_versions: vers:rpm/1.28.3-14.rhaos4.15.git33aabd8.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/crun?arch=aarch64
+    affected_versions: vers:rpm/<1.14-1.rhaos4.15.el9
+    fixed_versions: vers:rpm/1.14-1.rhaos4.15.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/runc-debuginfo?arch=aarch64&epoch=4
+    affected_versions: vers:rpm/<1.1.12-1.rhaos4.15.el9
+    fixed_versions: vers:rpm/1.1.12-1.rhaos4.15.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-debug-modules?arch=aarch64
+    affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-debug-modules-core?arch=aarch64
+    affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-debuginfo-common-aarch64?arch=aarch64
+    affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/coreos-installer-dracut?arch=aarch64
+    affected_versions: vers:rpm/<0.17.0-2.rhaos4.15.el8
+    fixed_versions: vers:rpm/0.17.0-2.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/coreos-installer?arch=ppc64le
+    affected_versions: vers:rpm/<0.17.0-3.rhaos4.15.el9
+    fixed_versions: vers:rpm/0.17.0-3.rhaos4.15.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-debug-modules-extra?arch=ppc64le
+    affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/openshift-hyperkube?arch=ppc64le
+    affected_versions: vers:rpm/<4.15.0-202402142009.p0.g6216ea1.assembly.stream.el9
+    fixed_versions: vers:rpm/4.15.0-202402142009.p0.g6216ea1.assembly.stream.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/coreos-installer-dracut?arch=ppc64le
+    affected_versions: vers:rpm/<0.17.0-2.rhaos4.15.el8
+    fixed_versions: vers:rpm/0.17.0-2.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-plugins?arch=ppc64le&epoch=3
+    affected_versions: vers:rpm/<4.4.1-21.rhaos4.15.el8
+    fixed_versions: vers:rpm/4.4.1-21.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ostree?arch=s390x
+    affected_versions: vers:rpm/<2023.8-3.el9
+    fixed_versions: vers:rpm/2023.8-3.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ostree-debugsource?arch=s390x
+    affected_versions: vers:rpm/<2023.8-3.el9
+    fixed_versions: vers:rpm/2023.8-3.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/rpm-ostree-debugsource?arch=s390x
+    affected_versions: vers:rpm/<2024.2-1.el9
+    fixed_versions: vers:rpm/2024.2-1.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/buildah-tests?arch=s390x&epoch=1
+    affected_versions: vers:rpm/<1.29.1-20.2.rhaos4.15.el8
+    fixed_versions: vers:rpm/1.29.1-20.2.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python-openstacksdk?arch=src
+    affected_versions: vers:rpm/<2.0.0-0.20231108210647.8f6a2cf.el9
+    fixed_versions: vers:rpm/2.0.0-0.20231108210647.8f6a2cf.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python-platformdirs?arch=src
+    affected_versions: vers:rpm/<2.3.0-1.el9
+    fixed_versions: vers:rpm/2.3.0-1.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/openstack-ironic?arch=noarch&epoch=1
+    affected_versions: vers:rpm/<23.1.1-0.20231213124529.d388f38.el9
+    fixed_versions: vers:rpm/23.1.1-0.20231213124529.d388f38.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/openstack-ironic-api?arch=noarch&epoch=1
+    affected_versions: vers:rpm/<23.1.1-0.20231213124529.d388f38.el9
+    fixed_versions: vers:rpm/23.1.1-0.20231213124529.d388f38.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/afterburn?arch=x86_64
     affected_versions: vers:rpm/<5.4.3-2.rhaos4.15.el9
     fixed_versions: vers:rpm/5.4.3-2.rhaos4.15.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ostree?arch=x86_64
+    affected_versions: vers:rpm/<2023.8-3.el9
+    fixed_versions: vers:rpm/2023.8-3.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/rpm-ostree?arch=x86_64
+    affected_versions: vers:rpm/<2024.2-1.el9
+    fixed_versions: vers:rpm/2024.2-1.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ignition-validate?arch=x86_64
+    affected_versions: vers:rpm/<2.16.2-2.rhaos4.15.el9
+    fixed_versions: vers:rpm/2.16.2-2.rhaos4.15.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/openshift-clients?arch=x86_64
+    affected_versions: vers:rpm/<4.15.0-202402070507.p0.g48dcf59.assembly.stream.el9
+    fixed_versions: vers:rpm/4.15.0-202402070507.p0.g48dcf59.assembly.stream.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/openshift-clients-redistributable?arch=x86_64
+    affected_versions: vers:rpm/<4.15.0-202402070507.p0.g48dcf59.assembly.stream.el9
+    fixed_versions: vers:rpm/4.15.0-202402070507.p0.g48dcf59.assembly.stream.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/cri-o-debugsource?arch=x86_64
+    affected_versions: vers:rpm/<1.28.3-14.rhaos4.15.git33aabd8.el9
+    fixed_versions: vers:rpm/1.28.3-14.rhaos4.15.git33aabd8.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bpftool?arch=x86_64
+    affected_versions: vers:rpm/<7.0.0-284.54.1.el9_2
+    fixed_versions: vers:rpm/7.0.0-284.54.1.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-debug-devel-matched?arch=x86_64
+    affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-selftests-internal?arch=x86_64
+    affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-tools?arch=x86_64
+    affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-rt-debug-core?arch=x86_64
+    affected_versions: vers:rpm/<5.14.0-284.54.1.rt14.339.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.54.1.rt14.339.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-rt-debug-modules?arch=x86_64
+    affected_versions: vers:rpm/<5.14.0-284.54.1.rt14.339.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.54.1.rt14.339.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-rt-debug-modules-core?arch=x86_64
+    affected_versions: vers:rpm/<5.14.0-284.54.1.rt14.339.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.54.1.rt14.339.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-rt-devel?arch=x86_64
+    affected_versions: vers:rpm/<5.14.0-284.54.1.rt14.339.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.54.1.rt14.339.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ignition-validate?arch=aarch64
+    affected_versions: vers:rpm/<2.16.2-2.rhaos4.15.el9
+    fixed_versions: vers:rpm/2.16.2-2.rhaos4.15.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-64k-debug-devel?arch=aarch64
+    affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-modules?arch=aarch64
+    affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-tools-libs-devel?arch=aarch64
+    affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python3-perf?arch=aarch64
+    affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ose-aws-ecr-image-credential-provider?arch=ppc64le
+    affected_versions: vers:rpm/<4.15.0-202401231232.p0.gba252ab.assembly.stream.el9
+    fixed_versions: vers:rpm/4.15.0-202401231232.p0.gba252ab.assembly.stream.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/rpm-ostree?arch=ppc64le
+    affected_versions: vers:rpm/<2024.2-1.el9
+    fixed_versions: vers:rpm/2024.2-1.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/bpftool-debuginfo?arch=ppc64le
+    affected_versions: vers:rpm/<7.0.0-284.54.1.el9_2
+    fixed_versions: vers:rpm/7.0.0-284.54.1.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-debuginfo?arch=ppc64le
+    affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-debuginfo-common-ppc64le?arch=ppc64le
+    affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/kernel-tools-debuginfo?arch=ppc64le
+    affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-tests?arch=ppc64le&epoch=3
+    affected_versions: vers:rpm/<4.4.1-21.rhaos4.15.el8
+    fixed_versions: vers:rpm/4.4.1-21.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-catatonit-debuginfo?arch=ppc64le&epoch=3
+    affected_versions: vers:rpm/<4.4.1-21.rhaos4.15.el8
+    fixed_versions: vers:rpm/4.4.1-21.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python3-perf?arch=s390x
+    affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
+    fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-gvproxy-debuginfo?arch=s390x&epoch=3
+    affected_versions: vers:rpm/<4.4.1-21.rhaos4.15.el9
+    fixed_versions: vers:rpm/4.4.1-21.rhaos4.15.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/skopeo-debuginfo?arch=s390x&epoch=2
+    affected_versions: vers:rpm/<1.11.2-21.1.rhaos4.15.el8
+    fixed_versions: vers:rpm/1.11.2-21.1.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/ose-aws-ecr-image-credential-provider?arch=s390x
+    affected_versions: vers:rpm/<4.15.0-202401231232.p0.gba252ab.assembly.stream.el8
+    fixed_versions: vers:rpm/4.15.0-202401231232.p0.gba252ab.assembly.stream.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/cri-tools-debuginfo?arch=s390x
+    affected_versions: vers:rpm/<1.28.0-3.el8
+    fixed_versions: vers:rpm/1.28.0-3.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/crun-debugsource?arch=s390x
+    affected_versions: vers:rpm/<1.14-1.rhaos4.15.el8
+    fixed_versions: vers:rpm/1.14-1.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/crun-debuginfo?arch=s390x
+    affected_versions: vers:rpm/<1.14-1.rhaos4.15.el8
+    fixed_versions: vers:rpm/1.14-1.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/buildah-tests-debuginfo?arch=s390x&epoch=1
+    affected_versions: vers:rpm/<1.29.1-20.2.rhaos4.15.el8
+    fixed_versions: vers:rpm/1.29.1-20.2.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/cri-o-debuginfo?arch=s390x
+    affected_versions: vers:rpm/<1.28.3-14.rhaos4.15.git33aabd8.el8
+    fixed_versions: vers:rpm/1.28.3-14.rhaos4.15.git33aabd8.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/podman-debugsource?arch=s390x&epoch=3
+    affected_versions: vers:rpm/<4.4.1-21.rhaos4.15.el8
+    fixed_versions: vers:rpm/4.4.1-21.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/toolbox?arch=src
+    affected_versions: vers:rpm/<0.1.2-1.rhaos4.15.el9
+    fixed_versions: vers:rpm/0.1.2-1.rhaos4.15.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/container-selinux?arch=src&epoch=3
+    affected_versions: vers:rpm/<2.228.1-1.rhaos4.15.el8
+    fixed_versions: vers:rpm/2.228.1-1.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/crun?arch=src
+    affected_versions: vers:rpm/<1.14-1.rhaos4.15.el8
+    fixed_versions: vers:rpm/1.14-1.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/runc?arch=src&epoch=4
+    affected_versions: vers:rpm/<1.1.12-1.rhaos4.15.el8
+    fixed_versions: vers:rpm/1.1.12-1.rhaos4.15.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/openshift-clients?arch=src
+    affected_versions: vers:rpm/<4.15.0-202402070507.p0.g48dcf59.assembly.stream.el8
+    fixed_versions: vers:rpm/4.15.0-202402070507.p0.g48dcf59.assembly.stream.el8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python-automaton?arch=src
+    affected_versions: vers:rpm/<3.2.0-0.20231026124537.9255778.el9
+    fixed_versions: vers:rpm/3.2.0-0.20231026124537.9255778.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python-cinderclient?arch=src
+    affected_versions: vers:rpm/<9.4.0-0.20231026140112.f1f14df.el9
+    fixed_versions: vers:rpm/9.4.0-0.20231026140112.f1f14df.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python-cliff?arch=src
+    affected_versions: vers:rpm/<4.3.0-0.20230720153123.72e81d7.el9
+    fixed_versions: vers:rpm/4.3.0-0.20230720153123.72e81d7.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python-ddt?arch=src
+    affected_versions: vers:rpm/<1.6.0-1.el9
+    fixed_versions: vers:rpm/1.6.0-1.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python-os-traits?arch=src
+    affected_versions: vers:rpm/<3.0.0-0.20230720155912.cff125c.el9
+    fixed_versions: vers:rpm/3.0.0-0.20230720155912.cff125c.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python-oslo-service?arch=src
+    affected_versions: vers:rpm/<3.2.0-0.20231026132024.e94d47a.el9
+    fixed_versions: vers:rpm/3.2.0-0.20231026132024.e94d47a.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python-sushy-oem-idrac?arch=src
+    affected_versions: vers:rpm/<5.0.0-0.20230720142539.da9a0e4.el9
+    fixed_versions: vers:rpm/5.0.0-0.20230720142539.da9a0e4.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python-swiftclient?arch=src
+    affected_versions: vers:rpm/<4.4.0-0.20231026135457.54fbfa8.el9
+    fixed_versions: vers:rpm/4.4.0-0.20231026135457.54fbfa8.el9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python3-os-traits-tests?arch=noarch
+    affected_versions: vers:rpm/<3.0.0-0.20230720155912.cff125c.el9
+    fixed_versions: vers:rpm/3.0.0-0.20230720155912.cff125c.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/afterburn-dracut?arch=x86_64
@@ -80,11 +540,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/coreos-installer-debuginfo?arch=x86_64
     affected_versions: vers:rpm/<0.17.0-3.rhaos4.15.el9
     fixed_versions: vers:rpm/0.17.0-3.rhaos4.15.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ostree?arch=x86_64
-    affected_versions: vers:rpm/<2023.8-3.el9
-    fixed_versions: vers:rpm/2023.8-3.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/ostree-devel?arch=x86_64
@@ -157,11 +612,6 @@ impacted_packages:
     fixed_versions: vers:rpm/4.15.0-202401231232.p0.gba252ab.assembly.stream.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-tools?arch=x86_64
-    affected_versions: vers:rpm/<1.28.0-3.el9
-    fixed_versions: vers:rpm/1.28.0-3.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/cri-tools-debugsource?arch=x86_64
     affected_versions: vers:rpm/<1.28.0-3.el9
     fixed_versions: vers:rpm/1.28.0-3.el9
@@ -180,16 +630,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/crun-debugsource?arch=x86_64
     affected_versions: vers:rpm/<1.14-1.rhaos4.15.el9
     fixed_versions: vers:rpm/1.14-1.rhaos4.15.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/crun-debuginfo?arch=x86_64
-    affected_versions: vers:rpm/<1.14-1.rhaos4.15.el9
-    fixed_versions: vers:rpm/1.14-1.rhaos4.15.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/rpm-ostree?arch=x86_64
-    affected_versions: vers:rpm/<2024.2-1.el9
-    fixed_versions: vers:rpm/2024.2-1.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/rpm-ostree-devel?arch=x86_64
@@ -277,11 +717,6 @@ impacted_packages:
     fixed_versions: vers:rpm/2.16.2-2.rhaos4.15.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ignition-validate?arch=x86_64
-    affected_versions: vers:rpm/<2.16.2-2.rhaos4.15.el9
-    fixed_versions: vers:rpm/2.16.2-2.rhaos4.15.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/ignition-debugsource?arch=x86_64
     affected_versions: vers:rpm/<2.16.2-2.rhaos4.15.el9
     fixed_versions: vers:rpm/2.16.2-2.rhaos4.15.el9
@@ -297,34 +732,9 @@ impacted_packages:
     fixed_versions: vers:rpm/2.16.2-2.rhaos4.15.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/openshift-clients?arch=x86_64
-    affected_versions: vers:rpm/<4.15.0-202402070507.p0.g48dcf59.assembly.stream.el9
-    fixed_versions: vers:rpm/4.15.0-202402070507.p0.g48dcf59.assembly.stream.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/openshift-clients-redistributable?arch=x86_64
-    affected_versions: vers:rpm/<4.15.0-202402070507.p0.g48dcf59.assembly.stream.el9
-    fixed_versions: vers:rpm/4.15.0-202402070507.p0.g48dcf59.assembly.stream.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/cri-o?arch=x86_64
     affected_versions: vers:rpm/<1.28.3-14.rhaos4.15.git33aabd8.el9
     fixed_versions: vers:rpm/1.28.3-14.rhaos4.15.git33aabd8.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-o-debugsource?arch=x86_64
-    affected_versions: vers:rpm/<1.28.3-14.rhaos4.15.git33aabd8.el9
-    fixed_versions: vers:rpm/1.28.3-14.rhaos4.15.git33aabd8.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-o-debuginfo?arch=x86_64
-    affected_versions: vers:rpm/<1.28.3-14.rhaos4.15.git33aabd8.el9
-    fixed_versions: vers:rpm/1.28.3-14.rhaos4.15.git33aabd8.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bpftool?arch=x86_64
-    affected_versions: vers:rpm/<7.0.0-284.54.1.el9_2
-    fixed_versions: vers:rpm/7.0.0-284.54.1.el9_2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel?arch=x86_64
@@ -348,11 +758,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debug-devel?arch=x86_64
-    affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debug-devel-matched?arch=x86_64
     affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
     fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
     fixed_in_commits: []
@@ -423,16 +828,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-modules-partner?arch=x86_64
-    affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-selftests-internal?arch=x86_64
-    affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-tools?arch=x86_64
     affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
     fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
     fixed_in_commits: []
@@ -517,11 +912,6 @@ impacted_packages:
     fixed_versions: vers:rpm/5.14.0-284.54.1.rt14.339.el9_2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-rt-debug-core?arch=x86_64
-    affected_versions: vers:rpm/<5.14.0-284.54.1.rt14.339.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.54.1.rt14.339.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-rt-debug-devel?arch=x86_64
     affected_versions: vers:rpm/<5.14.0-284.54.1.rt14.339.el9_2
     fixed_versions: vers:rpm/5.14.0-284.54.1.rt14.339.el9_2
@@ -537,16 +927,6 @@ impacted_packages:
     fixed_versions: vers:rpm/5.14.0-284.54.1.rt14.339.el9_2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-rt-debug-modules?arch=x86_64
-    affected_versions: vers:rpm/<5.14.0-284.54.1.rt14.339.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.54.1.rt14.339.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-rt-debug-modules-core?arch=x86_64
-    affected_versions: vers:rpm/<5.14.0-284.54.1.rt14.339.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.54.1.rt14.339.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-rt-debug-modules-extra?arch=x86_64
     affected_versions: vers:rpm/<5.14.0-284.54.1.rt14.339.el9_2
     fixed_versions: vers:rpm/5.14.0-284.54.1.rt14.339.el9_2
@@ -558,11 +938,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-rt-debug-modules-partner?arch=x86_64
-    affected_versions: vers:rpm/<5.14.0-284.54.1.rt14.339.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.54.1.rt14.339.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-rt-devel?arch=x86_64
     affected_versions: vers:rpm/<5.14.0-284.54.1.rt14.339.el9_2
     fixed_versions: vers:rpm/5.14.0-284.54.1.rt14.339.el9_2
     fixed_in_commits: []
@@ -1057,11 +1432,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.28.0-3.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/crun?arch=aarch64
-    affected_versions: vers:rpm/<1.14-1.rhaos4.15.el9
-    fixed_versions: vers:rpm/1.14-1.rhaos4.15.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/crun-debugsource?arch=aarch64
     affected_versions: vers:rpm/<1.14-1.rhaos4.15.el9
     fixed_versions: vers:rpm/1.14-1.rhaos4.15.el9
@@ -1112,11 +1482,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.1.12-1.rhaos4.15.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/runc-debuginfo?arch=aarch64&epoch=4
-    affected_versions: vers:rpm/<1.1.12-1.rhaos4.15.el9
-    fixed_versions: vers:rpm/1.1.12-1.rhaos4.15.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/buildah?arch=aarch64&epoch=1
     affected_versions: vers:rpm/<1.29.1-20.2.rhaos4.15.el9
     fixed_versions: vers:rpm/1.29.1-20.2.rhaos4.15.el9
@@ -1158,11 +1523,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/ignition?arch=aarch64
-    affected_versions: vers:rpm/<2.16.2-2.rhaos4.15.el9
-    fixed_versions: vers:rpm/2.16.2-2.rhaos4.15.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ignition-validate?arch=aarch64
     affected_versions: vers:rpm/<2.16.2-2.rhaos4.15.el9
     fixed_versions: vers:rpm/2.16.2-2.rhaos4.15.el9
     fixed_in_commits: []
@@ -1228,11 +1588,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-64k-debug-core?arch=aarch64
-    affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-64k-debug-devel?arch=aarch64
     affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
     fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
     fixed_in_commits: []
@@ -1327,16 +1682,6 @@ impacted_packages:
     fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debug-modules?arch=aarch64
-    affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debug-modules-core?arch=aarch64
-    affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debug-modules-extra?arch=aarch64
     affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
     fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
@@ -1358,11 +1703,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-devel-matched?arch=aarch64
-    affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-modules?arch=aarch64
     affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
     fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
     fixed_in_commits: []
@@ -1402,17 +1742,7 @@ impacted_packages:
     fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-tools-libs-devel?arch=aarch64
-    affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/perf?arch=aarch64
-    affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python3-perf?arch=aarch64
     affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
     fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
     fixed_in_commits: []
@@ -1447,11 +1777,6 @@ impacted_packages:
     fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debuginfo-common-aarch64?arch=aarch64
-    affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-tools-debuginfo?arch=aarch64
     affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
     fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
@@ -1473,11 +1798,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman?arch=aarch64&epoch=3
-    affected_versions: vers:rpm/<4.4.1-21.rhaos4.15.el9
-    fixed_versions: vers:rpm/4.4.1-21.rhaos4.15.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-gvproxy?arch=aarch64&epoch=3
     affected_versions: vers:rpm/<4.4.1-21.rhaos4.15.el9
     fixed_versions: vers:rpm/4.4.1-21.rhaos4.15.el9
     fixed_in_commits: []
@@ -1533,11 +1853,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/coreos-installer-bootinfra?arch=aarch64
-    affected_versions: vers:rpm/<0.17.0-2.rhaos4.15.el8
-    fixed_versions: vers:rpm/0.17.0-2.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/coreos-installer-dracut?arch=aarch64
     affected_versions: vers:rpm/<0.17.0-2.rhaos4.15.el8
     fixed_versions: vers:rpm/0.17.0-2.rhaos4.15.el8
     fixed_in_commits: []
@@ -1623,11 +1938,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/runc-debugsource?arch=aarch64&epoch=4
-    affected_versions: vers:rpm/<1.1.12-1.rhaos4.15.el8
-    fixed_versions: vers:rpm/1.1.12-1.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/runc-debuginfo?arch=aarch64&epoch=4
     affected_versions: vers:rpm/<1.1.12-1.rhaos4.15.el8
     fixed_versions: vers:rpm/1.1.12-1.rhaos4.15.el8
     fixed_in_commits: []
@@ -1792,11 +2102,6 @@ impacted_packages:
     fixed_versions: vers:rpm/5.4.3-2.rhaos4.15.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/coreos-installer?arch=ppc64le
-    affected_versions: vers:rpm/<0.17.0-3.rhaos4.15.el9
-    fixed_versions: vers:rpm/0.17.0-3.rhaos4.15.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/coreos-installer-bootinfra?arch=ppc64le
     affected_versions: vers:rpm/<0.17.0-3.rhaos4.15.el9
     fixed_versions: vers:rpm/0.17.0-3.rhaos4.15.el9
@@ -1827,11 +2132,6 @@ impacted_packages:
     fixed_versions: vers:rpm/2023.8-3.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ostree-devel?arch=ppc64le
-    affected_versions: vers:rpm/<2023.8-3.el9
-    fixed_versions: vers:rpm/2023.8-3.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/ostree-grub2?arch=ppc64le
     affected_versions: vers:rpm/<2023.8-3.el9
     fixed_versions: vers:rpm/2023.8-3.el9
@@ -1843,11 +2143,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/ostree-debugsource?arch=ppc64le
-    affected_versions: vers:rpm/<2023.8-3.el9
-    fixed_versions: vers:rpm/2023.8-3.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ostree-debuginfo?arch=ppc64le
     affected_versions: vers:rpm/<2023.8-3.el9
     fixed_versions: vers:rpm/2023.8-3.el9
     fixed_in_commits: []
@@ -1875,11 +2170,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/skopeo-debuginfo?arch=ppc64le&epoch=2
     affected_versions: vers:rpm/<1.11.2-21.1.rhaos4.15.el9
     fixed_versions: vers:rpm/1.11.2-21.1.rhaos4.15.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ose-aws-ecr-image-credential-provider?arch=ppc64le
-    affected_versions: vers:rpm/<4.15.0-202401231232.p0.gba252ab.assembly.stream.el9
-    fixed_versions: vers:rpm/4.15.0-202401231232.p0.gba252ab.assembly.stream.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/cri-tools?arch=ppc64le
@@ -1910,11 +2200,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/crun-debuginfo?arch=ppc64le
     affected_versions: vers:rpm/<1.14-1.rhaos4.15.el9
     fixed_versions: vers:rpm/1.14-1.rhaos4.15.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/rpm-ostree?arch=ppc64le
-    affected_versions: vers:rpm/<2024.2-1.el9
-    fixed_versions: vers:rpm/2024.2-1.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/rpm-ostree-devel?arch=ppc64le
@@ -2077,17 +2362,7 @@ impacted_packages:
     fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debug-modules?arch=ppc64le
-    affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debug-modules-core?arch=ppc64le
-    affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debug-modules-extra?arch=ppc64le
     affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
     fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
     fixed_in_commits: []
@@ -2177,27 +2452,7 @@ impacted_packages:
     fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/bpftool-debuginfo?arch=ppc64le
-    affected_versions: vers:rpm/<7.0.0-284.54.1.el9_2
-    fixed_versions: vers:rpm/7.0.0-284.54.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/kernel-debug-debuginfo?arch=ppc64le
-    affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debuginfo?arch=ppc64le
-    affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-debuginfo-common-ppc64le?arch=ppc64le
-    affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/kernel-tools-debuginfo?arch=ppc64le
     affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
     fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
     fixed_in_commits: []
@@ -2210,11 +2465,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/python3-perf-debuginfo?arch=ppc64le
     affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
     fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/openshift-hyperkube?arch=ppc64le
-    affected_versions: vers:rpm/<4.15.0-202402142009.p0.g6216ea1.assembly.stream.el9
-    fixed_versions: vers:rpm/4.15.0-202402142009.p0.g6216ea1.assembly.stream.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman?arch=ppc64le&epoch=3
@@ -2238,11 +2488,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-tests?arch=ppc64le&epoch=3
-    affected_versions: vers:rpm/<4.4.1-21.rhaos4.15.el9
-    fixed_versions: vers:rpm/4.4.1-21.rhaos4.15.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-debugsource?arch=ppc64le&epoch=3
     affected_versions: vers:rpm/<4.4.1-21.rhaos4.15.el9
     fixed_versions: vers:rpm/4.4.1-21.rhaos4.15.el9
     fixed_in_commits: []
@@ -2278,11 +2523,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/coreos-installer-bootinfra?arch=ppc64le
-    affected_versions: vers:rpm/<0.17.0-2.rhaos4.15.el8
-    fixed_versions: vers:rpm/0.17.0-2.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/coreos-installer-dracut?arch=ppc64le
     affected_versions: vers:rpm/<0.17.0-2.rhaos4.15.el8
     fixed_versions: vers:rpm/0.17.0-2.rhaos4.15.el8
     fixed_in_commits: []
@@ -2472,27 +2712,12 @@ impacted_packages:
     fixed_versions: vers:rpm/4.4.1-21.rhaos4.15.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-plugins?arch=ppc64le&epoch=3
-    affected_versions: vers:rpm/<4.4.1-21.rhaos4.15.el8
-    fixed_versions: vers:rpm/4.4.1-21.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-remote?arch=ppc64le&epoch=3
     affected_versions: vers:rpm/<4.4.1-21.rhaos4.15.el8
     fixed_versions: vers:rpm/4.4.1-21.rhaos4.15.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-tests?arch=ppc64le&epoch=3
-    affected_versions: vers:rpm/<4.4.1-21.rhaos4.15.el8
-    fixed_versions: vers:rpm/4.4.1-21.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-debugsource?arch=ppc64le&epoch=3
-    affected_versions: vers:rpm/<4.4.1-21.rhaos4.15.el8
-    fixed_versions: vers:rpm/4.4.1-21.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-catatonit-debuginfo?arch=ppc64le&epoch=3
     affected_versions: vers:rpm/<4.4.1-21.rhaos4.15.el8
     fixed_versions: vers:rpm/4.4.1-21.rhaos4.15.el8
     fixed_in_commits: []
@@ -2515,11 +2740,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/podman-remote-debuginfo?arch=ppc64le&epoch=3
     affected_versions: vers:rpm/<4.4.1-21.rhaos4.15.el8
     fixed_versions: vers:rpm/4.4.1-21.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/afterburn?arch=s390x
-    affected_versions: vers:rpm/<5.4.3-2.rhaos4.15.el9
-    fixed_versions: vers:rpm/5.4.3-2.rhaos4.15.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/afterburn-dracut?arch=s390x
@@ -2567,22 +2787,7 @@ impacted_packages:
     fixed_versions: vers:rpm/0.17.0-3.rhaos4.15.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ostree?arch=s390x
-    affected_versions: vers:rpm/<2023.8-3.el9
-    fixed_versions: vers:rpm/2023.8-3.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/ostree-devel?arch=s390x
-    affected_versions: vers:rpm/<2023.8-3.el9
-    fixed_versions: vers:rpm/2023.8-3.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ostree-libs?arch=s390x
-    affected_versions: vers:rpm/<2023.8-3.el9
-    fixed_versions: vers:rpm/2023.8-3.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ostree-debugsource?arch=s390x
     affected_versions: vers:rpm/<2023.8-3.el9
     fixed_versions: vers:rpm/2023.8-3.el9
     fixed_in_commits: []
@@ -2632,11 +2837,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.28.0-3.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-tools-debuginfo?arch=s390x
-    affected_versions: vers:rpm/<1.28.0-3.el9
-    fixed_versions: vers:rpm/1.28.0-3.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/crun?arch=s390x
     affected_versions: vers:rpm/<1.14-1.rhaos4.15.el9
     fixed_versions: vers:rpm/1.14-1.rhaos4.15.el9
@@ -2663,11 +2863,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/rpm-ostree-libs?arch=s390x
-    affected_versions: vers:rpm/<2024.2-1.el9
-    fixed_versions: vers:rpm/2024.2-1.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/rpm-ostree-debugsource?arch=s390x
     affected_versions: vers:rpm/<2024.2-1.el9
     fixed_versions: vers:rpm/2024.2-1.el9
     fixed_in_commits: []
@@ -2735,11 +2930,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/conmon-debuginfo?arch=s390x&epoch=3
     affected_versions: vers:rpm/<2.1.7-1.2.rhaos4.14.el9
     fixed_versions: vers:rpm/2.1.7-1.2.rhaos4.14.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ignition?arch=s390x
-    affected_versions: vers:rpm/<2.16.2-2.rhaos4.15.el9
-    fixed_versions: vers:rpm/2.16.2-2.rhaos4.15.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/ignition-validate?arch=s390x
@@ -2937,11 +3127,6 @@ impacted_packages:
     fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python3-perf?arch=s390x
-    affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
-    fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/rtla?arch=s390x
     affected_versions: vers:rpm/<5.14.0-284.54.1.el9_2
     fixed_versions: vers:rpm/5.14.0-284.54.1.el9_2
@@ -3027,11 +3212,6 @@ impacted_packages:
     fixed_versions: vers:rpm/4.4.1-21.rhaos4.15.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-gvproxy-debuginfo?arch=s390x&epoch=3
-    affected_versions: vers:rpm/<4.4.1-21.rhaos4.15.el9
-    fixed_versions: vers:rpm/4.4.1-21.rhaos4.15.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-plugins-debuginfo?arch=s390x&epoch=3
     affected_versions: vers:rpm/<4.4.1-21.rhaos4.15.el9
     fixed_versions: vers:rpm/4.4.1-21.rhaos4.15.el9
@@ -3097,16 +3277,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.11.2-21.1.rhaos4.15.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/skopeo-debuginfo?arch=s390x&epoch=2
-    affected_versions: vers:rpm/<1.11.2-21.1.rhaos4.15.el8
-    fixed_versions: vers:rpm/1.11.2-21.1.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/ose-aws-ecr-image-credential-provider?arch=s390x
-    affected_versions: vers:rpm/<4.15.0-202401231232.p0.gba252ab.assembly.stream.el8
-    fixed_versions: vers:rpm/4.15.0-202401231232.p0.gba252ab.assembly.stream.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/cri-tools?arch=s390x
     affected_versions: vers:rpm/<1.28.0-3.el8
     fixed_versions: vers:rpm/1.28.0-3.el8
@@ -3117,22 +3287,7 @@ impacted_packages:
     fixed_versions: vers:rpm/1.28.0-3.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-tools-debuginfo?arch=s390x
-    affected_versions: vers:rpm/<1.28.0-3.el8
-    fixed_versions: vers:rpm/1.28.0-3.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/crun?arch=s390x
-    affected_versions: vers:rpm/<1.14-1.rhaos4.15.el8
-    fixed_versions: vers:rpm/1.14-1.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/crun-debugsource?arch=s390x
-    affected_versions: vers:rpm/<1.14-1.rhaos4.15.el8
-    fixed_versions: vers:rpm/1.14-1.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/crun-debuginfo?arch=s390x
     affected_versions: vers:rpm/<1.14-1.rhaos4.15.el8
     fixed_versions: vers:rpm/1.14-1.rhaos4.15.el8
     fixed_in_commits: []
@@ -3157,22 +3312,12 @@ impacted_packages:
     fixed_versions: vers:rpm/1.29.1-20.2.rhaos4.15.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/buildah-tests?arch=s390x&epoch=1
-    affected_versions: vers:rpm/<1.29.1-20.2.rhaos4.15.el8
-    fixed_versions: vers:rpm/1.29.1-20.2.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/buildah-debugsource?arch=s390x&epoch=1
     affected_versions: vers:rpm/<1.29.1-20.2.rhaos4.15.el8
     fixed_versions: vers:rpm/1.29.1-20.2.rhaos4.15.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/buildah-debuginfo?arch=s390x&epoch=1
-    affected_versions: vers:rpm/<1.29.1-20.2.rhaos4.15.el8
-    fixed_versions: vers:rpm/1.29.1-20.2.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/buildah-tests-debuginfo?arch=s390x&epoch=1
     affected_versions: vers:rpm/<1.29.1-20.2.rhaos4.15.el8
     fixed_versions: vers:rpm/1.29.1-20.2.rhaos4.15.el8
     fixed_in_commits: []
@@ -3222,11 +3367,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.28.3-14.rhaos4.15.git33aabd8.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/cri-o-debuginfo?arch=s390x
-    affected_versions: vers:rpm/<1.28.3-14.rhaos4.15.git33aabd8.el8
-    fixed_versions: vers:rpm/1.28.3-14.rhaos4.15.git33aabd8.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/openshift-hyperkube?arch=s390x
     affected_versions: vers:rpm/<4.15.0-202402142009.p0.g6216ea1.assembly.stream.el8
     fixed_versions: vers:rpm/4.15.0-202402142009.p0.g6216ea1.assembly.stream.el8
@@ -3262,11 +3402,6 @@ impacted_packages:
     fixed_versions: vers:rpm/4.4.1-21.rhaos4.15.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/podman-debugsource?arch=s390x&epoch=3
-    affected_versions: vers:rpm/<4.4.1-21.rhaos4.15.el8
-    fixed_versions: vers:rpm/4.4.1-21.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/podman-catatonit-debuginfo?arch=s390x&epoch=3
     affected_versions: vers:rpm/<4.4.1-21.rhaos4.15.el8
     fixed_versions: vers:rpm/4.4.1-21.rhaos4.15.el8
@@ -3295,11 +3430,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/rust-afterburn?arch=src
     affected_versions: vers:rpm/<5.4.3-2.rhaos4.15.el9
     fixed_versions: vers:rpm/5.4.3-2.rhaos4.15.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/toolbox?arch=src
-    affected_versions: vers:rpm/<0.1.2-1.rhaos4.15.el9
-    fixed_versions: vers:rpm/0.1.2-1.rhaos4.15.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/coreos-installer?arch=src
@@ -3427,11 +3557,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.11.2-21.1.rhaos4.15.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/container-selinux?arch=src&epoch=3
-    affected_versions: vers:rpm/<2.228.1-1.rhaos4.15.el8
-    fixed_versions: vers:rpm/2.228.1-1.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/ose-aws-ecr-image-credential-provider?arch=src
     affected_versions: vers:rpm/<4.15.0-202401231232.p0.gba252ab.assembly.stream.el8
     fixed_versions: vers:rpm/4.15.0-202401231232.p0.gba252ab.assembly.stream.el8
@@ -3442,16 +3567,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.28.0-3.el8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/crun?arch=src
-    affected_versions: vers:rpm/<1.14-1.rhaos4.15.el8
-    fixed_versions: vers:rpm/1.14-1.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/runc?arch=src&epoch=4
-    affected_versions: vers:rpm/<1.1.12-1.rhaos4.15.el8
-    fixed_versions: vers:rpm/1.1.12-1.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/buildah?arch=src&epoch=1
     affected_versions: vers:rpm/<1.29.1-20.2.rhaos4.15.el8
     fixed_versions: vers:rpm/1.29.1-20.2.rhaos4.15.el8
@@ -3460,11 +3575,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/containernetworking-plugins?arch=src&epoch=1
     affected_versions: vers:rpm/<1.4.0-1.1.rhaos4.15.el8
     fixed_versions: vers:rpm/1.4.0-1.1.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/openshift-clients?arch=src
-    affected_versions: vers:rpm/<4.15.0-202402070507.p0.g48dcf59.assembly.stream.el8
-    fixed_versions: vers:rpm/4.15.0-202402070507.p0.g48dcf59.assembly.stream.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/butane?arch=src
@@ -3490,26 +3600,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/podman?arch=src&epoch=3
     affected_versions: vers:rpm/<4.4.1-21.rhaos4.15.el8
     fixed_versions: vers:rpm/4.4.1-21.rhaos4.15.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python-automaton?arch=src
-    affected_versions: vers:rpm/<3.2.0-0.20231026124537.9255778.el9
-    fixed_versions: vers:rpm/3.2.0-0.20231026124537.9255778.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python-cinderclient?arch=src
-    affected_versions: vers:rpm/<9.4.0-0.20231026140112.f1f14df.el9
-    fixed_versions: vers:rpm/9.4.0-0.20231026140112.f1f14df.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python-cliff?arch=src
-    affected_versions: vers:rpm/<4.3.0-0.20230720153123.72e81d7.el9
-    fixed_versions: vers:rpm/4.3.0-0.20230720153123.72e81d7.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python-ddt?arch=src
-    affected_versions: vers:rpm/<1.6.0-1.el9
-    fixed_versions: vers:rpm/1.6.0-1.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/python-debtcollector?arch=src
@@ -3560,11 +3650,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/python-os-service-types?arch=src
     affected_versions: vers:rpm/<1.7.0-0.20230720134705.0b2f473.el9
     fixed_versions: vers:rpm/1.7.0-0.20230720134705.0b2f473.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python-os-traits?arch=src
-    affected_versions: vers:rpm/<3.0.0-0.20230720155912.cff125c.el9
-    fixed_versions: vers:rpm/3.0.0-0.20230720155912.cff125c.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/python-osc-lib?arch=src
@@ -3627,11 +3712,6 @@ impacted_packages:
     fixed_versions: vers:rpm/5.2.0-0.20231026132830.a0ba2d7.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python-oslo-service?arch=src
-    affected_versions: vers:rpm/<3.2.0-0.20231026132024.e94d47a.el9
-    fixed_versions: vers:rpm/3.2.0-0.20231026132024.e94d47a.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/python-oslo-upgradecheck?arch=src
     affected_versions: vers:rpm/<2.2.0-0.20231026125248.cbee52e.el9
     fixed_versions: vers:rpm/2.2.0-0.20231026125248.cbee52e.el9
@@ -3672,16 +3752,6 @@ impacted_packages:
     fixed_versions: vers:rpm/5.1.0-0.20230720161334.2d99ccc.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python-sushy-oem-idrac?arch=src
-    affected_versions: vers:rpm/<5.0.0-0.20230720142539.da9a0e4.el9
-    fixed_versions: vers:rpm/5.0.0-0.20230720142539.da9a0e4.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python-swiftclient?arch=src
-    affected_versions: vers:rpm/<4.4.0-0.20231026135457.54fbfa8.el9
-    fixed_versions: vers:rpm/4.4.0-0.20231026135457.54fbfa8.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/python-tooz?arch=src
     affected_versions: vers:rpm/<4.2.0-0.20231026133434.bed303e.el9
     fixed_versions: vers:rpm/4.2.0-0.20231026133434.bed303e.el9
@@ -3710,16 +3780,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/python-ironic-lib?arch=src
     affected_versions: vers:rpm/<5.5.1-0.20231201154527.97a8ae5.el9
     fixed_versions: vers:rpm/5.5.1-0.20231201154527.97a8ae5.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python-openstacksdk?arch=src
-    affected_versions: vers:rpm/<2.0.0-0.20231108210647.8f6a2cf.el9
-    fixed_versions: vers:rpm/2.0.0-0.20231108210647.8f6a2cf.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python-platformdirs?arch=src
-    affected_versions: vers:rpm/<2.3.0-1.el9
-    fixed_versions: vers:rpm/2.3.0-1.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/python-sushy?arch=src
@@ -3765,11 +3825,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/openshift4-aws-iso?arch=noarch
     affected_versions: vers:rpm/<4.15.0-202312250209.p0.gd2acdd5.assembly.stream.el8
     fixed_versions: vers:rpm/4.15.0-202312250209.p0.gd2acdd5.assembly.stream.el8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/container-selinux?arch=noarch&epoch=3
-    affected_versions: vers:rpm/<2.228.1-1.rhaos4.15.el8
-    fixed_versions: vers:rpm/2.228.1-1.rhaos4.15.el8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/butane-redistributable?arch=noarch
@@ -3827,11 +3882,6 @@ impacted_packages:
     fixed_versions: vers:rpm/8.0.0-0.20230720140220.9c7499c.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python3-futurist?arch=noarch
-    affected_versions: vers:rpm/<2.4.1-0.20230720141142.159d752.el9
-    fixed_versions: vers:rpm/2.4.1-0.20230720141142.159d752.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/python3-glanceclient?arch=noarch&epoch=1
     affected_versions: vers:rpm/<4.4.0-0.20231026133336.62e6fc8.el9
     fixed_versions: vers:rpm/4.4.0-0.20231026133336.62e6fc8.el9
@@ -3845,11 +3895,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/python3-hardware-detect?arch=noarch
     affected_versions: vers:rpm/<0.31.0-0.20231026124537.af076d3.el9
     fixed_versions: vers:rpm/0.31.0-0.20231026124537.af076d3.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python3-ironic-prometheus-exporter?arch=noarch
-    affected_versions: vers:rpm/<4.3.0-0.20231002134531.b3e0de8.el9
-    fixed_versions: vers:rpm/4.3.0-0.20231002134531.b3e0de8.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/python3-keystoneauth1?arch=noarch
@@ -3878,11 +3923,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/python3-os-traits?arch=noarch
-    affected_versions: vers:rpm/<3.0.0-0.20230720155912.cff125c.el9
-    fixed_versions: vers:rpm/3.0.0-0.20230720155912.cff125c.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python3-os-traits-tests?arch=noarch
     affected_versions: vers:rpm/<3.0.0-0.20230720155912.cff125c.el9
     fixed_versions: vers:rpm/3.0.0-0.20230720155912.cff125c.el9
     fixed_in_commits: []
@@ -4017,11 +4057,6 @@ impacted_packages:
     fixed_versions: vers:rpm/7.1.0-0.20231026125723.0660a66.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python3-oslo-rootwrap-tests?arch=noarch
-    affected_versions: vers:rpm/<7.1.0-0.20231026125723.0660a66.el9
-    fixed_versions: vers:rpm/7.1.0-0.20231026125723.0660a66.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/python3-oslo-serialization?arch=noarch
     affected_versions: vers:rpm/<5.2.0-0.20231026132830.a0ba2d7.el9
     fixed_versions: vers:rpm/5.2.0-0.20231026132830.a0ba2d7.el9
@@ -4030,16 +4065,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/python3-oslo-serialization-tests?arch=noarch
     affected_versions: vers:rpm/<5.2.0-0.20231026132830.a0ba2d7.el9
     fixed_versions: vers:rpm/5.2.0-0.20231026132830.a0ba2d7.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python3-oslo-service?arch=noarch
-    affected_versions: vers:rpm/<3.2.0-0.20231026132024.e94d47a.el9
-    fixed_versions: vers:rpm/3.2.0-0.20231026132024.e94d47a.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python3-oslo-service-tests?arch=noarch
-    affected_versions: vers:rpm/<3.2.0-0.20231026132024.e94d47a.el9
-    fixed_versions: vers:rpm/3.2.0-0.20231026132024.e94d47a.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/python3-oslo-upgradecheck?arch=noarch
@@ -4077,11 +4102,6 @@ impacted_packages:
     fixed_versions: vers:rpm/3.2.0-0.20231026133739.6478669.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python3-osprofiler?arch=noarch
-    affected_versions: vers:rpm/<4.1.0-0.20231026130241.3c5fead.el9
-    fixed_versions: vers:rpm/4.1.0-0.20231026130241.3c5fead.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/python3-proliantutils?arch=noarch
     affected_versions: vers:rpm/<2.16.0-0.20231026140721.5839129.el9
     fixed_versions: vers:rpm/2.16.0-0.20231026140721.5839129.el9
@@ -4095,11 +4115,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/python3-pycadf?arch=noarch
     affected_versions: vers:rpm/<3.1.1-0.20230720135529.4179996.el9
     fixed_versions: vers:rpm/3.1.1-0.20230720135529.4179996.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python3-requestsexceptions?arch=noarch
-    affected_versions: vers:rpm/<1.4.0-0.20230720134705.d7ac0ff.el9
-    fixed_versions: vers:rpm/1.4.0-0.20230720134705.d7ac0ff.el9
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/python3-stevedore?arch=noarch
@@ -4132,22 +4147,7 @@ impacted_packages:
     fixed_versions: vers:rpm/0.12.1-0.20231026141130.8312bb2.el9
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/openstack-ironic?arch=noarch&epoch=1
-    affected_versions: vers:rpm/<23.1.1-0.20231213124529.d388f38.el9
-    fixed_versions: vers:rpm/23.1.1-0.20231213124529.d388f38.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/openstack-ironic-api?arch=noarch&epoch=1
-    affected_versions: vers:rpm/<23.1.1-0.20231213124529.d388f38.el9
-    fixed_versions: vers:rpm/23.1.1-0.20231213124529.d388f38.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/openstack-ironic-common?arch=noarch&epoch=1
-    affected_versions: vers:rpm/<23.1.1-0.20231213124529.d388f38.el9
-    fixed_versions: vers:rpm/23.1.1-0.20231213124529.d388f38.el9
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/openstack-ironic-conductor?arch=noarch&epoch=1
     affected_versions: vers:rpm/<23.1.1-0.20231213124529.d388f38.el9
     fixed_versions: vers:rpm/23.1.1-0.20231213124529.d388f38.el9
     fixed_in_commits: []
@@ -4236,7 +4236,7 @@ severities:
   - score: Important
     scoring_system: rhas
     scoring_elements:
-    published_at: None
+    published_at:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2023_7201.json
 weaknesses: []
 references:

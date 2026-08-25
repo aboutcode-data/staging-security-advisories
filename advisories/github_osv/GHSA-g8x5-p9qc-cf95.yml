@@ -24,11 +24,6 @@ summary: |
 
   * [Prevent Attacks and Redirect Users with OAuth 2.0 State Parameters](https://auth0.com/docs/secure/attack-protection/state-parameters)
 impacted_packages:
-  - purl: pkg:npm/%40fastify/oauth2
-    affected_versions: vers:npm/<7.2.0
-    fixed_versions: vers:npm/7.2.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/fastify/fastify-oauth2
     affected_versions:
     fixed_versions:
@@ -36,16 +31,21 @@ impacted_packages:
       - vcs_url: https://github.com/fastify/fastify-oauth2
         commit: bff756b456cbb769080631af2beb85671ff4c79c
     introduced_in_commits: []
+  - purl: pkg:npm/%40fastify/oauth2
+    affected_versions: vers:npm/<7.2.0
+    fixed_versions: vers:npm/7.2.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-g8x5-p9qc-cf95/GHSA-g8x5-p9qc-cf95.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-352

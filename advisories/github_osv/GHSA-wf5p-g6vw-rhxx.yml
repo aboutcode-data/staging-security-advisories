@@ -7,6 +7,15 @@ summary: |
   Axios Cross-Site Request Forgery Vulnerability
   An issue discovered in Axios 0.8.1 through 1.5.1 inadvertently reveals the confidential XSRF-TOKEN stored in cookies by including it in the HTTP header X-XSRF-TOKEN for every request made to any host allowing attackers to view sensitive information.
 impacted_packages:
+  - purl: pkg:github/axios/axios
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/axios/axios
+        commit: 96ee232bd3ee4de2e657333d4d2191cd389e14d0
+      - vcs_url: https://github.com/axios/axios
+        commit: 2755df562b9c194fba6d8b609a383443f6a6e967
+    introduced_in_commits: []
   - purl: pkg:npm/axios
     affected_versions: vers:npm/>=1.0.0|<1.6.0
     fixed_versions: vers:npm/1.6.0
@@ -17,25 +26,16 @@ impacted_packages:
     fixed_versions: vers:npm/0.28.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/axios/axios
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/axios/axios
-        commit: 96ee232bd3ee4de2e657333d4d2191cd389e14d0
-      - vcs_url: https://github.com/axios/axios
-        commit: 2755df562b9c194fba6d8b609a383443f6a6e967
-    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-wf5p-g6vw-rhxx/GHSA-wf5p-g6vw-rhxx.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-352

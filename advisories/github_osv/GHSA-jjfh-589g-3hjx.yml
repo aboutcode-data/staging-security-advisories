@@ -12,6 +12,13 @@ summary: |
     *  the application uses Spring MVC or Spring WebFlux
     *  `org.springframework.boot:spring-boot-actuator` is on the classpath
 impacted_packages:
+  - purl: pkg:github/spring-projects/spring-boot
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/spring-projects/spring-boot
+        commit: 5490e73922b37a7f0bdde43eb318cb1038b45d60
+    introduced_in_commits: []
   - purl: pkg:maven/org.springframework.boot/spring-boot-actuator
     affected_versions: vers:maven/<2.7.18
     fixed_versions: vers:maven/2.7.18
@@ -27,23 +34,16 @@ impacted_packages:
     fixed_versions: vers:maven/3.1.6
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/spring-projects/spring-boot
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/spring-projects/spring-boot
-        commit: 5490e73922b37a7f0bdde43eb318cb1038b45d60
-    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-jjfh-589g-3hjx/GHSA-jjfh-589g-3hjx.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses: []
 references:

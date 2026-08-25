@@ -27,11 +27,6 @@ summary: "unpoly-rails Denial of Service vulnerability\nThere is a possible Deni
   \ == response.headers['X-Up-Location']\n        response.headers.delete('X-Up-Location')\n\
   \      end\n    end\n  \n  end\n  ```"
 impacted_packages:
-  - purl: pkg:gem/unpoly-rails
-    affected_versions: vers:gem/<2.7.2.2
-    fixed_versions: vers:gem/2.7.2.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/unpoly/unpoly-rails
     affected_versions:
     fixed_versions:
@@ -39,16 +34,21 @@ impacted_packages:
       - vcs_url: https://github.com/unpoly/unpoly-rails
         commit: cd9ad0007daceeb3b2354fdcab4f88350427bf16
     introduced_in_commits: []
+  - purl: pkg:gem/unpoly-rails
+    affected_versions: vers:gem/<2.7.2.2
+    fixed_versions: vers:gem/2.7.2.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.9'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-m875-3xf6-mf78/GHSA-m875-3xf6-mf78.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-400

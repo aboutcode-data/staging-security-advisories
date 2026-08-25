@@ -9,6 +9,13 @@ summary: |
 
   Specifically, an application is vulnerable if Reactor Netty HTTP Server is configured to serve static resources.
 impacted_packages:
+  - purl: pkg:github/reactor/reactor-netty
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/reactor/reactor-netty
+        commit: b1dd46b9a424ca27f7f770be6561faa84d812e5b
+    introduced_in_commits: []
   - purl: pkg:maven/io.projectreactor.netty/reactor-netty-http
     affected_versions: vers:maven/>=1.1.0|<1.1.13
     fixed_versions: vers:maven/1.1.13
@@ -19,23 +26,16 @@ impacted_packages:
     fixed_versions: vers:maven/1.0.39
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/reactor/reactor-netty
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/reactor/reactor-netty
-        commit: b1dd46b9a424ca27f7f770be6561faa84d812e5b
-    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-xjhv-p3fv-x24r/GHSA-xjhv-p3fv-x24r.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

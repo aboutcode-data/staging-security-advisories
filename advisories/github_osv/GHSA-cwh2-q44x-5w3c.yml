@@ -7,11 +7,6 @@ summary: |
   Moodle Acceptance of Extraneous Untrusted Data With Trusted Data vulnerability
   Stronger revision number limitations were required on file serving endpoints to improve cache poisoning protection.
 impacted_packages:
-  - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/<4.3.0-rc2
-    fixed_versions: vers:composer/4.3.0-rc2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/moodle/moodle
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/moodle/moodle
         commit: 7679452caff6faa33f00d3f0589c5190bc01a933
     introduced_in_commits: []
+  - purl: pkg:composer/moodle/moodle
+    affected_versions: vers:composer/<4.3.0-rc2
+    fixed_versions: vers:composer/4.3.0-rc2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-cwh2-q44x-5w3c/GHSA-cwh2-q44x-5w3c.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-349

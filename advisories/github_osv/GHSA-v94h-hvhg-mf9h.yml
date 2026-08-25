@@ -16,11 +16,6 @@ summary: |
 
   Typically, Spring Boot applications need the org.springframework.boot:spring-boot-actuator dependency to meet all conditions.
 impacted_packages:
-  - purl: pkg:maven/org.springframework/spring-webmvc
-    affected_versions: vers:maven/>=6.0.0|<6.0.14
-    fixed_versions: vers:maven/6.0.14
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/spring-projects/spring-framework
     affected_versions:
     fixed_versions:
@@ -28,16 +23,21 @@ impacted_packages:
       - vcs_url: https://github.com/spring-projects/spring-framework
         commit: c18784678df489d06a70e54fcddb5e3821d4b00c
     introduced_in_commits: []
+  - purl: pkg:maven/org.springframework/spring-webmvc
+    affected_versions: vers:maven/>=6.0.0|<6.0.14
+    fixed_versions: vers:maven/6.0.14
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-v94h-hvhg-mf9h/GHSA-v94h-hvhg-mf9h.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses: []
 references:

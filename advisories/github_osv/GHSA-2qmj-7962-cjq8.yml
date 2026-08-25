@@ -7,11 +7,6 @@ summary: |
   langchain arbitrary code execution vulnerability
   An issue in langchain allows an attacker to execute arbitrary code via the PALChain in the python exec method.
 impacted_packages:
-  - purl: pkg:pypi/langchain
-    affected_versions: vers:pypi/<0.0.247
-    fixed_versions: vers:pypi/0.0.247
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/langchain-ai/langchain
     affected_versions:
     fixed_versions:
@@ -23,21 +18,26 @@ impacted_packages:
       - vcs_url: https://github.com/langchain-ai/langchain
         commit: e294ba475a355feb95003ed8f1a2b99942509a9e
     introduced_in_commits: []
+  - purl: pkg:pypi/langchain
+    affected_versions: vers:pypi/<0.0.247
+    fixed_versions: vers:pypi/0.0.247
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-2qmj-7962-cjq8/GHSA-2qmj-7962-cjq8.json
   - score: '9.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-2qmj-7962-cjq8/GHSA-2qmj-7962-cjq8.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

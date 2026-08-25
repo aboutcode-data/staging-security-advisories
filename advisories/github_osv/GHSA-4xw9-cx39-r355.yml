@@ -89,11 +89,6 @@ summary: |
 
   > Fixed in 4.0.0. Both encode and decode now reject combinations where the key type (PEM vs plain secret) doesn't match the algorithm family. Upgrade with npm install json-web-token@^4.
 impacted_packages:
-  - purl: pkg:npm/json-web-token
-    affected_versions: vers:npm/<=3.1.1
-    fixed_versions: vers:npm/4.0.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/joaquimserafim/json-web-token
     affected_versions:
     fixed_versions:
@@ -103,16 +98,21 @@ impacted_packages:
       - vcs_url: https://github.com/joaquimserafim/json-web-token
         commit: acf6a462471e1b14187eb77414e9161b8b7bff7e
     introduced_in_commits: []
+  - purl: pkg:npm/json-web-token
+    affected_versions: vers:npm/<=3.1.1
+    fixed_versions: vers:npm/4.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-4xw9-cx39-r355/GHSA-4xw9-cx39-r355.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-345

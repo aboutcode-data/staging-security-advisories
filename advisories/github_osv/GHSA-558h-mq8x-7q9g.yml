@@ -14,13 +14,6 @@ summary: "TensorFlow has Null Pointer Error in SparseSparseMaximum\n### Impact\n
   \ questions.\n\n\n### Attribution\nThis vulnerability has been reported by Yu Tian of Qihoo\
   \ 360 AIVul Team"
 impacted_packages:
-  - purl: pkg:github/tensorflow/tensorflow
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/tensorflow/tensorflow
-        commit: 5e0ecfb42f5f65629fd7a4edd6c4afe7ff0feb04
-    introduced_in_commits: []
   - purl: pkg:pypi/tensorflow
     affected_versions: vers:pypi/<2.11.1
     fixed_versions: vers:pypi/2.11.1
@@ -36,16 +29,23 @@ impacted_packages:
     fixed_versions: vers:pypi/2.11.1
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:github/tensorflow/tensorflow
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/tensorflow/tensorflow
+        commit: 5e0ecfb42f5f65629fd7a4edd6c4afe7ff0feb04
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-558h-mq8x-7q9g/GHSA-558h-mq8x-7q9g.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-476

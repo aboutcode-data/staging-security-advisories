@@ -44,6 +44,13 @@ summary: |
 
   WHATWG Living URL spec, section 4.4 URL Parsing, host state: https://url.spec.whatwg.org/#url-parsing
 impacted_packages:
+  - purl: pkg:github/google/closure-library
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/google/closure-library
+        commit: 0e567abedb058e9b194a40cfa3ad4c507653bccf
+    introduced_in_commits: []
   - purl: pkg:maven/lambdaisland/uri
     affected_versions: vers:maven/<1.14.120
     fixed_versions: vers:maven/1.14.120
@@ -58,23 +65,16 @@ impacted_packages:
       - vcs_url: https://github.com/lambdaisland/uri
         commit: f46db3e84846f79e14bfee0101d9c7a872321820
     introduced_in_commits: []
-  - purl: pkg:github/google/closure-library
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/google/closure-library
-        commit: 0e567abedb058e9b194a40cfa3ad4c507653bccf
-    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-cp4w-6x4w-v2h5/GHSA-cp4w-6x4w-v2h5.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-706

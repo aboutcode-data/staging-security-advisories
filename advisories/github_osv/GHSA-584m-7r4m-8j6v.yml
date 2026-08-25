@@ -17,11 +17,6 @@ summary: |
   As a workaround, you can set a different path as your default temporary directory using the Java system property java.io.tmpdir, if you’re concerned about this issue but unable to immediately update Jenkins.
 impacted_packages:
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
-    affected_versions: vers:maven/>=2.376|<2.387.1
-    fixed_versions: vers:maven/2.387.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
     affected_versions: vers:maven/<2.375.4
     fixed_versions: vers:maven/2.375.4
     fixed_in_commits: []
@@ -29,6 +24,11 @@ impacted_packages:
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
     affected_versions: vers:maven/>=2.388|<2.394
     fixed_versions: vers:maven/2.394
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
+    affected_versions: vers:maven/>=2.376|<2.387.1
+    fixed_versions: vers:maven/2.387.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/jenkinsci/jenkins
@@ -42,12 +42,12 @@ severities:
   - score: '3.6'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-584m-7r4m-8j6v/GHSA-584m-7r4m-8j6v.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-863

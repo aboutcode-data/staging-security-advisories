@@ -7,10 +7,14 @@ summary: |
   gRPC connection termination issue
   gRPC contains a vulnerability whereby a client can cause a termination of connection between a HTTP2 proxy and a gRPC server: a base64 encoding error for `-bin` suffixed headers will result in a disconnection by the gRPC server, but is typically allowed by HTTP2 proxies. We recommend upgrading beyond the commit in https://github.com/grpc/grpc/pull/32309.
 impacted_packages:
-  - purl: pkg:pypi/grpcio
-    affected_versions: vers:pypi/>=1.54.0|<1.54.2
-    fixed_versions: vers:pypi/1.54.2
-    fixed_in_commits: []
+  - purl: pkg:github/grpc/grpc
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/grpc/grpc
+        commit: 29d8beee0ac2555773b2a2dda5601c74a95d6c10
+      - vcs_url: https://github.com/grpc/grpc
+        commit: 65a2a895afaf1d2072447b9baf246374b182a946
     introduced_in_commits: []
   - purl: pkg:maven/io.grpc/grpc-protobuf
     affected_versions: vers:maven/>=1.53.0|<1.53.1
@@ -32,30 +36,26 @@ impacted_packages:
     fixed_versions: vers:maven/1.54.2
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:pypi/grpcio
+    affected_versions: vers:pypi/>=1.54.0|<1.54.2
+    fixed_versions: vers:pypi/1.54.2
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:gem/grpc
     affected_versions: vers:gem/>=1.54.0|<1.54.2
     fixed_versions: vers:gem/1.54.2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/grpc/grpc
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/grpc/grpc
-        commit: 29d8beee0ac2555773b2a2dda5601c74a95d6c10
-      - vcs_url: https://github.com/grpc/grpc
-        commit: 65a2a895afaf1d2072447b9baf246374b182a946
-    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-9hxf-ppjv-w6rq/GHSA-9hxf-ppjv-w6rq.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-440

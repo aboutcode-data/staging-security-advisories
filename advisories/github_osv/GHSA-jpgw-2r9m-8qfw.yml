@@ -17,11 +17,6 @@ summary: "Kiwi TCMS's misconfigured HTTP headers allow stored XSS execution with
   \ by [M Nadeem Qazi](https://huntr.dev/bounties/511489dd-ba38-4806-9029-b28ab2830aa8/) and\n\
   [Mahshooq Zubair](https://huntr.dev/bounties/c6eeb346-fa99-4d41-bc40-b68f8d689223/)."
 impacted_packages:
-  - purl: pkg:pypi/kiwitcms
-    affected_versions: vers:pypi/<12.5
-    fixed_versions: vers:pypi/12.5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/kiwitcms/kiwi
     affected_versions:
     fixed_versions:
@@ -31,16 +26,21 @@ impacted_packages:
       - vcs_url: https://github.com/kiwitcms/kiwi
         commit: ffb00450be52fe11a82a2507632c2328cae4ec9d
     introduced_in_commits: []
+  - purl: pkg:pypi/kiwitcms
+    affected_versions: vers:pypi/<12.5
+    fixed_versions: vers:pypi/12.5
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-jpgw-2r9m-8qfw/GHSA-jpgw-2r9m-8qfw.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-434

@@ -7,11 +7,6 @@ summary: |
   Ray has arbitrary code execution via jobs submission API
   Anyscale Ray allows a remote attacker to execute arbitrary code via the job submission API. NOTE: the vendor's position is that this report is irrelevant because Ray, as stated in its documentation, is not intended for use outside of a strictly controlled network environment.
 impacted_packages:
-  - purl: pkg:pypi/ray
-    affected_versions: vers:pypi/<=2.49.2
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/ray-project/ray
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/ray-project/ray
         commit: 978947083b1e192dba61ef653c863b11d56b0936
     introduced_in_commits: []
+  - purl: pkg:pypi/ray
+    affected_versions: vers:pypi/<=2.49.2
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-6wgj-66m2-xxp2/GHSA-6wgj-66m2-xxp2.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-918

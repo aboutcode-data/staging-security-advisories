@@ -7,6 +7,13 @@ summary: |
   Moodle may display roles to users who don't have access to them
   The course participation report required additional checks to prevent roles being displayed which the user did not have access to view.
 impacted_packages:
+  - purl: pkg:github/moodle/moodle
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/moodle/moodle
+        commit: f0a557bffbdb450648d0e4cedb391d14d8a0a253
+    introduced_in_commits: []
   - purl: pkg:composer/moodle/moodle
     affected_versions: vers:composer/>=4.1.0|<4.1.2
     fixed_versions: vers:composer/4.1.2
@@ -27,23 +34,16 @@ impacted_packages:
     fixed_versions: vers:composer/3.9.20
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/moodle/moodle
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/moodle/moodle
-        commit: f0a557bffbdb450648d0e4cedb391d14d8a0a253
-    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-vj5p-fp42-774p/GHSA-vj5p-fp42-774p.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200
