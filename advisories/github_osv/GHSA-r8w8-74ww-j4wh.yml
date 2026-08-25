@@ -29,6 +29,17 @@ summary: |
 
   Open index.php in a web browser and click on both links. The first demonstrates the vulnerability in a regular hyperlink and the second in a HYPERLINK() formula.
 impacted_packages:
+  - purl: pkg:github/phpoffice/phpspreadsheet
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/phpoffice/phpspreadsheet
+        commit: 8b9b378ecdc603234a34aab3b293d2cdc8e9210e
+      - vcs_url: https://github.com/phpoffice/phpspreadsheet
+        commit: 392dd08c5569b623060784e1333454d64df1f03d
+      - vcs_url: https://github.com/phpoffice/phpspreadsheet
+        commit: f0b70ed1086348904b27772b264e1605ba6c1d6d
+    introduced_in_commits: []
   - purl: pkg:composer/phpoffice/phpspreadsheet
     affected_versions: vers:composer/>=2.2.0|<2.3.0
     fixed_versions: vers:composer/2.3.0
@@ -49,32 +60,21 @@ impacted_packages:
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/phpoffice/phpspreadsheet
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/phpoffice/phpspreadsheet
-        commit: 8b9b378ecdc603234a34aab3b293d2cdc8e9210e
-      - vcs_url: https://github.com/phpoffice/phpspreadsheet
-        commit: 392dd08c5569b623060784e1333454d64df1f03d
-      - vcs_url: https://github.com/phpoffice/phpspreadsheet
-        commit: f0b70ed1086348904b27772b264e1605ba6c1d6d
-    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-r8w8-74ww-j4wh/GHSA-r8w8-74ww-j4wh.json
   - score: '4.8'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-r8w8-74ww-j4wh/GHSA-r8w8-74ww-j4wh.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

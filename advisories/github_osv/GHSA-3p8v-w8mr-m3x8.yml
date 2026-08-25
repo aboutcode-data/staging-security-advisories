@@ -50,11 +50,6 @@ summary: |
 
   Depending on how the framework is used: path traversal, XSS, SSRF; potentially RCE.
 impacted_packages:
-  - purl: pkg:maven/org.openrefine.dependencies/butterfly
-    affected_versions: vers:maven/<1.2.6
-    fixed_versions: vers:maven/1.2.6
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/openrefine/simile-butterfly
     affected_versions:
     fixed_versions:
@@ -62,16 +57,21 @@ impacted_packages:
       - vcs_url: https://github.com/openrefine/simile-butterfly
         commit: 537f64bfa72746f8b21d4bda461fad843435319c
     introduced_in_commits: []
+  - purl: pkg:maven/org.openrefine.dependencies/butterfly
+    affected_versions: vers:maven/<1.2.6
+    fixed_versions: vers:maven/1.2.6
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-3p8v-w8mr-m3x8/GHSA-3p8v-w8mr-m3x8.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

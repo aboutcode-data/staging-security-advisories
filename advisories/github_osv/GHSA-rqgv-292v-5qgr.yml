@@ -95,11 +95,6 @@ summary: |
 
   All Renovate versions from 37.158.0 up until 37.199.0 were affected. This vulnerability allows full access to Renovate's execution environment. The level of severity depends on how Renovate is deployed (Docker, Kubernetes, CI pipeline, ...) and whether Renovate is being offered to untrusted users/repositories.
 impacted_packages:
-  - purl: pkg:npm/renovate
-    affected_versions: vers:npm/>=37.158.0|<37.199.0
-    fixed_versions: vers:npm/37.199.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/renovatebot/renovate
     affected_versions:
     fixed_versions:
@@ -109,16 +104,21 @@ impacted_packages:
       - vcs_url: https://github.com/renovatebot/renovate
         commit: 1e941fd885c799f2d38f4084a6f4cb9438813c8f
     introduced_in_commits: []
+  - purl: pkg:npm/renovate
+    affected_versions: vers:npm/>=37.158.0|<37.199.0
+    fixed_versions: vers:npm/37.199.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/04/GHSA-rqgv-292v-5qgr/GHSA-rqgv-292v-5qgr.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-78

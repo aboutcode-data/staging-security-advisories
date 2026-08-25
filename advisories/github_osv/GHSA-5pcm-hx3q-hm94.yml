@@ -7,11 +7,6 @@ summary: |
   PyTorch heap buffer overflow vulnerability
   PyTorch before v2.2.0 was discovered to contain a heap buffer overflow vulnerability in the component /runtime/vararg_functions.cpp. This vulnerability allows attackers to cause a Denial of Service (DoS) via a crafted input.
 impacted_packages:
-  - purl: pkg:pypi/torch
-    affected_versions: vers:pypi/<2.2.0
-    fixed_versions: vers:pypi/2.2.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/pytorch/pytorch
     affected_versions:
     fixed_versions:
@@ -19,21 +14,26 @@ impacted_packages:
       - vcs_url: https://github.com/pytorch/pytorch
         commit: b5c3a17c2c207ebefcb85043f0cf94be9b2fef81
     introduced_in_commits: []
+  - purl: pkg:pypi/torch
+    affected_versions: vers:pypi/<2.2.0
+    fixed_versions: vers:pypi/2.2.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/04/GHSA-5pcm-hx3q-hm94/GHSA-5pcm-hx3q-hm94.json
   - score: '8.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/04/GHSA-5pcm-hx3q-hm94/GHSA-5pcm-hx3q-hm94.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-122

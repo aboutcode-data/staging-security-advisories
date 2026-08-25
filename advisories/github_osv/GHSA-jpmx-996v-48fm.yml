@@ -7,11 +7,6 @@ summary: |
   WildFly Elytron: OIDC app attempting to access the second tenant, the user should be prompted to log
   A flaw was found in JBoss EAP. When an OIDC app that serves multiple tenants attempts to access the second tenant, it should prompt the user to log in again since the second tenant is secured with a different OIDC configuration. The underlying issue is in OidcSessionTokenStore when determining if a cached token should be used or not. This logic needs to be updated to take into account the new "provider-url" option in addition to the "realm" option.
 impacted_packages:
-  - purl: pkg:maven/org.wildfly.security/wildfly-elytron-http-oidc
-    affected_versions: vers:maven/<2.2.5.Final
-    fixed_versions: vers:maven/2.2.5.Final
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/wildfly-security/wildfly-elytron
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/wildfly-security/wildfly-elytron
         commit: 6e94ec3476a279c0a130186209c50a2991ba4c84
     introduced_in_commits: []
+  - purl: pkg:maven/org.wildfly.security/wildfly-elytron-http-oidc
+    affected_versions: vers:maven/<2.2.5.Final
+    fixed_versions: vers:maven/2.2.5.Final
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/04/GHSA-jpmx-996v-48fm/GHSA-jpmx-996v-48fm.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-345

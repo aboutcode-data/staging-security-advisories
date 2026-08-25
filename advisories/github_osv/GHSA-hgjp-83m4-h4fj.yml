@@ -7,11 +7,6 @@ summary: |
   MySQL Connector/Python connector takeover vulnerability
   Vulnerability in the MySQL Connectors product of Oracle MySQL (component: Connector/Python).  Supported versions that are affected are 9.0.0 and prior. Difficult to exploit vulnerability allows low privileged attacker with network access via multiple protocols to compromise MySQL Connectors.  Successful attacks of this vulnerability can result in takeover of MySQL Connectors. CVSS 3.1 Base Score 7.5 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H).
 impacted_packages:
-  - purl: pkg:pypi/mysql-connector-python
-    affected_versions: vers:pypi/<9.1.0
-    fixed_versions: vers:pypi/9.1.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/mysql/mysql-connector-python
     affected_versions:
     fixed_versions:
@@ -19,21 +14,26 @@ impacted_packages:
       - vcs_url: https://github.com/mysql/mysql-connector-python
         commit: e6b927af06e8a85bd3754f602df96a5592b4558c
     introduced_in_commits: []
+  - purl: pkg:pypi/mysql-connector-python
+    affected_versions: vers:pypi/<9.1.0
+    fixed_versions: vers:pypi/9.1.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-hgjp-83m4-h4fj/GHSA-hgjp-83m4-h4fj.json
   - score: '7.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-hgjp-83m4-h4fj/GHSA-hgjp-83m4-h4fj.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-89

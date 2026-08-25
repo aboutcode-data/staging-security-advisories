@@ -8,13 +8,13 @@ summary: |
   Versions of the package http-proxy-middleware before 2.0.7, from 3.0.0 and before 3.0.3 are vulnerable to Denial of Service (DoS) due to an UnhandledPromiseRejection error thrown by micromatch. An attacker could kill the Node.js process and crash the server by making requests to certain paths.
 impacted_packages:
   - purl: pkg:npm/http-proxy-middleware
-    affected_versions: vers:npm/<2.0.7
-    fixed_versions: vers:npm/2.0.7
+    affected_versions: vers:npm/>=3.0.0|<3.0.3
+    fixed_versions: vers:npm/3.0.3
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:npm/http-proxy-middleware
-    affected_versions: vers:npm/>=3.0.0|<3.0.3
-    fixed_versions: vers:npm/3.0.3
+    affected_versions: vers:npm/<2.0.7
+    fixed_versions: vers:npm/2.0.7
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/chimurai/http-proxy-middleware
@@ -30,12 +30,12 @@ severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-c7qv-q95q-8v27/GHSA-c7qv-q95q-8v27.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-400

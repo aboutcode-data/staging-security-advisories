@@ -22,11 +22,6 @@ summary: "Sidekiq vulnerable to a Reflected XSS in Queues Web Page\n### Descript
   Figure 1: Source Code Vulnerable to XSS\n\n![image](https://github.com/sidekiq/sidekiq/assets/59286712/7a801feb-d495-416e-8e0e-36dee0eadf85)\n\
   Figure 2: XSS payload triggered"
 impacted_packages:
-  - purl: pkg:gem/sidekiq
-    affected_versions: vers:gem/>=7.2.0|<7.2.4
-    fixed_versions: vers:gem/7.2.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/sidekiq/sidekiq
     affected_versions:
     fixed_versions:
@@ -34,16 +29,21 @@ impacted_packages:
       - vcs_url: https://github.com/sidekiq/sidekiq
         commit: 30786e082c70349ab27ffa9eccc42fb0c696164d
     introduced_in_commits: []
+  - purl: pkg:gem/sidekiq
+    affected_versions: vers:gem/>=7.2.0|<7.2.4
+    fixed_versions: vers:gem/7.2.4
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/04/GHSA-q655-3pj8-9fxq/GHSA-q655-3pj8-9fxq.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

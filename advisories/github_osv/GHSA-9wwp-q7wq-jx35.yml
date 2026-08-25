@@ -19,11 +19,6 @@ summary: "@fastify/secure-session: Reuse of destroyed secure session cookie\n###
   \ treat \"old sessions\" as expired. \nMake sure to configure your cookie as \"http only\"\
   .\n\n### References\n\n* https://hackerone.com/reports/2374253"
 impacted_packages:
-  - purl: pkg:npm/%40fastify/secure-session
-    affected_versions: vers:npm/<7.3.0
-    fixed_versions: vers:npm/7.3.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/fastify/fastify-secure-session
     affected_versions:
     fixed_versions:
@@ -31,16 +26,21 @@ impacted_packages:
       - vcs_url: https://github.com/fastify/fastify-secure-session
         commit: 56d66642ecc633cff0606927601e81cdac361370
     introduced_in_commits: []
+  - purl: pkg:npm/%40fastify/secure-session
+    affected_versions: vers:npm/<7.3.0
+    fixed_versions: vers:npm/7.3.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/04/GHSA-9wwp-q7wq-jx35/GHSA-9wwp-q7wq-jx35.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-613
