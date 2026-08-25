@@ -38,11 +38,6 @@ summary: "Uptime Kuma has Persistentent User Sessions\n# Summary\n\nAttackers wi
   \ in the application for accessing other systems are existing valid paths across the trust\
   \ boundary, and the user should be aware of that."
 impacted_packages:
-  - purl: pkg:npm/uptime-kuma
-    affected_versions: vers:npm/<1.23.3
-    fixed_versions: vers:npm/1.23.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/louislam/uptime-kuma
     affected_versions:
     fixed_versions:
@@ -50,16 +45,21 @@ impacted_packages:
       - vcs_url: https://github.com/louislam/uptime-kuma
         commit: 88afab6571ef7d4d41bb395cdb6ecd3968835a4a
     introduced_in_commits: []
+  - purl: pkg:npm/uptime-kuma
+    affected_versions: vers:npm/<1.23.3
+    fixed_versions: vers:npm/1.23.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-g9v2-wqcj-j99g/GHSA-g9v2-wqcj-j99g.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-384

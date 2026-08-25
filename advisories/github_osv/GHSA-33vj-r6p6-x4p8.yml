@@ -7,11 +7,6 @@ summary: |
   Cross-Site Request Forgery (CSRF) in snipe/snipe-it
   Cross-Site Request Forgery (CSRF) in GitHub repository snipe/snipe-it prior to v.6.2.3.
 impacted_packages:
-  - purl: pkg:composer/snipe/snipe-it
-    affected_versions: vers:composer/<=6.2.2
-    fixed_versions: vers:composer/6.2.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/snipe/snipe-it
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/snipe/snipe-it
         commit: 6d55d782806c9660e9e65dc5250faacb5d0033ed
     introduced_in_commits: []
+  - purl: pkg:composer/snipe/snipe-it
+    affected_versions: vers:composer/<=6.2.2
+    fixed_versions: vers:composer/6.2.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-33vj-r6p6-x4p8/GHSA-33vj-r6p6-x4p8.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-352

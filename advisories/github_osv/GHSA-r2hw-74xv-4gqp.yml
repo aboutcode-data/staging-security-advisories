@@ -50,11 +50,6 @@ summary: "Nautobot vulnerable to exposure of hashed user passwords via REST API\
   \ to deny user access to the above list of impacted REST API endpoints, that is not recommended\
   \ as other endpoints may also expose this issue until patched.\n\n### References\n\nhttps://github.com/nautobot/nautobot/pull/4692"
 impacted_packages:
-  - purl: pkg:pypi/nautobot
-    affected_versions: vers:pypi/>=2.0.0|<2.0.3
-    fixed_versions: vers:pypi/2.0.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/nautobot/nautobot
     affected_versions:
     fixed_versions:
@@ -62,21 +57,26 @@ impacted_packages:
       - vcs_url: https://github.com/nautobot/nautobot
         commit: 1ce8e5c658a075c29554d517cd453675e5d40d71
     introduced_in_commits: []
+  - purl: pkg:pypi/nautobot
+    affected_versions: vers:pypi/>=2.0.0|<2.0.3
+    fixed_versions: vers:pypi/2.0.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.7'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-r2hw-74xv-4gqp/GHSA-r2hw-74xv-4gqp.json
   - score: '8.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-r2hw-74xv-4gqp/GHSA-r2hw-74xv-4gqp.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-312

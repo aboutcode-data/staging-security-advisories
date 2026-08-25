@@ -16,11 +16,6 @@ summary: |
   ### Workarounds
   Rooms with malicious server ACL events can be [purged and blocked](https://matrix-org.github.io/synapse/latest/admin_api/rooms.html#version-2-new-version) using the admin API.
 impacted_packages:
-  - purl: pkg:pypi/matrix-synapse
-    affected_versions: vers:pypi/<1.94.0
-    fixed_versions: vers:pypi/1.94.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/matrix-org/synapse
     affected_versions:
     fixed_versions:
@@ -28,21 +23,26 @@ impacted_packages:
       - vcs_url: https://github.com/matrix-org/synapse
         commit: f84da3c32ec74cf054e2fd6d10618aa4997cffaa
     introduced_in_commits: []
+  - purl: pkg:pypi/matrix-synapse
+    affected_versions: vers:pypi/<1.94.0
+    fixed_versions: vers:pypi/1.94.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.9'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-5chr-wjw5-3gq4/GHSA-5chr-wjw5-3gq4.json
   - score: '6.9'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-5chr-wjw5-3gq4/GHSA-5chr-wjw5-3gq4.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-770

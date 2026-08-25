@@ -14,6 +14,13 @@ summary: |
 
   Exploiting this vulnerability allows malicious actors to assign higher privileges to self-registered users, bypassing intended access control mechanisms.
 impacted_packages:
+  - purl: pkg:github/wso2/docs-security
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/wso2/docs-security
+        commit: cfd53689909eef62fc5427e193e35e7df8ab1ef8
+    introduced_in_commits: []
   - purl: pkg:maven/org.wso2.am/am-parent
     affected_versions: vers:maven/<=4.3.0
     fixed_versions: vers:maven/4.4.0
@@ -24,23 +31,16 @@ impacted_packages:
     fixed_versions: vers:maven/7.1.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/wso2/docs-security
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/wso2/docs-security
-        commit: cfd53689909eef62fc5427e193e35e7df8ab1ef8
-    introduced_in_commits: []
 severities:
   - score: '4.2'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/05/GHSA-j63j-7r7r-5v4j/GHSA-j63j-7r7r-5v4j.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-863

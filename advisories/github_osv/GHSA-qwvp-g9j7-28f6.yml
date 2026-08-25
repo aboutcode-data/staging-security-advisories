@@ -7,11 +7,6 @@ summary: |
   froxlor/froxlor vulnerable to unrestricted upload of file with dangerous type
   Image files uploaded in froxlor/froxlor prior to 2.0.14 were not properly validated which could result in remote code execution via path manipulation.
 impacted_packages:
-  - purl: pkg:composer/froxlor/froxlor
-    affected_versions: vers:composer/<2.0.14
-    fixed_versions: vers:composer/2.0.14
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/froxlor/froxlor
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/froxlor/froxlor
         commit: f36bc61fc74c85a21c8d31448198b11f96eb3bc6
     introduced_in_commits: []
+  - purl: pkg:composer/froxlor/froxlor
+    affected_versions: vers:composer/<2.0.14
+    fixed_versions: vers:composer/2.0.14
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/04/GHSA-qwvp-g9j7-28f6/GHSA-qwvp-g9j7-28f6.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-434

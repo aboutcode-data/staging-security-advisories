@@ -7,11 +7,6 @@ summary: |
   Next.js missing cache-control header may lead to CDN caching empty reply
   Next.js before 13.4.20-canary.13 lacks a cache-control header and thus empty prefetch responses may sometimes be cached by a CDN, causing a denial of service to all users requesting the same URL via that CDN. Cloudflare considers these requests cacheable assets.
 impacted_packages:
-  - purl: pkg:npm/next
-    affected_versions: vers:npm/>=0.9.9|<13.4.20-canary.13
-    fixed_versions: vers:npm/13.4.20-canary.13
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/vercel/next.js
     affected_versions:
     fixed_versions:
@@ -19,11 +14,16 @@ impacted_packages:
       - vcs_url: https://github.com/vercel/next.js
         commit: 20d05958ff853e9c9e42139ffec294336881c648
     introduced_in_commits: []
+  - purl: pkg:npm/next
+    affected_versions: vers:npm/>=0.9.9|<13.4.20-canary.13
+    fixed_versions: vers:npm/13.4.20-canary.13
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses: []
 references:

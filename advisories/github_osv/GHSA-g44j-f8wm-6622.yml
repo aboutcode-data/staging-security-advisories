@@ -7,6 +7,13 @@ summary: |
   Liferay Portal and Liferay DXP Vulnerable to Stored XSS in the Manage Vocabulary Page
   Stored cross-site scripting (XSS) vulnerability in the manage vocabulary page in the Asset Categories Admin Web module before 5.0.87 from Liferay Portal (7.4.2 through 7.4.3.87), and Liferay DXP 7.4 before update 88 allows remote attackers to inject arbitrary web script or HTML via a crafted payload injected into a Vocabulary's 'description' text field.
 impacted_packages:
+  - purl: pkg:github/liferay/liferay-portal
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/liferay/liferay-portal
+        commit: 2e02110747dd5cccb978623545bfa1f3ad0a5602
+    introduced_in_commits: []
   - purl: pkg:maven/com.liferay/com.liferay.asset.categories.admin.web
     affected_versions: vers:maven/<5.0.87
     fixed_versions: vers:maven/5.0.87
@@ -17,23 +24,16 @@ impacted_packages:
     fixed_versions: vers:maven/7.4.13.u88
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/liferay/liferay-portal
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/liferay/liferay-portal
-        commit: 2e02110747dd5cccb978623545bfa1f3ad0a5602
-    introduced_in_commits: []
 severities:
   - score: '9.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-g44j-f8wm-6622/GHSA-g44j-f8wm-6622.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

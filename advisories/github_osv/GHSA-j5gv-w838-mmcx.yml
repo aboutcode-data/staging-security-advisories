@@ -7,6 +7,13 @@ summary: |
   Liferay Portal and Liferay DXP Vulnerable to XSS via the Page Tree Menu
   Stored cross-site scripting (XSS) vulnerability in Page Tree menu in Liferay Layout Implementation before 6.0.102 from Liferay Portal (7.3.6 through 7.4.3.78), and Liferay DXP 7.3 fix pack 1 through update 23, and 7.4 before update 79 allows remote attackers to inject arbitrary web script or HTML via a crafted payload injected into page's "Name" text field.
 impacted_packages:
+  - purl: pkg:github/liferay/liferay-portal
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/liferay/liferay-portal
+        commit: 45931175b6ae14df089f0304f86b5b0f66ac3c02
+    introduced_in_commits: []
   - purl: pkg:maven/com.liferay/com.liferay.layout.impl
     affected_versions: vers:maven/<6.0.102
     fixed_versions: vers:maven/6.0.102
@@ -22,23 +29,16 @@ impacted_packages:
     fixed_versions: vers:maven/7.4.13.u79
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/liferay/liferay-portal
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/liferay/liferay-portal
-        commit: 45931175b6ae14df089f0304f86b5b0f66ac3c02
-    introduced_in_commits: []
 severities:
   - score: '9.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-j5gv-w838-mmcx/GHSA-j5gv-w838-mmcx.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

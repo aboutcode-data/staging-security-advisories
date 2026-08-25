@@ -11,11 +11,6 @@ summary: |
 
   This issue is a result of missing checks for services that require an active session.
 impacted_packages:
-  - purl: pkg:pypi/asyncua
-    affected_versions: vers:pypi/<0.9.96
-    fixed_versions: vers:pypi/0.9.96
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/freeopcua/opcua-asyncio
     affected_versions:
     fixed_versions:
@@ -25,16 +20,21 @@ impacted_packages:
       - vcs_url: https://github.com/freeopcua/opcua-asyncio
         commit: 2be7ce80df05de8d6c6ae1ebce6fa2bb7147844a
     introduced_in_commits: []
+  - purl: pkg:pypi/asyncua
+    affected_versions: vers:pypi/<0.9.96
+    fixed_versions: vers:pypi/0.9.96
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-2894-qcqf-g23g/GHSA-2894-qcqf-g23g.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-287

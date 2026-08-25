@@ -16,6 +16,13 @@ summary: |
   ### Workarounds
   Beyond upgrading to the patched versions, there is no other workaround. You must upgrade or disable MsQuic functionality.
 impacted_packages:
+  - purl: pkg:github/microsoft/msquic
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/microsoft/msquic
+        commit: 3226cff07d22662f16fc98d605656860e64cd343
+    introduced_in_commits: []
   - purl: pkg:nuget/Microsoft.Native.Quic.MsQuic.Schannel
     affected_versions: vers:nuget/<2.2.3
     fixed_versions: vers:nuget/2.2.3
@@ -26,23 +33,16 @@ impacted_packages:
     fixed_versions: vers:nuget/2.2.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/microsoft/msquic
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/microsoft/msquic
-        commit: 3226cff07d22662f16fc98d605656860e64cd343
-    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-xh5m-8qqp-c5x7/GHSA-xh5m-8qqp-c5x7.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-400

@@ -23,6 +23,15 @@ summary: |
   - Patched in Parse Server 6: https://github.com/parse-community/parse-server/releases/tag/6.3.1
   - Patched in Parse Server 5 (LTS): https://github.com/parse-community/parse-server/releases/tag/5.5.6
 impacted_packages:
+  - purl: pkg:github/parse-community/parse-server
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/parse-community/parse-server
+        commit: fd86278919556d3682e7e2c856dfccd5beffbfc0
+      - vcs_url: https://github.com/parse-community/parse-server
+        commit: 686a9f282dc23c31beab3d93e6d21ccd0e1328fe
+    introduced_in_commits: []
   - purl: pkg:npm/parse-server
     affected_versions: vers:npm/>=1.0.0|<5.5.6
     fixed_versions: vers:npm/5.5.6
@@ -33,25 +42,16 @@ impacted_packages:
     fixed_versions: vers:npm/6.3.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/parse-community/parse-server
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/parse-community/parse-server
-        commit: fd86278919556d3682e7e2c856dfccd5beffbfc0
-      - vcs_url: https://github.com/parse-community/parse-server
-        commit: 686a9f282dc23c31beab3d93e6d21ccd0e1328fe
-    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-792q-q67h-w579/GHSA-792q-q67h-w579.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-23

@@ -13,11 +13,6 @@ summary: "Auth0 Symfony SDK Vulnerable to Brute Force Authentication Tags of Coo
   \ that once updated, any previous session cookies will be rejected.\n\n**Acknowledgement**\n\
   Okta would like to thank Félix Charette for discovering this vulnerability."
 impacted_packages:
-  - purl: pkg:composer/auth0/symfony
-    affected_versions: vers:composer/<5.4.0
-    fixed_versions: vers:composer/5.4.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/auth0/symfony
     affected_versions:
     fixed_versions:
@@ -25,16 +20,21 @@ impacted_packages:
       - vcs_url: https://github.com/auth0/symfony
         commit: 9a7294f08a32f17a0e77c8522a648195b6940340
     introduced_in_commits: []
+  - purl: pkg:composer/auth0/symfony
+    affected_versions: vers:composer/<5.4.0
+    fixed_versions: vers:composer/5.4.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/05/GHSA-9wg9-93h9-j8ch/GHSA-9wg9-93h9-j8ch.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-287

@@ -36,6 +36,13 @@ summary: |
     - `babel-plugin-polyfill-es-shims` v0.10.0
     - `babel-plugin-polyfill-regenerator` v0.5.3
 impacted_packages:
+  - purl: pkg:github/babel/babel
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/babel/babel
+        commit: b13376b346946e3f62fc0848c1d2a23223314c82
+    introduced_in_commits: []
   - purl: pkg:npm/%40babel/traverse
     affected_versions: vers:npm/<7.23.2
     fixed_versions: vers:npm/7.23.2
@@ -51,23 +58,16 @@ impacted_packages:
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/babel/babel
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/babel/babel
-        commit: b13376b346946e3f62fc0848c1d2a23223314c82
-    introduced_in_commits: []
 severities:
   - score: '9.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-67hx-6x53-jw92/GHSA-67hx-6x53-jw92.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-184

@@ -15,11 +15,6 @@ summary: "Potential leak of authentication data to 3rd parties\n### Impact\nUser
   1. [HTTP authentication leak in redirects](https://curl.haxx.se/docs/CVE-2018-1000007.html)\
   \ - I used the same solution as CURL did.\n2. [CVE-2018-1000007](https://nvd.nist.gov/vuln/detail/CVE-2018-1000007)."
 impacted_packages:
-  - purl: pkg:npm/typed-rest-client
-    affected_versions: vers:npm/<1.8.0
-    fixed_versions: vers:npm/1.8.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/microsoft/typed-rest-client
     affected_versions:
     fixed_versions:
@@ -27,16 +22,21 @@ impacted_packages:
       - vcs_url: https://github.com/microsoft/typed-rest-client
         commit: f9ff755631b982ee1303dfc3e3c823d0d31233e8
     introduced_in_commits: []
+  - purl: pkg:npm/typed-rest-client
+    affected_versions: vers:npm/<1.8.0
+    fixed_versions: vers:npm/1.8.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/04/GHSA-558p-m34m-vpmq/GHSA-558p-m34m-vpmq.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-522

@@ -17,11 +17,6 @@ summary: "Craft CMS Remote Code Execution vulnerability\n### Impact\n\nThis is a
   \nhttps://github.com/craftcms/cms/commit/7359d18d46389ffac86c2af1e0cd59e37c298857\n\nhttps://github.com/craftcms/cms/commit/a270b928f3d34ad3bd953b81c304424edd57355e\n\
   \nhttps://github.com/craftcms/cms/blob/develop/CHANGELOG.md#4415---2023-07-03-critical"
 impacted_packages:
-  - purl: pkg:composer/craftcms/cms
-    affected_versions: vers:composer/<=4.4.14
-    fixed_versions: vers:composer/4.4.15
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/craftcms/cms
     affected_versions:
     fixed_versions:
@@ -33,16 +28,21 @@ impacted_packages:
       - vcs_url: https://github.com/craftcms/cms
         commit: a270b928f3d34ad3bd953b81c304424edd57355e
     introduced_in_commits: []
+  - purl: pkg:composer/craftcms/cms
+    affected_versions: vers:composer/<=4.4.14
+    fixed_versions: vers:composer/4.4.15
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '10.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/09/GHSA-4w8r-3xrw-v25g/GHSA-4w8r-3xrw-v25g.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

@@ -69,11 +69,6 @@ summary: |
 
   This issue was found in a security review that was _not_ scoped to crypto-es. This report is not an indication that crypto-es has undergone a formal security assessment by the author.
 impacted_packages:
-  - purl: pkg:npm/crypto-es
-    affected_versions: vers:npm/<2.1.0
-    fixed_versions: vers:npm/2.1.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/entronad/crypto-es
     affected_versions:
     fixed_versions:
@@ -81,16 +76,21 @@ impacted_packages:
       - vcs_url: https://github.com/entronad/crypto-es
         commit: d506677fae3d03a454b37ad126e0c119d416b757
     introduced_in_commits: []
+  - purl: pkg:npm/crypto-es
+    affected_versions: vers:npm/<2.1.0
+    fixed_versions: vers:npm/2.1.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-mpj8-q39x-wq5h/GHSA-mpj8-q39x-wq5h.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-328

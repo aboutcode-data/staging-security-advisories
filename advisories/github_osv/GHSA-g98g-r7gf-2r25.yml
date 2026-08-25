@@ -22,11 +22,6 @@ summary: |
   **Acknowledgement**
   Okta would like to thank Félix Charette for discovering this vulnerability.
 impacted_packages:
-  - purl: pkg:composer/auth0/auth0-php
-    affected_versions: vers:composer/>=8.0.0-BETA1|<8.14.0
-    fixed_versions: vers:composer/8.14.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/auth0/auth0-php
     affected_versions:
     fixed_versions:
@@ -34,16 +29,21 @@ impacted_packages:
       - vcs_url: https://github.com/auth0/auth0-php
         commit: 52a79480fdb246f59dbc089b81a784ae049bd389
     introduced_in_commits: []
+  - purl: pkg:composer/auth0/auth0-php
+    affected_versions: vers:composer/>=8.0.0-BETA1|<8.14.0
+    fixed_versions: vers:composer/8.14.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/05/GHSA-g98g-r7gf-2r25/GHSA-g98g-r7gf-2r25.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-287

@@ -9,11 +9,6 @@ summary: |
 
   pyminizip uses version 1.2.11 of zlib's code.
 impacted_packages:
-  - purl: pkg:pypi/pyminizip
-    affected_versions: vers:pypi/<=0.2.6
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/madler/zlib
     affected_versions:
     fixed_versions:
@@ -23,16 +18,21 @@ impacted_packages:
       - vcs_url: https://github.com/madler/zlib
         commit: 73331a6a0481067628f065ffe87bb1d8f787d10c
     introduced_in_commits: []
+  - purl: pkg:pypi/pyminizip
+    affected_versions: vers:pypi/<=0.2.6
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-mq29-j5xf-cjwr/GHSA-mq29-j5xf-cjwr.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-190

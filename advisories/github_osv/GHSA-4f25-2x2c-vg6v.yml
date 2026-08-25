@@ -14,11 +14,6 @@ summary: |
   ### Workarounds
   Apply the patch https://github.com/pimcore/pimcore/commit/765832f0dc5f6cfb296a82e089b701066f27bcef.patch manually.
 impacted_packages:
-  - purl: pkg:composer/pimcore/pimcore
-    affected_versions: vers:composer/<10.5.20
-    fixed_versions: vers:composer/10.5.20
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/pimcore/pimcore
     affected_versions:
     fixed_versions:
@@ -26,16 +21,21 @@ impacted_packages:
       - vcs_url: https://github.com/pimcore/pimcore
         commit: 765832f0dc5f6cfb296a82e089b701066f27bcef
     introduced_in_commits: []
+  - purl: pkg:composer/pimcore/pimcore
+    affected_versions: vers:composer/<10.5.20
+    fixed_versions: vers:composer/10.5.20
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/04/GHSA-4f25-2x2c-vg6v/GHSA-4f25-2x2c-vg6v.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

@@ -14,11 +14,6 @@ summary: |
   ### Workarounds
   The `federation_domain_whitelist` can be used to limit federation traffic with a homeserver.
 impacted_packages:
-  - purl: pkg:pypi/matrix-synapse
-    affected_versions: vers:pypi/<1.95.1
-    fixed_versions: vers:pypi/1.95.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/matrix-org/synapse
     affected_versions:
     fixed_versions:
@@ -26,16 +21,21 @@ impacted_packages:
       - vcs_url: https://github.com/matrix-org/synapse
         commit: daec55e1fe120c564240c5386e77941372bf458f
     introduced_in_commits: []
+  - purl: pkg:pypi/matrix-synapse
+    affected_versions: vers:pypi/<1.95.1
+    fixed_versions: vers:pypi/1.95.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-mp92-3jfm-3575/GHSA-mp92-3jfm-3575.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

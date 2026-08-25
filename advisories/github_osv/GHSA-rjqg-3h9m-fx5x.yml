@@ -11,6 +11,17 @@ summary: |
 
   The core REST and contributed GraphQL modules are not affected.
 impacted_packages:
+  - purl: pkg:github/drupal/core
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/drupal/core
+        commit: d4fe67562ee3ea0d9ecb9672d2945d94c5633d24
+      - vcs_url: https://github.com/drupal/core
+        commit: 5495dc530e3acd056478245bfe1828210c6da7dc
+      - vcs_url: https://github.com/drupal/core
+        commit: 1cd2741c2b43f6ad1bdfc121b8d9ec3b87e70742
+    introduced_in_commits: []
   - purl: pkg:composer/drupal/core
     affected_versions: vers:composer/>=8.7.0|<9.5.11
     fixed_versions: vers:composer/9.5.11
@@ -26,22 +37,11 @@ impacted_packages:
     fixed_versions: vers:composer/10.1.4
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/drupal/core
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/drupal/core
-        commit: d4fe67562ee3ea0d9ecb9672d2945d94c5633d24
-      - vcs_url: https://github.com/drupal/core
-        commit: 5495dc530e3acd056478245bfe1828210c6da7dc
-      - vcs_url: https://github.com/drupal/core
-        commit: 1cd2741c2b43f6ad1bdfc121b8d9ec3b87e70742
-    introduced_in_commits: []
 severities:
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

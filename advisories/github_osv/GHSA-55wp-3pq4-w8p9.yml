@@ -18,6 +18,13 @@ summary: |
 
   As a workaround, you can change your default temporary-file directory using the Java system property java.io.tmpdir, if you’re concerned about this issue but unable to immediately update Jenkins.
 impacted_packages:
+  - purl: pkg:github/jenkinsci/jenkins
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/jenkinsci/jenkins
+        commit: df7c4ccda8976c06bf31b8fb9938f26fc38501ca
+    introduced_in_commits: []
   - purl: pkg:maven/org.jenkins-ci.main/jenkins-core
     affected_versions: vers:maven/>=2.50|<2.414.2
     fixed_versions: vers:maven/2.414.2
@@ -28,23 +35,16 @@ impacted_packages:
     fixed_versions: vers:maven/2.424
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/jenkinsci/jenkins
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/jenkinsci/jenkins
-        commit: df7c4ccda8976c06bf31b8fb9938f26fc38501ca
-    introduced_in_commits: []
 severities:
   - score: '7.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/09/GHSA-55wp-3pq4-w8p9/GHSA-55wp-3pq4-w8p9.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-276

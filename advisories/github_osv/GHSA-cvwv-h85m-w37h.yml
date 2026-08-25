@@ -7,11 +7,6 @@ summary: |
   Cross-site Scripting (XSS) in froxlor/froxlor
   Cross-site Scripting (XSS) - Stored in GitHub repository froxlor/froxlor prior to 2.0.22.
 impacted_packages:
-  - purl: pkg:composer/froxlor/froxlor
-    affected_versions: vers:composer/<2.0.22
-    fixed_versions: vers:composer/2.0.22
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/froxlor/froxlor
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/froxlor/froxlor
         commit: 4711a414360782fe4fc94f7c25027077cbcdf73d
     introduced_in_commits: []
+  - purl: pkg:composer/froxlor/froxlor
+    affected_versions: vers:composer/<2.0.22
+    fixed_versions: vers:composer/2.0.22
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-cvwv-h85m-w37h/GHSA-cvwv-h85m-w37h.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

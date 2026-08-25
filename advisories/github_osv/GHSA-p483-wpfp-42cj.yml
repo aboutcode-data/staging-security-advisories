@@ -25,11 +25,6 @@ summary: |
 
   Patched versions are from [v4.99.4](https://github.com/coder/code-server/releases/tag/v4.99.4) onward.
 impacted_packages:
-  - purl: pkg:npm/code-server
-    affected_versions: vers:npm/<4.99.4
-    fixed_versions: vers:npm/4.99.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/coder/code-server
     affected_versions:
     fixed_versions:
@@ -37,16 +32,21 @@ impacted_packages:
       - vcs_url: https://github.com/coder/code-server
         commit: 47d6d3ada5aadef6d221f3d612401eb3dad9299e
     introduced_in_commits: []
+  - purl: pkg:npm/code-server
+    affected_versions: vers:npm/<4.99.4
+    fixed_versions: vers:npm/4.99.4
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/05/GHSA-p483-wpfp-42cj/GHSA-p483-wpfp-42cj.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-441

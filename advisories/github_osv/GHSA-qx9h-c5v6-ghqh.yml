@@ -20,6 +20,13 @@ summary: "org.xwiki.platform:xwiki-platform-panels-ui Eval Injection vulnerabili
   \ or comments about this advisory:\n\n*    Open an issue in [Jira XWiki.org](https://jira.xwiki.org/)\n\
   *    Email us at [Security Mailing List](mailto:security@xwiki.org)"
 impacted_packages:
+  - purl: pkg:github/xwiki/xwiki-platform
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/xwiki/xwiki-platform
+        commit: 50b4d91418b4150933f0317eb4a94ceaf5b69f67
+    introduced_in_commits: []
   - purl: pkg:maven/org.xwiki.platform/xwiki-platform-panels-ui
     affected_versions: vers:maven/>=1.1-M2|<13.10.11
     fixed_versions: vers:maven/13.10.11
@@ -35,23 +42,16 @@ impacted_packages:
     fixed_versions: vers:maven/14.10
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/xwiki/xwiki-platform
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/xwiki/xwiki-platform
-        commit: 50b4d91418b4150933f0317eb4a94ceaf5b69f67
-    introduced_in_commits: []
 severities:
   - score: '9.9'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/04/GHSA-qx9h-c5v6-ghqh/GHSA-qx9h-c5v6-ghqh.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

@@ -7,11 +7,6 @@ summary: |
   Cross-site Scripting (XSS) in dolibarr/dolibarr
   Cross-site Scripting (XSS) - Stored in GitHub repository dolibarr/dolibarr prior to 16.0.5.
 impacted_packages:
-  - purl: pkg:composer/dolibarr/dolibarr
-    affected_versions: vers:composer/<16.0.5
-    fixed_versions: vers:composer/16.0.5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/dolibarr/dolibarr
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/dolibarr/dolibarr
         commit: f569048eb2bd823525bce4ef52316e7a83e3345c
     introduced_in_commits: []
+  - purl: pkg:composer/dolibarr/dolibarr
+    affected_versions: vers:composer/<16.0.5
+    fixed_versions: vers:composer/16.0.5
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-9pjf-jw9q-fx49/GHSA-9pjf-jw9q-fx49.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

@@ -7,11 +7,6 @@ summary: |
   Economizzer host header injection vulnerability
   A host header injection vulnerability exists in gugoan's Economizzer v.0.9-beta1 and commit 3730880 (April 2023). By sending a specially crafted host header in the reset password request, it is possible to send password reset links to users which, once clicked, lead to an attacker-controlled server and thus leak the password reset token. This allows an attacker to reset other users' passwords.
 impacted_packages:
-  - purl: pkg:composer/gugoan/economizzer
-    affected_versions: vers:composer/<=0.9.0-beta1
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/gugoan/economizzer
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/gugoan/economizzer
         commit: 37308802dfe00d43df396a8afaa2096ece8b7b57
     introduced_in_commits: []
+  - purl: pkg:composer/gugoan/economizzer
+    affected_versions: vers:composer/<=0.9.0-beta1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/09/GHSA-hqp9-mrjw-7qq2/GHSA-hqp9-mrjw-7qq2.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

@@ -7,11 +7,6 @@ summary: |
   jose4j uses weak cryptographic algorithm
   jose4j before v0.9.3 allows attackers to set a low PBES2 iteration count of 1000 or less.
 impacted_packages:
-  - purl: pkg:maven/org.bitbucket.b_c/jose4j
-    affected_versions: vers:maven/<0.9.3
-    fixed_versions: vers:maven/0.9.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:bitbucket/b_c/jose4j
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://bitbucket.org/b_c/jose4j
         commit: 1929fe3
     introduced_in_commits: []
+  - purl: pkg:maven/org.bitbucket.b_c/jose4j
+    affected_versions: vers:maven/<0.9.3
+    fixed_versions: vers:maven/0.9.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-7g24-qg88-p43q/GHSA-7g24-qg88-p43q.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-327

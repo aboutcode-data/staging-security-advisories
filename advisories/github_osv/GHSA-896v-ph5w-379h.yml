@@ -7,11 +7,6 @@ summary: |
   Economizzer Insecure Direct Object Reference vulnerability
   An Insecure Direct Object Reference (IDOR) vulnerability in gugoan Economizzer commit 3730880 (April 2023) and v.0.9-beta1 allows any unauthenticated attacker to access cash book entry attachments of any other user, if they know the Id of the attachment.
 impacted_packages:
-  - purl: pkg:composer/gugoan/economizzer
-    affected_versions: vers:composer/<=0.9.0-beta1
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/gugoan/economizzer
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/gugoan/economizzer
         commit: 37308802dfe00d43df396a8afaa2096ece8b7b57
     introduced_in_commits: []
+  - purl: pkg:composer/gugoan/economizzer
+    affected_versions: vers:composer/<=0.9.0-beta1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '3.7'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/09/GHSA-896v-ph5w-379h/GHSA-896v-ph5w-379h.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-639

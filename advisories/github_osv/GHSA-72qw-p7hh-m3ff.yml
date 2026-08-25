@@ -25,11 +25,6 @@ summary: |
   ### Impact
   An attacker could exploit this vulnerability to cause a denial of service or increased resource usage.
 impacted_packages:
-  - purl: pkg:pypi/torbot
-    affected_versions: vers:pypi/<4.0.0
-    fixed_versions: vers:pypi/4.0.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/dedsecinside/torbot
     affected_versions:
     fixed_versions:
@@ -39,16 +34,21 @@ impacted_packages:
       - vcs_url: https://github.com/dedsecinside/torbot
         commit: ef6e06bc7785355b1701d5524eb4550441086ac4
     introduced_in_commits: []
+  - purl: pkg:pypi/torbot
+    affected_versions: vers:pypi/<4.0.0
+    fixed_versions: vers:pypi/4.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.6'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-72qw-p7hh-m3ff/GHSA-72qw-p7hh-m3ff.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-1333

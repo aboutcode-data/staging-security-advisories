@@ -9,11 +9,6 @@ summary: |
 
   This is partly to manage data properly, but also to prevent a potential (but unlikely) side-effect, where if a collaboration with id=10 is deleted, and subsequently a new collaboration is created with id=10, the authenticated users in that collaboration could potentially see results of the deleted collaboration in some cases, resulting in information disclosure.
 impacted_packages:
-  - purl: pkg:pypi/vantage6
-    affected_versions: vers:pypi/<4.0.0
-    fixed_versions: vers:pypi/4.0.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/vantage6/vantage6
     affected_versions:
     fixed_versions:
@@ -23,21 +18,26 @@ impacted_packages:
       - vcs_url: https://github.com/vantage6/vantage6
         commit: cce9538f8b70e814c080dd0ae43b297f3af8a732
     introduced_in_commits: []
+  - purl: pkg:pypi/vantage6
+    affected_versions: vers:pypi/<4.0.0
+    fixed_versions: vers:pypi/4.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '3.7'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:H/PR:H/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-rf54-7qrr-96j6/GHSA-rf54-7qrr-96j6.json
   - score: '1.0'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:L/AC:L/AT:P/PR:H/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-rf54-7qrr-96j6/GHSA-rf54-7qrr-96j6.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

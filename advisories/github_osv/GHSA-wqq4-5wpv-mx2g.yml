@@ -15,11 +15,6 @@ summary: |
 
   This was patched in [e041de359221ebeae04c469e8aff4145764e6d76](https://github.com/nodejs/undici/commit/e041de359221ebeae04c469e8aff4145764e6d76), which is included in version 5.26.2.
 impacted_packages:
-  - purl: pkg:npm/undici
-    affected_versions: vers:npm/<5.26.2
-    fixed_versions: vers:npm/5.26.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/nodejs/undici
     affected_versions:
     fixed_versions:
@@ -27,16 +22,21 @@ impacted_packages:
       - vcs_url: https://github.com/nodejs/undici
         commit: e041de359221ebeae04c469e8aff4145764e6d76
     introduced_in_commits: []
+  - purl: pkg:npm/undici
+    affected_versions: vers:npm/<5.26.2
+    fixed_versions: vers:npm/5.26.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '3.9'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:U/C:L/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-wqq4-5wpv-mx2g/GHSA-wqq4-5wpv-mx2g.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

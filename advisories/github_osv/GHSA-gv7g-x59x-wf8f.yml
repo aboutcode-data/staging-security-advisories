@@ -47,11 +47,6 @@ summary: "SvelteKit framework has Insufficient CSRF protection for CORS requests
   \ to explicitly set `SameSite` to a value other than `None` on authentication cookies especially\
   \ if the upgrade cannot be done in a timely manner."
 impacted_packages:
-  - purl: pkg:npm/%40sveltejs/kit
-    affected_versions: vers:npm/<1.15.2
-    fixed_versions: vers:npm/1.15.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/sveltejs/kit
     affected_versions:
     fixed_versions:
@@ -59,16 +54,21 @@ impacted_packages:
       - vcs_url: https://github.com/sveltejs/kit
         commit: ba436c6685e751d968a960fbda65f24cf7a82e9f
     introduced_in_commits: []
+  - purl: pkg:npm/%40sveltejs/kit
+    affected_versions: vers:npm/<1.15.2
+    fixed_versions: vers:npm/1.15.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/04/GHSA-gv7g-x59x-wf8f/GHSA-gv7g-x59x-wf8f.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-918

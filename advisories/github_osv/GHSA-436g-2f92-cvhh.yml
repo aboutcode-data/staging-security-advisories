@@ -17,11 +17,6 @@ summary: |
 
   Role-based Authorization Strategy Plugin 587.588.v850a_20a_30162 does not grant disabled permissions.
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins/role-strategy
-    affected_versions: vers:maven/<587.588.v850a
-    fixed_versions: vers:maven/587.588.v850a_20a_30162
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/role-strategy-plugin
     affected_versions:
     fixed_versions:
@@ -29,16 +24,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/role-strategy-plugin
         commit: 850a20a3016276d0c0ba4898a876c113a9191da4
     introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/role-strategy
+    affected_versions: vers:maven/<587.588.v850a
+    fixed_versions: vers:maven/587.588.v850a_20a_30162
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.9'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/04/GHSA-436g-2f92-cvhh/GHSA-436g-2f92-cvhh.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-281

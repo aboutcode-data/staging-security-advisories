@@ -19,11 +19,6 @@ summary: |
   code sink:
   https://github.com/librenms/librenms/blob/25.4.0/includes/html/pages/addhost.inc.php#L284
 impacted_packages:
-  - purl: pkg:composer/librenms/librenms
-    affected_versions: vers:composer/<25.5.0
-    fixed_versions: vers:composer/25.5.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/librenms/librenms
     affected_versions:
     fixed_versions:
@@ -31,16 +26,21 @@ impacted_packages:
       - vcs_url: https://github.com/librenms/librenms
         commit: 88fe1a7abdb500d9a2d4c45f9872df54c9ff8062
     introduced_in_commits: []
+  - purl: pkg:composer/librenms/librenms
+    affected_versions: vers:composer/<25.5.0
+    fixed_versions: vers:composer/25.5.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '2.1'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:P
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/05/GHSA-hxw5-9cc5-cmw5/GHSA-hxw5-9cc5-cmw5.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

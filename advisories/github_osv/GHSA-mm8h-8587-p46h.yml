@@ -29,11 +29,6 @@ summary: "RabbitMQ Java client's Lack of Message Size Limitation leads to Remote
   * Consumer throws OOM Exception\n\n\n### Impact\nUsers of RabbitMQ may suffer from  DoS attacks\
   \ from RabbitMQ Java client which will ultimately exhaust the memory of the consumer."
 impacted_packages:
-  - purl: pkg:maven/com.rabbitmq/amqp-client
-    affected_versions: vers:maven/<5.18.0
-    fixed_versions: vers:maven/5.18.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/rabbitmq/rabbitmq-java-client
     affected_versions:
     fixed_versions:
@@ -41,16 +36,21 @@ impacted_packages:
       - vcs_url: https://github.com/rabbitmq/rabbitmq-java-client
         commit: 714aae602dcae6cb4b53cadf009323ebac313cc8
     introduced_in_commits: []
+  - purl: pkg:maven/com.rabbitmq/amqp-client
+    affected_versions: vers:maven/<5.18.0
+    fixed_versions: vers:maven/5.18.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.9'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-mm8h-8587-p46h/GHSA-mm8h-8587-p46h.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-400

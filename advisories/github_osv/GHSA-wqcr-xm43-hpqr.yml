@@ -23,11 +23,6 @@ summary: "Vulnerable version of libwebp and can be exploited with a malicious so
   https://nvd.nist.gov/vuln/detail/CVE-2023-4863\nhttps://github.com/webmproject/libwebp/commit/2af26267cdfcb63a88e5c74a85927a12d6ca1d76\
   \ \nhttps://github.com/NoXF/libwebp-sys/commits/master"
 impacted_packages:
-  - purl: pkg:nuget/ImageResizer.Plugins.FreeImage
-    affected_versions: vers:nuget/<=4.2.8
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/webmproject/libwebp
     affected_versions:
     fixed_versions:
@@ -35,16 +30,21 @@ impacted_packages:
       - vcs_url: https://github.com/webmproject/libwebp
         commit: 2af26267cdfcb63a88e5c74a85927a12d6ca1d76
     introduced_in_commits: []
+  - purl: pkg:nuget/ImageResizer.Plugins.FreeImage
+    affected_versions: vers:nuget/<=4.2.8
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-wqcr-xm43-hpqr/GHSA-wqcr-xm43-hpqr.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses: []
 references:

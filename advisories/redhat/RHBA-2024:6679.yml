@@ -26,6 +26,31 @@ summary: |
 
   * nss: PK11_Encrypt using CKM_CHACHA20 can reveal plaintext on Intel Sandy Bridge machines [rhel-9.4.z] (JIRA:RHEL-53578)
 impacted_packages:
+  - purl: pkg:rpm/redhat/nss?arch=aarch64
+    affected_versions: vers:rpm/<3.101.0-7.el9_2
+    fixed_versions: vers:rpm/3.101.0-7.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/nss-sysinit?arch=aarch64
+    affected_versions: vers:rpm/<3.101.0-7.el9_2
+    fixed_versions: vers:rpm/3.101.0-7.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/nspr?arch=i686
+    affected_versions: vers:rpm/<4.35.0-14.el9_2
+    fixed_versions: vers:rpm/4.35.0-14.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/nss?arch=ppc64le
+    affected_versions: vers:rpm/<3.101.0-7.el9_2
+    fixed_versions: vers:rpm/3.101.0-7.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/nspr-devel?arch=i686
+    affected_versions: vers:rpm/<4.35.0-14.el9_2
+    fixed_versions: vers:rpm/4.35.0-14.el9_2
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/nspr?arch=aarch64
     affected_versions: vers:rpm/<4.35.0-14.el9_2
     fixed_versions: vers:rpm/4.35.0-14.el9_2
@@ -34,11 +59,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/nspr-devel?arch=aarch64
     affected_versions: vers:rpm/<4.35.0-14.el9_2
     fixed_versions: vers:rpm/4.35.0-14.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/nss?arch=aarch64
-    affected_versions: vers:rpm/<3.101.0-7.el9_2
-    fixed_versions: vers:rpm/3.101.0-7.el9_2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/nss-devel?arch=aarch64
@@ -62,11 +82,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/nss-softokn-freebl-devel?arch=aarch64
-    affected_versions: vers:rpm/<3.101.0-7.el9_2
-    fixed_versions: vers:rpm/3.101.0-7.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/nss-sysinit?arch=aarch64
     affected_versions: vers:rpm/<3.101.0-7.el9_2
     fixed_versions: vers:rpm/3.101.0-7.el9_2
     fixed_in_commits: []
@@ -134,11 +149,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/nspr-devel?arch=ppc64le
     affected_versions: vers:rpm/<4.35.0-14.el9_2
     fixed_versions: vers:rpm/4.35.0-14.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/nss?arch=ppc64le
-    affected_versions: vers:rpm/<3.101.0-7.el9_2
-    fixed_versions: vers:rpm/3.101.0-7.el9_2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/nss-devel?arch=ppc64le
@@ -224,16 +234,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/nss-util-debuginfo?arch=ppc64le
     affected_versions: vers:rpm/<3.101.0-7.el9_2
     fixed_versions: vers:rpm/3.101.0-7.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/nspr?arch=i686
-    affected_versions: vers:rpm/<4.35.0-14.el9_2
-    fixed_versions: vers:rpm/4.35.0-14.el9_2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/nspr-devel?arch=i686
-    affected_versions: vers:rpm/<4.35.0-14.el9_2
-    fixed_versions: vers:rpm/4.35.0-14.el9_2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/nss?arch=i686
@@ -525,7 +525,7 @@ severities:
   - score: Moderate
     scoring_system: rhas
     scoring_elements:
-    published_at: None
+    published_at:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhba-2024_6679.json
 weaknesses: []
 references:

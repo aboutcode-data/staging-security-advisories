@@ -7,12 +7,12 @@ summary: |
   Cross Site Scripting (XSS) in Serenity
   An XSS issue was discovered in Serenity Serene (and StartSharp) before 6.7.0. When users upload temporary files, some specific file endings are not allowed, but it is possible to upload .html or .htm files containing an XSS payload. The resulting link can be sent to an administrator user.
 impacted_packages:
-  - purl: pkg:nuget/Serenity.Net.Core
+  - purl: pkg:nuget/Serenity.Net.Services
     affected_versions: vers:nuget/<6.7.0
     fixed_versions: vers:nuget/6.7.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Serenity.Net.Services
+  - purl: pkg:nuget/Serenity.Net.Core
     affected_versions: vers:nuget/<6.7.0
     fixed_versions: vers:nuget/6.7.0
     fixed_in_commits: []
@@ -37,12 +37,12 @@ severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/04/GHSA-93h6-wx7r-mgfp/GHSA-93h6-wx7r-mgfp.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

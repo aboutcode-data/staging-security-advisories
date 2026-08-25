@@ -38,11 +38,6 @@ summary: |
 
   This vulnerability was reported on Intigriti by [ynoof](https://twitter.com/ynoofAssiri) @Ynoof5.
 impacted_packages:
-  - purl: pkg:maven/org.xwiki.commons/xwiki-commons-xml
-    affected_versions: vers:maven/>=4.2-milestone-1|<14.10
-    fixed_versions: vers:maven/14.10
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/xwiki/xwiki-commons
     affected_versions:
     fixed_versions:
@@ -50,16 +45,21 @@ impacted_packages:
       - vcs_url: https://github.com/xwiki/xwiki-commons
         commit: 8ff1a9d7e5d7b45b690134a537d53dc05cae04ab
     introduced_in_commits: []
+  - purl: pkg:maven/org.xwiki.commons/xwiki-commons-xml
+    affected_versions: vers:maven/>=4.2-milestone-1|<14.10
+    fixed_versions: vers:maven/14.10
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/04/GHSA-x37v-36wv-6v6h/GHSA-x37v-36wv-6v6h.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

@@ -24,11 +24,6 @@ summary: |
   ### Impact
   When installing dependencies with PDM, what's actually installed could differ from what's listed in `pyproject.toml` (including arbitrary code execution on install). It could also be used for downgrade attacks by only changing the version.
 impacted_packages:
-  - purl: pkg:pypi/pdm
-    affected_versions: vers:pypi/<=2.9.3
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/pdm-project/pdm
     affected_versions:
     fixed_versions:
@@ -37,6 +32,11 @@ impacted_packages:
         commit: 6853e2642dfa281d4a9958fbc6c95b7e32d84831
       - vcs_url: https://github.com/pdm-project/pdm
         commit: 45d1dfa47d4900c14a31b9bb761e4c46eb5c9442
+    introduced_in_commits: []
+  - purl: pkg:pypi/pdm
+    affected_versions: vers:pypi/<=2.9.3
+    fixed_versions:
+    fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/frostming/unearth
     affected_versions:
@@ -49,12 +49,12 @@ severities:
   - score: '7.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-j44v-mmf2-xvm9/GHSA-j44v-mmf2-xvm9.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-20

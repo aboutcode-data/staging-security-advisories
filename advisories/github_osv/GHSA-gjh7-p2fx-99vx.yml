@@ -25,6 +25,17 @@ summary: |
 
   Limiting request body sizes and query string lengths at the web server or CDN level is an effective mitigation.
 impacted_packages:
+  - purl: pkg:github/rack/rack
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/rack/rack
+        commit: cd6b70a1f2a1016b73dc906f924869f4902c2d74
+      - vcs_url: https://github.com/rack/rack
+        commit: 2bb5263b464b65ba4b648996a579dbd180d2b712
+      - vcs_url: https://github.com/rack/rack
+        commit: 3f5a4249118d09d199fe480466c8c6717e43b6e3
+    introduced_in_commits: []
   - purl: pkg:gem/rack
     affected_versions: vers:gem/<2.2.14
     fixed_versions: vers:gem/2.2.14
@@ -40,27 +51,16 @@ impacted_packages:
     fixed_versions: vers:gem/3.1.14
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/rack/rack
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/rack/rack
-        commit: cd6b70a1f2a1016b73dc906f924869f4902c2d74
-      - vcs_url: https://github.com/rack/rack
-        commit: 2bb5263b464b65ba4b648996a579dbd180d2b712
-      - vcs_url: https://github.com/rack/rack
-        commit: 3f5a4249118d09d199fe480466c8c6717e43b6e3
-    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/05/GHSA-gjh7-p2fx-99vx/GHSA-gjh7-p2fx-99vx.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-400

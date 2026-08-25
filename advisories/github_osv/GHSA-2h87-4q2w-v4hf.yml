@@ -46,6 +46,13 @@ summary: |
 
   All users on Strapi below 4.5.6 with access to the admin panel and the ability to modify the email templates
 impacted_packages:
+  - purl: pkg:github/strapi/strapi
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/strapi/strapi
+        commit: 921d30961d6ba96cc098f2aea197350a49f990bd
+    introduced_in_commits: []
   - purl: pkg:npm/%40strapi/plugin-users-permissions
     affected_versions: vers:npm/<4.5.6
     fixed_versions: vers:npm/4.5.6
@@ -56,23 +63,16 @@ impacted_packages:
     fixed_versions: vers:npm/4.5.6
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/strapi/strapi
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/strapi/strapi
-        commit: 921d30961d6ba96cc098f2aea197350a49f990bd
-    introduced_in_commits: []
 severities:
   - score: '10.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/04/GHSA-2h87-4q2w-v4hf/GHSA-2h87-4q2w-v4hf.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-74

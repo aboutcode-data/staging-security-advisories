@@ -7,11 +7,6 @@ summary: |
   Stored cross site scripting on API integration
   Concrete CMS (previously concrete5) before 9.2 is vulnerable to stored XSS on API Integrations via the name parameter.
 impacted_packages:
-  - purl: pkg:composer/concrete5/concrete5
-    affected_versions: vers:composer/<9.2.0
-    fixed_versions: vers:composer/9.2.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/concretecms/concretecms
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/concretecms/concretecms
         commit: 546cef6ec29208d5c079113635cd6e6b250e9f7c
     introduced_in_commits: []
+  - purl: pkg:composer/concrete5/concrete5
+    affected_versions: vers:composer/<9.2.0
+    fixed_versions: vers:composer/9.2.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/04/GHSA-xfmj-r86m-j2hr/GHSA-xfmj-r86m-j2hr.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

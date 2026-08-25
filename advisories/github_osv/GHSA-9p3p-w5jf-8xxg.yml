@@ -33,6 +33,13 @@ summary: |
 
   In all of the mentioned releases, we have updated the router to check if existing static files are within the document root. Requests to files outside the document root are treated as page requests of the error page and will no longer allow to determine whether the file exists or not.
 impacted_packages:
+  - purl: pkg:github/getkirby/kirby
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/getkirby/kirby
+        commit: 3ebc9ad3f5adcbd4838ce60219f1c9a561231235
+    introduced_in_commits: []
   - purl: pkg:composer/getkirby/cms
     affected_versions: vers:composer/<3.9.8+3
     fixed_versions: vers:composer/3.9.8+3
@@ -48,23 +55,16 @@ impacted_packages:
     fixed_versions: vers:composer/4.7.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/getkirby/kirby
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/getkirby/kirby
-        commit: 3ebc9ad3f5adcbd4838ce60219f1c9a561231235
-    introduced_in_commits: []
 severities:
   - score: '2.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:A/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:N/SC:L/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/05/GHSA-9p3p-w5jf-8xxg/GHSA-9p3p-w5jf-8xxg.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-23

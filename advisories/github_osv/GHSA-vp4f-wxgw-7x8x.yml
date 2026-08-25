@@ -20,11 +20,6 @@ summary: |
 
   This vulnerability can be prevented if user input correctly sanitized or there is no user input pass to the `init` function
 impacted_packages:
-  - purl: pkg:npm/%40dcl/single-sign-on-client
-    affected_versions: vers:npm/<0.1.0
-    fixed_versions: vers:npm/0.1.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/decentraland/single-sign-on-client
     affected_versions:
     fixed_versions:
@@ -32,16 +27,21 @@ impacted_packages:
       - vcs_url: https://github.com/decentraland/single-sign-on-client
         commit: bd20ea9533d0cda30809d929db85b1b76cef855a
     introduced_in_commits: []
+  - purl: pkg:npm/%40dcl/single-sign-on-client
+    affected_versions: vers:npm/<0.1.0
+    fixed_versions: vers:npm/0.1.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/09/GHSA-vp4f-wxgw-7x8x/GHSA-vp4f-wxgw-7x8x.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

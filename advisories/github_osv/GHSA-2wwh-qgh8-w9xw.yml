@@ -11,11 +11,6 @@ summary: |
 
   Build Failure Analyzer Plugin 2.4.2 requires POST requests for the affected HTTP endpoint.
 impacted_packages:
-  - purl: pkg:maven/com.sonyericsson.jenkins.plugins.bfa/build-failure-analyzer
-    affected_versions: vers:maven/<2.4.2
-    fixed_versions: vers:maven/2.4.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/build-failure-analyzer-plugin
     affected_versions:
     fixed_versions:
@@ -23,16 +18,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/build-failure-analyzer-plugin
         commit: a261229a67c52927d531c48ec0a59bf138ebd4d0
     introduced_in_commits: []
+  - purl: pkg:maven/com.sonyericsson.jenkins.plugins.bfa/build-failure-analyzer
+    affected_versions: vers:maven/<2.4.2
+    fixed_versions: vers:maven/2.4.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/09/GHSA-2wwh-qgh8-w9xw/GHSA-2wwh-qgh8-w9xw.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-352

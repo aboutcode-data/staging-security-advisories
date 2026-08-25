@@ -13,11 +13,6 @@ summary: |
 
   CloudBees CD Plugin 1.1.33 ensures that only files located within the expected directory are published.
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins/electricflow
-    affected_versions: vers:maven/<1.1.33
-    fixed_versions: vers:maven/1.1.33
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/electricflow-plugin
     affected_versions:
     fixed_versions:
@@ -25,16 +20,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/electricflow-plugin
         commit: e45ca8428ae45f45ca07611e802eaa0f1484ab50
     introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/electricflow
+    affected_versions: vers:maven/<1.1.33
+    fixed_versions: vers:maven/1.1.33
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-9ggw-h9mf-4jh7/GHSA-9ggw-h9mf-4jh7.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

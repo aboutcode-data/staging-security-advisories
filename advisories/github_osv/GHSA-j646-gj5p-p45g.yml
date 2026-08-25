@@ -14,6 +14,13 @@ summary: "CefSharp affected by heap buffer overflow in WebP\n**Google is aware t
   \ for older versions is to disable the WebCodecs API (`--disable-blink-features=WebCodecs`).\n\
   \nAs per https://magpcss.org/ceforum/viewtopic.php?f=6&t=19551#p54150"
 impacted_packages:
+  - purl: pkg:github/cefsharp/cefsharp
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/cefsharp/cefsharp
+        commit: f2890ba66170afb0bf742839febe4d20449f758c
+    introduced_in_commits: []
   - purl: pkg:nuget/CefSharp.Common
     affected_versions: vers:nuget/<116.0.230
     fixed_versions: vers:nuget/116.0.230
@@ -24,18 +31,11 @@ impacted_packages:
     fixed_versions: vers:nuget/116.0.230
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/cefsharp/cefsharp
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/cefsharp/cefsharp
-        commit: f2890ba66170afb0bf742839febe4d20449f758c
-    introduced_in_commits: []
 severities:
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses: []
 references:

@@ -7,11 +7,6 @@ summary: |
   Strapi does not verify the access or ID tokens issued during the OAuth flow
   Strapi 3.2.1 until 4.6.0 does not verify the access or ID tokens issued during the OAuth flow when the AWS Cognito login provider is used for authentication. A remote attacker could forge an ID token that is signed using the 'None' type algorithm to bypass authentication and impersonate any user that use AWS Cognito for authentication.
 impacted_packages:
-  - purl: pkg:npm/%40strapi/plugin-users-permissions
-    affected_versions: vers:npm/>=3.2.1|<4.6.0
-    fixed_versions: vers:npm/4.6.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/strapi/strapi
     affected_versions:
     fixed_versions:
@@ -23,11 +18,16 @@ impacted_packages:
       - vcs_url: https://github.com/strapi/strapi
         commit: eeab43b57707d7ef275076d27be6eabc72bd71a7
     introduced_in_commits: []
+  - purl: pkg:npm/%40strapi/plugin-users-permissions
+    affected_versions: vers:npm/>=3.2.1|<4.6.0
+    fixed_versions: vers:npm/4.6.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses: []
 references:

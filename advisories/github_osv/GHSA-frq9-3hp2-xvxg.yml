@@ -7,11 +7,6 @@ summary: |
   Markdownify MCP Server allows Server-Side Request Forgery (SSRF) via the Markdownify.get() function
   All versions of the package mcp-markdownify-server are vulnerable to Server-Side Request Forgery (SSRF) via the Markdownify.get() function. An attacker can craft a prompt that, once accessed by the MCP host, can invoke the webpage-to-markdown, bing-search-to-markdown, and youtube-to-markdown tools to issue requests and read the responses to attacker-controlled URLs, potentially leaking sensitive information.
 impacted_packages:
-  - purl: pkg:npm/mcp-markdownify-server
-    affected_versions: vers:npm/<=0.0.1
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/zcaceres/markdownify-mcp
     affected_versions:
     fixed_versions:
@@ -21,21 +16,26 @@ impacted_packages:
       - vcs_url: https://github.com/zcaceres/markdownify-mcp
         commit: 0284aa8f34d32c65e20d8cda2d429b7943c9af03
     introduced_in_commits: []
+  - purl: pkg:npm/mcp-markdownify-server
+    affected_versions: vers:npm/<=0.0.1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/05/GHSA-frq9-3hp2-xvxg/GHSA-frq9-3hp2-xvxg.json
   - score: '6.9'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N/E:P
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/05/GHSA-frq9-3hp2-xvxg/GHSA-frq9-3hp2-xvxg.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-918

@@ -40,6 +40,13 @@ summary: "io.micronaut.security:micronaut-security-oauth2 has invalid IdTokenCla
   \ &&\n                                validateAzp(claims, clientId, audiences);\n        \
   \    }\n        }\n        return false;\n    }\n}\n``"
 impacted_packages:
+  - purl: pkg:github/micronaut-projects/micronaut-security
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/micronaut-projects/micronaut-security
+        commit: 9728b925221a0d87798ccf250657a3c214b7e980
+    introduced_in_commits: []
   - purl: pkg:maven/io.micronaut.security/micronaut-security-oauth2
     affected_versions: vers:maven/>=3.11.0|<3.11.1
     fixed_versions: vers:maven/3.11.1
@@ -95,23 +102,16 @@ impacted_packages:
     fixed_versions: vers:maven/3.1.2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/micronaut-projects/micronaut-security
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/micronaut-projects/micronaut-security
-        commit: 9728b925221a0d87798ccf250657a3c214b7e980
-    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-qw22-8w9r-864h/GHSA-qw22-8w9r-864h.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-284

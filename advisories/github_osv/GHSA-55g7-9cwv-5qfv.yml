@@ -34,11 +34,6 @@ summary: "snappy-java's missing upper bound check on chunk length can lead to De
   \ Application Security team. \n\nWe kindly request for a new CVE ID to be assigned once you\
   \ acknowledge this vulnerability."
 impacted_packages:
-  - purl: pkg:maven/org.xerial.snappy/snappy-java
-    affected_versions: vers:maven/<=1.1.10.3
-    fixed_versions: vers:maven/1.1.10.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/xerial/snappy-java
     affected_versions:
     fixed_versions:
@@ -46,16 +41,21 @@ impacted_packages:
       - vcs_url: https://github.com/xerial/snappy-java
         commit: 9f8c3cf74223ed0a8a834134be9c917b9f10ceb5
     introduced_in_commits: []
+  - purl: pkg:maven/org.xerial.snappy/snappy-java
+    affected_versions: vers:maven/<=1.1.10.3
+    fixed_versions: vers:maven/1.1.10.4
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/09/GHSA-55g7-9cwv-5qfv/GHSA-55g7-9cwv-5qfv.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-770
