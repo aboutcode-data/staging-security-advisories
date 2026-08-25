@@ -9,6 +9,11 @@ summary: |
 
   An attacker could inject malicious code into a data-trix-attachment attribute that, when rendered as HTML and clicked on, could execute arbitrary JavaScript code within the context of the user's session, potentially leading to unauthorized actions being performed or sensitive information being disclosed.
 impacted_packages:
+  - purl: pkg:gem/action_text-trix
+    affected_versions: vers:gem/<2.1.16
+    fixed_versions: vers:gem/2.1.16
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:github/basecamp/trix
     affected_versions:
     fixed_versions:
@@ -16,16 +21,11 @@ impacted_packages:
       - vcs_url: https://github.com/basecamp/trix
         commit: 73c20cf03ab2b56c0ef9c9b1aaf63f2de44f4010
     introduced_in_commits: []
-  - purl: pkg:gem/action_text-trix
-    affected_versions: vers:gem/<2.1.16
-    fixed_versions: vers:gem/2.1.16
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
-  - score: None
+  - score:
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/gem/action_text-trix/GHSA-g9jg-w8vm-g96v.yml
 weaknesses:
   - CWE-1035

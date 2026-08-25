@@ -11,6 +11,11 @@ summary: |
   ### Original Description
   httparty before 0.21.0 is vulnerable to an assumed-immutable web parameter vulnerability. A remote and unauthenticated attacker can provide a crafted filename parameter during multipart/form-data uploads which could result in attacker controlled filenames being written.
 impacted_packages:
+  - purl: pkg:gem/httparty
+    affected_versions: vers:gem/<=0.20.0
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:github/jnunemaker/httparty
     affected_versions:
     fixed_versions:
@@ -20,16 +25,11 @@ impacted_packages:
       - vcs_url: https://github.com/jnunemaker/httparty
         commit: 4416141d37fd71bdba4f37589ec265f55aa446ce
     introduced_in_commits: []
-  - purl: pkg:gem/httparty
-    affected_versions: vers:gem/<=0.20.0
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
-  - score: None
+  - score:
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/gem/httparty/GHSA-g47j-3m2m-74qv.yml
 weaknesses:
   - CWE-668
