@@ -514,11 +514,6 @@ summary: "Pixar OpenUSD Sdf_PathNode Module Use-After-Free Vulnerability Leading
   \ to patch the issue and prevent potential security breaches.\n\n### Credit \n- Song Hyun\
   \ Bae ( @bshyuunn )"
 impacted_packages:
-  - purl: pkg:pypi/usd-core
-    affected_versions: vers:pypi/<25.8
-    fixed_versions: vers:pypi/25.8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/pixaranimationstudios/openusd
     affected_versions:
     fixed_versions:
@@ -526,16 +521,21 @@ impacted_packages:
       - vcs_url: https://github.com/pixaranimationstudios/openusd
         commit: 0d74f31fe64310791e274e587c9926335e9db9db
     introduced_in_commits: []
+  - purl: pkg:pypi/usd-core
+    affected_versions: vers:pypi/<25.8
+    fixed_versions: vers:pypi/25.8
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/09/GHSA-58p5-r2f6-g2cj/GHSA-58p5-r2f6-g2cj.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-416

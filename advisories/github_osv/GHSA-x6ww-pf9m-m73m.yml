@@ -42,11 +42,6 @@ summary: "MONAI does not prevent path traversal, potentially leading to arbitrar
   Arbitrary file write\n\n### Repair Suggestions\nCheck the contents of the downloaded Zip file,\
   \ or use a safer method to load it"
 impacted_packages:
-  - purl: pkg:pypi/monai
-    affected_versions: vers:pypi/<=1.5.0
-    fixed_versions: vers:pypi/1.5.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/project-monai/monai
     affected_versions:
     fixed_versions:
@@ -54,16 +49,21 @@ impacted_packages:
       - vcs_url: https://github.com/project-monai/monai
         commit: 946cfdff096d8b1d289063f06a04cae3fa3559d9
     introduced_in_commits: []
+  - purl: pkg:pypi/monai
+    affected_versions: vers:pypi/<=1.5.0
+    fixed_versions: vers:pypi/1.5.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/09/GHSA-x6ww-pf9m-m73m/GHSA-x6ww-pf9m-m73m.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

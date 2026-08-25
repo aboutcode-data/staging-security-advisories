@@ -19,11 +19,6 @@ summary: |
   # Additional Information
   If you discover a security vulnerability in one of our products or websites, please report the issue to Snowflake through our Vulnerability Disclosure Program hosted at HackerOne. For more information, please see our [Vulnerability Disclosure Policy](https://hackerone.com/snowflake?type=team).
 impacted_packages:
-  - purl: pkg:npm/snowflake-sdk
-    affected_versions: vers:npm/<=2.0.3
-    fixed_versions: vers:npm/2.0.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/snowflakedb/snowflake-connector-nodejs
     affected_versions:
     fixed_versions:
@@ -31,16 +26,21 @@ impacted_packages:
       - vcs_url: https://github.com/snowflakedb/snowflake-connector-nodejs
         commit: e94c24112271e1f44c271634bf29a3188acc68d0
     introduced_in_commits: []
+  - purl: pkg:npm/snowflake-sdk
+    affected_versions: vers:npm/<=2.0.3
+    fixed_versions: vers:npm/2.0.4
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '3.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/04/GHSA-wmjq-jrm2-9wfr/GHSA-wmjq-jrm2-9wfr.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-367

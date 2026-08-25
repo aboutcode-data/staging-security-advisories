@@ -32,11 +32,6 @@ summary: |
   ### Impact
   Arbitrary HTML can be inserted into the DOM by any user, allowing for JavaScript to be executed.
 impacted_packages:
-  - purl: pkg:composer/starcitizenwiki/embedvideo
-    affected_versions: vers:composer/<=4.0.0
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/starcitizenwiki/mediawiki-extensions-embedvideo
     affected_versions:
     fixed_versions:
@@ -46,16 +41,21 @@ impacted_packages:
       - vcs_url: https://github.com/starcitizenwiki/mediawiki-extensions-embedvideo
         commit: 4e075d3dc9a15a3ee53f449a684d5ab847e52f01
     introduced_in_commits: []
+  - purl: pkg:composer/starcitizenwiki/embedvideo
+    affected_versions: vers:composer/<=4.0.0
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.6'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/09/GHSA-4j5h-mvj3-m48v/GHSA-4j5h-mvj3-m48v.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

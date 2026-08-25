@@ -14,11 +14,6 @@ summary: |
   ### Workarounds
   As a temporary workaround, avoid using inline comments in .env files, or sanitize loaded values manually.
 impacted_packages:
-  - purl: pkg:composer/datahihi1/tiny-env
-    affected_versions: vers:composer/>=1.0.9|<1.0.11
-    fixed_versions: vers:composer/1.0.11
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/datahihi1/tiny-env
     affected_versions:
     fixed_versions:
@@ -26,16 +21,21 @@ impacted_packages:
       - vcs_url: https://github.com/datahihi1/tiny-env
         commit: 69b7b885e6cfbf07f470fb3512360e0caa95521e
     introduced_in_commits: []
+  - purl: pkg:composer/datahihi1/tiny-env
+    affected_versions: vers:composer/>=1.0.9|<1.0.11
+    fixed_versions: vers:composer/1.0.11
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/09/GHSA-72cm-7236-h43r/GHSA-72cm-7236-h43r.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-20

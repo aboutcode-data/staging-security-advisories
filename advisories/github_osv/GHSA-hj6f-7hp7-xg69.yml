@@ -12,18 +12,8 @@ summary: "Mautic vulnerable to SSRF via webhook function\n### Summary\nUsers wit
   \ for more information on SSRF and its fix"
 impacted_packages:
   - purl: pkg:composer/mautic/core
-    affected_versions: vers:composer/>=4.4.0|<4.4.17
-    fixed_versions: vers:composer/4.4.17
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/mautic/core
     affected_versions: vers:composer/>=5.0.0-alpha|<5.2.8
     fixed_versions: vers:composer/5.2.8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/mautic/core
-    affected_versions: vers:composer/>=6.0.0-alpha|<6.0.5
-    fixed_versions: vers:composer/6.0.5
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/mautic/mautic
@@ -35,16 +25,26 @@ impacted_packages:
       - vcs_url: https://github.com/mautic/mautic
         commit: 6084f6de4c88d1aeb5f6c73ea4fe1b09c98ea52b
     introduced_in_commits: []
+  - purl: pkg:composer/mautic/core
+    affected_versions: vers:composer/>=4.4.0|<4.4.17
+    fixed_versions: vers:composer/4.4.17
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/mautic/core
+    affected_versions: vers:composer/>=6.0.0-alpha|<6.0.5
+    fixed_versions: vers:composer/6.0.5
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '2.7'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/09/GHSA-hj6f-7hp7-xg69/GHSA-hj6f-7hp7-xg69.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-918

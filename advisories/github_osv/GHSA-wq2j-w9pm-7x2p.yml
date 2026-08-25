@@ -11,11 +11,6 @@ summary: |
   ### Details
   Many people who run DNN sites have a number of installed themes that they do not actually use. This could be because they were testing many themes during initial setup, because they have changed themes over time, or because they have development and production versions of a theme. Whatever the reason, many times the unused themes will become outdated over time as site admins wouldn't have reason to update something that is not used. However, this could introduce an entry point to exploit a vulnerable theme by making the server run the unused theme for unsuspecting client requests. Depending on the vulnerability in a theme, this could lead to server side or client side arbitrary code execution. With DNN 10.1.0 this functionality is now disabled by default but a setting was introduced in the Security module to turn activate the functionality.
 impacted_packages:
-  - purl: pkg:nuget/DotNetNuke.Core
-    affected_versions: vers:nuget/<10.1.0
-    fixed_versions: vers:nuget/10.1.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/dnnsoftware/dnn.platform
     affected_versions:
     fixed_versions:
@@ -23,16 +18,21 @@ impacted_packages:
       - vcs_url: https://github.com/dnnsoftware/dnn.platform
         commit: 72f30f69fd2214d77f6c2577dfcca495a24caf5c
     introduced_in_commits: []
+  - purl: pkg:nuget/DotNetNuke.Core
+    affected_versions: vers:nuget/<10.1.0
+    fixed_versions: vers:nuget/10.1.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/09/GHSA-wq2j-w9pm-7x2p/GHSA-wq2j-w9pm-7x2p.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-20

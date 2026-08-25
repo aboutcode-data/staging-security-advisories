@@ -24,11 +24,6 @@ summary: |
   ### Impact
   An attacker can use a reflected cross-site scripting attack to steal cookies from an authenticated user by having them click on a malicious link. Stolen cookies allow the attacker to take over the user’s session. This vulnerability may also allow attackers to deface the website or embed malicious content.
 impacted_packages:
-  - purl: pkg:composer/yeswiki/yeswiki
-    affected_versions: vers:composer/<=4.5.3
-    fixed_versions: vers:composer/4.5.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/yeswiki/yeswiki
     affected_versions:
     fixed_versions:
@@ -36,16 +31,21 @@ impacted_packages:
       - vcs_url: https://github.com/yeswiki/yeswiki
         commit: 4e9e51d80cd024ed2ac5c12c820817e6d8c2655a
     introduced_in_commits: []
+  - purl: pkg:composer/yeswiki/yeswiki
+    affected_versions: vers:composer/<=4.5.3
+    fixed_versions: vers:composer/4.5.4
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/04/GHSA-ggqx-43h2-55jp/GHSA-ggqx-43h2-55jp.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

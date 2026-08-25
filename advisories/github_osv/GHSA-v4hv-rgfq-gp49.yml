@@ -44,16 +44,6 @@ summary: "Angular Stored XSS Vulnerability via SVG Animation, SVG URL and MathML
   \ Configure a robust CSP header that disallows `javascript:` URLs."
 impacted_packages:
   - purl: pkg:npm/%40angular/compiler
-    affected_versions: vers:npm/>=21.0.0-next.0|<21.0.2
-    fixed_versions: vers:npm/21.0.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:npm/%40angular/compiler
-    affected_versions: vers:npm/>=20.0.0-next.0|<20.3.15
-    fixed_versions: vers:npm/20.3.15
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:npm/%40angular/compiler
     affected_versions: vers:npm/>=19.0.0-next.0|<19.2.17
     fixed_versions: vers:npm/19.2.17
     fixed_in_commits: []
@@ -61,6 +51,16 @@ impacted_packages:
   - purl: pkg:npm/%40angular/compiler
     affected_versions: vers:npm/<=18.2.14
     fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/%40angular/compiler
+    affected_versions: vers:npm/>=21.0.0-next.0|<21.0.2
+    fixed_versions: vers:npm/21.0.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:npm/%40angular/compiler
+    affected_versions: vers:npm/>=20.0.0-next.0|<20.3.15
+    fixed_versions: vers:npm/20.3.15
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/angular/angular
@@ -74,12 +74,12 @@ severities:
   - score: '8.5'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/12/GHSA-v4hv-rgfq-gp49/GHSA-v4hv-rgfq-gp49.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

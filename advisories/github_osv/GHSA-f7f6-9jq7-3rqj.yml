@@ -35,11 +35,6 @@ summary: |
   ### Workarounds
   If you control the input, don’t specify a property named `__proto__`. If you don’t control the output, strip any properties named `__proto__` before passing it to `valueToEstree`.
 impacted_packages:
-  - purl: pkg:npm/estree-util-value-to-estree
-    affected_versions: vers:npm/<3.3.3
-    fixed_versions: vers:npm/3.3.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/remcohaszing/estree-util-value-to-estree
     affected_versions:
     fixed_versions:
@@ -47,16 +42,21 @@ impacted_packages:
       - vcs_url: https://github.com/remcohaszing/estree-util-value-to-estree
         commit: d0c394fbc64bc55937ffe4e162b81f15ba506e55
     introduced_in_commits: []
+  - purl: pkg:npm/estree-util-value-to-estree
+    affected_versions: vers:npm/<3.3.3
+    fixed_versions: vers:npm/3.3.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.9'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/04/GHSA-f7f6-9jq7-3rqj/GHSA-f7f6-9jq7-3rqj.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-1321

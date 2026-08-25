@@ -132,11 +132,6 @@ summary: |
   * **Requirements:** Attacker must connect to the server (authenticated player)
   * **Effect:** Server memory rapidly increases, leading to freeze or crash
 impacted_packages:
-  - purl: pkg:composer/pocketmine/pocketmine-mp
-    affected_versions: vers:composer/<5.32.1
-    fixed_versions: vers:composer/5.32.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/pmmp/pocketmine-mp
     affected_versions:
     fixed_versions:
@@ -146,16 +141,21 @@ impacted_packages:
       - vcs_url: https://github.com/pmmp/pocketmine-mp
         commit: c417ecd30d20520227b15e09eda87db492ab0a6a
     introduced_in_commits: []
+  - purl: pkg:composer/pocketmine/pocketmine-mp
+    affected_versions: vers:composer/<5.32.1
+    fixed_versions: vers:composer/5.32.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/09/GHSA-fqqv-56h5-f57g/GHSA-fqqv-56h5-f57g.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-770

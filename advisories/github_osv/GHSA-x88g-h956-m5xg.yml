@@ -38,9 +38,9 @@ summary: "PhpSpreadsheet allows unauthorized Reflected XSS in `Convert-Online.ph
   \ />\n\n*Figure 6. Executing arbitrary JavaScript code*\n\n\n# Credit\nThis vulnerability\
   \ was discovered by **Aleksey Solovev (Positive Technologies)**"
 impacted_packages:
-  - purl: pkg:composer/phpoffice/phpspreadsheet
-    affected_versions: vers:composer/>=3.0.0|<3.7.0
-    fixed_versions: vers:composer/3.7.0
+  - purl: pkg:composer/phpoffice/phpexcel
+    affected_versions: vers:composer/<=1.8.2
+    fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/phpoffice/phpspreadsheet
@@ -58,9 +58,9 @@ impacted_packages:
     fixed_versions: vers:composer/2.3.5
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/phpoffice/phpexcel
-    affected_versions: vers:composer/<=1.8.2
-    fixed_versions:
+  - purl: pkg:composer/phpoffice/phpspreadsheet
+    affected_versions: vers:composer/>=3.0.0|<3.7.0
+    fixed_versions: vers:composer/3.7.0
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/phpoffice/phpspreadsheet
@@ -80,17 +80,17 @@ severities:
   - score: '7.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/01/GHSA-x88g-h956-m5xg/GHSA-x88g-h956-m5xg.json
   - score: '8.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:H/VA:N/SC:L/SI:H/SA:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/01/GHSA-x88g-h956-m5xg/GHSA-x88g-h956-m5xg.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

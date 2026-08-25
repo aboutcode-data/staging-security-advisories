@@ -8,8 +8,8 @@ summary: |
   A potential denial of service vulnerability is present in versions of Apache CXF before 3.5.10, 3.6.5 and 4.0.6. In some edge cases, the CachedOutputStream instances may not be closed and, if backed by temporary files, may fill up the file system (it applies to servers and clients).
 impacted_packages:
   - purl: pkg:maven/org.apache.cxf/cxf-core
-    affected_versions: vers:maven/<3.5.10
-    fixed_versions: vers:maven/3.5.10
+    affected_versions: vers:maven/>=4.0.0|<4.0.6
+    fixed_versions: vers:maven/4.0.6
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.cxf/cxf-core
@@ -18,20 +18,20 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.cxf/cxf-core
-    affected_versions: vers:maven/>=4.0.0|<4.0.6
-    fixed_versions: vers:maven/4.0.6
+    affected_versions: vers:maven/<3.5.10
+    fixed_versions: vers:maven/3.5.10
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/01/GHSA-fh5r-crhr-qrrq/GHSA-fh5r-crhr-qrrq.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-400

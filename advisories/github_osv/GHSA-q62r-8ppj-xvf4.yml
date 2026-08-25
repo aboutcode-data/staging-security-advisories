@@ -14,6 +14,15 @@ summary: |
   ### Workarounds
   Umbraco supports the configuration of [allowed](https://docs.umbraco.com/umbraco-cms/reference/configuration/contentsettings#allowed-upload-file-extensions) and [disallowed file extensions](https://docs.umbraco.com/umbraco-cms/reference/configuration/contentsettings#disallowed-upload-file-extensions).  Using these options to allow only necessary file extensions significantly reduces the scope of the vulnerability.
 impacted_packages:
+  - purl: pkg:github/umbraco/umbraco-cms
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/umbraco/umbraco-cms
+        commit: d3c1443b14b1076faf13d1bcecc42860fdf5fad8
+      - vcs_url: https://github.com/umbraco/umbraco-cms
+        commit: 06a2a500b358ce15b1e228391eb60bd517c6e833
+    introduced_in_commits: []
   - purl: pkg:nuget/Umbraco.Cms
     affected_versions: vers:nuget/>=14.0.0--preview004|<14.3.4
     fixed_versions: vers:nuget/14.3.4
@@ -24,25 +33,16 @@ impacted_packages:
     fixed_versions: vers:nuget/15.3.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/umbraco/umbraco-cms
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/umbraco/umbraco-cms
-        commit: d3c1443b14b1076faf13d1bcecc42860fdf5fad8
-      - vcs_url: https://github.com/umbraco/umbraco-cms
-        commit: 06a2a500b358ce15b1e228391eb60bd517c6e833
-    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/04/GHSA-q62r-8ppj-xvf4/GHSA-q62r-8ppj-xvf4.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-23

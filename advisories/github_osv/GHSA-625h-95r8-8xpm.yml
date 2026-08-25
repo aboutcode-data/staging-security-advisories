@@ -27,11 +27,6 @@ summary: |
   * If upgrading is not immediately possible, configure `QueryParser` with an explicit delimiter (e.g., `&`) to avoid the mismatch.
   * As a general precaution, enforce query string and request size limits at the web server or proxy layer (e.g., Nginx, Apache, or a CDN) to mitigate excessive parsing overhead.
 impacted_packages:
-  - purl: pkg:gem/rack
-    affected_versions: vers:gem/<2.2.18
-    fixed_versions: vers:gem/2.2.18
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/rack/rack
     affected_versions:
     fixed_versions:
@@ -39,16 +34,21 @@ impacted_packages:
       - vcs_url: https://github.com/rack/rack
         commit: 54e4ffdd5affebcb0c015cc6ae74635c0831ed71
     introduced_in_commits: []
+  - purl: pkg:gem/rack
+    affected_versions: vers:gem/<2.2.18
+    fixed_versions: vers:gem/2.2.18
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/09/GHSA-625h-95r8-8xpm/GHSA-625h-95r8-8xpm.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-400

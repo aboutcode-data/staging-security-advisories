@@ -31,13 +31,13 @@ summary: "jinjava has Sandbox Bypass via JavaType-Based Deserialization\n### Sum
   \ even lead to complete remote code execution."
 impacted_packages:
   - purl: pkg:maven/com.hubspot.jinjava/jinjava
-    affected_versions: vers:maven/2.8.0
-    fixed_versions: vers:maven/2.8.1
+    affected_versions: vers:maven/<2.7.5
+    fixed_versions: vers:maven/2.7.5
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/com.hubspot.jinjava/jinjava
-    affected_versions: vers:maven/<2.7.5
-    fixed_versions: vers:maven/2.7.5
+    affected_versions: vers:maven/2.8.0
+    fixed_versions: vers:maven/2.8.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/hubspot/jinjava
@@ -51,12 +51,12 @@ severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/09/GHSA-m49c-g9wr-hv6v/GHSA-m49c-g9wr-hv6v.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-1336

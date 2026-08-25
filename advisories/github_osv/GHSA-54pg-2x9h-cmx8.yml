@@ -7,6 +7,13 @@ summary: |
   TYPO3 "Form to Database" extension susceptible to Cross-site Scripting
   The extension "Form to Database" is susceptible to Cross-Site Scripting. This issue affects the following versions: before 2.2.5, from 3.0.0 before 3.2.2, from 4.0.0 before 4.2.3, from 5.0.0 before 5.0.2.
 impacted_packages:
+  - purl: pkg:gitlab/lavitto/typo3-form-to-database
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://gitlab.com/lavitto/typo3-form-to-database
+        commit: a3ab9bf9c04061d1841fff96a08c4dbf48aaaf37
+    introduced_in_commits: []
   - purl: pkg:composer/lavitto/typo3-form-to-database
     affected_versions: vers:composer/<2.2.5
     fixed_versions: vers:composer/2.2.5
@@ -27,23 +34,16 @@ impacted_packages:
     fixed_versions: vers:composer/5.0.2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:gitlab/lavitto/typo3-form-to-database
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://gitlab.com/lavitto/typo3-form-to-database
-        commit: a3ab9bf9c04061d1841fff96a08c4dbf48aaaf37
-    introduced_in_commits: []
 severities:
   - score: '2.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/09/GHSA-54pg-2x9h-cmx8/GHSA-54pg-2x9h-cmx8.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

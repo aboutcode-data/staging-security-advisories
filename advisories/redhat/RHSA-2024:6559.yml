@@ -16,7 +16,17 @@ summary: |
 
   For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.
 impacted_packages:
-  - purl: pkg:rpm/redhat/pg_repack?arch=src&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+  - purl: pkg:rpm/redhat/postgres-decoderbufs-debugsource?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<0.10.0-2.module+el8.5.0+11354+78b3c9c5
+    fixed_versions: vers:rpm/0.10.0-2.module+el8.5.0+11354+78b3c9c5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-docs-debuginfo?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/pg_repack?arch=aarch64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
     affected_versions: vers:rpm/<1.4.6-3.module+el8.5.0+11354+78b3c9c5
     fixed_versions: vers:rpm/1.4.6-3.module+el8.5.0+11354+78b3c9c5
     fixed_in_commits: []
@@ -29,11 +39,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/postgres-decoderbufs?arch=src&rpmmod=postgresql:12:8060020240903093929:ad008a3a
     affected_versions: vers:rpm/<0.10.0-2.module+el8.5.0+11354+78b3c9c5
     fixed_versions: vers:rpm/0.10.0-2.module+el8.5.0+11354+78b3c9c5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql?arch=src&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/pg_repack?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
@@ -51,52 +56,7 @@ impacted_packages:
     fixed_versions: vers:rpm/1.4.6-3.module+el8.5.0+11354+78b3c9c5
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/pgaudit?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<1.4.0-5.module+el8.5.0+11354+78b3c9c5
-    fixed_versions: vers:rpm/1.4.0-5.module+el8.5.0+11354+78b3c9c5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/pgaudit-debuginfo?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<1.4.0-5.module+el8.5.0+11354+78b3c9c5
-    fixed_versions: vers:rpm/1.4.0-5.module+el8.5.0+11354+78b3c9c5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/pgaudit-debugsource?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<1.4.0-5.module+el8.5.0+11354+78b3c9c5
-    fixed_versions: vers:rpm/1.4.0-5.module+el8.5.0+11354+78b3c9c5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgres-decoderbufs?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<0.10.0-2.module+el8.5.0+11354+78b3c9c5
-    fixed_versions: vers:rpm/0.10.0-2.module+el8.5.0+11354+78b3c9c5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgres-decoderbufs-debuginfo?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<0.10.0-2.module+el8.5.0+11354+78b3c9c5
-    fixed_versions: vers:rpm/0.10.0-2.module+el8.5.0+11354+78b3c9c5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgres-decoderbufs-debugsource?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<0.10.0-2.module+el8.5.0+11354+78b3c9c5
-    fixed_versions: vers:rpm/0.10.0-2.module+el8.5.0+11354+78b3c9c5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/postgresql?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-contrib?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-contrib-debuginfo?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-debuginfo?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
     affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_in_commits: []
@@ -111,67 +71,12 @@ impacted_packages:
     fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-docs-debuginfo?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-plperl?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-plperl-debuginfo?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/postgresql-plpython3?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
     affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-plpython3-debuginfo?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-pltcl?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-pltcl-debuginfo?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-server?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-server-debuginfo?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/postgresql-server-devel?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-server-devel-debuginfo?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-static?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-test?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
     affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_in_commits: []
@@ -186,34 +91,9 @@ impacted_packages:
     fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-upgrade-debuginfo?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-upgrade-devel?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-upgrade-devel-debuginfo?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/postgresql-test-rpm-macros?arch=noarch&rpmmod=postgresql:12:8060020240903093929:ad008a3a
     affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/pg_repack?arch=aarch64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<1.4.6-3.module+el8.5.0+11354+78b3c9c5
-    fixed_versions: vers:rpm/1.4.6-3.module+el8.5.0+11354+78b3c9c5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/pg_repack-debuginfo?arch=aarch64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<1.4.6-3.module+el8.5.0+11354+78b3c9c5
-    fixed_versions: vers:rpm/1.4.6-3.module+el8.5.0+11354+78b3c9c5
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/pg_repack-debugsource?arch=aarch64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
@@ -231,11 +111,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.4.0-5.module+el8.5.0+11354+78b3c9c5
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/pgaudit-debugsource?arch=aarch64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<1.4.0-5.module+el8.5.0+11354+78b3c9c5
-    fixed_versions: vers:rpm/1.4.0-5.module+el8.5.0+11354+78b3c9c5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/postgres-decoderbufs?arch=aarch64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
     affected_versions: vers:rpm/<0.10.0-2.module+el8.5.0+11354+78b3c9c5
     fixed_versions: vers:rpm/0.10.0-2.module+el8.5.0+11354+78b3c9c5
@@ -246,42 +121,12 @@ impacted_packages:
     fixed_versions: vers:rpm/0.10.0-2.module+el8.5.0+11354+78b3c9c5
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgres-decoderbufs-debugsource?arch=aarch64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<0.10.0-2.module+el8.5.0+11354+78b3c9c5
-    fixed_versions: vers:rpm/0.10.0-2.module+el8.5.0+11354+78b3c9c5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/postgresql?arch=aarch64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
     affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-contrib?arch=aarch64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-contrib-debuginfo?arch=aarch64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/postgresql-debuginfo?arch=aarch64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-debugsource?arch=aarch64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-docs?arch=aarch64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-docs-debuginfo?arch=aarch64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
     affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_in_commits: []
@@ -296,11 +141,6 @@ impacted_packages:
     fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-plpython3?arch=aarch64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/postgresql-plpython3-debuginfo?arch=aarch64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
     affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
@@ -311,17 +151,7 @@ impacted_packages:
     fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-pltcl-debuginfo?arch=aarch64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/postgresql-server?arch=aarch64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-server-debuginfo?arch=aarch64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
     affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_in_commits: []
@@ -336,27 +166,7 @@ impacted_packages:
     fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-static?arch=aarch64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-test?arch=aarch64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/postgresql-test-debuginfo?arch=aarch64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-upgrade?arch=aarch64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-upgrade-debuginfo?arch=aarch64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
     affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_in_commits: []
@@ -376,42 +186,12 @@ impacted_packages:
     fixed_versions: vers:rpm/1.4.6-3.module+el8.5.0+11354+78b3c9c5
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/pg_repack-debuginfo?arch=ppc64le&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<1.4.6-3.module+el8.5.0+11354+78b3c9c5
-    fixed_versions: vers:rpm/1.4.6-3.module+el8.5.0+11354+78b3c9c5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/pg_repack-debugsource?arch=ppc64le&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<1.4.6-3.module+el8.5.0+11354+78b3c9c5
-    fixed_versions: vers:rpm/1.4.6-3.module+el8.5.0+11354+78b3c9c5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/pgaudit?arch=ppc64le&rpmmod=postgresql:12:8060020240903093929:ad008a3a
     affected_versions: vers:rpm/<1.4.0-5.module+el8.5.0+11354+78b3c9c5
     fixed_versions: vers:rpm/1.4.0-5.module+el8.5.0+11354+78b3c9c5
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/pgaudit-debuginfo?arch=ppc64le&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<1.4.0-5.module+el8.5.0+11354+78b3c9c5
-    fixed_versions: vers:rpm/1.4.0-5.module+el8.5.0+11354+78b3c9c5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/pgaudit-debugsource?arch=ppc64le&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<1.4.0-5.module+el8.5.0+11354+78b3c9c5
-    fixed_versions: vers:rpm/1.4.0-5.module+el8.5.0+11354+78b3c9c5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgres-decoderbufs?arch=ppc64le&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<0.10.0-2.module+el8.5.0+11354+78b3c9c5
-    fixed_versions: vers:rpm/0.10.0-2.module+el8.5.0+11354+78b3c9c5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/postgres-decoderbufs-debuginfo?arch=ppc64le&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<0.10.0-2.module+el8.5.0+11354+78b3c9c5
-    fixed_versions: vers:rpm/0.10.0-2.module+el8.5.0+11354+78b3c9c5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgres-decoderbufs-debugsource?arch=ppc64le&rpmmod=postgresql:12:8060020240903093929:ad008a3a
     affected_versions: vers:rpm/<0.10.0-2.module+el8.5.0+11354+78b3c9c5
     fixed_versions: vers:rpm/0.10.0-2.module+el8.5.0+11354+78b3c9c5
     fixed_in_commits: []
@@ -456,22 +236,12 @@ impacted_packages:
     fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-plperl-debuginfo?arch=ppc64le&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/postgresql-plpython3?arch=ppc64le&rpmmod=postgresql:12:8060020240903093929:ad008a3a
     affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/postgresql-plpython3-debuginfo?arch=ppc64le&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-pltcl?arch=ppc64le&rpmmod=postgresql:12:8060020240903093929:ad008a3a
     affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_in_commits: []
@@ -496,11 +266,6 @@ impacted_packages:
     fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-server-devel-debuginfo?arch=ppc64le&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/postgresql-static?arch=ppc64le&rpmmod=postgresql:12:8060020240903093929:ad008a3a
     affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
@@ -521,27 +286,7 @@ impacted_packages:
     fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-upgrade-debuginfo?arch=ppc64le&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-upgrade-devel?arch=ppc64le&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-upgrade-devel-debuginfo?arch=ppc64le&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/pg_repack?arch=s390x&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<1.4.6-3.module+el8.5.0+11354+78b3c9c5
-    fixed_versions: vers:rpm/1.4.6-3.module+el8.5.0+11354+78b3c9c5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/pg_repack-debuginfo?arch=s390x&rpmmod=postgresql:12:8060020240903093929:ad008a3a
     affected_versions: vers:rpm/<1.4.6-3.module+el8.5.0+11354+78b3c9c5
     fixed_versions: vers:rpm/1.4.6-3.module+el8.5.0+11354+78b3c9c5
     fixed_in_commits: []
@@ -566,17 +311,7 @@ impacted_packages:
     fixed_versions: vers:rpm/1.4.0-5.module+el8.5.0+11354+78b3c9c5
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgres-decoderbufs?arch=s390x&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<0.10.0-2.module+el8.5.0+11354+78b3c9c5
-    fixed_versions: vers:rpm/0.10.0-2.module+el8.5.0+11354+78b3c9c5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/postgres-decoderbufs-debuginfo?arch=s390x&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<0.10.0-2.module+el8.5.0+11354+78b3c9c5
-    fixed_versions: vers:rpm/0.10.0-2.module+el8.5.0+11354+78b3c9c5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgres-decoderbufs-debugsource?arch=s390x&rpmmod=postgresql:12:8060020240903093929:ad008a3a
     affected_versions: vers:rpm/<0.10.0-2.module+el8.5.0+11354+78b3c9c5
     fixed_versions: vers:rpm/0.10.0-2.module+el8.5.0+11354+78b3c9c5
     fixed_in_commits: []
@@ -606,17 +341,7 @@ impacted_packages:
     fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-docs?arch=s390x&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/postgresql-docs-debuginfo?arch=s390x&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-plperl?arch=s390x&rpmmod=postgresql:12:8060020240903093929:ad008a3a
     affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_in_commits: []
@@ -626,27 +351,7 @@ impacted_packages:
     fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-plpython3?arch=s390x&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-plpython3-debuginfo?arch=s390x&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-pltcl?arch=s390x&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/postgresql-pltcl-debuginfo?arch=s390x&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-server?arch=s390x&rpmmod=postgresql:12:8060020240903093929:ad008a3a
     affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_in_commits: []
@@ -676,17 +381,7 @@ impacted_packages:
     fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-test-debuginfo?arch=s390x&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/postgresql-upgrade?arch=s390x&rpmmod=postgresql:12:8060020240903093929:ad008a3a
-    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/postgresql-upgrade-debuginfo?arch=s390x&rpmmod=postgresql:12:8060020240903093929:ad008a3a
     affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_in_commits: []
@@ -701,11 +396,316 @@ impacted_packages:
     fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:rpm/redhat/pg_repack?arch=src&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<1.4.6-3.module+el8.5.0+11354+78b3c9c5
+    fixed_versions: vers:rpm/1.4.6-3.module+el8.5.0+11354+78b3c9c5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgres-decoderbufs-debuginfo?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<0.10.0-2.module+el8.5.0+11354+78b3c9c5
+    fixed_versions: vers:rpm/0.10.0-2.module+el8.5.0+11354+78b3c9c5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-contrib-debuginfo?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-plperl-debuginfo?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-pltcl-debuginfo?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-server-devel-debuginfo?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-static?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/pg_repack-debuginfo?arch=aarch64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<1.4.6-3.module+el8.5.0+11354+78b3c9c5
+    fixed_versions: vers:rpm/1.4.6-3.module+el8.5.0+11354+78b3c9c5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-contrib-debuginfo?arch=aarch64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-docs?arch=aarch64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-docs-debuginfo?arch=aarch64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-upgrade?arch=aarch64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/pg_repack-debuginfo?arch=s390x&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<1.4.6-3.module+el8.5.0+11354+78b3c9c5
+    fixed_versions: vers:rpm/1.4.6-3.module+el8.5.0+11354+78b3c9c5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgres-decoderbufs-debugsource?arch=s390x&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<0.10.0-2.module+el8.5.0+11354+78b3c9c5
+    fixed_versions: vers:rpm/0.10.0-2.module+el8.5.0+11354+78b3c9c5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-test-debuginfo?arch=s390x&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql?arch=src&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/pgaudit?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<1.4.0-5.module+el8.5.0+11354+78b3c9c5
+    fixed_versions: vers:rpm/1.4.0-5.module+el8.5.0+11354+78b3c9c5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/pgaudit-debuginfo?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<1.4.0-5.module+el8.5.0+11354+78b3c9c5
+    fixed_versions: vers:rpm/1.4.0-5.module+el8.5.0+11354+78b3c9c5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/pgaudit-debugsource?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<1.4.0-5.module+el8.5.0+11354+78b3c9c5
+    fixed_versions: vers:rpm/1.4.0-5.module+el8.5.0+11354+78b3c9c5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-debuginfo?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-plperl?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-plpython3-debuginfo?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-plpython3?arch=aarch64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-pltcl-debuginfo?arch=aarch64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-server-debuginfo?arch=aarch64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/pg_repack-debuginfo?arch=ppc64le&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<1.4.6-3.module+el8.5.0+11354+78b3c9c5
+    fixed_versions: vers:rpm/1.4.6-3.module+el8.5.0+11354+78b3c9c5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/pgaudit-debuginfo?arch=ppc64le&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<1.4.0-5.module+el8.5.0+11354+78b3c9c5
+    fixed_versions: vers:rpm/1.4.0-5.module+el8.5.0+11354+78b3c9c5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgres-decoderbufs-debugsource?arch=ppc64le&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<0.10.0-2.module+el8.5.0+11354+78b3c9c5
+    fixed_versions: vers:rpm/0.10.0-2.module+el8.5.0+11354+78b3c9c5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-plperl-debuginfo?arch=ppc64le&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-upgrade-devel-debuginfo?arch=ppc64le&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgres-decoderbufs?arch=s390x&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<0.10.0-2.module+el8.5.0+11354+78b3c9c5
+    fixed_versions: vers:rpm/0.10.0-2.module+el8.5.0+11354+78b3c9c5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-plpython3?arch=s390x&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-contrib?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-server-debuginfo?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/pgaudit-debugsource?arch=aarch64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<1.4.0-5.module+el8.5.0+11354+78b3c9c5
+    fixed_versions: vers:rpm/1.4.0-5.module+el8.5.0+11354+78b3c9c5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgres-decoderbufs-debugsource?arch=aarch64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<0.10.0-2.module+el8.5.0+11354+78b3c9c5
+    fixed_versions: vers:rpm/0.10.0-2.module+el8.5.0+11354+78b3c9c5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-debugsource?arch=aarch64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-upgrade-debuginfo?arch=aarch64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-pltcl?arch=ppc64le&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-docs?arch=s390x&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-pltcl?arch=s390x&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-upgrade-debuginfo?arch=s390x&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-pltcl?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-test?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-upgrade-debuginfo?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-upgrade-devel-debuginfo?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-contrib?arch=aarch64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-static?arch=aarch64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/pgaudit-debugsource?arch=ppc64le&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<1.4.0-5.module+el8.5.0+11354+78b3c9c5
+    fixed_versions: vers:rpm/1.4.0-5.module+el8.5.0+11354+78b3c9c5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-server-devel-debuginfo?arch=ppc64le&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-upgrade-debuginfo?arch=ppc64le&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-upgrade-devel?arch=ppc64le&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-plperl?arch=s390x&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-plpython3-debuginfo?arch=s390x&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgres-decoderbufs?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<0.10.0-2.module+el8.5.0+11354+78b3c9c5
+    fixed_versions: vers:rpm/0.10.0-2.module+el8.5.0+11354+78b3c9c5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-server?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-upgrade-devel?arch=x86_64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-test?arch=aarch64&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/pg_repack-debugsource?arch=ppc64le&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<1.4.6-3.module+el8.5.0+11354+78b3c9c5
+    fixed_versions: vers:rpm/1.4.6-3.module+el8.5.0+11354+78b3c9c5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgres-decoderbufs?arch=ppc64le&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<0.10.0-2.module+el8.5.0+11354+78b3c9c5
+    fixed_versions: vers:rpm/0.10.0-2.module+el8.5.0+11354+78b3c9c5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/postgresql-server?arch=s390x&rpmmod=postgresql:12:8060020240903093929:ad008a3a
+    affected_versions: vers:rpm/<12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_versions: vers:rpm/12.20-1.module+el8.6.0+22262+7cfee20c
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: Important
     scoring_system: rhas
     scoring_elements:
-    published_at: None
+    published_at:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2024_6559.json
 weaknesses: []
 references:

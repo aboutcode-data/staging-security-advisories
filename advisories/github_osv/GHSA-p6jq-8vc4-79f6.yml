@@ -64,6 +64,13 @@ summary: |
   - Maximum length of 100 characters
   - Prevents path traversal and special characters
 impacted_packages:
+  - purl: pkg:github/nuxt/nuxt
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/nuxt/nuxt
+        commit: 2566d2046bccb158d98fb13e42ce4b2c33fb2595
+    introduced_in_commits: []
   - purl: pkg:npm/nuxt
     affected_versions: vers:npm/>=3.6.0|<3.19.0
     fixed_versions: vers:npm/3.19.0
@@ -74,23 +81,16 @@ impacted_packages:
     fixed_versions: vers:npm/4.1.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/nuxt/nuxt
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/nuxt/nuxt
-        commit: 2566d2046bccb158d98fb13e42ce4b2c33fb2595
-    introduced_in_commits: []
 severities:
   - score: '3.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/09/GHSA-p6jq-8vc4-79f6/GHSA-p6jq-8vc4-79f6.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

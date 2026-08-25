@@ -7,6 +7,13 @@ summary: |
   Moodle has reflected Cross-site Scripting risk in policy tool
   A flaw was found in Moodle. The return URL in the policy tool required additional sanitizing to prevent a reflected Cross-site scripting (XSS) risk.
 impacted_packages:
+  - purl: pkg:github/moodle/moodle
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/moodle/moodle
+        commit: ff9bbd6d9e7d6267ce85e6c9afbeb19581f2a85f
+    introduced_in_commits: []
   - purl: pkg:composer/moodle/moodle
     affected_versions: vers:composer/<4.1.18
     fixed_versions: vers:composer/4.1.18
@@ -27,23 +34,16 @@ impacted_packages:
     fixed_versions: vers:composer/4.5.4
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/moodle/moodle
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/moodle/moodle
-        commit: ff9bbd6d9e7d6267ce85e6c9afbeb19581f2a85f
-    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/04/GHSA-hxgg-4qww-85ph/GHSA-hxgg-4qww-85ph.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

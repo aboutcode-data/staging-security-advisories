@@ -19,11 +19,6 @@ summary: "vLLM vulnerable to Denial of Service by abusing xgrammar cache\n### Im
   \ other than preventing untrusted access to the OpenAI compatible API server.\n\n### References\n\
   \n* https://github.com/mlc-ai/xgrammar/security/advisories/GHSA-389x-67px-mjg3"
 impacted_packages:
-  - purl: pkg:pypi/vllm
-    affected_versions: vers:pypi/>=0.6.5|<0.8.4
-    fixed_versions: vers:pypi/0.8.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/vllm-project/vllm
     affected_versions:
     fixed_versions:
@@ -31,16 +26,21 @@ impacted_packages:
       - vcs_url: https://github.com/vllm-project/vllm
         commit: cb84e45ac75b42ba6795145923e8eb323bb825ad
     introduced_in_commits: []
+  - purl: pkg:pypi/vllm
+    affected_versions: vers:pypi/>=0.6.5|<0.8.4
+    fixed_versions: vers:pypi/0.8.4
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/04/GHSA-hf3c-wxg2-49q9/GHSA-hf3c-wxg2-49q9.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-1395

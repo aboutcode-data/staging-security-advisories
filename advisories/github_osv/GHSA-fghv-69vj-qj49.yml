@@ -51,6 +51,13 @@ summary: |
    - Credit to @JeppW for uncovering this vulnerability.
    - Credit to @JLLeitschuh at [Socket](https://socket.dev/) for coordinating the vulnerability disclosure.
 impacted_packages:
+  - purl: pkg:github/netty/netty
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/netty/netty
+        commit: edb55fd8e0a3bcbd85881e423464f585183d1284
+    introduced_in_commits: []
   - purl: pkg:maven/io.netty/netty-codec-http
     affected_versions: vers:maven/<4.1.125.Final
     fixed_versions: vers:maven/4.1.125.Final
@@ -61,18 +68,11 @@ impacted_packages:
     fixed_versions: vers:maven/4.2.5.Final
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/netty/netty
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/netty/netty
-        commit: edb55fd8e0a3bcbd85881e423464f585183d1284
-    introduced_in_commits: []
 severities:
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-444

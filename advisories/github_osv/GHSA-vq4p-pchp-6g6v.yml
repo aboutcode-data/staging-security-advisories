@@ -16,6 +16,13 @@ summary: |
 
   This allows an attacker to include Camel specific headers that for some Camel components can alter the behaviour such as the camel-bean component, or the camel-exec component.
 impacted_packages:
+  - purl: pkg:github/apache/camel
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/apache/camel
+        commit: 9fd8fc30dbd98511a1faa0cbcf39ef5aeec88a64
+    introduced_in_commits: []
   - purl: pkg:maven/org.apache.camel/camel-undertow
     affected_versions: vers:maven/>=4.10.0|<4.10.3
     fixed_versions: vers:maven/4.10.3
@@ -26,23 +33,16 @@ impacted_packages:
     fixed_versions: vers:maven/4.8.6
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/apache/camel
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/apache/camel
-        commit: 9fd8fc30dbd98511a1faa0cbcf39ef5aeec88a64
-    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/04/GHSA-vq4p-pchp-6g6v/GHSA-vq4p-pchp-6g6v.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-164

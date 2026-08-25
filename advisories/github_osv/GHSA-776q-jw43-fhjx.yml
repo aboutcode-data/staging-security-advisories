@@ -17,14 +17,14 @@ summary: |
 
   Upgrade to **2.0.5**, which addresses the flaw. If immediate upgrade is not possible, restrict exposure of IoTDB endpoints to trusted networks and disable or sanitize any feature paths that accept serialized payloads. These mitigations are defense-in-depth only; upgrading to 2.0.5 is the definitive fix.
 impacted_packages:
-  - purl: pkg:maven/org.apache.iotdb/iotdb-confignode
-    affected_versions: vers:maven/>=1.0.0|<2.0.5
-    fixed_versions: vers:maven/2.0.5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:pypi/apache-iotdb
     affected_versions: vers:pypi/>=1.0.0|<2.0.5
     fixed_versions: vers:pypi/2.0.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.iotdb/iotdb-confignode
+    affected_versions: vers:maven/>=1.0.0|<2.0.5
+    fixed_versions: vers:maven/2.0.5
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/apache/iotdb
@@ -38,17 +38,17 @@ severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/09/GHSA-776q-jw43-fhjx/GHSA-776q-jw43-fhjx.json
   - score: '9.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/09/GHSA-776q-jw43-fhjx/GHSA-776q-jw43-fhjx.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-502

@@ -7,6 +7,15 @@ summary: |
   Drupal Open Social Missing Authorization vulnerability
   Missing Authorization vulnerability in Drupal Open Social allows Forceful Browsing. This issue affects Open Social: from 0.0.0 before 12.3.11, from 12.4.0 before 12.4.10.
 impacted_packages:
+  - purl: pkg:github/goalgorilla/open_social
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/goalgorilla/open_social
+        commit: 6ebeed01c83dc4947a5c3689bc33b4deca574473
+      - vcs_url: https://github.com/goalgorilla/open_social
+        commit: 52c531e156fb8653e47ab99df432c4fb9651f36e
+    introduced_in_commits: []
   - purl: pkg:composer/goalgorilla/open_social
     affected_versions: vers:composer/<12.3.11
     fixed_versions: vers:composer/12.3.11
@@ -17,30 +26,21 @@ impacted_packages:
     fixed_versions: vers:composer/12.4.10
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/goalgorilla/open_social
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/goalgorilla/open_social
-        commit: 6ebeed01c83dc4947a5c3689bc33b4deca574473
-      - vcs_url: https://github.com/goalgorilla/open_social
-        commit: 52c531e156fb8653e47ab99df432c4fb9651f36e
-    introduced_in_commits: []
 severities:
   - score: '9.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/04/GHSA-gf72-h4cp-wcm4/GHSA-gf72-h4cp-wcm4.json
   - score: '6.8'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:H/SC:N/SI:N/SA:N/E:U
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/04/GHSA-gf72-h4cp-wcm4/GHSA-gf72-h4cp-wcm4.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-862

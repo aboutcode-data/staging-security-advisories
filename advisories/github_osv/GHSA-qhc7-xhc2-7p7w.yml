@@ -7,6 +7,18 @@ summary: |
   Moodle self enrollment available before completing second factor with MFA enabled
   A security vulnerability was discovered in Moodle that allows students to enroll themselves in courses without completing all the necessary safety checks. Specifically, users can sign up for courses prematurely, even if they haven't finished two-step verification processes.
 impacted_packages:
+  - purl: pkg:github/moodle/moodle
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/moodle/moodle
+        commit: b0965139014b459c3cb96e4fff45af4d5e09e261
+    introduced_in_commits: []
+  - purl: pkg:composer/moodle/moodle
+    affected_versions: vers:composer/>=4.5.0-beta|<4.5.4
+    fixed_versions: vers:composer/4.5.4
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:composer/moodle/moodle
     affected_versions: vers:composer/>=4.3.0-beta|<4.3.12
     fixed_versions: vers:composer/4.3.12
@@ -17,28 +29,16 @@ impacted_packages:
     fixed_versions: vers:composer/4.4.8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/>=4.5.0-beta|<4.5.4
-    fixed_versions: vers:composer/4.5.4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:github/moodle/moodle
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/moodle/moodle
-        commit: b0965139014b459c3cb96e4fff45af4d5e09e261
-    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/04/GHSA-qhc7-xhc2-7p7w/GHSA-qhc7-xhc2-7p7w.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-287

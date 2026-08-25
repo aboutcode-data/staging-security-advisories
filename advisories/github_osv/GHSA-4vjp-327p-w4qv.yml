@@ -11,11 +11,6 @@ summary: |
 
   In Templating Engine Plugin 2.5.4, libraries defined in folders are subject to sandbox protection.
 impacted_packages:
-  - purl: pkg:maven/org.jenkins-ci.plugins/templating-engine
-    affected_versions: vers:maven/<2.5.4
-    fixed_versions: vers:maven/2.5.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jenkinsci/templating-engine-plugin
     affected_versions:
     fixed_versions:
@@ -23,16 +18,21 @@ impacted_packages:
       - vcs_url: https://github.com/jenkinsci/templating-engine-plugin
         commit: bb2b4468b3bf4cea494afb8549af4e6450972653
     introduced_in_commits: []
+  - purl: pkg:maven/org.jenkins-ci.plugins/templating-engine
+    affected_versions: vers:maven/<2.5.4
+    fixed_versions: vers:maven/2.5.4
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/04/GHSA-4vjp-327p-w4qv/GHSA-4vjp-327p-w4qv.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

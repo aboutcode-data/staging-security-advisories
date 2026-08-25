@@ -13,13 +13,6 @@ summary: "Argo CD GitOps Engine does not scrub secret values from patch errors\n
   \ other than upgrading.\n\n### Resources\nFixed with commit https://github.com/argoproj/argo-cd/commit/6f5537bdf15ddbaa0f27a1a678632ff0743e4107\
   \ & https://github.com/argoproj/gitops-engine/commit/7e21b91e9d0f64104c8a661f3f390c5e6d73ddca"
 impacted_packages:
-  - purl: pkg:github/argoproj/argo-cd
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/argoproj/argo-cd
-        commit: 6f5537bdf15ddbaa0f27a1a678632ff0743e4107
-    introduced_in_commits: []
   - purl: pkg:github/argoproj/gitops-engine
     affected_versions:
     fixed_versions:
@@ -27,16 +20,23 @@ impacted_packages:
       - vcs_url: https://github.com/argoproj/gitops-engine
         commit: 7e21b91e9d0f64104c8a661f3f390c5e6d73ddca
     introduced_in_commits: []
+  - purl: pkg:github/argoproj/argo-cd
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/argoproj/argo-cd
+        commit: 6f5537bdf15ddbaa0f27a1a678632ff0743e4107
+    introduced_in_commits: []
 severities:
   - score: '6.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/01/GHSA-274v-mgcv-cm8j/GHSA-274v-mgcv-cm8j.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses: []
 references:

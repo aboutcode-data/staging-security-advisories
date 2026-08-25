@@ -7,6 +7,13 @@ summary: |
   GP247 and S-Cart have a stored cross-site scripting (XSS) vulnerability
   A stored cross-site scripting (XSS) vulnerability in the Admin Log Viewer of S-Cart <=10.0.3 allows a remote authenticated attacker to inject arbitrary web script or HTML via a crafted User-Agent header. The script is executed in an administrator's browser when they view the security log page, which could lead to session hijacking or other malicious actions.
 impacted_packages:
+  - purl: pkg:github/gp247net/core
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/gp247net/core
+        commit: e9848706b41d835ca3d668cb1554650403e86da1
+    introduced_in_commits: []
   - purl: pkg:composer/s-cart/core
     affected_versions: vers:composer/<=9.0.5
     fixed_versions:
@@ -24,23 +31,16 @@ impacted_packages:
       - vcs_url: https://github.com/s-cart/core
         commit: 7c9aa42761be5fd0131c61dbe2b5323beb96d5dd
     introduced_in_commits: []
-  - purl: pkg:github/gp247net/core
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/gp247net/core
-        commit: e9848706b41d835ca3d668cb1554650403e86da1
-    introduced_in_commits: []
 severities:
   - score: '1.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:U
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/09/GHSA-46v4-5mc8-q2cf/GHSA-46v4-5mc8-q2cf.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

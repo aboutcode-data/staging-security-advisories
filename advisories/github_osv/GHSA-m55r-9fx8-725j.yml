@@ -11,14 +11,14 @@ summary: |
 
   An open redirect vulnerability in the Site Settings in Liferay Portal 7.1.0 through 7.4.3.101, and Liferay DXP 2023.Q3.1 through 2023.Q3.4, 7.4 GA through update 92, 7.3 GA through update 35, and older unsupported versions allows remote attackers to redirect users to arbitrary external URLs via the _com_liferay_site_admin_web_portlet_SiteSettingsPortlet_redirect parameter.
 impacted_packages:
-  - purl: pkg:maven/com.liferay/com.liferay.configuration.admin.web
-    affected_versions: vers:maven/>=2.0.7|<5.0.76
-    fixed_versions: vers:maven/5.0.76
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:maven/com.liferay/com.liferay.site.admin.web
     affected_versions: vers:maven/>=2.0.4|<5.0.103
     fixed_versions: vers:maven/5.0.103
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/com.liferay/com.liferay.configuration.admin.web
+    affected_versions: vers:maven/>=2.0.7|<5.0.76
+    fixed_versions: vers:maven/5.0.76
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/liferay/liferay-portal
@@ -34,12 +34,12 @@ severities:
   - score: '5.1'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/09/GHSA-m55r-9fx8-725j/GHSA-m55r-9fx8-725j.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-601

@@ -25,11 +25,6 @@ summary: |
 
   Similar vulnerability in Jmix: [DoS in the Local File Storage · Advisory · jmix-framework/jmix](https://github.com/jmix-framework/jmix/security/advisories/GHSA-f3gv-cwwh-758m)
 impacted_packages:
-  - purl: pkg:maven/com.haulmont.cuba/cuba-core
-    affected_versions: vers:maven/<7.2.23
-    fixed_versions: vers:maven/7.2.23
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/cuba-platform/cuba
     affected_versions:
     fixed_versions:
@@ -37,16 +32,21 @@ impacted_packages:
       - vcs_url: https://github.com/cuba-platform/cuba
         commit: 42b6c00fd0572b8e52ae31afd1babc827a3161a1
     introduced_in_commits: []
+  - purl: pkg:maven/com.haulmont.cuba/cuba-core
+    affected_versions: vers:maven/<7.2.23
+    fixed_versions: vers:maven/7.2.23
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/04/GHSA-w3mp-6vrj-875g/GHSA-w3mp-6vrj-875g.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-770

@@ -13,12 +13,12 @@ summary: "XXE vulnerability in XSLT parsing in `org.hl7.fhir.publisher`\n### Imp
   [MITRE CWE](https://cwe.mitre.org/data/definitions/611.html)\n[OWASP XML External Entity Prevention\
   \ Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html#transformerfactory)"
 impacted_packages:
-  - purl: pkg:maven/org.hl7.fhir.publisher/org.hl7.fhir.publisher.cli
+  - purl: pkg:maven/org.hl7.fhir.publisher/org.hl7.fhir.publisher.core
     affected_versions: vers:maven/<1.7.4
     fixed_versions: vers:maven/1.7.4
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/org.hl7.fhir.publisher/org.hl7.fhir.publisher.core
+  - purl: pkg:maven/org.hl7.fhir.publisher/org.hl7.fhir.publisher.cli
     affected_versions: vers:maven/<1.7.4
     fixed_versions: vers:maven/1.7.4
     fixed_in_commits: []
@@ -34,12 +34,12 @@ severities:
   - score: '8.6'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/01/GHSA-8c3x-hq82-gjcm/GHSA-8c3x-hq82-gjcm.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-611
