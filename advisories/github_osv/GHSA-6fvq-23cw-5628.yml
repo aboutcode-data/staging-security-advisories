@@ -49,11 +49,6 @@ summary: |
 
   * https://github.com/vllm-project/vllm/pull/25794
 impacted_packages:
-  - purl: pkg:pypi/vllm
-    affected_versions: vers:pypi/>=0.5.1|<0.11.0
-    fixed_versions: vers:pypi/0.11.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/vllm-project/vllm
     affected_versions:
     fixed_versions:
@@ -61,16 +56,21 @@ impacted_packages:
       - vcs_url: https://github.com/vllm-project/vllm
         commit: 7977e5027c2250a4abc1f474c5619c40b4e5682f
     introduced_in_commits: []
+  - purl: pkg:pypi/vllm
+    affected_versions: vers:pypi/>=0.5.1|<0.11.0
+    fixed_versions: vers:pypi/0.11.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/10/GHSA-6fvq-23cw-5628/GHSA-6fvq-23cw-5628.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-400

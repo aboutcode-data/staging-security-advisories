@@ -9,11 +9,6 @@ summary: |
 
   Users are recommended to upgrade to pyfory version 0.12.3 or later, which has removed pickle fallback serializer and thus fixes this issue.
 impacted_packages:
-  - purl: pkg:pypi/pyfory
-    affected_versions: vers:pypi/>=0.12.0|<0.12.3
-    fixed_versions: vers:pypi/0.12.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:pypi/pyfury
     affected_versions: vers:pypi/>=0.1.0|<=0.10.3
     fixed_versions:
@@ -26,16 +21,21 @@ impacted_packages:
       - vcs_url: https://github.com/apache/fory
         commit: 379b948ecae5c3b849e5bdb3997978c9a163e40b
     introduced_in_commits: []
+  - purl: pkg:pypi/pyfory
+    affected_versions: vers:pypi/>=0.12.0|<0.12.3
+    fixed_versions: vers:pypi/0.12.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/10/GHSA-538v-3wq9-4h3r/GHSA-538v-3wq9-4h3r.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-502

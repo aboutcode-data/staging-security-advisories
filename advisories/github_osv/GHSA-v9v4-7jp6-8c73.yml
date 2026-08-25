@@ -7,11 +7,6 @@ summary: |
   rails Cross-site Scripting vulnerability
   The cross-site scripting (XSS) prevention feature in Ruby on Rails 2.x before 2.3.12, 3.0.x before 3.0.8, and 3.1.x before 3.1.0.rc2 does not properly handle mutation of safe buffers, which makes it easier for remote attackers to conduct XSS attacks via crafted strings to an application that uses a problematic string method, as demonstrated by the sub method.
 impacted_packages:
-  - purl: pkg:gem/activesupport
-    affected_versions: vers:gem/<3.0.7
-    fixed_versions: vers:gem/3.0.8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:gem/actionpack
     affected_versions: vers:gem/<2.3.11
     fixed_versions: vers:gem/2.3.12
@@ -25,6 +20,11 @@ impacted_packages:
   - purl: pkg:gem/activesupport
     affected_versions: vers:gem/<2.3.11
     fixed_versions: vers:gem/2.3.12
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:gem/activesupport
+    affected_versions: vers:gem/<3.0.7
+    fixed_versions: vers:gem/3.0.8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/rails/rails
@@ -40,7 +40,7 @@ severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

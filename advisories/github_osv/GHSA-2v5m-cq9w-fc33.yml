@@ -51,11 +51,6 @@ summary: "Admidio Vulnerable to Authenticated SQL Injection in Member Assignment
   \ retrieved: admidio\ncurrent database: 'admidio'\n```\nThis confirms that an attacker can\
   \ execute arbitrary SQL queries and extract information from the database."
 impacted_packages:
-  - purl: pkg:composer/admidio/admidio
-    affected_versions: vers:composer/<=4.3.16
-    fixed_versions: vers:composer/4.3.17
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/admidio/admidio
     affected_versions:
     fixed_versions:
@@ -63,16 +58,21 @@ impacted_packages:
       - vcs_url: https://github.com/admidio/admidio
         commit: fde81ae869e88a3cf42201f2548d57df785a37cb
     introduced_in_commits: []
+  - purl: pkg:composer/admidio/admidio
+    affected_versions: vers:composer/<=4.3.16
+    fixed_versions: vers:composer/4.3.17
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.2'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/10/GHSA-2v5m-cq9w-fc33/GHSA-2v5m-cq9w-fc33.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-89

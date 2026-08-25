@@ -20,11 +20,6 @@ summary: |
   ### Impact
   Malicious script is stored in SVG file and executed when the content is viewed. An attacker (with upload privilege) can target other admin users or editors who view the content, enabling session hijacking, unauthorized actions, or privilege escalation.
 impacted_packages:
-  - purl: pkg:composer/bagisto/bagisto
-    affected_versions: vers:composer/<=2.3.7
-    fixed_versions: vers:composer/2.3.8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/bagisto/bagisto
     affected_versions:
     fixed_versions:
@@ -32,16 +27,21 @@ impacted_packages:
       - vcs_url: https://github.com/bagisto/bagisto
         commit: 7b6b1dd639a14e7053bb82ef2f971c1f533fdfab
     introduced_in_commits: []
+  - purl: pkg:composer/bagisto/bagisto
+    affected_versions: vers:composer/<=2.3.7
+    fixed_versions: vers:composer/2.3.8
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.9'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:H/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/10/GHSA-fg89-g389-p346/GHSA-fg89-g389-p346.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-87

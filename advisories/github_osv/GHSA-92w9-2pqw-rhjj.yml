@@ -8,13 +8,13 @@ summary: |
   The `decode_credentials` method in `actionpack/lib/action_controller/metal/http_authentication.rb` in Ruby on Rails before 3.0.16, 3.1.x before 3.1.7, and 3.2.x before 3.2.7 converts Digest Authentication strings to symbols, which allows remote attackers to cause a denial of service by leveraging access to an application that uses a `with_http_digest` helper method, as demonstrated by the `authenticate_or_request_with_http_digest` method.
 impacted_packages:
   - purl: pkg:gem/actionpack
-    affected_versions: vers:gem/>=3.0.0.beta|<3.0.16
-    fixed_versions: vers:gem/3.0.16
+    affected_versions: vers:gem/>=3.1.0|<3.1.7
+    fixed_versions: vers:gem/3.1.7
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:gem/actionpack
-    affected_versions: vers:gem/>=3.1.0|<3.1.7
-    fixed_versions: vers:gem/3.1.7
+    affected_versions: vers:gem/>=3.0.0.beta|<3.0.16
+    fixed_versions: vers:gem/3.0.16
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:gem/actionpack
@@ -38,7 +38,7 @@ severities:
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-287

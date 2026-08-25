@@ -9,11 +9,6 @@ summary: |
 
   When EVP_HPKE_CTX_export fails it also returns an empty byte[] array filled with zeros. This byte[] feeds directly into OHttpCrypto.createResponseAEAD(...).  A silent all-zero export secret would produce a deterministic, attacker-predictable AEAD key.
 impacted_packages:
-  - purl: pkg:maven/io.netty.incubator/netty-incubator-codec-ohttp
-    affected_versions: vers:maven/<0.0.21.Final
-    fixed_versions: vers:maven/0.0.21.Final
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/netty/netty-incubator-codec-ohttp
     affected_versions:
     fixed_versions:
@@ -21,16 +16,21 @@ impacted_packages:
       - vcs_url: https://github.com/netty/netty-incubator-codec-ohttp
         commit: 3d3b4e527fc82ad0fe3db1af951ffd0ec9a10680
     introduced_in_commits: []
+  - purl: pkg:maven/io.netty.incubator/netty-incubator-codec-ohttp
+    affected_versions: vers:maven/<0.0.21.Final
+    fixed_versions: vers:maven/0.0.21.Final
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.9'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-f659-372h-6x3x/GHSA-f659-372h-6x3x.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-330

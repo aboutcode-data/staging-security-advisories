@@ -8,6 +8,21 @@ summary: |
   Magento versions 2.4.9-alpha2, 2.4.8-p2, 2.4.7-p7, 2.4.6-p12, 2.4.5-p14, 2.4.4-p15 and earlier are affected by an Incorrect Authorization vulnerability. An attacker could leverage this vulnerability to bypass security measures and gain unauthorized read access. Exploitation of this issue does not require user interaction.
 impacted_packages:
   - purl: pkg:composer/magento/community-edition
+    affected_versions: vers:composer/2.4.8
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/magento/community-edition
+    affected_versions: vers:composer/2.4.7
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/magento/project-community-edition
+    affected_versions: vers:composer/<=2.0.2
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/magento/community-edition
     affected_versions: vers:composer/>=2.4.9-alpha1|<2.4.9-alpha3
     fixed_versions: vers:composer/2.4.9-alpha3
     fixed_in_commits: []
@@ -28,22 +43,7 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/magento/community-edition
-    affected_versions: vers:composer/2.4.8
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/magento/community-edition
-    affected_versions: vers:composer/2.4.7
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/magento/community-edition
     affected_versions: vers:composer/2.4.6
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/magento/project-community-edition
-    affected_versions: vers:composer/<=2.0.2
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
@@ -51,12 +51,12 @@ severities:
   - score: '5.9'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/10/GHSA-r355-75hw-r8jf/GHSA-r355-75hw-r8jf.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-863

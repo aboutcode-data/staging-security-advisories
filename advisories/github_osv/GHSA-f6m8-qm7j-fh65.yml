@@ -11,6 +11,11 @@ summary: |
 
   Users are recommended to upgrade to version 5.0.3, which fixes the issue.
 impacted_packages:
+  - purl: pkg:maven/org.apache.kylin/kylin-server
+    affected_versions: vers:maven/>=4.0.0|<5.0.3
+    fixed_versions: vers:maven/5.0.3
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:maven/org.apache.kylin/kylin
     affected_versions: vers:maven/>=4.0.0|<5.0.3
     fixed_versions: vers:maven/5.0.3
@@ -41,11 +46,6 @@ impacted_packages:
     fixed_versions: vers:maven/5.0.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:maven/org.apache.kylin/kylin-server
-    affected_versions: vers:maven/>=4.0.0|<5.0.3
-    fixed_versions: vers:maven/5.0.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/apache/kylin
     affected_versions:
     fixed_versions:
@@ -57,12 +57,12 @@ severities:
   - score: '7.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/10/GHSA-f6m8-qm7j-fh65/GHSA-f6m8-qm7j-fh65.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-918

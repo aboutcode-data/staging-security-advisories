@@ -26,6 +26,11 @@ summary: |
   Credit:
   This issue was identified by lokerxx
 impacted_packages:
+  - purl: pkg:maven/org.apache.tomcat/tomcat-catalina
+    affected_versions: vers:maven/>=10.1.0-M1|<10.1.55
+    fixed_versions: vers:maven/10.1.55
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat.embed/tomcat-embed-core
     affected_versions: vers:maven/<9.0.118
     fixed_versions: vers:maven/9.0.118
@@ -59,11 +64,6 @@ impacted_packages:
   - purl: pkg:maven/org.apache.tomcat/tomcat-catalina
     affected_versions: vers:maven/<9.0.118
     fixed_versions: vers:maven/9.0.118
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.tomcat/tomcat-catalina
-    affected_versions: vers:maven/>=10.1.0-M1|<10.1.55
-    fixed_versions: vers:maven/10.1.55
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat/tomcat-catalina
@@ -86,12 +86,12 @@ severities:
   - score: '7.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-fv25-8xcx-gqjc/GHSA-fv25-8xcx-gqjc.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

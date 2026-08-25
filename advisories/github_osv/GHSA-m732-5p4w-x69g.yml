@@ -66,11 +66,6 @@ summary: |
   1) Add `verifyOptions.aud` (`string | string[] | RegExp`) to the middleware and enforce RFC 7519 semantics: In [verify method](https://github.com/honojs/hono/blob/db764c2f1d8a2905d66c78c41aa47e47d3a4165d/src/utils/jwt/jwt.ts#L99-L156), if `aud` is present and does not match with specified audiences, reject.
   2) Ensure equivalent `aud` handling exists in the JWK/JWKS flow (`jwk` middleware / `verifyWithJwks`) so users of external IdPs can enforce audience consistently.
 impacted_packages:
-  - purl: pkg:npm/hono
-    affected_versions: vers:npm/>=1.1.0|<4.10.2
-    fixed_versions: vers:npm/4.10.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/honojs/hono
     affected_versions:
     fixed_versions:
@@ -78,16 +73,21 @@ impacted_packages:
       - vcs_url: https://github.com/honojs/hono
         commit: 45ba3bf9e3dff8e4bd85d6b47d4b71c8d6c66bef
     introduced_in_commits: []
+  - purl: pkg:npm/hono
+    affected_versions: vers:npm/>=1.1.0|<4.10.2
+    fixed_versions: vers:npm/4.10.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/10/GHSA-m732-5p4w-x69g/GHSA-m732-5p4w-x69g.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-285

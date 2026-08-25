@@ -11,11 +11,6 @@ summary: |
   ### Original Description
   All versions of the package cross-zip are vulnerable to Directory Traversal via consecutive usage of zipSync() and unzipSync () functions that allow arguments such as __dirname. An attacker can access system files by selectively doing zip/unzip operations.
 impacted_packages:
-  - purl: pkg:npm/cross-zip
-    affected_versions: vers:npm/<=4.0.1
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/feross/cross-zip
     affected_versions:
     fixed_versions:
@@ -23,11 +18,16 @@ impacted_packages:
       - vcs_url: https://github.com/feross/cross-zip
         commit: eba335474e6142468bd8904f6456208db906d40d
     introduced_in_commits: []
+  - purl: pkg:npm/cross-zip
+    affected_versions: vers:npm/<=4.0.1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

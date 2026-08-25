@@ -93,11 +93,6 @@ summary: "ImageMagick has Integer Overflow in BMP Decoder (ReadBMP)\n## Summary\
   \nextent = (size_t)extent_64;\nbytes_per_line = 4*((extent+31)/32);\n```\n\n### Credits\n\
   wooseokdotkim\nwooseokdotkim@gmail.com"
 impacted_packages:
-  - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
-    affected_versions: vers:nuget/<14.9.0
-    fixed_versions: vers:nuget/14.9.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-HDRI-AnyCPU
     affected_versions: vers:nuget/<14.9.0
     fixed_versions: vers:nuget/14.9.0
@@ -113,12 +108,12 @@ impacted_packages:
     fixed_versions: vers:nuget/14.9.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q8-AnyCPU
+  - purl: pkg:nuget/Magick.NET-Q8-x86
     affected_versions: vers:nuget/<14.9.0
     fixed_versions: vers:nuget/14.9.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q8-x86
+  - purl: pkg:nuget/Magick.NET-Q8-AnyCPU
     affected_versions: vers:nuget/<14.9.0
     fixed_versions: vers:nuget/14.9.0
     fixed_in_commits: []
@@ -130,16 +125,21 @@ impacted_packages:
       - vcs_url: https://github.com/imagemagick/imagemagick
         commit: cea1693e2ded51b4cc91c70c54096cbed1691c00
     introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
+    affected_versions: vers:nuget/<14.9.0
+    fixed_versions: vers:nuget/14.9.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/10/GHSA-9pp9-cfwx-54rm/GHSA-9pp9-cfwx-54rm.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-190

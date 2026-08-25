@@ -41,30 +41,30 @@ summary: "Vert.x-Web vulnerable to Stored Cross-site Scripting in directory list
   \ environments\n\n# Similar CVEs Previously Reported\n\n- CVE‑2024‑32966  \n- CVE‑2019‑15603"
 impacted_packages:
   - purl: pkg:maven/io.vertx/vertx-web
-    affected_versions: vers:maven/<4.5.22
-    fixed_versions: vers:maven/4.5.22
+    affected_versions: vers:maven/<=5.0.4
+    fixed_versions: vers:maven/5.0.5
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/io.vertx/vertx-web
-    affected_versions: vers:maven/<=5.0.4
-    fixed_versions: vers:maven/5.0.5
+    affected_versions: vers:maven/<4.5.22
+    fixed_versions: vers:maven/4.5.22
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '4.9'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/10/GHSA-45p5-v273-3qqr/GHSA-45p5-v273-3qqr.json
   - score: '2.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:H/AT:P/PR:L/UI:N/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/10/GHSA-45p5-v273-3qqr/GHSA-45p5-v273-3qqr.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

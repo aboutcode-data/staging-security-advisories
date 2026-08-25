@@ -7,11 +7,6 @@ summary: |
   OpenSSL gem for Ruby using inadequate encryption strength
   The OpenSSL gem for Ruby uses the same initialization vector (IV) in GCM Mode (aes-*-gcm) when the IV is set before the key, which makes it easier for context-dependent attackers to bypass the encryption protection mechanism.
 impacted_packages:
-  - purl: pkg:gem/openssl
-    affected_versions: vers:gem/<2.0.0
-    fixed_versions: vers:gem/2.0.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/ruby/openssl
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/ruby/openssl
         commit: 8108e0a6db133f3375608303fdd2083eb5115062
     introduced_in_commits: []
+  - purl: pkg:gem/openssl
+    affected_versions: vers:gem/<2.0.0
+    fixed_versions: vers:gem/2.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2017/10/GHSA-6h88-qjpv-p32m/GHSA-6h88-qjpv-p32m.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-326

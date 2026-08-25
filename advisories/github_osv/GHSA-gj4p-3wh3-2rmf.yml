@@ -7,6 +7,11 @@ summary: |
   Arbitrary file read vulnerability in yard server
   `lib/yard/core_ext/file.rb` in the server in YARD before 0.9.11 does not block relative paths with an initial `../` sequence, which allows attackers to conduct directory traversal attacks and read arbitrary files.
 impacted_packages:
+  - purl: pkg:gem/yard
+    affected_versions: vers:gem/<0.9.11
+    fixed_versions: vers:gem/0.9.11
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:github/lsegal/yard
     affected_versions:
     fixed_versions:
@@ -14,21 +19,16 @@ impacted_packages:
       - vcs_url: https://github.com/lsegal/yard
         commit: b0217b3e30dc53d057b1682506333335975e62b4
     introduced_in_commits: []
-  - purl: pkg:gem/yard
-    affected_versions: vers:gem/<0.9.11
-    fixed_versions: vers:gem/0.9.11
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: '7.5'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2017/12/GHSA-gj4p-3wh3-2rmf/GHSA-gj4p-3wh3-2rmf.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

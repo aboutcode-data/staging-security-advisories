@@ -86,6 +86,21 @@ summary: "ImageMagick CLAHE : Unsigned underflow and division-by-zero lead to OO
   \n**Siyeon Han**\n\n[@hanbunny](https://github.com/hanbunny)\n[kokosyeon@gmail.com](mailto:kokosyeon@gmail.com)\n\
   \n**Shinyoung Won**\n\n[@yosiimich](yosimich123@gmail.com)\n[yosimich123@gmail.com](mailto:yosimich123@gmail.com)"
 impacted_packages:
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-x64
+    affected_versions: vers:nuget/<=14.9.0
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-OpenMP-x64
+    affected_versions: vers:nuget/<=14.9.0
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q8-arm64
+    affected_versions: vers:nuget/<=14.9.0
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-x64
     affected_versions: vers:nuget/<=14.9.0
     fixed_versions:
@@ -96,27 +111,12 @@ impacted_packages:
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-HDRI-x64
-    affected_versions: vers:nuget/<=14.9.0
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q8-OpenMP-x64
     affected_versions: vers:nuget/<=14.9.0
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-HDRI-OpenMP-x64
-    affected_versions: vers:nuget/<=14.9.0
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-OpenMP-x64
-    affected_versions: vers:nuget/<=14.9.0
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q8-arm64
     affected_versions: vers:nuget/<=14.9.0
     fixed_versions:
     fixed_in_commits: []
@@ -157,12 +157,12 @@ severities:
   - score: '4.7'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/10/GHSA-wpp4-vqfq-v4hp/GHSA-wpp4-vqfq-v4hp.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-191

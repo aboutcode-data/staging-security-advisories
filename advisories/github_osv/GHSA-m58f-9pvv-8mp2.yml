@@ -8,6 +8,11 @@ summary: |
   Moodle's mobile and web service authentication endpoints did not sufficiently restrict repeated password attempts, making them susceptible to brute-force attacks.
 impacted_packages:
   - purl: pkg:composer/moodle/moodle
+    affected_versions: vers:composer/<4.1.21
+    fixed_versions: vers:composer/4.1.21
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/moodle/moodle
     affected_versions: vers:composer/>=5.0.0-beta|<5.0.3
     fixed_versions: vers:composer/5.0.3
     fixed_in_commits: []
@@ -22,11 +27,6 @@ impacted_packages:
     fixed_versions: vers:composer/4.4.11
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/moodle/moodle
-    affected_versions: vers:composer/<4.1.21
-    fixed_versions: vers:composer/4.1.21
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/moodle/moodle
     affected_versions:
     fixed_versions:
@@ -38,12 +38,12 @@ severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/10/GHSA-m58f-9pvv-8mp2/GHSA-m58f-9pvv-8mp2.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-307

@@ -51,11 +51,6 @@ summary: |
   ### Suggested Fix
   Add a type check at the start of the `ldap.filter.escape_filter_chars` method to raise an exception when the supplied `assertion_value` parameter is not of type `str`.
 impacted_packages:
-  - purl: pkg:pypi/python-ldap
-    affected_versions: vers:pypi/<3.4.5
-    fixed_versions: vers:pypi/3.4.5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/python-ldap/python-ldap
     affected_versions:
     fixed_versions:
@@ -63,16 +58,21 @@ impacted_packages:
       - vcs_url: https://github.com/python-ldap/python-ldap
         commit: 3957526fb1852e84b90f423d9fef34c7af25b85a
     introduced_in_commits: []
+  - purl: pkg:pypi/python-ldap
+    affected_versions: vers:pypi/<3.4.5
+    fixed_versions: vers:pypi/3.4.5
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.5'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:P
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/10/GHSA-r7r6-cc7p-4v5m/GHSA-r7r6-cc7p-4v5m.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-75

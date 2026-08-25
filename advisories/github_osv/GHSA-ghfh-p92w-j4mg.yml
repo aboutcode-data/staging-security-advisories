@@ -9,11 +9,6 @@ summary: |
 
   A successful attack requires a malicious user to have read_pipeline Elasticsearch cluster privilege assigned to them.
 impacted_packages:
-  - purl: pkg:maven/org.elasticsearch/elasticsearch
-    affected_versions: vers:maven/>=7.17.0|<8.15.1
-    fixed_versions: vers:maven/8.15.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/elastic/elasticsearch
     affected_versions:
     fixed_versions:
@@ -23,16 +18,21 @@ impacted_packages:
       - vcs_url: https://github.com/elastic/elasticsearch
         commit: 4e5c6801f4d60f100f122072f6bf35b21fd722a5
     introduced_in_commits: []
+  - purl: pkg:maven/org.elasticsearch/elasticsearch
+    affected_versions: vers:maven/>=7.17.0|<8.15.1
+    fixed_versions: vers:maven/8.15.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/04/GHSA-ghfh-p92w-j4mg/GHSA-ghfh-p92w-j4mg.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-400

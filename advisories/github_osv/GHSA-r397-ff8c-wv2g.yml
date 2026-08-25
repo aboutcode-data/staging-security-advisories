@@ -68,11 +68,6 @@ summary: |
   ### Fix suggestion
   Can be fixed by porting relevant changes from PyMySQL – https://github.com/PyMySQL/PyMySQL/commit/b5e17cee46e0706dbfd707cdd2024452f0fb3267
 impacted_packages:
-  - purl: pkg:pypi/aiomysql
-    affected_versions: vers:pypi/<=0.2.0
-    fixed_versions: vers:pypi/0.3.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/aio-libs/aiomysql
     affected_versions:
     fixed_versions:
@@ -80,16 +75,21 @@ impacted_packages:
       - vcs_url: https://github.com/aio-libs/aiomysql
         commit: 32c4520dae3711367ded74a4726dcb8bb8919538
     introduced_in_commits: []
+  - purl: pkg:pypi/aiomysql
+    affected_versions: vers:pypi/<=0.2.0
+    fixed_versions: vers:pypi/0.3.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.2'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/10/GHSA-r397-ff8c-wv2g/GHSA-r397-ff8c-wv2g.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-73

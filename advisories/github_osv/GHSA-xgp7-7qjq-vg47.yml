@@ -21,11 +21,6 @@ summary: |
   - Avoid cloning or interacting with untrusted repositories using the Git Node.
   - Disable or restrict the use of the Git Node in workflows where repository content cannot be fully trusted.
 impacted_packages:
-  - purl: pkg:npm/n8n
-    affected_versions: vers:npm/<1.113.0
-    fixed_versions: vers:npm/1.113.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/n8n-io/n8n
     affected_versions:
     fixed_versions:
@@ -33,16 +28,21 @@ impacted_packages:
       - vcs_url: https://github.com/n8n-io/n8n
         commit: 5bf3db5ba84d3195bbe11bbd3c62f7086e090997
     introduced_in_commits: []
+  - purl: pkg:npm/n8n
+    affected_versions: vers:npm/<1.113.0
+    fixed_versions: vers:npm/1.113.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/10/GHSA-xgp7-7qjq-vg47/GHSA-xgp7-7qjq-vg47.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-829

@@ -7,11 +7,6 @@ summary: |
   dns-sync command injection vulnerability
   The dns-sync module before 0.1.1 for node.js allows context-dependent attackers to execute arbitrary commands via shell metacharacters in the first argument to the resolve API function.
 impacted_packages:
-  - purl: pkg:npm/dns-sync
-    affected_versions: vers:npm/<0.1.1
-    fixed_versions: vers:npm/0.1.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/skoranga/node-dns-sync
     affected_versions:
     fixed_versions:
@@ -19,11 +14,16 @@ impacted_packages:
       - vcs_url: https://github.com/skoranga/node-dns-sync
         commit: d9abaae384b198db1095735ad9c1c73d7b890a0d
     introduced_in_commits: []
+  - purl: pkg:npm/dns-sync
+    affected_versions: vers:npm/<0.1.1
+    fixed_versions: vers:npm/0.1.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-77

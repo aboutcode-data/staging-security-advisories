@@ -22,13 +22,20 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/symfony
-    affected_versions: vers:composer/>=7.2.9|<7.4.12
-    fixed_versions: vers:composer/7.4.12
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:composer/symfony/symfony
     affected_versions: vers:composer/>=8.0.0|<8.0.12
     fixed_versions: vers:composer/8.0.12
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:github/symfony/symfony
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/symfony/symfony
+        commit: 863aa81c61166f1aa74b7732df316f76113acbdb
+    introduced_in_commits: []
+  - purl: pkg:composer/symfony/symfony
+    affected_versions: vers:composer/>=7.2.9|<7.4.12
+    fixed_versions: vers:composer/7.4.12
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/symfony/twig-bridge
@@ -46,23 +53,16 @@ impacted_packages:
     fixed_versions: vers:composer/8.0.12
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/symfony/symfony
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/symfony/symfony
-        commit: 863aa81c61166f1aa74b7732df316f76113acbdb
-    introduced_in_commits: []
 severities:
   - score: '1.2'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:U
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-hmr5-2xcr-v8pp/GHSA-hmr5-2xcr-v8pp.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

@@ -30,7 +30,7 @@ summary: "Shopware vulnerable to Server-Side Request Forgery (SSRF) – order in
   \ height=\"100\"/>\n```\n4. Press the preview button to view the PFD.\n5. Observe that the\
   \ image is shown in the PDF."
 impacted_packages:
-  - purl: pkg:composer/shopware/core
+  - purl: pkg:composer/shopware/platform
     affected_versions: vers:composer/<6.6.10+7
     fixed_versions: vers:composer/6.6.10+7
     fixed_in_commits: []
@@ -40,14 +40,14 @@ impacted_packages:
     fixed_versions: vers:composer/6.7.3+1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:composer/shopware/platform
-    affected_versions: vers:composer/<6.6.10+7
-    fixed_versions: vers:composer/6.6.10+7
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:composer/shopware/core
     affected_versions: vers:composer/>=6.7.0+0|<6.7.3+1
     fixed_versions: vers:composer/6.7.3+1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:composer/shopware/core
+    affected_versions: vers:composer/<6.6.10+7
+    fixed_versions: vers:composer/6.6.10+7
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/shopware/shopware
@@ -61,12 +61,12 @@ severities:
   - score: '2.7'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/10/GHSA-3cpp-fv95-mpr5/GHSA-3cpp-fv95-mpr5.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-918

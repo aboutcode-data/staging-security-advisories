@@ -8,16 +8,6 @@ summary: |
   `activerecord/lib/active_record/nested_attributes.rb` in Active Record in Ruby on Rails 3.1.x and 3.2.x before 3.2.22.1, 4.0.x and 4.1.x before 4.1.14.1, 4.2.x before 4.2.5.1, and 5.x before 5.0.0.beta1.1 does not properly implement a certain destroy option, which allows remote attackers to bypass intended change restrictions by leveraging use of the nested attributes feature.
 impacted_packages:
   - purl: pkg:gem/activerecord
-    affected_versions: vers:gem/<=3.2.22.0
-    fixed_versions: vers:gem/3.2.22.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:gem/activerecord
-    affected_versions: vers:gem/<=4.1.14.0
-    fixed_versions: vers:gem/4.1.14.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:gem/activerecord
     affected_versions: vers:gem/>=4.2.0|<4.2.5.1
     fixed_versions: vers:gem/4.2.5.1
     fixed_in_commits: []
@@ -27,16 +17,26 @@ impacted_packages:
     fixed_versions: vers:gem/5.0.0.beta1.1
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:gem/activerecord
+    affected_versions: vers:gem/<=3.2.22.0
+    fixed_versions: vers:gem/3.2.22.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:gem/activerecord
+    affected_versions: vers:gem/<=4.1.14.0
+    fixed_versions: vers:gem/4.1.14.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.3'
-    scoring_system: cvssv3.1
+    scoring_system: cvssv3
     scoring_elements: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2017/10/GHSA-xrr6-3pc4-m447/GHSA-xrr6-3pc4-m447.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-284

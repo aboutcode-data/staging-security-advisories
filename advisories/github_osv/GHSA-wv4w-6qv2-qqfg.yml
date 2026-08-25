@@ -17,11 +17,6 @@ summary: |
 
   Review the authentication service policy on e-mail addresses; many will not allow exploiting this vulnerability.
 impacted_packages:
-  - purl: pkg:pypi/social-auth-app-django
-    affected_versions: vers:pypi/<5.6.0
-    fixed_versions: vers:pypi/5.6.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/python-social-auth/social-app-django
     affected_versions:
     fixed_versions:
@@ -29,16 +24,21 @@ impacted_packages:
       - vcs_url: https://github.com/python-social-auth/social-app-django
         commit: 10c80e2ebabeccd4e9c84ad0e16e1db74148ed4c
     introduced_in_commits: []
+  - purl: pkg:pypi/social-auth-app-django
+    affected_versions: vers:pypi/<5.6.0
+    fixed_versions: vers:pypi/5.6.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/10/GHSA-wv4w-6qv2-qqfg/GHSA-wv4w-6qv2-qqfg.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-290
