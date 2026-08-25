@@ -8,11 +8,6 @@ summary: |
   In artax version before 1.0.6 and 2 before 2.0.6, cookies of `foo.bar.example.com` were leaked to `foo.bar`. Additionally, any site could set cookies for any other site.
   Artax fixed this issue by following newer browser implementations now. Cookies can only be set on domains higher or equal to the current domain, but not on any public suffixes.
 impacted_packages:
-  - purl: pkg:composer/amphp/artax
-    affected_versions: vers:composer/<1.0.6|>=2.0.0|<2.0.6
-    fixed_versions: vers:composer/1.0.6|2.0.6
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/amphp/artax
     affected_versions:
     fixed_versions:
@@ -21,6 +16,11 @@ impacted_packages:
         commit: 25668b891d2bced567bd69611c7d18b6a93d5fc4
       - vcs_url: https://github.com/amphp/artax
         commit: accdadaf78f7a43305c3a97d6a964bbc550a555d
+    introduced_in_commits: []
+  - purl: pkg:composer/amphp/artax
+    affected_versions: vers:composer/<1.0.6|>=2.0.0|<2.0.6
+    fixed_versions: vers:composer/1.0.6|2.0.6
+    fixed_in_commits: []
     introduced_in_commits: []
 severities: []
 weaknesses:
