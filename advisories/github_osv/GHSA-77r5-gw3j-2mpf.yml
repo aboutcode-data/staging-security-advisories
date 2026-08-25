@@ -19,11 +19,6 @@ summary: |
   ### References
   https://portswigger.net/web-security/request-smuggling/advanced/response-queue-poisoning
 impacted_packages:
-  - purl: pkg:npm/next
-    affected_versions: vers:npm/>=13.4.0|<13.5.1
-    fixed_versions: vers:npm/13.5.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/vercel/next.js
     affected_versions:
     fixed_versions:
@@ -31,16 +26,21 @@ impacted_packages:
       - vcs_url: https://github.com/vercel/next.js
         commit: 44eba020c615f0d9efe431f84ada67b81576f3f5
     introduced_in_commits: []
+  - purl: pkg:npm/next
+    affected_versions: vers:npm/>=13.4.0|<13.5.1
+    fixed_versions: vers:npm/13.5.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-77r5-gw3j-2mpf/GHSA-77r5-gw3j-2mpf.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-444

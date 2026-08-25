@@ -7,11 +7,6 @@ summary: |
   Upsonic: remote code execution vulnerability in its MCP server/task creation functionality
   Upsonic 0.71.6 contains a remote code execution vulnerability in its MCP server/task creation functionality. The application allows users to define MCP tasks with arbitrary command and args values. Although an allowlist exists, certain allowed commands (npm, npx) accept argument flags that enable execution of arbitrary OS commands. Maliciously crafted MCP tasks may lead to remote code execution with the privileges of the Upsonic process. In version 0.72.0 Upsonic added a warning about using Stdio servers being able to execute commands directly on the machine.
 impacted_packages:
-  - purl: pkg:pypi/upsonic
-    affected_versions: vers:pypi/<0.72.0
-    fixed_versions: vers:pypi/0.72.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/upsonic/upsonic
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/upsonic/upsonic
         commit: 855053fce0662227d9246268ff4a0844b481a305
     introduced_in_commits: []
+  - purl: pkg:pypi/upsonic
+    affected_versions: vers:pypi/<0.72.0
+    fixed_versions: vers:pypi/0.72.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-cw73-5f7h-m4gv/GHSA-cw73-5f7h-m4gv.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-77

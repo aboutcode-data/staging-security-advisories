@@ -46,16 +46,6 @@ summary: "OpenEXR has buffer overflow in PyOpenEXR_old's channels() and channel(
   \              python3 poc.py\n```\n\n### Impact\nTypical memory stuff."
 impacted_packages:
   - purl: pkg:pypi/openexr
-    affected_versions: vers:pypi/>=3.2.0|<3.2.5
-    fixed_versions: vers:pypi/3.2.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/openexr
-    affected_versions: vers:pypi/>=3.3.0|<3.3.6
-    fixed_versions: vers:pypi/3.3.6
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/openexr
     affected_versions: vers:pypi/>=3.4.0|<3.4.3
     fixed_versions: vers:pypi/3.4.3
     fixed_in_commits: []
@@ -67,21 +57,31 @@ impacted_packages:
       - vcs_url: https://github.com/academysoftwarefoundation/openexr
         commit: b3a19903db0672c63055023aa788e592b16ec3c5
     introduced_in_commits: []
+  - purl: pkg:pypi/openexr
+    affected_versions: vers:pypi/>=3.2.0|<3.2.5
+    fixed_versions: vers:pypi/3.2.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/openexr
+    affected_versions: vers:pypi/>=3.3.0|<3.3.6
+    fixed_versions: vers:pypi/3.3.6
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-vh63-9mqx-wmjr/GHSA-vh63-9mqx-wmjr.json
   - score: '5.5'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:H/SC:N/SI:N/SA:N/E:P
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-vh63-9mqx-wmjr/GHSA-vh63-9mqx-wmjr.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-120

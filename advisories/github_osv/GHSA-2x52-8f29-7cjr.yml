@@ -11,11 +11,6 @@ summary: |
 
   This feature is now disabled entirely, because not all code paths necessary for a successful realization were fully implemented.
 impacted_packages:
-  - purl: pkg:maven/org.eclipse.edc/connector-core
-    affected_versions: vers:maven/>=0.2.1|<0.6.3
-    fixed_versions: vers:maven/0.6.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/eclipse-edc/connector
     affected_versions:
     fixed_versions:
@@ -23,16 +18,21 @@ impacted_packages:
       - vcs_url: https://github.com/eclipse-edc/connector
         commit: a4e6018d2c0457fba6f672fafa6c590513c45d1b
     introduced_in_commits: []
+  - purl: pkg:maven/org.eclipse.edc/connector-core
+    affected_versions: vers:maven/>=0.2.1|<0.6.3
+    fixed_versions: vers:maven/0.6.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:A/AC:H/PR:H/UI:N/S:C/C:H/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-2x52-8f29-7cjr/GHSA-2x52-8f29-7cjr.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-201

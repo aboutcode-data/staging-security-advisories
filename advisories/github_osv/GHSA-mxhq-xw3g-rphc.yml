@@ -22,11 +22,6 @@ summary: "lobe-chat `/api/proxy` endpoint Server-Side Request Forgery vulnerabil
   Accept-Encoding: gzip, deflate, br\nAccept-Language: zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7\n\n\
   http://172.23.0.1:8000/\n```\n\n### Impact\nSSRF ,All users will be impacted."
 impacted_packages:
-  - purl: pkg:npm/%40lobehub/chat
-    affected_versions: vers:npm/<=0.150.5
-    fixed_versions: vers:npm/0.150.6
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/lobehub/lobe-chat
     affected_versions:
     fixed_versions:
@@ -34,16 +29,21 @@ impacted_packages:
       - vcs_url: https://github.com/lobehub/lobe-chat
         commit: 465665a735556669ee30446c7ea9049a20cc7c37
     introduced_in_commits: []
+  - purl: pkg:npm/%40lobehub/chat
+    affected_versions: vers:npm/<=0.150.5
+    fixed_versions: vers:npm/0.150.6
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:L/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-mxhq-xw3g-rphc/GHSA-mxhq-xw3g-rphc.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-918

@@ -10,11 +10,6 @@ summary: "PDF.js vulnerable to arbitrary JavaScript execution upon opening a mal
   \ the use of `eval`:\nhttps://github.com/mozilla/pdf.js/pull/18015\n\n### Workarounds\nSet\
   \ the option `isEvalSupported` to `false`. \n\n### References\nhttps://bugzilla.mozilla.org/show_bug.cgi?id=1893645"
 impacted_packages:
-  - purl: pkg:npm/pdfjs-dist
-    affected_versions: vers:npm/<=4.1.392
-    fixed_versions: vers:npm/4.2.67
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/mozilla/pdf.js
     affected_versions:
     fixed_versions:
@@ -22,16 +17,21 @@ impacted_packages:
       - vcs_url: https://github.com/mozilla/pdf.js
         commit: 85e64b5c16c9aaef738f421733c12911a441cec6
     introduced_in_commits: []
+  - purl: pkg:npm/pdfjs-dist
+    affected_versions: vers:npm/<=4.1.392
+    fixed_versions: vers:npm/4.2.67
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-wgrm-67xf-hhpq/GHSA-wgrm-67xf-hhpq.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-754

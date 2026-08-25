@@ -133,11 +133,6 @@ summary: |
           urls.update(RE_URLMATCH.findall(page))
   ```
 impacted_packages:
-  - purl: pkg:pypi/pyload-ng
-    affected_versions: vers:pypi/<=0.5.0b3.dev96
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/pyload/pyload
     affected_versions:
     fixed_versions:
@@ -145,16 +140,21 @@ impacted_packages:
       - vcs_url: https://github.com/pyload/pyload
         commit: 4032e57d61d8f864e39f4dcfdb567527a50a9e1f
     introduced_in_commits: []
+  - purl: pkg:pypi/pyload-ng
+    affected_versions: vers:pypi/<=0.5.0b3.dev96
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.7'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-2wvg-62qm-gj33/GHSA-2wvg-62qm-gj33.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-918

@@ -6,6 +6,15 @@ summary: |
   silverstripe/framework's User-Agent header not correctly invalidating user session
   A security protection device in Session designed to protect session hijacking was not correctly functioning. This function intended to protect user sessions by detecting changes in the User-Agent header, but modifications to this header were not correctly invalidating the user session.
 impacted_packages:
+  - purl: pkg:github/silverstripe/silverstripe-framework
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/silverstripe/silverstripe-framework
+        commit: d47667bb0768841e4b305fa95d5a4e2ba232c4ad
+      - vcs_url: https://github.com/silverstripe/silverstripe-framework
+        commit: 44de03da0147e6094b02602b7b73d5b1a1306d78
+    introduced_in_commits: []
   - purl: pkg:composer/silverstripe/framework
     affected_versions: vers:composer/>=3.5.0-rc1|<3.5.6
     fixed_versions: vers:composer/3.5.6
@@ -16,25 +25,16 @@ impacted_packages:
     fixed_versions: vers:composer/3.6.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/silverstripe/silverstripe-framework
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/silverstripe/silverstripe-framework
-        commit: d47667bb0768841e4b305fa95d5a4e2ba232c4ad
-      - vcs_url: https://github.com/silverstripe/silverstripe-framework
-        commit: 44de03da0147e6094b02602b7b73d5b1a1306d78
-    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-4qx8-j9vh-2628/GHSA-4qx8-j9vh-2628.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-384

@@ -16,19 +16,14 @@ summary: "Eclipse Jetty: Early return from the JASPIAuthenticator code can poten
   \ privileges from a previous request (privilege escalation).\n\n### Patches\nNo patches yet.\n\
   \n### Workarounds\nDo not use Jetty's JASPI."
 impacted_packages:
-  - purl: pkg:maven/org.eclipse.jetty.ee11/jetty-ee11-jaspi
+  - purl: pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-jaspi
     affected_versions: vers:maven/<=12.0.33
     fixed_versions: vers:maven/12.0.34
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.eclipse.jetty.ee11/jetty-ee11-jaspi
-    affected_versions: vers:maven/<=12.1.7
-    fixed_versions: vers:maven/12.1.8
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-jaspi
-    affected_versions: vers:maven/<=12.1.7
-    fixed_versions: vers:maven/12.1.8
+    affected_versions: vers:maven/<=12.0.33
+    fixed_versions: vers:maven/12.0.34
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.eclipse.jetty.ee9/jetty-ee9-jaspi
@@ -41,9 +36,21 @@ impacted_packages:
     fixed_versions: vers:maven/12.1.8
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:github/user-attachments/files
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/user-attachments/files
+        commit: 26118760
+    introduced_in_commits: []
+  - purl: pkg:maven/org.eclipse.jetty.ee11/jetty-ee11-jaspi
+    affected_versions: vers:maven/<=12.1.7
+    fixed_versions: vers:maven/12.1.8
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-jaspi
-    affected_versions: vers:maven/<=12.0.33
-    fixed_versions: vers:maven/12.0.34
+    affected_versions: vers:maven/<=12.1.7
+    fixed_versions: vers:maven/12.1.8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.eclipse.jetty.ee9/jetty-ee9-jaspi
@@ -71,23 +78,16 @@ impacted_packages:
     fixed_versions: vers:maven/9.4.61
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/user-attachments/files
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/user-attachments/files
-        commit: 26118760
-    introduced_in_commits: []
 severities:
   - score: '7.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-r7p8-xq5m-436c/GHSA-r7p8-xq5m-436c.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-287

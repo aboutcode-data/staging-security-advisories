@@ -19,11 +19,6 @@ summary: |
 
   Additionally since v2.11 some default CSP are inserted in the server response headers to prevent inline-scripts or 3rd party domain scripts on pages served by the passbolt API. This is to cater for the case where the administrator has not set them up as part of the web server configuration.
 impacted_packages:
-  - purl: pkg:composer/passbolt/passbolt_api
-    affected_versions: vers:composer/<2.11.0
-    fixed_versions: vers:composer/2.11.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/passbolt/passbolt_api
     affected_versions:
     fixed_versions:
@@ -31,16 +26,21 @@ impacted_packages:
       - vcs_url: https://github.com/passbolt/passbolt_api
         commit: 6135b483f72c6853e6085e329f5f8d7be60c9933
     introduced_in_commits: []
+  - purl: pkg:composer/passbolt/passbolt_api
+    affected_versions: vers:composer/<2.11.0
+    fixed_versions: vers:composer/2.11.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.2'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-2f46-4xjm-73x5/GHSA-2f46-4xjm-73x5.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

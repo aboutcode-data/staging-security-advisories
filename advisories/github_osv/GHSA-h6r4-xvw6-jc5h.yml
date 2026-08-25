@@ -22,11 +22,6 @@ summary: |
   ### Impact
   Stealing the credentials of NocoDB user that clicks the malicious link.
 impacted_packages:
-  - purl: pkg:npm/nocodb
-    affected_versions: vers:npm/<=0.202.8
-    fixed_versions: vers:npm/0.202.9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/nocodb/nocodb
     affected_versions:
     fixed_versions:
@@ -34,16 +29,21 @@ impacted_packages:
       - vcs_url: https://github.com/nocodb/nocodb
         commit: 7f58ce3726dfec71537d8b80474a0f95a48a1574
     introduced_in_commits: []
+  - purl: pkg:npm/nocodb
+    affected_versions: vers:npm/<=0.202.8
+    fixed_versions: vers:npm/0.202.9
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-h6r4-xvw6-jc5h/GHSA-h6r4-xvw6-jc5h.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

@@ -9,11 +9,6 @@ summary: |
 
   Note: The 4.2.x branch is no longer under open source support. If you are using Spring Cloud Gateway 4.2.0 and are not an enterprise customer, you can upgrade to any Spring Cloud Gateway 4.2.x release newer than 4.2.0 available on Maven Centeral https://repo1.maven.org/maven2/org/springframework/cloud/spring-cloud-gateway/ . Ideally, if you are not an enterprise customer, you should be upgrading to 5.0.2 or 5.1.1, which are the current supported open source releases.
 impacted_packages:
-  - purl: pkg:maven/org.springframework.cloud/spring-cloud-gateway
-    affected_versions: vers:maven/4.2.0
-    fixed_versions: vers:maven/4.2.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/spring-cloud/spring-cloud-gateway
     affected_versions:
     fixed_versions:
@@ -21,16 +16,21 @@ impacted_packages:
       - vcs_url: https://github.com/spring-cloud/spring-cloud-gateway
         commit: 84009f2ee421e2191f8cc32ce3a84e7fc09e305e
     introduced_in_commits: []
+  - purl: pkg:maven/org.springframework.cloud/spring-cloud-gateway
+    affected_versions: vers:maven/4.2.0
+    fixed_versions: vers:maven/4.2.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-hwqh-2684-54fc/GHSA-hwqh-2684-54fc.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-15

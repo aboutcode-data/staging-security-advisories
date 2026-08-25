@@ -25,11 +25,6 @@ summary: |
 
   ZIP entry names are now validated against the resolved real path of the temporary directory before extraction. Any entry whose resolved path falls outside the temporary directory raises an error and aborts the import.
 impacted_packages:
-  - purl: pkg:pypi/gramps-webapi
-    affected_versions: vers:pypi/<=3.11.0
-    fixed_versions: vers:pypi/3.11.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/gramps-project/gramps-web-api
     affected_versions:
     fixed_versions:
@@ -37,16 +32,21 @@ impacted_packages:
       - vcs_url: https://github.com/gramps-project/gramps-web-api
         commit: 3ed4342711e3ec849552df09b1fe2fbf2ca5c29a
     introduced_in_commits: []
+  - purl: pkg:pypi/gramps-webapi
+    affected_versions: vers:pypi/<=3.11.0
+    fixed_versions: vers:pypi/3.11.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-m5gr-86j6-99jp/GHSA-m5gr-86j6-99jp.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

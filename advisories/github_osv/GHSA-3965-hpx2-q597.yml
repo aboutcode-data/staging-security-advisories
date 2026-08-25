@@ -7,6 +7,15 @@ summary: |
   Pug allows JavaScript code execution if an application accepts untrusted input
   Pug through 3.0.2 allows JavaScript code execution if an application accepts untrusted input for the name option of the `compileClient`, `compileFileClient`, or `compileClientWithDependenciesTracked` function. NOTE: these functions are for compiling Pug templates into JavaScript, and there would typically be no reason to allow untrusted callers.
 impacted_packages:
+  - purl: pkg:github/pugjs/pug
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/pugjs/pug
+        commit: 32acfe8f197dc44c54e8af32c7d7b19aa9d350fb
+      - vcs_url: https://github.com/pugjs/pug
+        commit: 4767cafea0af3d3f935553df0f9a8a6e76d470c2
+    introduced_in_commits: []
   - purl: pkg:npm/pug-code-gen
     affected_versions: vers:npm/<=3.0.2
     fixed_versions: vers:npm/3.0.3
@@ -17,25 +26,16 @@ impacted_packages:
     fixed_versions: vers:npm/3.0.3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/pugjs/pug
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/pugjs/pug
-        commit: 32acfe8f197dc44c54e8af32c7d7b19aa9d350fb
-      - vcs_url: https://github.com/pugjs/pug
-        commit: 4767cafea0af3d3f935553df0f9a8a6e76d470c2
-    introduced_in_commits: []
 severities:
   - score: '6.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-3965-hpx2-q597/GHSA-3965-hpx2-q597.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

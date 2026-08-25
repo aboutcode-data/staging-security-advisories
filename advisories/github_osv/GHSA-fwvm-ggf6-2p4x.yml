@@ -7,12 +7,17 @@ summary: |
   ImageMagick has a Stack Overflow in DestroyXMLTree()
   Magick frees the memory of the XML tree via the `DestroyXMLTree` function; however, this process is executed recursively with no depth limit imposed. When magick processes an XML file with deeply nested structures, it will exhaust the stack memory, resulting in a Denial of Service (DoS) attack.
 impacted_packages:
-  - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
+  - purl: pkg:nuget/Magick.NET-Q16-x86
     affected_versions: vers:nuget/<14.12.0
     fixed_versions: vers:nuget/14.12.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q8-x64
+  - purl: pkg:nuget/Magick.NET-Q16-x64
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
     affected_versions: vers:nuget/<14.12.0
     fixed_versions: vers:nuget/14.12.0
     fixed_in_commits: []
@@ -32,17 +37,12 @@ impacted_packages:
     fixed_versions: vers:nuget/14.12.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-x64
-    affected_versions: vers:nuget/<14.12.0
-    fixed_versions: vers:nuget/14.12.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-x86
-    affected_versions: vers:nuget/<14.12.0
-    fixed_versions: vers:nuget/14.12.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q8-AnyCPU
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q8-x64
     affected_versions: vers:nuget/<14.12.0
     fixed_versions: vers:nuget/14.12.0
     fixed_in_commits: []
@@ -103,12 +103,12 @@ severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-fwvm-ggf6-2p4x/GHSA-fwvm-ggf6-2p4x.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-674

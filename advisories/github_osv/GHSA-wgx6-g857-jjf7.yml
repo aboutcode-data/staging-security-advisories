@@ -21,6 +21,13 @@ summary: |
   ### Impact
   Persistence of an attacker who obtained valid session token and preventing legitimate users from account access
 impacted_packages:
+  - purl: pkg:github/openc3/cosmos
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/openc3/cosmos
+        commit: 2e623714e3426d5ae81b6f8239d4a2a6937ef776
+    introduced_in_commits: []
   - purl: pkg:gem/openc3
     affected_versions: vers:gem/<6.10.5
     fixed_versions: vers:gem/6.10.5
@@ -31,23 +38,16 @@ impacted_packages:
     fixed_versions: vers:gem/7.0.0-rc3
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/openc3/cosmos
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/openc3/cosmos
-        commit: 2e623714e3426d5ae81b6f8239d4a2a6937ef776
-    introduced_in_commits: []
 severities:
   - score: '8.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-wgx6-g857-jjf7/GHSA-wgx6-g857-jjf7.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-620

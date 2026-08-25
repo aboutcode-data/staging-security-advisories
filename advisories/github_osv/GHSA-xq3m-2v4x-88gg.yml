@@ -25,6 +25,15 @@ summary: |
 
   Do not load protobuf definitions or JSON descriptors from untrusted sources with affected versions. If untrusted schemas must be accepted, validate or restrict them before loading and run schema processing in an isolated environment.
 impacted_packages:
+  - purl: pkg:github/protobufjs/protobuf.js
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/protobufjs/protobuf.js
+        commit: ff7b2afef8754837cc6dc64c864cd111ab477956
+      - vcs_url: https://github.com/protobufjs/protobuf.js
+        commit: 535df444ac060243722ac5d672db205e5c531d75
+    introduced_in_commits: []
   - purl: pkg:npm/protobufjs
     affected_versions: vers:npm/>=8.0.0|<8.0.1
     fixed_versions: vers:npm/8.0.1
@@ -35,30 +44,21 @@ impacted_packages:
     fixed_versions: vers:npm/7.5.5
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/protobufjs/protobuf.js
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/protobufjs/protobuf.js
-        commit: ff7b2afef8754837cc6dc64c864cd111ab477956
-      - vcs_url: https://github.com/protobufjs/protobuf.js
-        commit: 535df444ac060243722ac5d672db205e5c531d75
-    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-xq3m-2v4x-88gg/GHSA-xq3m-2v4x-88gg.json
   - score: '9.4'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-xq3m-2v4x-88gg/GHSA-xq3m-2v4x-88gg.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

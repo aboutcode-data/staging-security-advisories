@@ -126,11 +126,6 @@ summary: |
 
   This fix restores the pre-49d0bb7 behavior where all non-script/style text content goes through `escapeHtml()`, ensuring decoded entities are properly re-encoded before output.
 impacted_packages:
-  - purl: pkg:npm/sanitize-html
-    affected_versions: vers:npm/>=2.17.2|<2.17.3
-    fixed_versions: vers:npm/2.17.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/apostrophecms/apostrophe
     affected_versions:
     fixed_versions:
@@ -138,16 +133,21 @@ impacted_packages:
       - vcs_url: https://github.com/apostrophecms/apostrophe
         commit: 7ca2d16237c72718ef7e5c7ae0458e6027ac4f64
     introduced_in_commits: []
+  - purl: pkg:npm/sanitize-html
+    affected_versions: vers:npm/>=2.17.2|<2.17.3
+    fixed_versions: vers:npm/2.17.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-9mrh-v2v3-xpfm/GHSA-9mrh-v2v3-xpfm.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

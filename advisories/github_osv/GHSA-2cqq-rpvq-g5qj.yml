@@ -128,11 +128,6 @@ summary: |
 
   The details of this bug may be privately disclosed to vulnerable parties, including but not limited to Hacktron AI's customers.
 impacted_packages:
-  - purl: pkg:maven/org.openidentityplatform.openam/openam
-    affected_versions: vers:maven/<=16.0.5
-    fixed_versions: vers:maven/16.0.6
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/openidentityplatform/openam
     affected_versions:
     fixed_versions:
@@ -140,16 +135,21 @@ impacted_packages:
       - vcs_url: https://github.com/openidentityplatform/openam
         commit: 014007c63cacc834cc795a89fac0e611aebc4a32
     introduced_in_commits: []
+  - purl: pkg:maven/org.openidentityplatform.openam/openam
+    affected_versions: vers:maven/<=16.0.5
+    fixed_versions: vers:maven/16.0.6
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-2cqq-rpvq-g5qj/GHSA-2cqq-rpvq-g5qj.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-502

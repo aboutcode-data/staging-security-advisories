@@ -7,11 +7,6 @@ summary: |
   Roundcube Webmail: Insufficient CSS sanitization in HTML e-mail messages
   An issue was discovered in Roundcube Webmail 1.6.0 before 1.6.14. Insufficient Cascading Style Sheets (CSS) sanitization in HTML e-mail messages may lead to SSRF or Information Disclosure, e.g., if stylesheet links point to local network hosts.
 impacted_packages:
-  - purl: pkg:composer/roundcube/roundcubemail
-    affected_versions: vers:composer/>=1.7.0-beta|<1.7.0-rc5
-    fixed_versions: vers:composer/1.7.0-rc5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/roundcube/roundcubemail
     affected_versions:
     fixed_versions:
@@ -21,16 +16,21 @@ impacted_packages:
       - vcs_url: https://github.com/roundcube/roundcubemail
         commit: 579b68eff90650a5c782e153debd66c765648942
     introduced_in_commits: []
+  - purl: pkg:composer/roundcube/roundcubemail
+    affected_versions: vers:composer/>=1.7.0-beta|<1.7.0-rc5
+    fixed_versions: vers:composer/1.7.0-rc5
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-vxg2-hhgr-37fx/GHSA-vxg2-hhgr-37fx.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-669

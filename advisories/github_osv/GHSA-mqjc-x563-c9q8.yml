@@ -8,6 +8,17 @@ summary: |
 
   In order to safeguard against this threat all potentially executable cell values exported from CSV will be prepended with a literal tab character.
 impacted_packages:
+  - purl: pkg:github/silverstripe/silverstripe-framework
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/silverstripe/silverstripe-framework
+        commit: cfe1d4f481bf53ea8da2b8608a563e207d923df9
+      - vcs_url: https://github.com/silverstripe/silverstripe-framework
+        commit: dd4c5417e7592e29e698af428b72bdb9b6729797
+      - vcs_url: https://github.com/silverstripe/silverstripe-framework
+        commit: 55739fa5af6171594b2cb4f3621d5fcce5e887d4
+    introduced_in_commits: []
   - purl: pkg:composer/silverstripe/framework
     affected_versions: vers:composer/>=3.5.0-rc1|<3.5.6
     fixed_versions: vers:composer/3.5.6
@@ -23,27 +34,16 @@ impacted_packages:
     fixed_versions: vers:composer/4.0.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/silverstripe/silverstripe-framework
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/silverstripe/silverstripe-framework
-        commit: cfe1d4f481bf53ea8da2b8608a563e207d923df9
-      - vcs_url: https://github.com/silverstripe/silverstripe-framework
-        commit: dd4c5417e7592e29e698af428b72bdb9b6729797
-      - vcs_url: https://github.com/silverstripe/silverstripe-framework
-        commit: 55739fa5af6171594b2cb4f3621d5fcce5e887d4
-    introduced_in_commits: []
 severities:
   - score: '8.0'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-mqjc-x563-c9q8/GHSA-mqjc-x563-c9q8.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-74

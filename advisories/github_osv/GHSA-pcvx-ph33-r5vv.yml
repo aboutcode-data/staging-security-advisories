@@ -7,12 +7,22 @@ summary: |
   ImageMagick has an out-of-bounds read in sample operation
   The -sample operation has an out of bounds read when an specific offset is set through the `sample:offset` define that could lead to an out of bounds read.
 impacted_packages:
-  - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-AnyCPU
     affected_versions: vers:nuget/<14.12.0
     fixed_versions: vers:nuget/14.12.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-HDRI-AnyCPU
+  - purl: pkg:nuget/Magick.NET-Q16-x86
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q8-x86
+    affected_versions: vers:nuget/<14.12.0
+    fixed_versions: vers:nuget/14.12.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
     affected_versions: vers:nuget/<14.12.0
     fixed_versions: vers:nuget/14.12.0
     fixed_in_commits: []
@@ -27,17 +37,7 @@ impacted_packages:
     fixed_versions: vers:nuget/14.12.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-HDRI-OpenMP-arm64
-    affected_versions: vers:nuget/<14.12.0
-    fixed_versions: vers:nuget/14.12.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-x64
-    affected_versions: vers:nuget/<14.12.0
-    fixed_versions: vers:nuget/14.12.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-x86
     affected_versions: vers:nuget/<14.12.0
     fixed_versions: vers:nuget/14.12.0
     fixed_in_commits: []
@@ -52,7 +52,7 @@ impacted_packages:
     fixed_versions: vers:nuget/14.12.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q8-x86
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-OpenMP-arm64
     affected_versions: vers:nuget/<14.12.0
     fixed_versions: vers:nuget/14.12.0
     fixed_in_commits: []
@@ -103,12 +103,12 @@ severities:
   - score: '5.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-pcvx-ph33-r5vv/GHSA-pcvx-ph33-r5vv.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-125

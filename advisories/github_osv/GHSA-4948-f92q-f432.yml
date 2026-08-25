@@ -153,11 +153,6 @@ summary: |
 
   3. **Validate primary key values** at record creation time. Reject or escape values containing SQL metacharacters (`'`, `"`, `;`, `--`) in string-type primary key fields.
 impacted_packages:
-  - purl: pkg:npm/%40nocobase/database
-    affected_versions: vers:npm/<2.0.39
-    fixed_versions: vers:npm/2.0.39
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/nocobase/nocobase
     affected_versions:
     fixed_versions:
@@ -165,16 +160,21 @@ impacted_packages:
       - vcs_url: https://github.com/nocobase/nocobase
         commit: 202e2b8efe44ba90adbf1087f6f70881ff947604
     introduced_in_commits: []
+  - purl: pkg:npm/%40nocobase/database
+    affected_versions: vers:npm/<2.0.39
+    fixed_versions: vers:npm/2.0.39
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-4948-f92q-f432/GHSA-4948-f92q-f432.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-89

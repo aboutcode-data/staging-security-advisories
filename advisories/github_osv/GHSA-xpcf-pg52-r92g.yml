@@ -32,11 +32,6 @@ summary: |
 
   In affected deployments, a denied IPv4 client may bypass access restrictions. Conversely, legitimate clients may be rejected when using IPv4 allow lists.
 impacted_packages:
-  - purl: pkg:npm/hono
-    affected_versions: vers:npm/<4.12.12
-    fixed_versions: vers:npm/4.12.12
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/honojs/hono
     affected_versions:
     fixed_versions:
@@ -44,21 +39,26 @@ impacted_packages:
       - vcs_url: https://github.com/honojs/hono
         commit: 48fa2233bc092f650119f42df043050737cabf39
     introduced_in_commits: []
+  - purl: pkg:npm/hono
+    affected_versions: vers:npm/<4.12.12
+    fixed_versions: vers:npm/4.12.12
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-xpcf-pg52-r92g/GHSA-xpcf-pg52-r92g.json
   - score: '6.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-xpcf-pg52-r92g/GHSA-xpcf-pg52-r92g.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-180

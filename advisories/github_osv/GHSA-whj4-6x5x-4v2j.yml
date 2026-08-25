@@ -16,11 +16,6 @@ summary: |
   Avoid Pillow >= 10.3.0, < 12.2.0
   Only open [specific image formats](https://pillow.readthedocs.io/en/stable/releasenotes/8.0.0.html#image-open-add-formats-parameter), excluding FITS.
 impacted_packages:
-  - purl: pkg:pypi/pillow
-    affected_versions: vers:pypi/>=10.3.0|<12.2.0
-    fixed_versions: vers:pypi/12.2.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/python-pillow/pillow
     affected_versions:
     fixed_versions:
@@ -28,21 +23,26 @@ impacted_packages:
       - vcs_url: https://github.com/python-pillow/pillow
         commit: 3cb854e8b2bab43f40e342e665f9340d861aa628
     introduced_in_commits: []
+  - purl: pkg:pypi/pillow
+    affected_versions: vers:pypi/>=10.3.0|<12.2.0
+    fixed_versions: vers:pypi/12.2.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-whj4-6x5x-4v2j/GHSA-whj4-6x5x-4v2j.json
   - score: '8.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-whj4-6x5x-4v2j/GHSA-whj4-6x5x-4v2j.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-400

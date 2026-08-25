@@ -222,11 +222,6 @@ summary: |
   - [CWE-93: Improper Neutralization of CRLF Sequences](https://cwe.mitre.org/data/definitions/93.html)
   - [OWASP: CRLF Injection](https://owasp.org/www-community/vulnerabilities/CRLF_Injection)
 impacted_packages:
-  - purl: pkg:npm/basic-ftp
-    affected_versions: vers:npm/5.2.0
-    fixed_versions: vers:npm/5.2.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/patrickjuchli/basic-ftp
     affected_versions:
     fixed_versions:
@@ -234,16 +229,21 @@ impacted_packages:
       - vcs_url: https://github.com/patrickjuchli/basic-ftp
         commit: 2ecc8e2c500c5234115f06fd1dbde1aa03d70f4b
     introduced_in_commits: []
+  - purl: pkg:npm/basic-ftp
+    affected_versions: vers:npm/5.2.0
+    fixed_versions: vers:npm/5.2.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.6'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-chqc-8p9q-pq6q/GHSA-chqc-8p9q-pq6q.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-93

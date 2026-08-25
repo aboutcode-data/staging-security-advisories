@@ -6,11 +6,6 @@ summary: |
   OroPlatform Forced Redirect to External Website
   OroPlatform is prone to open redirection which could allow attackers to redirect users to external website.
 impacted_packages:
-  - purl: pkg:composer/oro/platform
-    affected_versions: vers:composer/>=1.7.0|<1.7.4
-    fixed_versions: vers:composer/1.7.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/oroinc/platform
     affected_versions:
     fixed_versions:
@@ -18,16 +13,21 @@ impacted_packages:
       - vcs_url: https://github.com/oroinc/platform
         commit: baf79ad4f6b32bd2834b1766745afb20a5ef4739
     introduced_in_commits: []
+  - purl: pkg:composer/oro/platform
+    affected_versions: vers:composer/>=1.7.0|<1.7.4
+    fixed_versions: vers:composer/1.7.4
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-3vhm-q4w3-rw8q/GHSA-3vhm-q4w3-rw8q.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-601

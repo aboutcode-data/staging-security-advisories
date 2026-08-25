@@ -17,11 +17,6 @@ summary: |
 
   **Fixed**: https://github.com/onnx/onnx/pull/7751 object state corruption and DoS via ExternalDataInfo attribute injection
 impacted_packages:
-  - purl: pkg:pypi/onnx
-    affected_versions: vers:pypi/<=1.20.1
-    fixed_versions: vers:pypi/1.21.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/onnx/onnx
     affected_versions:
     fixed_versions:
@@ -29,16 +24,21 @@ impacted_packages:
       - vcs_url: https://github.com/onnx/onnx
         commit: e30c6935d67cc3eca2fa284e37248e7c0036c46b
     introduced_in_commits: []
+  - purl: pkg:pypi/onnx
+    affected_versions: vers:pypi/<=1.20.1
+    fixed_versions: vers:pypi/1.21.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.6'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-538c-55jv-c5g9/GHSA-538c-55jv-c5g9.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-400

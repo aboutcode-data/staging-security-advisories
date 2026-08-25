@@ -78,11 +78,6 @@ summary: |
   - rendering of parent-directory files that were not meant to be part of the template
   - possible without `--UNSAFE`
 impacted_packages:
-  - purl: pkg:pypi/copier
-    affected_versions: vers:pypi/<9.14.1
-    fixed_versions: vers:pypi/9.14.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/copier-org/copier
     affected_versions:
     fixed_versions:
@@ -90,16 +85,21 @@ impacted_packages:
       - vcs_url: https://github.com/copier-org/copier
         commit: cb80a3ffc9c3787de3ed837e04ca29a0ff8ca3df
     introduced_in_commits: []
+  - purl: pkg:pypi/copier
+    affected_versions: vers:pypi/<9.14.1
+    fixed_versions: vers:pypi/9.14.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-85v3-4m8g-hrh6/GHSA-85v3-4m8g-hrh6.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

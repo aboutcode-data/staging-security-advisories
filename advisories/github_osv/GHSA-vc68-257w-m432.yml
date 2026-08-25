@@ -63,17 +63,17 @@ summary: |
   Trigger Condition: Occurs under default settings; simply reading a malicious EXR file is sufficient to trigger the issue, without any user interaction.
 impacted_packages:
   - purl: pkg:pypi/openexr
+    affected_versions: vers:pypi/>=3.2.0|<=3.2.6
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/openexr
     affected_versions: vers:pypi/<=3.4.7
     fixed_versions: vers:pypi/3.4.8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:pypi/openexr
     affected_versions: vers:pypi/>=3.3.0|<=3.3.8
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/openexr
-    affected_versions: vers:pypi/>=3.2.0|<=3.2.6
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
@@ -88,12 +88,12 @@ severities:
   - score: '8.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-vc68-257w-m432/GHSA-vc68-257w-m432.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-908

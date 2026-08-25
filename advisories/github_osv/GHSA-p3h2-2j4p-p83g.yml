@@ -166,11 +166,6 @@ summary: |
   - Use `path.basename()` to strip directory components from `manifest.name` and enforce a strict character allow‑list (alphanumeric, `_`, `-`, `.`) before use.
   - Consider rejecting any `manifest.name` that contains path separators or traversal sequences, and add unit tests for malicious traversal inputs.
 impacted_packages:
-  - purl: pkg:npm/%40samanhappy/mcphub
-    affected_versions: vers:npm/<0.12.13
-    fixed_versions: vers:npm/0.12.13
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/samanhappy/mcphub
     affected_versions:
     fixed_versions:
@@ -178,16 +173,21 @@ impacted_packages:
       - vcs_url: https://github.com/samanhappy/mcphub
         commit: af5b013c09bb0add6b7ad9aaa5b875cf150d2a7c
     introduced_in_commits: []
+  - purl: pkg:npm/%40samanhappy/mcphub
+    affected_versions: vers:npm/<0.12.13
+    fixed_versions: vers:npm/0.12.13
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.2'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-p3h2-2j4p-p83g/GHSA-p3h2-2j4p-p83g.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

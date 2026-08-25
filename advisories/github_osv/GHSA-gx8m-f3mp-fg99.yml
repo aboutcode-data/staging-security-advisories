@@ -16,11 +16,6 @@ summary: |
   ### References
   https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35621
 impacted_packages:
-  - purl: pkg:composer/getformwork/formwork
-    affected_versions: vers:composer/<1.13.0
-    fixed_versions: vers:composer/1.13.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/getformwork/formwork
     affected_versions:
     fixed_versions:
@@ -30,16 +25,21 @@ impacted_packages:
       - vcs_url: https://github.com/getformwork/formwork
         commit: 6adc302f5a294f2ffbbf1571dd4ffea6b7876723
     introduced_in_commits: []
+  - purl: pkg:composer/getformwork/formwork
+    affected_versions: vers:composer/<1.13.0
+    fixed_versions: vers:composer/1.13.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-gx8m-f3mp-fg99/GHSA-gx8m-f3mp-fg99.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

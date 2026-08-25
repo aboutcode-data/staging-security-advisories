@@ -28,12 +28,7 @@ summary: "Dagster Vulnerable to SQL Injection via Dynamic Partition Keys in Data
   \ are properly escaped before inclusion in SQL queries across all affected I/O managers.\n\
   \nIf you are unable to apply the update, manual workarounds are described [here](https://gist.github.com/gibsondan/6d0c483f8499a8b1cd460cddc9fd8f72)."
 impacted_packages:
-  - purl: pkg:pypi/dagster-gcp
-    affected_versions: vers:pypi/<=0.29.0
-    fixed_versions: vers:pypi/0.29.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:pypi/dagster-duckdb
+  - purl: pkg:pypi/dagster-snowflake-polars
     affected_versions: vers:pypi/<=0.29.0
     fixed_versions: vers:pypi/0.29.1
     fixed_in_commits: []
@@ -53,7 +48,12 @@ impacted_packages:
     fixed_versions: vers:pypi/0.29.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:pypi/dagster-snowflake-polars
+  - purl: pkg:pypi/dagster-gcp
+    affected_versions: vers:pypi/<=0.29.0
+    fixed_versions: vers:pypi/0.29.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:pypi/dagster-duckdb
     affected_versions: vers:pypi/<=0.29.0
     fixed_versions: vers:pypi/0.29.1
     fixed_in_commits: []
@@ -62,12 +62,12 @@ severities:
   - score: '8.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-mjw2-v2hm-wj34/GHSA-mjw2-v2hm-wj34.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-89

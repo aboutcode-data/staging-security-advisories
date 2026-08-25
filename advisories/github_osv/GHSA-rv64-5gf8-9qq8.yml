@@ -11,6 +11,11 @@ summary: |
 
   Users are recommended to upgrade to version 11.0.21, 10.1.54 or 9.0.117 , which fix the issue.
 impacted_packages:
+  - purl: pkg:maven/org.apache.tomcat/tomcat
+    affected_versions: vers:maven/>=9.0.40|<9.0.116
+    fixed_versions: vers:maven/9.0.116
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat/tomcat-catalina
     affected_versions: vers:maven/>=9.0.40|<9.0.116
     fixed_versions: vers:maven/9.0.116
@@ -24,11 +29,6 @@ impacted_packages:
   - purl: pkg:maven/org.apache.tomcat/tomcat-catalina
     affected_versions: vers:maven/>=11.0.0-M1|<11.0.21
     fixed_versions: vers:maven/11.0.21
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.tomcat/tomcat
-    affected_versions: vers:maven/>=9.0.40|<9.0.116
-    fixed_versions: vers:maven/9.0.116
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.tomcat/tomcat
@@ -60,12 +60,12 @@ severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-rv64-5gf8-9qq8/GHSA-rv64-5gf8-9qq8.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-116

@@ -22,25 +22,25 @@ summary: |
   - Remove the `editor` permission from any user who should not have asset or blueprint management access
 impacted_packages:
   - purl: pkg:composer/october/system
-    affected_versions: vers:composer/>=4.0.0|<4.1.16
-    fixed_versions: vers:composer/4.1.16
+    affected_versions: vers:composer/<3.7.16
+    fixed_versions: vers:composer/3.7.16
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:composer/october/system
-    affected_versions: vers:composer/<3.7.16
-    fixed_versions: vers:composer/3.7.16
+    affected_versions: vers:composer/>=4.0.0|<4.1.16
+    fixed_versions: vers:composer/4.1.16
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '3.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-jvwg-phxx-j3rp/GHSA-jvwg-phxx-j3rp.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-863

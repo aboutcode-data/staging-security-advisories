@@ -10,11 +10,6 @@ summary: |
   ### Original Description
   OpenClaw before 2026.3.31 contains a callback origin mutation vulnerability in Plivo voice-call replay that allows attackers to mutate in-process callback origin before replay rejection. Attackers with captured valid callbacks for live calls can exploit this to manipulate callback origins during the replay process.
 impacted_packages:
-  - purl: pkg:npm/openclaw
-    affected_versions: vers:npm/<2026.3.31
-    fixed_versions: vers:npm/2026.3.31
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/openclaw/openclaw
     affected_versions:
     fixed_versions:
@@ -22,21 +17,26 @@ impacted_packages:
       - vcs_url: https://github.com/openclaw/openclaw
         commit: efe9183f9d2fd5e01c8068fa01f4a07a58a63c0b
     introduced_in_commits: []
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.3.31
+    fixed_versions: vers:npm/2026.3.31
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-cw28-63x4-37c3/GHSA-cw28-63x4-37c3.json
   - score: '6.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-cw28-63x4-37c3/GHSA-cw28-63x4-37c3.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-367
