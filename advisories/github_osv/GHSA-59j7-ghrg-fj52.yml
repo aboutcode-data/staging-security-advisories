@@ -74,11 +74,6 @@ summary: "Microsoft ASP.NET Core project templates vulnerable to denial of servi
   \ may not apply.\n\n### Acknowledgement\n\nMorgan Brown, Microsoft Corp."
 impacted_packages:
   - purl: pkg:nuget/System.IdentityModel.Tokens.Jwt
-    affected_versions: vers:nuget/<5.7.0
-    fixed_versions: vers:nuget/5.7.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/System.IdentityModel.Tokens.Jwt
     affected_versions: vers:nuget/>=6.5.0|<6.34.0
     fixed_versions: vers:nuget/6.34.0
     fixed_in_commits: []
@@ -89,6 +84,11 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:nuget/Microsoft.IdentityModel.JsonWebTokens
+    affected_versions: vers:nuget/<5.7.0
+    fixed_versions: vers:nuget/5.7.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/System.IdentityModel.Tokens.Jwt
     affected_versions: vers:nuget/<5.7.0
     fixed_versions: vers:nuget/5.7.0
     fixed_in_commits: []
@@ -107,12 +107,12 @@ severities:
   - score: '6.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/01/GHSA-59j7-ghrg-fj52/GHSA-59j7-ghrg-fj52.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-400

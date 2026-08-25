@@ -15,11 +15,6 @@ summary: |
   ### Workarounds
   If the application does not require access to the module `string`, it can remove it from `RestrictedPython.Utilities.utility_builtins`  or otherwise do not make it available in the restricted execution environment.
 impacted_packages:
-  - purl: pkg:pypi/restrictedpython
-    affected_versions: vers:pypi/<7.3
-    fixed_versions: vers:pypi/7.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/zopefoundation/restrictedpython
     affected_versions:
     fixed_versions:
@@ -27,21 +22,26 @@ impacted_packages:
       - vcs_url: https://github.com/zopefoundation/restrictedpython
         commit: d701cc36cccac36b21fa200f1f2d1945a9a215e6
     introduced_in_commits: []
+  - purl: pkg:pypi/restrictedpython
+    affected_versions: vers:pypi/<7.3
+    fixed_versions: vers:pypi/7.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-5rfv-66g4-jr8h/GHSA-5rfv-66g4-jr8h.json
   - score: '8.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-5rfv-66g4-jr8h/GHSA-5rfv-66g4-jr8h.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-200

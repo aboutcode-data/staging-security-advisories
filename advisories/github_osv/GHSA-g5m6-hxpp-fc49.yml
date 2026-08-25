@@ -48,6 +48,13 @@ summary: |
   <!-- _What kind of vulnerability is it? Who is impacted?_ -->
   Denial of Service for apps using `adapter-node`
 impacted_packages:
+  - purl: pkg:github/sveltejs/kit
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/sveltejs/kit
+        commit: af34142631c876a7eb62ff81f71e8a3f90dafee9
+    introduced_in_commits: []
   - purl: pkg:npm/%40sveltejs/kit
     affected_versions: vers:npm/>=2.0.0|<2.4.3
     fixed_versions: vers:npm/2.4.3
@@ -68,23 +75,16 @@ impacted_packages:
     fixed_versions: vers:npm/4.0.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/sveltejs/kit
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/sveltejs/kit
-        commit: af34142631c876a7eb62ff81f71e8a3f90dafee9
-    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/01/GHSA-g5m6-hxpp-fc49/GHSA-g5m6-hxpp-fc49.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-20

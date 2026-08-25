@@ -43,6 +43,16 @@ summary: "An update is now available for Red Hat Satellite 6.14 for RHEL 8.\n\nR
   \ the Dashboard page.\n2266141 - wrong link to scap content documentation \nUsers of Red Hat\
   \ Satellite are advised to upgrade to these updated\npackages, which fix these bugs."
 impacted_packages:
+  - purl: pkg:rpm/redhat/candlepin-selinux?arch=noarch
+    affected_versions: vers:rpm/<4.3.12-1.el8sat
+    fixed_versions: vers:rpm/4.3.12-1.el8sat
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/python39-aiohttp?arch=x86_64
+    affected_versions: vers:rpm/<3.9.2-0.1.el8pc
+    fixed_versions: vers:rpm/3.9.2-0.1.el8pc
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/candlepin?arch=src
     affected_versions: vers:rpm/<4.3.12-1.el8sat
     fixed_versions: vers:rpm/4.3.12-1.el8sat
@@ -139,11 +149,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/candlepin?arch=noarch
-    affected_versions: vers:rpm/<4.3.12-1.el8sat
-    fixed_versions: vers:rpm/4.3.12-1.el8sat
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/candlepin-selinux?arch=noarch
     affected_versions: vers:rpm/<4.3.12-1.el8sat
     fixed_versions: vers:rpm/4.3.12-1.el8sat
     fixed_in_commits: []
@@ -248,11 +253,6 @@ impacted_packages:
     fixed_versions: vers:rpm/0.0.0.1-1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/python39-aiohttp?arch=x86_64
-    affected_versions: vers:rpm/<3.9.2-0.1.el8pc
-    fixed_versions: vers:rpm/3.9.2-0.1.el8pc
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/python-aiohttp-debugsource?arch=x86_64
     affected_versions: vers:rpm/<3.9.2-0.1.el8pc
     fixed_versions: vers:rpm/3.9.2-0.1.el8pc
@@ -267,7 +267,7 @@ severities:
   - score: Moderate
     scoring_system: rhas
     scoring_elements:
-    published_at: None
+    published_at:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2024_1536.json
 weaknesses: []
 references:

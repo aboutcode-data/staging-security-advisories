@@ -7,6 +7,15 @@ summary: |
   czim/file-handling vulnerable to SSRF and directory traversal
   The czim/file-handling package before 1.5.0 and 2.x before 2.3.0 (used with PHP Composer) does not properly validate URLs within makeFromUrl and makeFromAny, leading to SSRF, and to directory traversal for the reading of local files.
 impacted_packages:
+  - purl: pkg:github/czim/file-handling
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/czim/file-handling
+        commit: 95dfda850536bf35e684619598b9d02f4c97680d
+      - vcs_url: https://github.com/czim/file-handling
+        commit: dcf879896efe3457f51af9c8eab9f70dfc709a99
+    introduced_in_commits: []
   - purl: pkg:composer/czim/file-handling
     affected_versions: vers:composer/<1.5.0
     fixed_versions: vers:composer/1.5.0
@@ -17,30 +26,21 @@ impacted_packages:
     fixed_versions: vers:composer/2.3.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/czim/file-handling
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/czim/file-handling
-        commit: 95dfda850536bf35e684619598b9d02f4c97680d
-      - vcs_url: https://github.com/czim/file-handling
-        commit: dcf879896efe3457f51af9c8eab9f70dfc709a99
-    introduced_in_commits: []
 severities:
   - score: '8.2'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-6rgh-r6j3-3223/GHSA-6rgh-r6j3-3223.json
   - score: '6.9'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:L/SI:L/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-6rgh-r6j3-3223/GHSA-6rgh-r6j3-3223.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

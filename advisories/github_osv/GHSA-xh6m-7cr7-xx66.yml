@@ -15,6 +15,21 @@ summary: |
   There is no known workaround.
 impacted_packages:
   - purl: pkg:maven/com.hazelcast/hazelcast
+    affected_versions: vers:maven/>=5.3.0|<5.3.5
+    fixed_versions: vers:maven/5.3.5
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/com.hazelcast/hazelcast
+    affected_versions: vers:maven/>=5.1|<=5.1.7
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/com.hazelcast/hazelcast
+    affected_versions: vers:maven/>=5.0|<=5.0.5
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/com.hazelcast/hazelcast
     affected_versions: vers:maven/<=4.1.10
     fixed_versions:
     fixed_in_commits: []
@@ -25,23 +40,8 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/com.hazelcast/hazelcast
-    affected_versions: vers:maven/>=5.0|<=5.0.5
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/com.hazelcast/hazelcast
-    affected_versions: vers:maven/>=5.1|<=5.1.7
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/com.hazelcast/hazelcast
     affected_versions: vers:maven/<=5.2.4
     fixed_versions: vers:maven/5.2.5
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/com.hazelcast/hazelcast
-    affected_versions: vers:maven/>=5.3.0|<5.3.5
-    fixed_versions: vers:maven/5.3.5
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/com.hazelcast/hazelcast-all
@@ -58,12 +58,12 @@ severities:
   - score: '7.6'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/02/GHSA-xh6m-7cr7-xx66/GHSA-xh6m-7cr7-xx66.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-922

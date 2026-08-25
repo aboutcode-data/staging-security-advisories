@@ -86,11 +86,6 @@ summary: "DOM Clobbering Gadget found in Rspack's AutoPublicPathRuntimeModule th
   \ the development team within three months, we will disclose this vulnerability to the CVE\
   \ agent."
 impacted_packages:
-  - purl: pkg:npm/%40rspack/core
-    affected_versions: vers:npm/<1.0.0-rc.1
-    fixed_versions: vers:npm/1.0.0-rc.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/web-infra-dev/rspack
     affected_versions:
     fixed_versions:
@@ -98,21 +93,26 @@ impacted_packages:
       - vcs_url: https://github.com/web-infra-dev/rspack
         commit: 0303c68bd76da258c9fd483936d3a00b9761aad0
     introduced_in_commits: []
+  - purl: pkg:npm/%40rspack/core
+    affected_versions: vers:npm/<1.0.0-rc.1
+    fixed_versions: vers:npm/1.0.0-rc.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-84jw-g43v-8gjm/GHSA-84jw-g43v-8gjm.json
   - score: '6.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-84jw-g43v-8gjm/GHSA-84jw-g43v-8gjm.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

@@ -19,11 +19,6 @@ summary: |
 
   There are no known workarounds for this issue. Please update to version 5.18.0 or later.
 impacted_packages:
-  - purl: pkg:npm/%40tanstack/react-query-next-experimental
-    affected_versions: vers:npm/>=5.0.0|<5.18.0
-    fixed_versions: vers:npm/5.18.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/tanstack/query
     affected_versions:
     fixed_versions:
@@ -31,16 +26,21 @@ impacted_packages:
       - vcs_url: https://github.com/tanstack/query
         commit: f2ddaf2536e8b71d2da88a9310ac9a48c13512a1
     introduced_in_commits: []
+  - purl: pkg:npm/%40tanstack/react-query-next-experimental
+    affected_versions: vers:npm/>=5.0.0|<5.18.0
+    fixed_versions: vers:npm/5.18.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.2'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/01/GHSA-997g-27x8-43rf/GHSA-997g-27x8-43rf.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

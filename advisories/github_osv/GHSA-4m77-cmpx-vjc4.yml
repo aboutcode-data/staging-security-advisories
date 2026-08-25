@@ -27,6 +27,15 @@ summary: |
 
   Vulnerability reported via the [bug bounty program](https://app.intigriti.com/programs/jupyter/jupyter/detail) [sponsored by the European Commission](https://commission.europa.eu/news/european-commissions-open-source-programme-office-starts-bug-bounties-2022-01-19_en) and hosted on the [Intigriti platform](https://www.intigriti.com/).
 impacted_packages:
+  - purl: pkg:github/jupyterlab/jupyterlab
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/jupyterlab/jupyterlab
+        commit: e1b3aabab603878e46add445a3114e838411d2df
+      - vcs_url: https://github.com/jupyterlab/jupyterlab
+        commit: dda0033cd49449572d077bbecd33b18d8d05f48a
+    introduced_in_commits: []
   - purl: pkg:pypi/jupyterlab
     affected_versions: vers:pypi/<=4.0.10
     fixed_versions: vers:pypi/4.0.11
@@ -37,25 +46,16 @@ impacted_packages:
     fixed_versions: vers:pypi/7.0.7
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/jupyterlab/jupyterlab
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/jupyterlab/jupyterlab
-        commit: e1b3aabab603878e46add445a3114e838411d2df
-      - vcs_url: https://github.com/jupyterlab/jupyterlab
-        commit: dda0033cd49449572d077bbecd33b18d8d05f48a
-    introduced_in_commits: []
 severities:
   - score: '6.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/01/GHSA-4m77-cmpx-vjc4/GHSA-4m77-cmpx-vjc4.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

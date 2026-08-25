@@ -11,11 +11,6 @@ summary: |
   ### Workarounds
   No
 impacted_packages:
-  - purl: pkg:pypi/vantage6-server
-    affected_versions: vers:pypi/<4.2.0
-    fixed_versions: vers:pypi/4.2.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/vantage6/vantage6
     affected_versions:
     fixed_versions:
@@ -23,16 +18,21 @@ impacted_packages:
       - vcs_url: https://github.com/vantage6/vantage6
         commit: 389f416c445da4f2438c72f34c3b1084485c4e30
     introduced_in_commits: []
+  - purl: pkg:pypi/vantage6-server
+    affected_versions: vers:pypi/<4.2.0
+    fixed_versions: vers:pypi/4.2.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '3.7'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/01/GHSA-45gq-q4xh-cp53/GHSA-45gq-q4xh-cp53.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-208

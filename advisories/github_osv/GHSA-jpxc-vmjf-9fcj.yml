@@ -7,6 +7,13 @@ summary: |
   Ansible vulnerable to Insertion of Sensitive Information into Log File
   A flaw was found in Ansible, where sensitive information stored in Ansible Vault files can be exposed in plaintext during the execution of a playbook. This occurs when using tasks such as include_vars to load vaulted variables without setting the no_log: true parameter, resulting in sensitive data being printed in the playbook output or logs. This can lead to the unintentional disclosure of secrets like passwords or API keys, compromising security and potentially allowing unauthorized access or actions.
 impacted_packages:
+  - purl: pkg:github/ansible/ansible
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/ansible/ansible
+        commit: 8a87e1c5d37422bc99d27ad4237d185cc233e035
+    introduced_in_commits: []
   - purl: pkg:pypi/ansible-core
     affected_versions: vers:pypi/>=2.17.0b1|<2.17.6
     fixed_versions: vers:pypi/2.17.6
@@ -17,28 +24,21 @@ impacted_packages:
     fixed_versions: vers:pypi/2.16.13
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/ansible/ansible
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/ansible/ansible
-        commit: 8a87e1c5d37422bc99d27ad4237d185cc233e035
-    introduced_in_commits: []
 severities:
   - score: '5.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-jpxc-vmjf-9fcj/GHSA-jpxc-vmjf-9fcj.json
   - score: '7.1'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-jpxc-vmjf-9fcj/GHSA-jpxc-vmjf-9fcj.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-532

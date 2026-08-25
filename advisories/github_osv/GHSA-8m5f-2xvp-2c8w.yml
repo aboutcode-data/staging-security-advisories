@@ -7,11 +7,6 @@ summary: |
   WWBN AVideo recovery notification bypass vulnerability
   A recovery notification bypass vulnerability exists in the userRecoverPass.php captcha validation functionality of WWBN AVideo dev master commit 15fed957fb. A specially crafted HTTP request can lead to silently create a recovery pass code for any user.
 impacted_packages:
-  - purl: pkg:composer/wwbn/avideo
-    affected_versions: vers:composer/<=12.4.0
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/wwbn/avideo
     affected_versions:
     fixed_versions:
@@ -19,16 +14,21 @@ impacted_packages:
       - vcs_url: https://github.com/wwbn/avideo
         commit: 15fed957fb64b4055158acfc449bd7974346edb5
     introduced_in_commits: []
+  - purl: pkg:composer/wwbn/avideo
+    affected_versions: vers:composer/<=12.4.0
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/01/GHSA-8m5f-2xvp-2c8w/GHSA-8m5f-2xvp-2c8w.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-640

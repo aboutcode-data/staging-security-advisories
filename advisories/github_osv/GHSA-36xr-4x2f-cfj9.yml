@@ -10,6 +10,11 @@ summary: |
   Users are recommended to upgrade to version 4.4.0, which fixes the issue. If users are on the 4.0.x LTS releases stream, then they are suggested to upgrade to 4.0.4. If users are on 3.x, they are suggested to move to 3.21.4 or 3.22.1
 impacted_packages:
   - purl: pkg:maven/org.apache.camel/camel-sql
+    affected_versions: vers:maven/>=4.0.0|<4.0.4
+    fixed_versions: vers:maven/4.0.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/org.apache.camel/camel-sql
     affected_versions: vers:maven/>=3.0.0|<3.21.4
     fixed_versions: vers:maven/3.21.4
     fixed_in_commits: []
@@ -17,11 +22,6 @@ impacted_packages:
   - purl: pkg:maven/org.apache.camel/camel-sql
     affected_versions: vers:maven/>=3.22.0|<3.22.1
     fixed_versions: vers:maven/3.22.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/org.apache.camel/camel-sql
-    affected_versions: vers:maven/>=4.0.0|<4.0.4
-    fixed_versions: vers:maven/4.0.4
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:maven/org.apache.camel/camel-sql
@@ -33,17 +33,17 @@ severities:
   - score: '7.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/02/GHSA-36xr-4x2f-cfj9/GHSA-36xr-4x2f-cfj9.json
   - score: '8.6'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/02/GHSA-36xr-4x2f-cfj9/GHSA-36xr-4x2f-cfj9.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-502

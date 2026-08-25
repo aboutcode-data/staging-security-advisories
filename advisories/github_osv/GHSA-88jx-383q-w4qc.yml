@@ -35,6 +35,13 @@ summary: "Cosign malicious attachments can cause system-wide denial of service\n
   \ version of Cosign, which limits the number of attachments. An environment variable can override\
   \ this value."
 impacted_packages:
+  - purl: pkg:github/google/go-containerregistry
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/google/go-containerregistry
+        commit: a0658aa1d0cc7a7f1bcc4a3af9155335b6943f40
+    introduced_in_commits: []
   - purl: pkg:github/sigstore/cosign
     affected_versions:
     fixed_versions:
@@ -44,23 +51,16 @@ impacted_packages:
       - vcs_url: https://github.com/sigstore/cosign
         commit: 629f5f8fa672973503edde75f84dcd984637629e
     introduced_in_commits: []
-  - purl: pkg:github/google/go-containerregistry
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/google/go-containerregistry
-        commit: a0658aa1d0cc7a7f1bcc4a3af9155335b6943f40
-    introduced_in_commits: []
 severities:
   - score: '4.2'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/04/GHSA-88jx-383q-w4qc/GHSA-88jx-383q-w4qc.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-770

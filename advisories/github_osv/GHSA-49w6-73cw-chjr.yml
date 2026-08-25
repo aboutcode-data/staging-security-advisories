@@ -47,13 +47,13 @@ summary: "Astro's server source code is exposed to the public if sourcemaps are 
   \ if they are using sourcemaps or an integration that enables sourcemaps."
 impacted_packages:
   - purl: pkg:npm/astro
-    affected_versions: vers:npm/>=5.0.0-alpha.0|<5.0.8
-    fixed_versions: vers:npm/5.0.8
+    affected_versions: vers:npm/<=4.16.17
+    fixed_versions: vers:npm/4.16.18
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:npm/astro
-    affected_versions: vers:npm/<=4.16.17
-    fixed_versions: vers:npm/4.16.18
+    affected_versions: vers:npm/>=5.0.0-alpha.0|<5.0.8
+    fixed_versions: vers:npm/5.0.8
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:github/withastro/astro
@@ -71,12 +71,12 @@ severities:
   - score: '7.8'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:H/SI:L/SA:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/12/GHSA-49w6-73cw-chjr/GHSA-49w6-73cw-chjr.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-219
