@@ -15,11 +15,6 @@ summary: "Next.js: Unbounded next/image disk cache growth can exhaust storage\n#
   \ for `images.localPatterns`, `images.remotePatterns`, and `images.qualities`)"
 impacted_packages:
   - purl: pkg:npm/next
-    affected_versions: vers:npm/>=16.0.0-beta.0|<16.1.7
-    fixed_versions: vers:npm/16.1.7
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:npm/next
     affected_versions: vers:npm/>=10.0.0|<15.5.14
     fixed_versions: vers:npm/15.5.14
     fixed_in_commits: []
@@ -31,16 +26,21 @@ impacted_packages:
       - vcs_url: https://github.com/vercel/next.js
         commit: 39eb8e0ac498b48855a0430fbf4c22276a73b4bd
     introduced_in_commits: []
+  - purl: pkg:npm/next
+    affected_versions: vers:npm/>=16.0.0-beta.0|<16.1.7
+    fixed_versions: vers:npm/16.1.7
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.9'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-3x4c-7xq6-9pq8/GHSA-3x4c-7xq6-9pq8.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-400

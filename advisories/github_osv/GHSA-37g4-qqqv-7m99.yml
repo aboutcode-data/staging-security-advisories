@@ -100,11 +100,6 @@ summary: |
   Please let me know if additional information or testing is needed.
   I'm happy to assist with further analysis or validation.
 impacted_packages:
-  - purl: pkg:pypi/intake
-    affected_versions: vers:pypi/<=2.0.9
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/intake/intake
     affected_versions:
     fixed_versions:
@@ -112,16 +107,21 @@ impacted_packages:
       - vcs_url: https://github.com/intake/intake
         commit: d0c0b6b57c1cb3f73880655ded4a9b0e18e1fd1b
     introduced_in_commits: []
+  - purl: pkg:pypi/intake
+    affected_versions: vers:pypi/<=2.0.9
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-37g4-qqqv-7m99/GHSA-37g4-qqqv-7m99.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

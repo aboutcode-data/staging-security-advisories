@@ -18,11 +18,6 @@ summary: |
   ### Impact
   The malicious JavaScript could move or delete existing files on the server, or upload new files, using the account of the person who opens the SVG.
 impacted_packages:
-  - purl: pkg:pypi/copyparty
-    affected_versions: vers:pypi/<=1.20.10
-    fixed_versions: vers:pypi/1.20.11
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/9001/copyparty
     affected_versions:
     fixed_versions:
@@ -30,16 +25,21 @@ impacted_packages:
       - vcs_url: https://github.com/9001/copyparty
         commit: 1c9f894e149b6be3cc7de81efc93a4ce4766e0e5
     introduced_in_commits: []
+  - purl: pkg:pypi/copyparty
+    affected_versions: vers:pypi/<=1.20.10
+    fixed_versions: vers:pypi/1.20.11
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.6'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-m6hv-x64c-27mm/GHSA-m6hv-x64c-27mm.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

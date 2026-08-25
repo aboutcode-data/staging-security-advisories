@@ -7,6 +7,21 @@ summary: |
   ImageMagick is vulnerable to heap buffer over-write on 32-bit systems in SFW decoder
   An overflow on  32-bit systems can cause a crash in the SFW decoder when processing extremely large images.
 impacted_packages:
+  - purl: pkg:nuget/Magick.NET-Q8-AnyCPU
+    affected_versions: vers:nuget/<14.10.4
+    fixed_versions: vers:nuget/14.10.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
+    affected_versions: vers:nuget/<14.10.4
+    fixed_versions: vers:nuget/14.10.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/Magick.NET-Q16-HDRI-AnyCPU
+    affected_versions: vers:nuget/<14.10.4
+    fixed_versions: vers:nuget/14.10.4
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-HDRI-x64
     affected_versions: vers:nuget/<14.10.4
     fixed_versions: vers:nuget/14.10.4
@@ -28,11 +43,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:nuget/Magick.NET-Q16-x86
-    affected_versions: vers:nuget/<14.10.4
-    fixed_versions: vers:nuget/14.10.4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q8-AnyCPU
     affected_versions: vers:nuget/<14.10.4
     fixed_versions: vers:nuget/14.10.4
     fixed_in_commits: []
@@ -92,26 +102,16 @@ impacted_packages:
     fixed_versions: vers:nuget/14.10.4
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-AnyCPU
-    affected_versions: vers:nuget/<14.10.4
-    fixed_versions: vers:nuget/14.10.4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:nuget/Magick.NET-Q16-HDRI-AnyCPU
-    affected_versions: vers:nuget/<14.10.4
-    fixed_versions: vers:nuget/14.10.4
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: '5.7'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-56jp-jfqg-f8f4/GHSA-56jp-jfqg-f8f4.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-122

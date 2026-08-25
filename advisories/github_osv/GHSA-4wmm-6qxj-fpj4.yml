@@ -98,11 +98,6 @@ summary: |
 
   `realpath()` resolves `../` sequences before the prefix check, preventing traversal bypasses.
 impacted_packages:
-  - purl: pkg:composer/wwbn/avideo
-    affected_versions: vers:composer/<=25.0.0
-    fixed_versions: vers:composer/26.0.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/wwbn/avideo
     affected_versions:
     fixed_versions:
@@ -110,16 +105,21 @@ impacted_packages:
       - vcs_url: https://github.com/wwbn/avideo
         commit: 870cf24a7632d4f1a5d5549b59103c18f39e3a21
     introduced_in_commits: []
+  - purl: pkg:composer/wwbn/avideo
+    affected_versions: vers:composer/<=25.0.0
+    fixed_versions: vers:composer/26.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-4wmm-6qxj-fpj4/GHSA-4wmm-6qxj-fpj4.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

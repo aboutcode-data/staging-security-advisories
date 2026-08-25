@@ -31,11 +31,6 @@ summary: |
 
   Applications relying solely on route-based middleware to protect static subpaths under the same static root may have exposed those resources.
 impacted_packages:
-  - purl: pkg:npm/%40hono/node-server
-    affected_versions: vers:npm/<1.19.10
-    fixed_versions: vers:npm/1.19.10
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/honojs/node-server
     affected_versions:
     fixed_versions:
@@ -43,16 +38,21 @@ impacted_packages:
       - vcs_url: https://github.com/honojs/node-server
         commit: 455015be1697dd89974a68b70350ea7b2d126d2e
     introduced_in_commits: []
+  - purl: pkg:npm/%40hono/node-server
+    affected_versions: vers:npm/<1.19.10
+    fixed_versions: vers:npm/1.19.10
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-wc8c-qw6v-h7f6/GHSA-wc8c-qw6v-h7f6.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-863

@@ -19,6 +19,15 @@ summary: |
 
   No workaround. Upgrade to a patched version.
 impacted_packages:
+  - purl: pkg:github/parse-community/parse-server
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/parse-community/parse-server
+        commit: 03249f9bf5b8783c8b848f84dab791ff0b761b8c
+      - vcs_url: https://github.com/parse-community/parse-server
+        commit: bdddab5f8b61a40cb8fc62dd895887bdd2f3838e
+    introduced_in_commits: []
   - purl: pkg:npm/parse-server
     affected_versions: vers:npm/>=9.0.0|<9.6.0-alpha.53
     fixed_versions: vers:npm/9.6.0-alpha.53
@@ -29,25 +38,16 @@ impacted_packages:
     fixed_versions: vers:npm/8.6.59
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/parse-community/parse-server
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/parse-community/parse-server
-        commit: 03249f9bf5b8783c8b848f84dab791ff0b761b8c
-      - vcs_url: https://github.com/parse-community/parse-server
-        commit: bdddab5f8b61a40cb8fc62dd895887bdd2f3838e
-    introduced_in_commits: []
 severities:
   - score: '8.6'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-p2w6-rmh7-w8q3/GHSA-p2w6-rmh7-w8q3.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-89

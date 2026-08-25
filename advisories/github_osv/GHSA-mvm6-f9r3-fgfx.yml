@@ -29,26 +29,26 @@ summary: "AWS SDK for .NET: Improper escaping of special characters in CloudFron
   \ Amazon Inspector Security Research team for identifying this issue and working through the\
   \ coordinated process together."
 impacted_packages:
-  - purl: pkg:nuget/AWSSDK.CloudFront
-    affected_versions: vers:nuget/<3.7.510.7
-    fixed_versions: vers:nuget/3.7.510.7
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:nuget/AWSSDK.Extensions.CloudFront.Signers
     affected_versions: vers:nuget/>=4.0.0|<4.0.0.26
     fixed_versions: vers:nuget/4.0.0.26
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:nuget/AWSSDK.CloudFront
+    affected_versions: vers:nuget/<3.7.510.7
+    fixed_versions: vers:nuget/3.7.510.7
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: '7.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:H/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-mvm6-f9r3-fgfx/GHSA-mvm6-f9r3-fgfx.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-116

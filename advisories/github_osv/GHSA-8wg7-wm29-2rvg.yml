@@ -11,11 +11,6 @@ summary: |
 
   Affected users should update to version 3.2.0 to mitigate the issue.
 impacted_packages:
-  - purl: pkg:composer/craftcms/webhooks
-    affected_versions: vers:composer/>=3.0.0|<3.2.0
-    fixed_versions: vers:composer/3.2.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/craftcms/webhooks
     affected_versions:
     fixed_versions:
@@ -23,16 +18,21 @@ impacted_packages:
       - vcs_url: https://github.com/craftcms/webhooks
         commit: 88344991a68b07145567c46dfd0ae3328c521f62
     introduced_in_commits: []
+  - purl: pkg:composer/craftcms/webhooks
+    affected_versions: vers:composer/>=3.0.0|<3.2.0
+    fixed_versions: vers:composer/3.2.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.5'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-8wg7-wm29-2rvg/GHSA-8wg7-wm29-2rvg.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-1336

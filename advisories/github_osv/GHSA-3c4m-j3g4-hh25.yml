@@ -51,11 +51,6 @@ summary: |
 
   - Bug bounty submission: SBB-L4ZVAFH8 (Intigriti)
 impacted_packages:
-  - purl: pkg:composer/flarum/nicknames
-    affected_versions: vers:composer/<1.8.3
-    fixed_versions: vers:composer/1.8.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/flarum/nicknames
     affected_versions:
     fixed_versions:
@@ -63,16 +58,21 @@ impacted_packages:
       - vcs_url: https://github.com/flarum/nicknames
         commit: 4dde99729abdce8f6e2a7437c86e38735fdcca28
     introduced_in_commits: []
+  - purl: pkg:composer/flarum/nicknames
+    affected_versions: vers:composer/<1.8.3
+    fixed_versions: vers:composer/1.8.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.6'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-3c4m-j3g4-hh25/GHSA-3c4m-j3g4-hh25.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

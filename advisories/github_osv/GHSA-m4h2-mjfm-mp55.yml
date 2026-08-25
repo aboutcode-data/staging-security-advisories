@@ -13,11 +13,6 @@ summary: |
 
   Disable subscriptions and, in general, queries over the WebSocket.
 impacted_packages:
-  - purl: pkg:npm/mercurius
-    affected_versions: vers:npm/<16.8.0
-    fixed_versions: vers:npm/16.8.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/mercurius-js/mercurius
     affected_versions:
     fixed_versions:
@@ -25,16 +20,21 @@ impacted_packages:
       - vcs_url: https://github.com/mercurius-js/mercurius
         commit: 5b56f60f4b0d60780b0ff499a479bd830bdd6986
     introduced_in_commits: []
+  - purl: pkg:npm/mercurius
+    affected_versions: vers:npm/<16.8.0
+    fixed_versions: vers:npm/16.8.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '2.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N/E:U
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-m4h2-mjfm-mp55/GHSA-m4h2-mjfm-mp55.json
   - score: LOW
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-863

@@ -134,11 +134,6 @@ summary: |
   2. Add `isSSRFSafeURL()` check (already exists in `objects/functions.php`) before any fetch
   3. Block outbound connections from the web process to RFC1918 addresses at the firewall/egress level
 impacted_packages:
-  - purl: pkg:composer/wwbn/avideo
-    affected_versions: vers:composer/<=26.0.0
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/wwbn/avideo
     affected_versions:
     fixed_versions:
@@ -146,16 +141,21 @@ impacted_packages:
       - vcs_url: https://github.com/wwbn/avideo
         commit: 1e6cf03e93b5a5318204b010ea28440b0d9a5ab3
     introduced_in_commits: []
+  - purl: pkg:composer/wwbn/avideo
+    affected_versions: vers:composer/<=26.0.0
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.3'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-3fpm-8rjr-v5mc/GHSA-3fpm-8rjr-v5mc.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-918

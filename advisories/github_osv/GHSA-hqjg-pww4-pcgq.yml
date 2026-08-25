@@ -15,11 +15,6 @@ summary: |
   * Only clone or pull scripts from trusted sources
   * Review the output of the `pull` and `clone` commands to verify only expected project files are modified
 impacted_packages:
-  - purl: pkg:npm/%40google/clasp
-    affected_versions: vers:npm/<3.2.0
-    fixed_versions: vers:npm/3.2.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/google/clasp
     affected_versions:
     fixed_versions:
@@ -27,16 +22,21 @@ impacted_packages:
       - vcs_url: https://github.com/google/clasp
         commit: ba6bd666fe74de54950122b5d92ecf1dcc02a9d3
     introduced_in_commits: []
+  - purl: pkg:npm/%40google/clasp
+    affected_versions: vers:npm/<3.2.0
+    fixed_versions: vers:npm/3.2.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.7'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-hqjg-pww4-pcgq/GHSA-hqjg-pww4-pcgq.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

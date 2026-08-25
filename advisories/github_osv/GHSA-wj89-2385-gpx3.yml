@@ -43,11 +43,6 @@ summary: |
   ## Mitigation
   Sanitize the inventory location name field when rendering in the "Track Inventory" table.
 impacted_packages:
-  - purl: pkg:composer/craftcms/commerce
-    affected_versions: vers:composer/<=5.5.2
-    fixed_versions: vers:composer/5.5.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/craftcms/commerce
     affected_versions:
     fixed_versions:
@@ -55,16 +50,21 @@ impacted_packages:
       - vcs_url: https://github.com/craftcms/commerce
         commit: da143df084563ddf0929d7c261bcc11d312e8004
     introduced_in_commits: []
+  - purl: pkg:composer/craftcms/commerce
+    affected_versions: vers:composer/<=5.5.2
+    fixed_versions: vers:composer/5.5.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '4.8'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-wj89-2385-gpx3/GHSA-wj89-2385-gpx3.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

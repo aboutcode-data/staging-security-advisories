@@ -7,6 +7,13 @@ summary: |
   Plexus-Utils has a Directory Traversal vulnerability in its extractFile method
   Directory Traversal vulnerability in the extractFile method of org.codehaus.plexus.util.Expand in plexus-utils before 6d780b3378829318ba5c2d29547e0012d5b29642. This allows an attacker to execute arbitrary code
 impacted_packages:
+  - purl: pkg:github/codehaus-plexus/plexus-utils
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/codehaus-plexus/plexus-utils
+        commit: 6d780b3378829318ba5c2d29547e0012d5b29642
+    introduced_in_commits: []
   - purl: pkg:maven/org.codehaus.plexus/plexus-utils
     affected_versions: vers:maven/>=4.0.0|<4.0.3
     fixed_versions: vers:maven/4.0.3
@@ -17,18 +24,11 @@ impacted_packages:
     fixed_versions: vers:maven/3.6.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/codehaus-plexus/plexus-utils
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/codehaus-plexus/plexus-utils
-        commit: 6d780b3378829318ba5c2d29547e0012d5b29642
-    introduced_in_commits: []
 severities:
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22

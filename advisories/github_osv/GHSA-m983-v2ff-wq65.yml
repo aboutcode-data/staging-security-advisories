@@ -27,6 +27,15 @@ summary: |
   - Fix Parse Server 9: https://github.com/parse-community/parse-server/pull/10330
   - Fix Parse Server 8: https://github.com/parse-community/parse-server/pull/10331
 impacted_packages:
+  - purl: pkg:github/parse-community/parse-server
+    affected_versions:
+    fixed_versions:
+    fixed_in_commits:
+      - vcs_url: https://github.com/parse-community/parse-server
+        commit: 776c71c3078e77d38c94937f463741793609d055
+      - vcs_url: https://github.com/parse-community/parse-server
+        commit: 5834e29234593addaa0251a85f572ad4f376320b
+    introduced_in_commits: []
   - purl: pkg:npm/parse-server
     affected_versions: vers:npm/>=9.0.0|<9.7.0-alpha.9
     fixed_versions: vers:npm/9.7.0-alpha.9
@@ -37,25 +46,16 @@ impacted_packages:
     fixed_versions: vers:npm/8.6.65
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:github/parse-community/parse-server
-    affected_versions:
-    fixed_versions:
-    fixed_in_commits:
-      - vcs_url: https://github.com/parse-community/parse-server
-        commit: 776c71c3078e77d38c94937f463741793609d055
-      - vcs_url: https://github.com/parse-community/parse-server
-        commit: 5834e29234593addaa0251a85f572ad4f376320b
-    introduced_in_commits: []
 severities:
   - score: '8.2'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-m983-v2ff-wq65/GHSA-m983-v2ff-wq65.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-362

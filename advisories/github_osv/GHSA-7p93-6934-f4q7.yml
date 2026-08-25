@@ -251,11 +251,6 @@ summary: |
   </html>
   ```
 impacted_packages:
-  - purl: pkg:pypi/glances
-    affected_versions: vers:pypi/<4.5.3
-    fixed_versions: vers:pypi/4.5.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/nicolargo/glances
     affected_versions:
     fixed_versions:
@@ -263,16 +258,21 @@ impacted_packages:
       - vcs_url: https://github.com/nicolargo/glances
         commit: dcb39c3f12b2a1eec708c58d22d7a1d62bdf5fa1
     introduced_in_commits: []
+  - purl: pkg:pypi/glances
+    affected_versions: vers:pypi/<4.5.3
+    fixed_versions: vers:pypi/4.5.3
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.1'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-7p93-6934-f4q7/GHSA-7p93-6934-f4q7.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-942

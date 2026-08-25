@@ -65,11 +65,6 @@ summary: "OpenClaw: Non-owner command-authorized sender can change the owner-onl
   \ must still be rejected unless `senderIsOwner === true`.\n4. Verify that the owner can still\
   \ use `/send on|off|inherit` normally."
 impacted_packages:
-  - purl: pkg:npm/openclaw
-    affected_versions: vers:npm/<2026.3.24
-    fixed_versions: vers:npm/2026.3.24
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/openclaw/openclaw
     affected_versions:
     fixed_versions:
@@ -81,21 +76,26 @@ impacted_packages:
       - vcs_url: https://github.com/openclaw/openclaw
         commit: ccfeecb6887cd97937e33a71877ad512741e82b2
     introduced_in_commits: []
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<2026.3.24
+    fixed_versions: vers:npm/2026.3.24
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.4'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-39mp-545q-w789/GHSA-39mp-545q-w789.json
   - score: '5.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-39mp-545q-w789/GHSA-39mp-545q-w789.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-285

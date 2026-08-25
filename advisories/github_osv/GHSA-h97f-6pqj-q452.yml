@@ -15,11 +15,6 @@ summary: "OpenClaw has a IPv6 multicast SSRF classifier bypass\n### Summary\nOpe
   \ (`2026.2.25`). Once that release is published on npm, the advisory is published.\n\nOpenClaw\
   \ thanks @zpbrent for reporting."
 impacted_packages:
-  - purl: pkg:npm/openclaw
-    affected_versions: vers:npm/<=2026.2.24
-    fixed_versions: vers:npm/2026.2.25
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/openclaw/openclaw
     affected_versions:
     fixed_versions:
@@ -27,16 +22,21 @@ impacted_packages:
       - vcs_url: https://github.com/openclaw/openclaw
         commit: baf656bc6fd7f83b6033e6dbc2548ec75028641f
     introduced_in_commits: []
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/<=2026.2.24
+    fixed_versions: vers:npm/2026.2.25
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:N/SC:L/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-h97f-6pqj-q452/GHSA-h97f-6pqj-q452.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-918

@@ -11,11 +11,6 @@ summary: |
 
   This issue affects all versions of esaml, including forks by arekinath, handnot2, and dropbox. Users running on Erlang/OTP 27 or later are not affected due to Xmerl defaulting to entities disabled.
 impacted_packages:
-  - purl: pkg:hex/esaml
-    affected_versions: vers:hex/<=4.6.0
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jump-app/esaml
     affected_versions:
     fixed_versions:
@@ -23,16 +18,21 @@ impacted_packages:
       - vcs_url: https://github.com/jump-app/esaml
         commit: bab85efde7c136911402a881ca55173759467a26
     introduced_in_commits: []
+  - purl: pkg:hex/esaml
+    affected_versions: vers:hex/<=4.6.0
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-4g2h-vm7x-747c/GHSA-4g2h-vm7x-747c.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-611

@@ -85,11 +85,6 @@ summary: "Forge has signature forgery in Ed25519 due to missing S > L check\n## 
   \ S is smaller than l\n\n\n## Credit\n\nThis vulnerability was discovered as part of a U.C.\
   \ Berkeley security research project by: Austin Chu, Sohee Kim, and Corban Villa."
 impacted_packages:
-  - purl: pkg:npm/node-forge
-    affected_versions: vers:npm/<1.4.0
-    fixed_versions: vers:npm/1.4.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/digitalbazaar/forge
     affected_versions:
     fixed_versions:
@@ -97,16 +92,21 @@ impacted_packages:
       - vcs_url: https://github.com/digitalbazaar/forge
         commit: bdecf11571c9f1a487cc0fe72fe78ff6dfa96b85
     introduced_in_commits: []
+  - purl: pkg:npm/node-forge
+    affected_versions: vers:npm/<1.4.0
+    fixed_versions: vers:npm/1.4.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-q67f-28xg-22rw/GHSA-q67f-28xg-22rw.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-347

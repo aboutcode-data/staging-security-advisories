@@ -51,11 +51,6 @@ summary: "Admidio allows Unauthenticated Access to Role-Restricted documents via
   \ moving uploads outside the web root eliminates the dependency on Apache configuration correctness\
   \ entirely.\n\n**Reported by:** Juan Felipe Oz [@JF0x0r](https://x.com/PwnedRar_)\n> [LinkedIn](https://www.linkedin.com/in/juanfelipeoz/)"
 impacted_packages:
-  - purl: pkg:composer/admidio/admidio
-    affected_versions: vers:composer/>=5.0.0|<5.0.8
-    fixed_versions: vers:composer/5.0.8
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/admidio/admidio
     affected_versions:
     fixed_versions:
@@ -63,16 +58,21 @@ impacted_packages:
       - vcs_url: https://github.com/admidio/admidio
         commit: 5f770c1ca81a4f6b02136280cd63316a35aabaaf
     introduced_in_commits: []
+  - purl: pkg:composer/admidio/admidio
+    affected_versions: vers:composer/>=5.0.0|<5.0.8
+    fixed_versions: vers:composer/5.0.8
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-7fh7-8xqm-3g88/GHSA-7fh7-8xqm-3g88.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-284

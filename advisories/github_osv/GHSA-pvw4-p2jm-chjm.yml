@@ -154,11 +154,6 @@ summary: |
 
   Both fixes should be applied for defense in depth.
 impacted_packages:
-  - purl: pkg:composer/wwbn/avideo
-    affected_versions: vers:composer/<=26.0.0
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/wwbn/avideo
     affected_versions:
     fixed_versions:
@@ -166,16 +161,21 @@ impacted_packages:
       - vcs_url: https://github.com/wwbn/avideo
         commit: 75d45780728294ededa1e3f842f95295d3e7d144
     introduced_in_commits: []
+  - purl: pkg:composer/wwbn/avideo
+    affected_versions: vers:composer/<=26.0.0
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '8.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-pvw4-p2jm-chjm/GHSA-pvw4-p2jm-chjm.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-89

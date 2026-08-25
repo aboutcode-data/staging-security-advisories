@@ -13,36 +13,6 @@ summary: "Spinnaker clouddriver and orca URL validation bypass via underscores i
   \ available in versions 2025.4.1, 2025.3.1, 2025.2.4 and 2026.0.0.  \n\n### Workarounds\n\
   You can disable the various artifacts on this system to work around these limits."
 impacted_packages:
-  - purl: pkg:maven/io.spinnaker.orca/orca-core
-    affected_versions: vers:maven/<2025.2.4
-    fixed_versions: vers:maven/2025.2.4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/io.spinnaker.clouddriver/clouddriver-artifacts
-    affected_versions: vers:maven/<2025.2.4
-    fixed_versions: vers:maven/2025.2.4
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/io.spinnaker.clouddriver/clouddriver-artifacts
-    affected_versions: vers:maven/>=2025.3.0|<2025.3.1
-    fixed_versions: vers:maven/2025.3.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/io.spinnaker.clouddriver/clouddriver-artifacts
-    affected_versions: vers:maven/>=2025.4.0|<2025.4.1
-    fixed_versions: vers:maven/2025.4.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/io.spinnaker.orca/orca-core
-    affected_versions: vers:maven/>=2025.3.0|<2025.3.1
-    fixed_versions: vers:maven/2025.3.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:maven/io.spinnaker.orca/orca-core
-    affected_versions: vers:maven/>=2025.4.0|<2025.4.1
-    fixed_versions: vers:maven/2025.4.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/spinnaker/spinnaker
     affected_versions:
     fixed_versions:
@@ -50,16 +20,46 @@ impacted_packages:
       - vcs_url: https://github.com/spinnaker/spinnaker
         commit: 7c4737906239a958a468e843239c6785b03d0eda
     introduced_in_commits: []
+  - purl: pkg:maven/io.spinnaker.clouddriver/clouddriver-artifacts
+    affected_versions: vers:maven/<2025.2.4
+    fixed_versions: vers:maven/2025.2.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/io.spinnaker.clouddriver/clouddriver-artifacts
+    affected_versions: vers:maven/>=2025.3.0|<2025.3.1
+    fixed_versions: vers:maven/2025.3.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/io.spinnaker.clouddriver/clouddriver-artifacts
+    affected_versions: vers:maven/>=2025.4.0|<2025.4.1
+    fixed_versions: vers:maven/2025.4.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/io.spinnaker.orca/orca-core
+    affected_versions: vers:maven/<2025.2.4
+    fixed_versions: vers:maven/2025.2.4
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/io.spinnaker.orca/orca-core
+    affected_versions: vers:maven/>=2025.3.0|<2025.3.1
+    fixed_versions: vers:maven/2025.3.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:maven/io.spinnaker.orca/orca-core
+    affected_versions: vers:maven/>=2025.4.0|<2025.4.1
+    fixed_versions: vers:maven/2025.4.1
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.1'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:L
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-8r8j-gfhg-fw38/GHSA-8r8j-gfhg-fw38.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-918

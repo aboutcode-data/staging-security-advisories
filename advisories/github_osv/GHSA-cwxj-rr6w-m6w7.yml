@@ -42,11 +42,6 @@ summary: |
 
   If the Scrapy 2.14.2 implementation is incompatible with your project (for example, because your Scrapy version is older), copy the corresponding middleware from your Scrapy version, apply the same patch, and use that as a replacement.
 impacted_packages:
-  - purl: pkg:pypi/scrapy
-    affected_versions: vers:pypi/<=2.14.1
-    fixed_versions: vers:pypi/2.14.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/scrapy/scrapy
     affected_versions:
     fixed_versions:
@@ -54,16 +49,21 @@ impacted_packages:
       - vcs_url: https://github.com/scrapy/scrapy
         commit: 945b787a263586cb5803c01c6da57daad8997ae5
     introduced_in_commits: []
+  - purl: pkg:pypi/scrapy
+    affected_versions: vers:pypi/<=2.14.1
+    fixed_versions: vers:pypi/2.14.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-cwxj-rr6w-m6w7/GHSA-cwxj-rr6w-m6w7.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-470

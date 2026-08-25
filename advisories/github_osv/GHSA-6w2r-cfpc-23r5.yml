@@ -81,11 +81,6 @@ summary: |
   $row = PlayList::getAllFromUser($_GET['users_id'], false, 'public');
   ```
 impacted_packages:
-  - purl: pkg:composer/wwbn/avideo
-    affected_versions: vers:composer/<25.0.0
-    fixed_versions: vers:composer/25.0.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/wwbn/avideo
     affected_versions:
     fixed_versions:
@@ -93,16 +88,21 @@ impacted_packages:
       - vcs_url: https://github.com/wwbn/avideo
         commit: 12adc66913724736937a61130ae2779c299445ca
     introduced_in_commits: []
+  - purl: pkg:composer/wwbn/avideo
+    affected_versions: vers:composer/<25.0.0
+    fixed_versions: vers:composer/25.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.5'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-6w2r-cfpc-23r5/GHSA-6w2r-cfpc-23r5.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-862

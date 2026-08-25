@@ -101,11 +101,6 @@ summary: |
     ```
   - Use the Handlebars **runtime-only** build (`handlebars/runtime`) on the server if templates are  pre-compiled at build time; `compile()` will be unavailable.
 impacted_packages:
-  - purl: pkg:npm/handlebars
-    affected_versions: vers:npm/<=4.7.8
-    fixed_versions: vers:npm/4.7.9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/handlebars-lang/handlebars.js
     affected_versions:
     fixed_versions:
@@ -113,16 +108,21 @@ impacted_packages:
       - vcs_url: https://github.com/handlebars-lang/handlebars.js
         commit: 68d8df5a88e0a26fe9e6084c5c6aaebe67b07da2
     introduced_in_commits: []
+  - purl: pkg:npm/handlebars
+    affected_versions: vers:npm/<=4.7.8
+    fixed_versions: vers:npm/4.7.9
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '9.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-2w6w-674q-4c4q/GHSA-2w6w-674q-4c4q.json
   - score: CRITICAL
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-94

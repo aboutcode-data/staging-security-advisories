@@ -91,11 +91,6 @@ summary: |
   }
   ```
 impacted_packages:
-  - purl: pkg:npm/unhead
-    affected_versions: vers:npm/<=2.1.10
-    fixed_versions: vers:npm/2.1.11
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/unjs/unhead
     affected_versions:
     fixed_versions:
@@ -103,16 +98,21 @@ impacted_packages:
       - vcs_url: https://github.com/unjs/unhead
         commit: 9ecc4f9568b0e23938f36d4b23fcfa4a18a89045
     introduced_in_commits: []
+  - purl: pkg:npm/unhead
+    affected_versions: vers:npm/<=2.1.10
+    fixed_versions: vers:npm/2.1.11
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '5.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-g5xx-pwrp-g3fv/GHSA-g5xx-pwrp-g3fv.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-79

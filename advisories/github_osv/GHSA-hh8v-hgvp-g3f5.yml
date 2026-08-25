@@ -26,11 +26,6 @@ summary: |
   - Provide your own domain-filtering implementation of `EmbedAdapterInterface`
   - Enable a [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) and outbound firewall restrictions
 impacted_packages:
-  - purl: pkg:composer/league/commonmark
-    affected_versions: vers:composer/<=2.8.1
-    fixed_versions: vers:composer/2.8.2
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/thephpleague/commonmark
     affected_versions:
     fixed_versions:
@@ -38,16 +33,21 @@ impacted_packages:
       - vcs_url: https://github.com/thephpleague/commonmark
         commit: 59fb075d2101740c337c7216e3f32b36c204218b
     introduced_in_commits: []
+  - purl: pkg:composer/league/commonmark
+    affected_versions: vers:composer/<=2.8.1
+    fixed_versions: vers:composer/2.8.2
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '6.3'
     scoring_system: cvssv4
     scoring_elements: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:L/SI:L/SA:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-hh8v-hgvp-g3f5/GHSA-hh8v-hgvp-g3f5.json
   - score: MODERATE
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-918

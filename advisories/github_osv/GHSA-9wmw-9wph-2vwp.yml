@@ -166,11 +166,6 @@ summary: |
 
   For browser SSE compatibility, implement a session token that can be passed via the `?token=` query parameter (the `QueryTokenMiddleware` already exists at `auth/middleware.go:39` to convert query params to Bearer tokens).
 impacted_packages:
-  - purl: pkg:npm/dagu
-    affected_versions: vers:npm/<2.2.4
-    fixed_versions: vers:npm/2.2.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/dagu-org/dagu
     affected_versions:
     fixed_versions:
@@ -178,16 +173,21 @@ impacted_packages:
       - vcs_url: https://github.com/dagu-org/dagu
         commit: 064616c9b80c04824c1c7c357308f77f3f24d775
     introduced_in_commits: []
+  - purl: pkg:npm/dagu
+    affected_versions: vers:npm/<2.2.4
+    fixed_versions: vers:npm/2.2.4
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.5'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-9wmw-9wph-2vwp/GHSA-9wmw-9wph-2vwp.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-306

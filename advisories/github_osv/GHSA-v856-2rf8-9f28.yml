@@ -90,11 +90,6 @@ impacted_packages:
     fixed_versions: vers:pypi/3.0.2
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:pypi/pydicom
-    affected_versions: vers:pypi/<2.4.5
-    fixed_versions: vers:pypi/2.4.5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/pydicom/pydicom
     affected_versions:
     fixed_versions:
@@ -102,16 +97,21 @@ impacted_packages:
       - vcs_url: https://github.com/pydicom/pydicom
         commit: 6414f01a053dff925578799f5a7208d2ae585e82
     introduced_in_commits: []
+  - purl: pkg:pypi/pydicom
+    affected_versions: vers:pypi/<2.4.5
+    fixed_versions: vers:pypi/2.4.5
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: '7.8'
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-    published_at: None
+    published_at:
     url: https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/03/GHSA-v856-2rf8-9f28/GHSA-v856-2rf8-9f28.json
   - score: HIGH
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses:
   - CWE-22
