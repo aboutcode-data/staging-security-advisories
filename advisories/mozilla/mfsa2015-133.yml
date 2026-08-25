@@ -13,11 +13,6 @@ summary: |
   the Netscape Portable Runtime (NSPR) due to a lack of checks during memory allocation.
   This leads to a potentially exploitable crash. This issue is fixed in NSPR 4.10.10. The NSPR library is a required component of NSS.
 impacted_packages:
-  - purl: pkg:mozilla/Thunderbird
-    affected_versions:
-    fixed_versions: vers:generic/38.4.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:mozilla/Firefox
     affected_versions:
     fixed_versions: vers:generic/42.0.0
@@ -28,11 +23,16 @@ impacted_packages:
     fixed_versions: vers:generic/38.4.0
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:mozilla/Thunderbird
+    affected_versions:
+    fixed_versions: vers:generic/38.4.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: critical
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url: https://www.mozilla.org/en-US/security/advisories/mfsa2015-133
 weaknesses: []
 references:

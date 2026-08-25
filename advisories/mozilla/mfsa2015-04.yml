@@ -9,16 +9,6 @@ summary: "Security researcher Xiaofeng Zheng of the Blue Lotus Team at\nTsinghua
   \ does\nnot allow them to be read. \n\nIn general this flaw cannot be exploited through email\
   \ in the\nThunderbird product, but is potentially a risk in browser or browser-like\ncontexts."
 impacted_packages:
-  - purl: pkg:mozilla/Firefox
-    affected_versions:
-    fixed_versions: vers:generic/35.0.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:mozilla/Firefox%20ESR
-    affected_versions:
-    fixed_versions: vers:generic/31.4.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:mozilla/Thunderbird
     affected_versions:
     fixed_versions: vers:generic/31.4.0
@@ -29,11 +19,21 @@ impacted_packages:
     fixed_versions: vers:generic/2.32.0
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:mozilla/Firefox%20ESR
+    affected_versions:
+    fixed_versions: vers:generic/31.4.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:mozilla/Firefox
+    affected_versions:
+    fixed_versions: vers:generic/35.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: medium
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url: https://www.mozilla.org/en-US/security/advisories/mfsa2015-04
 weaknesses: []
 references:
