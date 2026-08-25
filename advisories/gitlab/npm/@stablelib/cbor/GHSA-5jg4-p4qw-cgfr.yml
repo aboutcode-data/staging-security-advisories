@@ -7,6 +7,11 @@ summary: |
   @stablelib/cbor: Stack exhaustion Denial of Service via deeply nested CBOR arrays, maps, or tags
   `@stablelib/cbor` decodes nested CBOR structures recursively and does not enforce a maximum nesting depth. A sufficiently deep attacker-controlled CBOR payload can therefore crash decoding with `RangeError: Maximum call stack size exceeded`.
 impacted_packages:
+  - purl: pkg:npm/%40stablelib/cbor
+    affected_versions: vers:npm/<2.0.3
+    fixed_versions: vers:npm/2.0.3
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:github/stablelib/stablelib
     affected_versions:
     fixed_versions:
@@ -14,16 +19,11 @@ impacted_packages:
       - vcs_url: https://github.com/stablelib/stablelib
         commit: 0149e18d9d4736e22c257744ca945ebce7899a01
     introduced_in_commits: []
-  - purl: pkg:npm/%40stablelib/cbor
-    affected_versions: vers:npm/<2.0.3
-    fixed_versions: vers:npm/2.0.3
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
-  - score: None
+  - score:
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/@stablelib/cbor/GHSA-5jg4-p4qw-cgfr.yml
 weaknesses:
   - CWE-1035

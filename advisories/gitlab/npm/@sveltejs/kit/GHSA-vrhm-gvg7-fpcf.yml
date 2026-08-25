@@ -9,6 +9,11 @@ summary: |
 
   Only applications using both `experimental.remoteFunctions` and `form` are vulnerable.
 impacted_packages:
+  - purl: pkg:npm/%40sveltejs/kit
+    affected_versions: vers:npm/>=2.49.0|<2.52.2
+    fixed_versions: vers:npm/2.52.2
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:github/sveltejs/kit
     affected_versions:
     fixed_versions:
@@ -16,16 +21,11 @@ impacted_packages:
       - vcs_url: https://github.com/sveltejs/kit
         commit: f47c01bd8100328c24fdb8522fe35913b0735f35
     introduced_in_commits: []
-  - purl: pkg:npm/%40sveltejs/kit
-    affected_versions: vers:npm/>=2.49.0|<2.52.2
-    fixed_versions: vers:npm/2.52.2
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
-  - score: None
+  - score:
     scoring_system: cvssv3.1
     scoring_elements: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-    published_at: None
+    published_at:
     url: https://gitlab.com/gitlab-org/advisories-community/-/blob/main/npm/@sveltejs/kit/GHSA-vrhm-gvg7-fpcf.yml
 weaknesses:
   - CWE-1035
