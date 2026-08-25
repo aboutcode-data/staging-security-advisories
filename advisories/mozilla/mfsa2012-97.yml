@@ -6,6 +6,11 @@ summary: Mozilla developer Gabor Krizsanits discovered that XMLHttpRequest objec
   sandboxes have the system principal instead of the sandbox principal. This can lead to cross-site
   request forgery (CSRF) or information theft via an add-on running untrusted code in a sandbox.
 impacted_packages:
+  - purl: pkg:mozilla/SeaMonkey
+    affected_versions:
+    fixed_versions: vers:generic/2.14.0
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:mozilla/Firefox
     affected_versions:
     fixed_versions: vers:generic/17.0.0
@@ -16,16 +21,11 @@ impacted_packages:
     fixed_versions: vers:generic/17.0.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:mozilla/SeaMonkey
-    affected_versions:
-    fixed_versions: vers:generic/2.14.0
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: high
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url: https://www.mozilla.org/en-US/security/advisories/mfsa2012-97
 weaknesses: []
 references:

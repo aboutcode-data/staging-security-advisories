@@ -11,6 +11,11 @@ summary: |
   exploitable buffer overflow that was fixed in both NSS 3.15.3 and NSS
   3.14.5.
 impacted_packages:
+  - purl: pkg:mozilla/Thunderbird
+    affected_versions:
+    fixed_versions: vers:generic/24.1.1
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:mozilla/Firefox
     affected_versions:
     fixed_versions: vers:generic/25.0.1
@@ -21,14 +26,14 @@ impacted_packages:
     fixed_versions: vers:generic/24.1.1
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:mozilla/Seamonkey
+    affected_versions:
+    fixed_versions: vers:generic/2.22.1
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:mozilla/Firefox%20ESR
     affected_versions:
     fixed_versions: vers:generic/17.0.11
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:mozilla/Thunderbird
-    affected_versions:
-    fixed_versions: vers:generic/24.1.1
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:mozilla/Thunderbird%20ESR
@@ -36,16 +41,11 @@ impacted_packages:
     fixed_versions: vers:generic/17.0.11
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:mozilla/Seamonkey
-    affected_versions:
-    fixed_versions: vers:generic/2.22.1
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: critical
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url: https://www.mozilla.org/en-US/security/advisories/mfsa2013-103
 weaknesses: []
 references:

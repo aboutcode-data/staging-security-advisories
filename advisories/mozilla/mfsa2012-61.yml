@@ -9,24 +9,24 @@ summary: |
   image, a memory corruption can be induced, allowing an attacker to write random
   memory and cause a crash. This crash may be potentially exploitable.
 impacted_packages:
-  - purl: pkg:mozilla/Firefox
-    affected_versions:
-    fixed_versions: vers:generic/15.0.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:mozilla/Firefox%20ESR
     affected_versions:
     fixed_versions: vers:generic/10.0.7
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:mozilla/Thunderbird
+  - purl: pkg:mozilla/Thunderbird%20ESR
+    affected_versions:
+    fixed_versions: vers:generic/10.0.7
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:mozilla/Firefox
     affected_versions:
     fixed_versions: vers:generic/15.0.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:mozilla/Thunderbird%20ESR
+  - purl: pkg:mozilla/Thunderbird
     affected_versions:
-    fixed_versions: vers:generic/10.0.7
+    fixed_versions: vers:generic/15.0.0
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:mozilla/SeaMonkey
@@ -38,7 +38,7 @@ severities:
   - score: critical
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url: https://www.mozilla.org/en-US/security/advisories/mfsa2012-61
 weaknesses: []
 references:

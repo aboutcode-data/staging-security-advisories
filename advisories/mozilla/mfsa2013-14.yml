@@ -6,22 +6,12 @@ summary: |
   Security researcher Mariusz Mlynski reported that it is possible to change the prototype of an object and bypass Chrome Object Wrappers (COW) to gain access to chrome privileged functions. This could allow for arbitrary code execution.
   In general these flaws cannot be exploited through email in the Thunderbird and SeaMonkey products because scripting is disabled, but are potentially a risk in browser or browser-like contexts in those products.
 impacted_packages:
-  - purl: pkg:mozilla/Firefox
+  - purl: pkg:mozilla/Thunderbird%20ESR
     affected_versions:
-    fixed_versions: vers:generic/18.0.0
+    fixed_versions: vers:generic/17.0.2
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:mozilla/Firefox%20ESR
-    affected_versions:
-    fixed_versions: vers:generic/17.0.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:mozilla/Thunderbird
-    affected_versions:
-    fixed_versions: vers:generic/17.0.2
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:mozilla/Thunderbird%20ESR
     affected_versions:
     fixed_versions: vers:generic/17.0.2
     fixed_in_commits: []
@@ -31,11 +21,21 @@ impacted_packages:
     fixed_versions: vers:generic/2.15.0
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:mozilla/Thunderbird
+    affected_versions:
+    fixed_versions: vers:generic/17.0.2
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:mozilla/Firefox
+    affected_versions:
+    fixed_versions: vers:generic/18.0.0
+    fixed_in_commits: []
+    introduced_in_commits: []
 severities:
   - score: high
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url: https://www.mozilla.org/en-US/security/advisories/mfsa2013-14
 weaknesses: []
 references:

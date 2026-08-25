@@ -8,6 +8,16 @@ summary: "Mozilla community member Ms2ger found a mechanism where a\nnew Javascr
   \ flaw cannot be exploited through email in the\nThunderbird product because scripting is\
   \ disabled, but is potentially a risk in\nbrowser or browser-like contexts."
 impacted_packages:
+  - purl: pkg:mozilla/Firefox%20ESR
+    affected_versions:
+    fixed_versions: vers:generic/17.0.9
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:mozilla/Thunderbird%20ESR
+    affected_versions:
+    fixed_versions: vers:generic/17.0.9
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:mozilla/Firefox
     affected_versions:
     fixed_versions: vers:generic/24.0.0
@@ -18,26 +28,16 @@ impacted_packages:
     fixed_versions: vers:generic/2.21.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:mozilla/Firefox%20ESR
-    affected_versions:
-    fixed_versions: vers:generic/17.0.9
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:mozilla/Thunderbird
     affected_versions:
     fixed_versions: vers:generic/24.0.0
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:mozilla/Thunderbird%20ESR
-    affected_versions:
-    fixed_versions: vers:generic/17.0.9
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: high
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url: https://www.mozilla.org/en-US/security/advisories/mfsa2013-82
 weaknesses: []
 references:

@@ -7,6 +7,11 @@ summary: Software developer Dan Gohman of Google reported uninitialized data and
   with additional exploits to allow the reading and use of previously allocated memory in some
   circumstances.
 impacted_packages:
+  - purl: pkg:mozilla/Seamonkey
+    affected_versions:
+    fixed_versions: vers:generic/2.21.0
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:mozilla/Firefox
     affected_versions:
     fixed_versions: vers:generic/24.0.0
@@ -17,16 +22,11 @@ impacted_packages:
     fixed_versions: vers:generic/24.0.0
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:mozilla/Seamonkey
-    affected_versions:
-    fixed_versions: vers:generic/2.21.0
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: medium
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url: https://www.mozilla.org/en-US/security/advisories/mfsa2013-85
 weaknesses: []
 references:

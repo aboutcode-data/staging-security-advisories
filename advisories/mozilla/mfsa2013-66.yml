@@ -10,14 +10,19 @@ summary: |
   potentially lead to arbitrary code being run with the Administrator privileges
   used by the Maintenance Service and inherited by the Updater.
 impacted_packages:
-  - purl: pkg:mozilla/Firefox
-    affected_versions:
-    fixed_versions: vers:generic/23.0.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:mozilla/Firefox%20ESR
     affected_versions:
     fixed_versions: vers:generic/17.0.8
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:mozilla/Seamonkey
+    affected_versions:
+    fixed_versions: vers:generic/2.20.0
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:mozilla/Firefox
+    affected_versions:
+    fixed_versions: vers:generic/23.0.0
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:mozilla/Thunderbird%20ESR
@@ -30,16 +35,11 @@ impacted_packages:
     fixed_versions: vers:generic/17.0.8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:mozilla/Seamonkey
-    affected_versions:
-    fixed_versions: vers:generic/2.20.0
-    fixed_in_commits: []
-    introduced_in_commits: []
 severities:
   - score: high
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url: https://www.mozilla.org/en-US/security/advisories/mfsa2013-66
 weaknesses: []
 references:
