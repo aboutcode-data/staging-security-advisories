@@ -507,41 +507,6 @@ summary: |
       Thunderbird, SeaMonkey, NSS, GNU IceCat, and XULRunner, some of which may
       allow execution of arbitrary code or local privilege escalation.
 impacted_packages:
-  - purl: pkg:ebuild/www-client/firefox
-    affected_versions: vers:ebuild/<10.0.11
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/www-client/firefox-bin
-    affected_versions: vers:ebuild/<10.0.11
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/mail-client/thunderbird
-    affected_versions: vers:ebuild/<10.0.11
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/mail-client/thunderbird-bin
-    affected_versions: vers:ebuild/<10.0.11
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/www-client/seamonkey
-    affected_versions: vers:ebuild/<2.14-r1
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/www-client/seamonkey-bin
-    affected_versions: vers:ebuild/<2.14
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/dev-libs/nss
-    affected_versions: vers:ebuild/<3.14
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:ebuild/www-client/mozilla-firefox
     affected_versions: vers:ebuild/<=3.6.8
     fixed_versions:
@@ -577,6 +542,46 @@ impacted_packages:
     fixed_versions:
     fixed_in_commits: []
     introduced_in_commits: []
+  - purl: pkg:ebuild/www-client/firefox
+    affected_versions: vers:ebuild/<10.0.11
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/www-client/firefox-bin
+    affected_versions: vers:ebuild/<10.0.11
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/mail-client/thunderbird
+    affected_versions: vers:ebuild/<10.0.11
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/mail-client/thunderbird-bin
+    affected_versions: vers:ebuild/<10.0.11
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/www-client/seamonkey
+    affected_versions: vers:ebuild/<2.14-r1
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/www-client/seamonkey-bin
+    affected_versions: vers:ebuild/<2.14
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/dev-libs/nss
+    affected_versions: vers:ebuild/<3.14
+    fixed_versions:
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/mail-client/thunderbird
+    affected_versions:
+    fixed_versions: vers:ebuild/>=10.0.11
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:github/rapid7/metasploit-framework
     affected_versions:
     fixed_versions:
@@ -584,12 +589,22 @@ impacted_packages:
       - vcs_url: https://github.com/rapid7/metasploit-framework
         commit: 72caeaa72f843ec3534e272427c3915ef498b2f9
     introduced_in_commits: []
+  - purl: pkg:ebuild/www-client/seamonkey
+    affected_versions:
+    fixed_versions: vers:ebuild/>=2.14-r1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:ebuild/www-client/firefox-bin
+    affected_versions:
+    fixed_versions: vers:ebuild/>=10.0.11
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:ebuild/www-client/firefox
     affected_versions:
     fixed_versions: vers:ebuild/>=10.0.11
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:ebuild/mail-client/thunderbird
+  - purl: pkg:ebuild/mail-client/thunderbird-bin
     affected_versions:
     fixed_versions: vers:ebuild/>=10.0.11
     fixed_in_commits: []
@@ -599,31 +614,16 @@ impacted_packages:
     fixed_versions: vers:ebuild/>=2.14
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:ebuild/www-client/firefox-bin
-    affected_versions:
-    fixed_versions: vers:ebuild/>=10.0.11
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:ebuild/dev-libs/nss
     affected_versions:
     fixed_versions: vers:ebuild/>=3.14
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/www-client/seamonkey
-    affected_versions:
-    fixed_versions: vers:ebuild/>=2.14-r1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:ebuild/mail-client/thunderbird-bin
-    affected_versions:
-    fixed_versions: vers:ebuild/>=10.0.11
     fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score: high
     scoring_system: generic_textual
     scoring_elements:
-    published_at: None
+    published_at:
     url:
 weaknesses: []
 references:
