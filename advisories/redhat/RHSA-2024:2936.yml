@@ -13,6 +13,16 @@ summary: "An update for the go-toolset:rhel8 module is now available for Red Hat
   \nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments,\
   \ and other related information, refer to the CVE page(s) listed in the References section."
 impacted_packages:
+  - purl: pkg:rpm/redhat/golang-bin?arch=aarch64&rpmmod=go-toolset:rhel8:8080020240506114235:6b4b45d8
+    affected_versions: vers:rpm/<1.19.13-7.module+el8.8.0+21782+8d42ce3c
+    fixed_versions: vers:rpm/1.19.13-7.module+el8.8.0+21782+8d42ce3c
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/go-toolset?arch=s390x&rpmmod=go-toolset:rhel8:8080020240506114235:6b4b45d8
+    affected_versions: vers:rpm/<1.19.13-1.module+el8.8.0+20380+7171fefb
+    fixed_versions: vers:rpm/1.19.13-1.module+el8.8.0+20380+7171fefb
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/delve?arch=src&rpmmod=go-toolset:rhel8:8080020240506114235:6b4b45d8
     affected_versions: vers:rpm/<1.9.1-1.module+el8.8.0+16778+5fbb74f5
     fixed_versions: vers:rpm/1.9.1-1.module+el8.8.0+16778+5fbb74f5
@@ -93,11 +103,6 @@ impacted_packages:
     fixed_versions: vers:rpm/1.19.13-7.module+el8.8.0+21782+8d42ce3c
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/golang-bin?arch=aarch64&rpmmod=go-toolset:rhel8:8080020240506114235:6b4b45d8
-    affected_versions: vers:rpm/<1.19.13-7.module+el8.8.0+21782+8d42ce3c
-    fixed_versions: vers:rpm/1.19.13-7.module+el8.8.0+21782+8d42ce3c
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/go-toolset?arch=ppc64le&rpmmod=go-toolset:rhel8:8080020240506114235:6b4b45d8
     affected_versions: vers:rpm/<1.19.13-1.module+el8.8.0+20380+7171fefb
     fixed_versions: vers:rpm/1.19.13-1.module+el8.8.0+20380+7171fefb
@@ -111,11 +116,6 @@ impacted_packages:
   - purl: pkg:rpm/redhat/golang-bin?arch=ppc64le&rpmmod=go-toolset:rhel8:8080020240506114235:6b4b45d8
     affected_versions: vers:rpm/<1.19.13-7.module+el8.8.0+21782+8d42ce3c
     fixed_versions: vers:rpm/1.19.13-7.module+el8.8.0+21782+8d42ce3c
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/go-toolset?arch=s390x&rpmmod=go-toolset:rhel8:8080020240506114235:6b4b45d8
-    affected_versions: vers:rpm/<1.19.13-1.module+el8.8.0+20380+7171fefb
-    fixed_versions: vers:rpm/1.19.13-1.module+el8.8.0+20380+7171fefb
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/golang?arch=s390x&rpmmod=go-toolset:rhel8:8080020240506114235:6b4b45d8
@@ -132,7 +132,7 @@ severities:
   - score: Important
     scoring_system: rhas
     scoring_elements:
-    published_at: None
+    published_at:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2024_2936.json
 weaknesses: []
 references:

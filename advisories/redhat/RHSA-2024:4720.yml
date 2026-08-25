@@ -28,6 +28,21 @@ summary: |
 
   For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.
 impacted_packages:
+  - purl: pkg:rpm/redhat/mod_proxy_html-debuginfo?arch=aarch64&epoch=1&rpmmod=httpd:2.4:8100020240712114234:489197e6
+    affected_versions: vers:rpm/<2.4.37-65.module+el8.10.0+22069+b47f5c72.1
+    fixed_versions: vers:rpm/2.4.37-65.module+el8.10.0+22069+b47f5c72.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/mod_ssl?arch=s390x&epoch=1&rpmmod=httpd:2.4:8100020240712114234:489197e6
+    affected_versions: vers:rpm/<2.4.37-65.module+el8.10.0+22069+b47f5c72.1
+    fixed_versions: vers:rpm/2.4.37-65.module+el8.10.0+22069+b47f5c72.1
+    fixed_in_commits: []
+    introduced_in_commits: []
+  - purl: pkg:rpm/redhat/mod_proxy_html?arch=x86_64&epoch=1&rpmmod=httpd:2.4:8100020240712114234:489197e6
+    affected_versions: vers:rpm/<2.4.37-65.module+el8.10.0+22069+b47f5c72.1
+    fixed_versions: vers:rpm/2.4.37-65.module+el8.10.0+22069+b47f5c72.1
+    fixed_in_commits: []
+    introduced_in_commits: []
   - purl: pkg:rpm/redhat/httpd?arch=src&rpmmod=httpd:2.4:8100020240712114234:489197e6
     affected_versions: vers:rpm/<2.4.37-65.module+el8.10.0+22069+b47f5c72.1
     fixed_versions: vers:rpm/2.4.37-65.module+el8.10.0+22069+b47f5c72.1
@@ -124,11 +139,6 @@ impacted_packages:
     fixed_in_commits: []
     introduced_in_commits: []
   - purl: pkg:rpm/redhat/mod_proxy_html?arch=aarch64&epoch=1&rpmmod=httpd:2.4:8100020240712114234:489197e6
-    affected_versions: vers:rpm/<2.4.37-65.module+el8.10.0+22069+b47f5c72.1
-    fixed_versions: vers:rpm/2.4.37-65.module+el8.10.0+22069+b47f5c72.1
-    fixed_in_commits: []
-    introduced_in_commits: []
-  - purl: pkg:rpm/redhat/mod_proxy_html-debuginfo?arch=aarch64&epoch=1&rpmmod=httpd:2.4:8100020240712114234:489197e6
     affected_versions: vers:rpm/<2.4.37-65.module+el8.10.0+22069+b47f5c72.1
     fixed_versions: vers:rpm/2.4.37-65.module+el8.10.0+22069+b47f5c72.1
     fixed_in_commits: []
@@ -343,11 +353,6 @@ impacted_packages:
     fixed_versions: vers:rpm/2.4.37-65.module+el8.10.0+22069+b47f5c72.1
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/mod_ssl?arch=s390x&epoch=1&rpmmod=httpd:2.4:8100020240712114234:489197e6
-    affected_versions: vers:rpm/<2.4.37-65.module+el8.10.0+22069+b47f5c72.1
-    fixed_versions: vers:rpm/2.4.37-65.module+el8.10.0+22069+b47f5c72.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/mod_ssl-debuginfo?arch=s390x&epoch=1&rpmmod=httpd:2.4:8100020240712114234:489197e6
     affected_versions: vers:rpm/<2.4.37-65.module+el8.10.0+22069+b47f5c72.1
     fixed_versions: vers:rpm/2.4.37-65.module+el8.10.0+22069+b47f5c72.1
@@ -423,11 +428,6 @@ impacted_packages:
     fixed_versions: vers:rpm/2.0.8-8.module+el8.9.0+19080+567b90f8
     fixed_in_commits: []
     introduced_in_commits: []
-  - purl: pkg:rpm/redhat/mod_proxy_html?arch=x86_64&epoch=1&rpmmod=httpd:2.4:8100020240712114234:489197e6
-    affected_versions: vers:rpm/<2.4.37-65.module+el8.10.0+22069+b47f5c72.1
-    fixed_versions: vers:rpm/2.4.37-65.module+el8.10.0+22069+b47f5c72.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:rpm/redhat/mod_proxy_html-debuginfo?arch=x86_64&epoch=1&rpmmod=httpd:2.4:8100020240712114234:489197e6
     affected_versions: vers:rpm/<2.4.37-65.module+el8.10.0+22069+b47f5c72.1
     fixed_versions: vers:rpm/2.4.37-65.module+el8.10.0+22069+b47f5c72.1
@@ -457,7 +457,7 @@ severities:
   - score: Important
     scoring_system: rhas
     scoring_elements:
-    published_at: None
+    published_at:
     url: https://security.access.redhat.com/data/csaf/v2/advisories/2024/rhsa-2024_4720.json
 weaknesses: []
 references:
