@@ -10,17 +10,17 @@ summary: |
 
   The function `unescapeHTML` is vulnerable to ReDoS due to an overly-broad regex. The slowdown is approximately 2s f characters but grows exponentially with larger inputs. Upgrade to or higher.
 impacted_packages:
-  - purl: pkg:npm/underscore.string
-    affected_versions: vers:npm/<3.3.5
-    fixed_versions: vers:npm/3.3.5
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/epeli/underscore.string
     affected_versions:
     fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/epeli/underscore.string
         commit: f486cd684c94c12db48b45d52b1472a1b9661029
+    introduced_in_commits: []
+  - purl: pkg:npm/underscore.string
+    affected_versions: vers:npm/<3.3.5
+    fixed_versions: vers:npm/3.3.5
+    fixed_in_commits: []
     introduced_in_commits: []
 severities: []
 weaknesses:

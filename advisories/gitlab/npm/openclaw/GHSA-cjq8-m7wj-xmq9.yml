@@ -12,17 +12,17 @@ summary: |
   ## Original Description
   OpenClaw versions prior to 2026.2.26 contain an approval context-binding weakness in system.run execution flows with host=node that allows reuse of previously approved requests with modified environment variables. Attackers with access to an approval id can exploit this by reusing an approval with changed env input, bypassing execution-integrity controls in approval-enabled workflows.
 impacted_packages:
-  - purl: pkg:npm/openclaw
-    affected_versions: vers:npm/>=0.0.0
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/openclaw/openclaw
     affected_versions:
     fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/openclaw/openclaw
         commit: 10481097f8e6dd0346db9be0b5f27570e1bdfcfa
+    introduced_in_commits: []
+  - purl: pkg:npm/openclaw
+    affected_versions: vers:npm/>=0.0.0
+    fixed_versions:
+    fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score:
