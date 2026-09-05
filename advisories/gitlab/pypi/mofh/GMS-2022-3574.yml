@@ -8,17 +8,17 @@ summary: |
   mofh Vulnerable to Improper Restriction of XML External Entity Reference
   The `xml.etree.ElementTree` module that mofh used up until version `1.0.1` implements a simple and efficient API for parsing and creating XML data. But it makes the application vulnerable to Billion Laughs attack. It is a type of denial-of-service attack aimed at XML parsers. It uses multiple levels of nested entities.
 impacted_packages:
-  - purl: pkg:pypi/mofh
-    affected_versions: vers:pypi/<1.0.1
-    fixed_versions: vers:pypi/1.0.1
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/wallvon/mofh
     affected_versions:
     fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/wallvon/mofh
         commit: da0d33cfd368e2f237ab28bf7a7f00e3d281005a
+    introduced_in_commits: []
+  - purl: pkg:pypi/mofh
+    affected_versions: vers:pypi/<1.0.1
+    fixed_versions: vers:pypi/1.0.1
+    fixed_in_commits: []
     introduced_in_commits: []
 severities: []
 weaknesses:

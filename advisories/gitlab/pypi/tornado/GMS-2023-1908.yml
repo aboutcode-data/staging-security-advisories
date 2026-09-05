@@ -25,17 +25,17 @@ summary: |
   ```
   Because `int("0_0") == int("+0") == int("-0") == int("0")`, using the `int` constructor to parse and validate strings that should contain only ASCII digits is not a good strategy.
 impacted_packages:
-  - purl: pkg:pypi/tornado
-    affected_versions: vers:pypi/<6.3.3
-    fixed_versions: vers:pypi/6.3.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/tornadoweb/tornado
     affected_versions:
     fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/tornadoweb/tornado
         commit: b7a5dd29bb02950303ae96055082c12a1ea0a4fe
+    introduced_in_commits: []
+  - purl: pkg:pypi/tornado
+    affected_versions: vers:pypi/<6.3.3
+    fixed_versions: vers:pypi/6.3.3
+    fixed_in_commits: []
     introduced_in_commits: []
 severities: []
 weaknesses:
