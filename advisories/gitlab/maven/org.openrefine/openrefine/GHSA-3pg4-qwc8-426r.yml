@@ -8,17 +8,17 @@ summary: |
   OpenRefine releases contain Google API authentication keys ("client id" and "client secret") which can be extracted from released artifacts. For instance, download the package for OpenRefine 3.8.2 on linux. It contains the file `openrefine-3.8.2/webapp/extensions/gdata/module/MOD-INF/lib/openrefine-gdata.jar`, which can be extracted.
   This archive then contains the file `com/google/refine/extension/gdata/GoogleAPIExtension.java`, which contains the following lines:
 impacted_packages:
-  - purl: pkg:maven/org.openrefine/openrefine
-    affected_versions: vers:maven/<3.8.3
-    fixed_versions: vers:maven/3.8.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/openrefine/openrefine
     affected_versions:
     fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/openrefine/openrefine
         commit: 07dd61e00bb7f472ddcb243631299fba95ad90dd
+    introduced_in_commits: []
+  - purl: pkg:maven/org.openrefine/openrefine
+    affected_versions: vers:maven/<3.8.3
+    fixed_versions: vers:maven/3.8.3
+    fixed_in_commits: []
     introduced_in_commits: []
 severities: []
 weaknesses:

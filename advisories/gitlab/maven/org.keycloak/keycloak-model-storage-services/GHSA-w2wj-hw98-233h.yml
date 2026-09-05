@@ -13,17 +13,17 @@ summary: |
   A flaw was found in org.keycloak/keycloak-model-storage-service. The KeycloakRealmImport custom resource substitutes placeholders within imported realm documents, potentially referencing environment variables. This substitution process
   allows for injection attacks when crafted realm documents are processed. An attacker can leverage this to inject malicious content during the realm import procedure. This can lead to unintended consequences within the Keycloak environment.
 impacted_packages:
-  - purl: pkg:maven/org.keycloak/keycloak-model-storage-services
-    affected_versions: vers:maven/<=26.3.3
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/keycloak/keycloak
     affected_versions:
     fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/keycloak/keycloak
         commit: 75afda410495a9576e00edc3277ab42ca155f806
+    introduced_in_commits: []
+  - purl: pkg:maven/org.keycloak/keycloak-model-storage-services
+    affected_versions: vers:maven/<=26.3.3
+    fixed_versions:
+    fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score:
