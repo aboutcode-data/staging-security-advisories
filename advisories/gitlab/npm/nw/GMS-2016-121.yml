@@ -7,17 +7,17 @@ summary: |
   Downloads Resources over HTTP
   nw downloads zipped resources over HTTP, It may be possible to cause remote code execution (RCE) by swapping out the requested zip file with an attacker controlled binary if the attacker is on the network or positioned in between the user and the remote server.
 impacted_packages:
-  - purl: pkg:npm/nw
-    affected_versions: vers:npm/<0.26.0
-    fixed_versions: vers:npm/0.26.0
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/nwjs/npm-installer
     affected_versions:
     fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/nwjs/npm-installer
         commit: adb4df1e012d38a3872578d484291b9af07aad5b
+    introduced_in_commits: []
+  - purl: pkg:npm/nw
+    affected_versions: vers:npm/<0.26.0
+    fixed_versions: vers:npm/0.26.0
+    fixed_in_commits: []
     introduced_in_commits: []
 severities: []
 weaknesses:
