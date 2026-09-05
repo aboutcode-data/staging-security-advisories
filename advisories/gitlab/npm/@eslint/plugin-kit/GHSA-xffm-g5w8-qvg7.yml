@@ -7,17 +7,17 @@ summary: |
   @eslint/plugin-kit is vulnerable to Regular Expression Denial of Service attacks through ConfigCommentParser
   The `ConfigCommentParser#parseJSONLikeConfig` API is vulnerable to a Regular Expression Denial of Service (ReDoS) attack in its only argument.
 impacted_packages:
-  - purl: pkg:npm/%40eslint/plugin-kit
-    affected_versions: vers:npm/<0.3.4
-    fixed_versions: vers:npm/0.3.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/eslint/rewrite
     affected_versions:
     fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/eslint/rewrite
         commit: b283f64099ad6c6b5043387c091691d21b387805
+    introduced_in_commits: []
+  - purl: pkg:npm/%40eslint/plugin-kit
+    affected_versions: vers:npm/<0.3.4
+    fixed_versions: vers:npm/0.3.4
+    fixed_in_commits: []
     introduced_in_commits: []
 severities:
   - score:

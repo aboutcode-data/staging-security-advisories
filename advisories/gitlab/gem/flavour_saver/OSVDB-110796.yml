@@ -7,17 +7,17 @@ summary: |
   Remote code execution via handlebars helper
   The gem contains a flaw in helper method dispatch where it uses Kernel::send to call helpers without checking that they are defined within the template context first. This allows expressions such as {{system "ls"}} or {{eval "puts 1 + 1"}} to be executed.
 impacted_packages:
-  - purl: pkg:gem/flavour_saver
-    affected_versions: vers:gem/<0.3.3
-    fixed_versions: vers:gem/0.3.3
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jamesotron/flavoursaver
     affected_versions:
     fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/jamesotron/flavoursaver
         commit: 04a8ff444a9a9668a75b01b20b4974d398087a64
+    introduced_in_commits: []
+  - purl: pkg:gem/flavour_saver
+    affected_versions: vers:gem/<0.3.3
+    fixed_versions: vers:gem/0.3.3
+    fixed_in_commits: []
     introduced_in_commits: []
 severities: []
 weaknesses: []
