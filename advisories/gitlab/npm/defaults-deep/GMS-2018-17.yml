@@ -7,17 +7,17 @@ summary: |
   Denial of Service and Remote Code Execution
   Utilities function in defaults-deep can be tricked into modifying the prototype of "Object" when the attacker control part of the structure passed to these function. This can let an attacker add or modify existing property that will exist on all object. This can lead to denial of service or remote code execution.
 impacted_packages:
-  - purl: pkg:npm/defaults-deep
-    affected_versions: vers:npm/<0.2.4
-    fixed_versions: vers:npm/0.2.4
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jonschlinkert/defaults-deep
     affected_versions:
     fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/jonschlinkert/defaults-deep
         commit: c873f341327ad885ff4d0f23b3d3bca31b0343e5
+    introduced_in_commits: []
+  - purl: pkg:npm/defaults-deep
+    affected_versions: vers:npm/<0.2.4
+    fixed_versions: vers:npm/0.2.4
+    fixed_in_commits: []
     introduced_in_commits: []
 severities: []
 weaknesses:

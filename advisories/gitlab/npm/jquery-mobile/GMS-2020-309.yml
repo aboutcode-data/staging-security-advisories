@@ -8,17 +8,17 @@ summary: |
   Cross-Site Scripting in jquery-mobile
   All version of `jquery-mobile` are vulnerable to Cross-Site Scripting. The package checks for content in `location.hash` and if a URL is found it does an XmlHttpRequest (XHR) to the URL and renders the response with `innerHTML`. It fails to validate the `Content-Type` of the response, allowing attackers to include malicious payloads as part of query parameters that are reflected back to the user. A response such as `{"q":"<iframe/src='javascript:alert(1)'></iframe>","results":[]}` would be parsed as HTML and the JavaScript payload executed. No fix is currently available. Consider using an alternative package until a fix is made available.
 impacted_packages:
-  - purl: pkg:npm/jquery-mobile
-    affected_versions: vers:npm/>=0.0.0
-    fixed_versions:
-    fixed_in_commits: []
-    introduced_in_commits: []
   - purl: pkg:github/jquery/jquery-mobile
     affected_versions:
     fixed_versions:
     fixed_in_commits:
       - vcs_url: https://github.com/jquery/jquery-mobile
         commit: b0d9cc758a48f13321750d7409fb7655dcdf2b50
+    introduced_in_commits: []
+  - purl: pkg:npm/jquery-mobile
+    affected_versions: vers:npm/>=0.0.0
+    fixed_versions:
+    fixed_in_commits: []
     introduced_in_commits: []
 severities: []
 weaknesses:
